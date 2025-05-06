@@ -1,0 +1,79 @@
+功能,參數格式,指令,分類
+換立繪,,"SetPortrait(MC1,pic=2);",角色控制
+表情特效開,"位置,角色ID,表情ID","EnableCharacterExpression(1,NPC3,Shock);",
+表情特效關(單獨),位置,DisableCharacterExpression(1);,
+表情特效關(全部),,DisableAllCharacterExpression();,
+換位置,,"SetPanel(MC4, 3, immediate)",角色控制
+物件震動,,"SetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",角色控制
+物件震動漸慢,,"SetGameObjectShake(P0,ShakeNormalGradually, YAxis,1,20,0.1);",角色控制
+播放影片,,PlayVideo(Intro);,影片
+開啟對話背景圖,,EnableDialogueBG(Ye);,"背景,事件圖"
+開啟事件背景圖,,EnableEventBG(DiceIntro);,"背景,事件圖"
+關閉對話背景圖,,DisableDialogueBG();,"背景,事件圖"
+關閉事件背景圖,,DisableEventBG();,"背景,事件圖"
+擲骰檢定(手動),"FeatID,手動,檢定難度","BeginDiceRoll(Manual,InfantryCheck,5);",擲骰
+擲骰檢定(自動),"FeatID,自動,檢定難度","BeginDiceRoll(Auto,InfantryCheck,5);",擲骰
+開始戰鬥,"FightingType,戰鬥場次","BeginFight(Combat,8);",戰鬥
+開始小遊戲,"MiniGameID,MiniGameDifficulty,AbilityID,FeatID","BeginMiniGame(Snake,Default,Default,Infantry);",小遊戲
+播放音效(播放一次會被取代),"AudioID,音效種類","PlayAudio(Bird,normal)",音效
+播放音效(播放一次),"AudioID,音效種類","PlayAudio(Bird,oneshot)",音效
+播放音效(循環),"AudioID,音效種類,初始音量,最終音量,淡入時間","PlayAudio(Fire,loop_Fade,0,1,2)",音效
+播放音效(特殊),音效種類,PlayAudio_Special(LobbyLocation);,音效
+關閉音效(播放一次會被取代),音效種類,StopAudio(normal);,音效
+關閉音效(循環),"音效種類,最終音量,淡出時間","StopAudio(loop,0,2);",音效
+開啟畫面特效,"ParticleID,功能","PlayOrStopParticle(BloodSplash_Middle,Play);",特效
+關閉畫面特效,"ParticleID,功能","PlayOrStopParticle(BloodSplash_Middle,Stop);",特效
+關閉所有畫面特效,,StopAllParticle();,特效
+畫面淡入淡出轉場效果_淡入,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeIn,0.5,#000000,1) ;",MMF效果
+畫面淡入淡出轉場效果_淡出,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeOut,0.5,#000000,1) ;",MMF效果
+畫面淡入淡出轉場效果_淡入淡出,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInOut,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入_上方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInGradient_Up,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡出_上方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeOutGradient_Up,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入淡出_上方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInOutGradient_Up,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入_下方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInGradient_Down,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡出_下方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeOutGradient_Down,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入淡出_下方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInOutGradient_Down,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入_左方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInGradient_Left,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡出_左方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeOutGradient_Left,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入淡出_左方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInOutGradient_Left,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入_右方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInGradient_Right,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡出_右方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeOutGradient_Right,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入淡出_右方,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInOutGradient_Right,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入_周圍,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInGradient_Surround,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡出_周圍,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeOutGradient_Surround,0.5,#000000,1) ;",MMF效果
+漸層轉場效果_淡入淡出_周圍,"FeelID,效果長度,顏色,顏色透明度","PlayFeelFeedback(FadeInOutGradient_Surround,0.5,#000000,1) ;",MMF效果
+中間圖形轉場效果_淡入,FeelID,PlayFeelFeedback(FadeInRound);,MMF效果
+中間圖形轉場效果_淡出,FeelID,PlayFeelFeedback(FadeOutRound);,MMF效果
+中間圖形轉場效果_淡入淡出,FeelID,PlayFeelFeedback(FadeInOutRound);,MMF效果
+水平轉場效果_淡入,FeelID,PlayFeelFeedback(FadeInDirectional);,MMF效果
+水平轉場效果_淡出,FeelID,PlayFeelFeedback(FadeOutDirectional);,MMF效果
+水平轉場效果_淡入淡出,FeelID,PlayFeelFeedback(FadeInOutDirectional);,MMF效果
+聚光燈效果_淡入,"FeelID,FeelTargetID","PlayFeelFeedback(FadeInRoundDestination,P1_Destination);",MMF效果
+聚光燈效果_淡出,"FeelID,FeelTargetID","PlayFeelFeedback(FadeOutRoundDestination,P1_Destination);",MMF效果
+聚光燈效果_淡入淡出,"FeelID,FeelTargetID","PlayFeelFeedback(FadeInOutRoundDestination,P1_Destination);",MMF效果
+擠壓拉伸人物效果,"FeelID,FeelTargetID,效果長度,初始大小,最大大小","PlayFeelFeedback(SquashAndStretch,P1,0.5,1,1.1);",MMF效果
+人物進場效果,"FeelID,FeelTargetID,FeelPosID","PlayFeelFeedback(Position,P1,P1_OffScreenPos);",MMF效果
+人物縮放效果,"FeelID,持續時間.初始大小,最大大小","PlayFeelFeedback(Scale,P1,0.5,1,1.05);",MMF效果
+人物搖晃效果,"FeelID,FeelTargetID,效果長度,搖晃速度,搖晃範圍","PlayFeelFeedback(RotationShake,P1,0.5,25,5);",MMF效果
+鏡頭晃動效果,"FeelID,持續時間,衰變,速率","PlayFeelFeedback(CinemachineImpulse,0.5,0.5,1);",MMF效果
+五維經驗值,"DataCategory,CharacterID,AbilityID,數值","ModifyData(AbilityExp,MC1,Strength,50);",角色數據
+五維最大等級,"DataCategory,CharacterID,AbilityID,數值","ModifyData(AbilityMaxLevel,MC1,Strength,5);",角色數據
+專長經驗值,"DataCategory,CharacterID,FeatID,數值","ModifyData(FeatExp,MC1,Infantry,50);",角色數據
+技能,"DataCategory,CharacterID,CharacterSkillID","ModifyData(Skill,MC1,InfantryLv1_Tactics);",角色數據
+貴重品,"DataCategory,CharacterID,ValuablesID,數值","ModifyData(Valuable,MC1,SovereignSword,5);",角色數據
+特殊標籤,"DataCategory,CharacterID,SpecificTag","ModifyData(Valuable,MC1,SwordProficiency);",角色數據
+金幣,"DataCategory,CharacterID,數值","ModifyData(Coin,MC1,500);",角色數據
+回復體力,"DataCategory,CharacterID,數值","ModifyData(Stamina,50);",角色數據
+回復體力到最大值,"DataCategory,CharacterID",ModifyData(StaminaMax);,角色數據
+回復血量,"DataCategory,CharacterID,數值","ModifyData(Hp,MC1,50);",角色數據
+回復血量到最大值,"DataCategory,CharacterID","ModifyData(HpMax,MC1);",角色數據
+職業功勳,"DataCategory,ProfessionID,數值","ModifyData(ProfessionMerit,Ranger,5);",角色數據
+九宮格,"DataCategory,CharacterID,DnDAlignmentType,數值","ModifyData(DnDAlignment,MC1,GoodEvil,0.5);",角色數據
+生活經驗,"DataCategory,數值","ModifyData(LifeExp,50);",角色數據
+天賦點,"DataCategory,數值","ModifyData(TalentPoint,50);",角色數據
+休息,"DataCategory,RestType,花費天數","ModifyData(Rest,ShortRest,5);",角色數據
+是否在隊伍裡,"DataCategory,CharacterID,bool","ModifyData(IsInTeam,MC1,true);",角色數據
+是否能夠加入隊伍裡,"DataCategory,CharacterID,bool","ModifyData(IsAbleToJoinTeam,MC1,true);",角色數據
+開啟貴重品的便籤,ValuablesID,ShowValuableMemo(TaiXuanJing);,其他
+開啟回憶錄的回憶,MemoryID,ShowMemory(M_001);,其他
+設定限時選項,秒數(大於0是啟動 等於0是關閉),SetTimeout(5);,其他
