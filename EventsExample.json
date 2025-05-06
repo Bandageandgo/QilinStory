@@ -1,245 +1,191 @@
 [
     {
+        "entryID": 0,
+        "actorID": "MC1",
+        "text": "「呵，此地民風淳樸，必有高人隱……」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+        "links": [1]
+    },
+    {
         "entryID": 1,
-        "actorID": 0,
-        "text": "（主角從村口跑進來。）（旁白：一座依河而建的平凡小村莊，官道上的塵土在腳邊飛揚。村口的老槐樹下，一個簡陋的茶攤前坐著幾位正在閒聊的老者。當走近時，你注意到空氣中瀰漫著一種難以言喻的甜香。）",
-        "links": [
-            2,
-            3
-        ]
+        "actorID": "MC1",
+        "text": "「……」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+        "links": [2]
     },
     {
         "entryID": 2,
-        "actorID": 1,
-        "text": "「呼...總算有個落腳的地方歇歇腳了。小犀，妳還好吧？走了這麼久，累壞了吧。」",
-        "links": [
-            4
-        ]
+        "actorID": "MC8",
+        "text": "「表哥…我、我快餓扁了…」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+        "links": [3]
     },
     {
         "entryID": 3,
-        "actorID": 1,
-        "text": "「哈哈哈！走了這麼久，總算到了河東，那位於雲中的英豪府也不遠了！」",
-        "links": [
-            5
-        ]
+        "actorID": 2,
+        "text": "[panel=5]＊（平凡小村依河而建，塵土飛揚。老槐樹下有簡陋茶攤。數老者閒聊。空氣中飄著若有似無的甜香…還有塵土味。）＊",
+        "Sequence": "DisableCharacterExpression(1);",
+        "links": [4]
     },
     {
         "entryID": 4,
-        "actorID": 2,
-        "text": "「嗯，還撐得住。表哥，咱們還要走多久才能到英豪府呀？肚子都餓扁了。」",
-        "links": [
-            6
-        ]
+        "actorID": "MC1",
+        "text": "「咳嗯！店家請了！在下燕不凡，與舍妹自遠方而來。欲在此…」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [5]
     },
     {
         "entryID": 5,
-        "actorID": 2,
-        "text": "「表哥你醒醒！這裡只是個小村子才不是河東哩，離英豪府還遠得很呢！而且我肚子都餓扁！」",
-        "links": [
-            6
-        ]
+        "actorID": "MC8",
+        "text": "「茶攤！表哥！吃的！」",
+        "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [6]
     },
     {
         "entryID": 6,
-        "actorID": 0,
-        "text": "（主角走向茶攤，想打聽些消息。）",
-        "links": [
-            7
-        ]
+        "actorID": "MC8",
+        "text": "「老丈！有什麼吃的嗎？包子饅頭都行！還有我們要去[em2]雲中[/em2]，這裡有馬車嗎？」",
+        "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [7]
     },
     {
         "entryID": 7,
-        "actorID": 2,
-        "text": "「表哥你看！有茶攤耶！我聽說書先生講過，這種路邊茶攤消息最是靈通！是不是真的啊？咱們快去問問這些大爺，看看這附近有沒有什麼好玩…呃，我是說，有沒有什麼賺錢的門路，順便問問去英豪府的路嘛！」",
-        "links": [
-            8
-        ]
+        "actorID": "MC1",
+        "text": "「行走江湖，禮數為先…」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=pain);EnableCharacterExpression(0,MC1,Pain);",
+        "links": [8]
     },
     {
         "entryID": 8,
-        "actorID": -1,
-        "text": "[系統提示] 自動洞悉檢定（難度2）",
-        "links": [
-            9,
-            10
-        ]
+        "actorID": 3,
+        "text": "[panel=2]「哦？外鄉來的？喝口茶吧。去[em2]雲中[/em2]啊？明早卯時有驛站馬車路過。」",
+        "Sequence": "DisableCharacterExpression(0);DisableCharacterExpression(1);",
+        "links": [9]
     },
     {
         "entryID": 9,
-        "actorID": 0,
-        "text": "[檢定成功] 你注意到老伯在擦拭茶碗時，眼神似乎刻意避開了你們的目光。",
-        "links": [
-            11
-        ]
+        "actorID": "MC8",
+        "text": "「太好了！那車錢…」",
+        "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [10]
     },
     {
         "entryID": 10,
-        "actorID": 0,
-        "text": "[檢定失敗] 無特殊旁白。",
-        "links": [
-            11
-        ]
+        "actorID": 3,
+        "text": "[panel=2]「一人一百五，你們俩，三百文。」",
+        "Sequence": "DisableCharacterExpression(1);",
+        "links": [11]
     },
     {
         "entryID": 11,
-        "actorID": 2,
-        "text": "「老丈您好，我們是從外地來的，正打算前往英豪府。想向您打聽一下路途，順便歇歇腳。」",
-        "links": [
-            12
-        ]
+        "actorID": "MC8",
+        "text": "「三…三百？！表哥！三百文！我們連昨天的餅錢都還沒付呢！」",
+        "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Shock);",
+        "links": [12]
     },
     {
         "entryID": 12,
-        "actorID": 3,
-        "text": "「哦？去英豪府啊？那可不近。來，喝口茶。你們運氣不錯，明早卯時正好有驛站的馬車經過咱們村，可以直接搭到雲中。」",
-        "links": [
-            13
-        ]
+        "actorID": 0,
+        "text": "[自動洞悉檢定] (難度 2)",
+        "Sequence": "DisableCharacterExpression(1);BeginDiceRoll(Auto,InsightCheck,2);",
+        "links": [13, 16]
     },
     {
         "entryID": 13,
         "actorID": 2,
-        "text": "「真的嗎？太好了！那…那車資貴不貴呀？」",
-        "links": [
-            14
-        ]
+        "text": "[panel=5]＊（你注意到老伯在說出價格時，眼神似乎閃爍了一下，嘴角有著一絲不易察覺的弧度，似乎這價格並非表面那般簡單。）＊",
+        "Sequence": "ModifyData(FeatExp,MC1,Insight,10);",
+        "links": [14]
     },
     {
         "entryID": 14,
-        "actorID": 3,
-        "text": "「嗯…一個人大概要一百五十文吧。兩位的話，就是三百文。」",
-        "links": [
-            15
-        ]
+        "actorID": 0,
+        "text": "玩家（選擇回應）：",
+        "Sequence": "",
+        "links": [15]
     },
     {
         "entryID": 15,
-        "actorID": 2,
-        "text": "「三百文？！表哥，我們哪有那麼多錢…」",
-        "links": [
-            16,
-            17,
-            18
-        ]
-    },
-    {
-        "entryID": 16,
-        "actorID": 1,
-        "text": "「老丈，實不相瞞，我們盤纏不太夠。不知這村裡有沒有什麼零活可以做，賺點路費？」",
-        "links": [
-            19
-        ]
-    },
-    {
-        "entryID": 17,
-        "actorID": 1,
-        "text": "「老丈，我們初來乍到，想在此稍作停留。不知村中是否有機會能讓我們略盡綿薄之力，賺取些許盤纏？」",
-        "links": [
-            19
-        ]
-    },
-    {
-        "entryID": 18,
-        "actorID": -1,
-        "text": "[系統提示] 魅力檢定（難度5）：說服茶攤老伯透露隱秘消息",
-        "links": [
-            20,
-            23
-        ]
-    },
-    {
-        "entryID": 19,
-        "actorID": 3,
-        "text": "「賺錢啊…年輕人想賺錢是好事。你們可以去找咱們村長問問。他老人家心腸好，村裡的大小事都歸他管，或許知道哪裡有活兒。他通常在村子裡那間大瓦房。」",
-        "links": [
-            21
-        ]
-    },
-    {
-        "entryID": 20,
-        "actorID": 3,
-        "text": "[檢定成功] 「小哥兒口氣不小，看來也是走過些地方的。這村子啊，看著太平，水面下可未必…河神祭典…」",
-        "links": [
-            21
-        ]
-    },
-    {
-        "entryID": 21,
-        "actorID": 2,
-        "text": "「表哥，他說的『河神祭典』聽起來怪怪的…」",
-        "links": [
-            22
-        ]
-    },
-    {
-        "entryID": 22,
-        "actorID": 3,
-        "text": "「總之，先去找村長報備一下吧。他知道你們來了，行事也方便些。咱們村子有些老規矩，最好遵守一下，免得惹麻煩。」",
-        "links": [
-            26,
-            27,
-            28
-        ]
-    },
-    {
-        "entryID": 23,
-        "actorID": 3,
-        "text": "[檢定失敗] 「哼，年輕人，口氣倒不小。我們這小地方，沒什麼『不方便聲張』的難處。去找村長吧。」",
-        "links": [
-            24
-        ]
-    },
-    {
-        "entryID": 24,
-        "actorID": 2,
-        "text": "「表哥，他好像不太高興...我們先去找村長吧。」",
-        "links": [
-            26,
-            27,
-            28
-        ]
-    },
-    {
-        "entryID": 26,
-        "actorID": 1,
-        "text": "「老丈，您說的『規矩』是指什麼？」",
-        "links": [
-            29
-        ]
-    },
-    {
-        "entryID": 27,
-        "actorID": 1,
-        "text": "「這村子看起來很平靜，有什麼特別之處嗎？」",
-        "links": [
-            30
-        ]
-    },
-    {
-        "entryID": 28,
-        "actorID": 1,
-        "text": "「謝謝指點，我們先去找村長。」",
+        "actorID": 0,
+        "text": "[TUTORIAL：對話選項檢定] // 此處彈出教學提示：部分對話選項前方會標註所需的「屬性」與「難度」。若你的對應屬性達到或超過難度，則檢定成功，可能觸發更好的結果或額外信息。",
+        "Sequence": "",
         "links": []
     },
     {
-        "entryID": 29,
-        "actorID": 3,
-        "text": "「哎呀，也沒什麼特別的。就是村裡人都講究和氣生財，不打聽別人家事，天黑前回家關門，不去河邊閒逛...這些小規矩罷了。」",
-        "links": [
-            26,
-            27,
-            28
-        ]
+        "entryID": 16,
+        "actorID": 2,
+        "text": "[panel=5]＊（三百文確實不是個小數目，老伯的表情看起來很正常，似乎這就是公道價。）＊",
+        "Sequence": "",
+        "links": [14]
     },
     {
-        "entryID": 30,
-        "actorID": 3,
-        "text": "「平靜？是啊...咱們村雖小，但五穀豐登，村民安居樂業...」",
-        "links": [
-            26,
-            27,
-            28
-        ]
+        "entryID": 17,
+        "actorID": 0,
+        "text": "玩家（選擇回應）：",
+        "Sequence": "",
+        "links": [18, 21, 24]
+    },
+    {
+        "entryID": 18,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,CharismaCheck,6);",
+        "links": [19]
+    },
+    {
+        "entryID": 19,
+        "actorID": 0,
+        "text": "「三百文？小意思！」",
+        "Sequence": "",
+        "links": [20]
+    },
+    {
+        "entryID": 20,
+        "actorID": "MC1",
+        "text": "「咳咳！區區三百文…對我輩江湖兒女而言……」",
+        "Sequence": "SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+        "links": []
+    },
+    {
+        "entryID": 21,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,EconomicDevelopmentCheck,6);",
+        "links": [22]
+    },
+    {
+        "entryID": 22,
+        "actorID": 0,
+        "text": "「老丈，有營生嗎？」",
+        "Sequence": "",
+        "links": [23]
+    },
+    {
+        "entryID": 23,
+        "actorID": "MC1",
+        "text": "「老丈，盤纏緊張。村裡有營生嗎？在下粗活累活都能幹！」",
+        "Sequence": "SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+        "links": []
+    },
+    {
+        "entryID": 24,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,InsightCheck,12);",
+        "links": [25]
+    },
+    {
+        "entryID": 25,
+        "actorID": 0,
+        "text": "「店家，此地耐人尋味？」",
+        "Sequence": "",
+        "links": [26]
+    },
+    {
+        "entryID": 26,
+        "actorID": "MC1",
+        "text": "「店家，路資我兄妹定會設法。只是此地氣氛…以及老丈您方才的神色，似乎都有些耐人尋味？」",
+        "Sequence": "SetPortrait(MC1,pic=meditate);EnableCharacterExpression(0,MC1,Question);",
+        "links": []
     }
 ]
