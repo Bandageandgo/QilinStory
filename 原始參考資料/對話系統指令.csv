@@ -3,7 +3,6 @@
 表情特效開,"位置,角色ID,表情ID","EnableCharacterExpression(1,NPC3,Shock);",
 表情特效關(單獨),位置,DisableCharacterExpression(1);,
 表情特效關(全部),,DisableAllCharacterExpression();,
-換位置,,"SetPanel(MC4, 3, immediate)",角色控制
 物件震動,,"SetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",角色控制
 物件震動漸慢,,"SetGameObjectShake(P0,ShakeNormalGradually, YAxis,1,20,0.1);",角色控制
 播放影片,,PlayVideo(Intro);,影片
@@ -77,3 +76,4 @@
 開啟貴重品的便籤,ValuablesID,ShowValuableMemo(TaiXuanJing);,其他
 開啟回憶錄的回憶,MemoryID,ShowMemory(M_001);,其他
 設定限時選項,秒數(大於0是啟動 等於0是關閉),SetTimeout(5);,其他
+在Script欄位中呼叫QUEST,SetQuestState("BoxMap_M01_1", "active");SetQuestEntryState("BoxMap_M01_2", 1, "active");
