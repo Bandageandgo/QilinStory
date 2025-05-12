@@ -34,6 +34,15 @@
 -   `**發言者**` 需要轉換為對應的 `actorID` (如 `MC1`, `MC8` 或其他NPC的數字ID)。
 -   `對話內容` (包含括號內的描述，這些描述將用於生成 `Sequence`) 放入 `text` 欄位。
 
+#### 1.1 對話引號「」的統一處理
+-   所有角色對話在轉換為JSON時，其 `text` 欄位的值應統一格式化為**僅包含一對最外層的標準中文引號**，即 `「對話內容」` 的形式。
+    -   若原始 Markdown 對話無引號 (例如：`純文字`)，則轉換為 `「純文字」`。
+    -   若原始 Markdown 對話已有一層引號 (例如：`「引號文字」`)，則轉換後保持為 `「引號文字」`。
+    -   若原始 Markdown 對話有多層引號 (例如：`「「雙引號文字」」` 或 `「「「多層引號」」」`)，應將其處理為標準的單層引號，即 `「雙引號文字」` 或 `「多層引號」`。
+-   **選項文字的處理**：
+    -   **選項節點**的`text`欄位同樣遵循此單層引號原則，例如應轉換為 `「三百文？小意思！」`。
+-   **一致性原則**：所有對話節點的 `text` 欄位，無論是主角、NPC、旁白還是選項，都應遵循相同規則，確保整個JSON文件風格統一。
+
 ### 2. 特殊格式轉換
 
 -   對話文字中（不包括人名）的 `**重點文字**` 應轉換為 `[em2]重點文字[/em2]`。
@@ -80,6 +89,18 @@
         -   `links`: 此「空內容緩衝節點」的 `links` 才指向檢定成功和失敗的實際劇情分支節點（或教學提示等）。
 -   `FeatID` 參考 `擲骰指令轉換規則.md` 中的「常用檢定項目ID對照」。
 -   檢定成功後，在描述成功的旁白節點或下一個合適節點的 `Sequence` 中加入獎勵指令 `ModifyData(AbilityExp/FeatExp,MC1,獎勵用ID,10);`。
+-   **FeatID與獎勵ID的對應**: 擲骰時使用的`FeatID`（例如`InsightCheck`）與檢定成功後獎勵時使用的`獎勵用ID`（例如`Insight`）是相關聯但不同的ID。轉換時必須仔細查閱本指南末尾的「檢定ID與獎勵ID完整對照表」以確保使用正確的ID配對，避免錯誤。
+
+#### 4.1.1 擲骰成功/失敗分支條件標識
+-   **成功分支標識**: 在檢定成功分支的第一個節點的`Sequence`中，應添加條件標識`IsPassDice() == true`。例如：
+    ```
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,Insight,10);"
+    ```
+-   **失敗分支標識**: 在檢定失敗分支的第一個節點的`Sequence`中，應添加條件標識`IsPassDice() == false`。例如：
+    ```
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);"
+    ```
+-   **條件標識位置**: 這些條件標識應位於`Sequence`字串的最開頭，在任何其他指令（如`DisableCharacterExpression`）之前。
 
 #### 4.2 手動擲骰 (選項回應)
 -   **關鍵規則**: 當玩家需要從多個選項中選擇，並且某些選項涉及屬性/專長檢定時，處理流程如下：
@@ -102,6 +123,7 @@
         -   `links`: 此節點的 `links` 陣列通常包含**兩個 `entryID`**：一個指向檢定成功後的劇情分支，另一個指向檢定失敗後的劇情分支。遊戲引擎根據前一步驟 `BeginDiceRoll` 的結果來選擇其中一個鏈接。
     6.  **檢定成功獎勵**: 檢定成功後，在進入成功分支的**第一個合適節點** (通常是NPC的回應或主角的確認發言之後的旁白，或該NPC回應節點本身) 的 `Sequence` 中加入獎勵指令 `ModifyData(...)`。
     7.  **選項文本中的檢定標籤**: 如 `[魅力 難度6]`，主要用於提示編寫者此選項關聯哪個 `BeginDiceRoll` 指令以及後續分支邏輯，在最終的選項 `text` 中應去除以簡化顯示。
+    8.  **手動擲骰的成功/失敗分支條件標識**: 同自動檢定一樣，在成功分支的第一個節點中添加`IsPassDice() == true`，在失敗分支的第一個節點中添加`IsPassDice() == false`。
 
 ### 5. 連結 (`links`)
 
@@ -162,12 +184,49 @@
 ## 注意事項
 
 -   仔細核對所有 `actorID`、`角色ID` (指令內)、`pic` 值、`表情ID`、`FeatID` (擲骰)、`獎勵用ID` (ModifyData) 是否參照最新的規則文檔且正確無誤。
+-   **特別注意FeatID和獎勵ID的對應關係**: 在檢定和獎勵流程中，擲骰(`BeginDiceRoll`)使用的FeatID與獎勵(`ModifyData`)使用的ID是有對應關係的不同ID。必須查閱最新的對照表確保正確匹配。例如：
+    - 擲骰檢定使用: `InsightCheck`
+    - 對應的獎勵使用: `Insight`
+    - 擲骰檢定使用: `Ability_CHA` (魅力屬性檢定)
+    - 對應的獎勵使用: `AbilityExp,MC1,Ability_CHA` (經驗值獎勵)
+
+-   **檢定ID與獎勵ID完整對照表**:
+    
+    | 檢定名稱 (Check Name)        | 檢定用ID (`BeginDiceRoll` 中的 `FeatID`) | 獎勵用ID (`ModifyData`中的 `FeatID`) | 獎勵類型 (`ModifyData` 指令) |
+    |---------------------------|-------------------------------------------|-----------------------------|------------------------------|
+    | 統率檢定                  | `LeadershipCheck`                         | `Ability_LDR`               | 五維 (`AbilityExp`)          |
+    | 武力檢定                  | `StrengthCheck`                           | `Ability_STR`               | 五維 (`AbilityExp`)          |
+    | 智力檢定                  | `IntelligenceCheck`                       | `Ability_INT`               | 五維 (`AbilityExp`)          |
+    | 政治檢定                  | `PoliticsCheck`                           | `Ability_POL`               | 五維 (`AbilityExp`)          |
+    | 魅力檢定                  | `CharismaCheck`                           | `Ability_CHA`               | 五維 (`AbilityExp`)          |
+    | 步兵檢定                  | `InfantryCheck`                           | `Infantry`                  | 專長 (`FeatExp`)             |
+    | 兵法檢定                  | `MilitaryTacticsCheck`                    | `MilitaryTactics`           | 專長 (`FeatExp`)             |
+    | 弓術檢定                  | `ArcheryCheck`                            | `Archery`                   | 專長 (`FeatExp`)             |
+    | 武藝檢定                  | `MartialArtsCheck`                        | `MartialArts`               | 專長 (`FeatExp`)             |
+    | 內功檢定                  | `QiCheck`                                 | `Qi`                        | 專長 (`FeatExp`)             |
+    | 騎術檢定                  | `HorsemanshipCheck`                       | `Horsemanship`              | 專長 (`FeatExp`)             |
+    | 威嚇檢定                  | `IntimidationCheck`                       | `Intimidation`              | 專長 (`FeatExp`)             |
+    | 洞悉檢定                  | `InsightCheck`                            | `Insight`                   | 專長 (`FeatExp`)             |
+    | 謀略檢定                  | `StrategyCheck`                           | `Strategy`                  | 專長 (`FeatExp`)             |
+    | 學識檢定                  | `KnowledgeCheck`                          | `Knowledge`                 | 專長 (`FeatExp`)             |
+    | 醫術檢定                  | `MedicalExpertiseCheck`                   | `MedicalExpertise`          | 專長 (`FeatExp`)             |
+    | 厚黑檢定                  | `RealpolitikCheck`                        | `Realpolitik`               | 專長 (`FeatExp`)             |
+    | 經濟檢定                  | `EconomicDevelopmentCheck`                | `EconomicDevelopment`       | 專長 (`FeatExp`)             |
+    | 口才檢定                  | `PersuasionCheck`                         | `Persuasion`                | 專長 (`FeatExp`)             |
+    | 調情檢定                  | `FlirtingCheck`                           | `Flirting`                  | 專長 (`FeatExp`)             |
+    | 酒量檢定                  | `AlcoholToleranceCheck`                   | `AlcoholTolerance`          | 專長 (`FeatExp`)             |
+    | 巧手檢定                  | `SleightOfHandCheck`                      | `SleightOfHand`             | 專長 (`FeatExp`)             |
+    | 奪寶檢定                  | `TreasureHuntingCheck`                    | `TreasureHunting`           | 專長 (`FeatExp`)             |
+
+    **注意**: 在編寫JSON時，必須嚴格按照上表使用正確的ID。例如，當使用`BeginDiceRoll(Manual,InsightCheck,7);`進行檢定時，對應的獎勵必須是`ModifyData(FeatExp,MC1,Insight,10);`，絕不能混用ID。
+
 -   確保 `entryID` 連續且唯一。
 -   `Sequence` 指令的 `actorID` (如 `MC1`, `MC8`) 和 `位置` 參數務必正確。
 -   **表情特效的禁用 (`DisableCharacterExpression`) 必須準確地放在下一個節點的 `Sequence` 開頭。**
 -   `links` 的指向必須準確，以保證對話流程的正確性。
--   最終生成的JSON中，`Sequence` 字符串內的指令順序也很重要：通常是 `Disable...` (如果有) -> `SetPortrait` -> `Enable...` (如果有) -> `BeginDiceRoll` / `ModifyData` (如果適用於該節點)。
+-   最終生成的JSON中，`Sequence` 字符串內的指令順序也很重要：通常是 `IsPassDice()` (如果有) -> `Disable...` (如果有) -> `SetPortrait` -> `Enable...` (如果有) -> `BeginDiceRoll` / `ModifyData` (如果適用於該節點)。
 -   **只有特定類型的節點才應包含Description欄位**，包括檢定、擲骰、任務、選項等功能性節點。普通對話節點不應包含Description欄位。
+-   **對話文本統一性**: 確保所有對話文本的引號「」處理一致。根據1.1節規則，標準角色對話應包含引號。
 
 ## 範例 (片段示意，非完整劇情)
 
@@ -187,14 +246,14 @@
   {
     "entryID": 100,
     "actorID": "MC1",
-    "text": "這...這個嘛...",
+    "text": "「這...這個嘛...」",
     "Sequence": "SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
     "links": [101]
   },
   {
     "entryID": 101,
     "actorID": "MC8",
-    "text": "三百文！有三百文我們就能去京城了！",
+    "text": "「三百文！有三百文我們就能去京城了！」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Surprise_2);",
     "links": [102]
   },
@@ -224,9 +283,23 @@
   {
     "entryID": 106,
     "actorID": "MC1",
-    "text": "區區三百文，何足掛齒！",
+    "text": "「區區三百文，何足掛齒！」",
     "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
     "links": [110, 111]
+  },
+  {
+    "entryID": 110,
+    "actorID": "NPC1",
+    "text": "「不愧是年輕人，有魄力！」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "links": [120]
+  },
+  {
+    "entryID": 111,
+    "actorID": "NPC1",
+    "text": "「口氣不小，希望你的錢包也像嘴巴一樣大...」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [121]
   },
   {
     "entryID": 107,
@@ -239,7 +312,7 @@
   {
     "entryID": 108,
     "actorID": "MC1",
-    "text": "我們再想想辦法。",
+    "text": "「我們再想想辦法。」",
     "Sequence": "SetPortrait(MC1,pic=meditate);",
     "links": [109]
   }
