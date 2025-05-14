@@ -1,0 +1,362 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「呵，此地民風淳樸，必有高人隱……」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [2],
+    "Description": "1. 主線起始（抵達小溪村） - 地點：村口茶攤 - 觸發：主角一行人首次抵達小溪村"
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「[咕嚕——！]」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC8",
+    "text": "「表哥…我、我快餓扁了…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC0",
+    "text": "[PANEL=6]＊（平凡小村依河而建，塵土飛揚。老槐樹下有簡陋茶攤，一個矮小的身影在攤前忙來忙去。幾位老者則在一旁閒聊。空氣中飄著若有似無的甜香…當然還有塵土味。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "3",
+    "text": "「（外鄉來的客人？本店特色茶飲嘗嘗？」",
+    "Sequence": "",
+    "links": [7],
+    "Description": "NPC1 茶攤茶博士 actorID:3"
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC8",
+    "text": "「這位…呃…是茶博士？」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「唉唉，[em2]靈犀[/em2]，行走江湖，禮數為先，故事中的高手常都貌不驚人…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=hurt);EnableCharacterExpression(0,MC1,Pain);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "3",
+    "text": "「（露出有些猙獰的笑容）子曰：『有朋自遠方來，不亦樂乎？』二位客官，既是遠來，何妨品茗一杯，嘗嘗本店特色佳茗？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「老天爺啊！竟然比靈犀還有禮貌！」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Shock);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC8",
+    "text": "「你這樣才比較失禮吧…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);SetPortrait(MC1,pic=proud);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC8",
+    "text": "「先不管這些細節了，有什麼吃的嗎？包子饅頭都行！另外我們想去[em2]雲中[/em2]，請問這裡的馬車何時出發？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "3",
+    "text": "「要去[em2]雲中[/em2]啊？唉，最近不太平，附近山頭鬧山賊，兇得很！縣衙貼了告示，說為了安全，驛站的馬車啊，得等一個月後才能走了。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「一個月？這可如何是好！如此一來，[em2]雲中[/em2]的[em2]英豪府[/em2]俠客遴選，豈不就趕不上了？那可是我輩立身揚名，傳說的起點阿！」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC8",
+    "text": "「一個月？！那我們豈不是要在此地……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "3",
+    "text": "「是啊，你們得先找個落腳的地方。咱村裡就一個客棧，長租一個月我聽說約莫三百文。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC8",
+    "text": "「三…三百文一個月？！表哥！三百文！我們…我們身上哪有這許多錢！」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Shock);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);BeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [19],
+    "Description": "自動洞悉檢定觸發點 (難度2)"
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [20, 23],
+    "Description": "自動檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC0",
+    "text": "[PANEL=6]＊（你注意到這位茶博士，雖然樣貌奇特，言語間卻透著一股精明。他說出三百文時，眼神似乎在你們身上打量，不像是在隨口開價，倒像是在陳述一個此地不得不接受的「事實」。[即時訊息區]: 洞悉檢定成功！洞悉經驗+10。）＊",
+    "Sequence": "IsPassDice() == true;ModifyData(FeatExp,MC1,Insight,10);DisableCharacterExpression(0);",
+    "links": [21, 22]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「茶博士，一個月三百文…可否指點一下，此地有何營生可做？」",
+    "Sequence": "",
+    "links": [25],
+    "Description": "選項1（洞悉成功）：經濟檢定"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「三百文？小事一樁！茶博士，先來壺貴店最好的茶！」",
+    "Sequence": "",
+    "links": [29],
+    "Description": "選項2（洞悉成功）：魅力檢定"
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC0",
+    "text": "[PANEL=6]＊（三百文的房租確實不是個小數目，這位[em2]茶博士[/em2]的表情看不出什麼端倪，這似乎就是此地的行情價了。）＊",
+    "Sequence": "IsPassDice() == false;",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「茶博士，一個月三百文…可否指點一下，此地有何營生可做？」",
+    "Sequence": "",
+    "links": [25],
+    "Description": "選項1（洞悉失敗）：經濟檢定"
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,EconomicDevelopmentCheck,6);",
+    "links": [26],
+    "Description": "經濟檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「茶博士，一個月三百文…我們初來乍到，盤纏短缺，不知此地有何營生可做，還望指點一二。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [27, 28]
+  },
+  {
+    "entryID": 27,
+    "actorID": "3",
+    "text": "「呵呵，出門在外，手頭緊是常有的事。看你們也是爽快人。這村子裡啊，要說賺錢的門路去找村長問最快了。」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,EconomicDevelopment,10);",
+    "links": [37]
+  },
+  {
+    "entryID": 28,
+    "actorID": "3",
+    "text": "「營生？哼，我們這小地方，能有什麼大營生？你們自個兒去村裡轉轉吧，或許能碰上什麼零工。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [37]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,CharismaCheck,6);",
+    "links": [30],
+    "Description": "魅力檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「三百文？小事一樁！茶博士，先來壺貴店最好的茶！我與表妹也好歇歇腳。」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [31, 34]
+  },
+  {
+    "entryID": 31,
+    "actorID": "3",
+    "text": "「哦？這位小哥倒是好氣魄！」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "3",
+    "text": "「也罷，看小哥投緣，這壺『雲霧香茗』算我請了。至於營生嘛…村長那邊或許有些門路，你們不妨去問問。」",
+    "Sequence": "",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC8",
+    "text": "「表哥，你吹牛也不打草稿，我們哪有錢喝茶…還好這位茶博士大方。」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [37]
+  },
+  {
+    "entryID": 34,
+    "actorID": "3",
+    "text": "「呵呵，小哥口氣倒是不小。本店最好的『雲霧香茗』五十文一壺，承惠。先付錢，後上茶。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「呃…這個…」",
+    "Sequence": "SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC8",
+    "text": "「表哥…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=hurt);EnableCharacterExpression(1,MC8,Pain);",
+    "links": [3601]
+  },
+  {
+    "entryID": 3601,
+    "actorID": "3",
+    "text": "「看來是囊中羞澀了？唉，早說嘛。要去賺錢，可得多想想辦法，或者去村裡四處打聽打聽看有什麼門路。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "3",
+    "text": "「看兩位小英雄也是初出茅廬，人生地不熟。這樣吧，我給你們指條明路。『有間客棧』老闆娘『一枝花』可是我們這十里八鄉有名的美人，為人又熱情好客。」",
+    "Sequence": "",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "3",
+    "text": "「你們去那兒投宿，她說不定能給你們些方便，房錢嘛，也好商量。她對年輕的英雄俊傑，可是很照顧的！」",
+    "Sequence": "",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "3",
+    "text": "「快去吧，莫錯過了美人恩啊！」",
+    "Sequence": "",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC8",
+    "text": "「一枝花？！表哥，我們就先去那『有間客棧』看看！說不定真能便宜些！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「嗯，既然茶博士推薦，我們便去看看。安頓下來也是要緊事。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「[美人老闆娘？哼，我輩江湖兒女，豈會為女色所動…不過，客棧便宜點總是好的，嘻嘻！]」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,proud);",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC8",
+    "text": "「表哥，你可別又動什麼歪心思！我們現在是去安頓下來，不是去行俠仗義，更不准亂花錢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Anger);",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC8",
+    "text": "「那位一枝花要是真像茶博士說的那麼好心，肯給我們便宜點房錢就好，別的少想！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Anger);",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「我何時動過歪心思…我只是覺得，大丈夫行于世，當…呃…先解決食宿！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=hurt);EnableCharacterExpression(0,MC1,Nervous_2);",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC8",
+    "text": "「哼！總算說句實在話！快點去找活幹，不對，是快點去找客棧，填飽肚子才是正經事！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=angry);EnableCharacterExpression(1,MC8,Anger);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「是，是…靈犀女俠教訓的是…先去客棧。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=mindpain);",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「唉，英雄氣短…不對，是兄妹情長…」",
+    "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC0",
+    "text": "[PANEL=6]＊（前路漫漫，挑戰多多。說書江湖風光無限，現實第一步卻是為住處和盤纏發愁。那所謂的『美人』老闆娘，又會是怎樣一番境遇呢？你們能在此平凡小村找到安身之所嗎？）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [],
+    "Description": "主線起始結束，準備進入自由探索"
+  }
+] 
