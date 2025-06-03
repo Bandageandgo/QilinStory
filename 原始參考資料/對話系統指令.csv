@@ -17,7 +17,6 @@
 播放音效(播放一次會被取代),"AudioID,音效種類","PlayAudio(Bird,normal)",音效
 播放音效(播放一次),"AudioID,音效種類","PlayAudio(Bird,oneshot)",音效
 播放音效(循環),"AudioID,音效種類,初始音量,最終音量,淡入時間","PlayAudio(Fire,loop_Fade,0,1,2)",音效
-播放音效(特殊),音效種類,PlayAudio_Special(LobbyLocation);,音效
 關閉音效(播放一次會被取代),音效種類,StopAudio(normal);,音效
 關閉音效(循環),"音效種類,最終音量,淡出時間","StopAudio(loop,0,2);",音效
 開啟畫面特效,"ParticleID,功能","PlayOrStopParticle(BloodSplash_Middle,Play);",特效

@@ -1,0 +1,637 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（年輕郎中蹲在空地攤曬藥材，衣著邋遢，頭髮亂糟糟。但他眼神專注，捻動藥材的手法卻很精準。他口中念念有詞。）＊",
+    "Sequence": "",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "NPC3",
+    "text": "「唉，『龍銜草』、『鳳尾蕨』皆備，唯獨缺了關鍵的[em2]龜涎石[/em2]，如何是好...」",
+    "Sequence": "",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「先生眉頭緊鎖，莫非是為了採集珍稀藥材而煩惱？晚輩或許能效勞一二。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "NPC3",
+    "text": "「這位小兄弟有心了。實不相瞞，我正為一味名叫『龜涎石』的藥材發愁。此物是煉製『百歲羹』的關鍵。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "NPC3",
+    "text": "「聽聞村東的老學究可能知曉其下落，但他脾氣古怪，不知小兄弟可否替我去問問？若能尋得，必有重謝！」",
+    "Sequence": "",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "「重謝？表哥！聽起來是個賺錢的好機會！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [7, 10]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「行，我去會會那位怪學究。」",
+    "Sequence": "",
+    "links": [8],
+    "Description": "選項：接取任務 - 會會怪學究"
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「行，我去會會那位怪學究，希望能問到線索。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "NPC3",
+    "text": "「太好了！我在此靜候佳音！」",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「這事不簡單，我再想想。」",
+    "Sequence": "",
+    "links": [11],
+    "Description": "選項：不接取任務 - 再想想"
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「這事聽起來不簡單，我得先掂量掂量。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC8",
+    "text": "「唉，表哥，我們就這麼走了嗎？說不定能賺點盤CBN盤呢…」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "NPC3",
+    "text": "「那好吧，小兄弟若改了主意，隨時可來找我。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC0",
+    "text": "觸發支線任務：百歲羹",
+    "Sequence": "// TODO: Add TaskTriggerCommand for '百歲羹' here",
+    "Description": "任務觸發節點：百歲羹",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "NPC3",
+    "text": "「你找到了？！太好了，正是這『龜涎石』！」",
+    "Sequence": "",
+    "links": [16, 24]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「關於這龜涎石的品質…」",
+    "Sequence": "",
+    "links": [17],
+    "Description": "選項：關於龜涎石品質 (醫術檢定)"
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,MedicalExpertiseCheck,7);",
+    "links": [18],
+    "Description": "醫術檢定擲骰節點"
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「郎中請看，這龜涎石質地純粹，陰氣內斂，確是上品。此等品質想必能讓『百歲羹』藥效更佳。」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Question);",
+    "links": [19, 22]
+  },
+  {
+    "entryID": 19,
+    "actorID": "NPC3",
+    "text": "「哦？小兄弟好眼力！竟能看出此石的不凡！確實，以此石入藥，『百歲羹』功效必能增色不少！」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,MedicalExpertise,10);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "NPC3",
+    "text": "「就憑你這份眼力，我額外贈你50錢！」",
+    "Sequence": "ModifyData(Coin,MC1,50);",
+    "links": [21],
+    "Description": "醫術檢定成功，手動確認額外獎勵已發放：50錢"
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC8",
+    "text": "「哇！表哥你好懂啊！」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [25]
+  },
+  {
+    "entryID": 22,
+    "actorID": "NPC3",
+    "text": "「嗯，龜涎石確實難得。多謝你尋來。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [25]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「郎中，這是龜涎石。」",
+    "Sequence": "",
+    "links": [37],
+    "Description": "選項：直接交付龜涎石 (跳過品質檢定)"
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「關於酬勞和指點…」",
+    "Sequence": "",
+    "links": [26],
+    "Description": "選項：關於酬勞與指點 (口才檢定)"
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [27],
+    "Description": "口才檢定擲骰節點"
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「郎中，龜涎石尋來了。晚輩初出茅廬，見識淺薄，不知郎中能否在酬勞之外，提點一二？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [28, 31]
+  },
+  {
+    "entryID": 28,
+    "actorID": "NPC3",
+    "text": "「小兄弟謙遜好學，是塊好料子。我便將我行醫的一些心得《藥草辨識心得》贈與你，並額外指點你些醫術竅門，望你好生研習。」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,Persuasion,10);ModifyData(FeatExp,MC1,MedicalExpertise,15);",
+    "links": [29],
+    "Description": "口才檢定成功，手動確認額外獎勵已發放：《藥草辨識心得》已經發放"
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC8",
+    "text": "「表哥真會說話！郎中先生人真好！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「多謝先生金玉良言，晚輩受教了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": [32]
+  },
+  {
+    "entryID": 31,
+    "actorID": "NPC3",
+    "text": "「龜涎石尋來便好。江湖路遠，日後多看多學便是經驗了。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「好了，請收下龜涎石吧。」",
+    "Sequence": "",
+    "links": [37],
+    "Description": "選項：直接交付龜涎石 (跳過求教)"
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「郎中，這是你要的龜涎石。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "NPC3",
+    "text": "「小兄弟辛苦了。這龜涎石我收下了。」",
+    "Sequence": "",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "NPC3",
+    "text": "「這是謝禮100錢和幾瓶金創藥(小)。」",
+    "Sequence": "ModifyData(Coin,MC1,100);ModifyData(Inventory,AddItem,JinChuangYaoSmall,3);ModifyData(FeatExp,MC1,MedicalExpertise,10);",
+    "links": [40],
+    "Description": "任務基礎獎勵結算。醫術/口才檢定成功的額外獎勵已在前置節點發放。此處只發放基礎任務獎勵，並根據檢定情況調整郎中總結性對話。"
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC8",
+    "text": "「總算有些收穫了！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「多謝先生。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "NPC3",
+    "text": "「說來也怪，這小村子處處透著古怪…村後那片林子，聽說是古墓群，難怪有龜涎石…晚上最好別去。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（破屋內堆滿竹簡龜甲，散發霉味。戴老花鏡、頭髮花白的老學究正對著模糊的石碑拓片苦思，沒注意到你們。）＊",
+    "Sequence": "",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "NPC4",
+    "text": "「...非也非也...『玄鳥降兮』這句銘文，後半句究竟何意？...咳咳...」",
+    "Sequence": "",
+    "links": [45, 48]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「先生博學，不知可否請教一二？」",
+    "Sequence": "",
+    "links": [46],
+    "Description": "選項：向老學究請教"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「先生對古籍拓片似有精深研究，晚輩冒昧，不知可否請教一二？」",
+    "Sequence": "SetPortrait(MC1,pic=meditate);EnableCharacterExpression(0,MC1,Question);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "NPC4",
+    "text": "「哦？年輕人也懂這些？老夫研究的是先秦古篆，艱澀得很。若真懂，看看這拓片，『玄鳥降兮』，下句該接什麼？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [49, 53, 59, 65]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「離開。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：離開老學究"
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「依晚輩之見，或可是『四海一統』？此句氣勢恢宏。」",
+    "Sequence": "",
+    "links": [50],
+    "Description": "選項：猜謎『四海一統』 (學識 8)"
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,KnowledgeCheck,8);",
+    "links": [51],
+    "Description": "學識檢定擲骰節點 (四海一統)"
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「依晚輩之見，或可是『四海一統』？此句氣勢恢宏。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [52, 56]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「此句出自《漢書》，用以形容漢朝統一天下之盛。然『玄鳥降兮』乃商朝典故，兩者年代與意境或有差異。」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=proud);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "links": [55]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「莫非是應景之言，如『萬象更新』？」",
+    "Sequence": "",
+    "links": [54],
+    "Description": "選項：猜謎『萬象更新』 (學識 8)"
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,KnowledgeCheck,8);",
+    "links": [57],
+    "Description": "學識檢定擲骰節點 (萬象更新)"
+  },
+  {
+    "entryID": 55,
+    "actorID": "NPC4",
+    "text": "「嗯，少年人雖知其出處，卻非老夫所尋之意。再思之。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [47]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「這個...恕晚輩學識淺薄，『四海一統』只是隨口一猜。」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=Shy);",
+    "links": [58]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「莫非是應景之言，如『萬象更新』？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [60, 62]
+  },
+  {
+    "entryID": 58,
+    "actorID": "NPC4",
+    "text": "「『四海一統』？此句雖有氣勢，然與『玄鳥降兮』之古韻相去甚遠。少年人學問尚淺啊。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC1",
+    "text": "「晚輩曾在《詩經》中讀到『以奠厥邦』，不知是否切題？」",
+    "Sequence": "",
+    "links": [61],
+    "Description": "選項：猜謎『以奠厥邦』 (學識 8)"
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「此四字出自《周易》，形容天地煥然一新。然與商朝『玄鳥降兮』的典故關聯似乎不大。」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=proud);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "links": [64]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,KnowledgeCheck,8);",
+    "links": [67],
+    "Description": "學識檢定擲骰節點 (以奠厥邦)"
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「『萬象更新』...似乎有些牽強了。」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=Shy);",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "NPC4",
+    "text": "「『萬象更新』？與此古銘文意境不符，少年人再仔細推敲。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 64,
+    "actorID": "NPC4",
+    "text": "「言之有理，但亦非正解。再想想。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [47]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「若求吉利，不如接『福澤綿長』？」",
+    "Sequence": "",
+    "links": [66],
+    "Description": "選項：猜謎『福澤綿長』 (學識 8)"
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,KnowledgeCheck,8);",
+    "links": [73],
+    "Description": "學識檢定擲骰節點 (福澤綿長)"
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "「晚輩曾在《詩經》中讀到『以奠厥邦』，不知是否切題？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [68, 70]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「我想起來了！出自《詩經·商頌·玄鳥》：『天命玄鳥，降而生商…邦畿千里，維民所止，肇域彼四海…殷受命咸宜，百祿是何。』此詩正是頌揚商朝始祖契降世建商之事！」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=proud);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "NPC4",
+    "text": "「妙啊！妙啊！正是此句！此乃《商頌》之句！小友年紀輕輕，竟有如此學識，不凡啊！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [72]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「《詩經》...讓我想想...『以奠厥邦』...似乎記不太真切了。」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=Shy);",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "NPC4",
+    "text": "「唉，雖提及《詩經》，然未能闡其真意，看來還是差了些火候。可惜，可惜！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [79]
+  },
+  {
+    "entryID": 72,
+    "actorID": "NPC4",
+    "text": "「難得遇知音，老夫心情大好！」",
+    "Sequence": "",
+    "links": [76]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC1",
+    "text": "「若求吉利，不如接『福澤綿長』？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [74, 77]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「此為民間常用祝頌語，常見於祭祀，寓意吉祥。但若論古籍原文，恐非此句。」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=proud);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "NPC4",
+    "text": "「雖是吉言，卻非古銘之續。少年人需知其源流啊。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [47]
+  },
+  {
+    "entryID": 76,
+    "actorID": "NPC4",
+    "text": "「收集的寶貝不少，得送你點什麼…」",
+    "Sequence": "",
+    "links": [80]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "「『福澤綿長』...聽著吉利。」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=Shy);",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "NPC4",
+    "text": "「少年人，此言雖善，卻與古銘文風馬牛不相及也。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC8",
+    "text": "「就差一點...」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": []
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC8",
+    "text": "「這位老先生怎麼突然...」",
+    "Sequence": "SetPortrait(MC8,pic=think);",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "NPC4",
+    "text": "「有了！這塊龜涎石，陰氣重，但確實是難得古物...老夫本欲研究其紋路，現贈予你！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（獲得：[em2]龜涎石[/em2]）＊",
+    "Sequence": "ModifyData(Inventory,AddItem,GuixianStone,1);",
+    "links": [83, 91]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "「先生，我等盤纏拮据，可否請您資助一二？」",
+    "Sequence": "",
+    "links": [84],
+    "Description": "選項：向老學究索要盤纏 (口才 7)"
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,7);",
+    "links": [85],
+    "Description": "口才檢定擲骰節點 (索要盤纏)"
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「先生博古通今，晚輩斗膽，不知先生能否資助些許盤纏，以解燃眉之急？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [86, 89]
+  },
+  {
+    "entryID": 86,
+    "actorID": "NPC4",
+    "text": "「你這小友，倒也坦誠。也罷，老夫今日高興，便多贈你一些。這點小錢拿去，路上莫虧待自己。」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,Persuasion,10);ModifyData(Coin,MC1,100);",
+    "links": [87],
+    "Description": "+100錢"
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC8",
+    "text": "「（小聲）表哥真厲害，還能多要到錢！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「那就多謝先生了！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": []
+  },
+  {
+    "entryID": 89,
+    "actorID": "NPC4",
+    "text": "「嗯？年輕人學問不錯，怎地也沾染市儈氣息？老夫贈你古物已是看重，莫得寸進尺。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC8",
+    "text": "「（小聲）哎呀，好像惹老先生不高興了...」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [92]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC1",
+    "text": "「離開」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：離開老學究 (解謎成功後)"
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC1",
+    "text": "「嘿嘿...」",
+    "Sequence": "SetPortrait(MC1,pic=shy);",
+    "links": []
+  }
+]

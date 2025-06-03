@@ -1,0 +1,458 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（你來到村子附近的河邊，見一身材圓胖的青年道士，穿著略顯陳舊但乾淨的道袍，正坐在一塊光滑的大石頭上，一邊欣賞著河景，一邊悠哉地嗑著瓜子。見到你走近，他眼睛一亮，笑呵呵地從石頭上跳了下來，動作倒也還算靈活。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC20",
+    "text": "「哎呀！稀客稀客！這荒郊野嶺的，沒想到還能遇到像兄台這樣氣度不凡的人物！師兄弟們都叫我雍仔，剛下山不久，正準備前往英豪府一展拳腳，不知閣下是否也是江湖同道，有何指教？」",
+    "Sequence": "SetPortrait(MC20,pic=enthusiastic);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「道長果然也是同道中人！我與表妹此行，正是為了那英豪府的俠客遴選。若說指教，實不敢當，反倒是想請教道長，對這英豪府有何高見？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC20",
+    "text": "[panel=1]「哎呀！兄弟你這可問對人了！我跟你說，這英豪府啊，那可是咱們修道習武之人夢寐以求的魚躍龍門之地！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=excited);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC20",
+    "text": "[panel=1]「何止是盛事！那遴選可是三年一度，天下英雄豪傑雲集！一旦入選，不僅能得府中高人親授絕學，更有機會接觸到那些失傳的秘籍、稀世的奇珍異寶！你想想，那可是名揚天下，成為一代大俠的捷徑啊！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=boastful_or_excited);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "[panel=2]「聽起來是很誘人…但真有這麼好的事？該不會是道長您誇大其詞吧？」",
+    "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Question);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC20",
+    "text": "[panel=1]「姑娘此言差矣！我雍仔何曾說過虛話？這英豪府的威名，豈是空穴來風？再說，若非如此，又怎能吸引我這等茅山正宗的弟子前往？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC20,pic=proud_or_confident);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「道長所言甚是！那英豪府既有如此吸引力，想必其來歷也定然不凡，方能號召群雄吧？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC20",
+    "text": "[panel=1]「兄弟果然有見識！說起這英豪府的來歷，那可就源遠流長了！想當年漢室初建，妖邪四起，蒼生受苦。當時便有三位大英雄，不忍生靈塗炭，奏請高祖皇帝，廣納天下英雄豪傑，成立了這英豪府，專為誅滅妖邪，護佑我天下萬民！這可是代代相傳的使命啊！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=solemn_or_respectful);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「原來如此！想不到英豪府竟有這般輝煌的過去與濟世救民的重任！道長此番前往，定是為繼承先賢遺志，在遴選中一展抱負，為天下太平出力了！」",
+    "Sequence": "SetPortrait(MC1,pic=inspired_or_admiring);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC20",
+    "text": "[panel=1]「說得好！兄弟真乃我知音！我雍仔此番下山，正是要效仿先賢，憑我茅山所學，在那遴選之中拔得頭籌，揚名立萬是其次，最重要的是能入英豪府，為這天下蒼生盡一份心力！大丈夫立於天地間，豈能碌碌無為！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=heroic_or_passionate);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC20",
+    "text": "[panel=1]「不過嘛…嘿嘿，俗話說得好，英雄好漢也要吃飯不是？實不相瞞，貧道此行，這盤纏嘛…呃，略有些緊張。」",
+    "Sequence": "SetPortrait(MC20,pic=shy_or_embarrassed);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC20",
+    "text": "[panel=1]「本來想著一路趕到英豪府，但途徑這小溪村，卻讓我發現了些有意思的事情。」",
+    "Sequence": "SetPortrait(MC20,pic=thoughtful);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC20",
+    "text": "[panel=1]「兄弟，你有所不知，我茅山一派，除了降妖伏魔，對風水堪輿之術亦有涉獵。我瞧這小溪村依山傍水，看似平凡，但周遭氣場卻有些古怪。尤其是村後那片林子，隱隱透著一股……嗯，不同尋常的氣息。」",
+    "Sequence": "SetPortrait(MC20,pic=mysterious);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC20",
+    "text": "[panel=1]「我懷裡這張師門傳下的堪輿圖，對照此地山川走勢，你猜怎麼著？若我所料不差，這林子深處，極有可能藏著一座前朝的古墓！你想想，古墓之中，奇珍異寶、失傳秘籍，那可都是能助我們在英豪府站穩腳跟的好東西啊！」",
+    "Sequence": "SetPortrait(MC20,pic=scheming);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC8",
+    "text": "[panel=2]「古墓？道長，你說的這麼玄乎，不會是想騙我們去給你當苦力吧？而且，這窮鄉僻壤的，哪來什麼大人物的古墓？」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Question);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC20",
+    "text": "[panel=1]「哎呀，姑娘此言差矣！我雍仔豈是那等宵小之輩？我茅山道法，講究實事求是！這堪輿圖加上我的觀察，十有八九錯不了！再說，這等機緣，風險與收益並存嘛。若真能有所發現，所得你我二一添作五，如何？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC20,pic=evasive_but_confident);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC20",
+    "text": "[panel=1]「只是……那古墓若真存在，恐怕機關重重，妖邪滋擾亦未可知。貧道雖有些微末道行，但獨自一人前往，終究勢單力薄。若能有兄弟這等少年英俠相助，把握自然更大幾分。」",
+    "Sequence": "SetPortrait(MC20,pic=thoughtful_and_hopeful);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": 2,
+    "text": "[panel=6]＊（雍仔一番話說得是天花亂墜，英豪府的豪情壯志與古墓尋寶的神秘誘惑交織在一起。他那雙小眼睛在你身上滴溜溜地轉，似乎在盤算著什麼。）＊",
+    "Sequence": "",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,CharismaCheck,20);",
+    "links": [21],
+    "Description": "自動魅力檢定觸發點"
+  },
+  {
+    "entryID": 21,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "",
+    "links": [22],
+    "Description": "空內容緩衝節點，用於連接自動檢定結果"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
+    "Sequence": "SetPortrait(MC1,pic=excited);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你…你真的要去啊？聽起來很危險的樣子…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC20",
+    "text": "[panel=1]「好！這位兄弟果然是爽快人！有膽識！就這麼說定了！今晚三更，咱們在村後林子口那棵歪脖子老槐樹下會合，不見不散！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC20,pic=delighted_or_excited);",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「一言為定！」",
+    "Sequence": "SetPortrait(MC1,pic=determined);",
+    "links": []
+  },
+  {
+    "entryID": 26,
+    "actorID": 2,
+    "text": "[panel=6]＊（在廢棄小屋的後方，一個瘦弱的小女孩瑟縮在角落，緊緊抱著一個有些髒舊的布娃娃。她低著頭，似乎在躲避著什麼，眼神充滿驚恐與不安。）＊",
+    "Sequence": "",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC8",
+    "text": "「妳是不是肚子餓了？要吃東西嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": 2,
+    "text": "[panel=6]＊（小女孩聞聲抬頭，看到你們，眼神中的驚恐更甚，猛地搖了搖頭，一句話也不說，只是將布娃娃抱得更緊，手指無意識地指向不遠處的河邊，臉上滿是恐懼。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,CharismaCheck,5);",
+    "links": [31],
+    "Description": "魅力檢定擲骰節點 - 小花互動"
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "[em2][魅力檢定][/em2]「不哭不哭，眼淚是珍珠，本少俠在此，定護妳周全。妳若有何委屈，儘管說與我聽。」",
+    "Sequence": "",
+    "links": [32],
+    "Description": "選項：魅力檢定安慰小花"
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「不哭不哭，眼淚是珍珠，本少俠在此，定護妳周全。妳若有何委屈，儘管說與我聽。」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [33, 37]
+  },
+  {
+    "entryID": 33,
+    "actorID": 2,
+    "text": "[panel=6]＊（小女孩似乎感受到你們並無惡意，緊張的神情稍緩。她遲疑了一下，從小小的口袋裡摸出一枚晶瑩剔透、如同淚珠般的小石頭，顫抖地遞向你們。）＊",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Ability_CHA,10);ModifyData(Inventory,AddItem,RiverGodsTear,1);",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「這是…？」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC8",
+    "text": "「好漂亮的石頭！像是眼淚一樣…小妹妹，這是給我們的嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": 2,
+    "text": "[panel=6]＊（小女孩輕輕點了點頭，隨即又迅速低下頭。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [39] 
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「不哭不哭…嗯…小妹妹別怕，有什麼事慢慢說，本少俠會幫妳的。」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": 2,
+    "text": "[panel=6]＊（儘管你試圖安撫，小女孩依然驚恐萬分，緊緊抱著布娃娃，完全不理會你們，只是不斷搖頭，眼神充滿恐懼。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「看來此地確實有些古怪…小妹妹，妳先在此處藏好，莫要亂跑。我等稍後再去尋村中長者，看看是誰家的孩子走失了。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC8",
+    "text": "「表哥，她看起來好可憐…我們真的就這樣走了嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=pain);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「此女身世不明，言語不通，我等亦不宜久留。先去別處探探，或能從那位阿婆口中問出些許端倪。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": []
+  },
+  {
+    "entryID": 42,
+    "actorID": 2,
+    "text": "[panel=6]＊（河邊的小破廟前，一位滿臉皺紋的阿婆正佝僂著身子整理香案。她注意到你們走近，立刻板起臉孔，眼神銳利地上下打量著你們，顯得十分不友善。）＊",
+    "Sequence": "",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "NPC6",
+    "text": "[panel=1]「哼！又是外鄉來的遊手好閒之輩！看你們細皮嫩肉的，不像肯吃苦的樣子！我們這小溪村廟小，可容不下你們這些大佛！快走快走！別在這兒礙眼！」",
+    "Sequence": "EnableCharacterExpression(1,NPC6,Anger);",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「老人家息怒，我與表妹途徑此地，盤纏短缺，只是想尋個落腳之處，並打探些許營生，絕無他意。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC8",
+    "text": "[panel=2]「（小聲說）表哥，這阿婆好兇喔…比茶博士還難說話。」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "NPC6",
+    "text": "[panel=1]「少在這老婆子面前假惺惺！我看你們就是不懷好意！趕緊滾，別逼我老婆子動粗！」",
+    "Sequence": "EnableCharacterExpression(1,NPC6,Anger);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「好吧，阿婆，我等這便離開。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=mindpain);",
+    "links": []
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「阿婆，這塊石頭在路邊撿的，看起來油光水滑，還挺沉，您瞧瞧？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [49],
+    "Description": "給予阿婆閃亮的石頭"
+  },
+  {
+    "entryID": 49,
+    "actorID": "NPC6",
+    "text": "[panel=1]「石頭？我看你們是『茅坑裡的石頭』──又臭又硬！怎麼講都講不聽，非要賴在這窮鄉僻壤做什麼？想沾染什麼晦氣不成？！」",
+    "Sequence": "SetPortrait(NPC6,pic=angry);EnableCharacterExpression(1,NPC6,Anger);",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC8",
+    "text": "[panel=2]「（小聲）表哥，阿婆的比喻…真夠味。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=happy);",
+    "links": []
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「阿婆，這把木梳雖舊，但齒還算整齊，或許您用得上？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [52],
+    "Description": "給予阿婆木梳"
+  },
+  {
+    "entryID": 52,
+    "actorID": "NPC6",
+    "text": "[panel=1]「木梳？我看你們是『沒事找梳』──自尋煩惱！這村子的渾水也是你們能蹚的？趁早給我滾蛋，免得惹禍上身，到時哭都沒眼淚！」",
+    "Sequence": "SetPortrait(NPC6,pic=angry);EnableCharacterExpression(1,NPC6,Anger);",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC8",
+    "text": "[panel=2]「（小聲）我們好心給東西，怎麼還被罵呀…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=dislike);",
+    "links": []
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [55],
+    "Description": "給予阿婆河神的眼淚"
+  },
+  {
+    "entryID": 55,
+    "actorID": "NPC6",
+    "text": "[panel=1]「河神的眼淚？哼！我看是『禍水東流，淚不能止』！你們這些外鄉人，少管閒事！這五十文錢拿去，算老婆子我買了這晦氣玩意兒！立刻給我滾，再敢去招惹小花，我老婆子跟你們沒完！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC6,pic=angry);EnableCharacterExpression(1,NPC6,Anger);ModifyData(Coin,MC1,50);",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇！有錢拿耶！謝謝阿婆！您真是刀子嘴豆腐心！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "NPC6",
+    "text": "[panel=1]「豆腐心？我看你們是豬油蒙了心！拿了錢就快滾！別逼我老婆子動粗！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(NPC6,pic=angry);EnableCharacterExpression(1,NPC6,Anger);",
+    "links": []
+  },
+  {
+    "entryID": 58,
+    "actorID": 2,
+    "text": "[panel=6]＊（當你將三件不起眼的小物件都交給阿婆後，她緊繃的臉孔終於鬆弛下來，長長地嘆了口氣，眼神複雜地望著你們，又似乎是望向波光粼粼的河面，帶著一絲絕望。）＊",
+    "Sequence": "",
+    "links": [59],
+    "Description": "條件觸發：三樣物品均已給予阿婆"
+  },
+  {
+    "entryID": 59,
+    "actorID": "NPC6",
+    "text": "[panel=1]「你們這兩個傻孩子…何苦往這漩渦裡跳…唉…也罷，這些東西你們拿去，算是老婆子我老婆子最後能為你們做的了。快點離開這裡，走得越遠越好，永遠…永遠都不要再回頭！記住老婆子我的話，這小溪村…它要吃人了！」",
+    "Sequence": "ModifyData(AbilityExp,MC1,Ability_STR,100);ModifyData(AbilityExp,MC1,Ability_INT,100);ModifyData(AbilityExp,MC1,Ability_CHA,100);",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「多謝阿婆厚贈。但您說的『吃人』…究竟是何意？小花她…」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "NPC6",
+    "text": "[panel=1]「不准問！不准提！你們再不走，就真的走不掉了！滾！都給我滾——！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC6,pic=angry);EnableCharacterExpression(1,NPC6,Anger);",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這位阿婆…她好像很害怕什麼。她越是這樣，我越覺得小花和這個村子有大問題。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Meditate);",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "「唉，罷了，先看看情況。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);",
+    "links": []
+  }
+]

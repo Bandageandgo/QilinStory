@@ -1,0 +1,489 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（村口大槐樹下，布滿青苔的石桌靜立。桌面刻著未完棋局，棋子散落蒙塵，旁有泛黃舊棋譜。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「這棋局…佈局精妙，隱有殺伐之氣。似是古局。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "「下棋？表哥你會嗎？這也能賺錢？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=expect);",
+    "links": [3, 7]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「試試解這殘局。」",
+    "Sequence": "",
+    "links": [4],
+    "Description": "選項1：試試解這殘局"
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「這殘局...有點意思，手癢了，試試看！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Meditate);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（你拂去棋盤灰塵，沉思起來。黑白交錯間，殺機四伏…）＊",
+    "Sequence": "",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": 0,
+    "text": "觸發兵法小遊戲",
+    "Sequence": "// TODO: Add MinigameTriggerCommand for '兵法小遊戲' here. Assuming minigame outcome determines next link from engine.",
+    "links": [10, 14],
+    "Description": "小遊戲觸發節點：兵法小遊戲 (手動選擇成功/失敗路徑)"
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「算了，正事要緊。」",
+    "Sequence": "",
+    "links": [8],
+    "Description": "選項2：離開棋局"
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「罷了，眼下還有更要緊的事情。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": []
+  },
+  {
+    "entryID": 9,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（你成功解開殘局！雖只是遊戲，亦感精神一振。）＊",
+    "Sequence": "IsPassDice() == true;ModifyData(FeatExp,MC1,MilitaryTactics,20);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC8",
+    "text": "「哇！表哥你好厲害！但這破紙片…能賣錢嗎？看起來很舊了。」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（你對此棋局的解法已瞭然於胸）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": 0,
+    "text": "獲得【棋譜殘頁】",
+    "Sequence": "ModifyData(Inventory,AddItem,棋譜殘頁,1);",
+    "links": [],
+    "Description": "物品獲得：棋譜殘頁"
+  },
+  {
+    "entryID": 13,
+    "actorID": 2,
+    "text": "[PANEL=6]＊（此局變幻莫測，你苦思冥想，仍不得其解，只好暫且放棄。）＊",
+    "Sequence": "IsPassDice() == false;",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「此局變幻莫測…暫時無解。唉。」",
+    "Sequence": "SetPortrait(MC1,pic=mindpain);EnableCharacterExpression(0,MC1,Pain);",
+    "links": []
+  },
+  {
+    "entryID": 15,
+    "actorID": "NPC2",
+    "text": "「喲！哪來的年輕人？面生得很啊！歡迎歡迎！」",
+    "Sequence": "EnableCharacterExpression(1,NPC2,proud);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC8",
+    "text": "[panel=2]「村長好！聽聞此地前往[em2]雲中[/em2]的馬車，似乎要等上一個月才能出發？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Question);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "NPC2",
+    "text": "「唉，姑娘消息靈通！確實如此。近來山頭不太平，鬧山賊，縣衙下了文，為了大家夥兒的安全，驛站的馬車得等一個月後才能通行。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "NPC2",
+    "text": "「看你們倆風塵僕僕…莫不是急著趕路，又為這一個月的食宿盤纏發愁吧？」",
+    "Sequence": "EnableCharacterExpression(1,NPC2,Question);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「呃…村長慧眼。我等確有此憂慮，一文錢難倒英雄漢，也是常事…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "NPC2",
+    "text": "「哈哈哈！好說！年輕人出門在外，手頭緊正常！有什麼不好意思的！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "NPC2",
+    "text": "「放心！咱村活計有的是！肯賣力氣，一個月的食宿不成問題！就看你們想不想幹！」",
+    "Sequence": "",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「村長您儘管吩咐！無論是砍柴挑水、餵雞放牛這些事，我們兄妹倆熟練得很，保證給您辦得利利索索的！有什麼活兒儘管交給我們！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,proud);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "NPC2",
+    "text": "「哈哈，有幹勁！村東郎中似乎缺人採藥；村西牧羊人羊多；村里的怪學究給錢大方。你們可以自個兒去問問！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「村長，除了方才說的營生，我們還想向您打聽這附近可有什麼去處？我倆初入江湖，總想著多見識些新奇事物，也好增廣見聞。」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Question);",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "NPC2",
+    "text": "「哈哈，咱們這小村要說好玩，村後的小溪可以釣魚，搞不好能釣到大傢伙，茶攤的茶博士最愛這一味。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "NPC2",
+    "text": "「但…只有[em2]後山那片林子，絕對不能去！那裡頭邪門得很，不是鬧著玩的。[/em2] 。好了，就這樣吧，我要忙者鍛鍊了。」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「村長，村口石桌那盤殘局，我一時技癢，推演後略有心得。您對棋藝是否亦有涉獵？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "NPC2",
+    "text": "「哦？！小兄弟，你說的是大槐樹下那盤棋？那可是《弈星譜》上的殘局！你當真解開了？」",
+    "Sequence": "",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「正是那局。小弟僥倖參破其中變化。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "NPC2",
+    "text": "「踏破鐵鞋無覓處啊！小兄弟，老哥鑽研那棋局多日，就差臨門一腳！你可願將此解法告知於我？或是有何想法？」",
+    "Sequence": "",
+    "links": [31, 36, 41, 51]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「村長您別客氣，這棋譜能幫上您，我很樂意直接給您！」",
+    "Sequence": "",
+    "links": [32],
+    "Description": "選項A：慷慨告知棋譜"
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「區區棋局解法，何足掛齒。我願將心得與村長共享。」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "NPC2",
+    "text": "「哈哈哈！小兄弟果然爽快！有氣魄！老哥我欣賞你！」",
+    "Sequence": "",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "NPC2",
+    "text": "「小兄弟這真是幫了我大忙！老哥我無以為報，但我對鍛鍊健身一道頗有心得。」",
+    "Sequence": "",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "NPC2",
+    "text": "「我看小兄弟你很勇喔，不如就讓我來好好操練你一番，保證讓你筋骨更上一層樓！」",
+    "Sequence": "",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇！村長要親自操練表哥？太好了！這可真是天上掉下來的好處，不用花半文錢就能變強壯！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥你平常不是能躺著就不坐著，能坐著就不站著，還老喊肚子餓嗎？這下可有得你[em2]好好活動筋骨[/em2]了！嘻嘻。」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「村長厚愛，晚輩愧不敢當！定當竭盡所能，不負村長一番栽培！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,proud);",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「咳！靈犀！表哥我…我這是為了磨礪武藝，日後方能更好地行俠仗義、保護…保護弱小！豈是妳說的那般…那般懶散！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=tired);",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "NPC2",
+    "text": "「好啦！閒話少說，向右看~齊！！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「蛤！？」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);BeginMiniGame(Training,Default,Strength,Default);",
+    "links": [42],
+    "Description": "武力鍛鍊小遊戲觸發"
+  },
+  {
+    "entryID": 42,
+    "actorID": "NPC2",
+    "text": "「小兄弟不錯喔！看來你已經掌握了訣竅，那我就傳授給你[em2]挨打的訣竅[/em2]！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「蛤？哦，挨打的訣竅，那真是太棒了…」",
+    "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "NPC2",
+    "text": "「哼，你小子還是沒抓到訣竅！聽著，想當大俠，活命是根本！要是連自己都保不住，哪還有什麼輸出可言？所以，這第一堂課，就是教你怎麼在挨打時護住要害。看仔細了，就像這樣…如此這般…」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(Skill,MC1,IHP_Versatile);",
+    "links": [],
+    "Description": "獲得卡牌:血量提升!!"
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「村長，這棋譜您想要的話，您看著給個價錢就行。」",
+    "Sequence": "",
+    "links": [46],
+    "Description": "選項B：普通出售棋譜"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「相逢便是有緣。此解法對我而言不過一時消遣，村長若真心需要，出個合適的價錢便可。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "NPC2",
+    "text": "「也好。我出一百五十文，買你的解法，如何？」",
+    "Sequence": "",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC8",
+    "text": "「一百五！好耶！表哥快答應！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「成交。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);ModifyData(Coin,MC1,150);",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「雖不多，但也是進項。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": []
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「村長，這棋譜我可是花了不少功夫才弄明白的。您是愛棋之人，您覺得它值多少？」",
+    "Sequence": "",
+    "links": [52],
+    "Description": "選項C：口才檢定出售棋譜"
+  },
+  {
+    "entryID": 52,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,12);",
+    "links": [53],
+    "Description": "選項C的空對話擲骰節點"
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「村長明鑑，此棋局解法頗為精妙，晚輩也是耗費了不少心神才得以參透。看村長也是愛棋之人，想必能識其價值，不知村長願出何價交換此心得？」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Question);",
+    "links": [54, 57]
+  },
+  {
+    "entryID": 54,
+    "actorID": "NPC2",
+    "text": "「嗯…此解法確是難得…」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,Persuasion,10);",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "NPC2",
+    "text": "「也罷！看你我投緣，四百文！就這麼定了！」",
+    "Sequence": "ModifyData(Coin,MC1,400);",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC8",
+    "text": "「哇！四百錢！表哥太厲害了！發財了！可以吃好多頓綠豆糕了！」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Shock);",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「咳咳，小場面。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": []
+  },
+  {
+    "entryID": 58,
+    "actorID": "NPC2",
+    "text": "「年輕人，這解法雖好，但漫天要價可不好。我最多出一百五十文。不願就算了。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC8",
+    "text": "「唉…」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「成交。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);ModifyData(Coin,MC1,150);",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「雖不多，但也是進項。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": []
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「不了，這棋譜挺有意思的，我想自己再研究研究。」",
+    "Sequence": "",
+    "links": [63],
+    "Description": "選項D：保留棋譜"
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "「多謝村長美意。不過此棋局解法精妙絕倫，晚輩還想自行再參詳一番，暫不作交換了。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "NPC2",
+    "text": "「唉，那可惜了…人各有志。」",
+    "Sequence": "",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC8",
+    "text": "「表哥？為什麼不換呀？錢不夠怎麼辦？」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Question);",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC1",
+    "text": "「此殘頁或許另有玄機，不可輕易示人。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Meditate);",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "「萬一是絕世武功秘籍呢？那我不就虧大了。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": []
+  }
+]

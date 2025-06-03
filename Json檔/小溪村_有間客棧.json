@@ -1,0 +1,112 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（循著茶博士的指點，你們來到村子稍偏僻處的一間客棧前。客棧的招牌有些陳舊，上書「有間客棧」四字，門扉半掩，隱約能聞到飯菜的香氣和一些輕微的談笑聲，但看不清裡面的情形。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這就是茶博士說的『有間客棧』了！那位『一枝花』老闆娘真的會像他說的那麼好嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Question);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);",
+    "links": [3, 9]
+  },
+  {
+    "entryID": 3,
+    "actorID": 2,
+    "text": "[panel=6]＊（你們清點了一下身上的錢財，正好足夠支付一個月的房錢。）＊",
+    "Sequence": "CurrentCoin >= 300;",
+    "links": [4, 7],
+    "Description": "判斷身上的錢是否大於等於300錢"
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「決定了！我們就在此住下！」",
+    "Sequence": "",
+    "links": [5],
+    "Description": "選項1：決定住下"
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「好！大丈夫一言既出，便不更改！我們這就進去，會一會那位『一枝花』老闆娘，也順道解決我等的食宿大計！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);ModifyData(Coin,MC1,-300);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "[panel=2]「太好了！總算有個落腳的地方了！不知道客棧的飯菜好不好吃…那位老闆娘…真的像朵花嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [14]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「再等等，我們還想在村裡看看。」",
+    "Sequence": "",
+    "links": [8],
+    "Description": "選項2：再等等"
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「嗯…雖然盤纏是夠了，但天色尚早，我們不妨再在村中探查一番，或許還有其他機緣。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);",
+    "links": [15]
+  },
+  {
+    "entryID": 9,
+    "actorID": 2,
+    "text": "[panel=6]＊（你們摸了摸錢袋，裡面的銅板叮噹作響，卻遠遠不夠那三百錢的房錢。）＊",
+    "Sequence": "CurrentCoin < 300;",
+    "links": [10],
+    "Description": "判斷身上的錢是否小於300錢"
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC8",
+    "text": "[panel=2]「唉…表哥，我們的錢還差好多呢…看來今天是住不成客棧了。」",
+    "Sequence": "SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「無妨！英雄不論出身低，好漢不怕起更遲！區區盤纏，豈能難倒我？我們再去尋些營生便是！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=hurt);EnableCharacterExpression(0,MC1,Nervous_2);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": 2,
+    "text": "[panel=6]＊（看來，想要在這「有間客棧」落腳，還得再加把勁才行。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 14, 
+    "actorID": 2,
+    "text": "[panel=6]＊（你們深吸一口氣，推開了「有間客棧」的門。門後的景象與那位傳說中的「一枝花」老闆娘，都將在你們安頓下來後逐一揭曉。小溪村的初步探索暫告一段落，接下來的一個月，又會有怎樣的奇遇等待著你們呢？勞碌奔波總算有了個結果，你們決定先好好休息一晚。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [],
+    "Description": "第一幕結束 - 標準結局達成"
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC8",
+    "text": "[panel=2]「好吧，聽表哥的。不過可別逛太晚，我肚子又餓了。」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": []
+  }
+]

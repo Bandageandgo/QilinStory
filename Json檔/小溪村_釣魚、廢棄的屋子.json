@@ -1,0 +1,249 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（你來到河邊，見水波盪漾，偶有魚兒躍出水面。此地似乎是個不錯的釣點。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "「釣魚？如果能釣到大魚拿去賣錢就好了！表哥，我們的盤纏可不多了！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=expect);",
+    "links": [3, 13]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「試試手氣，釣幾尾魚上來。」",
+    "Sequence": "",
+    "links": [4],
+    "Description": "選項1：[花費半個時辰]試試手氣"
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「好，今日便在此處試試身手，看能不能有所斬獲。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);BeginMiniGame(Fishing,Default,Default,Default);",
+    "links": [5],
+    "Description": "釣魚小遊戲觸發點"
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「呼，這釣魚看似簡單，卻也考驗耐心與技巧。所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);ModifyData(LifeExp,100);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": 2,
+    "text": "[panel=6]＊（在江湖中，諸如釣魚、煎藥、挖礦等**工作**，不僅能賺取些許盤纏，更能積累寶貴的**生活經驗**。這些經驗能助你領悟**獨特技能**，正所謂條條大路通大俠。）＊",
+    "Sequence": "",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「哇！這是…這是什麼魚？通體金黃，莫非是傳說中的黃金魚？！看來今日運氣當真不錯！」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "links": [8],
+    "Description": "釣到黃金魚分支"
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC8",
+    "text": "「黃金魚？！表哥！我們發財啦！這魚一定很值錢！快想想拿去哪裡賣個好價錢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「此等奇物，確實罕見。不僅能解燃眉之急，或許還有其他妙用。靈犀，我可真行！對吧？對吧！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,proud);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC8",
+    "text": "「好啦，好啦。」",
+    "Sequence": "DisableCharacterExpression(0);EnableCharacterExpression(1,MC8,Meditate);DisableCharacterExpression(1);SetPortrait(MC8,pic=dislike);",
+    "links": []
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「還是先辦正事要緊。」",
+    "Sequence": "",
+    "links": [14],
+    "Description": "選項2：離開釣魚"
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「釣魚雖好，但眼下還有更要緊的事。我們還是先去別處看看吧。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": []
+  },
+  {
+    "entryID": 15,
+    "actorID": 2,
+    "text": "[panel=6]＊（你們在村中角落發現一間廢棄的民宅。門扉虛掩，輕輕一推便嘎吱作響地開了。屋內光線昏暗，四壁掛滿了厚厚的蛛網，空氣中瀰漫著塵土與腐朽的氣味，看起來已久無人居。角落裡，堆著一堆還算乾淨的稻草，像是有人曾在此歇過腳。）＊",
+    "Sequence": "",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「嘿，這屋子雖然破舊，倒也算個遮風避雨的去處。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Question);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC8",
+    "text": "「表哥，這裡好陰森啊，感覺冷颼颼的…我們還是別久留了。萬一…萬一有什麼蛇蟲鼠蟻，或是更嚇人的東西怎麼辦？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？再說，我輩江湖中人，隨遇而安乃是家常便飯。走了這半日，正好有些腿痠，容我在此打個盹，瞇上一小會兒，養足精神再賺錢不遲。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC8",
+    "text": "「(跺了跺腳)表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Anger);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「好啦好啦，就一小會兒，不會耽誤正事的。說不定還能夢到些高人指點呢，嘿嘿。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=playful);",
+    "links": [21, 36]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「就在這草堆上小憩片刻。」",
+    "Sequence": "",
+    "links": [22],
+    "Description": "選項1：[花費半個時辰]小憩片刻"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「就這麼說定了！天塌下來有高個子頂著，我先睡為敬！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": 2,
+    "text": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。蕭靈犀無奈地在一旁警戒。時間很快過去了…）＊",
+    "Sequence": "",
+    "links": [24, 29],
+    "Description": "條件判斷：身上是否有河神的眼淚"
+  },
+  {
+    "entryID": 24,
+    "actorID": 2,
+    "text": "[panel=6]＊（睡夢之中，燕不凡感覺自己彷彿沉入了一片清涼的水中。朦朧間，他似乎看到不遠處的河岸邊，有一個模糊的女子身影，正對著水面低泣。她的哭聲細微而悲傷，手中似乎緊握著什麼東西，散發著微弱的光芒。那股悲傷的氛圍如同漩渦般將燕不凡的意識捲入，一段段模糊而破碎的記憶片段湧上心頭…）＊",
+    "Sequence": "HasRiverGodsTear == true;",
+    "links": [25],
+    "Description": "玩家觸發回憶系統：『河神之淚的記憶碎片』。此處將調用獨立的回憶事件，處理回憶演出及相關邏輯。"
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「（不…不要…那不是…） 」",
+    "Sequence": "SetPortrait(MC1,pic=sleep_pain);",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": 2,
+    "text": "[panel=6]＊（燕不凡猛地驚醒，額上滲著冷汗，眼神還有些渙散，似乎尚未從深邃的記憶中完全脫離。）＊",
+    "Sequence": "SetPortrait(MC1,pic=surprise); EnableCharacterExpression(0,MC1,Nervous_2);",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥！你還好嗎？你剛剛樣子好嚇人，是不是做噩夢了？臉色好差，還不停冒冷汗！」",
+    "Sequence": "SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「（又是那個場景…那雙眼睛…不，不會的…）咳…咳…沒…沒事！靈犀妳別擔心，作了個有點刺激的夢罷了，大概是話本看多了，夢見自個兒成了大英雄，跟妖魔鬼怪大戰了三百回合！哈哈，醒來還有點喘不過氣呢！」",
+    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC1,pic=mindpain); EnableCharacterExpression(0,MC1,Meditate);SetPortrait(MC1,pic=playful); EnableCharacterExpression(0,MC1,Proud);",
+    "links": [33]
+  },
+  {
+    "entryID": 29,
+    "actorID": 2,
+    "text": "[panel=6]＊（燕不凡在草堆上打了個盹，雖然環境簡陋，倒也睡得安穩。一覺醒來，只覺得旅途的疲憊消減了不少，手腳也恢復了些力氣。）＊",
+    "Sequence": "HasRiverGodsTear == false;ModifyData(PlayerHP,MC1,Increase,20);ModifyData(LifeExp,MC1,Resting,5);",
+    "links": [30],
+    "Description": "系統訊息：體力恢復20點，生活經驗+5"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「啊——舒服！靈犀啊，妳就別板著臉了，你看我這不是精神百倍了嗎？果然忙裡偷閒才是硬道理。」",
+    "Sequence": "SetPortrait(MC1,pic=normal);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC8",
+    "text": "[panel=2]「哼，總算是醒了！表哥，你睡得可真沉，我都快擔心死你了！叫都叫不醒！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=angry);EnableCharacterExpression(1,MC8,Anger);",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC8",
+    "text": "[panel=2]「好啦好啦，不管是大戰三百回合還是睡得像頭豬，此地陰森森的，我們還是趕快離開這個鬼地方，去找點正經事做吧！你的盤纏可還沒著落呢！」",
+    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC8,pic=worried); EnableCharacterExpression(1,MC8,Relief);",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「嗯，嗯，靈犀教訓的是！不過這免費的床鋪，偶爾體驗一下也不錯嘛，哈哈！走，賺錢去！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);",
+    "links": []
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "「靈犀說得有理，此地不宜久留。」",
+    "Sequence": "",
+    "links": [37],
+    "Description": "選項2：離開廢棄的屋子"
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「呃…好吧，既然靈犀妳這麼說，此地或許真有些不妥。我們還是謹慎為上，另尋他處歇腳便是。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Shy);",
+    "links": []
+  }
+]
