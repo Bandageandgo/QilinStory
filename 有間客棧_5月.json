@@ -1,0 +1,336 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "2",
+    "text": "[panel=6]＊（又是一番藥浴的煎熬，但這一次，你感覺體內的暖流愈發清晰，原本堵塞的經脈似乎也通暢了不少。終於，你緩緩睜開了沉重的眼皮。）＊",
+    "Sequence": "",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「我…我這是…在哪裡…靈犀？」",
+    "Sequence": "SetPortrait(MC1,pic=hurt);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC8",
+    "text": "[panel=1]「表哥！你終於醒了！太好了！你嚇死我了！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC20",
+    "text": "[panel=3]「兄弟，你可算活過來了！再不醒，胖爺我可要給你準備後事了！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC20,pic=relieved_happy);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "NPC3",
+    "text": "[panel=4]「喲，小子，醒了？命還挺硬朗嘛。感覺怎麼樣，是不是覺得脫胎換骨，想去跟牛打一架了？」",
+    "Sequence": "SetPortrait(NPC3,pic=Laugh);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「多謝先生相救…我感覺…好多了，只是有些脫力…對了，那怪物…」",
+    "Sequence": "SetPortrait(MC1,pic=hurt);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "NPC3",
+    "text": "[panel=4]「那勞什子怪物，先別管它。你小子這次能活下來，可真是祖上積德。那屍氣凶得很，換了旁人早挺屍了。不過嘛，你這身體倒是有點意思…像是藏了什麼寶貝在自行護主似的，這才給你吊住一口氣。當然啦，主要還是我出手及時，不然啊，哼哼…」",
+    "Sequence": "SetPortrait(NPC3,pic=Surprise);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "NPC3",
+    "text": "[panel=4]「(沉吟片刻，繼續說道)你體內的屍氣，我去了大半，但還有些殘渣餘孽，經脈也傷得不輕。小子，以後想在這江湖上混，光靠現在這三腳貓的拳腳功夫，碰上硬茬子可就吃大虧了，小命都可能不保哦。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "NPC3",
+    "text": "[panel=4]「我看你小子根骨還行，勉強算是塊學武的料。正好，大叔我閒來無事，也略懂幾手吐納練氣的玩意兒。你要是樂意磕頭拜師…咳，開個玩笑。你要是願意學，我便傳你一套基礎心法，保你固本培元，傷好得快些。將來嘛，勤快點練，至少能多挨幾頓揍，碰上麻煩事也能多幾分保命的本錢。怎麼樣，小子，考不考慮？」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「張先生大恩，晚輩沒齒難忘！若能得先生傳授內功，更是三生有幸！請受晚輩一拜！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "NPC3",
+    "text": "[panel=4]「行了行了，小子，用不著這麼大陣仗，我這人不受這套。救死扶傷嘛，不過是舉手之勞。安心歇着，把身子養利索了，我自然會把那套玩意兒教給你。可別到時候說我這師傅藏私啊，哈哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC3,pic=Laugh);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "2",
+    "text": "[panel=6]＊（一場驚心動魄的古墓探險，雖然讓你險些喪命，卻也意外獲得了修習內功的機緣。江湖之路，禍福相依，未來的一切，仍是未知之數。）＊",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "NPC3",
+    "text": "[panel=1]「小子，你這身體底子古怪得很，尋常的練法怕是事倍功半。要讓你短時間內有些長進，能應付點場面，看來得用些非常的法子…」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「是的，師父。」",
+    "Sequence": "SetPortrait(MC1,pic=normal);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "NPC3",
+    "text": "[panel=1]「這部[em2]長生經[/em2]心法，博大精深，一時半刻要你融會貫通是不可能的。為今之計，只有讓你先強記總綱要訣，打下個根基再說。你且聽好了，而且叫我大叔就行，別師父師父的，聽著彆扭。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「好的，大叔。」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "NPC3",
+    "text": "[panel=1]「嗯，聽好了，『丹田如爐，真火自生；任督齊開，內息自轉。氣走三關，貫通百脈；心守玄牝，靜照無邊。[em2]陰陽交泰，如日如月[/em2]；形隨氣化，意領神牽。動中有靜，靜中藏剛；返照歸一，萬法皆焚。』」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "NPC3",
+    "text": "[panel=1]「(念到此處，微微頷首，隨即陷入沉思，開始自言自語)嗯…這小子體內似乎有股潛藏的力量與常人不同，若是強行催動，不知是福是禍…這[em2]長生經總綱[/em2]，若要他迅速上手，須得配合些特殊的行氣導引法門…」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "NPC3",
+    "text": "[panel=1]「尋常人學此法，單是理解這[em2]玄牝[/em2]，悟性稍低者便無法。他這情況…或許可以讓他先行其表，再悟其裡…」",
+    "Sequence": "SetPortrait(NPC3,pic=Pain);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "NPC3",
+    "text": "[panel=1]「唉，想這些作甚…嗯，剛才我念到哪了？哦，是[em2]心守玄牝，靜照無邊[/em2]對，就是這句。那下一句是…呃…」",
+    "Sequence": "EnableCharacterExpression(1,NPC3,Question);",
+    "links": [21, 25, 29, 33]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC0",
+    "text": "「大叔，莫非是『陰陽交泰，如日如月』？」",
+    "Sequence": "",
+    "links": [22],
+    "Description": "選項：提示口訣『陰陽交泰，如日如月』"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「大叔，您方才念到『心守玄牝，靜照無邊』，後面一句，弟子斗膽猜測，莫非是…『陰陽交泰，如日如月』？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "NPC3",
+    "text": "[panel=4]「哈哈哈！對對對！正是[em2]陰陽交泰，如日如月！[/em2]好小子，你這記性倒是不壞！悟性也可以啊！老子還以為你聽了就忘呢！」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(NPC3,pic=Laugh);ModifyData(FeatExp,MC1,Qi,10);",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "NPC3",
+    "text": "[panel=4]「既然你記性這麼好，看來硬記的法子在你身上也行得通！這便好辦了！」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [37]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC0",
+    "text": "「大叔，莫非是『丹田如爐，真火自生』？」",
+    "Sequence": "",
+    "links": [26],
+    "Description": "選項：提示口訣『丹田如爐，真火自生』"
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「大叔，您方才念到『心守玄牝，靜照無邊』，後面一句，弟子斗膽猜測，莫非是…『丹田如爐，真火自生』？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "NPC3",
+    "text": "[panel=4]「呵呵，小子，『丹田如爐，真火自生』那可是開篇第一句，這都記混啦？看來你還得用心多記幾遍。」 `[他沉吟片刻，猛一拍大腿]` 「哦！是『陰陽交泰，如日如月』！瞧我這腦子，差點被你帶偏了！」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(NPC3,pic=Normal);",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "NPC3",
+    "text": "[panel=4]「也罷，這口訣確實繞口，看來還是得讓你先死記硬背下來。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [37]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC0",
+    "text": "「大叔，莫非是『氣走三關，貫通百脈』？」",
+    "Sequence": "",
+    "links": [30],
+    "Description": "選項：提示口訣『氣走三關，貫通百脈』"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「大叔，您方才念到『心守玄牝，靜照無邊』，後面一句，弟子斗膽猜測，莫非是…『氣走三關，貫通百脈』？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "NPC3",
+    "text": "[panel=4]「『氣走三關，貫通百脈』，嗯，這句是在『心守玄牝』的前面。你記性不差，就是順序還得捋一捋。不急，慢慢來。」 `[他沉吟片刻，猛一拍大腿]` 「哦！是『陰陽交泰，如日如月』！想起來了！」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(NPC3,pic=Normal);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "NPC3",
+    "text": "[panel=4]「也罷，這口訣確實繞口，看來還是得讓你先死記硬背下來。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [37]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC0",
+    "text": "「大叔，莫非是『返照歸一，萬法皆焚』？」",
+    "Sequence": "",
+    "links": [34],
+    "Description": "選項：提示口訣『返照歸一，萬法皆焚』"
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「大叔，您方才念到『心守玄牝，靜照無邊』，後面一句，弟子斗膽猜測，莫非是…『返照歸一，萬法皆焚』？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "NPC3",
+    "text": "[panel=4]「哦？『返照歸一，萬法皆焚』？小子，你這可就跳到結尾去了！心急吃不了熱豆腐啊，一步一步來。」 `[他沉吟片刻，猛一拍大腿]` 「哦！是『陰陽交泰，如日如月』！差點忘了！」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(NPC3,pic=Normal);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "NPC3",
+    "text": "[panel=4]「也罷，這口訣確實繞口，看來還是得讓你先死記硬背下來。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "2",
+    "text": "[panel=6]＊（得到張仲景的誇獎，你心中不禁有些得意，對接下來的修習也更添了幾分信心。）＊",
+    "Sequence": "",
+    "links": [38],
+    "Description": "共通劇情：張仲景誇獎/決定讓玩家強記"
+  },
+  {
+    "entryID": 38,
+    "actorID": "NPC3",
+    "text": "[panel=4]「小子，你聽真著！後面的口訣是：『形隨氣化，意領神牽。動中有靜，靜中藏剛；返照歸一，萬法皆焚。』這便是『長生經』的總綱要訣。此心法講求以意領氣，以氣化形，非一朝一夕之功。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "NPC3",
+    "text": "[panel=4]「今日我先將這總綱的字句與初步的行氣法門傳你，你須得朝夕念誦，先求一字不錯，再慢慢體會其中真意。待你將這總綱背熟，氣感初成之時，我再傳你後續的分式修煉法門。」",
+    "Sequence": "SetPortrait(NPC3,pic=Normal);",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "NPC3",
+    "text": "[panel=1]「(眼神一轉，帶著點戲謔) 光說不練假把式。小子，你現在就試試，盤膝坐好，照著我剛才說的法子，試著感受一下體內的『氣』。別告訴我你什麼都感覺不到，那我可要懷疑是不是撿了塊石頭回來。」",
+    "Sequence": "SetPortrait(NPC3,pic=Laugh);EnableCharacterExpression(1,NPC3,Talk);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「大叔…這個…氣…它長什麼樣子？是熱的還是涼的？我…我好像只感覺到肚子有點餓…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=mindpain);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "NPC3",
+    "text": "[panel=1]「笨小子！氣哪有什麼固定模樣！它若有形，豈不是人人都能抓一把來賣錢了？用心去『聽』，用神去『照』！不是用你的肚皮去感覺餓不餓！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC3,pic=Laugh);EnableCharacterExpression(1,NPC3,Talk);",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "NPC3",
+    "text": "[panel=1]「(收斂笑容，略帶深意地) 你體質特殊，尋常法子可能不適用。記住，『意領神牽』，莫要拘泥於形式。有時候，你越想抓住它，它越是溜得快。不如放空心思，讓它自己來找你。就像…就像釣魚，太用力，魚反而不上鉤。先從這『靜照無邊』入手，靜下來，什麼都別想，看看能『照』到什麼。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(NPC3,pic=Normal);",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "2",
+    "text": "[panel=6]＊（接下來的數個時辰，張仲景詳細地為你講解了『長生經』總綱的每一個字義，並指導你如何初步感受體內氣息的流轉。你不禁聽得如痴如醉，雖有許多不明所以之處，卻也將那些口訣硬生生记了下來，對內功的理解也朦朧地有了一絲頭緒。）＊\n[即時訊息區]: 受張仲景指點，強記『長生經』總綱，內功經驗+100。",
+    "Sequence": "ModifyData(FeatExp,MC1,Qi,100);",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「多謝大叔傳授『長生經』大法！弟子定當勤勉修習，早日領悟其中奧妙，不負大叔厚望！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "NPC3",
+    "text": "[panel=4]「行了行了，小子，少來這些虛禮。你只要別三天打魚兩天曬網，把我的心法給練岔了氣，就算對得起我了。我嘛，也該去鎮上酒館鬆快鬆快筋骨，看看有沒有什麼新鮮的藥材…或者，嘿嘿，有沒有新釀的好酒。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC3,pic=Laugh);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "2",
+    "text": "[panel=6]＊（張仲景說完，便起身伸了個懶腰，瀟灑地踱步離去，留下你一人在房中，腦海中滿是那玄奧的『長生經』口訣。一股前所未有的力量，似乎正在你的體內悄然萌發，等待著被喚醒。）＊",
+    "Sequence": "",
+    "links": []
+  }
+] 

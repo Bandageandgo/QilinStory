@@ -1,0 +1,380 @@
+[
+  {
+    "entryID": 0,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（自從在有間客棧安頓下來，轉眼已過了數日。雖說盤纏暫時無虞，但離馬車啟程尚有一個月之久。這日清晨，陽光透過窗櫺灑進房內，你正伸著懶腰，一副悠然自得的模樣。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「啊——客棧的日子就是舒坦，無拘無束，真想就這麼躺到馬車來的那一天…」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "「表哥！你還真打算當一個月的米蟲啊？我們身上的錢可省著點花還勉強夠用，誰知道這一個月內會不會有什麼變故？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Meditate);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「靈犀啊，表哥我這是在養精蓄銳，勞逸結合！再說了，高手過招，意在神馳，我這是在冥想中提升境界呢！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC8",
+    "text": "「我看你是在夢裡跟周公下棋吧！表哥，你忘了我們為何要出來闖蕩江湖了？不就是為了成為一代大俠，行俠仗義嗎？就你現在這樣懶散，別說行俠仗義了，遇到點小毛賊怕是都應付不來！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=angry);EnableCharacterExpression(1,MC8,Meditate);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC8",
+    "text": "「俗話說得好，一日之計在於晨！你現在就該好好鍛鍊一下筋骨，提升實力！聽村裡人說，鎮上有家武館，倒是可以去請教習武。不過…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=expect);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "「我們現在這點錢，還是省著點好。我看你就在這房裡先自己練練吧！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（江湖路遠，每日可做之事繁多。但人的精力有限，許多重要的行動都會消耗**「天數」**。進入到下個回合時，天數會恢復。請妥善規劃，莫要虛度光陰。）＊",
+    "Sequence": "",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC8",
+    "text": "「表哥，鍛鍊可是要花力氣的，會消耗**天數**。今天可別想再偷懶了！」",
+    "Sequence": "SetPortrait(MC8,pic=angry);EnableCharacterExpression(1,MC8,Meditate);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Pain);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（你深吸一口氣，回憶著話本中英雄人物的招式，開始在房內胡亂揮拳。起初動作還有幾分生澀，但漸漸地，也打出了一些氣勢。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [11, 15]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（一番晨練下來，你感覺筋骨舒展，氣血暢通了不少。）＊",
+    "Sequence": "IsPassDice() == true;ModifyData(AbilityExp,MC1,Ability_STR,15);",
+    "Description": "小遊戲成功分支",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC0",
+    "text": "[即時訊息區]: 武力鍛鍊有成，武力經驗+15。",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「呼…這番活動下來，確實感覺身子骨都輕快了不少！看來日後還得勤加練習才是！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC8",
+    "text": "[panel=2]「這才對嘛！表哥，持之以恆，將來必能成為真正的大俠！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=happy);",
+    "links": [19]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（你胡亂揮舞了一陣，把自己累得夠嗆，卻沒感覺到什麼進步。）＊",
+    "Sequence": "IsPassDice() == false;ModifyData(AbilityExp,MC1,Ability_STR,5);",
+    "Description": "小遊戲失敗分支",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC0",
+    "text": "[即時訊息區]: 鍛鍊效果不佳，武力經驗+5。",
+    "Sequence": "",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做个靠腦子吃飯的儒俠…」",
+    "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Pain);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你這三分鐘熱度可不行啊！明日必須繼續！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC8",
+    "text": "「表哥，我們在這客棧也住了好幾天了，怎麼一次都沒見到那位**一枝花老闆娘**啊？茶博士把她誇得跟天仙似的，該不會是吹牛的吧？」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Question);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「靈犀，稍安勿躁。所謂神龍見首不見尾，真正的高人都是如此，美人自然也不例外。說不定這位老闆娘正在考驗我們的誠意呢！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "NPC13",
+    "text": "[panel=1]「嘿，又來兩個打聽『一枝花』老闆娘的愣頭青。他們怕是不知道老闆娘的『規矩』哦？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "NPC14",
+    "text": "[panel=3]「可不是嘛！想見老闆娘一面，那可不容易。聽說啊，老闆娘心情好時，偶爾會親自下廚做一道拿手絕活——『佳人笑』。那滋味，嘖嘖，吃過的人都說三日不忘！」",
+    "Sequence": "",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "NPC13",
+    "text": "[panel=1]「何止三日不忘！聽說那『佳人笑』用料奇特，非有緣人不可得。而且啊，要吃到這道菜，還得看你合不合老闆娘的『眼緣』！」",
+    "Sequence": "",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，他們在說老闆娘的菜！**佳人笑**？聽起來好厲害的樣子！不過什麼叫**眼緣**啊？」",
+    "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「**佳人笑…眼緣**…有意思。看來這位老闆娘確實不是等閒之輩。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=Meditate);",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC0",
+    "text": "玩家回應 (基於聽到的傳聞)：",
+    "Sequence": "",
+    "links": [28, 31]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「向店小二打聽如何才能嘗到『佳人笑』，順便探探老闆娘的『眼緣』是怎麼回事。」",
+    "Sequence": "",
+    "links": [29],
+    "Description": "選項1：打聽佳人笑與眼緣"
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「小二哥請留步，方才聽聞貴店老闆娘有一道名菜『佳人笑』，不知是何等佳餚？又要如何才能有幸品嚐？還有那所謂的『眼緣』，可否指點一二？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "NPC12",
+    "text": "「客官小聲些！這『佳人笑』可是我們老闆娘的獨門秘方，等閒不輕易示人！至於『眼緣』嘛…小的也說不準，全憑老闆娘的心意。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [32]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「這老闆娘聽起來規矩多多，神神秘秘的，我們還是少打聽為妙，免得惹麻煩。」",
+    "Sequence": "",
+    "links": [49],
+    "Description": "選項2：迴避打聽"
+  },
+  {
+    "entryID": 32,
+    "actorID": "NPC12",
+    "text": "「不過…小的倒是聽說，老闆娘似乎偏愛那些…嗯…**有誠意**的客人。待時機成熟，小的或許能替您引薦一二。但成與不成，小的可不敢打包票！」",
+    "Sequence": "",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC0",
+    "text": "玩家回應 (如何進一步打探)：",
+    "Sequence": "",
+    "links": [34, 37, 48]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「 小二哥，我看你也是個爽快人，咱們投緣。關於老闆娘的喜好，還請再提點一二，日後必有重謝！」",
+    "Sequence": "",
+    "links": [35],
+    "Description": "進一步打探選項1：口才檢定"
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,Ability_CHA,6);",
+    "links": [36],
+    "Description": "選項1的空對話擲骰節點"
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "「小二哥，我看你也是個爽快人，咱們投緣。關於老闆娘的喜好，還請再提點一二，日後必有重謝！」",
+    "Sequence": "SetPortrait(MC1,pic=Shy);",
+    "links": [39, 43]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "[em2][花費50文][/em2]「小二哥辛苦了，這點小意思不成敬意。還望告知一二老闆娘的喜好，也好讓我等有個準備。」",
+    "Sequence": "",
+    "links": [38],
+    "Description": "進一步打探選項2：花錢"
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「小二哥辛苦了，這點小意思不成敬意。還望告知一二老闆娘的喜好，也好讓我等有個準備。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);ModifyData(Coin,MC1,-50);",
+    "links": [45]
+  },
+  {
+    "entryID": 39,
+    "actorID": "NPC12",
+    "text": "「客官真是會說話！既然您這麼說了，小的就再多句嘴。我們老闆娘啊，最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);SetPortrait(NPC12,pic=happy);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「英雄好漢…原來如此！多謝小二哥提點！」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事或可多加註意，說不定還能增加幾分成功的機會。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [52]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「這樣啊…那好吧，不為難小二哥了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Pain);",
+    "links": [44]
+  },
+  {
+    "entryID": 43,
+    "actorID": "NPC12",
+    "text": "「客官過獎了，也太看得起小的了。老闆娘的心思…小的實在是猜不透，也不敢妄言啊。」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);SetPortrait(NPC12,pic=nervous);",
+    "links": [42]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（看來尋常言辭還是難以探得更多口風，想要知道一枝花的喜好，或許還得另尋他法。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [52]
+  },
+  {
+    "entryID": 45,
+    "actorID": "NPC12",
+    "text": "「哎喲，客官真是太客氣了！既然您如此有誠意，小的自然知無不言。不瞞您說，我們老闆娘啊，平日裡最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
+    "Sequence": "",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「**英雄好漢**…原來如此！多謝小二哥提點！」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情**俠義之士**！這倒是給你提了個醒，若想博其青睞，日後行事或可多加註意，說不定還能增加幾分成功的機會。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [52]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「多謝小二哥了，我再想想。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [51]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「靈犀，這位『一枝花』老闆娘聽起來頗不簡單，行事又如此神秘。俗話說得好，強龍不壓地頭蛇，我們初來乍到，還是莫要過多打探，以免平白招惹是非。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC8",
+    "text": "「嗯，表哥說的是。我們還是安分些，等馬車要緊。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=expect);",
+    "links": [52]
+  },
+  {
+    "entryID": 51,
+    "actorID": "NPC12",
+    "text": "「嘖！」",
+    "Sequence": "",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（你與蕭靈犀結束了與店小二的談話，繼續在大堂中觀察。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": []
+  }
+]

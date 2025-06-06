@@ -1,0 +1,580 @@
+[
+  {
+    "entryID": 0,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（時光飛逝，轉眼四月已經要結束。[em2]小溪村[/em2]的日子平淡而規律，你每日除了與[em2]靈犀[/em2]鬥嘴，便是在房中打坐或揮舞幾下木棍，偶爾也去村裡閒逛，聽些雞毛蒜皮的鄉野趣聞。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「嘖，這小村的日子雖安逸，卻也無聊得緊。也不知雍仔道長那邊如何了…」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「哎呀！我想起來了！雍仔道長！古墓！我們約好要去探村外林子深處的古墓！算算日子，可不就是今天了嗎？！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Shock);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC8",
+    "text": "「古墓？雍仔道長？表哥，你說的是那個胖乎乎，看起來不太靠譜的道士？你們要去盜墓不成？那可是犯法的！而且聽起來就很危險！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？雍仔道長說那是前朝古墓，內藏奇珍異寶，更有失傳秘籍！此乃探險尋寶，增長見聞，與盜墓截然不同！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「再說，與人有約，豈能失信？我意已決，今日便去那林中與雍仔道長會合！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=serious);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "[panel=2]「唉，我就知道攔不住你。表哥，萬事小心，若真有危險，保命要緊！我在客棧等你回來，可別讓我等太久，不然我就…我就把你的私房錢都拿去買糖葫蘆！」",
+    "Sequence": "SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「哈哈，放心放心，表哥我吉人天相，區區古墓何足道哉！等我滿載而歸，給你買十串糖葫蘆！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「前面就是後山了，趕緊過去吧，怕別讓雍仔等太久了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=serious);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
+    "Sequence": "",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「終於到了，趁霧還沒有太濃，趕緊去找雍仔吧。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（穿過一片迷霧，你終於來到了與雍仔約定的那棵歪脖子老槐樹下。只見雍仔早已在此等候，正焦急地踱來踱去，見到你出現，頓時喜上眉梢。）＊",
+    "Sequence": "",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC20",
+    "text": "「燕兄弟！你可算來了！貧道還以為你把這事給忘了呢！時辰不早，咱們速速啟程，那古墓裡的寶貝可等不及了！」",
+    "Sequence": "SetPortrait(MC20,pic=excited);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「雍仔道長久等了。事不宜遲，還請道長帶路。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC20",
+    "text": "「兄弟請看，此處便是那古墓的入口！我已探查過，周遭並無強力禁制，只是入口被巧妙隱藏起來罷了。嘿嘿，若非貧道身懷師門秘傳的堪輿之術，凡人豈能得見？」",
+    "Sequence": "SetPortrait(MC20,pic=proud_or_confident);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「道長，這洞口看起來平平無奇，甚至有些……簡陋？不像藏有奇珍異寶的古墓啊。」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Question);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC20",
+    "text": "「嘿嘿，燕兄弟，莫被表象所迷惑！此處設有障眼法！若非貧道眼尖，尋常人等只怕就此錯過了。看，這裡貼著一道隱匿符！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=smug);EnableCharacterExpression(1,MC20,Talk);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（雍仔指著石壁上一道幾乎與岩石融為一體、不細看絕難發現的淡黃色符籙。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC20",
+    "text": "「破！」",
+    "Sequence": "SetPortrait(MC20,pic=spellcasting);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（只見那隱匿符發出一陣微弱的光芒，隨即化為飛灰。原本看似普通的山壁竟如同水波般晃動起來，一個更加深邃、散發著古老氣息的真正墓道入口緩緩顯現，比之前那個洞口大了數倍，石壁兩側依稀可見人工開鑿的痕跡。）＊",
+    "Sequence": "",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC20",
+    "text": "「如何？燕兄弟，這才是通往真正寶藏的入口！若無貧道的火眼金睛和這手絕活，咱們今日可就要空手而歸了！」",
+    "Sequence": "SetPortrait(MC20,pic=proud);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（洞口內陰風陣陣，隱約傳來水滴和不知名蟲豸爬行的聲音，令人不寒而慄。）＊",
+    "Sequence": "",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「好，道長，我們進去！」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（你們點起火摺，藉著微弱的光芒在狹窄潮濕的墓道中穿行。墓道兩壁雕刻著模糊的壁畫，似乎在訴說著墓主人生前的功績。轉過幾個彎，前方豁然開朗，一間寬敞的石室出現在眼前，想必便是主墓室了。）＊",
+    "Sequence": "",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「這地方看起來有些詭異…」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（前方，一個枯瘦的人影被數條粗大的黑色鐵鍊鎖縛著，鐵鍊的另一端深深嵌入佈滿塵埃的地磚。那人影身上纏繞著鐵鍊，其中一條鐵鍊還貫穿了一柄古樸的石劍，將劍與人一同釘在地上。人影低垂着頭，長髮遮面，不知是死是活。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC20",
+    "text": "「乖乖…這是什麼陣仗？莫非是誰人用了什麼邪法，把自己跟什麼東西鎖在一起了？」",
+    "Sequence": "SetPortrait(MC20,pic=nervous);",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（在那被鎖人影的身後不遠處，有一個半人高的石台，石台上供奉著一個佈滿銅綠的古舊銅鼎，鼎身雕刻著繁複的雲紋，看起來頗有年代，似乎是件值錢的寶貝。）＊",
+    "Sequence": "",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC20",
+    "text": "「兄弟你看！那銅鼎！那絕對是個寶貝！看這包漿，少說也是前朝的物件！咱們發了！快，你去把它取下來！」",
+    "Sequence": "SetPortrait(MC20,pic=excited);EnableCharacterExpression(1,MC20,Talk);",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「道長，此地處處透着古怪，那人被鎖在此，恐怕與這鼎有關，還是小心為上，莫要輕舉妄動。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=mindpain);EnableCharacterExpression(0,MC1,Meditate);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC20",
+    "text": "「哎呀，兄弟，富貴險中求！你想想，若非奇珍，何須如此大費周章地藏匿？這正是上天賜予我倆的機緣！你聽我的，先去看看，若有不妥，咱們再退回來便是！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=eager);EnableCharacterExpression(1,MC20,Urge);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（雍仔的語氣充滿誘惑，你不禁有些動搖。[em2]自動魅力檢定 難度8[/em2]）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,CharismaCheck,8);",
+    "links": [33],
+    "Description": "自動魅力檢定觸發點 (難度8)"
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [34, 37],
+    "Description": "空內容緩衝節點，連接檢定結果"
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「不行，道長。我感覺這鼎有問題，我們不能冒險。此地不宜久留，我們還是先想辦法離開吧。」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=serious);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC20",
+    "text": "「糊塗啊兄弟！寶貝就在眼前，豈能空手而歸？你怕什麼，有貧道在此為你掠陣！這等絕世法器，錯過了這次，下次可就沒這等好運了！你再想想，有了此寶，咱們行走江湖豈不更有底氣？」",
+    "Sequence": "SetPortrait(MC20,pic=angry);EnableCharacterExpression(1,MC20,Urge);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（雍仔更是巧舌如簧，極力描繪著此寶的神妙和對你們未來的好處，你不禁再次猶豫起來。[em2]自動魅力檢定 難度12[/em2]）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,CharismaCheck,12);",
+    "links": [38],
+    "Description": "自動魅力檢定觸發點 (難度12)"
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [39, 42],
+    "Description": "空內容緩衝節點，連接檢定結果"
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「道長，我意已決。這東西我們不能碰。如果你執意要取，那便自便，但我絕不參與。」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=serious);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC20",
+    "text": "「你…你真是榆木腦袋！罷了罷了！你不取，貧道自己取！這等天賜之寶，合該與我有緣！」",
+    "Sequence": "SetPortrait(MC20,pic=angry);",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（雍仔說罷，不再理你，徑直走向那石台，小心翼翼地將銅鼎捧了起來。）＊",
+    "Sequence": "TakeItem(Yongzi_Took_Ding);",
+    "links": [45]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（雍仔的說辭讓你無法反駁，想到未來江湖險惡，若有至寶傍身確實能增添不少勝算，你最終還是被他說服了。）＊",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=tired);",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「好吧…道長，你說得有幾分道理。我去看看，但若有任何不對，我們立刻就走。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（你緩步走向石台，伸手將那古舊的銅鼎拿了起來。）＊",
+    "Sequence": "TakeItem(MC_Took_Ding);",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（就在銅鼎離開石台的一剎那，整個主墓室猛然劇烈震動起來！塵土簌簌落下，那被鐵鍊鎖在地上的人影發出低沉而痛苦的嘶吼，身上的鐵鍊繃得筆直，發出刺耳的摩擦聲！）＊",
+    "Sequence": "",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC20",
+    "text": "[panel=2]「不…不好！觸動機關了！」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Shock);SetPortrait(MC20,pic=surprise);EnableCharacterExpression(1,MC20,Shock);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（那被鎖人影頭顱猛地抬起，長髮散開，露出一張佈滿黑色血筋、雙眼赤紅的面孔！他身上的鐵鍊竟寸寸斷裂，那柄石劍也隨之碎裂！一股濃郁無比的黑氣從他體內噴湧而出！）＊",
+    "Sequence": "DisableCharacterExpression(0);DisableCharacterExpression(1);",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "NPC11",
+    "text": "「桀桀桀…封印…終於破了…多少年了…重見天日的感覺…真是美妙啊！擾吾長眠，覬覦吾之祭器…你們…都將成為我力量的一部分！！！」",
+    "Sequence": "SetPortrait(NPC11,pic=ferocious);",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「媽呀！這打得贏嗎！？」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Shock);",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（黑血師發出刺耳的尖嘯，化作一道黑影撲了上來！一場惡戰在所難免！）＊",
+    "Sequence": "DisableCharacterExpression(0);BeginCombat(Combat,17);",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（黑血師妖法詭異，黑氣纏繞，力量遠超預期。你與雍仔雖奮力抵抗，左支右絀，很快便傷痕累累，漸感不支。最終，你被一股巨力擊中胸口，眼前一黑，便失去了知覺。）＊",
+    "Sequence": "",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC20",
+    "text": "[panel=2]「呸！你這老妖怪，也不過如此！若非胖爺今日狀態不佳，定叫你魂飛魄散！」",
+    "Sequence": "SetPortrait(MC20,pic=wounded_proud);",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "NPC11",
+    "text": "[panel=1]「桀桀…死到臨頭還敢嘴硬！也好，就先從這個小娃娃開始，讓本座好好品嘗一下新鮮的陽氣！」",
+    "Sequence": "SetPortrait(NPC11,pic=smirk);",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（黑血師說著，伸出干枯的手爪，罩向昏迷的你，一股陰冷的吸力從其掌心傳來。）＊",
+    "Sequence": "",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC20",
+    "text": "[panel=2]「住手！老妖！有本事衝著貧道來！貧道我道行高深，陽氣也比較補啦！」",
+    "Sequence": "",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（就在黑血師的黑氣即將觸碰到你額頭的瞬間，你懷中的麒麟骰突然發出溫潤的白光！一個約莫七八歲的少女虛影從骰中浮現，擋在你身前。她小臉緊繃，神情間帶著與年齡不符的冰冷與傲慢。）＊",
+    "Sequence": "",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC0",
+    "text": "「哼，此等不入流的小怪也膽敢碰吾？」",
+    "Sequence": "",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（少女伸出小手，看似柔弱無力，卻散發出令人心悸的氣息，穩穩地擋住了黑血師的黑氣。黑血師的動作為之一滯，眼中閃過一絲驚疑。）＊",
+    "Sequence": "",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "NPC11",
+    "text": "[panel=1]「這是…什麼力量？！」",
+    "Sequence": "SetPortrait(NPC11,pic=surprised);",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（就在這時，一道青色身影如同驚鴻般從墓道口疾射而至，口中清喝一聲！）＊",
+    "Sequence": "",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "NPC3",
+    "text": "[panel=3]「嘖嘖，鬧出這麼大動靜，還以為是什麼了不得的角色。妖孽，到此為止了！」",
+    "Sequence": "",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（張仲景手持一個古樸的葫蘆，猛地拔開塞子，一股濃郁的白色煙霧從葫蘆口噴湧而出，迅速瀰漫了整個石室，遮蔽了所有人的視線。煙霧中帶有奇異的藥香，令人聞之欲睡。）＊",
+    "Sequence": "",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "NPC3",
+    "text": "[panel=3]「此乃我特製的『迷魂百草煙』，不想變成薰肉就快跟我走，小傢伙們！」",
+    "Sequence": "SetPortrait(NPC3,pic=Laugh);",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（張仲景趁着黑血師被煙霧所困，迅速來到你身邊，將你扶起，又拉了一把還有些發愣的雍仔，三人藉著煙霧的掩護，跌跌撞撞地逃出了主墓室，向着來路狂奔而去。）＊",
+    "Sequence": "",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC20",
+    "text": "[panel=2]「老妖…你等著…貧道…貧道還會回來的！」",
+    "Sequence": "",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（三人一口氣跑出古墓，重見天日，方才鬆了口氣。黑血師並未追出，似乎對外面有所忌憚，又或是被那迷煙所擾。你只覺得頭痛欲裂，眼前發黑，剛才饕餮現身的情景如同幻夢般消散，緊接著便失去了所有知覺。）＊",
+    "Sequence": "",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC20",
+    "text": "[panel=2]「張神醫！我兄弟他…他好像不行了！」",
+    "Sequence": "",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "NPC3",
+    "text": "[panel=1]「嘖，這小子傷得這麼重，還染了這鬼屍氣...算他命大遇上我。此地不宜久留，得立刻救治！」",
+    "Sequence": "",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（張仲景不由分說，背起失去意識的你，與雍仔一同匆匆趕到**有間客棧**門口，便見蕭靈犀正焦急地張望著。）＊",
+    "Sequence": "",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC8",
+    "text": "[panel=3]「表哥！表哥你怎麼了？！張先生，雍仔道長，這…這到底是怎麼回事？！」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Fear);",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "NPC3",
+    "text": "[panel=1]「蕭姑娘莫慌，令表兄這傷勢雖重，還中了棘手的屍毒，但有我在，閻王爺也休想輕易把他帶走。此地不宜耽擱，速速扶他進房，我來施救！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（眾人手忙腳亂地將你安置在客棧房間的床上。張仲景立刻從藥箱中取出各種藥材，指揮雍仔和蕭靈犀準備熱水和木桶。）＊",
+    "Sequence": "",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "NPC3",
+    "text": "[panel=1]「這小子情況確實棘手，屍氣都快把他五臟六腑當自家後院了。嘿，不過他這身子骨倒也奇特，換了旁人，怕是早去跟閻王喝茶了。我準備用猛藥替他泡個澡，逼出這邪毒，你們且放寬心，別擾了我行事便好。」",
+    "Sequence": "",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC8",
+    "text": "[panel=3]「大叔，求求你一定要救救我表哥！」",
+    "Sequence": "SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC20",
+    "text": "[panel=2]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（你感覺自己像被扔進了滾燙的油鍋，又像是墜入了冰冷的深淵。無數奇異的景象在眼前閃爍，耳邊充斥著嘈雜的聲音，身體時而灼熱如火，時而冰冷如鐵。在無盡的痛苦與迷茫中，你依稀感覺到一股溫和的力量在引導著體內的某些東西，試圖將那些狂暴的異物驅趕出去。）＊",
+    "Sequence": "",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "NPC3",
+    "text": "「丹田如爐，真火自生；任督齊開，內息自轉...」",
+    "Sequence": "",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（藥桶內的水翻騰著，顏色逐漸變得渾濁不堪，散發出刺鼻的腥臭。蕭靈犀和雍仔在一旁緊張地看著，不敢發出半點聲音。）＊",
+    "Sequence": "",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（不知過了多久，你體內的灼痛感和冰冷感漸漸消退，取而代之的是一種難以言喻的疲憊。你依稀能感覺到身下熱水的溫度，以及有人在輕柔地擦拭你的額頭。）＊",
+    "Sequence": "",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC8",
+    "text": "[panel=3]「表哥…你感覺怎麼樣了…你一定要醒過來啊…」",
+    "Sequence": "SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "NPC3",
+    "text": "[panel=1]「蕭姑娘放心，小兄弟的命算是保住了。只是屍氣入體太深，還需數日調養。今日的藥浴暫且到此，讓他好生歇息。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": []
+  }
+]
