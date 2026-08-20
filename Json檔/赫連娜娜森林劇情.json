@@ -1,0 +1,472 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你在後山林間漫步，忽聞得一陣理直氣壯又帶著幾分氣急敗壞的呼喊聲。那獨特的調調讓你心頭一跳。）＊」",
+    "Sequence": "",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「(這調調……不會吧？) 」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你循著聲音悄悄靠近，撥開身前的灌木叢——果不其然。只見空地上，三個瘦小的狗頭人正圍著一個懸吊在樹上的籠子手舞足蹈，而籠中之人，正是赫連娜娜。）＊」",
+    "Sequence": "SetPortrait(MC1,pic=normal);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC22",
+    "text": "「喂！說你們呢，聽不懂人話嗎？本姑娘命令你們，立刻把我放下來！我可是……咳，我可是很厲害的！」",
+    "Sequence": "SetPortrait(MC22,pic=angry);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC22",
+    "text": "「（嘀咕著）奇怪…按照我爹的筆記，只要展現出強者的氣勢，牠們不是應該納頭便拜嗎？難道是我的王霸之氣不夠？」",
+    "Sequence": "SetPortrait(MC22,pic=confuse);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": 2,
+    "text": "「[panel=6]＊（籠中的赫連娜娜也發現了藏在林邊的你，眼睛頓時一亮。那幾個狗頭人正圍著籠子又叫又跳，慶祝著自己的收穫，完全沒注意到你的存在。她連忙抓住機會，壓低了聲音朝你求救。）＊」",
+    "Sequence": "",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "「（壓低聲音，又驚又喜地）少俠！？你來得正好！我發現這些傢伙守著好東西，但溝通了許久根本就聽不懂。但沒關係，我還有一計，咱俩聯手把它給取了，保證你吃不了虧！」",
+    "Sequence": "SetPortrait(MC22,pic=happy);",
+    "links": [8, 9]
+  },
+  {
+    "entryID": 8,
+    "actorID": 0,
+    "text": "「妳有何計？」",
+    "Sequence": "",
+    "links": [10],
+    "Description": "選項1：同意赫連娜娜的計謀"
+  },
+  {
+    "entryID": 9,
+    "actorID": 0,
+    "text": "「不用了，何須如此麻煩！」",
+    "Sequence": "",
+    "links": [100],
+    "Description": "選項2：直接動用武力"
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「…好吧，妳有何計？」",
+    "Sequence": "SetData(Variable, MasterActSuccessCount, 0);SetPortrait(MC1,pic=8);",
+    "links": [11],
+    "Description": "計謀路線開始，初始化完美演出計數器"
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC22",
+    "text": "「嘿嘿，選對了！我這個計策，簡直是為你量身打造的！聽好囉，你先擺出一副[em2]高手總是很煩惱[/em2]的表情，然後慢慢地、一步一步走出去。對對對，就是要那種感覺！。走出去的時候，腳步放慢，眼神憂鬱一點！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你深吸一口氣，收斂心神，腳下不丁不八，一步步踏出，身形雖未見如何迅捷，卻自有一股淵渟嶽峙的氣勢。）＊」",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,CharismaCheck,10);",
+    "links": [14],
+    "Description": "自動魅力檢定觸發點"
+  },
+  {
+    "entryID": 14,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "",
+    "links": [15, 17],
+    "Description": "空內容緩衝節點，用於連接檢定結果"
+  },
+  {
+    "entryID": 15,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你步伐穩健，氣度沉凝，竟真有幾分宗師氣派。那幾個狗頭人顯然被你的氣場所懾，面面相覷，不敢妄動。）＊」",
+    "Sequence": "IsPassDice() == true;ModifyData(AbilityExp,MC1,Charisma,100);ModifyData(Variable, MasterActSuccessCount, 1);",
+    "links": [16],
+    "Description": "魅力檢定成功，完美演出計數+1"
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC22",
+    "text": "「就是這樣！牠們完全被你嚇傻了！快，第二步，給牠們致命一擊！你要把劍拔出來，對！指向牠們的頭領！然後這樣喊...」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "links": [20]
+  },
+  {
+    "entryID": 17,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你努力模仿高人姿態，不料腳下一滑，身形一個踉蹌，險些摔倒。方才凝聚的氣勢頓時洩了個一乾二淨。）＊」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1_Pain);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC22",
+    "text": "「[em6]倒吸一口氣，[/em6]老天爺啊！你怎麼回事！算了算了，問題不大！聽著，快！露出你最凶狠的表情，就像上次在客棧那樣逼問我一樣！然後用劍指著牠們的頭領！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=2);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你看向那三個形容枯槁的狗頭人，實在分不清哪個是頭領。只得隨意擇了一名，暗提一口丹田氣…）＊」",
+    "Sequence": "",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,IntimidationCheck,12);",
+    "links": [22],
+    "Description": "自動威嚇檢定觸發點"
+  },
+  {
+    "entryID": 22,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "",
+    "links": [23, 26],
+    "Description": "空內容緩衝節點，用於連接檢定結果"
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
+    "Sequence": "IsPassDice() == true;",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你聲如洪鐘，字字清晰。狗頭人們顯然聽不懂話語的內容，但你聲音裡那股不容置疑的威儀，卻讓牠們停下了無意義的舞蹈，面面相覷，喉嚨裡發出不安的咕嚕聲，顯然是被震懾住了。）＊」",
+    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,30);ModifyData(Variable, MasterActSuccessCount, 1);",
+    "links": [25],
+    "Description": "威嚇檢定成功，完美演出計數+1"
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC22",
+    "text": "「什麼叫做天賦？這就是天賦！現在正是使出最後一計[em2]誘之以利[/em2]的時機，看看你的行囊有沒有亮晶晶的東西可以吸引牠們的目光！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "links": [30]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「咳！爾等…土雞瓦狗…哪個…呃…」 ",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=11);",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": 2,
+    "text": "「[panel=6]＊（狗頭人面面相覷，似乎被你這番故弄玄虛的姿態激怒了，喉中發出威脅的低吼。）＊」",
+    "Sequence": "",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC22",
+    "text": "「哎呀呀！牠們要發火了！跳過跳過！直接到最後一計！快，把值錢的東西拿、拿出來給牠們看看！」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "",
+    "links": [31, 34],
+    "Description": "條件分歧點：檢查MasterActSuccessCount是否等於2，決定是否觸發完美結局。此處需要引擎實現相應的變數檢查與分支邏輯。"
+  },
+  {
+    "entryID": 31,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你的每一步都完美地執行了赫連娜娜那看似荒謬的計畫。從登場的氣勢到懾人的喝問，環環相扣，徹底擊潰了狗頭人貧瘠的心智。牠們眼中滿是敬畏與恐懼，仿佛看到了神明降臨。）＊」",
+    "Sequence": "",
+    "links": [32],
+    "Description": "完美演出分支"
+  },
+  {
+    "entryID": 32,
+    "actorID": 2,
+    "text": "「[panel=6]＊（為首的狗頭人顫抖著丟下了木棒，緊接著，另外兩隻也丟下武器，五體投地，對著你不斷地叩拜。）＊」",
+    "Sequence": "",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC22",
+    "text": "「[em6]她先是驚訝地張大了嘴，似乎不敢相信自己的眼睛，隨即立刻清了清嗓子：[/em6]咳！瞧見了嗎？我說什麼來著！只要你完全照我的吩咐去做，就絕對萬無一失！這，就叫[em2]算無遺策[/em2]！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "links": [200]
+  },
+  {
+    "entryID": 34,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你聞言，下意識地摸了摸自己的行囊。）＊」",
+    "Sequence": "",
+    "links": [35, 36, 37],
+    "Description": "常規演出分支"
+  },
+  {
+    "entryID": 35,
+    "actorID": 0,
+    "text": "「[em2][威嚇檢定][/em2] 拔劍」",
+    "Sequence": "",
+    "links": [40],
+    "Description": "選項：恐嚇"
+  },
+  {
+    "entryID": 36,
+    "actorID": 0,
+    "text": "「[em2][說服檢定][/em2] 掏出一枚銅錢」",
+    "Sequence": "",
+    "links": [50],
+    "Description": "選項：經濟"
+  },
+  {
+    "entryID": 37,
+    "actorID": 0,
+    "text": "「[em2][智力檢定][/em2] 指著天空」",
+    "Sequence": "",
+    "links": [60],
+    "Description": "選項：智力"
+  },
+  {
+    "entryID": 40,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,IntimidationCheck,10);",
+    "links": [41],
+    "Description": "手動威嚇檢定觸發點"
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「此劍，可取爾等性命。這，便是我最強的寶物。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [42, 43]
+  },
+  {
+    "entryID": 42,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你的話語中透出凜冽殺氣，劍刃的寒光讓狗頭人們感受到了久違的死亡恐懼。牠們對視一眼，怪叫著丟下武器，頭也不回地竄入了林中。）＊」",
+    "Sequence": "IsPassDice() == true;ModifyData(FeatExp,MC1,Intimidation,100);",
+    "links": [200]
+  },
+  {
+    "entryID": 43,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你的話語雖狠，氣勢卻稍顯不足。狗頭人感受到了威脅，但求生的本能反而激發了牠們的凶性，牠們尖叫著舉起了武器。）＊」",
+    "Sequence": "IsPassDice() == false;",
+    "links": [110]
+  },
+  {
+    "entryID": 50,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,8);",
+    "links": [51],
+    "Description": "手動說服檢定觸發點"
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「（掏出一枚銅錢）此物，可換爾等活路。」",
+    "Sequence": "SetPortrait(MC1,pic=normal);",
+    "links": [52, 53]
+  },
+  {
+    "entryID": 52,
+    "actorID": 2,
+    "text": "「[panel=6]＊（那枚銅錢在陽光下閃著微光，對於智力低下的狗頭人來說，這亮閃閃的東西有著致命的吸引力。牠們猶豫片刻，丟下武器，互相推搡著撲向那枚銅錢。）＊」",
+    "Sequence": "IsPassDice() == true;ModifyData(FeatExp,MC1,Persuasion,30);",
+    "links": [200]
+  },
+  {
+    "entryID": 53,
+    "actorID": 2,
+    "text": "「[panel=6]＊（狗頭人看著你手中的一枚銅錢，又看了看籠子裡的獵物和你身上的行囊，似乎覺得這筆交易並不划算。牠們眼中閃爍著貪婪與凶光，決定全都要。牠們咆哮著舉起了武器。）＊」",
+    "Sequence": "IsPassDice() == false;",
+    "links": [110]
+  },
+  {
+    "entryID": 60,
+    "actorID": 0,
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,IntelligenceCheck,12);",
+    "links": [61],
+    "Description": "手動智力檢定觸發點"
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「（遙指天際）天上日月，皆為我所有。爾等，還不退下？」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [62, 63]
+  },
+  {
+    "entryID": 62,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你的聲音不大，卻充滿了不容置疑的威嚴。狗頭人們順著你的手指望向太陽，刺眼的光芒讓牠們發出敬畏的尖叫。牠們看向你的眼神充滿了恐懼，彷彿在仰望神明。牠們丟下武器，匍匐在地，瑟瑟發抖。）＊」",
+    "Sequence": "IsPassDice() == true;ModifyData(AbilityExp,MC1,Intelligence,100);",
+    "links": [200]
+  },
+  {
+    "entryID": 63,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你的聲音雖響，卻無懾人之威。狗頭人們順著你的手指望向太陽，又看了看你，似乎覺得自己受到了戲耍。牠們發出憤怒的咆哮，舉起了武器。）＊」",
+    "Sequence": "IsPassDice() == false;",
+    "links": [110]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC1",
+    "text": "「哼，跳樑小丑，何須如此麻煩！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC22",
+    "text": "「哎！別衝動啊大俠！要講究策略！」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": 2,
+    "text": "「[panel=6]＊（但你已持劍衝出，狗頭人見狀立刻發出尖銳的叫聲，拿起地上的木棒石斧，一擁而上。）＊」",
+    "Sequence": "",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": 2,
+    "text": "「【進入戰鬥】」",
+    "Sequence": "",
+    "links": [111, 112],
+    "Description": "戰鬥劇情入口"
+  },
+  {
+    "entryID": 111,
+    "actorID": 2,
+    "text": "「[panel=6]＊（你三下五除二便將這幾個狗頭人打得落花流水。）＊」",
+    "Sequence": "",
+    "links": [200],
+    "Description": "戰鬥勝利"
+  },
+  {
+    "entryID": 112,
+    "actorID": 2,
+    "text": "「（戰敗劇情）」",
+    "Sequence": "",
+    "links": [],
+    "Description": "戰鬥失敗"
+  },
+  {
+    "entryID": 200,
+    "actorID": 2,
+    "text": "「[panel=6]＊（趁此機會，你迅速上前斬斷繩索，放下了籠子。）＊」",
+    "Sequence": "",
+    "links": [201],
+    "Description": "共通劇情：救下赫連娜娜後"
+  },
+  {
+    "entryID": 201,
+    "actorID": "MC22",
+    "text": "「（她從籠子裡爬出來，拍了拍身上的灰）咳咳！不錯不錯，雖有瑕疵，但總算是有驚無險。你很有潛力，孺子可教也！」",
+    "Sequence": "SetPortrait(MC22,pic=normal);",
+    "links": [202]
+  },
+  {
+    "entryID": 202,
+    "actorID": "MC1",
+    "text": "「妳這是在誇我還是在損我啊？我怎麼覺得妳才是最需要被救的那個。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [203]
+  },
+  {
+    "entryID": 203,
+    "actorID": "MC1",
+    "text": "「好了好了，姑娘，現在，能否說說妳真正的目的？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [204]
+  },
+  {
+    "entryID": 204,
+    "actorID": "MC22",
+    "text": "「（她故作神秘地壓低聲音）此事說來話長…我其實是為追尋了一件失落的秘寶而來。」",
+    "Sequence": "SetPortrait(MC22,pic=serious);",
+    "links": [205]
+  },
+  {
+    "entryID": 205,
+    "actorID": "MC1",
+    "text": "「秘寶？此話怎講？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [206]
+  },
+  {
+    "entryID": 206,
+    "actorID": "MC22",
+    "text": "「（她見你感興趣，得意地挺了挺胸，先解釋了秘寶的事）我夜觀天象，發現此地有龍脈之氣匯聚，近期內必有重寶出世。」",
+    "Sequence": "SetPortrait(MC22,pic=proud);",
+    "links": [207]
+  },
+  {
+    "entryID": 207,
+    "actorID": "MC1",
+    "text": "「重寶出世...跟妳被這些狗頭人吊起來有什麼關係？哈哈！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [208]
+  },
+  {
+    "entryID": 208,
+    "actorID": "MC22",
+    "text": "「（她臉上一紅，強自鎮定道）咳！這些傢伙就是寶穴的看守者！我…我這是在探查敵情，一時不慎才中了埋伏！」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "links": [209]
+  },
+  {
+    "entryID": 209,
+    "actorID": 2,
+    "text": "「[panel=6]＊（看著眼前這個死要面子、得了便宜還賣乖的丫頭，你嘆了口氣，感覺自己未來的旅途注定是不會無聊了。）＊」",
+    "Sequence": "",
+    "links": [210]
+  },
+  {
+    "entryID": 210,
+    "actorID": 2,
+    "text": "「[panel=6]＊（赫連娜娜加入隊伍。）＊」",
+    "Sequence": "",
+    "links": []
+  }
+]

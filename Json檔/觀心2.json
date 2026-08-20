@@ -1,0 +1,674 @@
+[
+  {
+    "entryID": 0,
+    "actorID": "MC0",
+    "text": "觀心觸發：完成黑鐵嶺深淵祭壇",
+    "Sequence": "// TODO: SetQuestState or觀心觸發條件",
+    "links": [
+      1
+    ],
+    "Description": "觀心事件入口：觀心：黑鐵嶺礦坑"
+  },
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "[panel=6]＊（礦坑入口的告示板上寫著——[em2]鹽鐵之利，國之大柄[/em2]；[em2]私吞礦石者，斬；私鑄兵器者，族誅[/em2]。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": 2,
+    "text": "[panel=6]＊（雲中廣場上，李四額頭磕得流血，哭喊著：黑鐵嶺吃人了——三十里外的礦坑裡，符咒剝落的鐵門後，是腐爛與硫磺的濁氣。）＊",
+    "Sequence": "",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "李四",
+    "text": "「救命啊！救救大山！救救我家媳婦！黑鐵嶺……黑鐵嶺吃人了啊！」",
+    "Sequence": "",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": 2,
+    "text": "[panel=6]＊（監工日記上寫著——深層岩壁裡挖到[em2]紅色水晶[/em2]，大山說那是「[em2]神[/em2]」的眼睛；工人們在膜拜；最後一頁：[em2]逃不掉了…門被鎖了…大山說，我們都是祭品…[/em2]）＊",
+    "Sequence": "",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": 2,
+    "text": "[panel=6]＊（祭壇中央，泥塑小人像額頭嵌著第三隻眼——妖異紅光，像活物般跳動。李大山滿身黑筋，喃喃要獻血給神。）＊",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": 2,
+    "text": "[panel=6]＊（你盤膝靜坐，礦坑裡讀過的字句，在心底一字一字凝成幾句——）＊",
+    "Sequence": "",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": 2,
+    "text": "[panel=6]＊（[em2]恰如裸身臥荒丘，潛伏爪牙只忍受；飄蓬江海謾嗟吁。鐵門一鎖！難逃脫！[/em2]）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [
+      9
+    ],
+    "Description": "自動洞悉檢定觸發點 (難度2)"
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      12,
+      10
+    ],
+    "Description": "自動檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      13
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": 2,
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "DisableDialogueBG();DisableEventBG();EnableDialogueBG(Ye);OpenPanel(1, close);OpenPanel(2, close);Continue();",
+    "links": [
+      11
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「出事了，官府不查，只會把鐵門一鎖。對上面來說，這礦坑裡埋的哪是人，不過是幾斤[em2]鹽鐵之利[/em2]罷了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「大山說[em2]我們都是祭品[/em2]……人在這種叫天不應的絕境裡，看見顆會發光的紅水晶，哪能不把它當神拜？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「可李四在村口磕破了頭，他只知道黑鐵嶺吃人。誰又在乎是官逼的，還是這蒼天要的呢？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      17,
+      19,
+      21,
+      23
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": 2,
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "links": []
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「管他官府封不封，人命不能這樣填進去。」",
+    "Sequence": "",
+    "links": [
+      18
+    ],
+    "Description": "選項1：[信義]"
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「官府鐵門一鎖，就想把這筆爛帳埋了。但若由著他們把人當祭品填進去，這天下還有什麼俠義可言？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「李大山他們……其實只是想活下去吧。」",
+    "Sequence": "",
+    "links": [
+      20
+    ],
+    "Description": "選項2：[仁心]"
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「人被逼到絕路竟至到拜一塊來路不明的神像。而李四額頭上的血…人命才是這黑鐵嶺最該看重的事情。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「官老爺的刀，地底下的神……」",
+    "Sequence": "",
+    "links": [
+      22
+    ],
+    "Description": "選項3：[通達]"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「上面有國之大柄壓著，下面有吃人的紅水晶等著。換作是我，也只能跟他們一樣潛伏忍受嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「借神鬼之名掩蓋人禍，這水深得很。」",
+    "Sequence": "",
+    "links": [
+      24
+    ],
+    "Description": "選項4：[機略]"
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「[em2]鹽鐵之利[/em2]才是根源。這所謂的妖邪，怕是有人巴不得它鬧大，好掩蓋下面見不得光的勾當。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC0",
+    "text": "觀心觸發：完成趙王洞祭壇前廳戰鬥",
+    "Sequence": "// TODO: SetQuestState or觀心觸發條件",
+    "links": [
+      26
+    ],
+    "Description": "觀心事件入口：觀心：趙王洞血煞"
+  },
+  {
+    "entryID": 26,
+    "actorID": 2,
+    "text": "[panel=6]＊（血色與黑霧吞沒視線。胸口那股飢餓如野火竄起——不只是妖物與同伴，那是一股想要[em2]吞噬天下[/em2]的狂妄衝動。）＊",
+    "Sequence": "",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": 2,
+    "text": "[panel=6]＊（腦中有個聲音步步進逼：[em2]吞噬這一切[/em2]。指甲掐進掌心，五臟六腑像要裂開。）＊",
+    "Sequence": "",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": 2,
+    "text": "「總有一天，你會心甘情願祈求吾的。」",
+    "Sequence": "",
+    "links": [
+      29
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": 2,
+    "text": "[panel=6]＊（飢餓驟退。你撐不住昏死過去。迷濛中，一雙寬大的手把你從地上拉起——）＊",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC5",
+    "text": "「……小子，你能撐到現在，是個漢子。剩下的交給我吧！」",
+    "Sequence": "SetPortrait(MC5,pic=8);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": 2,
+    "text": "[panel=6]＊（你盤膝靜坐，趙王洞裡那股腥甜氣息，又像貼著喉嚨爬了上來。種種邪念，在心底一字一字凝成幾句——）＊",
+    "Sequence": "",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": 2,
+    "text": "[panel=6]＊（[em2]突生吞噬天下意，此念原非吾本心；咬牙拒作吞噬奴。誰為主！還未知曉！[/em2]）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [
+      34
+    ],
+    "Description": "自動洞悉檢定觸發點 (難度2)"
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      37,
+      35
+    ],
+    "Description": "自動檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「戰後倒在地上，滿腦子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，還是這天地萬物……竟都成了我想一口吞下的微塵。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      38
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "「戰後倒在地上，滿腦子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，還是這天地萬物……竟都成了我想一口吞下的微塵。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      38
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": 2,
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "DisableDialogueBG();DisableEventBG();EnableDialogueBG(Ye);OpenPanel(1, close);OpenPanel(2, close);Continue();",
+    "links": [
+      36
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「那股飢火勒住喉嚨，逼著我在[em2]吞噬[/em2]與[em2]被吞噬[/em2]之間選一個。[em2]此念原非吾本心[/em2]……但我記不得自己是撐住了，還是已經讓步了半寸。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      39
+    ]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「洞裡那個聲音說，[em2]總有一天你會心甘情願祈求吾[/em2]。……連是人是鬼都說不清，卻像是在我心底扎了根。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「這副身子裡，[em2]誰為主[/em2]？……醒來時人在英豪府，賈詡卻留了卷竹簡。這一切，難道不是巧合？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      42,
+      44,
+      46,
+      48
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": 2,
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "links": []
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「祈求牠？……就算死，我也不答應。」",
+    "Sequence": "",
+    "links": [
+      43
+    ],
+    "Description": "選項1：[信義]"
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「沒有人可以控制我。我手裡的刀，劈的是我自己選的路。那個聲音想讓我當[em2]吞噬奴[/em2]？我死也不認這命。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「這股力量太邪……絕不能讓它傷了自己人。」",
+    "Sequence": "",
+    "links": [
+      45
+    ],
+    "Description": "選項2：[仁心]"
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「最駭人的不是那怪聲，是我竟把娜娜、雍仔當成了微塵肉塊。這力量再強，若是會傷了同伴、傷了靈犀，我拼死也得把它死死按住。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「管它什麼力量，現在沒事就好。」",
+    "Sequence": "",
+    "links": [
+      47
+    ],
+    "Description": "選項3：[通達]"
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「是人是鬼、誰做主……想破頭也沒用。反正這股力量現在安分了，人也活著回來了。是福是禍，走一步看一步吧。哈哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「若是這『吞噬』之力能為我所用……」",
+    "Sequence": "",
+    "links": [
+      49
+    ],
+    "Description": "選項4：[機略]"
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「[em2]吞噬天下[/em2]……這力量若是能被我駕馭，還有什麼成不了的事？只要能讓我變強，管它是妖是魔。誰為主？自然是我來做它的主！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC0",
+    "text": "觀心觸發：完成英豪府遴選大樹守衛大澈大悟",
+    "Sequence": "// TODO: SetQuestState or觀心觸發條件",
+    "links": [
+      51
+    ],
+    "Description": "觀心事件入口：觀心：大樹守衛三才門"
+  },
+  {
+    "entryID": 51,
+    "actorID": 2,
+    "text": "[panel=6]＊（大樹守衛摘下那頂可笑的水桶，露出一張滄桑的臉龐。他眼神清明，再無半分瘋癲。）＊",
+    "Sequence": "",
+    "links": [
+      52
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role133",
+    "text": "「我本是『三才門』的三師弟。當年為了湊齊三絕，我與大師兄聯手，將二師哥逼上了絕路。」",
+    "Sequence": "",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "role133",
+    "text": "「我苦尋『四神拳』不得，執念深種入骨。最終走火入魔……」",
+    "Sequence": "",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": 2,
+    "text": "[panel=6]＊（你盤膝靜坐，看著他牽驢遠去的背影。這百年的恩怨糾葛，在心底一字一字凝成幾句——）＊",
+    "Sequence": "",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": 2,
+    "text": "[panel=6]＊（[em2]手足相煎爭殘篇，執念入魔守空樹；一敗夢醒傳三才。恩怨散盡隱山林！[/em2]）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      56
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [
+      57
+    ],
+    "Description": "自動洞悉檢定觸發點 (難度2)"
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      60,
+      58
+    ],
+    "Description": "自動檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      61
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC1",
+    "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": 2,
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "DisableDialogueBG();DisableEventBG();EnableDialogueBG(Ye);OpenPanel(1, close);OpenPanel(2, close);Continue();",
+    "links": [
+      59
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「大樹哥[em2]執念深種[/em2]，瘋瘋癲癲守了半輩子樹……這天下第一的武功，竟能把人折磨成這副鬼樣子。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      63,
+      65,
+      67,
+      69
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": 2,
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "links": []
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "「同門這份情分，怎能說扔就扔。」",
+    "Sequence": "",
+    "links": [
+      64
+    ],
+    "Description": "選項1：[信義]"
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「大師兄和他先壞了規矩，才把二師哥逼上絕路。要是換成我，寧可不要這[em2]三絕合一[/em2]，也絕不幹這種[em2]逼死同門[/em2]的勾當。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「那句只盼來生做兄弟……聽著真讓人心酸。」",
+    "Sequence": "",
+    "links": [
+      66
+    ],
+    "Description": "選項2：[仁心]"
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC1",
+    "text": "「無字碑下那位前輩，到死只盼來生能做個普通兄弟……要是換成我，光是想到這句話，這拳譜再怎麼天下無敵，拿在手裡也嫌燙手。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "「爭不到的東西，一開始就不該惦記。」",
+    "Sequence": "",
+    "links": [
+      68
+    ],
+    "Description": "選項3：[通達]"
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「為了湊齊絕學把自己逼瘋，真是何苦來哉。要是換成我，這[em2]三絕合一[/em2]不要便是了，帶著自己本來的功夫下山逍遙，不比在這荒郊野外守半輩子樹強？哈哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC1",
+    "text": "「逼死同門又把自己逼瘋，這條路也太虧了。」",
+    "Sequence": "",
+    "links": [
+      70
+    ],
+    "Description": "選項4：[機略]"
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「跟人聯手鬧出人命，又為了一本拳法把自己逼成瘋子。這盤棋怎麼算怎麼賠本。要是換成我，[em2]三絕合一[/em2]總有別的法子，犯不著把自己搭進去。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "links": [
+      62
+    ]
+  }
+]

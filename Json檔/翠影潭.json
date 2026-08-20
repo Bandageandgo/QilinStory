@@ -1,0 +1,1141 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "[panel=6]＊（山路轉過一道彎，眼前豁然是一方碧潭，潭水深綠近墨，水面霧氣繚繞，靜得能聽見自己的呼吸聲。潭邊礁石上，坐著一位鬚髮花白的老者，手持一根釣竿，竿尖垂著細線探入水中，一動也不動，彷彿與潭水融成了一體。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [
+      3
+    ],
+    "Description": "自動洞悉檢定觸發點（難度2）：判斷主角能否看出老者釣鉤無餌"
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      4,
+      5
+    ],
+    "Description": "自動洞悉檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 4,
+    "actorID": 2,
+    "text": "[panel=6]＊（你湊近了些看清楚——鉤上果然一絲餌料都沒有，鉤尖甚至微微反著光，像是特意讓人看見的。方才那股感覺，不是你多心。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);ModifyData(Flag,Player,CYT_BaitInsight,1);",
+    "links": [
+      6
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 5,
+    "actorID": 2,
+    "text": "[panel=6]＊（你想再看仔細些，卻始終瞧不出個所以然，那點違和感，也就這麼淡去了。）＊",
+    "Sequence": "",
+    "links": [
+      6
+    ],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 6,
+    "actorID": "NPC_FishingElder",
+    "text": "「來都來了，坐吧。別出聲，我這魚膽子小。」",
+    "Sequence": "",
+    "links": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「這鉤上，似乎沒有餌？」",
+    "Sequence": "",
+    "links": [
+      12
+    ],
+    "Description": "選項1：僅先前自動洞悉檢定成功時顯示（隱藏選項，需引擎端旗標/GetFlag API支援，詳見文末備註）",
+    "Conditions": "GetFlag(Player,CYT_BaitInsight) == 1"
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「這潭裡，魚兒可多？」",
+    "Sequence": "",
+    "links": [
+      19
+    ],
+    "Description": "選項2：一般問候，無檢定"
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「一把年紀了，還耗在這兒？」",
+    "Sequence": "",
+    "links": [
+      21
+    ],
+    "Description": "選項3：略帶嘲諷，無檢定"
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "不由分說，直接出手試探。",
+    "Sequence": "",
+    "links": [
+      23
+    ],
+    "Description": "選項4：直接出手／踢館（不觸發真正戰鬥，僅為戰力伏筆）"
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "什麼也不說，在一旁坐下陪著看水面。",
+    "Sequence": "",
+    "links": [
+      25
+    ],
+    "Description": "選項5：安靜陪坐（不說話的動作選項）"
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「老丈這鉤上，似乎沒有餌？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "NPC_FishingElder",
+    "text": "「呵，你能瞧出來也算是不錯了。」",
+    "Sequence": "",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "NPC_FishingElder",
+    "text": "「餌是給魚吃的。我釣的，不是魚。」",
+    "Sequence": "",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「你不是在釣魚……那你到底在等什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Idea);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者的手，極輕微地頓了一下。潭面依舊平靜，但那根釣竿，卻彷彿被握得緊了幾分。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "NPC_FishingElder",
+    "text": "「……這句話，我自己倒是有陣子沒問過了。」",
+    "Sequence": "",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "NPC_FishingElder",
+    "text": "「這一問，問得比你那身功夫還準。」",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「老丈這潭裡，可有什麼特別的魚？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "NPC_FishingElder",
+    "text": "「這潭裡魚多不多，我還真沒數過。想吃魚，去下游，那邊多的是。」",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「一把年紀了，還有閒工夫在這兒釣魚？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者連眼皮都沒抬一下，彷彿你這句話跟腳邊的石頭沒什麼兩樣——就這麼重新沉入那種近乎凝滯的寧靜之中。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": 2,
+    "text": "[panel=6]＊（你按捺不住，欺身欲奪其釣竿，甚至已經運勁出招——可下一瞬，你竟說不清發生了什麼。手中一空，人已跌坐在原地，那根釣竿仍穩穩立在老者手中，竿尖連晃都沒晃一下。）＊",
+    "Sequence": "",
+    "links": [
+      24
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": 2,
+    "text": "[panel=6]＊（你這才驚覺，方才那一瞬，自己連他是怎麼出手的都沒看清。這老者的深淺，恐怕比看起來的還要深得多。）＊",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": 2,
+    "text": "[panel=6]＊（你沒有說話，只是在老者身旁尋了塊石頭坐下，靜靜望著水面。時間一點一滴過去，潭面平靜無波，連一聲魚躍都沒有。）＊",
+    "Sequence": "",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": 2,
+    "text": "[panel=6]＊（不知過了多久，你甚至有些懷疑自己是不是坐錯了地方——正當你心浮氣躁、幾乎要起身離開時……）＊",
+    "Sequence": "",
+    "links": [
+      27,
+      28
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "繼續留在原地。",
+    "Sequence": "",
+    "links": [
+      29
+    ],
+    "Description": "選項1：堅持留下"
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "忍不住起身離開。",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項2：起身離開（對話終止）"
+  },
+  {
+    "entryID": 29,
+    "actorID": "NPC_FishingElder",
+    "text": "「……我還當你坐不住。這麼久了，一句話都沒問。」",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "NPC_FishingElder",
+    "text": "「閒著也是閒著，有件小事，你要不要跑一趟。」",
+    "Sequence": "",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "NPC_FishingElder",
+    "text": "「繞到潭子那頭，淺灘上有艘爛得差不多的舊船，船舷上刻著一道痕。你去看看，那道痕現在指著水面下什麼地方，回來跟我說一聲就行。」",
+    "Sequence": "",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「就……這麼簡單？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "NPC_FishingElder",
+    "text": "「…去吧，別耽誤功夫。」",
+    "Sequence": "",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC0",
+    "text": "接取任務【舟痕之託】",
+    "Sequence": "// TODO: Add TaskTriggerCommand for '舟痕之託' here",
+    "links": [],
+    "Description": "任務觸發節點：舟痕之託"
+  },
+  {
+    "entryID": 35,
+    "actorID": 2,
+    "text": "[panel=6]＊（繞過半個潭子，你見著了那艘船——與其說是船，不如說是一堆勉強還維持著船形的朽木，早已與礁石、水草纏在了一起。船舷側面，果然有一道人為刻下的痕跡，邊緣已被歲月磨得模糊，卻仍看得出劍刻的痕跡。）＊",
+    "Sequence": "",
+    "links": [
+      36
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [
+      37
+    ],
+    "Description": "自動洞悉檢定觸發點（難度2）：判斷主角能否看出刻痕與現況的落差"
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      38,
+      39
+    ],
+    "Description": "自動洞悉檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 38,
+    "actorID": 2,
+    "text": "[panel=6]＊（你順著刻痕的角度望去，那方向如今正對著水面下一片光禿禿的礫石灘，什麼也沒有，連水草都未曾扎根。這些年潭水幾番沖刷、泥沙不知搬移過多少回，那道痕當年所指的地方，恐怕早就不是眼前這片礫石灘了——刻痕本身沒有變過，變的，是刻痕底下的整個世界。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "links": [
+      40
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 39,
+    "actorID": 2,
+    "text": "[panel=6]＊（你順著刻痕望去，水面下影影綽綽，看不真切，只覺得那裡似乎……什麼都沒有。）＊",
+    "Sequence": "",
+    "links": [
+      40
+    ],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「……舟行遠了，痕還在原處，底下卻什麼都不剩了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC0",
+    "text": "任務進度：已查看船舷刻痕，可返回向釣魚叟回報。",
+    "Sequence": "// TODO: Add QuestUpdateCommand for '舟痕之託' here",
+    "links": [],
+    "Description": "任務更新節點：舟痕之託－已查看刻痕"
+  },
+  {
+    "entryID": 42,
+    "actorID": "NPC_FishingElder",
+    "text": "「回來得挺快。怎麼樣，看見什麼了？」",
+    "Sequence": "",
+    "links": [
+      43,
+      44,
+      45
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「什麼都沒有，就一片空蕩蕩的礫石灘。」",
+    "Sequence": "",
+    "links": [
+      46
+    ],
+    "Description": "選項1：誠實回報（核心正確路線，仍需說服）"
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「水底似乎有東西在發光……」",
+    "Sequence": "",
+    "links": [
+      61
+    ],
+    "Description": "選項2：討好／說謊（錯誤選項，附挽回機會）"
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「一艘破船罷了，能有什麼名堂。」",
+    "Sequence": "",
+    "links": [
+      70
+    ],
+    "Description": "選項3：敷衍回應（錯誤選項，附挽回機會）"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「什麼都沒有。那道痕指著的地方，只是一片空蕩蕩的礫石灘。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "NPC_FishingElder",
+    "text": "「呵呵，什麼都沒有，倒是乾脆。」",
+    "Sequence": "",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "NPC_FishingElder",
+    "text": "「空蕩蕩的……嘿，也是。這麼多年，我倒也一直沒撈著個什麼。」",
+    "Sequence": "",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "NPC_FishingElder",
+    "text": "「說出來你可能不信——我年輕時也算打遍過天下，後來就是找不著能讓我認真的人了。閒得沒事幹，才窩到這潭子邊釣魚。」",
+    "Sequence": "",
+    "links": [
+      50,
+      51
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「老丈許久沒下山了吧？如今江湖高手輩出，光英豪府的呂信、子羽兩位，便是當世萬人敵！」",
+    "Sequence": "",
+    "links": [
+      52
+    ],
+    "Description": "選項1：口才檢定 難度15，胡吹大氣"
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「晚輩說的，句句屬實。信不信，全憑老丈。」",
+    "Sequence": "",
+    "links": [
+      59
+    ],
+    "Description": "選項2：平實應對，不特別說服"
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,PersuasionCheck,15);",
+    "links": [
+      53
+    ],
+    "Description": "選項1的空對話擲骰節點：口才檢定 難度15"
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「老丈這是許久沒下山了吧？如今外頭江湖，可比你想的熱鬧！」",
+    "Sequence": "Continue();SetPortrait(MC1,pic=5);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「光英豪府裡就有呂信、子羽兩位——一個身高九尺，虎背熊腰、膂力驚人，一口大刀掄起來罡風陣陣，弓馬更是了得，箭無虛發，江湖人都說他那身騎射，不輸當年的飛將軍李廣；一個身高八尺，丹鳳眼、臥蠶眉，面如重棗，相貌堂堂、威風凜凜，臉一沉，悍匪個個腿軟——」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「這兩位，說是當世萬人敵，也不誇張！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      56,
+      58
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "NPC_FishingElder",
+    "text": "「萬人敵……這詞，我有些日子沒聽人當真說過了。」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
+    "links": [
+      57
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 57,
+    "actorID": "NPC_FishingElder",
+    "text": "「真的假的，我倒想知道。行，算你這張嘴，替我省了下山這一趟。」",
+    "Sequence": "",
+    "links": [
+      79
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "NPC_FishingElder",
+    "text": "「萬人敵……這種話好聽是好聽，十句裡有九句是自己人捧自己人。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC1",
+    "text": "「晚輩說的，句句屬實。信不信，全憑老丈。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "NPC_FishingElder",
+    "text": "「倒也乾脆。不過信不信，我還得再想想。」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「我瞧見水底似乎有東西在發光，說不定真是把劍！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": "NPC_FishingElder",
+    "text": "「發光的東西？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      63,
+      64
+    ]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]趕緊改口，換個說法重新解釋方才那句話。",
+    "Sequence": "",
+    "links": [
+      65
+    ],
+    "Description": "選項1：厚黑檢定 難度12，嘗試圓謊"
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "訕訕地不再多說。",
+    "Sequence": "",
+    "links": [
+      69
+    ],
+    "Description": "選項2：不再多說"
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,RealpolitikCheck,12);",
+    "links": [
+      66
+    ],
+    "Description": "選項1的空對話擲骰節點：厚黑檢定 難度12"
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      67,
+      68
+    ],
+    "Description": "厚黑檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 67,
+    "actorID": "NPC_FishingElder",
+    "text": "「……嘴皮子倒是利索。行，這回就當沒聽見，你重新說一次。」",
+    "Sequence": "",
+    "links": [
+      43,
+      44,
+      45
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 68,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者不再答話，重新拿起釣竿，將視線投回水面，任你說什麼，都像是說給石頭聽。）＊",
+    "Sequence": "",
+    "links": [],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 69,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者不再答話，重新拿起釣竿，將視線投回水面，任你說什麼，都像是說給石頭聽。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「一艘破船罷了，能有什麼名堂。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [
+      71
+    ]
+  },
+  {
+    "entryID": 71,
+    "actorID": "NPC_FishingElder",
+    "text": "「破船罷了？看來你也懶得多看一眼。」",
+    "Sequence": "",
+    "links": [
+      72,
+      73
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「其實方才看得不夠仔細，容我再說一次。」",
+    "Sequence": "",
+    "links": [
+      74
+    ],
+    "Description": "選項1：口才檢定 難度5"
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC1",
+    "text": "「就這樣吧。」",
+    "Sequence": "",
+    "links": [
+      78
+    ],
+    "Description": "選項2：不再多說"
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「……其實晚輩方才確實看得不夠仔細，容我再說一次。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "links": [
+      75
+    ]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,PersuasionCheck,5);",
+    "links": [
+      76,
+      77
+    ],
+    "Description": "選項1的空對話擲骰節點：口才檢定 難度5"
+  },
+  {
+    "entryID": 76,
+    "actorID": "NPC_FishingElder",
+    "text": "「知道自己方才敷衍，倒也算數。行，再說一次。」",
+    "Sequence": "",
+    "links": [
+      43,
+      44,
+      45
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 77,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者不再理會，重新沉入那副老僧入定般的姿態，彷彿燕不凡從未出現過一般。）＊",
+    "Sequence": "",
+    "links": [],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 78,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者不再理會，重新沉入那副老僧入定般的姿態，彷彿燕不凡從未出現過一般。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 79,
+    "actorID": "NPC_FishingElder",
+    "text": "「你方才說的那兩個，呂信、子羽——是真是假，我倒說不好，不過倒是有趣。」",
+    "Sequence": "",
+    "links": [
+      80
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "NPC_FishingElder",
+    "text": "「這套東西，叫『御劍』。」",
+    "Sequence": "",
+    "links": [
+      81
+    ]
+  },
+  {
+    "entryID": 81,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者說著，隨手撿起腳邊一截枯枝，在指間轉了一圈，像是在掂量什麼。）＊",
+    "Sequence": "",
+    "links": [
+      82
+    ]
+  },
+  {
+    "entryID": 82,
+    "actorID": "NPC_FishingElder",
+    "text": "「劍字擺後頭，御字擺前頭——手裡拿的是什麼，從來不打緊。」",
+    "Sequence": "",
+    "links": [
+      83
+    ]
+  },
+  {
+    "entryID": 83,
+    "actorID": "NPC_FishingElder",
+    "text": "「真要說難的，是心裡沒有牽掛，把劍理看透了，招式的樣子，反倒可以忘掉。」",
+    "Sequence": "",
+    "links": [
+      84
+    ]
+  },
+  {
+    "entryID": 84,
+    "actorID": "NPC_FishingElder",
+    "text": "「你去想怎麼拆一招、怎麼使一招，那都還隔著一層。真到了火候，是連個招式的痕跡都不必留——就像那羚羊夜裡歇腳，掛角在樹梢上，腳不沾地，連個蹤影都尋不著。」",
+    "Sequence": "",
+    "links": [
+      85
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「所以老丈這些年，鉤上才不必掛餌……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [
+      86
+    ]
+  },
+  {
+    "entryID": 86,
+    "actorID": "NPC_FishingElder",
+    "text": "「這套東西，姑且教給你，就當是我這根釣竿，換了個地方，替我再拋一次——你要是真能會上那兩位，或是江湖上隨便哪個像樣的角色，替我探探深淺，也算沒白教。」",
+    "Sequence": "",
+    "links": [
+      87
+    ]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC1",
+    "text": "「老丈這是……讓晚輩替你走一趟江湖？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [
+      88
+    ]
+  },
+  {
+    "entryID": 88,
+    "actorID": "NPC_FishingElder",
+    "text": "「隨你怎麼想。左右我是閒著，你也不虧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      89
+    ]
+  },
+  {
+    "entryID": 89,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者隨手折下一根柳枝，在空中虛劃了幾道。枝頭並無鋒刃，你卻分明感覺到一股劍意撲面而來——那些原本晦澀難懂的劍理，竟在這一瞬間全數透了進來，清晰得不像話。）＊",
+    "Sequence": "",
+    "links": [
+      90
+    ]
+  },
+  {
+    "entryID": 90,
+    "actorID": "NPC_FishingElder",
+    "text": "「劍在哪兒，其實不重要。你心裡有沒有那口氣，才重要。」",
+    "Sequence": "",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC0",
+    "text": "習得劍法體系【御劍】",
+    "Sequence": "// TODO: Add SkillGrantCommand for '御劍' here（技能列表詳見附錄一）",
+    "links": [
+      92
+    ],
+    "Description": "技能習得節點：御劍"
+  },
+  {
+    "entryID": 92,
+    "actorID": "NPC_FishingElder",
+    "text": "「行了，去吧。這套東西擱在你身上能長成什麼樣，我倒想瞧瞧——不是聽你說，是我親眼看。等你自己耍熟了，再回來找我一趟。」",
+    "Sequence": "",
+    "links": [
+      93
+    ]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC0",
+    "text": "接取任務【印證劍心】",
+    "Sequence": "// TODO: Add TaskTriggerCommand for '印證劍心' here",
+    "links": [
+      94
+    ],
+    "Description": "任務觸發節點：印證劍心"
+  },
+  {
+    "entryID": 94,
+    "actorID": 2,
+    "text": "[panel=6]＊（你躬身一禮，老者卻已重新望向水面，不再言語。翠影潭依舊霧氣氤氳，彷彿方才那場交會，只是潭水裡的一圈漣漪，轉瞬即逝。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 95,
+    "actorID": 2,
+    "text": "[panel=6]＊（潭邊景色依舊，霧氣氤氳，老者仍坐在原處垂釣，彷彿時間從未在此流動過。）＊",
+    "Sequence": "",
+    "links": [
+      96
+    ]
+  },
+  {
+    "entryID": 96,
+    "actorID": "NPC_FishingElder",
+    "text": "「回來了。」",
+    "Sequence": "",
+    "links": [
+      97
+    ]
+  },
+  {
+    "entryID": 97,
+    "actorID": "NPC_FishingElder",
+    "text": "「這陣子，那套東西你自己耍得怎麼樣，我倒想瞧瞧——不是聽你說，是我親眼看。」",
+    "Sequence": "",
+    "links": [
+      98,
+      99
+    ]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC1",
+    "text": "「那就請老丈，賜教一場。」",
+    "Sequence": "",
+    "links": [
+      100
+    ],
+    "Description": "選項1：請求切磋"
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項2：暫不挑戰，離開"
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC1",
+    "text": "「那就請老丈，賜教一場。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      101
+    ]
+  },
+  {
+    "entryID": 101,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者這回不再隨手引化——他站定身形，周身氣息與方才那個懶洋洋的釣魚老頭判若兩人。）＊",
+    "Sequence": "",
+    "links": [
+      102
+    ]
+  },
+  {
+    "entryID": 102,
+    "actorID": "NPC_FishingElder",
+    "text": "「拿出你這陣子練的，讓我瞧瞧。」",
+    "Sequence": "",
+    "links": [
+      103
+    ]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginBattle(FishingElder_FinalTrial,Default,Default,Default);",
+    "links": [
+      104,
+      122
+    ],
+    "Description": "戰鬥觸發節點：FishingElder_FinalTrial（勝利或撐過指定回合數，達成「印證劍心」判定）"
+  },
+  {
+    "entryID": 104,
+    "actorID": 2,
+    "text": "[panel=6]＊（幾番交手，你這才真切感覺到，御劍在自己手上，終於不再只是幾個招式的堆疊。老者收勢而立，眼底閃過一絲極淡的訝異。）＊",
+    "Sequence": "",
+    "links": [
+      105
+    ],
+    "Conditions": "IsBattleWin() == true"
+  },
+  {
+    "entryID": 105,
+    "actorID": "NPC_FishingElder",
+    "text": "「……有點意思。」",
+    "Sequence": "",
+    "links": [
+      106
+    ]
+  },
+  {
+    "entryID": 106,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者卻沒有像往常那樣立刻坐回原位，只是望著潭水，久久不語。）＊",
+    "Sequence": "",
+    "links": [
+      107
+    ]
+  },
+  {
+    "entryID": 107,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者的神情忽然有些恍惚，彷彿一瞬間被拉回了許多年前，低聲開口，像是自言自語，又像是說給你聽。）＊",
+    "Sequence": "",
+    "links": [
+      108
+    ]
+  },
+  {
+    "entryID": 108,
+    "actorID": "NPC_FishingElder",
+    "text": "「十八歲那年，賀蘭山一帶有個作惡多端的羌人首領，欺凌鄉里。我那至交仗義執言，卻被他當眾折辱。公羊家有言：『九世猶可復仇，雖百世可也』——況在當世？我便許下一句『此辱，必為君雪』，隻身殺入賀蘭山，直至取了那首領首級後而歸。」",
+    "Sequence": "",
+    "links": [
+      109
+    ]
+  },
+  {
+    "entryID": 109,
+    "actorID": "NPC_FishingElder",
+    "text": "「只是這一趟，去得久了些——羌人的餘部尋了來，把我那至交也殺了。」",
+    "Sequence": "",
+    "links": [
+      110
+    ]
+  },
+  {
+    "entryID": 110,
+    "actorID": "NPC_FishingElder",
+    "text": "「我終究是沒有守住承諾……！」",
+    "Sequence": "",
+    "links": [
+      111
+    ]
+  },
+  {
+    "entryID": 111,
+    "actorID": "NPC_FishingElder",
+    "text": "「打那以後，我把劍沉入潭底，發誓再不與人動手。」",
+    "Sequence": "",
+    "links": [
+      112
+    ]
+  },
+  {
+    "entryID": 112,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者起身走到潭邊，俯身探入水中，不過眨眼功夫，便從水底摸出一把以舊布裹著的長劍。）＊",
+    "Sequence": "",
+    "links": [
+      113
+    ]
+  },
+  {
+    "entryID": 113,
+    "actorID": "NPC_FishingElder",
+    "text": "「這把劍，跟了我大半輩子，沒有一天不鋒利。我這雙手，往後不會再拿它指著誰了——你既學了這套東西，就該有把配得上的劍。」",
+    "Sequence": "",
+    "links": [
+      114
+    ]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "「老丈……」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      115
+    ]
+  },
+  {
+    "entryID": 115,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者收起釣竿，動作不疾不徐，像是這一天，他早已想過無數遍。）＊",
+    "Sequence": "",
+    "links": [
+      116
+    ]
+  },
+  {
+    "entryID": 116,
+    "actorID": "NPC_FishingElder",
+    "text": "「這潭子，我也釣得夠久了。」",
+    "Sequence": "",
+    "links": [
+      117
+    ]
+  },
+  {
+    "entryID": 117,
+    "actorID": 2,
+    "text": "[panel=6]＊（老者的身影，一步步遠去，沒入林間霧氣，再也望不見了。潭邊只剩下你，和那把沉甸甸的劍。）＊",
+    "Sequence": "",
+    "links": [
+      118
+    ]
+  },
+  {
+    "entryID": 118,
+    "actorID": 2,
+    "text": "[panel=6]＊（潭邊只剩下你一人，霧氣依舊瀰漫，那道熟悉的身影，卻再也不會出現在這片礁石上了。你低頭看著手中那把劍，忽然想起老者臨去前的最後一句話。）＊",
+    "Sequence": "",
+    "links": [
+      119
+    ]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC1",
+    "text": "「劍在手裡，是劍；劍不在手裡，也還是劍……」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "links": [
+      120
+    ]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC0",
+    "text": "獲得道具【釣魚叟贈劍】",
+    "Sequence": "AddItem(FishingElder_Sword);",
+    "links": [
+      121
+    ],
+    "Description": "物品交互節點：贈予 FishingElder_Sword"
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC0",
+    "text": "釣魚叟自此離開翠影潭，此為其登場劇情的完結。",
+    "Sequence": "// TODO: Add NPC departure flag/command for FishingElder（此後翠影潭不再有此NPC互動，見附錄待補事項）",
+    "links": [],
+    "Description": "劇情旗標節點：釣魚叟退場"
+  },
+  {
+    "entryID": 122,
+    "actorID": "NPC_FishingElder",
+    "text": "「還嫩了點，自己再去琢磨吧。」",
+    "Sequence": "",
+    "links": [],
+    "Conditions": "IsBattleWin() == false"
+  }
+]

@@ -1,0 +1,144 @@
+[
+    {
+        "entryID": 1,
+        "actorID": 3,
+        "text": "「嗯，小子，氣色看起來還不錯嘛。那[em2]長生經[/em2]練得如何了？可別三天打魚兩天曬網，把大叔我的心血給糟蹋了。」",
+        "Sequence": "SetPortrait(NPC3,pic=Normal);",
+        "links": [
+            2
+        ]
+    },
+    {
+        "entryID": 2,
+        "actorID": "MC1",
+        "text": "「大叔放心！我每日都有用心修習，感覺身體輕快了不少，之前那股陰寒之氣也沒那麼難受了！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            3
+        ]
+    },
+    {
+        "entryID": 3,
+        "actorID": 3,
+        "text": "「那就好。不過嘛，內功雖能固本培元，但你小子之前中的屍毒頗為麻煩，雖說拔除了大半，誰也保不准有沒有些許殘毒潛伏。行走江湖，刀劍無眼，磕磕碰碰也是常事。我看你對醫藥似乎也有些興趣，不如我再教你幾手粗淺的醫術，至少讓你日後能應付些小傷小病，不至於被人隨便下點藥就撂倒了。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC3,pic=Normal);",
+        "links": [
+            4
+        ]
+    },
+    {
+        "entryID": 4,
+        "actorID": "MC1",
+        "text": "「店家，這『英豪府』究竟是何來頭？為何引得這許多英雄好漢趨之若鶩？」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            5
+        ]
+    },
+    {
+        "entryID": 5,
+        "actorID": 3,
+        "text": "「哦？口氣倒不小，還想著懸壺濟世？小子，醫道之深，浩如煙海，可不是三言兩語就能學成的。我先教你些[em2]基礎的藥理和自救之法[/em2]，你且用心學著。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC3,pic=Laugh);",
+        "links": [
+            6
+        ]
+    },
+    {
+        "entryID": 6,
+        "actorID": 3,
+        "text": "「…譬如這[em2]斷腸草[/em2]，名字嚇人，但若炮製得法，微量反倒是活血化瘀的良藥；而這[em2]七星海棠[/em2]，看似無害，其花粉卻能使人昏睡。江湖險惡，得多個心眼。喏，這些常見的毒草藥草，你先認個臉熟。」",
+        "Sequence": "SetPortrait(NPC3,pic=Normal);ModifyData(FeatExp,MC1,MedicalExpertise,50);",
+        "links": [
+            7
+        ]
+    },
+    {
+        "entryID": 7,
+        "actorID": "MC1",
+        "text": "「多謝大叔指點，我一定會牢牢記住的！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);",
+        "links": [
+            8
+        ]
+    },
+    {
+        "entryID": 8,
+        "actorID": 3,
+        "text": "「(打了個哈欠，揮揮手)行了，今日就先到這。能記住多少，全看你自己的造化。小子，江湖路遠，好自為之吧。我還有事，先走了。」",
+        "Sequence": "",
+        "links": [
+            9
+        ]
+    },
+    {
+        "entryID": 9,
+        "actorID": "MC1",
+        "text": "「那這英豪府遴選，可有什麼門道？對出身、門派可有要求？」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Surprise_2);",
+        "links": [
+            10
+        ]
+    },
+    {
+        "entryID": 10,
+        "actorID": 3,
+        "text": "「怎麼，小子，幾日不見，倒學會黏人了？莫非是怕老子我跑了，沒人給你收拾爛攤子？」",
+        "Sequence": "SetPortrait(NPC3,pic=Laugh);EnableCharacterExpression(1,NPC3_Meditate);",
+        "links": [
+            11
+        ]
+    },
+    {
+        "entryID": 11,
+        "actorID": "MC8",
+        "text": "「表哥他是怕他那半吊子的武功和醫術可怎麼辦…」",
+        "Sequence": "SetPortrait(MC8,pic=dislike);",
+        "links": [
+            12
+        ]
+    },
+    {
+        "entryID": 12,
+        "actorID": 3,
+        "text": "「(略帶玩味地看了你一眼) 那古墓中的妖物，已被我的『迷魂百草煙』重創，失了部分元神，一時半會兒恢復不了元氣，但終究是個禍害。待你小子長生經略有小成，若有餘力，不妨去除此獠，也算為民除害，積攢些江湖歷練。」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [
+            13
+        ]
+    },
+    {
+        "entryID": 13,
+        "actorID": 3,
+        "text": "「(正色道)天下無不散的筵席。我雲遊慣了，一個地方可待不久。接下來，我打算往北方去，那邊有些故人舊事，也有些稀罕藥材，正好去瞧瞧。對了，那古墓中的妖物，已被我的『迷魂百草煙』重創，失了部分元神，一時半會兒恢復不了元氣，但終究是個禍害。你小子就好生在此地養傷，把[em2]長生經[/em2]給我練熟了，待長生經略有小成，若有餘力，不妨去除此獠，也算為民除害，積攢些江湖歷練。我看這小溪村山清水秀，客棧也還算安靜，正是你固本培元的好地方。他日若真有所成，江湖自會相見。」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(NPC3,pic=Normal);",
+        "links": [
+            14
+        ]
+    },
+    {
+        "entryID": 14,
+        "actorID": "MC1",
+        "text": "「大叔教誨，晚輩銘記在心，定不負大叔厚望！他日江湖再見，晚輩必以全新面貌拜見大叔！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            15
+        ]
+    },
+    {
+        "entryID": 15,
+        "actorID": 3,
+        "text": "「好小子，有志氣！走了！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC3,pic=Laugh);",
+        "links": [
+            16
+        ]
+    },
+    {
+        "entryID": 16,
+        "actorID": 2,
+        "text": "＊（張仲景話音未落，身形一晃，已飄然遠去，轉瞬便消失在小徑盡頭。你佇立良久...）＊",
+        "Sequence": "",
+        "links": []
+    }
+]

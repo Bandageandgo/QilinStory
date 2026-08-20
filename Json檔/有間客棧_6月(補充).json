@@ -1,0 +1,235 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "＊（你在與黑血屍的交戰中僥倖逃生，經過一番調養，傷勢總算穩定下來。你心裡清楚，之前那個神神秘秘的算命姑娘，恐怕沒安什麼好心。正想著這事，一個故作高深的聲音就從門外傳來。）＊",
+    "Sequence": "",
+    "links": [2],
+    "Description": "場景描述"
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "「應劫之人！吾已窺破天機，特來指點迷津！」",
+    "Sequence": "",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": 2,
+    "text": "＊（門被猛地推開，赫連娜娜風塵僕僕地闖了進來，高舉著那個不斷旋轉的古怪羅盤。她看起來有些狼狽，衣角上還掛著幾片樹葉，但依舊努力維持著高人風範。）＊",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "links": [4],
+    "Description": "旁白"
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「哎呀，這不是赫連『大師』嗎？妳的天機盤沒算到我差點就回不來了嗎？還是說，這也在妳的劇本裡？」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC22",
+    "text": "「非也！應劫之人遭逢此難，乃是天命注定，是為『應劫』。吾早已算到，故在後山布下『鎖龍陣』，鎮壓妖氣，否則你絕無生還之理！」",
+    "Sequence": "SetPortrait(MC22,pic=4);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "「說得跟真的一樣，我看是躲在哪裡偷看吧…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=5);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「哦？這麼說，我還得謝謝妳了？」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": 2,
+    "text": "＊（你看著眼前這個充滿矛盾的女孩，決定再多試探一下。）＊",
+    "Sequence": "",
+    "links": [9, 10, 11],
+    "Description": "重複選擇提示"
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「既然神機妙算，此行有何收穫？」",
+    "Sequence": "",
+    "links": [12],
+    "Description": "選項1：試探"
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「想合作，就拿出點誠意。」",
+    "Sequence": "",
+    "links": [15],
+    "Description": "選項2：講價"
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「別演了，妳到底是誰？」",
+    "Sequence": "",
+    "links": [18],
+    "Description": "選項3：質疑"
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「既然『大師』神機妙算，想必也算到此行必有收穫？說來聽聽。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC22",
+    "text": "「那是自然！你此番雖是『應劫』，卻也成功引動龍脈，撼動了那妖物守護的『機緣』！我這[em2]天機盤[/em2]的反應，前所未有的強烈！大俠，真正的寶藏，就要現世了！」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22_Proud);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC8",
+    "text": "「表哥，你看她那得意的樣子…你順著她說幾句話，她就樂得找不著北了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);",
+    "links": [8]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「『應劫』的差事我不想再幹第二次。妳想合作，得拿出點誠意來。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC22",
+    "text": "「你…你這是什麼話！我是在助你順應天命！再說…布陣也是需要成本的！不過…看在你確實險死還生的份上，這次若有所獲，我分你四成！…不，三成！不能再多了！」",
+    "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Nervous);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC8",
+    "text": "「表哥你看！她自己把價錢抬上去了！這人真奇怪…下次讓你跟她談，肯定能拿到更多好處！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=1);",
+    "links": [8]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「妳這身行頭、這套說詞，是跟誰學的？說吧，妳到底想要什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC22",
+    "text": "「你懂什麼！我…我之所學，豈是你能理解的！那墓裡的東西，關係到一樁天大的秘密，你只要知道，你我聯手，便能名揚天下，這還不夠嗎？！」",
+    "Sequence": "SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22_Anger);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC8",
+    "text": "「表哥，她…她怎麼突然生這麼大的氣？你看起來…好像說中了什麼她很在意的東西。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=14);",
+    "links": [8]
+  },
+  {
+    "entryID": 21,
+    "actorID": 2,
+    "text": "＊（經過一番試探，你對眼前這個故作高深的姑娘有了些了解。你決定……）＊",
+    "Sequence": "",
+    "links": [22, 23],
+    "Description": "最終選擇提示"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "[em2][調情檢定][/em2]「其實，妳這故作高深的樣子，還挺可愛的。」",
+    "Sequence": "BeginDiceRoll(Manual,FlirtingCheck,5);",
+    "links": [24],
+    "Description": "選項1：調情檢定"
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「好了，說正事吧。接下來妳有何打算？」",
+    "Sequence": "",
+    "links": [30],
+    "Description": "選項2：說正事"
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「其實，妳這故作高深的樣子，還挺可愛的。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "links": [25, 27]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC22",
+    "text": "「你…你你你…胡說八道些什麼！我…我乃天機傳人，不……不許胡言亂語！」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Nervous);SetFlag(Helian_Affection_Up_Greatly, true);",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC8",
+    "text": "「哇…表哥，她…她的臉比猴子屁股還紅欸！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=4);",
+    "links": [32]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC22",
+    "text": "「油嘴滑舌！我看你是之前摔壞腦子了！再胡說，小心我撕爛你的嘴！」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22_Anger);",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC8",
+    "text": "「表哥，看來她不吃你這一套哦。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);",
+    "links": [32]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「好了，說正事吧。接下來妳有何打算？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC22",
+    "text": "「那是自然！你以為你只是白白受苦了？我跟你說，你這一鬧，正好把那妖物看守的寶穴給震開了一道縫！我這天機盤都快轉瘋了，反應前所未有的強烈！少俠，真正的寶藏，就要現世了！」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22_Proud);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC8",
+    "text": "「……她……她又跑了？表哥，這女的也太不靠譜了！」",
+    "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8_Question);",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「不，恰恰相反，她很『靠譜』地在為她自己的目標奔波呢。只是…跑得也太快了點。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);",
+    "links": []
+  }
+]

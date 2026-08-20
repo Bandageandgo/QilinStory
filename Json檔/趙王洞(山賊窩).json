@@ -1,0 +1,752 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「勞煩通報廖頭領一聲，就說故人來訪，有要事相商。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": 127,
+    "text": "「哎呀！原來是廖頭領的朋友啊！歡迎歡迎！」",
+    "Sequence": "",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「廖大哥呢？怎麼不見人影？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": 127,
+    "text": "「廖頭領此刻正和幾位頭目在別處議事，暫時脫不開身。小的這就去傳話，還請先稍作歇息，很快便能見著廖頭領。」",
+    "Sequence": "",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC20",
+    "text": "「哈哈，這位兄弟熱情！道爺我這一路顛簸，正好口渴，先謝過啦！」",
+    "Sequence": "",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "「咦？我的羅盤怎麼突然亂晃了……？」",
+    "Sequence": "",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「這茶……不對勁！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": 2,
+    "text": "[panel=6]＊（茶水入口，最初還帶點淡淡清香，轉瞬間竟覺一陣天旋地轉。你發現雍仔已經砰然倒地，娜娜也撐著桌子，臉色蒼白，身子搖晃得隨時要倒。）＊",
+    "Sequence": "",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC22",
+    "text": "「你在茶裡下了什麼鬼東西……無恥……」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": 127,
+    "text": "「哼，活得不耐煩了還敢主動送上門！卞將軍正好缺[em2]祭品[/em2]，你們自投羅網，算你們倒楣！把那個胖子和那丫頭帶下去，這小子先給我鎖進大牢待卞將軍決定怎麼發落！」",
+    "Sequence": "",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": 2,
+    "text": "[panel=6]＊（你只覺天旋地轉，隨即徹底失去了意識……）＊",
+    "Sequence": "",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": 2,
+    "text": "[panel=6]＊（不知過了多久，你在一片陰冷潮濕中醒來。四周昏暗，只有微弱的火光透過鐵柵欄照進來。你還未完全清醒，便感覺懷中的麒麟骰傳來一陣微微的發熱。）＊",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「嘶……頭好痛。本以為有廖大哥這層關係，這趟任務該是十拿九穩，怎麼反倒成了階下囚？」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「等等，雍仔？娜娜？……他們不在這！糟了！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": 2,
+    "text": "[panel=6]＊（突然間，隔壁牢房傳來一個低沉穩重的聲音。）＊",
+    "Sequence": "",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role127",
+    "text": "「[em2]時有否泰，事有逆順[/em2]……小兄弟，沒想到你我一別，再見竟是這般光景。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=1);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「廖淳大哥！？你怎麼也被關在這裡？到底發生了什麼事？我的朋友們呢？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "role127",
+    "text": "「是我識人不明。卞喜那廝背棄了我教的初衷，背著渠帥在這洞裡搞些傷天害理的勾當。我屢次阻撓，反遭他暗算奪權，囚禁於此。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=2);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「難道……那幫賊人口中說的[em2]祭品[/em2]就是……？」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role127",
+    "text": "「不錯。你那兩位朋友恐怕已被送往更深處了。事不宜遲，我們得趕緊想辦法脫身！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=8);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": 2,
+    "text": "[panel=6]＊（長廊外傳來一陣腳步聲，一名負責看守的太平教眾提著大刀走來，惡狠狠地敲了敲鐵欄杆。）＊",
+    "Sequence": "",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": 127,
+    "text": "「吵什麼吵！死到臨頭了還這麼多話！再不安分點，老子現在就放你們的血！」",
+    "Sequence": "",
+    "links": [23, 27, 31]
+  },
+  {
+    "entryID": 23,
+    "actorID": 0,
+    "text": "[em2][口才檢定][/em2]「小爺可是雲中郡太守的姪子！」",
+    "Sequence": "",
+    "links": [24],
+    "Description": "選項1：威嚇誆騙（口才）"
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,5);",
+    "links": [25],
+    "Description": "選項1的空對話擲骰節點"
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「放我的血？小爺我可是雲中郡太守的姪子，估計外頭官兵哪怕掘地三尺也在四處找我呢。你想清楚，是現在把我放了逃命去，還是等大軍殺進來，給卞喜當替死鬼？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [26, 35]
+  },
+  {
+    "entryID": 26,
+    "actorID": 127,
+    "text": "「太、太守的姪子？！您您您快離開吧……大爺饒命，我、我也要溜了！」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [43]
+  },
+  {
+    "entryID": 27,
+    "actorID": 0,
+    "text": "[em2][巧手檢定][/em2]「（偷取監獄鑰匙）」",
+    "Sequence": "",
+    "links": [28],
+    "Description": "選項2：竊取鑰匙（巧手）"
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,SleightOfHandCheck,5);",
+    "links": [29],
+    "Description": "選項2的空對話擲骰節點"
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「（偷取監獄鑰匙）」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [30, 40]
+  },
+  {
+    "entryID": 30,
+    "actorID": 127,
+    "text": "「給我好好待著，別想耍花樣！」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);SetPortrait(role127,pic=2);ModifyData(FeatExp,Player,SleightOfHand,10);",
+    "links": [45]
+  },
+  {
+    "entryID": 31,
+    "actorID": 0,
+    "text": "「耍什麼手段，手段有我拳頭硬嗎？」",
+    "Sequence": "",
+    "links": [32],
+    "Description": "選項3：直接動手"
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「耍什麼手段，手段有我拳頭硬嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": 127,
+    "text": "「你個好小子！竟敢打我？不要命了！」",
+    "Sequence": "",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": 2,
+    "text": "[panel=6]＊（盛怒的看守解開了門鎖，拔出刀劍朝你襲來，進入戰鬥）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [40]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「放、放我的血？小爺我可是雲中郡太守的……」",
+    "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": 127,
+    "text": "「狗屁！太守的姪子怎麼會沒帶護衛在外頭閒逛？你小子當我傻啊？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=2);",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": 2,
+    "text": "[panel=6]＊（不等你解釋，盛怒的看守已解開了門鎖，拔出刀劍朝你襲來，進入戰鬥）＊",
+    "Sequence": "",
+    "links": [40]
+  },
+  {
+    "entryID": 38,
+    "actorID": 2,
+    "text": "[panel=6]＊（你趁看守不備，手指靈活地穿過柵欄，悄無聲息地順走了他腰間的鑰匙。隨後輕輕打開牢門。）＊",
+    "Sequence": "",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「嘿嘿，來不及啦大哥，咱的花樣已經耍完囉。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [45]
+  },
+  {
+    "entryID": 40,
+    "actorID": 2,
+    "text": "[panel=6]＊（進入戰鬥）＊",
+    "Sequence": "",
+    "links": [41, 42]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「既然他已經昏死過去，總算輪到我去救真正的人質了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [46]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「怎……怎麼會……我、我還沒救到人……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "links": [78]
+  },
+  {
+    "entryID": 43,
+    "actorID": 2,
+    "text": "[panel=6]＊（看守的教眾被你的謊言嚇得支支吾吾，最終還是低下了頭，默默替你打開門鎖，隨後連滾帶爬地逃離了牢房。）＊",
+    "Sequence": "",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「還真被我唬住了。行咧，救人要緊，先走一步！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [46]
+  },
+  {
+    "entryID": 45,
+    "actorID": 2,
+    "text": "[panel=6]＊（你趁看守不備，手指靈活地穿過柵欄，悄無聲息地順走了他腰間的鑰匙。隨後輕輕打開牢門。）＊",
+    "Sequence": "",
+    "links": [39]
+  },
+  {
+    "entryID": 46,
+    "actorID": 2,
+    "text": "[panel=6]＊（解決了看守後，你終於能離開這座破籠子。你走到隔壁牢房前，準備幫廖化開門。）＊",
+    "Sequence": "",
+    "links": [47, 49]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「廖大哥，你等等，我從看守身上摸鑰匙，馬上把門打開——」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": 2,
+    "text": "[panel=6]＊（你在昏倒的看守腰間摸出一串鑰匙，對準隔壁牢門試了幾次，鎖孔終於咬合。鏽跡斑斑的大鎖應聲而落。）＊",
+    "Sequence": "",
+    "links": [50]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「廖大哥，你等等，我看看這把鑰匙能不能開你的牢門——」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role127",
+    "text": "「多謝少俠冒險相救。走吧，去救你的朋友！」",
+    "Sequence": "SetPortrait(role127,pic=8);",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": 2,
+    "text": "[panel=2]＊（廖淳，加入隊伍！）＊",
+    "Sequence": "",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": 2,
+    "text": "[panel=6]＊（你們摸進了左下方的木屋，這裡似乎是教眾的休息室。幾名太平教眾正躺在通鋪上，見到你們闖入，立刻拔刀躍起。）＊",
+    "Sequence": "",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": 127,
+    "text": "「喂！你、你這傢伙是怎麼跑出來的？看守呢？」",
+    "Sequence": "",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": 127,
+    "text": "「怎麼還帶上了人？怎麼回事？來郊遊的？」",
+    "Sequence": "",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": 127,
+    "text": "「別犯傻了，來多少打多少，上！」",
+    "Sequence": "",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": 2,
+    "text": "[panel=6]＊（進入戰鬥）＊",
+    "Sequence": "",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「哈哈，不過如此，輕輕鬆鬆。看來此處應是他們的歇息之處。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role127",
+    "text": "「少俠好身手。我們在牢獄裡都沒怎麼歇息，不如趁這空檔好好整備一下吧。」",
+    "Sequence": "SetPortrait(role127,pic=1);",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": 2,
+    "text": "[panel=6]＊（你在屋內的破桌上發現了一張字跡潦草的紙條。）＊",
+    "Sequence": "",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「這是……某個教眾留下的筆記？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": 2,
+    "text": "[panel=6]＊（……已經有好幾人了……大家都說他們是沒種的傢伙，連賊也做不成，但我清楚，黃家兄弟不是這種人，況且他們只說去附近撇個尿，怎麼就不見了？還有老大，老大最近也很奇怪，老是不見咱們……以前還會邀兄弟們喝酒，如今卻只待在深洞之中，也不知在搗股什麼。在此不見天日地待著，就連抓了好幾隻肥羊，老大也不管不顧……大夥兒都覺得奇怪，卻也沒人敢問，究竟發生了什麼。……我見著了！我見著好幾個兄弟夜裡進了老大的寢室，然後就聽到了尖叫聲！是兄弟們的尖叫聲！我聽著了，我見著了！可弟兄們沒人信我，盡說我是想個狗屁理由，撒手不幹。娘的！這裝神弄鬼的地方，我再也不待了，要趁夜——）＊",
+    "Sequence": "",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": 2,
+    "text": "[panel=6]＊（「夜」字的最後一瞥被唐突拉長、撕扯，最後連後續紙張都被一併扯去。往後翻看，這名教眾再無留下訊息。）＊",
+    "Sequence": "",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "「[em2]幾名兄弟進了老大寢室後便發出尖叫[/em2]……這群傢伙到底有何古怪。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "role127",
+    "text": "「看來卞喜的祭祀已經到了喪心病狂的地步，連自己人都不放過。雍仔和娜娜恐有危險，我們走！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=2);",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": 2,
+    "text": "[panel=6]＊（來到右側的伙房，瀰漫著令人作嘔的腥臭味。兩名教眾正圍著大鼎攪拌著什麼。）＊",
+    "Sequence": "",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": 127,
+    "text": "「喂！小心些，要是糊了怎麼辦？小心老大拿你煲湯！」",
+    "Sequence": "",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": 127,
+    "text": "「我、我知道了……但、但張大哥，你你你……不覺得老大最近有點詭異……」",
+    "Sequence": "",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": 127,
+    "text": "「停停停。我知道你想說什麼，飯可以亂吃話可不能亂講，否則——」",
+    "Sequence": "",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": 2,
+    "text": "[panel=6]＊（這時，那名顧火教眾轉身看見了你們。）＊",
+    "Sequence": "",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": 127,
+    "text": "「等會兒，你是怎麼逃出來的！看守人呢？」",
+    "Sequence": "",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": 127,
+    "text": "「張張張大哥！那、那白毛小子身後……是誰啊？咱們有抓這號人嗎？」",
+    "Sequence": "",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "「我？不如先問問你們，連自家牢裡關了誰都不清楚嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": 127,
+    "text": "「沒見過。不認識。」",
+    "Sequence": "",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "role127",
+    "text": "「哼，在下才覺得奇怪。怎麼卞喜那廝把我關起來，卻連飯都不派人送一口。合著你們這群底下的人，壓根不知道我被關在這裡？」",
+    "Sequence": "SetPortrait(role127,pic=6);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": 127,
+    "text": "「算了，管你們是什麼人，碰上老子大刀張，都是要倒大楣了！」",
+    "Sequence": "",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC1",
+    "text": "「嘿，你們太平教外號也太多了吧？行，我乃天王老子，誰不服就上！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);",
+    "links": [77, 79]
+  },
+  {
+    "entryID": 77,
+    "actorID": 0,
+    "text": "[em2][威嚇檢定][/em2]「來！打啊！我看誰敢上來！」",
+    "Sequence": "",
+    "links": [80],
+    "Description": "選項4：威嚇（廚房）"
+  },
+  {
+    "entryID": 78,
+    "actorID": 2,
+    "text": "[panel=6]＊（進入Game Over畫面）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 79,
+    "actorID": 0,
+    "text": "「何須拐彎抹角，直接戰！」",
+    "Sequence": "",
+    "links": [86],
+    "Description": "選項5：直接戰鬥（廚房）"
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,IntimidationCheck,5);",
+    "links": [81],
+    "Description": "選項4的空對話擲骰節點"
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC1",
+    "text": "「來！打啊！我才剛拿下裡頭的傢伙，我看誰敢上來！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "links": [82, 85]
+  },
+  {
+    "entryID": 82,
+    "actorID": 2,
+    "text": "[panel=6]＊（你大聲一喝，猶如千軍萬馬集結於一人之上，就連那沸騰的鍋鼎在你的威嚇下，都顯得如此微不足道，兩位教眾更是站都站不穩！）＊",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,Player,Intimidation,10);",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": 127,
+    "text": "「誰誰誰誰怕你了！看招，『大刀黃巾旋風劈』——」",
+    "Sequence": "",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": 2,
+    "text": "[panel=6]＊（此戰無法避免，但你看清他們雙手顫抖著衝了上來，便知致勝之機已至，進入戰鬥）＊",
+    "Sequence": "",
+    "links": [87]
+  },
+  {
+    "entryID": 85,
+    "actorID": 2,
+    "text": "[panel=5]＊（你大喝一聲，卻不慎在某個字節發出猶如被公雞緊掐脖梗的爆音，只聽身後傳來一聲憋不住的笑聲，前方兩名教眾更是一愣。）＊",
+    "Sequence": "IsPassDice() == false;",
+    "links": [88]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "「何須拐彎抹角，直接戰！」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": 2,
+    "text": "[panel=6]＊（進入戰鬥）＊",
+    "Sequence": "",
+    "links": [90]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": 2,
+    "text": "[panel=6]＊（此戰避無可避，你見他們手持兵刃，堅毅地朝你衝來，進入戰鬥）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「這鍋裡到底在煮什麼鬼東西……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": 2,
+    "text": "[panel=6]＊（你用雙手握住巨杓攪動鍋鼎，只見那鍋鼎冒出腥黏濃稠的泡沫，鍋邊湧上紫黑色的浮沫與氣泡，隨後腥臭與不明肉香自破開的泡沫中噴出。）＊",
+    "Sequence": "",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC1",
+    "text": "「嘔、嘔嘔嘔——」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "role127",
+    "text": "「小兄弟，你這樣吐在裡頭，這鍋東西不是更沒法看了嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=6);",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC1",
+    "text": "「……廖大哥，你這烏鴉嘴能不能先收一收，說點中聽的，噁……」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「噁……往好處想，至少沒在鍋裡看到雍仔和娜娜的手腳。他們應該還活著。快走，現在還有機會，晚了就難說了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": 127,
+    "text": "「是廖頭領！他逃出來了！快，拿下他，卞將軍重重有賞！」",
+    "Sequence": "",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "role127",
+    "text": "「冥頑不靈！今日我便替太平道清理門戶！」",
+    "Sequence": "SetPortrait(role127,pic=2);",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": 2,
+    "text": "[panel=6]＊（進入戰鬥）＊",
+    "Sequence": "",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "「這裡就是主廳了，可通往深處的路在哪？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "role127",
+    "text": "「卞喜在主廳藏了一條密道——不繞外頭那些明面上的關卡，腳程能省一大截，較快直搗洞裡深處。入口就用機關掩在主位那張椅子背後。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=1);",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": 2,
+    "text": "[panel=6]＊（你們合力挪開沉重的座椅，牆根果然露出一道不起眼的鐵扳。廖化伸手一壓，只聽沉悶的機括聲響，大廳後方的厚重石壁緩緩向兩側移開。）＊",
+    "Sequence": "",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC1",
+    "text": "「開了！果然有暗道！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Idea);",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": 2,
+    "text": "[panel=6]＊（石壁之後是一條狹仄急轉的密道。你們沿坡疾行，果然比繞外頭近得多；不多時便到盡頭——腳前赫然是一口深坑，坑緣濕滑，底下漆黑中隱約有水氣與回音，想來落點便是洞底的水潭。若要再往下走，唯有由此跳下。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role127",
+    "text": "「小兄弟，從這坑口落進底下水潭，穿過潭子，才算真正接上趙王洞深處。我被囚那些日子，前頭究竟還有什麼，我也說不準……只曉得凶險恐怕只增不減。還有一句：此路一入，短時間內怕也難再折返這主廳；你若還有未竟之事，現下還來得及。」",
+    "Sequence": "SetPortrait(role127,pic=8);",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC1",
+    "text": "「雍仔和娜娜還在下面，我怎麼可能退縮？走吧，廖大哥，咱們去會會那個卞喜！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": 2,
+    "text": "[panel=6]＊（身子一墜，穿破黑暗，撲入下方冰涼的潭水之中。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

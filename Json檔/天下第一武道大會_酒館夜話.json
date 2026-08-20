@@ -1,0 +1,595 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（雁門城內一間酒館，四人圍著油膩的木桌坐定。呂信一腳踏上長凳，扯著嗓子叫小二快點拿酒出來。）＊",
+    "Sequence": "",
+    "links": [
+      1
+    ],
+    "Description": "賽後：酒館夜話（兩途共通）入口"
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC2",
+    "text": "「來！來來！都給我滿上！」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC2",
+    "text": "「想當年西楚霸王，一桿長戟橫掃八千里。大丈夫在世，就該這般轟轟烈烈，打出個名震天下——這才不枉來人間走一遭！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]一口喝光面前的酒[/em7]，名震天下……那也要看，這身武藝是否用在大義上。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC3,pic=1);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC2",
+    "text": "「嘿！管他那麼多呢——只要天下無敵，騎最快的馬、摟最美的女人，這天下還不是任你逍遙！」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC3",
+    "text": "[panel=2]「……殺得越多，才越明白這話有多輕。」",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": 2,
+    "text": "[panel=6]＊（席間一靜。誰也不知子羽究竟是為了什麼，才來到英豪府——那話裡的沉重，沒人敢接。）＊",
+    "Sequence": "",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]晃著酒碗，難得帶了幾分醉後的促狹[/em7]，哎喲，兩位老大哥一喝酒就論起道來，這叫人怎麼盡興？」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC7",
+    "text": "[panel=3]「要我說，夢想這玩意兒，跟賭局一個理——押得越大，輸得越慘；可若什麼都不押，那活著還有什麼滋味？」",
+    "Sequence": "",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC2",
+    "text": "「哈哈哈！好個郭鬼才！平日冷得像塊冰，一沾酒倒比誰都能說！那你押的是什麼？」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC7",
+    "text": "[panel=3]「我啊……押一筆早該還、卻還沒還清的帳。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC7,pic=3);",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": 2,
+    "text": "[panel=6]＊（他沒細說，仰頭把碗中酒一飲而盡。那點笑意落回眼底時，已悄悄涼了下來。）＊",
+    "Sequence": "",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC2",
+    "text": "「帳？哈——要說欠帳，是這世道欠老子的！」",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC2",
+    "text": "「你們是不知道，咱們這種五原邊地出來的，在中原那些體面人眼裡，跟茹毛飲血的野人差不了多少。話還沒說上兩句，先掂量你是打哪個窮鄉僻壤來的。」",
+    "Sequence": "",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC2",
+    "text": "「[em7]酒碗重重一頓[/em7]，可那又怎樣？老子偏不認這命！總有一天，要教他們仰著脖子、恭恭敬敬喊我一聲——這口氣，我呂信爭定了！」",
+    "Sequence": "EnableCharacterExpression(1,MC2,Anger);",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC2",
+    "text": "「[em7]一把攬過你肩，又咧嘴笑開[/em7]，喂，小子，光聽我們嚷嚷了。你呢——加入英豪府、闖蕩這江湖，究竟圖個什麼？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「我想仗劍走遍天下，除盡不平——教這世道，記住我的名字。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「說來，那褚燕的志向倒和我相同……也不知算不算英雄所見略同。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]放下酒碗，眼底閃過一絲精光[/em7]，話說回來——你這趟上擂台，總不會真是閒著沒事，來湊個熱鬧吧？府裡正愁銀根，你偏在這節骨眼往雁門跑……這裡頭，有事吧？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC7,pic=1);EnableCharacterExpression(3,MC7,Idea);",
+    "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC2",
+    "text": "「嘿，被你這麼一說——還真是！小子，你到底在盤算什麼？給兄弟們交個底啊！」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC2,pic=4);",
+    "links": [
+      20,
+      21,
+      22
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「成了。銀子到手——面子，摔在擂台上了。」",
+    "Sequence": "",
+    "links": [
+      23
+    ],
+    "Condition": "GetFlag(Tournament_Final_ThrowMatch) == true",
+    "Description": "選項1：詐敗換投資（限詐敗前途）"
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「冠軍拿了。銀子……飛了。」",
+    "Sequence": "",
+    "links": [
+      29
+    ],
+    "Condition": "GetFlag(Tournament_Final_WinHonest) == true",
+    "Description": "選項2：棄投資奪魁（限奪魁前途）"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「急什麼！先滿上——這碗喝完，我再慢慢說。」",
+    "Sequence": "",
+    "links": [
+      35
+    ],
+    "Condition": "GetData(Ability,Player,Ability_CHA) >= 80",
+    "Description": "選項3：敬酒壓過話頭（需魅力80，TODO: 確認魅力條件語法）"
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「[em7]放下酒碗，自嘲一笑[/em7]，赤龍幫那注——成了。褚人飛當場拍板，獨押咱英豪府。」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      24
+    ],
+    "Description": "分支1：詐敗換投資"
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「代價嘛，就是今日那一跤。你們都看出來了……我也不裝了。」",
+    "Sequence": "",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC2",
+    "text": "「[em7]一拍大腿，跳將起來[/em7]，成了？！哈哈哈——好小子！府裡上下愁了幾個月的銀根，叫你一跤給摔出來了！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=4);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC7",
+    "text": "[panel=3]「一個少年頭銜，換整面赤龍旗——這買賣，打著燈籠也難找。虧你捨得，也虧你敢。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC7,pic=1);",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]沉默片刻，緩緩舉起酒碗[/em7]，……擂台上那一讓，我本想說你兩句。可你擔下的，是全府的難處——這碗，我敬你。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「[em7]與他碰碗[/em7]，有這句話，這一跤就沒白摔。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「[em7]搖搖頭[/em7]，褚人飛要我讓那一場，我沒讓。冠軍拿了——銀子，也飛了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      30
+    ],
+    "Description": "分支2：棄投資奪魁"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「府裡的難處，只能再想別的法子。這事……算我任性了。」",
+    "Sequence": "",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC2",
+    "text": "「[em7]愣了一瞬，隨即哈哈大笑[/em7]，嗨！老子還當多大事！當著全并州的面，把赤龍幫少幫主掀下擂台——這口氣，多少銀子都買不來！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]咂了咂嘴[/em7]，說不心疼是假的……那可是府裡救急的錢。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC7,pic=3);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC7",
+    "text": "[panel=3]「不過——『天下第一少年英雄』這塊招牌一掛出去，往後上門的財路，未必比赤龍幫那注小。這帳，長遠看不虧。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]舉碗[/em7]，錢是死物。你今日守住的東西，比那筆銀子貴重得多。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「[em7]一把端起酒碗，朗聲大笑[/em7]，急什麼！正事哪有酒要緊——今日痛快，這碗我先乾為敬，喝完再說！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      36
+    ],
+    "Description": "分支3：魅力≥80・敬酒壓過話頭"
+  },
+  {
+    "entryID": 36,
+    "actorID": 2,
+    "text": "[panel=6]＊（你這份豪情灑脫，瞬間將原本有些沉悶的話題驅散。但這酒可不是普通的濁酒，猛灌之下，就看你的酒量如何了。）＊",
+    "Sequence": "",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,AlcoholToleranceCheck,6);",
+    "links": [
+      38
+    ],
+    "Description": "自動酒量檢定觸發點 (難度6)"
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      39,
+      56
+    ],
+    "Description": "第一輪酒量檢定後緩衝節點"
+  },
+  {
+    "entryID": 39,
+    "actorID": 2,
+    "text": "[panel=6]＊（烈酒入喉，你面不改色，反而笑得愈發狂放。這份氣魄與酒量，讓在場眾人皆是眼前一亮。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,10);",
+    "links": [
+      40
+    ],
+    "Condition": "IsPassDice() == true",
+    "Description": "第一輪酒量檢定成功"
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC2",
+    "text": "「[em7]重重一拍桌子，大聲叫好[/em7]，好小子！就衝你這份酒量和豪氣，我呂信交定你這兄弟了！來，滿上！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]舉起酒碗，微微點頭[/em7]，……氣度不凡。這杯，我陪你。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC3,pic=1);",
+    "links": [
+      42
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]笑意更深[/em7]，哈哈，有意思！這酒，喝得痛快！當浮一大白！」",
+    "Sequence": "SetPortrait(MC7,pic=1);EnableCharacterExpression(3,MC7,Idea);// TODO: AddAffection(呂信, 10); AddAffection(子羽, 10); AddAffection(郭嘉, 10);",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": 2,
+    "text": "[panel=6]＊（一碗接著一碗，酒罈見底又添新罈。眼看氣氛正酣，呂信索性拍開一罈壓箱底的老酒，非要與你再拚一輪。）＊",
+    "Sequence": "DisableCharacterExpression(3);",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC2",
+    "text": "「[em7]把酒碗往你面前重重一放[/em7]，方才那幾碗都不算數——這罈老酒才是真章！敢不敢陪你信哥，走完這一罈？！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Anger_2);",
+    "links": [
+      45
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Auto,AlcoholToleranceCheck,8);",
+    "links": [
+      46
+    ],
+    "Description": "第二輪自動酒量檢定觸發點 (難度8)"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      47,
+      51
+    ],
+    "Description": "第二輪酒量檢定後緩衝節點"
+  },
+  {
+    "entryID": 47,
+    "actorID": 2,
+    "text": "[panel=6]＊（一罈走完，你眼神依舊清亮。反倒是旁邊——郭嘉的舌頭，已經開始打結了。）＊",
+    "Sequence": "DisableCharacterExpression(1);ModifyData(FeatExp,Player,AlcoholTolerance,10);",
+    "links": [
+      48
+    ],
+    "Condition": "IsPassDice() == true",
+    "Description": "第二輪酒量檢定成功"
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]臉頰泛紅，手指虛虛點著你[/em7]，你、你這廝……嗝……當真是海量……我郭奉孝今日、算是服了……」",
+    "Sequence": "SetPortrait(MC7,pic=5);EnableCharacterExpression(3,MC7,Nervous);",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]伸手扶住搖搖欲墜的郭嘉，自己耳根也紅了[/em7]，……奉孝兄，你醉了。」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC3,pic=3);",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC2",
+    "text": "「[em7]勾住你的脖子，仰天大笑[/em7]，哈哈哈！好！這天下能陪老子喝到這份上的，你是頭一個！往後你的事，就是我呂信的事！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);// TODO: AddAffection(呂信, 5); AddAffection(子羽, 5); AddAffection(郭嘉, 5);（第二輪追加）",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": 2,
+    "text": "[panel=6]＊（這罈老酒後勁極猛，半罈下肚，天旋地轉——你和郭嘉幾乎同時軟倒在桌沿。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      52
+    ],
+    "Condition": "IsPassDice() == false",
+    "Description": "第二輪酒量檢定失敗"
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「[em7]撐著桌角，舌頭發沉[/em7]，信哥……這罈……算你、算你贏……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]已經趴在桌上，含糊不清[/em7]，……不虧……長遠看……不虧……」",
+    "Sequence": "SetPortrait(MC7,pic=3);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]默默把兩人的酒碗挪遠，替你們換上茶水[/em7]，……都少喝些。」",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC2",
+    "text": "「[em7]獨自舉罈灌了一大口，暢快大笑[/em7]，哈哈哈哈！一群三杯倒！罷了罷了——能捨命陪到這份上，也算給足老子面子！這罈，我自個兒收尾！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);// TODO: AddAffection(呂信, 5); AddAffection(子羽, 5); AddAffection(郭嘉, 5);（第二輪追加）",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": 2,
+    "text": "[panel=6]＊（烈酒入喉如刀割，你猛地嗆咳起來，咳得眼淚都快出來了，方才那豪氣干雲的架勢頓時破了功。）＊",
+    "Sequence": "",
+    "links": [
+      57
+    ],
+    "Condition": "IsPassDice() == false",
+    "Description": "第一輪酒量檢定失敗"
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「[em7]捂著胸口猛咳[/em7]，……咳咳……這酒……夠烈！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC2",
+    "text": "「[em7]拍著大腿狂笑[/em7]，哈哈哈哈哈！原來是個三杯倒！還想跟我們稱兄道弟充海量？差得遠呢！來來來，慢慢喝！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      59
+    ]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]無奈地遞上一杯茶水[/em7]，……逞強無益。先喝口茶緩緩。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC3,pic=3);",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]笑得前仰後合[/em7]，哎喲，這可真是原形畢露。不過……這份實誠，倒也不壞。來，算你這杯過了！」",
+    "Sequence": "SetPortrait(MC7,pic=1);EnableCharacterExpression(3,MC7,Proud);// TODO: AddAffection(呂信, 5); AddAffection(子羽, 5); AddAffection(郭嘉, 5);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC2",
+    "text": "「[em7]重重一磕酒碗[/em7]，都別愣著了——來，敬咱們自己！他日誰真闖出了名堂，今日這壺酒，可都得記著！」",
+    "Sequence": "DisableCharacterExpression(0);DisableCharacterExpression(1);DisableCharacterExpression(3);SetPortrait(MC2,pic=1);",
+    "links": [
+      62
+    ],
+    "Description": "三分支匯合"
+  },
+  {
+    "entryID": 62,
+    "actorID": 2,
+    "text": "[panel=6]＊（四只粗碗撞作一處，濁酒四濺。一碗接著一碗，直喝到明月早已高掛。碗裡不過是最尋常的濁酒，這幾個少年卻喝得豪氣干雲，彷彿捧著的是天底下最好的酒。）＊",
+    "Sequence": "",
+    "links": [],
+    "Description": "酒館夜話結尾"
+  }
+]

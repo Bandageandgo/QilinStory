@@ -1,0 +1,3451 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（你依狗頭軍師所言，往東去雁門尋赤龍幫。幫眾把你領進山寨大廳時，褚人飛正歪坐在上首，腳邊酒罈碰得叮噹響——你把英豪府缺銀、想拉投資的來意說了個大概。他聽罷，眯眼打量你片刻，忽然咧嘴一笑。）＊",
+    "Sequence": "",
+    "links": [
+      1
+    ],
+    "Description": "入口：褚人飛開場考較（解鎖天下武道大會）"
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC10",
+    "text": "「投資你們？可以啊。」",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「當真？多謝幫主！有赤龍幫這筆錢撐著，英豪府這道坎可就……」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC10",
+    "text": "「誒誒誒，別急著謝——老子話還沒說完呢。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「……幫主的意思是，還有下文？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC10",
+    "text": "「赤龍幫的錢，從不白給。收了它，雲中往後就得認老子這面旗。可要老子認你英豪府值這個價——總得先讓老子瞧瞧，你有沒有這個本事。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「原來是要先過幫主這一關。那…幫主想怎麼個瞧法？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC10",
+    "text": "「巧了，這幾日雲中正辦『天下武道大會』，各路好手雲集，老子也在裡頭押了注。你去打，一路打進決賽——是騾子是馬，台上見真章。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「好！江湖兒女，這才對味。擂台上，在下奉陪到底。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC10",
+    "text": "「慢著——還有一句，聽清楚了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC10",
+    "text": "「老子若真掏錢入資，可容不得牆頭草。赤龍幫的旗一立，甄家的銀子、黑狼的金子，都給老子滾一邊去。兩邊都想要？門兒都沒有。」",
+    "Sequence": "",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「……幫主說得明白。既收赤龍幫的情，便不會再去別家伸手。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC10",
+    "text": "「哼，算你懂事。去吧——擂台上給老子打出個名堂來。打進決賽再說銀子的事；打不進，也別怪老子翻臉不認人。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": 2,
+    "text": "[panel=6]＊（褚人飛揮手示意，幫眾便把你送出山寨。雁門風硬，武道大會的消息卻已在你腦裡敲定——下一站，雲中擂台。）＊",
+    "Sequence": "",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC0",
+    "text": "解鎖大地圖點：天下武道大會",
+    "Sequence": "// TODO: UnlockMapPoint(天下武道大會);",
+    "links": [],
+    "Description": "任務／地圖解鎖節點：天下武道大會"
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC3",
+    "text": "「……新秀賽。哄鬧而已。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      16
+    ],
+    "Description": "箱庭入口：子羽・首次"
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「你也來了？不打算下場露一手？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC3",
+    "text": "「羽已經打過了。對羽而言，這一場不過是看熱鬧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「看熱鬧也行。你總不會專程來噓人吧？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC3",
+    "text": "「……你若只想博名、討彩，趁早退下。若當真想一決短長——便堂堂正正打。羽有這個時間，看你打成什麼樣子。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      20,
+      29
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "[em2][學識檢定][/em2]「師直為壯。」",
+    "Sequence": "",
+    "links": [
+      21
+    ],
+    "Description": "選項1：學識檢定"
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,KnowledgeCheck,5);",
+    "links": [
+      22
+    ],
+    "Description": "選項1的空對話擲骰節點"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      23,
+      26
+    ],
+    "Description": "選項1檢定後緩衝節點"
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「《左傳》有云：『師直為壯，曲為老。』羽兄要看的堂堂正正——我盡力做到就是了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      24
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC3",
+    "text": "「……嗯。」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Knowledge,10);// TODO: 子羽好感＋",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": 2,
+    "text": "[panel=6]＊（他沒再多說一句，只把目光重新投回擂台。 ※子羽好感度＋）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「那個……春秋裡好像寫過，打要……打得正？師什麼為壯來著……」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      27
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC3",
+    "text": "「……。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": 2,
+    "text": "[panel=6]＊（他連眼皮都懶得抬，只當沒聽見。空氣靜了一息。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「好。我記住了。」",
+    "Sequence": "",
+    "links": [
+      30
+    ],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「好。我記住了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": []
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC3",
+    "text": "「……新秀賽。哄鬧而已。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：子羽・再次"
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC2",
+    "text": "「哈！這不是我們英豪府的人？來赤龍幫撐場面啊？」",
+    "Sequence": "",
+    "links": [
+      33
+    ],
+    "Description": "箱庭入口：呂信・首次"
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「路是褚幫主定的。我來打一場，便是來。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC2",
+    "text": "「痛快！我啊，少年賽早就打完了——再蹲這兒跟一群後生搶場子，豈不掉份？」",
+    "Sequence": "",
+    "links": [
+      35
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「那你蹲這兒做什麼？專門給別人打氣？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      36
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC2",
+    "text": "「閒著也是閒著。你上就上狠一點；別給英豪府丟臉。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC2",
+    "text": "「打贏了，我請你喝一頓！輸了——也一樣喝，權當壓驚。」",
+    "Sequence": "",
+    "links": [
+      38,
+      42,
+      45,
+      48
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "[em2][通達][/em2]「贏輸都喝，過了便是。」",
+    "Sequence": "",
+    "links": [
+      39
+    ],
+    "Description": "選項1：通達"
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「成！贏了喝、輸了也喝——反正打完還是日子，哪有那麼多彆扭。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC2",
+    "text": "「哈哈哈！這才痛快！想那麼多幹嘛——記住了，賽後那頓，誰也別想溜！」",
+    "Sequence": "DisableCharacterExpression(0);// TODO: 呂信好感＋",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": 2,
+    "text": "[panel=6]＊（他一拳捶上你肩，笑得比擂鼓還響。 ※呂信好感度＋）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "[em2][信義][/em2]「說出去的話，絕不縮。」",
+    "Sequence": "",
+    "links": [
+      43
+    ],
+    "Description": "選項2：信義"
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「成。場上見真章——說出去的話，我絕不縮。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC2",
+    "text": "「行，有骨氣。去打吧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "[em2][機略][/em2]「先打出名堂，酒留後頭。」",
+    "Sequence": "",
+    "links": [
+      46
+    ],
+    "Description": "選項3：機略"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「成。先把擂台打穿——酒留著，慶功或壓驚，到時再說。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC2",
+    "text": "「嘿，還會算計。去吧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「成。場上見真章。」",
+    "Sequence": "",
+    "links": [
+      49
+    ],
+    "Description": "選項4"
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「成。場上見真章。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": []
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC2",
+    "text": "「還磨蹭？擂台可不等人。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [],
+    "Description": "箱庭入口：呂信・再次"
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC6",
+    "text": "「又來逞能？擂台上可沒人替你包紮。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      52
+    ],
+    "Description": "箱庭入口：張寧・首次"
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「我會小心。你特地帶藥來……是在擔心我？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC6",
+    "text": "「誰擔心你。骨頭斷了、經脈損了——回來再給我一頓碎碎念，我可不奉陪。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「那我就盡量別斷。真斷了，你也別太兇。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC6",
+    "text": "「……藥材我帶齊了。不是特為你，別多想。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      56,
+      64
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "[em2][調情檢定][/em2]「……不是特為我。」",
+    "Sequence": "",
+    "links": [
+      57
+    ],
+    "Description": "選項1：調情檢定"
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,FlirtingCheck,5);",
+    "links": [
+      58
+    ],
+    "Description": "選項1的空對話擲骰節點"
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      59,
+      62
+    ],
+    "Description": "選項1檢定後緩衝節點"
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC1",
+    "text": "「……嗯。不是特為我。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      60
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC6",
+    "text": "「……。」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Flirting,10);// TODO: 張寧好感＋",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": 2,
+    "text": "[panel=6]＊（你只把她的否認原樣還回去，她卻像被戳中什麼，別過臉去，沒再接話。 ※張寧好感度＋）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「那……多謝大夫帶藥。」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      63
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC6",
+    "text": "「誰要你謝。去打你的。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「知道了，張大夫。」",
+    "Sequence": "",
+    "links": [
+      65
+    ],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「知道了，張大夫。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": []
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC6",
+    "text": "「傷了就過來。別硬撐。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：張寧・再次"
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [
+      68
+    ],
+    "Description": "箱庭入口：郭嘉・首次"
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC7",
+    "text": "「……興趣？沒有。但有用。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      69
+    ]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC1",
+    "text": "「有用？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      70
+    ]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC7",
+    "text": "「熱鬧是給人看的。我看的是熱鬧底下——各家的虛實。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      71
+    ]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「你連看個比武，都能看出這些？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      72
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC7",
+    "text": "「赤龍幫設這個局，各方勢力都湊了過來。用兵之要，貴在[em2]掩其不意[/em2]——趁對方沒料到時動手，勝負便定了大半。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      73,
+      90
+    ]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2]「先摸清虛實？」",
+    "Sequence": "",
+    "links": [
+      74
+    ],
+    "Description": "選項1：謀略檢定"
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,StrategyCheck,5);",
+    "links": [
+      75
+    ],
+    "Description": "選項1的空對話擲骰節點"
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      76,
+      83
+    ],
+    "Description": "選項1檢定後緩衝節點"
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC1",
+    "text": "「掩其不意……所以得先摸清對方虛實，再談出手？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      77
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC7",
+    "text": "「……嗯。接得上。」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Strategy,10);// TODO: 郭嘉好感＋",
+    "links": [
+      78
+    ]
+  },
+  {
+    "entryID": 78,
+    "actorID": 2,
+    "text": "[panel=6]＊（他極輕頷首，話少了半句——卻分明多看了你一眼。 ※郭嘉好感度＋）＊",
+    "Sequence": "",
+    "links": [
+      79
+    ]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC7",
+    "text": "「所以我來看。先探明各家虛實，該進、該退，才有分寸。」",
+    "Sequence": "",
+    "links": [
+      80
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC7",
+    "text": "「……而且。同門上擂，不來看一眼，總覺得說不過去。」",
+    "Sequence": "",
+    "links": [
+      81
+    ]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC1",
+    "text": "「哈哈，那你坐好看我表演吧。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      82
+    ]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC7",
+    "text": "「……囉嗦。去打你的吧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "「掩其不意……就是，呃，趁人不備？偷偷摸摸打？」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      84
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC7",
+    "text": "「……。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      85
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC7",
+    "text": "「可要出其不意，得先摸清對方虛實強弱。連底細都不知，就貿然出手，那不是奇兵，是自投死地。」",
+    "Sequence": "",
+    "links": [
+      86
+    ]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC7",
+    "text": "「所以我來看。這種場合看上一遍，比在茶館聽十天傳言都準。」",
+    "Sequence": "",
+    "links": [
+      87
+    ]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC7",
+    "text": "「……而且。同門上擂，不來看一眼，總覺得說不過去。」",
+    "Sequence": "",
+    "links": [
+      88
+    ]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「哈哈，那你坐好看我表演吧。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      89
+    ]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC7",
+    "text": "「……囉嗦。去打你的吧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「掩其不意……？」",
+    "Sequence": "",
+    "links": [
+      91
+    ],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC1",
+    "text": "「掩其不意……？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      92
+    ]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC7",
+    "text": "「可要出其不意，得先摸清對方虛實強弱。連底細都不知，就貿然出手，那不是奇兵，是自投死地。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      93
+    ]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC7",
+    "text": "「所以我來看。先探明各家虛實，勝算了然於胸，該進、該退，才有分寸。這種場合看上一遍，比在茶館聽十天傳言都準。」",
+    "Sequence": "",
+    "links": [
+      94
+    ]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC1",
+    "text": "「原來你是把這武道大會當沙場在推演了。你還是老樣子，想得遠。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      95
+    ]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC7",
+    "text": "「想遠一點，活得久一點。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      96
+    ]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC7",
+    "text": "「……而且。同門上擂，不來看一眼，總覺得說不過去。」",
+    "Sequence": "",
+    "links": [
+      97
+    ]
+  },
+  {
+    "entryID": 97,
+    "actorID": "MC1",
+    "text": "「哈哈，那你坐好看我表演吧。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      98
+    ]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC7",
+    "text": "「……囉嗦。去打你的吧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC7",
+    "text": "「兵貴神速。拋下雜念，速戰速決，掩其不意。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：郭嘉・再次"
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC23",
+    "text": "「嗚哇──好多人！鼓聲好響！今天這個比武大會要寫進見聞錄哪一個目錄啊？」",
+    "Sequence": "",
+    "links": [
+      101
+    ],
+    "Description": "箱庭入口：蔡文姬・首次"
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「那就…說是[em2]天下武道大會[/em2]好了，對了妳怎麼會在這？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      102
+    ]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC23",
+    "text": "「父親說做學問不能死守竹簡，要勤走、勤看，眼界才開得開。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      103
+    ]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「倒是有道理。那你今日專程來，是為了寫什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      104
+    ]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC23",
+    "text": "「當然是來找——還有沒有值得記進見聞錄的人、值得著墨的事。」",
+    "Sequence": "",
+    "links": [
+      105
+    ]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC23",
+    "text": "「而且你可是我筆下頭一個英雄。今天你上擂……我當然要仔細記錄下來！」",
+    "Sequence": "",
+    "links": [
+      106
+    ]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "「這壓力可不小啊。哈哈。」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      107
+    ]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC23",
+    "text": "「等你下來，這一場怎麼贏的，可得好好跟我說呢！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      108,
+      116
+    ]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC1",
+    "text": "[em2][學識檢定][/em2]「記事不如記人。」",
+    "Sequence": "",
+    "links": [
+      109
+    ],
+    "Description": "選項1：學識檢定"
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,KnowledgeCheck,5);",
+    "links": [
+      110
+    ],
+    "Description": "選項1的空對話擲骰節點"
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      111,
+      114
+    ],
+    "Description": "選項1檢定後緩衝節點"
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "「那可得記準——別只寫輸贏，也把擂台外的人情冷暖寫進去；記事不如記人，見聞錄才耐看。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      112
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC23",
+    "text": "「哇——你也懂！父親總說這句，你正好接上！等你下來，咱們一起補！」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Knowledge,10);// TODO: 蔡文姬好感＋",
+    "links": [
+      113
+    ]
+  },
+  {
+    "entryID": 113,
+    "actorID": 2,
+    "text": "[panel=6]＊（她眼睛亮得像剛覓到好素材，竹簡都快捏出褶來。 ※蔡文姬好感度＋）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "「那就……多寫一點？寫得好看一點？反正你……你最會寫了！」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      115
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC23",
+    "text": "「嗯嗯——反正你下來細說就行！我先把鼓聲寫進去！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC1",
+    "text": "「好，等我下來再說。」",
+    "Sequence": "",
+    "links": [
+      117
+    ],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 117,
+    "actorID": "MC1",
+    "text": "「好，等我下來再說。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": []
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC23",
+    "text": "「去吧去吧——回來可要跟我細說，好讓見聞錄多添光彩！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：蔡文姬・再次"
+  },
+  {
+    "entryID": 119,
+    "actorID": 2,
+    "text": "[panel=6]＊（酒攤旁圍了一圈人。一名身著赤龍幫服色的年輕擂手垂頭喪氣、方才落了敗；一名精瘦結實、濃眉大眼的青年正笑著，把一小袋銅錢塞回他手裡——那眉宇間本帶著幾分街頭匪氣，偏偏一雙眼睛靈活神采，沖淡了幾分那股兇相。）＊",
+    "Sequence": "",
+    "links": [
+      120
+    ],
+    "Description": "箱庭入口：褚燕・首次"
+  },
+  {
+    "entryID": 120,
+    "actorID": "role140",
+    "text": "「拿著！輸一場算什麼，回去練，下回燕哥替你壓陣！」",
+    "Sequence": "",
+    "links": [
+      121
+    ]
+  },
+  {
+    "entryID": 121,
+    "actorID": 2,
+    "text": "[panel=6]＊（打發走了赤龍幫眾，那青年身形一轉，動作輕捷得像陣風，正撞上在旁看著的你。）＊",
+    "Sequence": "",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 122,
+    "actorID": "role140",
+    "text": "「喲？是生面孔。」",
+    "Sequence": "",
+    "links": [
+      123
+    ]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC1",
+    "text": "「閣下出手倒挺大方。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      124
+    ]
+  },
+  {
+    "entryID": 124,
+    "actorID": "role140",
+    "text": "「嗨，只是順手扶一把，不值當一提。雁門褚燕——你呢？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      125
+    ]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC1",
+    "text": "「[var=PlayerLastName][var=PlayerFirstName]，英豪府的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      126
+    ]
+  },
+  {
+    "entryID": 126,
+    "actorID": "role140",
+    "text": "「英豪府？那咱倆算半個同道了。江湖上多半是想闖名堂的。可我瞧人，從不看拳頭大小。」",
+    "Sequence": "",
+    "links": [
+      127
+    ]
+  },
+  {
+    "entryID": 127,
+    "actorID": "role140",
+    "text": "「作為遊俠，話說出口就得算數，認準的事就得做到底！正所謂——[em2]其言必信，其行必果……[/em2]」",
+    "Sequence": "",
+    "links": [
+      128
+    ]
+  },
+  {
+    "entryID": 128,
+    "actorID": "MC1",
+    "text": "「……[em2]已諾必誠，不愛其軀，赴士之阨困！[/em2]」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      129
+    ]
+  },
+  {
+    "entryID": 129,
+    "actorID": 2,
+    "text": "[panel=6]＊（褚燕先是一怔，隨即那雙眼睛猛地一亮。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      130
+    ]
+  },
+  {
+    "entryID": 130,
+    "actorID": "role140",
+    "text": "「哈哈哈！好！這後半句，可不是誰都接得上來的——太史公那篇《遊俠列傳》，你也讀熟了！」",
+    "Sequence": "",
+    "links": [
+      131
+    ]
+  },
+  {
+    "entryID": 131,
+    "actorID": "MC1",
+    "text": "「大丈夫既提三尺劍，就該救人於厄、振人不贍——這樣的俠，我輩豈能落於人後！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      132
+    ]
+  },
+  {
+    "entryID": 132,
+    "actorID": "role140",
+    "text": "「好！說的好，兄弟！往後你就是我褚燕的朋友——兄弟你也是來打擂台的吧！話說前頭，上面咱可不認交情。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      133
+    ]
+  },
+  {
+    "entryID": 133,
+    "actorID": "MC1",
+    "text": "「正該如此！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      134
+    ]
+  },
+  {
+    "entryID": 134,
+    "actorID": "role140",
+    "text": "「一言為定！[em2]飛燕的刀，只會往前，不會回頭。[/em2]」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      135
+    ]
+  },
+  {
+    "entryID": 135,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [
+      136
+    ]
+  },
+  {
+    "entryID": 136,
+    "actorID": "MC1",
+    "text": "「……真拉風。這句，算你贏了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": []
+  },
+  {
+    "entryID": 137,
+    "actorID": "role140",
+    "text": "「還在逛？快打上來呀，我都等不及了，朋友！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [],
+    "Description": "箱庭入口：褚燕・再次"
+  },
+  {
+    "entryID": 138,
+    "actorID": "MC10",
+    "text": "「怎麼，緊張了？這大會的擂台可不是家宴，摔了臉，沒人替你撿。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      139
+    ],
+    "Description": "箱庭入口：褚人飛・閒談首次"
+  },
+  {
+    "entryID": 139,
+    "actorID": "MC1",
+    "text": "「幫主放心。既然答應了要打，便會贏。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      140
+    ]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC10",
+    "text": "「哈哈！年輕人有這股勁，老子愛看。台上那些貨色，你自個兒掂量——打得過就往上踩。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      141
+    ]
+  },
+  {
+    "entryID": 141,
+    "actorID": "MC1",
+    "text": "「晚輩記下了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      142
+    ]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC10",
+    "text": "「去吧。老子押了注在這場上，就在這兒看著——別讓我看走了眼。」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC10",
+    "text": "「老子這注可押在你身上了——別讓我的銀子打了水漂，聽見沒？」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：褚人飛・閒談再次"
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC5",
+    "text": "「底子紮實，可惜沒見過血。」",
+    "Sequence": "",
+    "links": [
+      145
+    ],
+    "Description": "箱庭氣泡：徐榮（不可點擊）"
+  },
+  {
+    "entryID": 145,
+    "actorID": "MC5",
+    "text": "「唉，一身本事，總得有處使。」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC19",
+    "text": "「東方的火……燒得倒是有點意思。」",
+    "Sequence": "",
+    "links": [
+      147
+    ],
+    "Description": "箱庭氣泡：阿SA（不可點擊）"
+  },
+  {
+    "entryID": 147,
+    "actorID": "MC19",
+    "text": "「聖火之下，藏著什麼的人，瞞不過我。」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 148,
+    "actorID": "role131",
+    "text": "「這幾把破銅爛鐵，也敢拎上台？」",
+    "Sequence": "",
+    "links": [
+      149
+    ],
+    "Description": "箱庭氣泡：蒲元（不可點擊）"
+  },
+  {
+    "entryID": 149,
+    "actorID": "role131",
+    "text": "「唔……那小子的刀，配重偏了半分！」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC8",
+    "text": "「表哥加油喔！傷藥、繃帶小犀都備好了，你只管放心去打——記得替咱們把彩頭掙回來！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      151
+    ],
+    "Description": "箱庭入口：蕭靈犀・首次"
+  },
+  {
+    "entryID": 151,
+    "actorID": "MC1",
+    "text": "「有你這個帳房在，我踏實多了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      152
+    ]
+  },
+  {
+    "entryID": 152,
+    "actorID": "MC8",
+    "text": "「那是當然！好啦，小犀先去報到，回頭台上見——」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      153
+    ]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "[em7]點頭應著，話說到一半才猛地反應過來[/em7]「……台上見？等等——你說『報到』？你排的這隊，是報名上擂的隊啊！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [
+      154
+    ]
+  },
+  {
+    "entryID": 154,
+    "actorID": "MC8",
+    "text": "[em7]吐了吐舌頭[/em7]「嘿嘿，被表哥發現啦。對呀，小犀這回也要打！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      155
+    ]
+  },
+  {
+    "entryID": 155,
+    "actorID": "MC1",
+    "text": "[em7]整個人愣住[/em7]「打？你、你連拳都沒正經揮過幾下，這擂台上刀劍無眼，我怎麼可能讓你——」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "links": [
+      156
+    ]
+  },
+  {
+    "entryID": 156,
+    "actorID": "MC8",
+    "text": "「哎呀表哥你就別大驚小怪啦！小犀……嘿嘿，小犀可是拜過『高人』、學了真本事的喔！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      157
+    ]
+  },
+  {
+    "entryID": 157,
+    "actorID": "MC1",
+    "text": "「高人？什麼高人？你什麼時候背著我去——」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      158
+    ]
+  },
+  {
+    "entryID": 158,
+    "actorID": "MC8",
+    "text": "[em7]把背後用布裹著的東西又往身後藏了藏[/em7]「不告訴你～現在說破了，就不叫驚喜啦！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      159
+    ]
+  },
+  {
+    "entryID": 159,
+    "actorID": "MC1",
+    "text": "「你背後藏的又是什麼？至少讓我看一眼，我才放得下心。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      160
+    ]
+  },
+  {
+    "entryID": 160,
+    "actorID": "MC8",
+    "text": "「不行不行！反正等小犀上了台，表哥你可得把眼睛睜大嘍——保證讓你下巴掉到地上撿不回來！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      161
+    ]
+  },
+  {
+    "entryID": 161,
+    "actorID": "MC1",
+    "text": "「……你這丫頭，又跟我賣關子。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      162
+    ]
+  },
+  {
+    "entryID": 162,
+    "actorID": "MC8",
+    "text": "「這叫『壓箱底』！小犀輸了，這個月的帳小犀自己認；小犀贏了嘛……嘿嘿，那彩頭可得記在表哥頭上！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": []
+  },
+  {
+    "entryID": 163,
+    "actorID": "MC8",
+    "text": "「噓——秘密武器，上了台才准看！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=5);",
+    "links": [],
+    "Description": "箱庭入口：蕭靈犀・再次"
+  },
+  {
+    "entryID": 164,
+    "actorID": "MC20",
+    "text": "「道法自然——贏也自然！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：雍仔"
+  },
+  {
+    "entryID": 165,
+    "actorID": "role125",
+    "text": "[em7]瞇眼認出主角，雙彎刀一橫[/em7]「……又是你。破廟那批『豬仔』裡溜掉的白毛，趙王洞掀了老子祭壇、放走廖化的，還是你。真他娘的陰魂不散。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      166
+    ],
+    "Description": "箱庭入口：卞喜・首次"
+  },
+  {
+    "entryID": 166,
+    "actorID": "MC1",
+    "text": "「卞喜。拿活人餵鼎、連自家弟兄都設計陷害的畜生，也有臉站在光天化日下。」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "links": [
+      167
+    ]
+  },
+  {
+    "entryID": 167,
+    "actorID": "role125",
+    "text": "「畜生？呵。老子替兄弟們掙口飯、掙條命——這世道本就人吃人，廖化那套酸腐道理，救不了誰。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      168
+    ]
+  },
+  {
+    "entryID": 168,
+    "actorID": "MC1",
+    "text": "「你把廖大哥下毒鎖進地牢、把弟兄一個個送上祭壇，這也算替兄弟掙命？」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "links": [
+      169
+    ]
+  },
+  {
+    "entryID": 169,
+    "actorID": "role125",
+    "text": "「識相點，小子。今日眾目睽睽，這筆帳老子先記著。雲中就這麼大——哪天你身邊沒人撐腰了，老子頭一個上門，把趙王洞那筆，連本帶利討回來。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      170
+    ]
+  },
+  {
+    "entryID": 170,
+    "actorID": "MC1",
+    "text": "「隨時奉陪。這回，換我來收你。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": []
+  },
+  {
+    "entryID": 171,
+    "actorID": "role125",
+    "text": "「哼，走著瞧，白毛小子。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [],
+    "Description": "箱庭入口：卞喜・再次"
+  },
+  {
+    "entryID": 172,
+    "actorID": "role73",
+    "text": "「哦？是你。小溪村一別，倒在這兒又撞上了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      173
+    ],
+    "Description": "箱庭入口：童淵・首次"
+  },
+  {
+    "entryID": 173,
+    "actorID": "MC1",
+    "text": "「童兄也來趕這場熱鬧。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      174
+    ]
+  },
+  {
+    "entryID": 174,
+    "actorID": "role73",
+    "text": "「并州好手雲集，我豈能不來？倒是你——才別幾日，武藝竟又精進一層，教某家熱血上湧！今日這一仗，可得痛痛快快打個夠！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      175
+    ]
+  },
+  {
+    "entryID": 175,
+    "actorID": "MC1",
+    "text": "「當日承你指點過幾手。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      176
+    ]
+  },
+  {
+    "entryID": 176,
+    "actorID": "role73",
+    "text": "「哈，那點切磋算什麼。真本事，是你自己一槍一槍練出來的。」",
+    "Sequence": "",
+    "links": [
+      177
+    ]
+  },
+  {
+    "entryID": 177,
+    "actorID": "role73",
+    "text": "「台上若碰著，可都得使全力——我想親眼瞧瞧，你這一手裡，練出『勢』沒有。」",
+    "Sequence": "",
+    "links": [
+      178
+    ]
+  },
+  {
+    "entryID": 178,
+    "actorID": "MC1",
+    "text": "「正合我意。這次，換我來討教。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      179
+    ]
+  },
+  {
+    "entryID": 179,
+    "actorID": "role73",
+    "text": "「好！這才痛快。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 180,
+    "actorID": "role73",
+    "text": "「槍在手，話便多餘。台上見。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：童淵・再次"
+  },
+  {
+    "entryID": 181,
+    "actorID": "role127",
+    "text": "[em7]見到主角，快步上前，重重按住他肩頭[/em7]「是你……小兄弟。趙王洞那一趟，若非你捨命闖那牢籠、又一路護著殺出深洞，我廖化這條命，早交代在卞喜手裡了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      182
+    ],
+    "Description": "箱庭入口：廖化・首次"
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "「廖大哥言重了。當時你我同陷囹圄，換作是你，也絕不會撇下我。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      183
+    ]
+  },
+  {
+    "entryID": 183,
+    "actorID": "role127",
+    "text": "[em7]神色一沉，聲音低了下去[/em7]「話雖如此……我與卞喜同披黃巾、同拜大賢良師，本該是弟兄。他卻背著渠帥拿活人祭那邪壇，我出言相阻，反遭他設計下毒、鎖進地牢，任我在裡頭爛死。」",
+    "Sequence": "",
+    "links": [
+      184
+    ]
+  },
+  {
+    "entryID": 184,
+    "actorID": "role127",
+    "text": "「我不是氣他害我這條命。我是恨——大賢良師『致太平』的旗子，竟教這種人扛著、扛髒了。」",
+    "Sequence": "",
+    "links": [
+      185
+    ]
+  },
+  {
+    "entryID": 185,
+    "actorID": "MC1",
+    "text": "「那廝……今日也混在這大會裡。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      186
+    ]
+  },
+  {
+    "entryID": 186,
+    "actorID": "role127",
+    "text": "[em7]獨眼一厲[/em7]「我曉得。他臉皮厚過城牆，哪兒熱鬧就往哪兒鑽。你我心裡有數便好——[em2]時有否泰，事有逆順[/em2]，這筆帳，遲早要與他清算。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      187
+    ]
+  },
+  {
+    "entryID": 187,
+    "actorID": "MC1",
+    "text": "「台上我不會手軟；台下那筆帳，也算我一份。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      188
+    ]
+  },
+  {
+    "entryID": 188,
+    "actorID": "role127",
+    "text": "「好。有你這句，我便放心了。去吧，莫負本心。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": []
+  },
+  {
+    "entryID": 189,
+    "actorID": "role127",
+    "text": "「去吧。莫負本心。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：廖化・再次"
+  },
+  {
+    "entryID": 190,
+    "actorID": "MC22",
+    "text": "「輪到本姑娘上啦——男…女兒立志出鄉，無功不返！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "箱庭入口：赫連娜娜"
+  },
+  {
+    "entryID": 191,
+    "actorID": 2,
+    "text": "[panel=6]＊（你走到擂台邊，一名紅衣主持人正扯著嗓子招呼看客。見你上前，他咧嘴一笑。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      192
+    ],
+    "Description": "箱庭入口：主持人・上場"
+  },
+  {
+    "entryID": 192,
+    "actorID": "TournamentHost",
+    "text": "「喲，這位少俠是要下場？醜話說在前頭——上了這擂台，拳腳無眼、輸贏自負。想清楚了？」",
+    "Sequence": "",
+    "links": [
+      194,
+      193
+    ]
+  },
+  {
+    "entryID": 193,
+    "actorID": "MC1",
+    "text": "「再逛逛。」",
+    "Sequence": "",
+    "links": [
+      195
+    ],
+    "Description": "選項2：再逛逛（回箱庭）"
+  },
+  {
+    "entryID": 194,
+    "actorID": "MC1",
+    "text": "「上！」",
+    "Sequence": "",
+    "links": [
+      196
+    ],
+    "Description": "選項1：上場"
+  },
+  {
+    "entryID": 195,
+    "actorID": "TournamentHost",
+    "text": "「不急不急，想好了再來——擂台又跑不了！」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 196,
+    "actorID": "TournamentHost",
+    "text": "「[em7]一甩紅綢，中氣十足[/em7]好！各位鄉親父老——『天下武道大會・少年新秀賽』，這廂又添一條好漢！」",
+    "Sequence": "",
+    "links": [
+      197
+    ]
+  },
+  {
+    "entryID": 197,
+    "actorID": "TournamentHost",
+    "text": "「這可是咱并州的一樁大事!從雁門到雲中、太原，各路好手都趕了來——承蒙全州豪商幫會共襄出資，才有這般盛會!」",
+    "Sequence": "",
+    "links": [
+      198
+    ]
+  },
+  {
+    "entryID": 198,
+    "actorID": "TournamentHost",
+    "text": "「規矩老一套：點到為止、拳頭大的說了算！這位英豪府來的少俠，頭一場的對手，已在台上候著啦——」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 199,
+    "actorID": "TournamentHost",
+    "text": "「小子——準備好了嗎?」",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 200,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日這座台子，就陪并州父老看個痛快!」",
+    "Sequence": "",
+    "links": [
+      202
+    ],
+    "Description": "選項：口才炒場 (難度6)"
+  },
+  {
+    "entryID": 201,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "",
+    "links": [
+      207
+    ],
+    "Description": "選項：直接開打"
+  },
+  {
+    "entryID": 202,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      203
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 203,
+    "actorID": "MC1",
+    "text": "「并州的父老們——今日這座台子，[var=PlayerLastName]某陪諸位看個痛快!下一個，是誰?!」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      204,
+      205,
+      206
+    ]
+  },
+  {
+    "entryID": 204,
+    "actorID": 2,
+    "text": "[panel=6]＊（全場轟然炸開，喝采如雷、震得梁上塵灰簌簌而落——你人還沒動手，聲勢已先壓了對手三分。[即時訊息區]: 口才大成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      209
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 205,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好此起彼落，看客紛紛探身，都想瞧瞧這口出狂言的小子有幾分斤兩。[即時訊息區]: 口才成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      209
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 206,
+    "actorID": 2,
+    "text": "[panel=6]＊（話撂得響，底下卻稀稀落落，還夾了幾聲嗤笑——這下騎虎難下，只能靠拳頭把場子掙回來了。[即時訊息區]: 口才失敗。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      209
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 207,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      208
+    ]
+  },
+  {
+    "entryID": 208,
+    "actorID": 2,
+    "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
+    "Sequence": "",
+    "links": [
+      209
+    ]
+  },
+  {
+    "entryID": 209,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      210
+    ],
+    "Description": "擂台戰流程合併點（口才後／直接開打後進入第一戰）"
+  },
+  {
+    "entryID": 210,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：vs 雍仔",
+    "Sequence": "// TODO: BeginFight(Combat,雍仔);",
+    "links": [
+      211
+    ],
+    "Description": "戰鬥觸發：第1戰・雍仔"
+  },
+  {
+    "entryID": 211,
+    "actorID": 2,
+    "text": "[panel=6]＊（三兩個照面，你便卸了雍仔的勢，將他穩穩拍落台下。）＊",
+    "Sequence": "",
+    "links": [
+      212
+    ]
+  },
+  {
+    "entryID": 212,
+    "actorID": "MC20",
+    "text": "「道法自然……輸，也自然。承讓了。」",
+    "Sequence": "",
+    "links": [
+      213
+    ]
+  },
+  {
+    "entryID": 213,
+    "actorID": "TournamentHost",
+    "text": "「乾淨俐落，開門紅！少俠——歇口氣，還是接著打？」",
+    "Sequence": "",
+    "links": [
+      214,
+      215
+    ]
+  },
+  {
+    "entryID": 214,
+    "actorID": "MC1",
+    "text": "「接著打。」",
+    "Sequence": "",
+    "links": [
+      222
+    ],
+    "Description": "選項：第1戰後繼續"
+  },
+  {
+    "entryID": 215,
+    "actorID": "MC1",
+    "text": "「歇口氣。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：第1戰後暫歇（回箱庭）"
+  },
+  {
+    "entryID": 216,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：vs 赫連娜娜",
+    "Sequence": "// TODO: BeginFight(Combat,赫連娜娜);",
+    "links": [
+      217
+    ],
+    "Description": "戰鬥觸發：第2戰・赫連娜娜"
+  },
+  {
+    "entryID": 217,
+    "actorID": 2,
+    "text": "[panel=6]＊（她那柄無鋒之劍舞得再急，也近不了你的身；一個踉蹌，敗下陣來。）＊",
+    "Sequence": "",
+    "links": [
+      218
+    ]
+  },
+  {
+    "entryID": 218,
+    "actorID": "MC22",
+    "text": "「唔……本姑娘的劍還差了點火候！算你厲害——這場，本姑娘認了！」",
+    "Sequence": "",
+    "links": [
+      219
+    ]
+  },
+  {
+    "entryID": 219,
+    "actorID": "TournamentHost",
+    "text": "「連異域來的姑娘都不是對手！少俠聲勢正旺——再上一場？」",
+    "Sequence": "",
+    "links": [
+      220,
+      221
+    ]
+  },
+  {
+    "entryID": 220,
+    "actorID": "MC1",
+    "text": "「接著打。」",
+    "Sequence": "",
+    "links": [
+      239
+    ],
+    "Description": "選項：第2戰後繼續"
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC1",
+    "text": "「歇口氣。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：第2戰後暫歇（回箱庭）"
+  },
+  {
+    "entryID": 222,
+    "actorID": "TournamentHost",
+    "text": "「小子——準備好了嗎?」",
+    "Sequence": "",
+    "links": [
+      223,
+      224
+    ],
+    "Description": "續戰口才炒場"
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日這座台子，就陪并州父老看個痛快!」",
+    "Sequence": "",
+    "links": [
+      225
+    ],
+    "Description": "選項：口才炒場 (難度6)"
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "",
+    "links": [
+      230
+    ],
+    "Description": "選項：直接開打"
+  },
+  {
+    "entryID": 225,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      226
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 226,
+    "actorID": "MC1",
+    "text": "「并州臥虎藏龍，可今日這方擂台——我[var=PlayerLastName]某站定了!」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      227,
+      228,
+      229
+    ]
+  },
+  {
+    "entryID": 227,
+    "actorID": 2,
+    "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。[即時訊息區]: 口才大成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      216
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 228,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好此起彼落。[即時訊息區]: 口才成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      216
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 229,
+    "actorID": 2,
+    "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。[即時訊息區]: 口才失敗。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      216
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 230,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      231
+    ]
+  },
+  {
+    "entryID": 231,
+    "actorID": 2,
+    "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
+    "Sequence": "",
+    "links": [
+      216
+    ]
+  },
+  {
+    "entryID": 232,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：vs 蕭靈犀",
+    "Sequence": "// TODO: BeginFight(Combat,蕭靈犀);",
+    "links": [
+      233
+    ],
+    "Description": "戰鬥觸發：第3戰・蕭靈犀"
+  },
+  {
+    "entryID": 233,
+    "actorID": 2,
+    "text": "[panel=6]＊（哨音方落，蕭靈犀竟雙手各拔一劍，劍走輕靈、招式刁鑽，看得全場與你都愣了半拍！你險險穩住陣腳，才將她逼下台去。）＊",
+    "Sequence": "",
+    "links": [
+      234
+    ]
+  },
+  {
+    "entryID": 234,
+    "actorID": "MC8",
+    "text": "「唉呀，到底還是輸給表哥了……可是嘿嘿，小犀這套雙劍，有沒有嚇你一大跳？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      235
+    ]
+  },
+  {
+    "entryID": 235,
+    "actorID": "MC1",
+    "text": "「嚇得不輕。你這丫頭，到底拜的是哪路高人……」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [
+      236
+    ]
+  },
+  {
+    "entryID": 236,
+    "actorID": "TournamentHost",
+    "text": "「好俊的一手雙劍！可惜棋差一著。少俠，這就停手，還是乘勢再戰？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      237,
+      238
+    ]
+  },
+  {
+    "entryID": 237,
+    "actorID": "MC1",
+    "text": "「接著打。」",
+    "Sequence": "",
+    "links": [
+      255
+    ],
+    "Description": "選項：第3戰後繼續"
+  },
+  {
+    "entryID": 238,
+    "actorID": "MC1",
+    "text": "「歇口氣。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：第3戰後暫歇（回箱庭）"
+  },
+  {
+    "entryID": 239,
+    "actorID": "TournamentHost",
+    "text": "「小子——準備好了嗎?」",
+    "Sequence": "",
+    "links": [
+      240,
+      241
+    ],
+    "Description": "續戰口才炒場"
+  },
+  {
+    "entryID": 240,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日這座台子，就陪并州父老看個痛快!」",
+    "Sequence": "",
+    "links": [
+      242
+    ],
+    "Description": "選項：口才炒場 (難度6)"
+  },
+  {
+    "entryID": 241,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "",
+    "links": [
+      247
+    ],
+    "Description": "選項：直接開打"
+  },
+  {
+    "entryID": 242,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      243
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC1",
+    "text": "「并州臥虎藏龍，可今日這方擂台——我[var=PlayerLastName]某站定了!」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      244,
+      245,
+      246
+    ]
+  },
+  {
+    "entryID": 244,
+    "actorID": 2,
+    "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。[即時訊息區]: 口才大成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      232
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 245,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好此起彼落。[即時訊息區]: 口才成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      232
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 246,
+    "actorID": 2,
+    "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。[即時訊息區]: 口才失敗。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      232
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 247,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      248
+    ]
+  },
+  {
+    "entryID": 248,
+    "actorID": 2,
+    "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
+    "Sequence": "",
+    "links": [
+      232
+    ]
+  },
+  {
+    "entryID": 249,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：vs 卞喜",
+    "Sequence": "// TODO: BeginFight(Combat,卞喜);",
+    "links": [
+      250
+    ],
+    "Description": "戰鬥觸發：第4戰・卞喜"
+  },
+  {
+    "entryID": 250,
+    "actorID": 2,
+    "text": "[panel=6]＊（你招招搶攻，半分陰招都不容他使出，一記重擊將卞喜掀翻在地。）＊",
+    "Sequence": "",
+    "links": [
+      251
+    ]
+  },
+  {
+    "entryID": 251,
+    "actorID": "role125",
+    "text": "「呸……算你走運！這筆帳，老子先給你記著——走著瞧！」",
+    "Sequence": "",
+    "links": [
+      252
+    ]
+  },
+  {
+    "entryID": 252,
+    "actorID": "TournamentHost",
+    "text": "「嘖，這位輸得可不服氣呀！少俠技高一籌——乘勝追擊？」",
+    "Sequence": "",
+    "links": [
+      253,
+      254
+    ]
+  },
+  {
+    "entryID": 253,
+    "actorID": "MC1",
+    "text": "「接著打。」",
+    "Sequence": "",
+    "links": [
+      271
+    ],
+    "Description": "選項：第4戰後繼續"
+  },
+  {
+    "entryID": 254,
+    "actorID": "MC1",
+    "text": "「歇口氣。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：第4戰後暫歇（回箱庭）"
+  },
+  {
+    "entryID": 255,
+    "actorID": "TournamentHost",
+    "text": "「小子——準備好了嗎?」",
+    "Sequence": "",
+    "links": [
+      256,
+      257
+    ],
+    "Description": "續戰口才炒場"
+  },
+  {
+    "entryID": 256,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日這座台子，就陪并州父老看個痛快!」",
+    "Sequence": "",
+    "links": [
+      258
+    ],
+    "Description": "選項：口才炒場 (難度6)"
+  },
+  {
+    "entryID": 257,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "",
+    "links": [
+      263
+    ],
+    "Description": "選項：直接開打"
+  },
+  {
+    "entryID": 258,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      259
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 259,
+    "actorID": "MC1",
+    "text": "「并州臥虎藏龍，可今日這方擂台——我[var=PlayerLastName]某站定了!」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      260,
+      261,
+      262
+    ]
+  },
+  {
+    "entryID": 260,
+    "actorID": 2,
+    "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。[即時訊息區]: 口才大成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      249
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 261,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好此起彼落。[即時訊息區]: 口才成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      249
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 262,
+    "actorID": 2,
+    "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。[即時訊息區]: 口才失敗。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      249
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 263,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      264
+    ]
+  },
+  {
+    "entryID": 264,
+    "actorID": 2,
+    "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
+    "Sequence": "",
+    "links": [
+      249
+    ]
+  },
+  {
+    "entryID": 265,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：vs 童淵",
+    "Sequence": "// TODO: BeginFight(Combat,童淵);",
+    "links": [
+      266
+    ],
+    "Description": "戰鬥觸發：第5戰・童淵"
+  },
+  {
+    "entryID": 266,
+    "actorID": 2,
+    "text": "[panel=6]＊（槍來槍往數十合，你終於在他槍勢一頓的剎那搶進，點停在他咽喉三寸之外。）＊",
+    "Sequence": "",
+    "links": [
+      267
+    ]
+  },
+  {
+    "entryID": 267,
+    "actorID": "role73",
+    "text": "「好！好一個『勢』字！這一槍，我輸得心服口服。」",
+    "Sequence": "",
+    "links": [
+      268
+    ]
+  },
+  {
+    "entryID": 268,
+    "actorID": "TournamentHost",
+    "text": "「連槍法名家都點了頭！少俠氣勢如虹——還有沒有膽再上？」",
+    "Sequence": "",
+    "links": [
+      269,
+      270
+    ]
+  },
+  {
+    "entryID": 269,
+    "actorID": "MC1",
+    "text": "「接著打。」",
+    "Sequence": "",
+    "links": [
+      287
+    ],
+    "Description": "選項：第5戰後繼續"
+  },
+  {
+    "entryID": 270,
+    "actorID": "MC1",
+    "text": "「歇口氣。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：第5戰後暫歇（回箱庭）"
+  },
+  {
+    "entryID": 271,
+    "actorID": "TournamentHost",
+    "text": "「小子——準備好了嗎?」",
+    "Sequence": "",
+    "links": [
+      272,
+      273
+    ],
+    "Description": "續戰口才炒場"
+  },
+  {
+    "entryID": 272,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日這座台子，就陪并州父老看個痛快!」",
+    "Sequence": "",
+    "links": [
+      274
+    ],
+    "Description": "選項：口才炒場 (難度6)"
+  },
+  {
+    "entryID": 273,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "",
+    "links": [
+      279
+    ],
+    "Description": "選項：直接開打"
+  },
+  {
+    "entryID": 274,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      275
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 275,
+    "actorID": "MC1",
+    "text": "「并州臥虎藏龍，可今日這方擂台——我[var=PlayerLastName]某站定了!」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      276,
+      277,
+      278
+    ]
+  },
+  {
+    "entryID": 276,
+    "actorID": 2,
+    "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。[即時訊息區]: 口才大成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      265
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 277,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好此起彼落。[即時訊息區]: 口才成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      265
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 278,
+    "actorID": 2,
+    "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。[即時訊息區]: 口才失敗。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      265
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 279,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      280
+    ]
+  },
+  {
+    "entryID": 280,
+    "actorID": 2,
+    "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
+    "Sequence": "",
+    "links": [
+      265
+    ]
+  },
+  {
+    "entryID": 281,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：vs 廖化",
+    "Sequence": "// TODO: BeginFight(Combat,廖化);",
+    "links": [
+      282
+    ],
+    "Description": "戰鬥觸發：第6戰・廖化"
+  },
+  {
+    "entryID": 282,
+    "actorID": 2,
+    "text": "[panel=6]＊（你與廖化拆招毫不留情，直鬥到他獨眼一亮、收刀退步。）＊",
+    "Sequence": "",
+    "links": [
+      283
+    ]
+  },
+  {
+    "entryID": 283,
+    "actorID": "role127",
+    "text": "「痛快！比起趙王洞那會兒，小兄弟又精進了。這一場，老夫甘拜下風。」",
+    "Sequence": "",
+    "links": [
+      284
+    ]
+  },
+  {
+    "entryID": 284,
+    "actorID": "TournamentHost",
+    "text": "「六場連勝、一場未歇！好一條生龍活虎的少年郎——只剩最後一關啦！」",
+    "Sequence": "",
+    "links": [
+      285,
+      286
+    ]
+  },
+  {
+    "entryID": 285,
+    "actorID": "MC1",
+    "text": "「接著打。」",
+    "Sequence": "",
+    "links": [
+      297
+    ],
+    "Description": "選項：第6戰後繼續"
+  },
+  {
+    "entryID": 286,
+    "actorID": "MC1",
+    "text": "「歇口氣。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "選項：第6戰後暫歇（回箱庭）"
+  },
+  {
+    "entryID": 287,
+    "actorID": "TournamentHost",
+    "text": "「小子——準備好了嗎?」",
+    "Sequence": "",
+    "links": [
+      288,
+      289
+    ],
+    "Description": "續戰口才炒場"
+  },
+  {
+    "entryID": 288,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日這座台子，就陪并州父老看個痛快!」",
+    "Sequence": "",
+    "links": [
+      290
+    ],
+    "Description": "選項：口才炒場 (難度6)"
+  },
+  {
+    "entryID": 289,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "",
+    "links": [
+      295
+    ],
+    "Description": "選項：直接開打"
+  },
+  {
+    "entryID": 290,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      291
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 291,
+    "actorID": "MC1",
+    "text": "「并州臥虎藏龍，可今日這方擂台——我[var=PlayerLastName]某站定了!」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      292,
+      293,
+      294
+    ]
+  },
+  {
+    "entryID": 292,
+    "actorID": 2,
+    "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。[即時訊息區]: 口才大成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      281
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 293,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好此起彼落。[即時訊息區]: 口才成功！）＊",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      281
+    ],
+    "Condition": "IsPassDice() == true"
+  },
+  {
+    "entryID": 294,
+    "actorID": 2,
+    "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。[即時訊息區]: 口才失敗。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      281
+    ],
+    "Condition": "IsPassDice() == false"
+  },
+  {
+    "entryID": 295,
+    "actorID": "MC1",
+    "text": "「準備好了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      296
+    ]
+  },
+  {
+    "entryID": 296,
+    "actorID": 2,
+    "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
+    "Sequence": "",
+    "links": [
+      281
+    ]
+  },
+  {
+    "entryID": 297,
+    "actorID": "TournamentHost",
+    "text": "「[em7]猛地拔高嗓門[/em7]壓軸登場的，正是赤龍幫的少幫主，人稱『飛燕』的——褚燕!」",
+    "Sequence": "",
+    "links": [
+      298
+    ]
+  },
+  {
+    "entryID": 298,
+    "actorID": 2,
+    "text": "[panel=6]＊（決賽開打前，褚人飛似笑非笑地踱到你身邊，狀似隨口閒聊。）＊",
+    "Sequence": "",
+    "links": [
+      299
+    ]
+  },
+  {
+    "entryID": 299,
+    "actorID": "MC10",
+    "text": "「台上這小子褚燕，是老子從小看到大的，也是赤龍幫將來要扛旗的人。」",
+    "Sequence": "",
+    "links": [
+      300
+    ]
+  },
+  {
+    "entryID": 300,
+    "actorID": "MC10",
+    "text": "「年輕人臉皮薄，這面子啊，有時候比輸贏還金貴。你是聰明人……老子的意思，不必挑明了吧？」",
+    "Sequence": "",
+    "links": [
+      301
+    ]
+  },
+  {
+    "entryID": 301,
+    "actorID": "MC0",
+    "text": "觸發戰鬥：決賽 vs 褚燕",
+    "Sequence": "// TODO: BeginFight(Combat,ChuYan);",
+    "links": [
+      302
+    ],
+    "Description": "戰鬥觸發：決賽・褚燕"
+  },
+  {
+    "entryID": 302,
+    "actorID": 2,
+    "text": "[panel=6]＊（你身形一晃，欺身直進，一招看似平平無奇的直取，卻悄然封死了褚燕左右兩路。他咬牙硬架，虎口被震得發麻，腳下不由踉蹌半步，門戶登時洞開——電光石火間，旁觀者中不乏高手看出勝負已分。場邊的褚人飛身子微微前傾，目光死死釘在你身上。）＊",
+    "Sequence": "",
+    "links": [
+      303,
+      304
+    ]
+  },
+  {
+    "entryID": 303,
+    "actorID": "MC1",
+    "text": "[em2][機略][/em2]「收住勁力，讓他一場。」",
+    "Sequence": "",
+    "links": [
+      305
+    ],
+    "Description": "選項：賣個面子（機略）"
+  },
+  {
+    "entryID": 304,
+    "actorID": "MC1",
+    "text": "[em2][信義][/em2]「全力落下，贏下這局。」",
+    "Sequence": "",
+    "links": [
+      323
+    ],
+    "Description": "選項：堂堂正正打（信義）"
+  },
+  {
+    "entryID": 305,
+    "actorID": 2,
+    "text": "[panel=6]＊（你心如電轉，把那足以定勝負的一手硬生生卸去七分，虛晃一招，順著褚燕的反撲「踉蹌」半步，恰到好處地單膝點地——這一敗不著痕跡，看客只當是龍爭虎鬥後力竭讓招。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      306
+    ]
+  },
+  {
+    "entryID": 306,
+    "actorID": "TournamentHost",
+    "text": "「[em7]振臂高呼[/em7]勝負已分——決賽的贏家，是赤龍幫的少幫主，褚燕!這一屆『天下第一少年英雄』，非他莫屬啦!」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      307
+    ]
+  },
+  {
+    "entryID": 307,
+    "actorID": "role140",
+    "text": "「……承讓了。」",
+    "Sequence": "",
+    "links": [
+      308
+    ]
+  },
+  {
+    "entryID": 308,
+    "actorID": "role140",
+    "text": "「怪了，方才那一手，我分明是躲不開的……」",
+    "Sequence": "",
+    "links": [
+      309
+    ]
+  },
+  {
+    "entryID": 309,
+    "actorID": "MC1",
+    "text": "「褚兄弟身手矯健，是在下技不如人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      310
+    ]
+  },
+  {
+    "entryID": 310,
+    "actorID": 2,
+    "text": "[panel=6]＊（他心裡也覺得這勝來得蹊蹺，可台下震天的喝采、奪魁的榮光就在眼前——那點不對勁，終究抵不過這份誘惑。他沒再追問，只是笑得有一絲說不出的不自在。 ）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      311
+    ]
+  },
+  {
+    "entryID": 311,
+    "actorID": "role140",
+    "text": "「贏就是贏！這彩頭，我褚燕收下了！」",
+    "Sequence": "",
+    "links": [
+      312
+    ]
+  },
+  {
+    "entryID": 312,
+    "actorID": "MC10",
+    "text": "「哈哈哈！好小子！有真本事，更難得的是——曉得什麼時候該收手。」",
+    "Sequence": "",
+    "links": [
+      313
+    ]
+  },
+  {
+    "entryID": 313,
+    "actorID": "MC10",
+    "text": "「老子看人向來看得準。一言既出，駟馬難追——赤龍幫這注，老子獨個兒押你了！英豪府往後有難處，就多我這面赤龍旗撐著。」",
+    "Sequence": "",
+    "links": [
+      314
+    ]
+  },
+  {
+    "entryID": 314,
+    "actorID": 2,
+    "text": "[panel=6]＊（話音方落，赤龍幫眾一擁而上，將奪魁的褚燕高高簇擁起來，吆喝笑鬧響成一片。）＊",
+    "Sequence": "",
+    "links": [
+      315
+    ]
+  },
+  {
+    "entryID": 315,
+    "actorID": "role140",
+    "text": "「[em7]從人堆裡探出半個身子朝你喊[/em7]喂，[var=PlayerLastName]兄弟——改日上雁門，來赤龍幫尋我！這一場咱倆沒打夠，得再痛痛快快來過！」",
+    "Sequence": "",
+    "links": [
+      316
+    ]
+  },
+  {
+    "entryID": 316,
+    "actorID": 2,
+    "text": "[panel=6]＊（他被人潮捲著遠去，猶自回頭朝你咧嘴大笑；你走下擂台，三道身影迎了上來——呂信、子羽、郭嘉。）＊",
+    "Sequence": "",
+    "links": [
+      317
+    ]
+  },
+  {
+    "entryID": 317,
+    "actorID": "MC2",
+    "text": "「喲，這一跤摔得漂亮！台下那幫人是當真了，可惜瞞不過你信哥的眼。」",
+    "Sequence": "",
+    "links": [
+      318
+    ]
+  },
+  {
+    "entryID": 318,
+    "actorID": "MC3",
+    "text": "[panel=2]「贏得起卻故意輸——比武是拿命相搏，不是拿來換好處的。」",
+    "Sequence": "",
+    "links": [
+      319
+    ]
+  },
+  {
+    "entryID": 319,
+    "actorID": "MC7",
+    "text": "[panel=3]「子羽兄稍安。他輸一場擂台，換回赤龍幫整面旗；先論成敗，再論是非——這筆帳，划算。」",
+    "Sequence": "",
+    "links": [
+      320
+    ]
+  },
+  {
+    "entryID": 320,
+    "actorID": "MC1",
+    "text": "「果然瞞不過，呵……」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      321
+    ]
+  },
+  {
+    "entryID": 321,
+    "actorID": "MC2",
+    "text": "「哈哈！罷了罷了，輸贏都翻篇了——走！這頓酒，我請客！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      322
+    ]
+  },
+  {
+    "entryID": 322,
+    "actorID": "MC0",
+    "text": "獲得赤龍幫獨家投資",
+    "Sequence": "// TODO: GrantInvestment(RedDragon);",
+    "links": [
+      345
+    ],
+    "Description": "結局標記：賣面子・赤龍幫投資"
+  },
+  {
+    "entryID": 323,
+    "actorID": 2,
+    "text": "[panel=6]＊（你手上不留半分，那足以定勝負的一擊實實落下！褚燕連退三步、刀脫手而出，全場先是死寂，繼而轟然譁動。）＊",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      324
+    ]
+  },
+  {
+    "entryID": 324,
+    "actorID": "role140",
+    "text": "「我……輸了……？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      325
+    ]
+  },
+  {
+    "entryID": 325,
+    "actorID": 2,
+    "text": "[panel=6]＊（他眼底掠過一絲藏不住的不甘——這一場，他輸得實在可惜。可台下萬千道目光，正齊刷刷落在他身上。）＊",
+    "Sequence": "",
+    "links": [
+      326
+    ]
+  },
+  {
+    "entryID": 326,
+    "actorID": "role140",
+    "text": "「[em7]猛地一咧嘴，抱拳朗聲[/em7]哈哈！好！你這招使的漂亮。」",
+    "Sequence": "",
+    "links": [
+      327
+    ]
+  },
+  {
+    "entryID": 327,
+    "actorID": 2,
+    "text": "[panel=6]＊（他笑得坦蕩、風範十足，抱拳的姿態引得滿場喝采。）＊",
+    "Sequence": "",
+    "links": [
+      328
+    ]
+  },
+  {
+    "entryID": 328,
+    "actorID": "TournamentHost",
+    "text": "「[em7]振臂高呼[/em7]贏啦——擊敗少幫主的黑馬，這位英豪府來的少俠!本屆『天下第一少年英雄』，就是他!」",
+    "Sequence": "",
+    "links": [
+      329
+    ]
+  },
+  {
+    "entryID": 329,
+    "actorID": 2,
+    "text": "[panel=6]＊（台下叫好聲震天。可場邊那道鷹隼般的目光，卻在你奪魁的那一刻，慢慢眯了起來。）＊",
+    "Sequence": "",
+    "links": [
+      330
+    ]
+  },
+  {
+    "entryID": 330,
+    "actorID": "MC10",
+    "text": "「[em7]沒有起身，只緩緩把玩著手中酒盞[/em7]……好個油鹽不進的楞小子。連老子遞的台階，都不屑踩上一腳。」",
+    "Sequence": "",
+    "links": [
+      331
+    ]
+  },
+  {
+    "entryID": 331,
+    "actorID": "MC10",
+    "text": "「贏得漂亮，這身本事，老子認。可赤龍幫要的，是懂人情、給得起面子的自己人；你這種一根筋的……老子用不起。這注——不押了。」",
+    "Sequence": "",
+    "links": [
+      332
+    ]
+  },
+  {
+    "entryID": 332,
+    "actorID": "MC1",
+    "text": "「道不同罷了。這錢，在下也不稀罕。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      333
+    ]
+  },
+  {
+    "entryID": 333,
+    "actorID": "MC10",
+    "text": "「哈！有種！話說回來——能在天下武道大會全勝奪魁的後生，你這名號，明日便要響遍并州。這份彩頭，銀子可買不來，拿好了!」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      334
+    ]
+  },
+  {
+    "entryID": 334,
+    "actorID": 2,
+    "text": "[panel=6]＊（一戰成名，聲震并州。 ※獲得名氣、習得新技能；惟無赤龍幫投資）＊",
+    "Sequence": "// TODO: AddSkill(...);",
+    "links": [
+      335
+    ]
+  },
+  {
+    "entryID": 335,
+    "actorID": 2,
+    "text": "[panel=6]＊（你走下擂台，全場喝采如雷——一路連勝、又當眾拒了赤龍幫的招攬全勝奪魁，這名號今日算是徹底立住了。）＊",
+    "Sequence": "",
+    "links": [
+      336
+    ]
+  },
+  {
+    "entryID": 336,
+    "actorID": "role140",
+    "text": "「[em7]分開人群擠上前[/em7]喂，別急著走啊！」",
+    "Sequence": "",
+    "links": [
+      337
+    ]
+  },
+  {
+    "entryID": 337,
+    "actorID": "role140",
+    "text": "「義父不投錢，是他的買賣；可你我這一場，是實打實的交情！改日上雁門，來赤龍幫尋我——飛燕認的是你這個人，不是那筆銀子！」",
+    "Sequence": "",
+    "links": [
+      338
+    ]
+  },
+  {
+    "entryID": 338,
+    "actorID": 2,
+    "text": "[panel=6]＊（他咧嘴大笑，那副輸了卻更服氣的爽快，比什麼彩頭都來得真。）＊",
+    "Sequence": "",
+    "links": [
+      339
+    ]
+  },
+  {
+    "entryID": 339,
+    "actorID": 2,
+    "text": "[panel=6]＊（人潮之外，三道身影迎上前來——呂信、子羽、郭嘉。）＊",
+    "Sequence": "",
+    "links": [
+      340
+    ]
+  },
+  {
+    "entryID": 340,
+    "actorID": "MC2",
+    "text": "「[em7]一拳捶上你胸口[/em7]痛快！當著那老狐狸的面奪了魁、還敢回絕他——兄弟，你可給咱英豪府長臉了！」",
+    "Sequence": "",
+    "links": [
+      341
+    ]
+  },
+  {
+    "entryID": 341,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]難得地頷首[/em7]贏得堂堂正正。這一場，我服。」",
+    "Sequence": "",
+    "links": [
+      342
+    ]
+  },
+  {
+    "entryID": 342,
+    "actorID": "MC7",
+    "text": "[panel=3]「名掙足了，錢卻飛了。」",
+    "Sequence": "",
+    "links": [
+      343
+    ]
+  },
+  {
+    "entryID": 343,
+    "actorID": "MC7",
+    "text": "[panel=3]「不過——赤龍幫的銀子有價，你這『少年英雄』的名頭無價。眼前是虧了，賺的卻在往後。」",
+    "Sequence": "",
+    "links": [
+      344
+    ]
+  },
+  {
+    "entryID": 344,
+    "actorID": "MC2",
+    "text": "「行了行了，算盤晚點打！走——今日這場，說什麼都得痛痛快快喝他個夠！」",
+    "Sequence": "",
+    "links": [
+      345
+    ]
+  },
+  {
+    "entryID": 345,
+    "actorID": 2,
+    "text": "[panel=6]＊（雁門城內一間酒館，四人圍著油膩的木桌坐定。呂信一腳踏上長凳，扯著嗓子叫小二快點拿酒出來。）＊",
+    "Sequence": "",
+    "links": [
+      346
+    ]
+  },
+  {
+    "entryID": 346,
+    "actorID": "MC2",
+    "text": "「來！來來！都給我滿上！」",
+    "Sequence": "",
+    "links": [
+      347
+    ]
+  },
+  {
+    "entryID": 347,
+    "actorID": "MC2",
+    "text": "「想當年西楚霸王，一桿長戟橫掃八千里。大丈夫在世，就該這般轟轟烈烈，打出個名震天下——這才不枉來人間走一遭！」",
+    "Sequence": "",
+    "links": [
+      348
+    ]
+  },
+  {
+    "entryID": 348,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]一口喝光面前的酒[/em7]名震天下……那也要看，這身武藝是否用在大義上。」",
+    "Sequence": "",
+    "links": [
+      349
+    ]
+  },
+  {
+    "entryID": 349,
+    "actorID": "MC2",
+    "text": "「嘿！管他那麼多呢——只要天下無敵，騎最快的馬、摟最美的女人，這天下還不是任你逍遙！」",
+    "Sequence": "",
+    "links": [
+      350
+    ]
+  },
+  {
+    "entryID": 350,
+    "actorID": "MC3",
+    "text": "[panel=2]「……殺得越多，才越明白這話有多輕。」",
+    "Sequence": "",
+    "links": [
+      351
+    ]
+  },
+  {
+    "entryID": 351,
+    "actorID": 2,
+    "text": "[panel=6]＊（席間一靜。誰也不知子羽究竟是為了什麼，才來到英豪府——那話裡的沉重，沒人敢接。）＊",
+    "Sequence": "",
+    "links": [
+      352
+    ]
+  },
+  {
+    "entryID": 352,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]晃著酒碗，難得帶了幾分醉後的促狹[/em7]哎喲，兩位老大哥一喝酒就論起道來，這叫人怎麼盡興？」",
+    "Sequence": "",
+    "links": [
+      353
+    ]
+  },
+  {
+    "entryID": 353,
+    "actorID": "MC7",
+    "text": "[panel=3]「要我說，夢想這玩意兒，跟賭局一個理——押得越大，輸得越慘；可若什麼都不押，那活著還有什麼滋味？」",
+    "Sequence": "",
+    "links": [
+      354
+    ]
+  },
+  {
+    "entryID": 354,
+    "actorID": "MC2",
+    "text": "「哈哈哈！好個郭鬼才！平日冷得像塊冰，一沾酒倒比誰都能說！那你押的是什麼？」",
+    "Sequence": "",
+    "links": [
+      355
+    ]
+  },
+  {
+    "entryID": 355,
+    "actorID": "MC7",
+    "text": "[panel=3]「我啊……押一筆早該還、卻還沒還清的帳。」",
+    "Sequence": "",
+    "links": [
+      356
+    ]
+  },
+  {
+    "entryID": 356,
+    "actorID": 2,
+    "text": "[panel=6]＊（他沒細說，仰頭把碗中酒一飲而盡。那點笑意落回眼底時，已悄悄涼了下來。）＊",
+    "Sequence": "",
+    "links": [
+      357
+    ]
+  },
+  {
+    "entryID": 357,
+    "actorID": "MC2",
+    "text": "「帳？哈——要說欠帳，是這世道欠老子的！」",
+    "Sequence": "",
+    "links": [
+      358
+    ]
+  },
+  {
+    "entryID": 358,
+    "actorID": "MC2",
+    "text": "「你們是不知道，咱們這種五原邊地出來的，在中原那些體面人眼裡，跟茹毛飲血的野人差不了多少。話還沒說上兩句，先掂量你是打哪個窮鄉僻壤來的。」",
+    "Sequence": "",
+    "links": [
+      359
+    ]
+  },
+  {
+    "entryID": 359,
+    "actorID": "MC2",
+    "text": "「[em7]酒碗重重一頓[/em7]可那又怎樣？老子偏不認這命！總有一天，要教他們仰著脖子、恭恭敬敬喊我一聲——這口氣，我呂信爭定了！」",
+    "Sequence": "",
+    "links": [
+      360
+    ]
+  },
+  {
+    "entryID": 360,
+    "actorID": "MC2",
+    "text": "「[em7]一把攬過你肩，又咧嘴笑開[/em7]喂，小子，光聽我們嚷嚷了。你呢——加入英豪府、闖蕩這江湖，究竟圖個什麼？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      361
+    ]
+  },
+  {
+    "entryID": 361,
+    "actorID": "MC1",
+    "text": "「我想仗劍走遍天下，除盡不平——教這世道，記住我的名字。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [
+      362
+    ]
+  },
+  {
+    "entryID": 362,
+    "actorID": "MC1",
+    "text": "「說來，倒和台上那褚燕一個模樣……也不知算不算英雄所見略同。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      363,
+      368
+    ]
+  },
+  {
+    "entryID": 363,
+    "actorID": "MC1",
+    "text": "「[em7]盯著碗裡的酒，半晌沒說話[/em7]……說到底，今天這一仗，贏得不乾不淨。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [
+      364
+    ],
+    "Description": "心事分歧：賣面子前途"
+  },
+  {
+    "entryID": 364,
+    "actorID": "MC2",
+    "text": "「嗨，多大點事！一個少年新秀的頭銜，值幾個錢？天底下這種擂台，多的是！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      365
+    ]
+  },
+  {
+    "entryID": 365,
+    "actorID": "MC3",
+    "text": "[panel=2]「你輸的是小義，護的是大義。……別擱在心上。」",
+    "Sequence": "",
+    "links": [
+      366
+    ]
+  },
+  {
+    "entryID": 366,
+    "actorID": "MC7",
+    "text": "[panel=3]「手段也好、過程也罷，一場輸贏——不過是路上的浮塵。」",
+    "Sequence": "",
+    "links": [
+      367
+    ]
+  },
+  {
+    "entryID": 367,
+    "actorID": "MC7",
+    "text": "[panel=3]「只是……浮塵落定前，終究得先過自己這一關。過不過得去，旁人說了不算。」",
+    "Sequence": "",
+    "links": [
+      374
+    ]
+  },
+  {
+    "entryID": 368,
+    "actorID": "MC1",
+    "text": "「[em7]搖搖頭，苦笑一聲[/em7]，那筆銀子，說不心疼是假的……可要我拿假招去換，這口氣，我嚥不下去。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      369
+    ],
+    "Description": "心事分歧：堂堂正正前途"
+  },
+  {
+    "entryID": 369,
+    "actorID": "MC2",
+    "text": "「哈！這才是我兄弟！錢沒了再掙就是！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      370
+    ]
+  },
+  {
+    "entryID": 370,
+    "actorID": "MC3",
+    "text": "[panel=2]「[em7]難得一笑[/em7]有所不為，才有所為。這錢，棄得對。」",
+    "Sequence": "",
+    "links": [
+      371
+    ]
+  },
+  {
+    "entryID": 371,
+    "actorID": "MC7",
+    "text": "[panel=3]「銀子沒了就沒了，你這身骨頭，倒是硬了不少。」",
+    "Sequence": "",
+    "links": [
+      372
+    ]
+  },
+  {
+    "entryID": 372,
+    "actorID": "MC7",
+    "text": "[panel=3]「這世上想抄捷徑的人多得是，肯把捷徑往外推的——才真叫少見。這一手，划得來。」",
+    "Sequence": "",
+    "links": [
+      373
+    ]
+  },
+  {
+    "entryID": 373,
+    "actorID": "MC2",
+    "text": "「[em7]",
+    "Sequence": "",
+    "links": [
+      374
+    ]
+  },
+  {
+    "entryID": 374,
+    "actorID": "MC2",
+    "text": "「[em7]重重一磕酒碗[/em7]說得好！都別愣著了——來，敬咱們自己！他日誰真闖出了名堂，今日這壺酒，可都得記著！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      375
+    ]
+  },
+  {
+    "entryID": 375,
+    "actorID": 2,
+    "text": "[panel=6]＊（四只粗碗撞作一處，濁酒四濺。一碗接著一碗，直喝到明月早已高掛。碗裡不過是最尋常的濁酒，這幾個少年卻喝得豪氣干雲，彷彿捧著的是天底下最好的酒。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

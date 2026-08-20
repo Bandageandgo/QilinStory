@@ -1,0 +1,979 @@
+[
+    {
+        "entryID": 0,
+        "actorID": 2,
+        "text": "[panel=6]＊（馬車顛簸了數日，沿著山道盤旋而上，終於在一處開闊地停下。眼前並非高牆深塹的大城，而是一片依山而建的聚落：青瓦木屋錯落，背後是陡壁與層層綠林，遠處山脊上還能瞥見一座小亭，彷彿冷眼俯視著腳下人煙。[em2]雲中[/em2]地處各方勢力夾縫，官府鞭長莫及，形同權力真空；名義上這一帶是[em2]英豪府[/em2]的地盤，實則龍蛇混雜，成了江湖中人北上南下時慣常落腳、換消息、等風向的去處。廣場以大片石板鋪就，三兩成群的人物或抱劍而立，或低聲交談，氣氛不鬧，卻透著一股躁動——與小溪村的淳樸寧靜截然不同。）＊",
+        "Sequence": "",
+        "links": [
+            1
+        ]
+    },
+    {
+        "entryID": 1,
+        "actorID": "MC1",
+        "text": "「終於到了！這就是雲中！英豪府的英雄大會，我來了！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+        "links": [
+            2
+        ]
+    },
+    {
+        "entryID": 2,
+        "actorID": "MC8",
+        "text": "「[panel=2]哎喲…表哥你小聲點。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=pain);EnableCharacterExpression(1,MC8,Pain);",
+        "links": [
+            3
+        ]
+    },
+    {
+        "entryID": 3,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "",
+        "Description": "判斷赫連娜娜是否在隊伍中",
+        "links": [
+            4,
+            6
+        ]
+    },
+    {
+        "entryID": 4,
+        "actorID": "MC22",
+        "text": "「[panel=1]哇！這就是雲中！人雜、眼多、消息快—真是有意思！」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22_Surprise_2);",
+        "links": [
+            5
+        ]
+    },
+    {
+        "entryID": 5,
+        "actorID": "MC1",
+        "text": "「赫連姑娘，我們是來參加英雄大會的，不是來盜墓的。」",
+        "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=tired);",
+        "links": [
+            6
+        ]
+    },
+    {
+        "entryID": 6,
+        "actorID": "MC1",
+        "text": "「走！趁熱打鐵，現在就去報名英雄大會！」",
+        "Sequence": "",
+        "links": [
+            7
+        ]
+    },
+    {
+        "entryID": 7,
+        "actorID": "role24",
+        "text": "「小兄弟，先別急。你們是外地來的吧？今年英豪府的英雄大會還沒開盤，要到[em2]179年12月下旬[/em2]才正式遴選。現在去，多半只會吃閉門羹。」",
+        "Sequence": "",
+        "links": [
+            8
+        ]
+    },
+    {
+        "entryID": 8,
+        "actorID": "MC8",
+        "text": "「[panel=2]啊？還要等這麼久？」",
+        "Sequence": "",
+        "links": [
+            9
+        ]
+    },
+    {
+        "entryID": 9,
+        "actorID": "role24",
+        "text": "「嗯。你們要是來參會的，去前面找英豪府守衛領憑證就行，客棧那邊有安排。」",
+        "Sequence": "",
+        "links": [
+            10
+        ]
+    },
+    {
+        "entryID": 10,
+        "actorID": "role65",
+        "text": "「這位兄台說得不錯。幾位少俠若是來參加大會，可在我這裡登記領憑證。」",
+        "Sequence": "",
+        "links": [
+            11
+        ]
+    },
+    {
+        "entryID": 11,
+        "actorID": "MC1",
+        "text": "「什麼？！還要等那麼久？那我們這段時間住哪？吃什麼？」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Shock);",
+        "links": [
+            12
+        ]
+    },
+    {
+        "entryID": 12,
+        "actorID": "role65",
+        "text": "「少俠莫慌。凡是來參加大會的各路英豪，我們英豪府早已在聚落裡包下了『英豪客棧』。各位憑此憑證，可前往客棧[em2]免費食宿[/em2]，直到大會開始。」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [
+            13
+        ]
+    },
+    {
+        "entryID": 13,
+        "actorID": "MC8",
+        "text": "「[panel=2]免費食宿？！太棒了！表哥，我們不用睡破廟了！」",
+        "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [
+            14
+        ]
+    },
+    {
+        "actorID": 0,
+        "text": "",
+        "Sequence": "",
+        "Description": "判斷赫連娜娜是否在隊伍中",
+        "entryID": 14,
+        "links": [
+            15,
+            18
+        ]
+    },
+    {
+        "entryID": 15,
+        "actorID": "MC22",
+        "text": "「[panel=1]既然有免費的客棧包吃包住，那本姑娘就不客氣啦！不過雲中這地兒龍蛇混雜，我得先去『探探路』，收集點情報！燕大俠，小犀妹妹，咱們客棧見啦！」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=8);EnableCharacterExpression(2,MC22_Happy);",
+        "links": [
+            16
+        ]
+    },
+    {
+        "entryID": 16,
+        "actorID": 2,
+        "text": "[panel=6]＊（話音剛落，赫連娜娜便如同一條滑溜的泥鰍，一溜煙地鑽進廣場邊那些抱劍閒談、行色匆匆的人堆裡，轉眼沒了蹤影。）＊",
+        "Sequence": "DisableCharacterExpression(2);",
+        "links": [
+            17
+        ]
+    },
+    {
+        "entryID": 17,
+        "actorID": "MC1",
+        "text": "「這丫頭…從小溪村那會兒裝神弄鬼當神棍開始，就沒個正經時候。算了，隨她去吧，別惹出什麼亂子就好。」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": [
+            28
+        ]
+    },
+    {
+        "entryID": 18,
+        "actorID": 2,
+        "text": "[panel=6]＊（你們正準備前往英豪客棧，忽然聽見街角傳來一陣熟悉又浮誇的聲音。）＊",
+        "Sequence": "",
+        "links": [
+            19
+        ]
+    },
+    {
+        "entryID": 19,
+        "actorID": "MC22",
+        "text": "「[panel=1]咦？！燕大俠？還有小犀妹妹？你們竟然真的跑到雲中來啦！」",
+        "Sequence": "SetPortrait(MC22,pic=9);EnableCharacterExpression(2,MC22,Surprise_2);",
+        "links": [
+            20
+        ]
+    },
+    {
+        "entryID": 20,
+        "actorID": "MC8",
+        "text": "「[panel=2]娜娜？！妳怎麼也在這裡？」",
+        "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [
+            21
+        ]
+    },
+    {
+        "entryID": 21,
+        "actorID": "MC22",
+        "text": "「天機所指，命運牽引，我掐指一算就知道你們會來……咳，總之我也打算參加英雄大會！」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);",
+        "links": [
+            22
+        ]
+    },
+    {
+        "entryID": 22,
+        "actorID": "MC1",
+        "text": "「說人話。」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": [
+            23
+        ]
+    },
+    {
+        "entryID": 23,
+        "actorID": "MC22",
+        "text": "「……其實是我在雲中繞了兩天，盤纏快見底了。本來想混進英豪府，結果連門都進不去。既然你們也要住英豪客棧，不如……咳咳，江湖兒女同舟共濟嘛！」",
+        "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(2,MC22,Nervous);",
+        "links": [
+            24
+        ]
+    },
+    {
+        "entryID": 24,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥，她這次至少講真話了。」",
+        "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=happy);",
+        "links": [
+            25
+        ]
+    },
+    {
+        "entryID": 25,
+        "actorID": "MC1",
+        "text": "「行吧，反正英雄大會還早，多個人多個照應。娜娜，妳要跟隊就得聽指揮，別再亂惹麻煩。」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [
+            26
+        ]
+    },
+    {
+        "entryID": 26,
+        "actorID": "MC22",
+        "text": "「遵命！從今天起，我就是隊伍的首席情報官兼尋寶顧問！」",
+        "Sequence": "SetPortrait(MC22,pic=8);EnableCharacterExpression(2,MC22,Happy);",
+        "links": [
+            27
+        ]
+    },
+    {
+        "entryID": 27,
+        "actorID": 2,
+        "text": "[panel=6]＊（赫連娜娜正式加入了你們的隊伍。這位自稱「天機在握」的姑娘，究竟會帶來機緣還是麻煩，暫時還沒人說得準。）＊",
+        "Sequence": "DisableCharacterExpression(2);;AddPlayer(MC22);",
+        "links": [
+            28
+        ]
+    },
+    {
+        "entryID": 28,
+        "actorID": 2,
+        "text": "[panel=6]＊（就這樣，你們前往英豪客棧安頓了下來。距離12月下旬的英雄大會還有一段漫長的等待期，你們決定趁此機會，在雲中這塊三不管的江湖聚落裡四處走走——機遇與麻煩，往往都藏在同一條石板路盡頭。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 29,
+        "actorID": 2,
+        "text": "[panel=6]＊（廣場中央設有一個木製的演講台，平時供文人雅士或江湖說書人在此高談闊論。此刻台上空無一人。）＊",
+        "Sequence": "",
+        "links": [
+            30
+        ]
+    },
+    {
+        "entryID": 30,
+        "actorID": "MC1",
+        "text": "「這台子建得不錯，正適合我輩抒發胸中抱負，順便練練膽量與口才。」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+        "links": [
+            31,
+            38
+        ]
+    },
+    {
+        "actorID": 0,
+        "text": "[em2][口才檢定][/em2]「登台演講，鍛鍊口才。」",
+        "Sequence": "",
+        "Description": "選項1：口才檢定",
+        "entryID": 31,
+        "links": [
+            32
+        ]
+    },
+    {
+        "actorID": 0,
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,8);",
+        "Description": "選項1的空對話擲骰節點",
+        "entryID": 32,
+        "links": [
+            33
+        ]
+    },
+    {
+        "entryID": 33,
+        "actorID": "MC1",
+        "text": "「諸位路過雲中的江湖朋友！在下燕不凡，今日初到此地，有幾句肺腑之言想與諸位分享！」",
+        "Sequence": "",
+        "links": [
+            34,
+            36
+        ]
+    },
+    {
+        "entryID": 34,
+        "actorID": 2,
+        "text": "[panel=6]＊（燕不凡口若懸河，引經據典，將江湖見聞說得生動有趣，引來台下陣陣喝采。）＊",
+        "Sequence": "IsPassDice() == true; ModifyData(FeatExp,MC1,Persuasion,20);",
+        "links": [
+            35
+        ]
+    },
+    {
+        "entryID": 35,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥好厲害！說得比茶館的說書人還好聽！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": []
+    },
+    {
+        "entryID": 36,
+        "actorID": 2,
+        "text": "[panel=6]＊（燕不凡一上台，看見底下那些抱劍打量、神色各異的江湖人，頓時結巴起來，說得前言不搭後語，沒幾句眾人便各自散去，只剩尷尬的風聲。）＊",
+        "Sequence": "IsPassDice() == false; ModifyData(FeatExp,MC1,Persuasion,5);",
+        "links": [
+            37
+        ]
+    },
+    {
+        "entryID": 37,
+        "actorID": "MC1",
+        "text": "「咳…看來還得多加練習…」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+        "links": []
+    },
+    {
+        "actorID": 0,
+        "text": "「算了，大庭廣眾之下怪不好意思的。」",
+        "Sequence": "",
+        "Description": "選項2：離開",
+        "entryID": 38,
+        "links": []
+    },
+    {
+        "entryID": 39,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "",
+        "Description": "判斷阿傑是否存活",
+        "links": [
+            40
+        ]
+    },
+    {
+        "entryID": 40,
+        "actorID": 2,
+        "text": "[panel=6]＊（市集角落有個豬肉攤，老闆正手起刀落，俐落地切著豬肉。仔細一看，竟是之前在破廟遇到過的阿傑。）＊",
+        "Sequence": "",
+        "links": [
+            41
+        ]
+    },
+    {
+        "entryID": 41,
+        "actorID": "MC1",
+        "text": "「咦？這不是阿傑兄弟嗎？你怎麼跑到雲中賣起豬肉來了？」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Question);",
+        "links": [
+            42
+        ]
+    },
+    {
+        "entryID": 42,
+        "actorID": "role99",
+        "text": "「哎呀！是少俠和蕭姑娘！恩公啊！自從上次破廟一別，我痛定思痛，決定金盆洗手，靠這把子力氣做點正經買賣。這不，在這支了個豬肉攤，生意還算過得去！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=happy);",
+        "links": [
+            43
+        ]
+    },
+    {
+        "entryID": 43,
+        "actorID": "role99",
+        "text": "「恩公要買肉嗎？算你們半價！這可是上好的五花肉！」",
+        "Sequence": "",
+        "links": [
+            44,
+            47
+        ]
+    },
+    {
+        "actorID": 0,
+        "text": "「買兩斤五花肉支持一下。」",
+        "Sequence": "",
+        "Description": "選項1：買肉",
+        "entryID": 44,
+        "links": [
+            45
+        ]
+    },
+    {
+        "entryID": 45,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "ModifyData(Coin,MC1,-50);ModifyData(Inventory,AddItem,Pork,2);",
+        "links": [
+            46
+        ]
+    },
+    {
+        "entryID": 46,
+        "actorID": "MC1",
+        "text": "「那就多謝阿傑兄弟了，祝你生意興隆！」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "actorID": 0,
+        "text": "「下次一定，下次一定。」",
+        "Sequence": "",
+        "Description": "選項2：離開",
+        "entryID": 47,
+        "links": []
+    },
+    {
+        "entryID": 48,
+        "actorID": 2,
+        "text": "[panel=6]＊（一陣香甜的氣味飄來，一位慈祥的阿婆正在翻炒著鐵鍋裡的栗子。）＊",
+        "Sequence": "",
+        "links": [
+            49
+        ]
+    },
+    {
+        "entryID": 49,
+        "actorID": "role5",
+        "text": "「糖炒粒子一包一百哦。」",
+        "Sequence": "",
+        "links": [
+            50
+        ]
+    },
+    {
+        "entryID": 50,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥…好香啊…」",
+        "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [
+            51,
+            53
+        ]
+    },
+    {
+        "actorID": 0,
+        "text": "「阿婆，給我來一份。」",
+        "Sequence": "",
+        "Description": "選項1：買栗子",
+        "entryID": 51,
+        "links": [
+            52
+        ]
+    },
+    {
+        "entryID": 52,
+        "actorID": "role5",
+        "text": "「糖炒粒子一包一百哦。」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "actorID": 0,
+        "text": "離開",
+        "Sequence": "",
+        "Description": "選項2：離開",
+        "entryID": 53,
+        "links": []
+    },
+    {
+        "entryID": 54,
+        "actorID": 2,
+        "text": "[panel=6]＊（你們來到外圍的一棵巨大的古樹下。突然，一陣怪異的驢叫聲傳來。只見一個頭戴破木水桶、手持長柄掃把的怪人，騎著一頭瘦骨嶙峋的老毛驢，從樹後衝了出來，擋住了去路。）＊",
+        "Sequence": "",
+        "links": [
+            55
+        ]
+    },
+    {
+        "entryID": 55,
+        "actorID": "NPC_TreeGuard",
+        "text": "「吾乃大樹守衛！擅闖領域者，死！」",
+        "Sequence": "",
+        "links": [
+            56
+        ]
+    },
+    {
+        "entryID": 56,
+        "actorID": "MC1",
+        "text": "「這…這是哪門子的守衛？頭上戴的是水桶吧？手裡拿的是掃把吧？！」",
+        "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Question);",
+        "links": [
+            57
+        ]
+    },
+    {
+        "entryID": 57,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥小心！他衝過來了！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
+        "links": [
+            58
+        ]
+    },
+    {
+        "entryID": 58,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "BeginCombat()",
+        "links": [
+            59,
+            70
+        ]
+    },
+    {
+        "entryID": 59,
+        "actorID": 0,
+        "text": "",
+        "Sequence": "",
+        "Description": "判斷大樹守衛已敗次數(TreeGuardLoseCount)",
+        "links": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
+        ]
+    },
+    {
+        "entryID": 60,
+        "actorID": "role133",
+        "text": "「哼！剛才是本守衛的老驢突然打噴嚏，這局不算！有種再來！」",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 61,
+        "actorID": "role133",
+        "text": "「你、你趁我掃把打滑偷襲！江湖規矩呢？再來一場！」",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 62,
+        "actorID": "role133",
+        "text": "「剛剛逆風！逆風你懂不懂？風向不對我發揮不出真正實力！」",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 63,
+        "actorID": "role133",
+        "text": "「等等！我昨晚守樹守到三更，沒睡飽！這次是精神不濟，不算！」",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 64,
+        "actorID": "role133",
+        "text": "「本守衛今天只用了三成功力！你別得意，再來！」",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 65,
+        "actorID": "role133",
+        "text": "「我、我水桶裡進沙子了！視線受阻！這把不公平！」",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 66,
+        "actorID": "role133",
+        "text": "「……哼！本守衛今日巡邏路線臨時調整，不是怕你！這棵樹先借你看管，改天再戰！」",
+        "Sequence": "",
+        "links": [
+            67
+        ]
+    },
+    {
+        "entryID": 67,
+        "actorID": 2,
+        "text": "[panel=6]＊（大樹守衛嘴上依舊不服，卻已騎著老毛驢一溜煙跑下山道，頭也不回。看樣子，短時間內他是不會再回來了。）＊",
+        "Sequence": "ModifyData(GlobalVar,TreeGuardLoseCount,1);ModifyData(Inventory,AddItem,GoldenTreeBroom,1);",
+        "links": [
+            68
+        ]
+    },
+    {
+        "entryID": 68,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥，他輸了七次還能找七個理由，真是人才。」",
+        "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 69,
+        "actorID": "MC1",
+        "text": "「這傢伙……嘴比掃把還硬。」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);",
+        "links": []
+    },
+    {
+        "entryID": 70,
+        "actorID": "role133",
+        "text": "「哈哈哈！知道大樹守衛的厲害了吧！快滾出聖樹領域！」",
+        "Sequence": "",
+        "links": [
+            71
+        ]
+    },
+    {
+        "entryID": 71,
+        "actorID": "MC1",
+        "text": "「可惡…竟然被一把掃把打敗了…」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 72,
+        "actorID": 2,
+        "text": "[panel=6]＊（你們來到英豪府巍峨的大門前，只見朱漆大門緊閉，門口守衛森嚴，透著一股莊嚴肅穆的氣息。）＊",
+        "Sequence": "",
+        "links": [
+            73
+        ]
+    },
+    {
+        "entryID": 73,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥，別看了。剛才那位江湖大哥不是說了嗎，英雄大會要等到12月下旬才開始呢。現在去只會吃閉門羹。」",
+        "Sequence": "SetPortrait(MC8,pic=normal);EnableCharacterExpression(1,MC8,Question);",
+        "links": [
+            74
+        ]
+    },
+    {
+        "entryID": 74,
+        "actorID": "MC1",
+        "text": "「唉，看著這大門進不去，真是心癢難耐。也罷，我們還是先去別處逛逛，或者找點營生賺點盤纏吧。」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);",
+        "links": []
+    },
+    {
+        "entryID": 75,
+        "actorID": 2,
+        "text": "[panel=6]＊（路過街角時，你們偶然聽見兩名江湖人士正在低聲交談，神色頗為凝重。）＊",
+        "Sequence": "",
+        "links": [
+            76
+        ]
+    },
+    {
+        "entryID": 76,
+        "actorID": "role65",
+        "text": "「最近你有沒有發現，西邊那座山……越來越熱了？早晚都會冒出白氣，像是在呼吸一樣……」",
+        "Sequence": "",
+        "links": [
+            77
+        ]
+    },
+    {
+        "entryID": 77,
+        "actorID": "role65",
+        "text": "「我也注意到了，這幾天獵物幾乎都不見了。連平常常見的山鹿都跑光了，怪得很。」",
+        "Sequence": "",
+        "links": [
+            78
+        ]
+    },
+    {
+        "entryID": 78,
+        "actorID": "role65",
+        "text": "「不只這樣，前天還聽人說，山壁突然『轟』的一聲——直接炸開一道裂縫，好像裡面有什麼東西在動……」",
+        "Sequence": "",
+        "links": [
+            79
+        ]
+    },
+    {
+        "entryID": 79,
+        "actorID": "role65",
+        "text": "「你有聽說嗎？村東那個老李，說要去找寶藏。他進了那個冒著蒸氣的山洞之後……就再也沒回來了。」",
+        "Sequence": "",
+        "links": [
+            80
+        ]
+    },
+    {
+        "entryID": 80,
+        "actorID": "role65",
+        "text": "「唉……我看那地方邪門得很，咱們還是少去為妙。」",
+        "Sequence": "",
+        "links": [
+            81
+        ]
+    },
+    {
+        "entryID": 81,
+        "actorID": "MC1",
+        "text": "「（冒著蒸氣的山洞？山壁炸裂？莫非是有什麼天地奇珍出世，又或者是某種強大妖獸的巢穴？看來西邊那座山，日後定要找機會去探一探。）」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Meditate);",
+        "links": [
+            82
+        ]
+    },
+    {
+        "entryID": 82,
+        "actorID": "MC8",
+        "text": "「[panel=2]表哥，他們說得好嚇人啊，我們可別去那種危險的地方。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
+        "links": []
+    },
+    {
+        "entryID": 83,
+        "actorID": 2,
+        "text": "[panel=6]＊（商賈巷轉角，一張不大的攤布鋪在地上，上頭擺著幾件異域香料、彩色玻璃珠與小巧銀飾。攤子雖小，卻收拾得極有章法。攤後站著一位充滿異域風情的女子，肌膚呈健康的小麥色，穿著紫金相間的波斯服飾，目光精明而銳利，正觀察每一個路過的人。）＊",
+        "Sequence": "",
+        "links": [
+            84
+        ]
+    },
+    {
+        "entryID": 84,
+        "actorID": "MC19",
+        "text": "「這位少俠，來看看西域的香料和首飾嗎？就算不買，隨便看看也不收錢。」",
+        "Sequence": "",
+        "links": [
+            85
+        ]
+    },
+    {
+        "entryID": 85,
+        "actorID": "MC1",
+        "text": "「東西是不錯，可惜我囊中羞澀。姑娘這口音聽著不像中原人，怎麼稱呼？」",
+        "Sequence": "SetPortrait(MC1,pic=normal);EnableCharacterExpression(0,MC1,Question);",
+        "links": [
+            86
+        ]
+    },
+    {
+        "entryID": 86,
+        "actorID": "MC19",
+        "text": "「我的本名太長，你們漢人念著拗口。叫我阿SA就好。做買賣嘛，四海為家，哪裡有商機就去哪裡。」",
+        "Sequence": "",
+        "links": [
+            87
+        ]
+    },
+    {
+        "entryID": 87,
+        "actorID": "MC8",
+        "text": "「[panel=2]阿SA姐姐，妳這些東西好漂亮呀。不過雲中這裡來來往往的都是些江湖粗人，賣這些小玩意兒能賺錢嗎？」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Question);",
+        "links": [
+            88
+        ]
+    },
+    {
+        "entryID": 88,
+        "actorID": "MC19",
+        "text": "「小妹妹，這妳就不懂了。我這攤子擺在這裡，賣東西是其次，主要是為了『收』東西。」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC19,pic=happy);",
+        "links": [
+            89
+        ]
+    },
+    {
+        "entryID": 89,
+        "actorID": "MC1",
+        "text": "「哦？阿SA姑娘還兼做當鋪的營生？收些什麼？」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);",
+        "links": [
+            90
+        ]
+    },
+    {
+        "entryID": 90,
+        "actorID": "MC19",
+        "text": "「尋常的金銀玉器我自然收，但我更感興趣的，是那些『奇奇怪怪』的東西。比如……你們若是日後在荒山野嶺、或是什麼古怪的地方，撿到會泛著[em2]邪異紅光[/em2]的石頭，千萬別當廢品扔了，帶來給我瞧瞧——開價絕對包你滿意。」",
+        "Sequence": "SetPortrait(MC19,pic=serious);",
+        "links": [
+            91
+        ]
+    },
+    {
+        "entryID": 91,
+        "actorID": "MC1",
+        "text": "「紅光的石頭？行，我記下了。若真碰著了這等稀罕物，一定先拿來給妳過目。」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+        "links": [
+            92
+        ]
+    },
+    {
+        "entryID": 92,
+        "actorID": 2,
+        "text": "[panel=6]＊（阿SA滿意地笑了笑，低頭繼續整理起她那張小小的攤布。你隱約覺得，這位異邦女商人特意提起那種奇怪的石頭，背後似乎另有隱情。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 93,
+        "actorID": 2,
+        "text": "[panel=6]＊（這日，你們在雲中的街上閒逛，忽然聽見一陣急促的叮叮噹噹打鐵聲，期間還夾雜著男人氣急敗壞的大吼。你們循聲找去，拐進一條僻靜的巷子，來到一處隱密的工坊。屋內爐火通紅，一個不修邊幅的漢子正對著一把古琴大呼小叫。旁邊站著一位中年文士，以及一位表情調皮的小女孩。）＊",
+        "Sequence": "",
+        "links": [
+            94
+        ]
+    },
+    {
+        "entryID": 94,
+        "actorID": "role131",
+        "text": "「不對！不對！這弦的材質完全不對！這樣彈出來的聲音，風聲怎麼可能符合宮商角徵羽的音律？！這琴都毀了！」",
+        "Sequence": "",
+        "links": [
+            95
+        ]
+    },
+    {
+        "entryID": 95,
+        "actorID": "role132",
+        "text": "「蒲兄，你這脾氣還是如此暴躁。這琴乃是上古遺物，尋常的木料與絲弦自然無法匹配。依我看，琴身內部的機括與音柱，非得用極寒之地的材料來打造，方能壓住這琴身蘊含的燥氣。」",
+        "Sequence": "",
+        "links": [
+            96
+        ]
+    },
+    {
+        "entryID": 96,
+        "actorID": "MC23",
+        "text": "「蒲伯伯又在發脾氣了。爹爹，你說的極寒材料是什麼呀？聽起來冷冰冰的。」",
+        "Sequence": "",
+        "links": [
+            97
+        ]
+    },
+    {
+        "entryID": 97,
+        "actorID": "role131",
+        "text": "「寒鐵！必須是『寒鐵』！只有用寒鐵打造的音柱，才能完美傳遞這把琴的靈魂！」",
+        "Sequence": "",
+        "links": [
+            98
+        ]
+    },
+    {
+        "entryID": 98,
+        "actorID": "MC1",
+        "text": "「兩位前輩，打擾了。在下燕不凡，剛才聽聞前輩需要『寒鐵』？」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [
+            99
+        ]
+    },
+    {
+        "entryID": 99,
+        "actorID": "role132",
+        "text": "「哦？年輕人，偷聽別人說話可不是君子所為。不過…你腳步虛浮，下盤不穩，顯然武功平平。你問這寒鐵做什麼？」",
+        "Sequence": "",
+        "links": [
+            100
+        ]
+    },
+    {
+        "entryID": 100,
+        "actorID": "MC1",
+        "text": "「咳…晚輩初出茅廬，正想找些營生。若前輩需要，晚輩願替前輩尋來這寒鐵！」",
+        "Sequence": "SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
+        "links": [
+            101
+        ]
+    },
+    {
+        "entryID": 101,
+        "actorID": "role131",
+        "text": "「真的？！好小子！只要你能找到寒鐵，我蒲元絕對不會虧待你！這把琴的修復，就全靠你了！」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [
+            102
+        ]
+    },
+    {
+        "entryID": 102,
+        "actorID": "MC23",
+        "text": "「你要去幫我們找寒鐵嗎？聽說那東西很難找的喔！要是你真找到了，記得來城外竹林找我們玩！我爹爹整天逼我讀書，無聊死了，要是你能來，我就彈琴給你聽！」",
+        "Sequence": "",
+        "links": [
+            103
+        ]
+    },
+    {
+        "entryID": 103,
+        "actorID": "MC8",
+        "text": "「[panel=2]這女孩看著年紀跟我差不多…卻……要是我也能像她一樣就好了……」",
+        "Sequence": "",
+        "links": [
+            104
+        ]
+    },
+    {
+        "entryID": 104,
+        "actorID": "role132",
+        "text": "「文姬！不得無禮！回去把《女誡》抄寫三遍！」",
+        "Sequence": "",
+        "links": [
+            105
+        ]
+    },
+    {
+        "entryID": 105,
+        "actorID": "MC23",
+        "text": "「略略略！爹爹又來了！我才不抄呢！我要繼續研究蒲伯伯的機關鳥！」",
+        "Sequence": "",
+        "links": [
+            106
+        ]
+    },
+    {
+        "entryID": 106,
+        "actorID": "role132",
+        "text": "「妳這丫頭！！」",
+        "Sequence": "",
+        "links": [
+            107
+        ]
+    },
+    {
+        "entryID": 107,
+        "actorID": "MC1",
+        "text": "「前輩放心，晚輩定當多方打聽，竭盡全力尋回寒鐵！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);",
+        "links": [
+            108
+        ]
+    },
+    {
+        "entryID": 108,
+        "actorID": 2,
+        "text": "[panel=6]＊（就這樣，你接下了蒲元的委託，也正式結識了這幾位性格各異的奇人。至於這罕見的「寒鐵」究竟身在何方，還得在江湖中多加打聽了。）＊",
+        "Sequence": "",
+        "links": []
+    }
+]

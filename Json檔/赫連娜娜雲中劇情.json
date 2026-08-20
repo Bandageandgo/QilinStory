@@ -1,0 +1,763 @@
+[
+  {
+    "entryID": 6000,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（雲中城乃三不管地帶，魚龍混雜。你正行經一處陰暗的街角，忽見前方幾個凶神惡煞的大漢圍著一名少女，那熟悉的聲音讓你停下了腳步。）＊",
+    "Sequence": "",
+    "links": [
+      6001
+    ]
+  },
+  {
+    "entryID": 6001,
+    "actorID": "MC22",
+    "text": "「哎呀！大哥，我真沒帶錢袋！下次！下次一定！我以長生天的名義發誓！」",
+    "Sequence": "SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22_Nervous);",
+    "links": [
+      6002
+    ]
+  },
+  {
+    "entryID": 6002,
+    "actorID": "NPC_Thug",
+    "text": "「嘿嘿，小姑娘，這裡是雲中，長生天管不到這兒！妳在咱們『吉祥賭坊』輸了五百兩，白紙黑字寫得清清楚楚。沒錢？那就跟我們走一趟，咱們幫主正好缺個倒酒的丫鬟！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(NPC_Thug,pic=smirk);",
+    "links": [
+      6003
+    ]
+  },
+  {
+    "entryID": 6003,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（只見赫連娜娜被幾個滿臉橫肉的打手攔住去路，這次她是真的慌了。這丫頭雖然機靈，但顯然低估了江湖險惡，原本想去賭坊探聽寶物消息，結果寶物沒見著，自己先栽了進去。）＊",
+    "Sequence": "",
+    "links": [
+      6004,
+      6005,
+      6006
+    ]
+  },
+  {
+    "entryID": 6004,
+    "actorID": "MC1",
+    "text": "「光天化日，欺負一個弱女子算什麼本事！」",
+    "Sequence": "",
+    "links": [
+      6010
+    ]
+  },
+  {
+    "entryID": 6005,
+    "actorID": "MC1",
+    "text": "（這丫頭又在搞什麼鬼？先看看再說。）",
+    "Sequence": "",
+    "links": [
+      6030
+    ]
+  },
+  {
+    "entryID": 6006,
+    "actorID": "MC1",
+    "text": "「這位姑娘，可是遇到了什麼麻煩？在下或許能幫上一二？」",
+    "Sequence": "",
+    "links": [
+      6060
+    ]
+  },
+  {
+    "entryID": 6010,
+    "actorID": "MC1",
+    "text": "「住手！光天化日之下，竟敢強逼良家婦女？」",
+    "Sequence": "SetPortrait(MC1,pic=angry);EnableCharacterExpression(0,MC1_Anger);",
+    "links": [
+      6011
+    ]
+  },
+  {
+    "entryID": 6011,
+    "actorID": "NPC_Thug",
+    "text": "「喲？哪來的愣頭青？敢管我們赤龍幫的閒事？兄弟們，給他點顏色瞧瞧！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      6012
+    ]
+  },
+  {
+    "entryID": 6012,
+    "actorID": "MC22",
+    "text": "「[em6]見到你如獲大赦，立刻躲到你身後[/em6] 大俠！救命啊！這些人玩不起，出老千騙我錢！」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "links": [
+      6013
+    ]
+  },
+  {
+    "entryID": 6013,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginCombat(Combat_Thugs);",
+    "links": [
+      6014
+    ]
+  },
+  {
+    "entryID": 6014,
+    "actorID": "NPC_Thug",
+    "text": "「哎喲！哎喲！好漢饒命！小的有眼不識泰山！」",
+    "Sequence": "",
+    "links": [
+      6015
+    ]
+  },
+  {
+    "entryID": 6015,
+    "actorID": "MC1",
+    "text": "「哼，滾！」",
+    "Sequence": "SetPortrait(MC1,pic=angry);",
+    "links": [
+      6016
+    ]
+  },
+  {
+    "entryID": 6016,
+    "actorID": "NPC_Thug",
+    "text": "「是是是！不過…這位好漢，咱們幫主『赤龍』最敬重英雄。既然這姑娘說是我們出千，不如兩位親自去賭坊見見幫主？若真能贏過幫主，別說這五百兩，就是庫房裡的寶貝也雙手奉上！」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=nervous);",
+    "links": [
+      6070
+    ]
+  },
+  {
+    "entryID": 6030,
+    "actorID": "MC1",
+    "text": "（抱臂旁觀，嘴角含笑，想看看這古靈精怪的丫頭又要演哪齣。）",
+    "Sequence": "SetPortrait(MC1,pic=smug);",
+    "links": [
+      6031
+    ]
+  },
+  {
+    "entryID": 6031,
+    "actorID": "MC22",
+    "text": "「[em6]瞥見了你，立刻戲精上身，大喊道[/em6] 啊！相公！你終於來了！快救救妾身！他們要抓我去抵債！」",
+    "Sequence": "SetPortrait(MC22,pic=9);EnableCharacterExpression(1,MC22_Surprise);",
+    "links": [
+      6032
+    ]
+  },
+  {
+    "entryID": 6032,
+    "actorID": "MC1",
+    "text": "「……算妳狠。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);",
+    "links": [
+      6033
+    ]
+  },
+  {
+    "entryID": 6033,
+    "actorID": "NPC_Thug",
+    "text": "「相公？正好！這丫頭欠了我們五百兩，既然你是她相公，那就替她還了吧！」",
+    "Sequence": "",
+    "links": [
+      6034,
+      6035
+    ]
+  },
+  {
+    "entryID": 6034,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「五百兩？我看你們是想錢想瘋了！」",
+    "Sequence": "",
+    "Description": "選項1：威嚇檢定",
+    "links": [
+      6040
+    ]
+  },
+  {
+    "entryID": 6035,
+    "actorID": "MC1",
+    "text": "「這位大哥，有話好說，這錢我們一定還。」",
+    "Sequence": "",
+    "links": [
+      6050
+    ]
+  },
+  {
+    "entryID": 6040,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,IntimidationCheck,10);",
+    "Description": "選項1的空對話擲骰節點",
+    "links": [
+      6041
+    ]
+  },
+  {
+    "entryID": 6041,
+    "actorID": "MC1",
+    "text": "「[em6]拔劍出鞘半寸，殺氣外露[/em6] 錢沒有，命有一條，你們要嗎？」",
+    "Sequence": "",
+    "links": [
+      6042,
+      6045
+    ]
+  },
+  {
+    "entryID": 6042,
+    "actorID": "NPC_Thug",
+    "text": "「[em6]被你的氣勢嚇退半步[/em6] 呃…這…好漢息怒！咱們也是混口飯吃…不如這樣，兩位去賭坊見見幫主？咱們幫主說了，只要能在賭桌上贏過他，這債一筆勾銷，還送寶貝！」",
+    "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=angry);ModifyData(FeatExp,Player,Intimidation,10);",
+    "links": [
+      6070
+    ]
+  },
+  {
+    "entryID": 6045,
+    "actorID": "NPC_Thug",
+    "text": "「[em6]不屑地冷笑[/em6] 喲？還想動手？兄弟們，上！教教這小子規矩！」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=angry);",
+    "links": [
+      6046
+    ]
+  },
+  {
+    "entryID": 6046,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginCombat(Combat_Thugs);",
+    "links": [
+      6070
+    ]
+  },
+  {
+    "entryID": 6050,
+    "actorID": "MC1",
+    "text": "「這位大哥，有話好說。我們初來乍到，手頭確實有點緊，不如寬限幾日？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      6051
+    ]
+  },
+  {
+    "entryID": 6051,
+    "actorID": "NPC_Thug",
+    "text": "「寬限？行啊！不過得去我們賭坊見見幫主。咱們幫主最喜歡和人對賭，若是你能贏了他，這債不僅不用還，還有好處拿！」",
+    "Sequence": "",
+    "links": [
+      6070
+    ]
+  },
+  {
+    "entryID": 6060,
+    "actorID": "MC1",
+    "text": "「[em6]走上前，故意裝作不認識，卻悄悄對她眨了眨眼[/em6] 這位姑娘，可是遇到了什麼麻煩？在下或許能幫上一二？」",
+    "Sequence": "SetPortrait(MC1,pic=smug);EnableCharacterExpression(0,MC1_Happy);",
+    "links": [
+      6061
+    ]
+  },
+  {
+    "entryID": 6061,
+    "actorID": "MC22",
+    "text": "「[em6]愣了一下，隨即臉頰微紅，配合地低下頭[/em6] 公…公子！這人欺負我！他們騙我簽了什麼借據，我根本看不懂中原的字…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Shy);",
+    "links": [
+      6062
+    ]
+  },
+  {
+    "entryID": 6062,
+    "actorID": "NPC_Thug",
+    "text": "「喲？想英雄救美？行啊！只要你能替她把債還了，人你帶走！」",
+    "Sequence": "",
+    "links": [
+      6063
+    ]
+  },
+  {
+    "entryID": 6063,
+    "actorID": "MC1",
+    "text": "「[em6]故作豪爽[/em6] 區區小錢，何足掛齒！不過本公子今日出門匆忙，沒帶現銀…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);",
+    "links": [
+      6064
+    ]
+  },
+  {
+    "entryID": 6064,
+    "actorID": "NPC_Thug",
+    "text": "「沒現銀？那正好！去咱們賭坊見見幫主。幫主他老人家最喜歡結交豪爽之人，若是你能贏了他，美人歸你，債也清了，豈不美哉？」",
+    "Sequence": "",
+    "links": [
+      6070
+    ]
+  },
+  {
+    "entryID": 6070,
+    "actorID": "NPC_Thug",
+    "text": "「[em6]拍了拍身上的灰塵[/em6] 哼，不管你是真有本事，還是裝腔作勢，既然你敢替這丫頭出頭，咱們『吉祥賭坊』就隨時恭候大駕！」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=smirk);",
+    "links": [
+      6071
+    ]
+  },
+  {
+    "entryID": 6071,
+    "actorID": "NPC_Thug",
+    "text": "「聽好了！咱們賭坊在城東的暗巷裡。到了門口，跟守門的說：『**赤龍翻江，豹子通殺**』。只要報上這句切口，自然有人帶你去見幫主。去與不去，全憑好漢定奪。兄弟們，撤！」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=serious);",
+    "links": [
+      6072
+    ]
+  },
+  {
+    "entryID": 6072,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（打手們撂下話與切口後，便轉身隱入了人群中。周圍看熱鬧的百姓見沒戲可看，也漸漸散去。這時，赫連娜娜像個做錯事的孩子般，低著頭湊到了你身邊。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      6080
+    ]
+  },
+  {
+    "entryID": 6080,
+    "actorID": "MC22",
+    "text": "「[em6]在你耳邊低語，語氣中帶著懊惱[/em6] 嗚…大俠，這次我是真的栽了。我聽說那赤龍幫幫主是個狂熱的**賭痴**，雖然凶狠但極重承諾。他立下規矩，只要有人能在賭桌上贏過他，不僅債務一筆勾銷，還會送出一件**稀世奇珍**！我本想去試試運氣，結果…結果連面都沒見著就輸光了！你…你一定要幫幫我！」",
+    "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22_Sad);",
+    "links": [
+      6081
+    ]
+  },
+  {
+    "entryID": 6081,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（看著赫連娜娜那副可憐兮兮的模樣，你嘆了口氣。雖然明知是鴻門宴，但為了那傳說中的寶物，也為了幫這丫頭解圍，你決定前往**吉祥賭坊**會一會那位赤龍幫幫主。）＊",
+    "Sequence": "UnlockMapLocation(Map_Casino);DisableCharacterExpression(1);",
+    "links": [
+      6200
+    ]
+  },
+  {
+    "entryID": 6200,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（穿過幾條曲折的暗巷，你們來到了一扇不起眼的黑漆木門前。門口站著一名雙臂抱胸、滿臉橫肉的守衛，冷冷地打量著你們。）＊",
+    "Sequence": "",
+    "links": [
+      6201
+    ]
+  },
+  {
+    "entryID": 6201,
+    "actorID": "NPC_Thug",
+    "text": "「站住！這裡不是小娃娃該來的地方，去去去，別在這兒礙眼！」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=angry);",
+    "links": [
+      6202,
+      6203,
+      6204
+    ]
+  },
+  {
+    "entryID": 6202,
+    "actorID": "MC1",
+    "text": "[若玩家已完成「街頭糾紛」並知道切口] 「赤龍翻江，豹子通殺。」",
+    "Sequence": "",
+    "links": [
+      6210
+    ]
+  },
+  {
+    "entryID": 6203,
+    "actorID": "MC1",
+    "text": "[若玩家未完成「街頭糾紛」，不知道切口] （嘗試對暗號）",
+    "Sequence": "",
+    "links": [
+      6215
+    ]
+  },
+  {
+    "entryID": 6204,
+    "actorID": "MC1",
+    "text": "「我是來替這位姑娘還錢的。」",
+    "Sequence": "",
+    "links": [
+      6220
+    ]
+  },
+  {
+    "entryID": 6210,
+    "actorID": "MC1",
+    "text": "「[em6]雙手抱胸，不卑不亢[/em6] 赤龍翻江，豹子通殺。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [
+      6211
+    ]
+  },
+  {
+    "entryID": 6211,
+    "actorID": "NPC_Thug",
+    "text": "「原來是懂規矩的熟客，進去吧。」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=normal);",
+    "links": [
+      6230
+    ]
+  },
+  {
+    "entryID": 6215,
+    "actorID": "MC1",
+    "text": "「[em6]故作鎮定[/em6] 呃……天王蓋地虎？」",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1_Nervous);",
+    "links": [
+      6216
+    ]
+  },
+  {
+    "entryID": 6216,
+    "actorID": "NPC_Thug",
+    "text": "「什麼亂七八糟的！連切口都不知道還敢來撒野？快滾！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC_Thug,pic=angry);",
+    "links": [
+      6217
+    ]
+  },
+  {
+    "entryID": 6217,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（守衛不耐煩地將你們推開。看來，沒有正確的切口是進不去的。或許該去城裡打聽一下消息……）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 6220,
+    "actorID": "MC1",
+    "text": "「我是來替這位姑娘還錢的。」",
+    "Sequence": "SetPortrait(MC1,pic=normal);",
+    "links": [
+      6221
+    ]
+  },
+  {
+    "entryID": 6221,
+    "actorID": "NPC_Thug",
+    "text": "「還錢？沒對上切口，天王老子來了也不准進！」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=angry);",
+    "links": [
+      6222,
+      6224
+    ]
+  },
+  {
+    "entryID": 6222,
+    "actorID": "MC1",
+    "text": "[若此時玩家其實知道切口] 「[em6]輕咳一聲[/em6] 赤龍翻江，豹子通殺。」",
+    "Sequence": "SetPortrait(MC1,pic=tired);",
+    "links": [
+      6223
+    ]
+  },
+  {
+    "entryID": 6223,
+    "actorID": "NPC_Thug",
+    "text": "「算你識相，進去吧。」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=normal);",
+    "links": [
+      6230
+    ]
+  },
+  {
+    "entryID": 6224,
+    "actorID": "MC1",
+    "text": "[若此時玩家不知道切口] 「[em6]愣住[/em6] 什麼切口？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1_Question);",
+    "links": [
+      6225
+    ]
+  },
+  {
+    "entryID": 6225,
+    "actorID": "NPC_Thug",
+    "text": "「不懂規矩就快滾，別逼大爺我動手！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC_Thug,pic=angry);",
+    "links": [
+      6226
+    ]
+  },
+  {
+    "entryID": 6226,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（守衛作勢欲打，你們只好暫時退避。看來得先弄清楚進入賭坊的規矩才行。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 6230,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（推開沉重的木門，一股混合著汗水、劣質脂粉與煙草味的熱浪撲面而來。昏暗的室內人聲鼎沸，骰子撞擊骰盅的清脆聲、賭徒們聲嘶力竭的叫喊聲，以及贏錢時的狂笑與輸錢時的咒罵交織在一起，構成了一幅瘋狂的市井浮世繪。）＊",
+    "Sequence": "",
+    "links": [
+      6231
+    ]
+  },
+  {
+    "entryID": 6231,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（而在這片喧囂的正中央，有一張特大的賭桌。只見一位身材魁梧的老者端坐在那裡，他白髮蒼蒼，卻袒露著結實的胸膛，手中轉動著兩枚沉重的鐵膽。這便是赤龍幫幫主——褚人飛。）＊",
+    "Sequence": "",
+    "links": [
+      6083
+    ]
+  },
+  {
+    "entryID": 6083,
+    "actorID": "NPC_Boss",
+    "text": "「[em6]手中鐵膽轉得飛快，發出清脆的撞擊聲[/em6] 喲？這不是剛才那丫頭嗎？怎麼，找了個乳臭未乾的小子來翻本？劉邦當年起事還有個樊噲，妳這又是哪路神仙？」",
+    "Sequence": "SetPortrait(NPC_Boss,pic=smug);",
+    "links": [
+      6084
+    ]
+  },
+  {
+    "entryID": 6084,
+    "actorID": "MC22",
+    "text": "「[em6]躲在你身後，探出半個腦袋[/em6] 少…少瞧不起人！這是我請來的高手！褚幫主，你可是說話算話的，只要贏了你，債務一筆勾銷，還要送我們那個盒子！」",
+    "Sequence": "SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22_Anger);",
+    "links": [
+      6085
+    ]
+  },
+  {
+    "entryID": 6085,
+    "actorID": "NPC_Boss",
+    "text": "「哈哈哈哈！好！爽快！老子就喜歡這種不怕死的！想當年老子在雁門打天下的時候，靠的就是一個『賭』字！規矩很簡單，一把定輸贏！押大押小，買定離手！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(NPC_Boss,pic=laugh);",
+    "links": [
+      6086
+    ]
+  },
+  {
+    "entryID": 6086,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（褚人飛親自搖骰，骰盅落桌，發出沉悶的聲響。你運起內力凝神細看，果然發現那骰子內部灌了水銀，桌下還有機關控制磁石。這老幫主看似豪爽，實則也是個老千。）＊",
+    "Sequence": "",
+    "links": [
+      6087
+    ]
+  },
+  {
+    "entryID": 6087,
+    "actorID": "MC22",
+    "text": "「[em6]緊張地抓著你的衣袖，手心全是汗[/em6] 大俠…全靠你了…要是輸了，我就真的要被抓去倒酒了…」",
+    "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22_Nervous);",
+    "links": [
+      6088,
+      6089,
+      6090
+    ]
+  },
+  {
+    "entryID": 6088,
+    "actorID": "MC1",
+    "text": "「看我的。」",
+    "Sequence": "",
+    "links": [
+      6091
+    ]
+  },
+  {
+    "entryID": 6089,
+    "actorID": "MC1",
+    "text": "「別怕，讓我來給妳『加持』一下。」",
+    "Sequence": "",
+    "links": [
+      6100
+    ]
+  },
+  {
+    "entryID": 6090,
+    "actorID": "MC1",
+    "text": "「出千！砸了這黑店！」",
+    "Sequence": "",
+    "links": [
+      6110
+    ]
+  },
+  {
+    "entryID": 6091,
+    "actorID": "MC1",
+    "text": "「[em6]不動聲色地將手按在桌上，暗勁一吐[/em6] 既然幫主如此豪氣，那我也陪您賭一把大的。押豹子。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "links": [
+      6092
+    ]
+  },
+  {
+    "entryID": 6092,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（只聽「喀嚓」一聲輕響，桌下的機關失靈。骰盅揭開——三個六，豹子！）＊",
+    "Sequence": "",
+    "links": [
+      6093
+    ]
+  },
+  {
+    "entryID": 6093,
+    "actorID": "NPC_Boss",
+    "text": "「什麼？！豹子？！」[em6]猛地站起身，隨即又大笑起來[/em6]「哈哈哈哈！好小子！有點手段！願賭服輸，這才是江湖規矩！這盒子歸你了！」",
+    "Sequence": "SetPortrait(NPC_Boss,pic=laugh);",
+    "links": [
+      6094
+    ]
+  },
+  {
+    "entryID": 6094,
+    "actorID": "MC22",
+    "text": "「哇！贏了！贏了！大俠你真神了！」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22_Happy);",
+    "links": [
+      6120
+    ]
+  },
+  {
+    "entryID": 6100,
+    "actorID": "MC1",
+    "text": "「[em6]走到她身後，輕輕握住她顫抖的手，在她耳邊吹了口氣[/em6] 別急，心定氣閒，運氣自然來。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=smug);",
+    "links": [
+      6101
+    ]
+  },
+  {
+    "entryID": 6101,
+    "actorID": "MC22",
+    "text": "「[em6]渾身一顫，臉紅得像熟透的蘋果，聲音都結巴了[/em6] 你、你幹嘛…這麼多人…」",
+    "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Shy);",
+    "links": [
+      6102
+    ]
+  },
+  {
+    "entryID": 6102,
+    "actorID": "MC1",
+    "text": "「[em6]帶著她的手將籌碼推向『豹子』[/em6] 信我。」",
+    "Sequence": "",
+    "links": [
+      6103
+    ]
+  },
+  {
+    "entryID": 6103,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（或許是你的內力干擾，又或許真的是旖旎氣氛帶來的好運。骰盅揭開——三個六！全場譁然！）＊",
+    "Sequence": "",
+    "links": [
+      6104
+    ]
+  },
+  {
+    "entryID": 6104,
+    "actorID": "NPC_Boss",
+    "text": "「嘖嘖嘖，英雄難過美人關，看來老子今天是輸給了這股酸臭味啊！拿去拿去！老子看著眼疼！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(NPC_Boss,pic=tired);",
+    "links": [
+      6105
+    ]
+  },
+  {
+    "entryID": 6105,
+    "actorID": "MC22",
+    "text": "「豹…豹子？！我們發財了！！」[em6]激動之下，她轉身緊緊抱住了你[/em6]",
+    "Sequence": "SetPortrait(MC22,pic=9);EnableCharacterExpression(1,MC22_Happy);",
+    "links": [
+      6130
+    ]
+  },
+  {
+    "entryID": 6110,
+    "actorID": "MC1",
+    "text": "「[em6]一掌拍碎賭桌，露出了裡面的磁石[/em6] 玩陰的？問過我手中的劍了嗎！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=angry);EnableCharacterExpression(0,MC1_Anger);",
+    "links": [
+      6111
+    ]
+  },
+  {
+    "entryID": 6111,
+    "actorID": "NPC_Boss",
+    "text": "「[em6]不怒反笑，眼中精光爆射[/em6] 好！有種！敢砸老子的場子，你是這十年來的第一個！想挑戰我？先問問我手中的鐵膽答不答應！」",
+    "Sequence": "DisableCharacterExpression(0);BeginCombat(Combat_CasinoBoss);",
+    "links": [
+      6120
+    ]
+  },
+  {
+    "entryID": 6120,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（一陣雞飛狗跳後，你們帶著戰利品（或者是褚人飛願賭服輸給的賠償）跑到了安全的小巷子裡。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      6121
+    ]
+  },
+  {
+    "entryID": 6121,
+    "actorID": "MC22",
+    "text": "「呼…呼…太刺激了！你看，這就是那個寶貝！還有這些銀子，夠我們在雲中逍遙好一陣子了！」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22_Happy);",
+    "links": [
+      6140
+    ]
+  },
+  {
+    "entryID": 6130,
+    "actorID": "MC22",
+    "text": "「[em6]突然想起了剛才的親密舉動，眼神有些躲閃[/em6] 咳…那個…剛才在裡面…謝、謝謝你幫我解圍啊。不過…下次不許突然靠那麼近！本姑娘可是很矜持的！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Shy);",
+    "links": [
+      6131
+    ]
+  },
+  {
+    "entryID": 6131,
+    "actorID": "MC1",
+    "text": "「哦？剛才某人抱著我不放的時候，可沒見多矜持啊？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=smug);",
+    "links": [
+      6132
+    ]
+  },
+  {
+    "entryID": 6132,
+    "actorID": "MC22",
+    "text": "「你！討厭！不理你了！分錢分錢！」",
+    "Sequence": "SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22_Anger);",
+    "links": [
+      6150
+    ]
+  },
+  {
+    "entryID": 6140,
+    "actorID": "MC22",
+    "text": "「嘿嘿，大俠果然好身手！以後這種『發財』的機會，我一定第一個找你！咱們就是雲中雙煞…不對，雲中雙俠！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);",
+    "links": [
+      6141
+    ]
+  },
+  {
+    "entryID": 6141,
+    "actorID": "MC1",
+    "text": "「…我怎麼覺得是『雲中雙騙』比較貼切？」",
+    "Sequence": "SetPortrait(MC1,pic=tired);",
+    "links": [
+      6150
+    ]
+  },
+  {
+    "entryID": 6150,
+    "actorID": "MC0",
+    "text": "[panel=6]＊（赫連娜娜塞給你沉甸甸的一袋銀子和那個神秘的木盒，哼著小曲離開了。你看著她的背影，不禁莞爾一笑。）＊",
+    "Sequence": "DisableCharacterExpression(1);ModifyData(Money,Player,500);AddItem(AncientRelic);",
+    "links": []
+  }
+]

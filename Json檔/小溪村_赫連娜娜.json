@@ -1,0 +1,159 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "＊（不遠處一棵大榕樹下，景象有些奇特。一名頭戴方巾的姑娘鋪了塊布在地上，中央擺著一個不斷旋轉的古怪羅盤。她沒有吆喝，只是半閉著眼，口中念念有詞，一副高深莫測的模樣，引得路過村民投來好奇又懷疑的目光。）＊",
+    "Sequence": "",
+    "links": [2],
+    "Description": "場景描述"
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "「天機轉，星河亂…東來紫氣，南蘊妖蓮…唉！」",
+    "Sequence": "SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22_Meditate);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC8",
+    "text": "「表哥，你看那個擺攤的，神神叨叨的。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8_Question);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「觀此人氣度，與其言談間似有玄機…莫非是話本裡常說的，隱於市井的奇人異士？！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「這位大師，在下[var=PlayerLastName][var=PlayerFirstName]，路經此地。方才聽聞姑娘所言，似乎對此地有些見解？」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1_Meditate);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "「在下觀天象，已知有緣人將至…果不其然！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22_Surprise_2);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「我只是想問…」",
+    "Sequence": "",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC22",
+    "text": "「少俠不必多言，讓在下為你卜上一卦。你命格不凡，胸有丘壑，卻困於淺灘，正所謂[em2]麒麟之志，暫掩于塵[/em2]啊！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=2);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「诶！這就玄了！！」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC8",
+    "text": "「表哥，她這話對誰都能說…」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC22",
+    "text": "「但你可知，大機遇往往伴隨大凶險！我這[em2]天機盤[/em2]顯示，此地後山妖氣沖天，恐有禍事將近！而你正是被命運選重之人！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=8);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": 2,
+    "text": "＊（只見她在隨身的小布囊裡翻找了半天，掏出了一塊看起來灰撲撲、毫不起眼的破石頭，鄭重地塞到你手裡。）＊",
+    "Sequence": "",
+    "links": [13],
+    "Description": "旁白"
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC22",
+    "text": "「此奇石，是你命中註定會得到的應劫之物！它能護你心神，在這場劫難中找到唯一的生機！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC22",
+    "text": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=15);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC8",
+    "text": "「表哥…這石頭…這石頭跟我昨天在河邊踢走的那個一模一樣啊…」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8_Pain);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「…多謝大師厚賜。此物…果然…。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1_Pain);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC22",
+    "text": "「哎呀！時辰！時辰！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=9);EnableCharacterExpression(1,MC22_Shock);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC22",
+    "text": "「七殺入疾厄，妖氣將達鼎盛，然危機之中亦藏有機緣！你切記，[em2]近日內[/em2]務必親往後山一行，方能逢凶化吉！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=8);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": 2,
+    "text": "＊（她話音未落，不等你們反應，便已收起包袱，如腳底抹油般一溜煙地跑向了後山。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [20],
+    "Description": "旁白"
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC8",
+    "text": "「表哥，她說得煞有其事，還叫你這幾天要去後山…感覺好可疑啊，我們還是別理她了吧？」",
+    "Sequence": "SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8_Question);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC8",
+    "text": "「再說了，說不定她根本不是去找什麼妖怪，而是去挖野菜了，嘻嘻。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「…真的這麼餓嗎?」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": []
+  }
+]

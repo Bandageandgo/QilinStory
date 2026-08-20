@@ -1,0 +1,670 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（循著茶博士的指點，你們來到村子稍偏僻處的一間客棧前。客棧的招牌有些陳舊，上書「有間客棧」四字，門扉半掩，隱約能聞到飯菜的香氣和一些輕微的談笑聲，但看不清裡面的情形。）＊",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這就是茶博士說的『有間客棧』了！那位『一枝花』老闆娘真的會像他說的那麼好嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8,Question);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": 2,
+    "text": "[panel=6]＊（就在兩人準備查看錢袋時，蕭靈犀突然停下了腳步，低頭看向客棧門邊的角落。）＊",
+    "Sequence": "",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC8",
+    "text": "[panel=2]「咦？表哥你看，這客棧門口怎麼有隻青蛙，而且…牠好像還戴著一頂小草帽？」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Question);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "短命二郎",
+    "text": "「呱！小丫頭眼力不錯。爺行不更名坐不改姓，乃是太行山一百零八好漢之一，短命二郎是也！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「……青蛙？好漢？」",
+    "Sequence": "SetPortrait(MC1,pic=confuse);EnableCharacterExpression(0,MC1,Question);",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "短命二郎",
+    "text": "「呱呀！小兄弟說話客氣點！莫不是沒聽過：一雙手渾如鐵棒，兩隻眼有似銅鈴。面皮上常有些笑容，心窩裡深藏著鴆毒。能生橫禍，善降非災。拳打來，獅子心寒；腳踢處，蚖蛇喪膽。何處覓行瘟使者，只此是短命二郎。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「這隻青蛙是怎麼回事…滿口黑話！？」",
+    "Sequence": "SetPortrait(MC1,pic=shock);EnableCharacterExpression(0,MC1,Shock);",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇，你好厲害喔！可是你怎麼會在這裡呀？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Meditate);",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "短命二郎",
+    "text": "「呱…別提了。我那兩個兄弟立地太歲和活閻羅在附近走散了，不知去向。你們若能幫我尋回我那兩位兄弟，我們兄弟絕不虧待朋友！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "短命二郎",
+    "text": "「能生橫禍，善降非災。幫了爺爺，就是你們的福氣！這個情報先免費送你們當見面禮：你們現在看小溪村對岸過不去吧？哼，[em2]等到三月過後，自有辦法到對岸那邊去！[/em2]」",
+    "Sequence": "",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "短命二郎",
+    "text": "「呱！爺也不會讓你白出力——別看我們兄弟現下散落各處，這青蛙好漢長年混跡江湖、耳目遍布，這天底下還真沒幾樁是我們不曉得的事兒！你們每尋回一位兄弟，爺便回贈一則江湖祕聞當答禮；外加金銀財帛、奇珍異寶充作賞錢，絕不虧待自家兄弟！呱哈哈哈！」",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥表哥～你都聽到了吧？只要順路多找幾隻好漢，好處這麼多诶！表哥你本領這麼大，幫人家一起找好不好？好不好嘛——」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「嘿！找幾隻青蛙這種小事還不是手到擒來的事，就交給表哥我吧！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=smile);",
+    "links": [],
+    "Description": "段落結束：有間客棧前首次遇見短命二郎"
+  },
+  {
+    "entryID": 15,
+    "actorID": 2,
+    "text": "[panel=6]＊（只見蕭靈犀蹲在窗台邊，正神神祕祕地與一隻熟面孔的青蛙嘀嘀咕咕。）＊",
+    "Sequence": "",
+    "links": [16],
+    "Description": "段落起點：首次互動 - 解釋為何蕭靈犀當中間人 (條件 FlagFirstFrogTalk == false)"
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「靈犀，妳又跟那位短命二郎搞什麼鬼？」",
+    "Sequence": "SetPortrait(MC1,pic=confuse);EnableCharacterExpression(0,MC1,Question);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC8",
+    "text": "[panel=2]「噓——表哥小聲點啦！二郎先生剛剛特地從窗戶跳進來，跟人家交代正事呢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=happy);",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "短命二郎",
+    "text": "「呱！小兄弟，往後爺要傳啥消息、交代啥事兒，都讓這丫頭轉達就成了，爺懶得跟你不長眼的小子廢話。」",
+    "Sequence": "",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「……為何要透過靈犀？」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Question);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "短命二郎",
+    "text": "「呱！其一，你個頭高、腰間還掛著傢伙，活像個來抓青蛙剝皮燉湯的廚子！我那些兄弟遠遠瞧見你就掉頭蹬腿，談個屁的買賣！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "短命二郎",
+    "text": "「其二，這丫頭個子小、心眼活，重要的是眼力比你小子利上百倍！」",
+    "Sequence": "",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "短命二郎",
+    "text": "「其三嘛——爺爺看這丫頭順眼！跟她說話舒坦！呱哈哈！」",
+    "Sequence": "",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC8",
+    "text": "[panel=2]「嘿嘿！表哥你聽到了沒～以後表哥你只要負責跟著人家跑腿就行啦——」",
+    "Sequence": "SetPortrait(MC8,pic=proud);",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「跑腿……明明是表哥我大些，怎麼角色顛倒過來了？」",
+    "Sequence": "SetPortrait(MC1,pic=mindpain);",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "短命二郎",
+    "text": "「呱！丫頭，這本是爺給妳作為紀錄的——往後你們每尋回一位兄弟，妳就在簿子上點一筆。湊夠了數，爺自會派小的們捎著賞錢跟祕聞來找妳。」",
+    "Sequence": "",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC8",
+    "text": "[panel=2]「嗯！這本人家會記得清清楚楚的，二郎先生你放心！」",
+    "Sequence": "SetPortrait(MC8,pic=serious);",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "短命二郎",
+    "text": "「呱！記住嘍，小子——往後每尋回我們青蛙一位兄弟，先帶來找這丫頭通報登記；爺這邊一收到信，就會差兄弟送賞錢與祕聞來。先帳後銀，童叟無欺！」",
+    "Sequence": "",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "短命二郎",
+    "text": "「呱哈哈，爺先走一步，告辭！」",
+    "Sequence": "",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": 2,
+    "text": "[panel=6]＊（一聲蛙鳴，短命二郎竄出窗外，眨眼便沒了蹤影。）＊",
+    "Sequence": "",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…二郎先生看起來雖然凶巴巴的。但表哥你不要怕他嘛，我們以後一起多幫他找幾位兄弟好不好～」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「我哪有怕…」",
+    "Sequence": "SetPortrait(MC1,pic=smile);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": 2,
+    "text": "[panel=6]＊（窗外蛙鳴漸遠，蕭靈犀把帳本揣進懷裡，眼底閃著光——這場江湖奇緣，就此記下了第一筆。）＊",
+    "Sequence": "",
+    "links": [],
+    "Description": "段落結束：首次互動完成，設置 FlagFirstFrogTalk = true"
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，今天有啥事嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=normal);",
+    "links": [34, 47],
+    "Description": "段落起點：日常對話 (點擊蕭靈犀)；系統依青蛙累計數量是否跨過下一階獎勵門檻，分支至 34 (分支A) 或 47+ (分支B 話家常，實際播放哪一條由 ChatProgress 決定)"
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥你看！這新登記的青蛙好漢，能夠跟二郎先生討賞囉！」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": [35],
+    "Description": "分支A：跨過新獎勵門檻 (優先觸發，發放後標記為已領取)"
+  },
+  {
+    "entryID": 35,
+    "actorID": 2,
+    "text": "[panel=6]＊（話音剛落，窗台上「噗通」一聲，跳上來一隻體型較小、頸上掛著小布袋的小青蛙。牠把布袋一卸，朝蕭靈犀「呱呱」叫了兩聲，便又跳走了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC8",
+    "text": "[panel=2]「來啦來啦～這是二郎先生送來的賞錢，表哥拿好！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);ModifyData(Coin,200);",
+    "links": [37, 39, 41, 43, 45],
+    "Description": "賞錢發放後，依當前跨過第幾階獎勵門檻，分支至對應江湖祕聞 (即時訊息：信蛙送來青蛙好漢的賞錢：200文)"
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC8",
+    "text": "[panel=2]「他還順便捎了一條江湖祕聞給我們——[em2]說是小溪村本來有三個好釣點，可如今都被河妖們給霸佔了，村裡誰也不敢靠近呢！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [38],
+    "Description": "第一階祕聞 - 河妖佔據釣魚點"
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC8",
+    "text": "[panel=2]「河妖耶——表哥你聽聽，說不定他們藏著好多寶貝呢！等我們有空，就一起去瞧瞧嘛～」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": []
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC8",
+    "text": "[panel=2]「他這次捎來的祕聞更厲害呢——[em2]說是這有間客棧呀，從前住過一位旅人，動身去找傳說中仙人留下的祕境，卻一去不回。至今他的房間，還原封不動地留在客棧裡呢！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [40],
+    "Description": "第二階祕聞 - 客棧失蹤旅人的房間"
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC8",
+    "text": "[panel=2]「仙人祕境耶——表哥你想想，那位旅人留下的房間裡，會不會還藏著什麼線索或寶貝呀～？」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": []
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC8",
+    "text": "[panel=2]「他這回說的更怪了——[em2]說是翠影壇邊上有位釣者，日日垂竿、風雨不改，可那釣竿上頭從來不掛餌。[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [42],
+    "Description": "第三階祕聞 - 翠影壇的無餌釣者"
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC8",
+    "text": "[panel=2]「不掛餌哪釣得到魚嘛～表哥你說，他到底是真的在釣魚，還是在釣什麼別的東西呀？聽起來好神祕喔，咱們找個機會也去翠影壇瞧瞧嘛～」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": []
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC8",
+    "text": "[panel=2]「他這回捎來的事更稀奇了——[em2]說是前些日子雲中大白天裡，有顆星石自九霄之外墜下，硬生生砸穿了一戶民房的屋瓦！整間屋子燒得焦黑，連石頭都還燙手呢！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [44],
+    "Description": "第四階祕聞 - 雲中的天外飛石"
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC8",
+    "text": "[panel=2]「天上掉下來的石頭耶——表哥你說，會不會是天上的仙人不小心掉了寶貝下凡呀？要是給咱們撿到，可不就一夜暴富啦！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "links": []
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC8",
+    "text": "[panel=2]「這回的話人家也聽不太明白呢…[em2]好像是勇煙嶺深處內有乾坤，但那地方挺邪門的…進去的人，沒幾個能囫圇個兒出來……[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=tired);",
+    "links": [46],
+    "Description": "第五階祕聞 - 勇煙嶺的上古遺跡"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥你說，那種地方到底是藏著天大的寶物，還是…天大的麻煩呀？」",
+    "Sequence": "SetPortrait(MC8,pic=tired);EnableCharacterExpression(1,MC8,Question);",
+    "links": []
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…等我們攢夠了錢，是不是就可以去買綠豆糕了？人家好久沒吃了嘛……(肚子咕嚕一聲) 啊！表哥不准笑！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 1 - 嚮往美食"
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…自從那場大火後，我們已經流浪好久了吧？小犀有時候會夢到爹娘呢……」",
+    "Sequence": "SetPortrait(MC8,pic=tired);",
+    "links": [],
+    "Description": "分支B 話題 2 - 故鄉舊事"
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥！你上回偷買江湖術士號稱『一吃就變強』的藥丸，小犀可還沒忘呢！結果勒？不僅沒變強，還拉了一整天肚子！咱們的盤纏可是要省著用的！下次再敢亂花，就要請出小犀的『靈犀神拳』囉！」",
+    "Sequence": "SetPortrait(MC8,pic=angry);",
+    "links": [],
+    "Description": "分支B 話題 3 - 提醒省錢"
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，等到了英豪府，會不會就能看到傳說中的大俠呀？人家也好想看一場真正的比武喔～」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [],
+    "Description": "分支B 話題 4 - 期待江湖"
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你說二郎先生看起來那麼有氣勢，會不會其實應該要是個豪傑呀？怎麼會變成青蛙了呢？」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 5 - 八卦二郎先生"
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那個叫娜娜姐姐的算命仙，真的好可疑喔！她塞給你的那塊『命中註定的應劫奇石』，跟我昨天在河邊踢走的破石頭明明長得一模一樣！還什麼麒麟之志暫掩於塵——人家覺得啊，她根本是亂講一通的嘛！」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [],
+    "Description": "分支B 話題 6 - 算命仙娜娜不靠譜 (條件：已在大榕樹下遇過赫連娜娜)"
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…娜娜姐姐上次又衝進房間說後山有什麼新變數，叫我們快去找她呢！雖然她講話神神叨叨的不太靠譜啦，可是…她對寶物的熱情看起來是真的耶。表哥，有空就去後山瞧瞧嘛～說不定真有什麼好東西在等著呢～」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 7 - 提醒去後山找娜娜 (條件：赫連娜娜已闖入客棧拜訪過)"
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你有沒有發現小溪村的雞都凶得不像話？人家昨天才靠近想摸一下，就被一隻大公雞追了三條田埂！是不是這些雞偷偷練了什麼武功呀？聽說呀，剛出江湖的少俠都得先把雞打過一輪，才算入門呢——」",
+    "Sequence": "SetPortrait(MC8,pic=angry);",
+    "links": [],
+    "Description": "分支B 話題 8 - 調侃小溪村的雞"
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…人家有時候會想，要是小犀能再長大一點，是不是就能幫表哥分擔點什麼了？不只是當帳房先生，也能拿起劍來跟表哥並肩闖江湖…」",
+    "Sequence": "SetPortrait(MC8,pic=tired);",
+    "links": [],
+    "Description": "分支B 話題 9 - 希望快點長大幫表哥"
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那個狗頭人茶博士看起來怪嚇人的，可是說起話來居然比表哥還文謅謅！什麼有朋自遠方來、什麼子曰…他到底是哪兒學來的呀？人家看哪，茶攤要是換成書院，他保證比那位老學究還像個先生～」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 10 - 茶博士的禮數 (條件：已在村口茶攤遇過茶博士)"
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那位書生真的是…人不可貌相，長的一臉江湖人卻滿口子曰子曰，嘻嘻！」",
+    "Sequence": "SetPortrait(MC8,pic=tired);",
+    "links": [],
+    "Description": "分支B 話題 11 - 老學究的詩經 (條件：已與滿臉橫肉的書生解過謎)"
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥！那個牧羊人真的有夠奇怪——小犀看他根本是懶得數羊，故意騙路過的人幫他算的吧！」",
+    "Sequence": "SetPortrait(MC8,pic=angry);",
+    "links": [],
+    "Description": "分支B 話題 12 - 牧羊人的怪數學 (條件：已與牧羊人交談過)"
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…童大哥練槍的時候每一刺出去都呼呼響，跟說書先生講的大俠一模一樣！表哥…要是你的伏虎拳也能練到那個樣子，人家就絕對不擔心你被山賊欺負啦——啊不是！人家是說，到時候小犀也能跟著沾光去英豪府嘛！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 13 - 童大哥的槍法 (條件：已遇過童淵)"
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥你說怪不怪～酒客都把一枝花姐姐誇得美若天仙、什麼『佳人笑』做菜一絕，可是我們住這麼久連她影子都沒見過呢！表哥…她該不會是只在月圓之夜才出現的鬼故事吧？要不然就是她其實長得像茶博士那樣呢——啊！別敲人家頭啦！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 14 - 一枝花老闆娘的傳聞 (條件：已在客棧大堂聽過酒客傳聞)"
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那個自稱茅山弟子的胖道長，真的會抓妖嗎？人家看他連坐個歇腳都要先念半天咒，肚子還咕嚕咕嚕響呢！嘿嘿！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [],
+    "Description": "分支B 話題 15 - 雍仔道長的茅山術 (條件：已在田埂邊遇過雍仔)"
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥表哥～這英豪府也太豪氣了吧！免費的房間、免費的飯菜，飯菜還能吃到飽耶！人家恨不得多塞點在懷裡帶走呢～早知道英雄大會這麼晚開，咱們應該再早點出發來雲中才對嘛！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [],
+    "Description": "分支B 話題 16 - 雲中免費食宿 (條件：已入住英豪客棧)"
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…你說奇不奇怪，那個賣糖炒栗子的老婆婆，怎麼好像走到哪都會出現呀？荒廢的礦坑深處那種地方根本不可能會有生意吧？她到底是賣給誰呀？該不會其實是…什麼神仙化的吧？」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 17 - 神出鬼沒的阿婆 (條件：已在不同地點多次遇到賣糖炒栗子的阿婆)"
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那位打鐵的蒲元先生好古怪喔！他個子明明還沒表哥你高呢，使那柄青銅大鎚時就跟搧扇子似的——還有他打鐵時還哼著怪怪的調子，人家一個字也聽不懂呢…」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 18 - 蒲元的古怪 (條件：已在隱密工坊見過蒲元)"
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那個叫琰兒姊姊的女孩，跟人家年紀差不多耶。她會彈琴、又能讀書，還那麼自由自在的…要是小犀也能像她一樣多好呢…(小聲嘀咕)不過她說要彈琴給表哥聽…哼，人家才不羨慕呢！」",
+    "Sequence": "SetPortrait(MC8,pic=tired);",
+    "links": [],
+    "Description": "分支B 話題 19 - 蔡文姬同齡羨慕 (條件：已在隱密工坊見過蔡文姬)"
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那個蔡先生對琰兒姊姊也太兇了吧！動不動就要她抄《水經》——人家光聽到名字就頭暈了。當大學問家的女兒原來也這麼辛苦呀，幸好小犀沒這種爹…呃不是，小犀沒有爹娘啦，可是…還是有表哥嘛！」",
+    "Sequence": "SetPortrait(MC8,pic=dislike);",
+    "links": [],
+    "Description": "分支B 話題 20 - 蔡邕對女兒嚴格 (條件：已在隱密工坊見過蔡邕)"
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那位波斯的阿SA姐姐怪怪的耶。她說擺攤是『收東西』，可是又不收路邊石頭——人家總覺得她在找什麼很特別的玩意兒。表哥你不會剛好身上有她要的東西吧？要是有，咱們可得多賣她點錢喔！」",
+    "Sequence": "SetPortrait(MC8,pic=expect);",
+    "links": [],
+    "Description": "分支B 話題 21 - 阿SA姐姐的神祕 (條件：已在商賈巷遇過阿SA)"
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC8",
+    "text": "[panel=2]「噗哈哈哈——表哥，那個頭上戴水桶、騎驢拿掃把的守衛真的好好笑喔！輸了還能找一堆藉口，什麼老驢打噴嚏、什麼水桶進沙子…要是把這幾條全記下來，下次表哥跟人家吵架輸了也能拿來用呢！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [],
+    "Description": "分支B 話題 22 - 大樹守衛的水桶 (條件：已在大樹下遭遇過大樹守衛)"
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…那個揹著巨刀的少年郎好嚇人喔！那刀比門板還大耶——他單手就拄著，腰都不彎一下！表哥…那種刀你揮得動嗎？要是被一刀劈到，小犀都不敢想呢…幸好他看起來不像壞人。」",
+    "Sequence": "SetPortrait(MC8,pic=surprise);",
+    "links": [],
+    "Description": "分支B 話題 23 - 颯爽少年郎的巨刀 (條件：已在雲中廣場見過颯爽少年郎)"
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…黑鐵嶺那塊紅水晶…人家現在閉上眼睛還會看到那種紅光在跳…那真的不是什麼寶貝呀，是會吃人的東西啊！表哥以後再見到那種泛紅光的怪石頭，可千萬別再撿來研究了——人家會害怕的嘛…」",
+    "Sequence": "SetPortrait(MC8,pic=tired);",
+    "links": [],
+    "Description": "分支B 話題 24 - 黑鐵嶺的紅水晶 (條件：已完成黑鐵嶺礦坑主線)"
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…張氏姐姐人真好喔，明明也大難不死，還願意把醫書送給咱們呢！她那種溫溫柔柔講話的樣子…就有點像書裡寫的那種大家閨秀。表哥要多看那本醫書呀，下次受傷小犀就不用擔心了～」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [],
+    "Description": "分支B 話題 25 - 張氏的醫術與感激 (條件：已在黑鐵嶺礦坑達成 Good Ending 並拜訪李家)"
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC8",
+    "text": "[panel=2]「咦？表哥又來找小犀啦～可是人家肚子裡的話都跟你念叨完啦，再說也是同樣的東西嘛。表哥不如出門去看看，幫青蛙好漢們多找幾位兄弟，順便給人家帶些新鮮事兒回來打發時間嘛～」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [],
+    "Description": "分支B 話題 26 - 循環播放 (所有話題播畢後，每次觸發此分支皆顯示此句)"
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC8",
+    "text": "「咦…？這個數好像有賺錢耶——表哥怎麼還沒回來呀！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "場景氣泡 A (條件優先觸發)：青蛙數量跨過新門檻、尚未領取賞錢時"
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC8",
+    "text": "「剛剛二郎先生捎來的那句話…我得記牢點，等表哥回來才好說給他聽…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "場景氣泡 B (條件優先觸發)：信蛙剛跳走、新祕聞未轉述時"
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC8",
+    "text": "「不行不行，咱們的錢袋又癟了…表哥再亂花，小犀真的要動拳頭啦！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "場景氣泡 C (條件優先觸發)：玩家身上錢少於 50 文時"
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC8",
+    "text": "「嘿嘿，這就是我們的新家啦…雖然只能住一個月…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "場景氣泡 D (條件優先觸發)：第一次入住客棧後、首日的氣泡"
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC8",
+    "text": "「娜娜姐姐到底是真會算命，還是只會說大話呀…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "場景氣泡 E (條件優先觸發)：已遇過赫連娜娜、尚未去後山時"
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC8",
+    "text": "「一枝花姐姐…到底長什麼樣子呢…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "場景氣泡 F (條件優先觸發)：已聽過一枝花傳聞、尚未見到本人時"
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC8",
+    "text": "「綠豆糕…麻糊…甜餅…等我們攢夠了錢…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：托腮幻想美食"
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC8",
+    "text": "「一筆、兩筆…再多幾筆就能換賞錢啦！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：翻著點蛙簿"
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC8",
+    "text": "「表哥又出門了…可別又亂花錢喔…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：望向窗外"
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC8",
+    "text": "「唔…一個人待在房間裡好無聊喔…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：踢著小腳"
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC8",
+    "text": "「呼啊～客棧的床比草堆軟好多哦…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：打了個小哈欠"
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC8",
+    "text": "「我是胖綠豆…表哥就是大王八……嘿嘿。」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：小聲嘀咕"
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC8",
+    "text": "「離馬車來還剩幾天呀…一、二、三……」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：數著手指頭"
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC8",
+    "text": "「哼！下次表哥再亂花錢，看我的——靈犀神拳！」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：擺出靈犀神拳起手式"
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC8",
+    "text": "「等我長大了…就不用一直被表哥保護了吧…」",
+    "Sequence": "",
+    "links": [],
+    "Description": "一般氣泡 (隨機輪播)：盯著小帳本發呆"
+  }
+]

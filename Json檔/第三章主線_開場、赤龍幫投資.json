@@ -1,0 +1,414 @@
+[
+  {
+    "entryID": 0,
+    "actorID": "MC4",
+    "text": "[panel=1]「主動找我，是作好坦白了？」",
+    "Sequence": "",
+    "links": [1]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「……還沒有，但我也沒其它選擇了吧？否則你也不必繼續留著我。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「只是我好歹也是拜師的，師者不該先替學徒解惑，竹簡出自何處？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": 2,
+    "text": "[panel=6]＊（聽到你的回應，賈詡露出不意察覺的微笑，瞥了一眼藏書庫。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「……《鬼谷經》……莫非……是那位鬼谷子？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC4",
+    "text": "[panel=1]「戰國之世，九黎橫生，百家伐異，各闢門道。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC4",
+    "text": "[panel=1]「可嘆，秦帝毀書，古學斷絕，殘存不過奇文異錄。」",
+    "Sequence": "",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC4",
+    "text": "[panel=1]「茫茫歲月，三傑尋其遺創英豪。如今古學再剩唯此處斷簡片章。」",
+    "Sequence": "",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC4",
+    "text": "[panel=1]「不過，詳加研讀，還是多有益處……」",
+    "Sequence": "",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC4",
+    "text": "[panel=1]「師者已授業，現在換學生了。」",
+    "Sequence": "",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「……好吧。瞞了師父這麼久，是弟子不是。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「自故鄉大火後流落江湖，弟子反覆夢見并州淪陷、城牆上戰死……逼真得不像尋常惡夢。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「娘親留下的麒麟骰每每異動，夢便更甚。弟子不知這預兆何意，只覺坐立難安。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC4",
+    "text": "[panel=1]「九黎盡出，中原淪陷。有意思，有意思……這世道總算有了點趣味。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC4",
+    "text": "[panel=1]「不過要讓你失望了，正如竹簡殘缺，此夢我也無從可解。」",
+    "Sequence": "",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「我也沒想過會太順利。反正骰子指引，必有其意，答案遲早自會浮現。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC4",
+    "text": "[panel=1]「呵呵，此夢就暫且別告知其他人，省得添亂。現在回到生活重點，來處理本府的生計……」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": 2,
+    "text": "[panel=6]＊（畫面淡出淡入，場景來到大廳）＊",
+    "Sequence": "",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC4",
+    "text": "[panel=1]「諸位，新人加入，象徵本府將踏上新的時代。」",
+    "Sequence": "",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC2",
+    "text": "[panel=1]「又是這套，從年前聽到年尾，只變四字……直說重點，上一年虧了多少？」",
+    "Sequence": "",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": 2,
+    "text": "[panel=6]＊（彷彿習以為常，徐榮攤開了帳冊──）＊",
+    "Sequence": "",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「紅色……紅色……這不都全赤字嗎！？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥！小犀剛盤過帳了——何止是赤字，下個月的米錢都快見底囉！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise);",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC22",
+    "text": "[panel=1]「咦？要沒米了？這英豪府怎麼跟我想像中的差這麼多……」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC20",
+    "text": "[panel=1]「咳咳！在下向來視錢財如浮雲……可浮雲不能當飯吃啊！」",
+    "Sequence": "",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC4",
+    "text": "[panel=1]「兩位大能，你們在府上白吃白住這些個月，花費的湯藥與伙食費，賈某都已記在帳上了。既然本府面臨財務危機，兩位是否也該拿出點誠意了？」",
+    "Sequence": "",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC7",
+    "text": "[panel=1]「……至少我看還有些日常工作。正常處理，還不至於關門收攤。」",
+    "Sequence": "",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC5",
+    "text": "[panel=1]「郭嘉講到重點了……」",
+    "Sequence": "",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC4",
+    "text": "[panel=1]「此乃本府要務，未免你們散漫，這一年的時間，你們好好運用，赤字變黑字。」",
+    "Sequence": "",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC4",
+    "text": "[panel=1]「若能并州三個實力派組織的投資，那是最好，那時往後財務無憂。」",
+    "Sequence": "",
+    "links": [30, 40, 50, 60]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「既入了英豪府，這一關，我當盡力。」",
+    "Sequence": "",
+    "links": [31],
+    "Description": "選項1：信義"
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「話雖如此，既然入了英豪府，赤字這一關，我定當盡一份力！」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC4",
+    "text": "[panel=1]「呵呵，這才像話。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC5",
+    "text": "[panel=1]「入了府門，便是同袍。」",
+    "Sequence": "",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC5",
+    "text": "[panel=1]「你願意盡力，很好。但記著，真到了關頭，不是一個人逞英雄就算了，是得讓身邊的人信你、跟得上你。」",
+    "Sequence": "",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「徐師父教訓的是。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC0",
+    "text": "※統率能力提升",
+    "Sequence": "ModifyData(AbilityExp,Player,Leadership,500);",
+    "links": [70],
+    "Description": "統率經驗獎勵節點"
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「見人受困，我便不能不管。」",
+    "Sequence": "",
+    "links": [41],
+    "Description": "選項2：仁心"
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「見大夥兒受困而不幫，非我本性。這事我管了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=3);EnableCharacterExpression(2,MC8,Pain);",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC8",
+    "text": "[panel=2]「你看帳冊這行——下個月的米錢，只夠一半人吃飽……」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=3);",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [70]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「船到橋頭自然直，算盤打一打，日子總能過下去。」",
+    "Sequence": "",
+    "links": [51],
+    "Description": "選項3：通達"
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「……也罷。船到橋頭自然直，天塌下來當被蓋。算盤打一打，日子總能過下去的。」",
+    "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC20",
+    "text": "[panel=1]「正是！世道艱難，隨遇而安。有時一張嘴，比一柄劍還管用——道爺我這兒，倒有幾句說人的訣竅。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「……道長願教，在下洗耳恭聽。反正多學點總沒壞處。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [70]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「填平赤字若能拉來投資，倒也不虧。」",
+    "Sequence": "",
+    "links": [61],
+    "Description": "選項4：機略"
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「嗯…填平赤字若能拉到三家投資，英豪府根基穩了，對我也不是壞事。這并州的門道，正好順便摸清楚。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC7",
+    "text": "[panel=1]「眼明手快。并州三家各懷心思，你若看得清利益所在，那在三家之間周旋也不會是沒有空間。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC4",
+    "text": "[panel=1]「話說在前頭——本府這一年的窟窿，攏共是三萬六千錢。填不平，明年這道門，可就未必開得成了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「三萬六千……這數目，可不是擺攤賣藝湊得出來的。」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC4",
+    "text": "[panel=1]「所以得找肯掏錢的主。并州境內，鄴城甄家財雄勢大，雁門赤龍幫——這兩家，一直想擴大他們的勢力範圍，雲中就是他們的角逐之地。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC4",
+    "text": "[panel=1]「只是——以貌取人，乃人之天性。連自身都打理不好，旁人便先看輕了你，還談什麼交涉議事？」",
+    "Sequence": "",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「師父的意思是……要談投資，得先把英豪府的裡子面子都撐起來？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC4",
+    "text": "[panel=1]「孺子可教。同樣是向人伸手，衣著整潔者討來的，旁人當作『借調』；蓬頭垢面者討來的，才叫『乞討』。人心如此，不服不行。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC4",
+    "text": "[panel=1]「當然，若另有其他機會，錢從哪來不打緊，湊齊了就成。」",
+    "Sequence": "",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "「……行，這任務我接下了。我倒要看看這并州的門道，究竟有多深。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC0",
+    "text": "觸發主線任務：填補赤字（并州三家投資）",
+    "Sequence": "// TODO: Add TaskTriggerCommand for '填補赤字' here",
+    "links": [],
+    "Description": "任務觸發節點：填補赤字"
+  }
+]

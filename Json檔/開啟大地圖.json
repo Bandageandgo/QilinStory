@@ -1,0 +1,127 @@
+[
+    {
+        "entryID": "OpenMap_01",
+        "actorID": "Narrator",
+        "text": "[panel=6]＊（送走了張仲景大叔，你運轉體內氣息，只覺丹田溫熱，之前受的內傷已然痊癒。看著窗外明媚的陽光，你心中卻生出了一絲……倦意。）＊",
+        "Sequence": "",
+        "links": [
+            {
+                "targetID": "OpenMap_02",
+                "text": ""
+            }
+        ],
+        "Description": "旁白開場"
+    },
+    {
+        "entryID": "OpenMap_02",
+        "actorID": "MC1",
+        "text": "[愜意地躺回床上，翹起二郎腿]：「呼……這傷筋動骨一百天，雖然張大叔醫術通神，但我看還是得多躺幾天鞏固鞏固。嗯，一會兒叫小二送壺好茶上來。」",
+        "Sequence": "SetPortrait(MC1,pic=happy);EnableCharacterExpression(0,MC1-1,Laugh);",
+        "links": [
+            {
+                "targetID": "OpenMap_03",
+                "text": ""
+            }
+        ],
+        "Description": "燕不凡想偷懶"
+    },
+    {
+        "entryID": "OpenMap_03",
+        "actorID": "MC8",
+        "text": "[一把掀開被子，雙手叉腰]：「表哥！張神醫前腳剛走，你後腳就原形畢露啦？我看你是想在這客棧裡生根發芽吧！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=angry);EnableCharacterExpression(1,MC8,Anger);",
+        "links": [
+            {
+                "targetID": "OpenMap_04",
+                "text": ""
+            }
+        ],
+        "Description": "蕭靈犀斥責"
+    },
+    {
+        "entryID": "OpenMap_04",
+        "actorID": "MC1",
+        "text": "[被嚇了一跳，連忙坐起]：「咳咳！靈犀，妳懂什麼？這叫『厚積薄發』！本少俠是在參悟剛才張大叔留下的醫理，順便思考未來的江湖大計……」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=shy);EnableCharacterExpression(0,MC1-1,Nervous);",
+        "links": [
+            {
+                "targetID": "OpenMap_05",
+                "text": ""
+            }
+        ],
+        "Description": "燕不凡找藉口"
+    },
+    {
+        "entryID": "OpenMap_05",
+        "actorID": "MC8",
+        "text": "[翻了個白眼，將包袱丟給主角]：「少來這套！江湖大計是用腳走出來的，不是躺出來的！既然傷好了，就趕緊出去活動活動。聽掌櫃的說，這附近除了小溪村，外面的世界可大著呢。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Meditate);",
+        "links": [
+            {
+                "targetID": "OpenMap_06",
+                "text": ""
+            }
+        ],
+        "Description": "蕭靈犀趕人"
+    },
+    {
+        "entryID": "OpenMap_06",
+        "actorID": "MC1",
+        "text": "[接過包袱，苦著臉]：「好好好，我去還不行嗎？……不過，妳不跟我一起去？外面若是遇到歹人，表哥我一個人雙拳難敵四手啊。」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1-1,Pain);",
+        "links": [
+            {
+                "targetID": "OpenMap_07",
+                "text": ""
+            }
+        ],
+        "Description": "燕不凡不想自己去"
+    },
+    {
+        "entryID": "OpenMap_07",
+        "actorID": "MC8",
+        "text": "[坐到桌邊，拿起帳本]：「我才不去吃那個苦呢。掌櫃的答應教我幾招算帳的本事，我就在這守著咱們的『大本營』。你若是在外面混不下去了，或者是找到了什麼寶貝，記得回來報告一聲。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=happy);",
+        "links": [
+            {
+                "targetID": "OpenMap_08",
+                "text": ""
+            }
+        ],
+        "Description": "蕭靈犀留守"
+    },
+    {
+        "entryID": "OpenMap_08",
+        "actorID": "MC1",
+        "text": "[整理了一下衣冠，恢復了自信的神色]：「哼，本少俠出馬，自然是滿載而歸！妳就在這乖乖等著聽我的傳奇故事吧！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1-1,Proud);",
+        "links": [
+            {
+                "targetID": "OpenMap_09",
+                "text": ""
+            }
+        ],
+        "Description": "燕不凡自信出發"
+    },
+    {
+        "entryID": "OpenMap_09",
+        "actorID": "System",
+        "text": "[panel=6]＊（在表妹的「督促」下，你無奈地離開了溫柔鄉。一幅廣闊的大地圖在你眼前展開，新的冒險，即將開始！）＊",
+        "Sequence": "UnlockSystem(WorldMap);",
+        "links": [
+            {
+                "targetID": "OpenMap_10",
+                "text": ""
+            }
+        ],
+        "Description": "系統解鎖大地圖"
+    },
+    {
+        "entryID": "OpenMap_10",
+        "actorID": "System",
+        "text": "[panel=6]＊（在大地圖中，點選「地點」即可展開深入探索。隨著「根據地」的遷移，周邊的新區域將逐一顯現；此外，多與人交流，或許能從傳聞中獲知隱藏地點的情報。）＊",
+        "Sequence": "",
+        "links": [],
+        "Description": "大地圖教學"
+    }
+]

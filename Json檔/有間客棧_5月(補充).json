@@ -1,0 +1,550 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "2",
+    "Description": "童淵的委託：槍桿之材 (完)",
+    "text": "[panel=6]＊（你帶著辛苦尋來的百年鐵木，再次來到村中空地。）＊",
+    "Sequence": "SetQuestState(Quest_TongYuan_FindWood, success)",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「童兄，幸不辱命，我將那百年鐵木取回來了！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "NPC15",
+    "text": "「太好了！[var=PlayerLastName]兄弟，我果然沒有看錯你！此木質地堅實，確是上品！有了它，我的愛槍便能恢復如初了！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC8",
+    "text": "[panel=2]「太好了！童大哥的槍有救了！那…酬勞方面…」",
+    "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "NPC15",
+    "text": "「哈哈大笑]小姑娘放心，[var=PlayerLastName]兄弟為我冒險，酬勞自然少不了！」",
+    "Sequence": "DisableCharacterExpression(2);IF (GetSkillLevel(百鳥朝鳳) >= 1) THEN JumpTo(6) ELSE JumpTo(8) ENDIF",
+    "links": []
+  },
+  {
+    "entryID": 6,
+    "actorID": "NPC15",
+    "text": "「我看[var=PlayerLastName]兄弟你的『百鳥朝鳳』槍法已頗具火候，只是在一些精微之處尚有欠缺。我今日便將此槍法的進階訣竅傳授於你，望你日後勤加練習，莫要辜負了這套絕學！」",
+    "Sequence": "",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "2",
+    "text": "[panel=6]＊（童淵將百鳥朝鳳Lv2的槍法訣竅傾囊相授，你細心記下，只覺茅塞頓開，對槍法的理解更上了一層樓。）＊",
+    "Sequence": "ModifySkillLevel(百鳥朝鳳, 2)",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "NPC15",
+    "text": "「這是些許心意，請兄弟務必收下，日後行走江湖，或能用得上。」",
+    "Sequence": "SetPortrait(NPC15,pic=normal);ModifyData(Coin,MC1,400);",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "NPC15",
+    "text": "「如今事情已了，我也該動身離開小溪村了。我打算前往北方拜訪一位故友，與他切磋武藝。」",
+    "Sequence": "",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "NPC15",
+    "text": "「青山不改，綠水長流，[var=PlayerLastName]兄弟，蕭姑娘，咱們後會有期！」",
+    "Sequence": "",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「童兄此去多加保重，願你武藝更上一層樓！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC8",
+    "text": "[panel=2]「童大哥一路順風！」",
+    "Sequence": "SetPortrait(MC8,pic=happy);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "2",
+    "text": "[panel=6]＊（童淵抱拳一笑，轉身瀟灑離去。這位來去如風的年輕遊俠，給你留下了深刻的印象。）＊",
+    "Sequence": "RemoveNPC(NPC15)",
+    "links": []
+  },
+  {
+    "entryID": 14,
+    "actorID": "2",
+    "Description": "D. 英雄救美的誤會",
+    "Condition": "IsQuestState(一枝花傳聞, 打聽到喜好)",
+    "text": "[panel=6]＊（夜晚，你行至後山小徑，忽聞前方傳來女子的驚呼與幾個男子的粗鄙笑罵聲。你心中一凜，加快腳步循聲而去。只見三五個兇神惡煞的山賊，正圍住一名以面紗遮掩容貌、身段窈窕的女子，言語極盡輕薄。）＊",
+    "Sequence": "",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "2",
+    "text": "[panel=1]「[em1]山賊甲：[/em1][嘿嘿淫笑]小娘子，這天都快黑了，一個人來這後山做什麼？莫不是…想與哥哥們共度良宵？」",
+    "Sequence": "",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "2",
+    "text": "[panel=3]「[em1]山賊乙：[/em1][打量著女子]聽聞[em2]有間客棧的老闆娘一枝花[/em2]，是少見的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面紗，讓哥幾個瞧瞧妳的真面目！」",
+    "Sequence": "",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "NPC10",
+    "text": "[panel=2]「幾位好漢請自重！小女子只是路過此地，並非你們口中的什麼[em2]一枝花[/em2]。若再不讓路，休怪小女子要呼救了！」",
+    "Sequence": "",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「呔！何方鼠輩，竟敢在此月朗星稀之下，行此強擄民女的不軌之事！爾等眼中可還有王法，心中可還有天理？！速速放開那位姑娘，束手就擒！」",
+    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Nervous_2);",
+    "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "2",
+    "text": "[panel=4]「[em1]山賊頭目：[/em1][先是一驚，看清是你一人後，獰笑道]哪裡來的愣頭青，也敢學人英雄救美？壞了爺爺們的好事，我看你是活膩歪了！識相的乖乖滾開，不然明年的今日，便是你的忌日！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "Description": "觸發戰鬥或檢定選項",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      21,
+      24,
+      30
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "Description": "替天行道",
+    "text": "「替天行道，義不容辭！」",
+    "Sequence": "",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「哼！我[var=PlayerLastName][var=PlayerFirstName]在此，豈容爾等放肆！路見不平，拔刀相助，正是我輩本分！替天行道，義不容辭！」",
+    "Sequence": "SetPortrait(MC1,pic=anger);",
+    "links": [
+      23
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "2",
+    "text": "[panel=6]＊（山賊頭目怒喝一聲，三人同時向你撲來！）＊",
+    "Sequence": "BeginFight(山賊*3, 36, 47)",
+    "links": []
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "Description": "口才檢定",
+    "text": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
+    "Sequence": "",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「咳，幾位壯士且慢動手，有話不妨好說！在下[var=PlayerLastName][var=PlayerFirstName]，江湖上嘛，人稱…嗯，這個暫且不提。這位姑娘若有得罪，還請看在在下幾分薄面上，高抬貴手，化干戈為玉帛可好？」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Question);BeginDiceRoll(Manual,PersuasionCheck,10);",
+    "links": [
+      26,
+      28
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "2",
+    "Condition": "IsPassDice() == true",
+    "text": "[panel=3]「[em1]山賊頭目：[/em1](遲疑地打量你幾眼，對手下道)你們兩個退下，我來會會他！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "2",
+    "text": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
+    "Sequence": "BeginFight(山賊頭目, 38, 47)",
+    "links": []
+  },
+  {
+    "entryID": 28,
+    "actorID": "2",
+    "Condition": "IsPassDice() == false",
+    "text": "[panel=3]「[em1]山賊頭目：[/em1][呸了一聲]給你臉不要臉！少廢話，兄弟們，給我上！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      29
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "2",
+    "text": "[panel=6]＊（說服失敗，三名山賊一擁而上！）＊",
+    "Sequence": "BeginFight(山賊*3, 40, 47)",
+    "links": []
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "Description": "威嚇檢定",
+    "text": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
+    "Sequence": "",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「哼，看來爾等是不見棺材不掉淚了！也罷！我[var=PlayerLastName][var=PlayerFirstName]的拳頭，專治各路不服！爾等若再執迷不悟，不肯束手就擒，那就休怪我劍下無情，拳腳也無眼了！」",
+    "Sequence": "SetPortrait(MC1,pic=anger);EnableCharacterExpression(0,MC1,Anger);BeginDiceRoll(Manual,IntimidationCheck,12);",
+    "links": [
+      32,
+      34
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "2",
+    "Condition": "IsPassDice() == true",
+    "text": "[panel=3]「[em1]山賊頭目：[/em1][被你的氣勢所懾，但仍色厲內荏地對手下喊道]哼，看你能耐我何！你們退後，看我收拾他！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "2",
+    "text": "[panel=6]＊（兩名山賊有些畏懼地退開，山賊頭目硬著頭皮上前。）＊",
+    "Sequence": "BeginFight(山賊頭目, 42, 47)",
+    "links": []
+  },
+  {
+    "entryID": 34,
+    "actorID": "2",
+    "Condition": "IsPassDice() == false",
+    "text": "[panel=3]「[em1]山賊頭目：[/em1][愣了一下，隨即狂笑]哈哈哈！口氣倒不小！兄弟們，給我上，讓他知道我們的厲害！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      35
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "2",
+    "text": "[panel=6]＊（威嚇無效，山賊們被激怒，一同攻了上來！）＊",
+    "Sequence": "BeginFight(山賊*3, 44, 47)",
+    "links": []
+  },
+  {
+    "entryID": 36,
+    "actorID": "2",
+    "Description": "戰鬥勝利(1v3)",
+    "text": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
+    "Sequence": "",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「呼…跳樑小丑，不堪一擊！還不快滾！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "2",
+    "Description": "戰鬥勝利(1v1, 口才)",
+    "text": "[panel=6]＊（你輕鬆擊敗了山賊頭目，剩下的嘍囉見狀四散奔逃。）＊",
+    "Sequence": "",
+    "links": [
+      39
+    ]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「哼！真是不自量力。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "2",
+    "Description": "戰鬥勝利(1v3, 口才失敗)",
+    "text": "[panel=6]＊（一番苦戰，你終將山賊們打跑。）＊",
+    "Sequence": "",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「呼…呼…這些亡命之徒，果然有幾分蠻力！不過，終究是邪不勝正！」",
+    "Sequence": "SetPortrait(MC1,pic=tired);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "2",
+    "Description": "戰鬥勝利(1v1, 威嚇)",
+    "text": "[panel=6]＊（山賊頭目被你三兩下便制服，倉皇逃竄，其餘山賊也作鳥獸散。）＊",
+    "Sequence": "",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「哼，我早就說過，不堪一擊！浪費大爺…不對，浪費本大俠的時間！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "2",
+    "Description": "戰鬥勝利(1v3, 威嚇失敗)",
+    "text": "[panel=6]＊（你一番激戰，將山賊們盡數擊退。）＊",
+    "Sequence": "",
+    "links": [
+      45
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「呸！宵小鼠輩，竟敢小看我！真是不知死活！」",
+    "Sequence": "SetPortrait(MC1,pic=hurt);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "Description": "戰鬥失敗_英雄救美",
+    "text": "「呃啊…可惡的山賊…竟如此兇悍…那位姑娘，她…唉，我真是沒用…」",
+    "Sequence": "SetPortrait(MC1,pic=hurt);",
+    "links": []
+  },
+  {
+    "entryID": 47,
+    "actorID": "NPC10",
+    "Description": "女子道謝",
+    "text": "「多謝少俠出手相救，小女子感激不盡。若非公子仗義，後果不堪設想。夜色已深，此地不宜久留，還望公子保重。」",
+    "Sequence": "",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "Description": "玩家回應",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      49,
+      52,
+      56
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "Description": "錯誤選項",
+    "text": "「姑娘言重，願護送一程。」",
+    "Sequence": "",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「咳！姑娘實在言重！路見不平拔刀相助，本是我輩江湖兒女分內事，何足掛齒！只是，這夜路崎嶇，山風又大，姑娘孤身一人，確實有些不妥。若姑娘不嫌棄在下愚鈍，我很樂意護送姑娘一程，以保萬全。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1,Hopeful);",
+    "links": [
+      51
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": "NPC10",
+    "text": "「多謝公子美意，只是小女子尚有私事，不便打擾。公子恩情，容日後再報。告辭。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      57
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "Description": "正確選項",
+    "text": "「分內之事，姑娘請早安歇。」",
+    "Sequence": "",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「姑娘實在太客氣了。此乃分內之事，不足掛齒，不足掛齒！咳…夜的確深了，山林險惡，姑娘還是儘早回府安歇為妙，切莫再獨行此等險地了。在下…在下告辭！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "NPC10",
+    "text": "「公子高風亮節，小女子心生敬佩。夜確實深了，小女子這便告辭，公子也請保重。」",
+    "Sequence": "",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "2",
+    "text": "[panel=6]＊（女子轉身，夜風吹過，帶起她衣袂與髮梢的清香。她消失在小徑拐角後，你發現在她先前佇立的青石板上，靜靜地躺著一方繡著含苞夜蘭的潔白手帕，散發著與她身上相同的幽香。）＊",
+    "Sequence": "AddItem(Item_YelanHandkerchief)",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "Description": "略顯自負和說教",
+    "text": "「山賊不足慮，姑娘夜行需小心。」",
+    "Sequence": "",
+    "links": [
+      57
+    ]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「哼！區區幾個山賊毛賊，何足道哉！本大俠三拳兩腳便能打發！不過嘛，姑娘你一個弱女子，這般深夜獨行，確實太過危險！下次務必小心在意，萬萬不可再如此大意了！」",
+    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [
+      59
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「咳！這位姑娘…當真是位奇女子。如此信物…我是否應當…（陷入沉思）…是了，日後若有緣再見，定當完璧歸趙，方顯我[var=PlayerLastName][var=PlayerFirstName]高風亮節！」",
+    "Sequence": "SetPortrait(MC1,pic=Meditate);",
+    "links": []
+  },
+  {
+    "entryID": 59,
+    "actorID": "NPC10",
+    "text": "「多謝公子提醒。告辭。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "2",
+    "text": "[panel=6]＊（女子語氣平淡地告辭，轉身便迅速消失在夜色中，未留下任何痕跡。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

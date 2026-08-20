@@ -1,0 +1,865 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（第三個早晨。馬車還得等二十來天，你正打盹，蕭靈犀卻在數桌上僅剩的銅板。）＊",
+    "Sequence": "",
+    "links": [
+      1
+    ]
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC8",
+    "text": "「二十七、二十八、二十九……唉，交了三百錢房租，就剩這點了。」",
+    "Sequence": "SetPortrait(MC8,pic=12);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「還夠用吧？有床睡、有飯吃，比睡野地強多了。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC8",
+    "text": "「表哥！雲中物價貴得很，英豪府遴選又要置辦行頭——咱們現在是坐吃山空！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「那不然呢？去跟大公雞再鬥三回合？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC8",
+    "text": "「鬥雞能賺幾個錢？山賊把路一封，村裡沒市集，過路客也進不來——人家要在客棧開個[em2]小棧[/em2]，誰有貨托過手、誰想買就來翻，賣了再分帳。這才是通路商的第一步！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Idea);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": 2,
+    "text": "[panel=6]＊（她撕下點蛙簿空白頁折成小帳冊，拉著你出門。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": 2,
+    "text": "[panel=6]＊（村口茶攤。茶博士正撥著算盤。）＊",
+    "Sequence": "",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role105",
+    "text": "[panel=1]「子曰：君子固窮……可老子不想固窮啊。」",
+    "Sequence": "",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC8",
+    "text": "[panel=2]「茶博士，您上回帳本裡不是寫著——[em2]有錢自遠方來，才亦樂乎[/em2]？現在遠方的人有錢也過不來啦。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role105",
+    "text": "[panel=1]「小丫頭，記性倒好。怎麼，你們兄妹無事不登三寶殿，今天怎來我這啦？」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC8",
+    "text": "[panel=2]「嘻嘻，讓您見笑啦。小犀在客棧開小棧做買賣——誰有貨托咱們過手標價，有人買就賣，賣了跟您分帳。您茶攤見的人多，有沒有願意試試的？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role105",
+    "text": "[panel=1]「做買賣？你這小丫頭，算盤打得倒快。茶葉管夠，壓箱底的玩意兒，免談。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC8",
+    "text": "[panel=2]「又不是白拿。小犀幫您標價、記帳，賣了分您九成……再說，櫃底那個沾灰的盒子，放著也是放著吧？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(2);BeginDiceRoll(Auto,InsightCheck,4);",
+    "links": [
+      15
+    ],
+    "Description": "自動洞悉檢定觸發點 (難度4)"
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      16,
+      17
+    ],
+    "Description": "自動檢定後的空緩衝節點"
+  },
+  {
+    "entryID": 16,
+    "actorID": 2,
+    "text": "[panel=6]＊（你瞧見茶博士目光往櫃底一閃，指尖在算盤上停了半拍——那盒子，他並非當真忘了。[即時訊息區]: 洞悉檢定成功！洞悉經驗+10。）＊",
+    "Sequence": "IsPassDice() == true;ModifyData(FeatExp,Player,Insight,10);",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": 2,
+    "text": "[panel=6]＊（茶博士撥算盤的聲音依舊平穩，你也說不清他到底在不在意那個盒子。）＊",
+    "Sequence": "IsPassDice() == false;",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "role105",
+    "text": "[panel=1]「……眼睛倒是尖。」",
+    "Sequence": "",
+    "links": [
+      19,
+      20,
+      21
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「茶博士，小犀年紀小，說話直了些，您別見怪。」",
+    "Sequence": "",
+    "links": [
+      22
+    ],
+    "Description": "選項1：口才檢定 (難度6)"
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「九一分帳，說定了便一銅板不少。」",
+    "Sequence": "",
+    "links": [
+      27
+    ],
+    "Description": "選項2：信義"
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「先試一試，賣不出再收回便是。」",
+    "Sequence": "",
+    "links": [
+      29
+    ],
+    "Description": "選項3：通達"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [
+      23
+    ],
+    "Description": "口才檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「茶博士，小犀年紀小，說話直了些。托您過手的貨，她記帳比誰都清楚，您就讓她試一試嘛。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      24,
+      25
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role105",
+    "text": "[panel=1]「……成，就讓妳試試。」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「茶博士，小犀她……呃……」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role105",
+    "text": "[panel=1]「結巴什麼？……罷了，看在小丫頭記性好的份上，讓她試試。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「九一分帳，說定了便一銅板不少。茶博士的貨，小犀絕不短您分文。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role105",
+    "text": "[panel=1]「哼，口氣倒硬。……成，讓妳試試。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「先試一試嘛，賣不出再收回，茶博士您又不損什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role105",
+    "text": "[panel=1]「……你們這些小鬼頭。成，試試就試試。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": 2,
+    "text": "[panel=6]＊（茶博士嘆口氣，蹲到櫃底，摸出一只[em2]雀羽面具[/em2]，羽毛尚帶光澤，卻沾了層薄灰。）＊",
+    "Sequence": "",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role105",
+    "text": "[panel=1]「這玩意兒跟了我些年，就放你那過手，標個價，賣了九一分——我九，你一。」",
+    "Sequence": "",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC8",
+    "text": "[panel=2]「入帳！小犀記下了！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": 2,
+    "text": "[panel=6]＊（村東小屋。滿臉橫肉的書生抱著竹簡發呆。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      35
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "NPC4",
+    "text": "「子曰……唉，子曰了半天，[em2]《孝經》[/em2]、[em2]《論語》[/em2]攢了一摞，過路書商不來，這書難道當柴燒？」",
+    "Sequence": "",
+    "links": [
+      36
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC8",
+    "text": "[panel=2]「書生哥哥，托幾本在客棧試試嘛。有人買，小犀記帳分您；沒人買，再搬回來就是。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "NPC4",
+    "text": "「……你看得懂這些？」",
+    "Sequence": "",
+    "links": [
+      38
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC8",
+    "text": "[panel=2]「看不懂，可總有人要。放小棧，比堆在這兒發霉強。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      39
+    ]
+  },
+  {
+    "entryID": 39,
+    "actorID": "NPC4",
+    "text": "「……也罷，拿兩本去。」",
+    "Sequence": "",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": 2,
+    "text": "[panel=6]＊（村中空地。郎中正曬藥材。）＊",
+    "Sequence": "",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "role113",
+    "text": "「雲遊的人，走哪兒都撿點東西——藥方、舊記，還有不知從哪兒換來的[em2]武學秘笈[/em2]……」",
+    "Sequence": "",
+    "links": [
+      42
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC8",
+    "text": "[panel=2]「大叔行走江湖，包袱裡的寶貝比藥箱還沉吧？小犀在客棧做小棧生意——您若有用不著的[em2]秘笈[/em2]，托小犀過手標價，賣了再分您。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "role113",
+    "text": "「通路商？成。挑幾本……咳，幾本[em2]不礙我修行[/em2]的，交你們過手試賣。別亂標價。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC8",
+    "text": "[panel=2]「口碑比暴利長久！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      45
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "role113",
+    "text": "「……這句是我該說的吧？」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": 2,
+    "text": "[panel=6]＊（日落，客棧房間。床腳堆了從村民手中收來的貨；帳冊上寫滿品名與價錢。）＊",
+    "Sequence": "",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC8",
+    "text": "「茶博士的面具、書生的書、大叔的秘笈……[em2]小犀小棧[/em2]，開張啦！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": 2,
+    "text": "[panel=6]＊（她把帳冊往你手裡一塞，又指了指那幾冊秘笈，眼睛亮晶晶的。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，以後想買什麼，在房裡跟小犀說就行——不用滿村跑。等到了[em2]雲中[/em2]，好貨更多，人家再請行商托貨，小棧還能擴！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「……所以我是掌櫃，還是腳夫？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      51
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC8",
+    "text": "[panel=2]「掌櫃！工錢兩文！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      52
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "NPC12",
+    "text": "[panel=2]「兩位……咱這是客棧，不是貨棧啊。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC8",
+    "text": "[panel=2]「小二哥放心，不佔走道！過路客要買，還得先問小犀呢。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC0",
+    "text": "解鎖根據地「小犀小棧」——可購買小溪村貨品",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      55
+    ],
+    "Description": "任務觸發節點：解鎖小犀小棧（小溪村）"
+  },
+  {
+    "entryID": 55,
+    "actorID": 2,
+    "text": "[panel=6]＊（馬車鈴聲仍未響起。可這個等不起來的小姑娘，已在客棧房裡搭好了第一個據點——等著把這條路，一路拓到雲中去。）＊",
+    "Sequence": "",
+    "links": [
+      56
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": 2,
+    "text": "[panel=6]＊（英豪客棧的房間比小溪村寬敞些，可小犀第一件事仍是把帳冊攤開，在扉頁補了兩個字——[em2]雲中[/em2]。）＊",
+    "Sequence": "",
+    "links": [
+      57
+    ]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，小溪村的小棧開張了，雲中這麼多過路客，不擴張太可惜啦！走，去談生意！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「妳這掌櫃當上癮了是吧……」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      59
+    ]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC8",
+    "text": "[panel=2]「掌櫃才賺錢呢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": 2,
+    "text": "[panel=6]＊（巷子中。來自波斯的商人阿莎在攤位旁拴著一峰駱駝，毛色油亮；攤上還掛了件[em2]貂皮大衣[/em2]，在雲中的山風裡格外扎眼。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC19",
+    "text": "[panel=1]「喲，小妹妹又來啦。這回不是只看玻璃珠了吧？」",
+    "Sequence": "",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC8",
+    "text": "[panel=2]「阿莎姐姐，小犀在英豪客棧開了間小棧，專做買賣。您絲路來回，[em2]貂皮大衣[/em2]、駱駝絨、那些中原見不著的稀罕物……與其壓在商隊裡，不如托小犀代發幾件？雲中江湖人，最愛買『別處沒有』的。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      63
+    ]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC19",
+    "text": "[panel=1]「小掌櫃，嘴倒是甜。成，大衣和幾樣西域稀罕貨，先交你過手。賣了二八分——我八，你二。駱駝嘛……」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      64
+    ]
+  },
+  {
+    "entryID": 64,
+    "actorID": 2,
+    "text": "[panel=6]＊（她拍了拍駱駝的頸毛。）＊",
+    "Sequence": "",
+    "links": [
+      65
+    ]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC19",
+    "text": "[panel=1]「畜生哪能住客棧。絨與駝鈴、鞍辦小件，倒可以記在你帳上發賣。」",
+    "Sequence": "",
+    "links": [
+      66
+    ]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC8",
+    "text": "[panel=2]「駱駝絨、駝鈴……入帳！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [
+      67,
+      68,
+      69
+    ]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "[em2][經濟檢定][/em2]「二八分公道，但小犀幫您吆喝，該多得一成。」",
+    "Sequence": "",
+    "links": [
+      70
+    ],
+    "Description": "選項1：經濟檢定 (難度6)"
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「說好二八分，一銅板不少您的。」",
+    "Sequence": "",
+    "links": [
+      75
+    ],
+    "Description": "選項2：信義"
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC1",
+    "text": "「先賣著看，價錢不好再改。」",
+    "Sequence": "",
+    "links": [
+      76
+    ],
+    "Description": "選項3：通達"
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,EconomicDevelopmentCheck,6);",
+    "links": [
+      71
+    ],
+    "Description": "經濟檢定擲骰節點 (難度6)"
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC8",
+    "text": "[panel=2]「阿莎姐姐，小犀幫您吆喝、記帳、跑腿，三七分好不好？您七，小犀三！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      72,
+      73
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC19",
+    "text": "[panel=1]「……小滑頭。三七便三七。」",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(2);ModifyData(FeatExp,Player,EconomicDevelopment,10);",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC8",
+    "text": "[panel=2]「那、那二八分也好……小犀一定幫您賣得妥妥的！」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC8,pic=13);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      74
+    ]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC19",
+    "text": "[panel=1]「呵呵，二八，不變。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC8",
+    "text": "[panel=2]「好！小犀記下了，二八分，一銅板不少！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC8",
+    "text": "[panel=2]「嗯！先賣著看，價錢不好咱們再改！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 77,
+    "actorID": 2,
+    "text": "[panel=6]＊（蒲元的隱密工坊。爐火未熄，牆上掛著幾柄剛出爐的兵器。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      78
+    ]
+  },
+  {
+    "entryID": 78,
+    "actorID": "role131",
+    "text": "「[em2]寶劍[/em2]、[em2]百辟刀[/em2]、[em2]大刀[/em2]、[em2]三丈矛[/em2]……每樣都是精品，可伯喈兄只要琴，江湖客要的是傢伙。堆著占地方！」",
+    "Sequence": "",
+    "links": [
+      79
+    ]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC8",
+    "text": "[panel=2]「蒲伯伯，小犀在英豪客棧做買賣呢！您這些精品兵器，托小棧代發，英豪府遴選前來雲中的江湖人，正缺稱手的傢伙。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      80
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role131",
+    "text": "「小丫頭嘴快。……成，挑幾件[em2]不砸招牌[/em2]的交你。賣了再來跟我分帳，別標太賤，辱了我的錘。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      81
+    ]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC8",
+    "text": "[panel=2]「小犀懂！精品嘛，價錢也要配得起！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      82
+    ]
+  },
+  {
+    "entryID": 82,
+    "actorID": 2,
+    "text": "[panel=6]＊（英豪府藥房外。張寧正指揮雜役搬運藥箱，嘴裡還在數藥材名。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      83
+    ]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC6",
+    "text": "「三七、柴胡、當歸……英豪府這幾個月採買的[em2]藥材[/em2]堆成山，[em2]藥品[/em2]也配了一批備用。過路客有病找不到人，還得來煩我。」",
+    "Sequence": "",
+    "links": [
+      84
+    ]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC8",
+    "text": "[panel=2]「寧兒姐姐，小犀在客棧做小棧生意！常備的藥材、成品的藥品，挑些托我代發，誰急用誰買，省得都擠來藥房。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      85
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC6",
+    "text": "「……你這丫頭，算盤打得比藥師還響。成，尋常藥材和幾種成品藥，交你發賣。別亂標價，吃壞人我唯你是問。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      86
+    ]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC8",
+    "text": "[panel=2]「放心！小犀記帳比抓青蛙還清楚！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      87
+    ]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC6",
+    "text": "「……哪來的青蛙。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      88
+    ]
+  },
+  {
+    "entryID": 88,
+    "actorID": 2,
+    "text": "[panel=6]＊（日落，英豪客棧房間。小溪村的貨還在，又添了貂皮、兵架、藥箱；帳冊厚了一截。）＊",
+    "Sequence": "",
+    "links": [
+      89
+    ]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC8",
+    "text": "「阿莎姐姐的稀罕物、蒲伯伯的精品兵器、寧兒姐姐的藥材藥品……[em2]小犀小棧[/em2]，雲中這攤，開張啦！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "links": [
+      90
+    ]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「所以我是掌櫃、腳夫，還是幫你扛藥箱的？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC8",
+    "text": "[panel=2]「掌櫃！等遴選完了，小犀還要請更多行商來托貨呢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "links": [
+      92
+    ]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC0",
+    "text": "小犀小棧追加雲中貨品（阿SA稀有物、蒲元精品武器、張寧藥材藥品）",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [
+      93
+    ],
+    "Description": "任務觸發節點：小犀小棧追加雲中貨品"
+  },
+  {
+    "entryID": 93,
+    "actorID": 2,
+    "text": "[panel=6]＊（英豪府遴選尚遠，可這個小姑娘已在雲中搭好了第二個據點——通路商的路，又長了一截。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

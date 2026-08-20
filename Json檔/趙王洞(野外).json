@@ -1,0 +1,242 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "[panel=6]＊（撲通、撲通，你與廖淳一前一後落入冰冷刺骨的水潭中。）＊",
+    "Sequence": "",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「哈啾！這水……也太冷了吧！簡直像冰窖一樣。廖大哥，你沒事吧？」",
+    "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Pain);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role127",
+    "text": "「沒事，我無礙。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=1);",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「那我們趕緊走吧！得趕快找到娜娜和雍仔才行！」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": 2,
+    "text": "[panel=6]＊（吾窮盡半生，尋訪天下古蹟，終在這趙王洞深處尋得這片地下水脈。此地靈氣充沛，實乃世外桃源！）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": 2,
+    "text": "[panel=6]＊（然……順者水脈再往深處，竟藏有一座古老的祭壇。吾本欲探其究竟，卻發現那祭壇周遭的石壁上，刻滿了詭異的無面像。）＊",
+    "Sequence": "",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": 2,
+    "text": "[panel=6]＊（自那日從祭壇歸來，吾便夜夜噩夢。夢中總有淒厲哀嚎與誦經聲縈繞耳畔，洞中靈氣亦漸漸化為腥臭血氣。吾心神日漸耗弱，恐命不久矣。）＊",
+    "Sequence": "",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": 2,
+    "text": "[panel=6]＊（那祭壇深處……到底封印著什麼？吾必須再探一次，若能解開此謎，吾這半生便不算虛度。）＊",
+    "Sequence": "",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": 2,
+    "text": "[panel=6]＊（[em7]最後的字跡已模糊不清，只剩下幾個狂亂的血痕[/em7]……沒有臉……他們也沒有臉……不要過去……）＊",
+    "Sequence": "",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC22",
+    "text": "「放開本姑娘！你們這些不長眼的傢伙！快把我的無鋒劍和羅盤還給我！」",
+    "Sequence": "",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": 127,
+    "text": "「吵死了！這丫頭怎麼這麼多廢話？要不是卞頭領吩咐說這次的祭品務必保持精力，我現在就把妳剁了！」",
+    "Sequence": "",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": 127,
+    "text": "「就是！上面廚房那鍋肉湯剛熬好，正好缺點料。快走！別耽誤了祭祀的大事！」",
+    "Sequence": "",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「娜娜！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Anger);",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": 127,
+    "text": "「什麼人！竟敢擅闖——」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role127",
+    "text": "「怎麼？連我也不認識了嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=2);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": 127,
+    "text": "「廖、廖頭領？！您……您不是被卞頭領關在……」",
+    "Sequence": "",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": 127,
+    "text": "「廖頭領饒命！我們也只是奉命行事啊！這丫頭我們不抓了，您、您大人有大量，把我們當個屁給放了吧！」",
+    "Sequence": "",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC22",
+    "text": "[panel=5]「[em7]趁著兩名教眾嚇得跪地求饒之際，猛地一腳踹翻其中一人，順勢掙脫了鬆開的繩索道:[/em7]哈哈！想困住本姑娘，你們再練個一百年吧！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);EnableCharacterExpression(5,MC22,Idea);",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC22",
+    "text": "[panel=2]「大俠！我就知道你一定會來救我的！」",
+    "Sequence": "DisableCharacterExpression(5);SetPortrait(MC22,pic=9);EnableCharacterExpression(2,MC22,Proud);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": 2,
+    "text": "[panel=6]＊（那兩名教眾跪在地上瑟瑟發抖再也沒有剛剛的氣焰。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role127",
+    "text": "「小兄弟，你說該這等助紂為虐的敗類，如何處置？」",
+    "Sequence": "SetPortrait(role127,pic=2);",
+    "links": [22, 23]
+  },
+  {
+    "entryID": 22,
+    "actorID": 0,
+    "text": "「除惡務盡，不能留活口！」",
+    "Sequence": "",
+    "links": [24],
+    "Description": "選項1：除惡務盡，不能留活口"
+  },
+  {
+    "entryID": 23,
+    "actorID": 0,
+    "text": "「他們也只是聽命行事，讓他們滾吧。」",
+    "Sequence": "",
+    "links": [25],
+    "Description": "選項2：放走教眾"
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「他們剛才還說要把娜娜剁了燉湯！這種喪盡天良的人，留著也是禍害！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "links": [26]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「算了，首惡是卞喜，他們不過是些聽命辦事的小嘍囉。滾吧！別再讓我看到你們做傷天害理的事！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [27]
+  },
+  {
+    "entryID": 26,
+    "actorID": 2,
+    "text": "[panel=6]＊（兩名教眾聞言面如死灰，一人磕頭如搗蒜、口不擇言只求饒命，另一人卻猛地掙起往草叢裡滾逃——廖淳搶步截住去路，你亦不再遲疑。二人驚叫掙扎，終究難敵，頃刻間便被你們斃於當場。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [28]
+  },
+  {
+    "entryID": 27,
+    "actorID": 2,
+    "text": "[panel=6]＊（兩名教眾千恩萬謝的連滾帶爬地逃跑了。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「娜娜，妳沒受傷吧？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC22",
+    "text": "「本姑娘福大命大，這點小場面算什麼！對了，大俠，雍仔呢？他沒跟你們在一起嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Question);",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「這正是我要說的。我們一路殺過來，只看到了妳，並沒有看到雍仔的下落。妳被抓的時候，有看到他嗎？」",
+    "Sequence": "DisableCharacterExpression(0);DisableCharacterExpression(2);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC22",
+    "text": "[panel=2]「我們中計之後，本姑娘索性裝昏到底，趁他們鬆懈後溜到這裡。途中聽他們在說:[em2]那個胖子靈力充沛，是絕佳的祭品[/em2]——八成說的就是雍仔！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Nervous_2);",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role127",
+    "text": "「[em2]祭品[/em2]是嗎…？卞喜在洞底藏了甚麼名堂，我至今也沒摸透，但若他們剛說的是真的，再拖一刻，你那朋友便多一分凶險。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(role127,pic=8);",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「那趕緊走吧！」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC22",
+    "text": "「算我一個！大俠一路上也替本姑娘擋過不少風雨，我怎能這時收手？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);",
+    "links": []
+  }
+]

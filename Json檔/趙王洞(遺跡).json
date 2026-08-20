@@ -1,0 +1,1007 @@
+[
+    {
+        "entryID": 1,
+        "actorID": "MC1",
+        "text": "「好重的血味……這裡就是最深處了嗎？感覺連呼吸都變得困難了。」",
+        "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Pain);",
+        "links": [
+            2
+        ]
+    },
+    {
+        "entryID": 2,
+        "actorID": "MC22",
+        "text": "「哇！我的羅盤在這裡指針亂轉！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Idel);",
+        "links": [
+            3
+        ]
+    },
+    {
+        "entryID": 3,
+        "actorID": "role127",
+        "text": "「你們兩個小心點，不知前方還有什麼機關。」",
+        "Sequence": "DisableCharacterExpression(1);",
+        "links": [
+            4
+        ]
+    },
+    {
+        "entryID": 4,
+        "actorID": "MC22",
+        "text": "「`[一把拉住燕不凡的手臂，瞪大眼睛]`：「大俠！你該不會是想打退堂鼓吧？雍仔還在裡面等著我們去救呢！」",
+        "Sequence": "SetPortrait(MC22,pic=2);EnableCharacterExpression(2,MC22,Anger);",
+        "links": [
+            5
+        ]
+    },
+    {
+        "entryID": 5,
+        "actorID": "2",
+        "text": "[panel=6]＊（吾終究還是沒能抵擋住好奇心，踏入了這無面祭壇。）＊",
+        "Sequence": "",
+        "links": [
+            6
+        ]
+    },
+    {
+        "entryID": 6,
+        "actorID": "2",
+        "text": "[panel=6]＊（錯了……全錯了！）＊",
+        "Sequence": "",
+        "links": [
+            7
+        ]
+    },
+    {
+        "entryID": 7,
+        "actorID": "2",
+        "text": "[panel=6]＊（那根本不是什麼佛，那是來自深淵的邪祟！）＊",
+        "Sequence": "",
+        "links": [
+            8
+        ]
+    },
+    {
+        "entryID": 8,
+        "actorID": "2",
+        "text": "[panel=6]＊（吾只是看了神像一眼，腦中便如有萬千毒蛇撕咬。）＊",
+        "Sequence": "",
+        "links": [
+            9
+        ]
+    },
+    {
+        "entryID": 9,
+        "actorID": "2",
+        "text": "[panel=6]＊（吾的身體開始異變，皮膚長出了青色的鱗片……）＊",
+        "Sequence": "",
+        "links": [
+            10
+        ]
+    },
+    {
+        "entryID": 10,
+        "actorID": "2",
+        "text": "[panel=6]＊（吾出不去了。）＊",
+        "Sequence": "",
+        "links": [
+            11
+        ]
+    },
+    {
+        "entryID": 11,
+        "actorID": "2",
+        "text": "[panel=6]＊（若有後人至此，切記，不可直視神像，不可聽其靡靡之音……）＊",
+        "Sequence": "",
+        "links": [
+            12
+        ]
+    },
+    {
+        "entryID": 12,
+        "actorID": "2",
+        "text": "[panel=6]＊（逃！快逃！）＊",
+        "Sequence": "",
+        "links": [
+            13
+        ]
+    },
+    {
+        "entryID": 13,
+        "actorID": "2",
+        "text": "[panel=6]＊（今日又被派來這鬼地方站崗。）＊",
+        "Sequence": "",
+        "links": [
+            14
+        ]
+    },
+    {
+        "entryID": 14,
+        "actorID": "2",
+        "text": "[panel=6]＊（洞裡又濕又冷，真懷念老家的熱炕頭。）＊",
+        "Sequence": "",
+        "links": [
+            15
+        ]
+    },
+    {
+        "entryID": 15,
+        "actorID": "2",
+        "text": "[panel=6]＊（最近伙食越來越差了，廚房那邊老是熬些腥臭的肉湯，聞著就噁心。）＊",
+        "Sequence": "",
+        "links": [
+            16
+        ]
+    },
+    {
+        "entryID": 16,
+        "actorID": "2",
+        "text": "[panel=6]＊（老王昨天喝了一口，今天整個人都魔怔了，嘴裡一直唸叨著什麼[em2]神功大成[/em2]。）＊",
+        "Sequence": "",
+        "links": [
+            17
+        ]
+    },
+    {
+        "entryID": 17,
+        "actorID": "2",
+        "text": "[panel=6]＊（原本加入太平道還以為總比在老家餓死要來的好，現在這裡也不是久居之地，還是找機會跑掉吧。）＊",
+        "Sequence": "",
+        "links": [
+            18
+        ]
+    },
+    {
+        "entryID": 18,
+        "actorID": "2",
+        "text": "[panel=6]＊（石頭上竟插著兩把造型奇異的劍，一長一短。但劍身都彎曲如蛇，且劍柄處雕刻著栩栩如生的毒蛇吐信圖案，透著一股森寒之氣。）＊",
+        "Sequence": "",
+        "links": [
+            19
+        ]
+    },
+    {
+        "entryID": 19,
+        "actorID": "MC22",
+        "text": "「`[好奇地湊上前]`：「哇！這對劍長得好奇怪，像條蛇一樣。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=9);EnableCharacterExpression(2,MC22,Question);",
+        "links": [
+            20
+        ]
+    },
+    {
+        "entryID": 20,
+        "actorID": "MC1",
+        "text": "「[em2][武力檢定][/em2]「讓我來試試！」",
+        "Sequence": "",
+        "links": [
+            21
+        ],
+        "Description": "選項1：武力檢定"
+    },
+    {
+        "entryID": 21,
+        "actorID": "0",
+        "text": "「」",
+        "Sequence": "BeginDiceRoll(Manual,StrengthCheck,15);",
+        "links": [
+            22
+        ],
+        "Description": "選項1的空對話擲骰節點"
+    },
+    {
+        "entryID": 22,
+        "actorID": "MC1",
+        "text": "「這劍似乎被死死卡在石頭裡了，我來試試能不能拔出來！」",
+        "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+        "links": [
+            23,
+            24,
+            36
+        ]
+    },
+    {
+        "entryID": 23,
+        "actorID": "MC1",
+        "text": "「離開」",
+        "Sequence": "",
+        "links": [],
+        "Description": "選項2：無檢定"
+    },
+    {
+        "entryID": 24,
+        "actorID": "2",
+        "text": "[panel=6]＊（只聽「錚」的一聲清脆劍鳴，蛇形怪劍應聲而出，劍刃在昏暗的光線下閃爍著幽綠的寒芒。）＊",
+        "Sequence": "IsPassDice() == true;ModifyData(AbilityExp,Player,Ability_STR,10);",
+        "links": [
+            25
+        ]
+    },
+    {
+        "entryID": 25,
+        "actorID": "role127",
+        "text": "「好劍！！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+        "links": [
+            26
+        ]
+    },
+    {
+        "entryID": 26,
+        "actorID": "MC22",
+        "text": "「[em7]指著石裂開的地方，道[/em7]：大俠快看！石頭裡面還藏著東西！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);EnableCharacterExpression(2,MC22,Surprise_2);",
+        "links": [
+            27
+        ]
+    },
+    {
+        "entryID": 27,
+        "actorID": "2",
+        "text": "[panel=6]＊（石裂中有一卷木牘、一幅帛圖，字跡近秦篆。）＊",
+        "Sequence": "",
+        "links": [
+            28
+        ]
+    },
+    {
+        "entryID": 28,
+        "actorID": "2",
+        "text": "[panel=6]＊（吾鑄此劍，尋寶入洞。）＊",
+        "Sequence": "",
+        "links": [
+            29
+        ]
+    },
+    {
+        "entryID": 29,
+        "actorID": "2",
+        "text": "[panel=6]＊（貪念既起，自掘墳墓。）＊",
+        "Sequence": "",
+        "links": [
+            30
+        ]
+    },
+    {
+        "entryID": 30,
+        "actorID": "2",
+        "text": "[panel=6]＊（寶藏藏於祭壇東穴，繪圖在帛。）＊",
+        "Sequence": "",
+        "links": [
+            31
+        ]
+    },
+    {
+        "entryID": 31,
+        "actorID": "2",
+        "text": "[panel=6]＊（後人按圖索驥，可得。）＊",
+        "Sequence": "",
+        "links": [
+            32
+        ]
+    },
+    {
+        "entryID": 32,
+        "actorID": "0",
+        "text": "「獲得【留劍記（木牘）】！獲得【藏寶圖（帛圖）】！」",
+        "Sequence": "",
+        "links": [
+            33
+        ]
+    },
+    {
+        "entryID": 33,
+        "actorID": "0",
+        "text": "「△事件圖：藏寶圖。」",
+        "Sequence": "",
+        "links": [
+            34
+        ]
+    },
+    {
+        "entryID": 34,
+        "actorID": "MC22",
+        "text": "「有寶圖！大俠，咱們按圖走就能找到寶藏啦！」",
+        "Sequence": "SetPortrait(MC22,pic=8);EnableCharacterExpression(2,MC22,Happy);",
+        "links": [
+            35
+        ]
+    },
+    {
+        "entryID": 35,
+        "actorID": "MC1",
+        "text": "「此人自掘墳墓，倒留了一條路給後人……走吧，救人要緊。」",
+        "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Idel);",
+        "links": []
+    },
+    {
+        "entryID": 36,
+        "actorID": "MC1",
+        "text": "「呼……不行，紋絲不動，看來我的力氣還不夠。」",
+        "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);SetPortrait(MC1,pic=11);",
+        "links": [
+            37
+        ]
+    },
+    {
+        "entryID": 37,
+        "actorID": "MC20",
+        "text": "「孽畜還不住手！本道長乃茅山嫡傳，你敢動我試試——」",
+        "Sequence": "SetPortrait(role89,pic=2);EnableCharacterExpression(1,role89,Proud);",
+        "links": [
+            38
+        ]
+    },
+    {
+        "entryID": 38,
+        "actorID": "MC20",
+        "text": "「等、等等！先別動爪子！火氣別那麼大，咱們萬事好商量阿！」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(role89,pic=2);EnableCharacterExpression(1,role89,Nervous_2);",
+        "links": [
+            39
+        ]
+    },
+    {
+        "entryID": 39,
+        "actorID": "2",
+        "text": "[panel=6]＊（就在千鈞一髮之際，赫連娜娜眼珠一轉突然從懷中摸出一串銅錢，猛地朝反方向的石壁擲去。「叮、叮叮叮」的一連脆響，那妖物瞬猛地轉過頭去。）＊",
+        "Sequence": "",
+        "links": [
+            40
+        ]
+    },
+    {
+        "entryID": 40,
+        "actorID": "MC22",
+        "text": "「大俠！趁現在！」",
+        "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Happy);",
+        "links": [
+            41
+        ]
+    },
+    {
+        "entryID": 41,
+        "actorID": "2",
+        "text": "[panel=6]＊（你心領神會地快速滑步向前並躍起，緊接者劍光一閃，精準地挑斷了綁住雍仔的粗繩。雍仔踉蹌落地，揉著手腕連退兩步，隨即從懷中抓出一疊符籙。）＊",
+        "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Anger);",
+        "links": [
+            42
+        ]
+    },
+    {
+        "entryID": 42,
+        "actorID": "MC20",
+        "text": "「`[咬破指尖，凌空畫符]`：「好！既然下來了，本道長這就讓牠嘗嘗茅山正宗的厲害！急急如律令！」",
+        "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=serious);EnableCharacterExpression(1,MC8,Serious);",
+        "links": [
+            43
+        ]
+    },
+    {
+        "entryID": 43,
+        "actorID": "2",
+        "text": "[panel=6]＊（白虎道妖這才意識到上當，受刺激般連聲怒吼，朝你們猛撲而來。）＊",
+        "Sequence": "",
+        "links": [
+            44
+        ]
+    },
+    {
+        "entryID": 44,
+        "actorID": "MC1",
+        "text": "「`[橫劍欲擋，仍被重擊]`：「呃啊——！」",
+        "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Pain);",
+        "links": [
+            45
+        ]
+    },
+    {
+        "entryID": 45,
+        "actorID": "2",
+        "text": "[panel=6]＊（你的視線被血色與黑霧吞沒。外界的聲音漸漸遠去，時間彷彿被凍結。此刻，你感覺到胸口那股異常的飢餓感如野火般竄起，幾乎要將理智燒毀——這是一股想吞噬眼前妖物的狂暴衝動！）＊",
+        "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);",
+        "links": [
+            46,
+            47
+        ]
+    },
+    {
+        "entryID": 46,
+        "actorID": "MC1",
+        "text": "「放任衝動，任由飢餓感蔓延」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 47,
+        "actorID": "MC1",
+        "text": "「咬緊牙關，努力保持理智」",
+        "Sequence": "",
+        "links": [
+            48
+        ]
+    },
+    {
+        "entryID": 48,
+        "actorID": "2",
+        "text": "[panel=6]＊（那股衝動並沒有因為你的念頭而平息，反而越發猛烈！你的指甲深深掐進掌心，但在你的感知中，倒在地上的妖物、甚至一旁受傷的同伴，竟都變成了散發著誘人氣息的「血肉」。那股無聲的意志在腦海中步步進逼：吃掉牠們。）＊",
+        "Sequence": "",
+        "links": [
+            49,
+            50
+        ]
+    },
+    {
+        "entryID": 49,
+        "actorID": "MC1",
+        "text": "「順從這股渴望」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 50,
+        "actorID": "MC1",
+        "text": "「死守最後的理智，拒絕這股扭曲的認知」",
+        "Sequence": "",
+        "links": [
+            51
+        ]
+    },
+    {
+        "entryID": 51,
+        "actorID": "2",
+        "text": "[panel=6]＊（彷彿有千萬隻螞蟻在啃咬你的腦髓。無型的飢餓意念竟像是化作為實質且死死勒住你的咽喉，你清楚地知道：若不吞噬別人，就只能被這股力量吞噬！你已經遊走在崩潰的邊緣。）＊",
+        "Sequence": "",
+        "links": [
+            52,
+            53
+        ]
+    },
+    {
+        "entryID": 52,
+        "actorID": "MC1",
+        "text": "「徹底屈服，洩洪壓力」",
+        "Sequence": "",
+        "links": [
+            54
+        ]
+    },
+    {
+        "entryID": 53,
+        "actorID": "MC1",
+        "text": "「去他的，你知道沒有任何人可以控制你」",
+        "Sequence": "",
+        "links": [
+            55
+        ]
+    },
+    {
+        "entryID": 54,
+        "actorID": "2",
+        "text": "[panel=6]＊（你放棄了掙扎，任由那莫名的意志接管身體。你的嘴角不受控制地扯出一抹冷笑，眼中透出凶光——）＊",
+        "Sequence": "",
+        "links": [
+            57
+        ]
+    },
+    {
+        "entryID": 55,
+        "actorID": "2",
+        "text": "[panel=6]＊（你死咬著牙關，憑著最後一絲清明死死將那股衝動壓在心底，即便劇痛讓你的五臟六腑都彷彿要裂開，你也未曾挪動半步。）＊",
+        "Sequence": "",
+        "links": [
+            56,
+            57
+        ]
+    },
+    {
+        "entryID": 56,
+        "actorID": "MC21",
+        "text": "「總有一天，你會心甘情願祈求吾的。」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 57,
+        "actorID": "2",
+        "text": "[panel=6]＊（那股似無窮無盡且永不會獲得滿足的強烈飢餓感驟然間退去，隨著窒息般的壓迫感消散，你終於撐不住，徹底昏死了過去。）＊",
+        "Sequence": "",
+        "links": [
+            58
+        ]
+    },
+    {
+        "entryID": 58,
+        "actorID": "2",
+        "text": "[panel=6]＊（在意識徹底沉陷之前的迷濛中，你隱約聽到一陣沉穩的腳步聲靠近。一雙寬大粗糙的手將你從冰冷的地面上拉起……）＊",
+        "Sequence": "",
+        "links": [
+            59
+        ]
+    },
+    {
+        "entryID": 59,
+        "actorID": "MC5",
+        "text": "「`[聲音有些模糊，帶著一絲無奈與讚賞]`：「…賈詡這傢伙，真是不乾脆；小子，你能撐到現在，是個漢子。剩下的交給我吧！」",
+        "Sequence": "",
+        "links": [
+            60
+        ]
+    },
+    {
+        "entryID": 60,
+        "actorID": "2",
+        "text": "[panel=6]＊（不知過了多久，一陣安神的藥香將你喚醒。你發現自己正躺在一間完全陌生的客房裡。身上的傷口已經被人妥善包紮過。）＊",
+        "Sequence": "",
+        "links": [
+            61
+        ]
+    },
+    {
+        "entryID": 61,
+        "actorID": "2",
+        "text": "[panel=6]＊（你緩緩睜開眼睛，剛想坐起身，胸口便傳來一陣幾乎要將肋骨撕裂的劇痛。你倒吸了一口涼氣，這才發現自己全身纏滿了繃帶。床邊，一個身形嬌小、臉色略顯蒼白的少女正端著一碗冒著詭異綠泡的藥湯。她那雙帶者銳利眼光的明亮大眼正冷冷地盯著你。）＊",
+        "Sequence": "",
+        "links": [
+            62
+        ]
+    },
+    {
+        "entryID": 62,
+        "actorID": "MC6",
+        "text": "「受到這樣的傷害，換做普通人早就當場經脈寸斷了……但你……不僅經脈完好無損，這一個月居然就像只是單純在昏睡而已，簡直不可思議。」",
+        "Sequence": "",
+        "links": [
+            63
+        ]
+    },
+    {
+        "entryID": 63,
+        "actorID": "MC6",
+        "text": "「看來這碗本來可用作續命的珍貴湯藥，現在看來也只配給你當補充營養的補品了。趁熱喝了！」",
+        "Sequence": "",
+        "links": [
+            64
+        ]
+    },
+    {
+        "entryID": 64,
+        "actorID": "2",
+        "text": "[panel=6]＊（雖然嘴巴毒辣，但你眼尖地捕捉到，她看緊繃的肩膀明顯放鬆了下來，嘴角甚至不自覺地勾起一抹極淺、極不易察覺的微笑。）＊",
+        "Sequence": "",
+        "links": [
+            65
+        ]
+    },
+    {
+        "entryID": 65,
+        "actorID": "MC1",
+        "text": "「`[有些看呆了，下意識地脫口而出]`：「妳……笑起來挺好看的……」",
+        "Sequence": "",
+        "links": [
+            66
+        ]
+    },
+    {
+        "entryID": 66,
+        "actorID": "MC6",
+        "text": "「你的腦子是被血煞啃乾淨了嗎？！再胡說八道，我就給你配一副啞藥！再晚醒一天，我就要把你丟出去當肥料了！」",
+        "Sequence": "",
+        "links": [
+            67
+        ]
+    },
+    {
+        "entryID": 67,
+        "actorID": "MC8",
+        "text": "[panel=2]「表哥！你終於醒了！嚇死小犀了……嗚嗚……張寧姊姊說你的脈象亂得像一團麻，我還以為……以為你再也醒不過來了……嗚嗚……」",
+        "Sequence": "SetPortrait(MC2,pic=cry);EnableCharacterExpression(1,MC2,Cry);",
+        "links": [
+            68
+        ]
+    },
+    {
+        "entryID": 68,
+        "actorID": "MC6",
+        "text": "「好了，靈犀妹妹乖，別哭了。眼淚又不能當藥引子，這笨蛋既然能睜開眼，我保證他絕對死不了。來，先把眼淚擦擦。」",
+        "Sequence": "",
+        "links": [
+            69
+        ]
+    },
+    {
+        "entryID": 69,
+        "actorID": "MC6",
+        "text": "「至於你！下次再敢把自己搞成這副德性，我就……我就……」",
+        "Sequence": "",
+        "links": [
+            70
+        ]
+    },
+    {
+        "entryID": 70,
+        "actorID": "MC6",
+        "text": "「[em7]話說到一半，實在忍不住笑了出來，隨即雙頰漲得通紅，慌亂地轉過身去[/em7]噗……咳！總、總之我去叫外面那兩個吵死人的傢伙進來！省得他們天天在我的藥房外頭探頭探腦，妨礙得很！」",
+        "Sequence": "",
+        "links": [
+            71
+        ]
+    },
+    {
+        "entryID": 71,
+        "actorID": "2",
+        "text": "[panel=6]＊（不一會兒，伴隨著一陣喧鬧的腳步聲，赫連娜娜和雍仔急匆匆地衝進了客房。他們這一個月一直在英豪府作些打雜的事情，就等著你醒來的這一天。）＊",
+        "Sequence": "",
+        "links": [
+            72
+        ]
+    },
+    {
+        "entryID": 72,
+        "actorID": "MC22",
+        "text": "「var=PlayerFirstName！我就說你命大福大造化大！本姑娘認可的人，哪有那麼容易交代在那種破山洞裡！」",
+        "Sequence": "SetPortrait(MC22,pic=happy);EnableCharacterExpression(2,MC22,Happy);",
+        "links": [
+            73
+        ]
+    },
+    {
+        "entryID": 73,
+        "actorID": "MC20",
+        "text": "「嘿嘿，某個嘴硬丫頭可不是這麼說的啊。你昏迷這一個月，她三天兩頭就來問你醒了沒，連跑腿都不敢走遠……」",
+        "Sequence": "",
+        "links": [
+            74
+        ]
+    },
+    {
+        "entryID": 74,
+        "actorID": "MC22",
+        "text": "「哇！小道士你閉嘴！再胡說我就拿你試劍！」",
+        "Sequence": "",
+        "links": [
+            75
+        ]
+    },
+    {
+        "entryID": 75,
+        "actorID": "2",
+        "text": "[panel=6]＊（你昏迷的這一個月裡，雍仔和娜娜都留在英豪府幫忙打雜。兩人天天拌嘴、互相拆台，倒也在吵吵鬧鬧中熟稔了起來。）＊",
+        "Sequence": "",
+        "links": [
+            76
+        ]
+    },
+    {
+        "entryID": 76,
+        "actorID": "MC20",
+        "text": "「表哥啊！你可算醒了！這一個月本道長天天替你誦經祈福，連飯都少吃了一大碗！為了給你求平安符，我連珍藏的硃砂都用光了，你可得記我一功！」",
+        "Sequence": "SetPortrait(MC8,pic=happy);",
+        "links": [
+            77
+        ]
+    },
+    {
+        "entryID": 77,
+        "actorID": "MC8",
+        "text": "[panel=2]「胖道士哥哥……你可以不要學我說話嗎？」",
+        "Sequence": "",
+        "links": [
+            78
+        ]
+    },
+    {
+        "entryID": 78,
+        "actorID": "MC20",
+        "text": "「……『哥哥』我收下了，『胖』那個字就免了吧。」",
+        "Sequence": "",
+        "links": [
+            79
+        ]
+    },
+    {
+        "entryID": 79,
+        "actorID": "MC1",
+        "text": "「`[看著這群吵鬧卻真誠的同伴，嘴角忍不住上揚，緊繃的心情終於完全放鬆下來]`：「咳……讓你們擔心了。我沒事，就是感覺……睡了很久。」",
+        "Sequence": "",
+        "links": [
+            80
+        ]
+    },
+    {
+        "entryID": 80,
+        "actorID": "2",
+        "text": "[panel=6]＊（房間裡的氣氛瞬間變得輕鬆熱鬧起來。沒過多久，聽聞你醒來的消息，英豪府的其他眾人也陸續來到了客房探望。）＊",
+        "Sequence": "",
+        "links": [
+            81
+        ]
+    },
+    {
+        "entryID": 81,
+        "actorID": "MC2",
+        "text": "「`[爽朗地大笑，重重地拍了拍床柱，震得床榻一陣搖晃]`：「喲！小兄弟醒啦！能去那種連老手都發憷的鬼地方走一遭，還能全鬚全尾地回來，算你有種！沒給我們英豪府丟臉！等你傷好了，大哥請你好好喝一頓，咱們一醉方休！」",
+        "Sequence": "",
+        "links": [
+            82
+        ]
+    },
+    {
+        "entryID": 82,
+        "actorID": "MC6",
+        "text": "「全鬚全尾…？這樣子形容還是第一次見到…」",
+        "Sequence": "",
+        "links": [
+            83
+        ]
+    },
+    {
+        "entryID": 83,
+        "actorID": "MC5",
+        "text": "「呵，能活著回來就好。看你瘦了這一大圈，今晚我親自下廚，給你做頓好的補補身子！我那獨門的遼東羹，保證你吃完生龍活虎！」",
+        "Sequence": "",
+        "links": [
+            84
+        ]
+    },
+    {
+        "entryID": 84,
+        "actorID": "MC3",
+        "text": "「能從那種邪物手下活命，甚至護住了同伴，算你勉強合格了。好好養傷，等你恢復了，我們再打一場。」",
+        "Sequence": "",
+        "links": [
+            85
+        ]
+    },
+    {
+        "entryID": 85,
+        "actorID": "MC7",
+        "text": "「哎呀呀，大家都擠在這裡做什麼，病人需要靜養，徐老師的羹還是留給呂信吃吧。不過看你這精神頭，想必是沒大礙了。大難不死，必有後福啊。」",
+        "Sequence": "",
+        "links": [
+            86
+        ]
+    },
+    {
+        "entryID": 86,
+        "actorID": "2",
+        "text": "[panel=6]＊（就在眾人喧鬧之際，門外傳來了平穩的腳步聲。那腳步聲不急不緩。眾人立刻止住了聲音，自覺地讓開了一條路。賈詡面無表情地走了進來，目光深邃地掃了你一眼。其他人見狀，互相交換了個眼神，紛紛找了個藉口退出了房間，只留下你和賈詡兩人。）＊",
+        "Sequence": "",
+        "links": [
+            87
+        ]
+    },
+    {
+        "entryID": 87,
+        "actorID": "MC4",
+        "text": "「`[語氣平淡，走到窗邊看著外頭的景色]`：「嗯，你那兩個同伴已經把事情經過都告訴我了。那位廖淳兄弟事後也來知會了一聲便自行離去。趙王洞的麻煩，算是暫時平息了。」",
+        "Sequence": "",
+        "links": [
+            88
+        ]
+    },
+    {
+        "entryID": 88,
+        "actorID": "MC1",
+        "text": "「`[猶豫了一下，回想起洞中那詭異的陣法，忍不住開口]`：「賈師父……我們在祭壇根本沒見到卞喜，反而遇到一頭半人半虎的怪物。那到底是什麼東西？」",
+        "Sequence": "",
+        "links": [
+            89
+        ]
+    },
+    {
+        "entryID": 89,
+        "actorID": "MC4",
+        "text": "「`[背對著你，聲音平靜如水]`：「卞喜不過是個被貪念驅使的棋子，跑了便跑了。至於那怪物……」",
+        "Sequence": "",
+        "links": [
+            90
+        ]
+    },
+    {
+        "entryID": 90,
+        "actorID": "MC4",
+        "text": "「`[轉過身，目光銳利地直視你]`：「殷商時期，曾有一種極其殘酷的古老祭祀。人們妄圖透過血煞與獻祭，從天那裡獲得不可思議的力量。那頭白虎妖物，不過是這種祭祀催生出的失敗品罷了。」",
+        "Sequence": "",
+        "links": [
+            91
+        ]
+    },
+    {
+        "entryID": 91,
+        "actorID": "MC4",
+        "text": "「怎麼？看你這副表情，是對那洞裡的東西心有餘悸，還是對自己差點把命交代在裡面感到後怕？」",
+        "Sequence": "",
+        "links": [
+            92
+        ]
+    },
+    {
+        "entryID": 92,
+        "actorID": "MC4",
+        "text": "「不必多想。我說過，現場情況由你自行判斷。既然能活著回來，過程如何就不重要了。」",
+        "Sequence": "",
+        "links": [
+            93
+        ]
+    },
+    {
+        "entryID": 93,
+        "actorID": "MC1",
+        "text": "「`[死死盯著賈詡的眼睛，呼吸微促]`：「那你是不是……早就摸清了那裡有什麼？你根本就知道，那裡不是普通的失蹤案，對吧？」",
+        "Sequence": "",
+        "links": [
+            94
+        ]
+    },
+    {
+        "entryID": 94,
+        "actorID": "MC4",
+        "text": "「`[冷靜地看著你，沒有絲毫被揭穿的慌亂]`：「賈某不是神仙，最多猜測出一二而已。這世道，危險本就無處不在，若事事都要查得一清二楚才敢動手，英豪府早就關門了。」",
+        "Sequence": "",
+        "links": [
+            95
+        ]
+    },
+    {
+        "entryID": 95,
+        "actorID": "MC4",
+        "text": "「`[停頓了一下，語氣變得意味深長]`：「不過……這次的結果，也算印證了你身上那顆骰子的真偽。」",
+        "Sequence": "",
+        "links": [
+            96
+        ]
+    },
+    {
+        "entryID": 96,
+        "actorID": "MC1",
+        "text": "「`[震驚，瞳孔猛地一縮，下意識地捂住胸口]`：「骰子真偽？你……你早就知道它的存在？難道你就為了測試這顆骰子，才派我去那種地方？！」",
+        "Sequence": "",
+        "links": [
+            97
+        ]
+    },
+    {
+        "entryID": 97,
+        "actorID": "2",
+        "text": "[panel=6]＊（面對你憤怒與不解的質問，賈詡並沒有辯解。他只是平靜地從寬大的袖中拿出一卷破舊的古老竹簡，隨手扔到了你的床榻前。）＊",
+        "Sequence": "",
+        "links": [
+            98
+        ]
+    },
+    {
+        "entryID": 98,
+        "actorID": "2",
+        "text": "[panel=6]＊（你下意識地撿起竹簡。上面的字跡因為年代久遠而十分模糊，但依稀尚可辨別出幾句令人心驚的描述……[em2]「異寶……麒麟之骰……解吉凶，現命數……然貪念若熾，必反噬其主……」[/em2]）＊",
+        "Sequence": "",
+        "links": [
+            99
+        ]
+    },
+    {
+        "entryID": 99,
+        "actorID": "MC4",
+        "text": "「要質問別人之前，先問問你自己……隱藏了什麼吧。」",
+        "Sequence": "",
+        "links": [
+            100
+        ]
+    },
+    {
+        "entryID": 100,
+        "actorID": "2",
+        "text": "[panel=6]＊（賈詡的腳步聲漸漸遠去，最終消失在走廊盡頭。只留下你獨自坐在床榻上，看著手中那卷揭示了部分真相的竹簡……）＊",
+        "Sequence": "",
+        "links": [
+            101
+        ]
+    },
+    {
+        "entryID": 101,
+        "actorID": "2",
+        "text": "[panel=6]＊（數日後，你終於徹底痊癒，胸口的劇痛也完全消失。這天，徐榮大步走進了客房。）＊",
+        "Sequence": "",
+        "links": [
+            102
+        ]
+    },
+    {
+        "entryID": 102,
+        "actorID": "MC5",
+        "text": "「小子，恢復得不錯嘛！張寧那丫頭這次也是下了本了，這些藥確實管用。」",
+        "Sequence": "",
+        "links": [
+            103
+        ]
+    },
+    {
+        "entryID": 103,
+        "actorID": "MC5",
+        "text": "「走，帶你去看看你以後住的地方。」",
+        "Sequence": "",
+        "links": [
+            104
+        ]
+    },
+    {
+        "entryID": 104,
+        "actorID": "2",
+        "text": "[panel=6]＊（你跟隨徐榮穿過長廊，來到了一間樸素但整潔的房間。房間裡一應俱全，陽光透過窗櫺灑在地板上，顯得格外溫馨。）＊",
+        "Sequence": "",
+        "links": [
+            105
+        ]
+    },
+    {
+        "entryID": 105,
+        "actorID": "MC5",
+        "text": "「喏，這就是你以後的房間了。不大但遮風避雨不成問題。」",
+        "Sequence": "",
+        "links": [
+            106
+        ]
+    },
+    {
+        "entryID": 106,
+        "actorID": "MC1",
+        "text": "「沒事，這裡很好。」",
+        "Sequence": "",
+        "links": [
+            107
+        ]
+    },
+    {
+        "entryID": 107,
+        "actorID": "MC5",
+        "text": "「另外，跟你說一聲。咱們英豪府呢，其實……沒什麼規矩。平時鬆散得很，大家都是各忙各的。」",
+        "Sequence": "",
+        "links": [
+            108
+        ]
+    },
+    {
+        "entryID": 108,
+        "actorID": "MC5",
+        "text": "「但要是真有什麼棘手的委託或是重要任務，賈師父自然會派人通知我們。至於沒有任務的時候嘛……」",
+        "Sequence": "",
+        "links": [
+            109
+        ]
+    },
+    {
+        "entryID": 109,
+        "actorID": "MC5",
+        "text": "「就自己看著辦吧！練武、逛街、接點小委託賺酒錢，隨你便。這幾天你就先好好熟悉一下環境，放鬆放鬆吧！」",
+        "Sequence": "",
+        "links": [
+            110
+        ]
+    },
+    {
+        "entryID": 110,
+        "actorID": "MC5",
+        "text": "「還有一點你得記住——從今往後，你就是英豪府的人了。咱們這地方雖然人不多，規矩也散漫，但既然進了這扇門，你就再也不是那種無根無底的江湖散人了。以後天塌下來，有府裡這幫兄弟跟你一起扛。好好休息吧，小兄弟。」",
+        "Sequence": "",
+        "links": [
+            111
+        ]
+    },
+    {
+        "entryID": 111,
+        "actorID": "2",
+        "text": "[panel=6]＊（徐榮交代完便轉身離開，留下你獨自站在這間屬於自己的房間裡。看著窗外灑落的陽光…）＊",
+        "Sequence": "",
+        "links": [
+            112
+        ]
+    },
+    {
+        "entryID": 112,
+        "actorID": "2",
+        "text": "[panel=6]＊（你不禁滿意地笑了。）＊",
+        "Sequence": "",
+        "links": []
+    }
+]

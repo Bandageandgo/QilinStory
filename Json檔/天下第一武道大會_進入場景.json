@@ -1,0 +1,138 @@
+[
+  {
+    "entryID": 0,
+    "actorID": 2,
+    "text": "[panel=6]＊（還沒踏進主欄，鼓聲、喝彩、酒氣與汗味已撲面而來。擂台場比想像中大得多——看台層層疊著，各色幫會旗號獵獵，少年好手三三兩兩熱身，販夫走卒吆喝成一片。）＊",
+    "Sequence": "",
+    "links": [
+      1
+    ],
+    "Description": "天下武道大會・進入場景（首次自動觸發）"
+  },
+  {
+    "entryID": 1,
+    "actorID": "MC20",
+    "text": "「哎喲……這陣仗！道爺雲遊四海，也沒見過這麼擠的場子。」",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "「雲遊四海？你才剛下山吧——茅山到這兒，道爺你的四海可真窄。」",
+    "Sequence": "",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC20",
+    "text": "「咳咳……出門在外，氣勢不能輸嘛……」",
+    "Sequence": "",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「褚幫主說的天下武道大會，便是這裡了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC20",
+    "text": "「正是正是。——誒，道爺我也得去報個名，混口飯吃嘛。你忙你的，咱們擂台上見！」",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「……你也要打？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC20",
+    "text": "「道法自然，有台便打，有飯便吃——回見！」",
+    "Sequence": "",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC22",
+    "text": "「本姑娘也要報名！大俠，擂台上可別手下留情喔！」",
+    "Sequence": "",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": 2,
+    "text": "[panel=6]＊（雍仔把拂塵往肩上一搭，娜娜扛著「無鋒」鑽進人叢——兩人一前一後找報到處去了。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": 2,
+    "text": "[panel=6]＊（擂台正中，一名背著偌大龜殼的老頭正扯著嗓子，聲如洪鐘——）＊",
+    "Sequence": "",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "TournamentHost",
+    "text": "「要下場的少俠！報名的、候場的，都到擂台邊上來——報過名、排好序，才准上台！」",
+    "Sequence": "",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「……人這麼多，先摸清場子再說。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);// TODO: LeaveParty(MC20);LeaveParty(MC22);",
+    "links": [
+      14
+    ],
+    "Description": "雍仔、赫連娜娜暫離隊伍（報名參賽）"
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC0",
+    "text": "※玩家可自由探索箱庭；要上擂，找擂台旁背龜殼的主持人",
+    "Sequence": "",
+    "links": [],
+    "Description": "進入場景結束・返回箱庭自由探索"
+  }
+]

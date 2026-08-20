@@ -1,0 +1,562 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "[panel=6]＊（鄴城甄家宅邸，朱漆大門，車馬絡繹不絕——光是門房的穿戴，都比英豪府正廳體面幾分。管事將你們二人引入偏廳等候，蕭靈犀跟在你身側，眼睛卻早已忍不住四處打量。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……這廳裡隨便一個花瓶，怕都夠英豪府吃半年了吧？」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Surprise);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「噓，小聲點。別一臉沒見過世面的樣子。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": 2,
+    "text": "[panel=6]＊（話音未落，屏風後傳來環佩輕響。一名衣著考究、眉眼精明的年輕女子緩步而出，身後跟著捧著算盤與帳冊的隨從——正是甄家現任家主，甄筠。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC9",
+    "text": "[panel=1]「喲。[var=PlayerLastName]公子。英豪府最新入府、年紀也最小的那位，竟親自上門——還帶了個孩子。筠還以為管事聽錯了。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "[panel=2]「誰是孩子！小犀是怕表哥吃虧才跟來的，不是來湊數的！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8,Anger);",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC9",
+    "text": "[panel=1]「哈，有意思的丫頭。[var=PlayerLastName]公子，英豪府的來意，筠已聽管事說了個大概——想與英豪府的結盟的事。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      8,
+      9
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「英豪府立足雲中，往後商路人情，甄家儘可借力。」",
+    "Sequence": "",
+    "links": [
+      10
+    ],
+    "Description": "選項1：一般對話"
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "[em2][政治檢定][/em2]「家主想必也清楚——并州三方角逐，雲中這塊地，早不是單純買賣。」",
+    "Sequence": "",
+    "links": [
+      12
+    ],
+    "Description": "選項2：政治檢定"
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「英豪府立足雲中，往後商路人情，甄家儘可借力。家主這筆，不會白投。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC9",
+    "text": "[panel=1]「嘴上的人情，筠聽得多了。真金白銀投下去，還得看人值不值得。」",
+    "Sequence": "SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,PoliticsCheck,12);",
+    "links": [
+      13
+    ],
+    "Description": "選項2的空對話擲骰節點：政治檢定 難度12"
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「家主想必也清楚——東邊赤龍幫、北邊黑狼氏族，都盯著雲中這塊地。甄家若此刻入局，日後并州商路、人情，便有了一處落腳。這筆買賣，算的從來不只是眼下的銀子。」",
+    "Sequence": "Continue();SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      14,
+      15
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]眉梢微挑[/em7]呵……是筠小看你了。看來你跟那些只會伸手要錢的莽夫，倒是不同。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(AbilityExp,Player,Politics,50);",
+    "links": [
+      16
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]布局？公子才入府不久，并州的水有多深，筠勸你少說兩句為妙。不過——話雖如此，筠也不是聽不進人話的。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      16
+    ],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC9",
+    "text": "[panel=1]「甄家要投一筆錢進雲中，不難。難的是——你得先讓筠相信，跟你打交道有賺頭。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「家主但說無妨。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC9",
+    "text": "[panel=1]「并州東南方，鄰近小溪村，有處名為『水濂洞』的地方，傳說當地供著一位『河神』。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC9",
+    "text": "[panel=1]「前些日子，有商隊從那邊帶回幾件來路不明的貨色。質地筠看了半日，也估不出個價來——尋常礦石、尋常工匠，斷做不出那種東西。筠對『估不出價』的東西有興趣。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Idea);",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「家主這是……連要什麼都不清楚的意思？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      21
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC9",
+    "text": "[panel=1]「筠也說不準究竟是什麼——傳聞這種東西，十句裡摻九句假，真假摻在一起，才最有意思。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC9",
+    "text": "[panel=1]「你去走一趟，把你覺得值錢的東西帶回來，筠自會掂量值不值這筆投資。生意人做買賣，眼光是本錢——這第一步，筠想先看看你有沒有這個本錢。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      23
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「連目標都不給，是想試探在下的眼光……這買賣，聽著有點意思。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "[em2][智力檢定][/em2]「家主既提到那批估不出價的貨，可知源頭從何而起？」",
+    "Sequence": "",
+    "links": [
+      30
+    ],
+    "Description": "選項1：智力檢定"
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2]「家主人脈廣、商路多，這事，怎麼不派自己人去查？」",
+    "Sequence": "",
+    "links": [
+      36
+    ],
+    "Description": "選項2：謀略檢定"
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "[em2][洞悉檢定][/em2]「家主圖的，恐怕不只是那幾件估不出價的貨吧？」",
+    "Sequence": "",
+    "links": [
+      42
+    ],
+    "Description": "選項3：洞悉檢定"
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「這『水濂洞』，聽名字倒有些意思，是何來頭？」",
+    "Sequence": "",
+    "links": [
+      47
+    ],
+    "Description": "選項4：詢問水濂洞來頭"
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「那『河神』，究竟是何方神聖？」",
+    "Sequence": "",
+    "links": [
+      49
+    ],
+    "Description": "選項5：詢問河神"
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「行，這趟差事，我接了。」",
+    "Sequence": "",
+    "links": [
+      52
+    ],
+    "Description": "選項6：直接接下差事"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,IntelligenceCheck,10);",
+    "links": [
+      31
+    ],
+    "Description": "選項1的空對話擲骰節點：智力檢定 難度10"
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「家主既提到那批估不出價的貨，可知源頭從何而起？家主既然打聽到這一步，想必也摸過些底細。」",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      32,
+      35
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]挑眉，倒有些意外[/em7]呵，不只是個蠻幹的莽夫。實話跟你說——筠是聽那商隊提過，水濂洞附近的地脈有異，隱約還混著些以前沒見過的礦光。至於裡頭到底是什麼名堂……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=4);EnableCharacterExpression(1,MC9,Surprise);ModifyData(AbilityExp,Player,Intelligence,50);",
+    "links": [
+      33
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC9",
+    "text": "[panel=1]「怪力亂神之事，筠向來不信，只信眼見為實。公子親自去瞧瞧，不就知道了？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": 2,
+    "text": "[panel=6]＊（甄筠的回答滴水不漏，看似坦誠，卻也巧妙地把「這東西到底是什麼」的疑問，原封不動地丟回了你手裡。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]公子連這都要問？筠只負責出價，不負責解惑——這種問題，去水濂洞親眼瞧，比問筠準得多。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      54
+    ],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,StrategyCheck,10);",
+    "links": [
+      37
+    ],
+    "Description": "選項2的空對話擲骰節點：謀略檢定 難度10"
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「家主人脈廣、商路多，這事，怎麼不派自己人去查？」",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      38,
+      41
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]搖扇，語氣淡了幾分[/em7]公子這一問，倒問到了點子上。水濂洞地處偏僻，甄家的人一動，明眼人都看得出甄家惦記上了什麼——赤龍幫、黑狼那邊，未必肯乾坐著看。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);ModifyData(FeatExp,Player,Strategy,50);",
+    "links": [
+      39
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC9",
+    "text": "[panel=1]「英豪府新來乍到，去打聽個荒山野廟的傳聞，誰會多想？這才好辦事。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": 2,
+    "text": "[panel=6]＊（原來甄家看重的，不只是那批來路不明的貨——英豪府這塊「無人留意」的招牌，本身就是她算盤裡的一部分。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]公子倒是問得直接。人手嘛，總有更要緊的地方去用，這點小事，勞煩外人跑一趟也無妨。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      54
+    ],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,InsightCheck,10);",
+    "links": [
+      43
+    ],
+    "Description": "選項3的空對話擲骰節點：洞悉檢定 難度10"
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「家主圖的，恐怕不只是那幾件估不出價的貨吧？」",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      44,
+      46
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]輕笑，並不否認[/em7]公子這眼力，倒是沒白費。若真有稀罕物件，消息一旦傳開，甄家在并州商賈間，也能落個『識貨』的名頭——這買賣，划算的地方，從來不只一處。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(FeatExp,Player,Insight,50);",
+    "links": [
+      45
+    ],
+    "Conditions": "IsPassDice() == true"
+  },
+  {
+    "entryID": 45,
+    "actorID": 2,
+    "text": "[panel=6]＊（甄筠向來不做只賺一頭的生意——這趟差事，恐怕還牽著她自己的一盤棋。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]搖頭，不置可否[/em7]公子想太多了。筠是生意人，圖的從來只有一樣——划不划算。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      54
+    ],
+    "Conditions": "IsPassDice() == false"
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「這[em2]水濂洞[/em2]，聽名字倒有些意思，是何來頭？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC9",
+    "text": "[panel=1]「聽商隊說，[em2]那洞口有道瀑布終年不歇，遠遠望去，竟像懸著一整幅水做的簾子[/em2]——水濂洞之名，想是由此而來。地方倒是偏，就在并州東南方，緊鄰著一個叫小溪村的地界，尋常人沒個緣由，不會往那邊去。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「那『河神』，究竟是何方神聖？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC9",
+    "text": "[panel=1]「聽聞是附近幾個村子共同供的神明，凡遇上大災大難、久病不癒，村民便備上供品送進洞裡，求河神庇佑。香火倒是不斷，只是筠向來不信這些，怪力亂神之說，姑妄聽之罷了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);",
+    "links": [
+      51
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC9",
+    "text": "[panel=1]「不過話說回來，村里還有個更老的說法——傳聞這河神之前，那洞裡還曾經有什麼成了精的野物盤踞，鬧過一場不小的亂子，後來又不知所踪。這麼老的鄉野怪談，也沒人真能說得清楚，聽著跟哄小孩的故事差不多。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「行，這趟差事，我接了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC9",
+    "text": "[panel=1]「乾脆，筠喜歡跟乾脆人打交道。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「……行，這任務我接下了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC9",
+    "text": "[panel=1]「爽快。那就去吧。筠在鄴城，等你的好消息。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "links": [
+      56
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC0",
+    "text": "解鎖大地圖點：水濂洞",
+    "Sequence": "DisableCharacterExpression(1);// TODO: UnlockMapPoint(水濂洞);",
+    "links": [
+      57
+    ],
+    "Description": "任務／地圖解鎖節點：水濂洞"
+  },
+  {
+    "entryID": 57,
+    "actorID": 2,
+    "text": "[panel=6]＊（出了甄家大門，蕭靈犀才總算鬆了口氣，湊到你耳邊。）＊",
+    "Sequence": "",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……這位甄家主，話說得雲裡霧裡，到底要咱們找什麼嘛？小犀怎麼聽著，比賈師父還讓人猜不透！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Nervous);",
+    "links": [
+      59
+    ]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC1",
+    "text": "「……我也有同感。管她要什麼，先去會會這位『河神』，看看到底是何方神聖，說不定答案就在裡頭。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": []
+  }
+]

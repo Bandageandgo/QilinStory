@@ -1,6 +1,6 @@
 功能,參數格式,指令,分類
 換立繪,,"SetPortrait(MC1,pic=2);",角色控制
-表情特效開,"位置,角色ID,表情ID","EnableCharacterExpression(1,NPC3,Shock);",
+表情特效開,"位置,角色版本ID,表情名稱","EnableCharacterExpression(1,MC1-1,Anger);",
 表情特效關(單獨),位置,DisableCharacterExpression(1);,
 表情特效關(全部),,DisableAllCharacterExpression();,
 物件震動,,"SetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",角色控制
@@ -12,7 +12,7 @@
 關閉事件背景圖,,DisableEventBG();,"背景,事件圖"
 擲骰檢定(手動),"FeatID,手動,檢定難度","BeginDiceRoll(Manual,InfantryCheck,5);",擲骰
 擲骰檢定(自動),"FeatID,自動,檢定難度","BeginDiceRoll(Auto,InfantryCheck,5);",擲骰
-開始戰鬥,"FightingType,戰鬥場次","BeginFight(Combat,8);",戰鬥
+開始戰鬥,"FightingType,戰鬥場次（數字ID）。禁止只寫本行核心指令，必須用完整包裝（見戰鬥指令轉換規則.md）","SetContinueMode(false);BeginFight(Combat,8);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);",戰鬥
 開始小遊戲,"MiniGameID,MiniGameDifficulty,AbilityID,FeatID","BeginMiniGame(Snake,Default,Default,Infantry);",小遊戲
 播放音效(播放一次會被取代),"AudioID,音效種類","PlayAudio(Bird,normal)",音效
 播放音效(播放一次),"AudioID,音效種類","PlayAudio(Bird,oneshot)",音效
@@ -72,6 +72,7 @@
 休息,"DataCategory,RestType,花費天數","ModifyData(Rest,ShortRest,5);",角色數據
 是否在隊伍裡,"DataCategory,CharacterID,bool","ModifyData(IsInTeam,MC1,true);",角色數據
 是否能夠加入隊伍裡,"DataCategory,CharacterID,bool","ModifyData(IsAbleToJoinTeam,MC1,true);",角色數據
+好感經驗值,"DataCategory,CharacterID,數值","ModifyData(FavorabilityExp,MC22,10);",角色數據
 開啟貴重品的便籤,ValuablesID,ShowValuableMemo(TaiXuanJing);,其他
 開啟回憶錄的回憶,MemoryID,ShowMemory(M_001);,其他
 設定限時選項,秒數(大於0是啟動 等於0是關閉),SetTimeout(5);,其他

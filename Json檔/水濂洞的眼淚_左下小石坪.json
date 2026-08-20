@@ -1,0 +1,73 @@
+[
+  {
+    "entryID": 1,
+    "actorID": 2,
+    "text": "[panel=6]＊（座面與石背的縫裡，卡著一塊薄薄的石片。水退之後才露邊角，不像供品，倒像這張椅子自己掉下來的。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "links": [
+      2,
+      3
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「細看這塊薄石片。」",
+    "Sequence": "",
+    "links": [
+      4
+    ],
+    "Description": "選項1：細看薄石片"
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「不予理會。」",
+    "Sequence": "",
+    "links": [
+      8
+    ],
+    "Description": "選項2：不予理會"
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「……『其山有異獸，形似猿猴而通人語，力能撼嶽，後為天兵所鎮，鎮於偏石之側』。這位子旁邊還刻著這種東西？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC8",
+    "text": "[panel=2]「猿猴通人語？天兵？聽著跟話本一樣……表哥，這跟河神有關係嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC20",
+    "text": "[panel=1]「誰知道寫的哪年的事。擱著吧——本道長可不想在這兒耗。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC20,pic=4);EnableCharacterExpression(1,MC20,Nervous);",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": 2,
+    "text": "[panel=6]＊（石片被塞回縫裡。石座還是那座石座，幾人沒再多看。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": []
+  },
+  {
+    "entryID": 8,
+    "actorID": 2,
+    "text": "[panel=6]＊（你沒再去碰那塊石片。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

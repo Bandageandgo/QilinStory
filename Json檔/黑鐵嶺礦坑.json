@@ -1,0 +1,554 @@
+[
+  {
+    "entryID": 1001,
+    "actorID": "2",
+    "text": "[panel=6]＊（雲中村的廣場上，一個瘋癲的老人正對著空氣哭喊，周圍的人都避之唯恐不及。唯獨一名背著長刀的少年郎，正饒有興致地看著這一幕。）＊",
+    "Sequence": "",
+    "links": [1002]
+  },
+  {
+    "entryID": 1002,
+    "actorID": "NPC_LiSi",
+    "text": "「救命啊！救救大山！救救我家媳婦！黑鐵嶺……黑鐵嶺吃人了啊！嗚嗚嗚……」",
+    "Sequence": "SetPortrait(NPC_LiSi,pic=mad);EnableCharacterExpression(1,NPC_LiSi,Pain);",
+    "links": [1003]
+  },
+  {
+    "entryID": 1003,
+    "actorID": "MC1",
+    "text": "「這老人家看起來像是受了極大的刺激。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [1004]
+  },
+  {
+    "entryID": 1004,
+    "actorID": "2",
+    "text": "[panel=6]＊（只見那少年郎身姿挺拔，一襲黑紅相間的勁裝。他長髮高束，單手隨意地拄著一柄常人根本無法揮動、尺寸大到誇張的巨型長刀。那刀身厚重如門板，卻被他舉重若輕地拿在手裡。）＊",
+    "Sequence": "",
+    "links": [1005]
+  },
+  {
+    "entryID": 1005,
+    "actorID": "role28",
+    "text": "「嘿，小兄弟，你也對這瘋老頭的話感興趣？」",
+    "Sequence": "SetPortrait(role28,pic=normal);",
+    "links": [1006]
+  },
+  {
+    "entryID": 1006,
+    "actorID": "MC1",
+    "text": "「哦？我看這老人家言之鑿鑿，不似全是瘋話。」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [1007]
+  },
+  {
+    "entryID": 1007,
+    "actorID": "role28",
+    "text": "「這瘋老頭叫李四，自從兒子媳婦失蹤後就神智不清了。不過嘛…空穴來風，未必無因。最近道上確實有傳聞，說三十里外的黑鐵嶺礦坑鬧鬼鬧得兇，似有妖邪作祟。」",
+    "Sequence": "SetPortrait(role28,pic=normal);",
+    "links": [1008]
+  },
+  {
+    "entryID": 1008,
+    "actorID": "MC22",
+    "text": "「妖邪作祟？那可太好了！本姑娘行走江湖的經驗告訴我，越是這種生人勿近的地方，越有可能藏著沒被發現的寶貝！」",
+    "Sequence": "SetPortrait(MC22,pic=thoughtful);EnableCharacterExpression(2,MC22_Question);",
+    "links": [1009]
+  },
+  {
+    "entryID": 1009,
+    "actorID": "role28",
+    "text": "「哈哈，小姑娘有意思！那地方原本是官營鐵礦，據說挖到了什麼不祥之物，工人們接連發瘋失蹤，官府鎮壓不住才封閉了事。現在那裡可是禁地，尋常人躲都來不及。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(role28,pic=normal);",
+    "links": [1010]
+  },
+  {
+    "entryID": 1010,
+    "actorID": "MC1",
+    "text": "「不祥之物...聽起來似乎有些兇險，我們是不是該從長計議？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1,Worry);",
+    "links": [1011]
+  },
+  {
+    "entryID": 1011,
+    "actorID": "MC22",
+    "text": "「哎呀，想那麼多幹嘛！富貴險中求，大俠快走吧！晚了寶貝就被搶光啦！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Happy);",
+    "links": [1012]
+  },
+  {
+    "entryID": 1012,
+    "actorID": "MC1",
+    "text": "「喂、喂！別推我啊...我去就是了！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);",
+    "links": [1013]
+  },
+  {
+    "entryID": 1013,
+    "actorID": "role28",
+    "text": "「喂——！若是真搞到什麼寶貝，可別忘了回來請我喝酒啊——！」",
+    "Sequence": "SetPortrait(role28,pic=normal);",
+    "links": [1014]
+  },
+  {
+    "entryID": 1014,
+    "actorID": "MC0",
+    "text": "[系統提示]: 已解鎖地圖地點：黑鐵嶺礦坑。",
+    "Sequence": "UnlockMapLocation(BlackIronRidgeMine);",
+    "links": []
+  },
+  {
+    "entryID": 1020,
+    "actorID": "2",
+    "text": "[panel=6]＊（黑鐵嶺礦坑，荒草叢生。不遠處的礦坑入口被一道厚重的木門給鎖住，門上貼滿了殘破的符咒。不遠處有一間破敗的看守屋和一口枯井。）＊",
+    "Sequence": "",
+    "links": [1021]
+  },
+  {
+    "entryID": 1021,
+    "actorID": "MC22",
+    "text": "「鎖住了阿，而且這鎖…嘖嘖，是魯班鎖的變種，硬砸肯定不行，會觸發機關塌方的。」",
+    "Sequence": "SetPortrait(MC22,pic=12);",
+    "links": [1022]
+  },
+  {
+    "entryID": 1022,
+    "actorID": "MC1",
+    "text": "「看來得想辦法進去。這周圍或許有線索。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [1023]
+  },
+  {
+    "entryID": 1023,
+    "actorID": "0",
+    "text": "玩家（選擇回應）：",
+    "Sequence": "",
+    "links": [1024, 1025]
+  },
+  {
+    "entryID": 1024,
+    "actorID": "MC1",
+    "text": "[em2][巧手檢定][/em2]「嘗試解開鐵門的鎖。」",
+    "Sequence": "",
+    "Description": "選項1：巧手檢定",
+    "links": [1026]
+  },
+  {
+    "entryID": 1025,
+    "actorID": "MC1",
+    "text": "「離開。」",
+    "Sequence": "",
+    "Description": "選項2：離開",
+    "links": [1035]
+  },
+  {
+    "entryID": 1026,
+    "actorID": "MC0",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,SleightOfHandCheck,8);",
+    "Description": "選項1的空對話擲骰節點",
+    "links": [1027]
+  },
+  {
+    "entryID": 1027,
+    "actorID": "MC1",
+    "text": "「這點小機關，難不倒我…咔噠！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1,Proud);",
+    "links": [1028, 1032]
+  },
+  {
+    "entryID": 1028,
+    "actorID": "2",
+    "text": "[panel=6]＊（一聲清脆的機簧聲，厚重的鐵門緩緩打開了一道縫隙。）＊",
+    "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,Player,SleightOfHand,10);",
+    "links": [1029]
+  },
+  {
+    "entryID": 1029,
+    "actorID": "MC22",
+    "text": "「厲害啊大俠！這手絕活哪學的？」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Happy);",
+    "links": [1030]
+  },
+  {
+    "entryID": 1030,
+    "actorID": "MC1",
+    "text": "「咳，行走江湖，技多不壓身。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=5);",
+    "links": [1031]
+  },
+  {
+    "entryID": 1031,
+    "actorID": "MC0",
+    "text": "[系統提示]: 通過正門進入礦坑第一層。",
+    "Sequence": "",
+    "links": [1040]
+  },
+  {
+    "entryID": 1032,
+    "actorID": "MC1",
+    "text": "「這鎖…結構甚是複雜…不行，卡住了。」",
+    "Sequence": "IsPassDice() == false;SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1,Nervous);",
+    "links": [1033]
+  },
+  {
+    "entryID": 1033,
+    "actorID": "MC22",
+    "text": "「看來只能另尋他法了。還是先去別處轉轉吧。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=6);",
+    "links": []
+  },
+  {
+    "entryID": 1035,
+    "actorID": "2",
+    "text": "[panel=6]＊（你決定暫時離開，稍作準備再來探索。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 1040,
+    "actorID": "2",
+    "text": "[panel=6]＊（礦坑內空氣渾濁，瀰漫著一股腐爛和硫磺的味道。）＊",
+    "Sequence": "",
+    "links": [1041]
+  },
+  {
+    "entryID": 1041,
+    "actorID": "2",
+    "text": "[panel=6]＊（一塊殘破的木製告示板，上面貼著一張泛黃的官府通告，字跡雖已模糊，但仍透著一股肅殺之氣。）＊",
+    "Sequence": "",
+    "links": [1042]
+  },
+  {
+    "entryID": 1042,
+    "actorID": "MC0",
+    "text": "[閱讀通告]:\n> 「大漢律令・鹽鐵專賣」\n> 「普天之下，莫非王土。鹽鐵之利，國之大柄，統歸少府，嚴禁私採私鑄。」\n> 「凡黑鐵嶺礦工，每日產出須悉數上繳鹽鐵官，不得私藏分毫。」\n> 「私吞礦石者，斬；私鑄兵器者，族誅。」\n> 「舉報私藏者，賞錢千緡，免役三載。」",
+    "Sequence": "",
+    "links": [1043]
+  },
+  {
+    "entryID": 1043,
+    "actorID": "2",
+    "text": "[panel=6]＊（幾張破爛的木床，地上散落著礦工的私人物品。牆上刻著歪歪扭扭的字：別睡著…睡著了就會聽到那個聲音…）＊",
+    "Sequence": "",
+    "links": [1044]
+  },
+  {
+    "entryID": 1044,
+    "actorID": "MC22",
+    "text": "「聽起來這裡的人精神壓力很大啊。」",
+    "Sequence": "SetPortrait(MC22,pic=12);",
+    "links": [1045]
+  },
+  {
+    "entryID": 1045,
+    "actorID": "2",
+    "text": "[panel=6]＊（桌椅東倒西歪，地上有乾涸的暗紅色痕跡。灶台上還有一鍋不知放了多少年的…黑糊糊的東西。）＊",
+    "Sequence": "",
+    "links": [1046]
+  },
+  {
+    "entryID": 1046,
+    "actorID": "2",
+    "text": "[panel=6]＊（這裡相對整潔。桌上有一本沾血的日記。）＊",
+    "Sequence": "",
+    "links": [1047]
+  },
+  {
+    "entryID": 1047,
+    "actorID": "MC0",
+    "text": "[閱讀日記]:\n> 「五月三日：大山那小子運氣真好，竟在深層岩壁裡挖到了一塊紅色的水晶！那光澤…簡直像活的一樣。」\n> 「五月五日：大山不對勁。他說要把水晶藏起來，說那是『神』的眼睛。他不想上交，想獨吞。」\n> 「五月十日：工人們開始瘋了！大山把水晶嵌在了一個泥塑的神像上，他們在膜拜它！那紅光…照得人心裡發慌。」\n> 「五月十五日：逃不掉了…門被鎖了…大山說，我們都是祭品…」",
+    "Sequence": "",
+    "links": [1048]
+  },
+  {
+    "entryID": 1048,
+    "actorID": "MC1",
+    "text": "「這塊礦石沉重異常，且泛著幽幽藍光，莫非就是蒲元師傅提到的『寒鐵』？太好了，總算沒白跑一趟！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1,Happy);",
+    "links": [1060]
+  },
+  {
+    "entryID": 1060,
+    "actorID": "2",
+    "text": "[panel=6]＊（礦坑最深處，一個巨大的空洞。中央設有一個詭異的祭壇，上面供奉著一尊泥塑小人像。這小人像面目猙獰，額頭中央竟長著第三隻眼——那是一顆散發著妖異紅光的晶體，彷彿活物般跳動著，充滿了誘惑。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [1061]
+  },
+  {
+    "entryID": 1061,
+    "actorID": "MC1",
+    "text": "「那是…李大山？還有那個神像…」",
+    "Sequence": "SetPortrait(MC1,pic=serious);",
+    "links": [1062]
+  },
+  {
+    "entryID": 1062,
+    "actorID": "NPC_LiSon",
+    "text": "「緩緩轉身，雙眼通紅，皮膚上佈滿黑色血管血…更多的血…獻給…神…」",
+    "Sequence": "SetPortrait(NPC_LiSon,pic=corrupted);EnableCharacterExpression(1,NPC_LiSon,Anger);",
+    "links": [1063]
+  },
+  {
+    "entryID": 1063,
+    "actorID": "MC22",
+    "text": "「大俠小心！你看那塊紅水晶的光芒...似乎正隨著他的呼吸在閃爍！那東西在控制他！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=12);EnableCharacterExpression(2,MC22,Meditate);",
+    "links": [1070]
+  },
+  {
+    "entryID": 1070,
+    "actorID": "2",
+    "text": "[panel=6]＊（李大山倒在地上，痛苦地喘息著。但他身上的黑色血管仍在跳動，那尊紅色神像的光芒愈發妖異，彷彿在催促他進行最後的自爆。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [1071]
+  },
+  {
+    "entryID": 1071,
+    "actorID": "NPC_DaughterInLaw",
+    "text": "「大山！不要！求求你們，不要殺我丈夫！」",
+    "Sequence": "SetPortrait(NPC_DaughterInLaw,pic=worried);",
+    "links": [1072]
+  },
+  {
+    "entryID": 1072,
+    "actorID": "MC22",
+    "text": "「唉呦！？那是他媳婦？糟了！那塊水晶的光芒越來越強，它在同時吸取這兩個人的生命力！再不阻止，他們都會死的！大俠！」",
+    "Sequence": "SetPortrait(MC22,pic=4);EnableCharacterExpression(2,MC22,Surprise);",
+    "links": [1073]
+  },
+  {
+    "entryID": 1073,
+    "actorID": "2",
+    "text": "[panel=6]＊（就在這時，你感到懷中的麒麟骰變得滾燙，彷彿一隻飢餓的野獸嗅到了血腥味，瘋狂地想要衝出來吞噬那尊神像上的紅光。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [1074]
+  },
+  {
+    "entryID": 1074,
+    "actorID": "MC22",
+    "text": "「喂！你發什麼呆？快做決定啊！」",
+    "Sequence": "SetPortrait(MC22,pic=14);EnableCharacterExpression(2,MC22,Question);",
+    "links": [1075]
+  },
+  {
+    "entryID": 1075,
+    "actorID": "0",
+    "text": "玩家（選擇回應）：",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [1076, 1077, 1078]
+  },
+  {
+    "entryID": 1076,
+    "actorID": "MC1",
+    "text": "[em2][殺伐][/em2]「長痛不如短痛...讓開！」",
+    "Sequence": "",
+    "Description": "選項1：殺伐",
+    "links": [1080]
+  },
+  {
+    "entryID": 1077,
+    "actorID": "MC1",
+    "text": "[em2][救贖][/em2]「賭一把了！就算拚上這條命，我也要救下他們！」",
+    "Sequence": "",
+    "Description": "選項2：救贖",
+    "links": [1090]
+  },
+  {
+    "entryID": 1078,
+    "actorID": "MC1",
+    "text": "[em2][血刀][/em2]「順從殺意。」",
+    "Sequence": "",
+    "Description": "選項3：血刀",
+    "links": [1110]
+  },
+  {
+    "entryID": 1080,
+    "actorID": "MC1",
+    "text": "「抱歉了，大山兄。你已被妖邪侵蝕太深，我只能...幫你解脫。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1,Pain);",
+    "links": [1081]
+  },
+  {
+    "entryID": 1081,
+    "actorID": "2",
+    "text": "[panel=6]＊（劍光落下，李大山停止了呼吸。神像額頭上的那隻「紅眼」似乎想要逃離，卻最終失去了光芒，變成了一顆黯淡無光的普通石頭。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [1082]
+  },
+  {
+    "entryID": 1082,
+    "actorID": "2",
+    "text": "[panel=6]＊（就在這時，你懷中的麒麟骰突然發熱，自行飛出，懸浮在神像上方。一股黑紅色的氣息從神像的紅水晶中被強行抽出，吸入骰子之中。）＊",
+    "Sequence": "",
+    "links": [1083]
+  },
+  {
+    "entryID": 1083,
+    "actorID": "MC0",
+    "text": "[系統提示]: 麒麟骰吞噬了「惡神殘片」的力量。獲得 赤眼殘片 x1。",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 1090,
+    "actorID": "MC1",
+    "text": "「賭了！我燕不凡行俠仗義，豈能見死不救！給我…破！！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1,Anger);",
+    "links": [1091]
+  },
+  {
+    "entryID": 1091,
+    "actorID": "2",
+    "text": "[panel=6]＊（你無視李大山的攻擊，衝向祭壇，一劍狠狠劈在泥塑小人像上！轟的一聲，泥像炸裂，那顆「紅眼」發出刺耳的尖嘯，化作一股黑氣衝擊你的胸口。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [1092]
+  },
+  {
+    "entryID": 1092,
+    "actorID": "MC0",
+    "text": "[系統提示]: 燕不凡受到重創，HP -50。",
+    "Sequence": "",
+    "links": [1093]
+  },
+  {
+    "entryID": 1093,
+    "actorID": "2",
+    "text": "[panel=6]＊（就在黑氣即將侵入你體內時，你懷中的麒麟骰突然變得滾燙無比，彷彿一隻飢餓已久的猛獸終於等到了獵物！它貪婪地將那股狂暴的黑氣連同泥像碎片中的紅光盡數吞噬！那顆原本妖異的「紅眼」瞬間失去了所有光澤，變成了灰白色的廢石。）＊",
+    "Sequence": "",
+    "links": [1094]
+  },
+  {
+    "entryID": 1094,
+    "actorID": "MC0",
+    "text": "[系統提示]: 麒麟骰吞噬了「惡神殘片」的力量。獲得 赤眼殘片 x1。",
+    "Sequence": "",
+    "links": [1095]
+  },
+  {
+    "entryID": 1095,
+    "actorID": "NPC_LiSon",
+    "text": "「呃…我…這是哪裡？媳婦？」",
+    "Sequence": "SetPortrait(NPC_LiSon,pic=weak);",
+    "links": [1096]
+  },
+  {
+    "entryID": 1096,
+    "actorID": "MC1",
+    "text": "「咳…我竟然沒死？真是…運氣好到家了…」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1,Pain);",
+    "links": [1097]
+  },
+  {
+    "entryID": 1097,
+    "actorID": "2",
+    "text": "[panel=6]＊（就在這時，祭壇後方的陰影處傳來一陣虛弱的咳嗽聲。一名女子扶著牆壁，艱難地走了出來。她衣衫襤褸，臉色蒼白，但眼神中透著一股堅毅。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [1098]
+  },
+  {
+    "entryID": 1098,
+    "actorID": "NPC_DaughterInLaw",
+    "text": "「大山…是你嗎？我聽到你的聲音了…」",
+    "Sequence": "SetPortrait(NPC_DaughterInLaw,pic=worried);",
+    "links": [1099]
+  },
+  {
+    "entryID": 1099,
+    "actorID": "NPC_LiSon",
+    "text": "「媳婦！妳還活著！太好了…我以為…我以為我把妳害死了…嗚嗚嗚…」",
+    "Sequence": "",
+    "links": [1100]
+  },
+  {
+    "entryID": 1100,
+    "actorID": "NPC_DaughterInLaw",
+    "text": "「我一直躲在後面的暗室裡…那裡有些草藥，我才勉強撐了下來。大山，沒事了，我們回家。」",
+    "Sequence": "SetPortrait(NPC_DaughterInLaw,pic=grateful);",
+    "links": [1101]
+  },
+  {
+    "entryID": 1101,
+    "actorID": "NPC_DaughterInLaw",
+    "text": "「多謝少俠！若非少俠毀了那邪物，喚醒了大山，我們夫妻倆今日都要命喪於此！」",
+    "Sequence": "",
+    "links": [1102]
+  },
+  {
+    "entryID": 1102,
+    "actorID": "NPC_DaughterInLaw",
+    "text": "「妾身家傳略通醫術，見少俠為了救大山受了內傷，心中實在難安。待日後回到雲中，還請務必來寒舍一敘。若少俠不嫌棄，妾身願將家傳醫術心得傾囊相授，以此報答救命之恩！」",
+    "Sequence": "",
+    "links": [1103]
+  },
+  {
+    "entryID": 1103,
+    "actorID": "MC0",
+    "text": "[系統提示]: 獲得 張氏的承諾 (回到雲中後可解鎖醫術學習/治療功能)。",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 1110,
+    "actorID": "MC1",
+    "text": "「痛苦嗎？絕望嗎？那就讓我來幫你們解脫吧…徹底的解脫。」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1,Cunning);",
+    "links": [1111]
+  },
+  {
+    "entryID": 1111,
+    "actorID": "MC22",
+    "text": "「大俠？你…你的眼神怎麼…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=4);EnableCharacterExpression(2,MC22,Shock);",
+    "links": [1112]
+  },
+  {
+    "entryID": 1112,
+    "actorID": "2",
+    "text": "[panel=6]＊（你沒有理會赫連娜娜，手中的刀刃泛起詭異的紅光。你走向倒地的李大山，以及剛從陰影中走出的張氏。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "links": [1113]
+  },
+  {
+    "entryID": 1113,
+    "actorID": "NPC_DaughterInLaw",
+    "text": "「少俠？你想做什麼？不要…不要過來！」",
+    "Sequence": "SetPortrait(NPC_DaughterInLaw,pic=worried);",
+    "links": [1114]
+  },
+  {
+    "entryID": 1114,
+    "actorID": "MC1",
+    "text": "「噓…很快就不痛了。你們的血肉，將成為我力量的一部分。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [1115]
+  },
+  {
+    "entryID": 1115,
+    "actorID": "2",
+    "text": "[panel=6]＊（刀光閃過，鮮血飛濺。李大山和張氏甚至來不及發出最後的慘叫，便倒在了血泊之中。）＊",
+    "Sequence": "",
+    "links": [1116]
+  },
+  {
+    "entryID": 1116,
+    "actorID": "2",
+    "text": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。與此同時，麒麟骰也發出貪婪的紅光，將神像中的邪力一掃而空。）＊",
+    "Sequence": "",
+    "links": [1117]
+  },
+  {
+    "entryID": 1117,
+    "actorID": "MC0",
+    "text": "[系統提示]: 血刀命盤充能 +2。麒麟骰吞噬了「惡神殘片」的力量。獲得 赤眼殘片 x1，怨靈精華 x2。",
+    "Sequence": "",
+    "links": [1118]
+  },
+  {
+    "entryID": 1118,
+    "actorID": "MC22",
+    "text": "「瘋子…你是個瘋子…」",
+    "Sequence": "SetPortrait(MC22,pic=4);EnableCharacterExpression(2,MC22,Shock);",
+    "links": []
+  }
+]

@@ -1,0 +1,547 @@
+[
+    {
+        "entryID": 1,
+        "actorID": "MC1",
+        "text": "「…[em6]（自從上次在小溪村被那自稱赫連娜娜的女子擺了一道，損了些錢財後，我便與小犀在此客棧落腳，打探『英豪府』的消息，順便看看有無賺錢的門路。）[/em6]」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1_Meditate);",
+        "links": [
+            2
+        ]
+    },
+    {
+        "entryID": 2,
+        "actorID": "MC1",
+        "text": "「（自言自語）嗯，張大叔言道，那妖物雖已元氣大傷，但放任不管，終非俠義所為。如今我傷勢已癒，長生經亦初窺門徑，正是肩挑日月、手摘星辰…咳，是時候了結此樁恩怨，以慰蒼生…」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=serious);",
+        "links": [
+            3
+        ]
+    },
+    {
+        "entryID": 3,
+        "actorID": "MC1",
+        "text": "「唉，也不知道那黑乎乎的傢伙現在怎麼樣了，可別比上次還難纏…咕嚕嚕…唉，肚子又叫了，行俠仗義也得填飽肚子啊！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=tired);",
+        "links": [
+            4
+        ]
+    },
+    {
+        "entryID": 4,
+        "actorID": 2,
+        "text": "[panel=6]＊（你打定主意，便去尋找雍仔。這段時日，雍仔因先前古墓之事心懷愧疚，時常來探望你，二人關係倒也親近了不少。）＊",
+        "Sequence": "",
+        "links": [
+            5
+        ]
+    },
+    {
+        "entryID": 5,
+        "actorID": "MC20",
+        "text": "「兄弟，你來啦。看你氣色，這長生經果然神妙，恢復得真快！」",
+        "Sequence": "",
+        "links": [
+            6
+        ]
+    },
+    {
+        "entryID": 6,
+        "actorID": "MC1",
+        "text": "「道長過謙了，這還得多謝道長連日來的照看。實不相瞞，我今日來，是有一樁關乎武林安危…呃…至少是小溪村安危的大事，想與道長商議。」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [
+            7
+        ]
+    },
+    {
+        "entryID": 7,
+        "actorID": "MC20",
+        "text": "「哦？[var=PlayerLastName]兄弟但說無妨，貧道洗耳恭聽。」",
+        "Sequence": "",
+        "links": [
+            8
+        ]
+    },
+    {
+        "entryID": 8,
+        "actorID": "MC1",
+        "text": "「道長，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！我意欲…再探龍潭虎穴，將此妖物徹底正法！以絕後患！道長…以為如何？」",
+        "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1_Question);",
+        "links": [
+            9
+        ]
+    },
+    {
+        "entryID": 9,
+        "actorID": "MC20",
+        "text": "「兄弟！你…你真打算再去？！唉！罷了罷了，說來慚愧，那日若非貧道財迷心竅，也不會害你身陷險境！這些日子貧道是寢食難安，總想著如何彌補…只是那妖物實在厲害，貧道…貧道怕又拖累了你。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=pain);EnableCharacterExpression(1,MC20_Nervous_2);",
+        "links": [
+            10
+        ]
+    },
+    {
+        "entryID": 10,
+        "actorID": "MC1",
+        "text": "「道長言重了！勝敗乃兵家常事…呃，不對，是探險尋寶，哪有不濕鞋的道理！張大叔已言明那妖物元氣大傷，如今你我二人聯手，又有準備，未必沒有勝算。你我既已結伴，自當同舟共濟，斬妖除魔！」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            11
+        ]
+    },
+    {
+        "entryID": 11,
+        "actorID": "MC1",
+        "text": "「(希望這次別又是我挨揍…)」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=tired);",
+        "links": [
+            12
+        ]
+    },
+    {
+        "entryID": 12,
+        "actorID": "MC8",
+        "text": "「表哥！你們…你們又要去那鬼地方？太危險了！」",
+        "Sequence": "SetPortrait(MC8,pic=dislike);",
+        "links": [
+            13
+        ]
+    },
+    {
+        "entryID": 13,
+        "actorID": "MC1",
+        "text": "「靈犀莫慌！有表哥在此，咳咳…此次我與道長同往，定會小心行事，那妖物已是強弩之末，不足為懼！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);",
+        "links": [
+            14
+        ]
+    },
+    {
+        "entryID": 14,
+        "actorID": "MC1",
+        "text": "「再說了，不把它解決掉，我…我們睡覺都不安穩啊！」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);",
+        "links": [
+            15
+        ]
+    },
+    {
+        "entryID": 15,
+        "actorID": "MC1",
+        "text": "「呼…又來到這鬼地方了…這次可得打起十二分精神，可不能再像上次一樣狼狽了…麒麟骰啊麒麟骰，保佑保佑！」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);",
+        "links": [
+            16
+        ]
+    },
+    {
+        "entryID": 16,
+        "actorID": "MC20",
+        "text": "「兄弟放心！吃一塹長一智，上次是貧道大意了，這次定不會再犯同樣的錯誤！今日定要讓那老妖知道茅山道法的厲害！」",
+        "Sequence": "SetPortrait(MC20,pic=determined);",
+        "links": [
+            17
+        ]
+    },
+    {
+        "entryID": 17,
+        "actorID": 2,
+        "text": "[panel=6]＊（輕車熟路地進入古墓，墓道內依舊陰森。很快，你們便回到了那間寬敞的主墓室。只見主墓室中央，那黑血屍果然還在，它身上的黑氣比之上次稀薄了不少，氣息也萎靡了許多，但眼神中的怨毒卻絲毫不減。）＊",
+        "Sequence": "",
+        "links": [
+            18
+        ]
+    },
+    {
+        "entryID": 18,
+        "actorID": "NPC11",
+        "text": "「又是…你們…還敢回來送死…咳咳…」",
+        "Sequence": "",
+        "links": [
+            19
+        ]
+    },
+    {
+        "entryID": 19,
+        "actorID": "MC1",
+        "text": "「呔！妖孽！休得張狂！上次讓你苟延殘喘，那是你命不該絕！今日我與雍仔道長替天行道，便是來收你這孽障，為民除害！還不束手就擒，更待何時？！」",
+        "Sequence": "SetPortrait(MC1,pic=angry);EnableCharacterExpression(0,MC1_Anger);",
+        "links": [
+            20
+        ]
+    },
+    {
+        "entryID": 20,
+        "actorID": "MC20",
+        "text": "「老妖！納命來！看我茅山神符！」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [
+            21
+        ]
+    },
+    {
+        "entryID": 21,
+        "actorID": 2,
+        "text": "[panel=6]＊（黑血屍怒吼一聲，再次撲了上來！）＊",
+        "Sequence": "BeginCombat(Combat,);",
+        "links": [
+            22
+        ]
+    },
+    {
+        "entryID": 22,
+        "actorID": 2,
+        "text": "[panel=6]＊（經過一番激戰，本已元氣大傷的黑血屍漸漸不支，在你與雍仔的聯手攻擊下，終於發出一聲不甘的哀嚎，周身的黑氣如同潮水般退去，最終化為一灘黑水，只留下一枚閃爍着奇異光芒的黑色珠子。）＊",
+        "Sequence": "",
+        "links": [
+            23
+        ]
+    },
+    {
+        "entryID": 23,
+        "actorID": "MC1",
+        "text": "「呼…呼…妖…妖孽…終於…授首了！ 」",
+        "Sequence": "SetPortrait(MC1,pic=hurt);ModifyData(AbilityExp,MC1,Ability_STR,100);ModifyData(FeatExp,MC1,MartialArts,20);",
+        "links": [
+            24
+        ]
+    },
+    {
+        "entryID": 24,
+        "actorID": "MC1",
+        "text": "「（我的老天鵝啊…腿肚子還在轉筋…總算是…贏了…咕…不行，打完架怎麼更餓了…）」",
+        "Sequence": "",
+        "links": [
+            25
+        ]
+    },
+    {
+        "entryID": 25,
+        "actorID": "MC20",
+        "text": "「哈哈！兄弟！我們成功了！這老妖總算伏法了！痛快！痛快啊！」",
+        "Sequence": "",
+        "links": [
+            26
+        ]
+    },
+    {
+        "entryID": 26,
+        "actorID": 2,
+        "text": "[panel=6]＊（雍仔上前，小心翼翼地拾起那枚黑色珠子。）＊",
+        "Sequence": "",
+        "links": [
+            27
+        ]
+    },
+    {
+        "entryID": 27,
+        "actorID": "MC20",
+        "text": "「這是…屍丹？看來是這老妖修煉多年的精華所在。兄弟，此物雖是妖物所留，但若運用得當，或許也有奇效。不過陰氣頗重，你剛修習長生經，還是由貧道暫為保管，日後若有需要，再行定奪如何？」",
+        "Sequence": "SetPortrait(MC20,pic=Meditate);",
+        "links": [
+            28
+        ]
+    },
+    {
+        "entryID": 28,
+        "actorID": 2,
+        "text": "[panel=6]＊（雍仔道長提出了暫為保管屍丹的建議，這枚凝聚了妖邪精華的珠子，究竟該如何處置？你不禁陷入了思索。）＊",
+        "Sequence": "",
+        "links": [
+            29,
+            33,
+            37,
+            41
+        ]
+    },
+    {
+        "entryID": 29,
+        "actorID": "MC1",
+        "text": "[em2][信義][/em2]「道長所言極是，此等邪物，非我輩正道俠士所宜沾染，便由道長全權處置吧。」",
+        "Sequence": "",
+        "Description": "選項1：信義",
+        "links": [
+            30
+        ]
+    },
+    {
+        "entryID": 30,
+        "actorID": "MC1",
+        "text": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
+        "Sequence": "SetPortrait(MC1,pic=mindpain);",
+        "links": [
+            31
+        ]
+    },
+    {
+        "entryID": 31,
+        "actorID": "MC1",
+        "text": "「且聽說書先生說的武林話本也沒聽過哪個大俠在吃屍丹的，唉，怎不是掉個甚麼千年靈芝之類的，這玩意兒黑不溜秋的，看著就倒胃口…）」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": [
+            32
+        ]
+    },
+    {
+        "entryID": 32,
+        "actorID": "MC20",
+        "text": "「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。放心，待貧道研究一番，若真有能化解其陰氣、化害為利之法，也定不會忘了兄弟你今日之功。」",
+        "Sequence": "SetPortrait(MC20,pic=proud);AddItem(CorpsePearl_Yongzi);",
+        "links": [
+            45
+        ]
+    },
+    {
+        "entryID": 33,
+        "actorID": "MC1",
+        "text": "[em2][通達][/em2]「道長，這屍丹聽起來頗為不凡，不如我們找個識貨之人看看？說不定能換些盤纏，或者有什麼化害為利之法？」",
+        "Sequence": "",
+        "Description": "選項2：通達",
+        "links": [
+            34
+        ]
+    },
+    {
+        "entryID": 34,
+        "actorID": "MC1",
+        "text": "「道長，此言雖有理，但…（搓了搓下巴，眼珠一轉）這屍丹聽著是邪門，可您也說了，『運用得當，或許也有奇效』。咱們辛辛苦苦打生打死才得了這麼個玩意兒，直接扔了豈不可惜？（內心：萬一能賣個好價錢呢？盤纏啊盤纏，行走江湖什麼都要錢…）不如這樣，我們找個大城鎮，尋個見多識廣的行家鑑定鑑定？說不定能換些實實在在的銀兩，或者有什麼法子能把它的邪性去了，只取其精華？總得物盡其用不是？」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1_Talk);",
+        "links": [
+            35
+        ]
+    },
+    {
+        "entryID": 35,
+        "actorID": "MC20",
+        "text": "「兄弟所言，倒也不失為一個法子。貧道對此物也是一知半解，若能尋得高人指點，確能更好地處置。只是此物陰氣甚重，須得小心保管，不可輕易示人。也罷，便依兄弟之見，待日後到了繁華之地，我等再設法探尋其奧秘與價值。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=normal);AddItem(CorpsePearl_Yongzi);",
+        "links": [
+            36
+        ]
+    },
+    {
+        "entryID": 36,
+        "actorID": 2,
+        "text": "[panel=6]＊（你選擇了更為靈活的處理方式，雍仔也同意了你的提議。這枚屍丹的未來充滿了未知，但也可能帶來意想不到的機遇。）＊",
+        "Sequence": "",
+        "links": [
+            45
+        ]
+    },
+    {
+        "entryID": 37,
+        "actorID": "MC1",
+        "text": "[em2][仁心][/em2]「此物乃妖邪精氣所凝，恐留存於世徒增禍患。道長，依我看，不如我等合力將其徹底銷毀，以絕後患！」",
+        "Sequence": "",
+        "Description": "選項3：仁心",
+        "links": [
+            38
+        ]
+    },
+    {
+        "entryID": 38,
+        "actorID": "MC1",
+        "text": "「道長，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端，遺禍蒼生！（義正辭嚴，彷彿戲文中的大俠附體）我輩行俠仗義，當以天下安危為念，豈能為一己之私或一時好奇，而留下如此隱患？（內心：雖然不知道怎麼銷毀，但聽起來就很正義…就是有點可惜了這麼個戰利品…要是能爆個裝備就好了…）依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
+        "Sequence": "SetPortrait(MC1,pic=angry);EnableCharacterExpression(0,MC1_Anger);",
+        "links": [
+            39
+        ]
+    },
+    {
+        "entryID": 39,
+        "actorID": "MC20",
+        "text": "「兄弟此言，深合天道！是貧道著相了。此等邪物，確不該留存於世。好！就依兄弟之見，我等這便設法將其銷毀！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=serious);",
+        "links": [
+            40
+        ]
+    },
+    {
+        "entryID": 40,
+        "actorID": 2,
+        "text": "[panel=6]＊（你與雍仔運起功力，配合茅山符法，費了好一番功夫，終於將那屍丹徹底化為飛灰。雖然失去了一件潛在的寶物，但你心中充滿了為民除害的浩然正氣。）＊",
+        "Sequence": "",
+        "links": [
+            45
+        ]
+    },
+    {
+        "entryID": 41,
+        "actorID": "MC1",
+        "text": "[em2][機略][/em2]「道長此言差矣，富貴險中求，力量亦然。這屍丹雖邪，卻也是力量之源。你我既已得之，豈能輕易放過？不如一同研究，看能否化為己用，增強實力！」",
+        "Sequence": "",
+        "Description": "選項4：機略",
+        "links": [
+            42
+        ]
+    },
+    {
+        "entryID": 42,
+        "actorID": "MC1",
+        "text": "「道長，此言差矣！（眼神閃爍，帶著一絲難以察覺的興奮）張大叔曾言，我體質特異。這屍丹雖陰邪，但所謂孤陰不長，孤陽不生，或許我正能以自身之長生經化解其戾氣，取其精華，助我功力大進！（內心：這可是BOSS掉的寶貝啊！說不定是什麼極品材料，或者能讓我一下子變得很強…打不過就跑，能打過就得撈好處，這才是江湖生存之道嘛！肚子都快餓扁了，變強了才能找到更多好吃的！）道長，你我九死一生得此奇物，豈能因其『陰氣頗重』便束之高閣？不如…讓小弟我來試試看？若真有不妥，再由道長處置不遲！」",
+        "Sequence": "SetPortrait(MC1,pic=smug);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            43
+        ]
+    },
+    {
+        "entryID": 43,
+        "actorID": "MC20",
+        "text": "「兄弟…你當真要親身一試？此物非同小可，內含妖邪之力，長生經雖正大光明，但你修習日淺…萬一…」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=worried);",
+        "links": [
+            44
+        ]
+    },
+    {
+        "entryID": 44,
+        "actorID": "MC1",
+        "text": "「道長放心！我自有分寸！（拍拍胸脯，其實心裡也有點打鼓）瞻前顧後，豈能成就大事？若能藉此突破，日後行走江湖，你我也多一分底氣！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);",
+        "links": [
+            45
+        ]
+    },
+    {
+        "entryID": 45,
+        "actorID": "MC20",
+        "text": "「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。但切記，若感不適，立刻停手，莫要逞強！」",
+        "Sequence": "SetPortrait(MC20,pic=worried);AddItem(CorpsePearl_MC1);",
+        "links": [
+            46
+        ]
+    },
+    {
+        "entryID": 46,
+        "actorID": 2,
+        "text": "[panel=6]＊（你力排眾議，將屍丹收入懷中。一股陰寒之氣隱約傳來，但其中蘊含的奇異力量也讓你心頭微熱。這一步是福是禍，猶未可知，但你已然做出了選擇。）＊",
+        "Sequence": "",
+        "links": [
+            47
+        ]
+    },
+    {
+        "entryID": 47,
+        "actorID": 2,
+        "text": "[panel=6]＊（二人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊",
+        "Sequence": "",
+        "links": [
+            48
+        ]
+    },
+    {
+        "entryID": 48,
+        "actorID": 2,
+        "text": "[panel=6]＊（回到小溪村後，雍仔找到了你，臉上帶著灑脫的笑容。）＊",
+        "Sequence": "",
+        "links": [
+            49
+        ]
+    },
+    {
+        "entryID": 49,
+        "actorID": "MC20",
+        "text": "「[var=PlayerLastName]兄弟，如今黑血屍已除，貧道心中的一塊大石也算落地了。此番與你共歷患難，也算是一段難得的緣分。天下無不散的筵席，貧道也該繼續我的雲遊之路，前往那[em2]雲中英豪府[/em2]見識一番了。」",
+        "Sequence": "",
+        "links": [
+            50
+        ]
+    },
+    {
+        "entryID": 50,
+        "actorID": "MC1",
+        "text": "「道長高義，[var=PlayerLastName]佩服！既然道長已了卻心事，欲往高處，我自然不能強留。青山不改，綠水長流，他日江湖再見，定要與道長痛飲三百杯，不醉不歸！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            51
+        ]
+    },
+    {
+        "entryID": 51,
+        "actorID": "MC8",
+        "text": "「表哥，你這一串江湖話和前幾天我們聽說書先生中的話本根本就一模一樣…再說了希望到時候你有錢請客！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);",
+        "links": [
+            52
+        ]
+    },
+    {
+        "entryID": 52,
+        "actorID": "MC20",
+        "text": "「哈哈哈，好！一言為定！[var=PlayerLastName]兄弟，保重！咱們[em2]英豪府[/em2]見！」",
+        "Sequence": "SetPortrait(MC20,pic=laugh);",
+        "links": [
+            53
+        ]
+    },
+    {
+        "entryID": 53,
+        "actorID": "MC1",
+        "text": "「道長保重！」",
+        "Sequence": "",
+        "links": [
+            54
+        ]
+    },
+    {
+        "entryID": 54,
+        "actorID": 2,
+        "text": "[panel=6]＊（雍仔再次深深看了你一眼，重重一抱拳，隨即轉身，腳步輕快地踏上了前往雲中府的路途。望著他逐漸遠去的背影，你心中不禁感慨，這位雍仔道長，初識之時只覺其言辭誇張、行事略顯毛躁，甚至有些不太靠譜；然幾經患難，方知其本性純良，非但勇於承擔過錯，在大是大非面前亦能挺身而出，實乃一位重情重義、值得結交的江湖同道。）＊",
+        "Sequence": "",
+        "links": [
+            55
+        ]
+    },
+    {
+        "entryID": 55,
+        "actorID": "MC8",
+        "text": "「表哥，雍仔道長走了，我們…也該準備準備了。下個月初，前往雲中的馬車隊就要出發了，我們可不能再耽擱了！」",
+        "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(1,MC8_Talk);",
+        "links": [
+            56
+        ]
+    },
+    {
+        "entryID": 56,
+        "actorID": "MC1",
+        "text": "「嗯！靈犀說的是！小溪村的日子雖然安逸，但我們的征途是星辰大海！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
+        "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [
+            57
+        ]
+    },
+    {
+        "entryID": 57,
+        "actorID": "MC8",
+        "text": "「我只希望到時候別又餓肚子了…(小聲道)還有…你別再受傷了…」",
+        "Sequence": "",
+        "links": [
+            58
+        ]
+    },
+    {
+        "entryID": 58,
+        "actorID": 2,
+        "text": "[panel=6]＊（一個月後，晨曦微露，你與蕭靈犀收拾好行囊，在有間客棧門口與眾人告別。二人登上了前往[em2]雲中[/em2]的馬車，車輪滾滾，向著充滿未知與挑戰的遠方駛去。江湖路遠，前途未卜，但少年人的眼中，卻燃燒著不滅的火焰與對未來的憧憬。）＊",
+        "Sequence": "",
+        "links": [
+            59
+        ]
+    },
+    {
+        "entryID": 59,
+        "actorID": 2,
+        "text": "[panel=6]＊（第二幕：初出茅廬之二 - 完）＊",
+        "Sequence": "",
+        "links": [
+            60
+        ]
+    },
+    {
+        "entryID": 60,
+        "actorID": 2,
+        "text": "[panel=6]＊（序章 - 完）＊",
+        "Sequence": "",
+        "links": []
+    }
+]

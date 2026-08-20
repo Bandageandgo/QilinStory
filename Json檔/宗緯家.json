@@ -1,0 +1,752 @@
+[
+    {
+        "entryID": 1,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你沿著蜿蜒的山路，終於來到了一處隱蔽的溪谷。這裡林木蔥鬱，空氣中瀰漫著泥土和青草的氣息。）＊",
+        "Sequence": "",
+        "links": [2]
+    },
+    {
+        "entryID": 2,
+        "actorID": "MC1",
+        "text": "「呼……這山路可真難走。不過獵戶大哥說得沒錯，這裡確實是風景清幽……就是爬上來要半條命，想清靜還真是不容易啊。」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": [3]
+    },
+    {
+        "entryID": 3,
+        "actorID": "MC1",
+        "text": "「喂——！宗緯大哥！人呢？……嗯？這營地怎麼亂成這樣？」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [4]
+    },
+    {
+        "entryID": 4,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（山谷中回蕩著你的聲音，卻無人應答。眼前的營地鍋碗瓢盆散落一地，火堆已經熄滅，似乎發生過什麼爭執。）＊",
+        "Sequence": "",
+        "links": [5]
+    },
+    {
+        "entryID": 5,
+        "actorID": "MC1",
+        "text": "「該不會是出什麼事了吧？不行，我得四處看看。」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);",
+        "links": []
+    },
+    {
+        "entryID": 20,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（這是一個簡易的營地，但此刻顯得異常凌亂。地面上還有拖拽的痕跡。）＊",
+        "Sequence": "",
+        "links": [21]
+    },
+    {
+        "entryID": 21,
+        "actorID": "MC1",
+        "text": "「這腳印……前腳掌寬大，爪痕深深嵌入泥土，不像人的，也不像野獸……倒像是某種……直立行走的狗？」",
+        "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1-1,Confused);",
+        "links": [22]
+    },
+    {
+        "entryID": 22,
+        "actorID": "MC1",
+        "text": "「而且走得很匆忙，像是遇到了什麼突發狀況。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Meditate);",
+        "links": [23]
+    },
+    {
+        "entryID": 23,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "Flag_Investigated_Camp = True;",
+        "Description": "變數設置：Flag_Investigated_Camp = True",
+        "links": [24, 25]
+    },
+    {
+        "entryID": 24,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "普通結束",
+        "links": []
+    },
+    {
+        "entryID": 25,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "隱藏分支：察覺 > 5 判定點 (模擬)",
+        "links": [26]
+    },
+    {
+        "entryID": 26,
+        "actorID": "MC1",
+        "text": "「嗯？這是宗緯大哥的箭。箭杆還是新的，看來他最近一直在防備什麼東西。」",
+        "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
+        "links": [27]
+    },
+    {
+        "entryID": 27,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你發現了隱藏的線索，獲得了 10 點洞悉經驗。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 40,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（清澈的水潭中，隱約飄浮著幾片破碎的葉子和……一絲淡淡的血跡？）＊",
+        "Sequence": "",
+        "links": [41]
+    },
+    {
+        "entryID": 41,
+        "actorID": "MC1",
+        "text": "「有血腥味……而且是從上游沖下來的。這水源的源頭在瀑布上方，看來麻煩是在上面。」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [42]
+    },
+    {
+        "entryID": 42,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "Flag_Investigated_Pool = True;",
+        "Description": "變數設置：Flag_Investigated_Pool = True",
+        "links": [43, 44]
+    },
+    {
+        "entryID": 43,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "普通結束",
+        "links": []
+    },
+    {
+        "entryID": 44,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "隱藏分支：察覺 > 8 判定點 (模擬)",
+        "links": [45]
+    },
+    {
+        "entryID": 45,
+        "actorID": "MC1",
+        "text": "「這塊苔蘚被踩爛了。看這爪印的大小……這狼的體型怕是不比老虎小啊。」",
+        "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
+        "links": [46]
+    },
+    {
+        "entryID": 46,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你發現了隱藏的線索，獲得了 10 點洞悉經驗。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 60,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（幾根粗壯的藤蔓垂落在懸崖邊，上方似乎還有一個平台。）＊",
+        "Sequence": "",
+        "links": [61]
+    },
+    {
+        "entryID": 61,
+        "actorID": "MC1",
+        "text": "「上面好像有煙味……難道宗緯大哥在上面？」",
+        "Sequence": "SetPortrait(MC1,pic=normal);",
+        "links": [62]
+    },
+    {
+        "entryID": 62,
+        "actorID": "MC1",
+        "text": "「嘿咻……這住得高是風景好，但買菜回家得多累啊！」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": []
+    },
+    {
+        "entryID": 80,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你來到一處地勢較高的平地，視野頓時開闊。空氣中瀰漫著一股油脂焦香的味道。不遠處的火堆旁，架著一隻烤得金黃酥脆的乳豬。）＊",
+        "Sequence": "",
+        "links": [81]
+    },
+    {
+        "entryID": 81,
+        "actorID": "MC1",
+        "text": "「好香！這皮色，這火候……簡直是極品！咕嚕……原來躲在這偷偷開小灶呢！」",
+        "Sequence": "SetPortrait(MC1,pic=happy);",
+        "links": [82]
+    },
+    {
+        "entryID": 82,
+        "actorID": "MC1",
+        "text": "「慢著！下層亂成那樣，這裡卻有剛烤好的肉……這情況不對勁啊。」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);",
+        "links": [83]
+    },
+    {
+        "entryID": 83,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "Flag_Investigated_Pig = True;",
+        "Description": "變數設置：Flag_Investigated_Pig = True",
+        "links": [84, 85]
+    },
+    {
+        "entryID": 84,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "普通結束",
+        "links": []
+    },
+    {
+        "entryID": 85,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "隱藏分支：察覺 > 6 判定點 (模擬)",
+        "links": [86]
+    },
+    {
+        "entryID": 86,
+        "actorID": "MC1",
+        "text": "「帶血的衣角……還沒被火燒完。看來宗緯大哥是在準備吃飯的時候被襲擊的，連肉都沒來得及吃。」",
+        "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
+        "links": [87]
+    },
+    {
+        "entryID": 87,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你發現了隱藏的線索，獲得了 10 點洞悉經驗。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 100,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（就在這時，樹林深處突然傳來一陣嘈雜的吼叫聲和兵器碰撞聲！）＊",
+        "Sequence": "",
+        "links": [101]
+    },
+    {
+        "entryID": 101,
+        "actorID": "MC1",
+        "text": "「那邊有聲音！就在這層林子裡！」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1-1,Surprise);",
+        "links": [102]
+    },
+    {
+        "entryID": 102,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你循聲衝過去，只見獵戶宗緯正手持鋼叉，背靠著一棵大樹，而他身邊竟然站著一隻……直立行走的狗頭人？！兩人正被一群餓狼團團圍住。）＊",
+        "Sequence": "",
+        "links": [103]
+    },
+    {
+        "entryID": 103,
+        "actorID": "role107",
+        "text": "[panel=2]「汪！壞狼！咬！肉肉……不給！」",
+        "Sequence": "",
+        "links": [104]
+    },
+    {
+        "entryID": 104,
+        "actorID": "role97",
+        "text": "[panel=1]「別叫了！小心左邊！該死，這群狼是餓瘋了嗎？！」",
+        "Sequence": "",
+        "links": [105]
+    },
+    {
+        "entryID": 105,
+        "actorID": "MC1",
+        "text": "「等等！那隻狗頭人……不是之前在破廟想搶劫我的那個嗎？！他們怎麼混在一起了？！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=shocked);",
+        "links": [106]
+    },
+    {
+        "entryID": 106,
+        "actorID": "role97",
+        "text": "[panel=1]「[var=PlayerFirstName]老弟？！快！快來幫忙！這群畜生數量太多了！」",
+        "Sequence": "",
+        "links": [107]
+    },
+    {
+        "entryID": 107,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "BeginCombat(WolfPack_Battle);",
+        "Description": "觸發戰鬥：狼群圍攻",
+        "links": []
+    },
+    {
+        "entryID": 130,
+        "actorID": "role97",
+        "text": "[panel=1]「呼……多虧老弟你來得及時，不然我和這小傢伙今天都要交代在這了。」",
+        "Sequence": "",
+        "links": [131]
+    },
+    {
+        "entryID": 131,
+        "actorID": "role107",
+        "text": "[panel=2]「強！朋友！肉肉……分你！」",
+        "Sequence": "",
+        "links": [132]
+    },
+    {
+        "entryID": 132,
+        "actorID": "MC1",
+        "text": "「去去去！宗緯大哥，這不是之前在破廟那隻狗頭人嗎？上次它跑得快，今天怎麼跟你稱兄道弟了？」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": [133]
+    },
+    {
+        "entryID": 133,
+        "actorID": "role97",
+        "text": "[panel=1]「你也認得它？哈哈，說來話長。上次它從你手裡逃跑後，在山裡被野狗追。我看它可憐就救了一把，誰知道這傢伙就賴上我了。」",
+        "Sequence": "",
+        "links": [134]
+    },
+    {
+        "entryID": 134,
+        "actorID": "MC1",
+        "text": "「喂，你這傢伙，放著好好的有前途的搶匪不當，幹嘛非得賴著宗緯大哥？這裡除了烤肉還有什麼好處？」",
+        "Sequence": "SetPortrait(MC1,pic=normal);",
+        "links": [135]
+    },
+    {
+        "entryID": 135,
+        "actorID": "role107",
+        "text": "[panel=2]「肉！香！還有……不被打！」",
+        "Sequence": "",
+        "links": [136]
+    },
+    {
+        "entryID": 136,
+        "actorID": "MC1",
+        "text": "「嘖嘖嘖，格局小了！跟著獵戶大哥只能吃烤肉，跟著本少俠混，那是吃香的喝辣的，還能名震江湖！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1-1,Cunning);",
+        "links": [137, 138]
+    },
+    {
+        "entryID": 137,
+        "actorID": "MC1",
+        "text": "「算了，別招惹他了。」",
+        "Sequence": "",
+        "links": [139]
+    },
+    {
+        "entryID": 138,
+        "actorID": "MC1",
+        "text": "[em2][口才檢定][/em2]「嘗試用食物誘惑他入夥。」",
+        "Sequence": "",
+        "links": [140]
+    },
+    {
+        "entryID": 139,
+        "actorID": "MC1",
+        "text": "「罷了，看你吃得這麼香，我就不打擾你了。」",
+        "Sequence": "",
+        "links": [144]
+    },
+    {
+        "entryID": 140,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,10);",
+        "Description": "選項2的空對話擲骰節點",
+        "links": [141]
+    },
+    {
+        "entryID": 141,
+        "actorID": "MC1",
+        "text": "「喂，不如這樣，你以後就跟著本少俠混。我保證你頓頓有肉吃，怎麼樣？」",
+        "Sequence": "SetPortrait(MC1,pic=normal);",
+        "links": [142, 143]
+    },
+    {
+        "entryID": 142,
+        "actorID": "role107",
+        "text": "[panel=2]「頓頓……有肉？真的？」",
+        "Sequence": "IsPassDice() == true;",
+        "links": [145]
+    },
+    {
+        "entryID": 143,
+        "actorID": "role107",
+        "text": "[panel=2]「你……瘦。沒肉。騙子！」",
+        "Sequence": "IsPassDice() == false;",
+        "links": [144]
+    },
+    {
+        "entryID": 144,
+        "actorID": "MC1",
+        "text": "「嘿！你這狗眼看人低的東西……」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": []
+    },
+    {
+        "entryID": 145,
+        "actorID": "MC1",
+        "text": "「當然是真的！本少俠一言九鼎！不過嘛……為了方便聯繫，我需要個信物，比如你身上那個亮閃閃的鍋子？」",
+        "Sequence": "",
+        "links": [146, 147, 148]
+    },
+    {
+        "entryID": 146,
+        "actorID": "MC1",
+        "text": "[em2][厚黑檢定][/em2]「兄弟啊，你聽過放長線釣大魚嗎？」",
+        "Sequence": "",
+        "links": [149]
+    },
+    {
+        "entryID": 147,
+        "actorID": "MC1",
+        "text": "「[支付 300 錢]」",
+        "Sequence": "",
+        "links": [154]
+    },
+    {
+        "entryID": 148,
+        "actorID": "MC1",
+        "text": "「還是算了，太麻煩。」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 149,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,RealpolitikCheck,12);",
+        "Description": "厚黑檢定空節點",
+        "links": [150]
+    },
+    {
+        "entryID": 150,
+        "actorID": "MC1",
+        "text": "「按照江湖規矩，這入夥費得先欠著。等我發達了，再一次付清！先把鍋子給我吧！」",
+        "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
+        "links": [151, 153]
+    },
+    {
+        "entryID": 151,
+        "actorID": "MC1",
+        "text": "「這叫『放長線釣大魚』，懂嗎？現在少吃一口肉，將來還你一整頭豬！」",
+        "Sequence": "IsPassDice() == true;SetPortrait(MC1,pic=serious);",
+        "links": [152]
+    },
+    {
+        "entryID": 152,
+        "actorID": "role107",
+        "text": "[panel=2]「長線……大魚？好！鍋子……給你！敲它……我就來！」",
+        "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);AddItem(Summon_Pot,1);",
+        "links": [180]
+    },
+    {
+        "entryID": 153,
+        "actorID": "role107",
+        "text": "[panel=2]「不！騙子！沒錢……不給！」",
+        "Sequence": "IsPassDice() == false;",
+        "links": [154]
+    },
+    {
+        "entryID": 154,
+        "actorID": "MC1",
+        "text": "「切，被識破了……好吧好吧，給你錢就是了。」",
+        "Sequence": "ModifyData(DnDAlignment,Player,LawChaos,0.15);",
+        "links": [155]
+    },
+    {
+        "entryID": 155,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "支付判定節點",
+        "links": [156]
+    },
+    {
+        "entryID": 156,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你支付了 300 錢，獲得了狗頭人的召喚信物。）＊",
+        "Sequence": "ModifyData(Money,MC1,-300);AddItem(Summon_Pot,1);",
+        "links": [180]
+    },
+    {
+        "entryID": 180,
+        "actorID": "role97",
+        "text": "[panel=1]「對了，老弟。你既然來了，有件事我得提醒你。最近這山裡不太平，尤其是下層那個瀑布下面。」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [181]
+    },
+    {
+        "entryID": 181,
+        "actorID": "MC1",
+        "text": "「瀑布下面？那裡不是死路嗎？」",
+        "Sequence": "SetPortrait(MC1,pic=normal);",
+        "links": [182]
+    },
+    {
+        "entryID": 182,
+        "actorID": "role97",
+        "text": "[panel=1]「老一輩的人說，那瀑布下藏著一個消失的部族。我剛才被狼群追的時候，似乎看到瀑布後面的水簾有些古怪，像是有條路。」",
+        "Sequence": "",
+        "links": [183]
+    },
+    {
+        "entryID": 183,
+        "actorID": "MC1",
+        "text": "「消失的部族？那豈不是會有……寶藏？！」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1-1,Surprise);",
+        "links": [184]
+    },
+    {
+        "entryID": 184,
+        "actorID": "role97",
+        "text": "[panel=1]「別光想著錢！那地方邪門得很，你自己小心。」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 200,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（這棵樹通體粉紅，在綠林中顯得格格不入。你總覺得樹冠裡藏著什麼東西。）＊",
+        "Sequence": "",
+        "links": [201]
+    },
+    {
+        "entryID": 201,
+        "actorID": "MC1",
+        "text": "「這樹看起來挺結實的，正好拿來練練手，順便看看能震下來什麼寶貝。」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [202, 203]
+    },
+    {
+        "entryID": 202,
+        "actorID": "MC1",
+        "text": "[em2][武藝檢定][/em2]「運氣丹田，全力一擊！」",
+        "Sequence": "",
+        "links": [204]
+    },
+    {
+        "entryID": 203,
+        "actorID": "MC1",
+        "text": "「還是別浪費力氣了。」",
+        "Sequence": "",
+        "links": [209]
+    },
+    {
+        "entryID": 204,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,MartialArtsCheck,8);",
+        "Description": "武藝檢定空節點",
+        "links": [205]
+    },
+    {
+        "entryID": 205,
+        "actorID": "MC1",
+        "text": "「看招！開山裂石掌——！」",
+        "Sequence": "SetPortrait(MC1,pic=anger);EnableCharacterExpression(0,MC1-1,Anger_2);",
+        "links": [206, 207]
+    },
+    {
+        "entryID": 206,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（「砰！」的一聲悶響，大樹劇烈搖晃，落葉紛飛。緊接著，「啪嗒」一聲，一個東西掉在了你面前。）＊",
+        "Sequence": "IsPassDice() == true;",
+        "links": [208]
+    },
+    {
+        "entryID": 208,
+        "actorID": "MC1",
+        "text": "「這是……一隻鞋？」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1-1,Surprise);",
+        "links": []
+    },
+    {
+        "entryID": 207,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（「砰！」你一掌打在樹幹上，大樹紋絲不動，反倒是你的手腕傳來一陣劇痛。）＊",
+        "Sequence": "IsPassDice() == false;",
+        "links": [210]
+    },
+    {
+        "entryID": 210,
+        "actorID": "MC1",
+        "text": "「哎喲！痛痛痛！這樹皮是鐵做的嗎？！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=pain);EnableCharacterExpression(0,MC1-1,Pain);",
+        "links": []
+    },
+    {
+        "entryID": 209,
+        "actorID": "MC1",
+        "text": "「算了，愛護花草樹木，人人有責。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=normal);",
+        "links": []
+    },
+    {
+        "entryID": 230,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（在古樹的根部，你發現了一塊半掩埋在土裡的石板。撥開泥土，上面刻著一行古老的篆文。）＊",
+        "Sequence": "",
+        "links": [231]
+    },
+    {
+        "entryID": 231,
+        "actorID": "MC1",
+        "text": "「『逆流而上者死，順流而下者生。心誠則靈，飛流直下三千尺……』這什麼亂七八糟的？」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Meditate);",
+        "links": [232]
+    },
+    {
+        "entryID": 232,
+        "actorID": "MC1",
+        "text": "「順流而下……該不會是讓我跳瀑布吧？這可是幾百尺高啊！會死人的吧？！」",
+        "Sequence": "SetPortrait(MC1,pic=shocked);",
+        "links": []
+    },
+    {
+        "entryID": 250,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（巨大的水流從這裡奔騰而下，發出雷鳴般的巨響。水霧瀰漫，看不清下方的深淺。）＊",
+        "Sequence": "",
+        "links": [251, 252]
+    },
+    {
+        "entryID": 251,
+        "actorID": "MC1",
+        "text": "[em2][信仰之躍][/em2]「相信石板的指引，跳下去！」",
+        "Sequence": "",
+        "links": [253]
+    },
+    {
+        "entryID": 252,
+        "actorID": "MC1",
+        "text": "「還是算了，小命要緊。」",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 253,
+        "actorID": "MC1",
+        "text": "「富貴險中求！十八年後又是一條好漢！啊啊啊——！」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [254]
+    },
+    {
+        "entryID": 254,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你縱身一躍，身體急速下墜。就在你以為要粉身碎骨時，一股柔和的水流竟然托住了你，將你送入了一個隱藏在瀑布後的水簾洞。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 270,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（洞穴內別有洞天，中央矗立著一座巨大的女神像。神像身披戰甲，手持長矛，英姿颯爽，與中原女子的溫婉截然不同。）＊",
+        "Sequence": "",
+        "links": [271]
+    },
+    {
+        "entryID": 271,
+        "actorID": "MC1",
+        "text": "「乖乖……這姐姐長得真彪悍！這身裝備，這肌肉線條……嘖嘖，要是活著，怕是一拳能打死我。」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1-1,Surprise);",
+        "links": [272]
+    },
+    {
+        "entryID": 272,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（神像的基座上刻著密密麻麻的文字。你湊近細看。）＊",
+        "Sequence": "",
+        "links": [273]
+    },
+    {
+        "entryID": 273,
+        "actorID": "MC1",
+        "text": "「極西之地？逆流河？助秦統一？這……這可是驚天大祕密啊！原來歷史書上沒寫的都在這兒呢！」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=shocked);",
+        "links": [274]
+    },
+    {
+        "entryID": 274,
+        "actorID": "MC1",
+        "text": "「守護蒼生什麼的太沉重了。不過既然是以前幫皇帝打仗的，肯定留下了不少好寶貝吧？嘿嘿……」",
+        "Sequence": "SetPortrait(MC1,pic=happy);",
+        "links": [275]
+    },
+    {
+        "entryID": 275,
+        "actorID": "MC1",
+        "text": "「咦？這背後刻的是什麼？亂七八糟的……像是小孩塗鴉的蝌蚪？」",
+        "Sequence": "SetPortrait(MC1,pic=Confused);EnableCharacterExpression(0,MC1-1,Confused);",
+        "links": [276]
+    },
+    {
+        "entryID": 276,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "Description": "屬性判定點：學識等級 == 0 且 智力 <= 65",
+        "links": [277, 280]
+    },
+    {
+        "entryID": 277,
+        "actorID": "MC1",
+        "text": "「不過……這些蝌蚪游來游去的，看久了還挺有意思。嘿，這隻往上游，這隻往下鑽……」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=Meditate);",
+        "links": [278]
+    },
+    {
+        "entryID": 278,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你不知不覺跟著這些「蝌蚪」的軌跡運轉體內氣息。只覺一股暖流從丹田升起，原本滯澀的經脈竟然暢通無阻。）＊",
+        "Sequence": "",
+        "links": [279]
+    },
+    {
+        "entryID": 279,
+        "actorID": "MC1",
+        "text": "「哇！爽！這難道就是傳說中的……瞎貓碰上死耗子？不對，是神功護體？」",
+        "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1-1,Surprise);AddSkill(MC1,WuJianCangJiJue);",
+        "links": []
+    },
+    {
+        "entryID": 280,
+        "actorID": "MC1",
+        "text": "「這線條粗細不一，毫無章法。既不符合人體經脈結構，也看不出什麼武學至理。估計是哪個工匠喝醉了亂刻的吧。」",
+        "Sequence": "SetPortrait(MC1,pic=tired);",
+        "links": [281]
+    },
+    {
+        "entryID": 281,
+        "actorID": "MC1",
+        "text": "「嘖，白高興一場。還以為是什麼絕世秘籍呢，結果就是個塗鴉板。」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=normal);",
+        "links": []
+    },
+    {
+        "entryID": 300,
+        "actorID": "MC1",
+        "text": "「呼……這地方進來容易出去難。看樣子，只能從這地下暗河游出去了。」",
+        "Sequence": "SetPortrait(MC1,pic=normal);",
+        "links": [301]
+    },
+    {
+        "entryID": 301,
+        "actorID": "MC1",
+        "text": "「希望能直接通到外面，別把我沖到什麼地下迷宮裡去。走了！」",
+        "Sequence": "SetPortrait(MC1,pic=serious);",
+        "links": [302]
+    },
+    {
+        "entryID": 302,
+        "actorID": "MC0",
+        "text": "[panel=6]＊（你深吸一口氣，潛入水中，順著暗河漂流而去……）＊",
+        "Sequence": "ExitMap();",
+        "links": []
+    }
+]

@@ -1,0 +1,536 @@
+[
+    {
+        "entryID": 1,
+        "actorID": 2,
+        "text": "[panel=6]＊（今日你回到**有間客棧**店小二一見你便滿臉堆笑地迎了上來，將你引至一旁。）＊",
+        "Sequence": "",
+        "links": [2]
+    },
+    {
+        "entryID": 2,
+        "actorID": 12,
+        "text": "「[var=PlayerLastName]公子，您可真是貴人啊！前幾日您在後山義助的那位姑娘，小的後來斗膽問起您遺落的那方【夜蘭手帕】，才知曉…那天竟是我們老闆娘！」",
+        "Sequence": "",
+        "links": [3]
+    },
+    {
+        "entryID": 3,
+        "actorID": "MC1",
+        "text": "「哦？竟是那位傳聞中的『一枝花』老闆娘？這可真是…小二哥，你如何得知？莫不是消遣在下吧？」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1_Question);",
+        "links": [4]
+    },
+    {
+        "entryID": 4,
+        "actorID": 12,
+        "text": "「[var=PlayerLastName]公子有所不知，我們老闆娘平日白日裡忙於俗務，極少以真面目示人，村人所見多是她處理事務時的模樣。唯有在夜深人靜，月上中天之時，她才會褪去疲憊，展露…展露那傾城之姿，獨自靜享片刻安寧。那晚您遇到的，正是老闆娘夜遊散心，不想卻……唉，幸得公子出手！」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [5]
+    },
+    {
+        "entryID": 5,
+        "actorID": 12,
+        "text": "[panel=1]「老闆娘對公子高潔的品行和不凡的身手是讚不絕口。特意吩咐小的，今夜為公子備下了小店的鎮店名菜——『佳人笑』，定要請公子賞光，以表謝意！」",
+        "Sequence": "",
+        "links": [6]
+    },
+    {
+        "entryID": 6,
+        "actorID": "MC1",
+        "text": "「原來如此。看來我[var=PlayerLastName][var=PlayerFirstName]的俠義之舉，總算被有眼光的老闆娘看在眼裡了！哈哈哈！好！那就有勞小二哥了！也請務必代我向老闆娘轉達謝意，就說[var=PlayerLastName]某，卻之不恭！」",
+        "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1_Question);",
+        "links": [7]
+    },
+    {
+        "entryID": 7,
+        "actorID": "MC1",
+        "text": "「嘖嘖，白日與夜晚竟判若兩人？這位『一枝花』老闆娘，當真是高深莫測，嘿，越來越有意思了！這『佳人笑』，聽名字就非同凡響，想必定是人間美味啊…咳咳！我輩行俠仗義，豈會專為口腹之慾！嗯，主要是為了答謝老闆娘的美意，對，美意！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [8]
+    },
+    {
+        "entryID": 8,
+        "actorID": 2,
+        "text": "[panel=6]＊（店小二引你至一間清幽的雅室，室內燭光搖曳，暗香浮動。未幾，他便小心翼翼地端上一道精緻絕倫的菜餚，霞光流轉，異香撲鼻，令人見之忘俗。菜名正是「佳人笑」。）＊",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [9]
+    },
+    {
+        "entryID": 9,
+        "actorID": 12,
+        "text": "「公子請慢用。老闆娘吩咐，此菜乃她親手採集夜間沾露奇花異草，輔以秘法烹製而成，專為酬謝公子高義。她今夜略感風露，不便親見，特在屏風後向公子致意，還望公子海涵。」",
+        "Sequence": "",
+        "links": [10]
+    },
+    {
+        "entryID": 10,
+        "actorID": 2,
+        "text": "[panel=6]＊（你注意到房間一角立著一扇繪有山水墨竹的屏風，屏風後燭影綽綽，似有佳人安坐，隱約可聞環佩輕響與極淡的蘭麝之氣，與那夜蘭手帕的香氣頗為相似。）＊",
+        "Sequence": "",
+        "links": [11, 19, 24]
+    },
+    {
+        "entryID": 11,
+        "actorID": "MC1",
+        "text": "「盛情愧領，『佳人笑』真乃神品！」",
+        "Sequence": "",
+        "links": [12],
+        "Description": "選項1: 正確選項 - 極盡讚美且有分寸"
+    },
+    {
+        "entryID": 12,
+        "actorID": "MC1",
+        "text": "「咳！[var=PlayerLastName]實是愧領老闆娘盛情！這『佳人笑』，真乃…該如何形容才好？簡直是神來之筆，色香味無一不佳，是神品啊神品！老闆娘不僅廚藝驚為天人，這份高義雅緻又深藏不露的風範，更是令晚生我萬分心折，佩服，佩服之至！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Proud);",
+        "links": [13]
+    },
+    {
+        "entryID": 13,
+        "actorID": 2,
+        "text": "[panel=6]＊（你話音剛落，屏風後傳來一聲如銀鈴般的輕笑，帶著幾分愉悅與讚賞。）＊",
+        "Sequence": "",
+        "links": [14]
+    },
+    {
+        "entryID": 14,
+        "actorID": 10,
+        "text": "[panel=5]「[var=PlayerLastName]公子謬讚了，些許拙技，不足掛齒。公子不僅身手不凡，品鑒亦是獨到，更難得的是一片赤誠俠心，實乃當世罕見之君子。小女子能以『佳人笑』款待公子，亦是此菜的榮幸。」",
+        "Sequence": "DisableCharacterExpression(0);SetFlag(Yihua_Event_JiarenXiao_CorrectChoice,true);",
+        "links": [15]
+    },
+    {
+        "entryID": 15,
+        "actorID": 10,
+        "text": "[panel=5]「將我那份薄禮贈予[var=PlayerLastName]公子，聊表寸心。」",
+        "Sequence": "",
+        "links": [16]
+    },
+    {
+        "entryID": 16,
+        "actorID": 2,
+        "text": "[panel=6]＊（店小二應聲，從屏風後走出，手中捧著一個精緻的食盒。）＊",
+        "Sequence": "",
+        "links": [17]
+    },
+    {
+        "entryID": 17,
+        "actorID": 12,
+        "text": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
+        "Sequence": "",
+        "links": [18]
+    },
+    {
+        "entryID": 18,
+        "actorID": 10,
+        "text": "[panel=5]「夜色已深，公子慢用。若他日公子仍在此地，或許…我們還有緣再敘。」",
+        "Sequence": "",
+        "links": [29]
+    },
+    {
+        "entryID": 19,
+        "actorID": "MC1",
+        "text": "「菜品絕妙，敢問老闆娘芳蹤？」",
+        "Sequence": "",
+        "links": [20],
+        "Description": "選項2: 錯誤選項 - 急於見面，略顯輕浮"
+    },
+    {
+        "entryID": 20,
+        "actorID": "MC1",
+        "text": "「此菜果然名不虛傳，老闆娘真是一位奇人！咳，在下[var=PlayerLastName][var=PlayerFirstName]。我遊歷江湖，向來最敬佩身懷絕技的英雄美人…咳，我是說豪傑雅士！不知屏風後這位女中豪傑，能否賞光一見？也好讓在下將來向江湖同道們講述老闆娘神乎其技的廚藝，與這『佳人笑』非同尋常的來歷時，能說得更加詳實些。」",
+        "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1_Hopeful);",
+        "links": [21]
+    },
+    {
+        "entryID": 21,
+        "actorID": 2,
+        "text": "[panel=6]＊（屏風後沉默良久，之前那若有若無的環佩聲也消失了。店小二面露尷尬之色。）＊",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [22]
+    },
+    {
+        "entryID": 22,
+        "actorID": 12,
+        "text": "[panel=1]「[乾咳一聲] [var=PlayerLastName]公子…我們老闆娘性喜清靜，不慣見客…尤其…唉，公子還是先用菜吧。這『佳人笑』涼了可就失了風味了。」",
+        "Sequence": "",
+        "links": [23]
+    },
+    {
+        "entryID": 23,
+        "actorID": 2,
+        "text": "[panel=6]＊（你雖覺「佳人笑」美味，但屏風後再無聲息，氣氛不免有些沉悶。看來是言多有失，唐突了佳人。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 24,
+        "actorID": "MC1",
+        "text": "「菜是不錯，何為『佳人笑』？」",
+        "Sequence": "",
+        "links": [25],
+        "Description": "選項3: 中性, 但略顯不解風情"
+    },
+    {
+        "entryID": 25,
+        "actorID": "MC1",
+        "text": "「嗯，此菜風味確實不凡，老闆娘費心了。在下心中有個小小疑問，這『佳人笑』之名，聽來頗有意趣。莫非此名背後，有何特別說法，或是與老闆娘某些風雅之事有關？倘若老闆娘方便，還望不吝賜教一二，讓在下也能增長些見聞。」",
+        "Sequence": "SetPortrait(MC1,pic=normal);EnableCharacterExpression(0,MC1_Question);",
+        "links": [26]
+    },
+    {
+        "entryID": 26,
+        "actorID": 2,
+        "text": "[panel=6]＊（屏風後傳來一聲極輕的嘆息，若有若無。）＊",
+        "Sequence": "",
+        "links": [27]
+    },
+    {
+        "entryID": 27,
+        "actorID": 10,
+        "text": "[panel=5]「不過是個菜名罷了，公子不必深究。請慢用。」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [28]
+    },
+    {
+        "entryID": 28,
+        "actorID": 2,
+        "text": "[panel=6]＊（你用完了「佳人笑」，滋味雖好，卻總覺得少了些什麼。屏風後的那位老闆娘，似乎並未因你的言語而展露笑顏。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 29,
+        "actorID": 2,
+        "text": "[panel=6]＊（數日後的深夜，你被店小二恭敬地請至客棧後院的一處清雅小亭。亭中燭光搖曳，石桌旁坐著的正是「一枝花」。她依舊蒙著面紗，但你能感覺到她今夜似乎心事重重。）＊",
+        "Sequence": "",
+        "links": [30]
+    },
+    {
+        "entryID": 30,
+        "actorID": 10,
+        "text": "[panel=2]「[var=PlayerLastName]公子，深夜叨擾，還望海涵。前些時日公子對小女子的『佳人笑』以及…對小女子本人的那份敬重與理解，讓小女子銘感五內，心中甚是溫暖。」",
+        "Sequence": "",
+        "links": [31]
+    },
+    {
+        "entryID": 31,
+        "actorID": "MC1",
+        "text": "「老闆娘言重了，能品嚐到如此佳餚，又能結識老闆娘這般奇女子，是[var=PlayerLastName]的榮幸。看老闆娘今夜眉間似有愁緒，不知是否有在下能分憂之處？」",
+        "Sequence": "SetPortrait(MC1,pic=normal);EnableCharacterExpression(0,MC1_Question);",
+        "links": [32]
+    },
+    {
+        "entryID": 32,
+        "actorID": 10,
+        "text": "[panel=2]「公子慧眼…實不相瞞，小女子確有一事困擾已久，甚至…可以說是一種身不由己的苦楚。我這夜晚的模樣，並非…並非我所願長久維持的形態。」",
+        "Sequence": "DisableCharacterExpression(0);",
+        "links": [33]
+    },
+    {
+        "entryID": 33,
+        "actorID": 2,
+        "text": "[panel=6]＊（她輕嘆一聲，望向亭外的月色，聲音帶著一絲飄渺。）＊",
+        "Sequence": "",
+        "links": [34]
+    },
+    {
+        "entryID": 34,
+        "actorID": 10,
+        "text": "[panel=2]「傳聞在這附近的山嶺深處，生長著一種名為『返真草』的奇藥。此草…能助我暫時擺脫束縛，顯露出…我真正的樣貌。只是那地方異常兇險，小女子夜晚不便前往，白日…白日的我，更是力有未逮。」",
+        "Sequence": "",
+        "links": [35]
+    },
+    {
+        "entryID": 35,
+        "actorID": 10,
+        "text": "[panel=2]「[var=PlayerLastName]公子，我知道這個請求或許唐突…但你屢次出手相助，高義薄雲，是我唯一能信任之人。不知公子…是否願意為我尋來這『返真草』？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
+        "Sequence": "SetPortrait(NPC10,pic=sad);EnableCharacterExpression(2,NPC10,Sad);",
+        "links": [36, 37, 38]
+    },
+    {
+        "entryID": 36,
+        "actorID": "MC1",
+        "text": "「老闆娘信得過我，[var=PlayerLastName]赴湯蹈火，在所不辭！請告知『返真草』所在，我即刻便去！」",
+        "Sequence": "",
+        "links": [39],
+        "Description": "選項1: 正確選項"
+    },
+    {
+        "entryID": 37,
+        "actorID": "MC1",
+        "text": "「此事聽來兇險，老闆娘可否容我思量一番？」",
+        "Sequence": "",
+        "links": [],
+        "Description": "選項2: 猶豫選項"
+    },
+    {
+        "entryID": 38,
+        "actorID": "MC1",
+        "text": "「顯露真容？老闆娘現在的模樣，已是傾國傾城，何必多此一舉？」",
+        "Sequence": "",
+        "links": [],
+        "Description": "選項3: 錯誤選項 - 未理解其深意"
+    },
+    {
+        "entryID": 39,
+        "actorID": 2,
+        "text": "[panel=6]＊（一番跋涉後，你終於來到一處高聳的向陽峭壁之下。峭壁如刀削斧劈，異常險峻。隱約間，你似乎能看到壁間頑強生長著一些奇特的植物，其中就有疑似「返真草」的蹤影。）＊",
+        "Sequence": "",
+        "links": [40]
+    },
+    {
+        "entryID": 40,
+        "actorID": 2,
+        "text": "[panel=6]＊（要採得藥草，必須先攀上這險峻的峭壁。你打量著崖壁，心中盤算著對策。）＊",
+        "Sequence": "",
+        "links": [41, 46]
+    },
+    {
+        "entryID": 41,
+        "actorID": "MC1",
+        "text": "[em2][武力檢定][/em2]「依仗過人臂力，強行攀爬。」",
+        "Sequence": "",
+        "links": [42],
+        "Description": "選項1：武力檢定"
+    },
+    {
+        "entryID": 42,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,StrengthCheck,12);",
+        "links": [43],
+        "Description": "選項1的空對話擲骰節點"
+    },
+    {
+        "entryID": 43,
+        "actorID": "MC1",
+        "text": "「哼，區區峭壁，何足道哉！看我施展神通臂力，硬生生給它攀上去！」",
+        "Sequence": "SetPortrait(MC1,pic=anger);EnableCharacterExpression(0,MC1_Determined);",
+        "links": [44, 45]
+    },
+    {
+        "entryID": 44,
+        "actorID": 2,
+        "text": "[panel=6]＊（你深吸一口氣，雙臂猛然發力，手指如鐵爪般緊扣岩石縫隙，一步一步穩健地向上攀登。汗水浸濕了你的衣衫，但你渾然不覺，終是成功登上了峭壁頂端。）＊",
+        "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Ability_STR,10);",
+        "links": [51]
+    },
+    {
+        "entryID": 45,
+        "actorID": 2,
+        "text": "[panel=6]＊（你嘗試了幾次，都因臂力不繼或找不到好的著力點而滑了下來，摔得七葷八素。眼看天色漸晚，你咬了咬牙，尋了條相對平緩但更為繞遠的陡坡，手足並用，狼狽不堪地花了數倍力氣才勉強爬了上去。）＊",
+        "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);SetFlag(Yizhihua_FindHerb_FailCount, GetFlag(Yizhihua_FindHerb_FailCount)+1);",
+        "links": [51]
+    },
+    {
+        "entryID": 46,
+        "actorID": "MC1",
+        "text": "[em2][武藝檢定][/em2]「施展輕身功夫，靈巧攀援。」",
+        "Sequence": "",
+        "links": [47],
+        "Description": "選項2：武藝檢定"
+    },
+    {
+        "entryID": 47,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "BeginDiceRoll(Manual,MartialArtsCheck,12);",
+        "links": [48],
+        "Description": "選項2的空對話擲骰節點"
+    },
+    {
+        "entryID": 48,
+        "actorID": "MC1",
+        "text": "「這等峭壁，尋常方法難以奏效，正是我輩施展輕身功夫的好去處！瞧我的！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1_Confident);",
+        "links": [49, 50]
+    },
+    {
+        "entryID": 49,
+        "actorID": 2,
+        "text": "[panel=6]＊（你提運內力，身形陡然變得輕盈無比。腳尖在微小的凸起上連點，如猿猴般靈巧地在峭壁間騰挪閃躍，很快便輕鬆抵達了崖頂。）＊",
+        "Sequence": "IsPassDice() == true;DisableCharacterExpression(0);ModifyData(FeatExp,MC1,MartialArts,10);",
+        "links": [51]
+    },
+    {
+        "entryID": 50,
+        "actorID": 2,
+        "text": "[panel=6]＊（你一時不慎，腳下打滑，或是內力提運稍有差池，數次嘗試都未能成功躍上理想的落腳點，反而驚險萬分。最終，你不得不放棄取巧，尋了條相對崎嶇難行的小道，費了九牛二虎之力才攀了上來。）＊",
+        "Sequence": "IsPassDice() == false;DisableCharacterExpression(0);SetFlag(Yizhihua_FindHerb_FailCount, GetFlag(Yizhihua_FindHerb_FailCount)+1);",
+        "links": [51]
+    },
+    {
+        "entryID": 51,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "IF (GetFlag(Yizhihua_FindHerb_FailCount) >= 2) THEN JumpTo(一枝花結局_緣慳一面) ENDIF;",
+        "links": [52],
+        "Description": "失敗次數檢查節點"
+    },
+    {
+        "entryID": 52,
+        "actorID": 2,
+        "text": "[panel=6]＊（你仔細辨認，終於在峭壁頂端的一處石縫中發現了幾株散發著奇特清香的幽藍小花——正是「返真草」！）＊",
+        "Sequence": "",
+        "links": [53]
+    },
+    {
+        "entryID": 53,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "links": [54, 55],
+        "Description": "藥草品質分支節點"
+    },
+    {
+        "entryID": 54,
+        "actorID": 2,
+        "text": "[panel=6]＊（由於你之前的判斷與行動都頗為順利，採到的「返真草」不僅數量充足，且每一株都色澤飽滿，藥性十足。）＊",
+        "Sequence": "GetFlag(Yizhihua_FindHerb_FailCount) == 0;",
+        "links": [56]
+    },
+    {
+        "entryID": 55,
+        "actorID": 2,
+        "text": "[panel=6]＊（雖然之前略有波折，但你最終還是成功採得了足夠的「返真草」。只是它們看起來似乎因你的耽擱或笨拙而略有些損傷，希望不影響藥效。）＊",
+        "Sequence": "GetFlag(Yizhihua_FindHerb_FailCount) == 1;",
+        "links": [56]
+    },
+    {
+        "entryID": 56,
+        "actorID": "MC1",
+        "text": "「太好了！總算不負所託！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);",
+        "links": [57]
+    },
+    {
+        "entryID": 57,
+        "actorID": 2,
+        "text": "[panel=6]＊（是夜，你帶著『返真草』回到客棧後院，一枝花已在亭中等候，見你歸來，眼中滿是期盼與緊張。）＊",
+        "Sequence": "",
+        "links": [58]
+    },
+    {
+        "entryID": 58,
+        "actorID": "MC1",
+        "text": "「老闆娘，幸不辱命，『返真草』在此！」",
+        "Sequence": "SetPortrait(MC1,pic=proud);AddItem(FanZhenCao,1);",
+        "links": [59]
+    },
+    {
+        "entryID": 59,
+        "actorID": 10,
+        "text": "[panel=2]「公子…你真的…太好了！」",
+        "Sequence": "SetPortrait(NPC10,pic=grateful);EnableCharacterExpression(2,NPC10,Happy);",
+        "links": [60]
+    },
+    {
+        "entryID": 60,
+        "actorID": 2,
+        "text": "[panel=6]＊（她接過『返真草』，緊緊地攥在手中，指尖微微顫抖。她凝視著藥草，又抬頭深深地看著你，眼中情緒複雜，似有千言萬語。）＊",
+        "Sequence": "",
+        "links": [61]
+    },
+    {
+        "entryID": 61,
+        "actorID": "MC0",
+        "text": "",
+        "Sequence": "",
+        "links": [62, 63],
+        "Description": "根據藥草品質的對話分支"
+    },
+    {
+        "entryID": 62,
+        "actorID": 10,
+        "text": "[panel=2]「這『返真草』品相極佳…公子果然非同凡響。」",
+        "Sequence": "GetFlag(Yizhihua_FindHerb_FailCount) == 0;",
+        "links": [64]
+    },
+    {
+        "entryID": 63,
+        "actorID": 10,
+        "text": "[panel=2]「（她看著手中品質欠佳的藥草，輕輕一嘆）無論如何，多謝公子費此一番心力…」",
+        "Sequence": "GetFlag(Yizhihua_FindHerb_FailCount) != 0;",
+        "links": [64]
+    },
+    {
+        "entryID": 64,
+        "actorID": 10,
+        "text": "[panel=2]「[var=PlayerLastName]公子…有此神草，我或許能…能變回一些事物原本該有的樣子。但在此之前，我還有最後一個，也是最重要的一個問題想問你。」",
+        "Sequence": "DisableCharacterExpression(2);SetPortrait(NPC10,pic=serious);EnableCharacterExpression(2,NPC10,Nervous);",
+        "links": [65]
+    },
+    {
+        "entryID": 65,
+        "actorID": "MC1",
+        "text": "「老闆娘但問無妨，[var=PlayerLastName]知無不言。」",
+        "Sequence": "",
+        "links": [66]
+    },
+    {
+        "entryID": 66,
+        "actorID": 10,
+        "text": "[panel=2]「（她上前一步，幾乎與你貼近，聲音壓得很低，帶著一絲顫抖，卻又無比清晰）若我…若我並非你所見的這般模樣？若我真正的面目，與常人迥異，甚至…甚至在世人眼中醜陋不堪、如同精怪異物…你是否還會像今夜這般待我？是否還會…還會對我有半分情意？」",
+        "Sequence": "EnableCharacterExpression(2,NPC10,Hopeful);",
+        "links": [67, 71, 74]
+    },
+    {
+        "entryID": 67,
+        "actorID": "MC1",
+        "text": "「一枝花，我心匪石，不可轉也。我所鍾情的，是妳的靈魂與真心，而非皮相。無論妳是何模樣，我此情不渝。」",
+        "Sequence": "",
+        "links": [68],
+        "Description": "選項1: 真愛選項"
+    },
+    {
+        "entryID": 68,
+        "actorID": "MC1",
+        "text": "「一枝花，詩三百，一言以蔽之，曰：思無邪。我對妳的情意，亦是如此純粹。我心匪石，不可轉也；我心匪席，不可卷也。我所鍾情的，是妳獨一無二的靈魂、妳的善良與堅韌。皮相於我如浮雲，無論妳是何等模樣，我[var=PlayerLastName][var=PlayerFirstName]對妳此情不渝，此心不改！」",
+        "Sequence": "SetPortrait(MC1,pic=love);EnableCharacterExpression(0,MC1_Happy);",
+        "links": [69]
+    },
+    {
+        "entryID": 69,
+        "actorID": 10,
+        "text": "[panel=2]「（聞言，她渾身一震，淚水瞬間奪眶而出，喜悅、感動、釋然…種種情緒交織在她眼中。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手，彷彿要將你融入她的生命之中。）」",
+        "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC10,pic=moved);EnableCharacterExpression(2,NPC10,Moved);",
+        "links": [70]
+    },
+    {
+        "entryID": 70,
+        "actorID": 2,
+        "text": "[panel=6]＊（此刻，言語已是多餘，兩顆心緊密相連。）＊",
+        "Sequence": "",
+        "links": []
+    },
+    {
+        "entryID": 71,
+        "actorID": "MC1",
+        "text": "「老闆娘何出此言？在我心中，妳已是完美無瑕。」",
+        "Sequence": "",
+        "links": [72],
+        "Description": "選項2: 回避問題，未通過試探"
+    },
+    {
+        "entryID": 72,
+        "actorID": "MC1",
+        "text": "「老闆娘何出此言？莫非是在考驗在下？在我[var=PlayerLastName]心中，老闆娘風姿綽約，品性高潔，已是完美無瑕，世間再無女子能及。」",
+        "Sequence": "SetPortrait(MC1,pic=serious);EnableCharacterExpression(0,MC1_Hopeful);",
+        "links": []
+    },
+    {
+        "entryID": 74,
+        "actorID": "MC1",
+        "text": "「此事…若真如此，我恐怕需要時間來適應。」",
+        "Sequence": "",
+        "links": [75],
+        "Description": "選項3: 猶豫不定，試探失敗"
+    },
+    {
+        "entryID": 75,
+        "actorID": "MC1",
+        "text": "「老闆娘…若真如妳所言，妳的真實面貌與常人有極大差異…此事確實太過駭人聽聞。我…我不敢保證自己能立刻接受。或許，我需要一些時間來…來適應和思考。」",
+        "Sequence": "SetPortrait(MC1,pic=shocked);EnableCharacterExpression(0,MC1_Surprised);",
+        "links": []
+    }
+]
