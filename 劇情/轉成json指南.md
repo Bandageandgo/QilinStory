@@ -1,6 +1,6 @@
 # Markdown 腳本轉 JSON 對話格式指南 (根據最新立繪、擲骰、戰鬥與貴重品規則修訂)
 
-本文件旨在說明如何將 Markdown 格式的遊戲腳本（例如 `初出茅廬.md`）轉換為遊戲引擎可讀取的 JSON 格式，並整合最新的 `立繪指令轉換規則.md`、`擲骰指令轉換規則.md`、`戰鬥指令轉換規則.md` 與 `貴重品指令轉換規則.md`。
+本文件旨在說明如何將 Markdown 格式的遊戲腳本（例如 `劇情/初出茅廬之一.md`）轉換為遊戲引擎可讀取的 JSON 格式，並整合最新的 `給AI看的指南/立繪指令轉換規則.md`、`給AI看的指南/擲骰指令轉換規則.md`、`給AI看的指南/戰鬥指令轉換規則.md` 與 `給AI看的指南/貴重品指令轉換規則.md`。
 
 ## JSON 結構
 
@@ -79,14 +79,14 @@
 
 -   對話文字中（不包括人名）的 `**重點文字**` 應轉換為 `[em2]重點文字[/em2]`。
 
-### 3. Sequence 指令生成 (核心規則依據 `立繪指令轉換規則.md`)
+### 3. Sequence 指令生成 (核心規則依據 `給AI看的指南/立繪指令轉換規則.md`)
 
 -   **始終包含 `Sequence` 欄位**: 每個 JSON 物件都必須有 `Sequence` 欄位，即使為空 `""`。
 -   **指令組成**: 主要包含 `SetPortrait` (換立繪), `EnableCharacterExpression` (啟用表情), `DisableCharacterExpression` (停用表情), 以及可能的擲骰 `BeginDiceRoll`、戰鬥 `BeginFight` 和 `ModifyData`。**好感度**用 `ModifyData(FavorabilityExp,角色ID,數值);`（例如 `ModifyData(FavorabilityExp,MC22,10);`），**禁止**寫 `AddAffection(...)`。**物品一律是貴重品**：`ModifyData(Valuable,Player,ValuablesID,數值);`（例如 `ModifyData(Valuable,Player,DragonHorn,1);`）。目前沒有一般道具，**禁止** `Inventory,AddItem` 與 `AddItem(...)`。
 
 #### 3.1 `SetPortrait` (換立繪)
 -   **觸發條件**: 每個包含主角 (`MC1`)、蕭靈犀 (`MC8`) 或甄筠 (`MC9`) 的對話行，都**必須**包含 `SetPortrait` 指令。
--   **規則**: 根據對話行中 `[...]` 內的立繪描述文字，查閱 `立繪指令轉換規則.md` 中的「立繪描述與`pic`參數對照表」，確定對應的 `角色ID` 和 `pic` 值。**注意 MC1／MC8 用 15 格通用編號（§3、§4.1、§4.2），甄筠 (`MC9`) 屬於五立繪角色，只能用 1～5（§4.3），不要混用 15 格數值。**
+-   **規則**: 根據對話行中 `[...]` 內的立繪描述文字，查閱 `給AI看的指南/立繪指令轉換規則.md` 中的「立繪描述與`pic`參數對照表」，確定對應的 `角色ID` 和 `pic` 值。**注意 MC1／MC8 用 15 格通用編號（§3、§4.1、§4.2），甄筠 (`MC9`) 屬於五立繪角色，只能用 1～5（§4.3），不要混用 15 格數值。**
 -   **格式**: `SetPortrait(角色ID,pic=圖片名稱);`
     *   例如：`燕不凡` `[尷尬/臉紅]` -> `SetPortrait(MC1,pic=7);`
     *   例如：`甄筠` `[似笑非笑，語氣輕鬆]` -> `SetPortrait(MC9,pic=1);`（一般，配合表情特效表達語氣，見 3.2）
@@ -94,9 +94,9 @@
 
 #### 3.2 `EnableCharacterExpression` (啟用表情特效)
 -   **觸發條件**: 如果對話情境需要額外的表情特效，在 `SetPortrait` 後緊跟 `EnableCharacterExpression`。
--   **規則**: 參考 `立繪指令轉換規則.md` 中的「情緒描述與表情名稱對照表」及立繪檔名，根據上下文和描述文字選擇合適的角色版本ID與表情名稱。
+-   **規則**: 參考 `給AI看的指南/立繪指令轉換規則.md` 中的「情緒描述與表情名稱對照表」及立繪檔名，根據上下文和描述文字選擇合適的角色版本ID與表情名稱。
 -   **格式**: `EnableCharacterExpression(位置,角色版本ID,表情名稱);`
-    -   `位置`: `角色ID`為 `MC1` 時，位置固定為 `0`。其他角色作為當前發言者時，位置必須對應 `[panel=N]`（例如甄筠 `[panel=1]` → 位置 `1`；蕭靈犀開口時 `[panel=2]` → 位置 `2`）。NPC 說話者 panel **只用 1～3**：換人時在 1 ↔ 2 輪替（先 1、再 2 或取代 2、再回到 1）；同一人連說維持原位。**蕭靈犀自己開口永遠用 2**（即使她先開口也不標 1），但 **2 號位不是整場鎖給她**——下一個換人的 NPC 該站 2 就把她換掉。**只有三人同場、1 和 2 都不能讓時才上 3，不要用 4**。詳見 `文本創作指南.md` 2.1 節。
+    -   `位置`: `角色ID`為 `MC1` 時，位置固定為 `0`。其他角色作為當前發言者時，位置必須對應 `[panel=N]`（例如甄筠 `[panel=1]` → 位置 `1`；蕭靈犀開口時 `[panel=2]` → 位置 `2`）。NPC 說話者 panel **只用 1～3**：換人時在 1 ↔ 2 輪替（先 1、再 2 或取代 2、再回到 1）；同一人連說維持原位。**蕭靈犀自己開口永遠用 2**（即使她先開口也不標 1），但 **2 號位不是整場鎖給她**——下一個換人的 NPC 該站 2 就把她換掉。**只有三人同場、1 和 2 都不能讓時才上 3，不要用 4**。詳見 `給AI看的指南/文本創作指南.md` 2.1 節。
     -   `角色版本ID`: 用於區分角色不同時期或服裝的ID，例如 `MC1-1`, `MC8`, `MC9`。
     -   `表情名稱`: 表情的英文名稱，例如 `Surprise`, `Proud`, `Angry` 等。
     -   例如：`蕭靈犀` `[震驚/垮臉立繪]` -> `SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Surprise);`
@@ -112,7 +112,7 @@
 #### 3.4 指令合併
 -   同一個節點的多個指令用分號 `;` 連接。
     *   例如: `SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);`
-    *   包含狀態恢復的下一個節點: `DisableCharacterExpression(0);SetPortrait(MC1,pic=NewPicForThisLine);` (注意：根據`立繪指令轉換規則.md`，每行都會重新`SetPortrait`，所以不一定會恢復到`pic=1`，而是該行對應的新立繪。)
+    *   包含狀態恢復的下一個節點: `DisableCharacterExpression(0);SetPortrait(MC1,pic=NewPicForThisLine);` (注意：根據`給AI看的指南/立繪指令轉換規則.md`，每行都會重新`SetPortrait`，所以不一定會恢復到`pic=1`，而是該行對應的新立繪。)
 -   **`BeginDiceRoll`／`BeginFight` 不得與立繪／表情寫在同一條 Sequence。** 擲骰與戰鬥必須各自獨立空對話節點（見 §4、§4.3）。
 
 #### 3.5 `ModifyData` 好感度
@@ -123,7 +123,7 @@
 -   可與立繪／表情寫在同一條 `Sequence`（放在 `SetPortrait`／`EnableCharacterExpression` 之後）。
 
 #### 3.6 `ModifyData` 貴重品
--   **目前沒有一般道具**。劇情裡給玩家的東西一律是貴重品，詳細規則見 `貴重品指令轉換規則.md`。
+-   **目前沒有一般道具**。劇情裡給玩家的東西一律是貴重品，詳細規則見 `給AI看的指南/貴重品指令轉換規則.md`。
 -   **獲得／增加**: `ModifyData(Valuable,Player,ValuablesID,數值);`
     -   例如：`ModifyData(Valuable,Player,DragonHorn,1);`（獲得貴重品「蛟龍角」）
     -   `Player`：主角（CSV 範例有時寫 `MC1`，劇本慣例用 `Player`）。
@@ -134,11 +134,11 @@
 -   **特殊標籤**（CSV 另一欄，無數量參數）：`ModifyData(Valuable,MC1,SwordProficiency);` —— 不是「獲得物品」，不要拿來發蛟龍角。
 -   可與立繪／表情寫在同一條 `Sequence`。開啟貴重品便籤用 `ShowValuableMemo(ValuablesID);`，與獲得指令分開。
 
-### 4. 擲骰相關指令 (依據 `擲骰指令轉換規則.md`)
+### 4. 擲骰相關指令 (依據 `給AI看的指南/擲骰指令轉換規則.md`)
 
 #### 4.1 系統擲骰 (自動檢定)
 -   Markdown 中的 `[自動<檢定類型>檢定]` 或類似的文字提示（例如 `[自動洞悉檢定] (難度 2)`），其文字內容**本身應放在一個常規的旁白或對話節點中**，或者如果不需要在遊戲中明確顯示此文字，則在生成JSON時可以忽略此文字。
--   觸發實際的自動擲骰時，`Sequence` **不是**只寫 `BeginDiceRoll(Auto,FeatID,難度);`，更**沒有** `DiceRoll(...)` 這個指令。必須依 `擲骰指令轉換規則.md` 使用完整四段包裝，例如自動洞悉難度 12：
+-   觸發實際的自動擲骰時，`Sequence` **不是**只寫 `BeginDiceRoll(Auto,FeatID,難度);`，更**沒有** `DiceRoll(...)` 這個指令。必須依 `給AI看的指南/擲骰指令轉換規則.md` 使用完整四段包裝，例如自動洞悉難度 12：
     ```
     SetContinueMode(false);
     SetContinueMode(true)@Message(EndRoll);
@@ -146,11 +146,11 @@
     BeginDiceRoll(Auto,InsightCheck,12);
     ```
     應遵循以下兩步驟結構：
-    1.  **檢定觸發節點**: 創建一個節點，其 `actorID` 通常為 `"MC0"` (或代表系統的ID)，`text` 欄位為**空字串 `""`**。`Sequence` 欄位**不能只寫** `BeginDiceRoll(Auto,FeatID,難度);`，必須依 `擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」使用完整包裝：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,FeatID,難度);`。此節點必須包含 `Description` 說明其為檢定觸發點。
+    1.  **檢定觸發節點**: 創建一個節點，其 `actorID` 通常為 `"MC0"` (或代表系統的ID)，`text` 欄位為**空字串 `""`**。`Sequence` 欄位**不能只寫** `BeginDiceRoll(Auto,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」使用完整包裝：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,FeatID,難度);`。此節點必須包含 `Description` 說明其為檢定觸發點。
         -   `links`: 此節點的 `links` 應指向緊隨其後的「空內容緩衝節點」。
     2.  **空內容緩衝節點**: 緊隨「檢定觸發節點」之後，必須插入一個**新的節點**（擲骰節點與成功／失敗分支之間**固定隔這一個節點**，`Conditions` 不可掛在這裡）。此節點的 `actorID` 為 `"MC0"`，`text` 為**空字串 `""`**；因為沒有對話可讓玩家點擊推進，`Sequence` **開頭必須為 `Continue();`**（否則擲骰結束後畫面會卡住、無法繼續），若無其他指令則 `Sequence` 僅為 `"Continue();"`。此節點必須包含 `Description` 說明其用途。
         -   `links`: 此「空內容緩衝節點」的 `links` 才指向檢定成功和失敗的實際劇情分支節點（或教學提示等）。
--   `FeatID` 參考 `擲骰指令轉換規則.md` 中的「常用檢定項目ID對照」。
+-   `FeatID` 參考 `給AI看的指南/擲骰指令轉換規則.md` 中的「常用檢定項目ID對照」。
 -   檢定成功後，在描述成功的旁白節點或下一個合適節點的 `Sequence` 中加入獎勵指令 `ModifyData(AbilityExp/FeatExp,Player,獎勵用ID,數值);`。**通用標準為 +10**；**口才檢定成功為 +25**（見 §4.2.1）。
 -   **FeatID與獎勵ID的對應**: 擲骰時使用的`FeatID`（例如`InsightCheck`）與檢定成功後獎勵時使用的`獎勵用ID`（例如`Insight`）是相關聯但不同的ID。轉換時必須仔細查閱本指南末尾的「檢定ID與獎勵ID完整對照表」以確保使用正確的ID配對，避免錯誤。
 
@@ -178,7 +178,7 @@
         -   `Sequence`: 通常為空字串 `""`。
         -   `Description`: 應包含描述此選項用途的文字，例如："選項1：魅力檢定"。
         -   `links`: **指向一個緊隨其後的、專用於觸發該選項檢定的「空對話擲骰節點」**。如果該選項無檢定，則直接指向選擇後的劇情分支。
-    4.  **空對話擲骰節點 (手動擲骰觸發)**: **緊隨在帶檢定的『選項節點』之後**，必須插入一個特殊的「空對話」JSON節點。此節點的 `text` 欄位為空字串 (`""`)，其 `Sequence` 欄位**不能只寫** `BeginDiceRoll(Manual,FeatID,難度);`，必須依 `擲骰指令轉換規則.md` 使用完整包裝：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,FeatID,難度);`。
+    4.  **空對話擲骰節點 (手動擲骰觸發)**: **緊隨在帶檢定的『選項節點』之後**，必須插入一個特殊的「空對話」JSON節點。此節點的 `text` 欄位為空字串 (`""`)，其 `Sequence` 欄位**不能只寫** `BeginDiceRoll(Manual,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md` 使用完整包裝：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,FeatID,難度);`。
         -   `actorID`: 通常為 `0` 或 `-1` (系統執行)。
         -   `text`: `""` (空字串)。
         -   `Description`: 應包含描述此節點用途的文字，例如："選項1的空對話擲骰節點"。
@@ -227,7 +227,7 @@
 }
 ```
 
-### 4.3 戰鬥相關指令 (依據 `戰鬥指令轉換規則.md`)
+### 4.3 戰鬥相關指令 (依據 `給AI看的指南/戰鬥指令轉換規則.md`)
 
 ⚠️ **禁止**只寫 `BeginFight(Combat,ID);` 或舊指令 `BeginCombat(...)`。戰鬥與擲骰一樣必須用 `SetContinueMode` 包住，否則打完畫面會卡住。**一場戰鬥固定四個對話節點**。細節與場次表見 `給AI看的指南/戰鬥指令轉換規則.md`。
 
@@ -327,7 +327,7 @@
 -   **演出描述與音效提示**: 類似「**演出**：跑進村口(茶攤)」或「`[音效：特大聲的咕嚕——！]`」的行，這些主要用於場景或氛圍指導，**不應**為其創建獨立的 `entryID` 和對話節點。它們的內容通常不會直接作為 `text` 顯示。
 -   **旁白**: `旁白: [panel=6]＊...＊` 或單獨的 `[panel=6]＊...＊` 行，轉換為 `actorID: 2` (或其他旁白ID) 的節點，`text` 包含 `[panel=6]` 和星號內的內容。
 -   **`[即時訊息區]` 和 `[系統提示]` 的處理**: 這類內容，**不應**為其創建獨立的對話節點。如果需要在遊戲中顯示這些信息，其內容應整合到緊鄰的旁白節點的 `text` 中（例如，作為旁白的一部分，或在旁白文字後另起一行），或由遊戲UI通過非對話方式（如彈出提示、日誌更新等）專門處理，以避免打斷對話流。
--   **玩家選項的特殊處理 (`立繪指令轉換規則.md` 5.1節)**:
+-   **玩家選項的特殊處理 (`給AI看的指南/立繪指令轉換規則.md` 5.1節)**:
     -   選項節點的 `text` 應為格式化後的選項文字。若不涉及檢定，則為 `「原本的選項文字」`。若涉及檢定，則為 `[em2][XX檢定][/em2]「原本的選項文字」`。例如，原始 Markdown 選項為 `[魅力 難度5]` `[嘗試英雄式站姿，眺望遠方立繪]`：「區區三百文，何足掛齒！」，則選項節點的 `text` 變為 `[em2][魅力檢定][/em2]「區區三百文，何足掛齒！」`。
     -   如果原始Markdown選項中帶有角色發言的立繪描述 (如 `[魅力 難度6]` `[尷尬/臉紅]`：「咳咳！...」)，則：
         1.  **選項節點**的 `text` 變為上述格式化後的文本。
@@ -404,8 +404,8 @@
 -   **表情特效的禁用 (`DisableCharacterExpression`) 必須準確地放在下一個節點的 `Sequence` 開頭。**
 -   `links` 的指向必須準確，以保證對話流程的正確性。
 -   最終生成的JSON中，`Sequence` 字符串內的指令順序也很重要：一般對話節點通常是 `Disable...` (如果有) -> `SetPortrait` -> `Enable...` (如果有) -> `ModifyData` (如果適用)。**`BeginDiceRoll`／`BeginFight` 不得夾在立繪／表情同一條 Sequence 裡**，必須各自單獨放在空對話節點，並使用完整包裝。擲骰成敗用 `IsPassDice()`、戰鬥勝負用 `IsPassFight()`，皆寫在獨立的 `Conditions` 欄位，不要混入 `Sequence`。
--   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`、`SetFlag`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
--   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
+-   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`、`SetFlag`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
+-   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
 -   **只有特定類型的節點才應包含Description欄位**，包括檢定、擲骰、戰鬥、任務、選項等功能性節點。普通對話節點不應包含Description欄位。
 -   **對話文本統一性**: 確保所有對話文本的引號「」處理一致。根據1.1節規則，標準角色對話應包含引號。
 
