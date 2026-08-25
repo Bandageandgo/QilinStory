@@ -1,0 +1,806 @@
+[
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「呵，此地民風淳樸，必有高人隱……」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「呵，此地民風淳樸，必有高人隱……」",
+    "zh_CN": "「呵，此地民风淳朴，必有高人隐……」",
+    "links": [
+      56
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「[咕嚕——！]」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);\nAudioControl(PlaySFXOneShot,Others_Growling);",
+    "zh_TW": "「[咕嚕——！]」",
+    "zh_CN": "「[咕噜——！]」",
+    "links": [
+      57
+    ]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC8",
+    "text": "「表哥…我、我快餓扁了…」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=3);\nEnableCharacterExpression(1,MC8,Pain);",
+    "zh_TW": "「表哥…我、我快餓扁了…」",
+    "zh_CN": "「表哥…我、我快饿扁了…」",
+    "links": [
+      2056
+    ]
+  },
+  {
+    "entryID": 59,
+    "actorID": "role2",
+    "text": "[panel=6]＊（平凡小村依河而建，塵土飛揚。老槐樹下有簡陋茶攤，一個矮小的身影在攤前忙來忙去。幾位老者則在一旁閒聊。[em2]空氣中飄著若有似無的甜香[/em2]…當然還有塵土味。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=6]＊（平凡小村依河而建，塵土飛揚。老槐樹下有簡陋茶攤，一個矮小的身影在攤前忙來忙去。幾位老者則在一旁閒聊。[em2]空氣中飄著若有似無的甜香[/em2]…當然還有塵土味。）＊",
+    "zh_CN": "[panel=6]＊（平凡小村依河而建，尘土飞扬。老槐树下有简陋茶摊，一个矮小的身影在摊前忙来忙去。几位老者则在一旁闲聊。[em2]空气中飘着若有似无的甜香[/em2]…当然还有尘土味。）＊",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "role105",
+    "text": "「外鄉來的客人？本店的好茶，嘗一碗？」",
+    "Sequence": "ControlStage(TriggerEvent,Start01,All);",
+    "zh_TW": "「外鄉來的客人？本店的好茶，嘗一碗？」",
+    "zh_CN": "「外乡来的客人？本店的好茶，尝一碗？」",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC8",
+    "text": "[panel=2]「這位…呃…是茶博士？」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「這位…呃…是茶博士？」",
+    "zh_CN": "[panel=2]「这位…呃…是茶博士？」",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「唉唉，[em2]靈犀[/em2]，行走江湖，禮數為先，故事中的高手常都貌不驚人…」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_TW": "「唉唉，[em2]靈犀[/em2]，行走江湖，禮數為先，故事中的高手常都貌不驚人…」",
+    "zh_CN": "「唉唉，[em2]灵犀[/em2]，行走江湖，礼数为先，故事中的高手常都貌不惊人…」",
+    "links": [
+      63
+    ]
+  },
+  {
+    "entryID": 63,
+    "actorID": "role105",
+    "text": "「[em2]子曰：『有朋自遠方來，不亦樂乎？』[/em2]二位客官，既是遠來，何妨品茗一杯，嘗嘗本店特色佳茗？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC105,pic=2)",
+    "zh_TW": "「[em2]子曰：『有朋自遠方來，不亦樂乎？』[/em2]二位客官，既是遠來，何妨品茗一杯，嘗嘗本店特色佳茗？」",
+    "zh_CN": "「[em2]子曰：『有朋自远方来，不亦乐乎？』[/em2]二位客官，既是远来，何妨品茗一杯，尝尝本店特色佳茗？」",
+    "links": [
+      64
+    ]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「老天爺啊！竟然比[em2]靈犀[/em2]還有禮貌！」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nSetContinueMode(false);\nSetGameObjectShake(P0,ShakeNormal,XYAxis,1,20,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
+    "zh_TW": "「老天爺啊！竟然比[em2]靈犀[/em2]還有禮貌！」",
+    "zh_CN": "「老天爷啊！竟然比[em2]灵犀[/em2]还有礼貌！」",
+    "links": [
+      65
+    ]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC8",
+    "text": "[panel=2]「你這樣才比較失禮吧…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「你這樣才比較失禮吧…」",
+    "zh_CN": "[panel=2]「你这样才比较失礼吧…」",
+    "links": [
+      66
+    ]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC8",
+    "text": "[panel=2]「先不管這些細節了，有什麼吃的嗎？包子饅頭都行！另外我們想去[em2]雲中[/em2]，請問這裡的馬車何時出發？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「先不管這些細節了，有什麼吃的嗎？包子饅頭都行！另外我們想去[em2]雲中[/em2]，請問這裡的馬車何時出發？」",
+    "zh_CN": "[panel=2]「先不管这些细节了，有什么吃的吗？包子馒头都行！另外我们想去[em2]云中[/em2]，请问这里的马车何时出发？」",
+    "links": [
+      67
+    ]
+  },
+  {
+    "entryID": 67,
+    "actorID": "role105",
+    "text": "「要去[em2]雲中[/em2]啊？唉，最近不太平，附近山頭鬧山賊，兇得很！縣衙貼了告示，說為了安全，驛站的馬車啊，得等一個月後才能走了。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC105,pic=3)",
+    "zh_TW": "「要去[em2]雲中[/em2]啊？唉，最近不太平，附近山頭鬧山賊，兇得很！縣衙貼了告示，說為了安全，驛站的馬車啊，得等一個月後才能走了。」",
+    "zh_CN": "「要去[em2]云中[/em2]啊？唉，最近不太平，附近山头闹山贼，凶得很！县衙贴了告示，说为了安全，驿站的马车啊，得等一个月后才能走了。」",
+    "links": [
+      68
+    ]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「一個月？這可如何是好！如此一來，[em2]雲中[/em2]的[em2]英豪府[/em2]俠客遴選，豈不就趕不上了？」",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「一個月？這可如何是好！如此一來，[em2]雲中[/em2]的[em2]英豪府[/em2]俠客遴選，豈不就趕不上了？」",
+    "zh_CN": "「一个月？这可如何是好！如此一来，[em2]云中[/em2]的[em2]英豪府[/em2]侠客遴选，岂不就赶不上了？」",
+    "links": [
+      115
+    ]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC8",
+    "text": "[panel=2]「一個月？！那我們豈不是要在此地……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=3);EnableCharacterExpression(2,MC8,Nervous_2);",
+    "zh_TW": "[panel=2]「一個月？！那我們豈不是要在此地……」",
+    "zh_CN": "[panel=2]「一个月？！那我们岂不是要在此地……」",
+    "links": [
+      70
+    ]
+  },
+  {
+    "entryID": 70,
+    "actorID": "role105",
+    "text": "「是啊，你們得先找個落腳的地方。咱村裡就一個客棧，長租一個月我聽說約莫三百錢。」",
+    "Sequence": "DisableCharacterExpression();SetPortrait(MC105,pic=4)",
+    "zh_TW": "「是啊，你們得先找個落腳的地方。咱村裡就一個客棧，長租一個月我聽說約莫三百錢。」",
+    "zh_CN": "「是啊，你们得先找个落脚的地方。咱村里就一个客栈，长租一个月我听说约莫三百钱。」",
+    "links": [
+      71
+    ]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC8",
+    "text": "[panel=2]「三…三百錢一個月？！表哥！三百錢！我們…我們身上哪有這許多錢！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Shock);",
+    "zh_TW": "[panel=2]「三…三百錢一個月？！表哥！三百錢！我們…我們身上哪有這許多錢！」",
+    "zh_CN": "[panel=2]「三…三百钱一个月？！表哥！三百钱！我们…我们身上哪有这许多钱！」",
+    "links": [
+      116
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);",
+    "links": [
+      73
+    ]
+  },
+  {
+    "entryID": 73,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      74,
+      77
+    ]
+  },
+  {
+    "entryID": 74,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你注意到這位茶博士，雖然樣貌奇特，言語間卻透著一股精明。他說出三百錢時，眼神似乎在你們身上打量，不像是在隨口開價，倒像在說一件此地人人認命了的事。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);DisableCharacterExpression();SetPortrait(MC1,pic=12);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（你注意到這位茶博士，雖然樣貌奇特，言語間卻透著一股精明。他說出三百錢時，眼神似乎在你們身上打量，不像是在隨口開價，倒像在說一件此地人人認命了的事。）＊",
+    "zh_CN": "[panel=6]＊（你注意到这位茶博士，虽然样貌奇特，言语间却透着一股精明。他说出三百钱时，眼神似乎在你们身上打量，不像是在随口开价，倒像在说一件此地人人认命了的事。）＊",
+    "links": [
+      123,
+      124
+    ]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC1",
+    "text": "[em2][經濟檢定][/em2]「茶博士，一個月三百錢…可否指點一下，此地有何營生可做？」",
+    "Sequence": "ShowNoviceTeaching(ManualDiceRoll);",
+    "Description": "手動擲骰教學",
+    "zh_TW": "[em2][經濟檢定][/em2]「茶博士，一個月三百錢…可否指點一下，此地有何營生可做？」",
+    "zh_CN": "[em2][经济检定][/em2]「茶博士，一个月三百钱…可否指点一下，此地有何营生可做？」",
+    "links": [
+      78
+    ]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC1",
+    "text": "[em2][魅力檢定][/em2]「三百錢？小事一樁！茶博士，先來壺貴店最好的茶！」",
+    "Sequence": "ShowNoviceTeaching(ManualDiceRoll);",
+    "Description": "手動擲骰教學",
+    "zh_TW": "[em2][魅力檢定][/em2]「三百錢？小事一樁！茶博士，先來壺貴店最好的茶！」",
+    "zh_CN": "[em2][魅力检定][/em2]「三百钱？小事一桩！茶博士，先来壶贵店最好的茶！」",
+    "links": [
+      82
+    ]
+  },
+  {
+    "entryID": 77,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三百錢的房租確實不是個小數目，這位[em2]茶博士[/em2]的表情看不出什麼端倪，這似乎就是此地的行情價了。）＊",
+    "Sequence": "DisableCharacterExpression();\nSetPortrait(MC1,pic=12);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=6]＊（三百錢的房租確實不是個小數目，這位[em2]茶博士[/em2]的表情看不出什麼端倪，這似乎就是此地的行情價了。）＊",
+    "zh_CN": "[panel=6]＊（三百钱的房租确实不是个小数目，这位[em2]茶博士[/em2]的表情看不出什么端倪，这似乎就是此地的行情价了。）＊",
+    "links": [
+      75,
+      76
+    ]
+  },
+  {
+    "entryID": 78,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,6);",
+    "links": [
+      79
+    ]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC1",
+    "text": "「茶博士，一個月三百錢…我們初來乍到，盤纏短缺，不知此地有何營生可做，還望指點一二。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「茶博士，一個月三百錢…我們初來乍到，盤纏短缺，不知此地有何營生可做，還望指點一二。」",
+    "zh_CN": "「茶博士，一个月三百钱…我们初来乍到，盘缠短缺，不知此地有何营生可做，还望指点一二。」",
+    "links": [
+      80,
+      81
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role105",
+    "text": "「呵呵，出門在外，手頭緊是常有的事。看你們也是爽快人。這村子裡啊，要說賺錢的門路去找村長問最快了。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10);\nSetPortrait(MC105,pic=3)",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「呵呵，出門在外，手頭緊是常有的事。看你們也是爽快人。這村子裡啊，要說賺錢的門路去找村長問最快了。」",
+    "zh_CN": "「呵呵，出门在外，手头紧是常有的事。看你们也是爽快人。这村子里啊，要说赚钱的门路去找村长问最快了。」",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 81,
+    "actorID": "role105",
+    "text": "「營生？哼，我們這小地方，能有什麼大營生？你們自個兒去村裡轉轉吧，或許能碰上什麼零工。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC105,pic=5)",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「營生？哼，我們這小地方，能有什麼大營生？你們自個兒去村裡轉轉吧，或許能碰上什麼零工。」",
+    "zh_CN": "「营生？哼，我们这小地方，能有什么大营生？你们自个儿去村里转转吧，或许能碰上什么零工。」",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 82,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,CharismaCheck,6);",
+    "links": [
+      83
+    ]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "「三百錢？小事一樁！茶博士，先來壺貴店最好的茶！我與表妹也好歇歇腳。」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「三百錢？小事一樁！茶博士，先來壺貴店最好的茶！我與表妹也好歇歇腳。」",
+    "zh_CN": "「三百钱？小事一桩！茶博士，先来壶贵店最好的茶！我与表妹也好歇歇脚。」",
+    "links": [
+      84,
+      87
+    ]
+  },
+  {
+    "entryID": 84,
+    "actorID": "role105",
+    "text": "「哦？這位小哥倒是好氣魄！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(AbilityExp,Player,Ability_CHA,10);\nSetPortrait(MC105,pic=3);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「哦？這位小哥倒是好氣魄！」",
+    "zh_CN": "「哦？这位小哥倒是好气魄！」",
+    "links": [
+      85
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "role105",
+    "text": "「也罷，看小哥投緣，這壺『雲霧香茗』算我請了。至於營生嘛…村長那邊或許有些門路，你們不妨去問問。」",
+    "Sequence": "",
+    "zh_TW": "「也罷，看小哥投緣，這壺『雲霧香茗』算我請了。至於營生嘛…村長那邊或許有些門路，你們不妨去問問。」",
+    "zh_CN": "「也罢，看小哥投缘，这壶『云雾香茗』算我请了。至于营生嘛…村长那边或许有些门路，你们不妨去问问。」",
+    "links": [
+      86
+    ]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你吹牛也不打草稿，我們哪有錢喝茶…還好這位茶博士大方。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「表哥，你吹牛也不打草稿，我們哪有錢喝茶…還好這位茶博士大方。」",
+    "zh_CN": "[panel=2]「表哥，你吹牛也不打草稿，我们哪有钱喝茶…还好这位茶博士大方。」",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role105",
+    "text": "「呵呵，小哥口氣倒是不小。本店最好的『雲霧香茗』五十錢一壺，承惠。先付錢，後上茶。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC105,pic=3)",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「呵呵，小哥口氣倒是不小。本店最好的『雲霧香茗』五十錢一壺，承惠。先付錢，後上茶。」",
+    "zh_CN": "「呵呵，小哥口气倒是不小。本店最好的『云雾香茗』五十钱一壶，承惠。先付钱，后上茶。」",
+    "links": [
+      88
+    ]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「呃…這個…」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「呃…這個…」",
+    "zh_CN": "「呃…这个…」",
+    "links": [
+      89
+    ]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=3);",
+    "zh_TW": "[panel=2]「表哥…」",
+    "zh_CN": "[panel=2]「表哥…」",
+    "links": [
+      90
+    ]
+  },
+  {
+    "entryID": 90,
+    "actorID": "role105",
+    "text": "「看來是囊中羞澀了？唉，早說嘛。要去賺錢，可得多想想辦法，或者去村裡四處打聽打聽看有什麼門路。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC105,pic=5)",
+    "zh_TW": "「看來是囊中羞澀了？唉，早說嘛。要去賺錢，可得多想想辦法，或者去村裡四處打聽打聽看有什麼門路。」",
+    "zh_CN": "「看来是囊中羞涩了？唉，早说嘛。要去赚钱，可得多想想办法，或者去村里四处打听打听看有什么门路。」",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role105",
+    "text": "「看兩位小英雄也是初出茅廬，人生地不熟。這樣吧，我給你們指條明路[em2]有間客棧[/em2]老闆娘[em2]一枝花[/em2]可是我們這十里八鄉有名的美人，為人又熱情好客。」",
+    "Sequence": "SetPortrait(MC105,pic=2)",
+    "zh_TW": "「看兩位小英雄也是初出茅廬，人生地不熟。這樣吧，我給你們指條明路[em2]有間客棧[/em2]老闆娘[em2]一枝花[/em2]可是我們這十里八鄉有名的美人，為人又熱情好客。」",
+    "zh_CN": "「看两位小英雄也是初出茅庐，人生地不熟。这样吧，我给你们指条明路[em2]有间客栈[/em2]老板娘[em2]一枝花[/em2]可是我们这十里八乡有名的美人，为人又热情好客。」",
+    "links": [
+      92
+    ]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role105",
+    "text": "「你們去那兒投宿，她說不定能給你們些方便，房錢嘛，也好商量。她對年輕的英雄俊傑，可是很照顧的！」",
+    "Sequence": "SetPortrait(MC105,pic=4)",
+    "zh_TW": "「你們去那兒投宿，她說不定能給你們些方便，房錢嘛，也好商量。她對年輕的英雄俊傑，可是很照顧的！」",
+    "zh_CN": "「你们去那儿投宿，她说不定能给你们些方便，房钱嘛，也好商量。她对年轻的英雄俊杰，可是很照顾的！」",
+    "links": [
+      93
+    ]
+  },
+  {
+    "entryID": 93,
+    "actorID": "role105",
+    "text": "「快去吧，莫錯過了美人恩啊！」",
+    "Sequence": "SetPortrait(MC105,pic=5)",
+    "zh_TW": "「快去吧，莫錯過了美人恩啊！」",
+    "zh_CN": "「快去吧，莫错过了美人恩啊！」",
+    "links": [
+      94
+    ]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC8",
+    "text": "「[em2]一枝花[/em2]？！表哥，我們就先去那[em2]有間客棧[/em2]看看！說不定真能便宜些！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "「[em2]一枝花[/em2]？！表哥，我們就先去那[em2]有間客棧[/em2]看看！說不定真能便宜些！」",
+    "zh_CN": "「[em2]一枝花[/em2]？！表哥，我们就先去那[em2]有间客栈[/em2]看看！说不定真能便宜些！」",
+    "links": [
+      95
+    ]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「嗯，既然茶博士推薦，我們便去看看。安頓下來也是要緊事。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「嗯，既然茶博士推薦，我們便去看看。安頓下來也是要緊事。」",
+    "zh_CN": "「嗯，既然茶博士推荐，我们便去看看。安顿下来也是要紧事。」",
+    "links": [
+      96
+    ]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC1",
+    "text": "「美人老闆娘？還外號一枝花？哼，我輩江湖兒女，豈會為女色所動…不過…」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,proud);",
+    "zh_TW": "「美人老闆娘？還外號一枝花？哼，我輩江湖兒女，豈會為女色所動…不過…」",
+    "zh_CN": "「美人老板娘？还外号一枝花？哼，我辈江湖儿女，岂会为女色所动…不过…」",
+    "links": [
+      104
+    ]
+  },
+  {
+    "entryID": 97,
+    "actorID": "MC8",
+    "text": "「表哥，你可別又動什麼歪心思！我們現在是去安頓下來，不是去行俠仗義，更不准亂花錢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=2);",
+    "zh_TW": "「表哥，你可別又動什麼歪心思！我們現在是去安頓下來，不是去行俠仗義，更不准亂花錢！」",
+    "zh_CN": "「表哥，你可别又动什么歪心思！我们现在是去安顿下来，不是去行侠仗义，更不准乱花钱！」",
+    "links": [
+      98
+    ]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC8",
+    "text": "「那位一枝花要是真像茶博士說的那麼好心，肯給我們便宜點房錢就好，別的少想！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_TW": "「那位一枝花要是真像茶博士說的那麼好心，肯給我們便宜點房錢就好，別的少想！」",
+    "zh_CN": "「那位一枝花要是真像茶博士说的那么好心，肯给我们便宜点房钱就好，别的少想！」",
+    "links": [
+      99
+    ]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "「我何時動過歪心思…我只是覺得，大丈夫行于世，當…呃…先解決食宿！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「我何時動過歪心思…我只是覺得，大丈夫行于世，當…呃…先解決食宿！」",
+    "zh_CN": "「我何时动过歪心思…我只是觉得，大丈夫行于世，当…呃…先解决食宿！」",
+    "links": [
+      100
+    ]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC8",
+    "text": "「哼！總算說句實在話！快點去找活幹，不對，是快點去找客棧，填飽肚子才是正經事！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=2);",
+    "zh_TW": "「哼！總算說句實在話！快點去找活幹，不對，是快點去找客棧，填飽肚子才是正經事！」",
+    "zh_CN": "「哼！总算说句实在话！快点去找活干，不对，是快点去找客栈，填饱肚子才是正经事！」",
+    "links": [
+      101
+    ]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「是，是…靈犀女俠教訓的是…先去客棧。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);",
+    "zh_TW": "「是，是…靈犀女俠教訓的是…先去客棧。」",
+    "zh_CN": "「是，是…灵犀女侠教训的是…先去客栈。」",
+    "links": [
+      102
+    ]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC1",
+    "text": "「唉，英雄氣短…不對，是兄妹情長…」",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「唉，英雄氣短…不對，是兄妹情長…」",
+    "zh_CN": "「唉，英雄气短…不对，是兄妹情长…」",
+    "links": [
+      103
+    ]
+  },
+  {
+    "entryID": 103,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們腹中飢腸轆轆，錢袋也空空如也。你停下腳步，思忖眼下這一關該怎麼過…）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"C0M1\", \"active\")",
+    "Description": "價值觀選擇",
+    "zh_TW": "[panel=6]＊（你們腹中飢腸轆轆，錢袋也空空如也。你停下腳步，思忖眼下這一關該怎麼過…）＊",
+    "zh_CN": "[panel=6]＊（你们腹中饥肠辘辘，钱袋也空空如也。你停下脚步，思忖眼下这一关该怎么过…）＊",
+    "links": [
+      107,
+      108,
+      109,
+      110
+    ]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "「...不過話說回來，沒有兒女私情，那還算什麼江湖？再說，說書故事裡，這類情節不也總是讓聽眾時而嘆息時而拍案叫好嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=12)",
+    "zh_TW": "「...不過話說回來，沒有兒女私情，那還算什麼江湖？再說，說書故事裡，這類情節不也總是讓聽眾時而嘆息時而拍案叫好嗎？」",
+    "zh_CN": "「...不过话说回来，没有儿女私情，那还算什么江湖？再说，说书故事里，这类情节不也总是让听众时而叹息时而拍案叫好吗？」",
+    "links": [
+      105
+    ]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC1",
+    "text": "「所以啦，如果緣分真來了，我也沒轍，而且這樣搞不好也能省不少住宿費用呢，小犀也會祝福我的...」",
+    "Sequence": "SetPortrait(MC1,pic=7)",
+    "zh_TW": "「所以啦，如果緣分真來了，我也沒轍，而且這樣搞不好也能省不少住宿費用呢，小犀也會祝福我的...」",
+    "zh_CN": "「所以啦，如果缘分真来了，我也没辙，而且这样搞不好也能省不少住宿费用呢，小犀也会祝福我的...」",
+    "links": [
+      97
+    ]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC8",
+    "text": "「表哥，趕緊賺住宿錢吧，不要亂跑了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「表哥，趕緊賺住宿錢吧，不要亂跑了！」",
+    "zh_CN": "「表哥，赶紧赚住宿钱吧，不要乱跑了！」",
+    "links": []
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC1",
+    "text": "[em2][信義][/em2]「仗劍而行，取之有道。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[em2][信義][/em2]「仗劍而行，取之有道。」",
+    "zh_CN": "[em2][信义][/em2]「仗剑而行，取之有道。」",
+    "links": [
+      120
+    ]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC1",
+    "text": "[em2][通達][/em2]「條條大路通洛陽，隨機應變。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[em2][通達][/em2]「條條大路通洛陽，隨機應變。」",
+    "zh_CN": "[em2][通达][/em2]「条条大路通洛阳，随机应变。」",
+    "links": [
+      119
+    ]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC1",
+    "text": "[em2][仁心][/em2]「助人為樂，解人之急。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[em2][仁心][/em2]「助人為樂，解人之急。」",
+    "zh_CN": "[em2][仁心][/em2]「助人为乐，解人之急。」",
+    "links": [
+      118
+    ]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC1",
+    "text": "[em2][機略][/em2]「利字當頭，怎麼快怎麼來。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[em2][機略][/em2]「利字當頭，怎麼快怎麼來。」",
+    "zh_CN": "[em2][机略][/em2]「利字当头，怎么快怎么来。」",
+    "links": [
+      117
+    ]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "「錢要賺，但得賺得光明磊落。哪怕去扛包賣藝，也不能失了心中的俠氣。坑蒙拐騙，我輩不為。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);",
+    "zh_TW": "「錢要賺，但得賺得光明磊落。哪怕去扛包賣藝，也不能失了心中的俠氣。坑蒙拐騙，我輩不為。」",
+    "zh_CN": "「钱要赚，但得赚得光明磊落。哪怕去扛包卖艺，也不能失了心中的侠气。坑蒙拐骗，我辈不为。」",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "「規矩是死的，人是活的。先四處聽聽閒話，看看有什麼油水可撈。賭兩把，吹吹牛，能搞到錢就是好法子。」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nModifyData(DnDAlignment,Player,LawChaos,-0.15);",
+    "zh_TW": "「規矩是死的，人是活的。先四處聽聽閒話，看看有什麼油水可撈。賭兩把，吹吹牛，能搞到錢就是好法子。」",
+    "zh_CN": "「规矩是死的，人是活的。先四处听听闲话，看看有什么油水可捞。赌两把，吹吹牛，能搞到钱就是好法子。」",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "「不如先看看村裡誰需要幫忙。真心待人，結下善緣，總不會讓我們餓肚子。」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(DnDAlignment,Player,GoodEvil,0.15);",
+    "zh_TW": "「不如先看看村裡誰需要幫忙。真心待人，結下善緣，總不會讓我們餓肚子。」",
+    "zh_CN": "「不如先看看村里谁需要帮忙。真心待人，结下善缘，总不会让我们饿肚子。」",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "「當務之急，是找到最快賺錢的方法。誰是冤大頭？哪個報酬高？目標得要明確。」",
+    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
+    "zh_TW": "「當務之急，是找到最快賺錢的方法。誰是冤大頭？哪個報酬高？目標得要明確。」",
+    "zh_CN": "「当务之急，是找到最快赚钱的方法。谁是冤大头？哪个报酬高？目标得要明确。」",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC1",
+    "text": "「那可是我輩立身揚名，話本裡英雄起家的頭一回啊！」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「那可是我輩立身揚名，話本裡英雄起家的頭一回啊！」",
+    "zh_CN": "「那可是我辈立身扬名，话本里英雄起家的头一回啊！」",
+    "links": [
+      69
+    ]
+  },
+  {
+    "entryID": 116,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在對話和環境中會需要通過[em2]洞悉檢定[/em2]，當通過檢定後會獲得更好的結果和[em2]隱藏的對話選項[/em2]。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（在對話和環境中會需要通過[em2]洞悉檢定[/em2]，當通過檢定後會獲得更好的結果和[em2]隱藏的對話選項[/em2]。）＊",
+    "zh_CN": "[panel=6]＊（在对话和环境中会需要通过[em2]洞悉检定[/em2]，当通过检定后会获得更好的结果和[em2]隐藏的对话选项[/em2]。）＊",
+    "links": [
+      72
+    ]
+  },
+  {
+    "entryID": 117,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,CommerceLv1);\nShowHint(Skill,CommerceLv1);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [
+      114
+    ]
+  },
+  {
+    "entryID": 118,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,Healing);\nShowHint(Skill,Healing);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [
+      113
+    ]
+  },
+  {
+    "entryID": 119,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,RealpolitikLv1);\nShowHint(Skill,RealpolitikLv1);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [
+      112
+    ]
+  },
+  {
+    "entryID": 120,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,TigerFist);\nShowHint(Skill,TigerFist);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [
+      111
+    ]
+  },
+  {
+    "entryID": 121,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nShowNoviceTeaching(BoxMapInteraction);\nSetContinueMode(original)@Message(EndTeaching);\nContinue()@Message(EndTeaching);\nModifyData(FavorabilityExp,MC8,200);",
+    "Script": "SetQuestEntryState(\"C0M1\", 2, \"active\")",
+    "Description": "蕭靈犀好感度提升、觸發任務",
+    "links": []
+  },
+  {
+    "entryID": 123,
+    "actorID": "role2",
+    "text": "[panel=6][em3][背景：江湖遊俠][/em3]（這位茶博士那副理所當然的口吻，與江湖中那些專門設局宰客的黑店伎倆如出一轍。這聽起來像是在用價格試探外鄉人的反應。）",
+    "Sequence": "",
+    "Conditions": "IsBackGroundFit(\"Player\", \"HumbleHero\")  == true",
+    "zh_TW": "[panel=6][em3][背景：江湖遊俠][/em3]（這位茶博士那副理所當然的口吻，與江湖中那些專門設局宰客的黑店伎倆如出一轍。這聽起來像是在用價格試探外鄉人的反應。）",
+    "zh_CN": "[panel=6][em3][背景：江湖游侠][/em3]（这位茶博士那副理所当然的口吻，与江湖中那些专门设局宰客的黑店伎俩如出一辙。这听起来像是在用价格试探外乡人的反应。）",
+    "links": [
+      2055
+    ]
+  },
+  {
+    "entryID": 124,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      76,
+      75
+    ]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,MyFriends);\nShowHint(Skill,MyFriends);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [
+      75,
+      76
+    ]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這嘴臉讓你懷念起與夥伴們一唱一和的日子。若有人在側，早破了這茶博士的局。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（這嘴臉讓你懷念起與夥伴們一唱一和的日子。若有人在側，早破了這茶博士的局。）＊",
+    "zh_CN": "[panel=6]＊（这嘴脸让你怀念起与伙伴们一唱一和的日子。若有人在侧，早破了这茶博士的局。）＊",
+    "links": [
+      2054
+    ]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(AddNewCharacter,MC8);\nModifyData(IsAbleToJoinTeam,MC8,flase);\nShowHint(Character,MC8);\nSetContinueMode(original)@Message(EndHintCharacter);",
+    "Description": "獲得角色情報",
+    "links": [
+      59
+    ]
+  }
+]

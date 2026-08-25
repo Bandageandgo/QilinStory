@@ -1,0 +1,600 @@
+[
+  {
+    "entryID": 770,
+    "actorID": "role2",
+    "text": "[panel=6]＊（──行至中途，你發現前方有熟悉身影在採藥。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（──行至中途，你發現前方有熟悉身影在採藥。）＊",
+    "zh_CN": "[panel=6]＊（──行至中途，你发现前方有熟悉身影在采药。）＊",
+    "links": [3904]
+  },
+  {
+    "entryID": 771,
+    "actorID": "MC8",
+    "text": "「表哥，你看！\n小犀找到了很多沒見過的藥草呢！」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "「表哥，你看！\n小犀找到了很多沒見過的藥草呢！」",
+    "zh_CN": "「表哥，你看！\n小犀找到了很多没见过的药草呢！」",
+    "links": [772]
+  },
+  {
+    "entryID": 772,
+    "actorID": "MC1",
+    "text": "哦！真的不錯，聞聞這些草藥的芳香……",
+    "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(LifeExp,50);",
+    "Description": "獲得生活經驗",
+    "zh_TW": "哦！真的不錯，聞聞這些草藥的芳香……",
+    "zh_CN": "哦！真的不错，闻闻这些草药的芳香……",
+    "links": [773]
+  },
+  {
+    "entryID": 773,
+    "actorID": "MC1",
+    "text": "「不對！我說你啊，放著好好的家不待，跑來這深山老林餵蚊子嗎？趕緊回去吧。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「不對！我說你啊，放著好好的家不待，跑來這深山老林餵蚊子嗎？趕緊回去吧。」",
+    "zh_CN": "「不对！我说你啊，放着好好的家不待，跑来这深山老林喂蚊子吗？赶紧回去吧。」",
+    "links": [774]
+  },
+  {
+    "entryID": 774,
+    "actorID": "MC8",
+    "text": "「又沒跑多遠……我這就回家。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "「又沒跑多遠……我這就回家。」",
+    "zh_CN": "「又没跑多远……我这就回家。」",
+    "links": [775]
+  },
+  {
+    "entryID": 775,
+    "actorID": "MC1",
+    "text": "「難道…這一切都是因為我賺的錢不夠花，才要出來拔草貼補家用嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(FavorabilityExp,MC8,50);\nDisableEventBG(FullScreen);\nEnableDialogueBG(Forest);",
+    "Description": "好感度提升、關閉事件圖、開啟背景圖",
+    "zh_TW": "「難道…這一切都是因為我賺的錢不夠花，才要出來拔草貼補家用嗎？」",
+    "zh_CN": "「难道…这一切都是因为我赚的钱不够花，才要出来拔草贴补家用吗？」",
+    "links": [2052]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Forest);\nContinue();",
+    "Description": "採草藥賺錢",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [770]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Description": "關閉背景圖",
+    "links": []
+  },
+  {
+    "entryID": 2053,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雲中位於各方勢力的交界處，此地乃三不管地帶，魚龍混雜。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（雲中位於各方勢力的交界處，此地乃三不管地帶，魚龍混雜。）＊",
+    "zh_CN": "[panel=6]＊（云中位于各方势力的交界处，此地乃三不管地带，鱼龙混杂。）＊",
+    "links": [3905]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC22",
+    "text": "「哎呀！大哥，我真沒帶錢袋！下次！下次一定！我向長生天發誓！」",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Nervous_2);",
+    "zh_TW": "「哎呀！大哥，我真沒帶錢袋！下次！下次一定！我向長生天發誓！」",
+    "zh_CN": "「哎呀！大哥，我真没带钱袋！下次！下次一定！我向长生天发誓！」",
+    "links": [2055]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "role13",
+    "text": "「小丫頭，雲中可不歸長生天管！欠賭坊五百錢，沒錢就跟我們走，幫主正缺個倒酒丫鬟！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "「小丫頭，雲中可不歸長生天管！欠賭坊五百錢，沒錢就跟我們走，幫主正缺個倒酒丫鬟！」",
+    "zh_CN": "「小丫头，云中可不归长生天管！欠赌坊五百钱，没钱就跟我们走，帮主正缺个倒酒丫鬟！」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "MC1",
+    "text": "「光天化日，欺負一個弱女子算什麼本事！」",
+    "Sequence": "",
+    "zh_CN": "「光天化日，欺负一个弱女子算什么本事！」",
+    "links": [2060]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "MC1",
+    "text": "（這丫頭又在搞什麼鬼？先看看再說。）",
+    "Sequence": "",
+    "zh_CN": "（这丫头又在搞什么鬼？先看看再说。）",
+    "links": [2068]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC1",
+    "text": "「住手！光天化日之下，竟敢強逼良家婦女？」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1_Anger);",
+    "zh_CN": "「住手！光天化日之下，竟敢强逼良家妇女？」",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role13",
+    "text": "「喲？哪來的愣頭青？敢管我們赤龍幫的閒事？兄弟們，給他點顏色瞧瞧！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「哟？哪来的愣头青？敢管我们赤龙帮的闲事？兄弟们，给他点颜色瞧瞧！」",
+    "links": [3663]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC22",
+    "text": "「[em7]見到你如獲大赦，立刻躲到你身後[/em7] 大俠！救命啊！這些人玩不起，出老千騙我錢！」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "zh_CN": "「[em7]见到你如获大赦，立刻躲到你身后[/em7] 大侠！救命啊！这些人玩不起，出老千骗我钱！」",
+    "links": [2057, 2058]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "role13",
+    "text": "「哎喲！哎喲！好漢饒命！小的有眼不識泰山！」",
+    "Sequence": "",
+    "zh_CN": "「哎哟！哎哟！好汉饶命！小的有眼不识泰山！」",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "MC1",
+    "text": "「哼，滾！」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_CN": "「哼，滚！」",
+    "links": [2066]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role13",
+    "text": "「是是是！不過…這位好漢，咱們幫主老人家最敬重英雄。既然這姑娘說是我們出千，不如兩位親自去賭坊見見幫主？」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=nervous);",
+    "zh_TW": "「是是是！不過…這位好漢，咱們幫主老人家最敬重英雄。既然這姑娘說是我們出千，不如兩位親自去賭坊見見幫主？」",
+    "zh_CN": "「是是是！不过…这位好汉，咱们帮主老人家最敬重英雄。既然这姑娘说是我们出千，不如两位亲自去赌坊见见帮主？」",
+    "links": [3666]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "MC22",
+    "text": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7] 啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
+    "Sequence": "SetPortrait(MC22,pic=10);\nEnableCharacterExpression(1,MC22_Surprise);",
+    "zh_TW": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7] 啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
+    "zh_CN": "「[em7]瞥见了你，立刻戏精上身，大喊道[/em7] 啊！当家的！你终于来了！快救救妾身！他们要抓我去抵债！」",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "MC1",
+    "text": "「……算妳狠。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);",
+    "zh_CN": "「……算妳狠。」",
+    "links": [2070]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "role13",
+    "text": "「當家的？正好！這丫頭欠了我們五百錢，既然你是她相好，那就替她還了吧！」",
+    "Sequence": "",
+    "zh_TW": "「當家的？正好！這丫頭欠了我們五百錢，既然你是她相好，那就替她還了吧！」",
+    "zh_CN": "「当家的？正好！这丫头欠了我们五百钱，既然你是她相好，那就替她还了吧！」",
+    "links": [2071, 2072]
+  },
+  {
+    "entryID": 2071,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「五百？我看你們是想錢想瘋了！」",
+    "Sequence": "",
+    "zh_TW": "[em2][威嚇檢定][/em2]「五百？我看你們是想錢想瘋了！」",
+    "zh_CN": "[em2][威吓检定][/em2]「五百？我看你们是想钱想疯了！」",
+    "links": [2073]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC1",
+    "text": "「這位大哥，有話好說，這錢我們一定還。」",
+    "Sequence": "",
+    "zh_CN": "「这位大哥，有话好说，这钱我们一定还。」",
+    "links": [2078]
+  },
+  {
+    "entryID": 2073,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
+    "links": [2074]
+  },
+  {
+    "entryID": 2074,
+    "actorID": "MC1",
+    "text": "「[em7]拔劍出鞘半寸，殺氣外露[/em7] 錢沒有，命有一條，你們要嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_CN": "「[em7]拔剑出鞘半寸，杀气外露[/em7] 钱没有，命有一条，你们要吗？」",
+    "links": [2075, 2076]
+  },
+  {
+    "entryID": 2075,
+    "actorID": "role13",
+    "text": "「[em7]被你的氣勢嚇退半步[/em7] 呃…這…好漢息怒！咱們也是混口飯吃…不如這樣，兩位去賭坊見見幫主？咱們幫主說了，只要能在賭桌上贏過他，這債一筆勾銷，還送寶貝！」",
+    "Sequence": ";SetPortrait(MC1,pic=2);ModifyData(FeatExp,Player,Intimidation,10);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "「[em7]被你的气势吓退半步[/em7] 呃…这…好汉息怒！咱们也是混口饭吃…不如这样，两位去赌坊见见帮主？咱们帮主说了，只要能在赌桌上赢过他，这债一笔勾销，还送宝贝！」",
+    "links": [3673]
+  },
+  {
+    "entryID": 2076,
+    "actorID": "role13",
+    "text": "「[em7]不屑地冷笑[/em7] 喲？還想動手？兄弟們，上！教教這小子規矩！」",
+    "Sequence": ";SetPortrait(MC1,pic=2);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「[em7]不屑地冷笑[/em7] 哟？还想动手？兄弟们，上！教教这小子规矩！」",
+    "links": [3663]
+  },
+  {
+    "entryID": 2078,
+    "actorID": "MC1",
+    "text": "「這位大哥，有話好說。我們初來乍到，手頭確實有點緊，不如寬限幾日？」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_CN": "「这位大哥，有话好说。我们初来乍到，手头确实有点紧，不如宽限几日？」",
+    "links": [2079]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "role13",
+    "text": "「寬限？問問我的拳頭吧，兄弟們，給他點顏色瞧瞧！」",
+    "Sequence": "",
+    "zh_TW": "「寬限？問問我的拳頭吧，兄弟們，給他點顏色瞧瞧！」",
+    "zh_CN": "「宽限？问问我的拳头吧，兄弟们，给他点颜色瞧瞧！」",
+    "links": [3663]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你嘆了口氣。雖然明知是鴻門宴，但為了那傳說中的寶物，也為了幫這丫頭解圍，你決定前往[em2]雲中的吉祥賭坊[/em2]會一會那位赤龍幫幫主。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Script": "SetQuestState(\"CF20\", \"active\")",
+    "Description": "觸發任務",
+    "zh_TW": "[panel=6]＊（你嘆了口氣。雖然明知是鴻門宴，但為了那傳說中的寶物，也為了幫這丫頭解圍，你決定前往[em2]雲中的吉祥賭坊[/em2]會一會那位赤龍幫幫主。）＊",
+    "zh_CN": "[panel=6]＊（你叹了口气。虽然明知是鸿门宴，但为了那传说中的宝物，也为了帮这丫头解围，你决定前往[em2]云中的吉祥赌坊[/em2]会一会那位赤龙帮帮主。）＊",
+    "links": [3675]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Yunzhong);\nContinue();",
+    "Description": "吉祥賭場",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2053]
+  },
+  {
+    "entryID": 3663,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,44);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [3676]
+  },
+  {
+    "entryID": 3664,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "Description": "戰鬥成功",
+    "links": [2064]
+  },
+  {
+    "entryID": 3666,
+    "actorID": "role13",
+    "text": "「若真能贏過幫主，別說這五百錢，就是庫房裡的寶貝也雙手奉上！」",
+    "Sequence": "SetPortrait(NPC_Thug,pic=nervous);",
+    "zh_TW": "「若真能贏過幫主，別說這五百錢，就是庫房裡的寶貝也雙手奉上！」",
+    "zh_CN": "「若真能赢过帮主，别说这五百钱，就是库房里的宝贝也双手奉上！」",
+    "links": [3673]
+  },
+  {
+    "entryID": 3670,
+    "actorID": "MC22",
+    "text": "「嗚…大俠，這次我是真的栽了。」",
+    "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22,Meditate);",
+    "zh_TW": "「嗚…大俠，這次我是真的栽了。」",
+    "zh_CN": "「呜…大侠，这次我是真的栽了。」",
+    "links": [3671]
+  },
+  {
+    "entryID": 3671,
+    "actorID": "MC22",
+    "text": "「但我聽說那赤龍幫幫主是個賭痴，雖然凶狠但極重承諾。他立下規矩，只要有人能在賭桌上贏過他，不僅債務一筆勾銷，還會送出一件稀世奇珍！」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nDisableCharacterExpression(1)",
+    "zh_TW": "「但我聽說那赤龍幫幫主是個賭痴，雖然凶狠但極重承諾。他立下規矩，只要有人能在賭桌上贏過他，不僅債務一筆勾銷，還會送出一件稀世奇珍！」",
+    "zh_CN": "「但我听说那赤龙帮帮主是个赌痴，虽然凶狠但极重承诺。他立下规矩，只要有人能在赌桌上赢过他，不仅债务一笔勾销，还会送出一件稀世奇珍！」",
+    "links": [2086]
+  },
+  {
+    "entryID": 3673,
+    "actorID": "role13",
+    "text": "「咱們賭坊位於雲中西面。到了門口，跟守門的說：[em2]赤龍翻江，豹子通殺[/em2]。自然有人帶你去見幫主。去與不去，全憑好漢定奪。兄弟們，撤！」",
+    "Sequence": "",
+    "zh_TW": "「咱們賭坊位於雲中西面。到了門口，跟守門的說：[em2]赤龍翻江，豹子通殺[/em2]。自然有人帶你去見幫主。去與不去，全憑好漢定奪。兄弟們，撤！」",
+    "zh_CN": "「咱们赌坊位于云中西面。到了门口，跟守门的说：[em2]赤龙翻江，豹子通杀[/em2]。自然有人带你去见帮主。去与不去，全凭好汉定夺。兄弟们，撤！」",
+    "links": [3674]
+  },
+  {
+    "entryID": 3674,
+    "actorID": "role2",
+    "text": "[panel=6]＊（打手們撂下話後，便轉身隱入了人群中。周圍看熱鬧的百姓見沒戲可看，也漸漸散去。這時，赫連娜娜低著頭湊到了你身邊。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（打手們撂下話後，便轉身隱入了人群中。周圍看熱鬧的百姓見沒戲可看，也漸漸散去。這時，赫連娜娜低著頭湊到了你身邊。）＊",
+    "zh_CN": "[panel=6]＊（打手们撂下话后，便转身隐入了人群中。周围看热闹的百姓见没戏可看，也渐渐散去。这时，赫连娜娜低着头凑到了你身边。）＊",
+    "links": [3670]
+  },
+  {
+    "entryID": 3675,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 3676,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [3664, 3677]
+  },
+  {
+    "entryID": 3677,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false;",
+    "Description": "戰鬥失敗",
+    "links": [3678]
+  },
+  {
+    "entryID": 3678,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();\nShowEnding(Ending_1);",
+    "Description": "BD",
+    "links": []
+  },
+  {
+    "entryID": 3679,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這日，你們在雲中的街上閒逛，忽然聽見一陣急促的叮叮噹噹打鐵聲，期間還夾雜著男人氣急敗壞的大吼。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_AnvilHit_1);\nAudioControl(PlaySFXOneShot,Others_AnvilHit_2);",
+    "zh_TW": "[panel=6]＊（這日，你們在雲中的街上閒逛，忽然聽見一陣急促的叮叮噹噹打鐵聲，期間還夾雜著男人氣急敗壞的大吼。）＊",
+    "zh_CN": "[panel=6]＊（这日，你们在云中的街上闲逛，忽然听见一阵急促的叮叮当当打铁声，期间还夹杂着男人气急败坏的大吼。）＊",
+    "links": [3906]
+  },
+  {
+    "entryID": 3680,
+    "actorID": "role131",
+    "text": "「錯了，全錯了！弦材不對，音色盡失，宮商角徵羽無一可合——此琴已近乎毀矣。」",
+    "Sequence": "",
+    "zh_TW": "「錯了，全錯了！弦材不對，音色盡失，宮商角徵羽無一可合——此琴已近乎毀矣。」",
+    "zh_CN": "「错了，全错了！弦材不对，音色尽失，宫商角征羽无一可合——此琴已近乎毁矣。」",
+    "links": [3681]
+  },
+  {
+    "entryID": 3681,
+    "actorID": "MC24",
+    "text": "「浦兄，此琴是我當年自焦桐裁出，尾焦而音在，故名[em2]焦尾[/em2]。凡料難承其火性，機括與音柱非極寒之材不可，否則難鎮其燥。」",
+    "Sequence": "",
+    "zh_TW": "「浦兄，此琴是我當年自焦桐裁出，尾焦而音在，故名[em2]焦尾[/em2]。凡料難承其火性，機括與音柱非極寒之材不可，否則難鎮其燥。」",
+    "zh_CN": "「浦兄，此琴是我当年自焦桐裁出，尾焦而音在，故名[em2]焦尾[/em2]。凡料难承其火性，机括与音柱非极寒之材不可，否则难镇其燥。」",
+    "links": [3682]
+  },
+  {
+    "entryID": 3682,
+    "actorID": "MC23",
+    "text": "「爹爹，你看浦伯伯又在發脾氣了。嘻嘻，真是有趣！」",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_37);\nSetPortrait(MC23,pic=3);",
+    "Description": "文姬主題曲",
+    "zh_TW": "「爹爹，你看浦伯伯又在發脾氣了。嘻嘻，真是有趣！」",
+    "zh_CN": "「爹爹，你看浦伯伯又在发脾气了。嘻嘻，真是有趣！」",
+    "links": [3683]
+  },
+  {
+    "entryID": 3683,
+    "actorID": "role131",
+    "text": "「對了——是寒鐵。音柱必得以寒鐵鑄成，方能鎮住此琴的火性與燥氣！」",
+    "Sequence": "",
+    "zh_TW": "「對了——是寒鐵。音柱必得以寒鐵鑄成，方能鎮住此琴的火性與燥氣！」",
+    "zh_CN": "「对了——是寒铁。音柱必得以寒铁铸成，方能镇住此琴的火性与燥气！」",
+    "links": [3684]
+  },
+  {
+    "entryID": 3684,
+    "actorID": "MC1",
+    "text": "「兩位前輩，叨擾了。剛偶然聽見二位在尋寒鐵？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「兩位前輩，叨擾了。剛偶然聽見二位在尋寒鐵？」",
+    "zh_CN": "「两位前辈，叨扰了。刚偶然听见二位在寻寒铁？」",
+    "links": [3685]
+  },
+  {
+    "entryID": 3685,
+    "actorID": "MC24",
+    "text": "「哦？年輕人，偷聽別人說話可不是君子所為。不過…你腳步虛浮，下盤不穩，顯然武功平平。你問這寒鐵做什麼？」",
+    "Sequence": "",
+    "zh_CN": "「哦？年轻人，偷听别人说话可不是君子所为。不过…你脚步虚浮，下盘不稳，显然武功平平。你问这寒铁做什么？」",
+    "links": [3686]
+  },
+  {
+    "entryID": 3686,
+    "actorID": "MC1",
+    "text": "「咳…晚輩初出茅廬，正想找些營生。若前輩需要，晚輩願替前輩尋來這寒鐵！」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1,Nervous);",
+    "zh_CN": "「咳…晚辈初出茅庐，正想找些营生。若前辈需要，晚辈愿替前辈寻来这寒铁！」",
+    "links": [3687]
+  },
+  {
+    "entryID": 3687,
+    "actorID": "role131",
+    "text": "「真的？！只要你能找到寒鐵，我[em2]浦元[/em2]絕對不會虧待你！！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「真的？！只要你能找到寒鐵，我[em2]浦元[/em2]絕對不會虧待你！！」",
+    "zh_CN": "「真的？！只要你能找到寒铁，我[em2]浦元[/em2]绝对不会亏待你！！」",
+    "links": [3688]
+  },
+  {
+    "entryID": 3688,
+    "actorID": "MC23",
+    "text": "[panel=2]「大哥哥真要去幫我們找寒鐵嗎？浦伯伯說過，寒鐵性寒且堅，尋常爐火根本煉不化，可不好找呢！」",
+    "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "[panel=2]「大哥哥真要去幫我們找寒鐵嗎？浦伯伯說過，寒鐵性寒且堅，尋常爐火根本煉不化，可不好找呢！」",
+    "zh_CN": "[panel=2]「大哥哥真要去帮我们找寒铁吗？浦伯伯说过，寒铁性寒且坚，寻常炉火根本炼不化，可不好找呢！」",
+    "links": [3907]
+  },
+  {
+    "entryID": 3689,
+    "actorID": "MC8",
+    "text": "[panel=2]「這女孩看著年紀跟我差不多…卻……要是我也能像她一樣就好了……」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_CN": "[panel=2]「这女孩看着年纪跟我差不多…却……要是我也能像她一样就好了……」",
+    "links": [3909]
+  },
+  {
+    "entryID": 3691,
+    "actorID": "MC23",
+    "text": "[panel=2]「略略略！爹爹又來了！我才不抄呢！我要繼續研究蒲伯伯的機關鳥！」",
+    "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_CN": "[panel=2]「略略略！爹爹又来了！我才不抄呢！我要继续研究蒲伯伯的机关鸟！」",
+    "links": [3912]
+  },
+  {
+    "entryID": 3693,
+    "actorID": "MC1",
+    "text": "「前輩放心，晚輩定當多方打聽，竭盡全力尋回寒鐵！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「前辈放心，晚辈定当多方打听，竭尽全力寻回寒铁！」",
+    "links": [3694]
+  },
+  {
+    "entryID": 3694,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蔡邕微微頷首，不再多言，轉身繼續與浦元討論起琴身的修復細節。而一旁的文姬則朝你扮了個鬼臉，你見狀也不再多作打擾，轉身離開了工坊。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 100",
+    "Description": "變數更新",
+    "zh_TW": "[panel=6]＊（蔡邕微微頷首，不再多言，轉身繼續與浦元討論起琴身的修復細節。而一旁的文姬則朝你扮了個鬼臉，你見狀也不再多作打擾，轉身離開了工坊。）＊",
+    "zh_CN": "[panel=6]＊（蔡邕微微颔首，不再多言，转身继续​​与浦元讨论起琴身的修复细节。而一旁的文姬则朝你扮了个鬼脸，你见状也不再多作打扰，转身离开了工坊。）＊",
+    "links": [3913]
+  },
+  {
+    "entryID": 3695,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Yunzhong);\nContinue();",
+    "Description": "鐵匠蒲元的奇思妙想",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [3679]
+  },
+  {
+    "entryID": 3904,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MC8FindSomething,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "換圖、音樂",
+    "links": [771]
+  },
+  {
+    "entryID": 3905,
+    "actorID": "role2",
+    "text": "[panel=6]＊（今日你於街上閒逛時，忽見前方幾個凶神惡煞的大漢圍著一名少女，那熟悉的聲音讓你停下了腳步。）＊",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);",
+    "Description": "放音樂",
+    "zh_TW": "[panel=6]＊（今日你於街上閒逛時，忽見前方幾個凶神惡煞的大漢圍著一名少女，那熟悉的聲音讓你停下了腳步。）＊",
+    "zh_CN": "[panel=6]＊（今日你于街上闲逛时，忽见前方几个凶神恶煞的大汉围着一名少女，那熟悉的声音让你停下了脚步。）＊",
+    "links": [2054]
+  },
+  {
+    "entryID": 3906,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們循聲找去，拐進一條僻靜的巷子，來到一處隱密的工坊。屋內爐火通紅，一個不修邊幅的漢子正對著一把古琴大呼小叫。旁邊站著一位中年文士，以及一位表情調皮的小女孩。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Houses_LongXiang);",
+    "Description": "換背景圖",
+    "zh_TW": "[panel=6]＊（你們循聲找去，拐進一條僻靜的巷子，來到一處隱密的工坊。屋內爐火通紅，一個不修邊幅的漢子正對著一把古琴大呼小叫。旁邊站著一位中年文士，以及一位表情調皮的小女孩。）＊",
+    "zh_CN": "[panel=6]＊（你们循声找去，拐进一条僻静的巷子，来到一处隐密的工坊。屋内炉火通红，一个不修边幅的汉子正对着一把古琴大呼小叫。旁边站着一位中年文士，以及一位表情调皮的小女孩。）＊",
+    "links": [3680]
+  },
+  {
+    "entryID": 3907,
+    "actorID": "MC23",
+    "text": "[panel=2]「但要是你真能找到，就來城外竹林找我們吧！我爹爹整天逼我背那些無聊的經史，你若來了，我就彈新譜給你聽，就當是謝禮啦！」",
+    "Sequence": "SetPortrait(MC23,pic=3);",
+    "zh_TW": "[panel=2]「但要是你真能找到，就來城外竹林找我們吧！我爹爹整天逼我背那些無聊的經史，你若來了，我就彈新譜給你聽，就當是謝禮啦！」",
+    "zh_CN": "[panel=2]「但要是你真能找到，就来城外竹林找我们吧！我爹爹整天逼我背那些无聊的经史，你若来了，我就弹新谱给你听，就当是谢礼啦！」",
+    "links": [3689]
+  },
+  {
+    "entryID": 3908,
+    "actorID": "MC24",
+    "text": "「琰兒，又在口無遮攔。妳若真閒得慌，回去把《水經》抄上一遍，免得成天只想著玩樂。」",
+    "Sequence": "",
+    "zh_TW": "「琰兒，又在口無遮攔。妳若真閒得慌，回去把《水經》抄上一遍，免得成天只想著玩樂。」",
+    "zh_CN": "「琰儿，又在口无遮拦。妳若真闲得慌，回去把《水经》抄上一遍，免得成天只想着玩乐。」",
+    "links": [3691]
+  },
+  {
+    "entryID": 3909,
+    "actorID": "MC1",
+    "text": "「…靈犀…」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「…靈犀…」",
+    "zh_CN": "「…灵犀…」",
+    "links": [3908]
+  },
+  {
+    "entryID": 3910,
+    "actorID": "MC24",
+    "text": "「小兄弟，寒鐵此物需借地脈極寒之氣方能凝結。此去南邊的[em2]黑鐵嶺[/em2]，其山勢如潛龍伏淵，陰氣鬱結於礦坑深處，最易生出寒鐵。」",
+    "Sequence": "",
+    "zh_TW": "「小兄弟，寒鐵此物需借地脈極寒之氣方能凝結。此去南邊的[em2]黑鐵嶺[/em2]，其山勢如潛龍伏淵，陰氣鬱結於礦坑深處，最易生出寒鐵。」",
+    "zh_CN": "「小兄弟，寒铁此物需借地脉极寒之气方能凝结。此去南边的[em2]黑铁岭[/em2]，其山势如潜龙伏渊，阴气郁结于矿坑深处，最易生出寒铁。」",
+    "links": [3914]
+  },
+  {
+    "entryID": 3912,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蔡邕看著一溜煙跑去擺弄機關的女兒，微微搖頭，眼神裡卻透著幾分無奈與寵溺。隨後，他轉過身看向你。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（蔡邕看著一溜煙跑去擺弄機關的女兒，微微搖頭，眼神裡卻透著幾分無奈與寵溺。隨後，他轉過身看向你。）＊",
+    "zh_CN": "[panel=6]＊（蔡邕看着一溜烟跑去摆弄机关的女儿，微微摇头，眼神里却透着几分无奈与宠溺。随后，他转过身看向你。）＊",
+    "links": [3910]
+  },
+  {
+    "entryID": 3913,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Script": "SetQuestState(\"CF17\", \"active\")",
+    "Description": "觸發任務、關閉背景",
+    "links": []
+  },
+  {
+    "entryID": 3914,
+    "actorID": "MC24",
+    "text": "「你若真想幫忙，不妨去那裡尋尋看。不過，那地方凶險，若事不可為，也無須勉強。」",
+    "Sequence": "",
+    "zh_TW": "「你若真想幫忙，不妨去那裡尋尋看。不過，那地方凶險，若事不可為，也無須勉強。」",
+    "zh_CN": "「你若真想帮忙，不妨去那里寻寻看。不过，那地方凶险，若事不可为，也无须勉强。」",
+    "links": [3693]
+  }
+]

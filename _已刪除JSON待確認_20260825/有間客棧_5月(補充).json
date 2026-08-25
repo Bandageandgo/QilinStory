@@ -30,7 +30,7 @@
   {
     "entryID": 4,
     "actorID": "MC8",
-    "text": "[panel=2]「太好了！童大哥的槍有救了！那…酬勞方面…」",
+    "text": "[panel=2]「太好了！童大哥的槍有救了！那…這謝儀嘛…」",
     "Sequence": "SetPortrait(MC8,pic=expect);EnableCharacterExpression(2,MC8,Meditate);",
     "links": [
       5
@@ -39,7 +39,7 @@
   {
     "entryID": 5,
     "actorID": "NPC15",
-    "text": "「哈哈大笑]小姑娘放心，[var=PlayerLastName]兄弟為我冒險，酬勞自然少不了！」",
+    "text": "「哈哈大笑]小姑娘放心，[var=PlayerLastName]兄弟為我冒險，謝儀自然少不了！」",
     "Sequence": "DisableCharacterExpression(2);IF (GetSkillLevel(百鳥朝鳳) >= 1) THEN JumpTo(6) ELSE JumpTo(8) ENDIF",
     "links": []
   },
@@ -109,7 +109,7 @@
   {
     "entryID": 13,
     "actorID": "2",
-    "text": "[panel=6]＊（童淵抱拳一笑，轉身瀟灑離去。這位來去如風的年輕遊俠，給你留下了深刻的印象。）＊",
+    "text": "[panel=6]＊（童淵抱拳一笑，轉身瀟灑離去。這位來去如風的年輕遊俠，教你久久難忘。）＊",
     "Sequence": "RemoveNPC(NPC15)",
     "links": []
   },

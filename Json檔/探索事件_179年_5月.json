@@ -1,0 +1,399 @@
+[
+  {
+    "entryID": 198,
+    "actorID": "role12",
+    "text": "[panel=1]「小娘子，這天都快黑了，一個人來這後山做什麼？莫不是…想與哥哥們共度良宵？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「小娘子，這天都快黑了，一個人來這後山做什麼？莫不是…想與哥哥們共度良宵？」",
+    "zh_CN": "[panel=1]「小娘子，这天都快黑了，一个人来这后山做什么？莫不是…想与哥哥们共度良宵？」",
+    "links": [199]
+  },
+  {
+    "entryID": 199,
+    "actorID": "role57",
+    "text": "[panel=3]「聽聞[em2]有間客棧的老闆娘一枝花[/em2]，是少見的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面紗，讓哥幾個瞧瞧妳的真面目！」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「聽聞[em2]有間客棧的老闆娘一枝花[/em2]，是少見的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面紗，讓哥幾個瞧瞧妳的真面目！」",
+    "zh_CN": "[panel=3]「听闻[em2]有间客栈的老板娘一枝花[/em2]，是少见的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面纱，让哥几个瞧瞧妳的真面目！」",
+    "links": [200]
+  },
+  {
+    "entryID": 200,
+    "actorID": "role117",
+    "text": "[panel=2]「...」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「...」",
+    "zh_CN": "[panel=2]「...」",
+    "links": [201]
+  },
+  {
+    "entryID": 201,
+    "actorID": "MC1",
+    "text": "「呔！何方鼠輩，竟敢在此行強擄民女的不軌之事！爾等眼中可還有王法，心中可還有天理？！速速放開那位姑娘，束手就擒！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「呔！何方鼠輩，竟敢在此行強擄民女的不軌之事！爾等眼中可還有王法，心中可還有天理？！速速放開那位姑娘，束手就擒！」",
+    "zh_CN": "「呔！何方鼠辈，竟敢在此行强掳民女的不轨之事！尔等眼中可还有王法，心中可还有天理？！速速放开那位姑娘，束手就擒！」",
+    "links": [202]
+  },
+  {
+    "entryID": 202,
+    "actorID": "role86",
+    "text": "[panel=4]「]哪裡來的愣頭青，也敢學人英雄救美？壞了爺爺們的好事，我看你是活膩歪了！識相的乖乖滾開，不然明年的今日，便是你的忌日！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=4]「]哪裡來的愣頭青，也敢學人英雄救美？壞了爺爺們的好事，我看你是活膩歪了！識相的乖乖滾開，不然明年的今日，便是你的忌日！」",
+    "zh_CN": "[panel=4]「]哪里来的愣头青，也敢学人英雄救美？坏了爷爷们的好事，我看你是活腻歪了！识相的乖乖滚开，不然明年的今日，便是你的忌日！」",
+    "links": [203]
+  },
+  {
+    "entryID": 203,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "",
+    "links": [206, 209, 204]
+  },
+  {
+    "entryID": 204,
+    "actorID": "MC1",
+    "text": "「替天行道，義不容辭！」",
+    "Sequence": "",
+    "zh_TW": "「替天行道，義不容辭！」",
+    "zh_CN": "「替天行道，义不容辞！」",
+    "links": [205]
+  },
+  {
+    "entryID": 205,
+    "actorID": "MC1",
+    "text": "「哼！有我在此，豈容爾等放肆！路見不平，拔刀相助，正是我輩本分！替天行道，義不容辭！」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "「哼！有我在此，豈容爾等放肆！路見不平，拔刀相助，正是我輩本分！替天行道，義不容辭！」",
+    "zh_CN": "「哼！有我在此，岂容尔等放肆！路见不平，拔刀相助，正是我辈本分！替天行道，义不容辞！」",
+    "links": [238]
+  },
+  {
+    "entryID": 206,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1,Question);BeginDiceRoll(Manual,PersuasionCheck,10);",
+    "zh_TW": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
+    "zh_CN": "[em2][口才检定][/em2]「诸位，可否卖我个薄面？」",
+    "links": [207]
+  },
+  {
+    "entryID": 207,
+    "actorID": "MC1",
+    "text": "「咳，幾位壯士且慢動手！在下江湖上人稱…嗯，這個暫且不提。這位姑娘若有得罪，還請看在在下幾分薄面上，高抬貴手，化干戈為玉帛可好？」",
+    "Sequence": "",
+    "zh_TW": "「咳，幾位壯士且慢動手！在下江湖上人稱…嗯，這個暫且不提。這位姑娘若有得罪，還請看在在下幾分薄面上，高抬貴手，化干戈為玉帛可好？」",
+    "zh_CN": "「咳，几位壮士且慢动手！在下江湖上人称…嗯，这个暂且不提。这位姑娘若有得罪，还请看在在下几分薄面上，高抬贵手，化干戈为玉帛可好？」",
+    "links": [208, 233]
+  },
+  {
+    "entryID": 208,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
+    "zh_CN": "[panel=6]＊（两名山贼稍稍退后，山贼头目上前一步，准备单独与你较量。）＊",
+    "links": [245]
+  },
+  {
+    "entryID": 209,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1,Anger);BeginDiceRoll(Manual,IntimidationCheck,12);",
+    "zh_TW": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
+    "zh_CN": "[em2][威吓检定][/em2]「滚！莫逼我出手！」",
+    "links": [210]
+  },
+  {
+    "entryID": 210,
+    "actorID": "MC1",
+    "text": "「哼，看來爾等是不見棺材不掉淚了！也罷！我專治各路不服！爾等若再執迷不悟，不肯束手就擒，那就休怪我劍下無情，拳腳也無眼了！」",
+    "Sequence": "",
+    "zh_TW": "「哼，看來爾等是不見棺材不掉淚了！也罷！我專治各路不服！爾等若再執迷不悟，不肯束手就擒，那就休怪我劍下無情，拳腳也無眼了！」",
+    "zh_CN": "「哼，看来尔等是不见棺材不掉泪了！也罢！我专治各路不服！尔等若再执迷不悟，不肯束手就擒，那就休怪我剑下无情，拳脚也无眼了！」",
+    "links": [208, 233]
+  },
+  {
+    "entryID": 211,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Strength,50);",
+    "Conditions": "IsPassFight()  == true;",
+    "zh_TW": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
+    "zh_CN": "[panel=6]＊（你一番拳脚，将这伙山贼打得落花流水，抱头鼠窜而去。）＊",
+    "links": [212]
+  },
+  {
+    "entryID": 212,
+    "actorID": "MC1",
+    "text": "「呼…呼…這些亡命之徒，果然有幾分蠻力！不過，終究是邪不勝正！」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nAudioControl(Play Music,BGM_2);",
+    "Description": "播放音樂",
+    "zh_TW": "「呼…呼…這些亡命之徒，果然有幾分蠻力！不過，終究是邪不勝正！」",
+    "zh_CN": "「呼…呼…这些亡命之徒，果然有几分蛮力！不过，终究是邪不胜正！」",
+    "links": [214]
+  },
+  {
+    "entryID": 213,
+    "actorID": "MC1",
+    "text": "「呃啊…可惡的山賊…竟如此兇悍…那位姑娘，她…唉，我真是沒用…」",
+    "Sequence": "SetPortrait(MC1,pic=16);EnableDialogueBG(Home);",
+    "zh_TW": "「呃啊…可惡的山賊…竟如此兇悍…那位姑娘，她…唉，我真是沒用…」",
+    "zh_CN": "「呃啊…可恶的山贼…竟如此凶悍…那位姑娘，她…唉，我真是没用…」",
+    "links": [234]
+  },
+  {
+    "entryID": 214,
+    "actorID": "role117",
+    "text": "[panel=4]「多謝少俠出手相救，小女子感激不盡。夜色已深，此地不宜久留，還望公子保重。」",
+    "Sequence": "",
+    "zh_TW": "[panel=4]「多謝少俠出手相救，小女子感激不盡。夜色已深，此地不宜久留，還望公子保重。」",
+    "zh_CN": "[panel=4]「多谢少侠出手相救，小女子感激不尽。夜色已深，此地不宜久留，还望公子保重。」",
+    "links": [215]
+  },
+  {
+    "entryID": 215,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "",
+    "links": [216, 219, 223]
+  },
+  {
+    "entryID": 216,
+    "actorID": "MC1",
+    "text": "「姑娘言重，願護送一程。」",
+    "Sequence": "",
+    "zh_TW": "「姑娘言重，願護送一程。」",
+    "zh_CN": "「姑娘言重，愿护送一程。」",
+    "links": [217]
+  },
+  {
+    "entryID": 217,
+    "actorID": "MC1",
+    "text": "「咳！姑娘實在言重！路見不平拔刀相助，本是我輩江湖兒女分內事，何足掛齒！只是，這夜路崎嶇，姑娘孤身一人，若姑娘不嫌棄在下愚鈍，我很樂意護送姑娘一程，以保萬全。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_TW": "「咳！姑娘實在言重！路見不平拔刀相助，本是我輩江湖兒女分內事，何足掛齒！只是，這夜路崎嶇，姑娘孤身一人，若姑娘不嫌棄在下愚鈍，我很樂意護送姑娘一程，以保萬全。」",
+    "zh_CN": "「咳！姑娘实在言重！路见不平拔刀相助，本是我辈江湖儿女分内事，何足挂齿！只是，这夜路崎岖，姑娘孤身一人，若姑娘不嫌弃在下愚钝，我很乐意护送姑娘一程，以保万全。」",
+    "links": [218]
+  },
+  {
+    "entryID": 218,
+    "actorID": "role117",
+    "text": "「多謝公子美意，只是小女子尚有私事，不便打擾。公子恩情，容日後再報。告辭。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「多謝公子美意，只是小女子尚有私事，不便打擾。公子恩情，容日後再報。告辭。」",
+    "zh_CN": "「多谢公子美意，只是小女子尚有私事，不便打扰。公子恩情，容日后再报。告辞。」",
+    "links": [222]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC1",
+    "text": "「分內之事，姑娘請早安歇。」",
+    "Sequence": "",
+    "zh_TW": "「分內之事，姑娘請早安歇。」",
+    "zh_CN": "「分内之事，姑娘请早安歇。」",
+    "links": [220]
+  },
+  {
+    "entryID": 220,
+    "actorID": "MC1",
+    "text": "「姑娘實在太客氣了。此乃分內之事，不足掛齒，不足掛齒！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「姑娘實在太客氣了。此乃分內之事，不足掛齒，不足掛齒！」",
+    "zh_CN": "「姑娘实在太客气了。此乃分内之事，不足挂齿，不足挂齿！」",
+    "links": [232]
+  },
+  {
+    "entryID": 221,
+    "actorID": "role117",
+    "text": "「公子高風亮節，小女子心生敬佩。小女子這便告辭，公子也請保重。」",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF04\", \"active\")",
+    "zh_TW": "「公子高風亮節，小女子心生敬佩。小女子這便告辭，公子也請保重。」",
+    "zh_CN": "「公子高风亮节，小女子心生敬佩。小女子这便告辞，公子也​​请保重。」",
+    "links": [222]
+  },
+  {
+    "entryID": 222,
+    "actorID": "role2",
+    "text": "[panel=6]＊（女子轉身，夜風吹過，帶起她衣袂與髮梢的清香。她消失在小徑拐角後，你發現在她先前佇立的青石板上，靜靜地躺著一方繡著含苞夜蘭的潔白手帕，散發著與她身上相同的幽香。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（女子轉身，夜風吹過，帶起她衣袂與髮梢的清香。她消失在小徑拐角後，你發現在她先前佇立的青石板上，靜靜地躺著一方繡著含苞夜蘭的潔白手帕，散發著與她身上相同的幽香。）＊",
+    "zh_CN": "[panel=6]＊（女子转身，夜风吹过，带起她衣袂与发梢的清香。她消失在小径拐角后，你发现在她先前伫立的青石板上，静静地躺着一方绣着含苞夜兰的洁白手帕，散发着与她身上相同的幽香。）＊",
+    "links": [225]
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC1",
+    "text": "「山賊不足慮，姑娘夜行需小心。」",
+    "Sequence": "",
+    "zh_TW": "「山賊不足慮，姑娘夜行需小心。」",
+    "zh_CN": "「山贼不足虑，姑娘夜行需小心。」",
+    "links": [224]
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC1",
+    "text": "「哼！區區幾個山賊毛賊，何足道哉！本大俠三拳兩腳便能打發！不過嘛，姑娘你一個弱女子，這般深夜獨行，確實太過危險！下次萬萬不可再如此大意了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「哼！區區幾個山賊毛賊，何足道哉！本大俠三拳兩腳便能打發！不過嘛，姑娘你一個弱女子，這般深夜獨行，確實太過危險！下次萬萬不可再如此大意了！」",
+    "zh_CN": "「哼！区区几个山贼毛贼，何足道哉！本大侠三拳两脚便能打发！不过嘛，姑娘你一个弱女子，这般深夜独行，确实太过危险！下次万万不可再如此大意了！」",
+    "links": [226]
+  },
+  {
+    "entryID": 225,
+    "actorID": "MC1",
+    "text": "「這位姑娘…當真有個性。如此信物…是了，日後若有緣再見，定當完璧歸趙！」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(Valuable,Player,NightHandkerchief,1);",
+    "Description": "獲得夜闌手帕",
+    "zh_TW": "「這位姑娘…當真有個性。如此信物…是了，日後若有緣再見，定當完璧歸趙！」",
+    "zh_CN": "「这位姑娘…当真有个性。如此信物…是了，日后若有缘再见，定当完璧归赵！」",
+    "links": [247]
+  },
+  {
+    "entryID": 226,
+    "actorID": "role117",
+    "text": "「多謝公子提醒。告辭。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「多謝公子提醒。告辭。」",
+    "zh_CN": "「多谢公子提醒。告辞。」",
+    "links": [222]
+  },
+  {
+    "entryID": 228,
+    "actorID": "role2",
+    "text": "[panel=6]＊（只見三五個兇神惡煞的山賊，正圍住一名以面紗遮掩容貌、身段窈窕的女子，言語極盡輕薄。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（只見三五個兇神惡煞的山賊，正圍住一名以面紗遮掩容貌、身段窈窕的女子，言語極盡輕薄。）＊",
+    "zh_CN": "[panel=6]＊（只见三五个凶神恶煞的山贼，正围住一名以面纱遮掩容貌、身段窈窕的女子，言语极尽轻薄。）＊",
+    "links": [198]
+  },
+  {
+    "entryID": 229,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這天，你行至後山小徑，忽聞前方傳來女子的驚呼與幾個男子的粗鄙笑罵聲。）＊",
+    "Sequence": "EnableDialogueBG(Forest);\nSetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlaySFXOneShot,Others_Bird);",
+    "Description": "播放音效",
+    "zh_TW": "[panel=6]＊（這天，你行至後山小徑，忽聞前方傳來女子的驚呼與幾個男子的粗鄙笑罵聲。）＊",
+    "zh_CN": "[panel=6]＊（这天，你行至后山小径，忽闻前方传来女子的惊呼与几个男子的粗鄙笑骂声。）＊",
+    "links": [228]
+  },
+  {
+    "entryID": 230,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你被這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == false;",
+    "Description": "這裡需要清除掉殘留的對話立繪",
+    "zh_TW": "[panel=6]＊（你被這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
+    "zh_CN": "[panel=6]＊（你被这伙山贼打得落花流水，抱头鼠窜而去。）＊",
+    "links": [213]
+  },
+  {
+    "entryID": 232,
+    "actorID": "MC1",
+    "text": "「咳…夜的確深了，山林險惡，姑娘還是儘早回府安歇為妙，切莫再獨行此等險地了。在下…在下告辭！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「咳…夜的確深了，山林險惡，姑娘還是儘早回府安歇為妙，切莫再獨行此等險地了。在下…在下告辭！」",
+    "zh_CN": "「咳…夜的确深了，山林险恶，姑娘还是尽早回府安歇为妙，切莫再独行此等险地了。在下…在下告辞！」",
+    "links": [221]
+  },
+  {
+    "entryID": 233,
+    "actorID": "role86",
+    "text": "[panel=4]「他馬的，你算老幾阿！兄弟們！給我上！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == false;",
+    "zh_TW": "[panel=4]「他馬的，你算老幾阿！兄弟們！給我上！」",
+    "zh_CN": "[panel=4]「他马的，你算老几阿！兄弟们！给我上！」",
+    "links": [243]
+  },
+  {
+    "entryID": 234,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 238,
+    "actorID": "role86",
+    "text": "[panel=4]「他馬的，你算老幾阿！兄弟們！給我上！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=4]「他馬的，你算老幾阿！兄弟們！給我上！」",
+    "zh_CN": "[panel=4]「他马的，你算老几阿！兄弟们！给我上！」",
+    "links": [241]
+  },
+  {
+    "entryID": 241,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,9);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [242]
+  },
+  {
+    "entryID": 242,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [211, 230]
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,9);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [244]
+  },
+  {
+    "entryID": 244,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [211, 230]
+  },
+  {
+    "entryID": 245,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nSetContinueMode(false);\nBeginFight(Combat,19);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [246]
+  },
+  {
+    "entryID": 246,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [211, 230]
+  },
+  {
+    "entryID": 247,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nDisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 248,
+    "actorID": "MC1",
+    "text": "開始對話",
+    "Sequence": "",
+    "zh_TW": "開始對話",
+    "zh_CN": "开始对话",
+    "links": []
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [229]
+  }
+]

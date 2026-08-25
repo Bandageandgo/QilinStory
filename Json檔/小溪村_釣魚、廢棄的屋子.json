@@ -1,249 +1,537 @@
 [
   {
-    "entryID": 0,
-    "actorID": 2,
+    "entryID": 1,
+    "actorID": "role2",
     "text": "[panel=6]＊（你來到河邊，見水波盪漾，偶有魚兒躍出水面。此地似乎是個不錯的釣點。）＊",
     "Sequence": "",
-    "links": [1]
-  },
-  {
-    "entryID": 1,
-    "actorID": "MC1",
-    "text": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
-    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Meditate);",
-    "links": [2]
+    "zh_TW": "[panel=6]＊（你來到河邊，見水波盪漾，偶有魚兒躍出水面。此地似乎是個不錯的釣點。）＊",
+    "zh_CN": "[panel=6]＊（你来到河边，见水波荡漾，偶有鱼儿跃出水面。此地似乎是个不错的钓点。）＊",
+    "links": [2, 40, 114, 12, 99]
   },
   {
     "entryID": 2,
-    "actorID": "MC8",
-    "text": "「釣魚？如果能釣到大魚拿去賣錢就好了！表哥，我們的盤纏可不多了！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=expect);",
-    "links": [3, 13]
+    "actorID": "MC1",
+    "text": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1_Meditate,Meditate);",
+    "Conditions": "Variable[\"FishCount\"] == 0 and (Variable[\"MyTime\"] < 6)",
+    "zh_TW": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
+    "zh_CN": "「嗯，这河水平缓，倒也适合垂钓。说不定能钓上几尾肥鱼，打打牙祭，体验一番渔家乐趣。」",
+    "links": [3]
   },
   {
     "entryID": 3,
-    "actorID": "MC1",
-    "text": "「試試手氣，釣幾尾魚上來。」",
-    "Sequence": "",
-    "links": [4],
-    "Description": "選項1：[花費半個時辰]試試手氣"
+    "actorID": "MC8",
+    "text": "「釣魚？如果能釣到大魚拿去賣錢就好了！表哥，我們的盤纏可不多了！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);",
+    "zh_TW": "「釣魚？如果能釣到大魚拿去賣錢就好了！表哥，我們的盤纏可不多了！」",
+    "zh_CN": "「钓鱼？如果能钓到大鱼拿去卖钱就好了！表哥，我们的盘缠可不多了！」",
+    "links": [35]
   },
   {
     "entryID": 4,
     "actorID": "MC1",
-    "text": "「好，今日便在此處試試身手，看能不能有所斬獲。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);BeginMiniGame(Fishing,Default,Default,Default);",
-    "links": [5],
-    "Description": "釣魚小遊戲觸發點"
-  },
-  {
-    "entryID": 5,
-    "actorID": "MC1",
-    "text": "「呼，這釣魚看似簡單，卻也考驗耐心與技巧。所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
-    "Sequence": "SetPortrait(MC1,pic=Meditate);ModifyData(LifeExp,100);",
-    "links": [6]
+    "text": "[em2][耗時一個時辰][/em2]「試試手氣，釣幾尾魚上來。」",
+    "Sequence": "",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Description": "扣時間",
+    "zh_TW": "[em2][耗時一個時辰][/em2]「試試手氣，釣幾尾魚上來。」",
+    "zh_CN": "[em2][耗时一个时辰][/em2]「试试手气，钓几尾鱼上来。」",
+    "links": [112]
   },
   {
     "entryID": 6,
-    "actorID": 2,
-    "text": "[panel=6]＊（在江湖中，諸如釣魚、煎藥、挖礦等**工作**，不僅能賺取些許盤纏，更能積累寶貴的**生活經驗**。這些經驗能助你領悟**獨特技能**，正所謂條條大路通大俠。）＊",
-    "Sequence": "",
-    "links": [7]
-  },
-  {
-    "entryID": 7,
     "actorID": "MC1",
-    "text": "「哇！這是…這是什麼魚？通體金黃，莫非是傳說中的黃金魚？！看來今日運氣當真不錯！」",
-    "Sequence": "SetPortrait(MC1,pic=surprise);EnableCharacterExpression(0,MC1,Surprise_2);",
-    "links": [8],
-    "Description": "釣到黃金魚分支"
+    "text": "「呼，這釣魚看似簡單，卻也考驗耐心與技巧。」",
+    "Sequence": "SetPortrait(MC1,pic=1);ModifyData(LifeExp,100);",
+    "Description": "獲得獎勵",
+    "zh_TW": "「呼，這釣魚看似簡單，卻也考驗耐心與技巧。」",
+    "zh_CN": "「呼，这钓鱼看似简单，却也考验耐心与技巧。」",
+    "links": [113]
   },
   {
-    "entryID": 8,
+    "entryID": 11,
     "actorID": "MC8",
-    "text": "「黃金魚？！表哥！我們發財啦！這魚一定很值錢！快想想拿去哪裡賣個好價錢！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=surprise);EnableCharacterExpression(1,MC8,Surprise_2);",
-    "links": [9]
+    "text": "「你是在跟誰說話啊...」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_TW": "「你是在跟誰說話啊...」",
+    "zh_CN": "「你是在跟谁说话啊...」",
+    "links": [51]
   },
   {
-    "entryID": 9,
-    "actorID": "MC1",
-    "text": "「此等奇物，確實罕見。不僅能解燃眉之急，或許還有其他妙用。靈犀，我可真行！對吧？對吧！」",
-    "Sequence": "SetPortrait(MC1,pic=proud);EnableCharacterExpression(0,MC1,proud);",
-    "links": [10]
-  },
-  {
-    "entryID": 10,
-    "actorID": "MC8",
-    "text": "「好啦，好啦。」",
-    "Sequence": "DisableCharacterExpression(0);EnableCharacterExpression(1,MC8,Meditate);DisableCharacterExpression(1);SetPortrait(MC8,pic=dislike);",
-    "links": []
-  },
-  {
-    "entryID": 13,
+    "entryID": 12,
     "actorID": "MC1",
     "text": "「還是先辦正事要緊。」",
     "Sequence": "",
-    "links": [14],
-    "Description": "選項2：離開釣魚"
-  },
-  {
-    "entryID": 14,
-    "actorID": "MC1",
-    "text": "「釣魚雖好，但眼下還有更要緊的事。我們還是先去別處看看吧。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=serious);",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "「還是先辦正事要緊。」",
+    "zh_CN": "「还是先办正事要紧。」",
     "links": []
   },
   {
-    "entryID": 15,
-    "actorID": 2,
-    "text": "[panel=6]＊（你們在村中角落發現一間廢棄的民宅。門扉虛掩，輕輕一推便嘎吱作響地開了。屋內光線昏暗，四壁掛滿了厚厚的蛛網，空氣中瀰漫著塵土與腐朽的氣味，看起來已久無人居。角落裡，堆著一堆還算乾淨的稻草，像是有人曾在此歇過腳。）＊",
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們在村中角落發現一間廢棄的民宅。門扉虛掩，輕輕一推便嘎吱作響地開了。屋內光線昏暗，四壁掛滿了厚厚的蛛網，看起來已久無人居。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（你們在村中角落發現一間廢棄的民宅。門扉虛掩，輕輕一推便嘎吱作響地開了。屋內光線昏暗，四壁掛滿了厚厚的蛛網，看起來已久無人居。）＊",
+    "zh_CN": "[panel=6]＊（你们在村中角落发现一间废弃的民宅。门扉虚掩，轻轻一推便嘎吱作响地开了。屋内光线昏暗，四壁挂满了厚厚的蛛网，看起来已久无人居。）＊",
+    "links": [56]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「嘿，這屋子雖然破舊，倒也算個遮風避雨的去處。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "「嘿，這屋子雖然破舊，倒也算個遮風避雨的去處。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
+    "zh_CN": "「嘿，这屋子虽然破旧，倒也算个遮风避雨的去处。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
     "links": [16]
   },
   {
     "entryID": 16,
-    "actorID": "MC1",
-    "text": "「嘿，這屋子雖然破舊，倒也算個遮風避雨的去處。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
-    "Sequence": "SetPortrait(MC1,pic=Meditate);EnableCharacterExpression(0,MC1,Question);",
+    "actorID": "MC8",
+    "text": "「表哥，這裡好陰森啊，[em2]冷颼颼的[/em2]…我們還是別久留了。萬一…萬一有什麼蛇蟲鼠蟻，或是更嚇人的東西怎麼辦？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=13);\nEnableCharacterExpression(1,MC8,Nervous_2);",
+    "zh_TW": "「表哥，這裡好陰森啊，[em2]冷颼颼的[/em2]…我們還是別久留了。萬一…萬一有什麼蛇蟲鼠蟻，或是更嚇人的東西怎麼辦？」",
+    "zh_CN": "「表哥，这里好阴森啊，感觉[em2]冷飕飕的[/em2]…我们还是别久留了。万一…万一有什么蛇虫鼠蚁，或是更吓人的东西怎么办？」",
     "links": [17]
   },
   {
     "entryID": 17,
-    "actorID": "MC8",
-    "text": "「表哥，這裡好陰森啊，感覺冷颼颼的…我們還是別久留了。萬一…萬一有什麼蛇蟲鼠蟻，或是更嚇人的東西怎麼辦？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
-    "links": [18]
+    "actorID": "MC1",
+    "text": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1,Meditate);",
+    "zh_TW": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？」",
+    "zh_CN": "「哎，灵犀妳就是爱操心。这青天白日的，能有什么古怪？」",
+    "links": [54]
   },
   {
     "entryID": 18,
-    "actorID": "MC1",
-    "text": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？再說，我輩江湖中人，隨遇而安乃是家常便飯。走了這半日，正好有些腿痠，容我在此打個盹，瞇上一小會兒，養足精神再賺錢不遲。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Meditate);",
+    "actorID": "MC8",
+    "text": "「(跺了跺腳)表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_TW": "「(跺了跺腳)表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "zh_CN": "「(跺了跺脚)表哥！你怎么老是这样！我们还有盘缠要赚，还有客栈要去呢！在这摆明就是闹鬼的地方睡觉，多危险啊！」",
     "links": [19]
   },
   {
     "entryID": 19,
-    "actorID": "MC8",
-    "text": "「(跺了跺腳)表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Anger);",
-    "links": [20]
+    "actorID": "MC1",
+    "text": "「好啦好啦，就一小會兒，不會耽誤正事的。說不定還能夢到些高人指點呢，嘿嘿。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);",
+    "zh_TW": "「好啦好啦，就一小會兒，不會耽誤正事的。說不定還能夢到些高人指點呢，嘿嘿。」",
+    "zh_CN": "「好啦好啦，就一小会儿，不会耽误正事的。说不定还能梦到些高人指点呢，嘿嘿。」",
+    "links": [20, 33]
   },
   {
     "entryID": 20,
     "actorID": "MC1",
-    "text": "「好啦好啦，就一小會兒，不會耽誤正事的。說不定還能夢到些高人指點呢，嘿嘿。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=playful);",
-    "links": [21, 36]
+    "text": "[em2][耗時一個時辰][/em2]「就在這草堆上小憩片刻。」",
+    "Sequence": "",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "[em2][耗時一個時辰][/em2]「就在這草堆上小憩片刻。」",
+    "zh_CN": "[em2][耗时一个时辰][/em2]「就在这草堆上小憩片刻。」",
+    "links": [21]
   },
   {
     "entryID": 21,
     "actorID": "MC1",
-    "text": "「就在這草堆上小憩片刻。」",
-    "Sequence": "",
-    "links": [22],
-    "Description": "選項1：[花費半個時辰]小憩片刻"
+    "text": "「就這麼說定了！天塌下來有高個子頂著，我先睡上一覺再說！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Description": "消耗時間",
+    "zh_TW": "「就這麼說定了！天塌下來有高個子頂著，我先睡上一覺再說！」",
+    "zh_CN": "「就这么说定了！天塌下来有高个子顶着，我先睡为敬！」",
+    "links": [22, 119]
   },
   {
     "entryID": 22,
-    "actorID": "MC1",
-    "text": "「就這麼說定了！天塌下來有高個子頂著，我先睡為敬！」",
-    "Sequence": "SetPortrait(MC1,pic=proud);",
-    "links": [23]
-  },
-  {
-    "entryID": 23,
-    "actorID": 2,
-    "text": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。蕭靈犀無奈地在一旁警戒。時間很快過去了…）＊",
-    "Sequence": "",
-    "links": [24, 29],
-    "Description": "條件判斷：身上是否有河神的眼淚"
-  },
-  {
-    "entryID": 24,
-    "actorID": 2,
-    "text": "[panel=6]＊（睡夢之中，燕不凡感覺自己彷彿沉入了一片清涼的水中。朦朧間，他似乎看到不遠處的河岸邊，有一個模糊的女子身影，正對著水面低泣。她的哭聲細微而悲傷，手中似乎緊握著什麼東西，散發著微弱的光芒。那股悲傷的氛圍如同漩渦般將燕不凡的意識捲入，一段段模糊而破碎的記憶片段湧上心頭…）＊",
-    "Sequence": "HasRiverGodsTear == true;",
-    "links": [25],
-    "Description": "玩家觸發回憶系統：『河神之淚的記憶碎片』。此處將調用獨立的回憶事件，處理回憶演出及相關邏輯。"
+    "actorID": "role2",
+    "text": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。[em2]蕭靈犀無奈地在一旁警戒[/em2]。時間很快過去了…）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Water);",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Rivertear\")  == true",
+    "Description": "需要有河神的眼淚",
+    "zh_TW": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。[em2]蕭靈犀無奈地在一旁警戒[/em2]。時間很快過去了…）＊",
+    "zh_CN": "[panel=6]＊（你说着便往草堆上一躺，随意拨了拨稻草，调整了个舒服的姿势，没一会儿便传出了均匀的呼吸声。[em2]萧灵犀无奈地在一旁警戒[/em2]。时间很快过去了…）＊",
+    "links": [2051]
   },
   {
     "entryID": 25,
-    "actorID": "MC1",
-    "text": "「（不…不要…那不是…） 」",
-    "Sequence": "SetPortrait(MC1,pic=sleep_pain);",
+    "actorID": "role2",
+    "text": "[panel=6]＊（你猛地驚醒，額上滲著冷汗，眼神還有些渙散，似乎尚未從那場深邃的舊夢中掙脫出來。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4); EnableCharacterExpression(0,MC1,Nervous_2);AudioControl(StopSFX);",
+    "zh_TW": "[panel=6]＊（你猛地驚醒，額上滲著冷汗，眼神還有些渙散，似乎尚未從那場深邃的舊夢中掙脫出來。）＊",
+    "zh_CN": "[panel=6]＊（你猛地惊醒，额上渗着冷汗，眼神还有些涣散，似乎尚未从深邃的记忆中完全脱离。）＊",
     "links": [26]
   },
   {
     "entryID": 26,
-    "actorID": 2,
-    "text": "[panel=6]＊（燕不凡猛地驚醒，額上滲著冷汗，眼神還有些渙散，似乎尚未從深邃的記憶中完全脫離。）＊",
-    "Sequence": "SetPortrait(MC1,pic=surprise); EnableCharacterExpression(0,MC1,Nervous_2);",
+    "actorID": "MC8",
+    "text": "「表哥！你還好嗎？你剛剛樣子好嚇人，是不是做噩夢了？臉色好差，還不停冒冷汗！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "zh_TW": "「表哥！你還好嗎？你剛剛樣子好嚇人，是不是做噩夢了？臉色好差，還不停冒冷汗！」",
+    "zh_CN": "「表哥！你还好吗？你刚刚样子好吓人，是不是做噩梦了？脸色好差，还不停冒冷汗！」",
     "links": [27]
   },
   {
     "entryID": 27,
-    "actorID": "MC8",
-    "text": "[panel=2]「表哥！你還好嗎？你剛剛樣子好嚇人，是不是做噩夢了？臉色好差，還不停冒冷汗！」",
-    "Sequence": "SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
-    "links": [28]
-  },
-  {
-    "entryID": 28,
     "actorID": "MC1",
-    "text": "「（又是那個場景…那雙眼睛…不，不會的…）咳…咳…沒…沒事！靈犀妳別擔心，作了個有點刺激的夢罷了，大概是話本看多了，夢見自個兒成了大英雄，跟妖魔鬼怪大戰了三百回合！哈哈，醒來還有點喘不過氣呢！」",
-    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC1,pic=mindpain); EnableCharacterExpression(0,MC1,Meditate);SetPortrait(MC1,pic=playful); EnableCharacterExpression(0,MC1,Proud);",
-    "links": [33]
+    "text": "「（又是那個場景…那雙眼睛…不，不會的…）咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
+    "Sequence": "DisableCharacterExpression(1); \nSetPortrait(MC1,pic=11);\n EnableCharacterExpression(0,MC1-1_Pain,Pain);",
+    "Script": "SetQuestState(\"CF07\", \"active\")\nSetQuestEntryState(\"CF07\", 1, \"success\");",
+    "Description": "觸發白日夢任務",
+    "zh_TW": "「（又是那個場景…那雙眼睛…不，不會的…）咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
+    "zh_CN": "「（又是那个场景…那双眼睛…不，不会的…）咳…咳…没…没事！灵犀妳别担心，作了个有点刺激的梦罢了。」",
+    "links": [57]
   },
   {
     "entryID": 29,
-    "actorID": 2,
-    "text": "[panel=6]＊（燕不凡在草堆上打了個盹，雖然環境簡陋，倒也睡得安穩。一覺醒來，只覺得旅途的疲憊消減了不少，手腳也恢復了些力氣。）＊",
-    "Sequence": "HasRiverGodsTear == false;ModifyData(PlayerHP,MC1,Increase,20);ModifyData(LifeExp,MC1,Resting,5);",
-    "links": [30],
-    "Description": "系統訊息：體力恢復20點，生活經驗+5"
+    "actorID": "MC1",
+    "text": "「啊——舒服！靈犀啊，妳就別板著臉了，你看我這不是精神百倍了嗎？果然忙裡偷閒才是正經。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「啊——舒服！靈犀啊，妳就別板著臉了，你看我這不是精神百倍了嗎？果然忙裡偷閒才是正經。」",
+    "zh_CN": "「啊——舒服！灵犀啊，妳就别板着脸了，你看我这不是精神百倍了吗？果然忙里偷闲才是硬道理。」",
+    "links": [31]
   },
   {
     "entryID": 30,
-    "actorID": "MC1",
-    "text": "「啊——舒服！靈犀啊，妳就別板著臉了，你看我這不是精神百倍了嗎？果然忙裡偷閒才是硬道理。」",
-    "Sequence": "SetPortrait(MC1,pic=normal);EnableCharacterExpression(0,MC1,Nervous);",
-    "links": [31]
+    "actorID": "MC8",
+    "text": "「哼，總算是醒了！表哥，你睡得可真沉，我都快擔心死你了！叫都叫不醒！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=2);EnableCharacterExpression(1,MC8,Anger);",
+    "zh_TW": "「哼，總算是醒了！表哥，你睡得可真沉，我都快擔心死你了！叫都叫不醒！」",
+    "zh_CN": "「哼，总算是醒了！表哥，你睡得可真沉，我都快担心死你了！叫都叫不醒！」",
+    "links": [29]
   },
   {
     "entryID": 31,
     "actorID": "MC8",
-    "text": "[panel=2]「哼，總算是醒了！表哥，你睡得可真沉，我都快擔心死你了！叫都叫不醒！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=angry);EnableCharacterExpression(1,MC8,Anger);",
-    "links": [33]
+    "text": "「好啦好啦，不管是大戰三百回合還是睡得像頭豬，此地陰森森的，我們還是趕快離開這個鬼地方，去找點正經事做吧！你的盤纏可還沒著落呢！」",
+    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC8,pic=3); ",
+    "zh_TW": "「好啦好啦，不管是大戰三百回合還是睡得像頭豬，此地陰森森的，我們還是趕快離開這個鬼地方，去找點正經事做吧！你的盤纏可還沒著落呢！」",
+    "zh_CN": "「好啦好啦，不管是大战三百回合还是睡得像头猪，此地阴森森的，我们还是赶快离开这个鬼地方，去找点正经事做吧！你的盘缠可还没着落呢！」",
+    "links": [120]
   },
   {
     "entryID": 33,
-    "actorID": "MC8",
-    "text": "[panel=2]「好啦好啦，不管是大戰三百回合還是睡得像頭豬，此地陰森森的，我們還是趕快離開這個鬼地方，去找點正經事做吧！你的盤纏可還沒著落呢！」",
-    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC8,pic=worried); EnableCharacterExpression(1,MC8,Relief);",
+    "actorID": "MC1",
+    "text": "「靈犀說得有理，此地不宜久留。」",
+    "Sequence": "",
+    "zh_TW": "「靈犀說得有理，此地不宜久留。」",
+    "zh_CN": "「灵犀说得有理，此地不宜久留。」",
     "links": [34]
   },
   {
     "entryID": 34,
     "actorID": "MC1",
-    "text": "「嗯，嗯，靈犀教訓的是！不過這免費的床鋪，偶爾體驗一下也不錯嘛，哈哈！走，賺錢去！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=proud);",
+    "text": "「呃…好吧，既然靈犀妳這麼說，此地或許真有些不妥。我們還是謹慎為上，另尋他處歇腳便是。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=7);",
+    "zh_TW": "「呃…好吧，既然靈犀妳這麼說，此地或許真有些不妥。我們還是謹慎為上，另尋他處歇腳便是。」",
+    "zh_CN": "「呃…好吧，既然灵犀妳这么说，此地或许真有些不妥。我们还是谨慎为上，另寻他处歇脚便是。」",
     "links": []
   },
   {
-    "entryID": 36,
-    "actorID": "MC1",
-    "text": "「靈犀說得有理，此地不宜久留。」",
+    "entryID": 35,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在江湖中，諸如釣魚、煎藥、挖礦等[em2]工作[/em2]，不僅能賺取些許盤纏，更能積累寶貴的[em2]生活經驗[/em2]。這些經驗能助你領悟[em2]獨特技能[/em2]，正所謂條條大路通大俠。）＊",
     "Sequence": "",
-    "links": [37],
-    "Description": "選項2：離開廢棄的屋子"
+    "zh_TW": "[panel=6]＊（在江湖中，諸如釣魚、煎藥、挖礦等[em2]工作[/em2]，不僅能賺取些許盤纏，更能積累寶貴的[em2]生活經驗[/em2]。這些經驗能助你領悟[em2]獨特技能[/em2]，正所謂條條大路通大俠。）＊",
+    "zh_CN": "[panel=6]＊（在江湖中，诸如钓鱼、煎药、挖矿等[em2]工作[/em2]，不仅能赚取些许盘缠，更能积累宝贵的[em2]生活经验[/em2]。这些经验能助你领悟[em2]独特技能[/em2]，正所谓条条大路通大侠。）＊",
+    "links": [4]
   },
   {
-    "entryID": 37,
+    "entryID": 40,
     "actorID": "MC1",
-    "text": "「呃…好吧，既然靈犀妳這麼說，此地或許真有些不妥。我們還是謹慎為上，另尋他處歇腳便是。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Shy);",
+    "text": "[em2][耗時一個時辰][/em2]「水流大、有難度的獵場才是我的歸宿！」",
+    "Sequence": "",
+    "Conditions": "Variable[\"FishCount\"] > 0 and (Variable[\"MyTime\"] < 6)",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Description": "扣時間",
+    "zh_TW": "[em2][耗時一個時辰][/em2]「水流大、有難度的獵場才是我的歸宿！」",
+    "zh_CN": "[em2][耗时一个时辰][/em2]「水流大、有难度的猎场才是我的归宿！」",
+    "links": [106]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC8",
+    "text": "「黃金魚？！表哥！我們發財啦！這魚一定很值錢！快想想拿去哪裡賣個好價錢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "「黃金魚？！表哥！我們發財啦！這魚一定很值錢！快想想拿去哪裡賣個好價錢！」",
+    "zh_CN": "「黄金鱼？！表哥！我们发财啦！这鱼一定很值钱！快想想拿去哪里卖个好价钱！」",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「此等奇物，確實罕見。不僅能解燃眉之急，或許還有其他妙用。靈犀，我可真行！對吧？對吧！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,proud);",
+    "zh_TW": "「此等奇物，確實罕見。不僅能解燃眉之急，或許還有其他妙用。靈犀，我可真行！對吧？對吧！」",
+    "zh_CN": "「此等奇物，确实罕见。不仅能解燃眉之急，或许还有其他妙用。灵犀，我可真行！对吧？对吧！」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC8",
+    "text": "「好啦，好啦，你好煩哦...」",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(1);\nSetPortrait(MC8,pic=6);",
+    "zh_TW": "「好啦，好啦，你好煩哦...」",
+    "zh_CN": "「好啦，好啦，你好烦哦...」",
+    "links": [103, 2053]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「...真是不可愛。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「...真是不可愛。」",
+    "zh_CN": "「...真是不可爱。」",
+    "links": [102, 2055]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「哇！這是…這是什麼魚？通體金黃，莫非是傳說中的黃金魚？！看來今日運氣當真不錯！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "zh_TW": "「哇！這是…這是什麼魚？通體金黃，莫非是傳說中的黃金魚？！看來今日運氣當真不錯！」",
+    "zh_CN": "「哇！这是…这是什么鱼？通体金黄，莫非是传说中的黄金鱼？！看来今日运气当真不错！」",
+    "links": [45]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「再說，我輩江湖中人，隨遇而安乃是家常便飯。走了這半日，正好有些腿痠，容我在此打個盹，瞇上一小會兒，養足精神再賺錢不遲。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「再說，我輩江湖中人，隨遇而安乃是家常便飯。走了這半日，正好有些腿痠，容我在此打個盹，瞇上一小會兒，養足精神再賺錢不遲。」",
+    "zh_CN": "「再说，我辈江湖中人，随遇而安乃是家常便饭。走了这半日，正好有些腿酸，容我在此打个盹，眯上一小会儿，养足精神再赚钱不迟。」",
+    "links": [18]
+  },
+  {
+    "entryID": 55,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nShowMemory(M_003);\nSetContinueMode(original)@Message(EndMemory);\nContinue()@Message(EndMemory);",
+    "links": [25]
+  },
+  {
+    "entryID": 56,
+    "actorID": "role2",
+    "text": "[panel=6]＊（角落裡，堆著一堆還算乾淨的稻草，像是有人曾在此歇過腳。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（角落裡，堆著一堆還算乾淨的稻草，像是有人曾在此歇過腳。）＊",
+    "zh_CN": "[panel=6]＊（角落里，堆着一堆还算干净的稻草，像是有人曾在此歇过脚。）＊",
+    "links": [15, 100]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「大概是話本看多了，夢見自個兒成了大英雄，跟妖魔鬼怪大戰了三百回合！哈哈，醒來還有點喘不過氣呢！」",
+    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC1,pic=8); EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「大概是話本看多了，夢見自個兒成了大英雄，跟妖魔鬼怪大戰了三百回合！哈哈，醒來還有點喘不過氣呢！」",
+    "zh_CN": "「大概是话本看多了，梦见自个儿成了大英雄，跟妖魔鬼怪大战了三百回合！哈哈，醒来还有点喘不过气呢！」",
+    "links": [30]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC8",
+    "text": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "zh_TW": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "zh_CN": "「表哥，时间不早了，没有时间做这事了，还是先去[em2]客栈[/em2]打尖吧。」",
+    "links": []
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC8",
+    "text": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "zh_TW": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "zh_CN": "「表哥，时间不早了，没有时间做这事了，还是先去[em2]客栈[/em2]打尖吧。」",
+    "links": []
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC8",
+    "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 5",
+    "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
+    "links": []
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC8",
+    "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] == 5",
+    "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
+    "links": []
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC8",
+    "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] == 5",
+    "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
+    "links": []
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginMiniGame(Fishing,Intermediate,Default,Default);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndMiniGame);\nContinue()@Message(EndMiniGame)",
+    "links": [111]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC1",
+    "text": "...",
+    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(LifeExp,10);",
+    "zh_TW": "...",
+    "zh_CN": "...",
+    "links": [115, 118]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [116]
+  },
+  {
+    "entryID": 112,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "BeginMiniGame(Fishing,Default,Default,Default);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndMiniGame);\nContinue()@Message(EndMiniGame)",
+    "links": [6]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "「所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
+    "Sequence": "",
+    "Script": "Variable[\"FishCount\"] = Variable[\"FishCount\"] +1",
+    "Description": "+1釣魚次數",
+    "zh_TW": "「所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
+    "zh_CN": "「所谓静心垂钓，方能有所得吧。江湖之路，亦是如此。」",
+    "links": [11]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "[em2][耗時一個時辰][/em2](跳過小遊戲僅獲得少許生活經驗)",
+    "Sequence": "",
+    "Conditions": "Variable[\"FishCount\"] > 0 and (Variable[\"MyTime\"] < 6)",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Description": "扣時間",
+    "zh_TW": "[em2][耗時一個時辰][/em2](跳過小遊戲僅獲得少許生活經驗)",
+    "zh_CN": "[em2][耗时一个时辰][/em2](跳过小游戏仅获得少许生活经验)",
+    "links": [108]
+  },
+  {
+    "entryID": 115,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在你剛收竿不久後，突然一條全身金黃色的魚自己跳上岸，真是了不得的幸運啊。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"FishCount\"] == 1",
+    "Script": "Variable[\"FishCount\"] = 3",
+    "Description": "釣魚次數=3",
+    "zh_TW": "[panel=6]＊（就在你剛收竿不久後，突然一條全身金黃色的魚自己跳上岸，真是了不得的幸運啊。）＊",
+    "zh_CN": "[panel=6]＊（就在你刚收竿不久后，突然一条全身金黄色的鱼自己跳上岸，真是了不得的幸运啊。）＊",
+    "links": [53]
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [115, 118]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC1",
+    "text": "「所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
+    "zh_CN": "「所谓静心垂钓，方能有所得吧。江湖之路，亦是如此。」",
+    "links": [103, 2053]
+  },
+  {
+    "entryID": 119,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。[em2]蕭靈犀無奈地在一旁警戒[/em2]。時間很快過去了…）＊",
+    "Sequence": "",
+    "Description": "一般睡覺",
+    "zh_TW": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。[em2]蕭靈犀無奈地在一旁警戒[/em2]。時間很快過去了…）＊",
+    "zh_CN": "[panel=6]＊（你说着便往草堆上一躺，随意拨了拨稻草，调整了个舒服的姿势，没一会儿便传出了均匀的呼吸声。[em2]萧灵犀无奈地在一旁警戒[/em2]。时间很快过去了…）＊",
+    "links": [2052]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC1",
+    "text": "「嗯，嗯，靈犀教訓的是！不過這免費的床鋪，偶爾體驗一下也不錯嘛，哈哈！走，賺錢去！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);\nModifyData(Rest);\nShowNoviceTeaching(Rest);",
+    "Description": "休息&教學",
+    "zh_TW": "「嗯，嗯，靈犀教訓的是！不過這免費的床鋪，偶爾體驗一下也不錯嘛，哈哈！走，賺錢去！」",
+    "zh_CN": "「嗯，嗯，灵犀教训的是！不过这免费的床铺，偶尔体验一下也不错嘛，哈哈！走，赚钱去！」",
+    "links": [101, 2054]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [14]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "過場演出",
+    "links": [55]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "過場演出",
+    "links": [30]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 2054,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 2055,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
     "links": []
   }
 ]

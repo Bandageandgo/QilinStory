@@ -1,0 +1,1185 @@
+[
+  {
+    "entryID": 113,
+    "actorID": "role2",
+    "text": "[panel=6]＊（破屋內堆滿竹簡龜甲，散發霉味。滿臉橫肉的書生正對著模糊的石碑拓片苦思，沒注意到你們。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（破屋內堆滿竹簡龜甲，散發霉味。滿臉橫肉的書生正對著模糊的石碑拓片苦思，沒注意到你們。）＊",
+    "zh_CN": "[panel=6]＊（破屋内堆满竹简龟甲，散发霉味。满脸横肉的书生正对着模糊的石碑拓片苦思，没注意到你们。）＊",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "role111",
+    "text": "「...非也非也...『玄鳥降兮』這句銘文，後半句究竟何意？..嗯...」",
+    "Sequence": "",
+    "zh_TW": "「...非也非也...『玄鳥降兮』這句銘文，後半句究竟何意？..嗯...」",
+    "zh_CN": "「...非也非也...『玄鸟降兮』这句铭文，后半句究竟何意？..嗯...」",
+    "links": [115, 168, 118]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC1",
+    "text": "[em2][耗時一個時辰][/em2]「先生博學，不知可否請教一二？」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F2\") == \"unassigned\"",
+    "Description": "會消耗1個時辰",
+    "zh_TW": "[em2][耗時一個時辰][/em2]「先生博學，不知可否請教一二？」",
+    "zh_CN": "[em2][耗时一个时辰][/em2]「先生博学，不知可否请教一二？」",
+    "links": [116, 164]
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC1",
+    "text": "「先生對古籍拓片似有精深研究，晚輩冒昧，不知可否請教一二？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "「先生對古籍拓片似有精深研究，晚輩冒昧，不知可否請教一二？」",
+    "zh_CN": "「先生对古籍拓片似有精深研究，晚辈冒昧，不知可否请教一二？」",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "role111",
+    "text": "「哦？你也懂這些？我研究的是先秦古篆，艱澀得很。若真懂，看看這拓片，『玄鳥降兮』，下句該接什麼？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"C0F2\", \"active\");\nVariable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Description": "接取任務、消耗時間",
+    "zh_TW": "「哦？你也懂這些？我研究的是先秦古篆，艱澀得很。若真懂，看看這拓片，『玄鳥降兮』，下句該接什麼？」",
+    "zh_CN": "「哦？你也懂这些？我研究的是先秦古篆，艰涩得很。若真懂，看看这拓片，『玄鸟降兮』，下句该接什么？」",
+    "links": [219, 119, 123, 129, 135]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC1",
+    "text": "「離開。」",
+    "Sequence": "",
+    "Conditions": "Variable[\"MyTime\"] < 7",
+    "zh_TW": "「離開。」",
+    "zh_CN": "「离开。」",
+    "links": []
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC1",
+    "text": "「依晚輩之見，或可是『四海一統』？」",
+    "Sequence": "",
+    "zh_TW": "「依晚輩之見，或可是『四海一統』？」",
+    "zh_CN": "「依晚辈之见，或可是『四海一统』？」",
+    "links": [120]
+  },
+  {
+    "entryID": 120,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,KnowledgeCheck,20);",
+    "links": [121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC1",
+    "text": "「依晚輩之見，或可是『四海一統』？此句氣勢恢宏。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「依晚輩之見，或可是『四海一統』？此句氣勢恢宏。」",
+    "zh_CN": "「依晚辈之见，或可是『四海一统』？此句气势恢宏。」",
+    "links": [122, 126]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC1",
+    "text": "「此句出自《漢書》，用以形容漢朝統一天下之盛。然『玄鳥降兮』乃商朝典故，兩者年代與意境或有差異。」",
+    "Sequence": "SetPortrait(MC1,pic=1);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「此句出自《漢書》，用以形容漢朝統一天下之盛。然『玄鳥降兮』乃商朝典故，兩者年代與意境或有差異。」",
+    "zh_CN": "「此句出自《汉书》，用以形容汉朝统一天下之盛。然『玄鸟降兮』乃商朝典故，两者年代与意境或有差异。」",
+    "links": [125]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC1",
+    "text": "「莫非是應景之言，如『萬象更新』？」",
+    "Sequence": "",
+    "zh_TW": "「莫非是應景之言，如『萬象更新』？」",
+    "zh_CN": "「莫非是应景之言，如『万象更新』？」",
+    "links": [124]
+  },
+  {
+    "entryID": 124,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,KnowledgeCheck,10);",
+    "links": [127]
+  },
+  {
+    "entryID": 125,
+    "actorID": "role111",
+    "text": "「嗯，少年人雖知其出處，卻非我所尋之意。再思之。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"C0F2\", \"abandoned\")",
+    "zh_TW": "「嗯，少年人雖知其出處，卻非我所尋之意。再思之。」",
+    "zh_CN": "「嗯，少年人虽知其出处，却非我所寻之意。再思之。」",
+    "links": [123, 129, 135]
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC1",
+    "text": "「這個...恕晚輩學識淺薄，『四海一統』只是隨口一猜。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「這個...恕晚輩學識淺薄，『四海一統』只是隨口一猜。」",
+    "zh_CN": "「这个...恕晚辈学识浅薄，『四海一统』只是随口一猜。」",
+    "links": [128]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC1",
+    "text": "「莫非是應景之言，如『萬象更新』？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「莫非是應景之言，如『萬象更新』？」",
+    "zh_CN": "「莫非是应景之言，如『万象更新』？」",
+    "links": [130, 132]
+  },
+  {
+    "entryID": 128,
+    "actorID": "role111",
+    "text": "「『四海一統』？此句雖有氣勢，然與『玄鳥降兮』之古韻相去甚遠。少年人學問尚淺啊。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"C0F2\", \"unassigned\")",
+    "zh_TW": "「『四海一統』？此句雖有氣勢，然與『玄鳥降兮』之古韻相去甚遠。少年人學問尚淺啊。」",
+    "zh_CN": "「『四海一统』？此句虽有气势，然与『玄鸟降兮』之古韵相去甚远。少年人学问尚浅啊。」",
+    "links": [165]
+  },
+  {
+    "entryID": 129,
+    "actorID": "MC1",
+    "text": "「記得似乎曾在《詩經》中讀到『以奠厥邦』？」",
+    "Sequence": "",
+    "zh_TW": "「記得似乎曾在《詩經》中讀到『以奠厥邦』？」",
+    "zh_CN": "「记得似乎曾在《诗经》中读到『以奠厥邦』？」",
+    "links": [137]
+  },
+  {
+    "entryID": 130,
+    "actorID": "MC1",
+    "text": "「此四字出自《周易》，形容天地煥然一新。然與商朝『玄鳥降兮』的典故關聯似乎不大。」",
+    "Sequence": "SetPortrait(MC1,pic=1);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「此四字出自《周易》，形容天地煥然一新。然與商朝『玄鳥降兮』的典故關聯似乎不大。」",
+    "zh_CN": "「此四字出自《周易》，形容天地焕然一新。然与商朝『玄鸟降兮』的典故关联似乎不大。」",
+    "links": [134]
+  },
+  {
+    "entryID": 132,
+    "actorID": "MC1",
+    "text": "「『萬象更新』...似乎有些牽強了。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「『萬象更新』...似乎有些牽強了。」",
+    "zh_CN": "「『万象更新』...似乎有些牵强了。」",
+    "links": [133]
+  },
+  {
+    "entryID": 133,
+    "actorID": "role111",
+    "text": "「『萬象更新』？與此古銘文意境不符，少年人學問尚淺啊。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"C0F2\", \"unassigned\")",
+    "zh_TW": "「『萬象更新』？與此古銘文意境不符，少年人學問尚淺啊。」",
+    "zh_CN": "「『万象更新』？与此古铭文意境不符，少年人学问尚浅啊。」",
+    "links": [165]
+  },
+  {
+    "entryID": 134,
+    "actorID": "role111",
+    "text": "「言之有理，但亦非正解。再想想。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「言之有理，但亦非正解。再想想。」",
+    "zh_CN": "「言之有理，但亦非正解。再想想。」",
+    "links": [119, 129, 135]
+  },
+  {
+    "entryID": 135,
+    "actorID": "MC1",
+    "text": "「若求吉利，不如接『福澤綿長』？」",
+    "Sequence": "",
+    "zh_TW": "「若求吉利，不如接『福澤綿長』？」",
+    "zh_CN": "「若求吉利，不如接『福泽绵长』？」",
+    "links": [136]
+  },
+  {
+    "entryID": 136,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,KnowledgeCheck,10);",
+    "links": [143]
+  },
+  {
+    "entryID": 137,
+    "actorID": "MC1",
+    "text": "「我想起來了！出自《詩經·商頌·玄鳥》」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "「我想起來了！出自《詩經·商頌·玄鳥》」",
+    "zh_CN": "「我想起来了！出自《诗经·商颂·玄鸟》」",
+    "links": [138]
+  },
+  {
+    "entryID": 138,
+    "actorID": "MC1",
+    "text": "「《詩經·商頌·玄鳥》：『天命玄鳥，降而生商…邦畿千里，維民所止，肇域彼四海…殷受命咸宜，百祿是何。』此詩正是頌揚商朝始祖契降世建商之事！」",
+    "Sequence": "DisableCharacterExpression();SetPortrait(MC1,pic=1);ModifyData(FeatExp,MC1,Knowledge,10);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「《詩經·商頌·玄鳥》：『天命玄鳥，降而生商…邦畿千里，維民所止，肇域彼四海…殷受命咸宜，百祿是何。』此詩正是頌揚商朝始祖契降世建商之事！」",
+    "zh_CN": "「《诗经·商颂·玄鸟》：『天命玄鸟，降而生商…邦畿千里，维民所止，肇域彼四海…殷受命咸宜，百禄是何。』此诗正是颂扬商朝始祖契降世建商之事！」",
+    "links": [139]
+  },
+  {
+    "entryID": 139,
+    "actorID": "role111",
+    "text": "「妙啊！妙啊！正是此句！此乃《商頌》之句！小友年紀輕輕，竟有如此學識，不凡啊！」",
+    "Sequence": "DisableCharacterExpression();",
+    "zh_TW": "「妙啊！妙啊！正是此句！此乃《商頌》之句！小友年紀輕輕，竟有如此學識，不凡啊！」",
+    "zh_CN": "「妙啊！妙啊！正是此句！此乃《商颂》之句！小友年纪轻轻，竟有如此学识，不凡啊！」",
+    "links": [142]
+  },
+  {
+    "entryID": 142,
+    "actorID": "role111",
+    "text": "「難得遇知音，不錯不錯！難得難得！」",
+    "Sequence": "",
+    "zh_TW": "「難得遇知音，不錯不錯！難得難得！」",
+    "zh_CN": "「难得遇知音，不错不错！难得难得！」",
+    "links": [146]
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC1",
+    "text": "「若求吉利，不如接『福澤綿長』？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「若求吉利，不如接『福澤綿長』？」",
+    "zh_CN": "「若求吉利，不如接『福泽绵长』？」",
+    "links": [144, 147]
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC1",
+    "text": "「此為民間常用祝頌語，常見於祭祀，寓意吉祥。但若論古籍原文，恐非此句。」",
+    "Sequence": "SetPortrait(MC1,pic=1);ModifyData(FeatExp,MC1,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「此為民間常用祝頌語，常見於祭祀，寓意吉祥。但若論古籍原文，恐非此句。」",
+    "zh_CN": "「此为民间常用祝颂语，常见于祭祀，寓意吉祥。但若论古籍原文，恐非此句。」",
+    "links": [145]
+  },
+  {
+    "entryID": 145,
+    "actorID": "role111",
+    "text": "「雖是吉言，卻非古銘之續。少年人需知其源流啊。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「雖是吉言，卻非古銘之續。少年人需知其源流啊。」",
+    "zh_CN": "「虽是吉言，却非古铭之续。少年人需知其源流啊。」",
+    "links": [119, 123, 129]
+  },
+  {
+    "entryID": 146,
+    "actorID": "role111",
+    "text": "「收集的寶貝不少，得送你點什麼…」",
+    "Sequence": "",
+    "zh_TW": "「收集的寶貝不少，得送你點什麼…」",
+    "zh_CN": "「收集的宝贝不少，得送你点什么…」",
+    "links": [150]
+  },
+  {
+    "entryID": 147,
+    "actorID": "MC1",
+    "text": "「『福澤綿長』...聽著吉利。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「『福澤綿長』...聽著吉利。」",
+    "zh_CN": "「『福泽绵长』...听着吉利。」",
+    "links": [148]
+  },
+  {
+    "entryID": 148,
+    "actorID": "role111",
+    "text": "「少年人，此言雖善，卻與古銘文風馬牛不相及也。少年人學問尚淺啊。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"C0F2\", \"unassigned\")",
+    "zh_TW": "「少年人，此言雖善，卻與古銘文風馬牛不相及也。少年人學問尚淺啊。」",
+    "zh_CN": "「少年人，此言虽善，却与古铭文风马牛不相及也。少年人学问尚浅啊。」",
+    "links": [166]
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC8",
+    "text": "「這位先生怎麼突然...」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "zh_TW": "「這位先生怎麼突然...」",
+    "zh_CN": "「这位先生怎么突然...」",
+    "links": [151]
+  },
+  {
+    "entryID": 151,
+    "actorID": "role111",
+    "text": "「有了！這塊龜涎石，陰氣重，但確實是難得古物...我本欲研究其紋路，現贈予你！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "「有了！這塊龜涎石，陰氣重，但確實是難得古物...我本欲研究其紋路，現贈予你！」",
+    "zh_CN": "「有了！这块龟涎石，阴气重，但确实是难得古物...我本欲研究其纹路，现赠予你！」",
+    "links": [2052, 152]
+  },
+  {
+    "entryID": 152,
+    "actorID": "role2",
+    "text": "[panel=6]＊（獲得：[em2]龜涎石[/em2]）＊",
+    "Sequence": "ModifyData(Inventory,AddItem,GuixianStone,1);",
+    "Script": "SetQuestState(\"C0F2\", \"success\");\nSetQuestEntryState(\"C0F1\", 1, \"success\");\nSetQuestEntryState(\"C0F1\", 2, \"active\")",
+    "Description": "任務成功",
+    "zh_TW": "[panel=6]＊（獲得：[em2]龜涎石[/em2]）＊",
+    "zh_CN": "[panel=6]＊（获得：[em2]龟涎石[/em2]）＊",
+    "links": [153, 161]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]「先生，我等盤纏拮据，可否請您資助一二？」",
+    "Sequence": "",
+    "zh_TW": "[em2][厚黑檢定][/em2]「先生，我等盤纏拮据，可否請您資助一二？」",
+    "zh_CN": "[em2][厚黑检定][/em2]「先生，我等盘缠拮据，可否请您资助一二？」",
+    "links": [154]
+  },
+  {
+    "entryID": 154,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,7);",
+    "links": [155]
+  },
+  {
+    "entryID": 155,
+    "actorID": "MC1",
+    "text": "「先生博古通今，晚輩斗膽，不知先生能否資助些許盤纏，以解燃眉之急？」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Nervous_2);",
+    "zh_TW": "「先生博古通今，晚輩斗膽，不知先生能否資助些許盤纏，以解燃眉之急？」",
+    "zh_CN": "「先生博古通今，晚辈斗胆，不知先生能否资助些许盘缠，以解燃眉之急？」",
+    "links": [156, 159]
+  },
+  {
+    "entryID": 156,
+    "actorID": "role111",
+    "text": "「你這小友，倒也坦誠。也罷，我今日高興，便多贈你一些。這點小錢拿去，路上莫虧待自己。」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,MC1,Realpolitik,10);ModifyData(Coin,100);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "給100錢",
+    "zh_TW": "「你這小友，倒也坦誠。也罷，我今日高興，便多贈你一些。這點小錢拿去，路上莫虧待自己。」",
+    "zh_CN": "「你这小友，倒也坦诚。也罢，我今日高兴，便多赠你一些。这点小钱拿去，路上莫亏待自己。」",
+    "links": [157]
+  },
+  {
+    "entryID": 157,
+    "actorID": "MC8",
+    "text": "「（小聲）表哥真厲害，還能多要到錢！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "「（小聲）表哥真厲害，還能多要到錢！」",
+    "zh_CN": "「（小声）表哥真厉害，还能多要到钱！」",
+    "links": [158]
+  },
+  {
+    "entryID": 158,
+    "actorID": "MC1",
+    "text": "「那就多謝先生了！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "「那就多謝先生了！」",
+    "zh_CN": "「那就多谢先生了！」",
+    "links": [167]
+  },
+  {
+    "entryID": 159,
+    "actorID": "role111",
+    "text": "「嗯？年輕人學問不錯，怎地也沾染市儈氣息？我已贈你古物已是看重，莫得寸進尺。」",
+    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC41,Anger);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「嗯？年輕人學問不錯，怎地也沾染市儈氣息？我已贈你古物已是看重，莫得寸進尺。」",
+    "zh_CN": "「嗯？年轻人学问不错，怎地也沾染市侩气息？我已赠你古物已是看重，莫得寸进尺。」",
+    "links": [160]
+  },
+  {
+    "entryID": 160,
+    "actorID": "MC8",
+    "text": "「（小聲）哎呀，好像惹先生不高興了...」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nDisableCharacterExpression(1);",
+    "zh_TW": "「（小聲）哎呀，好像惹先生不高興了...」",
+    "zh_CN": "「（小声）哎呀，好像惹先生不高兴了...」",
+    "links": [162]
+  },
+  {
+    "entryID": 161,
+    "actorID": "MC1",
+    "text": "「離開」",
+    "Sequence": "",
+    "zh_TW": "「離開」",
+    "zh_CN": "「离开」",
+    "links": [158]
+  },
+  {
+    "entryID": 162,
+    "actorID": "MC1",
+    "text": "「嘿嘿...」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「嘿嘿...」",
+    "zh_CN": "「嘿嘿...」",
+    "links": [167]
+  },
+  {
+    "entryID": 164,
+    "actorID": "MC8",
+    "text": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "zh_TW": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "zh_CN": "「表哥，时间不早了，没有时间做这事了，还是先去[em2]客栈[/em2]打尖吧。」",
+    "links": []
+  },
+  {
+    "entryID": 165,
+    "actorID": "MC8",
+    "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 5",
+    "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
+    "links": []
+  },
+  {
+    "entryID": 166,
+    "actorID": "MC8",
+    "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 5",
+    "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
+    "links": []
+  },
+  {
+    "entryID": 167,
+    "actorID": "MC8",
+    "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 5",
+    "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
+    "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
+    "links": []
+  },
+  {
+    "entryID": 168,
+    "actorID": "MC1",
+    "text": "「先生可否知曉龜涎石之下落？」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"active\"",
+    "zh_TW": "「先生可否知曉龜涎石之下落？」",
+    "zh_CN": "「先生可否知晓龟涎石之下落？」",
+    "links": [169]
+  },
+  {
+    "entryID": 169,
+    "actorID": "MC1",
+    "text": "聽說先生博覽群物，晚輩冒昧，不知可否請教關於龜涎石？",
+    "Sequence": "",
+    "zh_TW": "聽說先生博覽群物，晚輩冒昧，不知可否請教關於龜涎石？",
+    "zh_CN": "听说先生博览群物，晚辈冒昧，不知可否请教关于龟涎石？",
+    "links": [170, 233]
+  },
+  {
+    "entryID": 170,
+    "actorID": "role111",
+    "text": "「龜涎石」？此物雖名為石，實則為老龜腹中凝結之液，入藥可固本培元、安神定魄，乃極罕見之藥材。」",
+    "Sequence": "",
+    "zh_TW": "「龜涎石」？此物雖名為石，實則為老龜腹中凝結之液，入藥可固本培元、安神定魄，乃極罕見之藥材。」",
+    "zh_CN": "「龟涎石」？此物虽名为石，实则为老龟腹中凝结之液，入药可固本培元、安神定魄，乃极罕见之药材。 」",
+    "links": [171]
+  },
+  {
+    "entryID": 171,
+    "actorID": "role111",
+    "text": "「漁民獵捕老龜，偶爾可自其腹內獲得」",
+    "Sequence": "",
+    "zh_TW": "「漁民獵捕老龜，偶爾可自其腹內獲得」",
+    "zh_CN": "「渔民猎捕老龟，偶尔可自其腹内获得」",
+    "links": [172]
+  },
+  {
+    "entryID": 172,
+    "actorID": "role111",
+    "text": "「你倒是來得巧了——我這兒，恰好還藏有一塊。」",
+    "Sequence": "",
+    "zh_TW": "「你倒是來得巧了——我這兒，恰好還藏有一塊。」",
+    "zh_CN": "「你倒是来得巧了——我这儿，恰好还藏有一块。」",
+    "links": [173, 2051]
+  },
+  {
+    "entryID": 173,
+    "actorID": "MC1",
+    "text": "「多謝先生詳言指點，晚輩告辭了。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"unassigned\"",
+    "zh_TW": "「多謝先生詳言指點，晚輩告辭了。」",
+    "zh_CN": "「多谢先生详言指点，晚辈告辞了。」",
+    "links": []
+  },
+  {
+    "entryID": 175,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一個邋遢郎中蹲在空地攤曬藥材，衣著邋遢，頭髮亂糟糟。但他眼神專注，捻動藥材的手法甚是老練。他口中念念有詞。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（一個邋遢郎中蹲在空地攤曬藥材，衣著邋遢，頭髮亂糟糟。但他眼神專注，捻動藥材的手法甚是老練。他口中念念有詞。）＊",
+    "zh_CN": "[panel=6]＊（一个邋遢郎中蹲在空地摊晒药材，衣着邋遢，头发乱糟糟。但他眼神专注，捻动药材的手法却很精准。他口中念念有词。）＊",
+    "links": [176]
+  },
+  {
+    "entryID": 176,
+    "actorID": "role42",
+    "text": "「唉，『龍銜草』、『鳳尾蕨』皆備，唯獨缺了關鍵的[em2]龜涎石[/em2]，如何是好...」",
+    "Sequence": "SetPortrait(role42,pic=3);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "「唉，『龍銜草』、『鳳尾蕨』皆備，唯獨缺了關鍵的[em2]龜涎石[/em2]，如何是好...」",
+    "zh_CN": "「唉，『龙衔草』、『凤尾蕨』皆备，唯独缺了关键的[em2]龟涎石[/em2]，如何是好...」",
+    "links": [177]
+  },
+  {
+    "entryID": 177,
+    "actorID": "MC1",
+    "text": "「先生眉頭緊鎖，莫非是為了採集珍稀藥材而煩惱？晚輩或許能效勞一二。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「先生眉頭緊鎖，莫非是為了採集珍稀藥材而煩惱？晚輩或許能效勞一二。」",
+    "zh_CN": "「先生眉头紧锁，莫非是为了采集珍稀药材而烦恼？晚辈或许能效劳一二。」",
+    "links": [178]
+  },
+  {
+    "entryID": 178,
+    "actorID": "role42",
+    "text": "「這位小兄弟有心了。實不相瞞，我正為一味名叫[em2]龜涎石[/em2]的藥材發愁。此物是煉製[em2]百歲羹[/em2]的關鍵。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role42,pic=1);",
+    "zh_TW": "「這位小兄弟有心了。實不相瞞，我正為一味名叫[em2]龜涎石[/em2]的藥材發愁。此物是煉製[em2]百歲羹[/em2]的關鍵。」",
+    "zh_CN": "「这位小兄弟有心了。实不相瞒，我正为一味名叫[em2]龟涎石[/em2]的药材发愁。此物是炼制[em2]百岁羹[/em2]的关键。」",
+    "links": [179]
+  },
+  {
+    "entryID": 179,
+    "actorID": "role42",
+    "text": "「聽聞[em2]村東的學究[/em2]可能知曉其下落，但他脾氣古怪，不知小兄弟可否替我去問問？若能尋得，必有重謝！」",
+    "Sequence": "",
+    "zh_TW": "「聽聞[em2]村東的學究[/em2]可能知曉其下落，但他脾氣古怪，不知小兄弟可否替我去問問？若能尋得，必有重謝！」",
+    "zh_CN": "「听闻[em2]村东的学究[/em2]可能知晓其下落，但他脾气古怪，不知小兄弟可否替我去问问？若能寻得，必有重谢！」",
+    "links": [180]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC8",
+    "text": "[panel=2]「重謝？表哥！聽起來是個賺錢的好機會！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「重謝？表哥！聽起來是個賺錢的好機會！」",
+    "zh_CN": "[panel=2]「重谢？表哥！听起来是个赚钱的好机会！」",
+    "links": [181, 184]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC1",
+    "text": "「那行吧，我去會會那位怪學究。」",
+    "Sequence": "",
+    "zh_TW": "「那行吧，我去會會那位怪學究。」",
+    "zh_CN": "「那行吧，我去会会那位怪学究。」",
+    "links": [182]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "「行，我去會會那位怪學究，希望能問到線索。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「行，我去會會那位怪學究，希望能問到線索。」",
+    "zh_CN": "「行，我去会会那位怪学究，希望能问到线索。」",
+    "links": [183]
+  },
+  {
+    "entryID": 183,
+    "actorID": "role42",
+    "text": "「太棒了！看小兄弟你表演了，我就在此等候佳音！」",
+    "Sequence": "",
+    "Script": "SetQuestState(\"C0F1\", \"active\")",
+    "Description": "接取任務",
+    "zh_TW": "「太棒了！看小兄弟你表演了，我就在此等候佳音！」",
+    "zh_CN": "「太棒了！看小兄弟你表演了，我就在此等候佳音！」",
+    "links": []
+  },
+  {
+    "entryID": 184,
+    "actorID": "MC1",
+    "text": "「這事不簡單，我再想想。」",
+    "Sequence": "",
+    "zh_TW": "「這事不簡單，我再想想。」",
+    "zh_CN": "「这事不简单，我再想想。」",
+    "links": [185]
+  },
+  {
+    "entryID": 185,
+    "actorID": "MC1",
+    "text": "「這事聽起來不簡單，我得先掂量掂量。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「這事聽起來不簡單，我得先掂量掂量。」",
+    "zh_CN": "「这事听起来不简单，我得先掂量掂量。」",
+    "links": [186]
+  },
+  {
+    "entryID": 186,
+    "actorID": "MC8",
+    "text": "[panel=2]「唉，表哥，我們就這麼走了嗎？說不定能賺點盤纏呢…」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「唉，表哥，我們就這麼走了嗎？說不定能賺點盤纏呢…」",
+    "zh_CN": "[panel=2]「唉，表哥，我们就这么走了吗？说不定能赚点盘缠呢…」",
+    "links": [187]
+  },
+  {
+    "entryID": 187,
+    "actorID": "role42",
+    "text": "「那好吧，小兄弟若改了主意，隨時可來找我。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「那好吧，小兄弟若改了主意，隨時可來找我。」",
+    "zh_CN": "「那好吧，小兄弟若改了主意，随时可来找我。」",
+    "links": []
+  },
+  {
+    "entryID": 188,
+    "actorID": "role42",
+    "text": "「你找到了？！不錯嘛，這正是[em2]龜涎石[/em2]沒錯！」",
+    "Sequence": "",
+    "zh_TW": "「你找到了？！不錯嘛，這正是[em2]龜涎石[/em2]沒錯！」",
+    "zh_CN": "「你找到了？！不错嘛，这正是[em2]龟涎石[/em2]没错！」",
+    "links": [189, 223, 224]
+  },
+  {
+    "entryID": 189,
+    "actorID": "MC1",
+    "text": "[em2][醫術檢定][/em2]「關於這龜涎石的功效…」",
+    "Sequence": "",
+    "zh_TW": "[em2][醫術檢定][/em2]「關於這龜涎石的功效…」",
+    "zh_CN": "[em2][医术检定][/em2]「关于这龟涎石的功效…」",
+    "links": [190]
+  },
+  {
+    "entryID": 190,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,MedicalExpertiseCheck,8);",
+    "links": [239]
+  },
+  {
+    "entryID": 191,
+    "actorID": "MC1",
+    "text": "「大叔請看，這龜涎石質地純粹，陰氣內斂，確是上品。此等成色，想必能讓[em2]百歲羹[/em2]藥力更足。」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「大叔請看，這龜涎石質地純粹，陰氣內斂，確是上品。此等成色，想必能讓[em2]百歲羹[/em2]藥力更足。」",
+    "zh_CN": "「大叔请看，这龟涎石质地纯粹，阴气内敛，确是上品。此等品质想必能让[em2]百岁羹[/em2]药效更佳。」",
+    "links": [192]
+  },
+  {
+    "entryID": 192,
+    "actorID": "role42",
+    "text": "「哦？小兄弟好眼力！竟能看出此石的不凡！確實，以此石入藥，[em2]百歲羹[/em2]功效必能增色不少！」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,MC1,MedicalExpertise,10);SetPortrait(role42,pic=4);",
+    "zh_TW": "「哦？小兄弟好眼力！竟能看出此石的不凡！確實，以此石入藥，[em2]百歲羹[/em2]功效必能增色不少！」",
+    "zh_CN": "「哦？小兄弟好眼力！竟能看出此石的不凡！确实，以此石入药，[em2]百岁羹[/em2]功效必能增色不少！」",
+    "links": [193]
+  },
+  {
+    "entryID": 193,
+    "actorID": "role42",
+    "text": "「就憑你這份眼力，我額外贈你[em2]50錢[/em2]！」",
+    "Sequence": "ModifyData(Coin,50);SetPortrait(role42,pic=1);",
+    "Description": "給錢",
+    "zh_TW": "「就憑你這份眼力，我額外贈你[em2]50錢[/em2]！」",
+    "zh_CN": "「就凭你这份眼力，我额外赠你[em2]50钱[/em2]！」",
+    "links": [194]
+  },
+  {
+    "entryID": 194,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇！表哥你好懂啊！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「哇！表哥你好懂啊！」",
+    "zh_CN": "[panel=2]「哇！表哥你好懂啊！」",
+    "links": [196, 227, 230]
+  },
+  {
+    "entryID": 195,
+    "actorID": "role42",
+    "text": "「...嗯，龜涎石確實難得。多謝你尋來。」",
+    "Sequence": "SetPortrait(role42,pic=3);",
+    "zh_TW": "「...嗯，龜涎石確實難得。多謝你尋來。」",
+    "zh_CN": "「...嗯，龟涎石确实难得。多谢你寻来。」",
+    "links": [211]
+  },
+  {
+    "entryID": 196,
+    "actorID": "MC1",
+    "text": "[em2][經濟檢定][/em2]「關於謝儀和指點…」",
+    "Sequence": "SetPortrait(role42,pic=1);DisableCharacterExpression(2);",
+    "zh_TW": "[em2][經濟檢定][/em2]「關於謝儀和指點…」",
+    "zh_CN": "[em2][经济检定][/em2]「关于谢仪和指点…」",
+    "links": [197]
+  },
+  {
+    "entryID": 197,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,10);",
+    "links": [198]
+  },
+  {
+    "entryID": 198,
+    "actorID": "MC1",
+    "text": "「大叔，龜涎石尋來了。晚輩初出茅廬，見識淺薄，不知郎中能否在謝儀之外，提點一二？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「大叔，龜涎石尋來了。晚輩初出茅廬，見識淺薄，不知郎中能否在謝儀之外，提點一二？」",
+    "zh_CN": "「大叔，龟涎石寻来了。晚辈初出茅庐，见识浅薄，不知郎中能否在谢仪之外，提点一二？」",
+    "links": [199, 202]
+  },
+  {
+    "entryID": 199,
+    "actorID": "role42",
+    "text": "「小兄弟謙遜好學，是塊好料子。我便將我行醫的一些心得指點給你，望你好生研習。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,MC1,EconomicDevelopment,10);\nModifyData(FeatExp,MC1,MedicalExpertise,15);\nSetPortrait(role42,pic=4);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「小兄弟謙遜好學，是塊好料子。我便將我行醫的一些心得指點給你，望你好生研習。」",
+    "zh_CN": "「小兄弟谦逊好学，是块好料子。我便将我行医的一些心得指点给你，望你好生研习。」",
+    "links": [200]
+  },
+  {
+    "entryID": 200,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥真會說話！大叔人真好！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「表哥真會說話！大叔人真好！」",
+    "zh_CN": "[panel=2]「表哥真会说话！大叔人真好！」",
+    "links": [203]
+  },
+  {
+    "entryID": 201,
+    "actorID": "MC1",
+    "text": "「多謝大叔金玉良言，我倆知道了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);SetPortrait(role42,pic=1);",
+    "Script": "SetQuestEntryState(\"C0F1\", 2, \"success\");\nSetQuestState(\"C0F1\", \"success\");",
+    "Description": "完成任務",
+    "zh_TW": "「多謝大叔金玉良言，我倆知道了。」",
+    "zh_CN": "「多谢大叔金玉良言，我俩知道了。」",
+    "links": [214]
+  },
+  {
+    "entryID": 202,
+    "actorID": "role42",
+    "text": "「江湖路遠，日後多看多學便是歷練。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role42,pic=3);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「江湖路遠，日後多看多學便是歷練。」",
+    "zh_CN": "「江湖路远，日后多看多学便是经验了。」",
+    "links": [203]
+  },
+  {
+    "entryID": 203,
+    "actorID": "role42",
+    "text": "「小兄弟辛苦了。那這龜涎石我就收下了。」",
+    "Sequence": "SetPortrait(role42,pic=1);DisableCharacterExpression(2);",
+    "zh_TW": "「小兄弟辛苦了。那這龜涎石我就收下了。」",
+    "zh_CN": "「小兄弟辛苦了。那这龟涎石我就收下了。」",
+    "links": [204]
+  },
+  {
+    "entryID": 204,
+    "actorID": "role42",
+    "text": "「除了報酬以外我在順便給你幾瓶我自己調的金創藥，或許對你日後會有幫助。」",
+    "Sequence": "ModifyData(Coin,100);\nModifyData(FeatExp,MC1,MedicalExpertise,10);\nModifyData(Valuable,MC1,HealingPotion,10);",
+    "Description": "給予報酬",
+    "zh_TW": "「除了報酬以外我在順便給你幾瓶我自己調的金創藥，或許對你日後會有幫助。」",
+    "zh_CN": "「除了报酬以外我在顺便给你几瓶我自己调的金创药，或许对你日后会有帮助。」",
+    "links": [205]
+  },
+  {
+    "entryID": 205,
+    "actorID": "role42",
+    "text": "「說來也怪，這小村子處處透著古怪…村後那片林子，聽說是古墓群，難怪有龜涎石…晚上最好別去。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「說來也怪，這小村子處處透著古怪…村後那片林子，聽說是古墓群，難怪有龜涎石…晚上最好別去。」",
+    "zh_CN": "「说来也怪，这小村子处处透着古怪…村后那片林子，听说是古墓群，难怪有龟涎石…晚上最好别去。」",
+    "links": [213]
+  },
+  {
+    "entryID": 206,
+    "actorID": "role42",
+    "text": "「如何？小兄弟改變主意要去找學究拿取[em2]龜涎石[/em2]了嗎？」",
+    "Sequence": "",
+    "zh_TW": "「如何？小兄弟改變主意要去找學究拿取[em2]龜涎石[/em2]了嗎？」",
+    "zh_CN": "「如何？小兄弟改变主意要去找学究拿取[em2]龟涎石[/em2]了吗？」",
+    "links": [180]
+  },
+  {
+    "entryID": 207,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue()",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"unassigned\"",
+    "links": [206]
+  },
+  {
+    "entryID": 208,
+    "actorID": "MC8",
+    "text": "[panel=2]「大叔，我們回來囉~。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F2\") == success",
+    "Description": "要先完成學究的任務",
+    "zh_TW": "[panel=2]「大叔，我們回來囉~。」",
+    "zh_CN": "[panel=2]「大叔，我们回来啰~。」",
+    "links": [209]
+  },
+  {
+    "entryID": 209,
+    "actorID": "MC1",
+    "text": "「大叔，我們從學究那拿回了塊石頭，你看一下是否為[em2]龜涎石[/em2]。」",
+    "Sequence": "",
+    "zh_TW": "「大叔，我們從學究那拿回了塊石頭，你看一下是否為[em2]龜涎石[/em2]。」",
+    "zh_CN": "「大叔，我们从学究那拿回了块石头，你看一下是否为[em2]龟涎石[/em2]。」",
+    "links": [188]
+  },
+  {
+    "entryID": 210,
+    "actorID": "MC1",
+    "text": "「痾..這龜延石..嗯，很重！想必拿來壓藥材是一把好手。」",
+    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「痾..這龜延石..嗯，很重！想必拿來壓藥材是一把好手。」",
+    "zh_CN": "「痾..这龟延石..嗯，很重！想必拿来压药材是一把好手。」",
+    "links": [195]
+  },
+  {
+    "entryID": 211,
+    "actorID": "MC8",
+    "text": "[panel=2]「不懂就不要硬說嘛。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「不懂就不要硬說嘛。」",
+    "zh_CN": "[panel=2]「不懂就不要硬说嘛。」",
+    "links": [196, 227, 230]
+  },
+  {
+    "entryID": 212,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue()",
+    "Conditions": "CurrentQuestState(\"C0F2\") == success and (CurrentQuestState(\"C0F1\") == \"active\")",
+    "links": [208]
+  },
+  {
+    "entryID": 213,
+    "actorID": "role42",
+    "text": "「還有你們倆一口一個大叔，我姓[em2]張[/em2]名[em2]仲景[/em2]，也才剛到而立之年而已！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role42,pic=3);",
+    "zh_TW": "「還有你們倆一口一個大叔，我姓[em2]張[/em2]名[em2]仲景[/em2]，也才剛到而立之年而已！」",
+    "zh_CN": "「还有你们俩一口一个大叔，我姓[em2]张[/em2]名[em2]仲景[/em2]，也才刚到而立之年而已！」",
+    "links": [201]
+  },
+  {
+    "entryID": 214,
+    "actorID": "MC13",
+    "text": "「..你這個小兔崽子！」",
+    "Sequence": "SetPortrait(MC13,pic=2);",
+    "zh_TW": "「..你這個小兔崽子！」",
+    "zh_CN": "「..你这个小兔崽子！」",
+    "links": []
+  },
+  {
+    "entryID": 215,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"active\" and (CurrentQuestState(\"C0F2\") ~= \"success\")",
+    "links": [216]
+  },
+  {
+    "entryID": 216,
+    "actorID": "role42",
+    "text": "「問到龜涎石了嗎？我的百歲羹等不及了！」",
+    "Sequence": "",
+    "zh_TW": "「問到龜涎石了嗎？我的百歲羹等不及了！」",
+    "zh_CN": "「问到龟涎石了吗？我的百岁羹等不及了！」",
+    "links": [217]
+  },
+  {
+    "entryID": 217,
+    "actorID": "MC1",
+    "text": "「還沒找到，先生請再等等。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「還沒找到，先生請再等等。」",
+    "zh_CN": "「还没找到，先生请再等等。」",
+    "links": []
+  },
+  {
+    "entryID": 218,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [207, 215, 212, 237]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC1",
+    "text": "[em2][學識檢定][/em2]「我似乎在哪裡看過這個句子...」",
+    "Sequence": "",
+    "zh_TW": "[em2][學識檢定][/em2]「我似乎在哪裡看過這個句子...」",
+    "zh_CN": "[em2][学识检定][/em2]「我似乎在哪里看过这个句子...」",
+    "links": [220]
+  },
+  {
+    "entryID": 220,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,KnowledgeCheck,10);",
+    "links": [240]
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC1",
+    "text": "「我想起來了！出自《詩經·商頌·玄鳥》」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「我想起來了！出自《詩經·商頌·玄鳥》」",
+    "zh_CN": "「我想起来了！出自《诗经·商颂·玄鸟》」",
+    "links": [138]
+  },
+  {
+    "entryID": 222,
+    "actorID": "MC1",
+    "text": "「唉...想不起，來頭好痛！」",
+    "Sequence": "SetPortrait(MC1,pic=11);\n",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "SetQuestState(\"C0F2\", \"unassigned\")",
+    "zh_TW": "「唉...想不起，來頭好痛！」",
+    "zh_CN": "「唉...想不起，来头好痛！」",
+    "links": [165]
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「關於這龜涎石的功效…」",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"MedicalExpertise\", 1)  == true",
+    "zh_TW": "[em2][隱藏選項][/em2]「關於這龜涎石的功效…」",
+    "zh_CN": "[em2][隐藏选项][/em2]「关于这龟涎石的功效…」",
+    "links": [225]
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC1",
+    "text": "「痾..這龜延石..」",
+    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「痾..這龜延石..」",
+    "zh_CN": "「痾..这龟延石..」",
+    "links": [226]
+  },
+  {
+    "entryID": 225,
+    "actorID": "MC1",
+    "text": "「大叔請看，這龜涎石質地純粹，陰氣內斂，確是上品。此等成色，想必能讓[em2]百歲羹[/em2]藥力更足。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「大叔請看，這龜涎石質地純粹，陰氣內斂，確是上品。此等成色，想必能讓[em2]百歲羹[/em2]藥力更足。」",
+    "zh_CN": "「大叔请看，这龟涎石质地纯粹，阴气内敛，确是上品。此等品质想必能让[em2]百岁羹[/em2]药效更佳。」",
+    "links": [192]
+  },
+  {
+    "entryID": 226,
+    "actorID": "MC1",
+    "text": "「痾..這龜延石..嗯，很重！想必拿來壓藥材是一把好手。」",
+    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「痾..這龜延石..嗯，很重！想必拿來壓藥材是一把好手。」",
+    "zh_CN": "「痾..这龟延石..嗯，很重！想必拿来压药材是一把好手。」",
+    "links": [195]
+  },
+  {
+    "entryID": 227,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「關於這謝儀的部分…」",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1)  == true",
+    "zh_TW": "[em2][隱藏選項][/em2]「關於這謝儀的部分…」",
+    "zh_CN": "[em2][隐藏选项][/em2]「关于这谢仪的部分…」",
+    "links": [228]
+  },
+  {
+    "entryID": 228,
+    "actorID": "MC1",
+    "text": "「大叔，龜涎石尋來了。晚輩初出茅廬，見識淺薄，不知郎中能否在謝儀之外，提點一二？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Question);",
+    "zh_TW": "「大叔，龜涎石尋來了。晚輩初出茅廬，見識淺薄，不知郎中能否在謝儀之外，提點一二？」",
+    "zh_CN": "「大叔，龟涎石寻来了。晚辈初出茅庐，见识浅薄，不知郎中能否在谢仪之外，提点一二？」",
+    "links": [2050]
+  },
+  {
+    "entryID": 230,
+    "actorID": "MC1",
+    "text": "「痾..關於這謝儀的部分…」",
+    "Sequence": "",
+    "zh_TW": "「痾..關於這謝儀的部分…」",
+    "zh_CN": "「痾..关于这谢仪的部分…」",
+    "links": [231]
+  },
+  {
+    "entryID": 231,
+    "actorID": "role42",
+    "text": "「小兄弟辛苦了。那這龜涎石我就收下了。」",
+    "Sequence": "SetPortrait(role42,pic=1);DisableCharacterExpression(2);",
+    "zh_TW": "「小兄弟辛苦了。那這龜涎石我就收下了。」",
+    "zh_CN": "「小兄弟辛苦了。那这龟涎石我就收下了。」",
+    "links": [232]
+  },
+  {
+    "entryID": 232,
+    "actorID": "role42",
+    "text": "「來這是你的報酬。」",
+    "Sequence": "ModifyData(Coin,100);",
+    "Description": "給予報酬",
+    "zh_TW": "「來這是你的報酬。」",
+    "zh_CN": "「来这是你的报酬。」",
+    "links": [205]
+  },
+  {
+    "entryID": 233,
+    "actorID": "role111",
+    "text": "「...嗯，不是給你龜涎石了嗎?年輕人，有空吃點銀杏吧，瞧你這記性。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F2\") == \"success\"",
+    "zh_TW": "「...嗯，不是給你龜涎石了嗎?年輕人，有空吃點銀杏吧，瞧你這記性。」",
+    "zh_CN": "「...嗯，不是给你龟涎石了吗?年轻人，有空吃点银杏吧，瞧你这记性。」",
+    "links": [234]
+  },
+  {
+    "entryID": 234,
+    "actorID": "MC1",
+    "text": "「嘿嘿...」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "「嘿嘿...」",
+    "zh_CN": "「嘿嘿...」",
+    "links": []
+  },
+  {
+    "entryID": 235,
+    "actorID": "MC1",
+    "text": "「大叔，你好啊~」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「大叔，你好啊~」",
+    "zh_CN": "「大叔，你好啊~」",
+    "links": [236]
+  },
+  {
+    "entryID": 236,
+    "actorID": "role42",
+    "text": "「好、好。」",
+    "Sequence": "SetPortrait(role42,pic=3);",
+    "zh_TW": "「好、好。」",
+    "zh_CN": "「好、好。」",
+    "links": []
+  },
+  {
+    "entryID": 237,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\"",
+    "Description": "任務完成後對話",
+    "links": [235]
+  },
+  {
+    "entryID": 239,
+    "actorID": "MC1",
+    "text": "「這龜涎石...」",
+    "Sequence": "SetPortrait(MC1,pic=12)",
+    "zh_TW": "「這龜涎石...」",
+    "zh_CN": "「这龟涎石...」",
+    "links": [191, 210]
+  },
+  {
+    "entryID": 240,
+    "actorID": "MC1",
+    "text": "「我記得有讀過這個句子是在...」",
+    "Sequence": "",
+    "zh_TW": "「我記得有讀過這個句子是在...」",
+    "zh_CN": "「我记得有读过这个句子是在...」",
+    "links": [221, 222]
+  },
+  {
+    "entryID": 2047,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Script": "SetQuestEntryState(\"C0M1\", 4, \"success\")",
+    "Description": "任務更新",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [175]
+  },
+  {
+    "entryID": 2048,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [218]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2054, 113]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "role42",
+    "text": "「小兄弟謙遜好學，是塊好料子。我便將我行醫的一些心得指點給你，望你好生研習。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,MC1,EconomicDevelopment,10);\nModifyData(FeatExp,MC1,MedicalExpertise,15);\nSetPortrait(role42,pic=4);",
+    "zh_TW": "「小兄弟謙遜好學，是塊好料子。我便將我行醫的一些心得指點給你，望你好生研習。」",
+    "zh_CN": "「小兄弟谦逊好学，是块好料子。我便将我行医的一些心得指点给你，望你好生研习。」",
+    "links": [200]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"active\"",
+    "links": [114]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "role2",
+    "text": "[panel=6][em3][背景：世家子弟[/em3]（你一眼認出此乃上品。雖陰氣沉重，但其隱有靈氣，倒也確實是難得之物。)",
+    "Sequence": "ModifyData(Inventory,AddItem,GuixianStone,1);",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Noble\")  == true",
+    "Script": "SetQuestState(\"C0F2\", \"success\");\nSetQuestEntryState(\"C0F1\", 1, \"success\");\nSetQuestEntryState(\"C0F1\", 2, \"active\")",
+    "Description": "任務成功",
+    "zh_TW": "[panel=6][em3][背景：世家子弟[/em3]（你一眼認出此乃上品。雖陰氣沉重，但其隱有靈氣，倒也確實是難得之物。)",
+    "zh_CN": "[panel=6][em3][背景：世家子弟[/em3]（你一眼认出此乃上品。虽阴气沉重，但其隐有灵气，倒也确实是难得之物。)",
+    "links": [2053]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,Erudite);\nShowHint(Skill,Erudite);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [153, 161]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "role2",
+    "text": "[panel=6]＊（破屋內堆滿竹簡龜甲，散發霉味。滿臉橫肉的書生正對著模糊的石碑拓片苦思，沒注意到你們。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "CurrentQuestState(\"C0F2\") == \"success\"",
+    "zh_TW": "[panel=6]＊（破屋內堆滿竹簡龜甲，散發霉味。滿臉橫肉的書生正對著模糊的石碑拓片苦思，沒注意到你們。）＊",
+    "zh_CN": "[panel=6]＊（破屋内堆满竹简龟甲，散发霉味。满脸横肉的书生正对着模糊的石碑拓片苦思，没注意到你们。）＊",
+    "links": []
+  }
+]

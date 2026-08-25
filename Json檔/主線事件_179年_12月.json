@@ -1,0 +1,76 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（時光飛逝，轉眼已到遴選的日子。如今，雲中的氣氛變得空前熱烈，只因那扇緊閉多時的英豪府大門，終於緩緩開啟。）＊",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_39);",
+    "Description": "參加英豪府遴選、音樂",
+    "zh_TW": "[panel=6]＊（時光飛逝，轉眼已到遴選的日子。如今，雲中的氣氛變得空前熱烈，只因那扇緊閉多時的英豪府大門，終於緩緩開啟。）＊",
+    "zh_CN": "[panel=6]＊（时光飞逝，转眼已到遴选的日子。如今，云中的气氛变得空前热烈，只因那扇紧闭多时的英豪府大门，终于缓缓开启。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "「大俠！小犀妹妹！快別歇著了！剛去街上都在說英豪府的遴選今天開始啦！」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Surprise_2);",
+    "zh_TW": "「大俠！小犀妹妹！快別歇著了！剛去街上都在說英豪府的遴選今天開始啦！」",
+    "zh_CN": "「大侠！小犀妹妹！快别歇着了！刚去街上都在说英豪府的遴选今天开始啦！」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「終於等到了！這幾個月可把我憋壞了！英豪府，誅怪濟世！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「終於等到了！這幾個月可把我憋壞了！英豪府，誅怪濟世！」",
+    "zh_CN": "「终于等到了！这几个月可把我憋坏了！英豪府，诛怪济世！」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「走走走，現在就出發，去晚了可就報不上名了！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "「走走走，現在就出發，去晚了可就報不上名了！」",
+    "zh_CN": "「走走走，现在就出发，去晚了可就报不上名了！」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你連早膳都還沒吃呢。雖然這陣子在客棧白吃白住省了不少盤纏，但餓著肚子怎麼去參加遴選呀？要是選上了，以後才有穩定的俸祿可以拿呢！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Meditate);",
+    "zh_TW": "[panel=2]「表哥，你連早膳都還沒吃呢。雖然這陣子在客棧白吃白住省了不少盤纏，但餓著肚子怎麼去參加遴選呀？要是選上了，以後才有穩定的俸祿可以拿呢！」",
+    "zh_CN": "[panel=2]「表哥，你连早膳都还没吃呢。虽然这阵子在客栈白吃白住省了不少盘缠，但饿着肚子怎么去参加遴选呀？要是选上了，以后才有稳定的俸禄可以拿呢！」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「咳……兵法有云，兵馬未動，糧草先行！走，下樓把客棧免費的早膳吃個夠本，然後立刻殺向英豪府！」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「咳……兵法有云，兵馬未動，糧草先行！走，下樓把客棧免費的早膳吃個夠本，然後立刻殺向英豪府！」",
+    "zh_CN": "「咳……兵法有云，兵马未动，粮草先行！走，下楼把客栈免费的早膳吃个够本，然后立刻杀向英豪府！」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "「懂的懂的！這叫做大丈夫不拘小節嘛！吃飽了才有力氣！走走走，吃完咱們就去大顯身手！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "「懂的懂的！這叫做大丈夫不拘小節嘛！吃飽了才有力氣！走走走，吃完咱們就去大顯身手！」",
+    "zh_CN": "「懂的懂的！这叫做大丈夫不拘小节嘛！吃饱了才有力气！走走走，吃完咱们就去大显身手！」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就這樣，在短暫的休整與幾個月的雲中歷練後，你們終於踏出了客棧，朝著英豪府的方向邁進。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nModifyData(ChancePoint,1);\nLoadLevel(HallOfHeroes);\nContinue();",
+    "Description": "移動到英豪府、獲得機會點",
+    "zh_TW": "[panel=6]＊（就這樣，在短暫的休整與幾個月的雲中歷練後，你們終於踏出了客棧，朝著英豪府的方向邁進。）＊",
+    "zh_CN": "[panel=6]＊（就这样，在短暂的休整与几个月的云中历练后，你们终于踏出了客栈，朝着英豪府的方向迈进。）＊",
+    "links": []
+  }
+]

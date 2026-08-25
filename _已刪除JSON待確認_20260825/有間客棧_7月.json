@@ -427,7 +427,7 @@
     {
         "entryID": 60,
         "actorID": 2,
-        "text": "[panel=6]＊（她接過『返真草』，緊緊地攥在手中，指尖微微顫抖。她凝視著藥草，又抬頭深深地看著你，眼中情緒複雜，似有千言萬語。）＊",
+        "text": "[panel=6]＊（她接過『返真草』，緊緊地攥在手中，指尖微微顫抖。她凝視著藥草，又抬頭深深地看著你，眼中神色複雜，似有千言萬語。）＊",
         "Sequence": "",
         "links": [61]
     },
@@ -449,7 +449,7 @@
     {
         "entryID": 63,
         "actorID": 10,
-        "text": "[panel=2]「（她看著手中品質欠佳的藥草，輕輕一嘆）無論如何，多謝公子費此一番心力…」",
+        "text": "[panel=2]「（她看著手中成色欠佳的藥草，輕輕一嘆）無論如何，多謝公子費此一番心力…」",
         "Sequence": "GetFlag(Yizhihua_FindHerb_FailCount) != 0;",
         "links": [64]
     },
@@ -485,21 +485,21 @@
     {
         "entryID": 68,
         "actorID": "MC1",
-        "text": "「一枝花，詩三百，一言以蔽之，曰：思無邪。我對妳的情意，亦是如此純粹。我心匪石，不可轉也；我心匪席，不可卷也。我所鍾情的，是妳獨一無二的靈魂、妳的善良與堅韌。皮相於我如浮雲，無論妳是何等模樣，我[var=PlayerLastName][var=PlayerFirstName]對妳此情不渝，此心不改！」",
+        "text": "「一枝花，詩三百，一言以蔽之，曰：思無邪。我對妳的情意，亦是如此純粹。我心匪石，不可轉也；我心匪席，不可卷也。我所鍾情的，是妳的心性為人、妳的善良與堅韌。皮相於我如浮雲，無論妳是何等模樣，我[var=PlayerLastName][var=PlayerFirstName]對妳此情不渝，此心不改！」",
         "Sequence": "SetPortrait(MC1,pic=love);EnableCharacterExpression(0,MC1_Happy);",
         "links": [69]
     },
     {
         "entryID": 69,
         "actorID": 10,
-        "text": "[panel=2]「（聞言，她渾身一震，淚水瞬間奪眶而出，喜悅、感動、釋然…種種情緒交織在她眼中。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手，彷彿要將你融入她的生命之中。）」",
+        "text": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
         "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC10,pic=moved);EnableCharacterExpression(2,NPC10,Moved);",
         "links": [70]
     },
     {
         "entryID": 70,
         "actorID": 2,
-        "text": "[panel=6]＊（此刻，言語已是多餘，兩顆心緊密相連。）＊",
+        "text": "[panel=6]＊（此刻，言語已是多餘——此時無聲勝有聲。）＊",
         "Sequence": "",
         "links": []
     },

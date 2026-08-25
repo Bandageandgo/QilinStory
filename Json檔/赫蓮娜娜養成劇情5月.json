@@ -1,53 +1,68 @@
-
 [
   {
     "entryID": 1,
     "actorID": 2,
-    "text": "[panel=6]＊（你在與黑血屍的交戰中僥倖逃生，經過一番調養，傷勢總算穩定下來。你心裡清楚，之前那個神神秘秘的算命姑娘，恐怕不怎麼靠譜。正想著這事，一個洪亮且急促的聲音就從門外傳來。）＊",
+    "text": "[panel=6]＊（你在與黑血屍的交戰中僥倖逃生，經過一番調養，傷勢總算穩定下來。你心裡清楚，之前那個神神秘秘的算命姑娘，恐怕不怎麼牢靠。正想著這事，一個洪亮且急促的聲音就從門外傳來。）＊",
     "Sequence": "",
-    "links": [2]
+    "links": [
+      2
+    ]
   },
   {
     "entryID": 2,
     "actorID": "MC22",
     "text": "「少俠！你果然命大！聽我說，事情還沒結束，我卜算到了新的變數！」",
     "Sequence": "",
-    "links": [3]
+    "links": [
+      3
+    ]
   },
   {
     "entryID": 3,
     "actorID": 2,
     "text": "[panel=6]＊（門被猛地推開，赫連娜娜風塵僕僕地闖了進來，高舉著那個不斷旋轉的古怪羅盤。她看起來有些狼狽，衣角上還掛著幾片樹葉，但依舊努力維持著高人風範。）＊",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "links": [4]
+    "links": [
+      4
+    ]
   },
   {
     "entryID": 4,
     "actorID": "MC1",
     "text": "「哎呀，這不是[em2]赫連大師[/em2]嗎？妳的天機盤沒算到我差點就回不來了嗎？還是說，這也在妳的計算中？」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "links": [5]
+    "links": [
+      5
+    ]
   },
   {
     "entryID": 5,
     "actorID": "MC22",
     "text": "[panel=1]「非也！非也！少俠你遭逢此難，乃是天命注定，是為應劫。吾早已算到，故在後山布下[em2]鎖龍陣[/em2]鎮壓妖氣，否則你絕無生還之理！」",
     "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Proud);",
-    "links": [6]
+    "links": [
+      6
+    ]
   },
   {
     "entryID": 6,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她小聲嘀咕了一句，[/em6]說得跟真的一樣，我看是躲在哪裡偷看吧…」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=5);",
-    "links": [7]
+    "links": [
+      7
+    ]
   },
   {
     "entryID": 7,
     "actorID": "MC0",
     "text": "",
     "Sequence": "",
-    "links": [8, 12, 16],
+    "links": [
+      8,
+      12,
+      16
+    ],
     "Description": "玩家回應選項"
   },
   {
@@ -55,7 +70,9 @@
     "actorID": "MC1",
     "text": "「說得玄之又玄，不如直說此行究竟是得了什麼機緣？」",
     "Sequence": "",
-    "links": [9],
+    "links": [
+      9
+    ],
     "Description": "選項1：詢問機緣"
   },
   {
@@ -63,28 +80,36 @@
     "actorID": "MC1",
     "text": "[panel=2]「既然赫連姑娘神機妙算，想必也算到此行必有收穫？說來聽聽。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [10]
+    "links": [
+      10
+    ]
   },
   {
     "entryID": 10,
     "actorID": "MC22",
     "text": "[panel=1]「那是自然！你以為你只是白白受苦了？我跟你說，你這一鬧，正好把那妖物看守的寶穴給震開了一道縫！我這天機盤都快轉瘋了，反應前所未有的強烈！少俠，真正的寶藏，就要現世了！」",
     "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Proud);",
-    "links": [11]
+    "links": [
+      11
+    ]
   },
   {
     "entryID": 11,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她小聲對你笑道，[/em6]表哥，你看她那得意的樣子，你順著她說幾句話，她就樂得找不著北了，什麼都說出來了。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=9);",
-    "links": [7]
+    "links": [
+      7
+    ]
   },
   {
     "entryID": 12,
     "actorID": "MC1",
     "text": "「我為妳口中的天命差點沒了命。」",
     "Sequence": "",
-    "links": [13],
+    "links": [
+      13
+    ],
     "Description": "選項2：表達不滿"
   },
   {
@@ -92,28 +117,36 @@
     "actorID": "MC1",
     "text": "[panel=2]「這種所謂應劫的差事我不想再幹第二次了。妳想合作，得拿出點誠意來。」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "links": [14]
+    "links": [
+      14
+    ]
   },
   {
     "entryID": 14,
     "actorID": "MC22",
     "text": "[panel=1]「[em6]她像是被踩到尾巴一樣，[/em6]誠意？我幫你逆天改命可是要冒天譴風險的！我這天機盤不要錢啊？行，怕了你了！這樣，這次若有所獲，咱倆四六分！你六我四…不對，是你四我六！…呃，三七！就三七！」",
     "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Nervous);",
-    "links": [15]
+    "links": [
+      15
+    ]
   },
   {
     "entryID": 15,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她眼睛一亮，興奮地湊到你耳邊，[/em6]表哥你看，她心虛了！一著急連自己想分幾成都算不清楚。下次你再多嚇唬她一下，說不定她還得倒貼我們錢呢！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=9);",
-    "links": [7]
+    "links": [
+      7
+    ]
   },
   {
     "entryID": 16,
     "actorID": "MC1",
     "text": "「妳這套說詞，是跟哪個說書先生學的？」",
     "Sequence": "",
-    "links": [17],
+    "links": [
+      17
+    ],
     "Description": "選項3：質疑說詞"
   },
   {
@@ -121,35 +154,46 @@
     "actorID": "MC1",
     "text": "[panel=2]「姑娘，恕我直言，妳這番說詞破綻不少。我輩行走江湖，講究一個『信』字。妳若有難處，不妨直說，何必如此大費周章？」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [18]
+    "links": [
+      18
+    ]
   },
   {
     "entryID": 18,
     "actorID": "MC22",
     "text": "[panel=1]「[em6]她像是被人踩到了痛處，瞬間漲紅了臉，[/em6]誰、誰有難處了！我爹……我做事自有我的道理，用不著你來多嘴！總、總之！那墓裡的東西對我很重要，你只要幫我拿到，我、我或許就能離目標更近一步！」",
     "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Anger);",
-    "links": [19]
+    "links": [
+      19
+    ]
   },
   {
     "entryID": 19,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她被赫連娜娜的氣勢嚇得縮了一下，小聲對你說，[/em6]表哥，她…她怎麼回事啊？一提到她爹，她就好像被踩到尾巴的貓一樣，好兇喔…」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=14);",
-    "links": [7]
+    "links": [
+      7
+    ]
   },
   {
     "entryID": 20,
     "actorID": 2,
     "text": "[panel=6]＊（經過一番試探，你對眼前這個故作高深的姑娘有了些了解。你決定……）＊",
     "Sequence": "",
-    "links": [21, 29]
+    "links": [
+      21,
+      29
+    ]
   },
   {
     "entryID": 21,
     "actorID": "MC1",
     "text": "[em2][調情檢定][/em2]「妳這份執著，倒也令人佩服。」",
     "Sequence": "",
-    "links": [22],
+    "links": [
+      22
+    ],
     "Description": "選項1：調情檢定"
   },
   {
@@ -157,7 +201,9 @@
     "actorID": "MC0",
     "text": "",
     "Sequence": "BeginDiceRoll(Manual,FlirtingCheck,5);",
-    "links": [23],
+    "links": [
+      23
+    ],
     "Description": "調情檢定擲骰節點"
   },
   {
@@ -165,42 +211,55 @@
     "actorID": "MC1",
     "text": "「姑娘雖然看似……高深莫測，但這份執著，倒也令人佩服。」",
     "Sequence": "SetPortrait(MC1,pic=7);",
-    "links": [24, 26]
+    "links": [
+      24,
+      26
+    ]
   },
   {
     "entryID": 24,
     "actorID": "MC22",
     "text": "[panel=1]「[em6]她先是一愣，隨即有些得意地挺了挺胸，但臉頰卻不由自主地紅了，[/em6]那、那是自然！我爹……咳，我為了目標，向來是不屈不撓的！算、算你有眼光！」",
     "Sequence": "IsPassDice() == true;ModifyData(FeatExp,MC1,Flirting,10);SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22_Shy);",
-    "links": [25]
+    "links": [
+      25
+    ]
   },
   {
     "entryID": 25,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她驚訝地張大了嘴，看看你，又看看赫連娜娜，[/em6]哇…表哥，她的臉比猴子屁股還紅！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=4);",
-    "links": [33]
+    "links": [
+      33
+    ]
   },
   {
     "entryID": 26,
     "actorID": "MC22",
     "text": "[panel=1]「[em6]她懷疑地瞥了你一眼，[/em6]哼，我的決心，還需要你來佩服？與其說這些廢話，不如想想怎麼辦正事。」",
     "Sequence": "IsPassDice() == false;SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22_Anger);",
-    "links": [27]
+    "links": [
+      27
+    ]
   },
   {
     "entryID": 27,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她吐了吐舌頭，[/em6]表哥，看來她不吃你這一套哦。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);",
-    "links": [33]
+    "links": [
+      33
+    ]
   },
   {
     "entryID": 28,
     "actorID": "MC1",
     "text": "「好了，說正事吧。妳費了這麼大功夫，究竟是為了什麼？」",
     "Sequence": "",
-    "links": [29],
+    "links": [
+      29
+    ],
     "Description": "選項2：說正事"
   },
   {
@@ -208,49 +267,63 @@
     "actorID": "MC1",
     "text": "[panel=2]「好了，說正事吧。妳費了這麼大功夫，究竟是為了什麼？」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [30]
+    "links": [
+      30
+    ]
   },
   {
     "entryID": 30,
     "actorID": "MC22",
     "text": "[panel=1]「[em6]她收起了之前的慌亂，眼神變得銳利起來，[/em6]當然是為了尋找失落的寶藏，順便行俠仗義！怎麼，難道你對金銀財寶沒興趣？」",
     "Sequence": "SetPortrait(MC22,pic=8);",
-    "links": [31]
+    "links": [
+      31
+    ]
   },
   {
     "entryID": 31,
     "actorID": 2,
     "text": "[panel=6]＊（就在你們對話之際，赫連娜娜腰間的古怪羅盤突然發出嗡嗡的聲響，指針瘋狂轉動。）＊",
     "Sequence": "",
-    "links": [32]
+    "links": [
+      32
+    ]
   },
   {
     "entryID": 32,
     "actorID": "MC22",
     "text": "[panel=1]「[em6]她臉色一變，急忙拿出羅盤，[/em6]動了！它動了！就是現在！」[em6]她看著羅盤，頭也不抬地對你喊道，[/em6]「不行，我得立刻去記下方位，這機會稍縱即逝！你…你先待著，別亂跑啊！」",
     "Sequence": "SetPortrait(MC22,pic=8);",
-    "links": [33]
+    "links": [
+      33
+    ]
   },
   {
     "entryID": 33,
     "actorID": 2,
     "text": "[panel=6]＊（她話音未落，不等你們反應，便已收起羅盤，如腳底抹油般一溜煙地消失了。）＊",
     "Sequence": "",
-    "links": [34]
+    "links": [
+      34
+    ]
   },
   {
     "entryID": 34,
     "actorID": "MC8",
     "text": "[panel=2]「[em6]她看著赫連娜娜消失的方向，有些不安地問，[/em6]表哥……她就這麼跑了？我們……我們該不會是被她騙了吧？」",
     "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8_Question);",
-    "links": [35]
+    "links": [
+      35
+    ]
   },
   {
     "entryID": 35,
     "actorID": "MC1",
     "text": "「被騙倒不至於，我看她對那[em2]寶藏[/em2]的熱情可是真的。」",
     "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=1);",
-    "links": [36]
+    "links": [
+      36
+    ]
   },
   {
     "entryID": 36,

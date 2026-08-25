@@ -16,14 +16,14 @@
   {
     "entryID": 2,
     "actorID": "MC8",
-    "text": "「表哥！你還真打算當一個月的米蟲啊？我們身上的錢可省著點花還勉強夠用，誰知道這一個月內會不會有什麼變故？」",
+    "text": "「表哥！你還真打算當一個月的閒漢啊？我們身上的錢可省著點花還勉強夠用，誰知道這一個月內會不會有什麼變故？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);EnableCharacterExpression(1,MC8,Meditate);",
     "links": [3]
   },
   {
     "entryID": 3,
     "actorID": "MC1",
-    "text": "「靈犀啊，表哥我這是在養精蓄銳，勞逸結合！再說了，高手過招，意在神馳，我這是在冥想中提升境界呢！」",
+    "text": "「靈犀啊，表哥我這是在養精蓄銳，一張一弛，文武之道嘛！再說了，高手過招，意在神馳，我這是在打坐參悟呢！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=Shy);EnableCharacterExpression(0,MC1,Nervous);",
     "links": [4]
   },
@@ -37,7 +37,7 @@
   {
     "entryID": 5,
     "actorID": "MC8",
-    "text": "「俗話說得好，一日之計在於晨！你現在就該好好鍛鍊一下筋骨，提升實力！聽村裡人說，鎮上有家武館，倒是可以去請教習武。不過…」",
+    "text": "「俗話說得好，一日之計在於晨！你現在就該好好打熬筋骨，長些真本事！聽村裡人說，鎮上有家武館，倒是可以去請教習武。不過…」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=expect);",
     "links": [6]
   },
@@ -123,14 +123,14 @@
   {
     "entryID": 17,
     "actorID": "MC1",
-    "text": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做个靠腦子吃飯的儒俠…」",
+    "text": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做個靠腦子吃飯的儒俠…」",
     "Sequence": "SetPortrait(MC1,pic=tired);EnableCharacterExpression(0,MC1,Pain);",
     "links": [18]
   },
   {
     "entryID": 18,
     "actorID": "MC8",
-    "text": "[panel=2]「表哥，你這三分鐘熱度可不行啊！明日必須繼續！」",
+    "text": "[panel=2]「表哥，你這一曝十寒可不行啊！明日必須繼續！」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=dislike);",
     "links": [19]
   },
@@ -158,7 +158,7 @@
   {
     "entryID": 22,
     "actorID": "NPC13",
-    "text": "[panel=1]「嘿，又來兩個打聽『一枝花』老闆娘的愣頭青。他們怕是不知道老闆娘的『規矩』哦？」",
+    "text": "[panel=1]「嘿，又來兩個打聽『一枝花』老闆娘的愣頭青。他們怕是不知道老闆娘的『規矩』吧？」",
     "Sequence": "DisableCharacterExpression(0);",
     "links": [23]
   },
@@ -296,7 +296,7 @@
   {
     "entryID": 41,
     "actorID": "MC0",
-    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事或可多加註意，說不定還能增加幾分成功的機會。）＊",
+    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
     "Sequence": "DisableCharacterExpression(0);",
     "links": [52]
   },
@@ -338,7 +338,7 @@
   {
     "entryID": 47,
     "actorID": "MC0",
-    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情**俠義之士**！這倒是給你提了個醒，若想博其青睞，日後行事或可多加註意，說不定還能增加幾分成功的機會。）＊",
+    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情**俠義之士**！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
     "Sequence": "DisableCharacterExpression(0);",
     "links": [52]
   },

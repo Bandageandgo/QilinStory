@@ -1,0 +1,382 @@
+[
+  {
+    "entryID": 65,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在蕭靈犀的督促下晨練了一番，你雖然筋骨舒展，但無所事事地待在客棧房間裡，還是讓你閒得發慌。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（在蕭靈犀的督促下晨練了一番，你雖然筋骨舒展，但無所事事地待在客棧房間裡，還是讓你閒得發慌。）＊",
+    "zh_CN": "[panel=6]＊（在萧灵犀的督促下晨练了一番，你虽然筋骨舒展，但无所事事地待在客栈房间里，还是让你闲得发慌。）＊",
+    "links": [
+      66
+    ]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC1",
+    "text": "「唉…練也練完了，接下來幹嘛呢？這小村子就這麼點大，都逛膩了。難道真要這樣無聊到一個月後？」",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「唉…練也練完了，接下來幹嘛呢？這小村子就這麼點大，都逛膩了。難道真要這樣無聊到一個月後？」",
+    "zh_CN": "「唉…练也练完了，接下来干嘛呢？这小村子就这么点大，感觉都逛腻了。难道真要这样无聊到一个月后？」",
+    "links": [
+      67
+    ]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC8",
+    "text": "「就知道你會這麼說。誰說待在村裡就沒事做了？茶博士不是說這村子臥虎藏龍嗎？村長也說後山林子很古怪，那位童淵大哥不也是在村裡遇到的嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);EnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「就知道你會這麼說。誰說待在村裡就沒事做了？茶博士不是說這村子臥虎藏龍嗎？村長也說後山林子很古怪，那位童淵大哥不也是在村裡遇到的嗎？」",
+    "zh_CN": "「就知道你会这么说。谁说待在村里就没事做了？茶博士不是说这村子卧虎藏龙吗？村长也说后山林子很古怪，那位童渊大哥不也是在村里遇到的吗？」",
+    "links": [
+      68
+    ]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「哦，妳的意思是…？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「哦，妳的意思是…？」",
+    "zh_CN": "「哦，妳的意思是…？」",
+    "links": [
+      69
+    ]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC8",
+    "text": "「我們可以[em2]去左近各處走走逛逛呀！[/em2]與其在房間裡發呆，不如出去走走，跟村裡的人聊聊天，或者去周邊逛逛，肯定能發現些什麼！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「我們可以[em2]去左近各處走走逛逛呀！[/em2]與其在房間裡發呆，不如出去走走，跟村裡的人聊聊天，或者去周邊逛逛，肯定能發現些什麼！」",
+    "zh_CN": "「我们可以[em2]探险附近的区域！[/em2]与其在房间里发呆，不如出去走走，跟村里的人聊聊天，或者去周边逛逛，肯定能发现些什么！」",
+    "links": [
+      70
+    ]
+  },
+  {
+    "entryID": 70,
+    "actorID": "role2",
+    "text": "[panel=6]＊（江湖之大，奇遇無所不在，關鍵在於是否有一雙善於發現的眼睛和願意探索的雙腿。你可以透過[em2]探險指令[/em2]，在不同地點消耗時間，觸發各種隨機事件或任務線索。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（江湖之大，奇遇無所不在，關鍵在於是否有一雙善於發現的眼睛和願意探索的雙腿。你可以透過[em2]探險指令[/em2]，在不同地點消耗時間，觸發各種隨機事件或任務線索。）＊",
+    "zh_CN": "[panel=6]＊（江湖之大，奇遇无所不在，关键在于是否有一双善于发现的眼睛和愿意探索的双腿。你可以透过[em2]探险指令[/em2]，在不同地点消耗时间，触发各种随机事件或任务线索。）＊",
+    "links": [
+      71
+    ]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「有道理！坐而言不如起而行！我這就去[em2]探險[/em2]一番，看看能碰上什麼新鮮事！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「有道理！坐而言不如起而行！我這就去[em2]探險[/em2]一番，看看能碰上什麼新鮮事！」",
+    "zh_CN": "「有道理！坐而言不如起而行！我这就去[em2]探险[/em2]一番，看看能碰上什么新鲜事！」",
+    "links": [
+      72
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC8",
+    "text": "「這才像話嘛！趕緊去吧去吧！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=5);",
+    "zh_TW": "「這才像話嘛！趕緊去吧去吧！」",
+    "zh_CN": "「这才像话嘛！赶紧去吧去吧！」",
+    "links": [
+      2054
+    ]
+  },
+  {
+    "entryID": 73,
+    "actorID": "role2",
+    "text": "[panel=6]＊（自從在有間客棧安頓下來，轉眼已過了數日。雖說盤纏暫時無虞，但離馬車啟程尚有一個月之久。這日清晨，陽光透過窗櫺灑進房內，你正伸著懶腰，一副悠然自得的模樣。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（自從在有間客棧安頓下來，轉眼已過了數日。雖說盤纏暫時無虞，但離馬車啟程尚有一個月之久。這日清晨，陽光透過窗櫺灑進房內，你正伸著懶腰，一副悠然自得的模樣。）＊",
+    "zh_CN": "[panel=6]＊（自从在有间客栈安顿下来，转眼已过了数日。虽说盘缠暂时无虞，但离马车启程尚有一个月之久。这日清晨，阳光透过窗棂洒进房内，你正伸着懒腰，一副悠然自得的模样。）＊",
+    "links": [
+      74
+    ]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「啊——客棧的日子就是舒坦，無拘無束，真想就這麼躺到馬車來的那一天…」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「啊——客棧的日子就是舒坦，無拘無束，真想就這麼躺到馬車來的那一天…」",
+    "zh_CN": "「啊——客栈的日子就是舒坦，无拘无束，真想就这么躺到马车来的那一天…」",
+    "links": [
+      75
+    ]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC8",
+    "text": "「表哥！你還真打算當一個月的閒漢啊？我們身上的錢可省著點花還勉強夠用，誰知道這一個月內會不會有什麼變故？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=6);\nEnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「表哥！你還真打算當一個月的閒漢啊？我們身上的錢可省著點花還勉強夠用，誰知道這一個月內會不會有什麼變故？」",
+    "zh_CN": "「表哥！你还真打算当一个月的闲汉啊？我们身上的钱可省着点花还勉强够用，谁知道这一个月内会不会有什么变故？」",
+    "links": [
+      76
+    ]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC1",
+    "text": "「靈犀啊，表哥我這是在養精蓄銳，一張一弛，文武之道嘛！再說了，高手過招，意在神馳，我這是在打坐參悟呢！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「靈犀啊，表哥我這是在養精蓄銳，一張一弛，文武之道嘛！再說了，高手過招，意在神馳，我這是在打坐參悟呢！」",
+    "zh_CN": "「灵犀啊，表哥我这是在养精蓄锐，劳逸结合！再说了，高手过招，意在神驰，我这是在冥想中提升境界呢！」",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC8",
+    "text": "「我看你是在夢裡跟周公下棋吧！表哥，你忘了我們為何要出來闖蕩江湖了？不就是為了成為一代大俠，行俠仗義嗎？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=2);\nEnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「我看你是在夢裡跟周公下棋吧！表哥，你忘了我們為何要出來闖蕩江湖了？不就是為了成為一代大俠，行俠仗義嗎？」",
+    "zh_CN": "「我看你是在梦里跟周公下棋吧！表哥，你忘了我们为何要出来闯荡江湖了？不就是为了成为一代大侠，行侠仗义吗？」",
+    "links": [
+      93
+    ]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC8",
+    "text": "「俗話說得好，一日之計在於晨！你現在就該好好打熬筋骨，長些真本事！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=5);",
+    "zh_TW": "「俗話說得好，一日之計在於晨！你現在就該好好打熬筋骨，長些真本事！」",
+    "zh_CN": "「俗话说得好，一日之计在于晨！你现在就该好好锻炼一下筋骨，提升实力！」",
+    "links": [
+      79
+    ]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC8",
+    "text": "「不過我們現在這點錢，還是省著點好。我看你就在這房裡先自己練練吧！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "「不過我們現在這點錢，還是省著點好。我看你就在這房裡先自己練練吧！」",
+    "zh_CN": "「不过我们现在这点钱，还是省着点好。我看你就在这房里先自己练练吧！」",
+    "links": [
+      80
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=6]＊（江湖路遠，每日可做之事繁多。但人的精力有限，許多重要的行動都會消耗[em2]天數[/em2]。進入到下個回合時，天數會恢復。請妥善規劃，莫要虛度光陰。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（江湖路遠，每日可做之事繁多。但人的精力有限，許多重要的行動都會消耗[em2]天數[/em2]。進入到下個回合時，天數會恢復。請妥善規劃，莫要虛度光陰。）＊",
+    "zh_CN": "[panel=6]＊（江湖路远，每日可做之事繁多。但人的精力有限，许多重要的行动都会消耗[em2]天数[/em2]。进入到下个回合时，天数会恢复。请妥善规划，莫要虚度光阴。）＊",
+    "links": [
+      81
+    ]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC8",
+    "text": "「表哥，鍛鍊可是要花力氣的，會消耗[em2]天數[/em2]。今天可別想再偷懶了！」",
+    "Sequence": "SetPortrait(MC8,pic=2);EnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「表哥，鍛鍊可是要花力氣的，會消耗[em2]天數[/em2]。今天可別想再偷懶了！」",
+    "zh_CN": "「表哥，锻炼可是要花力气的，会消耗[em2]天数[/em2]。今天可别想再偷懒了！」",
+    "links": [
+      82
+    ]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_TW": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
+    "zh_CN": "「唉，好吧好吧，听妳的便是，今日就先练练我这虎虎生风的『伏虎拳』！」",
+    "links": [
+      2051
+    ]
+  },
+  {
+    "entryID": 83,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你深吸一口氣，回憶著話本中英雄人物的招式，開始在房內胡亂揮拳。起初動作還有幾分生澀，但漸漸地，也打出了一些氣勢。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你深吸一口氣，回憶著話本中英雄人物的招式，開始在房內胡亂揮拳。起初動作還有幾分生澀，但漸漸地，也打出了一些氣勢。）＊",
+    "zh_CN": "[panel=6]＊（你深吸一口气，回忆着话本中英雄人物的招式，开始在房内胡乱挥拳。起初动作还有几分生涩，但渐渐地，也打出了一些气势。）＊",
+    "links": [
+      91
+    ]
+  },
+  {
+    "entryID": 84,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一番晨練下來，你只覺筋骨舒展，氣血暢通了不少。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Ability_STR,15);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（一番晨練下來，你只覺筋骨舒展，氣血暢通了不少。）＊",
+    "zh_CN": "[panel=6]＊（一番晨练下来，你只觉筋骨舒展，气血畅通了不少。）＊",
+    "links": [
+      85
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「呼…這番活動下來，確實覺得身子骨都輕快了不少！看來日後還得勤加練習才是！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「呼…這番活動下來，確實覺得身子骨都輕快了不少！看來日後還得勤加練習才是！」",
+    "zh_CN": "「呼…这番活动下来，确实觉得身子骨都轻快了不少！看来日后还得勤加练习才是！」",
+    "links": [
+      86
+    ]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC8",
+    "text": "[panel=2]「這才對嘛！表哥，持之以恆，將來必能成為真正的大俠！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「這才對嘛！表哥，持之以恆，將來必能成為真正的大俠！」",
+    "zh_CN": "[panel=2]「这才对嘛！表哥，持之以恒，将来必能成为真正的大侠！」",
+    "links": [
+      2052
+    ]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你胡亂揮舞了一陣，把自己累得夠嗆，卻沒覺出什麼長進。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Ability_STR,5);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（你胡亂揮舞了一陣，把自己累得夠嗆，卻沒覺出什麼長進。）＊",
+    "zh_CN": "[panel=6]＊（你胡乱挥舞了一阵，把自己累得够呛，却没觉出什么长进。）＊",
+    "links": [
+      88
+    ]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做個靠腦子吃飯的儒俠…」",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_TW": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做個靠腦子吃飯的儒俠…」",
+    "zh_CN": "「不行了…不行了…这比跟人吵架还累…看来我还是适合做个靠脑子吃饭的儒侠…」",
+    "links": [
+      89
+    ]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你這一曝十寒可不行啊！明日必須繼續！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「表哥，你這一曝十寒可不行啊！明日必須繼續！」",
+    "zh_CN": "[panel=2]「表哥，你这一曝十寒可不行啊！明日必须继续！」",
+    "links": [
+      2052
+    ]
+  },
+  {
+    "entryID": 90,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ModifyData(Command,Meditate,Unlock);\nModifyData(Command,Training_Ability,Unlock);\nModifyData(ActionPointMax);\nExecutePanelBaseManager(Command,Enter);\nShowNoviceTeaching(Command);\nContinue();",
+    "Description": "解鎖中控指令_訓練五維、觀心、教學",
+    "links": []
+  },
+  {
+    "entryID": 91,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nDisableCharacterExpression(1);BeginDiceRoll(Auto,StrengthCheck,6);",
+    "Description": "自動檢定_武力",
+    "links": [
+      92
+    ]
+  },
+  {
+    "entryID": 92,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      84,
+      87
+    ]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC8",
+    "text": "「就你現在這樣懶散，別說行俠仗義了，遇到點小毛賊怕是都應付不來！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=2);EnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「就你現在這樣懶散，別說行俠仗義了，遇到點小毛賊怕是都應付不來！」",
+    "zh_CN": "「就你现在这样懒散，别说行侠仗义了，遇到点小毛贼怕是都应付不来！」",
+    "links": [
+      78
+    ]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [
+      73
+    ]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [
+      65
+    ]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nBeginMiniGame(Training,Default,Strength,Default);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndMiniGame);\nContinue()@Message(EndMiniGame);",
+    "Description": "鍛鍊小遊戲",
+    "links": [
+      83
+    ]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇，表哥你看！房間這些東西瞧著好厲害！你快用用看，要是能變強，以後我們就能接賺錢的委託了！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「哇，表哥你看！房間這些東西瞧著好厲害！你快用用看，要是能變強，以後我們就能接賺錢的委託了！」",
+    "zh_CN": "[panel=2]「哇，表哥你看！房间这些东西瞧着好厉害！你快用用看，要是能变强，以后我们就能接赚钱的委托了！」",
+    "links": [
+      2053
+    ]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC8",
+    "text": "[panel=2]「而且畢竟都花錢了，不好好利用這些鍛鍊設施就是浪費！」",
+    "Sequence": "SetPortrait(MC8,pic=2);",
+    "Script": "SetQuestState(\"CF13\", \"active\")",
+    "Description": "開啟任務",
+    "zh_TW": "[panel=2]「而且畢竟都花錢了，不好好利用這些鍛鍊設施就是浪費！」",
+    "zh_CN": "[panel=2]「而且毕竟都花钱了，不好好利用这些锻炼设施就是浪费！」",
+    "links": [
+      90
+    ]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Command,Explore,Unlock);\nExecutePanelBaseManager(Command,Enter);\nShowNoviceTeaching(Command_Explore);\nContinue();",
+    "Description": "解鎖探索、跳出探索的教學",
+    "links": []
+  }
+]

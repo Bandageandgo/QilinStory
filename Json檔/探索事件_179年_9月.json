@@ -1,0 +1,430 @@
+[
+  {
+    "entryID": 2052,
+    "actorID": "role2",
+    "text": "[panel=6]＊（──行至中途，\n你看見山上有群猴子正在毆打一隻小猴子。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_39);",
+    "Description": "放音樂",
+    "zh_TW": "[panel=6]＊（──行至中途，\n你看見山上有群猴子正在毆打一隻小猴子。）＊",
+    "zh_CN": "[panel=6]＊（──行至中途，\n你看见山上有群猴子正在殴打一只小猴子。）＊",
+    "links": [3903]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "role2",
+    "text": "[panel=6]＊（被毆打的小猴子只能蜷縮在角落，而旁邊插不進隊伍的猴子們，也在一旁叫囂，沒有任何阻止的動作……）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（被毆打的小猴子只能蜷縮在角落，而旁邊插不進隊伍的猴子們，也在一旁叫囂，沒有任何阻止的動作……）＊",
+    "zh_CN": "[panel=6]＊（被殴打的小猴子只能蜷缩在角落，而旁边插不进队伍的猴子们，也在一旁叫嚣，没有任何阻止的动作……）＊",
+    "links": [2054, 2055, 2056]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC1",
+    "text": "[em2][威嚇][/em2]「喂！別太過份了！」",
+    "Sequence": "",
+    "zh_TW": "[em2][威嚇][/em2]「喂！別太過份了！」",
+    "zh_CN": "[em2][威吓][/em2]「喂！别太过份了！」",
+    "links": [3886]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC1",
+    "text": "[em2][戰鬥][/em2]「豈有此理！給我住手！」",
+    "Sequence": "",
+    "zh_TW": "[em2][戰鬥][/em2]「豈有此理！給我住手！」",
+    "zh_CN": "[em2][战斗][/em2]「岂有此理！给我住手！」",
+    "links": [3896]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC1",
+    "text": "「罷了，這是自然界弱肉強食。」",
+    "Sequence": "",
+    "zh_TW": "「罷了，這是自然界弱肉強食。」",
+    "zh_CN": "「罢了，这是自然界弱肉强食。」",
+    "links": [3901]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "role2",
+    "text": "[panel=6]＊（猴群被你的氣勢震懾，\n紛紛放下手邊動作逃走……）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);\nModifyData(FeatExp,Player,Intimidation,30);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=6]＊（猴群被你的氣勢震懾，\n紛紛放下手邊動作逃走……）＊",
+    "zh_CN": "[panel=6]＊（猴群被你的气势震慑，\n纷纷放下手边动作逃走……）＊",
+    "links": [2060]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "role2",
+    "text": "[panel=6]＊（猴群對你投向了看白癡的眼神，隨即撲來……）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（猴群對你投向了看白癡的眼神，隨即撲來……）＊",
+    "zh_CN": "[panel=6]＊（猴群对你投向了看白痴的眼神，随即扑来……）＊",
+    "links": [3895]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "role2",
+    "text": "[panel=6]＊（得救的小猴子朝著你，又是吱吱叫，又是鞠躬。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（得救的小猴子朝著你，又是吱吱叫，又是鞠躬。）＊",
+    "zh_CN": "[panel=6]＊（得救的小猴子朝着你，又是吱吱叫，又是鞠躬。）＊",
+    "links": [2062]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你被猴群賞了傳聞中的奧義猴子百烈拳，立時倒地昏迷不醒……）＊",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "[panel=6]＊（你被猴群賞了傳聞中的奧義猴子百烈拳，立時倒地昏迷不醒……）＊",
+    "zh_CN": "[panel=6]＊（你被猴群赏了传闻中的奥义猴子百烈拳，立时倒地昏迷不醒……）＊",
+    "links": [3898]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC1",
+    "text": "「嘿，你這小猴子還頗有靈性的啊。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「嘿，你這小猴子還頗有靈性的啊。」",
+    "zh_CN": "「嘿，你这小猴子还颇有灵性的啊。」",
+    "links": [2064]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這時你看到小猴子有搓毛色，與其他猴子不同。正當要細看，小猴子就已經離開了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（這時你看到小猴子有搓毛色，與其他猴子不同。正當要細看，小猴子就已經離開了。）＊",
+    "zh_CN": "[panel=6]＊（这时你看到小猴子有搓毛色，与其他猴子不同。正当要细看，小猴子就已经离开了。）＊",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "MC1",
+    "text": "「……那就是他被欺負的原因嗎……\n看來人與猴子，也沒什麼區別……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「……那就是他被欺負的原因嗎……\n看來人與猴子，也沒什麼區別……」",
+    "zh_CN": "「……那就是他被欺负的原因吗……\n看来人与猴子，也没什么区别……」",
+    "links": [3899]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role2",
+    "text": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "Conditions": "IsPassFight()  == true",
+    "zh_TW": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
+    "zh_CN": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
+    "links": [2060]
+  },
+  {
+    "entryID": 2076,
+    "actorID": "role2",
+    "text": "[panel=6]＊（──行至中途，你聽見耳熟的吱吱聲。）＊",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_39);",
+    "Description": "音樂",
+    "zh_TW": "[panel=6]＊（──行至中途，你聽見耳熟的吱吱聲。）＊",
+    "zh_CN": "[panel=6]＊（──行至中途，你听见耳熟的吱吱声。）＊",
+    "links": [3904]
+  },
+  {
+    "entryID": 2077,
+    "actorID": "role2",
+    "text": "[panel=6]＊（原來是先前被你救下的小猴子，\n而牠手中拿著一小酒壺向你晃呀晃。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（原來是先前被你救下的小猴子，\n而牠手中拿著一小酒壺向你晃呀晃。）＊",
+    "zh_CN": "[panel=6]＊（原来是先前被你救下的小猴子，\n而它手中拿着一小酒壶向你晃呀晃。）＊",
+    "links": [2078]
+  },
+  {
+    "entryID": 2078,
+    "actorID": "MC1",
+    "text": "「咦？該不會是要給我的？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「咦？該不會是要給我的？」",
+    "zh_CN": "「咦？该不会是要给我的？」",
+    "links": [2079]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小猴子點了點頭。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（小猴子點了點頭。）＊",
+    "zh_CN": "[panel=6]＊（小猴子点了点头。）＊",
+    "links": [2080]
+  },
+  {
+    "entryID": 2080,
+    "actorID": "MC1",
+    "text": "「那我就卻之不恭了。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「那我就卻之不恭了。」",
+    "zh_CN": "「那我就却之不恭了。」",
+    "links": [2081]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你接受了小猴子的好意，當場一乾而盡。\n甘甜之際，霎時體內有股暖流，四處流竄……）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Qi,100);\nModifyData(FeatExp,Player,AlcoholTolerance,100);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=6]＊（你接受了小猴子的好意，當場一乾而盡。\n甘甜之際，霎時體內有股暖流，四處流竄……）＊",
+    "zh_CN": "[panel=6]＊（你接受了小猴子的好意，当场一干而尽。\n甘甜之际，霎时体内有股暖流，四处流窜……）＊",
+    "links": [2082]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "MC1",
+    "text": "「哦！好奇特的酒啊，這該不會是你釀的吧？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「哦！好奇特的酒啊，這該不會是你釀的吧？」",
+    "zh_CN": "「哦！好奇特的酒啊，这该不会是你酿的吧？」",
+    "links": [2083]
+  },
+  {
+    "entryID": 2083,
+    "actorID": "role2",
+    "text": "[panel=6]＊（只見小猴子又是點頭，\n然後拿回空酒壺，往水裡洗了洗才離開。）＊",
+    "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(Forest);",
+    "zh_TW": "[panel=6]＊（只見小猴子又是點頭，\n然後拿回空酒壺，往水裡洗了洗才離開。）＊",
+    "zh_CN": "[panel=6]＊（只见小猴子又是点头，\n然后拿回空酒壶，往水里洗了洗才离开。）＊",
+    "links": [2084]
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC1",
+    "text": "「真是奇妙的小猴。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Script": "SetQuestEntryState(\"CF19\", 1, \"success\")",
+    "Description": "更新任務",
+    "zh_TW": "「真是奇妙的小猴。」",
+    "zh_CN": "「真是奇妙的小猴。」",
+    "links": [3902]
+  },
+  {
+    "entryID": 3885,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Forest);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2052]
+  },
+  {
+    "entryID": 3886,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,IntimidationCheck,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "威嚇檢定",
+    "links": [3889]
+  },
+  {
+    "entryID": 3887,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "成功",
+    "links": [3894]
+  },
+  {
+    "entryID": 3888,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "失敗",
+    "links": [2059]
+  },
+  {
+    "entryID": 3889,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [3887, 3888]
+  },
+  {
+    "entryID": 3894,
+    "actorID": "MC1",
+    "text": "「喂！別太過份了！連畜生都知道仗勢欺人嗎？給我滾！」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_TW": "「喂！別太過份了！連畜生都知道仗勢欺人嗎？給我滾！」",
+    "zh_CN": "「喂！别太过份了！连畜生都知道仗势欺人吗？给我滚！」",
+    "links": [2058]
+  },
+  {
+    "entryID": 3895,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,43);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進戰鬥43",
+    "links": [2066, 2061]
+  },
+  {
+    "entryID": 3896,
+    "actorID": "MC1",
+    "text": "「豈有此理！路見不平，拔刀相助！只要作惡即使是猴子我也照管！」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_TW": "「豈有此理！路見不平，拔刀相助！只要作惡即使是猴子我也照管！」",
+    "zh_CN": "「岂有此理！路见不平，拔刀相助！只要作恶即使是猴子我也照管！」",
+    "links": [3895]
+  },
+  {
+    "entryID": 3897,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 3898,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 3899,
+    "actorID": "role2",
+    "text": "[panel=6]＊（山林恢復了平靜，那隻異色的小猴子早已不知去向。你搖了搖頭，甩去心頭那絲莫名的雜念，轉身返回居所。）＊",
+    "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(Forest);",
+    "Script": "SetQuestState(\"CF19\", \"active\")",
+    "Description": "觸發任務",
+    "zh_TW": "[panel=6]＊（山林恢復了平靜，那隻異色的小猴子早已不知去向。你搖了搖頭，甩去心頭那絲莫名的雜念，轉身返回居所。）＊",
+    "zh_CN": "[panel=6]＊（山林恢复了平静，那只异色的小猴子早已不知去向。你摇了摇头，甩去心头那丝莫名的杂念，转身返回居所。）＊",
+    "links": [3898]
+  },
+  {
+    "entryID": 3900,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Forest);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2076]
+  },
+  {
+    "entryID": 3901,
+    "actorID": "MC1",
+    "text": "「罷了，自然界弱肉強食，我們外人也不好隨意插手因果。」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nDisableEventBG(FullScreen);\nEnableDialogueBG(Forest);",
+    "zh_TW": "「罷了，自然界弱肉強食，我們外人也不好隨意插手因果。」",
+    "zh_CN": "「罢了，自然界弱肉强食，我们外人也不好随意插手因果。」",
+    "links": [3898]
+  },
+  {
+    "entryID": 3902,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 3903,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MonkeyBully,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "換圖",
+    "links": [2053]
+  },
+  {
+    "entryID": 3904,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MonkeyWine,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "換圖",
+    "links": [2077]
+  },
+  {
+    "entryID": 3907,
+    "actorID": "MC8",
+    "text": "「[[em3]背景：遊民[/em3]]……表哥，有件事雖然難以啟齒，但為了這個家，小犀還是不得不說了。」",
+    "Sequence": "SetPortrait(MC8,pic=3);\nEnableDialogueBG(Home);",
+    "zh_TW": "「[[em3]背景：遊民[/em3]]……表哥，有件事雖然難以啟齒，但為了這個家，小犀還是不得不說了。」",
+    "zh_CN": "「[[em3]背景：游民[/em3]]……表哥，有件事虽然难以启齿，但为了这个家，小犀还是不得不说了。」",
+    "links": [3915]
+  },
+  {
+    "entryID": 3908,
+    "actorID": "MC8",
+    "text": "「近來家裡財務嚴重入不敷出。\n照我估算，不出多久，我們就可以喝西北風了。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "zh_TW": "「近來家裡財務嚴重入不敷出。\n照我估算，不出多久，我們就可以喝西北風了。」",
+    "zh_CN": "「近来家里财务严重入不敷出。\n照我估算，不出多久，我们就可以喝西北风了。」",
+    "links": [3909]
+  },
+  {
+    "entryID": 3909,
+    "actorID": "MC1",
+    "text": "「我已經很努力了……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「我已經很努力了……」",
+    "zh_CN": "「我已经很努力了……」",
+    "links": [3910]
+  },
+  {
+    "entryID": 3910,
+    "actorID": "MC8",
+    "text": "「……總之，我會出去打些零工，貼補家用。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "「……總之，我會出去打些零工，貼補家用。」",
+    "zh_CN": "「……总之，我会出去打些零工，贴补家用。」",
+    "links": [3911]
+  },
+  {
+    "entryID": 3911,
+    "actorID": "MC1",
+    "text": "「看來這樣問題就完美解決了！」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「看來這樣問題就完美解決了！」",
+    "zh_CN": "「看来这样问题就完美解决了！」",
+    "links": [3912]
+  },
+  {
+    "entryID": 3912,
+    "actorID": "MC8",
+    "text": "「唉…」",
+    "Sequence": "SetPortrait(MC8,pic=3);\nDisableEventBG(FullScreen);\nEnableDialogueBG(Home);",
+    "zh_TW": "「唉…」",
+    "zh_CN": "「唉…」",
+    "links": [3916]
+  },
+  {
+    "entryID": 3913,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 3914,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Home);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [3907]
+  },
+  {
+    "entryID": 3915,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MC8NoMoney,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "換圖、音樂",
+    "links": [3908]
+  },
+  {
+    "entryID": 3916,
+    "actorID": "MC8",
+    "text": "「你的格局還真不是一般的大！」",
+    "Sequence": "SetPortrait(MC8,pic=9);\nModifyData(FavorabilityExp,MC8,50);",
+    "Description": "好感度提升",
+    "zh_TW": "「你的格局還真不是一般的大！」",
+    "zh_CN": "「你的格局还真不是一般的大！」",
+    "links": [3913]
+  }
+]

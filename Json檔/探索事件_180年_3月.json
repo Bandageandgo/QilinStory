@@ -1,0 +1,924 @@
+[
+  {
+    "entryID": 2095,
+    "actorID": "role2",
+    "text": "[panel=6]＊（只看見蔡琰正蹲在地上，眉頭緊鎖地對著一堆散落的木製齒輪和彈簧發愁。旁邊還放著一隻半成品的木鳥。）＊",
+    "Sequence": "EnableDialogueBG(Farmland);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_37);",
+    "Description": "主題曲、背景圖",
+    "zh_TW": "[panel=6]＊（只看見蔡琰正蹲在地上，眉頭緊鎖地對著一堆散落的木製齒輪和彈簧發愁。旁邊還放著一隻半成品的木鳥。）＊",
+    "zh_CN": "[panel=6]＊（只看见蔡琰正蹲在地上，眉头紧锁地对着一堆散落的木制齿轮和弹簧发愁。旁边还放着一只半成品的木鸟。）＊",
+    "links": [2096]
+  },
+  {
+    "entryID": 2096,
+    "actorID": "MC23",
+    "text": "「哎呀！又卡住了！蒲伯伯給的圖紙明明是這樣畫的，為什麼這隻木鳥就是飛不起來，還把裡面的發條給崩斷了！」",
+    "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "「哎呀！又卡住了！蒲伯伯給的圖紙明明是這樣畫的，為什麼這隻木鳥就是飛不起來，還把裡面的發條給崩斷了！」",
+    "zh_CN": "「哎呀！又卡住了！蒲伯伯给的图纸明明是这样画的，为什么这只木鸟就是飞不起来，还把里面的发条给崩断了！」",
+    "links": [2103]
+  },
+  {
+    "entryID": 2097,
+    "actorID": "MC1",
+    "text": "「這機關構造確實精巧，但……這發條的材質似乎承受不住連發機括的瞬間爆發力，所以才會崩斷。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「这机关构造确实精巧，但……这发条的材质似乎承受不住连发机括的瞬间爆发力，所以才会崩断。」",
+    "links": [2104]
+  },
+  {
+    "entryID": 2098,
+    "actorID": "MC1",
+    "text": "「既然這木鳥是為了防身而造，威力自然是首要。我們不如去尋找更堅韌的材料來替換發條，我願助妳一臂之力！」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_CN": "「既然这木鸟是为了防身而造，威力自然是首要。我们不如去寻找更坚韧的材料来替换发条，我愿助妳一臂之力！」",
+    "links": [2105]
+  },
+  {
+    "entryID": 2099,
+    "actorID": "MC1",
+    "text": "「規矩是死的，人是活的。既然圖紙上的方法行不通，不如我們跳出框架，試著改變機括的傳動方式，用巧勁化解這股爆發力？」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「规矩是死的，人是活的。既然图纸上的方法行不通，不如我们跳出框架，试着改变机括的传动方式，用巧劲化解这股爆发力？」",
+    "links": [2106]
+  },
+  {
+    "entryID": 2100,
+    "actorID": "MC1",
+    "text": "「這木鳥的機括雖然精妙，但若能加上淬毒的暗器或是迷煙，即便發條威力不足，也能在對敵時出奇制勝。」",
+    "Sequence": "SetPortrait(MC1,pic=18);",
+    "zh_CN": "「这木鸟的机括虽然精妙，但若能加上淬毒的暗器或是迷烟，即便发条威力不足，也能在对敌时出奇制胜。」",
+    "links": [2108]
+  },
+  {
+    "entryID": 2101,
+    "actorID": "MC1",
+    "text": "「這木鳥造得如此精巧，若是用來傷人未免可惜。不如將它改造成能傳遞信件或是播撒花種的機關，豈不更美？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「这木鸟造得如此精巧，若是用来伤人未免可惜。不如将它改造成能传递信件或是播撒花种的机关，岂不更美？」",
+    "links": [2107]
+  },
+  {
+    "entryID": 2102,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "蔡琰的興趣",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2095]
+  },
+  {
+    "entryID": 2103,
+    "actorID": "MC23",
+    "text": "「大哥哥！你來得正好！你快幫我看看，這木鳥的機括到底哪裡出問題了？爹爹只會叫我讀書，根本不管這些！」",
+    "Sequence": "SetPortrait(MC23,pic=3);",
+    "zh_TW": "「大哥哥！你來得正好！你快幫我看看，這木鳥的機括到底哪裡出問題了？爹爹只會叫我讀書，根本不管這些！」",
+    "zh_CN": "「大哥哥！你来得正好！你快帮我看看，这木鸟的机括到底哪里出问题了？爹爹只会叫我读书，根本不管这些！」",
+    "links": [2097]
+  },
+  {
+    "entryID": 2104,
+    "actorID": "MC23",
+    "text": "「可是……可是如果不用這種強力的發條，木鳥射出去的石子就沒有威力了呀！」",
+    "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_CN": "「可是……可是如果不用这种强力的发条，木鸟射出去的石子就没有威力了呀！」",
+    "links": [2109, 2110, 2111, 2112]
+  },
+  {
+    "entryID": 2105,
+    "actorID": "MC23",
+    "text": "「大哥哥你真笨，這木鳥要是能等到你找來材料再修，黃花菜都涼了！我才不要等那麼久呢。」",
+    "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_CN": "「大哥哥你真笨，这木鸟要是能等到你找来材料再修，黄花菜都凉了！我才不要等那么久呢。」",
+    "links": [2113]
+  },
+  {
+    "entryID": 2106,
+    "actorID": "MC23",
+    "text": "「對呀！我怎麼沒想到！如果加一個緩衝的齒輪，就能把力量分散開來了！大哥哥，你太聰明了！我這就試試！」",
+    "Sequence": "ModifyData(FavorabilityExp,MC23,50);\nSetPortrait(MC23,pic=3);",
+    "Description": "蔡琰好感度提升",
+    "zh_CN": "「对呀！我怎么没想到！如果加一个缓冲的齿轮，就能把力量分散开来了！大哥哥，你太聪明了！我这就试试！」",
+    "links": [2113]
+  },
+  {
+    "entryID": 2107,
+    "actorID": "MC23",
+    "text": "「大哥哥你說話怎麼跟我爹爹一樣老氣橫秋的……播撒花種有什麼好玩的，一點都不威風。」",
+    "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_CN": "「大哥哥你说话怎么跟我爹爹一样老气横秋的……播撒花种有什么好玩的，一点都不威风。」",
+    "links": [2113]
+  },
+  {
+    "entryID": 2108,
+    "actorID": "MC23",
+    "text": "「淬毒？迷煙？大哥哥，你這想法也太陰險了吧！我造這木鳥只是為了好玩，才不想用它來害人呢！」",
+    "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_CN": "「淬毒？迷烟？大哥哥，你这想法也太阴险了吧！我造这木鸟只是为了好玩，才不想用它来害人呢！」",
+    "links": [2113]
+  },
+  {
+    "entryID": 2109,
+    "actorID": "MC1",
+    "text": "「不如去尋找更堅韌的材料來替換發條？」",
+    "Sequence": "",
+    "zh_TW": "「不如去尋找更堅韌的材料來替換發條？」",
+    "zh_CN": "「不如去寻找更坚韧的材料来替换发条？」",
+    "links": [2098]
+  },
+  {
+    "entryID": 2110,
+    "actorID": "MC1",
+    "text": "「不如試著改變機括的傳動方式？」",
+    "Sequence": "",
+    "zh_TW": "「不如試著改變機括的傳動方式？」",
+    "zh_CN": "「不如试着改变机括的传动方式？」",
+    "links": [2099]
+  },
+  {
+    "entryID": 2111,
+    "actorID": "MC1",
+    "text": "「可加上淬毒的暗器來彌補威力的不足？」",
+    "Sequence": "",
+    "zh_TW": "「可加上淬毒的暗器來彌補威力的不足？」",
+    "zh_CN": "「可加上淬毒的暗器来弥补威力的不足？」",
+    "links": [2100]
+  },
+  {
+    "entryID": 2112,
+    "actorID": "MC1",
+    "text": "「不如將它改造成能播撒花種的機關？」",
+    "Sequence": "",
+    "zh_TW": "「不如將它改造成能播撒花種的機關？」",
+    "zh_CN": "「不如将它改造成能播撒花种的机关？」",
+    "links": [2101]
+  },
+  {
+    "entryID": 2113,
+    "actorID": "role2",
+    "text": "[panel=6]＊（看著蔡琰又埋頭擺弄起那些機關零件，你笑著搖了搖頭，沒有再打擾她的興致。這竹林裡的時光，倒也難得的清閒。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（看著蔡琰又埋頭擺弄起那些機關零件，你笑著搖了搖頭，沒有再打擾她的興致。這竹林裡的時光，倒也難得的清閒。）＊",
+    "zh_CN": "[panel=6]＊（看着蔡琰又埋头摆弄起那些机关零件，你笑着摇了摇头，没有再打扰她的兴致。这竹林里的时光，倒也难得的清闲。）＊",
+    "links": [2121]
+  },
+  {
+    "entryID": 2114,
+    "actorID": "MC1",
+    "text": "「琰兒妹妹，我前些日子在野外，遇到了一個會打拳的木人樁，還從裡面找到了一些奇怪的機關零件。妳看看這個。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableDialogueBG(Farmland);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_37);",
+    "Description": "主題曲、背景圖",
+    "zh_CN": "「琰儿妹妹，我前些日子在野外，遇到了一个会打拳的木人桩，还从里面找到了一些奇怪的机关零件。妳看看这个。」",
+    "links": [4134]
+  },
+  {
+    "entryID": 2116,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你將在野外獲得的機關殘骸遞給文姬。她接過後，像模像樣地端詳了半天，時而敲敲打打，時而皺眉思索。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你将在野外获得的机关残骸递给文姬。她接过后，像模像样地端详了半天，时而敲敲打打，时而皱眉思索。）＊",
+    "links": [4135]
+  },
+  {
+    "entryID": 2119,
+    "actorID": "MC1",
+    "text": "「好，那我們就去雲中找蒲前輩。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「好，那我们就去云中找蒲前辈。」",
+    "links": [4137]
+  },
+  {
+    "entryID": 2121,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Description": "關閉背景圖",
+    "links": []
+  },
+  {
+    "entryID": 4119,
+    "actorID": "role2",
+    "text": "[panel=6]＊（剛一進門，就看到蔡琰已經先一步跑來，正纏著蒲元說些什麼。）＊",
+    "Sequence": "",
+    "Description": "換背景圖",
+    "zh_TW": "[panel=6]＊（剛一進門，就看到蔡琰已經先一步跑來，正纏著蒲元說些什麼。）＊",
+    "zh_CN": "[panel=6]＊（刚一进门，就看到蔡琰已经先一步跑来，正缠着蒲元说些什么。）＊",
+    "links": [4130]
+  },
+  {
+    "entryID": 4120,
+    "actorID": "role131",
+    "text": "「哎喲，別晃了別晃了！什麼木人樁能讓妳這麼興奮？拿來我瞧瞧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「哎喲，別晃了別晃了！什麼木人樁能讓妳這麼興奮？拿來我瞧瞧。」",
+    "zh_CN": "「哎哟，别晃了别晃了！什么木人桩能让妳这么兴奋？拿来我瞧瞧。」",
+    "links": [4122]
+  },
+  {
+    "entryID": 4121,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"CF23\", 1, \"active\")",
+    "Description": "任務更新",
+    "links": [4138]
+  },
+  {
+    "entryID": 4122,
+    "actorID": "MC1",
+    "text": "「前輩，在下於野外偶然得來的殘骸。這機關人似乎懂得某種拳法，只是損壞嚴重，琰兒妹妹說您或許有辦法修復。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「前輩，在下於野外偶然得來的殘骸。這機關人似乎懂得某種拳法，只是損壞嚴重，琰兒妹妹說您或許有辦法修復。」",
+    "zh_CN": "「前辈，在下于野外偶然得来的残骸。这机关人似乎懂得某种拳法，只是损坏严重，琰儿妹妹说您或许有办法修复。」",
+    "links": [4123]
+  },
+  {
+    "entryID": 4123,
+    "actorID": "role131",
+    "text": "「咦？這構造……這天馬行空的設計……有點意思啊！這不是尋常的機關術，倒像是失傳已久的[em2]墨家[/em2]機關術！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "「咦？這構造……這天馬行空的設計……有點意思啊！這不是尋常的機關術，倒像是失傳已久的[em2]墨家[/em2]機關術！」",
+    "zh_CN": "「咦？这构造……这天马行空的设计……有点意思啊！这不是寻常的机关术，倒像是失传已久的[em2]墨家[/em2]机关术！」",
+    "links": [4124]
+  },
+  {
+    "entryID": 4124,
+    "actorID": "role131",
+    "text": "「好東西！真是好東西！小子，你這回可是撿到寶了！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「好東西！真是好東西！小子，你這回可是撿到寶了！」",
+    "zh_CN": "「好东西！真是好东西！小子，你这回可是捡到宝了！」",
+    "links": [4125]
+  },
+  {
+    "entryID": 4125,
+    "actorID": "role131",
+    "text": "「這機關的核心陣紋雖然毀了大半，但只要能找到合適的替代材料，我蒲元保證能讓它重獲新生，甚至比原來更強！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「這機關的核心陣紋雖然毀了大半，但只要能找到合適的替代材料，我蒲元保證能讓它重獲新生，甚至比原來更強！」",
+    "zh_CN": "「这机关的核心阵纹虽然毁了大半，但只要能找到合适的替代材料，我蒲元保证能让它重获新生，甚至比原来更强！」",
+    "links": [4131]
+  },
+  {
+    "entryID": 4126,
+    "actorID": "MC1",
+    "text": "「一言為定！我定會多加留意。」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_TW": "「一言為定！我定會多加留意。」",
+    "zh_CN": "「一言为定！我定会多加留意。」",
+    "links": [4128]
+  },
+  {
+    "entryID": 4127,
+    "actorID": "role131",
+    "text": "「行行行，算妳一份！不過…修復這玩意兒可不是那麼簡單。我需要機關零件來在此基礎框架下讓它恢復原本的功能。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「行行行，算妳一份！不過…修復這玩意兒可不是那麼簡單。我需要機關零件來在此基礎框架下讓它恢復原本的功能。」",
+    "zh_CN": "「行行行，算妳一份！不过…修复这玩意儿可不是那么简单。我需要机关零件来在此基础框架下让它恢复原本的功能。」",
+    "links": [4132]
+  },
+  {
+    "entryID": 4128,
+    "actorID": "role2",
+    "text": "[panel=6]＊（看著蒲元和蔡琰已經迫不及待地開始討論改造方案，你默默退出了工坊。看來，未來的江湖之路上，你又多了一個需要收集的目標。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（看著蒲元和蔡琰已經迫不及待地開始討論改造方案，你默默退出了工坊。看來，未來的江湖之路上，你又多了一個需要收集的目標。）＊",
+    "zh_CN": "[panel=6]＊（看着蒲元和蔡琰已经迫不及待地开始讨论改造方案，你默默退出了工坊。看来，未来的江湖之路上，你又多了一个需要收集的目标。）＊",
+    "links": [4121]
+  },
+  {
+    "entryID": 4130,
+    "actorID": "MC23",
+    "text": "「蒲伯伯！大哥哥帶了一個超厲害的木人樁殘骸回來，你快幫我們看看能不能修好嘛！」",
+    "Sequence": "",
+    "zh_TW": "「蒲伯伯！大哥哥帶了一個超厲害的木人樁殘骸回來，你快幫我們看看能不能修好嘛！」",
+    "zh_CN": "「蒲伯伯！大哥哥带了一个超厉害的木人桩残骸回来，你快帮我们看看能不能修好嘛！」",
+    "links": [4120]
+  },
+  {
+    "entryID": 4131,
+    "actorID": "MC23",
+    "text": "「太好了！那我也要幫忙！我要給它裝上會噴火的機關！」",
+    "Sequence": "ModifyData(FavorabilityExp,MC23,50);",
+    "Description": "好感度提升",
+    "zh_TW": "「太好了！那我也要幫忙！我要給它裝上會噴火的機關！」",
+    "zh_CN": "「太好了！那我也要帮忙！我要给它装上会喷火的机关！」",
+    "links": [4127]
+  },
+  {
+    "entryID": 4132,
+    "actorID": "role131",
+    "text": "「這樣吧，這殘骸我先收下。日後你在江湖上若是收集到了合適的零件統統拿來給我！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(Valuable,Player,DamagedMechanism,-1);",
+    "Description": "損毀的機關人-1",
+    "zh_TW": "「這樣吧，這殘骸我先收下。日後你在江湖上若是收集到了合適的零件統統拿來給我！」",
+    "zh_CN": "「这样吧，这残骸我先收下。日后你在江湖上若是收集到了合适的零件统统拿来给我！」",
+    "links": [4126]
+  },
+  {
+    "entryID": 4133,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "蔡琰的勞作課題",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2114]
+  },
+  {
+    "entryID": 4134,
+    "actorID": "MC23",
+    "text": "「會打拳的木人？！真的嗎？快給我看看！」",
+    "Sequence": "",
+    "zh_CN": "「会打拳的木人？！真的吗？快给我看看！」",
+    "links": [2116]
+  },
+  {
+    "entryID": 4135,
+    "actorID": "MC23",
+    "text": "「這機關的構造好精妙呀！跟蒲伯伯教我的不太一樣，好像是種更古老的設計。不過……這零件損壞得太嚴重了，光靠我現在的工具修不好。」",
+    "Sequence": "",
+    "zh_CN": "「这机关的构造好精妙呀！跟蒲伯伯教我的不太一样，好像是种更古老的设计。不过……这零件损坏得太严重了，光靠我现在的工具修不好。」",
+    "links": [4136]
+  },
+  {
+    "entryID": 4136,
+    "actorID": "MC23",
+    "text": "「這機關的構造好精妙呀！跟蒲伯伯教我的不太一樣，好像是種更古老的設計。不過……這零件損壞得太嚴重了，光靠我現在的工具修不好。」",
+    "Sequence": "",
+    "zh_CN": "「这机关的构造好精妙呀！跟蒲伯伯教我的不太一样，好像是种更古老的设计。不过……这零件损坏得太严重了，光靠我现在的工具修不好。」",
+    "links": [2119]
+  },
+  {
+    "entryID": 4137,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Yunzhong)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [4119]
+  },
+  {
+    "entryID": 4138,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Description": "關閉背景圖",
+    "links": []
+  },
+  {
+    "entryID": 4139,
+    "actorID": "MC10",
+    "text": "「投資你們？可以啊。」",
+    "Sequence": "",
+    "links": [4140]
+  },
+  {
+    "entryID": 4140,
+    "actorID": "MC1",
+    "text": "「當真？多謝幫主！有赤龍幫這筆錢撐著，英豪府這道坎可就……」",
+    "Sequence": "SetPortrait(MC1,pic=17);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [4141]
+  },
+  {
+    "entryID": 4141,
+    "actorID": "MC10",
+    "text": "「誒誒誒，別急著謝——老子話還沒說完呢。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4142]
+  },
+  {
+    "entryID": 4142,
+    "actorID": "MC1",
+    "text": "「……幫主的意思是，還有下文？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [4143]
+  },
+  {
+    "entryID": 4143,
+    "actorID": "MC10",
+    "text": "「赤龍幫的錢，從不白給。收了它，雲中往後就得認老子這面旗。可要老子認你英豪府值這個價——總得先讓老子瞧瞧，你有沒有這個本事。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4144]
+  },
+  {
+    "entryID": 4144,
+    "actorID": "MC1",
+    "text": "「原來是要先過幫主這一關。那…幫主想怎麼個瞧法？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4145]
+  },
+  {
+    "entryID": 4145,
+    "actorID": "MC10",
+    "text": "「巧了，這幾日雲中正辦『天下武道大會』，各路好手雲集，老子也在裡頭押了注。你去打，一路打進決賽——是騾子是馬，台上見真章。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4146]
+  },
+  {
+    "entryID": 4146,
+    "actorID": "MC1",
+    "text": "「好！江湖兒女，這才對味。擂台上，在下奉陪到底。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [4149]
+  },
+  {
+    "entryID": 4147,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nDisableDialogueBG();\nMapLock(JinYangArena, unlock);\nContinue();",
+    "Script": "SetQuestState(\"CF38\", \"active\")",
+    "Description": "任務更新、地點解鎖",
+    "links": []
+  },
+  {
+    "entryID": 4148,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這日你依「軍師」所言，拜訪赤龍幫。幫眾把你領進大廳時，褚人飛正歪坐在上首，腳邊酒罈碰得叮噹響——你把英豪府缺銀、想拉投資的來意說了個大概。他聽罷，眯眼打量你片刻，忽然咧嘴一笑。）＊",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_28);\nAudioControl(PlaySFXOneShot,Fire);\nEnableDialogueBG(Mansion_RedDragonGang);",
+    "Description": "赤龍幫投資",
+    "zh_TW": "[panel=6]＊（這日你依「軍師」所言，拜訪赤龍幫。幫眾把你領進大廳時，褚人飛正歪坐在上首，腳邊酒罈碰得叮噹響——你把英豪府缺銀、想拉投資的來意說了個大概。他聽罷，眯眼打量你片刻，忽然咧嘴一笑。）＊",
+    "zh_CN": "[panel=6]＊（这日你依「军师」所言，拜访赤龙帮。帮众把你领进大厅时，褚人飞正歪坐在上首，脚边酒坛碰得叮当响——你把英豪府缺银、想拉投资的来意说了个大概。他听罢，眯眼打量你片刻，忽然咧嘴一笑。）＊",
+    "links": [4139]
+  },
+  {
+    "entryID": 4149,
+    "actorID": "MC10",
+    "text": "「慢著——先別答應那麼快，我還有個要求你聽清楚了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4150]
+  },
+  {
+    "entryID": 4150,
+    "actorID": "MC10",
+    "text": "「老子若真掏錢入資，可容不得牆頭草。赤龍幫的旗一立，甄家的銀子、黑狼的金子，都給老子滾一邊去。兩邊都想要？門兒都沒有。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4151]
+  },
+  {
+    "entryID": 4151,
+    "actorID": "MC1",
+    "text": "「……幫主說得明白。既收赤龍幫的情，便不會再去別家伸手。」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4152]
+  },
+  {
+    "entryID": 4152,
+    "actorID": "MC10",
+    "text": "「哼，算你懂事。去吧——擂台上給老子打出個名堂來。打進決賽再說銀子的事；打不進，也別怪老子翻臉不認人。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4154]
+  },
+  {
+    "entryID": 4153,
+    "actorID": "role2",
+    "text": "[panel=6]＊（褚人飛揮手示意，繼續自顧自地喝酒不在理會你，幫眾便把你送出山寨。）＊",
+    "Sequence": "",
+    "links": [4147]
+  },
+  {
+    "entryID": 4154,
+    "actorID": "MC1",
+    "text": "「是是、一定、一定獲勝！」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "links": [4155]
+  },
+  {
+    "entryID": 4155,
+    "actorID": "MC1",
+    "text": "「幫主好興致啊，喝酒該說不說在下也十分拿手，不如…」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "links": [4153]
+  },
+  {
+    "entryID": 4157,
+    "actorID": "role2",
+    "text": "[panel=6]＊（鄴城甄家宅邸，朱漆大門，車馬絡繹不絕——光是門房的穿戴，都比英豪府正廳體面幾分。管事將你們二人引入偏廳等候，蕭靈犀跟在你身側，眼睛卻早已忍不住四處打量。）＊",
+    "Sequence": "EnableDialogueBG(Mansion_ZhenFamily);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "甄家投資",
+    "links": [4158]
+  },
+  {
+    "entryID": 4158,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……這廳裡隨便一個花瓶，怕都夠英豪府吃半年了吧？」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Surprise);",
+    "links": [4159]
+  },
+  {
+    "entryID": 4159,
+    "actorID": "MC1",
+    "text": "「噓，小聲點。別一臉沒見過世面的樣子。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4160]
+  },
+  {
+    "entryID": 4160,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音未落，屏風後傳來環佩輕響。一名衣著考究、眉眼精明的年輕女子緩步而出，身後跟著捧著算盤與帳冊的隨從——正是甄家現任家主[em2]甄筠[/em2]。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [4161]
+  },
+  {
+    "entryID": 4161,
+    "actorID": "MC9",
+    "text": "「[var=PlayerLastName]公子。英豪府最新入府、年紀也最小的那位，竟親自上門——還帶了個孩子。筠還以為管事聽錯了。」",
+    "Sequence": "SetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Idea);",
+    "links": [4162]
+  },
+  {
+    "entryID": 4162,
+    "actorID": "MC8",
+    "text": "[panel=2]「誰是孩子！小犀是怕表哥吃虧才跟來的，不是來湊數的！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=2);\nEnableCharacterExpression(2,MC8,Anger);",
+    "links": [4163]
+  },
+  {
+    "entryID": 4163,
+    "actorID": "MC9",
+    "text": "[panel=1]「哈，有意思的丫頭。[var=PlayerLastName]公子，英豪府的來意，筠已聽管事說了個大概——想與英豪府的結盟的事。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC9,pic=8);",
+    "links": [4165, 4164]
+  },
+  {
+    "entryID": 4164,
+    "actorID": "MC1",
+    "text": "「英豪府立足雲中，往後商路人情，甄家儘可借力。」",
+    "Sequence": "",
+    "Description": "選項1：一般對話",
+    "links": [4166]
+  },
+  {
+    "entryID": 4165,
+    "actorID": "MC1",
+    "text": "[em2][政治檢定][/em2]「家主想必也清楚——并州三方角逐，雲中這塊地，早不是單純買賣。」",
+    "Sequence": "",
+    "Description": "選項2：政治檢定",
+    "links": [4168]
+  },
+  {
+    "entryID": 4166,
+    "actorID": "MC1",
+    "text": "「英豪府立足雲中，往後商路人情，甄家儘可借力。家主這筆，不會白投。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": [4167]
+  },
+  {
+    "entryID": 4167,
+    "actorID": "MC9",
+    "text": "[panel=1]「嘴上的人情，筠聽得多了。真金白銀投下去，還得看人值不值得。」",
+    "Sequence": "SetPortrait(MC9,pic=6);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [4172]
+  },
+  {
+    "entryID": 4168,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PoliticsCheck,12);",
+    "Description": "政治檢定 難度12",
+    "links": [4169]
+  },
+  {
+    "entryID": 4169,
+    "actorID": "MC1",
+    "text": "「東邊赤龍、北邊黑狼，都盯著雲中。最遠的甄家此刻若選擇與英豪府結盟而入局——這筆買賣，算的不只是銀子。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4170, 4171]
+  },
+  {
+    "entryID": 4170,
+    "actorID": "MC9",
+    "text": "「[em7]眉梢微挑[/em7]，呵……是筠小看你了。看來你跟那些只會伸手要錢的莽夫，倒是不同。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Idea);\nModifyData(AbilityExp,Player,Politics,50);",
+    "Conditions": "IsPassDice() == true",
+    "links": [4172]
+  },
+  {
+    "entryID": 4171,
+    "actorID": "MC9",
+    "text": "「[em7]似笑非笑[/em7]布局？公子才入府不久，并州的水有多深，筠勸你少說兩句為妙。不過——話雖如此，筠也不是聽不進人話的。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=6);EnableCharacterExpression(1,MC9,Meditate);",
+    "Conditions": "IsPassDice() == false",
+    "links": [4172]
+  },
+  {
+    "entryID": 4172,
+    "actorID": "MC9",
+    "text": "[panel=1]「甄家要投一筆錢進雲中，不難。難的是——你得先讓筠相信，跟你打交道有賺頭。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=8);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [4173]
+  },
+  {
+    "entryID": 4173,
+    "actorID": "MC1",
+    "text": "「家主但說無妨。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": [4174]
+  },
+  {
+    "entryID": 4174,
+    "actorID": "MC9",
+    "text": "[panel=1]「并州東南方，鄰近小溪村，有處名為[em2]水濂洞[/em2]的地方，傳說當地供著一位河神。」",
+    "Sequence": "SetPortrait(MC9,pic=8);",
+    "links": [4175]
+  },
+  {
+    "entryID": 4175,
+    "actorID": "MC9",
+    "text": "[panel=1]「前些日子，有商隊從那邊帶回幾件來路不明的貨色。質地筠看了半日，也估不出個價來——尋常礦石、尋常工匠，斷做不出那種東西。筠對\"估不出價\"的東西有興趣。」",
+    "Sequence": "SetPortrait(MC9,pic=12);EnableCharacterExpression(1,MC9,Idea);",
+    "links": [4176]
+  },
+  {
+    "entryID": 4176,
+    "actorID": "MC1",
+    "text": "「家主這是……連要什麼都不清楚的意思？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [4177]
+  },
+  {
+    "entryID": 4177,
+    "actorID": "MC9",
+    "text": "[panel=1]「筠也說不準究竟是什麼——傳聞這種東西，十句裡摻九句假，真假摻在一起，才最有意思。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=5);",
+    "links": [4178]
+  },
+  {
+    "entryID": 4178,
+    "actorID": "MC9",
+    "text": "[panel=1]「你去走一趟，把你覺得值錢的東西帶回來，筠自會掂量值不值這筆投資。生意人做買賣，眼光是本錢——這第一步，筠想先看看你有沒有這個本錢。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=8);",
+    "links": [4180, 4181, 4182]
+  },
+  {
+    "entryID": 4180,
+    "actorID": "MC1",
+    "text": "[em2][智力檢定][/em2]「家主既提到那批估不出價的貨，可知源頭從何而起？」",
+    "Sequence": "",
+    "Description": "選項1：智力檢定",
+    "links": [4186]
+  },
+  {
+    "entryID": 4181,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2]「家主人脈廣、商路多，這事，怎麼不派自己人去查？」",
+    "Sequence": "",
+    "Description": "選項2：謀略檢定",
+    "links": [4192]
+  },
+  {
+    "entryID": 4182,
+    "actorID": "MC1",
+    "text": "[em2][洞悉檢定][/em2]「家主圖的，恐怕不只是那幾件估不出價的貨吧？」",
+    "Sequence": "",
+    "Description": "選項3：洞悉檢定",
+    "links": [4198]
+  },
+  {
+    "entryID": 4183,
+    "actorID": "MC1",
+    "text": "「這[em2]水濂洞[/em2]，是何來頭？」",
+    "Sequence": "",
+    "Description": "選項4：詢問水濂洞來頭",
+    "links": [4203]
+  },
+  {
+    "entryID": 4184,
+    "actorID": "MC1",
+    "text": "「祭拜河神？」",
+    "Sequence": "",
+    "Description": "選項5：詢問河神",
+    "links": [4205]
+  },
+  {
+    "entryID": 4185,
+    "actorID": "MC1",
+    "text": "「行，我接了。」",
+    "Sequence": "",
+    "Description": "選項6：直接接下差事",
+    "links": [4208]
+  },
+  {
+    "entryID": 4186,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntelligenceCheck,10);",
+    "Description": "選項1的空對話擲骰節點：智力檢定 難度10",
+    "links": [4187]
+  },
+  {
+    "entryID": 4187,
+    "actorID": "MC1",
+    "text": "「家主既提到那批估不出價的貨，可知源頭從何而起？家主既然打聽到這一步，想必也摸過些底細。」",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4188, 4191]
+  },
+  {
+    "entryID": 4188,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]挑眉，倒有些意外[/em7]呵，不只是個蠻幹的莽夫。實話跟你說——筠是聽那商隊提過，水濂洞附近的地脈有異，隱約還混著些以前沒見過的礦光。至於裡頭到底是什麼名堂……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=4);EnableCharacterExpression(1,MC9,Surprise);ModifyData(AbilityExp,Player,Intelligence,50);",
+    "Conditions": "IsPassDice() == true",
+    "links": [4189]
+  },
+  {
+    "entryID": 4189,
+    "actorID": "MC9",
+    "text": "[panel=1]「怪力亂神之事，筠向來不信，只信眼見為實。公子親自去瞧瞧，不就知道了？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=8);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [4216]
+  },
+  {
+    "entryID": 4191,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]公子連這都要問？筠只負責出價，不負責解惑——這種問題，去水濂洞親眼瞧，比問筠準得多。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=6);EnableCharacterExpression(1,MC9,Meditate);",
+    "Conditions": "IsPassDice() == false",
+    "links": [4216]
+  },
+  {
+    "entryID": 4192,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,StrategyCheck,10);",
+    "Description": "選項2的空對話擲骰節點：謀略檢定 難度10",
+    "links": [4193]
+  },
+  {
+    "entryID": 4193,
+    "actorID": "MC1",
+    "text": "「家主人脈廣、商路多，這事，怎麼不派自己人去查？」",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4194, 4197]
+  },
+  {
+    "entryID": 4194,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]搖扇，語氣淡了幾分[/em7]公子這一問，倒問到了點子上。水濂洞地處偏僻，甄家的人一動，明眼人都看得出甄家惦記上了什麼——赤龍幫、黑狼那邊，未必肯乾坐著看。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=12);EnableCharacterExpression(1,MC9,Meditate);ModifyData(FeatExp,Player,Strategy,50);",
+    "Conditions": "IsPassDice() == true",
+    "links": [4195]
+  },
+  {
+    "entryID": 4195,
+    "actorID": "MC9",
+    "text": "[panel=1]「英豪府新來乍到，去打聽個荒山野廟的傳聞，誰會多想？這才好辦事。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=5);EnableCharacterExpression(1,MC9,Proud);",
+    "links": [4216]
+  },
+  {
+    "entryID": 4197,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]公子倒是問得直接。人手嘛，總有更要緊的地方去用，這點小事，勞煩外人跑一趟也無妨。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=6);EnableCharacterExpression(1,MC9,Meditate);",
+    "Conditions": "IsPassDice() == false",
+    "links": [4216]
+  },
+  {
+    "entryID": 4198,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,10);",
+    "Description": "選項3的空對話擲骰節點：洞悉檢定 難度10",
+    "links": [4199]
+  },
+  {
+    "entryID": 4199,
+    "actorID": "MC1",
+    "text": "「家主圖的，恐怕不只是那幾件估不出價的貨吧？」",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "links": [4200, 4202]
+  },
+  {
+    "entryID": 4200,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]輕笑，並不否認[/em7]公子這眼力，倒是沒白費。若真有稀罕物件，消息一旦傳開，甄家在并州商賈間，也能落個『識貨』的名頭——這買賣，划算的地方，從來不只一處。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=5);EnableCharacterExpression(1,MC9,Proud);ModifyData(FeatExp,Player,Insight,50);",
+    "Conditions": "IsPassDice() == true",
+    "links": [4216]
+  },
+  {
+    "entryID": 4202,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]搖頭，不置可否[/em7]公子想太多了。筠是生意人，圖的從來只有一樣——划不划算。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=6);EnableCharacterExpression(1,MC9,Meditate);",
+    "Conditions": "IsPassDice() == false",
+    "links": [4216]
+  },
+  {
+    "entryID": 4203,
+    "actorID": "MC1",
+    "text": "「這[em2]水濂洞[/em2]，聽名字倒有些意思，是何來頭？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [4204]
+  },
+  {
+    "entryID": 4204,
+    "actorID": "MC9",
+    "text": "「聽商隊說，[em2]那洞口有道瀑布終年不歇，遠遠望去，竟像懸著一整幅水做的簾子[/em2]——水濂洞之名，想是由此而來。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=8);EnableCharacterExpression(1,MC9,Meditate);",
+    "links": [4219]
+  },
+  {
+    "entryID": 4205,
+    "actorID": "MC1",
+    "text": "「那河神，究竟是何方神聖？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [4206]
+  },
+  {
+    "entryID": 4206,
+    "actorID": "MC9",
+    "text": "[panel=1]「聽聞是附近幾個村子共同供的神明，凡遇上大災大難、久病不癒，村民便備上供品送進洞裡，求河神庇佑。香火倒是不斷，只是筠向來不信這些，怪力亂神之說，姑妄聽之罷了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=8);\nEnableCharacterExpression(1,MC9,Meditate);",
+    "links": [4207]
+  },
+  {
+    "entryID": 4207,
+    "actorID": "MC9",
+    "text": "「不過…還有個更老的說法——傳說那洞裡還曾經有什麼成了精的野物盤踞，鬧過一場不小的亂子，後來又不知所踪。但這麼久遠的傳說，也沒人真能說得清楚，聽著跟哄小孩的故事差不多。」",
+    "Sequence": "SetPortrait(MC9,pic=12);\nDisableCharacterExpression(1);",
+    "links": [4183, 4184, 4185]
+  },
+  {
+    "entryID": 4208,
+    "actorID": "MC1",
+    "text": "「行，這趟差事，我接了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "links": [4209]
+  },
+  {
+    "entryID": 4209,
+    "actorID": "MC9",
+    "text": "[panel=1]「乾脆，筠喜歡跟乾脆人打交道。」",
+    "Sequence": "SetPortrait(MC9,pic=5);",
+    "links": [4211]
+  },
+  {
+    "entryID": 4211,
+    "actorID": "MC9",
+    "text": "[panel=1]「那就趕緊去吧。筠在鄴城，等你的好消息。」",
+    "Sequence": "SetPortrait(MC9,pic=5);",
+    "links": [4212]
+  },
+  {
+    "entryID": 4212,
+    "actorID": "role2",
+    "text": "[panel=6]＊（解鎖地點：水濂洞）＊",
+    "Sequence": "DisableCharacterExpression(1);\nAudioControl(PlaySFX,Dice_StartUp);\nMapLock(RiverGodCave, unlock);",
+    "Description": "任務／地圖解鎖節點：水濂洞",
+    "links": [4217]
+  },
+  {
+    "entryID": 4213,
+    "actorID": "role2",
+    "text": "[panel=6]＊（出了甄家大門，蕭靈犀才總算鬆了口氣，湊到你耳邊。）＊",
+    "Sequence": "",
+    "links": [4214]
+  },
+  {
+    "entryID": 4214,
+    "actorID": "MC8",
+    "text": "「表哥……這位甄家主，話說得雲裡霧裡，到底要咱們找什麼嘛？小犀怎麼聽著，比賈師父還讓人猜不透！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Nervous);",
+    "links": [4215]
+  },
+  {
+    "entryID": 4215,
+    "actorID": "MC1",
+    "text": "「……我也有同感。管她要什麼，先去會會這位『河神』，看看到底是何方神聖，說不定答案就在裡頭。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "links": [4218]
+  },
+  {
+    "entryID": 4216,
+    "actorID": "MC9",
+    "text": "「你還有什麼想問的。」",
+    "Sequence": "",
+    "links": [4183, 4184, 4185]
+  },
+  {
+    "entryID": 4217,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nOpenPanel(1, close);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Ye)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [4213]
+  },
+  {
+    "entryID": 4218,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Script": "SetQuestState(\"CF40\", \"active\")",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4219,
+    "actorID": "MC9",
+    "text": "「地方倒是偏，就在并州東南方，緊鄰著一個叫小溪村的地界，尋常人沒個緣由，不會往那邊去。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [4183, 4184, 4185]
+  }
+]

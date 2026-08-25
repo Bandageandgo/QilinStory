@@ -1,123 +1,157 @@
 [
   {
     "entryID": 1,
-    "actorID": 2,
-    "text": "＊（不遠處一棵大榕樹下，景象有些奇特。一名頭戴方巾的姑娘鋪了塊布在地上，中央擺著一個不斷旋轉的古怪羅盤。她沒有吆喝，只是半閉著眼，口中念念有詞，一副高深莫測的模樣，引得路過村民投來好奇又懷疑的目光。）＊",
-    "Sequence": "",
-    "links": [2],
-    "Description": "場景描述"
+    "actorID": "role2",
+    "text": "[panel=6]＊（一名頭戴方巾的姑娘鋪了塊布在地上，中央擺著一個不斷旋轉的古怪羅盤。她沒有吆喝，只是半閉著眼，口中念念有詞，一副高深莫測的模樣，引得路過村民投來好奇又懷疑的目光。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);",
+    "Description": "關閉地圖音樂、放主題曲",
+    "zh_TW": "[panel=6]＊（一名頭戴方巾的姑娘鋪了塊布在地上，中央擺著一個不斷旋轉的古怪羅盤。她沒有吆喝，只是半閉著眼，口中念念有詞，一副高深莫測的模樣，引得路過村民投來好奇又懷疑的目光。）＊",
+    "zh_CN": "[panel=6]＊（一名头戴方巾的姑娘铺了块布在地上，中央摆着一个不断旋转的古怪罗盘。她没有吆喝，只是半闭着眼，口中念念有词，一副高深莫测的模样，引得路过村民投来好奇又怀疑的目光。）＊",
+    "links": [2]
   },
   {
     "entryID": 2,
     "actorID": "MC22",
     "text": "「天機轉，星河亂…東來紫氣，南蘊妖蓮…唉！」",
-    "Sequence": "SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22_Meditate);",
+    "Sequence": "SetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_TW": "「天機轉，星河亂…東來紫氣，南蘊妖蓮…唉！」",
+    "zh_CN": "「天机转，星河乱…东来紫气，南蕴妖莲…唉！」",
     "links": [3]
   },
   {
     "entryID": 3,
     "actorID": "MC8",
-    "text": "「表哥，你看那個擺攤的，神神叨叨的。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8_Question);",
-    "links": [4]
+    "text": "[panel=2]「表哥，你看那個擺攤的，神神叨叨的。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「表哥，你看那個擺攤的，神神叨叨的。」",
+    "zh_CN": "[panel=2]「表哥，你看那个摆摊的，神神叨叨的。」",
+    "links": [2050, 4]
   },
   {
     "entryID": 4,
     "actorID": "MC1",
     "text": "「觀此人氣度，與其言談間似有玄機…莫非是話本裡常說的，隱於市井的奇人異士？！」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "「觀此人氣度，與其言談間似有玄機…莫非是話本裡常說的，隱於市井的奇人異士？！」",
+    "zh_CN": "「观此人气度，与其言谈间似有玄机…莫非是话本里常说的，隐于市井的奇人异士？！」",
     "links": [5]
   },
   {
     "entryID": 5,
     "actorID": "MC1",
-    "text": "「這位大師，在下[var=PlayerLastName][var=PlayerFirstName]，路經此地。方才聽聞姑娘所言，似乎對此地有些見解？」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1_Meditate);",
-    "links": [6]
+    "text": "「方才聽聞姑娘所言，似乎對何事而擔憂？」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「方才聽聞姑娘所言，似乎對何事而擔憂？」",
+    "zh_CN": "「方才听闻姑娘所言，似乎对何事而担忧？」",
+    "links": [2055]
   },
   {
     "entryID": 6,
     "actorID": "MC22",
-    "text": "「在下觀天象，已知有緣人將至…果不其然！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22_Surprise_2);",
+    "text": "「在下赫連娜娜，觀天象，已知有緣人將至…果不其然！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Surprise_2);",
+    "zh_TW": "「在下赫連娜娜，觀天象，已知有緣人將至…果不其然！」",
+    "zh_CN": "「在下赫连娜娜，观天象，已知有缘人将至…果不其然！」",
     "links": [7]
   },
   {
     "entryID": 7,
     "actorID": "MC1",
-    "text": "「我只是想問…」",
-    "Sequence": "",
+    "text": "「诶，什麼有緣人？我只是想問…」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「诶，什麼有緣人？我只是想問…」",
+    "zh_CN": "「诶，什么有缘人？我只是想问…」",
     "links": [8]
   },
   {
     "entryID": 8,
     "actorID": "MC22",
     "text": "「少俠不必多言，讓在下為你卜上一卦。你命格不凡，胸有丘壑，卻困於淺灘，正所謂[em2]麒麟之志，暫掩于塵[/em2]啊！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=2);",
+    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(0);\nSetPortrait(MC22,pic=2);",
+    "zh_TW": "「少俠不必多言，讓在下為你卜上一卦。你命格不凡，胸有丘壑，卻困於淺灘，正所謂[em2]麒麟之志，暫掩于塵[/em2]啊！」",
+    "zh_CN": "「少侠不必多言，让在下为你卜上一卦。你命格不凡，胸有丘壑，却困于浅滩，正所谓[em2]麒麟之志，暂掩于尘[/em2]啊！」",
     "links": [9]
   },
   {
     "entryID": 9,
     "actorID": "MC1",
     "text": "「诶！這就玄了！！」",
-    "Sequence": "SetPortrait(MC1,pic=4);",
-    "links": [10]
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Idea);",
+    "zh_TW": "「诶！這就玄了！！」",
+    "zh_CN": "「诶！这就玄了！！」",
+    "links": [23]
   },
   {
     "entryID": 10,
     "actorID": "MC8",
-    "text": "「表哥，她這話對誰都能說…」",
-    "Sequence": "SetPortrait(MC8,pic=6);",
+    "text": "[panel=2]「表哥，她這話對誰都能說…」",
+    "Sequence": "SetPortrait(MC8,pic=6);\nEnableCharacterExpression(2,MC8,Nervous);",
+    "zh_TW": "[panel=2]「表哥，她這話對誰都能說…」",
+    "zh_CN": "[panel=2]「表哥，她这话对谁都能说…」",
     "links": [11]
   },
   {
     "entryID": 11,
     "actorID": "MC22",
     "text": "「但你可知，大機遇往往伴隨大凶險！我這[em2]天機盤[/em2]顯示，此地後山妖氣沖天，恐有禍事將近！而你正是被命運選重之人！」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=8);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=8);",
+    "zh_TW": "「但你可知，大機遇往往伴隨大凶險！我這[em2]天機盤[/em2]顯示，此地後山妖氣沖天，恐有禍事將近！而你正是被命運選重之人！」",
+    "zh_CN": "「但你可知，大机遇往往伴随大凶险！我这[em2]天机盘[/em2]显示，此地后山妖气冲天，恐有祸事将近！而你正是被命运选重之人！」",
     "links": [12]
   },
   {
     "entryID": 12,
-    "actorID": 2,
-    "text": "＊（只見她在隨身的小布囊裡翻找了半天，掏出了一塊看起來灰撲撲、毫不起眼的破石頭，鄭重地塞到你手裡。）＊",
-    "Sequence": "",
-    "links": [13],
-    "Description": "旁白"
+    "actorID": "role2",
+    "text": "[panel=6]＊（只見她在隨身的小布囊裡翻找了半天，掏出了一塊看起來灰撲撲、毫不起眼的破石頭，鄭重地塞到你手裡。）＊",
+    "Sequence": "ModifyData(Valuable,MC1,Rivertear,1);\nEnableCharacterExpression(6,MC22,Anger_2);",
+    "Description": "獲得河神的眼淚",
+    "zh_TW": "[panel=6]＊（只見她在隨身的小布囊裡翻找了半天，掏出了一塊看起來灰撲撲、毫不起眼的破石頭，鄭重地塞到你手裡。）＊",
+    "zh_CN": "[panel=6]＊（只见她在随身的小布囊里翻找了半天，掏出了一块看起来灰扑扑、毫不起眼的破石头，郑重地塞到你手里。）＊",
+    "links": [13]
   },
   {
     "entryID": 13,
     "actorID": "MC22",
-    "text": "「此奇石，是你命中註定會得到的應劫之物！它能護你心神，在這場劫難中找到唯一的生機！」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "text": "「此奇石，是你命中註定會得到的應劫之物！它能在危急的時候護你平安，在這場劫難中找到唯一的生機！」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nDisableCharacterExpression(6);",
+    "zh_TW": "「此奇石，是你命中註定會得到的應劫之物！它能在危急的時候護你平安，在這場劫難中找到唯一的生機！」",
+    "zh_CN": "「此奇石，是你命中注定会得到的应劫之物！它能在危急的时候护你平安，在这场劫难中找到唯一的生机！」",
     "links": [14]
   },
   {
     "entryID": 14,
     "actorID": "MC22",
     "text": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=15);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=15);",
+    "zh_TW": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
+    "zh_CN": "「在下与你萍水相逢，本不该泄露天机。但助应劫之人顺应天命，亦是修行。此石便赠予你，分文不取，只盼你能把握时机，斩妖除魔，夺得造化！」",
     "links": [15]
   },
   {
     "entryID": 15,
     "actorID": "MC8",
-    "text": "「表哥…這石頭…這石頭跟我昨天在河邊踢走的那個一模一樣啊…」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8_Pain);",
+    "text": "[panel=2]「表哥…這石頭…這石頭跟我昨天在河邊踢走的那個一模一樣啊…」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=13);\nEnableCharacterExpression(2,MC8,Pain);",
+    "zh_TW": "[panel=2]「表哥…這石頭…這石頭跟我昨天在河邊踢走的那個一模一樣啊…」",
+    "zh_CN": "[panel=2]「表哥…这石头…这石头跟我昨天在河边踢走的那个一模一样啊…」",
     "links": [16]
   },
   {
     "entryID": 16,
     "actorID": "MC1",
-    "text": "「…多謝大師厚賜。此物…果然…。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1_Pain);",
+    "text": "「多謝大師厚賜。此物果然一看就非凡物！」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「多謝大師厚賜。此物果然一看就非凡物！」",
+    "zh_CN": "「多谢大师厚赐。此物果然一看就非凡物！」",
     "links": [17]
   },
   {
     "entryID": 17,
     "actorID": "MC22",
     "text": "「哎呀！時辰！時辰！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=9);EnableCharacterExpression(1,MC22_Shock);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Shock);",
+    "zh_TW": "「哎呀！時辰！時辰！」",
+    "zh_CN": "「哎呀！时辰！时辰！」",
     "links": [18]
   },
   {
@@ -125,35 +159,90 @@
     "actorID": "MC22",
     "text": "「七殺入疾厄，妖氣將達鼎盛，然危機之中亦藏有機緣！你切記，[em2]近日內[/em2]務必親往後山一行，方能逢凶化吉！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=8);",
+    "zh_TW": "「七殺入疾厄，妖氣將達鼎盛，然危機之中亦藏有機緣！你切記，[em2]近日內[/em2]務必親往後山一行，方能逢凶化吉！」",
+    "zh_CN": "「七杀入疾厄，妖气将达鼎盛，然危机之中亦藏有机缘！你切记，[em2]近日内[/em2]务必亲往后山一行，方能逢凶化吉！」",
     "links": [19]
   },
   {
     "entryID": 19,
-    "actorID": 2,
-    "text": "＊（她話音未落，不等你們反應，便已收起包袱，如腳底抹油般一溜煙地跑向了後山。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "links": [20],
-    "Description": "旁白"
+    "actorID": "role2",
+    "text": "[panel=6]＊（她話音未落，不等你們反應，便已收起包袱，如腳底抹油般一溜煙地跑向了後山。）＊",
+    "Sequence": "SetContinueMode(false);\nDisableCharacterExpression(1);\nSetContinueMode(original)@Message(EndEntryEvent);",
+    "Description": "赫連娜娜逃跑演出",
+    "zh_TW": "[panel=6]＊（她話音未落，不等你們反應，便已收起包袱，如腳底抹油般一溜煙地跑向了後山。）＊",
+    "zh_CN": "[panel=6]＊（她话音未落，不等你们反应，便已收起包袱，如脚底抹油般一溜烟地跑向了后山。）＊",
+    "links": [20]
   },
   {
     "entryID": 20,
     "actorID": "MC8",
-    "text": "「表哥，她說得煞有其事，還叫你這幾天要去後山…感覺好可疑啊，我們還是別理她了吧？」",
-    "Sequence": "SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8_Question);",
+    "text": "[panel=1]「表哥，她說得煞有其事，還叫你這幾天要去後山…感覺好可疑啊，我們還是別理她了吧？」",
+    "Sequence": "SetPortrait(MC8,pic=2);\nEnableCharacterExpression(1,MC8,Question)@1;",
+    "zh_TW": "[panel=1]「表哥，她說得煞有其事，還叫你這幾天要去後山…感覺好可疑啊，我們還是別理她了吧？」",
+    "zh_CN": "[panel=1]「表哥，她说得煞有其事，还叫你这几天要去后山…感觉好可疑啊，我们还是别理她了吧？」",
     "links": [21]
   },
   {
     "entryID": 21,
     "actorID": "MC8",
     "text": "「再說了，說不定她根本不是去找什麼妖怪，而是去挖野菜了，嘻嘻。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=5);",
+    "zh_TW": "「再說了，說不定她根本不是去找什麼妖怪，而是去挖野菜了，嘻嘻。」",
+    "zh_CN": "「再说了，说不定她根本不是去找什么妖怪，而是去挖野菜了，嘻嘻。」",
     "links": [22]
   },
   {
     "entryID": 22,
     "actorID": "MC1",
     "text": "「…真的這麼餓嗎?」",
-    "Sequence": "DisableCharacterExpression(2);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=9);",
+    "Script": "SetQuestState(\"CF08\", \"active\")",
+    "zh_TW": "「…真的這麼餓嗎?」",
+    "zh_CN": "「…真的这么饿吗?」",
     "links": []
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「唉，看來想安穩過日子是沒指望了…不過，我自己本就不是那種甘於平淡的人。嘿嘿！」",
+    "Sequence": "SetPortrait(MC1,pic=7);\nDisableCharacterExpression(0);",
+    "zh_TW": "「唉，看來想安穩過日子是沒指望了…不過，我自己本就不是那種甘於平淡的人。嘿嘿！」",
+    "zh_CN": "「唉，看来想安稳过日子是没指望了…不过，我自己本就不是那种甘于平淡的人。嘿嘿！」",
+    "links": [10]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "初見娜娜(強制)",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "role2",
+    "text": "[panel=6][em3][背景：遊牧民族][/em3]（這人說話雖然神神叨叨，但那雙眼睛卻利得很。那股子藏不住的野勁，讓她顯得與周遭的一切格格不入。）",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=12);",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Outlander\")  == true",
+    "zh_TW": "[panel=6][em3][背景：遊牧民族][/em3]（這人說話雖然神神叨叨，但那雙眼睛卻利得很。那股子藏不住的野勁，讓她顯得與周遭的一切格格不入。）",
+    "zh_CN": "[panel=6][em3][背景：游牧民族][/em3]（这人说话虽然神神叨叨，但那双眼睛却利得很。那股子藏不住的野劲，让她显得与周遭的一切格格不入。）",
+    "links": [2054]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,RaptorVision);\nShowHint(Skill,RaptorVision);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [5]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(AddNewCharacter,MC22);\nModifyData(IsAbleToJoinTeam,MC22,flase);\nShowHint(Character,MC22);\nSetContinueMode(original)@Message(EndHintCharacter);",
+    "Description": "獲得角色情報",
+    "links": [6]
   }
 ]
