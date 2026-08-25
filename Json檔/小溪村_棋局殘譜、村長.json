@@ -42,10 +42,10 @@
   {
     "entryID": 5,
     "actorID": "MC1",
-    "text": "「這殘局...有點意思，手癢了，試試看！」",
+    "text": "「這殘局…有點意思，手癢了，試試看！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
-    "zh_TW": "「這殘局...有點意思，手癢了，試試看！」",
-    "zh_CN": "「这残局...有点意思，手痒了，试试看！」",
+    "zh_TW": "「這殘局…有點意思，手癢了，試試看！」",
+    "zh_CN": "「这残局…有点意思，手痒了，试试看！」",
     "links": [6]
   },
   {
@@ -96,12 +96,12 @@
   {
     "entryID": 14,
     "actorID": "role2",
-    "text": "[panel=6]＊（此局變幻莫測，你苦思冥想...）＊",
+    "text": "[panel=6]＊（此局變幻莫測，你苦思冥想…）＊",
     "Sequence": "",
     "Conditions": "IsPassMiniGameRating(\"A\")  == false;",
     "Description": "小遊戲評價低於A",
-    "zh_TW": "[panel=6]＊（此局變幻莫測，你苦思冥想...）＊",
-    "zh_CN": "[panel=6]＊（此局变幻莫测，你苦思冥想...）＊",
+    "zh_TW": "[panel=6]＊（此局變幻莫測，你苦思冥想…）＊",
+    "zh_CN": "[panel=6]＊（此局变幻莫测，你苦思冥想…）＊",
     "links": [15]
   },
   {
@@ -227,11 +227,11 @@
   {
     "entryID": 28,
     "actorID": "MC1",
-    "text": "「村口石桌那盤殘局...」",
+    "text": "「村口石桌那盤殘局…」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "Conditions": "Variable[\"ChessGame\"] == true",
-    "zh_TW": "「村口石桌那盤殘局...」",
-    "zh_CN": "「村口石桌那盘残局...」",
+    "zh_TW": "「村口石桌那盤殘局…」",
+    "zh_CN": "「村口石桌那盘残局…」",
     "links": [29]
   },
   {
@@ -475,10 +475,10 @@
   {
     "entryID": 57,
     "actorID": "MC8",
-    "text": "「哇！四百錢！表哥太厲害了！發財了！可以買好多頓棗泥糕了，真的花不完」",
+    "text": "「哇！四百錢！表哥太厲害了！發財了！可以買好多頓棗泥糕了，真的花不完！」",
     "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Shock);",
-    "zh_TW": "「哇！四百錢！表哥太厲害了！發財了！可以買好多頓棗泥糕了，真的花不完」",
-    "zh_CN": "「哇！四百钱！表哥太厉害了！发财了！可以买好多顿枣泥糕了，真的花不完」",
+    "zh_TW": "「哇！四百錢！表哥太厲害了！發財了！可以買好多頓棗泥糕了，真的花不完！」",
+    "zh_CN": "「哇！四百钱！表哥太厉害了！发财了！可以买好多顿枣泥糕了，真的花不完！」",
     "links": [58]
   },
   {
@@ -524,12 +524,12 @@
   {
     "entryID": 62,
     "actorID": "MC1",
-    "text": "「雖不多，但蚊子腿即使在小也是肉...」",
+    "text": "「雖不多，但蚊子腿再小也是肉…」",
     "Sequence": "DisableCharacterExpression();SetPortrait(MC1,pic=3);",
     "Script": "Variable[\"ChessGame\"] = false",
     "Description": "變數更新",
-    "zh_TW": "「雖不多，但蚊子腿即使在小也是肉...」",
-    "zh_CN": "「虽不多，但蚊子腿即使在小也是肉...」",
+    "zh_TW": "「雖不多，但蚊子腿再小也是肉…」",
+    "zh_CN": "「虽不多，但蚊子腿再小也是肉…」",
     "links": []
   },
   {
@@ -629,10 +629,10 @@
   {
     "entryID": 104,
     "actorID": "role112",
-    "text": "「喲！年輕人！歡迎歡迎！」",
+    "text": "「喲！年輕人！稀客稀客！」",
     "Sequence": "",
-    "zh_TW": "「喲！年輕人！歡迎歡迎！」",
-    "zh_CN": "「哟！年轻人！欢迎欢迎！」",
+    "zh_TW": "「喲！年輕人！稀客稀客！」",
+    "zh_CN": "「哟！年轻人！稀客稀客！」",
     "links": [28, 109]
   },
   {
@@ -676,10 +676,10 @@
   {
     "entryID": 109,
     "actorID": "MC1",
-    "text": "沒事沒事，路過跟您問聲好。",
+    "text": "「沒事沒事，路過跟您問聲好。」",
     "Sequence": "",
-    "zh_TW": "沒事沒事，路過跟您問聲好。",
-    "zh_CN": "没事没事，路过跟您问声好。",
+    "zh_TW": "「沒事沒事，路過跟您問聲好。」",
+    "zh_CN": "「没事没事，路过跟您问声好。」",
     "links": [106]
   },
   {
@@ -693,13 +693,13 @@
   {
     "entryID": 111,
     "actorID": "MC1",
-    "text": "[em2][統率檢定][耗時一個時辰][/em2]「應該要這樣解...」",
+    "text": "[em2][統率檢定][耗時一個時辰][/em2]「應該要這樣解…」",
     "Sequence": "",
     "Conditions": "Variable[\"MyTime\"] < 6",
     "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
     "Description": "耗費時間",
-    "zh_TW": "[em2][統率檢定][耗時一個時辰][/em2]「應該要這樣解...」",
-    "zh_CN": "[em2][统率检定][耗时一个时辰][/em2]「应该要这样解...」",
+    "zh_TW": "[em2][統率檢定][耗時一個時辰][/em2]「應該要這樣解…」",
+    "zh_CN": "[em2][统率检定][耗时一个时辰][/em2]「应该要这样解…」",
     "links": [113]
   },
   {
@@ -731,11 +731,11 @@
   {
     "entryID": 115,
     "actorID": "MC8",
-    "text": "「謝謝你哦，但看來是失敗了。」",
+    "text": "「多謝表哥賣力，只可惜…還是砸了。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=6);",
     "Conditions": "IsPassDice()  == false",
-    "zh_TW": "「謝謝你哦，但看來是失敗了。」",
-    "zh_CN": "「谢谢你哦，但看来是失败了。」",
+    "zh_TW": "「多謝表哥賣力，只可惜…還是砸了。」",
+    "zh_CN": "「多谢表哥卖力，只可惜…还是砸了。」",
     "links": [15]
   },
   {
@@ -748,19 +748,19 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
-    "text": "「...」",
+    "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "zh_TW": "「...」",
-    "zh_CN": "「...」",
+    "zh_TW": "「…」",
+    "zh_CN": "「…」",
     "links": [116]
   },
   {
     "entryID": 2050,
     "actorID": "MC1",
-    "text": "「...」",
+    "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "zh_TW": "「...」",
-    "zh_CN": "「...」",
+    "zh_TW": "「…」",
+    "zh_CN": "「…」",
     "links": [1]
   },
   {

@@ -51,10 +51,10 @@
   {
     "entryID": 11,
     "actorID": "MC8",
-    "text": "「你是在跟誰說話啊...」",
+    "text": "「你是在跟誰說話啊…」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
-    "zh_TW": "「你是在跟誰說話啊...」",
-    "zh_CN": "「你是在跟谁说话啊...」",
+    "zh_TW": "「你是在跟誰說話啊…」",
+    "zh_CN": "「你是在跟谁说话啊…」",
     "links": [51]
   },
   {
@@ -107,10 +107,10 @@
   {
     "entryID": 18,
     "actorID": "MC8",
-    "text": "「(跺了跺腳)表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "text": "「[em7]跺了跺腳[/em7]表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
-    "zh_TW": "「(跺了跺腳)表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
-    "zh_CN": "「(跺了跺脚)表哥！你怎么老是这样！我们还有盘缠要赚，还有客栈要去呢！在这摆明就是闹鬼的地方睡觉，多危险啊！」",
+    "zh_TW": "「[em7]跺了跺腳[/em7]表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "zh_CN": "「[em7]跺了跺脚[/em7]表哥！你怎么老是这样！我们还有盘缠要赚，还有客栈要去呢！在这摆明就是闹鬼的地方睡觉，多危险啊！」",
     "links": [19]
   },
   {
@@ -175,12 +175,12 @@
   {
     "entryID": 27,
     "actorID": "MC1",
-    "text": "「（又是那個場景…那雙眼睛…不，不會的…）咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
+    "text": "「又是那個場景…那雙眼睛…不，不會的…咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
     "Sequence": "DisableCharacterExpression(1); \nSetPortrait(MC1,pic=11);\n EnableCharacterExpression(0,MC1-1_Pain,Pain);",
     "Script": "SetQuestState(\"CF07\", \"active\")\nSetQuestEntryState(\"CF07\", 1, \"success\");",
     "Description": "觸發白日夢任務",
-    "zh_TW": "「（又是那個場景…那雙眼睛…不，不會的…）咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
-    "zh_CN": "「（又是那个场景…那双眼睛…不，不会的…）咳…咳…没…没事！灵犀妳别担心，作了个有点刺激的梦罢了。」",
+    "zh_TW": "「又是那個場景…那雙眼睛…不，不會的…咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
+    "zh_CN": "「又是那个场景…那双眼睛…不，不会的…咳…咳…没…没事！灵犀你别担心，作了个凶险吓人的梦罢了。」",
     "links": [57]
   },
   {
@@ -270,19 +270,19 @@
   {
     "entryID": 47,
     "actorID": "MC8",
-    "text": "「好啦，好啦，你好煩哦...」",
+    "text": "「好啦，好啦，你好煩哦…」",
     "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(1);\nSetPortrait(MC8,pic=6);",
-    "zh_TW": "「好啦，好啦，你好煩哦...」",
-    "zh_CN": "「好啦，好啦，你好烦哦...」",
+    "zh_TW": "「好啦，好啦，你好煩哦…」",
+    "zh_CN": "「好啦，好啦，你好烦哦…」",
     "links": [103, 2053]
   },
   {
     "entryID": 51,
     "actorID": "MC1",
-    "text": "「...真是不可愛。」",
+    "text": "「…真是不可愛。」",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "zh_TW": "「...真是不可愛。」",
-    "zh_CN": "「...真是不可爱。」",
+    "zh_TW": "「…真是不可愛。」",
+    "zh_CN": "「…真是不可爱。」",
     "links": [102, 2055]
   },
   {
@@ -388,10 +388,10 @@
   {
     "entryID": 108,
     "actorID": "MC1",
-    "text": "...",
+    "text": "…",
     "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(LifeExp,10);",
-    "zh_TW": "...",
-    "zh_CN": "...",
+    "zh_TW": "…",
+    "zh_CN": "…",
     "links": [115, 118]
   },
   {
@@ -472,29 +472,29 @@
   {
     "entryID": 120,
     "actorID": "MC1",
-    "text": "「嗯，嗯，靈犀教訓的是！不過這免費的床鋪，偶爾體驗一下也不錯嘛，哈哈！走，賺錢去！」",
+    "text": "「嗯，嗯，靈犀教訓的是！不過這不要錢的床鋪，偶爾領略一番也不錯嘛，哈哈！走，賺錢去！」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);\nModifyData(Rest);\nShowNoviceTeaching(Rest);",
     "Description": "休息&教學",
-    "zh_TW": "「嗯，嗯，靈犀教訓的是！不過這免費的床鋪，偶爾體驗一下也不錯嘛，哈哈！走，賺錢去！」",
-    "zh_CN": "「嗯，嗯，灵犀教训的是！不过这免费的床铺，偶尔体验一下也不错嘛，哈哈！走，赚钱去！」",
+    "zh_TW": "「嗯，嗯，靈犀教訓的是！不過這不要錢的床鋪，偶爾領略一番也不錯嘛，哈哈！走，賺錢去！」",
+    "zh_CN": "「嗯，嗯，灵犀教训的是！不过这不要钱的床铺，偶尔领略一番也不错嘛，哈哈！走，赚钱去！」",
     "links": [101, 2054]
   },
   {
     "entryID": 2049,
     "actorID": "MC1",
-    "text": "「...」",
+    "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "zh_TW": "「...」",
-    "zh_CN": "「...」",
+    "zh_TW": "「…」",
+    "zh_CN": "「…」",
     "links": [14]
   },
   {
     "entryID": 2050,
     "actorID": "MC1",
-    "text": "「...」",
+    "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "zh_TW": "「...」",
-    "zh_CN": "「...」",
+    "zh_TW": "「…」",
+    "zh_CN": "「…」",
     "links": [1]
   },
   {
