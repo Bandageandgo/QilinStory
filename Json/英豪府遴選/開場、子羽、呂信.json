@@ -93,10 +93,10 @@
   {
     "entryID": 441,
     "actorID": "MC5",
-    "text": "[panel=4]真是的，兩個不讓人省心的傢伙。\n小兄弟不要緊吧，敢阻擋那兩人，膽識不俗啊。",
-    "Sequence": "SetPortrait(MC10,pic=1);",
-    "zh_TW": "[panel=4]真是的，兩個不讓人省心的傢伙。\n小兄弟不要緊吧，敢阻擋那兩人，膽識不俗啊。",
-    "zh_CN": "[panel=4]真是的，两个不让人省心的家伙。 \n小兄弟不要紧吧，敢阻挡那两人，胆识不俗啊。",
+    "text": "[panel=4]「真是的，兩個不讓人省心的傢伙。\n小兄弟不要緊吧，敢阻擋那兩人，膽識不俗啊。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=4]「真是的，兩個不讓人省心的傢伙。\n小兄弟不要緊吧，敢阻擋那兩人，膽識不俗啊。」",
+    "zh_CN": "[panel=4]「真是的，两个不让人省心的家伙。 \n小兄弟不要紧吧，敢阻挡那两人，胆识不俗啊。」",
     "links": [442]
   },
   {
@@ -112,7 +112,7 @@
     "entryID": 443,
     "actorID": "MC5",
     "text": "[panel=4]「哈哈！那又何妨。天下就該多些你這種血性。我看好你，好好努力通過試驗吧。」",
-    "Sequence": "SetPortrait(MC10,pic=1);\nModifyData(FavorabilityExp,MC5,100);",
+    "Sequence": "SetPortrait(MC5,pic=1);\nModifyData(FavorabilityExp,MC5,100);",
     "Description": "獲得好感",
     "zh_TW": "[panel=4]「哈哈！那又何妨。天下就該多些你這種血性。我看好你，好好努力通過試驗吧。」",
     "zh_CN": "[panel=4]「哈哈！那又何妨。天下就该多些你这种血性。我看好你，好好努力通过试验吧。」",
@@ -167,7 +167,7 @@
     "entryID": 449,
     "actorID": "MC4",
     "text": "[panel=4]「那邊的小夥子，你能看清當下形勢，\n不衝動妄為，是個可造之材。」",
-    "Sequence": "SetPortrait(MC11,pic=1);",
+    "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=4]「那邊的小夥子，你能看清當下形勢，\n不衝動妄為，是個可造之材。」",
     "zh_CN": "[panel=4]「那边的小伙子，你能看清当下形势，\n不冲动妄为，是个可造之材。」",
     "links": [450]
@@ -202,10 +202,10 @@
   {
     "entryID": 455,
     "actorID": "MC4",
-    "text": "[panel=4]都進去吧，馬上就要說明遴選了。",
-    "Sequence": "SetPortrait(MC11,pic=3);",
-    "zh_TW": "[panel=4]都進去吧，馬上就要說明遴選了。",
-    "zh_CN": "[panel=4]都进去吧，马上就要说明遴选了。",
+    "text": "[panel=4]「都進去吧，馬上就要說明遴選了。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=4]「都進去吧，馬上就要說明遴選了。」",
+    "zh_CN": "[panel=4]「都进去吧，马上就要说明遴选了。」",
     "links": [457]
   },
   {
@@ -220,10 +220,10 @@
   {
     "entryID": 457,
     "actorID": "role2",
-    "text": "[panel=5]子羽稍微致意，便拖著呂信入內。",
+    "text": "[panel=6]＊（子羽稍微致意，便拖著呂信入內。）＊",
     "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
-    "zh_TW": "[panel=5]子羽稍微致意，便拖著呂信入內。",
-    "zh_CN": "[panel=5]子羽稍微致意，便拖着吕信入内。",
+    "zh_TW": "[panel=6]＊（子羽稍微致意，便拖著呂信入內。）＊",
+    "zh_CN": "[panel=6]＊（子羽稍微致意，便拖着吕信入内。）＊",
     "links": [449]
   },
   {
@@ -500,7 +500,7 @@
     "entryID": 516,
     "actorID": "MC5",
     "text": "[panel=4]「兩個混帳！平常就算了，今日什麼場合，有你們這樣胡鬧！」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nSetPortrait(MC10,pic=2);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nSetPortrait(MC5,pic=2);",
     "zh_TW": "[panel=4]「兩個混帳！平常就算了，今日什麼場合，有你們這樣胡鬧！」",
     "zh_CN": "[panel=4]「两个混帐！平常就算了，今日什么场合，有你们这样胡闹！」",
     "links": [517]
@@ -536,7 +536,7 @@
     "entryID": 520,
     "actorID": "MC4",
     "text": "[panel=4]「行了，都進去吧，\n馬上就要說明遴選了。」",
-    "Sequence": "SetPortrait(MC11,pic=3);\nSetPortrait(MC1,pic=3);",
+    "Sequence": "SetPortrait(MC4,pic=3);\nSetPortrait(MC1,pic=3);",
     "zh_TW": "[panel=4]「行了，都進去吧，\n馬上就要說明遴選了。」",
     "zh_CN": "[panel=4]「行了，都进去吧，\n马上就要说明遴选了。」",
     "links": [521]
@@ -554,7 +554,7 @@
     "entryID": 522,
     "actorID": "MC5",
     "text": "[panel=4]「真是的，兩個不讓人省心的傢伙……\n不過這位小兄弟不簡單啊。」",
-    "Sequence": "SetPortrait(MC10,pic=1);\nModifyData(FavorabilityExp,MC5,100);",
+    "Sequence": "SetPortrait(MC5,pic=1);\nModifyData(FavorabilityExp,MC5,100);",
     "Description": "獲得好感",
     "zh_TW": "[panel=4]「真是的，兩個不讓人省心的傢伙……\n不過這位小兄弟不簡單啊。」",
     "zh_CN": "[panel=4]「真是的，两个不让人省心的家伙……\n不过这位小兄弟不简单啊。」",
@@ -564,7 +564,7 @@
     "entryID": 523,
     "actorID": "MC4",
     "text": "[panel=4]「呵，成竹在胸，看來本府將有曠世奇才了。好生努力，我們會在英豪府等你。」",
-    "Sequence": "SetPortrait(MC11,pic=1);\nDisableCharacterExpression(0);\nModifyData(FavorabilityExp,MC4,100);",
+    "Sequence": "SetPortrait(MC4,pic=1);\nDisableCharacterExpression(0);\nModifyData(FavorabilityExp,MC4,100);",
     "Description": "獲得好感",
     "zh_TW": "[panel=4]「呵，成竹在胸，看來本府將有曠世奇才了。好生努力，我們會在英豪府等你。」",
     "zh_CN": "[panel=4]「呵，成竹在胸，看来本府将有旷世奇才了。好生努力，我们会在英豪府等你。」",
@@ -1019,10 +1019,10 @@
   {
     "entryID": 4063,
     "actorID": "MC2",
-    "text": "「[em7]你正欲開口，呂信卻笑著擺了擺手打斷並說道[/em7]:行了，裡頭到底是什麼鬼東西，你自己心裡有數就好。」",
+    "text": "「[em7]你正欲開口，呂信卻笑著擺了擺手打斷並說道[/em7]：行了，裡頭到底是什麼鬼東西，你自己心裡有數就好。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "「[em7]你正欲開口，呂信卻笑著擺了擺手打斷並說道[/em7]:行了，裡頭到底是什麼鬼東西，你自己心裡有數就好。」",
-    "zh_CN": "「[em7]你正欲开口，吕信却笑着摆了摆手打断并说道[/em7]:行了，里头到底是什么鬼东西，你自己心里有数就好。」",
+    "zh_TW": "「[em7]你正欲開口，呂信卻笑著擺了擺手打斷並說道[/em7]：行了，裡頭到底是什麼鬼東西，你自己心裡有數就好。」",
+    "zh_CN": "「[em7]你正欲开口，吕信却笑着摆了摆手打断并说道[/em7]：行了，里头到底是什么鬼东西，你自己心里有数就好。」",
     "links": [4064]
   },
   {
@@ -1037,12 +1037,12 @@
   {
     "entryID": 4065,
     "actorID": "MC22",
-    "text": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]:說到喝酒，本姑娘這裡正好有壇好東西！這可是我們在吉祥賭場，從褚人飛那傢伙手裡贏來的好東西！就當作是謝你剛剛幫忙解圍的謝禮啦！」",
+    "text": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]：說到喝酒，本姑娘這裡正好有壇好東西！這可是我們在吉祥賭場，從褚人飛那傢伙手裡贏來的好東西！就當作是謝你剛剛幫忙解圍的謝禮啦！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
     "Conditions": "IsValuablesObtained(\"Player\", \"FireWine\")  == true",
     "Description": "有火酒",
-    "zh_TW": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]:說到喝酒，本姑娘這裡正好有壇好東西！這可是我們在吉祥賭場，從褚人飛那傢伙手裡贏來的好東西！就當作是謝你剛剛幫忙解圍的謝禮啦！」",
-    "zh_CN": "[panel=2]「[em7]赶紧掏出一个酒囊，得意地晃了晃，道[/em7]:说到喝酒，本姑娘这里正好有坛好东西！这可是我们在吉祥赌场，从褚人飞那家伙手里赢来的好东西！就当作是谢你刚刚帮忙解围的谢礼啦！」",
+    "zh_TW": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]：說到喝酒，本姑娘這裡正好有壇好東西！這可是我們在吉祥賭場，從褚人飛那傢伙手裡贏來的好東西！就當作是謝你剛剛幫忙解圍的謝禮啦！」",
+    "zh_CN": "[panel=2]「[em7]赶紧掏出一个酒囊，得意地晃了晃，道[/em7]：说到喝酒，本姑娘这里正好有坛好东西！这可是我们在吉祥赌场，从褚人飞那家伙手里赢来的好东西！就当作是谢你刚刚帮忙解围的谢礼啦！」",
     "links": [4066]
   },
   {

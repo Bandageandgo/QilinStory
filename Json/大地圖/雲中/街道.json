@@ -168,9 +168,9 @@
   {
     "entryID": 23,
     "actorID": "MC1",
-    "text": "「說人話。」",
+    "text": "「有話直說。」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "zh_CN": "「说人话。」",
+    "zh_CN": "「有话直说。」",
     "links": [24]
   },
   {
@@ -1338,20 +1338,20 @@
   {
     "entryID": 4148,
     "actorID": "role2",
-    "text": "「[panel=6]＊（看著眼前這個死要面子、得了便宜還賣乖的丫頭，你嘆了口氣，感覺自己未來的旅途注定是不會無聊了。）＊」",
+    "text": "[panel=6]＊（看著眼前這個死要面子、得了便宜還賣乖的丫頭，你嘆了口氣，感覺自己未來的旅途注定是不會無聊了。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_TW": "「[panel=6]＊（看著眼前這個死要面子、得了便宜還賣乖的丫頭，你嘆了口氣，感覺自己未來的旅途注定是不會無聊了。）＊」",
-    "zh_CN": "「[panel=6]＊（看着眼前这个死要面子、得了便宜还卖乖的丫头，你叹了口气，感觉自己未来的旅途注定是不会无聊了。）＊」",
+    "zh_TW": "[panel=6]＊（看著眼前這個死要面子、得了便宜還賣乖的丫頭，你嘆了口氣，感覺自己未來的旅途注定是不會無聊了。）＊",
+    "zh_CN": "[panel=6]＊（看着眼前这个死要面子、得了便宜还卖乖的丫头，你叹了口气，感觉自己未来的旅途注定是不会无聊了。）＊",
     "links": [4149]
   },
   {
     "entryID": 4149,
     "actorID": "role2",
-    "text": "「[panel=6]＊（赫連娜娜加入隊伍。）＊」",
+    "text": "[panel=6]＊（赫連娜娜加入隊伍。）＊",
     "Sequence": "ModifyData(IsAbleToJoinTeam,MC22,true);\nModifyData(IsInTeam,MC22,true);\nModifyData(Valuable,Player,DesertBlade,1);\nModifyData(Valuable,Player,RingPommelSaber,1);\nModifyData(Valuable,Player,EagleBow,1);\nShowNoviceTeaching(SpellTao);",
     "Description": "娜娜加入隊伍、獲得風沙掠影秘笈",
-    "zh_TW": "「[panel=6]＊（赫連娜娜加入隊伍。）＊」",
-    "zh_CN": "「[panel=6]＊（赫连娜娜加入队伍。）＊」",
+    "zh_TW": "[panel=6]＊（赫連娜娜加入隊伍。）＊",
+    "zh_CN": "[panel=6]＊（赫连娜娜加入队伍。）＊",
     "links": [29]
   },
   {
