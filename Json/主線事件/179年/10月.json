@@ -1,0 +1,336 @@
+[
+  {
+    "entryID": 2160,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雲中的客棧房間比小溪村寬敞些，可小犀第一件事仍是把帳冊攤開，在扉頁補了兩個字——[em2]雲中[/em2]。）＊",
+    "Sequence": "EnableDialogueBG(Home);",
+    "Description": "蕭靈犀的野望2",
+    "zh_CN": "[panel=6]＊（云中的客栈房间比小溪村宽敞些，可小犀第一件事仍是​​把帐册摊开，在扉页补了两个字——[em2]云中[/em2]。）＊",
+    "links": [2161]
+  },
+  {
+    "entryID": 2161,
+    "actorID": "MC8",
+    "text": "「表哥，雲中這麼多過路客，不擴張生意太可惜啦！走，去街上找找機會！」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nEnableCharacterExpression(1,MC8,Surprise_2);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);",
+    "Description": "蕭靈犀主題曲",
+    "zh_CN": "「表哥，云中这么多过路客，不扩张生意太可惜啦！走，去街上找找机会！」",
+    "links": [2162]
+  },
+  {
+    "entryID": 2162,
+    "actorID": "MC1",
+    "text": "「妳這掌櫃當上癮了是吧……」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「妳这掌柜当上瘾了是吧……」",
+    "links": [2163]
+  },
+  {
+    "entryID": 2163,
+    "actorID": "MC8",
+    "text": "「掌櫃才賺錢呢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
+    "zh_CN": "「掌柜才赚钱呢！」",
+    "links": [2201]
+  },
+  {
+    "entryID": 2164,
+    "actorID": "role2",
+    "text": "[panel=6]＊（巷子中。來自波斯的商人阿莎在攤位旁拴著一峰駱駝，毛色油亮；攤上還掛了件[em2]貂裘[/em2]，在雲中的山風裡格外扎眼。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nEnableDialogueBG(Yunzhong);",
+    "zh_CN": "[panel=6]＊（巷子中。来自波斯的商人阿莎在摊位旁拴着一峰骆驼，毛色油亮；摊上还挂了件[em2]貂裘[/em2]，在云中的山风里格外扎眼。）＊",
+    "links": [2165]
+  },
+  {
+    "entryID": 2165,
+    "actorID": "MC19",
+    "text": "[panel=1]「喲，小妹妹又來啦。這回不是只看琉璃珠了吧？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "[panel=1]「哟，小妹妹又来啦。这回不是只看琉璃珠了吧？」",
+    "links": [2166]
+  },
+  {
+    "entryID": 2166,
+    "actorID": "MC8",
+    "text": "[panel=2]「阿莎姐姐，您西域商道上來回，攤上這件貂裘、還有駱駝絨，雲中可沒幾家見得著。」",
+    "Sequence": "SetPortrait(MC8,pic=1);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「阿莎姐姐，您西域商道上来回，摊上这件貂裘、还有骆驼绒，云中可没几家见得着。」",
+    "links": [2194]
+  },
+  {
+    "entryID": 2167,
+    "actorID": "MC19",
+    "text": "[panel=1]「小掌櫃，嘴倒是甜。成，貂裘和幾樣西域稀罕貨，先交你過手。賣了二八分——我八，你二。駱駝嘛……」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=1]「小掌柜，嘴倒是甜。成，貂裘和几样西域稀罕货，先交你过手。卖了二八分——我八，你二。骆驼嘛……」",
+    "links": [2168]
+  },
+  {
+    "entryID": 2168,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她拍了拍駱駝的頸毛。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她拍了拍骆驼的颈毛。）＊",
+    "links": [2169]
+  },
+  {
+    "entryID": 2169,
+    "actorID": "MC19",
+    "text": "[panel=1]「畜生哪能住客棧。絨與駝鈴、鞍辦小件，倒可以記在你帳上發賣。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「畜生哪能住客栈。绒与驼铃、鞍办小件，倒可以记在你帐上发卖。」",
+    "links": [2170]
+  },
+  {
+    "entryID": 2170,
+    "actorID": "MC8",
+    "text": "[panel=2]「駱駝絨、駝鈴……入帳！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_CN": "[panel=2]「骆驼绒、驼铃……入帐！」",
+    "links": [2171]
+  },
+  {
+    "entryID": 2171,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,EconomicDevelopmentCheck,6);",
+    "links": [2172]
+  },
+  {
+    "entryID": 2172,
+    "actorID": "MC8",
+    "text": "[panel=2]「阿莎姐姐，小犀幫您吆喝、記帳、跑腿，三七分好不好？您七，小犀三！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「阿莎姐姐，小犀帮您吆喝、记帐、跑腿，三七分好不好？您七，小犀三！」",
+    "links": [2173, 2174]
+  },
+  {
+    "entryID": 2173,
+    "actorID": "MC19",
+    "text": "[panel=1]「……小滑頭。三七便三七。」",
+    "Sequence": ";DisableCharacterExpression(2);ModifyData(FeatExp,Player,EconomicDevelopment,10);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "[panel=1]「……小滑头。三七便三七。」",
+    "links": [2176]
+  },
+  {
+    "entryID": 2174,
+    "actorID": "MC8",
+    "text": "[panel=2]「那、那二八分也好……小犀一定幫您賣得妥妥的！」",
+    "Sequence": "SetPortrait(MC8,pic=13);EnableCharacterExpression(2,MC8,Meditate);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "[panel=2]「那、那二八分也好……小犀一定帮您卖得妥妥的！」",
+    "links": [2175]
+  },
+  {
+    "entryID": 2175,
+    "actorID": "MC19",
+    "text": "[panel=1]「呵呵，二八，不變。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=1]「呵呵，二八，不变。」",
+    "links": [2176]
+  },
+  {
+    "entryID": 2176,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(2);\nContinue();",
+    "links": [2193]
+  },
+  {
+    "entryID": 2177,
+    "actorID": "role131",
+    "text": "「[em2]寶劍[/em2]、[em2]百辟刀[/em2]、[em2]大刀[/em2]、[em2]三丈矛[/em2]……每樣都是精品，可堆著挺占地方！」",
+    "Sequence": "",
+    "zh_CN": "「[em2]宝剑[/em2]、[em2]百辟刀[/em2]、[em2]大刀[/em2]、[em2]三丈矛[/em2]……每样都是精品，可堆着挺占地方！」",
+    "links": [2178]
+  },
+  {
+    "entryID": 2178,
+    "actorID": "MC8",
+    "text": "[panel=2]「蒲伯伯，牆上這幾柄，件件都是精品，辱不了您的錘。」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nEnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「蒲伯伯，墙上这几柄，件件都是精品，辱不了您的锤。」",
+    "links": [2199]
+  },
+  {
+    "entryID": 2179,
+    "actorID": "role131",
+    "text": "「小丫頭嘴快。……成，挑幾件[em2]不砸招牌[/em2]的交你。賣了再來跟我分帳，別標太賤，辱了我的錘。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "「小丫头嘴快。……成，挑几件[em2]不砸招牌[/em2]的交你。卖了再来跟我分帐，别标太贱，辱了我的锤。」",
+    "links": [2180]
+  },
+  {
+    "entryID": 2180,
+    "actorID": "MC8",
+    "text": "[panel=2]「小犀懂！精品嘛，價錢也要配得起！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「小犀懂！精品嘛，价钱也要配得起！」",
+    "links": [2196]
+  },
+  {
+    "entryID": 2181,
+    "actorID": "role2",
+    "text": "[panel=6]＊（英豪府藥房外。張寧正指揮雜役搬運藥箱，嘴裡還在數藥材名。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nEnableDialogueBG(Houses_ChivalrousDoctor);",
+    "zh_CN": "[panel=6]＊（英豪府药房外。张宁正指挥杂役搬运药箱，嘴里还在数药材名。）＊",
+    "links": [2182]
+  },
+  {
+    "entryID": 2182,
+    "actorID": "MC6",
+    "text": "「三七、柴胡、當歸……英豪府這幾個月採買的[em2]藥材[/em2]堆成山，[em2]藥品[/em2]也配了一批備用。過路客有病找不到人，還得來煩我。」",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_CN": "「三七、柴胡、当归……英豪府这几个月采买的[em2]药材[/em2]堆成山，[em2]药品[/em2]也配了一批备用。过路客有病找不到人，还得来烦我。」",
+    "links": [2183]
+  },
+  {
+    "entryID": 2183,
+    "actorID": "MC8",
+    "text": "[panel=2]「寧兒姐姐，小犀在客棧做小棧生意！常備的藥材、成品的藥品，挑些托我代發，誰急用誰買，省得都擠來藥房。」",
+    "Sequence": "SetPortrait(MC8,pic=1);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「宁儿姐姐，小犀在客栈做小栈生意！常备的药材、成品的药品，挑些托我代发，谁急用谁买，省得都挤来药房。」",
+    "links": [2184]
+  },
+  {
+    "entryID": 2184,
+    "actorID": "MC6",
+    "text": "「你這丫頭，帳算得還真精。那尋常藥材和幾種成品藥，交你發賣。但別亂標價。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC6,pic=1);;",
+    "zh_CN": "「你这丫头，账算得还真精。那寻常药材和几种成品药，交你发卖。但别乱标价。」",
+    "links": [2185]
+  },
+  {
+    "entryID": 2185,
+    "actorID": "MC8",
+    "text": "[panel=2]「放心！小犀記帳比抓青蛙還清楚！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「放心！小犀记帐比抓青蛙还清楚！」",
+    "links": [2186]
+  },
+  {
+    "entryID": 2186,
+    "actorID": "MC6",
+    "text": "「……哪來的青蛙。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC6,pic=4);;",
+    "zh_CN": "「……哪来的青蛙。」",
+    "links": [2197]
+  },
+  {
+    "entryID": 2187,
+    "actorID": "role2",
+    "text": "[panel=6]＊（日落，客棧房間。貨物中又添了貂皮、兵架、藥箱；帳冊厚了一截。）＊",
+    "Sequence": "EnableDialogueBG(Lnn);",
+    "zh_CN": "[panel=6]＊（日落，客栈房间。货物中又添了貂皮、兵架、药箱；帐册厚了一截。）＊",
+    "links": [2188]
+  },
+  {
+    "entryID": 2188,
+    "actorID": "MC8",
+    "text": "「阿莎姐姐的稀罕物、蒲伯伯的精品兵器、寧兒姐姐的藥材藥品……[em2]雲中這攤，開張啦[/em2]！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「阿莎姐姐的稀罕物、蒲伯伯的精品兵器、宁儿姐姐的药材药品……[em2]云中这摊，开张啦[/em2]！」",
+    "links": [2189]
+  },
+  {
+    "entryID": 2189,
+    "actorID": "MC1",
+    "text": "「這麼多貨物真能賣完嗎？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「这么多货物真能卖完吗？」",
+    "links": [2190]
+  },
+  {
+    "entryID": 2190,
+    "actorID": "MC8",
+    "text": "「別擔心，等遴選完了，小犀還要請更多行商來托貨呢！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Idea);",
+    "zh_CN": "「别担心，等遴选完了，小犀还要请更多行商来托货呢！」",
+    "links": [2191]
+  },
+  {
+    "entryID": 2191,
+    "actorID": "role2",
+    "text": "[panel=6]＊（英豪府遴選尚遠，可這個小姑娘已在雲中搭好了第二個據點——行商的路，又長了一截。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nShop(AddItem,MC8,Camel,1);\nShop(AddItem,MC8,MinkCoat,1);\nShop(AddItem,MC8,TreasuredSword,3);\nShop(AddItem,MC8,HundredRefugeBlade,3);\nShop(AddItem,MC8,BroadBlade,1);\nShop(AddItem,MC8,NineMeterSpear,3);\nShop(AddItem,MC8,HealingPotion,30);\nShop(AddItem,MC8,QiReplenishingPill,10);\nShop(AddItem,MC8,SwiftnessPill,5);\nShop(AddItem,MC8,VioletHerb,20);\nShop(AddItem,MC8,SpiritNourishingLeaf,20);\nShop(AddItem,MC8,DetoxRoot,20);\nShop(AddItem,MC8,BloodActivatingFlower,20);",
+    "Description": "商品更新",
+    "zh_CN": "[panel=6]＊（英豪府遴选尚远，可这个小姑娘已在云中搭好了第二个据点——行商的路，又长了一截。）＊",
+    "links": [2198]
+  },
+  {
+    "entryID": 2192,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nContinue()@1;\nOpenPanel(1, close);\nDisableDialogueBG();",
+    "links": [2164]
+  },
+  {
+    "entryID": 2193,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nContinue()@1;\nDisableDialogueBG();",
+    "links": [2195]
+  },
+  {
+    "entryID": 2194,
+    "actorID": "MC8",
+    "text": "[panel=2]「您這貂裘、駱駝絨……雲中江湖人就好這口別處沒有的，壓在商隊裡多可惜，交幾件給小犀試試嘛？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「您这貂裘、骆驼绒……云中江湖人就好这口别处没有的，压在商队里多可惜，交几件给小犀试试嘛？」",
+    "links": [2167]
+  },
+  {
+    "entryID": 2195,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蒲元的隱密工坊。爐火未熄，牆上掛著幾柄剛出爐的兵器。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nEnableDialogueBG(Shop_Small);",
+    "zh_CN": "[panel=6]＊（蒲元的隐密工坊。炉火未熄，墙上挂着几柄刚出炉的兵器。）＊",
+    "links": [2177]
+  },
+  {
+    "entryID": 2196,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nContinue()@1;\nDisableDialogueBG();",
+    "links": [2181]
+  },
+  {
+    "entryID": 2197,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nOpenPanel(2, close);\nContinue()@1;\nDisableDialogueBG();",
+    "links": [2187]
+  },
+  {
+    "entryID": 2198,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 2199,
+    "actorID": "MC8",
+    "text": "[panel=2]「您方才也說了——堆在工坊裡確實可惜。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "zh_CN": "[panel=2]「您方才也说了——堆在工坊里确实可惜。」",
+    "links": [2200]
+  },
+  {
+    "entryID": 2200,
+    "actorID": "MC8",
+    "text": "[panel=2]「剛好小犀在客棧嘛！遴選前來雲中的江湖人，最肯為好兵器掏錢——咱們客棧人來人往，誰有貨、誰要貨，小犀幫您牽個線。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「刚好小犀在客栈嘛！遴选前来云中的江湖人，最肯为好兵器掏钱——咱们客栈人来人往，谁有货、谁要货，小犀帮您牵个线。」",
+    "links": [2179]
+  },
+  {
+    "entryID": 2201,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她撕下點蛙簿空白頁折成小帳冊，拉著你出門。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她撕下点蛙簿空白页折成小帐册，拉着你出门。）＊",
+    "links": [2192]
+  }
+]

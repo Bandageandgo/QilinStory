@@ -1,0 +1,554 @@
+[
+  {
+    "entryID": 65,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你來到後山，卻見童淵並未練槍，而是一臉苦惱地撫摸著他的槍桿，不住地嘆氣。）＊",
+    "Sequence": "EnableDialogueBG(TrainingGround);\nSetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "播放音樂",
+    "zh_TW": "[panel=6]＊（你來到後山，卻見童淵並未練槍，而是一臉苦惱地撫摸著他的槍桿，不住地嘆氣。）＊",
+    "zh_CN": "[panel=6]＊（你来到后山，却见童渊并未练枪，而是一脸苦恼地抚摸着他的枪杆，不住地叹气。）＊",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC1",
+    "text": "「童大哥，今日怎麼不練槍了？看你眉頭深鎖，莫非是遇上什麼難事？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「童大哥，今日怎麼不練槍了？看你眉頭深鎖，莫非是遇上什麼難事？」",
+    "zh_CN": "「童大哥，今日怎么不练枪了？看你眉头深锁，莫非是遇上什么难事？」",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "role73",
+    "text": "「唉，跟你說吧。我這桿槍，跟隨我多年，但在之前與你切磋時，用力過猛。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「唉，跟你說吧。我這桿槍，跟隨我多年，但在之前與你切磋時，用力過猛。」",
+    "zh_CN": "「唉，跟你说吧。我这杆枪，跟随我多年，但在之前与你切磋时，用力过猛。」",
+    "links": [81]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC8",
+    "text": "[panel=2]「這麼嚴重？那可怎麼辦？這村子裡也沒個像樣的鐵匠鋪能修吧？」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Question);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=2]「這麼嚴重？那可怎麼辦？這村子裡也沒個像樣的鐵匠鋪能修吧？」",
+    "zh_CN": "[panel=2]「这么严重？那可怎么办？这村子里也没个像样的铁匠铺能修吧？」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "role73",
+    "text": "「正是如此。我訪遍了村子，也沒找到合適的材料。不過，村裡的張老木匠告訴我，村後林子深處，生長著一種[em2]百年鐵木[/em2]。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "「正是如此。我訪遍了村子，也沒找到合適的材料。不過，村裡的張老木匠告訴我，村後林子深處，生長著一種[em2]百年鐵木[/em2]。」",
+    "zh_CN": "「正是如此。我访遍了村子，也没找到合适的材料。不过，村里的张老木匠告诉我，村后林子深处，生长着一种[em2]百年铁木[/em2]。」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "role73",
+    "text": "「質地堅逾鋼鐵，韌性又極佳，是製作和修補槍桿的上上之選。只是或許是沒有緣分吧，我找了好幾日也未見張老木匠口中的鐵木。」",
+    "Sequence": "",
+    "zh_TW": "「質地堅逾鋼鐵，韌性又極佳，是製作和修補槍桿的上上之選。只是或許是沒有緣分吧，我找了好幾日也未見張老木匠口中的鐵木。」",
+    "zh_CN": "「质地坚逾钢铁，韧性又极佳，是制作和修补枪杆的上上之选。只是或许是没有缘分吧，我找了好几日也未见张老木匠口中的铁木。」",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "",
+    "links": [72, 73]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "「童大哥莫急，我願為你走一趟，取來那鐵木！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「童大哥莫急，我願為你走一趟，取來那鐵木！」",
+    "zh_CN": "「童大哥莫急，我愿为你走一趟，取来那铁木！」",
+    "links": [74]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC1",
+    "text": "「聽起來太麻煩了，還是另想辦法吧。」",
+    "Sequence": "SetPortrait(MC1,pic=10);",
+    "zh_TW": "「聽起來太麻煩了，還是另想辦法吧。」",
+    "zh_CN": "「听起来太麻烦了，还是另想办法吧。」",
+    "links": [78]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「童兄莫急，我輩江湖中人，講究的就是一個[em2]義氣[/em2]！區區險地，何足掛齒！我願為你走一趟，取來那鐵木！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「童兄莫急，我輩江湖中人，講究的就是一個[em2]義氣[/em2]！區區險地，何足掛齒！我願為你走一趟，取來那鐵木！」",
+    "zh_CN": "「童兄莫急，我辈江湖中人，讲究的就是一个[em2]义气[/em2]！区区险地，何足挂齿！我愿为你走一趟，取来那铁木！」",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "role73",
+    "text": "「哦！[var=PlayerLastName]兄弟，你若真能替我取得那鐵木，老哥我定有重賞！」",
+    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC20,Idea);",
+    "zh_TW": "「哦！[var=PlayerLastName]兄弟，你若真能替我取得那鐵木，老哥我定有重賞！」",
+    "zh_CN": "「哦！[var=PlayerLastName]兄弟，你若真能替我取得那铁木，老哥我定有重赏！」",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你又逞英雄！不過…幫童大哥也是應該的，但一定要小心啊！童大哥，這謝儀嘛…」",
+    "Sequence": "SetPortrait(MC8,pic=6);EnableCharacterExpression(2,MC8,Meditate);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=2]「表哥，你又逞英雄！不過…幫童大哥也是應該的，但一定要小心啊！童大哥，這謝儀嘛…」",
+    "zh_CN": "[panel=2]「表哥，你又逞英雄！不过…帮童大哥也是应该的，但一定要小心啊！童大哥，这谢仪嘛…」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "role73",
+    "text": "[panel=1]「小姑娘放心，若真能尋來鐵木，謝儀絕不會少！如此，便拜託你了！這是鐵木的圖樣，它通常長在向陽的懸崖壁上，樹皮呈暗紅色，你多加留意。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "Script": "SetQuestState(\"C0F3\", \"active\")",
+    "zh_TW": "[panel=1]「小姑娘放心，若真能尋來鐵木，謝儀絕不會少！如此，便拜託你了！這是鐵木的圖樣，它通常長在向陽的懸崖壁上，樹皮呈暗紅色，你多加留意。」",
+    "zh_CN": "[panel=1]「小姑娘放心，若真能寻来铁木，谢仪绝不会少！如此，便拜托你了！这是铁木的图样，它通常长在向阳的悬崖壁上，树皮呈暗红色，你多加留意。」",
+    "links": [109]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC1",
+    "text": "「童兄，那地方聽起來太危險了，我們還是再想想別的辦法吧。」",
+    "Sequence": "SetPortrait(MC1,pic=10);",
+    "zh_TW": "「童兄，那地方聽起來太危險了，我們還是再想想別的辦法吧。」",
+    "zh_CN": "「童兄，那地方听起来太危险了，我们还是再想想别的办法吧。」",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "role73",
+    "text": "「唉…也罷，是我強人所難了。」",
+    "Sequence": "EnableCharacterExpression(1,NPC20,Meditate);",
+    "zh_TW": "「唉…也罷，是我強人所難了。」",
+    "zh_CN": "「唉…也罢，是我强人所难了。」",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=6]＊（童淵看起來興致不高，你也不好再打擾，只好先行離開。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nDisableDialogueBG();",
+    "zh_TW": "[panel=6]＊（童淵看起來興致不高，你也不好再打擾，只好先行離開。）＊",
+    "zh_CN": "[panel=6]＊（童渊看起来兴致不高，你也不好再打扰，只好先行离开。）＊",
+    "links": [111]
+  },
+  {
+    "entryID": 81,
+    "actorID": "role73",
+    "text": "「加上日夜苦練，槍桿上竟出現了一道細微的裂痕。雖不影響尋常使用，但若遇上真正的高手，恐怕會當場斷裂。」",
+    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC20,Nervous_2);",
+    "zh_TW": "「加上日夜苦練，槍桿上竟出現了一道細微的裂痕。雖不影響尋常使用，但若遇上真正的高手，恐怕會當場斷裂。」",
+    "zh_CN": "「加上日夜苦练，枪杆上竟出现了一道细微的裂痕。虽不影响寻常使用，但若遇上真正的高手，恐怕会当场断裂。」",
+    "links": [68]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC8",
+    "text": "「表哥，我們在這客棧也住了好幾天了，怎麼一次都沒見到那位[em2]一枝花老闆娘[/em2]啊？茶博士把她誇得跟天仙似的，該不會是吹牛的吧？」",
+    "Sequence": "EnableDialogueBG(Lnn);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Question);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,Others_Talking);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "播放音樂",
+    "zh_TW": "「表哥，我們在這客棧也住了好幾天了，怎麼一次都沒見到那位[em2]一枝花老闆娘[/em2]啊？茶博士把她誇得跟天仙似的，該不會是吹牛的吧？」",
+    "zh_CN": "「表哥，我们在这客栈也住了好几天了，怎么一次都没见到那位[em2]一枝花老板娘[/em2]啊？茶博士把她夸得跟天仙似的，该不会是吹牛的吧？」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC1",
+    "text": "「靈犀，稍安勿躁。所謂神龍見首不見尾，真正的高人都是如此，美人自然也不例外。說不定這位老闆娘正在考驗我們的誠意呢！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「靈犀，稍安勿躁。所謂神龍見首不見尾，真正的高人都是如此，美人自然也不例外。說不定這位老闆娘正在考驗我們的誠意呢！」",
+    "zh_CN": "「灵犀，稍安勿躁。所谓神龙见首不见尾，真正的高人都是如此，美人自然也不例外。说不定这位老板娘正在考验我们的诚意呢！」",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "role57",
+    "text": "[panel=1]「嘿，又來兩個打聽『一枝花』老闆娘的愣頭青。他們怕是還不知道老闆娘的規矩。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「嘿，又來兩個打聽『一枝花』老闆娘的愣頭青。他們怕是還不知道老闆娘的規矩。」",
+    "zh_CN": "[panel=1]「嘿，又来两个打听『一枝花』老板娘的愣头青。他们怕是还不知道老板娘的规矩。」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "role24",
+    "text": "[panel=4]「可不是嘛！想見老闆娘一面，那可不容易。聽說啊，老闆娘心情好時，偶爾會親自下廚做一道拿手絕活——『佳人笑』。那滋味，嘖嘖，吃過的人都說三日不忘！」",
+    "Sequence": "",
+    "zh_TW": "[panel=4]「可不是嘛！想見老闆娘一面，那可不容易。聽說啊，老闆娘心情好時，偶爾會親自下廚做一道拿手絕活——『佳人笑』。那滋味，嘖嘖，吃過的人都說三日不忘！」",
+    "zh_CN": "[panel=4]「可不是嘛！想见老板娘一面，那可不容易。听说啊，老板娘心情好时，偶尔会亲自下厨做一道拿手绝活——『佳人笑』。那滋味，啧啧，吃过的人都说三日不忘！」",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role57",
+    "text": "[panel=1]「何止三日不忘！聽說那『佳人笑』用料奇特，非有緣人不可得。而且啊，要吃到這道菜，還得看你合不合老闆娘的『眼緣』！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「何止三日不忘！聽說那『佳人笑』用料奇特，非有緣人不可得。而且啊，要吃到這道菜，還得看你合不合老闆娘的『眼緣』！」",
+    "zh_CN": "[panel=1]「何止三日不忘！听说那『佳人笑』用料奇特，非有缘人不可得。而且啊，要吃到这道菜，还得看你合不合老板娘的『眼缘』！」",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，他們在說老闆娘的菜！[em2]佳人笑[/em2]？聽起來好厲害的樣子！不過什麼叫[em2]眼緣[/em2]啊？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「表哥，他們在說老闆娘的菜！[em2]佳人笑[/em2]？聽起來好厲害的樣子！不過什麼叫[em2]眼緣[/em2]啊？」",
+    "zh_CN": "[panel=2]「表哥，他们在说老板娘的菜！[em2]佳人笑[/em2]？听起来好厉害的样子！不过什么叫[em2]眼缘[/em2]啊？」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC1",
+    "text": "「[em2]佳人笑…眼緣[/em2]…有意思。看來這位老闆娘確實不是等閒之輩。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "「[em2]佳人笑…眼緣[/em2]…有意思。看來這位老闆娘確實不是等閒之輩。」",
+    "zh_CN": "「[em2]佳人笑…眼缘[/em2]…有意思。看来这位老板娘确实不是等闲之辈。」",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「小二哥請留步，方才聽聞貴店老闆娘有一道名菜『佳人笑』，不知是何等佳餚？又要如何才能有幸品嚐？還有那所謂的『眼緣』，可否指點一二？」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「小二哥請留步，方才聽聞貴店老闆娘有一道名菜『佳人笑』，不知是何等佳餚？又要如何才能有幸品嚐？還有那所謂的『眼緣』，可否指點一二？」",
+    "zh_CN": "「小二哥请留步，方才听闻贵店老板娘有一道名菜『佳人笑』，不知是何等佳肴？又要如何才能有幸品尝？还有那所谓的『眼缘』，可否指点一二？」",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role115",
+    "text": "「客官小聲些！這『佳人笑』可是我們老闆娘的獨門秘方，等閒不輕易示人！至於『眼緣』嘛…小的也說不準，全憑老闆娘的心意。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「客官小聲些！這『佳人笑』可是我們老闆娘的獨門秘方，等閒不輕易示人！至於『眼緣』嘛…小的也說不準，全憑老闆娘的心意。」",
+    "zh_CN": "「客官小声些！这『佳人笑』可是我们老板娘的独门秘方，等闲不轻易示人！至于『眼缘』嘛…小的也说不准，全凭老板娘的心意。」",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role115",
+    "text": "「不過…小的倒是聽說，老闆娘似乎偏愛那些…嗯…[em2]有誠意的客人[/em2]。待時機成熟，小的或許能替您引薦一二。但成與不成，小的可不敢打包票！」",
+    "Sequence": "",
+    "zh_TW": "「不過…小的倒是聽說，老闆娘似乎偏愛那些…嗯…[em2]有誠意的客人[/em2]。待時機成熟，小的或許能替您引薦一二。但成與不成，小的可不敢打包票！」",
+    "zh_CN": "「不过…小的倒是听说，老板娘似乎偏爱那些…嗯…[em2]有诚意的客人[/em2]。待时机成熟，小的或许能替您引荐一二。但成与不成，小的可不敢打包票！」",
+    "links": [93, 96, 106]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「小二哥，關於老闆娘的喜好，還請再提點一二，日後必有重謝！」",
+    "Sequence": "",
+    "zh_TW": "[em2][口才檢定][/em2]「小二哥，關於老闆娘的喜好，還請再提點一二，日後必有重謝！」",
+    "zh_CN": "[em2][口才检定][/em2]「小二哥，关于老板娘的喜好，还请再提点一二，日后必有重谢！」",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「小二哥，我看你也是個爽快人，咱們投緣。關於老闆娘的喜好，還請再提點一二，日後必有重謝！」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_TW": "「小二哥，我看你也是個爽快人，咱們投緣。關於老闆娘的喜好，還請再提點一二，日後必有重謝！」",
+    "zh_CN": "「小二哥，我看你也是个爽快人，咱们投缘。关于老板娘的喜好，还请再提点一二，日后必有重谢！」",
+    "links": [98, 102]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC1",
+    "text": "[em2][花費50錢][/em2]「小二哥辛苦了，這點小意思不成敬意。」",
+    "Sequence": "",
+    "zh_TW": "[em2][花費50錢][/em2]「小二哥辛苦了，這點小意思不成敬意。」",
+    "zh_CN": "[em2][花费50钱][/em2]「小二哥辛苦了，这点小意思不成敬意。」",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "MC1",
+    "text": "「小二哥辛苦了，這點小意思不成敬意。還望告知一二老闆娘的喜好，也好讓我等有個準備。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=17);ModifyData(Coin,-50);",
+    "zh_TW": "「小二哥辛苦了，這點小意思不成敬意。還望告知一二老闆娘的喜好，也好讓我等有個準備。」",
+    "zh_CN": "「小二哥辛苦了，这点小意思不成敬意。还望告知一二老板娘的喜好，也好让我等有个准备。」",
+    "links": [103]
+  },
+  {
+    "entryID": 98,
+    "actorID": "role115",
+    "text": "「客官真是會說話！既然您這麼說了，小的就再多句嘴。我們老闆娘啊，最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC12,pic=5);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「客官真是會說話！既然您這麼說了，小的就再多句嘴。我們老闆娘啊，最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
+    "zh_CN": "「客官真是会说话！既然您这么说了，小的就再多句嘴。我们老板娘啊，最佩服的就是那些行侠仗义、有真本事的英雄好汉！她常说，江湖儿女，当快意恩仇，行大丈夫事！」",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "「英雄好漢…原來如此！多謝小二哥提點！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "zh_TW": "「英雄好漢…原來如此！多謝小二哥提點！」",
+    "zh_CN": "「英雄好汉…原来如此！多谢小二哥提点！」",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "role2",
+    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nDisableDialogueBG();",
+    "zh_TW": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
+    "zh_CN": "[panel=6]＊（原来这位一枝花老板娘钟情侠义之士！这倒是给你提了个醒，若想博其青睐，日后行事须把侠义二字放在心上，成算便多几分。）＊",
+    "links": [113]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「這樣啊…那好吧，不為難小二哥了。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_TW": "「這樣啊…那好吧，不為難小二哥了。」",
+    "zh_CN": "「这样啊…那好吧，不为难小二哥了。」",
+    "links": [108]
+  },
+  {
+    "entryID": 102,
+    "actorID": "role115",
+    "text": "「客官過獎了，也太看得起小的了。老闆娘的心思…小的實在是猜不透，也不敢妄言啊。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC12,pic=nervous);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「客官過獎了，也太看得起小的了。老闆娘的心思…小的實在是猜不透，也不敢妄言啊。」",
+    "zh_CN": "「客官过奖了，也太看得起小的了。老板娘的心思…小的实在是猜不透，也不敢妄言啊。」",
+    "links": [101]
+  },
+  {
+    "entryID": 103,
+    "actorID": "role115",
+    "text": "「哎喲，客官真是太客氣了！既然您如此有誠意，小的自然知無不言。不瞞您說，我們老闆娘啊，平日裡最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
+    "Sequence": "",
+    "zh_TW": "「哎喲，客官真是太客氣了！既然您如此有誠意，小的自然知無不言。不瞞您說，我們老闆娘啊，平日裡最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
+    "zh_CN": "「哎哟，客官真是太客气了！既然您如此有诚意，小的自然知无不言。不瞒您说，我们老板娘啊，平日里最佩服的就是那些行侠仗义、有真本事的英雄好汉！她常说，江湖儿女，当快意恩仇，行大丈夫事！」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "「[em2]英雄好漢[/em2]…原來如此！多謝小二哥提點！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "「[em2]英雄好漢[/em2]…原來如此！多謝小二哥提點！」",
+    "zh_CN": "「[em2]英雄好汉[/em2]…原来如此！多谢小二哥提点！」",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role2",
+    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情[em2]俠義之士[/em2]！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（原來這位一枝花老闆娘鍾情[em2]俠義之士[/em2]！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
+    "zh_CN": "[panel=6]＊（原来这位一枝花老板娘钟情[em2]侠义之士[/em2]！这倒是给你提了个醒，若想博其青睐，日后行事须把侠义二字放在心上，成算便多几分。）＊",
+    "links": [112]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "「多謝小二哥了，我再想想。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「多謝小二哥了，我再想想。」",
+    "zh_CN": "「多谢小二哥了，我再想想。」",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "role115",
+    "text": "「嘖！」",
+    "Sequence": "",
+    "zh_TW": "「嘖！」",
+    "zh_CN": "「啧！」",
+    "links": [93, 96]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC1",
+    "text": "[em2][花費50錢][/em2]「小二哥辛苦了，這點小意思不成敬意。」",
+    "Sequence": "ModifyData(Coin,MC1,-50);",
+    "zh_TW": "[em2][花費50錢][/em2]「小二哥辛苦了，這點小意思不成敬意。」",
+    "zh_CN": "[em2][花费50钱][/em2]「小二哥辛苦了，这点小意思不成敬意。」",
+    "links": [97]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC1",
+    "text": "「好的，那童兄等我的好消息！」",
+    "Sequence": "",
+    "zh_TW": "「好的，那童兄等我的好消息！」",
+    "zh_CN": "「好的，那童兄等我的好消息！」",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 111,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 112,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();Continue();",
+    "links": []
+  },
+  {
+    "entryID": 113,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();Continue();",
+    "links": []
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [83]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [65]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "role135",
+    "text": "「[em7]不理會你，自顧自地唱道[/em7]：打魚一世蓼兒洼，不種青苗不種麻；酷吏贓官都殺盡…罷！罷！！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「[em7]不理会你，自顾自地唱道[/em7]：打鱼一世蓼儿洼，不种青苗不种麻；酷吏赃官都杀尽…罢！罢！！」",
+    "links": [2085]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC8",
+    "text": "「[em7]撿起布袋，數了數，把銅錢悄悄推過來[/em7]：……表哥。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Meditate)@0.2;\nModifyData(Coin,500);",
+    "Description": "給錢",
+    "zh_CN": "「[em7]捡起布袋，数了数，把铜钱悄悄推过来[/em7]：……表哥。」",
+    "links": [2087]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "role2",
+    "text": "[panel=6]＊（活閻羅那一筆剛記進簿子，窗外便響了一聲蛙鳴。）＊",
+    "Sequence": "EnableDialogueBG(Home);",
+    "Description": "阮氏三兄弟",
+    "zh_CN": "[panel=6]＊（活阎罗那一笔刚记进簿子，窗外便响了一声蛙鸣。）＊",
+    "links": [2080]
+  },
+  {
+    "entryID": 2080,
+    "actorID": "role2",
+    "text": "[panel=6]＊（——三隻戴著不同小配件的青蛙排成一列，神氣十足地昂著頭。）＊",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nEnableEventBG(ThreeFrogBrother,FullScreen);",
+    "Description": "蕭靈犀主題曲，事件圖",
+    "zh_CN": "[panel=6]＊（——三只戴着不同小配件的青蛙排成一列，神气十足地昂着头。）＊",
+    "links": [2081]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "role135",
+    "text": "「呱哈哈！小子，算你辦事不拖泥帶水！爺的兩位兄弟都找齊了，這筆人情，我們兄弟記下了！」",
+    "Sequence": "",
+    "zh_CN": "「呱哈哈！小子，算你办事不拖泥带水！爷的两位兄弟都找齐了，这笔人情，我们兄弟记下了！」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥你看！三位都到齊了耶——好有排場喔！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「表哥你看！三位都到齐了耶——好有排场喔！」",
+    "links": [2083]
+  },
+  {
+    "entryID": 2083,
+    "actorID": "role135",
+    "text": "「[em7]咧開大嘴，笑道[/em7]：咱兄弟不怕天、不怕地，不怕官司；大碗吃酒、大塊吃肉。貪官污吏撞到爺們，掀個底朝天！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "「[em7]咧开大嘴，笑道[/em7]：咱兄弟不怕天、不怕地，不怕官司；大碗吃酒、大块吃肉。贪官污吏撞到爷们，掀个底朝天！」",
+    "links": [2084]
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC1",
+    "text": "「倒也是痛快。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);",
+    "zh_CN": "「倒也是痛快。」",
+    "links": [2070]
+  },
+  {
+    "entryID": 2085,
+    "actorID": "role2",
+    "text": "[panel=6]＊（「罷」字拖了一截，便戛然而止。一時之間，誰也沒接話。）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=6]＊（「罢」字拖了一截，便戛然而止。一时之间，谁也没接话。）＊",
+    "links": [2086]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "role2",
+    "text": "[panel=6]＊（半晌，他從帽下摸出一隻小布袋，擲到蕭靈犀腳邊。三蛙相視一眼，誰也沒再多說，一齊躍出窗外。）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);\nDisableEventBG(FullScreen);",
+    "Description": "關閉事件圖",
+    "zh_CN": "[panel=6]＊（半晌，他从帽下摸出一只小布袋，掷到萧灵犀脚边。三蛙相视一眼，谁也没再多说，一齐跃出窗外。）＊",
+    "links": [2072]
+  },
+  {
+    "entryID": 2087,
+    "actorID": "MC1",
+    "text": "「嗯。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nDisableCharacterExpression(1);",
+    "zh_CN": "「嗯。」",
+    "links": [2088]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蛙鳴漸遠。你應了一聲，沒再多問。方才叫到一半的調子，這會兒已經聽不清了。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestEntryState(\"CF35\", 1, \"success\");\nSetQuestState(\"CF35\", \"success\")",
+    "Description": "完成任務",
+    "zh_CN": "[panel=6]＊（蛙鸣渐远。你应了一声，没再多问。方才叫到一半的调子，这会儿已经听不清了。）＊",
+    "links": [2089]
+  },
+  {
+    "entryID": 2089,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  }
+]

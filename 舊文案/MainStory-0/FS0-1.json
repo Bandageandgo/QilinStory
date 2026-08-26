@@ -1,0 +1,978 @@
+[
+  {
+    "entryID": 189,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Relic);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"CF28\", 1) == \"active\"",
+    "links": [219]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC2",
+    "text": "嘿！來了啊，我可等很久了。\n那麼就準備考試吧。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "嘿！來了啊，我可等很久了。\n那麼就準備考試吧。",
+    "zh_CN": "嘿！来了啊，我可等很久了。 \n那么就准备考试吧。",
+    "links": [221]
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC2",
+    "text": "嗯……與其說是考試，不如說是我這未來師兄，\n提前教教你們一些生活門路。",
+    "Sequence": "",
+    "zh_TW": "嗯……與其說是考試，不如說是我這未來師兄，\n提前教教你們一些生活門路。",
+    "zh_CN": "嗯……与其说是考试，不如说是我这未来师兄，\n提前教教你们一些生活门路。",
+    "links": [222]
+  },
+  {
+    "entryID": 222,
+    "actorID": "role2",
+    "text": "[panel=5]呂信指了指身後遺跡。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]呂信指了指身後遺跡。",
+    "zh_CN": "[panel=5]吕信指了指身后遗迹。",
+    "links": [223]
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC2",
+    "text": "這遺跡據傳藏有一座古墓，但凡達官貴人死了，\n都要放些寶物陪葬，供死後享用。",
+    "Sequence": "",
+    "zh_TW": "這遺跡據傳藏有一座古墓，但凡達官貴人死了，\n都要放些寶物陪葬，供死後享用。",
+    "zh_CN": "这遗迹据传藏有一座古墓，但凡达官贵人死了，\n都要放些宝物陪葬，供死后享用。",
+    "links": [260]
+  },
+  {
+    "entryID": 224,
+    "actorID": "role2",
+    "text": "[panel=5]你們進入了遺跡，沿路火光昏暗，\n一段路程後，在你們面前是被刺木封住的路……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你們進入了遺跡，沿路火光昏暗，\n一段路程後，在你們面前是被刺木封住的路……",
+    "zh_CN": "[panel=5]你们进入了遗迹，沿路火光昏暗，\n一段路程后，在你们面前是被刺木封住的路……",
+    "links": [353]
+  },
+  {
+    "entryID": 228,
+    "actorID": "MC1",
+    "text": "2.[em1][武力][/em1]真麻煩，直接拆了就好。",
+    "Sequence": "BeginDiceRoll(Strength,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][武力][/em1]真麻煩，直接拆了就好。",
+    "zh_CN": "2.[em1][武力][/em1]真麻烦，直接拆了就好。",
+    "links": [231]
+  },
+  {
+    "entryID": 231,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [241, 245]
+  },
+  {
+    "entryID": 233,
+    "actorID": "role2",
+    "text": "[panel=5]當你破解機關瞬間，\n擋住前路的刺木盡數收入石壁中。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,SleightOfHand,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]當你破解機關瞬間，\n擋住前路的刺木盡數收入石壁中。",
+    "zh_CN": "[panel=5]当你破解机关瞬间，\n挡住前路的刺木尽数收入石壁中。",
+    "links": [234]
+  },
+  {
+    "entryID": 234,
+    "actorID": "MC2",
+    "text": "不錯喔，看來你也是幹這一行的料。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "不錯喔，看來你也是幹這一行的料。",
+    "zh_CN": "不错喔，看来你也是干这一行的料。",
+    "links": [235]
+  },
+  {
+    "entryID": 235,
+    "actorID": "MC1",
+    "text": "……我還真不知道這該高興，還是該難過……",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "……我還真不知道這該高興，還是該難過……",
+    "zh_CN": "……我还真不知道这该高兴，还是该难过……",
+    "links": [236]
+  },
+  {
+    "entryID": 236,
+    "actorID": "MC2",
+    "text": "別想那麼多了。\n繼續前進，我想終點就快到了。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "別想那麼多了。\n繼續前進，我想終點就快到了。",
+    "zh_CN": "别想那么多了。 \n继续前进，我想终点就快到了。",
+    "links": [259]
+  },
+  {
+    "entryID": 237,
+    "actorID": "role2",
+    "text": "[panel=5]你不慎觸動機關，頓時箭如雨下。\n呂信瞬間抓起你，帶你逃出生天……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]你不慎觸動機關，頓時箭如雨下。\n呂信瞬間抓起你，帶你逃出生天……",
+    "zh_CN": "[panel=5]你不慎触动机关，顿时箭如雨下。 \n吕信瞬间抓起你，带你逃出生天……",
+    "links": [238]
+  },
+  {
+    "entryID": 238,
+    "actorID": "MC2",
+    "text": "哈哈哈！\n真是好險啊，差點就沒命了。",
+    "Sequence": "SetPortrait(MC2,pic=1);\nSetPortrait(MC1,pic=8);",
+    "zh_TW": "哈哈哈！\n真是好險啊，差點就沒命了。",
+    "zh_CN": "哈哈哈！ \n真是好险啊，差点就没命了。",
+    "links": [239]
+  },
+  {
+    "entryID": 239,
+    "actorID": "MC2",
+    "text": "等你調整好狀態，再來找我重新挑戰吧。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Description": "離開任務",
+    "zh_TW": "等你調整好狀態，再來找我重新挑戰吧。",
+    "zh_CN": "等你调整好状态，再来找我重新挑战吧。",
+    "links": [294]
+  },
+  {
+    "entryID": 241,
+    "actorID": "role2",
+    "text": "[panel=5]你動武硬是拆出一條前路。\n儘管有觸動機關，但都被你化解掉了。",
+    "Sequence": "SetPortrait(MC1,pic=2);\nShowInstantMessage(Exp_FeatExp,MC1,Strength,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]你動武硬是拆出一條前路。\n儘管有觸動機關，但都被你化解掉了。",
+    "zh_CN": "[panel=5]你动武硬是拆出一条前路。 \n尽管有触动机关，但都被你化解掉了。",
+    "links": [242]
+  },
+  {
+    "entryID": 242,
+    "actorID": "MC2",
+    "text": "看不出你小子挺瘋的。\n可以啊，夠資格做我將來的師弟。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "看不出你小子挺瘋的。\n可以啊，夠資格做我將來的師弟。",
+    "zh_CN": "看不出你小子挺疯的。 \n可以啊，够资格做我将来的师弟。",
+    "links": [243]
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC1",
+    "text": "哪裡哪裡，我是猜假如換你，\n你可能也會這樣做。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "哪裡哪裡，我是猜假如換你，\n你可能也會這樣做。",
+    "zh_CN": "哪里哪里，我是猜假如换你，\n你可能也会这样做。",
+    "links": [244]
+  },
+  {
+    "entryID": 244,
+    "actorID": "MC2",
+    "text": "哈哈！說得好，就是要這股氣魄。\n繼續前進吧。我想終點就快到了。",
+    "Sequence": "",
+    "zh_TW": "哈哈！說得好，就是要這股氣魄。\n繼續前進吧。我想終點就快到了。",
+    "zh_CN": "哈哈！说得好，就是要这股气魄。 \n继续前进吧。我想终点就快到了。",
+    "links": [259]
+  },
+  {
+    "entryID": 245,
+    "actorID": "role2",
+    "text": "[panel=5]你打算拆路，結果觸動機關，\n頓時箭雨射出。幸好呂信連忙抓起你避開……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]你打算拆路，結果觸動機關，\n頓時箭雨射出。幸好呂信連忙抓起你避開……",
+    "zh_CN": "[panel=5]你打算拆路，结果触动机关，\n顿时箭雨射出。幸好吕信连忙抓起你避开……",
+    "links": [246]
+  },
+  {
+    "entryID": 246,
+    "actorID": "MC2",
+    "text": "喂！你要瘋，也看一下場合。",
+    "Sequence": "SetPortrait(MC2,pic=5);",
+    "zh_TW": "喂！你要瘋，也看一下場合。",
+    "zh_CN": "喂！你要疯，也看一下场合。",
+    "links": [247]
+  },
+  {
+    "entryID": 247,
+    "actorID": "MC1",
+    "text": "……我想說如果是你，應會這樣做……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "……我想說如果是你，應會這樣做……",
+    "zh_CN": "……我想说如果是你，应会这样做……",
+    "links": [248]
+  },
+  {
+    "entryID": 248,
+    "actorID": "MC2",
+    "text": "就憑你那點本領也想跟我一樣。\n而且該細心的時候，我也會細心的。",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_TW": "就憑你那點本領也想跟我一樣。\n而且該細心的時候，我也會細心的。",
+    "zh_CN": "就凭你那点本领也想跟我一样。 \n而且该细心的时候，我也会细心的。",
+    "links": [239]
+  },
+  {
+    "entryID": 259,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [273]
+  },
+  {
+    "entryID": 260,
+    "actorID": "MC2",
+    "text": "這就是胡扯。\n世間會用錢的，只有活人，死人是不會用錢的。",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "這就是胡扯。\n世間會用錢的，只有活人，死人是不會用錢的。",
+    "zh_CN": "这就是胡扯。 \n世间会用钱的，只有活人，死人是不会用钱的。",
+    "links": [261]
+  },
+  {
+    "entryID": 261,
+    "actorID": "MC1",
+    "text": "（這個話題前兆該不會是我想的那樣吧……？）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（這個話題前兆該不會是我想的那樣吧……？）",
+    "zh_CN": "（这个话题前兆该不会是我想的那样吧……？）",
+    "links": [262]
+  },
+  {
+    "entryID": 262,
+    "actorID": "MC2",
+    "text": "看神情，你們應該都猜到了。\n沒錯，題目就是深入遺跡，把寶物帶出來。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "看神情，你們應該都猜到了。\n沒錯，題目就是深入遺跡，把寶物帶出來。",
+    "zh_CN": "看神情，你们应该都猜到了。 \n没错，题目就是深入遗迹，把宝物带出来。",
+    "links": [263]
+  },
+  {
+    "entryID": 263,
+    "actorID": "MC1",
+    "text": "果然是要盜墓！？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "果然是要盜墓！？",
+    "zh_CN": "果然是要盗墓！ ？",
+    "links": [264]
+  },
+  {
+    "entryID": 264,
+    "actorID": "MC2",
+    "text": "別說得那麼難聽，要叫摸金。\n我來英豪府之前，可都靠這維生。",
+    "Sequence": "SetPortrait(MC2,pic=4);\nDisableAllCharacterExpression();",
+    "zh_TW": "別說得那麼難聽，要叫摸金。\n我來英豪府之前，可都靠這維生。",
+    "zh_CN": "别说得那么难听，要叫摸金。 \n我来英豪府之前，可都靠这维生。",
+    "links": [265]
+  },
+  {
+    "entryID": 265,
+    "actorID": "MC1",
+    "text": "（……這也算是一種為生活努力的方式……？）",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "（……這也算是一種為生活努力的方式……？）",
+    "zh_CN": "（……这也算是一种为生活努力的方式……？）",
+    "links": [266]
+  },
+  {
+    "entryID": 266,
+    "actorID": "MC2",
+    "text": "為防出人命，親切如我會隨行保護你們的安危。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Script": "SetQuestState(\"CF28\", \"active\");\nSetQuestEntryState(\"CF28\", 1, \"success\");\nSetQuestEntryState(\"CF28\", 2, \"active\")",
+    "Description": "變數更新",
+    "zh_TW": "為防出人命，親切如我會隨行保護你們的安危。",
+    "zh_CN": "为防出人命，亲切如我会随行保护你们的安危。",
+    "links": [323, 324]
+  },
+  {
+    "entryID": 268,
+    "actorID": "MC2",
+    "text": "準備好要一訪古墓了了嗎？",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "準備好要一訪古墓了了嗎？",
+    "zh_CN": "准备好要一访古墓了了吗？",
+    "links": [269, 270]
+  },
+  {
+    "entryID": 269,
+    "actorID": "MC1",
+    "text": "1.出發吧。",
+    "Sequence": "",
+    "zh_TW": "1.出發吧。",
+    "zh_CN": "1.出发吧。",
+    "links": [297]
+  },
+  {
+    "entryID": 270,
+    "actorID": "MC1",
+    "text": "2.我還需要些良心準備。",
+    "Sequence": "",
+    "Description": "離開任務",
+    "zh_TW": "2.我還需要些良心準備。",
+    "zh_CN": "2.我还需要些良心准备。",
+    "links": [296]
+  },
+  {
+    "entryID": 273,
+    "actorID": "role2",
+    "text": "[panel=5]隨著你們越深入，視線越加渾沌不清，\n最後面前只剩一條不到單腳大小的細長通道。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]隨著你們越深入，視線越加渾沌不清，\n最後面前只剩一條不到單腳大小的細長通道。",
+    "zh_CN": "[panel=5]随着你们越深入，视线越加浑沌不清，\n最后面前只剩一条不到单脚大小的细长通道。",
+    "links": [274]
+  },
+  {
+    "entryID": 274,
+    "actorID": "MC1",
+    "text": "死路？不，前面那有幾道微弱火光。\n一片黑暗唯獨那有火光，想必那就是竅門。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "死路？不，前面那有幾道微弱火光。\n一片黑暗唯獨那有火光，想必那就是竅門。",
+    "zh_CN": "死路？不，前面那有几道微弱火光。 \n一片黑暗唯独那有火光，想必那就是窍门。",
+    "links": [275]
+  },
+  {
+    "entryID": 275,
+    "actorID": "MC1",
+    "text": "火光跟這裡的距離……用弓箭嘗試看看。",
+    "Sequence": "",
+    "Description": "進小遊戲",
+    "zh_TW": "火光跟這裡的距離……用弓箭嘗試看看。",
+    "zh_CN": "火光跟这里的距离……用弓箭尝试看看。",
+    "links": [276, 277]
+  },
+  {
+    "entryID": 276,
+    "actorID": "MC1",
+    "text": "➤進[射箭小遊戲]。※成功。",
+    "Sequence": "",
+    "zh_TW": "➤進[射箭小遊戲]。※成功。",
+    "zh_CN": "➤进[射箭小游戏]。 ※成功。",
+    "links": [281]
+  },
+  {
+    "entryID": 277,
+    "actorID": "MC1",
+    "text": "➤進[射箭小遊戲]。※失敗。",
+    "Sequence": "",
+    "zh_TW": "➤進[射箭小遊戲]。※失敗。",
+    "zh_CN": "➤进[射箭小游戏]。 ※失败。",
+    "links": [278]
+  },
+  {
+    "entryID": 278,
+    "actorID": "role2",
+    "text": "[panel=5]你嘗試瞄準火光，\n結果失了準頭，反誤觸黑暗中的機關。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=5]你嘗試瞄準火光，\n結果失了準頭，反誤觸黑暗中的機關。",
+    "zh_CN": "[panel=5]你尝试瞄准火光，\n结果失了准头，反误触黑暗中的机关。",
+    "links": [279]
+  },
+  {
+    "entryID": 279,
+    "actorID": "role2",
+    "text": "[panel=5]霎那間，神秘液體灌入，其氣味讓人窒息，\n幸虧呂信抓住你，逃出生天……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]霎那間，神秘液體灌入，其氣味讓人窒息，\n幸虧呂信抓住你，逃出生天……",
+    "zh_CN": "[panel=5]霎那间，神秘液体灌入，其气味让人窒息，\n幸亏吕信抓住你，逃出生天……",
+    "links": [280]
+  },
+  {
+    "entryID": 280,
+    "actorID": "MC2",
+    "text": "呼……那種氣味，該不會是硃砂銀水吧。\n要是再慢個幾步，可能我們都登仙了。",
+    "Sequence": "SetPortrait(MC1,pic=8);\nSetPortrait(MC2,pic=3);",
+    "zh_TW": "呼……那種氣味，該不會是硃砂銀水吧。\n要是再慢個幾步，可能我們都登仙了。",
+    "zh_CN": "呼……那种气味，该不会是朱砂银水吧。 \n要是再慢个几步，可能我们都登仙了。",
+    "links": [239]
+  },
+  {
+    "entryID": 281,
+    "actorID": "role2",
+    "text": "[panel=5]當箭矢命中火光，黑暗中傳出古怪聲響，\n隨即木橋自上方垂下。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=5]當箭矢命中火光，黑暗中傳出古怪聲響，\n隨即木橋自上方垂下。",
+    "zh_CN": "[panel=5]当箭矢命中火光，黑暗中传出古怪声响，\n随即木桥自上方垂下。",
+    "links": [282]
+  },
+  {
+    "entryID": 282,
+    "actorID": "role2",
+    "text": "[panel=5]你們爬上木橋，正是古墓所在，\n四周滿是陪葬寶物。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你們爬上木橋，正是古墓所在，\n四周滿是陪葬寶物。",
+    "zh_CN": "[panel=5]你们爬上木桥，正是古墓所在，\n四周满是陪葬宝物。",
+    "links": [283]
+  },
+  {
+    "entryID": 283,
+    "actorID": "MC2",
+    "text": "哈！我就知道，果然不少。",
+    "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Idea);",
+    "zh_TW": "哈！我就知道，果然不少。",
+    "zh_CN": "哈！我就知道，果然不少。",
+    "links": [284]
+  },
+  {
+    "entryID": 284,
+    "actorID": "MC1",
+    "text": "……竟然這麼多……\n你都不擔心會遭天譴？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nDisableCharacterExpression(1);",
+    "zh_TW": "……竟然這麼多……\n你都不擔心會遭天譴？",
+    "zh_CN": "……竟然这么多……\n你都不担心会遭天谴？",
+    "links": [285]
+  },
+  {
+    "entryID": 285,
+    "actorID": "MC2",
+    "text": "怕什麼，數往今來，多少掘墓之事。\n當年楚霸王不也掘那秦墓，那時可更加壯闊。",
+    "Sequence": "",
+    "zh_TW": "怕什麼，數往今來，多少掘墓之事。\n當年楚霸王不也掘那秦墓，那時可更加壯闊。",
+    "zh_CN": "怕什么，数往今来，多少掘墓之事。 \n当年楚霸王不也掘那秦墓，那时可更加壮阔。",
+    "links": [286]
+  },
+  {
+    "entryID": 286,
+    "actorID": "MC1",
+    "text": "（這該用壯闊形容嗎……\n而且你知道項羽的下場嗎……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "（這該用壯闊形容嗎……\n而且你知道項羽的下場嗎……）",
+    "zh_CN": "（这该用壮阔形容吗……\n而且你知道项羽的下场吗……）",
+    "links": [287]
+  },
+  {
+    "entryID": 287,
+    "actorID": "MC2",
+    "text": "總之，你通過了，這寶物給你當入門慶賀吧。\n等遴選結束，你就回[em2]英豪府報到[/em2]吧。",
+    "Sequence": "ShowInstantMessage(Influence_Merit,50);\nDisableAllCharacterExpression();",
+    "Script": "SetQuestState(\"CF28\", \"success\");\nSetQuestEntryState(\"CF28\", 2, \"success\");\nSetQuestEntryState(\"MS05\", 1, \"success\");\nSetQuestEntryState(\"MS05\", 2, \"active\");",
+    "Description": "獲得功勳跟貴重品／變數更新",
+    "zh_TW": "總之，你通過了，這寶物給你當入門慶賀吧。\n等遴選結束，你就回[em2]英豪府報到[/em2]吧。",
+    "zh_CN": "总之，你通过了，这宝物给你当入门庆贺吧。 \n等遴选结束，你就回[em2]英豪府报到[/em2]吧。",
+    "links": [289]
+  },
+  {
+    "entryID": 288,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 289,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [288]
+  },
+  {
+    "entryID": 292,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Relic);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"CF28\", 2) == \"active\"",
+    "links": [268]
+  },
+  {
+    "entryID": 293,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 294,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [293]
+  },
+  {
+    "entryID": 295,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 296,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [295]
+  },
+  {
+    "entryID": 297,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Relic);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [224]
+  },
+  {
+    "entryID": 300,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [233, 237]
+  },
+  {
+    "entryID": 301,
+    "actorID": "role2",
+    "text": "[panel=5]你們進入了遺跡，沿路火光昏暗，\n一段路程後，在你們面前是被刺木封住的路……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你們進入了遺跡，沿路火光昏暗，\n一段路程後，在你們面前是被刺木封住的路……",
+    "zh_CN": "[panel=5]你们进入了遗迹，沿路火光昏暗，\n一段路程后，在你们面前是被刺木封住的路……",
+    "links": [302]
+  },
+  {
+    "entryID": 302,
+    "actorID": "MC1",
+    "text": "前路被封，四周也沒其它出路……\n牆上有一幅凹凸壁畫，想必這就是機關吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "前路被封，四周也沒其它出路……\n牆上有一幅凹凸壁畫，想必這就是機關吧。",
+    "zh_CN": "前路被封，四周也没其它出路……\n墙上有一幅凹凸壁画，想必这就是机关吧。",
+    "links": [303, 304]
+  },
+  {
+    "entryID": 303,
+    "actorID": "MC1",
+    "text": "1.[em1][需求技能卡巧手Lv1][巧手][/em1]有機關就有解法，就嘗試破解好了。",
+    "Sequence": "",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][需求技能卡巧手Lv1][巧手][/em1]有機關就有解法，就嘗試破解好了。",
+    "zh_CN": "1.[em1][需求技能卡巧手Lv1][巧手][/em1]有机关就有解法，就尝试破解好了。",
+    "links": [348, 349]
+  },
+  {
+    "entryID": 304,
+    "actorID": "MC1",
+    "text": "2.[em1][武力][/em1]真麻煩，直接拆了就好。",
+    "Sequence": "BeginDiceRoll(Strength,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][武力][/em1]真麻煩，直接拆了就好。",
+    "zh_CN": "2.[em1][武力][/em1]真麻烦，直接拆了就好。",
+    "links": [305]
+  },
+  {
+    "entryID": 305,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [313, 317]
+  },
+  {
+    "entryID": 306,
+    "actorID": "role2",
+    "text": "[panel=5]當你破解機關瞬間，\n擋住前路的刺木盡數收入石壁中。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,SleightOfHand,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]當你破解機關瞬間，\n擋住前路的刺木盡數收入石壁中。",
+    "zh_CN": "[panel=5]当你破解机关瞬间，\n挡住前路的刺木尽数收入石壁中。",
+    "links": [307]
+  },
+  {
+    "entryID": 307,
+    "actorID": "MC2",
+    "text": "不錯喔，看來你也是幹這一行的料。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "不錯喔，看來你也是幹這一行的料。",
+    "zh_CN": "不错喔，看来你也是干这一行的料。",
+    "links": [308]
+  },
+  {
+    "entryID": 308,
+    "actorID": "MC1",
+    "text": "……我還真不知道這該高興，還是該難過……",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "……我還真不知道這該高興，還是該難過……",
+    "zh_CN": "……我还真不知道这该高兴，还是该难过……",
+    "links": [309]
+  },
+  {
+    "entryID": 309,
+    "actorID": "MC2",
+    "text": "別想那麼多了。\n繼續前進，我想終點就快到了。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "別想那麼多了。\n繼續前進，我想終點就快到了。",
+    "zh_CN": "别想那么多了。 \n继续前进，我想终点就快到了。",
+    "links": [321]
+  },
+  {
+    "entryID": 310,
+    "actorID": "role2",
+    "text": "[panel=5]你不慎觸動機關，頓時箭如雨下。\n呂信瞬間抓起你，帶你逃出生天……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]你不慎觸動機關，頓時箭如雨下。\n呂信瞬間抓起你，帶你逃出生天……",
+    "zh_CN": "[panel=5]你不慎触动机关，顿时箭如雨下。 \n吕信瞬间抓起你，带你逃出生天……",
+    "links": [311]
+  },
+  {
+    "entryID": 311,
+    "actorID": "MC2",
+    "text": "哈哈哈！\n真是好險啊，差點就沒命了。",
+    "Sequence": "SetPortrait(MC2,pic=1);\nSetPortrait(MC1,pic=8);",
+    "zh_TW": "哈哈哈！\n真是好險啊，差點就沒命了。",
+    "zh_CN": "哈哈哈！ \n真是好险啊，差点就没命了。",
+    "links": [312]
+  },
+  {
+    "entryID": 312,
+    "actorID": "MC2",
+    "text": "等你調整好狀態，再來找我重新挑戰吧。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Description": "離開任務",
+    "zh_TW": "等你調整好狀態，再來找我重新挑戰吧。",
+    "zh_CN": "等你调整好状态，再来找我重新挑战吧。",
+    "links": [343]
+  },
+  {
+    "entryID": 313,
+    "actorID": "role2",
+    "text": "[panel=5]你動武硬是拆出一條前路。\n儘管有觸動機關，但都被你化解掉了。",
+    "Sequence": "SetPortrait(MC1,pic=2);\nShowInstantMessage(Exp_FeatExp,MC1,Strength,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]你動武硬是拆出一條前路。\n儘管有觸動機關，但都被你化解掉了。",
+    "zh_CN": "[panel=5]你动武硬是拆出一条前路。 \n尽管有触动机关，但都被你化解掉了。",
+    "links": [314]
+  },
+  {
+    "entryID": 314,
+    "actorID": "MC2",
+    "text": "看不出你小子挺瘋的。\n可以啊，夠資格做我將來的師弟。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "看不出你小子挺瘋的。\n可以啊，夠資格做我將來的師弟。",
+    "zh_CN": "看不出你小子挺疯的。 \n可以啊，够资格做我将来的师弟。",
+    "links": [315]
+  },
+  {
+    "entryID": 315,
+    "actorID": "MC1",
+    "text": "哪裡哪裡，我是猜假如換你，\n你可能也會這樣做。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "哪裡哪裡，我是猜假如換你，\n你可能也會這樣做。",
+    "zh_CN": "哪里哪里，我是猜假如换你，\n你可能也会这样做。",
+    "links": [316]
+  },
+  {
+    "entryID": 316,
+    "actorID": "MC2",
+    "text": "哈哈！說得好，就是要這股氣魄。\n繼續前進吧。我想終點就快到了。",
+    "Sequence": "",
+    "zh_TW": "哈哈！說得好，就是要這股氣魄。\n繼續前進吧。我想終點就快到了。",
+    "zh_CN": "哈哈！说得好，就是要这股气魄。 \n继续前进吧。我想终点就快到了。",
+    "links": [321]
+  },
+  {
+    "entryID": 317,
+    "actorID": "role2",
+    "text": "[panel=5]你打算拆路，結果觸動機關，\n頓時箭雨射出。幸好呂信連忙抓起你避開……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]你打算拆路，結果觸動機關，\n頓時箭雨射出。幸好呂信連忙抓起你避開……",
+    "zh_CN": "[panel=5]你打算拆路，结果触动机关，\n顿时箭雨射出。幸好吕信连忙抓起你避开……",
+    "links": [318]
+  },
+  {
+    "entryID": 318,
+    "actorID": "MC2",
+    "text": "喂！你要瘋，也看一下場合。",
+    "Sequence": "SetPortrait(MC2,pic=5);",
+    "zh_TW": "喂！你要瘋，也看一下場合。",
+    "zh_CN": "喂！你要疯，也看一下场合。",
+    "links": [319]
+  },
+  {
+    "entryID": 319,
+    "actorID": "MC1",
+    "text": "……我想說如果是你，應會這樣做……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "……我想說如果是你，應會這樣做……",
+    "zh_CN": "……我想说如果是你，应会这样做……",
+    "links": [320]
+  },
+  {
+    "entryID": 320,
+    "actorID": "MC2",
+    "text": "就憑你那點本領也想跟我一樣。\n而且該細心的時候，我也會細心的。",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_TW": "就憑你那點本領也想跟我一樣。\n而且該細心的時候，我也會細心的。",
+    "zh_CN": "就凭你那点本领也想跟我一样。 \n而且该细心的时候，我也会细心的。",
+    "links": [312]
+  },
+  {
+    "entryID": 321,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [325]
+  },
+  {
+    "entryID": 323,
+    "actorID": "MC1",
+    "text": "1.那就有勞你了。",
+    "Sequence": "",
+    "zh_TW": "1.那就有勞你了。",
+    "zh_CN": "1.那就有劳你了。",
+    "links": [346]
+  },
+  {
+    "entryID": 324,
+    "actorID": "MC1",
+    "text": "2.我還需要些良心準備。",
+    "Sequence": "",
+    "Description": "離開任務",
+    "zh_TW": "2.我還需要些良心準備。",
+    "zh_CN": "2.我还需要些良心准备。",
+    "links": [345]
+  },
+  {
+    "entryID": 325,
+    "actorID": "role2",
+    "text": "[panel=5]隨著你們越深入，視線越加渾沌不清，\n最後面前只剩一條不到單腳大小的細長通道。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]隨著你們越深入，視線越加渾沌不清，\n最後面前只剩一條不到單腳大小的細長通道。",
+    "zh_CN": "[panel=5]随着你们越深入，视线越加浑沌不清，\n最后面前只剩一条不到单脚大小的细长通道。",
+    "links": [326]
+  },
+  {
+    "entryID": 326,
+    "actorID": "MC1",
+    "text": "死路？不，前面那有幾道微弱火光。\n一片黑暗唯獨那有火光，想必那就是竅門。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "死路？不，前面那有幾道微弱火光。\n一片黑暗唯獨那有火光，想必那就是竅門。",
+    "zh_CN": "死路？不，前面那有几道微弱火光。 \n一片黑暗唯独那有火光，想必那就是窍门。",
+    "links": [327]
+  },
+  {
+    "entryID": 327,
+    "actorID": "MC1",
+    "text": "火光跟這裡的距離……用弓箭嘗試看看。",
+    "Sequence": "",
+    "Description": "進小遊戲",
+    "zh_TW": "火光跟這裡的距離……用弓箭嘗試看看。",
+    "zh_CN": "火光跟这里的距离……用弓箭尝试看看。",
+    "links": [328, 329]
+  },
+  {
+    "entryID": 328,
+    "actorID": "MC1",
+    "text": "➤進[射箭小遊戲]。※成功。",
+    "Sequence": "",
+    "zh_TW": "➤進[射箭小遊戲]。※成功。",
+    "zh_CN": "➤进[射箭小游戏]。 ※成功。",
+    "links": [333]
+  },
+  {
+    "entryID": 329,
+    "actorID": "MC1",
+    "text": "➤進[射箭小遊戲]。※失敗。",
+    "Sequence": "",
+    "zh_TW": "➤進[射箭小遊戲]。※失敗。",
+    "zh_CN": "➤进[射箭小游戏]。 ※失败。",
+    "links": [330]
+  },
+  {
+    "entryID": 330,
+    "actorID": "role2",
+    "text": "[panel=5]你嘗試瞄準火光，\n結果失了準頭，反誤觸黑暗中的機關。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=5]你嘗試瞄準火光，\n結果失了準頭，反誤觸黑暗中的機關。",
+    "zh_CN": "[panel=5]你尝试瞄准火光，\n结果失了准头，反误触黑暗中的机关。",
+    "links": [331]
+  },
+  {
+    "entryID": 331,
+    "actorID": "role2",
+    "text": "[panel=5]霎那間，神秘液體灌入，其氣味讓人窒息，\n幸虧呂信抓住你，逃出生天……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]霎那間，神秘液體灌入，其氣味讓人窒息，\n幸虧呂信抓住你，逃出生天……",
+    "zh_CN": "[panel=5]霎那间，神秘液体灌入，其气味让人窒息，\n幸亏吕信抓住你，逃出生天……",
+    "links": [332]
+  },
+  {
+    "entryID": 332,
+    "actorID": "MC2",
+    "text": "呼……那種氣味，該不會是硃砂銀水吧。\n要是再慢個幾步，可能我們都登仙了。",
+    "Sequence": "SetPortrait(MC1,pic=8);\nSetPortrait(MC2,pic=3);",
+    "zh_TW": "呼……那種氣味，該不會是硃砂銀水吧。\n要是再慢個幾步，可能我們都登仙了。",
+    "zh_CN": "呼……那种气味，该不会是朱砂银水吧。 \n要是再慢个几步，可能我们都登仙了。",
+    "links": [312]
+  },
+  {
+    "entryID": 333,
+    "actorID": "role2",
+    "text": "[panel=5]當箭矢命中火光，黑暗中傳出古怪聲響，\n隨即木橋自上方垂下。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=5]當箭矢命中火光，黑暗中傳出古怪聲響，\n隨即木橋自上方垂下。",
+    "zh_CN": "[panel=5]当箭矢命中火光，黑暗中传出古怪声响，\n随即木桥自上方垂下。",
+    "links": [334]
+  },
+  {
+    "entryID": 334,
+    "actorID": "role2",
+    "text": "[panel=5]你們爬上木橋，正是古墓所在，\n四周滿是陪葬寶物。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你們爬上木橋，正是古墓所在，\n四周滿是陪葬寶物。",
+    "zh_CN": "[panel=5]你们爬上木桥，正是古墓所在，\n四周满是陪葬宝物。",
+    "links": [335]
+  },
+  {
+    "entryID": 335,
+    "actorID": "MC2",
+    "text": "哈！我就知道，果然不少。",
+    "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Idea);",
+    "zh_TW": "哈！我就知道，果然不少。",
+    "zh_CN": "哈！我就知道，果然不少。",
+    "links": [336]
+  },
+  {
+    "entryID": 336,
+    "actorID": "MC1",
+    "text": "……竟然這麼多……\n你都不擔心會遭天譴？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nDisableCharacterExpression(1);",
+    "zh_TW": "……竟然這麼多……\n你都不擔心會遭天譴？",
+    "zh_CN": "……竟然这么多……\n你都不担心会遭天谴？",
+    "links": [337]
+  },
+  {
+    "entryID": 337,
+    "actorID": "MC2",
+    "text": "怕什麼，數往今來，多少掘墓之事。\n當年楚霸王不也掘那秦墓，那時可更加壯闊。",
+    "Sequence": "",
+    "zh_TW": "怕什麼，數往今來，多少掘墓之事。\n當年楚霸王不也掘那秦墓，那時可更加壯闊。",
+    "zh_CN": "怕什么，数往今来，多少掘墓之事。 \n当年楚霸王不也掘那秦墓，那时可更加壮阔。",
+    "links": [338]
+  },
+  {
+    "entryID": 338,
+    "actorID": "MC1",
+    "text": "（這該用壯闊形容嗎……\n而且你知道項羽的下場嗎……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "（這該用壯闊形容嗎……\n而且你知道項羽的下場嗎……）",
+    "zh_CN": "（这该用壮阔形容吗……\n而且你知道项羽的下场吗……）",
+    "links": [339]
+  },
+  {
+    "entryID": 339,
+    "actorID": "MC2",
+    "text": "總之，你通過了，這寶物給你當入門慶賀吧。\n等遴選結束，你就回[em2]英豪府報到[/em2]吧。",
+    "Sequence": "ShowInstantMessage(Influence_Merit,50);\nDisableAllCharacterExpression();",
+    "Script": "SetQuestState(\"CF28\", \"success\");\nSetQuestEntryState(\"CF28\", 2, \"success\");\nSetQuestEntryState(\"MS05\", 1, \"success\");\nSetQuestEntryState(\"MS05\", 2, \"active\");",
+    "Description": "獲得功勳跟貴重品／變數更新",
+    "zh_TW": "總之，你通過了，這寶物給你當入門慶賀吧。\n等遴選結束，你就回[em2]英豪府報到[/em2]吧。",
+    "zh_CN": "总之，你通过了，这宝物给你当入门庆贺吧。 \n等遴选结束，你就回[em2]英豪府报到[/em2]吧。",
+    "links": [341]
+  },
+  {
+    "entryID": 340,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 341,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [340]
+  },
+  {
+    "entryID": 342,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 343,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [342]
+  },
+  {
+    "entryID": 344,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 345,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [344]
+  },
+  {
+    "entryID": 346,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Relic);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [301]
+  },
+  {
+    "entryID": 347,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [306, 310]
+  },
+  {
+    "entryID": 348,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(SleightOfHand,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Conditions": "IsSkillObtained(\"MC1\", \"SleightOfHandLv1_Check\")  == true",
+    "links": [347]
+  },
+  {
+    "entryID": 349,
+    "actorID": "MC1",
+    "text": "不行，我還不懂如何拆解……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Conditions": "IsSkillObtained(\"MC1\", \"SleightOfHandLv1_Check\")  == false",
+    "zh_TW": "不行，我還不懂如何拆解……",
+    "zh_CN": "不行，我还不懂如何拆解……",
+    "links": [302]
+  },
+  {
+    "entryID": 350,
+    "actorID": "MC1",
+    "text": "1.[em1][需求技能卡巧手Lv1][巧手][/em1]有機關就有解法，就嘗試破解好了。",
+    "Sequence": "",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][需求技能卡巧手Lv1][巧手][/em1]有機關就有解法，就嘗試破解好了。",
+    "zh_CN": "1.[em1][需求技能卡巧手Lv1][巧手][/em1]有机关就有解法，就尝试破解好了。",
+    "links": [351, 352]
+  },
+  {
+    "entryID": 351,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(SleightOfHand,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Conditions": "IsSkillObtained(\"MC1\", \"SleightOfHandLv1_Check\")  == true",
+    "links": [300]
+  },
+  {
+    "entryID": 352,
+    "actorID": "MC1",
+    "text": "不行，我還不懂如何拆解……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Conditions": "IsSkillObtained(\"MC1\", \"SleightOfHandLv1_Check\")  == false",
+    "zh_TW": "不行，我還不懂如何拆解……",
+    "zh_CN": "不行，我还不懂如何拆解……",
+    "links": [353]
+  },
+  {
+    "entryID": 353,
+    "actorID": "MC1",
+    "text": "前路被封，四周也沒其它出路……\n牆上有一幅凹凸壁畫，想必這就是機關吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "前路被封，四周也沒其它出路……\n牆上有一幅凹凸壁畫，想必這就是機關吧。",
+    "zh_CN": "前路被封，四周也没其它出路……\n墙上有一幅凹凸壁画，想必这就是机关吧。",
+    "links": [350, 228]
+  }
+]

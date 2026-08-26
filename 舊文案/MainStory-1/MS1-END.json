@@ -1,0 +1,811 @@
+[
+  {
+    "entryID": 398,
+    "actorID": "role37",
+    "text": "呼……這幾位大俠好厲害啊！\n竟然三兩下就解決那幫畜牲。",
+    "Sequence": "",
+    "zh_TW": "呼……這幾位大俠好厲害啊！\n竟然三兩下就解決那幫畜牲。",
+    "zh_CN": "呼……这几位大侠好厉害啊！ \n竟然三两下就解决那帮畜牲。",
+    "links": [399]
+  },
+  {
+    "entryID": 399,
+    "actorID": "MC5",
+    "text": "[panel=2]過獎了，徐某早聞大秦傭兵之悍，\n若非疲竭，徐某豈有出手機會。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=2]過獎了，徐某早聞大秦傭兵之悍，\n若非疲竭，徐某豈有出手機會。",
+    "zh_CN": "[panel=2]过奖了，徐某早闻大秦佣兵之悍，\n若非疲竭，徐某岂有出手机会。",
+    "links": [400]
+  },
+  {
+    "entryID": 400,
+    "actorID": "role37",
+    "text": "哈哈！你們都聽到了嗎，\n這大俠在誇我們呢。",
+    "Sequence": "",
+    "zh_TW": "哈哈！你們都聽到了嗎，\n這大俠在誇我們呢。",
+    "zh_CN": "哈哈！你们都听到了吗，\n这大侠在夸我们呢。",
+    "links": [401]
+  },
+  {
+    "entryID": 401,
+    "actorID": "role35",
+    "text": "[panel=2]好了好了，少不要臉了。\n人家不過客氣，你們就當真了。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]好了好了，少不要臉了。\n人家不過客氣，你們就當真了。",
+    "zh_CN": "[panel=2]好了好了，少不要脸了。 \n人家不过客气，你们就当真了。",
+    "links": [402]
+  },
+  {
+    "entryID": 402,
+    "actorID": "role35",
+    "text": "[panel=2]快抓緊時間歇息，\n我們以後要走的路還長著呢。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]快抓緊時間歇息，\n我們以後要走的路還長著呢。",
+    "zh_CN": "[panel=2]快抓紧时间歇息，\n我们以后要走的路还长着呢。",
+    "links": [403]
+  },
+  {
+    "entryID": 403,
+    "actorID": "role37",
+    "text": "是是是，論嘮叨，隊長妳可真是老隊長親閨女。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "是是是，論嘮叨，隊長妳可真是老隊長親閨女。",
+    "zh_CN": "是是是，论唠叨，队长妳可真是老队长亲闺女。",
+    "links": [404]
+  },
+  {
+    "entryID": 404,
+    "actorID": "role35",
+    "text": "[panel=2]還敢說！",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "[panel=2]還敢說！",
+    "zh_CN": "[panel=2]还敢说！",
+    "links": [517]
+  },
+  {
+    "entryID": 405,
+    "actorID": "role2",
+    "text": "[panel=5]戰鬥結束，眾人人終於得到喘息……",
+    "Sequence": "",
+    "Description": "變數分歧",
+    "zh_TW": "[panel=5]戰鬥結束，眾人人終於得到喘息……",
+    "zh_CN": "[panel=5]战斗结束，众人人终于得到喘息……",
+    "links": [398]
+  },
+  {
+    "entryID": 406,
+    "actorID": "MC7",
+    "text": "身體騙不了人。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "身體騙不了人。",
+    "zh_CN": "身体骗不了人。",
+    "links": [407]
+  },
+  {
+    "entryID": 407,
+    "actorID": "MC5",
+    "text": "年輕真好，哈哈……",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "年輕真好，哈哈……",
+    "zh_CN": "年轻真好，哈哈……",
+    "links": [408]
+  },
+  {
+    "entryID": 408,
+    "actorID": "MC6",
+    "text": "一群蠢貨，信不信我放藥把你們全滅了。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "一群蠢貨，信不信我放藥把你們全滅了。",
+    "zh_CN": "一群蠢货，信不信我放药把你们全灭了。",
+    "links": [409]
+  },
+  {
+    "entryID": 409,
+    "actorID": "role2",
+    "text": "[panel=5]張寧嘴上這麼說，人卻是往另一頭跑，\n彷彿恨不得立馬從眾人面前消失……",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]張寧嘴上這麼說，人卻是往另一頭跑，\n彷彿恨不得立馬從眾人面前消失……",
+    "zh_CN": "[panel=5]张宁嘴上这么说，人却是往另一头跑，\n仿佛恨不得立马从众人面前消失……",
+    "links": [411]
+  },
+  {
+    "entryID": 411,
+    "actorID": "MC1",
+    "text": "……這下好了吧，\n我說你們幾個共犯，現在怎麼辦……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "……這下好了吧，\n我說你們幾個共犯，現在怎麼辦……",
+    "zh_CN": "……这下好了吧，\n我说你们几个共犯，现在怎么办……",
+    "links": [412]
+  },
+  {
+    "entryID": 412,
+    "actorID": "role35",
+    "text": "我去看看同伴狀況，先說我不是想溜。\n不是有句話解鈴還須繫鈴人，你……加油。",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "我去看看同伴狀況，先說我不是想溜。\n不是有句話解鈴還須繫鈴人，你……加油。",
+    "zh_CN": "我去看看同伴状况，先说我不是想溜。 \n不是有句话解铃还须系铃人，你……加油。",
+    "links": [444]
+  },
+  {
+    "entryID": 414,
+    "actorID": "MC1",
+    "text": "唔！一個個溜得還真快……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "唔！一個個溜得還真快……",
+    "zh_CN": "唔！一个个溜得还真快……",
+    "links": [415]
+  },
+  {
+    "entryID": 415,
+    "actorID": "MC1",
+    "text": "算了，認命了。\n反正最後繞了半圈，肯定還是丟到我頭上……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "算了，認命了。\n反正最後繞了半圈，肯定還是丟到我頭上……",
+    "zh_CN": "算了，认命了。 \n反正最后绕了半圈，肯定还是丢到我头上……",
+    "links": [442]
+  },
+  {
+    "entryID": 416,
+    "actorID": "MC1",
+    "text": "張姑娘……\n剛剛大家不是有意戲弄妳，只是…",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "張姑娘……\n剛剛大家不是有意戲弄妳，只是…",
+    "zh_CN": "张姑娘……\n刚刚大家不是有意戏弄妳，只是…",
+    "links": [417]
+  },
+  {
+    "entryID": 417,
+    "actorID": "MC6",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [418]
+  },
+  {
+    "entryID": 418,
+    "actorID": "MC1",
+    "text": "那個……我的意思是是……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "那個……我的意思是是……",
+    "zh_CN": "那个……我的意思是是……",
+    "links": [419]
+  },
+  {
+    "entryID": 419,
+    "actorID": "MC6",
+    "text": "……………………",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "……………………",
+    "zh_CN": "……………………",
+    "links": [447]
+  },
+  {
+    "entryID": 420,
+    "actorID": "MC1",
+    "text": "對不住。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "對不住。",
+    "zh_CN": "对不住。",
+    "links": [421]
+  },
+  {
+    "entryID": 421,
+    "actorID": "role2",
+    "text": "[panel=5]你低下了頭，準備好迎接狂風暴雨……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你低下了頭，準備好迎接狂風暴雨……",
+    "zh_CN": "[panel=5]你低下了头，准备好迎接狂风暴雨……",
+    "links": [423]
+  },
+  {
+    "entryID": 423,
+    "actorID": "MC1",
+    "text": "這是……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "這是……",
+    "zh_CN": "这是……",
+    "links": [530]
+  },
+  {
+    "entryID": 425,
+    "actorID": "MC1",
+    "text": "藥性猛烈，不可多喝。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "藥性猛烈，不可多喝。",
+    "zh_CN": "药性猛烈，不可多喝。",
+    "links": [426]
+  },
+  {
+    "entryID": 426,
+    "actorID": "MC6",
+    "text": "明白就好。",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nShowInstantMessage(Favorability,MC8,20,Agree);",
+    "Description": "獲得好感",
+    "zh_TW": "明白就好。",
+    "zh_CN": "明白就好。",
+    "links": [446]
+  },
+  {
+    "entryID": 427,
+    "actorID": "role2",
+    "text": "[panel=5]這苦，溫暖厚實……\n其中相遇、相交、相知、相惜……",
+    "Sequence": "",
+    "Description": "獲得貴重品",
+    "zh_TW": "[panel=5]這苦，溫暖厚實……\n其中相遇、相交、相知、相惜……",
+    "zh_CN": "[panel=5]这苦，温暖厚实……\n其中相遇、相交、相知、相惜……",
+    "links": []
+  },
+  {
+    "entryID": 442,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [445]
+  },
+  {
+    "entryID": 444,
+    "actorID": "role2",
+    "text": "[panel=5]哪料當你轉頭要問其他人，\n徐榮四人也早已溜之大吉。",
+    "Sequence": "OpenPanel(1, close);\nShowInstantMessage(Favorability,MC2,20,Agree);\nShowInstantMessage(Favorability,MC3,20,Agree);\nShowInstantMessage(Favorability,MC5,20,Agree);\nShowInstantMessage(Favorability,MC7,20,Agree);\nShowInstantMessage(Favorability,MC10,20,Agree);",
+    "Description": "獲得好感",
+    "zh_TW": "[panel=5]哪料當你轉頭要問其他人，\n徐榮四人也早已溜之大吉。",
+    "zh_CN": "[panel=5]哪料当你转头要问其他人，\n徐荣四人也早已溜之大吉。",
+    "links": [414]
+  },
+  {
+    "entryID": 445,
+    "actorID": "role2",
+    "text": "[panel=5]你繞了一會，\n總算是在一個角落，找到正在煎藥的張寧。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你繞了一會，\n總算是在一個角落，找到正在煎藥的張寧。",
+    "zh_CN": "[panel=5]你绕了一会，\n总算是在一个角落，找到正在煎药的张宁。",
+    "links": [416]
+  },
+  {
+    "entryID": 446,
+    "actorID": "role2",
+    "text": "[panel=5]熟悉的苦味流入喉中，但並不是酸楚……",
+    "Sequence": "",
+    "Description": "變數獲得技能卡",
+    "zh_TW": "[panel=5]熟悉的苦味流入喉中，但並不是酸楚……",
+    "zh_CN": "[panel=5]熟悉的苦味流入喉中，但并不是酸楚……",
+    "links": [427]
+  },
+  {
+    "entryID": 447,
+    "actorID": "MC1",
+    "text": "（唉，解釋這麼多做什麼，\n我真正該說的只有……）",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "（唉，解釋這麼多做什麼，\n我真正該說的只有……）",
+    "zh_CN": "（唉，解释这么多做什么，\n我真正该说的只有……）",
+    "links": [420]
+  },
+  {
+    "entryID": 450,
+    "actorID": "role35",
+    "text": "啊！",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "啊！",
+    "zh_CN": "啊！",
+    "links": [452]
+  },
+  {
+    "entryID": 451,
+    "actorID": "role2",
+    "text": "[panel=5]戰鬥結束，眾人人終於得到喘息，然而……",
+    "Sequence": "SetPortrait(role35,pic=6);",
+    "Description": "變數分歧",
+    "zh_TW": "[panel=5]戰鬥結束，眾人人終於得到喘息，然而……",
+    "zh_CN": "[panel=5]战斗结束，众人人终于得到喘息，然而……",
+    "links": [450]
+  },
+  {
+    "entryID": 452,
+    "actorID": "role2",
+    "text": "[panel=5]先前受傷的大秦人一個一個倒下……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]先前受傷的大秦人一個一個倒下……",
+    "zh_CN": "[panel=5]先前受伤的大秦人一个一个倒下……",
+    "links": [453]
+  },
+  {
+    "entryID": 453,
+    "actorID": "MC1",
+    "text": "怎麼會……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "怎麼會……",
+    "zh_CN": "怎么会……",
+    "links": [454]
+  },
+  {
+    "entryID": 454,
+    "actorID": "role2",
+    "text": "[panel=5]張寧上前檢視，搖了搖頭──\n他們彷彿使命結束，悄然離去了世間……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]張寧上前檢視，搖了搖頭──\n他們彷彿使命結束，悄然離去了世間……",
+    "zh_CN": "[panel=5]张宁上前检视，摇了摇头──\n他们仿佛使命结束，悄然离去了世间……",
+    "links": [455]
+  },
+  {
+    "entryID": 455,
+    "actorID": "MC5",
+    "text": "[panel=2]他們大概早超出了極限吧。\n應是一股信念支撐他們至今，才敢放下。",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "[panel=2]他們大概早超出了極限吧。\n應是一股信念支撐他們至今，才敢放下。",
+    "zh_CN": "[panel=2]他们大概早超出了极限吧。 \n应是一股信念支撑他们至今，才敢放下。",
+    "links": [456]
+  },
+  {
+    "entryID": 456,
+    "actorID": "role2",
+    "text": "[panel=5]徐榮看著斯蒂娜，向其致意……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]徐榮看著斯蒂娜，向其致意……",
+    "zh_CN": "[panel=5]徐荣看着斯蒂娜，向其致意……",
+    "links": [457]
+  },
+  {
+    "entryID": 457,
+    "actorID": "role35",
+    "text": "他們是為了……",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "他們是為了……",
+    "zh_CN": "他们是为了……",
+    "links": [458]
+  },
+  {
+    "entryID": 458,
+    "actorID": "MC5",
+    "text": "[panel=2]──他們是一群勇者。",
+    "Sequence": "SetPortrait(role35,pic=3);\nSetPortrait(MC1,pic=9);",
+    "zh_TW": "[panel=2]──他們是一群勇者。",
+    "zh_CN": "[panel=2]──他们是一群勇者。",
+    "links": [459]
+  },
+  {
+    "entryID": 459,
+    "actorID": "MC2",
+    "text": "羽兄。",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_TW": "羽兄。",
+    "zh_CN": "羽兄。",
+    "links": [460]
+  },
+  {
+    "entryID": 460,
+    "actorID": "MC3",
+    "text": "[panel=2]嗯。",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=2]嗯。",
+    "zh_CN": "[panel=2]嗯。",
+    "links": [509]
+  },
+  {
+    "entryID": 467,
+    "actorID": "role2",
+    "text": "[panel=5]……片刻後，\n你聽到了歌聲，那似乎是斯蒂娜……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]……片刻後，\n你聽到了歌聲，那似乎是斯蒂娜……",
+    "zh_CN": "[panel=5]……片刻后，\n你听到了歌声，那似乎是斯蒂娜……",
+    "links": [468, 469]
+  },
+  {
+    "entryID": 468,
+    "actorID": "MC1",
+    "text": "1.（循著歌聲過去）",
+    "Sequence": "",
+    "zh_TW": "1.（循著歌聲過去）",
+    "zh_CN": "1.（循着歌声过去）",
+    "links": [510]
+  },
+  {
+    "entryID": 469,
+    "actorID": "MC1",
+    "text": "2.（還是先讓她一個人靜一靜吧）",
+    "Sequence": "",
+    "zh_TW": "2.（還是先讓她一個人靜一靜吧）",
+    "zh_CN": "2.（还是先让她一个人静一静吧）",
+    "links": [511]
+  },
+  {
+    "entryID": 470,
+    "actorID": "MC1",
+    "text": "……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……",
+    "zh_CN": "……",
+    "links": [471]
+  },
+  {
+    "entryID": 471,
+    "actorID": "role35",
+    "text": "……小的時候我聽爹說，\n在大秦，人死了，人們會為他唱歌送行……",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "……小的時候我聽爹說，\n在大秦，人死了，人們會為他唱歌送行……",
+    "zh_CN": "……小的时候我听爹说，\n在大秦，人死了，人们会为他唱歌送行……",
+    "links": [472]
+  },
+  {
+    "entryID": 472,
+    "actorID": "role35",
+    "text": "當年，他們也為爹唱了這首歌……\n如今我能做的，只剩這件事……",
+    "Sequence": "",
+    "zh_TW": "當年，他們也為爹唱了這首歌……\n如今我能做的，只剩這件事……",
+    "zh_CN": "当年，他们也为爹唱了这首歌……\n如今我能做的，只剩这件事……",
+    "links": [474]
+  },
+  {
+    "entryID": 474,
+    "actorID": "MC1",
+    "text": "……相信他們會聽到的。",
+    "Sequence": "",
+    "zh_TW": "……相信他們會聽到的。",
+    "zh_CN": "……相信他们会听到的。",
+    "links": [479]
+  },
+  {
+    "entryID": 479,
+    "actorID": "role35",
+    "text": "你相信人死後真有幽冥能聽到……？",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "你相信人死後真有幽冥能聽到……？",
+    "zh_CN": "你相信人死后真有幽冥能听到……？",
+    "links": [480]
+  },
+  {
+    "entryID": 480,
+    "actorID": "MC1",
+    "text": "坦白說……幽冥之事我也不清楚……\n但我相信妳的心意，可以傳達到。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "坦白說……幽冥之事我也不清楚……\n但我相信妳的心意，可以傳達到。",
+    "zh_CN": "坦白说……幽冥之事我也不清楚……\n但我相信妳的心意，可以传达到。",
+    "links": [481]
+  },
+  {
+    "entryID": 481,
+    "actorID": "role35",
+    "text": "………………\n謝謝你。",
+    "Sequence": "SetPortrait(role35,pic=1);\nSetPortrait(MC1,pic=6);\nShowInstantMessage(Favorability,MC10,10,Agree);",
+    "Description": "獲得好感",
+    "zh_TW": "………………\n謝謝你。",
+    "zh_CN": "………………\n谢谢你。",
+    "links": [482]
+  },
+  {
+    "entryID": 482,
+    "actorID": "role35",
+    "text": "大秦傭兵，生死同行。\n終有一天，我會帶著歌聲，追上你們的。",
+    "Sequence": "SetPortrait(role35,pic=2);\nShowReward(RomanSpirit_Combat)@1;\nShowInstantMessage(Reward_SkillCard,MC1,RomanSpirit_Combat)@1;",
+    "zh_TW": "大秦傭兵，生死同行。\n終有一天，我會帶著歌聲，追上你們的。",
+    "zh_CN": "大秦佣兵，生死同行。 \n终有一天，我会带着歌声，追上你们的。",
+    "links": [483]
+  },
+  {
+    "entryID": 483,
+    "actorID": "role2",
+    "text": "[panel=5]……歌聲或許能撫平亡魂，那生者呢……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]……歌聲或許能撫平亡魂，那生者呢……",
+    "zh_CN": "[panel=5]……歌声或许能抚平亡魂，那生者呢……",
+    "links": [484]
+  },
+  {
+    "entryID": 484,
+    "actorID": "role2",
+    "text": "[panel=5]若能再珍惜時間，說不定，將是不同的景色……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]若能再珍惜時間，說不定，將是不同的景色……",
+    "zh_CN": "[panel=5]若能再珍惜时间，说不定，将是不同的景色……",
+    "links": [485]
+  },
+  {
+    "entryID": 485,
+    "actorID": "role2",
+    "text": "[panel=5]如今，只盼離去的蕭索能被隔日朝陽沖淡………",
+    "Sequence": "",
+    "zh_TW": "[panel=5]如今，只盼離去的蕭索能被隔日朝陽沖淡………",
+    "zh_CN": "[panel=5]如今，只盼离去的萧索能被隔日朝阳冲淡………",
+    "links": []
+  },
+  {
+    "entryID": 486,
+    "actorID": "MC1",
+    "text": "張姑娘，大秦的其他人都不要緊吧？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "張姑娘，大秦的其他人都不要緊吧？",
+    "zh_CN": "张姑娘，大秦的其他人都不要紧吧？",
+    "links": [487]
+  },
+  {
+    "entryID": 487,
+    "actorID": "MC6",
+    "text": "身體的傷是無大礙，但……\n心裡的傷就沒那麼容易了。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "身體的傷是無大礙，但……\n心裡的傷就沒那麼容易了。",
+    "zh_CN": "身体的伤是无大碍，但……\n心里的伤就没那么容易了。",
+    "links": [488]
+  },
+  {
+    "entryID": 488,
+    "actorID": "MC6",
+    "text": "雖說身在那一行，早就看淡生死，\n但如此落幕，是人都難免不甘心……",
+    "Sequence": "",
+    "zh_TW": "雖說身在那一行，早就看淡生死，\n但如此落幕，是人都難免不甘心……",
+    "zh_CN": "虽说身在那一行，早就看淡生死，\n但如此落幕，是人都难免不甘心……",
+    "links": [489]
+  },
+  {
+    "entryID": 489,
+    "actorID": "MC1",
+    "text": "……妳也去休息吧。\n從前幾日開始，妳就沒有闔過眼了。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "……妳也去休息吧。\n從前幾日開始，妳就沒有闔過眼了。",
+    "zh_CN": "……妳也去休息吧。 \n从前几日开始，妳就没有阖过眼了。",
+    "links": [512]
+  },
+  {
+    "entryID": 490,
+    "actorID": "MC6",
+    "text": "唉呦，好可怕，\n我身邊何時竟多了喜歡偷看的人。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "唉呦，好可怕，\n我身邊何時竟多了喜歡偷看的人。",
+    "zh_CN": "唉呦，好可怕，\n我身边何时竟多了喜欢偷看的人。",
+    "links": [491]
+  },
+  {
+    "entryID": 491,
+    "actorID": "MC1",
+    "text": "囉嗦……畢竟讓妳同行，我就有責任看顧好妳。\n萬一妳累倒了，我還得揹她，那多麻煩。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "囉嗦……畢竟讓妳同行，我就有責任看顧好妳。\n萬一妳累倒了，我還得揹她，那多麻煩。",
+    "zh_CN": "啰嗦……毕竟让妳同行，我就有责任看顾好妳。 \n万一妳累倒了，我还得背她，那多麻烦。",
+    "links": [498]
+  },
+  {
+    "entryID": 498,
+    "actorID": "MC6",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [500]
+  },
+  {
+    "entryID": 500,
+    "actorID": "MC6",
+    "text": "用不著操心，顧好你自己吧。\n我要去看看斯蒂娜的狀況，你可別跟來。",
+    "Sequence": "SetPortrait(MC6,pic=5);;\nShowInstantMessage(Favorability,MC8,30,Agree);",
+    "zh_TW": "用不著操心，顧好你自己吧。\n我要去看看斯蒂娜的狀況，你可別跟來。",
+    "zh_CN": "用不着操心，顾好你自己吧。 \n我要去看看斯蒂娜的状况，你可别跟来。",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "MC1",
+    "text": "唉，逞強的傢伙……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "唉，逞強的傢伙……",
+    "zh_CN": "唉，逞强的家伙……",
+    "links": [504]
+  },
+  {
+    "entryID": 504,
+    "actorID": "role2",
+    "text": "[panel=5]即便事情是結束了，\n但你還是忍不住望向一個個墓塚……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]即便事情是結束了，\n但你還是忍不住望向一個個墓塚……",
+    "zh_CN": "[panel=5]即便事情是结束了，\n但你还是忍不住望向一个个墓冢……",
+    "links": [506]
+  },
+  {
+    "entryID": 506,
+    "actorID": "role2",
+    "text": "[panel=5]若能再珍惜時間，說不定，將是不同的景色……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]若能再珍惜時間，說不定，將是不同的景色……",
+    "zh_CN": "[panel=5]若能再珍惜时间，说不定，将是不同的景色……",
+    "links": [507]
+  },
+  {
+    "entryID": 507,
+    "actorID": "role2",
+    "text": "[panel=5]此刻都成往事……他們的一生總結於此，\n總結於異鄉荒野，不精采，也不亮麗……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]此刻都成往事……他們的一生總結於此，\n總結於異鄉荒野，不精采，也不亮麗……",
+    "zh_CN": "[panel=5]此刻都成往事……他们的一生总结于此，\n总结于异乡荒野，不精采，也不亮丽……",
+    "links": []
+  },
+  {
+    "entryID": 509,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);\nSetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [516]
+  },
+  {
+    "entryID": 510,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [470]
+  },
+  {
+    "entryID": 511,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [513]
+  },
+  {
+    "entryID": 512,
+    "actorID": "MC6",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC6,pic=4);;",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [490]
+  },
+  {
+    "entryID": 513,
+    "actorID": "role2",
+    "text": "[panel=5]你靜靜地走離，好不打擾斯蒂娜。\n遇上診治完倖存傭兵的張寧走來……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你靜靜地走離，好不打擾斯蒂娜。\n遇上診治完倖存傭兵的張寧走來……",
+    "zh_CN": "[panel=5]你静静地走离，好不打扰斯蒂娜。 \n遇上诊治完幸存佣兵的张宁走来……",
+    "links": [486]
+  },
+  {
+    "entryID": 516,
+    "actorID": "role2",
+    "text": "[panel=5]……你們收埋了逝者。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]……你們收埋了逝者。",
+    "zh_CN": "[panel=5]……你们收埋了逝者。",
+    "links": [467]
+  },
+  {
+    "entryID": 517,
+    "actorID": "MC2",
+    "text": "哈哈哈……\n這幫人還真有趣，我喜歡。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "哈哈哈……\n這幫人還真有趣，我喜歡。",
+    "zh_CN": "哈哈哈……\n这帮人还真有趣，我喜欢。",
+    "links": [518]
+  },
+  {
+    "entryID": 518,
+    "actorID": "MC3",
+    "text": "郭嘉，你的臉色很難看，不要緊吧？",
+    "Sequence": "OpenPanel(2, close);\nSetPortrait(MC3,pic=1);",
+    "zh_TW": "郭嘉，你的臉色很難看，不要緊吧？",
+    "zh_CN": "郭嘉，你的脸色很难看，不要紧吧？",
+    "links": [519]
+  },
+  {
+    "entryID": 519,
+    "actorID": "MC7",
+    "text": "[panel=2]沒事，只是有些累而已……",
+    "Sequence": "SetPortrait(MC7,pic=3);",
+    "zh_TW": "[panel=2]沒事，只是有些累而已……",
+    "zh_CN": "[panel=2]没事，只是有些累而已……",
+    "links": [520]
+  },
+  {
+    "entryID": 520,
+    "actorID": "MC6",
+    "text": "都別撐了，你們所有人都去休息吧，\n接下來是大夫的工作了。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "都別撐了，你們所有人都去休息吧，\n接下來是大夫的工作了。",
+    "zh_CN": "都别撑了，你们所有人都去休息吧，\n接下来是大夫的工作了。",
+    "links": [521]
+  },
+  {
+    "entryID": 521,
+    "actorID": "MC6",
+    "text": "我去準備些活息藥湯。\n有任何不舒服，就快來叫我。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "我去準備些活息藥湯。\n有任何不舒服，就快來叫我。",
+    "zh_CN": "我去准备些活息药汤。 \n有任何不舒服，就快来叫我。",
+    "links": [522]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role2",
+    "text": "[panel=5]張寧轉身要離開，\n但她忘了自己也是連日奔波──",
+    "Sequence": "OpenPanel(2, close);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=5]張寧轉身要離開，\n但她忘了自己也是連日奔波──",
+    "zh_CN": "[panel=5]张宁转身要离开，\n但她忘了自己也是连日奔波──",
+    "links": [523]
+  },
+  {
+    "entryID": 523,
+    "actorID": "MC1",
+    "text": "小心！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "小心！",
+    "zh_CN": "小心！",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "role2",
+    "text": "[panel=5]張寧頭一暈，險險摔倒，\n幸有你及時出面，只不過動作有些……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]張寧頭一暈，險險摔倒，\n幸有你及時出面，只不過動作有些……",
+    "zh_CN": "[panel=5]张宁头一晕，险险摔倒，\n幸有你及时出面，只不过动作有些……",
+    "links": [525]
+  },
+  {
+    "entryID": 525,
+    "actorID": "MC2",
+    "text": "唉呀呀，兩位真是好火熱啊。\n不用介意我們，快點繼續，動作別停下。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "唉呀呀，兩位真是好火熱啊。\n不用介意我們，快點繼續，動作別停下。",
+    "zh_CN": "唉呀呀，两位真是好火热啊。 \n不用介意我们，快点继续，动作别停下。",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC1",
+    "text": "啊！這……那……張姑娘！\n抱歉！我不是有意的……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "啊！這……那……張姑娘！\n抱歉！我不是有意的……",
+    "zh_CN": "啊！这……那……张姑娘！ \n抱歉！我不是有意的……",
+    "links": [527]
+  },
+  {
+    "entryID": 527,
+    "actorID": "MC6",
+    "text": "[panel=2]…………",
+    "Sequence": "SetPortrait(MC6,pic=5);;",
+    "zh_TW": "[panel=2]…………",
+    "zh_CN": "[panel=2]…………",
+    "links": [528]
+  },
+  {
+    "entryID": 528,
+    "actorID": "role35",
+    "text": "嘿，臉色那麼紅，還說沒有意。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "嘿，臉色那麼紅，還說沒有意。",
+    "zh_CN": "嘿，脸色那么红，还说没有意。",
+    "links": [529]
+  },
+  {
+    "entryID": 529,
+    "actorID": "MC3",
+    "text": "都說無意才是最真心。",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "zh_TW": "都說無意才是最真心。",
+    "zh_CN": "都说无意才是最真心。",
+    "links": [406]
+  },
+  {
+    "entryID": 530,
+    "actorID": "MC6",
+    "text": "這段期間，你才是最累的人吧。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "這段期間，你才是最累的人吧。",
+    "zh_CN": "这段期间，你才是最累的人吧。",
+    "links": [531]
+  },
+  {
+    "entryID": 531,
+    "actorID": "MC1",
+    "text": "沒這回事啦，我還……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "沒這回事啦，我還……",
+    "zh_CN": "没这回事啦，我还……",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "MC6",
+    "text": "在我面前不用裝了，你什麼德性，我豈會不知。\n拿好了，記得此藥……",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "在我面前不用裝了，你什麼德性，我豈會不知。\n拿好了，記得此藥……",
+    "zh_CN": "在我面前不用装了，你什么德性，我岂会不知。 \n拿好了，记得此药……",
+    "links": [425]
+  }
+]

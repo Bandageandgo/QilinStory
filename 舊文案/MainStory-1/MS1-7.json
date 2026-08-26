@@ -1,0 +1,703 @@
+[
+  {
+    "entryID": 180,
+    "actorID": "role2",
+    "text": "[panel=5]眾人疾行趕路，試圖擺脫怪物。\n奈何敵人難纏……",
+    "Sequence": "PlayOrStopParticle(Smoke_Dust,Play);",
+    "zh_TW": "[panel=5]眾人疾行趕路，試圖擺脫怪物。\n奈何敵人難纏……",
+    "zh_CN": "[panel=5]众人疾行赶路，试图摆脱怪物。 \n奈何敌人难缠……",
+    "links": [181]
+  },
+  {
+    "entryID": 181,
+    "actorID": "role4",
+    "text": "吼──吼──",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──吼──",
+    "zh_CN": "吼──吼──",
+    "links": [182]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "該死的，也追得太緊了吧。\n郭嘉，我知道是強人所難，但你可有計策脫困？",
+    "Sequence": "DisableAllCharacterExpression();\nSetPortrait(MC1,pic=2);",
+    "zh_TW": "該死的，也追得太緊了吧。\n郭嘉，我知道是強人所難，但你可有計策脫困？",
+    "zh_CN": "该死的，也追得太紧了吧。 \n郭嘉，我知道是强人所难，但你可有计策脱困？",
+    "links": [185]
+  },
+  {
+    "entryID": 185,
+    "actorID": "MC7",
+    "text": "有。此處草木林立，\n用燎火配合張寧毒藥，可成毒焰。",
+    "Sequence": "",
+    "zh_TW": "有。此處草木林立，\n用燎火配合張寧毒藥，可成毒焰。",
+    "zh_CN": "有。此处草木林立，\n用燎火配合张宁毒药，可成毒焰。",
+    "links": [189]
+  },
+  {
+    "entryID": 189,
+    "actorID": "MC7",
+    "text": "但此刻是西風，燎火只會反燒我們。",
+    "Sequence": "SetPortrait(MC7,pic=3);\nEnableCharacterExpression(1,MC7,Meditate);",
+    "zh_TW": "但此刻是西風，燎火只會反燒我們。",
+    "zh_CN": "但此刻是西风，燎火只会反烧我们。",
+    "links": [190]
+  },
+  {
+    "entryID": 190,
+    "actorID": "MC1",
+    "text": "地利人和皆備，獨缺天時嗎……",
+    "Sequence": "SetPortrait(MC1,pic=9);\nPlayOrStopParticle(Smoke_Dust,Stop);\nDisableAllCharacterExpression();",
+    "zh_TW": "地利人和皆備，獨缺天時嗎……",
+    "zh_CN": "地利人和皆备，独缺天时吗……",
+    "links": [266]
+  },
+  {
+    "entryID": 191,
+    "actorID": "role2",
+    "text": "[panel=5]禍不單行，竟有怪物從側面衝出，橫擋於前──",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=5]禍不單行，竟有怪物從側面衝出，橫擋於前──",
+    "zh_CN": "[panel=5]祸不单行，竟有怪物从侧面冲出，横挡于前──",
+    "links": [193, 267]
+  },
+  {
+    "entryID": 193,
+    "actorID": "MC1",
+    "text": "1.可惡！跟牠們拼了，看是誰滅了誰！",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "Description": "進戰鬥",
+    "zh_TW": "1.可惡！跟牠們拼了，看是誰滅了誰！",
+    "zh_CN": "1.可恶！跟它们拼了，看是谁灭了谁！",
+    "links": [275, 203]
+  },
+  {
+    "entryID": 203,
+    "actorID": "role2",
+    "text": "[panel=5]──你們不敵怪物，陷入死局，\n但你不顧凶險誓要殺出活路。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──你們不敵怪物，陷入死局，\n但你不顧凶險誓要殺出活路。",
+    "zh_CN": "[panel=5]──你们不敌怪物，陷入死局，\n但你不顾凶险誓要杀出活路。",
+    "links": [258]
+  },
+  {
+    "entryID": 206,
+    "actorID": "role2",
+    "text": "[panel=5]骰子落定瞬間，風向開始轉變了！",
+    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(0,MC1,Anger_2);\nPlayOrStopParticle(ScreenWhite_1);\nPlayOrStopParticle(Wind_Right,Play);",
+    "zh_TW": "[panel=5]骰子落定瞬間，風向開始轉變了！",
+    "zh_CN": "[panel=5]骰子落定瞬间，风向开始转变了！",
+    "links": [207]
+  },
+  {
+    "entryID": 207,
+    "actorID": "MC1",
+    "text": "[em2]是東風[/em2]！郭嘉、張寧！",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "[em2]是東風[/em2]！郭嘉、張寧！",
+    "zh_CN": "[em2]是东风[/em2]！郭嘉、张宁！",
+    "links": [208]
+  },
+  {
+    "entryID": 208,
+    "actorID": "role2",
+    "text": "[panel=5]見天時至，郭嘉、張寧迅速聯手發計──",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]見天時至，郭嘉、張寧迅速聯手發計──",
+    "zh_CN": "[panel=5]见天时至，郭嘉、张宁迅速联手发计──",
+    "links": [209]
+  },
+  {
+    "entryID": 209,
+    "actorID": "role2",
+    "text": "[panel=5]毒火雙發，相輔相成，\n一時間毒焰如火龍沿著林木吞噬怪物。",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Wind_Right,Stop);\nPlayOrStopParticle(PotionFire,Play);\nSetContinueMode(original)@6;",
+    "zh_TW": "[panel=5]毒火雙發，相輔相成，\n一時間毒焰如火龍沿著林木吞噬怪物。",
+    "zh_CN": "[panel=5]毒火双发，相辅相成，\n一时间毒焰如火龙沿着林木吞噬怪物。",
+    "links": [293]
+  },
+  {
+    "entryID": 210,
+    "actorID": "role2",
+    "text": "[panel=5]然而怪物並不打算乖乖就範，\n竟開始前撲後進，以屍首湮滅毒焰。",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=5]然而怪物並不打算乖乖就範，\n竟開始前撲後進，以屍首湮滅毒焰。",
+    "zh_CN": "[panel=5]然而怪物并不打算乖乖就范，\n竟开始前扑后进，以尸首湮灭毒焰。",
+    "links": [211]
+  },
+  {
+    "entryID": 211,
+    "actorID": "MC1",
+    "text": "終究避不了背水一戰嗎……\n那就看是誰滅了誰……",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "終究避不了背水一戰嗎……\n那就看是誰滅了誰……",
+    "zh_CN": "终究避不了背水一战吗……\n那就看是谁灭了谁……",
+    "links": [212]
+  },
+  {
+    "entryID": 212,
+    "actorID": "role2",
+    "text": "[panel=5]怎耐縱是戰意猶存，\n可現實的體力早已不支……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]怎耐縱是戰意猶存，\n可現實的體力早已不支……",
+    "zh_CN": "[panel=5]怎耐纵是战意犹存，\n可现实的体力早已不支……",
+    "links": [263]
+  },
+  {
+    "entryID": 218,
+    "actorID": "MC2",
+    "text": "[panel=4]──站起來！\n別給我們英豪府丟人！",
+    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(4,MC2,Anger_3);\nSetPortrait(MC2,pic=2);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=4]──站起來！\n別給我們英豪府丟人！",
+    "zh_CN": "[panel=4]──站起来！ \n别给我们英豪府丢人！",
+    "links": [219]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC1",
+    "text": "呂……呂大哥……？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nDisableCharacterExpression(4);",
+    "zh_TW": "呂……呂大哥……？",
+    "zh_CN": "吕……吕大哥……？",
+    "links": [220]
+  },
+  {
+    "entryID": 220,
+    "actorID": "MC2",
+    "text": "[panel=4]如何啊，英雄總是來得及時。",
+    "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(4,MC2,Proud);",
+    "zh_TW": "[panel=4]如何啊，英雄總是來得及時。",
+    "zh_CN": "[panel=4]如何啊，英雄总是来得及时。",
+    "links": [221]
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC3",
+    "text": "[panel=5]狗屁不通，若你在府內，\n他們會遇上這種危險嗎！",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]狗屁不通，若你在府內，\n他們會遇上這種危險嗎！",
+    "zh_CN": "[panel=5]狗屁不通，若你在府内，\n他们会遇上这种危险吗！",
+    "links": [222]
+  },
+  {
+    "entryID": 222,
+    "actorID": "MC1",
+    "text": "徐師父！羽師兄！",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "徐師父！羽師兄！",
+    "zh_CN": "徐师父！羽师兄！",
+    "links": [223]
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC5",
+    "text": "[panel=4]你們做得很好，接下來就交給我們。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "[panel=4]你們做得很好，接下來就交給我們。",
+    "zh_CN": "[panel=4]你们做得很好，接下来就交给我们。",
+    "links": [294]
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC2",
+    "text": "[panel=2]氣勢是很好，但不是我想潑冷水，\n剩下的好像還不少。",
+    "Sequence": "SetPortrait(MC2,pic=4);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=2]氣勢是很好，但不是我想潑冷水，\n剩下的好像還不少。",
+    "zh_CN": "[panel=2]气势是很好，但不是我想泼冷水，\n剩下的好像还不少。",
+    "links": [225]
+  },
+  {
+    "entryID": 225,
+    "actorID": "MC5",
+    "text": "[panel=2]怕了？怕了你可以躲回窩裡。",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "[panel=2]怕了？怕了你可以躲回窩裡。",
+    "zh_CN": "[panel=2]怕了？怕了你可以躲回窝里。",
+    "links": [226]
+  },
+  {
+    "entryID": 226,
+    "actorID": "MC2",
+    "text": "[panel=2]我害怕？笑話！\n我怕是你們跟不上我！殺！",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=2]我害怕？笑話！\n我怕是你們跟不上我！殺！",
+    "zh_CN": "[panel=2]我害怕？笑话！ \n我怕是你们跟不上我！杀！",
+    "links": [227]
+  },
+  {
+    "entryID": 227,
+    "actorID": "MC3",
+    "text": "[panel=2]愛現的傢伙。",
+    "Sequence": "SetPortrait(MC3,pic=5);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=2]愛現的傢伙。",
+    "zh_CN": "[panel=2]爱现的家伙。",
+    "links": [228]
+  },
+  {
+    "entryID": 228,
+    "actorID": "MC5",
+    "text": "他也就這優點。\n別輸給他，動手！",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "他也就這優點。\n別輸給他，動手！",
+    "zh_CN": "他也就这优点。 \n别输给他，动手！",
+    "links": [295]
+  },
+  {
+    "entryID": 230,
+    "actorID": "MC5",
+    "text": "九黎，盡殺！",
+    "Sequence": "",
+    "zh_TW": "九黎，盡殺！",
+    "zh_CN": "九黎，尽杀！",
+    "links": [306]
+  },
+  {
+    "entryID": 231,
+    "actorID": "MC1",
+    "text": "全……全殺光了……？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "全……全殺光了……？",
+    "zh_CN": "全……全杀光了……？",
+    "links": [239]
+  },
+  {
+    "entryID": 238,
+    "actorID": "MC7",
+    "text": "[panel=2]那種事怎麼樣都無所謂，\n你們怎麼來得如此剛好？",
+    "Sequence": "SetPortrait(MC1,pic=6);\nSetPortrait(MC7,pic=1);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]那種事怎麼樣都無所謂，\n你們怎麼來得如此剛好？",
+    "zh_CN": "[panel=2]那种事怎么样都无所谓，\n你们怎么来得如此刚好？",
+    "links": [243]
+  },
+  {
+    "entryID": 239,
+    "actorID": "MC2",
+    "text": "那不是廢話，\n我可是繼西楚霸王之後，天下第一的呂信。",
+    "Sequence": "etPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Proud);",
+    "zh_TW": "那不是廢話，\n我可是繼西楚霸王之後，天下第一的呂信。",
+    "zh_CN": "那不是废话，\n我可是继西楚霸王之后，天下第一的吕信。",
+    "links": [240]
+  },
+  {
+    "entryID": 240,
+    "actorID": "MC3",
+    "text": "[panel=2]最後四面楚歌，烏江自刎。",
+    "Sequence": "SetPortrait(MC3,pic=5);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]最後四面楚歌，烏江自刎。",
+    "zh_CN": "[panel=2]最后四面楚歌，乌江自刎。",
+    "links": [241]
+  },
+  {
+    "entryID": 241,
+    "actorID": "MC2",
+    "text": "少咒我了，我可是會活到一百歲！",
+    "Sequence": "SetPortrait(MC2,pic=5);\nEnableCharacterExpression(1,MC2,Surprise_2);",
+    "zh_TW": "少咒我了，我可是會活到一百歲！",
+    "zh_CN": "少咒我了，我可是会活到一百岁！",
+    "links": [238]
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC5",
+    "text": "我們在回程聽聞此事，便立刻趕來了。",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "我們在回程聽聞此事，便立刻趕來了。",
+    "zh_CN": "我们在回程听闻此事，便立刻赶来了。",
+    "links": [301]
+  },
+  {
+    "entryID": 244,
+    "actorID": "MC3",
+    "text": "[panel=2]至於姓呂的會溜去哪裡，我們豈會不知。",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "zh_TW": "[panel=2]至於姓呂的會溜去哪裡，我們豈會不知。",
+    "zh_CN": "[panel=2]至于姓吕的会溜去哪里，我们岂会不知。",
+    "links": [245]
+  },
+  {
+    "entryID": 245,
+    "actorID": "MC2",
+    "text": "嘖！下次你可以別再拿刀抵著人身後嗎？\n我還以為是強盜打劫……",
+    "Sequence": "SetPortrait(MC1,pic=5);\nSetPortrait(MC2,pic=4);\nEnableCharacterExpression(1,MC2,Nervous);",
+    "zh_TW": "嘖！下次你可以別再拿刀抵著人身後嗎？\n我還以為是強盜打劫……",
+    "zh_CN": "啧！下次你可以别再拿刀抵着人身后吗？ \n我还以为是强盗打劫……",
+    "links": [246]
+  },
+  {
+    "entryID": 246,
+    "actorID": "MC5",
+    "text": "[panel=2]好了好了，眾人都辛苦了……",
+    "Sequence": "EnableCharacterExpression(2,MC5,Proud);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=2]好了好了，眾人都辛苦了……",
+    "zh_CN": "[panel=2]好了好了，众人都辛苦了……",
+    "links": []
+  },
+  {
+    "entryID": 258,
+    "actorID": "role2",
+    "text": "[panel=5]霎時間，你如瘋如魔，更勝鬼神，\n竟真把怪物殺退，但也付出相應代價……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]霎時間，你如瘋如魔，更勝鬼神，\n竟真把怪物殺退，但也付出相應代價……",
+    "zh_CN": "[panel=5]霎时间，你如疯如魔，更胜鬼神，\n竟真把怪物杀退，但也付出相应代价……",
+    "links": [270]
+  },
+  {
+    "entryID": 259,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [180]
+  },
+  {
+    "entryID": 263,
+    "actorID": "MC1",
+    "text": "嗚呃……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "嗚呃……",
+    "zh_CN": "呜呃……",
+    "links": [218]
+  },
+  {
+    "entryID": 265,
+    "actorID": "role2",
+    "text": "[panel=5]師徒三人──\n如風！如狂！如雨！如暴！霎那間──",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,1,30,0.1);\nPlayOrStopParticle(Sword_Multiple_ScreenWhite,Play);\nPlayOrStopParticle(BloodSplash_Middle,Play);\nPlayOrStopParticle(Punch_Multiple_ScreenWhite,Play);\nPlayOrStopParticle(BloodSplash_Right,Play);\nPlayOrStopParticle(BloodSplash_Left,Play);\nPlayOrStopParticle(Smoke_Dust,Stop);\nSetContinueMode(original)@1;",
+    "zh_TW": "[panel=5]師徒三人──\n如風！如狂！如雨！如暴！霎那間──",
+    "zh_CN": "[panel=5]师徒三人──\n如风！如狂！如雨！如暴！霎那间──",
+    "links": [304]
+  },
+  {
+    "entryID": 266,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [191]
+  },
+  {
+    "entryID": 267,
+    "actorID": "MC1",
+    "text": "2.[em1][統率][/em1]別慌，數量不多，集結成陣，以鋒矢之勢殺過去！",
+    "Sequence": "BeginDiceRoll(Leadership,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][統率][/em1]別慌，數量不多，集結成陣，以鋒矢之勢殺過去！",
+    "zh_CN": "2.[em1][统率][/em1]别慌，数量不多，集结成阵，以锋矢之势杀过去！",
+    "links": [305]
+  },
+  {
+    "entryID": 270,
+    "actorID": "role2",
+    "text": "[panel=5]你身受無數創傷，體內筋脈盡斷，\n此後餘生已成活死人。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你身受無數創傷，體內筋脈盡斷，\n此後餘生已成活死人。",
+    "zh_CN": "[panel=5]你身受无数创伤，体内筋脉尽断，\n此后余生已成活死人。",
+    "links": [271]
+  },
+  {
+    "entryID": 271,
+    "actorID": "role2",
+    "text": "[panel=5]董卓並未怪罪於誰，\n將你交於張寧、斯蒂娜照料。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]董卓並未怪罪於誰，\n將你交於張寧、斯蒂娜照料。",
+    "zh_CN": "[panel=5]董卓并未怪罪于谁，\n将你交于张宁、斯蒂娜照料。",
+    "links": [272]
+  },
+  {
+    "entryID": 272,
+    "actorID": "role2",
+    "text": "[panel=5]此後天下風雲動盪，皆與你們無關，\n你在兩女陪伴下，於僻世山村，終了殘生……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]此後天下風雲動盪，皆與你們無關，\n你在兩女陪伴下，於僻世山村，終了殘生……",
+    "zh_CN": "[panel=5]此后天下风云动荡，皆与你们无关，\n你在两女陪伴下，于僻世山村，终了残生……",
+    "links": []
+  },
+  {
+    "entryID": 273,
+    "actorID": "role2",
+    "text": "[panel=5]陣勢結成，猶如飛箭，\n一口氣殺穿擋在前路的怪物──",
+    "Sequence": "SetPortrait(MC1,pic=2);\nPlayOrStopParticle(Arrow_Left,Play);\nPlayOrStopParticle(BloodSplash_Right,Play)@1;\nShowInstantMessage(Exp_FeatExp,MC1,Leadership,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]陣勢結成，猶如飛箭，\n一口氣殺穿擋在前路的怪物──",
+    "zh_CN": "[panel=5]阵势结成，犹如飞箭，\n一口气杀穿挡在前路的怪物──",
+    "links": [275]
+  },
+  {
+    "entryID": 274,
+    "actorID": "role2",
+    "text": "[panel=5]事發突然，眾人慌亂難以集結，\n只能打上一場硬仗──",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "進戰鬥",
+    "zh_TW": "[panel=5]事發突然，眾人慌亂難以集結，\n只能打上一場硬仗──",
+    "zh_CN": "[panel=5]事发突然，众人慌乱难以集结，\n只能打上一场硬仗──",
+    "links": [275, 203]
+  },
+  {
+    "entryID": 275,
+    "actorID": "role35",
+    "text": "哼！畜牲！以為還能偷襲得逞嗎。",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "哼！畜牲！以為還能偷襲得逞嗎。",
+    "zh_CN": "哼！畜牲！以为还能偷袭得逞吗。",
+    "links": [276]
+  },
+  {
+    "entryID": 276,
+    "actorID": "role4",
+    "text": "吼──！吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！吼──！",
+    "zh_CN": "吼──！吼──！",
+    "links": [277]
+  },
+  {
+    "entryID": 277,
+    "actorID": "role2",
+    "text": "[panel=5]然而一時耽擱，後方凶煞追上了！",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=5]然而一時耽擱，後方凶煞追上了！",
+    "zh_CN": "[panel=5]然而一时耽搁，后方凶煞追上了！",
+    "links": [278]
+  },
+  {
+    "entryID": 278,
+    "actorID": "role35",
+    "text": "可恨，眾人準備迎戰！",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "可恨，眾人準備迎戰！",
+    "zh_CN": "可恨，众人准备迎战！",
+    "links": [279]
+  },
+  {
+    "entryID": 279,
+    "actorID": "role4",
+    "text": "吼──！吼──！吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！吼──！吼──！",
+    "zh_CN": "吼──！吼──！吼──！",
+    "links": [280]
+  },
+  {
+    "entryID": 280,
+    "actorID": "MC1",
+    "text": "（不行，這樣下去必定全軍覆滅……）",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);",
+    "zh_TW": "（不行，這樣下去必定全軍覆滅……）",
+    "zh_CN": "（不行，这样下去必定全军覆灭……）",
+    "links": [281]
+  },
+  {
+    "entryID": 281,
+    "actorID": "role2",
+    "text": "[panel=5]忽然──！",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);",
+    "zh_TW": "[panel=5]忽然──！",
+    "zh_CN": "[panel=5]忽然──！",
+    "links": [282]
+  },
+  {
+    "entryID": 282,
+    "actorID": "MC1",
+    "text": "麒麟骰！這種時候……？",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "麒麟骰！這種時候……？",
+    "zh_CN": "麒麟骰！这种时候……？",
+    "links": [283]
+  },
+  {
+    "entryID": 283,
+    "actorID": "role2",
+    "text": "[panel=5]懷中骰子再出異光，\n正當你打算拿出一看──",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);",
+    "zh_TW": "[panel=5]懷中骰子再出異光，\n正當你打算拿出一看──",
+    "zh_CN": "[panel=5]怀中骰子再出异光，\n正当你打算拿出一看──",
+    "links": [284]
+  },
+  {
+    "entryID": 284,
+    "actorID": "MC1",
+    "text": "（唔……萬一是饕餮……）",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);\nSetPortrait(MC1,pic=4);",
+    "zh_TW": "（唔……萬一是饕餮……）",
+    "zh_CN": "（唔……万一是饕餮……）",
+    "links": [285]
+  },
+  {
+    "entryID": 285,
+    "actorID": "role2",
+    "text": "[panel=5]剎那一念，握緊的手不敢攤開……",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=5]剎那一念，握緊的手不敢攤開……",
+    "zh_CN": "[panel=5]刹那一念，握紧的手不敢摊开……",
+    "links": [286]
+  },
+  {
+    "entryID": 286,
+    "actorID": "role4",
+    "text": "吼──！吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！吼──！",
+    "zh_CN": "吼──！吼──！",
+    "links": [287]
+  },
+  {
+    "entryID": 287,
+    "actorID": "role35",
+    "text": "倒數──戒備！",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(role35,pic=2);",
+    "zh_TW": "倒數──戒備！",
+    "zh_CN": "倒数──戒备！",
+    "links": [288]
+  },
+  {
+    "entryID": 288,
+    "actorID": "MC1",
+    "text": "唔──！",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);",
+    "zh_TW": "唔──！",
+    "zh_CN": "唔──！",
+    "links": [289]
+  },
+  {
+    "entryID": 289,
+    "actorID": "role42",
+    "text": "[panel=4]（不要畏懼骰子，更不要被骰子牽著走。\n只要你足夠強悍，骰子會回應你的意念。）",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nPlayOrStopParticle(Spotlight_4,Play);",
+    "zh_TW": "[panel=4]（不要畏懼骰子，更不要被骰子牽著走。\n只要你足夠強悍，骰子會回應你的意念。）",
+    "zh_CN": "[panel=4]（不要畏惧骰子，更不要被骰子牵着走。\n只要你足够强悍，骰子会回应你的意念。）",
+    "links": [290]
+  },
+  {
+    "entryID": 290,
+    "actorID": "MC1",
+    "text": "解吉凶，現命數……",
+    "Sequence": "PlayOrStopParticle(Spotlight_4,Stop);\nOpenPanel(4, close);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Anger_2);",
+    "zh_TW": "解吉凶，現命數……",
+    "zh_CN": "解吉凶，现命数……",
+    "links": [291]
+  },
+  {
+    "entryID": 291,
+    "actorID": "MC1",
+    "text": "麒麟骰！此際天時，為你不可！",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=2);",
+    "zh_TW": "麒麟骰！此際天時，為你不可！",
+    "zh_CN": "麒麟骰！此际天时，为你不可！",
+    "links": [292]
+  },
+  {
+    "entryID": 292,
+    "actorID": "role2",
+    "text": "[panel=5]希望燃起，骰子擲出一線生機，\n結果──",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);",
+    "Description": "事件圖",
+    "zh_TW": "[panel=5]希望燃起，骰子擲出一線生機，\n結果──",
+    "zh_CN": "[panel=5]希望燃起，骰子掷出一线生机，\n结果──",
+    "links": [206]
+  },
+  {
+    "entryID": 293,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [210]
+  },
+  {
+    "entryID": 294,
+    "actorID": "role4",
+    "text": "吼──！吼──！吼──！吼──！",
+    "Sequence": "OpenPanel(4, close);\nOpenPanel(5, close);\nSetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！吼──！吼──！吼──！",
+    "zh_CN": "吼──！吼──！吼──！吼──！",
+    "links": [224]
+  },
+  {
+    "entryID": 295,
+    "actorID": "MC3",
+    "text": "[panel=2]偃武──",
+    "Sequence": "EnableDialogueBG(MountainForest);\nSetPortrait(MC3,pic=3);\nPlayOrStopParticle(MurderousLook_Left,Play);",
+    "zh_TW": "[panel=2]偃武──",
+    "zh_CN": "[panel=2]偃武──",
+    "links": [296]
+  },
+  {
+    "entryID": 296,
+    "actorID": "role2",
+    "text": "[panel=5]偃刀出，殺意生，\n滔天凶氣傾洩而出，就連怪物也露出了恐懼！",
+    "Sequence": "",
+    "zh_TW": "[panel=5]偃刀出，殺意生，\n滔天凶氣傾洩而出，就連怪物也露出了恐懼！",
+    "zh_CN": "[panel=5]偃刀出，杀意生，\n滔天凶气倾泄而出，就连怪物也露出了恐惧！",
+    "links": [297]
+  },
+  {
+    "entryID": 297,
+    "actorID": "role4",
+    "text": "吼──",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,XYAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──",
+    "zh_CN": "吼──",
+    "links": [298]
+  },
+  {
+    "entryID": 298,
+    "actorID": "MC3",
+    "text": "[panel=2]──開斬！！！",
+    "Sequence": "SetContinueMode(false);\nSetPortrait(MC3,pic=2);\nEnableCharacterExpression(2,MC3,Anger_3);\nPlayOrStopParticle(RedSword_Single_ScreenWhite,Play)@0.5;\nPlayOrStopParticle(BloodSplash_Middle,Play)@0.5;\nSetGameObjectShake(BG,ShakeNormal, XYAxis,1,50,0)@0.5;\nOpenPanel(1, close)@0.5;\nSetContinueMode(original)@0.5;",
+    "zh_TW": "[panel=2]──開斬！！！",
+    "zh_CN": "[panel=2]──开斩！ ！ ！",
+    "links": [299]
+  },
+  {
+    "entryID": 299,
+    "actorID": "role2",
+    "text": "[panel=5]一斬，斬出了天地血線！隨即──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]一斬，斬出了天地血線！隨即──",
+    "zh_CN": "[panel=5]一斩，斩出了天地血线！随即──",
+    "links": [230]
+  },
+  {
+    "entryID": 301,
+    "actorID": "MC5",
+    "text": "就地圖推看，\n若要佈守，屬這處山區為上策。",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "就地圖推看，\n若要佈守，屬這處山區為上策。",
+    "zh_CN": "就地图推看，\n若要布守，属这处山区为上策。",
+    "links": [302]
+  },
+  {
+    "entryID": 302,
+    "actorID": "MC5",
+    "text": "不過也多虧你們剛才的大火，\n我們才得以迅速掌握你們確切位置。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "不過也多虧你們剛才的大火，\n我們才得以迅速掌握你們確切位置。",
+    "zh_CN": "不过也多亏你们刚才的大火，\n我们才得以迅速掌握你们确切位置。",
+    "links": [244]
+  },
+  {
+    "entryID": 304,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,1,50,0.1);\nPlayOrStopParticle(RedSword_Multiple_ScreenWhite,Play);\nPlayOrStopParticle(BloodSplash_X,Play);\nPlayOrStopParticle(BloodSplash_Middle,Play);\nPlayOrStopParticle(BloodSplash_Right,Play);\nPlayOrStopParticle(BloodSplash_Left,Play);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "links": [231]
+  },
+  {
+    "entryID": 305,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [273, 274]
+  },
+  {
+    "entryID": 306,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);\nSetContinueMode(false);\nPlayOrStopParticle(Sword_Multiple_ScreenWhite,Play);\nPlayOrStopParticle(BrokenWall,Play);\nPlayOrStopParticle(Smoke_Dust,Play)@0.5;\nSetGameObjectShake(BG,ShakeNormalGradually,XYAxis,1,50,0.1);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "links": [265]
+  }
+]

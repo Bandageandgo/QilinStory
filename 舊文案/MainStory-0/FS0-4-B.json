@@ -1,0 +1,477 @@
+[
+  {
+    "entryID": 675,
+    "actorID": "role2",
+    "text": "[panel=5]甫近甄家，就見百官朝會之景，\n其中一艷麗女子立於高位。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]甫近甄家，就見百官朝會之景，\n其中一艷麗女子立於高位。",
+    "zh_CN": "[panel=5]甫近甄家，就见百官朝会之景，\n其中一艳丽女子立于高位。",
+    "links": [676]
+  },
+  {
+    "entryID": 676,
+    "actorID": "MC9",
+    "text": "[panel=3]近來我聽聞有人不甘赤龍幫挑釁，擅作報復。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nSetPortrait(role20,pic=4);",
+    "zh_TW": "[panel=3]近來我聽聞有人不甘赤龍幫挑釁，擅作報復。",
+    "zh_CN": "[panel=3]近来我听闻有人不甘赤龙帮挑衅，擅作报复。",
+    "links": [723]
+  },
+  {
+    "entryID": 677,
+    "actorID": "MC9",
+    "text": "[panel=3]好了，筠也不讓各位委屈。\n你們有一切損失開銷，都由本家承擔。",
+    "Sequence": "SetPortrait(role20,pic=1);",
+    "zh_TW": "[panel=3]好了，筠也不讓各位委屈。\n你們有一切損失開銷，都由本家承擔。",
+    "zh_CN": "[panel=3]好了，筠也不让各位委屈。 \n你们有一切损失开销，都由本家承担。",
+    "links": [680, 681]
+  },
+  {
+    "entryID": 678,
+    "actorID": "role19",
+    "text": "[panel=2]家主教訓的是。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]家主教訓的是。",
+    "zh_CN": "[panel=2]家主教训的是。",
+    "links": [677]
+  },
+  {
+    "entryID": 679,
+    "actorID": "MC9",
+    "text": "[panel=3]別緊張，都是同族，筠豈有不信。\n只是惡犬亂吠，隨之起舞，豈不作賤自己當狗。",
+    "Sequence": "SetPortrait(role20,pic=1);",
+    "zh_TW": "[panel=3]別緊張，都是同族，筠豈有不信。\n只是惡犬亂吠，隨之起舞，豈不作賤自己當狗。",
+    "zh_CN": "[panel=3]别紧张，都是同族，筠岂有不信。 \n只是恶犬乱吠，随之起舞，岂不作贱自己当狗。",
+    "links": [683]
+  },
+  {
+    "entryID": 680,
+    "actorID": "MC1",
+    "text": "1.對外爭理不爭勢，圓融世故，值得學習啊。",
+    "Sequence": "",
+    "zh_TW": "1.對外爭理不爭勢，圓融世故，值得學習啊。",
+    "zh_CN": "1.对外争理不争势，圆融世故，值得学习啊。",
+    "links": [687]
+  },
+  {
+    "entryID": 681,
+    "actorID": "MC1",
+    "text": "2.訓斥之後再給甜頭，馭下之術，這家主很會玩啊。",
+    "Sequence": "",
+    "zh_TW": "2.訓斥之後再給甜頭，馭下之術，這家主很會玩啊。",
+    "zh_CN": "2.训斥之后再给甜头，驭下之术，这家主很会玩啊。",
+    "links": [688]
+  },
+  {
+    "entryID": 682,
+    "actorID": "MC9",
+    "text": "[panel=3]今日便到此。\n我倦了，各自去忙吧。",
+    "Sequence": "SetPortrait(role20,pic=3);",
+    "zh_TW": "[panel=3]今日便到此。\n我倦了，各自去忙吧。",
+    "zh_CN": "[panel=3]今日便到此。 \n我倦了，各自去忙吧。",
+    "links": [685]
+  },
+  {
+    "entryID": 683,
+    "actorID": "MC9",
+    "text": "[panel=3]讓他咬。他們理虧，\n我們才有藉口打狗，知道嗎？",
+    "Sequence": "SetPortrait(role20,pic=2);",
+    "zh_TW": "[panel=3]讓他咬。他們理虧，\n我們才有藉口打狗，知道嗎？",
+    "zh_CN": "[panel=3]让他咬。他们理亏，\n我们才有借口打狗，知道吗？",
+    "links": [678]
+  },
+  {
+    "entryID": 684,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Ye);\nAudioControl(PlaySFXOneShot,Water);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS04-B\", 1) == \"active\"",
+    "links": [686]
+  },
+  {
+    "entryID": 685,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nOpenPanel(3, close);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [689]
+  },
+  {
+    "entryID": 686,
+    "actorID": "MC1",
+    "text": "這是什麼情形……！",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "這是什麼情形……！",
+    "zh_CN": "这是什么情形……！",
+    "links": [675]
+  },
+  {
+    "entryID": 687,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "ShowInstantMessage(Exp_FeatExp,MC1,Charisma,20);\nContinue();",
+    "Description": "獲得專長經驗",
+    "links": [682]
+  },
+  {
+    "entryID": 688,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "ShowInstantMessage(Exp_FeatExp,MC1,Realpolitik,20);\nContinue();",
+    "Description": "獲得專長經驗",
+    "links": [682]
+  },
+  {
+    "entryID": 689,
+    "actorID": "MC1",
+    "text": "排場真大，要見這家主肯定不易……\n錢財對大族不過糞土，或許得試試[em2]獻上珍寶[/em2]。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Script": "SetQuestState(\"FS04-B\", \"active\");\nSetQuestEntryState(\"FS04-B\", 1, \"success\");\nSetQuestEntryState(\"FS04-B\", 2, \"active\")",
+    "Description": "變數更新",
+    "zh_TW": "排場真大，要見這家主肯定不易……\n錢財對大族不過糞土，或許得試試[em2]獻上珍寶[/em2]。",
+    "zh_CN": "排场真大，要见这家主肯定不易……\n钱财对大族不过粪土，或许得试试[em2]献上珍宝[/em2]。",
+    "links": [726]
+  },
+  {
+    "entryID": 690,
+    "actorID": "MC9",
+    "text": "你就是獻寶之人嗎？有點本事。",
+    "Sequence": "SetPortrait(role20,pic=4);",
+    "zh_TW": "你就是獻寶之人嗎？有點本事。",
+    "zh_CN": "你就是献宝之人吗？有点本事。",
+    "links": [691]
+  },
+  {
+    "entryID": 691,
+    "actorID": "MC1",
+    "text": "承蒙厚愛。\n能識寶物價值，家主也非凡眼。",
+    "Sequence": "",
+    "zh_TW": "承蒙厚愛。\n能識寶物價值，家主也非凡眼。",
+    "zh_CN": "承蒙厚爱。 \n能识宝物价值，家主也非凡眼。",
+    "links": [692]
+  },
+  {
+    "entryID": 692,
+    "actorID": "MC9",
+    "text": "會說話，但我的興趣一向很短，\n給你回答我三句話的時間好了。",
+    "Sequence": "SetPortrait(role20,pic=1);",
+    "zh_TW": "會說話，但我的興趣一向很短，\n給你回答我三句話的時間好了。",
+    "zh_CN": "会说话，但我的兴趣一向很短，\n给你回答我三句话的时间好了。",
+    "links": [693]
+  },
+  {
+    "entryID": 693,
+    "actorID": "MC1",
+    "text": "咦？正常流程，\n不是由我用三句話說服家主？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "咦？正常流程，\n不是由我用三句話說服家主？",
+    "zh_CN": "咦？正常流程，\n不是由我用三句话说服家主？",
+    "links": [694]
+  },
+  {
+    "entryID": 694,
+    "actorID": "MC9",
+    "text": "這是你的第一句回答嗎？",
+    "Sequence": "SetPortrait(role20,pic=3);\nDisableAllCharacterExpression();",
+    "zh_TW": "這是你的第一句回答嗎？",
+    "zh_CN": "这是你的第一句回答吗？",
+    "links": [695]
+  },
+  {
+    "entryID": 695,
+    "actorID": "MC1",
+    "text": "不是！\n是在下僭越了。",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "不是！\n是在下僭越了。",
+    "zh_CN": "不是！ \n是在下僭越了。",
+    "links": [696]
+  },
+  {
+    "entryID": 696,
+    "actorID": "MC9",
+    "text": "無事獻殷勤非奸即盜，\n你是哪一種？",
+    "Sequence": "SetPortrait(role20,pic=4);\nDisableAllCharacterExpression();\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "無事獻殷勤非奸即盜，\n你是哪一種？",
+    "zh_CN": "无事献殷勤非奸即盗，\n你是哪一种？",
+    "links": [697, 698, 699]
+  },
+  {
+    "entryID": 697,
+    "actorID": "MC1",
+    "text": "1.在下既非不奸，更非盜，在下只是一位有所求的買賣人。",
+    "Sequence": "",
+    "zh_TW": "1.在下既非不奸，更非盜，在下只是一位有所求的買賣人。",
+    "zh_CN": "1.在下既非不奸，更非盗，在下只是一位有所求的买卖人。",
+    "links": [700]
+  },
+  {
+    "entryID": 698,
+    "actorID": "MC1",
+    "text": "2.在下想與甄家交朋友，一片赤誠，天地可鑑。",
+    "Sequence": "",
+    "zh_TW": "2.在下想與甄家交朋友，一片赤誠，天地可鑑。",
+    "zh_CN": "2.在下想与甄家交朋友，一片赤诚，天地可鉴。",
+    "links": [702]
+  },
+  {
+    "entryID": 699,
+    "actorID": "MC1",
+    "text": "3.站在貴人身邊，在下是大奸也是大盜。",
+    "Sequence": "",
+    "zh_TW": "3.站在貴人身邊，在下是大奸也是大盜。",
+    "zh_CN": "3.站在贵人身边，在下是大奸也是大盗。",
+    "links": [703]
+  },
+  {
+    "entryID": 700,
+    "actorID": "MC9",
+    "text": "商人言利不談情。\n來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=3);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "商人言利不談情。\n來人，送客。",
+    "zh_CN": "商人言利不谈情。 \n来人，送客。",
+    "links": [701]
+  },
+  {
+    "entryID": 701,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [727]
+  },
+  {
+    "entryID": 702,
+    "actorID": "MC9",
+    "text": "人心隔肚皮，天地豈能見。\n來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=3);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "人心隔肚皮，天地豈能見。\n來人，送客。",
+    "zh_CN": "人心隔肚皮，天地岂能见。 \n来人，送客。",
+    "links": [701]
+  },
+  {
+    "entryID": 703,
+    "actorID": "MC9",
+    "text": "嗯……\n說說你如何看待這位貴人？",
+    "Sequence": "SetPortrait(role20,pic=1);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "嗯……\n說說你如何看待這位貴人？",
+    "zh_CN": "嗯……\n说说你如何看待这位贵人？",
+    "links": [706, 704, 705]
+  },
+  {
+    "entryID": 704,
+    "actorID": "MC1",
+    "text": "2.傾城傾國，萬世難得一見的佳人。",
+    "Sequence": "",
+    "zh_TW": "2.傾城傾國，萬世難得一見的佳人。",
+    "zh_CN": "2.倾城倾国，万世难得一见的佳人。",
+    "links": [707]
+  },
+  {
+    "entryID": 705,
+    "actorID": "MC1",
+    "text": "3.氣宇非凡，超凡脫俗的神人。",
+    "Sequence": "",
+    "zh_TW": "3.氣宇非凡，超凡脫俗的神人。",
+    "zh_CN": "3.气宇非凡，超凡脱俗的神人。",
+    "links": [708]
+  },
+  {
+    "entryID": 706,
+    "actorID": "MC1",
+    "text": "1.敬如天，望如聖，尊之如母。",
+    "Sequence": "",
+    "zh_TW": "1.敬如天，望如聖，尊之如母。",
+    "zh_CN": "1.敬如天，望如圣，尊之如母。",
+    "links": [709]
+  },
+  {
+    "entryID": 707,
+    "actorID": "MC9",
+    "text": "讚美之聲，向來不絕於耳。\n來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=1);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "讚美之聲，向來不絕於耳。\n來人，送客。",
+    "zh_CN": "赞美之声，向来不绝于耳。 \n来人，送客。",
+    "links": [701]
+  },
+  {
+    "entryID": 708,
+    "actorID": "MC9",
+    "text": "肉體凡胎，焉能成神。\n來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=4);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "肉體凡胎，焉能成神。\n來人，送客。",
+    "zh_CN": "肉体凡胎，焉能成神。 \n来人，送客。",
+    "links": [701]
+  },
+  {
+    "entryID": 709,
+    "actorID": "MC9",
+    "text": "尊之，如何尊之？",
+    "Sequence": "SetPortrait(role20,pic=3);\nSetPortrait(MC1,pic=6);",
+    "zh_TW": "尊之，如何尊之？",
+    "zh_CN": "尊之，如何尊之？",
+    "links": [710, 711, 712]
+  },
+  {
+    "entryID": 710,
+    "actorID": "MC1",
+    "text": "1.人之行，莫大於孝，竭盡所能，日夜侍奉。",
+    "Sequence": "",
+    "zh_TW": "1.人之行，莫大於孝，竭盡所能，日夜侍奉。",
+    "zh_CN": "1.人之行，莫大于孝，竭尽所能，日夜侍奉。",
+    "links": [713]
+  },
+  {
+    "entryID": 711,
+    "actorID": "MC1",
+    "text": "2.財物不私，盡數奉養。",
+    "Sequence": "",
+    "zh_TW": "2.財物不私，盡數奉養。",
+    "zh_CN": "2.财物不私，尽数奉养。",
+    "links": [714]
+  },
+  {
+    "entryID": 712,
+    "actorID": "MC1",
+    "text": "3.（不作多言，深躬作揖）",
+    "Sequence": "",
+    "zh_TW": "3.（不作多言，深躬作揖）",
+    "zh_CN": "3.（不作多言，深躬作揖）",
+    "links": [715]
+  },
+  {
+    "entryID": 713,
+    "actorID": "MC9",
+    "text": "君只談孝，卻不知久病無孝子。\n來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=4);\nSetPortrait(MC1,pic=8);",
+    "zh_TW": "君只談孝，卻不知久病無孝子。\n來人，送客。",
+    "zh_CN": "君只谈孝，却不知久病无孝子。 \n来人，送客。",
+    "links": [701]
+  },
+  {
+    "entryID": 714,
+    "actorID": "MC9",
+    "text": "甘露時雨，不私一物。\n來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=3);\nSetPortrait(MC1,pic=8);",
+    "zh_TW": "甘露時雨，不私一物。\n來人，送客。",
+    "zh_CN": "甘露时雨，不私一物。 \n来人，送客。",
+    "links": [701]
+  },
+  {
+    "entryID": 715,
+    "actorID": "MC9",
+    "text": "千言萬語不如一個行動。\n呵呵……來人，賜酒。",
+    "Sequence": "SetPortrait(role20,pic=1);\nSetPortrait(MC1,pic=6);\nShowInstantMessage(Favorability,MC9,10,Agree);",
+    "Description": "獲得好感",
+    "zh_TW": "千言萬語不如一個行動。\n呵呵……來人，賜酒。",
+    "zh_CN": "千言万语不如一个行动。 \n呵呵……来人，赐酒。",
+    "links": [716]
+  },
+  {
+    "entryID": 716,
+    "actorID": "MC1",
+    "text": "（呼……跟她說話真累，\n還好看過父親是如何應對這種人。）",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "（呼……跟她說話真累，\n還好看過父親是如何應對這種人。）",
+    "zh_CN": "（呼……跟她说话真累，\n还好看过父亲是如何应对这种人。）",
+    "links": [717]
+  },
+  {
+    "entryID": 717,
+    "actorID": "role2",
+    "text": "[panel=5]家僕遞來一只金盞跟一枚信物。\n當你飲下盞酒，要歸還，家僕卻收回了手。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=5]家僕遞來一只金盞跟一枚信物。\n當你飲下盞酒，要歸還，家僕卻收回了手。",
+    "zh_CN": "[panel=5]家仆递来一只金盏跟一枚信物。 \n当你饮下盏酒，要归还，家仆却收回了手。",
+    "links": [718]
+  },
+  {
+    "entryID": 718,
+    "actorID": "MC9",
+    "text": "那金盞髒了，自個留著，就當獻寶賞賜。\n至於信物，你有自知，我倦了，送客。",
+    "Sequence": "SetPortrait(role20,pic=3);",
+    "Description": "獲得貴重品",
+    "zh_TW": "那金盞髒了，自個留著，就當獻寶賞賜。\n至於信物，你有自知，我倦了，送客。",
+    "zh_CN": "那金盏脏了，自个留着，就当献宝赏赐。 \n至于信物，你有自知，我倦了，送客。",
+    "links": [719]
+  },
+  {
+    "entryID": 719,
+    "actorID": "MC1",
+    "text": "說趕人就趕人，這家主真難伺候……\n也罷，反正信物到手，也沒理由待著。",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=8);",
+    "Script": "SetQuestEntryState(\"FS04-B\", 2, \"success\");\nSetQuestState(\"FS04-B\", \"success\");\nSetQuestEntryState(\"FS04\", 3, \"success\")",
+    "Description": "變數更新",
+    "zh_TW": "說趕人就趕人，這家主真難伺候……\n也罷，反正信物到手，也沒理由待著。",
+    "zh_CN": "说赶人就赶人，这家主真难伺候……\n也罢，反正信物到手，也没理由待着。",
+    "links": [720]
+  },
+  {
+    "entryID": 720,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [721]
+  },
+  {
+    "entryID": 721,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": [728]
+  },
+  {
+    "entryID": 722,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "AudioControl(PlaySFXOneShot,Water);\nEnableDialogueBG(Mansion_ZhenFamily);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS04-B\", 2) == \"active\"",
+    "links": [724]
+  },
+  {
+    "entryID": 723,
+    "actorID": "role19",
+    "text": "[panel=2]我等不敢，家主明鑑。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]我等不敢，家主明鑑。",
+    "zh_CN": "[panel=2]我等不敢，家主明鉴。",
+    "links": [679]
+  },
+  {
+    "entryID": 724,
+    "actorID": "role2",
+    "text": "[panel=5]如你所料，提及獻寶，門衛立刻進入詢問。\n片刻後，裡面主人便傳你入內。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]如你所料，提及獻寶，門衛立刻進入詢問。\n片刻後，裡面主人便傳你入內。",
+    "zh_CN": "[panel=5]如你所料，提及献宝，门卫立刻进入询问。 \n片刻后，里面主人便传你入内。",
+    "links": [690]
+  },
+  {
+    "entryID": 725,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 726,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [725]
+  },
+  {
+    "entryID": 727,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 728,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "",
+    "Conditions": "(CurrentQuestState(\"FS04-A\") == \"success\") and (CurrentQuestState(\"FS04-B\") == \"success\")",
+    "Script": "SetQuestEntryState(\"FS04\", 4, \"active\")",
+    "Description": "變數更新：AB任務完成",
+    "links": []
+  }
+]

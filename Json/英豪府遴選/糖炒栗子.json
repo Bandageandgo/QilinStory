@@ -1,0 +1,133 @@
+[
+  {
+    "entryID": 102,
+    "actorID": "MC8",
+    "text": "[panel=2「]表哥…好香啊…但阿婆怎會來廚房擺攤？」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「表哥…好香啊…但阿婆怎會來廚房擺攤？」",
+    "zh_CN": "[panel=2「]表哥…好香啊…但阿婆怎会来厨房摆摊？」",
+    "links": [4075]
+  },
+  {
+    "entryID": 4059,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "糖炒栗子",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4074, 4085]
+  },
+  {
+    "entryID": 4074,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]:糖炒栗子一包一百哦~」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF18\", 3) == \"unassigned\"",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]:糖炒栗子一包一百哦~」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]:糖炒栗子一包一百哦~」",
+    "links": [102]
+  },
+  {
+    "entryID": 4075,
+    "actorID": "MC1",
+    "text": "「別問。阿婆自有她的考量。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "「別問。阿婆自有她的考量。」",
+    "zh_CN": "「别问。阿婆自有她的考量。」",
+    "links": [4076]
+  },
+  {
+    "entryID": 4076,
+    "actorID": "role5",
+    "text": "「[em7]笑容不變重複道[/em7]:糖炒栗子一包一百哦~」",
+    "Sequence": "",
+    "zh_TW": "「[em7]笑容不變重複道[/em7]:糖炒栗子一包一百哦~」",
+    "zh_CN": "「[em7]笑容不变重复道[/em7]:糖炒栗子一包一百哦~」",
+    "links": [4077, 4078]
+  },
+  {
+    "entryID": 4077,
+    "actorID": "MC1",
+    "text": "「來一包吧，正好餓了。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「來一包吧，正好餓了。」",
+    "zh_CN": "「来一包吧，正好饿了。」",
+    "links": [4080, 4079]
+  },
+  {
+    "entryID": 4078,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": [4086]
+  },
+  {
+    "entryID": 4079,
+    "actorID": "MC1",
+    "text": "「啊，竟然沒帶錢出來！？」",
+    "Sequence": "SetPortrait(MC1,pic=19);",
+    "zh_TW": "「啊，竟然沒帶錢出來！？」",
+    "zh_CN": "「啊，竟然没带钱出来！？」",
+    "links": [4081]
+  },
+  {
+    "entryID": 4080,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
+    "Sequence": "ModifyData(Coin,-100);",
+    "Conditions": "IsCoinPass(100)  == true",
+    "zh_TW": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
+    "zh_CN": "[panel=6]＊（你掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
+    "links": [4083]
+  },
+  {
+    "entryID": 4081,
+    "actorID": "MC22",
+    "text": "[panel=2]「沒關係，還好有我在呢！」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=2]「沒關係，還好有我在呢！」",
+    "zh_CN": "[panel=2]「没关系，还好有我在呢！」",
+    "links": [4082]
+  },
+  {
+    "entryID": 4082,
+    "actorID": "role2",
+    "text": "[panel=6]＊（娜娜掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（娜娜掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
+    "zh_CN": "[panel=6]＊（娜娜掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
+    "links": [4083]
+  },
+  {
+    "entryID": 4083,
+    "actorID": "role5",
+    "text": "「[em7]笑容不變重複道[/em7]:糖炒栗子一包一百哦~」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Script": "SetQuestEntryState(\"CF18\", 3, \"success\")",
+    "Description": "獲得糖炒栗子、任務更新",
+    "zh_TW": "「[em7]笑容不變重複道[/em7]:糖炒栗子一包一百哦~」",
+    "zh_CN": "「[em7]笑容不变重复道[/em7]:糖炒栗子一包一百哦~」",
+    "links": []
+  },
+  {
+    "entryID": 4085,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]:糖炒栗子一包一百哦~」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]:糖炒栗子一包一百哦~」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]:糖炒栗子一包一百哦~」",
+    "links": []
+  },
+  {
+    "entryID": 4086,
+    "actorID": "role5",
+    "text": "「[em7]笑容不變重複道[/em7]:糖炒栗子一包一百哦~」",
+    "Sequence": "",
+    "zh_TW": "「[em7]笑容不變重複道[/em7]:糖炒栗子一包一百哦~」",
+    "zh_CN": "「[em7]笑容不变重复道[/em7]:糖炒栗子一包一百哦~」",
+    "links": []
+  }
+]

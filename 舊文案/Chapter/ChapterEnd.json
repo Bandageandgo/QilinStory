@@ -1,0 +1,25 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "進死亡終局",
+    "Sequence": "",
+    "Conditions": "Variable[\"RestartTimes\"] <= 0",
+    "Script": "SetQuestState(\"Chapter\", \"failure\")",
+    "Description": "變數更新",
+    "zh_TW": "進死亡終局",
+    "zh_CN": "进死亡终局",
+    "links": []
+  },
+  {
+    "entryID": 2,
+    "actorID": "role2",
+    "text": "還有機會重新開始",
+    "Sequence": "UpdateTracker();",
+    "Conditions": "Variable[\"RestartTimes\"] > 0",
+    "Script": "Variable[\"RestartTimes\"] = 0;\nVariable[\"DaysRemaining\"] = 30;",
+    "zh_TW": "還有機會重新開始",
+    "zh_CN": "还有机会重新开始",
+    "links": []
+  }
+]

@@ -1,0 +1,3410 @@
+[
+  {
+    "entryID": 14,
+    "actorID": "role72",
+    "text": "小兄弟，近日看你汗水揮灑得很是勤奮啊，\n不像其他人簽了名，愛練不練的。",
+    "Sequence": "",
+    "zh_TW": "小兄弟，近日看你汗水揮灑得很是勤奮啊，\n不像其他人簽了名，愛練不練的。",
+    "zh_CN": "小兄弟，近日看你汗水挥洒得很是勤奋啊，\n不像其他人签了名，爱练不练的。",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "開玩笑，那些雜魚肉腳，豈能與我相比。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "開玩笑，那些雜魚肉腳，豈能與我相比。",
+    "zh_CN": "开玩笑，那些杂鱼肉脚，岂能与我相比。",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role72",
+    "text": "這麼說，你很勇喔？",
+    "Sequence": "",
+    "zh_TW": "這麼說，你很勇喔？",
+    "zh_CN": "这么说，你很勇喔？",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "那還用說，我勇起來，連我自己都怕。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "那還用說，我勇起來，連我自己都怕。",
+    "zh_CN": "那还用说，我勇起来，连我自己都怕。",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "role72",
+    "text": "這樣就好辦了，大叔構思出了一套新的鍛鍊法。\n機會難得，讓我手把手，給你指導指導吧。",
+    "Sequence": "",
+    "zh_TW": "這樣就好辦了，大叔構思出了一套新的鍛鍊法。\n機會難得，讓我手把手，給你指導指導吧。",
+    "zh_CN": "这样就好办了，大叔构思出了一套新的锻炼法。 \n机会难得，让我手把手，给你指导指导吧。",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "等等！不要！大叔不要──！",
+    "Sequence": "SetPortrait(MC1,pic=7);\nShowInstantMessage(Exp_FeatExp,MC1,Strength,20); ",
+    "Description": "獲得專長經驗",
+    "zh_TW": "等等！不要！大叔不要──！",
+    "zh_CN": "等等！不要！大叔不要──！",
+    "links": []
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=5]──這日，你行經途中，看到了奇妙景象。",
+    "Sequence": "",
+    "Description": "寶箱小表妹",
+    "zh_TW": "[panel=5]──這日，你行經途中，看到了奇妙景象。",
+    "zh_CN": "[panel=5]──这日，你行经途中，看到了奇妙景象。",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "這年頭，還會有人中這種陷阱……",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "這年頭，還會有人中這種陷阱……",
+    "zh_CN": "这年头，还会有人中这种陷阱……",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC8",
+    "text": "好暗，好可怕──",
+    "Sequence": "SetPortrait(role6,pic=4);",
+    "zh_TW": "好暗，好可怕──",
+    "zh_CN": "好暗，好可怕──",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "小犀！？別亂動，表哥這就幫妳撬開。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "小犀！？別亂動，表哥這就幫妳撬開。",
+    "zh_CN": "小犀！ ？别乱动，表哥这就帮妳撬开。",
+    "links": [423]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=5]你細心拆開了箱子。",
+    "Sequence": "ShowInstantMessage(Exp_FeatExp,MC1,SleightOfHand,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]你細心拆開了箱子。",
+    "zh_CN": "[panel=5]你细心拆开了箱子。",
+    "links": [31]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role2",
+    "text": "[panel=5]任你如何摸索，箱子就是紋絲不動。\n最後你豁盡全力拆壞了箱子。",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]任你如何摸索，箱子就是紋絲不動。\n最後你豁盡全力拆壞了箱子。",
+    "zh_CN": "[panel=5]任你如何摸索，箱子就是纹丝不动。 \n最后你豁尽全力拆坏了箱子。",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC8",
+    "text": "呼……多謝表哥救命。\n但你就不能溫柔點嗎？你看，寶貝全都壞了。",
+    "Sequence": "SetPortrait(role6,pic=4);",
+    "zh_TW": "呼……多謝表哥救命。\n但你就不能溫柔點嗎？你看，寶貝全都壞了。",
+    "zh_CN": "呼……多谢表哥救命。 \n但你就不能温柔点吗？你看，宝贝全都坏了。",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "能平安脫險就不錯了。\n我說妳啊，這種陷阱都能上當，說好的精明呢？",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "能平安脫險就不錯了。\n我說妳啊，這種陷阱都能上當，說好的精明呢？",
+    "zh_CN": "能平安脱险就不错了。 \n我說妳啊，这种陷阱都能上当，说好的精明呢？",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC8",
+    "text": "這不能怪我啊，\n我只是輸給了一顆想冒險的心……",
+    "Sequence": "SetPortrait(role6,pic=1);",
+    "zh_TW": "這不能怪我啊，\n我只是輸給了一顆想冒險的心……",
+    "zh_CN": "这不能怪我啊，\n我只是输给了一颗想冒险的心……",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "唉，早知道不讓妳亂看書了。\n總之，回家！現在！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "唉，早知道不讓妳亂看書了。\n總之，回家！現在！",
+    "zh_CN": "唉，早知道不让妳乱看书了。 \n总之，回家！现在！",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC8",
+    "text": "知道了啦。",
+    "Sequence": "SetPortrait(role6,pic=3);",
+    "zh_TW": "知道了啦。",
+    "zh_CN": "知道了啦。",
+    "links": []
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC8",
+    "text": "呼……多謝表哥救命。",
+    "Sequence": "SetPortrait(role6,pic=5);",
+    "zh_TW": "呼……多謝表哥救命。",
+    "zh_CN": "呼……多谢表哥救命。",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "我說妳啊，\n沒人跟妳說路邊大叔跟箱子都別亂接近嗎？",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "我說妳啊，\n沒人跟妳說路邊大叔跟箱子都別亂接近嗎？",
+    "zh_CN": "我說妳啊，\n没人跟妳說路边大叔跟箱子都别乱接近吗？",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC8",
+    "text": "可是你見到寶箱，難道就不會心動？\n你心中難道已經沒有對未知的渴望？",
+    "Sequence": "SetPortrait(role6,pic=1);",
+    "zh_TW": "可是你見到寶箱，難道就不會心動？\n你心中難道已經沒有對未知的渴望？",
+    "zh_CN": "可是你见到宝箱，难道就不会心动？ \n你心中难道已经没有对未知的渴望？",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC8",
+    "text": "少年啊，你那顆冒險患難的心去哪了？",
+    "Sequence": "",
+    "zh_TW": "少年啊，你那顆冒險患難的心去哪了？",
+    "zh_CN": "少年啊，你那颗冒险患难的心去哪了？",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "夠多了省下來……早知道不讓妳亂看書了。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "夠多了省下來……早知道不讓妳亂看書了。",
+    "zh_CN": "够多了省下来……早知道不让妳乱看书了。",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "所以呢？這值得妳犯蠢的寶箱裡有什麼寶貝？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "所以呢？這值得妳犯蠢的寶箱裡有什麼寶貝？",
+    "zh_CN": "所以呢？这值得妳犯蠢的宝箱里有什么宝贝？",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC8",
+    "text": "我看看……都在這。",
+    "Sequence": "SetPortrait(role6,pic=5);",
+    "zh_TW": "我看看……都在這。",
+    "zh_CN": "我看看……都在这。",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "好，充公！不得反駁，回家！",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Description": "隨機獲得貴重品",
+    "zh_TW": "好，充公！不得反駁，回家！",
+    "zh_CN": "好，充公！不得反驳，回家！",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC8",
+    "text": "知道了，哼……",
+    "Sequence": "SetPortrait(role6,pic=6);",
+    "zh_TW": "知道了，哼……",
+    "zh_CN": "知道了，哼……",
+    "links": []
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "唔……呃……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "唔……呃……",
+    "zh_CN": "唔……呃……",
+    "links": [44]
+  },
+  {
+    "entryID": 41,
+    "actorID": "role2",
+    "text": "[panel=5]──這日，你經過鏢局……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──這日，你經過鏢局……",
+    "zh_CN": "[panel=5]──这日，你经过镖局……",
+    "links": [78]
+  },
+  {
+    "entryID": 42,
+    "actorID": "role2",
+    "text": "[panel=5]──這日，你完成鏢局工作，正在結算酬勞……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──這日，你完成鏢局工作，正在結算酬勞……",
+    "zh_CN": "[panel=5]──这日，你完成镖局工作，正在结算酬劳……",
+    "links": [83]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "嗯？前面怎麼有鏢車擱置……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "嗯？前面怎麼有鏢車擱置……",
+    "zh_CN": "嗯？前面怎么有镖车搁置……",
+    "links": [95]
+  },
+  {
+    "entryID": 44,
+    "actorID": "role2",
+    "text": "[panel=5]等你醒來，發現身處在不見天日的山洞內，\n滿地盡是白骨……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]等你醒來，發現身處在不見天日的山洞內，\n滿地盡是白骨……",
+    "zh_CN": "[panel=5]等你醒来，发现身处在不见天日的山洞内，\n满地尽是白骨……",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "啊！怎麼這麼多骨頭……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "啊！怎麼這麼多骨頭……",
+    "zh_CN": "啊！怎么这么多骨头……",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "role56",
+    "text": "那些都是我的傑作。",
+    "Sequence": "",
+    "zh_TW": "那些都是我的傑作。",
+    "zh_CN": "那些都是我的杰作。",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "role2",
+    "text": "[panel=5]出言者是一名全身被巨鏈綑綁，\n深深釘入巨石，儼然合為一體的囚徒。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]出言者是一名全身被巨鏈綑綁，\n深深釘入巨石，儼然合為一體的囚徒。",
+    "zh_CN": "[panel=5]出言者是一名全身被巨链捆绑，\n深深钉入巨石，俨然合为一体的囚徒。",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "role80",
+    "text": "原來如此，是從上面的洞摔下來嗎……\n小子還真是好運，哈哈哈……",
+    "Sequence": "",
+    "zh_TW": "原來如此，是從上面的洞摔下來嗎……\n小子還真是好運，哈哈哈……",
+    "zh_CN": "原来如此，是从上面的洞摔下来吗……\n小子还真是好运，哈哈哈……",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role80",
+    "text": "喂，反正無聊，說說你是因何摔下來的。",
+    "Sequence": "",
+    "zh_TW": "喂，反正無聊，說說你是因何摔下來的。",
+    "zh_CN": "喂，反正无聊，说说你是因何摔下来的。",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "這……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "這……",
+    "zh_CN": "这……",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role80",
+    "text": "這什麼？我要真想殺人，你早就死了。",
+    "Sequence": "",
+    "zh_TW": "這什麼？我要真想殺人，你早就死了。",
+    "zh_CN": "这什么？我要真想杀人，你早就死了。",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "role2",
+    "text": "[panel=5]眼見左右無它路，你只要照著他所說去做了……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]眼見左右無它路，你只要照著他所說去做了……",
+    "zh_CN": "[panel=5]眼见左右无它路，你只要照着他所说去做了……",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "role80",
+    "text": "厲害的賊寇？哈哈哈！當真笑話。\n分明是自己學藝不精，還假長他人氣焰。",
+    "Sequence": "",
+    "zh_TW": "厲害的賊寇？哈哈哈！當真笑話。\n分明是自己學藝不精，還假長他人氣焰。",
+    "zh_CN": "厉害的贼寇？哈哈哈！当真笑话。 \n分明是自己学艺不精，还假长他人气焰。",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "你是沒親自領教過，\n不知他們之深淺，當然說得輕鬆。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "你是沒親自領教過，\n不知他們之深淺，當然說得輕鬆。",
+    "zh_CN": "你是没亲自领教过，\n不知他们之深浅，当然说得轻松。",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "role80",
+    "text": "還敢頂嘴，小子也是倔強。\n區區賊寇算什麼，若我指點你一兩招……",
+    "Sequence": "",
+    "zh_TW": "還敢頂嘴，小子也是倔強。\n區區賊寇算什麼，若我指點你一兩招……",
+    "zh_CN": "还敢顶嘴，小子也是倔强。 \n区区贼寇算什么，若我指点你一两招……",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "接下來我知道！練成之後，\n替你出去殺盡害你至此的仇家，屠戮江湖三千。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "接下來我知道！練成之後，\n替你出去殺盡害你至此的仇家，屠戮江湖三千。",
+    "zh_CN": "接下来我知道！练成之后，\n替你出去杀尽害你至此的仇家，屠戮江湖三千。",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role80",
+    "text": "殺你的大頭鬼！你當我是變態殺人魔嗎！",
+    "Sequence": "",
+    "zh_TW": "殺你的大頭鬼！你當我是變態殺人魔嗎！",
+    "zh_CN": "杀你的大头鬼！你当我是变态杀人魔吗！",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "role80",
+    "text": "我綁在這，是在跟人比試，\n比十五年內，看誰能耐得久。",
+    "Sequence": "",
+    "zh_TW": "我綁在這，是在跟人比試，\n比十五年內，看誰能耐得久。",
+    "zh_CN": "我绑在这，是在跟人比试，\n比十五年内，看谁能耐得久。",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "啊？那這些白骨是……？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "啊？那這些白骨是……？",
+    "zh_CN": "啊？那这些白骨是……？",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "role80",
+    "text": "看清楚，那些是動物骨頭，\n你當我們是做仙都不用人送飯嗎。",
+    "Sequence": "",
+    "zh_TW": "看清楚，那些是動物骨頭，\n你當我們是做仙都不用人送飯嗎。",
+    "zh_CN": "看清楚，那些是动物骨头，\n你当我们是做仙都不用人送饭吗。",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "……你們這般高人高高人還真會玩。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "……你們這般高人高高人還真會玩。",
+    "zh_CN": "……你们这般高人高高人还真会玩。",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "role80",
+    "text": "男人的氣魄，不是你這般膚淺小白臉會理解的。\n回到正題，看到那口刀了嗎？試著拔出來看看。",
+    "Sequence": "",
+    "zh_TW": "男人的氣魄，不是你這般膚淺小白臉會理解的。\n回到正題，看到那口刀了嗎？試著拔出來看看。",
+    "zh_CN": "男人的气魄，不是你这般肤浅小白脸会理解的。 \n回到正题，看到那口刀了吗？试着拔出来看看。",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "role2",
+    "text": "[panel=5]對方所指是插在巨石的刀。\n你嘗試幾次，別說拔出了，刀連動也沒動。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]對方所指是插在巨石的刀。\n你嘗試幾次，別說拔出了，刀連動也沒動。",
+    "zh_CN": "[panel=5]对方所指是插在巨石的刀。 \n你尝试几次，别说拔出了，刀连动也没动。",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "role80",
+    "text": "愚蠢！力氣不是這樣用的。\n施力要先抑後揚，刀推一寸，再拔兩寸。",
+    "Sequence": "",
+    "zh_TW": "愚蠢！力氣不是這樣用的。\n施力要先抑後揚，刀推一寸，再拔兩寸。",
+    "zh_CN": "愚蠢！力气不是这样用的。 \n施力要先抑后扬，刀推一寸，再拔两寸。",
+    "links": [431]
+  },
+  {
+    "entryID": 66,
+    "actorID": "role2",
+    "text": "[panel=5]你照著對方所教去做，果然湊效。\n如此反覆一段時間，總算把刀拔出。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Intelligence,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]你照著對方所教去做，果然湊效。\n如此反覆一段時間，總算把刀拔出。",
+    "zh_CN": "[panel=5]你照着对方所教去做，果然凑效。 \n如此反覆一段时间，总算把刀拔出。",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "role80",
+    "text": "很好，看那邊有道石門嗎？現在用刀劈開它。",
+    "Sequence": "",
+    "zh_TW": "很好，看那邊有道石門嗎？現在用刀劈開它。",
+    "zh_CN": "很好，看那边有道石门吗？现在用刀劈开它。",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "這怎麼可能？\n那石門如此厚重，少說也有千百斤……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "這怎麼可能？\n那石門如此厚重，少說也有千百斤……",
+    "zh_CN": "这怎么可能？ \n那石门如此厚重，少说也有千百斤……",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "role80",
+    "text": "你是要劈門！還是被我劈？",
+    "Sequence": "",
+    "zh_TW": "你是要劈門！還是被我劈？",
+    "zh_CN": "你是要劈门！还是被我劈？",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "我劈！我劈就是了。\n刀要斷了可別怪我。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "我劈！我劈就是了。\n刀要斷了可別怪我。",
+    "zh_CN": "我劈！我劈就是了。 \n刀要断了可别怪我。",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "role2",
+    "text": "[panel=5]你舉刀一劈，結果石門竟被應聲劈開。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你舉刀一劈，結果石門竟被應聲劈開。",
+    "zh_CN": "[panel=5]你举刀一劈，结果石门竟被应声劈开。",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "真劈開了……怎麼會……\n這到底是何寶刀？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "真劈開了……怎麼會……\n這到底是何寶刀？",
+    "zh_CN": "真劈开了……怎么会……\n这到底是何宝刀？",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "role80",
+    "text": "想太多了，那就是一把破柴刀。\n是你在拔刀時，學會了我之刀法的使力方式。",
+    "Sequence": "ShowReward(MadBlade_Combat)@1;\nShowInstantMessage(Reward_SkillCard,MC1,MadBlade_Combat)@1;",
+    "Description": "獲得技能卡",
+    "zh_TW": "想太多了，那就是一把破柴刀。\n是你在拔刀時，學會了我之刀法的使力方式。",
+    "zh_CN": "想太多了，那就是一把破柴刀。 \n是你在拔刀时，学会了我之刀法的使力方式。",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "role80",
+    "text": "現在你可以回去雪恥了。",
+    "Sequence": "",
+    "zh_TW": "現在你可以回去雪恥了。",
+    "zh_CN": "现在你可以回去雪耻了。",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC1",
+    "text": "真的嗎！多謝前輩賜招。\n他日我定會帶些好吃好喝的，回來孝敬您！",
+    "Sequence": "",
+    "zh_TW": "真的嗎！多謝前輩賜招。\n他日我定會帶些好吃好喝的，回來孝敬您！",
+    "zh_CN": "真的吗！多谢前辈赐招。 \n他日我定会带些好吃好喝的，回来孝敬您！",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "role80",
+    "text": "用不著，我在這吃好綁好，有靜有修。\n滾吧，別再回來，否則下次斷的就不是石門。",
+    "Sequence": "",
+    "zh_TW": "用不著，我在這吃好綁好，有靜有修。\n滾吧，別再回來，否則下次斷的就不是石門。",
+    "zh_CN": "用不着，我在这吃好绑好，有静有修。 \n滚吧，别再回来，否则下次断的就不是石门。",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "好吧，祝您……十五年比試順利。\n晚輩會期待哪日您出關的那一天。",
+    "Sequence": "",
+    "zh_TW": "好吧，祝您……十五年比試順利。\n晚輩會期待哪日您出關的那一天。",
+    "zh_CN": "好吧，祝您……十五年比试顺利。 \n晚辈会期待哪日您出关的那一天。",
+    "links": []
+  },
+  {
+    "entryID": 78,
+    "actorID": "role81",
+    "text": "快點把東西裝好，我們要出發了。",
+    "Sequence": "",
+    "zh_TW": "快點把東西裝好，我們要出發了。",
+    "zh_CN": "快点把东西装好，我们要出发了。",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC1",
+    "text": "（那女子……聽她口氣和一身戎裝，\n該不會是鏢師吧？）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（那女子……聽她口氣和一身戎裝，\n該不會是鏢師吧？）",
+    "zh_CN": "（那女子……听她口气和一身戎装，\n该不会是镖师吧？）",
+    "links": [82]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=5]當你還在納悶時，女子已經領隊出發。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]當你還在納悶時，女子已經領隊出發。",
+    "zh_CN": "[panel=5]当你还在纳闷时，女子已经领队出发。",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC1",
+    "text": "整隊速度俐落，出發有條不穩，\n這女子定是鏢界好手吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "整隊速度俐落，出發有條不穩，\n這女子定是鏢界好手吧。",
+    "zh_CN": "整队速度俐落，出发有条不稳，\n这女子定是镖界好手吧。",
+    "links": []
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "（來了這裡那麼多趟，原來這裡真還有別人……\n我還當總鏢頭就是一枝獨秀了。）",
+    "Sequence": "",
+    "zh_TW": "（來了這裡那麼多趟，原來這裡真還有別人……\n我還當總鏢頭就是一枝獨秀了。）",
+    "zh_CN": "（来了这里那么多趟，原来这里真还有别人……\n我还当总镖头就是一枝独秀了。）",
+    "links": [80]
+  },
+  {
+    "entryID": 83,
+    "actorID": "role81",
+    "text": "哦，又完成了啊。\n你的動作還是那麼迅速。",
+    "Sequence": "",
+    "zh_TW": "哦，又完成了啊。\n你的動作還是那麼迅速。",
+    "zh_CN": "哦，又完成了啊。 \n你的动作还是那么迅速。",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC1",
+    "text": "我記得妳是……上次帶領另一隊鏢車的姑娘。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "我記得妳是……上次帶領另一隊鏢車的姑娘。",
+    "zh_CN": "我记得妳是……上次带领另一队镖车的姑娘。",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "role81",
+    "text": "你有注意到啊？\n真是榮幸，我也注意你很久了。",
+    "Sequence": "",
+    "zh_TW": "你有注意到啊？\n真是榮幸，我也注意你很久了。",
+    "zh_CN": "你有注意到啊？ \n真是荣幸，我也注意你很久了。",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "（這種發展……怎麼辦！幸福來得好突然……）",
+    "Sequence": "SetPortrait(MC1,pic=10);",
+    "zh_TW": "（這種發展……怎麼辦！幸福來得好突然……）",
+    "zh_CN": "（这种发展……怎么办！幸福来得好突然……）",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role81",
+    "text": "自你來以後，我們家的鏢局扶搖直上，\n爹都說這是要踏上人生巔峰了。",
+    "Sequence": "",
+    "zh_TW": "自你來以後，我們家的鏢局扶搖直上，\n爹都說這是要踏上人生巔峰了。",
+    "zh_CN": "自你来以后，我们家的镖局扶摇直上，\n爹都说这是要踏上人生巅峰了。",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "人生巔峰……\n這怪話怎麼聽著有點耳熟，像在哪聽過……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "人生巔峰……\n這怪話怎麼聽著有點耳熟，像在哪聽過……",
+    "zh_CN": "人生巅峰……\n这怪话怎么听着有点耳熟，像在哪听过……",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "role81",
+    "text": "還有誰呢，不就這那怪怪的總鏢頭。",
+    "Sequence": "",
+    "zh_TW": "還有誰呢，不就這那怪怪的總鏢頭。",
+    "zh_CN": "还有谁呢，不就这那怪怪的总镖头。",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "對了，就是那傢伙，誒？所以是妳……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "對了，就是那傢伙，誒？所以是妳……",
+    "zh_CN": "对了，就是那家伙，诶？所以是妳……",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role82",
+    "text": "你好，我就是那怪鏢頭的女兒，\n我叫晨殷，今日就是想跟你打聲招呼。",
+    "Sequence": "",
+    "zh_TW": "你好，我就是那怪鏢頭的女兒，\n我叫晨殷，今日就是想跟你打聲招呼。",
+    "zh_CN": "你好，我就是那怪镖头的女儿，\n我叫晨殷，今日就是想跟你打声招呼。",
+    "links": [93]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role82",
+    "text": "唉呀，爹在催了，我先去趕鏢了，\n有機會再好好聊聊吧。",
+    "Sequence": "OpenPanel(2, close);",
+    "zh_TW": "唉呀，爹在催了，我先去趕鏢了，\n有機會再好好聊聊吧。",
+    "zh_CN": "唉呀，爹在催了，我先去赶镖了，\n有机会再好好聊聊吧。",
+    "links": [94]
+  },
+  {
+    "entryID": 93,
+    "actorID": "role69",
+    "text": "[panel=2]殷兒，該出發了。\n人生前程，可經不起拖拖拉拉的。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]殷兒，該出發了。\n人生前程，可經不起拖拖拉拉的。",
+    "zh_CN": "[panel=2]殷儿，该出发了。 \n人生前程，可经不起拖拖拉拉的。",
+    "links": [92]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC1",
+    "text": "（沒想到那位傳銷鏢頭的女兒還挺正常的……\n這就是南方所說的歹竹出好筍……？）",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "（沒想到那位傳銷鏢頭的女兒還挺正常的……\n這就是南方所說的歹竹出好筍……？）",
+    "zh_CN": "（没想到那位传销镖头的女儿还挺正常的……\n这就是南方所说的歹竹出好笋……？）",
+    "links": []
+  },
+  {
+    "entryID": 95,
+    "actorID": "role2",
+    "text": "[panel=5]你稍微接近，看清楚原來是賊寇劫鏢。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你稍微接近，看清楚原來是賊寇劫鏢。",
+    "zh_CN": "[panel=5]你稍微接近，看清楚原来是贼寇劫镖。",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC1",
+    "text": "啊！被圍的不是晨殷姑娘嗎？得趕快幫她。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Description": "進戰鬥",
+    "zh_TW": "啊！被圍的不是晨殷姑娘嗎？得趕快幫她。",
+    "zh_CN": "啊！被围的不是晨殷姑娘吗？得赶快帮她。",
+    "links": [97, 98]
+  },
+  {
+    "entryID": 97,
+    "actorID": "role2",
+    "text": "[panel=5]經你出手，賊寇被徹底擊潰，晨殷總算脫險。",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=5]經你出手，賊寇被徹底擊潰，晨殷總算脫險。",
+    "zh_CN": "[panel=5]经你出手，贼寇被彻底击溃，晨殷总算脱险。",
+    "links": [99]
+  },
+  {
+    "entryID": 98,
+    "actorID": "role2",
+    "text": "[panel=5]你反而被賊寇重創，送回家中休養……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]你反而被賊寇重創，送回家中休養……",
+    "zh_CN": "[panel=5]你反而被贼寇重创，送回家中休养……",
+    "links": []
+  },
+  {
+    "entryID": 99,
+    "actorID": "role2",
+    "text": "[panel=5]不過晨殷受傷不輕，當下也不方便多說，\n只管送她回去養傷……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]不過晨殷受傷不輕，當下也不方便多說，\n只管送她回去養傷……",
+    "zh_CN": "[panel=5]不过晨殷受伤不轻，当下也不方便多说，\n只管送她回去养伤……",
+    "links": []
+  },
+  {
+    "entryID": 100,
+    "actorID": "role82",
+    "text": "你好啊，上次多謝你的救命之恩。",
+    "Sequence": "",
+    "zh_TW": "你好啊，上次多謝你的救命之恩。",
+    "zh_CN": "你好啊，上次多谢你的救命之恩。",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "客氣了，妳能沒事才最重要。",
+    "Sequence": "",
+    "zh_TW": "客氣了，妳能沒事才最重要。",
+    "zh_CN": "客气了，妳能没事才最重要。",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "role82",
+    "text": "今日拜訪，實是有一事相托。",
+    "Sequence": "",
+    "zh_TW": "今日拜訪，實是有一事相托。",
+    "zh_CN": "今日拜访，实是有一事相托。",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "但說無訪，力能所及，定然幫忙。",
+    "Sequence": "",
+    "zh_TW": "但說無訪，力能所及，定然幫忙。",
+    "zh_CN": "但说无访，力能所及，定然帮忙。",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role82",
+    "text": "上次的事，我反省過後，覺得自己還太稚嫩。\n希望能到你旗下磨練，不知你意下如何。",
+    "Sequence": "",
+    "zh_TW": "上次的事，我反省過後，覺得自己還太稚嫩。\n希望能到你旗下磨練，不知你意下如何。",
+    "zh_CN": "上次的事，我反省过后，觉得自己还太稚嫩。 \n希望能到你旗下磨练，不知你意下如何。",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC1",
+    "text": "妳想來我是很歡迎，但總鏢頭那邊允許嗎？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "妳想來我是很歡迎，但總鏢頭那邊允許嗎？",
+    "zh_CN": "妳想来我是很欢迎，但总镖头那边允许吗？",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "role82",
+    "text": "他說只要能踏上人生巔峰，未來一切好談",
+    "Sequence": "",
+    "zh_TW": "他說只要能踏上人生巔峰，未來一切好談",
+    "zh_CN": "他说只要能踏上人生巅峰，未来一切好谈",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC1",
+    "text": "我無話可說了……那妳就自便吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "我無話可說了……那妳就自便吧。",
+    "zh_CN": "我无话可说了……那妳就自便吧。",
+    "links": []
+  },
+  {
+    "entryID": 108,
+    "actorID": "role2",
+    "text": "[panel=5]當你在鍛鍊時，\n一直感覺有道令人脊背發涼的目光……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]當你在鍛鍊時，\n一直感覺有道令人脊背發涼的目光……",
+    "zh_CN": "[panel=5]当你在锻炼时，\n一直感觉有道令人脊背发凉的目光……",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC1",
+    "text": "何方宵小，竟敢在一直盯著人屁股看！",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "何方宵小，竟敢在一直盯著人屁股看！",
+    "zh_CN": "何方宵小，竟敢在一直盯着人屁股看！",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "role72",
+    "text": "唉呦，小兄弟這招呼好生粗魯，\n大叔我可消受不起。",
+    "Sequence": "",
+    "zh_TW": "唉呦，小兄弟這招呼好生粗魯，\n大叔我可消受不起。",
+    "zh_CN": "唉呦，小兄弟这招呼好生粗鲁，\n大叔我可消受不起。",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "竟然輕易就閃過我的攻擊了……？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "竟然輕易就閃過我的攻擊了……？",
+    "zh_CN": "竟然轻易就闪过我的攻击了……？",
+    "links": [112]
+  },
+  {
+    "entryID": 112,
+    "actorID": "role72",
+    "text": "呵呵，別小看我大叔，\n當年我可是江湖人稱摘雷手。",
+    "Sequence": "",
+    "zh_TW": "呵呵，別小看我大叔，\n當年我可是江湖人稱摘雷手。",
+    "zh_CN": "呵呵，别小看我大叔，\n当年我可是江湖人称摘雷手。",
+    "links": [113]
+  },
+  {
+    "entryID": 113,
+    "actorID": "role72",
+    "text": "今日興致不錯，\n就讓大叔下場考較考較後生晚輩的武藝。",
+    "Sequence": "",
+    "Description": "進單挑",
+    "zh_TW": "今日興致不錯，\n就讓大叔下場考較考較後生晚輩的武藝。",
+    "zh_CN": "今日兴致不错，\n就让大叔下场考较考较后生晚辈的武艺。",
+    "links": [114, 115]
+  },
+  {
+    "entryID": 114,
+    "actorID": "role72",
+    "text": "不愧是我看上的人，未來可期。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Strength,50); ",
+    "Description": "獲得專長經驗",
+    "zh_TW": "不愧是我看上的人，未來可期。",
+    "zh_CN": "不愧是我看上的人，未来可期。",
+    "links": []
+  },
+  {
+    "entryID": 115,
+    "actorID": "role72",
+    "text": "嘖嘖嘖，小兄弟還太嫩了。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "嘖嘖嘖，小兄弟還太嫩了。",
+    "zh_CN": "啧啧啧，小兄弟还太嫩了。",
+    "links": []
+  },
+  {
+    "entryID": 116,
+    "actorID": "role2",
+    "text": "[panel=5]──這次你收到了一個長期賴帳的討債目標。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──這次你收到了一個長期賴帳的討債目標。",
+    "zh_CN": "[panel=5]──这次你收到了一个长期赖帐的讨债目标。",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "MC1",
+    "text": "你就那位渡過渴望之船、闖過膽魄之路，\n賭遍無數死亡，人稱的──傳說肥羊？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "你就那位渡過渴望之船、闖過膽魄之路，\n賭遍無數死亡，人稱的──傳說肥羊？",
+    "zh_CN": "你就那位渡过渴望之船、闯过胆魄之路，\n赌遍无数死亡，人称的──传说肥羊？",
+    "links": [118]
+  },
+  {
+    "entryID": 118,
+    "actorID": "role83",
+    "text": "過獎過獎，那都是朋友們賞臉的玩笑。",
+    "Sequence": "",
+    "zh_TW": "過獎過獎，那都是朋友們賞臉的玩笑。",
+    "zh_CN": "过奖过奖，那都是朋友们赏脸的玩笑。",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "role83",
+    "text": "閣下是來要債的吧。\n可如你所見，我一身清貧，實是有心無力啊。",
+    "Sequence": "",
+    "zh_TW": "閣下是來要債的吧。\n可如你所見，我一身清貧，實是有心無力啊。",
+    "zh_CN": "阁下是来要债的吧。 \n可如你所见，我一身清贫，实是有心无力啊。",
+    "links": [120]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC1",
+    "text": "（擺明就是裝傻……\n這種老賴就算毒打一頓也沒用了……）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（擺明就是裝傻……\n這種老賴就算毒打一頓也沒用了……）",
+    "zh_CN": "（摆明就是装傻……\n这种老赖就算毒打一顿也没用了……）",
+    "links": [425]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC1",
+    "text": "誒，你誤會了，\n在下不過久仰大名，想交個朋友罷了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Persuasion,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "誒，你誤會了，\n在下不過久仰大名，想交個朋友罷了。",
+    "zh_CN": "诶，你误会了，\n在下不过久仰大名，想交个朋友罢了。",
+    "links": [123]
+  },
+  {
+    "entryID": 122,
+    "actorID": "role2",
+    "text": "[panel=5]任你如何口沫橫飛，老賴就是老賴，\n最終你只能空手回去……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]任你如何口沫橫飛，老賴就是老賴，\n最終你只能空手回去……",
+    "zh_CN": "[panel=5]任你如何口沫横飞，老赖就是老赖，\n最终你只能空手回去……",
+    "links": []
+  },
+  {
+    "entryID": 123,
+    "actorID": "role2",
+    "text": "[panel=5]你找來了人假扮攤販，烤著香嫩雞肉。\n一聞到雞肉的焦香，老賴就吞了幾大口唾沫……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你找來了人假扮攤販，烤著香嫩雞肉。\n一聞到雞肉的焦香，老賴就吞了幾大口唾沫……",
+    "zh_CN": "[panel=5]你找来了人假扮摊贩，烤着香嫩鸡肉。 \n一闻到鸡肉的焦香，老赖就吞了几大口唾沫……",
+    "links": [124]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC1",
+    "text": "老闆，給這位朋友一瓶酒，算我的。",
+    "Sequence": "",
+    "zh_TW": "老闆，給這位朋友一瓶酒，算我的。",
+    "zh_CN": "老板，给这位朋友一瓶酒，算我的。",
+    "links": [125]
+  },
+  {
+    "entryID": 125,
+    "actorID": "role83",
+    "text": "咦？可以嗎？",
+    "Sequence": "",
+    "zh_TW": "咦？可以嗎？",
+    "zh_CN": "咦？可以吗？",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC1",
+    "text": "當然可以啊，都朋友嘛。只不過……\n其實你想要的是那香嫩的雞肉吧？",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "當然可以啊，都朋友嘛。只不過……\n其實你想要的是那香嫩的雞肉吧？",
+    "zh_CN": "当然可以啊，都朋友嘛。只不过……\n其实你想要的是那香嫩的鸡肉吧？",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC1",
+    "text": "很久沒好好享受了吧。\n欲望就像顆球，你要老壓著，它可是砸回來的。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "很久沒好好享受了吧。\n欲望就像顆球，你要老壓著，它可是砸回來的。",
+    "zh_CN": "很久没好好享受了吧。 \n欲望就像颗球，你要老压着，它可是砸回来的。",
+    "links": [128]
+  },
+  {
+    "entryID": 128,
+    "actorID": "role83",
+    "text": "唔……！老闆，給我雞肉！不！整隻雞腿給我！",
+    "Sequence": "",
+    "zh_TW": "唔……！老闆，給我雞肉！不！整隻雞腿給我！",
+    "zh_CN": "唔……！老板，给我鸡肉！不！整只鸡腿给我！",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "role2",
+    "text": "[panel=5]老賴掏出了藏著的賭本，大飽口福，\n全然沒發覺自己把債給清了……",
+    "Sequence": "ShowInstantMessage(Influence_Reputation,50);\nShowInstantMessage(Reward_Coin,200);\nShowReward(SeeingTheSign_Check)@1;\nShowInstantMessage(Reward_SkillCard,MC1,SeeingTheSign_Check)@1;",
+    "Description": "獲得技能跟錢跟名聲",
+    "zh_TW": "[panel=5]老賴掏出了藏著的賭本，大飽口福，\n全然沒發覺自己把債給清了……",
+    "zh_CN": "[panel=5]老赖掏出了藏着的赌本，大饱口福，\n全然没发觉自己把债给清了……",
+    "links": []
+  },
+  {
+    "entryID": 131,
+    "actorID": "role2",
+    "text": "[panel=5]──你剛收起釣竿，\n就在不遠處看見熟悉身影也在釣魚。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──你剛收起釣竿，\n就在不遠處看見熟悉身影也在釣魚。",
+    "zh_CN": "[panel=5]──你刚收起钓竿，\n就在不远处看见熟悉身影也在钓鱼。",
+    "links": [139]
+  },
+  {
+    "entryID": 132,
+    "actorID": "role2",
+    "text": "[panel=5]──你剛收拾工具，\n就發現不遠處有個人影也在挖礦……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──你剛收拾工具，\n就發現不遠處有個人影也在挖礦……",
+    "zh_CN": "[panel=5]──你刚收拾工具，\n就发现不远处有个人影也在挖矿……",
+    "links": [144]
+  },
+  {
+    "entryID": 133,
+    "actorID": "role2",
+    "text": "[panel=5]──行至中途，\n你發現前方又是熟悉身影，而且全副裝備。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──行至中途，\n你發現前方又是熟悉身影，而且全副裝備。",
+    "zh_CN": "[panel=5]──行至中途，\n你发现前方又是熟悉身影，而且全副装备。",
+    "links": [149]
+  },
+  {
+    "entryID": 139,
+    "actorID": "MC8",
+    "text": "表哥，你看！\n小犀釣到了好多魚呢，今晚可以加菜了。",
+    "Sequence": "SetPortrait(role6,pic=5);",
+    "zh_TW": "表哥，你看！\n小犀釣到了好多魚呢，今晚可以加菜了。",
+    "zh_CN": "表哥，你看！ \n小犀钓到了好多鱼呢，今晚可以加菜了。",
+    "links": [140]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC1",
+    "text": "太棒了，瞧瞧這些魚多麼肥美……",
+    "Sequence": "SetPortrait(MC1,pic=5);\nShowInstantMessage(Exp_LifeExp,MC1,100);",
+    "Description": "獲得生活經驗",
+    "zh_TW": "太棒了，瞧瞧這些魚多麼肥美……",
+    "zh_CN": "太棒了，瞧瞧这些鱼多么肥美……",
+    "links": [141]
+  },
+  {
+    "entryID": 141,
+    "actorID": "MC1",
+    "text": "不對！妳為何會在這，\n不是讓妳好好待在家，別亂跑嗎！",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "不對！妳為何會在這，\n不是讓妳好好待在家，別亂跑嗎！",
+    "zh_CN": "不对！妳为何会在这，\n不是让妳好好待在家，别乱跑吗！",
+    "links": [142]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC8",
+    "text": "不過就是釣個魚而已，大驚小怪的……\n今晚不許你吃魚了。",
+    "Sequence": "SetPortrait(role6,pic=6);",
+    "zh_TW": "不過就是釣個魚而已，大驚小怪的……\n今晚不許你吃魚了。",
+    "zh_CN": "不过就是钓个鱼而已，大惊小怪的……\n今晚不许你吃鱼了。",
+    "links": [143]
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC1",
+    "text": "真受不了這小傢伙……",
+    "Sequence": "SetPortrait(MC1,pic=9);\nOpenPanel(1, close);",
+    "zh_TW": "真受不了這小傢伙……",
+    "zh_CN": "真受不了这小家伙……",
+    "links": []
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC8",
+    "text": "表哥，你快看！\n這裡還有個礦脈呢。",
+    "Sequence": "SetPortrait(role6,pic=1);",
+    "zh_TW": "表哥，你快看！\n這裡還有個礦脈呢。",
+    "zh_CN": "表哥，你快看！ \n这里还有个矿脉呢。",
+    "links": [145]
+  },
+  {
+    "entryID": 145,
+    "actorID": "MC1",
+    "text": "哈，妳眼睛真利，這麼隱密妳都能發現……",
+    "Sequence": "SetPortrait(MC1,pic=5);\nShowInstantMessage(Exp_LifeExp,MC1,100);",
+    "Description": "獲得生活經驗",
+    "zh_TW": "哈，妳眼睛真利，這麼隱密妳都能發現……",
+    "zh_CN": "哈，妳眼睛真利，这么隐密妳都能发现……",
+    "links": [146]
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC1",
+    "text": "不對！妳怎麼又亂跑！\n妳這些工具又從哪來拿來的？",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "不對！妳怎麼又亂跑！\n妳這些工具又從哪來拿來的？",
+    "zh_CN": "不对！妳怎么又乱跑！ \n妳这些工具又从哪来拿来的？",
+    "links": [147]
+  },
+  {
+    "entryID": 147,
+    "actorID": "MC8",
+    "text": "就有人丟在這的，就別計較了，我這就回家。",
+    "Sequence": "SetPortrait(role6,pic=6);",
+    "zh_TW": "就有人丟在這的，就別計較了，我這就回家。",
+    "zh_CN": "就有人丢在这的，就别计较了，我这就回家。",
+    "links": [148]
+  },
+  {
+    "entryID": 148,
+    "actorID": "MC1",
+    "text": "真是的，這小傢伙一天天都有新花樣……",
+    "Sequence": "SetPortrait(MC1,pic=9);\nOpenPanel(1, close);",
+    "zh_TW": "真是的，這小傢伙一天天都有新花樣……",
+    "zh_CN": "真是的，这小家伙一天天都有新花样……",
+    "links": []
+  },
+  {
+    "entryID": 149,
+    "actorID": "MC8",
+    "text": "表哥，如何？小犀這身行頭，\n有沒有像行走江湖的奇士啊。",
+    "Sequence": "SetPortrait(role6,pic=1);",
+    "zh_TW": "表哥，如何？小犀這身行頭，\n有沒有像行走江湖的奇士啊。",
+    "zh_CN": "表哥，如何？小犀这身行头，\n有没有像行走江湖的奇士啊。",
+    "links": [150]
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC8",
+    "text": "讓我們兄妹攜手同遊江湖，\n探索世上一切未知，找到大秘寶！",
+    "Sequence": "EnableCharacterExpression(1,MC8,Proud);",
+    "zh_TW": "讓我們兄妹攜手同遊江湖，\n探索世上一切未知，找到大秘寶！",
+    "zh_CN": "让我们兄妹携手同游江湖，\n探索世上一切未知，找到大秘宝！",
+    "links": [151]
+  },
+  {
+    "entryID": 151,
+    "actorID": "MC1",
+    "text": "唉……這都第四次了，\n我也懶得念了，就隨妳去玩吧。",
+    "Sequence": "SetPortrait(MC1,pic=9);\nDisableAllCharacterExpression();",
+    "Description": "主角跟表妹加能力",
+    "zh_TW": "唉……這都第四次了，\n我也懶得念了，就隨妳去玩吧。",
+    "zh_CN": "唉……这都第四次了，\n我也懒得念了，就随妳去玩吧。",
+    "links": [152]
+  },
+  {
+    "entryID": 152,
+    "actorID": "MC8",
+    "text": "表哥人最好了。好！我要成為……",
+    "Sequence": "SetPortrait(role6,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
+    "zh_TW": "表哥人最好了。好！我要成為……",
+    "zh_CN": "表哥人最好了。好！我要成为……",
+    "links": [153]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "停！慢著！再說下去，就沒法收拾了。",
+    "Sequence": "SetPortrait(MC1,pic=7);\nDisableAllCharacterExpression();",
+    "zh_TW": "停！慢著！再說下去，就沒法收拾了。",
+    "zh_CN": "停！慢着！再说下去，就没法收拾了。",
+    "links": []
+  },
+  {
+    "entryID": 154,
+    "actorID": "role2",
+    "text": "[panel=5]──行至中途，你見到一名老人倒在路旁……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──行至中途，你見到一名老人倒在路旁……",
+    "zh_CN": "[panel=5]──行至中途，你见到一名老人倒在路旁……",
+    "links": [155]
+  },
+  {
+    "entryID": 155,
+    "actorID": "role84",
+    "text": "唉呦……好心的先生大爺們，姑姥姥三姨太……\n可憐可憐小的摔斷的腳啊……",
+    "Sequence": "",
+    "zh_TW": "唉呦……好心的先生大爺們，姑姥姥三姨太……\n可憐可憐小的摔斷的腳啊……",
+    "zh_CN": "唉呦……好心的先生大爷们，姑姥姥三姨太……\n可怜可怜小的摔断的脚啊……",
+    "links": [156, 157, 429]
+  },
+  {
+    "entryID": 156,
+    "actorID": "MC1",
+    "text": "1.[em1][洞悉][/em1]演得也太假了吧。",
+    "Sequence": "BeginDiceRoll(Insight,Manual,5);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][洞悉][/em1]演得也太假了吧。",
+    "zh_CN": "1.[em1][洞悉][/em1]演得也太假了吧。",
+    "links": [426]
+  },
+  {
+    "entryID": 157,
+    "actorID": "MC1",
+    "text": "2.[em1][政治][/em1]別擔心，我的座右銘就是日行一善。",
+    "Sequence": "BeginDiceRoll(Politics,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][政治][/em1]別擔心，我的座右銘就是日行一善。",
+    "zh_CN": "2.[em1][政治][/em1]别担心，我的座右铭就是日行一善。",
+    "links": [428]
+  },
+  {
+    "entryID": 158,
+    "actorID": "role2",
+    "text": "[panel=5]你拆穿了對方的裝傷把戲，\n並把手法揭露給周遭，短期內騙子難以出沒……",
+    "Sequence": "SetPortrait(MC1,pic=2);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,20);\nShowInstantMessage(Influence_Reputation,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟名聲",
+    "zh_TW": "[panel=5]你拆穿了對方的裝傷把戲，\n並把手法揭露給周遭，短期內騙子難以出沒……",
+    "zh_CN": "[panel=5]你拆穿了对方的装伤把戏，\n并把手法揭露给周遭，短期内骗子难以出没……",
+    "links": []
+  },
+  {
+    "entryID": 159,
+    "actorID": "role2",
+    "text": "[panel=5]儘管你一再爭辯對方是裝的，奈何抓不到漏洞，\n反而遭聚集而來的百姓非議……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nShowInstantMessage(Influence_Reputation,-20);",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "扣名聲",
+    "zh_TW": "[panel=5]儘管你一再爭辯對方是裝的，奈何抓不到漏洞，\n反而遭聚集而來的百姓非議……",
+    "zh_CN": "[panel=5]尽管你一再争辩对方是装的，奈何抓不到漏洞，\n反而遭聚集而来的百姓非议……",
+    "links": []
+  },
+  {
+    "entryID": 160,
+    "actorID": "role2",
+    "text": "[panel=5]你謹慎扶對方到歇息處，即便對方想搗亂，\n但你那猶如善舉楷模的演出，見者無不稱道。",
+    "Sequence": "SetPortrait(MC1,pic=9);\nShowInstantMessage(Exp_FeatExp,MC1,Politics,20);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=5]你謹慎扶對方到歇息處，即便對方想搗亂，\n但你那猶如善舉楷模的演出，見者無不稱道。",
+    "zh_CN": "[panel=5]你谨慎扶对方到歇息处，即便对方想捣乱，\n但你那犹如善举楷模的演出，见者无不称道。",
+    "links": [162]
+  },
+  {
+    "entryID": 161,
+    "actorID": "role2",
+    "text": "[panel=5]你正要扶起對方，\n他便開始大聲哭鬧，指罪你撞傷了他。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]你正要扶起對方，\n他便開始大聲哭鬧，指罪你撞傷了他。",
+    "zh_CN": "[panel=5]你正要扶起对方，\n他便开始大声哭闹，指罪你撞伤了他。",
+    "links": [163]
+  },
+  {
+    "entryID": 162,
+    "actorID": "role2",
+    "text": "[panel=5]不久，你收到了鄰近村長送來獎狀，\n表彰你為青年典範……",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1,Proud);\nShowInstantMessage(Influence_Reputation,40);",
+    "Description": "獲得專長經驗跟名聲",
+    "zh_TW": "[panel=5]不久，你收到了鄰近村長送來獎狀，\n表彰你為青年典範……",
+    "zh_CN": "[panel=5]不久，你收到了邻近村长送来奖状，\n表彰你为青年典范……",
+    "links": []
+  },
+  {
+    "entryID": 163,
+    "actorID": "role2",
+    "text": "[panel=5]哭鬧聲引來人群，眾人議論紛紛，\n你百口莫辯，最終在壓力下，付了賠償……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nShowInstantMessage(Reward_Coin,-100);",
+    "Description": "損失錢",
+    "zh_TW": "[panel=5]哭鬧聲引來人群，眾人議論紛紛，\n你百口莫辯，最終在壓力下，付了賠償……",
+    "zh_CN": "[panel=5]哭闹声引来人群，众人议论纷纷，\n你百口莫辩，最终在压力下，付了赔偿……",
+    "links": []
+  },
+  {
+    "entryID": 422,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [24, 25]
+  },
+  {
+    "entryID": 423,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(SleightOfHand,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "links": [422]
+  },
+  {
+    "entryID": 424,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [121, 122]
+  },
+  {
+    "entryID": 425,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,16);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "links": [424]
+  },
+  {
+    "entryID": 426,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [158, 159]
+  },
+  {
+    "entryID": 428,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [160, 161]
+  },
+  {
+    "entryID": 429,
+    "actorID": "MC1",
+    "text": "3.（裝作沒看到）",
+    "Sequence": "",
+    "zh_TW": "3.（裝作沒看到）",
+    "zh_CN": "3.（装作没看到）",
+    "links": []
+  },
+  {
+    "entryID": 430,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [66, 432]
+  },
+  {
+    "entryID": 431,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Intelligence,Manual,5);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "links": [430]
+  },
+  {
+    "entryID": 432,
+    "actorID": "role2",
+    "text": "[panel=5]你試著照著對方所教去做，\n可領悟不到其中奧妙，始終停在原地。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]你試著照著對方所教去做，\n可領悟不到其中奧妙，始終停在原地。",
+    "zh_CN": "[panel=5]你试着照着对方所教去做，\n可领悟不到其中奥妙，始终停在原地。",
+    "links": [433]
+  },
+  {
+    "entryID": 433,
+    "actorID": "role80",
+    "text": "一點悟性都沒用，就你這樣也敢在道上走跳……",
+    "Sequence": "",
+    "zh_TW": "一點悟性都沒用，就你這樣也敢在道上走跳……",
+    "zh_CN": "一点悟性都没用，就你这样也敢在道上走跳……",
+    "links": [434]
+  },
+  {
+    "entryID": 434,
+    "actorID": "role80",
+    "text": "快滾！趁我心情沒變壞前快滾，也別再回來了！",
+    "Sequence": "",
+    "zh_TW": "快滾！趁我心情沒變壞前快滾，也別再回來了！",
+    "zh_CN": "快滚！趁我心情没变坏前快滚，也别再回来了！",
+    "links": []
+  },
+  {
+    "entryID": 435,
+    "actorID": "role2",
+    "text": "[panel=5]──就在鑑寶大會要落幕，\n有三名可疑人士主動找上你。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──就在鑑寶大會要落幕，\n有三名可疑人士主動找上你。",
+    "zh_CN": "[panel=5]──就在鉴宝大会要落幕，\n有三名可疑人士主动找上你。",
+    "links": [436]
+  },
+  {
+    "entryID": 436,
+    "actorID": "role2",
+    "text": "[panel=5]他們都自稱握有寶物，打算專門賣給你……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "[panel=5]他們都自稱握有寶物，打算專門賣給你……",
+    "zh_CN": "[panel=5]他们都自称握有宝物，打算专门卖给你……",
+    "links": [437, 438]
+  },
+  {
+    "entryID": 437,
+    "actorID": "MC1",
+    "text": "1.[em1][洞悉][/em1]且讓我看看寶物。",
+    "Sequence": "BeginDiceRoll(Insight,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][洞悉][/em1]且讓我看看寶物。",
+    "zh_CN": "1.[em1][洞悉][/em1]且让我看看宝物。",
+    "links": [439]
+  },
+  {
+    "entryID": 438,
+    "actorID": "MC1",
+    "text": "2.我並沒有買東西的打算，各位請回吧。",
+    "Sequence": "",
+    "zh_TW": "2.我並沒有買東西的打算，各位請回吧。",
+    "zh_CN": "2.我并没有买东西的打算，各位请回吧。",
+    "links": []
+  },
+  {
+    "entryID": 439,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [440, 441]
+  },
+  {
+    "entryID": 440,
+    "actorID": "role2",
+    "text": "[panel=5]在你的慧眼之下，立馬找出只有一人是賣真貨。",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=5]在你的慧眼之下，立馬找出只有一人是賣真貨。",
+    "zh_CN": "[panel=5]在你的慧眼之下，立马找出只有一人是卖真货。",
+    "links": [446, 447]
+  },
+  {
+    "entryID": 441,
+    "actorID": "role2",
+    "text": "[panel=5]即便你都快開啟神眼了，卻仍難辨寶物真偽。",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]即便你都快開啟神眼了，卻仍難辨寶物真偽。",
+    "zh_CN": "[panel=5]即便你都快开启神眼了，却仍难辨宝物真伪。",
+    "links": [442, 443, 444, 445]
+  },
+  {
+    "entryID": 442,
+    "actorID": "MC1",
+    "text": "1.（跟第一個人買）",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.（跟第一個人買）",
+    "zh_CN": "1.（跟第一个人买）",
+    "links": [450]
+  },
+  {
+    "entryID": 443,
+    "actorID": "MC1",
+    "text": "2.（跟第二個人買）",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.（跟第二個人買）",
+    "zh_CN": "2.（跟第二个人买）",
+    "links": [452]
+  },
+  {
+    "entryID": 444,
+    "actorID": "MC1",
+    "text": "3.（跟第三個人買）",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "3.（跟第三個人買）",
+    "zh_CN": "3.（跟第三个人买）",
+    "links": [454]
+  },
+  {
+    "entryID": 445,
+    "actorID": "MC1",
+    "text": "4.還是算了，把錢留在更有用的地方。",
+    "Sequence": "",
+    "zh_TW": "4.還是算了，把錢留在更有用的地方。",
+    "zh_CN": "4.还是算了，把钱留在更有用的地方。",
+    "links": []
+  },
+  {
+    "entryID": 446,
+    "actorID": "MC1",
+    "text": "1.這寶物我買了。",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.這寶物我買了。",
+    "zh_CN": "1.这宝物我买了。",
+    "links": [448]
+  },
+  {
+    "entryID": 447,
+    "actorID": "MC1",
+    "text": "2.還是算了，把錢留在更有用的地方。",
+    "Sequence": "",
+    "zh_TW": "2.還是算了，把錢留在更有用的地方。",
+    "zh_CN": "2.还是算了，把钱留在更有用的地方。",
+    "links": []
+  },
+  {
+    "entryID": 448,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [456, 457]
+  },
+  {
+    "entryID": 450,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [458, 459]
+  },
+  {
+    "entryID": 452,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [460, 461]
+  },
+  {
+    "entryID": 454,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [462, 463]
+  },
+  {
+    "entryID": 456,
+    "actorID": "role2",
+    "text": "成功以打折價買到寶物，",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "成功以打折價買到寶物，",
+    "zh_CN": "成功以打折价买到宝物，",
+    "links": []
+  },
+  {
+    "entryID": 457,
+    "actorID": "role2",
+    "text": "失敗以原價購買",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "失敗以原價購買",
+    "zh_CN": "失败以原价购买",
+    "links": []
+  },
+  {
+    "entryID": 458,
+    "actorID": "role2",
+    "text": "成功以打折價買到假寶物，",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "成功以打折價買到假寶物，",
+    "zh_CN": "成功以打折价买到假宝物，",
+    "links": []
+  },
+  {
+    "entryID": 459,
+    "actorID": "role2",
+    "text": "失敗以原價購買",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "失敗以原價購買",
+    "zh_CN": "失败以原价购买",
+    "links": []
+  },
+  {
+    "entryID": 460,
+    "actorID": "role2",
+    "text": "成功以打折價買到寶物，",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "成功以打折價買到寶物，",
+    "zh_CN": "成功以打折价买到宝物，",
+    "links": []
+  },
+  {
+    "entryID": 461,
+    "actorID": "role2",
+    "text": "失敗以原價購買",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "失敗以原價購買",
+    "zh_CN": "失败以原价购买",
+    "links": []
+  },
+  {
+    "entryID": 462,
+    "actorID": "role2",
+    "text": "成功以打折價買到假寶物，",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "成功以打折價買到假寶物，",
+    "zh_CN": "成功以打折价买到假宝物，",
+    "links": []
+  },
+  {
+    "entryID": 463,
+    "actorID": "role2",
+    "text": "失敗以原價購買",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "失敗以原價購買",
+    "zh_CN": "失败以原价购买",
+    "links": []
+  },
+  {
+    "entryID": 464,
+    "actorID": "role2",
+    "text": "[panel=5]──行至中途，有位商人鬼鬼祟祟找上了你……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──行至中途，有位商人鬼鬼祟祟找上了你……",
+    "zh_CN": "[panel=5]──行至中途，有位商人鬼鬼祟祟找上了你……",
+    "links": [465]
+  },
+  {
+    "entryID": 465,
+    "actorID": "role15",
+    "text": "哇！年輕人，不得了，你天靈蓋有一道靈光。\n如此奇相，準是商界萬中無一的奇才。",
+    "Sequence": "",
+    "zh_TW": "哇！年輕人，不得了，你天靈蓋有一道靈光。\n如此奇相，準是商界萬中無一的奇才。",
+    "zh_CN": "哇！年轻人，不得了，你天灵盖有一道灵光。 \n如此奇相，准是商界万中无一的奇才。",
+    "links": [466]
+  },
+  {
+    "entryID": 466,
+    "actorID": "role15",
+    "text": "要是讓你投資，還不富可敵國啊。\n正所謂，獨樂樂不如眾樂樂……",
+    "Sequence": "",
+    "zh_TW": "要是讓你投資，還不富可敵國啊。\n正所謂，獨樂樂不如眾樂樂……",
+    "zh_CN": "要是让你投资，还不富可敌国啊。 \n正所谓，独乐乐不如众乐乐……",
+    "links": [467]
+  },
+  {
+    "entryID": 467,
+    "actorID": "role15",
+    "text": "我有個可靠消息，穩賺不賠的生意。\n你要不要入夥啊……",
+    "Sequence": "",
+    "zh_TW": "我有個可靠消息，穩賺不賠的生意。\n你要不要入夥啊……",
+    "zh_CN": "我有个可靠消息，稳赚不赔的生意。 \n你要不要入伙啊……",
+    "links": [468, 469]
+  },
+  {
+    "entryID": 468,
+    "actorID": "MC1",
+    "text": "1.[em1][經世致用][/em1]還有這等好事，看來我親自操刀，還不登天。",
+    "Sequence": "BeginDiceRoll(Insight,Manual,18);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定／需求條件",
+    "zh_TW": "1.[em1][經世致用][/em1]還有這等好事，看來我親自操刀，還不登天。",
+    "zh_CN": "1.[em1][经世致用][/em1]还有这等好事，看来我亲自操刀，还不登天。",
+    "links": [470]
+  },
+  {
+    "entryID": 469,
+    "actorID": "MC1",
+    "text": "2.太可疑了，我才不上當。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "2.太可疑了，我才不上當。",
+    "zh_CN": "2.太可疑了，我才不上当。",
+    "links": []
+  },
+  {
+    "entryID": 470,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [471, 472]
+  },
+  {
+    "entryID": 471,
+    "actorID": "role2",
+    "text": "[panel=5]靈光加持，投資有道，你因此大賺了一筆。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nShowInstantMessage(Reward_Coin,500);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟錢",
+    "zh_TW": "[panel=5]靈光加持，投資有道，你因此大賺了一筆。",
+    "zh_CN": "[panel=5]灵光加持，投资有道，你因此大赚了一笔。",
+    "links": []
+  },
+  {
+    "entryID": 472,
+    "actorID": "role2",
+    "text": "[panel=5]靈光滅頂，投資失利，你差點賠個血本無歸。",
+    "Sequence": "SetPortrait(MC1,pic=8);\nShowInstantMessage(Reward_Coin,-500);",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "損失錢",
+    "zh_TW": "[panel=5]靈光滅頂，投資失利，你差點賠個血本無歸。",
+    "zh_CN": "[panel=5]灵光灭顶，投资失利，你差点赔个血本无归。",
+    "links": []
+  },
+  {
+    "entryID": 474,
+    "actorID": "role2",
+    "text": "[panel=5]──行至中途，\n你見到兩方人馬在互相叫囂，衝突將一觸即發。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]──行至中途，\n你見到兩方人馬在互相叫囂，衝突將一觸即發。",
+    "zh_CN": "[panel=5]──行至中途，\n你见到两方人马在互相叫嚣，冲突将一触即发。",
+    "links": [475]
+  },
+  {
+    "entryID": 475,
+    "actorID": "role2",
+    "text": "[panel=5]這兩方刺龍刺虎，面目猙獰，\n都是江湖惡名的流氓幫派……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這兩方刺龍刺虎，面目猙獰，\n都是江湖惡名的流氓幫派……",
+    "zh_CN": "[panel=5]这两方刺龙刺虎，面目狰狞，\n都是江湖恶名的流氓帮派……",
+    "links": [476, 477, 478, 479]
+  },
+  {
+    "entryID": 476,
+    "actorID": "MC1",
+    "text": "1.[em1][厚黑][/em1]打起來，打起來。",
+    "Sequence": "BeginDiceRoll(Realpolitik,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][厚黑][/em1]打起來，打起來。",
+    "zh_CN": "1.[em1][厚黑][/em1]打起来，打起来。",
+    "links": [480]
+  },
+  {
+    "entryID": 477,
+    "actorID": "MC1",
+    "text": "2.[em1][武力][/em1]兩邊都不是好東西，今日替天行道，一併鏟了！",
+    "Sequence": "BeginDiceRoll(Strength,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][武力][/em1]兩邊都不是好東西，今日替天行道，一併鏟了！",
+    "zh_CN": "2.[em1][武力][/em1]两边都不是好东西，今日替天行道，一并铲了！",
+    "links": [483]
+  },
+  {
+    "entryID": 478,
+    "actorID": "MC1",
+    "text": "3.[em1][魅力][/em1]綠林出好漢，都別打了，真要打，去練武室打！",
+    "Sequence": "BeginDiceRoll(Charisma,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "3.[em1][魅力][/em1]綠林出好漢，都別打了，真要打，去練武室打！",
+    "zh_CN": "3.[em1][魅力][/em1]绿林出好汉，都别打了，真要打，去练武室打！",
+    "links": [486]
+  },
+  {
+    "entryID": 479,
+    "actorID": "MC1",
+    "text": "4.路見不平，繞道而行。",
+    "Sequence": "",
+    "zh_TW": "4.路見不平，繞道而行。",
+    "zh_CN": "4.路见不平，绕道而行。",
+    "links": []
+  },
+  {
+    "entryID": 480,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [481, 482]
+  },
+  {
+    "entryID": 481,
+    "actorID": "role2",
+    "text": "[panel=5]世上最愉悅的，\n莫過於坐山觀虎鬥，徛懸山看馬相踢。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nShowInstantMessage(Exp_FeatExp,MC1,Realpolitik,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]世上最愉悅的，\n莫過於坐山觀虎鬥，徛懸山看馬相踢。",
+    "zh_CN": "[panel=5]世上最愉悦的，\n莫过于坐山观虎斗，徛悬山看马相踢。",
+    "links": [489]
+  },
+  {
+    "entryID": 482,
+    "actorID": "role2",
+    "text": "[panel=5]都說禍從口中，兩方人馬都注意到你，\n眾志一心把你痛揍了一頓……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]都說禍從口中，兩方人馬都注意到你，\n眾志一心把你痛揍了一頓……",
+    "zh_CN": "[panel=5]都说祸从口中，两方人马都注意到你，\n众志一心把你痛揍了一顿……",
+    "links": []
+  },
+  {
+    "entryID": 483,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [484, 485]
+  },
+  {
+    "entryID": 484,
+    "actorID": "role2",
+    "text": "[panel=5]問天下，誰敢共飲，誰敢擋關，\n是英雄就要打十個！",
+    "Sequence": "SetPortrait(MC1,pic=2);\nShowInstantMessage(Exp_FeatExp,MC1,Strength,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]問天下，誰敢共飲，誰敢擋關，\n是英雄就要打十個！",
+    "zh_CN": "[panel=5]问天下，谁敢共饮，谁敢挡关，\n是英雄就要打十个！",
+    "links": [490]
+  },
+  {
+    "entryID": 485,
+    "actorID": "role2",
+    "text": "[panel=5]放最狠的話，挨最毒的打。\n但都你自找的，怪誰呢？",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]放最狠的話，挨最毒的打。\n但都你自找的，怪誰呢？",
+    "zh_CN": "[panel=5]放最狠的话，挨最毒的打。 \n但都你自找的，怪谁呢？",
+    "links": []
+  },
+  {
+    "entryID": 486,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [487, 488]
+  },
+  {
+    "entryID": 487,
+    "actorID": "role2",
+    "text": "[panel=5]眾人聞言，回頭一見，\n竟是一名英姿颯爽，魅力無邊的少俠。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Charisma,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]眾人聞言，回頭一見，\n竟是一名英姿颯爽，魅力無邊的少俠。",
+    "zh_CN": "[panel=5]众人闻言，回头一见，\n竟是一名英姿飒爽，魅力无边的少侠。",
+    "links": [491]
+  },
+  {
+    "entryID": 488,
+    "actorID": "role2",
+    "text": "[panel=5]眾人如你所願，\n把你拖進綠林練武室，好好打一頓……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]眾人如你所願，\n把你拖進綠林練武室，好好打一頓……",
+    "zh_CN": "[panel=5]众人如你所愿，\n把你拖进绿林练武室，好好打一顿……",
+    "links": []
+  },
+  {
+    "entryID": 489,
+    "actorID": "role2",
+    "text": "[panel=5]在觀眾慫恿下，\n兩方大打出手，江湖少了兩幫禍害……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]在觀眾慫恿下，\n兩方大打出手，江湖少了兩幫禍害……",
+    "zh_CN": "[panel=5]在观众怂恿下，\n两方大打出手，江湖少了两帮祸害……",
+    "links": []
+  },
+  {
+    "entryID": 490,
+    "actorID": "role2",
+    "text": "[panel=5]區區兩個幫派，還不夠你熱身呢。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]區區兩個幫派，還不夠你熱身呢。",
+    "zh_CN": "[panel=5]区区两个帮派，还不够你热身呢。",
+    "links": []
+  },
+  {
+    "entryID": 491,
+    "actorID": "role2",
+    "text": "[panel=5]眾人看在你面上，罷手言和，\n甚至願追隨你至天邊……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]眾人看在你面上，罷手言和，\n甚至願追隨你至天邊……",
+    "zh_CN": "[panel=5]众人看在你面上，罢手言和，\n甚至愿追随你至天边……",
+    "links": []
+  },
+  {
+    "entryID": 494,
+    "actorID": "role2",
+    "text": "[panel=5]──正當工作告一段落，你聽到了吵鬧聲。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]──正當工作告一段落，你聽到了吵鬧聲。",
+    "zh_CN": "[panel=5]──正当工作告一段落，你听到了吵闹声。",
+    "links": [495, 496, 497, 498, 499]
+  },
+  {
+    "entryID": 495,
+    "actorID": "role5",
+    "text": "這藥會不會開得太少了啊，\n老婆子我都幾歲的人，稍不留意人就沒了。",
+    "Sequence": "",
+    "zh_TW": "這藥會不會開得太少了啊，\n老婆子我都幾歲的人，稍不留意人就沒了。",
+    "zh_CN": "这药会不会开得太少了啊，\n老婆子我都几岁的人，稍不留意人就没了。",
+    "links": [500]
+  },
+  {
+    "entryID": 496,
+    "actorID": "role18",
+    "text": "我心這邊好不舒服，\n可那位張大夫一直沒空幫我看。",
+    "Sequence": "",
+    "zh_TW": "我心這邊好不舒服，\n可那位張大夫一直沒空幫我看。",
+    "zh_CN": "我心这边好不舒服，\n可那位张大夫一直没空帮我看。",
+    "links": [541, 542]
+  },
+  {
+    "entryID": 497,
+    "actorID": "role70",
+    "text": "大夫，我說了好多次，\n妳這就沒有永保青春，返老還童的靈藥嗎？",
+    "Sequence": "",
+    "zh_TW": "大夫，我說了好多次，\n妳這就沒有永保青春，返老還童的靈藥嗎？",
+    "zh_CN": "大夫，我说了好多次，\n妳这就没有永保青春，返老还童的灵药吗？",
+    "links": [561]
+  },
+  {
+    "entryID": 498,
+    "actorID": "role12",
+    "text": "什麼破庸醫！醫沒醫好，\n還收費這麼貴，你們好意思嗎！",
+    "Sequence": "",
+    "zh_TW": "什麼破庸醫！醫沒醫好，\n還收費這麼貴，你們好意思嗎！",
+    "zh_CN": "什么破庸医！医没医好，\n还收费这么贵，你们好意思吗！",
+    "links": [586]
+  },
+  {
+    "entryID": 499,
+    "actorID": "role72",
+    "text": "小大夫，我這一整天渾身痠痛的，\n妳能不能想點辦法啊。",
+    "Sequence": "",
+    "zh_TW": "小大夫，我這一整天渾身痠痛的，\n妳能不能想點辦法啊。",
+    "zh_CN": "小大夫，我这一整天浑身酸痛的，\n妳能不能想点办法啊。",
+    "links": [610]
+  },
+  {
+    "entryID": 500,
+    "actorID": "MC6",
+    "text": "[panel=2]藥不是多吃就有用，\n妳拿那麼多有何用，少占用浪費資源了。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "[panel=2]藥不是多吃就有用，\n妳拿那麼多有何用，少占用浪費資源了。",
+    "zh_CN": "[panel=2]药不是多吃就有用，\n妳拿那么多有何用，少占用浪费资源了。",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "role5",
+    "text": "怎麼跟病患這樣講話，妳這還是大夫！\n懂不懂敬老尊賢，回頭我就跟街坊告狀……",
+    "Sequence": "",
+    "zh_TW": "怎麼跟病患這樣講話，妳這還是大夫！\n懂不懂敬老尊賢，回頭我就跟街坊告狀……",
+    "zh_CN": "怎么跟病患这样讲话，妳这还是大夫！ \n懂不懂敬老尊贤，回头我就跟街坊告状……",
+    "links": [502, 503, 504]
+  },
+  {
+    "entryID": 502,
+    "actorID": "MC1",
+    "text": "1.[em1][口才][/em1]老婆婆且息怒，張大夫講話雖直，但也是苦口婆心，總好過庸醫的花言巧語，騙您買更多藥。",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][口才][/em1]老婆婆且息怒，張大夫講話雖直，但也是苦口婆心，總好過庸醫的花言巧語，騙您買更多藥。",
+    "zh_CN": "1.[em1][口才][/em1]老婆婆且息怒，张大夫讲话虽直，但也是苦口婆心，总好过庸医的花言巧语，骗您买更多药。",
+    "links": [515]
+  },
+  {
+    "entryID": 503,
+    "actorID": "MC1",
+    "text": "2.[em1][威嚇][/em1]想告狀，妳可試試，我也很想聽街坊會如何聊起為老不遵？",
+    "Sequence": "BeginDiceRoll(Intimidation,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][威嚇][/em1]想告狀，妳可試試，我也很想聽街坊會如何聊起為老不遵？",
+    "zh_CN": "2.[em1][威吓][/em1]想告状，妳可试试，我也很想听街坊会如何聊起为老不遵？",
+    "links": [516]
+  },
+  {
+    "entryID": 504,
+    "actorID": "MC1",
+    "text": "3.[em1][醫術][/em1]老婆婆別急，我再幫您看看便是。",
+    "Sequence": "BeginDiceRoll(MedicalExpertise,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "3.[em1][醫術][/em1]老婆婆別急，我再幫您看看便是。",
+    "zh_CN": "3.[em1][医术][/em1]老婆婆别急，我再帮您看看便是。",
+    "links": [528]
+  },
+  {
+    "entryID": 505,
+    "actorID": "role5",
+    "text": "……你說得確實有道理，是老婆子失態了。\n下次再麻煩你們了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Persuasion,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "……你說得確實有道理，是老婆子失態了。\n下次再麻煩你們了。",
+    "zh_CN": "……你说得确实有道理，是老婆子失态了。 \n下次再麻烦你们了。",
+    "links": [508]
+  },
+  {
+    "entryID": 506,
+    "actorID": "role5",
+    "text": "胡說八道，你以為這種說詞，\n就能幫她開脫嗎，別看不起老人家了！",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "胡說八道，你以為這種說詞，\n就能幫她開脫嗎，別看不起老人家了！",
+    "zh_CN": "胡说八道，你以为这种说词，\n就能帮她开脱吗，别看不起老人家了！",
+    "links": [507]
+  },
+  {
+    "entryID": 507,
+    "actorID": "MC1",
+    "text": "既然如此，還請老人家賜教了。",
+    "Sequence": "",
+    "Description": "進舌戰",
+    "zh_TW": "既然如此，還請老人家賜教了。",
+    "zh_CN": "既然如此，还请老人家赐教了。",
+    "links": [511, 510]
+  },
+  {
+    "entryID": 508,
+    "actorID": "MC6",
+    "text": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "zh_CN": "你还真会说话。 \n不过谢了，替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 510,
+    "actorID": "role5",
+    "text": "哼！理由一大堆，不奉陪了。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "哼！理由一大堆，不奉陪了。",
+    "zh_CN": "哼！理由一大堆，不奉陪了。",
+    "links": [513]
+  },
+  {
+    "entryID": 511,
+    "actorID": "role5",
+    "text": "……你說得確實有道理，是老婆子失態了。\n下次再麻煩你們了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "……你說得確實有道理，是老婆子失態了。\n下次再麻煩你們了。",
+    "zh_CN": "……你说得确实有道理，是老婆子失态了。 \n下次再麻烦你们了。",
+    "links": [512]
+  },
+  {
+    "entryID": 512,
+    "actorID": "MC6",
+    "text": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "zh_CN": "你还真会说话。 \n不过谢了，替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 513,
+    "actorID": "MC1",
+    "text": "抱歉，我搞砸了……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nOpenPanel(1, close);",
+    "zh_TW": "抱歉，我搞砸了……",
+    "zh_CN": "抱歉，我搞砸了……",
+    "links": [514]
+  },
+  {
+    "entryID": 514,
+    "actorID": "MC6",
+    "text": "無所謂，這種人等過陣子身體又哪邊痛，\n就會當作沒事，舔著臉上門了。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "無所謂，這種人等過陣子身體又哪邊痛，\n就會當作沒事，舔著臉上門了。",
+    "zh_CN": "无所谓，这种人等过阵子身体又哪边痛，\n就会当作没事，舔着脸上门了。",
+    "links": []
+  },
+  {
+    "entryID": 515,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [505, 506]
+  },
+  {
+    "entryID": 516,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [517, 518]
+  },
+  {
+    "entryID": 517,
+    "actorID": "role5",
+    "text": "……唔，老婆子身為長輩，\n當然不會跟晚輩計較，就先這樣了。",
+    "Sequence": "SetPortrait(MC1,pic=2);\nShowInstantMessage(Exp_FeatExp,MC1,Intimidation,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "……唔，老婆子身為長輩，\n當然不會跟晚輩計較，就先這樣了。",
+    "zh_CN": "……唔，老婆子身为长辈，\n当然不会跟晚辈计较，就先这样了。",
+    "links": [519]
+  },
+  {
+    "entryID": 518,
+    "actorID": "role5",
+    "text": "你想嚇唬我老婆子，別小看老人家了！",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "你想嚇唬我老婆子，別小看老人家了！",
+    "zh_CN": "你想吓唬我老婆子，别小看老人家了！",
+    "links": [521]
+  },
+  {
+    "entryID": 519,
+    "actorID": "MC6",
+    "text": "想不到你也會有這樣強勢的時候。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "想不到你也會有這樣強勢的時候。",
+    "zh_CN": "想不到你也会有这样强势的时候。",
+    "links": [520]
+  },
+  {
+    "entryID": 520,
+    "actorID": "MC1",
+    "text": "我只是向來同意尊賢，但敬老？看人囉。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "我只是向來同意尊賢，但敬老？看人囉。",
+    "zh_CN": "我只是向来同意尊贤，但敬老？看人啰。",
+    "links": []
+  },
+  {
+    "entryID": 521,
+    "actorID": "MC1",
+    "text": "豈敢，晚輩不過是想給您講點道理。",
+    "Sequence": "",
+    "Description": "進舌戰",
+    "zh_TW": "豈敢，晚輩不過是想給您講點道理。",
+    "zh_CN": "岂敢，晚辈不过是想给您讲点道理。",
+    "links": [522, 525]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role5",
+    "text": "……唔，老婆子身為長輩，\n當然不會跟晚輩計較，就先這樣了。",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "……唔，老婆子身為長輩，\n當然不會跟晚輩計較，就先這樣了。",
+    "zh_CN": "……唔，老婆子身为长辈，\n当然不会跟晚辈计较，就先这样了。",
+    "links": [523]
+  },
+  {
+    "entryID": 523,
+    "actorID": "MC6",
+    "text": "想不到你也會有這樣強勢的時候。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "想不到你也會有這樣強勢的時候。",
+    "zh_CN": "想不到你也会有这样强势的时候。",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "MC1",
+    "text": "我只是向來同意尊賢，但敬老？看人囉。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "我只是向來同意尊賢，但敬老？看人囉。",
+    "zh_CN": "我只是向来同意尊贤，但敬老？看人啰。",
+    "links": []
+  },
+  {
+    "entryID": 525,
+    "actorID": "role5",
+    "text": "哼！小子只會虛張聲勢，不奉陪了。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "哼！小子只會虛張聲勢，不奉陪了。",
+    "zh_CN": "哼！小子只会虚张声势，不奉陪了。",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC1",
+    "text": "抱歉，我搞砸了……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nOpenPanel(1, close);",
+    "zh_TW": "抱歉，我搞砸了……",
+    "zh_CN": "抱歉，我搞砸了……",
+    "links": [527]
+  },
+  {
+    "entryID": 527,
+    "actorID": "MC6",
+    "text": "無所謂，這種人等過陣子身體又哪邊痛，\n就會當作沒事，舔著臉上門了。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "無所謂，這種人等過陣子身體又哪邊痛，\n就會當作沒事，舔著臉上門了。",
+    "zh_CN": "无所谓，这种人等过阵子身体又哪边痛，\n就会当作没事，舔着脸上门了。",
+    "links": []
+  },
+  {
+    "entryID": 528,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [529, 530]
+  },
+  {
+    "entryID": 529,
+    "actorID": "role5",
+    "text": "小夥子醫術真不錯，\n老婆子感覺又能多活幾年了，下次再麻煩你了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,MedicalExpertise,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "小夥子醫術真不錯，\n老婆子感覺又能多活幾年了，下次再麻煩你了。",
+    "zh_CN": "小伙子医术真不错，\n老婆子感觉又能多活几年了，下次再麻烦你了。",
+    "links": [531]
+  },
+  {
+    "entryID": 530,
+    "actorID": "role5",
+    "text": "不用！我就是要拿藥！",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "不用！我就是要拿藥！",
+    "zh_CN": "不用！我就是要拿药！",
+    "links": [533]
+  },
+  {
+    "entryID": 531,
+    "actorID": "MC6",
+    "text": "恭喜你，自找麻煩了，不過也替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "恭喜你，自找麻煩了，不過也替我省了不少心力。",
+    "zh_CN": "恭喜你，自找麻烦了，不过也替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 533,
+    "actorID": "MC1",
+    "text": "老婆婆，這樣我們會很難辦，且聽我說幾句。",
+    "Sequence": "",
+    "Description": "進舌戰",
+    "zh_TW": "老婆婆，這樣我們會很難辦，且聽我說幾句。",
+    "zh_CN": "老婆婆，这样我们会很难办，且听我说几句。",
+    "links": [534, 537]
+  },
+  {
+    "entryID": 534,
+    "actorID": "role5",
+    "text": "……你說得確實有道理，是老婆子失態了。\n下次再麻煩你們了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "……你說得確實有道理，是老婆子失態了。\n下次再麻煩你們了。",
+    "zh_CN": "……你说得确实有道理，是老婆子失态了。 \n下次再麻烦你们了。",
+    "links": [540]
+  },
+  {
+    "entryID": 537,
+    "actorID": "role5",
+    "text": "哼！理由一大堆，不奉陪了。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "哼！理由一大堆，不奉陪了。",
+    "zh_CN": "哼！理由一大堆，不奉陪了。",
+    "links": [538]
+  },
+  {
+    "entryID": 538,
+    "actorID": "MC1",
+    "text": "抱歉，我搞砸了……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nOpenPanel(1, close);",
+    "zh_TW": "抱歉，我搞砸了……",
+    "zh_CN": "抱歉，我搞砸了……",
+    "links": [539]
+  },
+  {
+    "entryID": 539,
+    "actorID": "MC6",
+    "text": "無所謂，這種人等過陣子身體又哪邊痛，\n就會當作沒事，舔著臉上門了。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "無所謂，這種人等過陣子身體又哪邊痛，\n就會當作沒事，舔著臉上門了。",
+    "zh_CN": "无所谓，这种人等过阵子身体又哪边痛，\n就会当作没事，舔着脸上门了。",
+    "links": []
+  },
+  {
+    "entryID": 540,
+    "actorID": "MC6",
+    "text": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "zh_CN": "你还真会说话。 \n不过谢了，替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 541,
+    "actorID": "MC1",
+    "text": "1.[em1][醫術][/em1]今日看病的人有些多，還請見諒。要不我先幫妳看看。",
+    "Sequence": "BeginDiceRoll(MedicalExpertise,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][醫術][/em1]今日看病的人有些多，還請見諒。要不我先幫妳看看。",
+    "zh_CN": "1.[em1][医术][/em1]今日看病的人有些多，还请见谅。要不我先帮妳看看。",
+    "links": [552]
+  },
+  {
+    "entryID": 542,
+    "actorID": "MC1",
+    "text": "2.[em1][調情][/em1]姑娘莫慌，本人也是大夫，湊巧專門治心病，尤其是心裡怦怦跳那種……",
+    "Sequence": "BeginDiceRoll(Flirting,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][調情][/em1]姑娘莫慌，本人也是大夫，湊巧專門治心病，尤其是心裡怦怦跳那種……",
+    "zh_CN": "2.[em1][调情][/em1]姑娘莫慌，本人也是大夫，凑巧专门治心病，尤其是心里怦怦跳那种……",
+    "links": [558]
+  },
+  {
+    "entryID": 543,
+    "actorID": "role18",
+    "text": "大夫醫術真是高超，\n下次小女子就直接來找你吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,MedicalExpertise,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "大夫醫術真是高超，\n下次小女子就直接來找你吧。",
+    "zh_CN": "大夫医术真是高超，\n下次小女子就直接来找你吧。",
+    "links": [546]
+  },
+  {
+    "entryID": 544,
+    "actorID": "role18",
+    "text": "什麼庸醫！這破地方，本姑娘再也不來了。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "什麼庸醫！這破地方，本姑娘再也不來了。",
+    "zh_CN": "什么庸医！这破地方，本姑娘再也不来了。",
+    "links": [550]
+  },
+  {
+    "entryID": 546,
+    "actorID": "MC6",
+    "text": "多謝了，今日真的差點忙不過來。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "多謝了，今日真的差點忙不過來。",
+    "zh_CN": "多谢了，今日真的差点忙不过来。",
+    "links": []
+  },
+  {
+    "entryID": 550,
+    "actorID": "MC1",
+    "text": "抱歉，我搞砸了……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nOpenPanel(1, close);",
+    "zh_TW": "抱歉，我搞砸了……",
+    "zh_CN": "抱歉，我搞砸了……",
+    "links": [551]
+  },
+  {
+    "entryID": 551,
+    "actorID": "MC6",
+    "text": "無所謂，這種人多的是。\n看日後她是想早點跟閻王報到，還是學著等待。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "無所謂，這種人多的是。\n看日後她是想早點跟閻王報到，還是學著等待。",
+    "zh_CN": "无所谓，这种人多的是。 \n看日后她是想早点跟阎王报到，还是学着等待。",
+    "links": []
+  },
+  {
+    "entryID": 552,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [543, 544]
+  },
+  {
+    "entryID": 553,
+    "actorID": "role18",
+    "text": "唉呦，大夫怎麼這麼說啊。\n不過小女子的心確實撲通撲通的……",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Flirting,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "唉呦，大夫怎麼這麼說啊。\n不過小女子的心確實撲通撲通的……",
+    "zh_CN": "唉呦，大夫怎么这么说啊。 \n不过小女子的心确实扑通扑通的……",
+    "links": [555]
+  },
+  {
+    "entryID": 554,
+    "actorID": "role18",
+    "text": "哪來的登徒子！快來人啊！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "哪來的登徒子！快來人啊！",
+    "zh_CN": "哪来的登徒子！快来人啊！",
+    "links": [556]
+  },
+  {
+    "entryID": 555,
+    "actorID": "MC6",
+    "text": "[panel=2]這樣啊，要不我開點藥給妳如何？",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=2]這樣啊，要不我開點藥給妳如何？",
+    "zh_CN": "[panel=2]这样啊，要不我开点药给妳如何？",
+    "links": [559]
+  },
+  {
+    "entryID": 556,
+    "actorID": "role2",
+    "text": "[panel=5]女子一呼百應，醫館內不論老的少的，\n天降正義的，給了你應得的制裁……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=5]女子一呼百應，醫館內不論老的少的，\n天降正義的，給了你應得的制裁……",
+    "zh_CN": "[panel=5]女子一呼百应，医馆内不论老的少的，\n天降正义的，给了你应得的制裁……",
+    "links": [557]
+  },
+  {
+    "entryID": 557,
+    "actorID": "MC6",
+    "text": "自作孽，不可活。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "自作孽，不可活。",
+    "zh_CN": "自作孽，不可活。",
+    "links": []
+  },
+  {
+    "entryID": 558,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [553, 554]
+  },
+  {
+    "entryID": 559,
+    "actorID": "role18",
+    "text": "咦！那個我好像不跳了。\n大夫我沒事了，先告辭。",
+    "Sequence": "",
+    "zh_TW": "咦！那個我好像不跳了。\n大夫我沒事了，先告辭。",
+    "zh_CN": "咦！那个我好像不跳了。 \n大夫我没事了，先告辞。",
+    "links": [560]
+  },
+  {
+    "entryID": 560,
+    "actorID": "role2",
+    "text": "[panel=5]女子倉皇離開後，\n張寧瞪向你，你的下場已被宣判……",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]女子倉皇離開後，\n張寧瞪向你，你的下場已被宣判……",
+    "zh_CN": "[panel=5]女子仓皇离开后，\n张宁瞪向你，你的下场已被宣判……",
+    "links": []
+  },
+  {
+    "entryID": 561,
+    "actorID": "MC6",
+    "text": "[panel=2]要有這麼方便的藥，妳還用得著如此煩惱嗎。\n人啊，別妄想阻擋時間的前進。",
+    "Sequence": "SetPortrait(MC6,pic=4);;",
+    "zh_TW": "[panel=2]要有這麼方便的藥，妳還用得著如此煩惱嗎。\n人啊，別妄想阻擋時間的前進。",
+    "zh_CN": "[panel=2]要有这么方便的药，妳还用得着如此烦恼吗。 \n人啊，别妄想阻挡时间的前进。",
+    "links": [562]
+  },
+  {
+    "entryID": 562,
+    "actorID": "role70",
+    "text": "妳個小丫頭不就是年輕一點，囂張什麼啊！",
+    "Sequence": "",
+    "zh_TW": "妳個小丫頭不就是年輕一點，囂張什麼啊！",
+    "zh_CN": "妳个小丫头不就是年轻一点，嚣张什么啊！",
+    "links": [574, 575]
+  },
+  {
+    "entryID": 563,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [564, 565]
+  },
+  {
+    "entryID": 564,
+    "actorID": "role70",
+    "text": "唉呀，這小夥子真厲害，\n瞧瞧我的臉又變嫩了，下次再麻煩你了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,MedicalExpertise,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "唉呀，這小夥子真厲害，\n瞧瞧我的臉又變嫩了，下次再麻煩你了。",
+    "zh_CN": "唉呀，这小伙子真厉害，\n瞧瞧我的脸又变嫩了，下次再麻烦你了。",
+    "links": [566]
+  },
+  {
+    "entryID": 565,
+    "actorID": "role70",
+    "text": "你這麼什麼狗屁膏藥，瞧我臉都變皺了！\n這是嚴重的醫療疏失！我定要告你們！",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "你這麼什麼狗屁膏藥，瞧我臉都變皺了！\n這是嚴重的醫療疏失！我定要告你們！",
+    "zh_CN": "你这么什么狗屁膏药，瞧我脸都变皱了！ \n这是严重的医疗疏失！我定要告你们！",
+    "links": [567]
+  },
+  {
+    "entryID": 566,
+    "actorID": "MC6",
+    "text": "雖說是治標不治本，不過也替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "雖說是治標不治本，不過也替我省了不少心力。",
+    "zh_CN": "虽说是治标不治本，不过也替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 567,
+    "actorID": "MC1",
+    "text": "老闆娘別急，且聽我慢慢說，\n那就是藥效發揮的過程……",
+    "Sequence": "",
+    "Description": "進舌戰",
+    "zh_TW": "老闆娘別急，且聽我慢慢說，\n那就是藥效發揮的過程……",
+    "zh_CN": "老板娘别急，且听我慢慢说，\n那就是药效发挥的过程……",
+    "links": [568, 569]
+  },
+  {
+    "entryID": 568,
+    "actorID": "role70",
+    "text": "唉呀，是我太激動了，\n那麼下次再麻煩你了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "唉呀，是我太激動了，\n那麼下次再麻煩你了。",
+    "zh_CN": "唉呀，是我太激动了，\n那么下次再麻烦你了。",
+    "links": [572]
+  },
+  {
+    "entryID": 569,
+    "actorID": "role70",
+    "text": "哼！胡說八道，不奉陪了。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "哼！胡說八道，不奉陪了。",
+    "zh_CN": "哼！胡说八道，不奉陪了。",
+    "links": [570]
+  },
+  {
+    "entryID": 570,
+    "actorID": "MC1",
+    "text": "抱歉，我搞砸了……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nOpenPanel(1, close);",
+    "zh_TW": "抱歉，我搞砸了……",
+    "zh_CN": "抱歉，我搞砸了……",
+    "links": [571]
+  },
+  {
+    "entryID": 571,
+    "actorID": "MC6",
+    "text": "無所謂，這類人等過陣子看鏡子，\n自然會受不了又來問了。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "無所謂，這類人等過陣子看鏡子，\n自然會受不了又來問了。",
+    "zh_CN": "无所谓，这类人等过阵子看镜子，\n自然会受不了又来问了。",
+    "links": []
+  },
+  {
+    "entryID": 572,
+    "actorID": "MC6",
+    "text": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "zh_CN": "你还真会说话。 \n不过谢了，替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 574,
+    "actorID": "MC1",
+    "text": "1.[em1][醫術][/em1]我這倒是有一帖良方可以敷在臉上。",
+    "Sequence": "BeginDiceRoll(MedicalExpertise,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][醫術][/em1]我這倒是有一帖良方可以敷在臉上。",
+    "zh_CN": "1.[em1][医术][/em1]我这倒是有一帖良方可以敷在脸上。",
+    "links": [563]
+  },
+  {
+    "entryID": 575,
+    "actorID": "MC1",
+    "text": "2.[em1][調情][/em1]誒，小丫頭片子哪裡懂，老闆娘風韻猶存的魅力呢。",
+    "Sequence": "BeginDiceRoll(Flirting,Manual,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][調情][/em1]誒，小丫頭片子哪裡懂，老闆娘風韻猶存的魅力呢。",
+    "zh_CN": "2.[em1][调情][/em1]诶，小丫头片子哪里懂，老板娘风韵犹存的魅力呢。",
+    "links": [576]
+  },
+  {
+    "entryID": 576,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [577, 578]
+  },
+  {
+    "entryID": 577,
+    "actorID": "role70",
+    "text": "真的嗎？呵呵，\n果然有的人就是天生麗質，不受歲月催。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Flirting,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "真的嗎？呵呵，\n果然有的人就是天生麗質，不受歲月催。",
+    "zh_CN": "真的吗？呵呵，\n果然有的人就是天生丽质，不受岁月催。",
+    "links": [579]
+  },
+  {
+    "entryID": 578,
+    "actorID": "role70",
+    "text": "少忽悠老娘了，老娘什麼場面沒見過，\n還會聽小子的甜言蜜語。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "少忽悠老娘了，老娘什麼場面沒見過，\n還會聽小子的甜言蜜語。",
+    "zh_CN": "少忽悠老娘了，老娘什么场面没见过，\n还会听小子的甜言蜜语。",
+    "links": [580]
+  },
+  {
+    "entryID": 579,
+    "actorID": "MC6",
+    "text": "……難得你的胡話會有派上用場的時候，\n不過也替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "……難得你的胡話會有派上用場的時候，\n不過也替我省了不少心力。",
+    "zh_CN": "……难得你的胡话会有派上用场的时候，\n不过也替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 580,
+    "actorID": "MC1",
+    "text": "老闆娘息怒，在下一向不說虛言……",
+    "Sequence": "",
+    "Description": "進舌戰",
+    "zh_TW": "老闆娘息怒，在下一向不說虛言……",
+    "zh_CN": "老板娘息怒，在下一向不说虚言……",
+    "links": [581, 582]
+  },
+  {
+    "entryID": 581,
+    "actorID": "role70",
+    "text": "唉呀，是我太激動了，\n那麼下次再麻煩你了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "唉呀，是我太激動了，\n那麼下次再麻煩你了。",
+    "zh_CN": "唉呀，是我太激动了，\n那么下次再麻烦你了。",
+    "links": [585]
+  },
+  {
+    "entryID": 582,
+    "actorID": "role70",
+    "text": "就你這本事，還敢調戲老娘！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "就你這本事，還敢調戲老娘！",
+    "zh_CN": "就你这本事，还敢调戏老娘！",
+    "links": [583]
+  },
+  {
+    "entryID": 583,
+    "actorID": "role2",
+    "text": "[panel=5]老闆娘一腿踢出，竟如千招萬式，\n無數光芒在你眼前飛過，雖然面前一黑……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]老闆娘一腿踢出，竟如千招萬式，\n無數光芒在你眼前飛過，雖然面前一黑……",
+    "zh_CN": "[panel=5]老板娘一腿踢出，竟如千招万式，\n无数光芒在你眼前飞过，虽然面前一黑……",
+    "links": []
+  },
+  {
+    "entryID": 585,
+    "actorID": "MC6",
+    "text": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "你還真會說話。\n不過謝了，替我省了不少心力。",
+    "zh_CN": "你还真会说话。 \n不过谢了，替我省了不少心力。",
+    "links": []
+  },
+  {
+    "entryID": 586,
+    "actorID": "MC6",
+    "text": "[panel=2]請看清楚，你這是新傷，舊傷早好了。\n你要一直這麼找死，神仙也難救。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "[panel=2]請看清楚，你這是新傷，舊傷早好了。\n你要一直這麼找死，神仙也難救。",
+    "zh_CN": "[panel=2]请看清楚，你这是新伤，旧伤早好了。 \n你要一直这么找死，神仙也难救。",
+    "links": [587]
+  },
+  {
+    "entryID": 587,
+    "actorID": "MC6",
+    "text": "[panel=2]至於收費，我認為性命在前，這很合理。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "[panel=2]至於收費，我認為性命在前，這很合理。",
+    "zh_CN": "[panel=2]至于收费，我认为性命在前，这很合理。",
+    "links": [588]
+  },
+  {
+    "entryID": 588,
+    "actorID": "role12",
+    "text": "妳還有理了啊，信不信我把妳這砸了！",
+    "Sequence": "",
+    "zh_TW": "妳還有理了啊，信不信我把妳這砸了！",
+    "zh_CN": "妳还有理了啊，信不信我把妳这砸了！",
+    "links": [589, 590]
+  },
+  {
+    "entryID": 589,
+    "actorID": "MC1",
+    "text": "1.[em1][醫術][/em1]壯士且慢，在下略通醫術，我來幫你治傷吧。",
+    "Sequence": "BeginDiceRoll(MedicalExpertise,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][醫術][/em1]壯士且慢，在下略通醫術，我來幫你治傷吧。",
+    "zh_CN": "1.[em1][医术][/em1]壮士且慢，在下略通医术，我来帮你治伤吧。",
+    "links": [591]
+  },
+  {
+    "entryID": 590,
+    "actorID": "MC1",
+    "text": "2.[em1][威嚇][/em1]你知道大夫可是有千萬種方式，能讓人求生不能，求死不能。",
+    "Sequence": "BeginDiceRoll(Intimidation,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][威嚇][/em1]你知道大夫可是有千萬種方式，能讓人求生不能，求死不能。",
+    "zh_CN": "2.[em1][威吓][/em1]你知道大夫可是有千万种方式，能让人求生不能，求死不能。",
+    "links": [601]
+  },
+  {
+    "entryID": 591,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [592, 593]
+  },
+  {
+    "entryID": 592,
+    "actorID": "role12",
+    "text": "哦！這不就治好了嗎。\n多謝啦，下次再麻煩你了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,MedicalExpertise,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "哦！這不就治好了嗎。\n多謝啦，下次再麻煩你了。",
+    "zh_CN": "哦！这不就治好了吗。 \n多谢啦，下次再麻烦你了。",
+    "links": [594]
+  },
+  {
+    "entryID": 593,
+    "actorID": "role12",
+    "text": "唔！你這麼破醫術！非逼我發飆不可！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "唔！你這麼破醫術！非逼我發飆不可！",
+    "zh_CN": "唔！你这么破医术！非逼我发飙不可！",
+    "links": [595]
+  },
+  {
+    "entryID": 594,
+    "actorID": "MC6",
+    "text": "你還真不嫌麻煩，不過是他是該感謝你。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "你還真不嫌麻煩，不過是他是該感謝你。",
+    "zh_CN": "你还真不嫌麻烦，不过是他是该感谢你。",
+    "links": [600]
+  },
+  {
+    "entryID": 595,
+    "actorID": "MC1",
+    "text": "那就請吧，在下最擅長就是以拳治病。",
+    "Sequence": "",
+    "Description": "進單挑",
+    "zh_TW": "那就請吧，在下最擅長就是以拳治病。",
+    "zh_CN": "那就请吧，在下最擅长就是以拳治病。",
+    "links": [596, 597]
+  },
+  {
+    "entryID": 596,
+    "actorID": "MC6",
+    "text": "真是的，你大可不必多管，看現在弄得一團亂。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "真是的，你大可不必多管，看現在弄得一團亂。",
+    "zh_CN": "真是的，你大可不必多管，看现在弄得一团乱。",
+    "links": [599]
+  },
+  {
+    "entryID": 597,
+    "actorID": "role2",
+    "text": "[panel=5]最終張寧看不下去出手，\n輕易便用藥教訓了對方。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]最終張寧看不下去出手，\n輕易便用藥教訓了對方。",
+    "zh_CN": "[panel=5]最终张宁看不下去出手，\n轻易便用药教训了对方。",
+    "links": []
+  },
+  {
+    "entryID": 599,
+    "actorID": "MC1",
+    "text": "我這是在救他，\n要換妳出手，他還不被整個半生不死。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "我這是在救他，\n要換妳出手，他還不被整個半生不死。",
+    "zh_CN": "我这是在救他，\n要换妳出手，他还不被整个半生不死。",
+    "links": []
+  },
+  {
+    "entryID": 600,
+    "actorID": "MC1",
+    "text": "呵，要換妳出手，\n只怕就不只丟小命那麼簡單了。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "呵，要換妳出手，\n只怕就不只丟小命那麼簡單了。",
+    "zh_CN": "呵，要换妳出手，\n只怕就不只丢小命那么简单了。",
+    "links": []
+  },
+  {
+    "entryID": 601,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [602, 603]
+  },
+  {
+    "entryID": 602,
+    "actorID": "role12",
+    "text": "……他娘的，\n你們這幫大夫心比我還黑，不奉陪了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Intimidation,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "……他娘的，\n你們這幫大夫心比我還黑，不奉陪了。",
+    "zh_CN": "……他娘的，\n你们这帮大夫心比我还黑，不奉陪了。",
+    "links": [604]
+  },
+  {
+    "entryID": 603,
+    "actorID": "role12",
+    "text": "那老子現在就讓你死！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "進單挑",
+    "zh_TW": "那老子現在就讓你死！",
+    "zh_CN": "那老子现在就让你死！",
+    "links": [606, 607]
+  },
+  {
+    "entryID": 604,
+    "actorID": "MC6",
+    "text": "恭喜你啊，黑心大夫。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "恭喜你啊，黑心大夫。",
+    "zh_CN": "恭喜你啊，黑心大夫。",
+    "links": [609]
+  },
+  {
+    "entryID": 606,
+    "actorID": "MC6",
+    "text": "真是的，你大可不必多管，看現在弄得一團亂。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "真是的，你大可不必多管，看現在弄得一團亂。",
+    "zh_CN": "真是的，你大可不必多管，看现在弄得一团乱。",
+    "links": [608]
+  },
+  {
+    "entryID": 607,
+    "actorID": "role2",
+    "text": "[panel=5]最終張寧看不下去出手，\n輕易便用藥教訓了對方。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]最終張寧看不下去出手，\n輕易便用藥教訓了對方。",
+    "zh_CN": "[panel=5]最终张宁看不下去出手，\n轻易便用药教训了对方。",
+    "links": []
+  },
+  {
+    "entryID": 608,
+    "actorID": "MC1",
+    "text": "我這是在救他，\n要換妳出手，他還不被整個半生不死。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "我這是在救他，\n要換妳出手，他還不被整個半生不死。",
+    "zh_CN": "我这是在救他，\n要换妳出手，他还不被整个半生不死。",
+    "links": []
+  },
+  {
+    "entryID": 609,
+    "actorID": "MC1",
+    "text": "過獎了，跟妳相比，我還差遠了。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "過獎了，跟妳相比，我還差遠了。",
+    "zh_CN": "过奖了，跟妳相比，我还差远了。",
+    "links": []
+  },
+  {
+    "entryID": 610,
+    "actorID": "MC6",
+    "text": "[panel=2]我說過了，你那是鍛鍊過度，要適時休息。\n還有那些奇怪的藥別亂吃。",
+    "Sequence": "SetPortrait(MC6,pic=4);;",
+    "zh_TW": "[panel=2]我說過了，你那是鍛鍊過度，要適時休息。\n還有那些奇怪的藥別亂吃。",
+    "zh_CN": "[panel=2]我说过了，你那是锻炼过度，要适时休息。 \n还有那些奇怪的药别乱吃。",
+    "links": [611]
+  },
+  {
+    "entryID": 611,
+    "actorID": "role72",
+    "text": "這怎麼行，你看看我這一身完美的肌肉，\n靠的就是日夜不懈，要是休息，線條是鬆弛的。",
+    "Sequence": "",
+    "zh_TW": "這怎麼行，你看看我這一身完美的肌肉，\n靠的就是日夜不懈，要是休息，線條是鬆弛的。",
+    "zh_CN": "这怎么行，你看看我这一身完美的肌肉，\n靠的就是日夜不懈，要是休息，线条是松弛的。",
+    "links": [612, 613]
+  },
+  {
+    "entryID": 612,
+    "actorID": "MC1",
+    "text": "1.[em1][醫術][/em1]肌肉療法，沒人比我更懂了。",
+    "Sequence": "BeginDiceRoll(MedicalExpertise,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][醫術][/em1]肌肉療法，沒人比我更懂了。",
+    "zh_CN": "1.[em1][医术][/em1]肌肉疗法，没人比我更懂了。",
+    "links": [619]
+  },
+  {
+    "entryID": 613,
+    "actorID": "MC1",
+    "text": "2.[em1][口才][/em1]大叔，休息是為了練更多的肌肉，也是一種鍛鍊啊。",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][口才][/em1]大叔，休息是為了練更多的肌肉，也是一種鍛鍊啊。",
+    "zh_CN": "2.[em1][口才][/em1]大叔，休息是为了练更多的肌肉，也是一种锻炼啊。",
+    "links": [626]
+  },
+  {
+    "entryID": 614,
+    "actorID": "role72",
+    "text": "哦哦！我感受到了，\n肌肉在雀躍，肌肉在大聲呼喊愛還記得嗎！",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,MedicalExpertise,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "哦哦！我感受到了，\n肌肉在雀躍，肌肉在大聲呼喊愛還記得嗎！",
+    "zh_CN": "哦哦！我感受到了，\n肌肉在雀跃，肌肉在大声呼喊爱还记得吗！",
+    "links": [616]
+  },
+  {
+    "entryID": 615,
+    "actorID": "role72",
+    "text": "還說懂了！你看大叔這身肌肉都軟掉了。\n孰可忍，孰不可忍！不奉陪了！",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "還說懂了！你看大叔這身肌肉都軟掉了。\n孰可忍，孰不可忍！不奉陪了！",
+    "zh_CN": "还说懂了！你看大叔这身肌肉都软掉了。 \n孰可忍，孰不可忍！不奉陪了！",
+    "links": [617]
+  },
+  {
+    "entryID": 616,
+    "actorID": "role72",
+    "text": "我要立刻回去鍛鍊，回應它們的愛了！",
+    "Sequence": "",
+    "zh_TW": "我要立刻回去鍛鍊，回應它們的愛了！",
+    "zh_CN": "我要立刻回去锻炼，回应它们的爱了！",
+    "links": [620]
+  },
+  {
+    "entryID": 617,
+    "actorID": "MC1",
+    "text": "抱歉，我搞砸了……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "抱歉，我搞砸了……",
+    "zh_CN": "抱歉，我搞砸了……",
+    "links": [618]
+  },
+  {
+    "entryID": 618,
+    "actorID": "MC6",
+    "text": "無所謂，反正那人本來就怪怪的，\n放著也沒多大危害。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "無所謂，反正那人本來就怪怪的，\n放著也沒多大危害。",
+    "zh_CN": "无所谓，反正那人本来就怪怪的，\n放着也没多大危害。",
+    "links": []
+  },
+  {
+    "entryID": 619,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [614, 615]
+  },
+  {
+    "entryID": 620,
+    "actorID": "MC6",
+    "text": "好吧，我承認還是你對這種怪人有辦法，謝了。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "好吧，我承認還是你對這種怪人有辦法，謝了。",
+    "zh_CN": "好吧，我承认还是你对这种怪人有办法，谢了。",
+    "links": []
+  },
+  {
+    "entryID": 621,
+    "actorID": "role72",
+    "text": "言之有理！瞧瞧我都只顧自己，\n沒聽到肌肉在哭泣……",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Persuasion,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "言之有理！瞧瞧我都只顧自己，\n沒聽到肌肉在哭泣……",
+    "zh_CN": "言之有理！瞧瞧我都只顾自己，\n没听到肌肉在哭泣……",
+    "links": [623]
+  },
+  {
+    "entryID": 622,
+    "actorID": "role72",
+    "text": "胡說！肌肉才不會停下腳步，\n我們約好要一同奔向天涯。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "胡說！肌肉才不會停下腳步，\n我們約好要一同奔向天涯。",
+    "zh_CN": "胡说！肌肉才不会停下脚步，\n我们约好要一同奔向天涯。",
+    "links": [625]
+  },
+  {
+    "entryID": 623,
+    "actorID": "role72",
+    "text": "多謝，是你讓我迷途知返，肌肉會眷顧你的。",
+    "Sequence": "",
+    "zh_TW": "多謝，是你讓我迷途知返，肌肉會眷顧你的。",
+    "zh_CN": "多谢，是你让我迷途知返，肌肉会眷顾你的。",
+    "links": [627]
+  },
+  {
+    "entryID": 625,
+    "actorID": "MC6",
+    "text": "啊？哭著跑掉了……畫面真噁心……",
+    "Sequence": "SetPortrait(MC6,pic=4);;",
+    "zh_TW": "啊？哭著跑掉了……畫面真噁心……",
+    "zh_CN": "啊？哭着跑掉了……画面真恶心……",
+    "links": []
+  },
+  {
+    "entryID": 626,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [621, 622]
+  },
+  {
+    "entryID": 627,
+    "actorID": "MC6",
+    "text": "肌肉會眷顧你……\n你不會哪天也變成那種怪人吧？",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "肌肉會眷顧你……\n你不會哪天也變成那種怪人吧？",
+    "zh_CN": "肌肉会眷顾你……\n你不会哪天也变成那种怪人吧？",
+    "links": [628]
+  },
+  {
+    "entryID": 628,
+    "actorID": "MC1",
+    "text": "才不會！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "才不會！",
+    "zh_CN": "才不会！",
+    "links": []
+  },
+  {
+    "entryID": 666,
+    "actorID": "role2",
+    "text": "[panel=5]──行至中途，又見黃土楓樹，\n樹下刀客依舊沉吟不決……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]──行至中途，又見黃土楓樹，\n樹下刀客依舊沉吟不決……",
+    "zh_CN": "[panel=5]──行至中途，又见黄土枫树，\n树下刀客依旧沉吟不决……",
+    "links": [686]
+  },
+  {
+    "entryID": 667,
+    "actorID": "role2",
+    "text": "[panel=5]──行至中途，熟悉的樹下，又是謎語刀客。\n只是這次，他拿著一個複雜繩結……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]──行至中途，熟悉的樹下，又是謎語刀客。\n只是這次，他拿著一個複雜繩結……",
+    "zh_CN": "[panel=5]──行至中途，熟悉的树下，又是谜语刀客。 \n只是这次，他拿着一个复杂绳结……",
+    "links": [695]
+  },
+  {
+    "entryID": 686,
+    "actorID": "role85",
+    "text": "回答我[em2]長眠無語安息處，不論貴賤共一房。\n家家無處不迎客，生死同行到天明。[/em2]",
+    "Sequence": "",
+    "zh_TW": "回答我[em2]長眠無語安息處，不論貴賤共一房。\n家家無處不迎客，生死同行到天明。[/em2]",
+    "zh_CN": "回答我[em2]长眠无语安息处，不论贵贱共一房。 \n家家无处不迎客，生死同行到天明。 [/em2]",
+    "links": [687]
+  },
+  {
+    "entryID": 687,
+    "actorID": "MC1",
+    "text": "（又是隱語……）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（又是隱語……）",
+    "zh_CN": "（又是隐语……）",
+    "links": [688, 689, 690, 691]
+  },
+  {
+    "entryID": 688,
+    "actorID": "MC1",
+    "text": "1.謎底蹋床也。",
+    "Sequence": "",
+    "zh_TW": "1.謎底蹋床也。",
+    "zh_CN": "1.谜底蹋床也。",
+    "links": [692]
+  },
+  {
+    "entryID": 689,
+    "actorID": "MC1",
+    "text": "2.謎底夜晚也。",
+    "Sequence": "",
+    "zh_TW": "2.謎底夜晚也。",
+    "zh_CN": "2.谜底夜晚也。",
+    "links": [692]
+  },
+  {
+    "entryID": 690,
+    "actorID": "MC1",
+    "text": "3.謎底死亡也。",
+    "Sequence": "",
+    "zh_TW": "3.謎底死亡也。",
+    "zh_CN": "3.谜底死亡也。",
+    "links": [692]
+  },
+  {
+    "entryID": 691,
+    "actorID": "MC1",
+    "text": "4.謎底墳墓也。",
+    "Sequence": "",
+    "zh_TW": "4.謎底墳墓也。",
+    "zh_CN": "4.谜底坟墓也。",
+    "links": [724]
+  },
+  {
+    "entryID": 692,
+    "actorID": "role85",
+    "text": "……你終究不是我要等的人……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……你終究不是我要等的人……",
+    "zh_CN": "……你终究不是我要等的人……",
+    "links": [693]
+  },
+  {
+    "entryID": 693,
+    "actorID": "role2",
+    "text": "[panel=5]就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。",
+    "zh_CN": "[panel=5]就见刀客叹了口气，\n枫叶吹起，人也跟着不见踪影。",
+    "links": [694]
+  },
+  {
+    "entryID": 694,
+    "actorID": "MC1",
+    "text": "此人究竟是何方高人……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "此人究竟是何方高人……",
+    "zh_CN": "此人究竟是何方高人……",
+    "links": []
+  },
+  {
+    "entryID": 695,
+    "actorID": "role85",
+    "text": "解開它。",
+    "Sequence": "",
+    "zh_TW": "解開它。",
+    "zh_CN": "解开它。",
+    "links": [697]
+  },
+  {
+    "entryID": 696,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [698, 699]
+  },
+  {
+    "entryID": 697,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Insight,Auto,12);\nContinue();",
+    "Description": "背景檢定",
+    "links": [696]
+  },
+  {
+    "entryID": 698,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowInstantMessage(Check,Insight,Success);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,20); \nContinue()@0.5;",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "links": [700, 701, 702]
+  },
+  {
+    "entryID": 699,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowInstantMessage(Check,Insight,Fail);\nContinue()@0.5;",
+    "Conditions": "IsPassDice()  == false",
+    "links": [703, 704]
+  },
+  {
+    "entryID": 700,
+    "actorID": "MC1",
+    "text": "1.（仔細尋找繩頭）",
+    "Sequence": "",
+    "zh_TW": "1.（仔細尋找繩頭）",
+    "zh_CN": "1.（仔细寻找绳头）",
+    "links": [705]
+  },
+  {
+    "entryID": 701,
+    "actorID": "MC1",
+    "text": "2.（用力撕扯）",
+    "Sequence": "",
+    "zh_TW": "2.（用力撕扯）",
+    "zh_CN": "2.（用力撕扯）",
+    "links": [705]
+  },
+  {
+    "entryID": 702,
+    "actorID": "MC1",
+    "text": "3.（斬斷繩結）",
+    "Sequence": "",
+    "zh_TW": "3.（斬斷繩結）",
+    "zh_CN": "3.（斩断绳结）",
+    "links": [708]
+  },
+  {
+    "entryID": 703,
+    "actorID": "MC1",
+    "text": "1.（仔細尋找繩頭）",
+    "Sequence": "",
+    "zh_TW": "1.（仔細尋找繩頭）",
+    "zh_CN": "1.（仔细寻找绳头）",
+    "links": [705]
+  },
+  {
+    "entryID": 704,
+    "actorID": "MC1",
+    "text": "2.（用力撕扯）",
+    "Sequence": "",
+    "zh_TW": "2.（用力撕扯）",
+    "zh_CN": "2.（用力撕扯）",
+    "links": [705]
+  },
+  {
+    "entryID": 705,
+    "actorID": "role85",
+    "text": "……終歸不是我要等的人……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……終歸不是我要等的人……",
+    "zh_CN": "……终归不是我要等的人……",
+    "links": [706]
+  },
+  {
+    "entryID": 706,
+    "actorID": "role2",
+    "text": "[panel=5]就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。",
+    "zh_CN": "[panel=5]就见刀客叹了口气，\n枫叶吹起，人也跟着不见踪影。",
+    "links": [707]
+  },
+  {
+    "entryID": 707,
+    "actorID": "MC1",
+    "text": "此人究竟是何方高人……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "此人究竟是何方高人……",
+    "zh_CN": "此人究竟是何方高人……",
+    "links": []
+  },
+  {
+    "entryID": 708,
+    "actorID": "role85",
+    "text": "世間事，世紛亂，當斷則斷，不斷則亂。",
+    "Sequence": "ShowInstantMessage(Exp_FeatExp,MC1,Intelligence,20); ",
+    "Description": "獲得專長經驗",
+    "zh_TW": "世間事，世紛亂，當斷則斷，不斷則亂。",
+    "zh_CN": "世间事，世纷乱，当断则断，不断则乱。",
+    "links": [709]
+  },
+  {
+    "entryID": 709,
+    "actorID": "role85",
+    "text": "你有洞穿本質的思考，\n但要斷世間，也要相當的本領。",
+    "Sequence": "",
+    "zh_TW": "你有洞穿本質的思考，\n但要斷世間，也要相當的本領。",
+    "zh_CN": "你有洞穿本质的思考，\n但要断世间，也要相当的本领。",
+    "links": [710]
+  },
+  {
+    "entryID": 710,
+    "actorID": "role2",
+    "text": "[panel=5]楓落風起，刀出龍吟──",
+    "Sequence": "",
+    "Description": "進單挑",
+    "zh_TW": "[panel=5]楓落風起，刀出龍吟──",
+    "zh_CN": "[panel=5]枫落风起，刀出龙吟──",
+    "links": [711, 712]
+  },
+  {
+    "entryID": 711,
+    "actorID": "role85",
+    "text": "你，合格了。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "你，合格了。",
+    "zh_CN": "你，合格了。",
+    "links": [715]
+  },
+  {
+    "entryID": 712,
+    "actorID": "role85",
+    "text": "此人好生厲害，究竟是何方高人……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "此人好生厲害，究竟是何方高人……",
+    "zh_CN": "此人好生厉害，究竟是何方高人……",
+    "links": [713]
+  },
+  {
+    "entryID": 713,
+    "actorID": "role2",
+    "text": "[panel=5]就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。",
+    "zh_CN": "[panel=5]就见刀客叹了口气，\n枫叶吹起，人也跟着不见踪影。",
+    "links": [714]
+  },
+  {
+    "entryID": 714,
+    "actorID": "MC1",
+    "text": "此人究竟是何方高人……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "此人究竟是何方高人……",
+    "zh_CN": "此人究竟是何方高人……",
+    "links": []
+  },
+  {
+    "entryID": 715,
+    "actorID": "MC1",
+    "text": "多謝前輩指教。",
+    "Sequence": "",
+    "zh_TW": "多謝前輩指教。",
+    "zh_CN": "多谢前辈指教。",
+    "links": [716]
+  },
+  {
+    "entryID": 716,
+    "actorID": "role85",
+    "text": "前輩無須，今日便是我在江湖的最後一日。",
+    "Sequence": "",
+    "zh_TW": "前輩無須，今日便是我在江湖的最後一日。",
+    "zh_CN": "前辈无须，今日便是我在江湖的最后一日。",
+    "links": [717]
+  },
+  {
+    "entryID": 717,
+    "actorID": "role2",
+    "text": "[panel=5]此時你才看清刀客面若死灰，\n顯然病入膏肓，時日無多。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]此時你才看清刀客面若死灰，\n顯然病入膏肓，時日無多。",
+    "zh_CN": "[panel=5]此时你才看清刀客面若死灰，\n显然病入膏肓，时日无多。",
+    "links": [718]
+  },
+  {
+    "entryID": 718,
+    "actorID": "role85",
+    "text": "但兄弟，你的路還沒到到頭……",
+    "Sequence": "",
+    "zh_TW": "但兄弟，你的路還沒到到頭……",
+    "zh_CN": "但兄弟，你的路还没到到头……",
+    "links": [719]
+  },
+  {
+    "entryID": 719,
+    "actorID": "role2",
+    "text": "[panel=5]刀客輕撫手中的刀，緩緩納入鞘中，\n這將是他為之做的最後一次。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]刀客輕撫手中的刀，緩緩納入鞘中，\n這將是他為之做的最後一次。",
+    "zh_CN": "[panel=5]刀客轻抚手中的刀，缓缓纳入鞘中，\n这将是他为之做的最后一次。",
+    "links": [720]
+  },
+  {
+    "entryID": 720,
+    "actorID": "role85",
+    "text": "此刀遊龍，願在你手中，能再展輝煌。",
+    "Sequence": "",
+    "zh_TW": "此刀遊龍，願在你手中，能再展輝煌。",
+    "zh_CN": "此刀游龙，愿在你手中，能再展辉煌。",
+    "links": [721]
+  },
+  {
+    "entryID": 721,
+    "actorID": "role2",
+    "text": "[panel=5]刀客果斷地把刀交給你。",
+    "Sequence": "",
+    "Description": "獲得貴重品",
+    "zh_TW": "[panel=5]刀客果斷地把刀交給你。",
+    "zh_CN": "[panel=5]刀客果断地把刀交给你。",
+    "links": [722]
+  },
+  {
+    "entryID": 722,
+    "actorID": "role85",
+    "text": "遊龍終非池中物，雲雨凌騰嘯九霄……",
+    "Sequence": "",
+    "zh_TW": "遊龍終非池中物，雲雨凌騰嘯九霄……",
+    "zh_CN": "游龙终非池中物，云雨凌腾啸九霄……",
+    "links": [723]
+  },
+  {
+    "entryID": 723,
+    "actorID": "role2",
+    "text": "[panel=5]刀客吟嘆，不再回首，\n是對刀的道別，亦是歉意……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]刀客吟嘆，不再回首，\n是對刀的道別，亦是歉意……",
+    "zh_CN": "[panel=5]刀客吟叹，不再回首，\n是对刀的道别，亦是歉意……",
+    "links": []
+  },
+  {
+    "entryID": 724,
+    "actorID": "role85",
+    "text": "任你如何顯赫，終歸不過一杯黃土。\n我們會再碰面的……",
+    "Sequence": "SetPortrait(MC1,pic=6);\nShowInstantMessage(Exp_FeatExp,MC1,Intelligence,20); ",
+    "Description": "獲得專長經驗",
+    "zh_TW": "任你如何顯赫，終歸不過一杯黃土。\n我們會再碰面的……",
+    "zh_CN": "任你如何显赫，终归不过一杯黄土。 \n我们会再碰面的……",
+    "links": [725]
+  },
+  {
+    "entryID": 725,
+    "actorID": "role2",
+    "text": "[panel=5]楓葉凋落，刀者已不見蹤影。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]楓葉凋落，刀者已不見蹤影。",
+    "zh_CN": "[panel=5]枫叶凋落，刀者已不见踪影。",
+    "links": [726]
+  },
+  {
+    "entryID": 726,
+    "actorID": "MC1",
+    "text": "……他是遇上何事，為何這般愁苦……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……他是遇上何事，為何這般愁苦……",
+    "zh_CN": "……他是遇上何事，为何这般愁苦……",
+    "links": []
+  }
+]

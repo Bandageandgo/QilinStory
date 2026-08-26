@@ -1,0 +1,684 @@
+[
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,10);\nContinue();",
+    "links": [115]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "看起來是個古老遺跡……\n有機會，就去裡中尋寶吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "看起來是個古老遺跡……\n有機會，就去裡中尋寶吧。",
+    "zh_CN": "看起来是个古老遗迹……\n有机会，就去里中寻宝吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "StopAllParticle();\nDisableEventBG();\nPlayOrPauseNodePlayer(Play);\nDisableEventBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [117, 116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC1",
+    "text": "前面好像沒有路了，回頭吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "前面好像沒有路了，回頭吧。",
+    "zh_CN": "前面好像没有路了，回头吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 117,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YunzhongRelic)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [113]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,5);\nContinue();",
+    "links": [120]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC1",
+    "text": "是獵場啊。讓我想起在家鄉的日子了。\n有機會，去練練手吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "是獵場啊。讓我想起在家鄉的日子了。\n有機會，去練練手吧。",
+    "zh_CN": "是猎场啊。让我想起在家乡的日子了。 \n有机会，去练练手吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [122, 121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YunzhongHuntingGround_Beginner)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [119]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nContinue();",
+    "links": [125]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC1",
+    "text": "這裡是……？",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableEventBG(Mining);",
+    "zh_TW": "這裡是……？",
+    "zh_CN": "这里是……？",
+    "links": [114]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nBeginOpenRoad(YunzhongDungeon)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "links": [124]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,5);\nContinue();",
+    "links": [129]
+  },
+  {
+    "entryID": 128,
+    "actorID": "MC1",
+    "text": "前面那是釣場嗎？\n有機會，可以去那釣幾條大魚加菜了。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "前面那是釣場嗎？\n有機會，可以去那釣幾條大魚加菜了。",
+    "zh_CN": "前面那是钓场吗？ \n有机会，可以去那钓几条大鱼加菜了。",
+    "links": [114]
+  },
+  {
+    "entryID": 129,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [131, 130]
+  },
+  {
+    "entryID": 130,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 131,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YunzhongFishingGround_Beginner)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [128]
+  },
+  {
+    "entryID": 132,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,5);\nContinue();",
+    "links": [134]
+  },
+  {
+    "entryID": 133,
+    "actorID": "MC1",
+    "text": "前頭那是……賊窩？\n此時過去太危險，還是先繞開好了。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableEventBG(Mining);",
+    "zh_TW": "前頭那是……賊窩？\n此時過去太危險，還是先繞開好了。",
+    "zh_CN": "前头那是……贼窝？ \n此时过去太危险，还是先绕开好了。",
+    "links": [114]
+  },
+  {
+    "entryID": 134,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [136, 135]
+  },
+  {
+    "entryID": 135,
+    "actorID": "MC1",
+    "text": "前面好像沒有路了，回頭吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "前面好像沒有路了，回頭吧。",
+    "zh_CN": "前面好像没有路了，回头吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 136,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YunzhongThievesBase_Beginner)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [133]
+  },
+  {
+    "entryID": 137,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,18);\nContinue();",
+    "links": [139]
+  },
+  {
+    "entryID": 138,
+    "actorID": "MC1",
+    "text": "哦！這獵場真豪華。\n有機會，去練練手吧。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableEventBG(Mining);",
+    "zh_TW": "哦！這獵場真豪華。\n有機會，去練練手吧。",
+    "zh_CN": "哦！这猎场真豪华。 \n有机会，去练练手吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 139,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [141, 140]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 141,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YanmenHuntingGround_Advanced)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [138]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nContinue();",
+    "links": [144]
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC1",
+    "text": "為何要上山，因為山就在那裡。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableEventBG(Mining);",
+    "zh_TW": "為何要上山，因為山就在那裡。",
+    "zh_CN": "为何要上山，因为山就在那里。",
+    "links": [114]
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [145]
+  },
+  {
+    "entryID": 145,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nBeginOpenRoad(YanmenMountain)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "links": [143]
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,12);\nContinue();",
+    "links": [148]
+  },
+  {
+    "entryID": 147,
+    "actorID": "MC1",
+    "text": "這年頭的賊寇都住這麼好嗎……？\n找一天把他們都端了。",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableEventBG(Mining);",
+    "zh_TW": "這年頭的賊寇都住這麼好嗎……？\n找一天把他們都端了。",
+    "zh_CN": "这年头的贼寇都住这么好吗……？ \n找一天把他们都端了。",
+    "links": [114]
+  },
+  {
+    "entryID": 148,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [150, 149]
+  },
+  {
+    "entryID": 149,
+    "actorID": "MC1",
+    "text": "前面好像沒有路了，回頭吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "前面好像沒有路了，回頭吧。",
+    "zh_CN": "前面好像没有路了，回头吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YanmenThievesBase_Intermediate)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [147]
+  },
+  {
+    "entryID": 151,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,12);\nContinue();",
+    "links": [153]
+  },
+  {
+    "entryID": 152,
+    "actorID": "MC1",
+    "text": "這獵場還真大啊。\n有機會，去練練手吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "這獵場還真大啊。\n有機會，去練練手吧。",
+    "zh_CN": "这猎场还真大啊。 \n有机会，去练练手吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [155, 154]
+  },
+  {
+    "entryID": 154,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 155,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YanmenHuntingGround_Intermediate)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [152]
+  },
+  {
+    "entryID": 156,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,15);\nContinue();",
+    "links": [158]
+  },
+  {
+    "entryID": 157,
+    "actorID": "MC1",
+    "text": "那裡似乎有詭異的氣息……只怕非是易與。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableEventBG(Mining);",
+    "zh_TW": "那裡似乎有詭異的氣息……只怕非是易與。",
+    "zh_CN": "那里似乎有诡异的气息……只怕非是易与。",
+    "links": [114]
+  },
+  {
+    "entryID": 158,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [160, 159]
+  },
+  {
+    "entryID": 159,
+    "actorID": "MC1",
+    "text": "前面好像沒有路了，回頭吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "前面好像沒有路了，回頭吧。",
+    "zh_CN": "前面好像没有路了，回头吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 160,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(YanmenCultBase)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [157]
+  },
+  {
+    "entryID": 161,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,2);\nContinue();",
+    "links": [163]
+  },
+  {
+    "entryID": 162,
+    "actorID": "MC1",
+    "text": "原來是座礦山啊。\n有機會就去挖些礦，賺點零花錢。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "原來是座礦山啊。\n有機會就去挖些礦，賺點零花錢。",
+    "zh_CN": "原来是座矿山啊。 \n有机会就去挖些矿，赚点零花钱。",
+    "links": [114]
+  },
+  {
+    "entryID": 163,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [165, 164]
+  },
+  {
+    "entryID": 164,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 165,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(JinyangMine_Beginner)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [162]
+  },
+  {
+    "entryID": 166,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,10);\nContinue();",
+    "links": [168]
+  },
+  {
+    "entryID": 167,
+    "actorID": "MC1",
+    "text": "哦！很少見到這麼大的礦山。\n有機會就去挖些礦，賺點零花錢。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "哦！很少見到這麼大的礦山。\n有機會就去挖些礦，賺點零花錢。",
+    "zh_CN": "哦！很少见到这么大的矿山。 \n有机会就去挖些矿，赚点零花钱。",
+    "links": [114]
+  },
+  {
+    "entryID": 168,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [170, 169]
+  },
+  {
+    "entryID": 169,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 170,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(JinyangMine_Intermediate)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [167]
+  },
+  {
+    "entryID": 171,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,15);\nContinue();",
+    "links": [173]
+  },
+  {
+    "entryID": 172,
+    "actorID": "MC1",
+    "text": "這裡居然藏了個天然礦脈。\n有機會就去挖些礦，賺點零花錢。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableEventBG(Mining);",
+    "zh_TW": "這裡居然藏了個天然礦脈。\n有機會就去挖些礦，賺點零花錢。",
+    "zh_CN": "这里居然藏了个天然矿脉。 \n有机会就去挖些矿，赚点零花钱。",
+    "links": [114]
+  },
+  {
+    "entryID": 173,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [175, 174]
+  },
+  {
+    "entryID": 174,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 175,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(JinyangMine_Advanced)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [172]
+  },
+  {
+    "entryID": 176,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,15);\nContinue();",
+    "links": [178]
+  },
+  {
+    "entryID": 177,
+    "actorID": "MC1",
+    "text": "聽說那裡是被叫黃石窟……\n不知那是什麼地方。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableEventBG(Mining);",
+    "zh_TW": "聽說那裡是被叫黃石窟……\n不知那是什麼地方。",
+    "zh_CN": "听说那里是被叫黄石窟……\n不知那是什么地方。",
+    "links": [114]
+  },
+  {
+    "entryID": 178,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [180, 179]
+  },
+  {
+    "entryID": 179,
+    "actorID": "MC1",
+    "text": "前面好像沒有路了，回頭吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "前面好像沒有路了，回頭吧。",
+    "zh_CN": "前面好像没有路了，回头吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(JinyangGrotto)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [177]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,12);\nContinue();",
+    "links": [183]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "真危險，差點跑進蟻窩了。\n那可是天然陷阱，不知有多少旅人葬送其中……",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "真危險，差點跑進蟻窩了。\n那可是天然陷阱，不知有多少旅人葬送其中……",
+    "zh_CN": "真危险，差点跑进蚁窝了。 \n那可是天然陷阱，不知有多少旅人葬送其中……",
+    "links": [114]
+  },
+  {
+    "entryID": 183,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [185, 184]
+  },
+  {
+    "entryID": 184,
+    "actorID": "MC1",
+    "text": "前面好像沒有路了，回頭吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "前面好像沒有路了，回頭吧。",
+    "zh_CN": "前面好像没有路了，回头吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 185,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(JinyangAntNest)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [182]
+  },
+  {
+    "entryID": 186,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,15);\nContinue();",
+    "links": [188]
+  },
+  {
+    "entryID": 187,
+    "actorID": "MC1",
+    "text": "哦！我還是頭一次見到如此大的釣場。\n有機會，可以去那釣幾條大魚加菜了。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableEventBG(Mining);",
+    "zh_TW": "哦！我還是頭一次見到如此大的釣場。\n有機會，可以去那釣幾條大魚加菜了。",
+    "zh_CN": "哦！我还是头一次见到如此大的钓场。 \n有机会，可以去那钓几条大鱼加菜了。",
+    "links": [114]
+  },
+  {
+    "entryID": 188,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [190, 189]
+  },
+  {
+    "entryID": 189,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 190,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(JinyangFishingGround_Advanced)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [187]
+  },
+  {
+    "entryID": 191,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,10);\nContinue();",
+    "links": [193]
+  },
+  {
+    "entryID": 192,
+    "actorID": "MC1",
+    "text": "哦！銀瀑飛瀉，不失寫意練功之所。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableEventBG(Mining);",
+    "zh_TW": "哦！銀瀑飛瀉，不失寫意練功之所。",
+    "zh_CN": "哦！银瀑飞泻，不失写意练功之所。",
+    "links": [114]
+  },
+  {
+    "entryID": 193,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [195, 194]
+  },
+  {
+    "entryID": 194,
+    "actorID": "MC1",
+    "text": "好像沒什麼特別的地方，繼續趕路吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Check,Insight,Fail)",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "好像沒什麼特別的地方，繼續趕路吧。",
+    "zh_CN": "好像没什么特别的地方，继续赶路吧。",
+    "links": [114]
+  },
+  {
+    "entryID": 195,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nSetContinueMode(false);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,10)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nBeginOpenRoad(HedingWaterfall)@2;\nSetContinueMode(original)@Message(EndOpenRoad);\nContinue()@Message(EndOpenRoad);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [192]
+  }
+]

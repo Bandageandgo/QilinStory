@@ -1,0 +1,286 @@
+[
+  {
+    "entryID": 497,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [498]
+  },
+  {
+    "entryID": 498,
+    "actorID": "role2",
+    "text": "[panel=5]回到府內，就見郭嘉跟張寧圍著地圖，\n身邊還有一位異族女子……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]回到府內，就見郭嘉跟張寧圍著地圖，\n身邊還有一位異族女子……",
+    "zh_CN": "[panel=5]回到府内，就见郭嘉跟张宁围着地图，\n身边还有一位异族女子……",
+    "links": [499]
+  },
+  {
+    "entryID": 499,
+    "actorID": "MC1",
+    "text": "出了什麼事？我聽說有人上門求助。\n莫非是張姑娘身邊這位朋友？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "出了什麼事？我聽說有人上門求助。\n莫非是張姑娘身邊這位朋友？",
+    "zh_CN": "出了什么事？我听说有人上门求助。 \n莫非是张姑娘身边这位朋友？",
+    "links": [500]
+  },
+  {
+    "entryID": 500,
+    "actorID": "MC6",
+    "text": "……算朋友吧，我們以前有過幾次合作。\n她是[em2]大秦傭兵[/em2]的首領──斯蒂娜。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "……算朋友吧，我們以前有過幾次合作。\n她是[em2]大秦傭兵[/em2]的首領──斯蒂娜。",
+    "zh_CN": "……算朋友吧，我们以前有过几次合作。 \n她是[em2]大秦佣兵[/em2]的首领──斯蒂娜。",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "role35",
+    "text": "想必你也是英豪府的(主角名)少俠，\n我聽過張寧說過你的事。",
+    "Sequence": "",
+    "zh_TW": "想必你也是英豪府的(主角名)少俠，\n我聽過張寧說過你的事。",
+    "zh_CN": "想必你也是英豪府的(主角名)少侠，\n我听过张宁说过你的事。",
+    "links": [502]
+  },
+  {
+    "entryID": 502,
+    "actorID": "MC1",
+    "text": "希望是些好事……大秦傭兵嗎……\n我在涼州聽過，想不到首領竟是這般……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "希望是些好事……大秦傭兵嗎……\n我在涼州聽過，想不到首領竟是這般……",
+    "zh_CN": "希望是些好事……大秦佣兵吗……\n我在凉州听过，想不到首领竟是这般……",
+    "links": [503]
+  },
+  {
+    "entryID": 503,
+    "actorID": "MC1",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1,Meditate);",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [504]
+  },
+  {
+    "entryID": 504,
+    "actorID": "MC6",
+    "text": "[panel=2]你臉紅什麼，是又打什麼壞心思了嗎？\n這也難怪，斯蒂娜那麼漂亮，是人都會多想吧。",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]你臉紅什麼，是又打什麼壞心思了嗎？\n這也難怪，斯蒂娜那麼漂亮，是人都會多想吧。",
+    "zh_CN": "[panel=2]你脸红什么，是又打什么坏心思了吗？ \n这也难怪，斯蒂娜那么漂亮，是人都会多想吧。",
+    "links": [505]
+  },
+  {
+    "entryID": 505,
+    "actorID": "MC1",
+    "text": "才沒有！妳別亂說，我是……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "才沒有！妳別亂說，我是……",
+    "zh_CN": "才没有！妳别乱说，我是……",
+    "links": [506]
+  },
+  {
+    "entryID": 506,
+    "actorID": "MC6",
+    "text": "[panel=2]解釋就是掩飾，掩飾就是事實。\n斯蒂娜，趁這傢伙亂想前，說回妳的正題吧。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "[panel=2]解釋就是掩飾，掩飾就是事實。\n斯蒂娜，趁這傢伙亂想前，說回妳的正題吧。",
+    "zh_CN": "[panel=2]解释就是掩饰，掩饰就是事实。 \n斯蒂娜，趁这家伙乱想前，说回妳的正题吧。",
+    "links": [507]
+  },
+  {
+    "entryID": 507,
+    "actorID": "MC1",
+    "text": "（嘖……總有一天我一定要讓她啞口無言……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nOpenPanel(2, close);",
+    "zh_TW": "（嘖……總有一天我一定要讓她啞口無言……）",
+    "zh_CN": "（啧……总有一天我一定要让她哑口无言……）",
+    "links": [508]
+  },
+  {
+    "entryID": 508,
+    "actorID": "role35",
+    "text": "數日前──\n我們剛完成清剿賊窟的工作，正打算歇息。",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "數日前──\n我們剛完成清剿賊窟的工作，正打算歇息。",
+    "zh_CN": "数日前──\n我们刚完成清剿贼窟的工作，正打算歇息。",
+    "links": [509]
+  },
+  {
+    "entryID": 509,
+    "actorID": "role35",
+    "text": "突然不知打哪冒出一群怪物朝我們襲擊。\n牠們數量眾多，加上眾人疲憊，實難以抵抗。",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "突然不知打哪冒出一群怪物朝我們襲擊。\n牠們數量眾多，加上眾人疲憊，實難以抵抗。",
+    "zh_CN": "突然不知打哪冒出一群怪物朝我们袭击。 \n它们数量众多，加上众人疲惫，实难以抵抗。",
+    "links": [510]
+  },
+  {
+    "entryID": 510,
+    "actorID": "role35",
+    "text": "無奈之下，我們唯有退守最近的山中。\n但終非長遠之計，因此由我闖出來設法求援……",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "無奈之下，我們唯有退守最近的山中。\n但終非長遠之計，因此由我闖出來設法求援……",
+    "zh_CN": "无奈之下，我们唯有退守最近的山中。 \n但终非长远之计，因此由我闯出来设法求援……",
+    "links": [511]
+  },
+  {
+    "entryID": 511,
+    "actorID": "MC1",
+    "text": "大秦傭兵怎麼說，也頗具實力……\n妳能指出大略方位，還有隊中存糧？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "大秦傭兵怎麼說，也頗具實力……\n妳能指出大略方位，還有隊中存糧？",
+    "zh_CN": "大秦佣兵怎么说，也颇具实力……\n妳能指出大略方位，还有队中存粮？",
+    "links": [512]
+  },
+  {
+    "entryID": 512,
+    "actorID": "role35",
+    "text": "他們就守在雁門跟雲中交界處……\n存糧的話，若自今日算起，應還有十天左右。",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "他們就守在雁門跟雲中交界處……\n存糧的話，若自今日算起，應還有十天左右。",
+    "zh_CN": "他们就守在雁门跟云中交界处……\n存粮的话，若自今日算起，应还有十天左右。",
+    "links": [513]
+  },
+  {
+    "entryID": 513,
+    "actorID": "MC7",
+    "text": "[panel=2]這十天還是無意外的前提……\n一旦糧食見底，出於本能，人勢必會嘗試突圍。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]這十天還是無意外的前提……\n一旦糧食見底，出於本能，人勢必會嘗試突圍。",
+    "zh_CN": "[panel=2]这十天还是无意外的前提……\n一旦粮食见底，出于本能，人势必会尝试突围。",
+    "links": [514]
+  },
+  {
+    "entryID": 514,
+    "actorID": "MC7",
+    "text": "[panel=2]到時定然付出慘痛代價。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]到時定然付出慘痛代價。",
+    "zh_CN": "[panel=2]到时定然付出惨痛代价。",
+    "links": [515, 516]
+  },
+  {
+    "entryID": 515,
+    "actorID": "MC1",
+    "text": "1.當事人在場，你也稍微顧忌一下。",
+    "Sequence": "",
+    "zh_TW": "1.當事人在場，你也稍微顧忌一下。",
+    "zh_CN": "1.当事人在场，你也稍微顾忌一下。",
+    "links": [517]
+  },
+  {
+    "entryID": 516,
+    "actorID": "MC1",
+    "text": "2.我跟你的想法一樣。",
+    "Sequence": "",
+    "zh_TW": "2.我跟你的想法一樣。",
+    "zh_CN": "2.我跟你的想法一样。",
+    "links": [519]
+  },
+  {
+    "entryID": 517,
+    "actorID": "MC7",
+    "text": "不忍之心，人皆有之，但並不會幫助現狀。",
+    "Sequence": "SetPortrait(MC1,pic=8);\nSetPortrait(MC7,pic=3);\nShowInstantMessage(Exp_FeatExp,MC1,Leadership,20);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "不忍之心，人皆有之，但並不會幫助現狀。",
+    "zh_CN": "不忍之心，人皆有之，但并不会帮助现状。",
+    "links": [518]
+  },
+  {
+    "entryID": 518,
+    "actorID": "role35",
+    "text": "[panel=2]沒關係的，他說的也是事實。",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "[panel=2]沒關係的，他說的也是事實。",
+    "zh_CN": "[panel=2]没关系的，他说的也是事实。",
+    "links": [521]
+  },
+  {
+    "entryID": 519,
+    "actorID": "MC6",
+    "text": "很高興你們有了總結，\n但斯蒂娜可不是專程來聽人淡然分析的。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nSetPortrait(MC6,pic=2);;\nShowInstantMessage(Exp_FeatExp,MC1,Intelligence,20);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "很高興你們有了總結，\n但斯蒂娜可不是專程來聽人淡然分析的。",
+    "zh_CN": "很高兴你们有了总结，\n但斯蒂娜可不是专程来听人淡然分析的。",
+    "links": [520]
+  },
+  {
+    "entryID": 520,
+    "actorID": "role35",
+    "text": "[panel=2]沒關係的，他們說的也是事實。",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "[panel=2]沒關係的，他們說的也是事實。",
+    "zh_CN": "[panel=2]没关系的，他们说的也是事实。",
+    "links": [521]
+  },
+  {
+    "entryID": 521,
+    "actorID": "MC1",
+    "text": "放心吧，即便是火海刀山，\n我們也不會放著不管，我們這就行動。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "放心吧，即便是火海刀山，\n我們也不會放著不管，我們這就行動。",
+    "zh_CN": "放心吧，即便是火海刀山，\n我们也不会放着不管，我们这就行动。",
+    "links": [522]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role35",
+    "text": "[panel=2]多謝！這份恩情，斯蒂娜此生銘記。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]多謝！這份恩情，斯蒂娜此生銘記。",
+    "zh_CN": "[panel=2]多谢！这份恩情，斯蒂娜此生铭记。",
+    "links": [523]
+  },
+  {
+    "entryID": 523,
+    "actorID": "MC6",
+    "text": "還算有點血性膽識，\n那本姑娘也捨命陪君子吧。",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "還算有點血性膽識，\n那本姑娘也捨命陪君子吧。",
+    "zh_CN": "还算有点血性胆识，\n那本姑娘也舍命陪君子吧。",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "MC1",
+    "text": "妳一定要在出發前，\n說如此不吉利的話嗎……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "妳一定要在出發前，\n說如此不吉利的話嗎……",
+    "zh_CN": "妳一定要在出发前，\n说如此不吉利的话吗……",
+    "links": [525]
+  },
+  {
+    "entryID": 525,
+    "actorID": "MC6",
+    "text": "這叫想最壞的打算，做最好的準備。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "這叫想最壞的打算，做最好的準備。",
+    "zh_CN": "这叫想最坏的打算，做最好的准备。",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC7",
+    "text": "[panel=2]我同意她的話。\n即便要動身，也要做足準備。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]我同意她的話。\n即便要動身，也要做足準備。",
+    "zh_CN": "[panel=2]我同意她的话。 \n即便要动身，也要做足准备。",
+    "links": [552]
+  },
+  {
+    "entryID": 551,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 552,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [551]
+  }
+]

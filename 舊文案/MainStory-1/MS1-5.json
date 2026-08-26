@@ -1,0 +1,506 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=5]你們跟隨斯蒂娜連夜趕路，\n來到了傭兵防守的山區……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你們跟隨斯蒂娜連夜趕路，\n來到了傭兵防守的山區……",
+    "zh_CN": "[panel=5]你们跟随斯蒂娜连夜赶路，\n来到了佣兵防守的山区……",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role35",
+    "text": "我的同伴就在那座山中……",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "我的同伴就在那座山中……",
+    "zh_CN": "我的同伴就在那座山中……",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role4",
+    "text": "吼────\n吼──吼──吼──",
+    "Sequence": "EnableCharacterExpression(1,Monster,Anger_3);\nSetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼────\n吼──吼──吼──",
+    "zh_CN": "吼────\n吼──吼──吼──",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role35",
+    "text": "該死！這群畜牲，\n竟然已經增加到這麼遠的地方……",
+    "Sequence": "SetPortrait(role35,pic=4);\nDisableAllCharacterExpression();",
+    "zh_TW": "該死！這群畜牲，\n竟然已經增加到這麼遠的地方……",
+    "zh_CN": "该死！这群畜牲，\n竟然已经增加到这么远的地方……",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role35",
+    "text": "……那些傢伙不要緊吧……",
+    "Sequence": "",
+    "zh_TW": "……那些傢伙不要緊吧……",
+    "zh_CN": "……那些家伙不要紧吧……",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "安心吧，都說大秦傭兵驍勇善戰，\n你的同伴不會有事的。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "安心吧，都說大秦傭兵驍勇善戰，\n你的同伴不會有事的。",
+    "zh_CN": "安心吧，都说大秦佣兵骁勇善战，\n你的同伴不会有事的。",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role35",
+    "text": "…………",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role35",
+    "text": "你說得對，那些傢伙跟爹一路闖過無數難關，\n命比誰都還硬才是。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "你說得對，那些傢伙跟爹一路闖過無數難關，\n命比誰都還硬才是。",
+    "zh_CN": "你说得对，那些家伙跟爹一路闯过无数难关，\n命比谁都还硬才是。",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role35",
+    "text": "抱歉，我不該自己先洩氣的。",
+    "Sequence": "",
+    "zh_TW": "抱歉，我不該自己先洩氣的。",
+    "zh_CN": "抱歉，我不该自己先泄气的。",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "妳身為隊長自然會擔心。\n坦率說出，總好過悶著。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "妳身為隊長自然會擔心。\n坦率說出，總好過悶著。",
+    "zh_CN": "妳身为队长自然会担心。 \n坦率说出，总好过闷着。",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "此刻天色將暗，不宜進攻。\n我們且休整一晚，破曉之時，便著手行動。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "此刻天色將暗，不宜進攻。\n我們且休整一晚，破曉之時，便著手行動。",
+    "zh_CN": "此刻天色将暗，不宜进攻。 \n我们且休整一晚，破晓之时，便着手行动。",
+    "links": [520]
+  },
+  {
+    "entryID": 520,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000)->Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [577]
+  },
+  {
+    "entryID": 521,
+    "actorID": "role2",
+    "text": "[panel=5]夜裡──",
+    "Sequence": "EnableDialogueBG(Cave);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
+    "Description": "換場景",
+    "zh_TW": "[panel=5]夜裡──",
+    "zh_CN": "[panel=5]夜里──",
+    "links": [522]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role2",
+    "text": "[panel=5]為防遇擊，你四周巡守，\n卻見斯蒂娜一人獨自望著月夜……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]為防遇擊，你四周巡守，\n卻見斯蒂娜一人獨自望著月夜……",
+    "zh_CN": "[panel=5]为防遇击，你四周巡守，\n却见斯蒂娜一人独自望着月夜……",
+    "links": [558]
+  },
+  {
+    "entryID": 523,
+    "actorID": "role35",
+    "text": "……你又在盯著我看了。",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "……你又在盯著我看了。",
+    "zh_CN": "……你又在盯着我看了。",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "MC1",
+    "text": "抱歉……我不是有意的……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "抱歉……我不是有意的……",
+    "zh_CN": "抱歉……我不是有意的……",
+    "links": [559]
+  },
+  {
+    "entryID": 525,
+    "actorID": "role35",
+    "text": "你是指外表嗎……\n呵，不怪你，畢竟──",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "你是指外表嗎……\n呵，不怪你，畢竟──",
+    "zh_CN": "你是指外表吗……\n呵，不怪你，毕竟──",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "role35",
+    "text": "我不是真正的大秦人，也並非真正的漢人。",
+    "Sequence": "",
+    "zh_TW": "我不是真正的大秦人，也並非真正的漢人。",
+    "zh_CN": "我不是真正的大秦人，也并非真正的汉人。",
+    "links": [527]
+  },
+  {
+    "entryID": 527,
+    "actorID": "MC1",
+    "text": "……？",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "……？",
+    "zh_CN": "……？",
+    "links": [528]
+  },
+  {
+    "entryID": 528,
+    "actorID": "role35",
+    "text": "不介意的話，這邊還有個空位，\n我跟你說個故事。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "不介意的話，這邊還有個空位，\n我跟你說個故事。",
+    "zh_CN": "不介意的话，这边还有个空位，\n我跟你说个故事。",
+    "links": [529]
+  },
+  {
+    "entryID": 529,
+    "actorID": "role2",
+    "text": "[panel=5]看著對方的邀請，你上前坐在了斯蒂娜身邊。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]看著對方的邀請，你上前坐在了斯蒂娜身邊。",
+    "zh_CN": "[panel=5]看着对方的邀请，你上前坐在了斯蒂娜身边。",
+    "links": [573]
+  },
+  {
+    "entryID": 530,
+    "actorID": "role35",
+    "text": "[panel=2]我的父親確實是大秦人，是他建立了大秦傭兵，\n給我們這些異鄉人，留了一個歸屬。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]我的父親確實是大秦人，是他建立了大秦傭兵，\n給我們這些異鄉人，留了一個歸屬。",
+    "zh_CN": "[panel=2]我的父亲确实是大秦人，是他建立了大秦佣兵，\n给我们这些异乡人，留了一个归属。",
+    "links": [531]
+  },
+  {
+    "entryID": 531,
+    "actorID": "role35",
+    "text": "[panel=2]當時，他們嘗試融入這片土地的生活……\n在那時，父親遇了身為漢人的母親。",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "[panel=2]當時，他們嘗試融入這片土地的生活……\n在那時，父親遇了身為漢人的母親。",
+    "zh_CN": "[panel=2]当时，他们尝试融入这片土地的生活……\n在那时，父亲遇了身为汉人的母亲。",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "role35",
+    "text": "[panel=2]兩位來自不同家鄉的人，\n有了一個結果，也就是──我。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]兩位來自不同家鄉的人，\n有了一個結果，也就是──我。",
+    "zh_CN": "[panel=2]两位来自不同家乡的人，\n有了一个结果，也就是──我。",
+    "links": [539]
+  },
+  {
+    "entryID": 539,
+    "actorID": "MC1",
+    "text": "不是大秦，也非漢人……\n就是這個意思嗎……",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1,Meditate);",
+    "zh_TW": "不是大秦，也非漢人……\n就是這個意思嗎……",
+    "zh_CN": "不是大秦，也非汉人……\n就是这个意思吗……",
+    "links": [560]
+  },
+  {
+    "entryID": 544,
+    "actorID": "MC1",
+    "text": "1.過往我來不及。但這一次，我敢保證，不會再一樣。",
+    "Sequence": "",
+    "Description": "獲得好感",
+    "zh_TW": "1.過往我來不及。但這一次，我敢保證，不會再一樣。",
+    "zh_CN": "1.过往我来不及。但这一次，我敢保证，不会再一样。",
+    "links": [546]
+  },
+  {
+    "entryID": 545,
+    "actorID": "MC1",
+    "text": "2.月圓人團圓，今夜即明朝。",
+    "Sequence": "",
+    "Description": "獲得專長經驗",
+    "zh_TW": "2.月圓人團圓，今夜即明朝。",
+    "zh_CN": "2.月圆人团圆，今夜即明朝。",
+    "links": [547]
+  },
+  {
+    "entryID": 546,
+    "actorID": "role35",
+    "text": "[panel=2]謝謝……能遇上你們，是我們的幸運。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role35,pic=1);\nShowInstantMessage(Favorability,MC10,20,Agree);",
+    "zh_TW": "[panel=2]謝謝……能遇上你們，是我們的幸運。",
+    "zh_CN": "[panel=2]谢谢……能遇上你们，是我们的幸运。",
+    "links": [548]
+  },
+  {
+    "entryID": 547,
+    "actorID": "role35",
+    "text": "[panel=2]呵，是啊，上蒼都如此預示了。我們必定會團圓。",
+    "Sequence": "ShowInstantMessage(Exp_FeatExp,MC1,Flirting,20);\nSetPortrait(MC1,pic=6);\nSetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]呵，是啊，上蒼都如此預示了。我們必定會團圓。",
+    "zh_CN": "[panel=2]呵，是啊，上苍都如此预示了。我们必定会团圆。",
+    "links": [548]
+  },
+  {
+    "entryID": 548,
+    "actorID": "MC6",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nOpenPanel(0, close);\nOpenPanel(2, close);",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [549]
+  },
+  {
+    "entryID": 549,
+    "actorID": "MC7",
+    "text": "[panel=2]沒關係嗎？",
+    "Sequence": "",
+    "zh_TW": "[panel=2]沒關係嗎？",
+    "zh_CN": "[panel=2]没关系吗？",
+    "links": [550]
+  },
+  {
+    "entryID": 550,
+    "actorID": "MC6",
+    "text": "什麼關係不關係，就嫌他們有點吵而已。",
+    "Sequence": "SetPortrait(MC6,pic=4);;",
+    "zh_TW": "什麼關係不關係，就嫌他們有點吵而已。",
+    "zh_CN": "什么关系不关系，就嫌他们有点吵而已。",
+    "links": [551]
+  },
+  {
+    "entryID": 551,
+    "actorID": "MC7",
+    "text": "[panel=2]那妳可以加入他們。",
+    "Sequence": "SetPortrait(MC7,pic=3);",
+    "zh_TW": "[panel=2]那妳可以加入他們。",
+    "zh_CN": "[panel=2]那妳可以加入他们。",
+    "links": [552]
+  },
+  {
+    "entryID": 552,
+    "actorID": "MC6",
+    "text": "……郭嘉，你真的很不會說話。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "……郭嘉，你真的很不會說話。",
+    "zh_CN": "……郭嘉，你真的很不会说话。",
+    "links": [553]
+  },
+  {
+    "entryID": 553,
+    "actorID": "MC7",
+    "text": "[panel=2]我對這類事沒興趣。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]我對這類事沒興趣。",
+    "zh_CN": "[panel=2]我对这类事没兴趣。",
+    "links": [554]
+  },
+  {
+    "entryID": 554,
+    "actorID": "MC6",
+    "text": "聽過一見如故？我還沒那般不識趣。\n冷靜是有期限的，特別是少了父親倚靠的時候。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "聽過一見如故？我還沒那般不識趣。\n冷靜是有期限的，特別是少了父親倚靠的時候。",
+    "zh_CN": "听过一见如故？我还没那般不识趣。 \n冷静是有期限的，特别是少了父亲倚靠的时候。",
+    "links": [578]
+  },
+  {
+    "entryID": 555,
+    "actorID": "MC7",
+    "text": "[panel=2]我為剛才的輕率致歉。\n妳才是比任何人都理解當中感受的人。",
+    "Sequence": "SetPortrait(MC7,pic=1);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]我為剛才的輕率致歉。\n妳才是比任何人都理解當中感受的人。",
+    "zh_CN": "[panel=2]我为刚才的轻率致歉。 \n妳才是比任何人都理解当中感受的人。",
+    "links": [556]
+  },
+  {
+    "entryID": 556,
+    "actorID": "MC6",
+    "text": "你那喜歡調查家底的壞毛病，真該改一改。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "你那喜歡調查家底的壞毛病，真該改一改。",
+    "zh_CN": "你那喜欢调查家底的坏毛病，真该改一改。",
+    "links": [557]
+  },
+  {
+    "entryID": 557,
+    "actorID": "MC7",
+    "text": "[panel=2]我盡量。我先去休息了，\n你們明早別遲了。",
+    "Sequence": "SetPortrait(MC7,pic=3);",
+    "zh_TW": "[panel=2]我盡量。我先去休息了，\n你們明早別遲了。",
+    "zh_CN": "[panel=2]我尽量。我先去休息了，\n你们明早别迟了。",
+    "links": [572]
+  },
+  {
+    "entryID": 558,
+    "actorID": "role2",
+    "text": "[panel=5]月光隱藏她那憂愁，照耀著潔白，\n你不禁看著出神……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]月光隱藏她那憂愁，照耀著潔白，\n你不禁看著出神……",
+    "zh_CN": "[panel=5]月光隐藏她那忧愁，照耀着洁白，\n你不禁看着出神……",
+    "links": [523]
+  },
+  {
+    "entryID": 559,
+    "actorID": "MC1",
+    "text": "我……我只是有些……好奇。\n妳……和我見過的大秦人不太一樣。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "我……我只是有些……好奇。\n妳……和我見過的大秦人不太一樣。",
+    "zh_CN": "我……我只是有些……好奇。 \n妳……和我见过的大秦人不太一样。",
+    "links": [525]
+  },
+  {
+    "entryID": 560,
+    "actorID": "MC1",
+    "text": "子女身上都會留著父母的痕跡，\n是深根，也是禮物……",
+    "Sequence": "SetPortrait(MC1,pic=6);\nDisableAllCharacterExpression();",
+    "zh_TW": "子女身上都會留著父母的痕跡，\n是深根，也是禮物……",
+    "zh_CN": "子女身上都会留着父母的痕迹，\n是深根，也是礼物……",
+    "links": [561]
+  },
+  {
+    "entryID": 561,
+    "actorID": "MC1",
+    "text": "妳看這我這滿頭白髮，\n便承自母親，自小便是如此。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "妳看這我這滿頭白髮，\n便承自母親，自小便是如此。",
+    "zh_CN": "妳看这我这满头白发，\n便承自母亲，自小便是如此。",
+    "links": [562]
+  },
+  {
+    "entryID": 562,
+    "actorID": "role35",
+    "text": "[panel=2]呵呵，那你可受了不少異樣眼光吧。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]呵呵，那你可受了不少異樣眼光吧。",
+    "zh_CN": "[panel=2]呵呵，那你可受了不少异​​样眼光吧。",
+    "links": [563]
+  },
+  {
+    "entryID": 563,
+    "actorID": "MC1",
+    "text": "也就是些不懂得外人會而已，哈哈……",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "也就是些不懂得外人會而已，哈哈……",
+    "zh_CN": "也就是些不懂得外人会而已，哈哈……",
+    "links": [564]
+  },
+  {
+    "entryID": 564,
+    "actorID": "role35",
+    "text": "[panel=2]確實會如此呢，隊裡很多人，\n都是看著我長大的，他們都對我很好。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]確實會如此呢，隊裡很多人，\n都是看著我長大的，他們都對我很好。",
+    "zh_CN": "[panel=2]确实会如此呢，队里很多人，\n都是看着我长大的，他们都对我很好。",
+    "links": [565]
+  },
+  {
+    "entryID": 565,
+    "actorID": "role35",
+    "text": "[panel=2]即便爹走了，他們還願意推舉我為隊長……\n他們，是我跟這塊土地僅剩的聯繫……",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "[panel=2]即便爹走了，他們還願意推舉我為隊長……\n他們，是我跟這塊土地僅剩的聯繫……",
+    "zh_CN": "[panel=2]即便爹走了，他们还愿意推举我为队长……\n他们，是我跟这块土地仅剩的联系……",
+    "links": [566]
+  },
+  {
+    "entryID": 566,
+    "actorID": "role2",
+    "text": "[panel=5]斯蒂娜望向娥月……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]斯蒂娜望向娥月……",
+    "zh_CN": "[panel=5]斯蒂娜望向娥月……",
+    "links": [567]
+  },
+  {
+    "entryID": 567,
+    "actorID": "role35",
+    "text": "[panel=2]今夜是滿月啊……",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]今夜是滿月啊……",
+    "zh_CN": "[panel=2]今夜是满月啊……",
+    "links": [568]
+  },
+  {
+    "entryID": 568,
+    "actorID": "role35",
+    "text": "[panel=2]我求助過不少合作過的人，\n但對有些人，異鄉人始終是異鄉人。",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "[panel=2]我求助過不少合作過的人，\n但對有些人，異鄉人始終是異鄉人。",
+    "zh_CN": "[panel=2]我求助过不少合作过的人，\n但对有些人，异乡人始终是异乡人。",
+    "links": [569]
+  },
+  {
+    "entryID": 569,
+    "actorID": "role35",
+    "text": "[panel=2]無論流了多少血，都是不變的事實……\n這一次、上一次、以前……一如往常……",
+    "Sequence": "",
+    "zh_TW": "[panel=2]無論流了多少血，都是不變的事實……\n這一次、上一次、以前……一如往常……",
+    "zh_CN": "[panel=2]无论流了多少血，都是不变的事实……\n这一次、上一次、以前……一如往常……",
+    "links": [544, 545]
+  },
+  {
+    "entryID": 570,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Wilderness);\nSetPortrait(MC1,pic=6);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [1]
+  },
+  {
+    "entryID": 571,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 572,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [571]
+  },
+  {
+    "entryID": 573,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(5, close);\nOpenPanel(1, close);\nSetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [530]
+  },
+  {
+    "entryID": 577,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nContinue()@0.5;",
+    "links": [521]
+  },
+  {
+    "entryID": 578,
+    "actorID": "MC7",
+    "text": "[panel=2]…………",
+    "Sequence": "SetPortrait(MC7,pic=3);\nEnableCharacterExpression(2,MC7,Meditate);",
+    "zh_TW": "[panel=2]…………",
+    "zh_CN": "[panel=2]…………",
+    "links": [555]
+  }
+]

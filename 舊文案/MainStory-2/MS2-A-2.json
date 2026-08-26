@@ -1,0 +1,605 @@
+[
+  {
+    "entryID": 71,
+    "actorID": "role2",
+    "text": "[panel=5]荒野之上，怪物殺之不絕，湧之不盡，\n然眾志一心，攻勢滔天，阻斷了怪物攻勢……",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=5]荒野之上，怪物殺之不絕，湧之不盡，\n然眾志一心，攻勢滔天，阻斷了怪物攻勢……",
+    "zh_CN": "[panel=5]荒野之上，怪物杀之不绝，涌之不尽，\n然众志一心，攻势滔天，阻断了怪物攻势……",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC5",
+    "text": "很好！一鼓作氣把牠們壓制住！",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "很好！一鼓作氣把牠們壓制住！",
+    "zh_CN": "很好！一鼓作气把它们压制住！",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "role4",
+    "text": "[panel=4]吼──！吼──！吼──！",
+    "Sequence": "",
+    "zh_TW": "[panel=4]吼──！吼──！吼──！",
+    "zh_CN": "[panel=4]吼──！吼──！吼──！",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "role2",
+    "text": "[panel=5]忽然！怪物竟是以退為進，\n反轉攻勢直往你們的陣中薄弱處。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]忽然！怪物竟是以退為進，\n反轉攻勢直往你們的陣中薄弱處。",
+    "zh_CN": "[panel=5]忽然！怪物竟是以退为进，\n反转攻势直往你们的阵中薄弱处。",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC2",
+    "text": "[panel=2]休想！",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=2]休想！",
+    "zh_CN": "[panel=2]休想！",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "role2",
+    "text": "[panel=5]呂信及時回守，\n但怪物竟又成群拐了彎，又往另一角攻去。",
+    "Sequence": "OpenPanel(4, close);\nOpenPanel(2, close);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=5]呂信及時回守，\n但怪物竟又成群拐了彎，又往另一角攻去。",
+    "zh_CN": "[panel=5]吕信及时回守，\n但怪物竟又成群拐了弯，又往另一角攻去。",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "（怎麼回事……牠們動作跟以往完全不同……）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（怎麼回事……牠們動作跟以往完全不同……）",
+    "zh_CN": "（怎么回事……它们动作跟以往完全不同……）",
+    "links": [136]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC5",
+    "text": "聲東擊西嗎……\n牠們往左去了！守住！",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "聲東擊西嗎……\n牠們往左去了！守住！",
+    "zh_CN": "声东击西吗……\n它们往左去了！守住！",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC1",
+    "text": "（鉤形、雁形、疏數、方圓……\n這些行動模式……不會吧……）",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "（鉤形、雁形、疏數、方圓……\n這些行動模式……不會吧……）",
+    "zh_CN": "（钩形、雁形、疏数、方圆……\n这些行动模式……不会吧……）",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC5",
+    "text": "刀戎闢地！",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "刀戎闢地！",
+    "zh_CN": "刀戎辟地！",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC5",
+    "text": "別發呆！這裡可是戰場！",
+    "Sequence": "",
+    "zh_TW": "別發呆！這裡可是戰場！",
+    "zh_CN": "别发呆！这里可是战场！",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "師父……是孫臏十陣，怪物……\n在行軍佈陣，牠們現在就像……有人指揮……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "師父……是孫臏十陣，怪物……\n在行軍佈陣，牠們現在就像……有人指揮……",
+    "zh_CN": "师父……是孙膑十阵，怪物……\n在行军布阵，它们现在就像……有人指挥……",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "role4",
+    "text": "[panel=4]吼──！吼──！吼──！",
+    "Sequence": "",
+    "zh_TW": "[panel=4]吼──！吼──！吼──！",
+    "zh_CN": "[panel=4]吼──！吼──！吼──！",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC5",
+    "text": "滾一邊去！",
+    "Sequence": "OpenPanel(4, close);",
+    "zh_TW": "滾一邊去！",
+    "zh_CN": "滚一边去！",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC5",
+    "text": "別往前衝了，隨我退後。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "別往前衝了，隨我退後。",
+    "zh_CN": "别往前冲了，随我退后。",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "role2",
+    "text": "[panel=5]你與徐榮且戰且退，\n怪物顯然不打算輕放，緊追不捨。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你與徐榮且戰且退，\n怪物顯然不打算輕放，緊追不捨。",
+    "zh_CN": "[panel=5]你与徐荣且战且退，\n怪物显然不打算轻放，紧追不舍。",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role2",
+    "text": "[panel=5]不知不覺間，你們陷入了低地，\n怪物見獵心蜂擁而衝。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]不知不覺間，你們陷入了低地，\n怪物見獵心蜂擁而衝。",
+    "zh_CN": "[panel=5]不知不觉间，你们陷入了低地，\n怪物见猎心蜂拥而冲。",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC5",
+    "text": "終究只會其形，不得其實的孽畜。\n就是現在！呂信！動手！",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "終究只會其形，不得其實的孽畜。\n就是現在！呂信！動手！",
+    "zh_CN": "终究只会其形，不得其实的孽畜。 \n就是现在！吕信！动手！",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "role2",
+    "text": "[panel=5]只見呂信不知何時已佔居高地，一舉衝殺而下！",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]只見呂信不知何時已佔居高地，一舉衝殺而下！",
+    "zh_CN": "[panel=5]只见吕信不知何时已占居高地，一举冲杀而下！",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC2",
+    "text": "[panel=2]霸王迴天──！",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=2]霸王迴天──！",
+    "zh_CN": "[panel=2]霸王回天──！",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role2",
+    "text": "[panel=5]呂信彷彿怒浪狂濤，頓時怪物血肉橫分。\n然此時怪物再度調轉攻勢，竟有分兵合圍之法。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]呂信彷彿怒浪狂濤，頓時怪物血肉橫分。\n然此時怪物再度調轉攻勢，竟有分兵合圍之法。",
+    "zh_CN": "[panel=5]吕信仿佛怒浪狂涛，顿时怪物血肉横分。 \n然此时怪物再度调转攻势，竟有分兵合围之法。",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role4",
+    "text": "[panel=4]吼──！吼──！吼──！",
+    "Sequence": "",
+    "zh_TW": "[panel=4]吼──！吼──！吼──！",
+    "zh_CN": "[panel=4]吼──！吼──！吼──！",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC2",
+    "text": "[panel=2]想以多打少，你們還不夠格！",
+    "Sequence": "",
+    "zh_TW": "[panel=2]想以多打少，你們還不夠格！",
+    "zh_CN": "[panel=2]想以多打少，你们还不够格！",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=5]此刻呂信猶如萬夫之勇，以一殺百，\n吸引了更多怪物包圍──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]此刻呂信猶如萬夫之勇，以一殺百，\n吸引了更多怪物包圍──",
+    "zh_CN": "[panel=5]此刻吕信犹如万夫之勇，以一杀百，\n吸引了更多怪物包围──",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC5",
+    "text": "呂信，那邊交給你，沒問題嗎？",
+    "Sequence": "SetPortrait(MC10,pic=4);\nOpenPanel(4, close);\nOpenPanel(2, close);",
+    "zh_TW": "呂信，那邊交給你，沒問題嗎？",
+    "zh_CN": "吕信，那边交给你，没问题吗？",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC2",
+    "text": "[panel=2]廢話！我可是跟羽兄說好了，這些還不夠殺呢！",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]廢話！我可是跟羽兄說好了，這些還不夠殺呢！",
+    "zh_CN": "[panel=2]废话！我可是跟羽兄说好了，这些还不够杀呢！",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "role2",
+    "text": "[panel=5]似在與不在場的某人較勁，呂信招路盡現，\n越打氣勢越是凌厲，如入無人之境！",
+    "Sequence": "OpenPanel(4, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]似在與不在場的某人較勁，呂信招路盡現，\n越打氣勢越是凌厲，如入無人之境！",
+    "zh_CN": "[panel=5]似在与不在场的某人较劲，吕信招路尽现，\n越打气势越是凌厉，如入无人之境！",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC5",
+    "text": "那邊交給他了。\n你與我合招開道，預防牠們突襲截斷後勤。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "那邊交給他了。\n你與我合招開道，預防牠們突襲截斷後勤。",
+    "zh_CN": "那边交给他了。 \n你与我合招开道，预防它们突袭截断后勤。",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "知道了！\n風起──破軍！",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "知道了！\n風起──破軍！",
+    "zh_CN": "知道了！ \n风起──破军！",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "role2",
+    "text": "[panel=5]你與徐榮合擊，一口氣劈開血路。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你與徐榮合擊，一口氣劈開血路。",
+    "zh_CN": "[panel=5]你与徐荣合击，一口气劈开血路。",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "role2",
+    "text": "[panel=5]然就你們在趕往張寧位置時，\n巨響傳來，第二道防線也被攻破了──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]然就你們在趕往張寧位置時，\n巨響傳來，第二道防線也被攻破了──",
+    "zh_CN": "[panel=5]然就你们在赶往张宁位置时，\n巨响传来，第二道防线也被攻破了──",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC5",
+    "text": "郭嘉那邊還沒有消息嗎？",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "郭嘉那邊還沒有消息嗎？",
+    "zh_CN": "郭嘉那边还没有消息吗？",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "還沒看到他們！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "還沒看到他們！",
+    "zh_CN": "还没看到他们！",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role2",
+    "text": "[panel=5]好似知曉大功將成，怪物竟集中回攻英豪府，\n其勢之凶，最後防線迅速瀕臨瓦解！",
+    "Sequence": "OpenPanel(2, close);",
+    "zh_TW": "[panel=5]好似知曉大功將成，怪物竟集中回攻英豪府，\n其勢之凶，最後防線迅速瀕臨瓦解！",
+    "zh_CN": "[panel=5]好似知晓大功将成，怪物竟集中回攻英豪府，\n其势之凶，最后防线迅速濒临瓦解！",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role4",
+    "text": "[panel=4]吼──！吼──！吼──！",
+    "Sequence": "",
+    "zh_TW": "[panel=4]吼──！吼──！吼──！",
+    "zh_CN": "[panel=4]吼──！吼──！吼──！",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "role2",
+    "text": "[panel=5]眼見此役即將告敗──！",
+    "Sequence": "",
+    "zh_TW": "[panel=5]眼見此役即將告敗──！",
+    "zh_CN": "[panel=5]眼见此役即将告败──！",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC1",
+    "text": "英豪府……炸了……？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nOpenPanel(4, close);",
+    "zh_TW": "英豪府……炸了……？",
+    "zh_CN": "英豪府……炸了……？",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "role2",
+    "text": "[panel=5]只聞轟鳴連響，大地彷彿震怒，\n火光亂石吞沒了英豪府周遭，你們連忙後撤。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]只聞轟鳴連響，大地彷彿震怒，\n火光亂石吞沒了英豪府周遭，你們連忙後撤。",
+    "zh_CN": "[panel=5]只闻轰鸣连响，大地仿佛震怒，\n火光乱石吞没了英豪府周遭，你们连忙后撤。",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "role2",
+    "text": "[panel=5]最靠近的怪物反應不及，盡數消亡於其中。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]最靠近的怪物反應不及，盡數消亡於其中。",
+    "zh_CN": "[panel=5]最靠近的怪物反应不及，尽数消亡于其中。",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC4",
+    "text": "耗資費心，籌備多時，\n只為此刻絢麗燦爛啊。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "耗資費心，籌備多時，\n只為此刻絢麗燦爛啊。",
+    "zh_CN": "耗资费心，筹备多时，\n只为此刻绚丽灿烂啊。",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "role2",
+    "text": "[panel=5]聽見熟悉聲音，儘管一身狼狽，\n但子羽背著賈詡出現，郭嘉他們成功歸來。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]聽見熟悉聲音，儘管一身狼狽，\n但子羽背著賈詡出現，郭嘉他們成功歸來。",
+    "zh_CN": "[panel=5]听见熟悉声音，尽管一身狼狈，\n但子羽背着贾诩出现，郭嘉他们成功归来。",
+    "links": [112]
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "太好了！\n你們都逃出來了──",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "太好了！\n你們都逃出來了──",
+    "zh_CN": "太好了！ \n你们都逃出来了──",
+    "links": [114]
+  },
+  {
+    "entryID": 113,
+    "actorID": "role26",
+    "text": "[panel=2]不關心一下老子嗎？",
+    "Sequence": "SetPortrait(role26,pic=1);",
+    "zh_TW": "[panel=2]不關心一下老子嗎？",
+    "zh_CN": "[panel=2]不关心一下老子吗？",
+    "links": [115]
+  },
+  {
+    "entryID": 114,
+    "actorID": "role2",
+    "text": "[panel=5]驚喜之際，你卻見到了更令你意外的身影……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]驚喜之際，你卻見到了更令你意外的身影……",
+    "zh_CN": "[panel=5]惊喜之际，你却见到了更令你意外的身影……",
+    "links": [113]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC1",
+    "text": "父親……你怎麼會在這？\n不……不是，你怎麼會跟賈師父他們在一起？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "父親……你怎麼會在這？\n不……不是，你怎麼會跟賈師父他們在一起？",
+    "zh_CN": "父亲……你怎么会在这？ \n不……不是，你怎么会跟贾师父他们在一起？",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "role26",
+    "text": "[panel=2]這麼明白的事還用問嗎，\n老子不過就碰巧經過，湊個熱鬧而已。",
+    "Sequence": "SetPortrait(role26,pic=3);",
+    "zh_TW": "[panel=2]這麼明白的事還用問嗎，\n老子不過就碰巧經過，湊個熱鬧而已。",
+    "zh_CN": "[panel=2]这么明白的事还用问吗，\n老子不过就碰巧经过，凑个热闹而已。",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "MC1",
+    "text": "太鬼扯了吧……\n啊！我是說……剛才的爆炸又是怎麼回事……？",
+    "Sequence": "",
+    "zh_TW": "太鬼扯了吧……\n啊！我是說……剛才的爆炸又是怎麼回事……？",
+    "zh_CN": "太鬼扯了吧……\n啊！我是说……刚才的爆炸又是怎么回事……？",
+    "links": [118]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC5",
+    "text": "不用想，天底下還有誰會幹出這種荒唐事。",
+    "Sequence": "OpenPanel(2, close);\nSetPortrait(MC10,pic=2);",
+    "zh_TW": "不用想，天底下還有誰會幹出這種荒唐事。",
+    "zh_CN": "不用想，天底下还有谁会干出这种荒唐事。",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "role2",
+    "text": "[panel=5]就見徐榮、張寧跟呂信都是灰頭土臉地趕來。",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]就見徐榮、張寧跟呂信都是灰頭土臉地趕來。",
+    "zh_CN": "[panel=5]就见徐荣、张宁跟吕信都是灰头土脸地赶来。",
+    "links": [120]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC6",
+    "text": "我就不該淌這渾水……\n碰上這傢伙，幾條命都不夠。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "我就不該淌這渾水……\n碰上這傢伙，幾條命都不夠。",
+    "zh_CN": "我就不该淌这浑水……\n碰上这家伙，几条命都不够。",
+    "links": [121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC2",
+    "text": "[panel=2]你個喪心病狂的！\n現在好了，英豪府沒了，我以後住哪。",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=2]你個喪心病狂的！\n現在好了，英豪府沒了，我以後住哪。",
+    "zh_CN": "[panel=2]你个丧心病狂的！ \n现在好了，英豪府没了，我以后住哪。",
+    "links": [122]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC4",
+    "text": "你這就冤枉為師了，\n英豪府不是好端端在那嗎。",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "你這就冤枉為師了，\n英豪府不是好端端在那嗎。",
+    "zh_CN": "你这就冤枉为师了，\n英豪府不是好端端在那吗。",
+    "links": [137]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC5",
+    "text": "[panel=2]你受傷了？他娘的，怎麼不早說！\n每次都胡亂一通，張寧，快處理一下這混帳。",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "[panel=2]你受傷了？他娘的，怎麼不早說！\n每次都胡亂一通，張寧，快處理一下這混帳。",
+    "zh_CN": "[panel=2]你受伤了？他娘的，怎么不早说！ \n每次都胡乱一通，张宁，快处理一下这混帐。",
+    "links": [124]
+  },
+  {
+    "entryID": 124,
+    "actorID": "role4",
+    "text": "[panel=4]吼──！吼──！吼──！",
+    "Sequence": "OpenPanel(2, close);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=4]吼──！吼──！吼──！",
+    "zh_CN": "[panel=4]吼──！吼──！吼──！",
+    "links": [125]
+  },
+  {
+    "entryID": 125,
+    "actorID": "role2",
+    "text": "[panel=5]雖然爆炸消滅了不少怪物，\n但仍留有主力，重整態勢。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]雖然爆炸消滅了不少怪物，\n但仍留有主力，重整態勢。",
+    "zh_CN": "[panel=5]虽然爆炸消灭了不少怪物，\n但仍留有主力，重整态势。",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "role26",
+    "text": "還想再戰嗎，正好老子一肚子氣沒地方發。",
+    "Sequence": "SetPortrait(role26,pic=1);",
+    "zh_TW": "還想再戰嗎，正好老子一肚子氣沒地方發。",
+    "zh_CN": "还想再战吗，正好老子一肚子气没地方发。",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC1",
+    "text": "父親且慢，這些怪物甚是古怪，會使兵法進退。",
+    "Sequence": "",
+    "zh_TW": "父親且慢，這些怪物甚是古怪，會使兵法進退。",
+    "zh_CN": "父亲且慢，这些怪物甚是古怪，会使兵法进退。",
+    "links": [128]
+  },
+  {
+    "entryID": 128,
+    "actorID": "MC4",
+    "text": "兵法……難怪能從爆炸中即時止損，有意思……",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "兵法……難怪能從爆炸中即時止損，有意思……",
+    "zh_CN": "兵法……难怪能从爆炸中即时止损，有意思……",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "MC5",
+    "text": "[panel=2]少打歪心思了，就你這破身體，\n給我老實待著，這裡有我頭痛就好了。",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "[panel=2]少打歪心思了，就你這破身體，\n給我老實待著，這裡有我頭痛就好了。",
+    "zh_CN": "[panel=2]少打歪心思了，就你这破身体，\n给我老实待着，这里有我头痛就好了。",
+    "links": [130]
+  },
+  {
+    "entryID": 130,
+    "actorID": "MC4",
+    "text": "放心，上好的醫方已經來了，\n雖說時機有些糟就是。",
+    "Sequence": "",
+    "zh_TW": "放心，上好的醫方已經來了，\n雖說時機有些糟就是。",
+    "zh_CN": "放心，上好的医方已经来了，\n虽说时机有些糟就是。",
+    "links": [131]
+  },
+  {
+    "entryID": 131,
+    "actorID": "role2",
+    "text": "[panel=5]就見賈詡指著不遠處，\n那是一支黃衣部隊，隊中樹立一面大旗──",
+    "Sequence": "OpenPanel(2, close);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=5]就見賈詡指著不遠處，\n那是一支黃衣部隊，隊中樹立一面大旗──",
+    "zh_CN": "[panel=5]就见贾诩指着不远处，\n那是一支黄衣部队，队中树立一面大旗──",
+    "links": [132]
+  },
+  {
+    "entryID": 132,
+    "actorID": "role38",
+    "text": "抱歉抱歉，是我來遲了。",
+    "Sequence": "SetPortrait(role38,pic=1);",
+    "zh_TW": "抱歉抱歉，是我來遲了。",
+    "zh_CN": "抱歉抱歉，是我来迟了。",
+    "links": [133]
+  },
+  {
+    "entryID": 133,
+    "actorID": "MC4",
+    "text": "[panel=2]多慮了，是這些怪物將遲了。\n董校尉，不介意吧。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]多慮了，是這些怪物將遲了。\n董校尉，不介意吧。",
+    "zh_CN": "[panel=2]多虑了，是这些怪物将迟了。 \n董校尉，不介意吧。",
+    "links": [134]
+  },
+  {
+    "entryID": 134,
+    "actorID": "role26",
+    "text": "[panel=2]料理完眼前，再論公事。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]料理完眼前，再論公事。",
+    "zh_CN": "[panel=2]料理完眼前，再论公事。",
+    "links": [135]
+  },
+  {
+    "entryID": 135,
+    "actorID": "role38",
+    "text": "多謝開恩，張角會炒上一道好菜的。\n本教聽令，配合英豪府，怪物──盡滅！",
+    "Sequence": "SetPortrait(role26,pic=2);",
+    "zh_TW": "多謝開恩，張角會炒上一道好菜的。\n本教聽令，配合英豪府，怪物──盡滅！",
+    "zh_CN": "多谢开恩，张角会炒上一道好菜的。 \n本教听令，配合英豪府，怪物──尽灭！",
+    "links": []
+  },
+  {
+    "entryID": 136,
+    "actorID": "role2",
+    "text": "[panel=5]錯愕之際，第一道防線被怪物突襲擊潰了──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]錯愕之際，第一道防線被怪物突襲擊潰了──",
+    "zh_CN": "[panel=5]错愕之际，第一道防线被怪物突袭击溃了──",
+    "links": [78]
+  },
+  {
+    "entryID": 137,
+    "actorID": "MC4",
+    "text": "不愧是上古建材，果然堅固……嗚呃……",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "不愧是上古建材，果然堅固……嗚呃……",
+    "zh_CN": "不愧是上古建材，果然坚固……呜呃……",
+    "links": [123]
+  }
+]

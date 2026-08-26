@@ -1,0 +1,222 @@
+[
+  {
+    "entryID": 40,
+    "actorID": "MC5",
+    "text": "哦？不必拘禮，是來考試的吧。\n不急，我正好煮了午餐，我們邊吃邊說。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "哦？不必拘禮，是來考試的吧。\n不急，我正好煮了午餐，我們邊吃邊說。",
+    "zh_CN": "哦？不必拘礼，是来考试的吧。 \n不急，我正好煮了午餐，我们边吃边说。",
+    "links": [64]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "（啊！哈──哈──\n我剛怎麼了……？我……升天了？）",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "（啊！哈──哈──\n我剛怎麼了……？我……升天了？）",
+    "zh_CN": "（啊！哈──哈──\n我刚怎么了……？我……升天了？）",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC5",
+    "text": "還合胃口吧，\n這可都是我的拿手好菜，儘量吃別客氣。",
+    "Sequence": "",
+    "zh_TW": "還合胃口吧，\n這可都是我的拿手好菜，儘量吃別客氣。",
+    "zh_CN": "还合胃口吧，\n这可都是我的拿手好菜，尽量吃别客气。",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "唔……多謝前輩美意。\n但事關時間，晚輩還是想先談正事吧。",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "zh_TW": "唔……多謝前輩美意。\n但事關時間，晚輩還是想先談正事吧。",
+    "zh_CN": "唔……多谢前辈美意。 \n但事关时间，晚辈还是想先谈正事吧。",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC5",
+    "text": "好吧，我也不愛繞彎子。\n行走江湖，交際人和不可免。",
+    "Sequence": "SetPortrait(MC10,pic=3);\nSetPortrait(MC1,pic=6);\nDisableAllCharacterExpression();",
+    "zh_TW": "好吧，我也不愛繞彎子。\n行走江湖，交際人和不可免。",
+    "zh_CN": "好吧，我也不爱绕弯子。 \n行走江湖，交际人和不可免。",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC5",
+    "text": "并州有三個實力派組織注資，\n分別是赤龍幫、甄家、黑狼氏族。",
+    "Sequence": "",
+    "zh_TW": "并州有三個實力派組織注資，\n分別是赤龍幫、甄家、黑狼氏族。",
+    "zh_CN": "并州有三个实力派组织注资，\n分别是赤龙帮、甄家、黑狼氏族。",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC5",
+    "text": "黑狼氏族較為特殊，這次先不提。\n你就試著拿到[em2]赤龍幫[/em2]跟[em2]甄家[/em2]信物吧。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "黑狼氏族較為特殊，這次先不提。\n你就試著拿到[em2]赤龍幫[/em2]跟[em2]甄家[/em2]信物吧。",
+    "zh_CN": "黑狼氏族较为特殊，这次先不提。 \n你就试着拿到[em2]赤龙帮[/em2]跟[em2]甄家[/em2]信物吧。",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "晚輩明白了。那麼晚輩還要趕時間，\n這頓飯請恕來日再品。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Script": "SetQuestState(\"FS04\", \"active\");\nSetQuestEntryState(\"FS04\", 1, \"success\");\nSetQuestEntryState(\"FS04\", 2, \"active\");\nSetQuestEntryState(\"FS04\", 3, \"active\");\nSetQuestEntryState(\"FS04-A\", 1, \"active\");\nSetQuestEntryState(\"FS04-B\", 1, \"active\");",
+    "Description": "變數更新",
+    "zh_TW": "晚輩明白了。那麼晚輩還要趕時間，\n這頓飯請恕來日再品。",
+    "zh_CN": "晚辈明白了。那么晚辈还要赶时间，\n这顿饭请恕来日再品。",
+    "links": [642]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "（來考試還有招待，\n徐前輩人真是太好了！）",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "（來考試還有招待，\n徐前輩人真是太好了！）",
+    "zh_CN": "（来考试还有招待，\n徐前辈人真是太好了！）",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "role2",
+    "text": "[panel=5]你大口吞下的瞬間，四周景物竟開始扭曲，\n眼前一片混濁，隨即又好接近了太陽……",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(PotionSmoke_1,Play);\nPlayOrStopParticle(PotionSmoke_2,Play);\nSetContinueMode(original)@1.5;",
+    "zh_TW": "[panel=5]你大口吞下的瞬間，四周景物竟開始扭曲，\n眼前一片混濁，隨即又好接近了太陽……",
+    "zh_CN": "[panel=5]你大口吞下的瞬间，四周景物竟开始扭曲，\n眼前一片混浊，随即又好接近了太阳……",
+    "links": [41]
+  },
+  {
+    "entryID": 535,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(TrainingGround);\nAudioControl(PlaySFXOneShot,Bird);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS04\", 1) == \"active\"",
+    "links": [536]
+  },
+  {
+    "entryID": 536,
+    "actorID": "MC1",
+    "text": "晚輩見過徐前輩。",
+    "Sequence": "",
+    "zh_TW": "晚輩見過徐前輩。",
+    "zh_CN": "晚辈见过徐前辈。",
+    "links": [40]
+  },
+  {
+    "entryID": 629,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HeroesGuild);\nAudioControl(PlaySFXOneShot,Bird);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS04\", 4) == \"active\"",
+    "links": [631]
+  },
+  {
+    "entryID": 631,
+    "actorID": "MC5",
+    "text": "我都聽說了，\n小兄弟能得褚甄二人信物，著實不簡單。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "我都聽說了，\n小兄弟能得褚甄二人信物，著實不簡單。",
+    "zh_CN": "我都听说了，\n小兄弟能得褚甄二人信物，着实不简单。",
+    "links": [632]
+  },
+  {
+    "entryID": 632,
+    "actorID": "MC1",
+    "text": "過獎了，晚輩只是僥倖而已。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "過獎了，晚輩只是僥倖而已。",
+    "zh_CN": "过奖了，晚辈只是侥幸而已。",
+    "links": [633]
+  },
+  {
+    "entryID": 633,
+    "actorID": "MC5",
+    "text": "泰而不驕，必成大器，很好。\n自今日起，你就是我英豪府一員。",
+    "Sequence": "ShowInstantMessage(Influence_Merit,75);",
+    "zh_TW": "泰而不驕，必成大器，很好。\n自今日起，你就是我英豪府一員。",
+    "zh_CN": "泰而不骄，必成大器，很好。 \n自今日起，你就是我英豪府一员。",
+    "links": [634]
+  },
+  {
+    "entryID": 634,
+    "actorID": "MC5",
+    "text": "為師也沒什麼好東西，\n唯有一匹老馬就送你當祝賀。",
+    "Sequence": "SetPortrait(MC1,pic=3);\nShowInstantMessage(Influence_Merit,75);",
+    "Description": "獲得功勳跟貴種品馬",
+    "zh_TW": "為師也沒什麼好東西，\n唯有一匹老馬就送你當祝賀。",
+    "zh_CN": "为师也没什么好东西，\n唯有一匹老马就送你当祝贺。",
+    "links": [635]
+  },
+  {
+    "entryID": 635,
+    "actorID": "MC1",
+    "text": "多謝師父！",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "多謝師父！",
+    "zh_CN": "多谢师父！",
+    "links": [636]
+  },
+  {
+    "entryID": 636,
+    "actorID": "MC5",
+    "text": "不用著急，還要等遴選結束，\n你[em2]回英豪府[/em2]，那時才算正式報到。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "不用著急，還要等遴選結束，\n你[em2]回英豪府[/em2]，那時才算正式報到。",
+    "zh_CN": "不用着急，还要等遴选结束，\n你[em2]回英豪府[/em2]，那时才算正式报到。",
+    "links": [637]
+  },
+  {
+    "entryID": 637,
+    "actorID": "MC5",
+    "text": "不過呀，我其實想過自己的題目是否太刁難。\n這樣吧，請你吃一頓，你上次不也說想再吃……",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "不過呀，我其實想過自己的題目是否太刁難。\n這樣吧，請你吃一頓，你上次不也說想再吃……",
+    "zh_CN": "不过呀，我其实想过自己的题目是否太刁难。 \n这样吧，请你吃一顿，你上次不也说想再吃……",
+    "links": [638]
+  },
+  {
+    "entryID": 638,
+    "actorID": "role2",
+    "text": "[panel=5]於是你深深體會有些客套話，不能隨便亂說……",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Shock);",
+    "Script": "SetQuestState(\"FS04\", \"success\");\nSetQuestEntryState(\"MS05\", 1, \"success\");\nSetQuestEntryState(\"MS05\", 2, \"active\");\nSetQuestEntryState(\"FS04\", 4, \"success\")",
+    "Description": "變數更新",
+    "zh_TW": "[panel=5]於是你深深體會有些客套話，不能隨便亂說……",
+    "zh_CN": "[panel=5]于是你深深体会有些客套话，不能随便乱说……",
+    "links": [662]
+  },
+  {
+    "entryID": 641,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 642,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [641]
+  },
+  {
+    "entryID": 662,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [663]
+  },
+  {
+    "entryID": 663,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": []
+  }
+]

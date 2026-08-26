@@ -1,0 +1,1249 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你沿著蜿蜒的山路，終於來到了一處隱蔽的溪谷。這裡林木蔥鬱，空氣中瀰漫著泥土和青草的氣息。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你沿着蜿蜒的山路，终于来到了一处隐蔽的溪谷。这里林木葱郁，空气中弥漫着泥土和青草的气息。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「呼……這山路可真難走。不過獵戶大哥說得沒錯，這裡確實是風景清幽……就是爬上來要半條命，想清靜還真是不容易啊。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「呼……这山路可真难走。不过猎户大哥说得没错，这里确实是风景清幽……就是爬上来要半条命，想清静还真是不容易啊。」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「喂——！宗緯大哥！人呢？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「喂——！宗纬大哥！人呢？」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "[panel=6]＊（山谷中回蕩著你的聲音，卻無人應答。不遠處的營地鍋碗瓢盆散落一地，火堆已經熄滅，似乎發生過什麼爭執。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（山谷中回荡着你的声音，却无人应答。不远处的营地锅碗瓢盆散落一地，火堆已经熄灭，似乎发生过什么争执。）＊",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「該不會是出什麼事了吧？不行，我得去看看。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Script": "SetQuestState(\"CF10\", \"active\")\nSetQuestEntryState(\"CF10\", 1, \"active\")\nSetQuestEntryState(\"CF10\", 2, \"active\")",
+    "Description": "觸發任務",
+    "zh_CN": "「该不会是出什么事了吧？不行，我得去看看。」",
+    "links": []
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這是一個簡易的營地，但此刻顯得異常凌亂。地面上還有拖拽的痕跡。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF10\", 1) == \"active\"",
+    "zh_CN": "[panel=6]＊（这是一个简易的营地，但此刻显得异常凌乱。地面上还有拖拽的痕迹。）＊",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「這腳印……前腳掌寬大，爪痕深深嵌入泥土，不像人的，也不像野獸……倒像是某種……直立行走的狗？」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「这脚印……前脚掌宽大，爪痕深深嵌入泥土，不像人的，也不像野兽……倒像是某种……直立行走的狗？」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「而且走得很匆忙，像是遇到了什麼突發狀況。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "Script": "SetQuestEntryState(\"CF10\", 1, \"success\");",
+    "Description": "更新任務",
+    "zh_CN": "「而且走得很匆忙，像是遇到了什么突发状况。」",
+    "links": []
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「嗯？這是宗緯大哥的箭。箭杆還是新的，看來他最近一直在防備什麼東西。」",
+    "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
+    "zh_CN": "「嗯？这是宗纬大哥的箭。箭杆还是新的，看来他最近一直在防备什么东西。」",
+    "links": []
+  },
+  {
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=6]＊（清澈的水潭中，隱約飄浮著幾片破碎的葉子和……一絲淡淡的血跡？）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF10\", 2) == \"active\"",
+    "zh_CN": "[panel=6]＊（清澈的水潭中，隐约飘浮着几片破碎的叶子和……一丝淡淡的血迹？）＊",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「有血腥味……而且是從上游沖下來的。這水源的源頭在瀑布上方，看來麻煩是在上面。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Script": "SetQuestEntryState(\"CF10\",2, \"success\");",
+    "Description": "任務更新",
+    "zh_CN": "「有血腥味……而且是从上游冲下来的。这水源的源头在瀑布上方，看来麻烦是在上面。」",
+    "links": []
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「這塊苔蘚被踩爛了。看這爪印的大小……這野獸的體型怕是不比老虎小啊。」",
+    "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
+    "zh_CN": "「这块苔藓被踩烂了。看这爪印的大小……这野兽的体型怕是不比老虎小啊。」",
+    "links": []
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "[panel=6]＊（幾根粗壯的藤蔓垂落在懸崖邊，上方似乎還有一個平台。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（几根粗壮的藤蔓垂落在悬崖边，上方似乎还有一个平台。）＊",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「上面好像有煙味……難道宗緯大哥在上面？」",
+    "Sequence": "SetPortrait(MC1,pic=normal);",
+    "zh_CN": "「上面好像有烟味……难道宗纬大哥在上面？」",
+    "links": []
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（空氣中瀰漫著一股油脂焦香的味道。眼前的火堆旁，架著一隻烤得金黃酥脆的乳豬。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（空气中弥漫着一股油脂焦香的味道。眼前的火堆旁，架着一只烤得金黄酥脆的乳猪。）＊",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「好香！這皮色，這火候……簡直是極品！咕嚕……原來躲在這偷偷開小灶呢！」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「好香！这皮色，这火候……简直是极品！咕噜……原来躲在这偷偷开小灶呢！」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「慢著！這裡怎會有剛烤好的肉……這情況也太不對勁了啊。」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_CN": "「慢着！这里怎会有刚烤好的肉……这情况也太不对劲了啊。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在這時，樹林深處突然傳來一陣嘈雜的吼叫聲和兵器碰撞聲！）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestEntryState(\"CF10\",3, \"success\");\nSetQuestEntryState(\"CF10\",4, \"active\");",
+    "Description": "任務更新",
+    "zh_CN": "[panel=6]＊（就在这时，树林深处突然传来一阵嘈杂的吼叫声和兵器碰撞声！）＊",
+    "links": []
+  },
+  {
+    "entryID": 34,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你循聲衝過去，只見獵戶宗緯正手持鋼叉，背靠著一棵大樹，而他身邊竟然站著一隻……狗頭人？！兩人正被一群巨狼團團圍住。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你循声冲过去，只见猎户宗纬正手持钢叉，背靠着一棵大树，而他身边竟然站着一只……狗头人？！两人正被一群巨狼团团围住。）＊",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "role106",
+    "text": "[panel=2]「汪！壞狼！咬！肉肉……不給！」",
+    "Sequence": "",
+    "zh_CN": "[panel=2]「汪！坏狼！咬！肉肉……不给！」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role97",
+    "text": "[panel=1]「別叫了！小心左邊！該死，這群狼是餓瘋了嗎？！」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「别叫了！小心左边！该死，这群狼是饿疯了吗？！」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「等等！那隻狗頭人……不是之前在破廟想搶劫我的那個嗎？！他們怎麼混在一起了？！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「等等！那只狗头人……不是之前在破庙想抢劫我的那个吗？！他们怎么混在一起了？！」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role97",
+    "text": "[panel=1]「[var=PlayerFirstName]老弟？！快！快來幫忙！這群畜生數量太多了！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]老弟？！快！快来帮忙！这群畜生数量太多了！」",
+    "links": [2070]
+  },
+  {
+    "entryID": 40,
+    "actorID": "role97",
+    "text": "[panel=1]「呼……多虧老弟你來得及時，不然我和這小傢伙今天都要交代在這了。」",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF10\",4, \"success\")\nSetQuestState(\"CF10\", \"success\")",
+    "Description": "任務完成",
+    "zh_CN": "[panel=1]「呼……多亏老弟你来得及时，不然我和这小家伙今天都要交代在这了。」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "role106",
+    "text": "[panel=2]「強！朋友！肉肉……分你！」",
+    "Sequence": "",
+    "zh_CN": "[panel=2]「强！朋友！肉肉……分你！」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「去去去！宗緯大哥，這不是之前在破廟那隻狗頭人嗎？上次它跑得快，今天怎麼跟你稱兄道弟了？」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「去去去！宗纬大哥，这不是之前在破庙那只狗头人吗？上次它跑得快，今天怎么跟你称兄道弟了？」",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "role97",
+    "text": "[panel=1]「你也認得它？哈哈，說來話長。上次它從你手裡逃跑後，在山裡被野狗追。我看它可憐就救了一把，誰知道這傢伙就賴上我了。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「你也认得它？哈哈，说来话长。上次它从你手里逃跑后，在山里被野狗追。我看它可怜就救了一把，谁知道这家伙就赖上我了。」",
+    "links": [2074]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「喂，你這傢伙，放著好好的有前途的搶匪不當，幹嘛非得賴著宗緯大哥？這裡除了烤肉還有什麼好處？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「喂，你这家伙，放着好好的有前途的抢匪不当，干嘛非得赖着宗纬大哥？这里除了烤肉还有什么好处？」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "role106",
+    "text": "「肉！香！還有……不被打！」",
+    "Sequence": "",
+    "zh_CN": "「肉！香！还有……不被打！」",
+    "links": [48, 47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「算了，別招惹他了。」",
+    "Sequence": "",
+    "zh_CN": "「算了，别招惹他了。」",
+    "links": [49]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「不如這樣，你以後就跟著我混。我保證你頓頓有肉吃。」",
+    "Sequence": "",
+    "zh_CN": "[em2][口才检定][/em2]「不如这样，你以后就跟着我混。我保证你顿顿有肉吃。」",
+    "links": [50]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「罷了，看你吃得這麼香，我就不打擾你了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「罢了，看你吃得这么香，我就不打扰你了。」",
+    "links": []
+  },
+  {
+    "entryID": 50,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,10);",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「嘖嘖嘖，格局小了！跟著獵戶大哥只能吃烤肉，跟著本少俠混，那是吃香的喝辣的，還能名震江湖！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_CN": "「啧啧啧，格局小了！跟着猎户大哥只能吃烤肉，跟着本少侠混，那是吃香的喝辣的，还能名震江湖！」",
+    "links": [52, 53]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role106",
+    "text": "「頓頓……有肉？真的？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "「顿顿……有肉？真的？」",
+    "links": [56, 57, 58]
+  },
+  {
+    "entryID": 53,
+    "actorID": "role106",
+    "text": "「你……瘦。沒肉。騙子！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「你……瘦。没肉。骗子！」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「嘿！你這狗眼看人低的東西……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "「嘿！你这狗眼看人低的东西……」",
+    "links": []
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「當然是真的！本少俠一言九鼎！不過嘛……為了方便聯繫，我需要個信物，比如你身上那個亮閃閃的鍋子？」",
+    "Sequence": "ModifyData(DnDAlignment,Player,LawChaos,0.15);\nModifyData(Coin,-300);\nSetPortrait(MC1,pic=1);",
+    "Description": "減少300錢",
+    "zh_CN": "「当然是真的！本少侠一言九鼎！不过嘛……为了方便联系，我需要个信物，比如你身上那个亮闪闪的锅子？」",
+    "links": [2077]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]「兄弟啊，我怎還會騙你呢，那就依照江湖的規矩來。」",
+    "Sequence": "",
+    "zh_CN": "[em2][厚黑检定][/em2]「兄弟啊，我怎还会骗你呢，那就依照江湖的规矩来。」",
+    "links": [59]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "[em2][信義][/em2]「[給他 300 錢]」",
+    "Sequence": "",
+    "Conditions": "IsCoinPass(300)  == true",
+    "zh_CN": "[em2][信义][/em2]「[给他 300 钱]」",
+    "links": [55]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「還是算了，太麻煩。」",
+    "Sequence": "",
+    "zh_CN": "「还是算了，太麻烦。」",
+    "links": [2079]
+  },
+  {
+    "entryID": 59,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,12);",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「按照江湖規矩，這入夥費得先欠著。等我發達了，再一次付清！先把鍋子給我吧！」",
+    "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
+    "zh_CN": "「按照江湖规矩，这入伙费得先欠着。等我发达了，再一次付清！先把锅子给我吧！」",
+    "links": [61, 63]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「這叫『放長線釣大魚』，懂嗎？現在少吃一口肉，將來還你一整頭豬！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "「这叫『放长线钓大鱼』，懂吗？现在少吃一口肉，将来还你一整头猪！」",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "role106",
+    "text": "「長線……大魚？好！鍋子……給你！敲它……我就來！」",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);AddItem(Summon_Pot,1);",
+    "zh_CN": "「长线……大鱼？好！锅子……给你！敲它……我就来！」",
+    "links": [2078]
+  },
+  {
+    "entryID": 63,
+    "actorID": "role106",
+    "text": "「不！騙子！沒錢……不給！」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「不！骗子！没钱……不给！」",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「切，被識破了……好吧好吧，給你錢就是了。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "「切，被识破了……好吧好吧，给你钱就是了。」",
+    "links": [2081, 2080]
+  },
+  {
+    "entryID": 66,
+    "actorID": "role2",
+    "text": "[panel=6]＊（獲得了狗頭人的召喚信物。）＊",
+    "Sequence": "ModifyData(Valuable,Player,CallingDogBrother,3);",
+    "Script": "Variable[\"HireDogMan\"] = true",
+    "Description": "獲得貴種品、變數更新",
+    "zh_CN": "[panel=6]＊（获得了狗头人的召唤信物。）＊",
+    "links": []
+  },
+  {
+    "entryID": 67,
+    "actorID": "role97",
+    "text": "「[em7]一屁股坐在地上，擦著汗[/em7]呼……多虧老弟你來得及時，不然我和這小傢伙今天都要交代在這了。不過……老弟你怎麼會跑到這深山老林來？」",
+    "Sequence": "",
+    "zh_CN": "「[em7]一屁股坐在地上，擦着汗[/em7]呼……多亏老弟你来得及时，不然我和这小家伙今天都要交代在这了。不过……老弟你怎么会跑到这深山老林来？」",
+    "links": [2087]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「這裡跟世外桃源似的，能有啥危險？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「这里跟世外桃源似的，能有啥危险？」",
+    "links": [2089]
+  },
+  {
+    "entryID": 69,
+    "actorID": "role97",
+    "text": "「甚至……我有時候眼花，覺得它們像是被什麼東西吸進瀑布後面去了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「甚至……我有时候眼花，觉得它们像是被什么东西吸进瀑布后面去了。」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「水沖不走，還反被吸進去？這瀑布後面……難道別有洞天？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_CN": "「水冲不走，还反被吸进去？这瀑布后面……难道别有洞天？」",
+    "links": [2091]
+  },
+  {
+    "entryID": 71,
+    "actorID": "role97",
+    "text": "「我是在叫你別去送死！那地方陰森森的，連狼群都不敢靠近，你自己小心點。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Script": "SetQuestState(\"CF11\", \"active\")",
+    "Description": "激活任務",
+    "zh_CN": "「我是在叫你别去送死！那地方阴森森的，连狼群都不敢靠近，你自己小心点。」",
+    "links": []
+  },
+  {
+    "entryID": 72,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這棵樹通體粉紅，在綠林中顯得格格不入）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（这棵树通体粉红，在绿林中显得格格不入）＊",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC1",
+    "text": "「這樹看起來挺結實的，正好拿來練練手。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「这树看起来挺结实的，正好拿来练练手。」",
+    "links": [74, 75]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "[em2][武藝檢定][/em2]「運氣丹田，全力一擊！」",
+    "Sequence": "",
+    "Conditions": "Variable[\"HealerSandals\"] == false",
+    "zh_CN": "[em2][武艺检定][/em2]「运气丹田，全力一击！」",
+    "links": [76]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC1",
+    "text": "「還是別浪費力氣了。」",
+    "Sequence": "",
+    "zh_CN": "「还是别浪费力气了。」",
+    "links": [82]
+  },
+  {
+    "entryID": 76,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,MartialArtsCheck,10);",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "「看招！開山裂石掌——！」",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger_2);",
+    "zh_CN": "「看招！开山裂石掌——！」",
+    "links": [78, 80]
+  },
+  {
+    "entryID": 78,
+    "actorID": "role2",
+    "text": "[panel=6]＊（「砰！」的一聲悶響，大樹劇烈搖晃，落葉紛飛。緊接著，「啪嗒」一聲，一個東西掉在了你面前。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "[panel=6]＊（「砰！」的一声闷响，大树剧烈摇晃，落叶纷飞。紧接着，「啪嗒」一声，一个东西掉在了你面前。）＊",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC1",
+    "text": "「這是……一隻鞋？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);\nModifyData(Valuable,Player,HealerSandals,1);",
+    "Description": "獲得醫者草鞋",
+    "zh_CN": "「这是……一只鞋？」",
+    "links": [2093]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=6]＊（「砰！」你一掌打在樹幹上，大樹紋絲不動，反倒是你的手腕傳來一陣劇痛。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "[panel=6]＊（「砰！」你一掌打在树干上，大树纹丝不动，反倒是你的手腕传来一阵剧痛。）＊",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC1",
+    "text": "「哎喲！痛痛痛！這樹是鐵做的嗎？！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "「哎哟！痛痛痛！这树是铁做的吗？！」",
+    "links": [2092]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "「算了，愛護花草樹木，人人有責。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);",
+    "zh_CN": "「算了，爱护花草树木，人人有责。」",
+    "links": []
+  },
+  {
+    "entryID": 83,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在古樹的根部，你發現了一塊半掩埋在土裡的石板。撥開泥土，上面刻著一行古老的篆文。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（在古树的根部，你发现了一块半掩埋在土里的石板。拨开泥土，上面刻着一行古老的篆文。）＊",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC1",
+    "text": "「[em2]逆流而上者死，順流而下者生。心誠則靈，飛流直下三千尺……[/em2]」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「[em2]逆流而上者死，顺流而下者生。心诚则灵，飞流直下三千尺……[/em2]」",
+    "links": [2096]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「順流而下…？莫非是！？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_CN": "「顺流而下…？莫非是！？」",
+    "links": [2095]
+  },
+  {
+    "entryID": 86,
+    "actorID": "role2",
+    "text": "[panel=6]＊（巨大的水流從這裡奔騰而下，發出雷鳴般的巨響。水霧瀰漫，看不清下方的深淺。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（巨大的水流从这里奔腾而下，发出雷鸣般的巨响。水雾弥漫，看不清下方的深浅。）＊",
+    "links": [87, 88]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC1",
+    "text": "[em2][捨身一躍][/em2]「相信石板的指引，跳下去！」",
+    "Sequence": "",
+    "zh_CN": "[em2][舍身一跃][/em2]「相信石板的指引，跳下去！」",
+    "links": [89]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC1",
+    "text": "「富貴險中求！十八年後又是一條好漢！」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_CN": "「富贵险中求！十八年后又是一条好汉！」",
+    "links": [2098]
+  },
+  {
+    "entryID": 90,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你縱身一躍，身體急速下墜。就在你以為要粉身碎骨時…）＊",
+    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;",
+    "zh_CN": "[panel=6]＊（你纵身一跃，身体急速下坠。就在你以为要粉身碎骨时…）＊",
+    "links": [2107]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role2",
+    "text": "[panel=6]＊（洞穴內別有洞天，中央矗立著一座巨大的女神像。神像身披戰甲，手持長矛，英姿颯爽，與中原女子的溫婉截然不同。）＊",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF12\", \"active\")",
+    "Description": "觸發任務",
+    "zh_CN": "[panel=6]＊（洞穴内别有洞天，中央矗立着一座巨大的女神像。神像身披战甲，手持长矛，英姿飒爽，与中原女子的温婉截然不同。）＊",
+    "links": []
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC1",
+    "text": "「乖乖……這姐姐長得真彪悍！這身甲冑，這肌肉線條……嘖嘖，要是活著，怕是一拳能打死我。」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_CN": "「乖乖……这姐姐长得真彪悍！这身甲胄，这肌肉线条……啧啧，要是活着，怕是一拳能打死我。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "role2",
+    "text": "[panel=6]＊（神像的基座上刻著密密麻麻的文字。你湊近細看。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（神像的基座上刻着密密麻麻的文字。你凑近细看。）＊",
+    "links": [2100]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC1",
+    "text": "「極西之地？逆流河？助秦統一？這……這可是驚天大祕密啊！原來歷史書上沒寫的都在這兒呢！」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nDisableEventBG();",
+    "zh_CN": "「极西之地？逆流河？助秦统一？这……这可是惊天大秘密啊！原来历史书上没写的都在这儿呢！」",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「守護蒼生什麼的太沉重了。不過既然是以前幫皇帝打仗的，肯定留下了不少好寶貝吧？嘿嘿……」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_CN": "「守护苍生什么的太沉重了。不过既然是以前帮皇帝打仗的，肯定留下了不少好宝贝吧？嘿嘿……」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC1",
+    "text": "「咦？這背後刻的是什麼？亂七八糟的……像是小孩塗鴉的蝌蚪？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「咦？这背后刻的是什么？乱七八糟的……像是小孩涂鸦的蝌蚪？」",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2103, 2104, 2105, 2117]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC1",
+    "text": "「不過……這些蝌蚪游來游去的，看久了還挺有意思。嘿，這隻往上游，這隻往下鑽……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);",
+    "zh_CN": "「不过……这些蝌蚪游来游去的，看久了还挺有意思。嘿，这只往上游，这只往下钻……」",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你不知不覺跟著這些「蝌蚪」的軌跡運轉體內氣息。只覺一股暖流從丹田升起，原本滯澀的經脈竟然暢通無阻。）＊",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,HiddenPlotSutra);\nShowHint(Skill,HiddenPlotSutra);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Script": "SetQuestState(\"CF12\", \"success\")",
+    "Description": "獲得無間藏機訣技能卡、完成任務",
+    "zh_CN": "[panel=6]＊（你不知不觉跟着这些「蝌蚪」的轨迹运转体内气息。只觉一股暖流从丹田升起，原本滞涩的经脉竟然畅通无阻。）＊",
+    "links": []
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「這線條粗細不一，毫無章法。既不符合人體經脈結構，也看不出什麼武學至理。估計是哪個工匠喝醉了亂刻的吧。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「这线条粗细不一，毫无章法。既不符合人体经脉结构，也看不出什么武学至理。估计是哪个工匠喝醉了乱刻的吧。」",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC1",
+    "text": "「嘖，白高興一場。還以為是什麼絕世秘籍呢，結果就是個塗鴉板。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=normal);",
+    "Script": "SetQuestState(\"CF12\", \"success\")",
+    "Description": "完成任務",
+    "zh_CN": "「啧，白高兴一场。还以为是什么绝世秘籍呢，结果就是个涂鸦板。」",
+    "links": []
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「呼……這地方進來容易出去難。看樣子，只能從這地下暗河游出去了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「呼……这地方进来容易出去难。看样子，只能从这地下暗河游出去了。」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "「希望能直接通到外面，別把我沖到什麼九曲十八彎的鬼地方去。走了！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「希望能直接通到外面，别把我冲到什么九曲十八弯的鬼地方去。走了！」",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你深吸一口氣，潛入水中，順著暗河漂流而去……）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你深吸一口气，潜入水中，顺着暗河漂流而去……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "入場對話(下層)",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊營地",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [6, 2066]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "營地通過背景洞悉檢定出現箭，且點擊箭出現的對話",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [12]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "池塘邊通過背景洞悉檢定出現，且點擊出現的對話",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [19]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "藤蔓出現的條件:CurrentQuestEntryState(\"CF10\", 2) == \"success\"",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [21, 2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這是一個簡易的營地，但此刻顯得異常凌亂。地面上還有拖拽的痕跡。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（这是一个简易的营地，但此刻显得异常凌乱。地面上还有拖拽的痕迹。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role2",
+    "text": "[panel=6]＊（清澈的水潭中，隱約飄浮著幾片破碎的葉子和……一絲淡淡的血跡？）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（清澈的水潭中，隐约飘浮着几片破碎的叶子和……一丝淡淡的血迹？）＊",
+    "links": []
+  },
+  {
+    "entryID": 2068,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊烤乳豬",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [24]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "觸發條件:CurrentQuestState(\"CF10\"4) == \"active\"",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2111]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,31);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [2071]
+  },
+  {
+    "entryID": 2071,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2072, 2073]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "links": [2112]
+  },
+  {
+    "entryID": 2073,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "links": [2075]
+  },
+  {
+    "entryID": 2074,
+    "actorID": "role97",
+    "text": "[panel=1]「老弟，此地不宜久留。我那架子上還烤著乳豬呢，再不回去肉都要老了！走走走，去我那兒慢慢說。」",
+    "Sequence": "",
+    "Description": "畫面變暗，NPC移動到屋子前",
+    "zh_CN": "[panel=1]「老弟，此地不宜久留。我那架子上还烤着乳猪呢，再不回去肉都要老了！走走走，去我那儿慢慢说。」",
+    "links": []
+  },
+  {
+    "entryID": 2075,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "失敗結局",
+    "links": []
+  },
+  {
+    "entryID": 2076,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "跟狗頭人對話",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2083, 44]
+  },
+  {
+    "entryID": 2077,
+    "actorID": "role106",
+    "text": "「[em7]接過錢，開心地遞過鍋子[/em7]錢……香！鍋子……給你！戰鬥……敲它！我就來！」",
+    "Sequence": "",
+    "zh_CN": "「[em7]接过钱，开心地递过锅子[/em7]钱……香！锅子……给你！战斗……敲它！我就来！」",
+    "links": [2115]
+  },
+  {
+    "entryID": 2078,
+    "actorID": "role106",
+    "text": "「[em7]伸出三根手指[/em7]但是……只能三次！幫多了……吃虧！！」",
+    "Sequence": "",
+    "zh_CN": "「[em7]伸出三根手指[/em7]但是……只能三次！帮多了……吃亏！！」",
+    "links": [66]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "MC1",
+    "text": "「罷了，看你吃得這麼香，我就不打擾你了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Script": "Variable[\"HireDogMan\"] = true",
+    "Description": "變數更新",
+    "zh_CN": "「罢了，看你吃得这么香，我就不打扰你了。」",
+    "links": []
+  },
+  {
+    "entryID": 2080,
+    "actorID": "MC1",
+    "text": "「不過我需要個信物，比如你身上那個亮閃閃的鍋子？」",
+    "Sequence": "ModifyData(Coin,-300);\nSetPortrait(MC1,pic=13);",
+    "Conditions": "IsCoinPass(300)  == true",
+    "Description": "減少300錢",
+    "zh_CN": "「不过我需要个信物，比如你身上那个亮闪闪的锅子？」",
+    "links": [2077]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "MC1",
+    "text": "「啊，沒帶錢在身上。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Conditions": "IsCoinPass(300)  ~= true",
+    "zh_CN": "「啊，没带钱在身上。」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "role106",
+    "text": "「小子，你在尋老子開心是不是！？」",
+    "Sequence": "",
+    "Script": "Variable[\"HireDogMan\"] = true",
+    "Description": "變數更新",
+    "zh_CN": "「小子，你在寻老子开心是不是！？」",
+    "links": [2084]
+  },
+  {
+    "entryID": 2083,
+    "actorID": "role106",
+    "text": "「真香啊！」",
+    "Sequence": "",
+    "Conditions": "Variable[\"HireDogMan\"] == true",
+    "zh_CN": "「真香啊！」",
+    "links": []
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC1",
+    "text": "「…說話好流利…」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Conditions": "IsCoinPass(300)  ~= true",
+    "zh_CN": "「…说话好流利…」",
+    "links": []
+  },
+  {
+    "entryID": 2085,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "跟宗緯對話",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2086, 2106]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們回到上層平台，分食了那隻烤得恰到好處的乳豬。好不酒足飯飽。）＊",
+    "Sequence": "ModifyData(Rest);",
+    "Conditions": "CurrentQuestState(\"CF11\") == \"unassigned\"",
+    "Description": "休息",
+    "zh_CN": "[panel=6]＊（你们回到上层平台，分食了那只烤得恰到好处的乳猪。好不酒足饭饱。）＊",
+    "links": [67]
+  },
+  {
+    "entryID": 2087,
+    "actorID": "role97",
+    "text": "「對了，老弟。你既然來了，有件事我得提醒你。最近這山裡不太平。」",
+    "Sequence": "",
+    "zh_CN": "「对了，老弟。你既然来了，有件事我得提醒你。最近这山里不太平。」",
+    "links": [68]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點粉紅大樹",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [72]
+  },
+  {
+    "entryID": 2089,
+    "actorID": "role97",
+    "text": "「剛才那群狼你也見識到了，兇狠得不正常。但我擔心的不是野獸，而是這地方本身就透著股邪氣。」",
+    "Sequence": "",
+    "zh_CN": "「刚才那群狼你也见识到了，凶狠得不正常。但我担心的不是野兽，而是这地方本身就透着股邪气。」",
+    "links": [2090]
+  },
+  {
+    "entryID": 2090,
+    "actorID": "role97",
+    "text": "「就說底下那水潭裡常年漂著一堆枯木。照理說瀑布水流這麼急，枯木早就該被沖走了。可怪就怪在，那些木頭偏偏就在那打轉沒被沖走。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「就说底下那水潭里常年漂着一堆枯木。照理说瀑布水流这么急，枯木早就该被冲走了。可怪就怪在，那些木头偏偏就在那打转没被冲走。」",
+    "links": [69]
+  },
+  {
+    "entryID": 2091,
+    "actorID": "MC1",
+    "text": "「怪事必有妖，有妖必有寶！大哥，你這是在暗示我那裡有寶貝啊！」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「怪事必有妖，有妖必有宝！大哥，你这是在暗示我那里有宝贝啊！」",
+    "links": [71]
+  },
+  {
+    "entryID": 2092,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 2093,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nContinue();",
+    "Script": "Variable[\"HealerSandals\"] = true",
+    "Description": "變數更新",
+    "links": []
+  },
+  {
+    "entryID": 2094,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊正確的枯樹",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [83]
+  },
+  {
+    "entryID": 2095,
+    "actorID": "MC1",
+    "text": "「這可是幾百尺高啊！會死人的吧？！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nDisableCharacterExpression(0);",
+    "Script": "SetQuestEntryState(\"CF11\", 1, \"success\")",
+    "Description": "任務更新",
+    "zh_CN": "「这可是几百尺高啊！会死人的吧？！」",
+    "links": []
+  },
+  {
+    "entryID": 2096,
+    "actorID": "MC1",
+    "text": "「這什麼亂七八糟的？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「这什么乱七八糟的？」",
+    "links": [85]
+  },
+  {
+    "entryID": 2097,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊 在瀑布出現的新互動,出現條件:CurrentQuestEntryState(\"CF11\", 1) == \"success\"",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [86]
+  },
+  {
+    "entryID": 2098,
+    "actorID": "MC1",
+    "text": "「啊啊啊——！」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nAudioControl(PlaySFXOneShot,Others_EagleCry);",
+    "zh_CN": "「啊啊啊——！」",
+    "links": [4235]
+  },
+  {
+    "entryID": 2099,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點女神雕像",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2116, 2110]
+  },
+  {
+    "entryID": 2100,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾族本居極西之地，受神諭指引，\n跨越「逆流之河」來到中土。時值戰國亂世，\n吾族助秦王掃六合，統天下。\n然秦王欲求長生，窺視吾族血脈之力。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（吾族本居极西之地，受神谕指引，\n跨越「逆流之河」来到中土。时值战国乱世，\n吾族助秦王扫六合，统天下。\n然秦王欲求长生，窥视吾族血脉之力。）＊",
+    "links": [2102]
+  },
+  {
+    "entryID": 2101,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點出口(瀑布後的洞穴)",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [103]
+  },
+  {
+    "entryID": 2102,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾族不願為奴，遂隱於深山，\n封印逆流河口，以此神像鎮之。\n後世有緣人，若得吾族傳承，\n當以此力守護蒼生，勿蹈秦王覆轍。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（吾族不愿为奴，遂隐于深山，\n封印逆流河口，以此神像镇之。\n后世有缘人，若得吾族传承，\n当以此力守护苍生，勿蹈秦王覆辙。）＊",
+    "links": [94]
+  },
+  {
+    "entryID": 2103,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「專注於圖形。」",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true",
+    "zh_CN": "[em2][隐藏选项][/em2]「专注于图形。」",
+    "links": [98]
+  },
+  {
+    "entryID": 2104,
+    "actorID": "MC1",
+    "text": "「試著破解其中奧妙。」",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  == true",
+    "zh_CN": "「试着破解其中奥妙。」",
+    "links": [101]
+  },
+  {
+    "entryID": 2105,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"Knowledge\", 1)  == true",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 2106,
+    "actorID": "role97",
+    "text": "「我只是想要當個快樂的獵手，還真難啊…」",
+    "Sequence": "",
+    "zh_CN": "「我只是想要当个快乐的猎手，还真难啊…」",
+    "links": []
+  },
+  {
+    "entryID": 2107,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一股柔和的水流竟然托住了你，你順著水流很快地來到了一山洞中。）＊",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF11\", \"success\");",
+    "Description": "任務完成",
+    "zh_CN": "[panel=6]＊（一股柔和的水流竟然托住了你，你顺着水流很快地来到了一山洞中。）＊",
+    "links": [91]
+  },
+  {
+    "entryID": 2108,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊水潭",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [14, 2067]
+  },
+  {
+    "entryID": 2110,
+    "actorID": "MC1",
+    "text": "「這裡沒啥值得查的了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "CurrentQuestState(\"CF12\") ~= \"active\"",
+    "zh_CN": "「这里没啥值得查的了。」",
+    "links": []
+  },
+  {
+    "entryID": 2111,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@9;\nContinue()@9;",
+    "Description": "空地戰鬥開始演出",
+    "links": [34]
+  },
+  {
+    "entryID": 2112,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@0.1;\nContinue()@0.1;",
+    "Description": "空地戰鬥勝利演出",
+    "links": [40]
+  },
+  {
+    "entryID": 2114,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你支付了 300 錢，獲得了狗頭人的召喚信物。看來這傢伙雖然貪吃，但帳算得很精。）＊",
+    "Sequence": "ModifyData(Valuable,Player,CallingDogBrother,3);",
+    "Script": "Variable[\"HireDogMan\"] = true",
+    "Description": "獲得貴種品、變數更新",
+    "zh_CN": "[panel=6]＊（你支付了 300 钱，获得了狗头人的召唤信物。看来这家伙虽然贪吃，但帐算得很精。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2115,
+    "actorID": "role106",
+    "text": "「[em7]伸出三根手指[/em7]但是……只能三次！幫多了……吃虧！！」",
+    "Sequence": "",
+    "zh_CN": "「[em7]伸出三根手指[/em7]但是……只能三次！帮多了……吃亏！！」",
+    "links": [2114]
+  },
+  {
+    "entryID": 2116,
+    "actorID": "MC1",
+    "text": "「乖乖……這神像。」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableEventBG(ZhongWeiHomeGoddessStatue);",
+    "Conditions": "CurrentQuestState(\"CF12\") == \"active\"",
+    "zh_CN": "「乖乖……这神像。」",
+    "links": [92]
+  },
+  {
+    "entryID": 2117,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 4233,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_FallWater);\nContinue()@Message(EndEntryEvent);",
+    "Description": "瀑布跳下演出",
+    "links": [4234]
+  },
+  {
+    "entryID": 4234,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Description": "淡出",
+    "links": [90]
+  },
+  {
+    "entryID": 4235,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Description": "淡入",
+    "links": [4233]
+  },
+  {
+    "entryID": 4236,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  }
+]

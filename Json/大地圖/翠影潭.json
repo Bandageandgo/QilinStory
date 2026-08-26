@@ -1,0 +1,914 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（山路轉過一道彎，眼前豁然是一方碧潭，潭水深綠近墨，水面霧氣繚繞。潭邊坐著一位鬚髮花白的老者，手持一根釣竿，竿尖垂著細線探入水中，一動也不動，彷彿與潭水融成了一體。）＊",
+    "Sequence": "",
+    "Description": "強制觸發",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,8);",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [4, 5]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你湊近了些看清楚——鉤上果然一絲餌料都沒有，鉤尖甚至微微反著光，像是特意讓人看見的。方才那股感覺，不是你多心。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,50);\nEnableEventBG(OldManFishing);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "事件圖",
+    "links": [6]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你想再看仔細些，卻始終瞧不出個所以然，那點說不上來的不對勁，也就這麼淡去了。）＊",
+    "Sequence": "EnableEventBG(OldManFishing);",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "事件圖",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role139",
+    "text": "「來都來了，坐吧。別出聲，我這魚膽子小。」",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF39\", \"active\")",
+    "Description": "觸發任務",
+    "links": [7, 8, 9]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「這鉤上，似乎沒有餌？」",
+    "Sequence": "",
+    "links": [12]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「這潭裡，魚兒可多？」",
+    "Sequence": "",
+    "links": [19]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「一把年紀了，還耗在這兒？」",
+    "Sequence": "",
+    "links": [21]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "不由分說，直接出手試探。",
+    "Sequence": "",
+    "links": [23]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "什麼也不說，在一旁坐下陪著看水面。",
+    "Sequence": "",
+    "links": [25]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「老丈這鉤上，似乎沒有餌？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "role139",
+    "text": "「呵，你竟能瞧出來，那也算不是俗人了。」",
+    "Sequence": "",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role139",
+    "text": "「餌是給魚吃的。我釣的，不是魚。」",
+    "Sequence": "",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「你不是在釣魚……那你到底在等什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者的手，極輕微地頓了一下。潭面依舊平靜，但那根釣竿，卻彷彿被握得緊了幾分。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "role139",
+    "text": "「……這句話，我自己倒是有陣子沒問過了。」",
+    "Sequence": "",
+    "links": [30]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「老丈這潭裡，可有什麼特別的魚？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role139",
+    "text": "「這潭裡魚多不多，我還真沒數過。想吃魚，去下游，那邊多的是。」",
+    "Sequence": "",
+    "links": [10, 11]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「一把年紀了，還有閒工夫在這兒釣魚？」",
+    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者連眼皮都沒抬一下，彷彿你這句話跟腳邊的石頭沒什麼兩樣——就這麼重新沉入那種近乎凝滯的寧靜之中。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [10, 11]
+  },
+  {
+    "entryID": 23,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你按捺不住，欺身欲奪其釣竿，甚至已經運勁出招——可下一瞬，你竟說不清發生了什麼。手中一空，人已跌坐在原地，那根釣竿仍穩穩立在老者手中，竿尖連晃都沒晃一下。）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你這才驚覺，方才那一瞬，自己連他是怎麼出手的都沒看清。這老者的深淺，恐怕比看起來的還要深得多。）＊",
+    "Sequence": "SetPortrait(MC1,pic=19);",
+    "links": [2072]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你沒有說話，只是在老者身旁尋了塊石頭坐下，靜靜望著水面。時間一點一滴過去，潭面平靜無波，連一聲魚躍都沒有。）＊",
+    "Sequence": "",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不知過了多久，你甚至有些懷疑自己是不是坐錯了地方——正當你心浮氣躁、幾乎要起身離開時……）＊",
+    "Sequence": "",
+    "links": [27, 28]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "繼續留在原地。",
+    "Sequence": "",
+    "links": [29]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "忍不住起身離開。",
+    "Sequence": "",
+    "links": [2072]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role139",
+    "text": "「……我還當你坐不住。這麼久了，一句話都沒問。」",
+    "Sequence": "",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role139",
+    "text": "「閒著也是閒著，有件小事，你要不要跑一趟。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "role139",
+    "text": "「繞到潭子那頭，淺灘上有艘爛得差不多的舊船，船舷上刻著一道痕。你去看看，那道痕現在指著水面下什麼地方，回來跟我說一聲就行。」",
+    "Sequence": "",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「就……這麼簡單？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role139",
+    "text": "「…去吧，別耽誤功夫。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableEventBG();",
+    "Script": "SetQuestEntryState(\"CF39\", 2, \"active\")",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 35,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你見著了一堆勉強還維持著船形的朽木。側面，有一道人為刻下的痕跡，邊緣已被歲月磨得模糊，卻仍看得出劍刻的痕跡。）＊",
+    "Sequence": "",
+    "Description": "點擊舟",
+    "links": [36, 2054]
+  },
+  {
+    "entryID": 36,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,15);",
+    "Conditions": "CurrentQuestEntryState(\"CF39\", 2) == \"active\"",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [38, 39]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你順著刻痕的角度望去，那方向如今什麼也沒有。這些年來泥沙不知搬移過多少回，那道痕當年所指的地方，恐怕早就不是眼前這片礫石灘了。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,50);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [40]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你順著刻痕望去，水面下影影綽綽，看不真切，只覺得那裡似乎……有東西在發光…？）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「舟還在、刻痕也還在原處，底下卻什麼也沒有。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [2055]
+  },
+  {
+    "entryID": 41,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF39\", 2, \"success\");\nSetQuestEntryState(\"CF39\", 3, \"active\")",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 42,
+    "actorID": "role139",
+    "text": "「回來得挺快。怎麼樣，看見什麼了？」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF39\", 3) == \"active\"",
+    "Description": "回報任務",
+    "links": [2059]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「什麼都沒有，就一片空蕩蕩的礫石灘。」",
+    "Sequence": "",
+    "links": [46]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「水底似乎有東西在發光……」",
+    "Sequence": "",
+    "links": [61]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「一艘破船罷了，能有什麼名堂。」",
+    "Sequence": "",
+    "links": [70]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「什麼都沒有。那道痕指著的地方，只是一片空蕩蕩的礫石灘。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "role139",
+    "text": "「呵呵，什麼都沒有…」",
+    "Sequence": "",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "role139",
+    "text": "「空蕩蕩的……嘿，也是。這麼多年，我倒也一直沒撈著個什麼。」",
+    "Sequence": "",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "role139",
+    "text": "「說了你多半不信——我年輕時也算打遍過天下，後來就是找不著能讓我認真的人了。閒得沒事幹，才窩到這潭子邊釣魚。」",
+    "Sequence": "",
+    "links": [53, 2069]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「老丈許久沒下山了吧？如今江湖高手輩出，光英豪府的呂信、子羽兩位，就非常人也！」",
+    "Sequence": "",
+    "links": [54, 2060]
+  },
+  {
+    "entryID": 52,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,15);",
+    "links": [50]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「如今外頭江湖，可比你想的熱鬧！」",
+    "Sequence": "Continue();SetPortrait(MC1,pic=5);",
+    "links": [52]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「一個身高九尺，虎背熊腰、膂力驚人，一口大刀掄起來罡風陣陣，弓馬更是了得，箭無虛發，江湖人都說他那身騎射，不輸當年的飛將軍李廣！」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "Conditions": "IsPassDice()  == true",
+    "links": [2067]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「這兩位，說是當世萬人敵，也不誇張！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "role139",
+    "text": "「萬人敵……這詞，我有些日子沒聽人當真說過了。」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
+    "links": [79]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role139",
+    "text": "「萬人敵……這種話好聽是好聽，十句裡有九句是自己人捧自己人。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [63, 2070]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「我瞧見水底似乎有東西在發光，說不定真是把劍！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "role139",
+    "text": "「[em7]似笑非笑地看者你[/em7]，發光的東西？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [63, 2070]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]趕緊改口，換個說法重新解釋方才那句話。",
+    "Sequence": "",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,10);",
+    "links": [74]
+  },
+  {
+    "entryID": 67,
+    "actorID": "role139",
+    "text": "「……嘴皮子倒是利索。行，這回就當沒聽見，你重新說一次。」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "links": [43, 44, 45]
+  },
+  {
+    "entryID": 68,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者不再答話，重新拿起釣竿，將視線投回水面，任你說什麼，都像是說給石頭聽。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "Script": "SetQuestState(\"CF39\", \"failure\")",
+    "Description": "任務失敗",
+    "links": []
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「一艘破船罷了，能有什麼名堂。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "role139",
+    "text": "「破船罷了？看來你也懶得多看一眼。」",
+    "Sequence": "",
+    "links": [63, 2070]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「……其實晚輩方才詞不達意，容我再說一次。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "links": [67, 68]
+  },
+  {
+    "entryID": 79,
+    "actorID": "role139",
+    "text": "「你方才說的那兩個，呂信、子羽——是真是假，我倒說不好，不過倒是有趣。」",
+    "Sequence": "",
+    "links": [81]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role139",
+    "text": "「瞧你這點悟性，也說不準是真聰明，還是只是小聰明。」",
+    "Sequence": "",
+    "links": [2056]
+  },
+  {
+    "entryID": 81,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者說著，隨手撿起腳邊一截枯枝，在指間轉了一圈，像是在掂量什麼。）＊",
+    "Sequence": "",
+    "links": [80]
+  },
+  {
+    "entryID": 82,
+    "actorID": "role139",
+    "text": "「一個劍客手裡拿的是不是劍，從來不打緊。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "role139",
+    "text": "「真要說難的，是心裡沒有牽掛，把劍理看透了，招式的樣子，反倒可以忘掉。」",
+    "Sequence": "",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "role139",
+    "text": "「你去想怎麼拆一招、怎麼使一招，那都還隔著一層。真到了火候，是連個招式的痕跡都不必留——就像那羚羊夜裡歇腳，掛角在樹梢上，腳不沾地，連個蹤影都尋不著。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「所以老丈這些年，鉤上才不必掛餌……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "role139",
+    "text": "「這套東西，姑且教給你——你要是真能會上那兩位，替我探探深淺，也算沒白教。」",
+    "Sequence": "",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC1",
+    "text": "「老丈這是……讓晚輩替你走一趟江湖？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "role139",
+    "text": "「隨你怎麼想。左右我是閒著，你也不虧。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "role2",
+    "text": "[panel=6]＊（釣魚叟隨手把他的釣桿，在空中虛劃了幾道。桿頭並無鋒刃，你卻分明感覺到一股劍意撲面而來——）＊",
+    "Sequence": "",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "role139",
+    "text": "「[em7]將柳枝隨手一拋，落回潭中，泛起一圈漣漪[/em7]，這樣你應該能懂了吧。」",
+    "Sequence": "",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role139",
+    "text": "「行了，去吧。」",
+    "Sequence": "",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你躬身一禮，老者卻已重新望向水面，不再言語。翠影潭依舊霧氣氤氳，彷彿方才那場交會，只是潭水裡的一圈漣漪，轉瞬即逝。）＊",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF39\", 4, \"active\")",
+    "Description": "任務更新",
+    "links": [2065]
+  },
+  {
+    "entryID": 95,
+    "actorID": "role2",
+    "text": "[panel=6]＊（潭邊景色依舊，霧氣氤氳，老者仍坐在原處垂釣，彷彿時間從未在此流動過。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF39\", 4) == \"active\"",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "role139",
+    "text": "「回來了。」",
+    "Sequence": "",
+    "links": [98, 99]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC1",
+    "text": "單挑",
+    "Sequence": "",
+    "links": [100]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC1",
+    "text": "「請老丈，賜教一場。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者這回不再隨手引化——他站定身形，周身氣息與方才那個懶洋洋的釣魚老頭判若兩人。）＊",
+    "Sequence": "",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "role139",
+    "text": "「拿出你這陣子練的，讓我瞧瞧。」",
+    "Sequence": "",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,75);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [2063]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role2",
+    "text": "[panel=6]＊（幾番交手，你這才真切感覺到，御劍在自己手上，終於不再只是幾個招式的堆疊。老者收勢而立，眼底閃過一絲極淡的訝異。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == true",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role139",
+    "text": "「……有點意思。」",
+    "Sequence": "",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "role2",
+    "text": "[panel=6]＊（釣魚叟卻沒有像往常那樣立刻坐回原位，只是望著潭水，久久不語。）＊",
+    "Sequence": "",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "role2",
+    "text": "[panel=6]＊（釣魚叟的神情忽然有些恍惚，彷彿一瞬間被拉回了許多年前，低聲開口，像是自言自語，又像是說給你聽。）＊",
+    "Sequence": "",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "role139",
+    "text": "「年少時，家鄉有個作惡多端的羌人首領，欺凌鄉里。我那至交仗義執言，卻被他當眾折辱。[em2]公羊家有言：九世猶可復仇，雖百世可也[/em2]——況在當世？」",
+    "Sequence": "",
+    "links": [2064]
+  },
+  {
+    "entryID": 109,
+    "actorID": "role139",
+    "text": "「只是這一趟，去得久了些——羌人的餘部尋了來，把我那至交也殺了。」",
+    "Sequence": "",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "role139",
+    "text": "「我終究是……失了信！」",
+    "Sequence": "",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "role139",
+    "text": "「打那以後，我把劍沉入潭底，發誓再不與人動手。」",
+    "Sequence": "",
+    "links": [112]
+  },
+  {
+    "entryID": 112,
+    "actorID": "role2",
+    "text": "[panel=6]＊（釣魚叟起身走到潭邊，俯身探入水中，不過眨眼功夫，便從水底摸出一把以舊布裹著的長劍。）＊",
+    "Sequence": "",
+    "links": [113]
+  },
+  {
+    "entryID": 113,
+    "actorID": "role139",
+    "text": "「這把劍，年少時常伴我左右。你既學了這套東西，就該有把配得上的劍。」",
+    "Sequence": "",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "「老丈……」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(Valuable,Player,DragonSpringSword,1);",
+    "Description": "獲得物品",
+    "links": [115]
+  },
+  {
+    "entryID": 115,
+    "actorID": "role2",
+    "text": "[panel=6]＊（釣魚叟收起釣竿，動作不疾不徐，像是這一天，他早已想過無數遍。）＊",
+    "Sequence": "",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "role139",
+    "text": "「這魚，我也釣得夠久了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者的身影，一步步遠去，沒入林間霧氣，再也望不見了。潭邊只剩下你，和那把沉甸甸的劍。）＊",
+    "Sequence": "",
+    "links": [118]
+  },
+  {
+    "entryID": 118,
+    "actorID": "role2",
+    "text": "[panel=6]＊（潭邊只剩下你一人，霧氣依舊瀰漫，那道熟悉的身影，卻再也不會出現在這片礁石上了。你低頭看著手中那把劍，忽然想起老者臨去前的最後一句話。）＊",
+    "Sequence": "",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC1",
+    "text": "「劍在手裡，是劍；劍不在手裡，也還是劍……」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Script": "SetQuestEntryState(\"CF39\", 4, \"success\");\nSetQuestState(\"CF39\", \"success\")",
+    "Description": "完成任務",
+    "links": [2062]
+  },
+  {
+    "entryID": 122,
+    "actorID": "role139",
+    "text": "「還嫩了點，自己再去琢磨吧。」",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == false",
+    "links": []
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊釣魚叟",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2053, 42, 95]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者不再理會，重新沉入那副老僧入定般的姿態，彷彿你從未出現過一般。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"CF39\") == \"failure\"",
+    "Description": "任務失敗",
+    "links": []
+  },
+  {
+    "entryID": 2054,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC1",
+    "text": "「前輩難道另有深意…？」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "links": [41]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "role139",
+    "text": "「罷了，你若想學，我可以教你怎麼用劍。」",
+    "Sequence": "",
+    "links": [2057]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "MC1",
+    "text": "「用劍？我會用劍啊…」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "links": [2058]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "role139",
+    "text": "「呵呵，這東西你若學得五六分，這世上，就怕是沒剩幾個對手。」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "links": [82]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF39\", 3, \"success\")",
+    "Description": "任務更新",
+    "links": [43, 44, 45]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC1",
+    "text": "「呂信、子羽兩位——一個力能扛鼎，一刀劈下去，連城牆都能生生劈出個窟窿；一個弓馬絕倫，箭一放出去，三里外照樣取人首級，眼睛都不必眨一下！」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "Conditions": "IsPassDice()  == false",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "MC1",
+    "text": "「這兩位往陣前一站，別說尋常悍匪腿軟，便是千軍萬馬擺在跟前，怕也殺他個七進七出，面不改色！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [58]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場，場上人物更換",
+    "links": [2066]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [104, 122]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "role139",
+    "text": "「我便許下一句『此辱，必為君雪』，隻身殺入賀蘭山，直至取了那首領首級後而歸。」",
+    "Sequence": "",
+    "links": [109]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,DragonSword);\nShowHint(Skill,DragonSword);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能卡",
+    "links": []
+  },
+  {
+    "entryID": 2066,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,DragonSword_9);\nShowHint(Skill,DragonSword_9);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能卡",
+    "links": []
+  },
+  {
+    "entryID": 2067,
+    "actorID": "MC1",
+    "text": "「一個身高八尺，丹鳳眼、臥蠶眉，相貌堂堂、威風凜凜，臉一沉，悍匪個個腿軟——」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "links": [55]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "MC1",
+    "text": "「老丈許久沒下山了吧？」",
+    "Sequence": "Continue();SetPortrait(MC1,pic=5);",
+    "links": [2073]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "MC1",
+    "text": "「等、等，我的意思其實是…」",
+    "Sequence": "",
+    "links": [2071]
+  },
+  {
+    "entryID": 2071,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,RealpolitikCheck,10);",
+    "links": [74]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老者不再答話，重新拿起釣竿，將視線投回水面，任你說什麼，都像是說給石頭聽。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableEventBG();",
+    "Script": "SetQuestState(\"CF39\", \"failure\")",
+    "Description": "任務失敗",
+    "links": []
+  },
+  {
+    "entryID": 2073,
+    "actorID": "MC1",
+    "text": "「老丈許久沒下山了吧？如今江湖高手輩出，光英豪府的呂信、子羽兩位，就非常人也！」",
+    "Sequence": "",
+    "links": [2075]
+  },
+  {
+    "entryID": 2075,
+    "actorID": "MC1",
+    "text": "「呂信、子羽兩位——一個力能扛鼎，一刀劈下去，連城牆都能生生劈出個窟窿；一個弓馬絕倫，箭一放出去，三里外照樣取人首級，眼睛都不必眨一下！」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "links": [2061]
+  }
+]

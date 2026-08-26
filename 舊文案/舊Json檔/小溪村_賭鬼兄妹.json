@@ -1,0 +1,863 @@
+[
+  {
+    "entryID": 2457,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();\nSetPortrait(MC1,pic=1);",
+    "Description": "點擊賭徒兄長",
+    "links": [2459, 2545]
+  },
+  {
+    "entryID": 2458,
+    "actorID": "role101",
+    "text": "「你別任性……等我說好……」",
+    "Sequence": "",
+    "zh_TW": "「你別任性……等我說好……」",
+    "zh_CN": "「你别任性……等我说好……」",
+    "links": [2460]
+  },
+  {
+    "entryID": 2459,
+    "actorID": "role101",
+    "text": "「不過在這小村裡也實在是無聊的緊，小兄弟。\n反正咱們閒者也是閒者，要不陪我玩一把？」",
+    "Sequence": "",
+    "Conditions": "IsSkillObtained(\"Player\", \"StreetTactics\")  == false",
+    "zh_TW": "「不過在這小村裡也實在是無聊的緊，小兄弟。\n反正咱們閒者也是閒者，要不陪我玩一把？」",
+    "zh_CN": "「不过在这小村里也实在是无聊的紧，小兄弟。\n反正咱们闲者也是闲者，要不陪我玩一把？」",
+    "links": [2508, 2558, 2507]
+  },
+  {
+    "entryID": 2460,
+    "actorID": "role102",
+    "text": "「可是……哥哥～」",
+    "Sequence": "",
+    "zh_TW": "「可是……哥哥～」",
+    "zh_CN": "「可是……哥哥～」",
+    "links": [2461]
+  },
+  {
+    "entryID": 2461,
+    "actorID": "role101",
+    "text": "「都這種時候了，就別任——嗯？\n咳、咳嗯！」",
+    "Sequence": "",
+    "zh_TW": "「都這種時候了，就別任——嗯？\n咳、咳嗯！」",
+    "zh_CN": "「都这种时候了，就别任——嗯？\n咳、咳嗯！」",
+    "links": [2462]
+  },
+  {
+    "entryID": 2462,
+    "actorID": "role102",
+    "text": "「嗯？哎呀～小哥哥，何故在我們旁邊鬼鬼祟祟的，嗯……總不是想和姐姐玩吧？」",
+    "Sequence": "",
+    "zh_TW": "「嗯？哎呀～小哥哥，何故在我們旁邊鬼鬼祟祟的，嗯……總不是想和姐姐玩吧？」",
+    "zh_CN": "「嗯？哎呀～小哥哥，何故在我们旁边鬼鬼祟祟的，嗯……总不是想和姐姐玩吧？」",
+    "links": [2517]
+  },
+  {
+    "entryID": 2463,
+    "actorID": "role101",
+    "text": "「唉！姑娘家還不矜持點？像什麼樣？\n對不住啊這位小哥，咱妹妹性子如此，我替她賠個不是。」",
+    "Sequence": "",
+    "zh_TW": "「唉！姑娘家還不矜持點？像什麼樣？\n對不住啊這位小哥，咱妹妹性子如此，我替她賠個不是。」",
+    "zh_CN": "「唉！姑娘家还不矜持点？像什么样？\n对不住啊这位小哥，咱妹妹性子如此，我替她赔个不是。」",
+    "links": [2464]
+  },
+  {
+    "entryID": 2464,
+    "actorID": "role102",
+    "text": "「呵呵，對不住啊小哥哥，人家就開個小玩笑。\n沒惱著你吧？」",
+    "Sequence": "",
+    "zh_TW": "「呵呵，對不住啊小哥哥，人家就開個小玩笑。\n沒惱著你吧？」",
+    "zh_CN": "「呵呵，对不住啊小哥哥，人家就开个小玩笑。\n没恼着你吧？」",
+    "links": [2465]
+  },
+  {
+    "entryID": 2465,
+    "actorID": "role101",
+    "text": "「對不住吶小兄弟，咱們兄妹連趕了幾天路，實在是乏得緊，這精神頭有些撐不住，就先失陪啦。」",
+    "Sequence": "",
+    "zh_TW": "「對不住吶小兄弟，咱們兄妹連趕了幾天路，實在是乏得緊，這精神頭有些撐不住，就先失陪啦。」",
+    "zh_CN": "「对不住呐小兄弟，咱们兄妹连赶了几天路，实在是乏得紧，这精神头有些撑不住，就先失陪啦。」",
+    "links": []
+  },
+  {
+    "entryID": 2466,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginMiniGame(Drinking,Default,Default,AlcoholTolerance,NPC25);\nSetContinueMode(original)@Message(EndMiniGame);\nContinue()@Message(EndMiniGame)",
+    "Script": "Variable[\"F_BoxMapM01_33\"] = 1",
+    "Description": "喝酒小遊戲",
+    "links": [2510]
+  },
+  {
+    "entryID": 2467,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();\nSetPortrait(MC1,pic=1);",
+    "Description": "點擊酒鬼妹妹",
+    "links": [2544, 2491, 2548]
+  },
+  {
+    "entryID": 2468,
+    "actorID": "role102",
+    "text": "「嘿嘿，小哥～你還真是熱情～\n就這麼想與我說說話嗎？唉呦，熱切的男人，我心悅地很！」",
+    "Sequence": "",
+    "zh_TW": "「嘿嘿，小哥～你還真是熱情～\n就這麼想與我說說話嗎？唉呦，熱切的男人，我心悅地很！」",
+    "zh_CN": "「嘿嘿，小哥～你还真是热情～\n就这么想与我说说话吗？唉呦，热切的男人，我心悦地很！」",
+    "links": [2519]
+  },
+  {
+    "entryID": 2470,
+    "actorID": "MC1",
+    "text": "[em2]［調情］[/em2]「這裡有一種世間最烈、也最甜的酒……」",
+    "Sequence": "",
+    "zh_TW": "[em2]［調情］[/em2]「這裡有一種世間最烈、也最甜的酒……」",
+    "zh_CN": "[em2]［调情］[/em2]「这里有一种世间最烈、也最甜的酒……」",
+    "links": [2473]
+  },
+  {
+    "entryID": 2472,
+    "actorID": "MC1",
+    "text": "[em2]［口才］[/em2]「姑娘想要何物，還請明示。」",
+    "Sequence": "",
+    "zh_TW": "[em2]［口才］[/em2]「姑娘想要何物，還請明示。」",
+    "zh_CN": "[em2]［口才］[/em2]「姑娘想要何物，还请明示。」",
+    "links": [2483]
+  },
+  {
+    "entryID": 2473,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,FlirtingCheck,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "開始檢定",
+    "links": [2474]
+  },
+  {
+    "entryID": 2474,
+    "actorID": "MC1",
+    "text": "「姐姐想要好東西醒神？巧了，我這裡正好藏有一種酒，雖無形無色，卻最是醉人。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「姐姐想要好東西醒神？巧了，我這裡正好藏有一種酒，雖無形無色，卻最是醉人。」",
+    "zh_CN": "「姐姐想要好东西醒神？巧了，我这里正好藏有一种酒，虽无形无色，却最是醉人。」",
+    "links": [2557]
+  },
+  {
+    "entryID": 2475,
+    "actorID": "role102",
+    "text": "「……「你的天長地久」？\n呵呵呵……小哥可真會說話……呵呵呵！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Flirting,20);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "「……「你的天長地久」？\n呵呵呵……小哥可真會說話……呵呵呵！」",
+    "zh_CN": "「……「你的天长地久」？ \n呵呵呵……小哥可真会说话……呵呵呵！ 」",
+    "links": [2522]
+  },
+  {
+    "entryID": 2477,
+    "actorID": "role102",
+    "text": "「呵呵，小哥你還真會說話！好啦好啦，你的嘴巴和抹了蜜一樣，我也得給點兒好處——」",
+    "Sequence": "",
+    "zh_TW": "「呵呵，小哥你還真會說話！好啦好啦，你的嘴巴和抹了蜜一樣，我也得給點兒好處——」",
+    "zh_CN": "「呵呵，小哥你还真会说话！好啦好啦，你的嘴巴和抹了蜜一样，我也得给点儿好处——」",
+    "links": [2478]
+  },
+  {
+    "entryID": 2478,
+    "actorID": "role102",
+    "text": "「你別看這小村十分平常，村中的[em2]水井[/em2]底下有個好東西呢！」",
+    "Sequence": "",
+    "zh_TW": "「你別看這小村十分平常，村中的[em2]水井[/em2]底下有個好東西呢！」",
+    "zh_CN": "「你别看这小村十分平常，村中的[em2]水井[/em2]底下有个好东西呢！」",
+    "links": [2479]
+  },
+  {
+    "entryID": 2479,
+    "actorID": "role102",
+    "text": "「呵呵，奴家見識淺薄，何況那井是淤泥遍布，奴家可不想弄髒自己的手……如何定奪，便交予小哥你了。」",
+    "Sequence": "",
+    "zh_TW": "「呵呵，奴家見識淺薄，何況那井是淤泥遍布，奴家可不想弄髒自己的手……如何定奪，便交予小哥你了。」",
+    "zh_CN": "「呵呵，奴家见识浅薄，何况那井是淤泥遍布，奴家可不想弄脏自己的手……如何定夺，便交予小哥你了。」",
+    "links": [2482]
+  },
+  {
+    "entryID": 2481,
+    "actorID": "role102",
+    "text": "「罷了罷了，等你找到奴家喜歡的好東西，奴家倒可以陪你說說話。呵呵，奴家會好好等著的。」",
+    "Sequence": "",
+    "zh_TW": "「罷了罷了，等你找到奴家喜歡的好東西，奴家倒可以陪你說說話。呵呵，奴家會好好等著的。」",
+    "zh_CN": "「罢了罢了，等你找到奴家喜欢的好东西，奴家倒可以陪你说说话。呵呵，奴家会好好等着的。」",
+    "links": [2482]
+  },
+  {
+    "entryID": 2482,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "Variable[\"F_BoxMapM01_12\"] = true",
+    "Description": "變數更新",
+    "links": []
+  },
+  {
+    "entryID": 2483,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "開始檢定",
+    "links": [2484]
+  },
+  {
+    "entryID": 2484,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2485, 2488]
+  },
+  {
+    "entryID": 2485,
+    "actorID": "role102",
+    "text": "「嗯……若是直白的說了，倒也是無趣……」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "「嗯……若是直白的說了，倒也是無趣……」",
+    "zh_CN": "「嗯……若是直白的说了，倒也是无趣……」",
+    "links": [2486]
+  },
+  {
+    "entryID": 2486,
+    "actorID": "role102",
+    "text": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
+    "Sequence": "",
+    "zh_TW": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
+    "zh_CN": "「[em7]盈盈一笑，向主角行了个万福礼[/em7]\n小女子无以为报，便送小哥……一句吉言吧！\n祝小哥往后行走江湖，桃花朵朵开，却片叶不沾身～」",
+    "links": [2528]
+  },
+  {
+    "entryID": 2487,
+    "actorID": "role102",
+    "text": "「唉呦！讓你好生猜猜呢，這題又不難，小哥，我相信你呢！」",
+    "Sequence": "",
+    "zh_TW": "「唉呦！讓你好生猜猜呢，這題又不難，小哥，我相信你呢！」",
+    "zh_CN": "「唉呦！让你好生猜猜呢，这题又不难，小哥，我相信你呢！」",
+    "links": [2482]
+  },
+  {
+    "entryID": 2488,
+    "actorID": "role102",
+    "text": "「呵呵，奴家雖不討厭有話直說的男人，但此處著實無聊的很……小哥就當是陪陪我的興致，努力猜猜？」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「呵呵，奴家雖不討厭有話直說的男人，但此處著實無聊的很……小哥就當是陪陪我的興致，努力猜猜？」",
+    "zh_CN": "「呵呵，奴家虽不讨厌有话直说的男人，但此处着实无聊的很……小哥就当是陪陪我的兴致，努力猜猜？」",
+    "links": [2489]
+  },
+  {
+    "entryID": 2489,
+    "actorID": "role102",
+    "text": "「等你找到奴家喜歡的好東西，奴家倒可以陪你說說話。呵呵，奴家會好好等著的。」",
+    "Sequence": "",
+    "zh_TW": "「等你找到奴家喜歡的好東西，奴家倒可以陪你說說話。呵呵，奴家會好好等著的。」",
+    "zh_CN": "「等你找到奴家喜欢的好东西，奴家倒可以陪你说说话。呵呵，奴家会好好等着的。」",
+    "links": [2529]
+  },
+  {
+    "entryID": 2491,
+    "actorID": "MC1",
+    "text": "「姑娘想要的可是此物？」",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Buddhlood\")  == true and (Variable[\"F_BoxMapM01_12\"] == true)",
+    "Description": "條件：若擁有【佛血酒】，佛血酒可以在水井中獲得",
+    "zh_TW": "「姑娘想要的可是此物？」",
+    "zh_CN": "「姑娘想要的可是此物？」",
+    "links": [2493]
+  },
+  {
+    "entryID": 2493,
+    "actorID": "role102",
+    "text": "「哎呀！不愧是小哥，真上道呀！」",
+    "Sequence": "",
+    "zh_TW": "「哎呀！不愧是小哥，真上道呀！」",
+    "zh_CN": "「哎呀！不愧是小哥，真上道呀！」",
+    "links": [2511]
+  },
+  {
+    "entryID": 2494,
+    "actorID": "role102",
+    "text": "「哼～算了！有酒不嫌棄，何況是小哥你帶來的，來來來，乾了！」",
+    "Sequence": "ModifyData(Valuable,Player,Buddhlood,-1);",
+    "Description": "失去：佛血酒*１",
+    "zh_TW": "「哼～算了！有酒不嫌棄，何況是小哥你帶來的，來來來，乾了！」",
+    "zh_CN": "「哼～算了！有酒不嫌弃，何况是小哥你带来的，来来来，干了！」",
+    "links": [2495]
+  },
+  {
+    "entryID": 2495,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "links": [2496]
+  },
+  {
+    "entryID": 2496,
+    "actorID": "role102",
+    "text": "「……！\n……噶、噶呵呵！」",
+    "Sequence": "",
+    "zh_TW": "「……！\n……噶、噶呵呵！」",
+    "zh_CN": "「……！\n……噶、噶呵呵！」",
+    "links": [2497]
+  },
+  {
+    "entryID": 2497,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "links": [2498]
+  },
+  {
+    "entryID": 2498,
+    "actorID": "role102",
+    "text": "「好酒！好酒！\n哎呀！奴……老娘好久沒喝著這麼美味的玩意兒了！」",
+    "Sequence": "",
+    "zh_TW": "「好酒！好酒！\n哎呀！奴……老娘好久沒喝著這麼美味的玩意兒了！」",
+    "zh_CN": "「好酒！好酒！\n哎呀！奴……老娘好久没喝着这么美味的玩意儿了！」",
+    "links": [2499]
+  },
+  {
+    "entryID": 2499,
+    "actorID": "role102",
+    "text": "「香醇中帶了點血腥，血腥中又帶了些回甘，入喉渾厚，後韻卻猶若火燒……燒盡後又是一抹芳香…」",
+    "Sequence": "",
+    "zh_TW": "「香醇中帶了點血腥，血腥中又帶了些回甘，入喉渾厚，後韻卻猶若火燒……燒盡後又是一抹芳香…」",
+    "zh_CN": "「香醇中带了点血腥，血腥中又带了些回甘，入喉浑厚，后韵却犹若火烧……烧尽后又是一抹芳香…」",
+    "links": [2500]
+  },
+  {
+    "entryID": 2500,
+    "actorID": "role102",
+    "text": "「哎呀～小哥你對人家真好！叫人家心兒砰砰跳呢！\n既然小哥你對人家這麼好，我也得以禮相待才是。」",
+    "Sequence": "",
+    "zh_TW": "「哎呀～小哥你對人家真好！叫人家心兒砰砰跳呢！\n既然小哥你對人家這麼好，我也得以禮相待才是。」",
+    "zh_CN": "「哎呀～小哥你对人家真好！叫人家心儿砰砰跳呢！\n既然小哥你对人家这么好，我也得以礼相待才是。」",
+    "links": [2549]
+  },
+  {
+    "entryID": 2501,
+    "actorID": "role102",
+    "text": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]，\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
+    "Sequence": "EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]，\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
+    "zh_CN": "「[em7]盈盈一笑，向主角行了个万福礼[/em7]，\n小女子无以为报，便送小哥……一句吉言吧！\n祝小哥往后行走江湖，桃花朵朵开，却片叶不沾身～」",
+    "links": [2502]
+  },
+  {
+    "entryID": 2502,
+    "actorID": "role102",
+    "text": "「小哥再見～你真是個好人～」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「小哥再見～你真是個好人～」",
+    "zh_CN": "「小哥再见～你真是个好人～」",
+    "links": [2550]
+  },
+  {
+    "entryID": 2507,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": [2509]
+  },
+  {
+    "entryID": 2508,
+    "actorID": "MC1",
+    "text": "「玩，都玩。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「玩，都玩。」",
+    "zh_CN": "「玩，都玩。」",
+    "links": [2466]
+  },
+  {
+    "entryID": 2509,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 2510,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2513, 2514]
+  },
+  {
+    "entryID": 2511,
+    "actorID": "role102",
+    "text": "「嗯？這酒……怎麼紅通通的？哼～還真是古怪。\n小哥，你不是拿了什麼奇怪的東西給奴家吧？」",
+    "Sequence": "",
+    "zh_TW": "「嗯？這酒……怎麼紅通通的？哼～還真是古怪。\n小哥，你不是拿了什麼奇怪的東西給奴家吧？」",
+    "zh_CN": "「嗯？这酒……怎么红通通的？哼～还真是古怪。\n小哥，你不是拿了什么奇怪的东西给奴家吧？」",
+    "links": [2494]
+  },
+  {
+    "entryID": 2513,
+    "actorID": "role101",
+    "text": "「哈哈，小兄弟還太嫩哩！\n來，爺爺我在這兒等你呢，你要想喝，隨時奉陪！」",
+    "Sequence": "",
+    "Conditions": "IsPassMiniGame()  == false",
+    "zh_TW": "「哈哈，小兄弟還太嫩哩！\n來，爺爺我在這兒等你呢，你要想喝，隨時奉陪！」",
+    "zh_CN": "「哈哈，小兄弟还太嫩哩！\n来，爷爷我在这儿等你呢，你要想喝，随时奉陪！」",
+    "links": [2518]
+  },
+  {
+    "entryID": 2514,
+    "actorID": "role101",
+    "text": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
+    "Sequence": "",
+    "Conditions": "IsPassMiniGame()  == true",
+    "zh_TW": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
+    "zh_CN": "「唉！小……噶儿！小哥～了不起啊～\n嘿嘿！能拼赢我的家伙……噶儿！第一次见！」",
+    "links": [2515]
+  },
+  {
+    "entryID": 2515,
+    "actorID": "role101",
+    "text": "「爽，太爽了！嘿、嘿嘿，噶兒！」",
+    "Sequence": "",
+    "zh_TW": "「爽，太爽了！嘿、嘿嘿，噶兒！」",
+    "zh_CN": "「爽，太爽了！嘿、嘿嘿，噶儿！」",
+    "links": [2530]
+  },
+  {
+    "entryID": 2517,
+    "actorID": "MC1",
+    "text": "「呃……！不、不是的，我——」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "「呃……！不、不是的，我——」",
+    "zh_CN": "「呃……！不、不是的，我——」",
+    "links": [2463]
+  },
+  {
+    "entryID": 2518,
+    "actorID": "MC1",
+    "text": "「壞了，玩過頭了……嗚嗚，好、好暈，好想吐……」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "「壞了，玩過頭了……嗚嗚，好、好暈，好想吐……」",
+    "zh_CN": "「坏了，玩过头了……呜呜，好、好晕，好想吐……」",
+    "links": []
+  },
+  {
+    "entryID": 2519,
+    "actorID": "MC1",
+    "text": "「你在說什…麼？」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「你在說什…麼？」",
+    "zh_CN": "「你在说什…么？」",
+    "links": [2520]
+  },
+  {
+    "entryID": 2520,
+    "actorID": "role102",
+    "text": "「唉！你離這麼遠做甚麼吶，奴家又不會吃了你！」",
+    "Sequence": "",
+    "zh_TW": "「唉！你離這麼遠做甚麼吶，奴家又不會吃了你！」",
+    "zh_CN": "「唉！你离这么远做什么呐，奴家又不会吃了你！」",
+    "links": [2547]
+  },
+  {
+    "entryID": 2521,
+    "actorID": "role102",
+    "text": "「你若取些「好東西」來給奴家醒醒神……呼呼，奴家倒也能告訴小哥一件「好事兒」。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "「你若取些「好東西」來給奴家醒醒神……呼呼，奴家倒也能告訴小哥一件「好事兒」。」",
+    "zh_CN": "「你若取些「好东西」来给奴家醒醒神……呼呼，奴家倒也能告诉小哥一件「好事儿」。 」",
+    "links": [2472, 2470]
+  },
+  {
+    "entryID": 2522,
+    "actorID": "MC1",
+    "text": "「姑娘說想要「好東西」，可在下以為，世間沒什麼東西比美人淺笑更加美好了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「姑娘說想要「好東西」，可在下以為，世間沒什麼東西比美人淺笑更加美好了。」",
+    "zh_CN": "「姑娘说想要「好东西」，可在下以为，世间没什么东西比美人浅笑更加美好了。 」",
+    "links": [2477]
+  },
+  {
+    "entryID": 2523,
+    "actorID": "MC1",
+    "text": "「…就是與你「天長地久」啊。」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「…就是與你「天長地久」啊。」",
+    "zh_CN": "「…就是与你「天长地久」啊。 」",
+    "links": [2526]
+  },
+  {
+    "entryID": 2524,
+    "actorID": "role102",
+    "text": "「……」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [2523]
+  },
+  {
+    "entryID": 2525,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [2481]
+  },
+  {
+    "entryID": 2526,
+    "actorID": "role102",
+    "text": "「…………」",
+    "Sequence": "",
+    "zh_TW": "「…………」",
+    "zh_CN": "「…………」",
+    "links": [2525]
+  },
+  {
+    "entryID": 2528,
+    "actorID": "MC1",
+    "text": "「你這也沒好好說啊！」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「你這也沒好好說啊！」",
+    "zh_CN": "「你这也没好好说啊！」",
+    "links": [2487]
+  },
+  {
+    "entryID": 2529,
+    "actorID": "MC1",
+    "text": "「真是麻煩的姑娘……不過，『好東西』麼？\n或許能從那姑娘身上討個頭緒？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「真是麻煩的姑娘……不過，『好東西』麼？\n或許能從那姑娘身上討個頭緒？」",
+    "zh_CN": "「真是麻烦的姑娘……不过，『好东西』么？\n或许能从那姑娘身上讨个头绪？」",
+    "links": [2482]
+  },
+  {
+    "entryID": 2530,
+    "actorID": "role101",
+    "text": "「嘿嘿……看你人不錯，哥哥我就告訴你。這江湖啊，就像這酒桌，誰老實誰吃虧！」",
+    "Sequence": "",
+    "zh_TW": "「嘿嘿……看你人不錯，哥哥我就告訴你。這江湖啊，就像這酒桌，誰老實誰吃虧！」",
+    "zh_CN": "「嘿嘿……看你人不错，哥哥我就告诉你。这江湖啊，就像这酒桌，谁老实谁吃亏！」",
+    "links": [2531]
+  },
+  {
+    "entryID": 2531,
+    "actorID": "role101",
+    "text": "「你以為打架靠的是拳頭？錯！大錯特錯！靠的是……噶兒！靠的是腦子靈光，手腳得更要快且神不知鬼不覺的！」",
+    "Sequence": "",
+    "zh_TW": "「你以為打架靠的是拳頭？錯！大錯特錯！靠的是……噶兒！靠的是腦子靈光，手腳得更要快且神不知鬼不覺的！」",
+    "zh_CN": "「你以为打架靠的是拳头？错！大错特错！靠的是……噶儿！靠的是脑子灵光，手脚得更要快且神不知鬼不觉的！」",
+    "links": [2532]
+  },
+  {
+    "entryID": 2532,
+    "actorID": "MC1",
+    "text": "「手腳要快…？你不會指的是讓我去偷東西吧？」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「手腳要快…？你不會指的是讓我去偷東西吧？」",
+    "zh_CN": "「手脚要快…？你不会指的是让我去偷东西吧？」",
+    "links": [2533]
+  },
+  {
+    "entryID": 2533,
+    "actorID": "role101",
+    "text": "「[em7]搖晃著手指，隨手抓起桌上的一把花生殼，且朝正在路邊呼呼大睡的狗指去[/em7]，\n看見沒？若那狗要是咬我，我就拿這花生殼丟它眼珠子！」",
+    "Sequence": "",
+    "zh_TW": "「[em7]搖晃著手指，隨手抓起桌上的一把花生殼，且朝正在路邊呼呼大睡的狗指去[/em7]，\n看見沒？若那狗要是咬我，我就拿這花生殼丟它眼珠子！」",
+    "zh_CN": "「[em7]摇晃着手指，随手抓起桌上的一把花生壳，且朝正在路边呼呼大睡的狗指去[/em7]，\n看见没？若那狗要是咬我，我就拿这花生壳丢它眼珠子！」",
+    "links": [2534]
+  },
+  {
+    "entryID": 2534,
+    "actorID": "role101",
+    "text": "「牠要是還撲過來，我就……我就抄起這板凳砸它腦袋！」",
+    "Sequence": "",
+    "zh_TW": "「牠要是還撲過來，我就……我就抄起這板凳砸它腦袋！」",
+    "zh_CN": "「它要是还扑过来，我就……我就抄起这板凳砸它脑袋！」",
+    "links": [2535]
+  },
+  {
+    "entryID": 2535,
+    "actorID": "MC1",
+    "text": "「就這？這不就是……耍無賴嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「就這？這不就是……耍無賴嗎？」",
+    "zh_CN": "「就这？这不就是……耍无赖吗？」",
+    "links": [2536]
+  },
+  {
+    "entryID": 2536,
+    "actorID": "role101",
+    "text": "「嘿嘿，命都沒了還管什麼無賴不無賴？」",
+    "Sequence": "",
+    "zh_TW": "「嘿嘿，命都沒了還管什麼無賴不無賴？」",
+    "zh_CN": "「嘿嘿，命都没了还管什么无赖不无赖？」",
+    "links": [2538]
+  },
+  {
+    "entryID": 2537,
+    "actorID": "role101",
+    "text": "「大俠？那都是騙人的！真打起來，身邊有什麼用什麼，這酒壺、這桌子、甚至是……」",
+    "Sequence": "",
+    "zh_TW": "「大俠？那都是騙人的！真打起來，身邊有什麼用什麼，這酒壺、這桌子、甚至是……」",
+    "zh_CN": "「大侠？那都是骗人的！真打起来，身边有什么用什么，这酒壶、这桌子、甚至是……」",
+    "links": [2540]
+  },
+  {
+    "entryID": 2538,
+    "actorID": "role101",
+    "text": "「小哥，我告訴你，之前，有幾個遊民圍著我要飯，甚是煩人！老子我就是抓了一把地上的沙子……」",
+    "Sequence": "",
+    "zh_TW": "「小哥，我告訴你，之前，有幾個遊民圍著我要飯，甚是煩人！老子我就是抓了一把地上的沙子……」",
+    "zh_CN": "「小哥，我告诉你，之前，有几个游民围着我要饭，甚是烦人！老子我就是抓了一把地上的沙子……」",
+    "links": [2539]
+  },
+  {
+    "entryID": 2539,
+    "actorID": "role101",
+    "text": "「呼！全迷了他們的眼，然後一板磚一個，碰碰崩，全都給我倒下！」",
+    "Sequence": "",
+    "zh_TW": "「呼！全迷了他們的眼，然後一板磚一個，碰碰崩，全都給我倒下！」",
+    "zh_CN": "「呼！全迷了他们的眼，然后一板砖一个，碰碰崩，全都给我倒下！」",
+    "links": [2537]
+  },
+  {
+    "entryID": 2540,
+    "actorID": "role101",
+    "text": "「噶兒！甚至是你剛吐的那堆東西，只要能讓人滑倒，那就是好寶貝！」",
+    "Sequence": "",
+    "zh_TW": "「噶兒！甚至是你剛吐的那堆東西，只要能讓人滑倒，那就是好寶貝！」",
+    "zh_CN": "「噶儿！甚至是你刚吐的那堆东西，只要能让人滑倒，那就是好宝贝！」",
+    "links": [2541]
+  },
+  {
+    "entryID": 2541,
+    "actorID": "MC1",
+    "text": "「……雖然聽起來卑鄙了點，但好像……有點道理？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「……雖然聽起來卑鄙了點，但好像……有點道理？」",
+    "zh_CN": "「……虽然听起来卑鄙了点，但好像……有点道理？」",
+    "links": [2542]
+  },
+  {
+    "entryID": 2542,
+    "actorID": "role101",
+    "text": "「[em7]已經趴在桌上快睡著了[/em7]，\n學著點……這叫……物盡其用……這才是……真正的……江湖……呼……呼……」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「[em7]已經趴在桌上快睡著了[/em7]，\n學著點……這叫……物盡其用……這才是……真正的……江湖……呼……呼……」",
+    "zh_CN": "「[em7]已经趴在桌上快睡着了[/em7]，\n学着点……这叫……物尽其用……这才是……真正的……江湖……呼……呼……」",
+    "links": [2564, 2543]
+  },
+  {
+    "entryID": 2543,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雖然這個酒鬼的話粗俗不堪，甚至有些下作。但你細細想來，這些小伎倆確實是市井之中最實用的生存智慧。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（雖然這個酒鬼的話粗俗不堪，甚至有些下作。但你細細想來，這些小伎倆確實是市井之中最實用的生存智慧。）＊",
+    "zh_CN": "[panel=6]＊（虽然这个酒鬼的话粗俗不堪，甚至有些下作。但你细细想来，这些小伎俩确实是市井之中最实用的生存智慧。）＊",
+    "links": [2555]
+  },
+  {
+    "entryID": 2544,
+    "actorID": "MC1",
+    "text": "「好重的酒味…」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nSetContinueMode(false);\nSetGameObjectShake(P0,ShakeNormal,XYAxis,1,20,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
+    "Conditions": "Variable[\"F_BoxMapM01_12\"] == false",
+    "zh_TW": "「好重的酒味…」",
+    "zh_CN": "「好重的酒味…」",
+    "links": [2468]
+  },
+  {
+    "entryID": 2545,
+    "actorID": "role2",
+    "text": "[panel=6]＊（毫無反應，這位仁兄忙著呼呼大睡。）＊",
+    "Sequence": "",
+    "Conditions": "IsSkillObtained(\"Player\", \"StreetTactics\")  == true",
+    "zh_TW": "[panel=6]＊（毫無反應，這位仁兄忙著呼呼大睡。）＊",
+    "zh_CN": "[panel=6]＊（毫无反应，这位仁兄忙者呼呼大睡。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2546,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();\nSetPortrait(MC1,pic=1);",
+    "Description": "靠近自動觸發",
+    "links": [2458]
+  },
+  {
+    "entryID": 2547,
+    "actorID": "MC8",
+    "text": "[panel=2]「……」",
+    "Sequence": "SetPortrait(MC8,pic=2);\nDisableCharacterExpression(0);\nEnableCharacterExpression(2,MC8,Anger);",
+    "zh_TW": "[panel=2]「……」",
+    "zh_CN": "[panel=2]「……」",
+    "links": [2521]
+  },
+  {
+    "entryID": 2548,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這位大姊自飲自樂，完全不理你。）＊",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Buddhlood\")  == false and (Variable[\"F_BoxMapM01_12\"] == true)",
+    "zh_TW": "[panel=6]＊（這位大姊自飲自樂，完全不理你。）＊",
+    "zh_CN": "[panel=6]＊（这位大姊自饮自乐，完全不理你。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2549,
+    "actorID": "MC1",
+    "text": "「咳咳，姑娘太客氣了，不知姑娘打算……？」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_TW": "「咳咳，姑娘太客氣了，不知姑娘打算……？」",
+    "zh_CN": "「咳咳，姑娘太客气了，不知姑娘打算……？」",
+    "links": [2501]
+  },
+  {
+    "entryID": 2550,
+    "actorID": "MC1",
+    "text": "「……啊？吉、吉言？就這？」",
+    "Sequence": "SetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「……啊？吉、吉言？就這？」",
+    "zh_CN": "「……啊？吉、吉言？就这？」",
+    "links": [2551]
+  },
+  {
+    "entryID": 2551,
+    "actorID": "MC1",
+    "text": "「等等……她剛才幾句話就把我打發了？而且我還沒法生氣，甚至心裡還有點……美滋滋的？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);",
+    "zh_TW": "「等等……她剛才幾句話就把我打發了？而且我還沒法生氣，甚至心裡還有點……美滋滋的？」",
+    "zh_CN": "「等等……她刚才几句话就把我打发了？而且我还没法生气，甚至心里还有点……美滋滋的？」",
+    "links": [2552]
+  },
+  {
+    "entryID": 2552,
+    "actorID": "MC1",
+    "text": "「這……高手啊！用幾句漂亮話，不用花一分錢，就換走了我的幫忙，還讓我沒法對她生氣……」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_TW": "「這……高手啊！用幾句漂亮話，不用花一分錢，就換走了我的幫忙，還讓我沒法對她生氣……」",
+    "zh_CN": "「这……高手啊！用几句漂亮话，不用花一分钱，就换走了我的帮忙，还让我没法对她生气……」",
+    "links": [2553]
+  },
+  {
+    "entryID": 2553,
+    "actorID": "MC1",
+    "text": "「原來這就是[em2]灌迷湯[/em2]！只要嘴夠甜，天下皆可佔便宜！ 學到了，學到了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "「原來這就是[em2]灌迷湯[/em2]！只要嘴夠甜，天下皆可佔便宜！ 學到了，學到了！」",
+    "zh_CN": "「原来这就是[em2]灌迷汤[/em2]！只要嘴够甜，天下皆可占便宜！ 学到了，学到了！」",
+    "links": [2554]
+  },
+  {
+    "entryID": 2554,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你從這位女子中領悟到了語言的藝術。有的時候，一頂高帽子比刀劍更有用。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你從這位女子中領悟到了語言的藝術。有的時候，一頂高帽子比刀劍更有用。）＊",
+    "zh_CN": "[panel=6]＊（你从这位女子中领悟到了语言的艺术。有的时候，一顶高帽子比刀剑更有用。）＊",
+    "links": [2556]
+  },
+  {
+    "entryID": 2555,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(LifeExp,20);\nModifyData(Skill,Player,StreetTactics);\nShowHint(Skill,StreetTactics);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得\"小伎倆\"",
+    "links": []
+  },
+  {
+    "entryID": 2556,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(LifeExp,20);\nModifyData(Skill,Player,SilverTongue);\nShowHint(Skill,SilverTongue);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能\"灌迷湯\"",
+    "links": []
+  },
+  {
+    "entryID": 2557,
+    "actorID": "MC1",
+    "text": "「這酒的名字，就叫……與妳天長地久！不知姐姐願不願意嘗一口？」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「這酒的名字，就叫……與妳天長地久！不知姐姐願不願意嘗一口？」",
+    "zh_CN": "「这酒的名字，就叫……与妳天长地久！不知姐姐愿不愿意尝一口？」",
+    "links": [2475, 2524]
+  },
+  {
+    "entryID": 2558,
+    "actorID": "MC1",
+    "text": "[em2][酒量檢定][跳過小遊戲][/em2]「當然沒問題囉…」",
+    "Sequence": "",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "zh_TW": "[em2][酒量檢定][跳過小遊戲][/em2]「當然沒問題囉…」",
+    "zh_CN": "[em2][酒量检定][跳过小游戏][/em2]「当然没问题啰…」",
+    "links": [2559]
+  },
+  {
+    "entryID": 2559,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,AlcoholToleranceCheck,12);",
+    "links": [2560]
+  },
+  {
+    "entryID": 2560,
+    "actorID": "MC1",
+    "text": "「嘿，來碰一個！都在酒裡了！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「嘿，來碰一個！都在酒裡了！」",
+    "zh_CN": "「嘿，来碰一个！都在酒里了！」",
+    "links": [2561, 2563]
+  },
+  {
+    "entryID": 2561,
+    "actorID": "MC1",
+    "text": "「壞了，玩過頭了……嗚嗚，好、好暈，好想吐……」",
+    "Sequence": "SetPortrait(MC1,pic=6);\nDisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「壞了，玩過頭了……嗚嗚，好、好暈，好想吐……」",
+    "zh_CN": "「坏了，玩过头了……呜呜，好、好晕，好想吐……」",
+    "links": [2562]
+  },
+  {
+    "entryID": 2562,
+    "actorID": "role101",
+    "text": "「哈哈，小兄弟還太嫩哩！\n來，爺爺我在這兒等你呢，你要想喝，隨時奉陪！」",
+    "Sequence": "",
+    "zh_TW": "「哈哈，小兄弟還太嫩哩！\n來，爺爺我在這兒等你呢，你要想喝，隨時奉陪！」",
+    "zh_CN": "「哈哈，小兄弟还太嫩哩！\n来，爷爷我在这儿等你呢，你要想喝，随时奉陪！」",
+    "links": []
+  },
+  {
+    "entryID": 2563,
+    "actorID": "role101",
+    "text": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
+    "zh_CN": "「唉！小……噶儿！小哥～了不起啊～\n嘿嘿！能拼赢我的家伙……噶儿！第一次见！」",
+    "links": [2515]
+  },
+  {
+    "entryID": 2564,
+    "actorID": "role2",
+    "text": "[panel=6][em3][背景：街頭混混][/em3]（雖然這番話旁人聽起來或許刺耳，但在你看來卻倍感親切。這等市井伎倆，才是能讓你活下去的硬道理。）",
+    "Sequence": "",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Charlatan\")  == true",
+    "zh_TW": "[panel=6][em3][背景：街頭混混][/em3]（雖然這番話旁人聽起來或許刺耳，但在你看來卻倍感親切。這等市井伎倆，才是能讓你活下去的硬道理。）",
+    "zh_CN": "[panel=6][em3][背景：街头混混][/em3]（虽然这番话旁人听起来或许刺耳，但在你看来却倍感亲切。这等市井伎俩，才是能让你活下去的硬道理。）",
+    "links": [2565]
+  },
+  {
+    "entryID": 2565,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,GiveMeMoney);\nShowHint(Skill,GiveMeMoney);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "links": [2555]
+  }
+]

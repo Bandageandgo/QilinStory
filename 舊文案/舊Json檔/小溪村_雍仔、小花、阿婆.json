@@ -1,0 +1,859 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你來到村子附近的河邊，見一身材圓胖的青年道士，穿著略顯陳舊但乾淨的道袍，正坐在一塊光滑的大石頭上，一邊欣賞著河景，一邊悠哉地嗑著瓜子。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（你來到村子附近的河邊，見一身材圓胖的青年道士，穿著略顯陳舊但乾淨的道袍，正坐在一塊光滑的大石頭上，一邊欣賞著河景，一邊悠哉地嗑著瓜子。）＊",
+    "zh_CN": "[panel=6]＊（你来到村子附近的河边，见一身材圆胖的青年道士，穿着略显陈旧但干净的道袍，正坐在一块光滑的大石头上，一边欣赏着河景，一边悠哉地嗑着瓜子。）＊",
+    "links": [65, 186]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role88",
+    "text": "「哎呀！稀客稀客！這荒郊野嶺的，沒想到還能遇到像兄台這樣氣度不凡的人物！」",
+    "Sequence": "",
+    "zh_TW": "「哎呀！稀客稀客！這荒郊野嶺的，沒想到還能遇到像兄台這樣氣度不凡的人物！」",
+    "zh_CN": "「哎呀！稀客稀客！这荒郊野岭的，没想到还能遇到像兄台这样气度不凡的人物！」",
+    "links": [2056]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「實不相瞞，我與表妹此行，正是為了那英豪府的俠客遴選。」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「實不相瞞，我與表妹此行，正是為了那英豪府的俠客遴選。」",
+    "zh_CN": "「实不相瞒，我与表妹此行，正是为了那英豪府的侠客遴选。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC20",
+    "text": "[panel=1]「哎呀！這可巧啦！我也正要去參加俠客遴選，我跟你說，這[em2]英豪府[/em2]啊，那可是咱們修道習武之人夢寐以求的魚躍龍門之地！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「哎呀！這可巧啦！我也正要去參加俠客遴選，我跟你說，這[em2]英豪府[/em2]啊，那可是咱們修道習武之人夢寐以求的魚躍龍門之地！」",
+    "zh_CN": "[panel=1]「哎呀！这可巧啦！我也正要去参加侠客遴选，我跟你说，这[em2]英豪府[/em2]啊，那可是咱们修道习武之人梦寐以求的鱼跃龙门之地！」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1_Meditate,Question);",
+    "zh_TW": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
+    "zh_CN": "「哦？鱼跃龙门？听闻英豪府遴选侠士，广纳天下英才，不知是何等盛事？」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC20",
+    "text": "[panel=1]「何止是盛事！那遴選可是[em2]三年一度[/em2]，天下英雄豪傑雲集！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「何止是盛事！那遴選可是[em2]三年一度[/em2]，天下英雄豪傑雲集！」",
+    "zh_CN": "[panel=1]「何止是盛事！那遴选可是[em2]三年一度[/em2]，天下英雄豪杰云集！」",
+    "links": [183]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC8",
+    "text": "[panel=2]「聽起來是很誘人…但真有這麼好的事？該不會是你誇大其詞吧？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「聽起來是很誘人…但真有這麼好的事？該不會是你誇大其詞吧？」",
+    "zh_CN": "[panel=2]「听起来是很诱人…但真有这么好的事？该不会是你夸大其词吧？」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC20",
+    "text": "[panel=1]「小姑娘此言差矣！我雍仔何曾說過虛話？這[em2]英豪府[/em2]的威名，豈是空穴來風？」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=1]「小姑娘此言差矣！我雍仔何曾說過虛話？這[em2]英豪府[/em2]的威名，豈是空穴來風？」",
+    "zh_CN": "[panel=1]「小姑娘此言差矣！我雍仔何曾说过虚话？这[em2]英豪府[/em2]的威名，岂是空穴来风？」",
+    "links": [185]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其來歷也定然不凡吧？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1_Meditate,Meditate);",
+    "zh_TW": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其來歷也定然不凡吧？」",
+    "zh_CN": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其来历也定然不凡吧？」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC20",
+    "text": "[panel=1]「兄弟果然有見識！說起這英豪府的來歷，那可就源遠流長了！想當年漢室初建，妖邪四起，蒼生受苦。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「兄弟果然有見識！說起這英豪府的來歷，那可就源遠流長了！想當年漢室初建，妖邪四起，蒼生受苦。」",
+    "zh_CN": "[panel=1]「兄弟果然有见识！说起这英豪府的来历，那可就源远流长了！想当年汉室初建，妖邪四起，苍生受苦。」",
+    "links": [67]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「原來如此！想不到英豪府竟有這般輝煌的過去與濟世救民的重任！道長此番前往，定是為繼承先賢遺志，在遴選中一展抱負，為天下太平出力了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「原來如此！想不到英豪府竟有這般輝煌的過去與濟世救民的重任！道長此番前往，定是為繼承先賢遺志，在遴選中一展抱負，為天下太平出力了！」",
+    "zh_CN": "「原来如此！想不到英豪府竟有这般辉煌的过去与济世救民的重任！道长此番前往，定是为继承先贤遗志，在遴选中一展抱负，为天下太平出力了！」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC20",
+    "text": "[panel=1]「說得好！兄弟真乃我知音！我雍仔此番下山，正是要效仿先賢，憑我茅山所學，在那遴選之中拔得頭籌「[em2]大丈夫立於天地間，豈能碌碌無為！[/em2]」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「說得好！兄弟真乃我知音！我雍仔此番下山，正是要效仿先賢，憑我茅山所學，在那遴選之中拔得頭籌「[em2]大丈夫立於天地間，豈能碌碌無為！[/em2]」",
+    "zh_CN": "[panel=1]「说得好！兄弟真乃我知音！我雍仔此番下山，正是要效仿先贤，凭我茅山所学，在那遴选之中拔得头筹「[em2]大丈夫立于天地间，岂能碌碌无为！[/em2]」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC20",
+    "text": "[panel=1]「不過嘛…嘿嘿，俗話說得好，英雄好漢也要吃飯不是？實不相瞞，貧道此行，這盤纏嘛…呃，略有些緊張。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「不過嘛…嘿嘿，俗話說得好，英雄好漢也要吃飯不是？實不相瞞，貧道此行，這盤纏嘛…呃，略有些緊張。」",
+    "zh_CN": "[panel=1]「不过嘛…嘿嘿，俗话说得好，英雄好汉也要吃饭不是？实不相瞒，贫道此行，这盘缠嘛…呃，略有些紧张。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC20",
+    "text": "[panel=1]「本來想著一路趕到英豪府，但途徑這[em2]小溪村[/em2]，卻讓我發現了些有意思的事情。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「本來想著一路趕到英豪府，但途徑這[em2]小溪村[/em2]，卻讓我發現了些有意思的事情。」",
+    "zh_CN": "[panel=1]「本来想着一路赶到英豪府，但途径这[em2]小溪村[/em2]，却让我发现了些有意思的事情。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC20",
+    "text": "[panel=1]「兄弟，你有所不知，我茅山一派，除了降妖伏魔，對[em2]風水堪輿之術[/em2]亦有涉獵。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「兄弟，你有所不知，我茅山一派，除了降妖伏魔，對[em2]風水堪輿之術[/em2]亦有涉獵。」",
+    "zh_CN": "[panel=1]「兄弟，你有所不知，我茅山一派，除了降妖伏魔，对[em2]风水堪舆之术[/em2]亦有涉猎。」",
+    "links": [70]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC20",
+    "text": "[panel=1]「我懷裡這張師門傳下的堪輿圖，對照此地山川走勢，你猜怎麼著？若我所料不差，這林子深處，極有可能藏著一座[em2]前朝的古墓[/em2]！你想想，古墓之中，",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「我懷裡這張師門傳下的堪輿圖，對照此地山川走勢，你猜怎麼著？若我所料不差，這林子深處，極有可能藏著一座[em2]前朝的古墓[/em2]！你想想，古墓之中，",
+    "zh_CN": "[panel=1]「我怀里这张师门传下的堪舆图，对照此地山川走势，你猜怎么着？若我所料不差，这林子深处，极有可能藏着一座[em2]前朝的古墓[/em2]！你想想，古墓之中，",
+    "links": [68]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC8",
+    "text": "[panel=2]「古墓？道長，你說的這麼玄乎，不會是想騙我們去給你當苦力吧？而且，這窮鄉僻壤的，哪來什麼大人物的古墓？」",
+    "Sequence": "SetPortrait(MC8,pic=6);EnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「古墓？道長，你說的這麼玄乎，不會是想騙我們去給你當苦力吧？而且，這窮鄉僻壤的，哪來什麼大人物的古墓？」",
+    "zh_CN": "[panel=2]「古墓？道长，你说的这么玄乎，不会是想骗我们去给你当苦力吧？而且，这穷乡僻壤的，哪来什么大人物的古墓？」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC20",
+    "text": "[panel=1]「哎呀，小姑娘此言差矣！我雍仔豈是那等宵小之輩？我茅山道法，講究實事求是！這堪輿圖加上我的觀察，十有八九錯不了！」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=1]「哎呀，小姑娘此言差矣！我雍仔豈是那等宵小之輩？我茅山道法，講究實事求是！這堪輿圖加上我的觀察，十有八九錯不了！」",
+    "zh_CN": "[panel=1]「哎呀，小姑娘此言差矣！我雍仔岂是那等宵小之辈？我茅山道法，讲究实事求是！这堪舆图加上我的观察，十有八九错不了！」",
+    "links": [195]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雍仔一番話說得是天花亂墜，他那雙小眼睛在你身上滴溜溜地轉，似乎在盤算著什麼。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（雍仔一番話說得是天花亂墜，他那雙小眼睛在你身上滴溜溜地轉，似乎在盤算著什麼。）＊",
+    "zh_CN": "[panel=6]＊（雍仔一番话说得是天花乱坠，他那双小眼睛在你身上滴溜溜地转，似乎在盘算着什么。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,CharismaCheck,12);",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [23, 188]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
+    "zh_CN": "「道长…道长所言极是！富贵险中求！若真有此等机缘，岂能错过！好！我答应你！今晚我们便去那林中一探究竟！」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你…你真的要去啊？聽起來很危險的樣子…」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=4);",
+    "zh_TW": "[panel=2]「表哥，你…你真的要去啊？聽起來很危險的樣子…」",
+    "zh_CN": "[panel=2]「表哥，你…你真的要去啊？听起来很危险的样子…」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC20",
+    "text": "[panel=1]「好！兄弟是個爽快人！那就這麼說定了！這事不急在一時，咱們就約在下個月，到時候約在後山那老槐樹下，如何？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「好！兄弟是個爽快人！那就這麼說定了！這事不急在一時，咱們就約在下個月，到時候約在後山那老槐樹下，如何？」",
+    "zh_CN": "[panel=1]「好！兄弟是个爽快人！那就这么说定了！这事不急在一时，咱们就约在下个月，到时候约在后山那老槐树下，如何？」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「一言為定，愛拚才會贏啦！說那麼多！」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "Script": "SetQuestEntryState(\"C0M1\", 5, \"success\")",
+    "Description": "任務更新",
+    "zh_TW": "「一言為定，愛拚才會贏啦！說那麼多！」",
+    "zh_CN": "「一言为定，爱拼才会赢啦！说那么多！」",
+    "links": []
+  },
+  {
+    "entryID": 27,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在廢棄小屋的後方，一個瘦弱的小女孩瑟縮在角落，緊緊抱著一個有些髒舊的布娃娃。她低著頭，似乎在躲避著什麼，眼神充滿驚恐與不安。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（在廢棄小屋的後方，一個瘦弱的小女孩瑟縮在角落，緊緊抱著一個有些髒舊的布娃娃。她低著頭，似乎在躲避著什麼，眼神充滿驚恐與不安。）＊",
+    "zh_CN": "[panel=6]＊（在废弃小屋的后方，一个瘦弱的小女孩瑟缩在角落，紧紧抱着一个有些脏旧的布娃娃。她低着头，似乎在躲避着什么，眼神充满惊恐与不安。）＊",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1_Meditate,Question);",
+    "zh_TW": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
+    "zh_CN": "「小妹妹，妳怎么一个人在这里？是不是有人欺负妳？」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC8",
+    "text": "「妳是不是肚子餓了？要吃東西嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "「妳是不是肚子餓了？要吃東西嗎？」",
+    "zh_CN": "「妳是不是肚子饿了？要吃东西吗？」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小女孩聞聲抬頭，看到你們，眼神中的驚恐更甚，猛地搖了搖頭，一句話也不說，只是將布娃娃抱得更緊，手指無意識地指向不遠處的河邊，臉上滿是恐懼。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（小女孩聞聲抬頭，看到你們，眼神中的驚恐更甚，猛地搖了搖頭，一句話也不說，只是將布娃娃抱得更緊，手指無意識地指向不遠處的河邊，臉上滿是恐懼。）＊",
+    "zh_CN": "[panel=6]＊（小女孩闻声抬头，看到你们，眼神中的惊恐更甚，猛地摇了摇头，一句话也不说，只是将布娃娃抱得更紧，手指无意识地指向不远处的河边，脸上满是恐惧。）＊",
+    "links": [32, 71]
+  },
+  {
+    "entryID": 31,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,CharismaCheck,14);",
+    "links": [33]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "[em2][魅力檢定][/em2]「妳若有何委屈，儘管說與我聽。」",
+    "Sequence": "",
+    "zh_TW": "[em2][魅力檢定][/em2]「妳若有何委屈，儘管說與我聽。」",
+    "zh_CN": "[em2][魅力检定][/em2]「妳若有何委屈，尽管说与我听。」",
+    "links": [31]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「不哭不哭，眼淚是珍珠，本少俠在此，定護妳周全。妳若有何委屈，儘管說與我聽。」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「不哭不哭，眼淚是珍珠，本少俠在此，定護妳周全。妳若有何委屈，儘管說與我聽。」",
+    "zh_CN": "「不哭不哭，眼泪是珍珠，本少侠在此，定护妳周全。妳若有何委屈，尽管说与我听。」",
+    "links": [34, 39]
+  },
+  {
+    "entryID": 34,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小女孩似乎感受到你們並無惡意，緊張的神情稍緩。她遲疑了一下，從懷裡摸出一枚晶瑩剔透、如同淚珠般的小石頭，顫抖地遞向你們。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(AbilityExp,MC1,Ability_CHA,10);\nModifyData(Inventory,AddItem,RiverGodsTear,1);\nControlStage(TriggerEvent,folly01,All);",
+    "Conditions": "IsPassDice() ==true;",
+    "zh_TW": "[panel=6]＊（小女孩似乎感受到你們並無惡意，緊張的神情稍緩。她遲疑了一下，從懷裡摸出一枚晶瑩剔透、如同淚珠般的小石頭，顫抖地遞向你們。）＊",
+    "zh_CN": "[panel=6]＊（小女孩似乎感受到你们并无恶意，紧张的神情稍缓。她迟疑了一下，从小小的口袋里摸出一枚晶莹剔透、如同泪珠般的小石头，颤抖地递向你们。）＊",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「這是…？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1_Meditate,Meditate);",
+    "zh_TW": "「這是…？」",
+    "zh_CN": "「这是…？」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC8",
+    "text": "「好漂亮的石頭！像是眼淚一樣…小妹妹，這是給我們的嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "「好漂亮的石頭！像是眼淚一樣…小妹妹，這是給我們的嗎？」",
+    "zh_CN": "「好漂亮的石头！像是眼泪一样…小妹妹，这是给我们的吗？」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小女孩輕輕點了點頭，隨即又迅速低下頭。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（小女孩輕輕點了點頭，隨即又迅速低下頭。）＊",
+    "zh_CN": "[panel=6]＊（小女孩轻轻点了点头，随即又迅速低下头。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（儘管你試圖安撫，小女孩依然驚恐萬分，緊緊抱著布娃娃，完全不理會你們，只是不斷搖頭，眼神充滿恐懼。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（儘管你試圖安撫，小女孩依然驚恐萬分，緊緊抱著布娃娃，完全不理會你們，只是不斷搖頭，眼神充滿恐懼。）＊",
+    "zh_CN": "[panel=6]＊（尽管你试图安抚，小女孩依然惊恐万分，紧紧抱着布娃娃，完全不理会你们，只是不断摇头，眼神充满恐惧。）＊",
+    "links": []
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「看來此地確實有些古怪…小妹妹，妳先在此處藏好，莫要亂跑。我等稍後再去尋村中長者，看看是誰家的孩子走失了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「看來此地確實有些古怪…小妹妹，妳先在此處藏好，莫要亂跑。我等稍後再去尋村中長者，看看是誰家的孩子走失了。」",
+    "zh_CN": "「看来此地确实有些古怪…小妹妹，妳先在此处藏好，莫要乱跑。我等稍后再去寻村中长者，看看是谁家的孩子走失了。」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC8",
+    "text": "「表哥，她看起來好可憐…我們真的就這樣走了嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "「表哥，她看起來好可憐…我們真的就這樣走了嗎？」",
+    "zh_CN": "「表哥，她看起来好可怜…我们真的就这样走了吗？」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「此女身世不明，言語不通，我等亦不宜久留。先去別處探探。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「此女身世不明，言語不通，我等亦不宜久留。先去別處探探。」",
+    "zh_CN": "「此女身世不明，言语不通，我等亦不宜久留。先去别处探探。」",
+    "links": []
+  },
+  {
+    "entryID": 43,
+    "actorID": "role2",
+    "text": "[panel=6]＊（河邊的小破廟前，一位滿臉皺紋的阿婆正佝僂著身子整理香案。她注意到你們走近，立刻板起臉孔，眼神銳利地上下打量著你們，顯得十分不友善。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（河邊的小破廟前，一位滿臉皺紋的阿婆正佝僂著身子整理香案。她注意到你們走近，立刻板起臉孔，眼神銳利地上下打量著你們，顯得十分不友善。）＊",
+    "zh_CN": "[panel=6]＊（河边的小破庙前，一位满脸皱纹的阿婆正佝偻着身子整理香案。她注意到你们走近，立刻板起脸孔，眼神锐利地上下打量着你们，显得十分不友善。）＊",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "role5",
+    "text": "[panel=1]「哼！又是外鄉來的遊手好閒之輩！看你們細皮嫩肉的，不像肯吃苦的樣子！我們這小溪村廟小，可容不下你們這些大佛！快走快走！別在這兒礙眼！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「哼！又是外鄉來的遊手好閒之輩！看你們細皮嫩肉的，不像肯吃苦的樣子！我們這小溪村廟小，可容不下你們這些大佛！快走快走！別在這兒礙眼！」",
+    "zh_CN": "[panel=1]「哼！又是外乡来的游手好闲之辈！看你们细皮嫩肉的，不像肯吃苦的样子！我们这小溪村庙小，可容不下你们这些大佛！快走快走！别在这儿碍眼！」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「老人家息怒，我與表妹途徑此地，盤纏短缺，只是想尋個落腳之處，並打探些許營生，絕無他意。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "zh_TW": "「老人家息怒，我與表妹途徑此地，盤纏短缺，只是想尋個落腳之處，並打探些許營生，絕無他意。」",
+    "zh_CN": "「老人家息怒，我与表妹途径此地，盘缠短缺，只是想寻个落脚之处，并打探些许营生，绝无他意。」",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC8",
+    "text": "[panel=2]「（小聲說）表哥，這阿婆好兇喔…比茶博士還難說話。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「（小聲說）表哥，這阿婆好兇喔…比茶博士還難說話。」",
+    "zh_CN": "[panel=2]「（小声说）表哥，这阿婆好凶喔…比茶博士还难说话。」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "role5",
+    "text": "[panel=1]「少在這老婆子面前假惺惺！我看你們就是不懷好意！趕緊滾，別逼我老婆子動粗！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「少在這老婆子面前假惺惺！我看你們就是不懷好意！趕緊滾，別逼我老婆子動粗！」",
+    "zh_CN": "[panel=1]「少在这老婆子面前假惺惺！我看你们就是不怀好意！赶紧滚，别逼我老婆子动粗！」",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「好吧，阿婆，我等這便離開。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);",
+    "zh_TW": "「好吧，阿婆，我等這便離開。」",
+    "zh_CN": "「好吧，阿婆，我等这便离开。」",
+    "links": []
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「阿婆，這塊石頭是路邊撿的，看起來油光水滑，還挺沉，您瞧瞧？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsValuablesObtained(\"Player\", \"\")  == true",
+    "zh_TW": "「阿婆，這塊石頭是路邊撿的，看起來油光水滑，還挺沉，您瞧瞧？」",
+    "zh_CN": "「阿婆，这块石头是路边捡的，看起来油光水滑，还挺沉，您瞧瞧？」",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role5",
+    "text": "[panel=1]「石頭？我看你們是『茅坑裡的石頭』──又臭又硬！怎麼講都講不聽，非要賴在這窮鄉僻壤做什麼？想沾染什麼晦氣不成？！」",
+    "Sequence": "SetPortrait(NPC6,pic=2);",
+    "zh_TW": "[panel=1]「石頭？我看你們是『茅坑裡的石頭』──又臭又硬！怎麼講都講不聽，非要賴在這窮鄉僻壤做什麼？想沾染什麼晦氣不成？！」",
+    "zh_CN": "[panel=1]「石头？我看你们是『茅坑里的石头』──又臭又硬！怎么讲都讲不听，非要赖在这穷乡僻壤做什么？想沾染什么晦气不成？！」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC8",
+    "text": "[panel=2]「（小聲）表哥，阿婆的比喻…真夠味。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=5);",
+    "Script": "Variable[\"MyCounter\"] = Variable[\"MyCounter\"] + 1",
+    "zh_TW": "[panel=2]「（小聲）表哥，阿婆的比喻…真夠味。」",
+    "zh_CN": "[panel=2]「（小声）表哥，阿婆的比喻…真够味。」",
+    "links": []
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「阿婆，這把木梳雖舊，但齒還算整齊，或許您用得上？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「阿婆，這把木梳雖舊，但齒還算整齊，或許您用得上？」",
+    "zh_CN": "「阿婆，这把木梳虽旧，但齿还算整齐，或许您用得上？」",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "role5",
+    "text": "[panel=1]「木梳？我看你們是『沒事找梳』──自尋煩惱！這村子的渾水也是你們能蹚的？趁早給我滾蛋，免得惹禍上身，到時哭都沒眼淚！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「木梳？我看你們是『沒事找梳』──自尋煩惱！這村子的渾水也是你們能蹚的？趁早給我滾蛋，免得惹禍上身，到時哭都沒眼淚！」",
+    "zh_CN": "[panel=1]「木梳？我看你们是『没事找梳』──自寻烦恼！这村子的浑水也是你们能趟的？趁早给我滚蛋，免得惹祸上身，到时哭都没眼泪！」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC8",
+    "text": "[panel=2]「（小聲）我們好心給東西，怎麼還被罵呀…」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "Script": "Variable[\"MyCounter\"] = Variable[\"MyCounter\"] + 1",
+    "zh_TW": "[panel=2]「（小聲）我們好心給東西，怎麼還被罵呀…」",
+    "zh_CN": "[panel=2]「（小声）我们好心给东西，怎么还被骂呀…」",
+    "links": []
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
+    "zh_CN": "「阿婆，此物名为『河神的眼泪』，是我们从一位小妹妹那里得来的。她看起来非常害怕河边…」",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "role5",
+    "text": "[panel=1]「河神的眼淚？哼！你們這些外鄉人，少管閒事！這五十錢拿去，算老婆子我買了這晦氣玩意兒！立刻給我滾，再敢去招惹小花，我老婆子跟你們沒完！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(Coin,MC1,50);",
+    "Description": "給錢",
+    "zh_TW": "[panel=1]「河神的眼淚？哼！你們這些外鄉人，少管閒事！這五十錢拿去，算老婆子我買了這晦氣玩意兒！立刻給我滾，再敢去招惹小花，我老婆子跟你們沒完！」",
+    "zh_CN": "[panel=1]「河神的眼泪？哼！你们这些外乡人，少管闲事！这五十钱拿去，算老婆子我买了这晦气玩意儿！立刻给我滚，再敢去招惹小花，我老婆子跟你们没完！」",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇！有錢拿耶！多謝阿婆！您真是刀子嘴豆腐心！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「哇！有錢拿耶！多謝阿婆！您真是刀子嘴豆腐心！」",
+    "zh_CN": "[panel=2]「哇！有钱拿耶！谢谢阿婆！您真是刀子嘴豆腐心！」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role5",
+    "text": "[panel=1]「豆腐心？我看你們是豬油蒙了心！拿了錢就快滾！另外這個玩意兒你們拿回去，老婆子我要這東西幹啥。」",
+    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(2);",
+    "Script": "Variable[\"MyCounter\"] = Variable[\"MyCounter\"] + 1",
+    "zh_TW": "[panel=1]「豆腐心？我看你們是豬油蒙了心！拿了錢就快滾！另外這個玩意兒你們拿回去，老婆子我要這東西幹啥。」",
+    "zh_CN": "[panel=1]「豆腐心？我看你们是猪油蒙了心！拿了钱就快滚！另外这个玩意儿你们拿回去，老婆子我要这东西干啥。」",
+    "links": []
+  },
+  {
+    "entryID": 59,
+    "actorID": "role2",
+    "text": "[panel=6]＊（當你將三件不起眼的小物件都交給阿婆後，她緊繃的臉孔終於鬆弛下來，長長地嘆了口氣，眼神複雜地望著你們，又似乎是望向波光粼粼的河面，帶著一絲絕望。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"MyCounter\"] == 3",
+    "zh_TW": "[panel=6]＊（當你將三件不起眼的小物件都交給阿婆後，她緊繃的臉孔終於鬆弛下來，長長地嘆了口氣，眼神複雜地望著你們，又似乎是望向波光粼粼的河面，帶著一絲絕望。）＊",
+    "zh_CN": "[panel=6]＊（当你将三件不起眼的小物件都交给阿婆后，她紧绷的脸孔终于松弛下来，长长地叹了口气，眼神复杂地望着你们，又似乎是望向波光粼粼的河面，带着一丝绝望。）＊",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "role5",
+    "text": "[panel=1]「你們這兩個撿破爛的傻孩子…唉…也罷，這些東西你們拿去，算是老婆子我最後能為你們做的了。快點離開這裡，走得越遠越好，永遠…永遠都不要再回頭！記住老婆子我的話，這小溪村…[em2]它要吃人了！[/em2]」",
+    "Sequence": "ModifyData(AbilityExp,MC1,Ability_STR,100);\nModifyData(AbilityExp,MC1,Ability_INT,100);\nModifyData(AbilityExp,MC1,Ability_CHA,100);ModifyData(Coin,150);",
+    "Description": "給錢",
+    "zh_TW": "[panel=1]「你們這兩個撿破爛的傻孩子…唉…也罷，這些東西你們拿去，算是老婆子我最後能為你們做的了。快點離開這裡，走得越遠越好，永遠…永遠都不要再回頭！記住老婆子我的話，這小溪村…[em2]它要吃人了！[/em2]」",
+    "zh_CN": "[panel=1]「你们这两个捡破烂的傻孩子…唉…也罢，这些东西你们拿去，算是老婆子我最后能为你们做的了。快点离开这里，走得越远越好，永远…永远都不要再回头！记住老婆子我的话，这小溪村…[em2]它要吃人了！[/em2]」",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「多謝阿婆厚贈。但您說的[em2]吃人[/em2]…究竟是何意？[em2]小花[/em2]她…」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「多謝阿婆厚贈。但您說的[em2]吃人[/em2]…究竟是何意？[em2]小花[/em2]她…」",
+    "zh_CN": "「多谢阿婆厚赠。但您说的[em2]吃人[/em2]…究竟是何意？[em2]小花[/em2]她…」",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "role5",
+    "text": "[panel=1]「不准問！不准提！你們再不走，就真的走不掉了！滾！都給我滾——！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(NPC6,pic=2);",
+    "zh_TW": "[panel=1]「不准問！不准提！你們再不走，就真的走不掉了！滾！都給我滾——！」",
+    "zh_CN": "[panel=1]「不准问！不准提！你们再不走，就真的走不掉了！滚！都给我滚——！」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這位阿婆…她好像很害怕什麼。她越是這樣，我越覺得[em2]小花[/em2]和這個村子有大問題。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=13);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_TW": "[panel=2]「表哥，這位阿婆…她好像很害怕什麼。她越是這樣，我越覺得[em2]小花[/em2]和這個村子有大問題。」",
+    "zh_CN": "[panel=2]「表哥，这位阿婆…她好像很害怕什么。她越是这样，我越觉得[em2]小花[/em2]和这个村子有大问题。」",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「唉，罷了，先看看情況。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=3);",
+    "zh_TW": "「唉，罷了，先看看情況。」",
+    "zh_CN": "「唉，罢了，先看看情况。」",
+    "links": []
+  },
+  {
+    "entryID": 65,
+    "actorID": "role2",
+    "text": "[panel=6]＊（見到你走近，他眼睛一亮，笑呵呵地從石頭上跳了下來，動作倒也還算靈活。）＊",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_16);",
+    "Conditions": "CurrentQuestEntryState(\"C0M1\", 5) == \"unassigned\"",
+    "Description": "關閉地圖音樂、放主題曲",
+    "zh_TW": "[panel=6]＊（見到你走近，他眼睛一亮，笑呵呵地從石頭上跳了下來，動作倒也還算靈活。）＊",
+    "zh_CN": "[panel=6]＊（见到你走近，他眼睛一亮，笑呵呵地从石头上跳了下来，动作倒也还算灵活。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC20",
+    "text": "「我剛下山不久，在山上師兄弟們都叫我雍仔，你也叫我雍仔就好啦，我正準備前往[em2]英豪府[/em2]一展拳腳，不知小兄弟是為了何事來到此地？」",
+    "Sequence": "",
+    "zh_TW": "「我剛下山不久，在山上師兄弟們都叫我雍仔，你也叫我雍仔就好啦，我正準備前往[em2]英豪府[/em2]一展拳腳，不知小兄弟是為了何事來到此地？」",
+    "zh_CN": "「我刚下山不久，在山上师兄弟们都叫我雍仔，你也叫我雍仔就好啦，我正准备前往[em2]英豪府[/em2]一展拳脚，不知小兄弟是为了何事来到此地？」",
+    "links": [3]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC20",
+    "text": "[panel=1]「當時便有三位大英雄，不忍生靈塗炭，奏請高祖皇帝，廣納天下英雄豪傑，成立了這英豪府，專為誅滅妖邪，護佑我天下萬民！這可是代代相傳的使命啊！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「當時便有三位大英雄，不忍生靈塗炭，奏請高祖皇帝，廣納天下英雄豪傑，成立了這英豪府，專為誅滅妖邪，護佑我天下萬民！這可是代代相傳的使命啊！」",
+    "zh_CN": "[panel=1]「当时便有三位大英雄，不忍生灵涂炭，奏请高祖皇帝，广纳天下英雄豪杰，成立了这英豪府，专为诛灭妖邪，护佑我天下万民！这可是代代相传的使命啊！」",
+    "links": [11]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC20",
+    "text": "[panel=1]奇珍異寶、失傳秘籍，那可都是能助我們在英豪府站穩腳跟的好東西啊！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]奇珍異寶、失傳秘籍，那可都是能助我們在英豪府站穩腳跟的好東西啊！」",
+    "zh_CN": "[panel=1]奇珍异宝、失传秘籍，那可都是能助我们在英豪府站稳脚跟的好东西啊！ 」",
+    "links": [17]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC20",
+    "text": "[panel=1]「我瞧這小溪村依山傍水，看似平凡，但周遭地氣卻有些古怪。尤其是[em2]村後那片林子[/em2]，隱隱透著一股……嗯，不同尋常的氣息。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「我瞧這小溪村依山傍水，看似平凡，但周遭地氣卻有些古怪。尤其是[em2]村後那片林子[/em2]，隱隱透著一股……嗯，不同尋常的氣息。」",
+    "zh_CN": "[panel=1]「我瞧这小溪村依山傍水，看似平凡，但周遭气场却有些古怪。尤其是[em2]村后那片林子[/em2]，隐隐透着一股……嗯，不同寻常的气息。」",
+    "links": [16]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "[em2][耗時一個時辰][/em2]「道長身手不凡，不如切磋一下？點到為止。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1,Question);",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "[em2][耗時一個時辰][/em2]「道長身手不凡，不如切磋一下？點到為止。」",
+    "zh_CN": "[em2][耗时一个时辰][/em2]「道长身手不凡，不如切磋一下？点到为止。」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC20",
+    "text": "「好啊！正手癢呢！來！」",
+    "Sequence": "DisableCharacterExpression(0);BeginFight(Combat,13);",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "zh_TW": "「好啊！正手癢呢！來！」",
+    "zh_CN": "「好啊！正手痒呢！来！」",
+    "links": [179]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue()",
+    "links": [72, 75, 101]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC1",
+    "text": "「離開。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "「離開。」",
+    "zh_CN": "「离开。」",
+    "links": []
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC8",
+    "text": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "zh_TW": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
+    "zh_CN": "「表哥，时间不早了，没有时间做这事了，还是先去[em2]客栈[/em2]打尖吧。」",
+    "links": []
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC20",
+    "text": "「厲害！厲害！兄弟好身手！胖爺我服了！」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Strength,20);",
+    "Conditions": "IsPassFight()  == true",
+    "zh_TW": "「厲害！厲害！兄弟好身手！胖爺我服了！」",
+    "zh_CN": "「厉害！厉害！兄弟好身手！胖爷我服了！」",
+    "links": []
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC20",
+    "text": "「嘿嘿，承讓承讓！兄弟也不賴，差點火候！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "「嘿嘿，承讓承讓！兄弟也不賴，差點火候！」",
+    "zh_CN": "「嘿嘿，承让承让！兄弟也不赖，差点火候！」",
+    "links": []
+  },
+  {
+    "entryID": 179,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,17);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [180]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [181, 182]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "links": [102]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "戰鬥失敗",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "戰鬥失敗",
+    "zh_CN": "战斗失败",
+    "links": [103]
+  },
+  {
+    "entryID": 183,
+    "actorID": "MC20",
+    "text": "[panel=1]「一旦入選，不僅能得府中高人親授絕學，更有機會接觸到那些[em2]失傳的秘籍[/em2]、稀世的奇珍異寶！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「一旦入選，不僅能得府中高人親授絕學，更有機會接觸到那些[em2]失傳的秘籍[/em2]、稀世的奇珍異寶！」",
+    "zh_CN": "[panel=1]「一旦入选，不仅能得府中高人亲授绝学，更有机会接触到那些[em2]失传的秘籍[/em2]、稀世的奇珍异宝！」",
+    "links": [184]
+  },
+  {
+    "entryID": 184,
+    "actorID": "MC20",
+    "text": "[panel=1]「你想想，那可是名揚天下，成為一代大俠的捷徑啊！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「你想想，那可是名揚天下，成為一代大俠的捷徑啊！」",
+    "zh_CN": "[panel=1]「你想想，那可是名扬天下，成为一代大侠的捷径啊！」",
+    "links": [7]
+  },
+  {
+    "entryID": 185,
+    "actorID": "MC20",
+    "text": "[panel=1]「再說，若非如此，又怎能吸引我這等[em2]茅山正宗[/em2]的弟子前往？」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=1]「再說，若非如此，又怎能吸引我這等[em2]茅山正宗[/em2]的弟子前往？」",
+    "zh_CN": "[panel=1]「再说，若非如此，又怎能吸引我这等[em2]茅山正宗[/em2]的弟子前往？」",
+    "links": [9]
+  },
+  {
+    "entryID": 186,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雍仔一個人自得其樂地嗑著瓜子。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（雍仔一個人自得其樂地嗑著瓜子。）＊",
+    "zh_CN": "[panel=6]＊（雍仔一个人自得其乐地嗑着瓜子。）＊",
+    "links": []
+  },
+  {
+    "entryID": 187,
+    "actorID": "role5",
+    "text": "「唉，這兩個可憐的撿破爛的孩子。」",
+    "Sequence": "",
+    "zh_TW": "「唉，這兩個可憐的撿破爛的孩子。」",
+    "zh_CN": "「唉，这两个可怜的捡破烂的孩子。」",
+    "links": []
+  },
+  {
+    "entryID": 188,
+    "actorID": "MC1",
+    "text": "「哈哈，道長說得頭頭是道！不過…真要有寶貝，你自個兒去取便是，何必找我這個萍水相逢的人？這話說出來，怕是連三歲孩童都不信吧！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);\nModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "「哈哈，道長說得頭頭是道！不過…真要有寶貝，你自個兒去取便是，何必找我這個萍水相逢的人？這話說出來，怕是連三歲孩童都不信吧！」",
+    "zh_CN": "「哈哈，道长说得头头是道！不过…真要有宝贝，你自个儿去取便是，何必找我这个萍水相逢的人？这话说出来，怕是连三岁孩童都不信吧！」",
+    "links": [189]
+  },
+  {
+    "entryID": 189,
+    "actorID": "MC8",
+    "text": "[panel=2]「道長所言極是！富貴險中求！若真有此等機緣，我表哥豈能錯過！好！我答應你！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=4);",
+    "zh_TW": "[panel=2]「道長所言極是！富貴險中求！若真有此等機緣，我表哥豈能錯過！好！我答應你！」",
+    "zh_CN": "[panel=2]「道长所言极是！富贵险中求！若真有此等机缘，我表哥岂能错过！好！我答应你！」",
+    "links": [192]
+  },
+  {
+    "entryID": 190,
+    "actorID": "MC20",
+    "text": "[panel=1]「好！小姑娘有膽識！就這麼說定了！但這事不急在一時，咱們就約在下個月，到時候約在後山那老槐樹下，如何？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「好！小姑娘有膽識！就這麼說定了！但這事不急在一時，咱們就約在下個月，到時候約在後山那老槐樹下，如何？」",
+    "zh_CN": "[panel=1]「好！小姑娘有胆识！就这么说定了！但这事不急在一时，咱们就约在下个月，到时候约在后山那老槐树下，如何？」",
+    "links": [191]
+  },
+  {
+    "entryID": 191,
+    "actorID": "MC8",
+    "text": "[panel=2]「好啊！好啊！」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「好啊！好啊！」",
+    "zh_CN": "[panel=2]「好啊！好啊！」",
+    "links": [193]
+  },
+  {
+    "entryID": 192,
+    "actorID": "MC1",
+    "text": "「唉唷，我的玉皇大帝啊，還真有人信啊！」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "「唉唷，我的玉皇大帝啊，還真有人信啊！」",
+    "zh_CN": "「唉唷，我的玉皇大帝啊，还真有人信啊！」",
+    "links": [190]
+  },
+  {
+    "entryID": 193,
+    "actorID": "MC1",
+    "text": "「唉唉…」",
+    "Sequence": "SetPortrait(MC1,pic=10);",
+    "zh_TW": "「唉唉…」",
+    "zh_CN": "「唉唉…」",
+    "links": [194]
+  },
+  {
+    "entryID": 194,
+    "actorID": "MC1",
+    "text": "「算了，隨便吧。」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(DnDAlignment,MC1,LawChaos,-0.05);",
+    "Script": "SetQuestEntryState(\"C0M1\", 5, \"success\")",
+    "Description": "通達提升、任務更新",
+    "zh_TW": "「算了，隨便吧。」",
+    "zh_CN": "「算了，随便吧。」",
+    "links": []
+  },
+  {
+    "entryID": 195,
+    "actorID": "MC20",
+    "text": "[panel=1]「再說，這等機緣，富貴險中求嘛。若真能有所發現，所得你我二一添作五，如何？」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=1]「再說，這等機緣，富貴險中求嘛。若真能有所發現，所得你我二一添作五，如何？」",
+    "zh_CN": "[panel=1]「再说，这等机缘，风险与收益并存嘛。若真能有所发现，所得你我二一添作五，如何？」",
+    "links": [20]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「…」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「…」",
+    "zh_CN": "「…」",
+    "links": [1]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(AddNewCharacter,MC20);\nModifyData(IsAbleToJoinTeam,MC20,flase);\nShowHint(Character,MC20);\nSetContinueMode(original)@Message(EndHintCharacter);",
+    "Description": "獲得角色情報",
+    "links": [66]
+  }
+]

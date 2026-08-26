@@ -1,0 +1,564 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（循著茶博士的指點，你們來到村子稍偏僻處的一間客棧前。客棧的招牌有些陳舊，上書「有間客棧」四字，門扉半掩，隱約能聞到飯菜的香氣和一些輕微的談笑聲，但看不清裡面的情形。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（循著茶博士的指點，你們來到村子稍偏僻處的一間客棧前。客棧的招牌有些陳舊，上書「有間客棧」四字，門扉半掩，隱約能聞到飯菜的香氣和一些輕微的談笑聲，但看不清裡面的情形。）＊",
+    "zh_CN": "[panel=6]＊（循着茶博士的指点，你们来到村子稍偏僻处的一间客栈前。客栈的招牌有些陈旧，上书「有间客栈」四字，门扉半掩，隐约能闻到饭菜的香气和一些轻微的谈笑声，但看不清里面的情形。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "「表哥，這就是茶博士說的『有間客棧』了！那位『一枝花』老闆娘真的會像他說的那麼好嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Question);",
+    "zh_TW": "「表哥，這就是茶博士說的『有間客棧』了！那位『一枝花』老闆娘真的會像他說的那麼好嗎？」",
+    "zh_CN": "「表哥，这就是茶博士说的『有间客栈』了！那位『一枝花』老板娘真的会像他说的那么好吗？」",
+    "links": [3, 23]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
+    "Conditions": "Variable[\"MyTime\"] < 6",
+    "zh_TW": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
+    "zh_CN": "「哼，是正是邪，是美人还是夜叉，进去一探便知。不过…我们得先确定盘缠是否足够。」",
+    "links": [4, 10]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們清點了一下身上的錢財，正好足夠支付一個月的房錢。）＊",
+    "Sequence": "CurrentCoin >= 300;",
+    "Conditions": "IsCoinPass(300)  == true",
+    "zh_TW": "[panel=6]＊（你們清點了一下身上的錢財，正好足夠支付一個月的房錢。）＊",
+    "zh_CN": "[panel=6]＊（你们清点了一下身上的钱财，正好足够支付一个月的房钱。）＊",
+    "links": [5, 8]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「決定了！我們就在此住下！」",
+    "Sequence": "",
+    "zh_TW": "「決定了！我們就在此住下！」",
+    "zh_CN": "「决定了！我们就在此住下！」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「好！大丈夫一言既出，便不更改！我們這就進去，會一會那位『一枝花』老闆娘，也順道解決我等的食宿大計！」",
+    "Sequence": "SetPortrait(MC1,pic=1);ModifyData(Coin,MC1,-300);",
+    "zh_TW": "「好！大丈夫一言既出，便不更改！我們這就進去，會一會那位『一枝花』老闆娘，也順道解決我等的食宿大計！」",
+    "zh_CN": "「好！大丈夫一言既出，便不更改！我们这就进去，会一会那位『一枝花』老板娘，也顺道解决我等的食宿大计！」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC8",
+    "text": "「太好了！總算有個落腳的地方了！不知道客棧的飯菜好不好吃…那位老闆娘…真的像朵花嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_TW": "「太好了！總算有個落腳的地方了！不知道客棧的飯菜好不好吃…那位老闆娘…真的像朵花嗎？」",
+    "zh_CN": "「太好了！总算有个落脚的地方了！不知道客栈的饭菜好不好吃…那位老板娘…真的像朵花吗？」",
+    "links": [2053]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「再等等，我們還想在村裡看看。」",
+    "Sequence": "",
+    "zh_TW": "「再等等，我們還想在村裡看看。」",
+    "zh_CN": "「再等等，我们还想在村里看看。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「嗯…雖然盤纏是夠了，但天色尚早，我們不妨再在村中探查一番，或許還有其他機緣。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「嗯…雖然盤纏是夠了，但天色尚早，我們不妨再在村中探查一番，或許還有其他機緣。」",
+    "zh_CN": "「嗯…虽然盘缠是够了，但天色尚早，我们不妨再在村中探查一番，或许还有其他机缘。」",
+    "links": [15]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們摸了摸錢袋，裡面的銅錢叮噹作響，卻遠遠不夠那三百錢的房錢。）＊",
+    "Sequence": "CurrentCoin < 300;",
+    "Conditions": "IsCoinPass(300)  == false",
+    "zh_TW": "[panel=6]＊（你們摸了摸錢袋，裡面的銅錢叮噹作響，卻遠遠不夠那三百錢的房錢。）＊",
+    "zh_CN": "[panel=6]＊（你们摸了摸钱袋，里面的铜钱叮当作响，却远远不够那三百钱的房钱。）＊",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC8",
+    "text": "「唉…表哥，我們的錢還差好多呢…看來今天是住不成客棧了。」",
+    "Sequence": "SetPortrait(MC8,pic=3);EnableCharacterExpression(1,MC8,Pain);",
+    "zh_TW": "「唉…表哥，我們的錢還差好多呢…看來今天是住不成客棧了。」",
+    "zh_CN": "「唉…表哥，我们的钱还差好多呢…看来今天是住不成客栈了。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「無妨！英雄不論出身低，好漢不怕起更遲！區區盤纏，豈能難倒我？我們再去尋些營生便是！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「無妨！英雄不論出身低，好漢不怕起更遲！區區盤纏，豈能難倒我？我們再去尋些營生便是！」",
+    "zh_CN": "「无妨！英雄不论出身低，好汉不怕起更迟！区区盘缠，岂能难倒我？我们再去寻些营生便是！」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "role2",
+    "text": "[panel=6]＊（看來，想要在這「有間客棧」落腳，還得再加把勁才行。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（看來，想要在這「有間客棧」落腳，還得再加把勁才行。）＊",
+    "zh_CN": "[panel=6]＊（看来，想要在这「有间客栈」落脚，还得再加把劲才行。）＊",
+    "links": []
+  },
+  {
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們深吸一口氣，推開了「有間客棧」的門。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(0);\nModifyData(Coin,-300);",
+    "Script": "SetQuestState(\"C0M1\", \"success\");",
+    "Description": "第一幕結束，前進第二幕",
+    "zh_TW": "[panel=6]＊（你們深吸一口氣，推開了「有間客棧」的門。）＊",
+    "zh_CN": "[panel=6]＊（你们深吸一口气，推开了「有间客栈」的门。）＊",
+    "links": [193, 195]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC8",
+    "text": "「好吧，聽表哥的。不過可別逛太晚，我肚子又餓了。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "「好吧，聽表哥的。不過可別逛太晚，我肚子又餓了。」",
+    "zh_CN": "「好吧，听表哥的。不过可别逛太晚，我肚子又饿了。」",
+    "links": []
+  },
+  {
+    "entryID": 16,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們摸了摸充實起來的錢袋，心中安定了不少。天色已晚，該找個地方歇息了。）＊",
+    "Sequence": "",
+    "Conditions": "IsCoinPass(300)  == true",
+    "zh_TW": "[panel=6]＊（你們摸了摸充實起來的錢袋，心中安定了不少。天色已晚，該找個地方歇息了。）＊",
+    "zh_CN": "[panel=6]＊（你们摸了摸充实起来的钱袋，心中安定了不少。天色已晚，该找个地方歇息了。）＊",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC8",
+    "text": "「表哥，天黑了，我們賺的錢也夠住店了，快去『有間客棧』吧！我好想睡覺啊…」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "「表哥，天黑了，我們賺的錢也夠住店了，快去『有間客棧』吧！我好想睡覺啊…」",
+    "zh_CN": "「表哥，天黑了，我们赚的钱也够住店了，快去『有间客栈』吧！我好想睡觉啊…」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「嗯，忙碌了一日，也是該好好休整一番了。希望那位『一枝花』老闆娘名副其實，莫讓我們失望才好。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「嗯，忙碌了一日，也是該好好休整一番了。希望那位『一枝花』老闆娘名副其實，莫讓我們失望才好。」",
+    "zh_CN": "「嗯，忙碌了一日，也是该好好休整一番了。希望那位『一枝花』老板娘名副其实，莫让我们失望才好。」",
+    "links": [2053]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC8",
+    "text": "「表哥…又冷…又餓…我們的錢還是不夠…嗚…我好想吃熱乎乎的包子…」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "Conditions": "IsCoinPass(300)  == false",
+    "zh_TW": "「表哥…又冷…又餓…我們的錢還是不夠…嗚…我好想吃熱乎乎的包子…」",
+    "zh_CN": "「表哥…又冷…又饿…我们的钱还是不够…呜…我好想吃热乎乎的包子…」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「咳…靈犀莫怕，有表哥在…區區風餐露宿，算得了什麼？想當年…想當年那些話本裡的英雄好漢，哪個不是從這般境遇中磨礪出來的？我們…我們這是在體驗生活！」",
+    "Sequence": "SetPortrait(MC1,pic=11);ModifyData(Coin,MC1,-300);",
+    "zh_TW": "「咳…靈犀莫怕，有表哥在…區區風餐露宿，算得了什麼？想當年…想當年那些話本裡的英雄好漢，哪個不是從這般境遇中磨礪出來的？我們…我們這是在體驗生活！」",
+    "zh_CN": "「咳…灵犀莫怕，有表哥在…区区风餐露宿，算得了什么？想当年…想当年那些话本里的英雄好汉，哪个不是从这般境遇中磨砺出来的？我们…我们这是在体验生活！」",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（最終，你們不得不在村中尋了個勉強可以避風的廢棄柴房，蜷縮著度過了在小溪村的第一個夜晚。說書人口中的江湖豪情萬丈，此刻卻教冰冷的夜風和腹中飢火，砸了個粉碎。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"MyTime\"] >= 6;IsCoinPass(300)  == false",
+    "Script": "SetQuestState(\"C0M1\", \"failure\");",
+    "zh_TW": "[panel=6]＊（最終，你們不得不在村中尋了個勉強可以避風的廢棄柴房，蜷縮著度過了在小溪村的第一個夜晚。說書人口中的江湖豪情萬丈，此刻卻教冰冷的夜風和腹中飢火，砸了個粉碎。）＊",
+    "zh_CN": "[panel=6]＊（最终，你们不得不在村中寻了个勉强可以避风的废弃柴房，蜷缩着度过了在小溪村的第一个夜晚。说书人描绘的江湖豪情万丈，此刻却被冰冷的现实和腹中的饥饿感无情地击碎。）＊",
+    "links": [194]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
+    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "zh_TW": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
+    "zh_CN": "「哼，是正是邪，是美人还是夜叉，进去一探便知。不过…我们得先确定盘缠是否足够。」",
+    "links": [16, 20]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "「哦！此雞眼神不凡，難道是雞中豪傑！」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Conditions": "Variable[\"CAttack\"] == 0",
+    "zh_TW": "「哦！此雞眼神不凡，難道是雞中豪傑！」",
+    "zh_CN": "「哦！此鸡眼神不凡，难道是鸡中豪杰！」",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role114",
+    "text": "「人類，看三小！不服來戰！咕！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「人類，看三小！不服來戰！咕！」",
+    "zh_CN": "「人类，看三小！不服来战！咕！」",
+    "links": [178]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "「…」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「…」",
+    "zh_CN": "…",
+    "links": [182, 104, 190]
+  },
+  {
+    "entryID": 109,
+    "actorID": "role114",
+    "text": "「咕～咕～…」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Strength,5);",
+    "zh_TW": "「咕～咕～…」",
+    "zh_CN": "「咕～咕～…」",
+    "links": []
+  },
+  {
+    "entryID": 110,
+    "actorID": "role114",
+    "text": "「咕咕！真是個廢物。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「咕咕！真是個廢物。」",
+    "zh_CN": "「咕咕！真是个废物。」",
+    "links": []
+  },
+  {
+    "entryID": 178,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,15);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [179]
+  },
+  {
+    "entryID": 179,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "Variable[\"FastFight\"] = true",
+    "links": [180, 181]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "Script": "Variable[\"CAttack\"] = Variable[\"CAttack\"] + 1",
+    "links": [109]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "links": [110]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "「哈哈！你是最後一隻了」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Conditions": "Variable[\"CAttack\"] == 2",
+    "zh_TW": "「哈哈！你是最後一隻了」",
+    "zh_CN": "「哈哈！你是最后一只了」",
+    "links": [183]
+  },
+  {
+    "entryID": 183,
+    "actorID": "role114",
+    "text": "「可惡人類，兄弟一起上！咕！咕！咕！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「可惡人類，兄弟一起上！咕！咕！咕！」",
+    "zh_CN": "「可恶人类，兄弟一起上！咕！咕！咕！」",
+    "links": [186]
+  },
+  {
+    "entryID": 184,
+    "actorID": "role114",
+    "text": "「咕～咕～…」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Strength,5);",
+    "zh_TW": "「咕～咕～…」",
+    "zh_CN": "「咕～咕～…」",
+    "links": [191]
+  },
+  {
+    "entryID": 185,
+    "actorID": "role114",
+    "text": "「咕咕！真是個廢物。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=16);",
+    "zh_TW": "「咕咕！真是個廢物。」",
+    "zh_CN": "「咕咕！真是个废物。」",
+    "links": []
+  },
+  {
+    "entryID": 186,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,16);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [187]
+  },
+  {
+    "entryID": 187,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [188, 189]
+  },
+  {
+    "entryID": 188,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "links": [184]
+  },
+  {
+    "entryID": 189,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "links": [185]
+  },
+  {
+    "entryID": 190,
+    "actorID": "MC1",
+    "text": "「你也想打嗎，來呀！」",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Conditions": "Variable[\"CAttack\"] == 1",
+    "zh_TW": "「你也想打嗎，來呀！」",
+    "zh_CN": "「你也想打吗，来呀！」",
+    "links": [105]
+  },
+  {
+    "entryID": 191,
+    "actorID": "role2",
+    "text": "[panel=6]＊（群雞鄭重地拔下各自最珍貴的羽毛，獻給你這位新首領；你把這些羽毛紮成一副手套，權作彼此的情誼。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（群雞鄭重地拔下各自最珍貴的羽毛，獻給你這位新首領；你把這些羽毛紮成一副手套，權作彼此的情誼。）＊",
+    "zh_CN": "[panel=6]＊（群鸡郑重地拔下各自最珍贵的羽毛，献给你这位新首领；你把这些羽毛扎成一副手套，权作彼此的情谊。）＊",
+    "links": [192]
+  },
+  {
+    "entryID": 192,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Skill,Player,ChickenFist);\nModifyData(Valuable,Player,ChickenClawGlove,1);\nShowHint(Skill,ChickenFist);\nContinue();",
+    "Description": "獲得雞攻擊之術技能卡",
+    "links": []
+  },
+  {
+    "entryID": 193,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
+    "Conditions": "CurrentQuestState(\"C0F1\") ~= \"active\"",
+    "links": []
+  },
+  {
+    "entryID": 194,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "BAD ENDING",
+    "links": []
+  },
+  {
+    "entryID": 195,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"active\"",
+    "Script": "SetQuestState(\"C0F1\", \"failure\")",
+    "links": []
+  },
+  {
+    "entryID": 196,
+    "actorID": "role114",
+    "text": "「咕～咕～…」",
+    "Sequence": "",
+    "zh_TW": "「咕～咕～…」",
+    "zh_CN": "「咕～咕～…」",
+    "links": []
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「…」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「…」",
+    "zh_CN": "「…」",
+    "links": [1]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在準備推開客棧門時，蕭靈犀突然停下了腳步，低頭看向客棧門邊的角落。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（就在准备推开客栈门时，萧灵犀突然停下了脚步，低头看向客栈门边的角落。）＊",
+    "links": [2065]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC8",
+    "text": "[panel=2]「咦？表哥你看，這客棧門口怎麼有隻青蛙，而且…牠好像還戴著一頂小草帽？」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "zh_CN": "[panel=2]「咦？表哥你看，这客栈门口怎么有只青蛙，而且…它好像还戴着一顶小草帽？」",
+    "links": [2055]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "role135",
+    "text": "「呱！小丫頭眼力不錯。爺行不更名坐不改姓，乃是太行山一百零八好漢之一，短命二郎是也！」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "「呱！小丫头眼力不错。爷行不更名坐不改姓，乃是太行山一百零八好汉之一，短命二郎是也！」",
+    "links": [2056]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC1",
+    "text": "「……青蛙？好漢？」",
+    "Sequence": "SetPortrait(MC1,pic=confuse);EnableCharacterExpression(0,MC1,Question);",
+    "zh_CN": "「……青蛙？好汉？」",
+    "links": [2057]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "role135",
+    "text": "「呱呀！小兄弟說話客氣點！莫不是沒聽過：」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「呱呀！小兄弟说话客气点！莫不是没听过：」",
+    "links": [2067]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "MC1",
+    "text": "「這隻青蛙是怎麼回事…滿口黑話！？」",
+    "Sequence": "SetPortrait(MC1,pic=shock);EnableCharacterExpression(0,MC1,Shock);",
+    "zh_CN": "「这只青蛙是怎么回事…满口黑话！？」",
+    "links": [2059]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇，你好厲害喔！可是你怎麼會在這裡呀？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「哇，你好厉害喔！可是你怎么会在这里呀？」",
+    "links": [2060]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "role135",
+    "text": "「呱…別提了。我那兩個兄弟立地太歲和活閻羅在附近走散了，不知去向。你們若能幫我尋回我那兩位兄弟，我們兄弟絕不虧待朋友！」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "「呱…别提了。我那两个兄弟立地太岁和活阎罗在附近走散了，不知去向。你们若能帮我寻回我那两位兄弟，我们兄弟绝不亏待朋友！」",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role135",
+    "text": "「能生橫禍，善降非災。幫了爺爺，就是你們的福氣！呱！先白送你們個消息當見面禮，你們現在看小溪村對岸過不去吧？」",
+    "Sequence": "",
+    "zh_CN": "「能生横祸，善降非灾。帮了爷爷，就是你们的福气！呱！先白送你们个消息当见面礼，你们现在看小溪村对岸过不去吧？」",
+    "links": [2068]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "role135",
+    "text": "「呱！爺也不會讓你白出力——別看我們兄弟現下散落各處，這青蛙好漢長年混跡江湖、耳目遍布，這天底下還真沒幾樁是我們不曉得的事兒！」",
+    "Sequence": "",
+    "zh_CN": "「呱！爷也不会让你白出力——别看我们兄弟现下散落各处，这青蛙好汉长年混迹江湖、耳目遍布，这天底下还真没几桩是我们不晓得的事儿！」",
+    "links": [2066]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC8",
+    "text": "「表哥表哥～你都聽到了吧？只要順路多找幾隻好漢，好處這麼多誒！表哥你本領這麼大，幫人家一起找好不好？好不好嘛——」",
+    "Sequence": "SetPanel(MC8, 1, immediate)\nSetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「表哥表哥～你都听到了吧？只要顺路多找几只好汉，好处这么多诶！表哥你本领这么大，帮人家一起找好不好？好不好嘛——」",
+    "links": [2064]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "MC1",
+    "text": "「嘿！找幾隻青蛙這種小事還不是手到擒來的事，就交給表哥我吧！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Script": "SetQuestState(\"CF35\", \"active\");\nSetQuestEntryState(\"CF35\", 1, \"active\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1;",
+    "Description": "觸發任務、變數+1",
+    "zh_CN": "「嘿！找几只青蛙这种小事还不是手到擒来的事，就交给表哥我吧！」",
+    "links": [14]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ControlStage(TriggerEvent,All,Forge);\nSetContinueMode(false);\nSetContinueMode(original)@4;\nContinue()@4;",
+    "Description": "青蛙跳出來",
+    "links": [2054]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role135",
+    "text": "「你們尋回我的兄弟們，爺便回贈金銀財帛；外加一則江湖祕聞當答禮，絕不虧待自家兄弟！呱哈哈哈！」",
+    "Sequence": "",
+    "zh_CN": "「你们寻回我的兄弟们，爷便回赠金银财帛；外加一则江湖秘闻当答礼，绝不亏待自家兄弟！呱哈哈哈！」",
+    "links": [2069]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role135",
+    "text": "「[em2]一雙手渾如鐵棒，兩隻眼有似銅鈴。\n心窩裡深藏著鴆毒。能生橫禍，善降非災。\n何處覓行瘟使者，只此是短命二郎。[/em2]」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「[em2]一双手浑如铁棒，两只眼有似铜铃。\n心窝里深藏着鸩毒。能生横祸，善降非灾。\n何处觅行瘟使者，只此是短命二郎。[/em2]」",
+    "links": [2058]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "role135",
+    "text": "「[em2]等到三月過後，自有辦法到對岸那邊去！[/em2]」",
+    "Sequence": "",
+    "zh_CN": "「[em2]等到三月过后，自有办法到对岸那边去！[/em2]」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nContinue()@0.2;",
+    "links": [2063]
+  }
+]

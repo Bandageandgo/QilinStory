@@ -1,0 +1,59 @@
+[
+  {
+    "entryID": 497,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [498]
+  },
+  {
+    "entryID": 498,
+    "actorID": "role55",
+    "text": "賈混……我是說賈主事，\n你們的冤家太平道又來找麻煩了。",
+    "Sequence": "",
+    "zh_TW": "賈混……我是說賈主事，\n你們的冤家太平道又來找麻煩了。",
+    "zh_CN": "贾混……我是说贾主事，\n你们的冤家太平道又来找麻烦了。",
+    "links": [499]
+  },
+  {
+    "entryID": 499,
+    "actorID": "MC4",
+    "text": "妳還是一如往常的直率啊。",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "妳還是一如往常的直率啊。",
+    "zh_CN": "妳还是一如往常的直率啊。",
+    "links": [500]
+  },
+  {
+    "entryID": 500,
+    "actorID": "MC4",
+    "text": "打壓對手，獨佔市道，我並不意外。\n但放縱不管，勢必阻礙本府發展。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "打壓對手，獨佔市道，我並不意外。\n但放縱不管，勢必阻礙本府發展。",
+    "zh_CN": "打压对手，独占市道，我并不意外。 \n但放纵不管，势必阻碍本府发展。",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "MC4",
+    "text": "之後若再遇上，\n你們記得找時間處理掉吧。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "之後若再遇上，\n你們記得找時間處理掉吧。",
+    "zh_CN": "之后若再遇上，\n你们记得找时间处理掉吧。",
+    "links": [543]
+  },
+  {
+    "entryID": 542,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 543,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [542]
+  }
+]

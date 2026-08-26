@@ -1,0 +1,251 @@
+[
+  {
+    "entryID": 24,
+    "actorID": "role57",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,6);\nContinue();",
+    "links": [30]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role57",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,8);\nContinue();",
+    "links": [30]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role57",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,10);\nContinue();",
+    "links": [30]
+  },
+  {
+    "entryID": 27,
+    "actorID": "role57",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,12);\nContinue();",
+    "links": [30]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role57",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,14);\nContinue();",
+    "links": [30]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role57",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Pause);\nBeginDiceRoll(Insight,Auto,16);\nContinue();",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [31, 40, 32]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "前面人影竄動，應是賊寇埋伏。\n小心避開為上。",
+    "Sequence": "PlayOrStopParticle(SecretSpot,Play);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,20)@2;\nShowInstantMessage(Check,Insight,Success)@2.2;\nSetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "前面人影竄動，應是賊寇埋伏。\n小心避開為上。",
+    "zh_CN": "前面人影窜动，应是贼寇埋伏。 \n小心避开为上。",
+    "links": [38]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role57",
+    "text": "此路我開，想過路──留財！否則，留命！",
+    "Sequence": "ShowInstantMessage(Check,Insight,Fail);",
+    "Conditions": "IsPassDice()  == false and (IsFameValuePass(\"MC1\", 2000)  == false)",
+    "zh_TW": "此路我開，想過路──留財！否則，留命！",
+    "zh_CN": "此路我开，想过路──留财！否则，留命！",
+    "links": [33, 34, 35, 36]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "1.[em1][口才][/em1]我看你實為好漢，既是好漢，何苦為難討生活的人呢？",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "zh_TW": "1.[em1][口才][/em1]我看你實為好漢，既是好漢，何苦為難討生活的人呢？",
+    "zh_CN": "1.[em1][口才][/em1]我看你实为好汉，既是好汉，何苦为难讨生活的人呢？",
+    "links": [266]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "2.[em1][政治][/em1]有道是做人留一線，日後好相見，多一位朋友，總好多一位敵人，你說是吧？",
+    "Sequence": "BeginDiceRoll(Politics,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "zh_TW": "2.[em1][政治][/em1]有道是做人留一線，日後好相見，多一位朋友，總好多一位敵人，你說是吧？",
+    "zh_CN": "2.[em1][政治][/em1]有道是做人留一线，日后好相见，多一位朋友，总好多一位敌人，你说是吧？",
+    "links": [269]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "3.[em1][威嚇][/em1]生死看淡，不服來戰。",
+    "Sequence": "BeginDiceRoll(Intimidation,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "zh_TW": "3.[em1][威嚇][/em1]生死看淡，不服來戰。",
+    "zh_CN": "3.[em1][威吓][/em1]生死看淡，不服来战。",
+    "links": [272]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "4.要戰來戰，怕你不成！",
+    "Sequence": "",
+    "zh_TW": "4.要戰來戰，怕你不成！",
+    "zh_CN": "4.要战来战，怕你不成！",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginFight(Duel,2);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進單挑",
+    "links": [277]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "呼，免去了一場無意義的惡戰。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableAllCharacterExpression();",
+    "zh_TW": "呼，免去了一場無意義的惡戰。",
+    "zh_CN": "呼，免去了一场无意义的恶战。",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "PlayOrPauseNodePlayer(Play);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 40,
+    "actorID": "role57",
+    "text": "閣下威名如雷貫耳，小弟無意冒犯，先告退了。",
+    "Sequence": "ShowInstantMessage(Check,Insight,Fail);",
+    "Conditions": "IsPassDice()  == false and (IsFameValuePass(\"MC1\", 2000)  == true)",
+    "zh_TW": "閣下威名如雷貫耳，小弟無意冒犯，先告退了。",
+    "zh_CN": "阁下威名如雷贯耳，小弟无意冒犯，先告退了。",
+    "links": [38]
+  },
+  {
+    "entryID": 266,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [267, 268]
+  },
+  {
+    "entryID": 267,
+    "actorID": "role57",
+    "text": "說得也是，大家日子都不好過。\n你走吧，我不為難你。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "說得也是，大家日子都不好過。\n你走吧，我不為難你。",
+    "zh_CN": "说得也是，大家日子都不好过。 \n你走吧，我不为难你。",
+    "links": [38]
+  },
+  {
+    "entryID": 268,
+    "actorID": "role57",
+    "text": "有道哩，但弱肉強食，生活所迫，別怨我！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "有道哩，但弱肉強食，生活所迫，別怨我！",
+    "zh_CN": "有道哩，但弱肉强食，生活所迫，别怨我！",
+    "links": [37]
+  },
+  {
+    "entryID": 269,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [270, 271]
+  },
+  {
+    "entryID": 270,
+    "actorID": "role57",
+    "text": "說得也是，今日且交個朋友。\n我不為難你，你走吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "說得也是，今日且交個朋友。\n我不為難你，你走吧。",
+    "zh_CN": "说得也是，今日且交个朋友。 \n我不为难你，你走吧。",
+    "links": [38]
+  },
+  {
+    "entryID": 271,
+    "actorID": "role57",
+    "text": "都快活不下去了，誰還聽你廢話！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "都快活不下去了，誰還聽你廢話！",
+    "zh_CN": "都快活不下去了，谁还听你废话！",
+    "links": [37]
+  },
+  {
+    "entryID": 272,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [273, 274]
+  },
+  {
+    "entryID": 273,
+    "actorID": "role57",
+    "text": "他娘的，半路遇到瘋子，誰要跟你拼命了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "他娘的，半路遇到瘋子，誰要跟你拼命了。",
+    "zh_CN": "他娘的，半路遇到疯子，谁要跟你拼命了。",
+    "links": [38]
+  },
+  {
+    "entryID": 274,
+    "actorID": "role57",
+    "text": "他娘的夠狠啊，那老子成全你！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "他娘的夠狠啊，那老子成全你！",
+    "zh_CN": "他娘的够狠啊，那老子成全你！",
+    "links": [37]
+  },
+  {
+    "entryID": 275,
+    "actorID": "MC1",
+    "text": "總算打贏了",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == true",
+    "Description": "戰鬥勝利",
+    "zh_TW": "總算打贏了",
+    "zh_CN": "总算打赢了",
+    "links": [39]
+  },
+  {
+    "entryID": 276,
+    "actorID": "MC1",
+    "text": "看來我得多加磨練",
+    "Sequence": "ResetNodePlayer(Jinyang);",
+    "Conditions": "IsPassFight()  == false",
+    "Description": "戰鬥失敗",
+    "zh_TW": "看來我得多加磨練",
+    "zh_CN": "看来我得多加磨练",
+    "links": []
+  },
+  {
+    "entryID": 277,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [275, 276]
+  }
+]

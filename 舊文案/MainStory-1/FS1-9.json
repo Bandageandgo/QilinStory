@@ -1,0 +1,1133 @@
+[
+  {
+    "entryID": 425,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Heding);\nAudioControl(PlaySFXOneShot,Water);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [427]
+  },
+  {
+    "entryID": 426,
+    "actorID": "role2",
+    "text": "※事件階段1：到黃巾村觸發(這段期間張角還不在)",
+    "Sequence": "",
+    "zh_TW": "※事件階段1：到黃巾村觸發(這段期間張角還不在)",
+    "zh_CN": "※事件阶段1：到黄巾村触发(这段期间张角还不在)",
+    "links": [425]
+  },
+  {
+    "entryID": 427,
+    "actorID": "MC1",
+    "text": "蒼天啊……天地之間，竟有如此壯闊神樹……\n黃葉如金，黃金黃巾……莫怪名喚黃巾村……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "蒼天啊……天地之間，竟有如此壯闊神樹……\n黃葉如金，黃金黃巾……莫怪名喚黃巾村……",
+    "zh_CN": "苍天啊……天地之间，竟有如此壮阔神树……\n黄叶如金，黄金黄巾……莫怪名唤黄巾村……",
+    "links": [428]
+  },
+  {
+    "entryID": 428,
+    "actorID": "role2",
+    "text": "[panel=5]正當你驚嘆天地造物奧妙，\n隨即便見到了蒼天之殘酷……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]正當你驚嘆天地造物奧妙，\n隨即便見到了蒼天之殘酷……",
+    "zh_CN": "[panel=5]正当你惊叹天地造物奥妙，\n随即便见到了苍天之残酷……",
+    "links": [429]
+  },
+  {
+    "entryID": 429,
+    "actorID": "role39",
+    "text": "嗚呃……",
+    "Sequence": "",
+    "zh_TW": "嗚呃……",
+    "zh_CN": "呜呃……",
+    "links": [430]
+  },
+  {
+    "entryID": 430,
+    "actorID": "MC1",
+    "text": "啊！不要緊吧，振作點。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "啊！不要緊吧，振作點。",
+    "zh_CN": "啊！不要紧吧，振作点。",
+    "links": [431]
+  },
+  {
+    "entryID": 431,
+    "actorID": "role2",
+    "text": "[panel=5]這時你發現村內死氣沉沉，\n村人都已病倒，奄奄一息。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這時你發現村內死氣沉沉，\n村人都已病倒，奄奄一息。",
+    "zh_CN": "[panel=5]这时你发现村内死气沉沉，\n村人都已病倒，奄奄一息。",
+    "links": [432]
+  },
+  {
+    "entryID": 432,
+    "actorID": "MC1",
+    "text": "怎麼回事……難不成是鬧瘟災……",
+    "Sequence": "",
+    "zh_TW": "怎麼回事……難不成是鬧瘟災……",
+    "zh_CN": "怎么回事……难不成是闹瘟灾……",
+    "links": [433]
+  },
+  {
+    "entryID": 433,
+    "actorID": "role4",
+    "text": "吼────",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼────",
+    "zh_CN": "吼────",
+    "links": [434]
+  },
+  {
+    "entryID": 434,
+    "actorID": "MC1",
+    "text": "嘖！還真會挑時候。",
+    "Sequence": "",
+    "zh_TW": "嘖！還真會挑時候。",
+    "zh_CN": "啧！还真会挑时候。",
+    "links": [435]
+  },
+  {
+    "entryID": 435,
+    "actorID": "role2",
+    "text": "[panel=5]眼見怪物來犯，你立刻著手應戰。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]眼見怪物來犯，你立刻著手應戰。",
+    "zh_CN": "[panel=5]眼见怪物来犯，你立刻着手应战。",
+    "links": [436]
+  },
+  {
+    "entryID": 436,
+    "actorID": "role2",
+    "text": "[panel=5]然而，交手幾回，\n你竟感身體漸漸異常燥熱沉重……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]然而，交手幾回，\n你竟感身體漸漸異常燥熱沉重……",
+    "zh_CN": "[panel=5]然而，交手几回，\n你竟感身体渐渐异常燥热沉重……",
+    "links": [437]
+  },
+  {
+    "entryID": 437,
+    "actorID": "MC1",
+    "text": "（呃……我的身體……嗚！我的頭……）",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "（呃……我的身體……嗚！我的頭……）",
+    "zh_CN": "（呃……我的身体……呜！我的头……）",
+    "links": [438]
+  },
+  {
+    "entryID": 438,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [439]
+  },
+  {
+    "entryID": 439,
+    "actorID": "MC1",
+    "text": "（糟了……）",
+    "Sequence": "",
+    "zh_TW": "（糟了……）",
+    "zh_CN": "（糟了……）",
+    "links": [440]
+  },
+  {
+    "entryID": 440,
+    "actorID": "role56",
+    "text": "唉，真讓人看不下去。",
+    "Sequence": "",
+    "zh_TW": "唉，真讓人看不下去。",
+    "zh_CN": "唉，真让人看不下去。",
+    "links": [441]
+  },
+  {
+    "entryID": 441,
+    "actorID": "role2",
+    "text": "[panel=5]忽然，劍者自天而降，昂首輕嘆。\n隨即劍指一凝，沖霄劍氣自指而出──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]忽然，劍者自天而降，昂首輕嘆。\n隨即劍指一凝，沖霄劍氣自指而出──",
+    "zh_CN": "[panel=5]忽然，剑者自天而降，昂首轻叹。 \n随即剑指一凝，冲霄剑气自指而出──",
+    "links": [442]
+  },
+  {
+    "entryID": 442,
+    "actorID": "role67",
+    "text": "煩啊。",
+    "Sequence": "",
+    "zh_TW": "煩啊。",
+    "zh_CN": "烦啊。",
+    "links": [443]
+  },
+  {
+    "entryID": 443,
+    "actorID": "role2",
+    "text": "[panel=5]劍動、寂然、萬物絕──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]劍動、寂然、萬物絕──",
+    "zh_CN": "[panel=5]剑动、寂然、万物绝──",
+    "links": [444]
+  },
+  {
+    "entryID": 444,
+    "actorID": "MC1",
+    "text": "劍……氣……？……仙……人……？嗚",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "劍……氣……？……仙……人……？嗚",
+    "zh_CN": "剑……气……？ ……仙……人……？呜",
+    "links": [446]
+  },
+  {
+    "entryID": 445,
+    "actorID": "MC1",
+    "text": "嗚……頭好痛……我剛才……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "嗚……頭好痛……我剛才……",
+    "zh_CN": "呜……头好痛……我刚才……",
+    "links": [447]
+  },
+  {
+    "entryID": 446,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nSetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [445]
+  },
+  {
+    "entryID": 447,
+    "actorID": "role67",
+    "text": "差點就去見上蒼了。\n但也不怪你，只怪這瘟魔種的確難纏。",
+    "Sequence": "",
+    "zh_TW": "差點就去見上蒼了。\n但也不怪你，只怪這瘟魔種的確難纏。",
+    "zh_CN": "差点就去见上苍了。 \n但也不怪你，只怪这瘟魔种的确难缠。",
+    "links": [448]
+  },
+  {
+    "entryID": 448,
+    "actorID": "MC1",
+    "text": "啊！是仙人！多謝仙人救命之恩。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "啊！是仙人！多謝仙人救命之恩。",
+    "zh_CN": "啊！是仙人！多谢仙人救命之恩。",
+    "links": [449]
+  },
+  {
+    "entryID": 449,
+    "actorID": "role67",
+    "text": "仙人？哈哈哈……\n世人遇上不可解釋的事，總喜歡以仙神代之。",
+    "Sequence": "",
+    "zh_TW": "仙人？哈哈哈……\n世人遇上不可解釋的事，總喜歡以仙神代之。",
+    "zh_CN": "仙人？哈哈哈……\n世人遇上不可解释的事，总喜欢以仙神代之。",
+    "links": [450]
+  },
+  {
+    "entryID": 450,
+    "actorID": "MC1",
+    "text": "你不是仙人？\n可放眼天下，不曾聞過有人會使劍氣神技……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "你不是仙人？\n可放眼天下，不曾聞過有人會使劍氣神技……",
+    "zh_CN": "你不是仙人？ \n可放眼天下，不曾闻过有人会使剑气神技……",
+    "links": [451]
+  },
+  {
+    "entryID": 451,
+    "actorID": "role67",
+    "text": "你的天下太小了……\n罷了，多言無益，我該去也。",
+    "Sequence": "",
+    "zh_TW": "你的天下太小了……\n罷了，多言無益，我該去也。",
+    "zh_CN": "你的天下太小了……\n罢了，多言无益，我该去也。",
+    "links": [452]
+  },
+  {
+    "entryID": 452,
+    "actorID": "role2",
+    "text": "[panel=5]只劍那人縱身一躍，\n宛若清風，已在數里，不見人影……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]只劍那人縱身一躍，\n宛若清風，已在數里，不見人影……",
+    "zh_CN": "[panel=5]只剑那人纵身一跃，\n宛若清风，已在数里，不见人影……",
+    "links": [453]
+  },
+  {
+    "entryID": 453,
+    "actorID": "MC1",
+    "text": "此人當真了得……\n可惜，若有機會定要向他討教一招半式……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "此人當真了得……\n可惜，若有機會定要向他討教一招半式……",
+    "zh_CN": "此人当真了得……\n可惜，若有机会定要向他讨教一招半式……",
+    "links": [454]
+  },
+  {
+    "entryID": 454,
+    "actorID": "role2",
+    "text": "※事件階段2：經過30天，再到黃巾村觸發醫術檢定，通過才能觸發劇情",
+    "Sequence": "",
+    "zh_TW": "※事件階段2：經過30天，再到黃巾村觸發醫術檢定，通過才能觸發劇情",
+    "zh_CN": "※事件阶段2：经过30天，再到黄巾村触发医术检定，通过才能触发剧情",
+    "links": [455]
+  },
+  {
+    "entryID": 455,
+    "actorID": "MC1",
+    "text": "怎麼會這樣……！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "怎麼會這樣……！",
+    "zh_CN": "怎么会这样……！",
+    "links": [456]
+  },
+  {
+    "entryID": 456,
+    "actorID": "role2",
+    "text": "[panel=5]再訪黃巾村，\n卻見村內仍舊死寂，村人仍處病苦。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]再訪黃巾村，\n卻見村內仍舊死寂，村人仍處病苦。",
+    "zh_CN": "[panel=5]再访黄巾村，\n却见村内仍旧死寂，村人仍处病苦。",
+    "links": [457]
+  },
+  {
+    "entryID": 457,
+    "actorID": "MC1",
+    "text": "又是瘟疫？我這就去找張姑娘來……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "又是瘟疫？我這就去找張姑娘來……",
+    "zh_CN": "又是瘟疫？我这就去找张姑娘来……",
+    "links": [458]
+  },
+  {
+    "entryID": 458,
+    "actorID": "MC1",
+    "text": "……等一下，之前的劍者好像提到瘟魔種……\n上次與那怪物戰鬥，身體的確有異……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "……等一下，之前的劍者好像提到瘟魔種……\n上次與那怪物戰鬥，身體的確有異……",
+    "zh_CN": "……等一下，之前的剑者好像提到瘟魔种……\n上次与那怪物战斗，身体的确有异……",
+    "links": [459]
+  },
+  {
+    "entryID": 459,
+    "actorID": "MC1",
+    "text": "若真是怪物所為，那找張姑娘也只是治本……\n那人既知怪物，或許有根除之法……",
+    "Sequence": "",
+    "zh_TW": "若真是怪物所為，那找張姑娘也只是治本……\n那人既知怪物，或許有根除之法……",
+    "zh_CN": "若真是怪物所为，那找张姑娘也只是治本……\n那人既知怪物，或许有根除之法……",
+    "links": [460]
+  },
+  {
+    "entryID": 460,
+    "actorID": "role2",
+    "text": "※事件階段3：主角到破廟觸發",
+    "Sequence": "",
+    "zh_TW": "※事件階段3：主角到破廟觸發",
+    "zh_CN": "※事件阶段3：主角到破庙触发",
+    "links": [461]
+  },
+  {
+    "entryID": 461,
+    "actorID": "role2",
+    "text": "[panel=5]你走入破廟，便聽到聲如震天的打鼾聲……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你走入破廟，便聽到聲如震天的打鼾聲……",
+    "zh_CN": "[panel=5]你走入破庙，便听到声如震天的打鼾声……",
+    "links": [462]
+  },
+  {
+    "entryID": 462,
+    "actorID": "role67",
+    "text": "呼……哈……呼……",
+    "Sequence": "",
+    "zh_TW": "呼……哈……呼……",
+    "zh_CN": "呼……哈……呼……",
+    "links": [463]
+  },
+  {
+    "entryID": 463,
+    "actorID": "MC1",
+    "text": "（蒼天啊，原來他在這……機不可失……）",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "（蒼天啊，原來他在這……機不可失……）",
+    "zh_CN": "（苍天啊，原来他在这……机不可失……）",
+    "links": [465, 464]
+  },
+  {
+    "entryID": 464,
+    "actorID": "MC1",
+    "text": "※可點劍者觸發魅力檢定，檢定成功",
+    "Sequence": "",
+    "zh_TW": "※可點劍者觸發魅力檢定，檢定成功",
+    "zh_CN": "※可点剑者触发魅力检定，检定成功",
+    "links": [469]
+  },
+  {
+    "entryID": 465,
+    "actorID": "MC1",
+    "text": "※可點劍者觸發魅力檢定，※檢定失敗",
+    "Sequence": "",
+    "zh_TW": "※可點劍者觸發魅力檢定，※檢定失敗",
+    "zh_CN": "※可点剑者触发魅力检定，※检定失败",
+    "links": [466]
+  },
+  {
+    "entryID": 466,
+    "actorID": "role2",
+    "text": "[panel=5]你試圖攀談，但鼾聲不減反增，\n好似有意驅趕擾人者。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]你試圖攀談，但鼾聲不減反增，\n好似有意驅趕擾人者。",
+    "zh_CN": "[panel=5]你试图攀谈，但鼾声不减反增，\n好似有意驱赶扰人者。",
+    "links": [467]
+  },
+  {
+    "entryID": 467,
+    "actorID": "role2",
+    "text": "[panel=5]最終你被鼾聲隱藏的氣勁震出屋外，\n等再回來，劍者已經不在……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]最終你被鼾聲隱藏的氣勁震出屋外，\n等再回來，劍者已經不在……",
+    "zh_CN": "[panel=5]最终你被鼾声隐藏的气劲震出屋外，\n等再回来，剑者已经不在……",
+    "links": [468]
+  },
+  {
+    "entryID": 468,
+    "actorID": "MC1",
+    "text": "打鼾也能傷人……\n這人所學太古怪了吧……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "打鼾也能傷人……\n這人所學太古怪了吧……",
+    "zh_CN": "打鼾也能伤人……\n这人所学太古怪了吧……",
+    "links": []
+  },
+  {
+    "entryID": 469,
+    "actorID": "role67",
+    "text": "唔啊……\n好久沒睡這麼舒暢了……怎麼你也在啊？",
+    "Sequence": "",
+    "zh_TW": "唔啊……\n好久沒睡這麼舒暢了……怎麼你也在啊？",
+    "zh_CN": "唔啊……\n好久没睡这么舒畅了……怎么你也在啊？",
+    "links": [470]
+  },
+  {
+    "entryID": 470,
+    "actorID": "MC1",
+    "text": "……啊……仙人你醒了啊……？",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "……啊……仙人你醒了啊……？",
+    "zh_CN": "……啊……仙人你醒了啊……？",
+    "links": [471]
+  },
+  {
+    "entryID": 471,
+    "actorID": "role67",
+    "text": "一代不如一代啊……口水擦一擦，說明來意吧。\n追逐於吾，不會又說仙人之辭吧？",
+    "Sequence": "",
+    "zh_TW": "一代不如一代啊……口水擦一擦，說明來意吧。\n追逐於吾，不會又說仙人之辭吧？",
+    "zh_CN": "一代不如一代啊……口水擦一擦，说明来意吧。 \n追逐于吾，不会又说仙人之辞吧？",
+    "links": [472]
+  },
+  {
+    "entryID": 472,
+    "actorID": "role2",
+    "text": "[panel=5]你詳述了瘟疫跟怪物猜測……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你詳述了瘟疫跟怪物猜測……",
+    "zh_CN": "[panel=5]你详述了瘟疫跟怪物猜测……",
+    "links": [478]
+  },
+  {
+    "entryID": 473,
+    "actorID": "role67",
+    "text": "愣頭愣腦的，耳朵還挺靈啊。\n正如你所料，瘟疫禍首是那瘟魔種。",
+    "Sequence": "",
+    "zh_TW": "愣頭愣腦的，耳朵還挺靈啊。\n正如你所料，瘟疫禍首是那瘟魔種。",
+    "zh_CN": "愣头愣脑的，耳朵还挺灵啊。 \n正如你所料，瘟疫祸首是那瘟魔种。",
+    "links": [474]
+  },
+  {
+    "entryID": 474,
+    "actorID": "role67",
+    "text": "這種怪物即便在過往，也極為罕見。",
+    "Sequence": "",
+    "zh_TW": "這種怪物即便在過往，也極為罕見。",
+    "zh_CN": "这种怪物即便在过往，也极为罕见。",
+    "links": [551]
+  },
+  {
+    "entryID": 475,
+    "actorID": "MC1",
+    "text": "但上次你不是已將之殺除，為何還有疫病肆虐？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "但上次你不是已將之殺除，為何還有疫病肆虐？",
+    "zh_CN": "但上次你不是已将之杀除，为何还有疫病肆虐？",
+    "links": [476]
+  },
+  {
+    "entryID": 476,
+    "actorID": "role67",
+    "text": "瘟魔種一旦出現，往往不只一隻。\n事實上，吾沿途而來，已見數個村莊蒙受其害。",
+    "Sequence": "",
+    "zh_TW": "瘟魔種一旦出現，往往不只一隻。\n事實上，吾沿途而來，已見數個村莊蒙受其害。",
+    "zh_CN": "瘟魔种一旦出现，往往不只一只。 \n事实上，吾沿途而来，已见数个村庄蒙受其害。",
+    "links": [477]
+  },
+  {
+    "entryID": 477,
+    "actorID": "MC1",
+    "text": "既然如此，晚輩願隨前輩共誅瘟魔。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "既然如此，晚輩願隨前輩共誅瘟魔。",
+    "zh_CN": "既然如此，晚辈愿随前辈共诛瘟魔。",
+    "links": [479]
+  },
+  {
+    "entryID": 478,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [473]
+  },
+  {
+    "entryID": 479,
+    "actorID": "role67",
+    "text": "省省吧，吾早已不問世事，\n上次只是一時興起。",
+    "Sequence": "",
+    "zh_TW": "省省吧，吾早已不問世事，\n上次只是一時興起。",
+    "zh_CN": "省省吧，吾早已不问世事，\n上次只是一时兴起。",
+    "links": [480]
+  },
+  {
+    "entryID": 480,
+    "actorID": "MC1",
+    "text": "可是……",
+    "Sequence": "",
+    "zh_TW": "可是……",
+    "zh_CN": "可是……",
+    "links": [481]
+  },
+  {
+    "entryID": 481,
+    "actorID": "role67",
+    "text": "吾說了，牠們就如瘟疫本身。\n天命定數，凡人焉能抗天。",
+    "Sequence": "",
+    "zh_TW": "吾說了，牠們就如瘟疫本身。\n天命定數，凡人焉能抗天。",
+    "zh_CN": "吾说了，它们就如瘟疫本身。 \n天命定数，凡人焉能抗天。",
+    "links": [482, 483]
+  },
+  {
+    "entryID": 482,
+    "actorID": "MC1",
+    "text": "1.有道是人定勝天。",
+    "Sequence": "",
+    "zh_TW": "1.有道是人定勝天。",
+    "zh_CN": "1.有道是人定胜天。",
+    "links": [484]
+  },
+  {
+    "entryID": 483,
+    "actorID": "MC1",
+    "text": "2.怪物便是怪物，豈能稱天。",
+    "Sequence": "",
+    "zh_TW": "2.怪物便是怪物，豈能稱天。",
+    "zh_CN": "2.怪物便是怪物，岂能称天。",
+    "links": [485]
+  },
+  {
+    "entryID": 484,
+    "actorID": "role67",
+    "text": "人定勝天……\n不過庸者倔強，聊以慰藉罷了。",
+    "Sequence": "",
+    "zh_TW": "人定勝天……\n不過庸者倔強，聊以慰藉罷了。",
+    "zh_CN": "人定胜天……\n不过庸者倔强，聊以慰藉罢了。",
+    "links": [486]
+  },
+  {
+    "entryID": 485,
+    "actorID": "role67",
+    "text": "你不聞天意難測，天意弄人？",
+    "Sequence": "",
+    "zh_TW": "你不聞天意難測，天意弄人？",
+    "zh_CN": "你不闻天意难测，天意弄人？",
+    "links": [486]
+  },
+  {
+    "entryID": 486,
+    "actorID": "MC1",
+    "text": "……好吧，前輩意決，晚輩便不為難了。\n這樁事晚輩會設法解決的。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "……好吧，前輩意決，晚輩便不為難了。\n這樁事晚輩會設法解決的。",
+    "zh_CN": "……好吧，前辈意决，晚辈便不为难了。 \n这桩事晚辈会设法解决的。",
+    "links": [487]
+  },
+  {
+    "entryID": 487,
+    "actorID": "role67",
+    "text": "疫入骨髓，上蒼難救。\n這可是要玩命的。",
+    "Sequence": "",
+    "zh_TW": "疫入骨髓，上蒼難救。\n這可是要玩命的。",
+    "zh_CN": "疫入骨髓，上苍难救。 \n这可是要玩命的。",
+    "links": [488]
+  },
+  {
+    "entryID": 488,
+    "actorID": "MC1",
+    "text": "假若如此，誠如你言，命數罷了。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "假若如此，誠如你言，命數罷了。",
+    "zh_CN": "假若如此，诚如你言，命数罢了。",
+    "links": [489]
+  },
+  {
+    "entryID": 489,
+    "actorID": "role67",
+    "text": "…………\n…………",
+    "Sequence": "",
+    "zh_TW": "…………\n…………",
+    "zh_CN": "…………\n…………",
+    "links": [490]
+  },
+  {
+    "entryID": 490,
+    "actorID": "role67",
+    "text": "唉，這該叫道德綁架嗎……",
+    "Sequence": "",
+    "zh_TW": "唉，這該叫道德綁架嗎……",
+    "zh_CN": "唉，这该叫道德绑架吗……",
+    "links": [491]
+  },
+  {
+    "entryID": 491,
+    "actorID": "role67",
+    "text": "就你的身手，想對付瘟魔種，還嫌太早。\n閒著也閒著，吾可以指點一二，但得看你本事。",
+    "Sequence": "",
+    "zh_TW": "就你的身手，想對付瘟魔種，還嫌太早。\n閒著也閒著，吾可以指點一二，但得看你本事。",
+    "zh_CN": "就你的身手，想对付瘟魔种，还嫌太早。 \n闲着也闲着，吾可以指点一二，但得看你本事。",
+    "links": [492]
+  },
+  {
+    "entryID": 492,
+    "actorID": "MC1",
+    "text": "真的嗎！那還請前輩賜教吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "真的嗎！那還請前輩賜教吧。",
+    "zh_CN": "真的吗！那还请前辈赐教吧。",
+    "links": [493]
+  },
+  {
+    "entryID": 493,
+    "actorID": "role67",
+    "text": "少自以為了。\n吾要出手，何來賜教，那是教訓。",
+    "Sequence": "",
+    "zh_TW": "少自以為了。\n吾要出手，何來賜教，那是教訓。",
+    "zh_CN": "少自以为了。 \n吾要出手，何来赐教，那是教训。",
+    "links": [494]
+  },
+  {
+    "entryID": 494,
+    "actorID": "role67",
+    "text": "并州有幾處賊窟。\n把他們掃平，那時再回來找吾吧。",
+    "Sequence": "",
+    "zh_TW": "并州有幾處賊窟。\n把他們掃平，那時再回來找吾吧。",
+    "zh_CN": "并州有几处贼窟。 \n把他们扫平，那时再回来找吾吧。",
+    "links": [495]
+  },
+  {
+    "entryID": 495,
+    "actorID": "role2",
+    "text": "※事件階段4：完成戰略圖中，出現的數個清剿賊窟事件，回破廟找林天觸發",
+    "Sequence": "",
+    "zh_TW": "※事件階段4：完成戰略圖中，出現的數個清剿賊窟事件，回破廟找林天觸發",
+    "zh_CN": "※事件阶段4：完成战略图中，出现的数个清剿贼窟事件，回破庙找林天触发",
+    "links": [496]
+  },
+  {
+    "entryID": 496,
+    "actorID": "role67",
+    "text": "哦？動作還算快啊。\n很好，你夠格喝這一口了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "哦？動作還算快啊。\n很好，你夠格喝這一口了。",
+    "zh_CN": "哦？动作还算快啊。 \n很好，你够格喝这一口了。",
+    "links": [497]
+  },
+  {
+    "entryID": 497,
+    "actorID": "role2",
+    "text": "[panel=5]劍者拿出酒壺，倒了些酒給你。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]劍者拿出酒壺，倒了些酒給你。",
+    "zh_CN": "[panel=5]剑者拿出酒壶，倒了些酒给你。",
+    "links": [498]
+  },
+  {
+    "entryID": 498,
+    "actorID": "MC1",
+    "text": "多謝前輩。",
+    "Sequence": "",
+    "zh_TW": "多謝前輩。",
+    "zh_CN": "多谢前辈。",
+    "links": [499]
+  },
+  {
+    "entryID": 499,
+    "actorID": "role2",
+    "text": "[panel=5]其酒雖有酒氣，卻無酒勁，\n隱隱之中還帶著黃菊醇香……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]其酒雖有酒氣，卻無酒勁，\n隱隱之中還帶著黃菊醇香……",
+    "zh_CN": "[panel=5]其酒虽有酒气，却无酒劲，\n隐隐之中还带着黄菊醇香……",
+    "links": [500]
+  },
+  {
+    "entryID": 500,
+    "actorID": "role67",
+    "text": "現在試著稍作吐納看看。",
+    "Sequence": "",
+    "zh_TW": "現在試著稍作吐納看看。",
+    "zh_CN": "现在试着稍作吐纳看看。",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "role2",
+    "text": "[panel=5]這時，你發覺全身氣脈通暢，\n氣力不斷湧現，身體比平常還要輕盈。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這時，你發覺全身氣脈通暢，\n氣力不斷湧現，身體比平常還要輕盈。",
+    "zh_CN": "[panel=5]这时，你发觉全身气脉通畅，\n气力不断涌现，身体比平常还要轻盈。",
+    "links": [502]
+  },
+  {
+    "entryID": 502,
+    "actorID": "MC1",
+    "text": "這……怎麼回事？\n晚輩體內氣力好像要衝出來了……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "這……怎麼回事？\n晚輩體內氣力好像要衝出來了……",
+    "zh_CN": "这……怎么回事？ \n晚辈体内气力好像要冲出来了……",
+    "links": [503]
+  },
+  {
+    "entryID": 503,
+    "actorID": "role67",
+    "text": "那就是了，你之根基尚嫌不足，\n此酒能輔你之氣。",
+    "Sequence": "",
+    "zh_TW": "那就是了，你之根基尚嫌不足，\n此酒能輔你之氣。",
+    "zh_CN": "那就是了，你之根基尚嫌不足，\n此酒能辅你之气。",
+    "links": [504]
+  },
+  {
+    "entryID": 504,
+    "actorID": "role67",
+    "text": "酒中黃菊也有袪病避邪之用。\n在吾師門，以前人人都會釀。",
+    "Sequence": "",
+    "zh_TW": "酒中黃菊也有袪病避邪之用。\n在吾師門，以前人人都會釀。",
+    "zh_CN": "酒中黄菊也有袪病避邪之用。 \n在吾师门，以前人人都会酿。",
+    "links": [505]
+  },
+  {
+    "entryID": 505,
+    "actorID": "MC1",
+    "text": "以前？這麼說來，前輩如此熟知怪物……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "以前？這麼說來，前輩如此熟知怪物……",
+    "zh_CN": "以前？这么说来，前辈如此熟知怪物……",
+    "links": [506]
+  },
+  {
+    "entryID": 506,
+    "actorID": "role67",
+    "text": "閒談到此了。\n接下來，你可要仔細看好了──",
+    "Sequence": "",
+    "zh_TW": "閒談到此了。\n接下來，你可要仔細看好了──",
+    "zh_CN": "闲谈到此了。 \n接下来，你可要仔细看好了──",
+    "links": [507]
+  },
+  {
+    "entryID": 507,
+    "actorID": "role67",
+    "text": "神道訣，玄元太清──神龍現影！",
+    "Sequence": "",
+    "zh_TW": "神道訣，玄元太清──神龍現影！",
+    "zh_CN": "神道诀，玄元太清──神龙现影！",
+    "links": [508]
+  },
+  {
+    "entryID": 508,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,20,0.1)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [509]
+  },
+  {
+    "entryID": 509,
+    "actorID": "MC1",
+    "text": "……！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "……！",
+    "zh_CN": "……！",
+    "links": [510]
+  },
+  {
+    "entryID": 510,
+    "actorID": "role67",
+    "text": "看清了？",
+    "Sequence": "",
+    "zh_TW": "看清了？",
+    "zh_CN": "看清了？",
+    "links": [511]
+  },
+  {
+    "entryID": 511,
+    "actorID": "MC1",
+    "text": "這……此招太過深奧，晚輩一時難以參透……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "這……此招太過深奧，晚輩一時難以參透……",
+    "zh_CN": "这……此招太过深奥，晚辈一时难以参透……",
+    "links": [512]
+  },
+  {
+    "entryID": 512,
+    "actorID": "role67",
+    "text": "好歹這是匯聚吾所學之初步。\n若你片刻便悟，吾還用混嗎。",
+    "Sequence": "",
+    "zh_TW": "好歹這是匯聚吾所學之初步。\n若你片刻便悟，吾還用混嗎。",
+    "zh_CN": "好歹这是汇聚吾所学之初步。 \n若你片刻便悟，吾还用混吗。",
+    "links": [513]
+  },
+  {
+    "entryID": 513,
+    "actorID": "role67",
+    "text": "你且先試幾手，吾一旁指點便是了。",
+    "Sequence": "",
+    "zh_TW": "你且先試幾手，吾一旁指點便是了。",
+    "zh_CN": "你且先试几手，吾一旁指点便是了。",
+    "links": [514]
+  },
+  {
+    "entryID": 514,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [515]
+  },
+  {
+    "entryID": 515,
+    "actorID": "MC1",
+    "text": "──神道訣，神龍現影！",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "──神道訣，神龍現影！",
+    "zh_CN": "──神道诀，神龙现影！",
+    "links": [516]
+  },
+  {
+    "entryID": 516,
+    "actorID": "role67",
+    "text": "嗯……火候初成，我們動身吧。",
+    "Sequence": "",
+    "zh_TW": "嗯……火候初成，我們動身吧。",
+    "zh_CN": "嗯……火候初成，我们动身吧。",
+    "links": [517]
+  },
+  {
+    "entryID": 517,
+    "actorID": "MC1",
+    "text": "咦？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "咦？",
+    "zh_CN": "咦？",
+    "links": [518]
+  },
+  {
+    "entryID": 518,
+    "actorID": "role67",
+    "text": "去除了那瘟魔種。\n有你這般愚蠢後輩，前輩還有何話好說。",
+    "Sequence": "",
+    "zh_TW": "去除了那瘟魔種。\n有你這般愚蠢後輩，前輩還有何話好說。",
+    "zh_CN": "去除了那瘟魔种。 \n有你这般愚蠢后辈，前辈还有何话好说。",
+    "links": [519]
+  },
+  {
+    "entryID": 519,
+    "actorID": "MC1",
+    "text": "真的？多謝前輩！",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "真的？多謝前輩！",
+    "zh_CN": "真的？多谢前辈！",
+    "links": [520]
+  },
+  {
+    "entryID": 520,
+    "actorID": "role2",
+    "text": "※事件階段5：回到黃巾村觸發",
+    "Sequence": "",
+    "zh_TW": "※事件階段5：回到黃巾村觸發",
+    "zh_CN": "※事件阶段5：回到黄巾村触发",
+    "links": [521]
+  },
+  {
+    "entryID": 521,
+    "actorID": "role67",
+    "text": "那就動手準備。\n你先把村人安置附近的山頭，以免再染疫。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "那就動手準備。\n你先把村人安置附近的山頭，以免再染疫。",
+    "zh_CN": "那就动手准备。 \n你先把村人安置附近的山头，以免再染疫。",
+    "links": [522]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [523]
+  },
+  {
+    "entryID": 523,
+    "actorID": "role2",
+    "text": "[panel=5]你把村人安置好後，\n回來就見劍者在村口不遠處放置囊袋。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你把村人安置好後，\n回來就見劍者在村口不遠處放置囊袋。",
+    "zh_CN": "[panel=5]你把村人安置好后，\n回来就见剑者在村口不远处放置囊袋。",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "MC1",
+    "text": "這袋子是……？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "這袋子是……？",
+    "zh_CN": "这袋子是……？",
+    "links": [525]
+  },
+  {
+    "entryID": 525,
+    "actorID": "role67",
+    "text": "茱萸囊，瘟魔種極度厭惡它之奇味，\n一旦聞到會恨不得飛奔過來，將之毀去。",
+    "Sequence": "",
+    "zh_TW": "茱萸囊，瘟魔種極度厭惡它之奇味，\n一旦聞到會恨不得飛奔過來，將之毀去。",
+    "zh_CN": "茱萸囊，瘟魔种极度厌恶它之奇味，\n一旦闻到会恨不得飞奔过来，将之毁去。",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC1",
+    "text": "厭惡，卻又被吸引，還真矛盾。",
+    "Sequence": "",
+    "zh_TW": "厭惡，卻又被吸引，還真矛盾。",
+    "zh_CN": "厌恶，却又被吸引，还真矛盾。",
+    "links": [527]
+  },
+  {
+    "entryID": 527,
+    "actorID": "role67",
+    "text": "人不也是嗎。",
+    "Sequence": "",
+    "zh_TW": "人不也是嗎。",
+    "zh_CN": "人不也是吗。",
+    "links": [528]
+  },
+  {
+    "entryID": 528,
+    "actorID": "role4",
+    "text": "吼──吼──",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──吼──",
+    "zh_CN": "吼──吼──",
+    "links": [529]
+  },
+  {
+    "entryID": 529,
+    "actorID": "role67",
+    "text": "來得還真快，準備了。",
+    "Sequence": "",
+    "zh_TW": "來得還真快，準備了。",
+    "zh_CN": "来得还真快，准备了。",
+    "links": [530, 531]
+  },
+  {
+    "entryID": 530,
+    "actorID": "MC1",
+    "text": "➤進[戰鬥]。勝利",
+    "Sequence": "",
+    "zh_TW": "➤進[戰鬥]。勝利",
+    "zh_CN": "➤进[战斗]。 胜利",
+    "links": [533]
+  },
+  {
+    "entryID": 531,
+    "actorID": "MC1",
+    "text": "➤進[戰鬥]。失敗",
+    "Sequence": "",
+    "zh_TW": "➤進[戰鬥]。失敗",
+    "zh_CN": "➤进[战斗]。 失败",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "role2",
+    "text": "纏鬥之中，即便手中兵刃猶在揮舞，\n但你深受瘟疫侵蝕，眼前漸漸只剩黑暗……",
+    "Sequence": "",
+    "zh_TW": "纏鬥之中，即便手中兵刃猶在揮舞，\n但你深受瘟疫侵蝕，眼前漸漸只剩黑暗……",
+    "zh_CN": "缠斗之中，即便手中兵刃犹在挥舞，\n但你深受瘟疫侵蚀，眼前渐渐只剩黑暗……",
+    "links": []
+  },
+  {
+    "entryID": 533,
+    "actorID": "role2",
+    "text": "[panel=5]一番凶戰過後，瘟魔皆亡於你們劍下，\n少了病源，疫病漸息……",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=5]一番凶戰過後，瘟魔皆亡於你們劍下，\n少了病源，疫病漸息……",
+    "zh_CN": "[panel=5]一番凶战过后，瘟魔皆亡于你们剑下，\n少了病源，疫病渐息……",
+    "links": [534]
+  },
+  {
+    "entryID": 534,
+    "actorID": "MC1",
+    "text": "呼……這次真的差點要把命搭進去了……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "呼……這次真的差點要把命搭進去了……",
+    "zh_CN": "呼……这次真的差点要把命搭进去了……",
+    "links": [535]
+  },
+  {
+    "entryID": 535,
+    "actorID": "role67",
+    "text": "呵呵……感受到活著的美好了嗎？\n要好好謹記這種感觸，畢竟有的人可沒這機會。",
+    "Sequence": "",
+    "zh_TW": "呵呵……感受到活著的美好了嗎？\n要好好謹記這種感觸，畢竟有的人可沒這機會。",
+    "zh_CN": "呵呵……感受到活着的美好了吗？ \n要好好谨记这种感触，毕竟有的人可没这机会。",
+    "links": [536]
+  },
+  {
+    "entryID": 536,
+    "actorID": "MC1",
+    "text": "……前輩之前提過以前師門，莫非如今……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "……前輩之前提過以前師門，莫非如今……",
+    "zh_CN": "……前辈之前提过以前师门，莫非如今……",
+    "links": [537]
+  },
+  {
+    "entryID": 537,
+    "actorID": "role67",
+    "text": "世事無常，有聚就有散。\n縱使無敵，又有何用。",
+    "Sequence": "",
+    "zh_TW": "世事無常，有聚就有散。\n縱使無敵，又有何用。",
+    "zh_CN": "世事无常，有聚就有散。 \n纵使无敌，又有何用。",
+    "links": [538]
+  },
+  {
+    "entryID": 538,
+    "actorID": "MC1",
+    "text": "……若前輩不嫌棄，晚輩所待的英豪府……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……若前輩不嫌棄，晚輩所待的英豪府……",
+    "zh_CN": "……若前辈不嫌弃，晚辈所待的英豪府……",
+    "links": [539]
+  },
+  {
+    "entryID": 539,
+    "actorID": "role2",
+    "text": "[panel=5]正當閒談之際，你們見到路過邊村，\n一片悽慘，卻非疫災所致，顯然乃強盜所為……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]正當閒談之際，你們見到路過邊村，\n一片悽慘，卻非疫災所致，顯然乃強盜所為……",
+    "zh_CN": "[panel=5]正当闲谈之际，你们见到路过边村，\n一片凄惨，却非疫灾所致，显然乃强盗所为……",
+    "links": [540]
+  },
+  {
+    "entryID": 540,
+    "actorID": "role67",
+    "text": "人禍成千，殺戮為萬，更勝疫病。\n百煉人間，何處登神，吾，倦了……",
+    "Sequence": "",
+    "zh_TW": "人禍成千，殺戮為萬，更勝疫病。\n百煉人間，何處登神，吾，倦了……",
+    "zh_CN": "人祸成千，杀戮为万，更胜疫病。 \n百炼人间，何处登神，吾，倦了……",
+    "links": [541]
+  },
+  {
+    "entryID": 541,
+    "actorID": "role2",
+    "text": "[panel=5]劍者把酒壺跟一錦囊扔給了你。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]劍者把酒壺跟一錦囊扔給了你。",
+    "zh_CN": "[panel=5]剑者把酒壶跟一锦囊扔给了你。",
+    "links": [542]
+  },
+  {
+    "entryID": 542,
+    "actorID": "role67",
+    "text": "這已不是吾的時代，\n這些黃菊酒你代吾給村人，多少有用處。",
+    "Sequence": "",
+    "zh_TW": "這已不是吾的時代，\n這些黃菊酒你代吾給村人，多少有用處。",
+    "zh_CN": "这已不是吾的时代，\n这些黄菊酒你代吾给村人，多少有用处。",
+    "links": [543]
+  },
+  {
+    "entryID": 543,
+    "actorID": "MC1",
+    "text": "…………",
+    "Sequence": "",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [544]
+  },
+  {
+    "entryID": 544,
+    "actorID": "MC1",
+    "text": "前輩可否在最後，告訴我你的名字？",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "前輩可否在最後，告訴我你的名字？",
+    "zh_CN": "前辈可否在最后，告诉我你的名字？",
+    "links": [545]
+  },
+  {
+    "entryID": 545,
+    "actorID": "role67",
+    "text": "林……",
+    "Sequence": "",
+    "zh_TW": "林……",
+    "zh_CN": "林……",
+    "links": [546]
+  },
+  {
+    "entryID": 546,
+    "actorID": "role2",
+    "text": "[panel=5]劍者無語，只是望天……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]劍者無語，只是望天……",
+    "zh_CN": "[panel=5]剑者无语，只是望天……",
+    "links": [547]
+  },
+  {
+    "entryID": 547,
+    "actorID": "role2",
+    "text": "[panel=5]其後，清風一躍，便無蹤影……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]其後，清風一躍，便無蹤影……",
+    "zh_CN": "[panel=5]其后，清风一跃，便无踪影……",
+    "links": [548]
+  },
+  {
+    "entryID": 548,
+    "actorID": "role2",
+    "text": "[panel=5]你打開茱萸囊，\n裡中有一張紙條，一本秘笈。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你打開茱萸囊，\n裡中有一張紙條，一本秘笈。",
+    "zh_CN": "[panel=5]你打开茱萸囊，\n里中有一张纸条，一本秘笈。",
+    "links": [549]
+  },
+  {
+    "entryID": 549,
+    "actorID": "MC1",
+    "text": "「此乃我畢生精華，自可修習。\n此緣已了，無須再尋，時代予你……」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "「此乃我畢生精華，自可修習。\n此緣已了，無須再尋，時代予你……」",
+    "zh_CN": "「此乃我毕生精华，自可修习。\n此缘已了，无须再寻，时代予你……」",
+    "links": [550]
+  },
+  {
+    "entryID": 550,
+    "actorID": "MC1",
+    "text": "……前輩，你的囑託，我收下了。",
+    "Sequence": "",
+    "zh_TW": "……前輩，你的囑託，我收下了。",
+    "zh_CN": "……前辈，你的嘱托，我收下了。",
+    "links": []
+  },
+  {
+    "entryID": 551,
+    "actorID": "role67",
+    "text": "牠們身負災病，所經之處，生靈不存。\n可以說便是瘟疫本身。",
+    "Sequence": "",
+    "zh_TW": "牠們身負災病，所經之處，生靈不存。\n可以說便是瘟疫本身。",
+    "zh_CN": "它们身负灾病，所经之处，生灵不存。 \n可以说便是瘟疫本身。",
+    "links": [475]
+  }
+]

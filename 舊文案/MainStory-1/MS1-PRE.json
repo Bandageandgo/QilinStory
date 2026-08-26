@@ -1,0 +1,671 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "這次敵人規模非比尋常……\n對了，其他人呢？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "這次敵人規模非比尋常……\n對了，其他人呢？",
+    "zh_CN": "这次敌人规模非比寻常……\n对了，其他人呢？",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC7",
+    "text": "徐師父帶羽師兄出任務，賈師父去冀州赴會，\n至於呂師兄一如既往，不知去哪尋寶了。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "徐師父帶羽師兄出任務，賈師父去冀州赴會，\n至於呂師兄一如既往，不知去哪尋寶了。",
+    "zh_CN": "徐师父带羽师兄出任务，贾师父去冀州赴会，\n至于吕师兄一如既往，不知去哪寻宝了。",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "偏偏需要的時候，就不在，蒼天弄人啊……\n萬不得已，只能跟外人借調援手。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "偏偏需要的時候，就不在，蒼天弄人啊……\n萬不得已，只能跟外人借調援手。",
+    "zh_CN": "偏偏需要的时候，就不在，苍天弄人啊……\n万不得已，只能跟外人借调援手。",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC7",
+    "text": "還要算上準備物資。\n時間有限，要審慎選擇。",
+    "Sequence": "",
+    "zh_TW": "還要算上準備物資。\n時間有限，要審慎選擇。",
+    "zh_CN": "还要算上准备物资。 \n时间有限，要审慎选择。",
+    "links": [584]
+  },
+  {
+    "entryID": 393,
+    "actorID": "MC10",
+    "text": "情況老夫明白了，\n不過此事不好辦……",
+    "Sequence": "SetPortrait(MC10,pic=4);\nSetPortrait(MC1,pic=6);",
+    "Description": "變數分歧",
+    "zh_TW": "情況老夫明白了，\n不過此事不好辦……",
+    "zh_CN": "情况老夫明白了，\n不过此事不好办……",
+    "links": [394, 395]
+  },
+  {
+    "entryID": 394,
+    "actorID": "MC1",
+    "text": "1.[em1][魅力][/em1]為人講究個義字，幫主就是重義氣，才得眾人擁戴不是嗎？",
+    "Sequence": "BeginDiceRoll(Charisma,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][魅力][/em1]為人講究個義字，幫主就是重義氣，才得眾人擁戴不是嗎？",
+    "zh_CN": "1.[em1][魅力][/em1]为人讲究个义字，帮主就是重义气，才得众人拥戴不是吗？",
+    "links": [396]
+  },
+  {
+    "entryID": 395,
+    "actorID": "MC1",
+    "text": "2.[em1][謀略][/em1]幫主此刻出手，可得大秦助力，來日與甄家對峙，豈不多了一張王牌？",
+    "Sequence": "BeginDiceRoll(Strategy,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][謀略][/em1]幫主此刻出手，可得大秦助力，來日與甄家對峙，豈不多了一張王牌？",
+    "zh_CN": "2.[em1][谋略][/em1]帮主此刻出手，可得大秦助力，来日与甄家对峙，岂不多了一张王牌？",
+    "links": [554]
+  },
+  {
+    "entryID": 396,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [397, 403]
+  },
+  {
+    "entryID": 397,
+    "actorID": "MC10",
+    "text": "哈哈！你小子平常話糙，理卻不糙。\n為人不義，豬狗不如。",
+    "Sequence": "SetPortrait(MC10,pic=1);\nSetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Charisma,20); \nShowInstantMessage(Favorability,MC10,20,Agree);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟好感",
+    "zh_TW": "哈哈！你小子平常話糙，理卻不糙。\n為人不義，豬狗不如。",
+    "zh_CN": "哈哈！你小子平常话糙，理却不糙。 \n为人不义，猪狗不如。",
+    "links": [398]
+  },
+  {
+    "entryID": 398,
+    "actorID": "MC10",
+    "text": "好！這事老夫幫了，\n老夫這就調派幫眾與你們前去。",
+    "Sequence": "",
+    "zh_TW": "好！這事老夫幫了，\n老夫這就調派幫眾與你們前去。",
+    "zh_CN": "好！这事老夫帮了，\n老夫这就调派帮众与你们前去。",
+    "links": [399]
+  },
+  {
+    "entryID": 399,
+    "actorID": "role35",
+    "text": "[panel=2]多謝幫主，\n幫主快人快語，不愧是當世豪傑。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]多謝幫主，\n幫主快人快語，不愧是當世豪傑。",
+    "zh_CN": "[panel=2]多谢帮主，\n帮主快人快语，不愧是当世豪杰。",
+    "links": [400]
+  },
+  {
+    "entryID": 400,
+    "actorID": "MC10",
+    "text": "不必謝了，妳大秦是為遠來游子，\n而我赤龍幫多為流民，於苦相差無己。",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "不必謝了，妳大秦是為遠來游子，\n而我赤龍幫多為流民，於苦相差無己。",
+    "zh_CN": "不必谢了，妳大秦是为远来游子，\n而我赤龙帮多为流民，于苦相差无己。",
+    "links": [401]
+  },
+  {
+    "entryID": 401,
+    "actorID": "MC10",
+    "text": "可惜老夫有要事，無法沙場同行。",
+    "Sequence": "",
+    "zh_TW": "可惜老夫有要事，無法沙場同行。",
+    "zh_CN": "可惜老夫有要事，无法沙场同行。",
+    "links": [402]
+  },
+  {
+    "entryID": 402,
+    "actorID": "MC1",
+    "text": "幫主已是幫了大忙，\n接下來我們自己處理便可。",
+    "Sequence": "",
+    "zh_TW": "幫主已是幫了大忙，\n接下來我們自己處理便可。",
+    "zh_CN": "帮主已是帮了大忙，\n接下来我们自己处理便可。",
+    "links": []
+  },
+  {
+    "entryID": 403,
+    "actorID": "MC10",
+    "text": "花言巧語……就因為義氣，\n老夫有責任照顧底下人的生活。",
+    "Sequence": "SetPortrait(MC10,pic=4);\nSetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "花言巧語……就因為義氣，\n老夫有責任照顧底下人的生活。",
+    "zh_CN": "花言巧语……就因为义气，\n老夫有责任照顾底下人的生活。",
+    "links": [404]
+  },
+  {
+    "entryID": 404,
+    "actorID": "MC10",
+    "text": "老夫不能輕易讓他們白白送死，\n此事不必再談了。",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "老夫不能輕易讓他們白白送死，\n此事不必再談了。",
+    "zh_CN": "老夫不能轻易让他们白白送死，\n此事不必再谈了。",
+    "links": []
+  },
+  {
+    "entryID": 417,
+    "actorID": "MC10",
+    "text": "……你小子所言不無道理……\n大秦的姑娘妳怎麼說？",
+    "Sequence": "SetPortrait(MC10,pic=1);\nSetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Strategy,20); \nShowInstantMessage(Favorability,MC10,20,Agree);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟好感",
+    "zh_TW": "……你小子所言不無道理……\n大秦的姑娘妳怎麼說？",
+    "zh_CN": "……你小子所言不无道理……\n大秦的姑娘妳怎么说？",
+    "links": [418]
+  },
+  {
+    "entryID": 418,
+    "actorID": "role35",
+    "text": "[panel=2]只要幫主將來一句話，\n大秦傭兵願為先鋒。",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "[panel=2]只要幫主將來一句話，\n大秦傭兵願為先鋒。",
+    "zh_CN": "[panel=2]只要帮主将来一句话，\n大秦佣兵愿为先锋。",
+    "links": [419]
+  },
+  {
+    "entryID": 419,
+    "actorID": "MC10",
+    "text": "爽快！老夫這就派人與你們前去，\n你們快去吧。",
+    "Sequence": "",
+    "zh_TW": "爽快！老夫這就派人與你們前去，\n你們快去吧。",
+    "zh_CN": "爽快！老夫这就派人与你们前去，\n你们快去吧。",
+    "links": []
+  },
+  {
+    "entryID": 421,
+    "actorID": "MC10",
+    "text": "狗屁一堆，\n你們此去都未必有命回來了，談何之後。",
+    "Sequence": "SetPortrait(MC10,pic=2);\nSetPortrait(MC1,pic=4);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "狗屁一堆，\n你們此去都未必有命回來了，談何之後。",
+    "zh_CN": "狗屁一堆，\n你们此去都未必有命回来了，谈何之后。",
+    "links": [423]
+  },
+  {
+    "entryID": 423,
+    "actorID": "MC10",
+    "text": "老夫不會讓自己人陪你們送死的，\n此事不必再談了。",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "老夫不會讓自己人陪你們送死的，\n此事不必再談了。",
+    "zh_CN": "老夫不会让自己人陪你们送死的，\n此事不必再谈了。",
+    "links": []
+  },
+  {
+    "entryID": 437,
+    "actorID": "MC9",
+    "text": "我聽明白了，不過甄家與大秦傭兵非親非故，\n何故為你們涉險賣命？",
+    "Sequence": "SetPortrait(role20,pic=1);",
+    "Description": "變數分歧",
+    "zh_TW": "我聽明白了，不過甄家與大秦傭兵非親非故，\n何故為你們涉險賣命？",
+    "zh_CN": "我听明白了，不过甄家与大秦佣兵非亲非故，\n何故为你们涉险卖命？",
+    "links": [438, 439]
+  },
+  {
+    "entryID": 438,
+    "actorID": "MC1",
+    "text": "1.[em1][政治][/em1]利益向來伴隨風險，家主要不想想赤龍幫？",
+    "Sequence": "BeginDiceRoll(Politics,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][政治][/em1]利益向來伴隨風險，家主要不想想赤龍幫？",
+    "zh_CN": "1.[em1][政治][/em1]利益向来伴随风险，家主要不想想赤龙帮？",
+    "links": [555]
+  },
+  {
+    "entryID": 439,
+    "actorID": "MC1",
+    "text": "2.[em1][厚黑][/em1]有些人是做賣命的生意，但就要看是為誰賣命。",
+    "Sequence": "BeginDiceRoll(Realpolitik,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][厚黑][/em1]有些人是做賣命的生意，但就要看是為誰賣命。",
+    "zh_CN": "2.[em1][厚黑][/em1]有些人是做卖命的生意，但就要看是为谁卖命。",
+    "links": [556]
+  },
+  {
+    "entryID": 440,
+    "actorID": "MC9",
+    "text": "……你呀，別有居心啊，不過深得我心。\n行吧，我就調人幫點忙吧。",
+    "Sequence": "SetPortrait(role20,pic=1);\nSetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Politics,20); \nShowInstantMessage(Favorability,MC9,20,Agree);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟好感",
+    "zh_TW": "……你呀，別有居心啊，不過深得我心。\n行吧，我就調人幫點忙吧。",
+    "zh_CN": "……你呀，别有居心啊，不过深得我心。 \n行吧，我就调人帮点忙吧。",
+    "links": [441]
+  },
+  {
+    "entryID": 441,
+    "actorID": "role35",
+    "text": "[panel=2]多謝家主！\n家主之仁，是為大家風範。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]多謝家主！\n家主之仁，是為大家風範。",
+    "zh_CN": "[panel=2]多谢家主！ \n家主之仁，是为大家风范。",
+    "links": [442]
+  },
+  {
+    "entryID": 442,
+    "actorID": "MC9",
+    "text": "別急著謝，假如，我是說假如甄家與人為敵，\n大秦傭兵知道該立於何方吧？",
+    "Sequence": "SetPortrait(role20,pic=4);",
+    "zh_TW": "別急著謝，假如，我是說假如甄家與人為敵，\n大秦傭兵知道該立於何方吧？",
+    "zh_CN": "别急着谢，假如，我是说假如甄家与人为敌，\n大秦佣兵知道该立于何方吧？",
+    "links": [443]
+  },
+  {
+    "entryID": 443,
+    "actorID": "role35",
+    "text": "[panel=2]要是真有那一天，\n甄家之前，大秦傭兵絕不遲到。",
+    "Sequence": "SetPortrait(role35,pic=2);\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "[panel=2]要是真有那一天，\n甄家之前，大秦傭兵絕不遲到。",
+    "zh_CN": "[panel=2]要是真有那一天，\n甄家之前，大秦佣兵绝不迟到。",
+    "links": [444]
+  },
+  {
+    "entryID": 444,
+    "actorID": "MC9",
+    "text": "呵呵，這話中聽，\n去吧，為我們雙方的未來去吧。",
+    "Sequence": "SetPortrait(role20,pic=1);",
+    "zh_TW": "呵呵，這話中聽，\n去吧，為我們雙方的未來去吧。",
+    "zh_CN": "呵呵，这话中听，\n去吧，为我们双方的未来去吧。",
+    "links": []
+  },
+  {
+    "entryID": 446,
+    "actorID": "MC9",
+    "text": "你呀，其心可議。\n甄家與赤龍幫向來交好，豈容外人說三道四。",
+    "Sequence": "SetPortrait(role20,pic=2);\nSetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "你呀，其心可議。\n甄家與赤龍幫向來交好，豈容外人說三道四。",
+    "zh_CN": "你呀，其心可议。 \n甄家与赤龙帮向来交好，岂容外人说三道四。",
+    "links": [448]
+  },
+  {
+    "entryID": 448,
+    "actorID": "MC9",
+    "text": "唉，本以為你有何高見，\n看來是筠想多了。來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=4);",
+    "zh_TW": "唉，本以為你有何高見，\n看來是筠想多了。來人，送客。",
+    "zh_CN": "唉，本以为你有何高见，\n看来是筠想多了。来人，送客。",
+    "links": []
+  },
+  {
+    "entryID": 459,
+    "actorID": "MC9",
+    "text": "話很是中聽，嗯……大秦傭兵，不錯的投資。\n行吧，筠就調點人幫些忙吧。",
+    "Sequence": "SetPortrait(role20,pic=3);\nSetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Realpolitik,20); \nShowInstantMessage(Favorability,MC9,20,Agree);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟好感",
+    "zh_TW": "話很是中聽，嗯……大秦傭兵，不錯的投資。\n行吧，筠就調點人幫些忙吧。",
+    "zh_CN": "话很是中听，嗯……大秦佣兵，不错的投资。 \n行吧，筠就调点人帮些忙吧。",
+    "links": [460]
+  },
+  {
+    "entryID": 460,
+    "actorID": "role35",
+    "text": "[panel=2]多謝家主！\n家主之仁，是為大家風範。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]多謝家主！\n家主之仁，是為大家風範。",
+    "zh_CN": "[panel=2]多谢家主！ \n家主之仁，是为大家风范。",
+    "links": [461]
+  },
+  {
+    "entryID": 461,
+    "actorID": "MC9",
+    "text": "謝字不必，\n這只是一場交易。",
+    "Sequence": "",
+    "zh_TW": "謝字不必，\n這只是一場交易。",
+    "zh_CN": "谢字不必，\n这只是一场交易。",
+    "links": []
+  },
+  {
+    "entryID": 463,
+    "actorID": "MC9",
+    "text": "可惜，命與命未必同一個價值。\n你之論點差了，來人，送客。",
+    "Sequence": "SetPortrait(role20,pic=4);\nSetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "可惜，命與命未必同一個價值。\n你之論點差了，來人，送客。",
+    "zh_CN": "可惜，命与命未必同一个价值。 \n你之论点差了，来人，送客。",
+    "links": []
+  },
+  {
+    "entryID": 478,
+    "actorID": "role22",
+    "text": "哼哈哈！就這樣的小事啊。",
+    "Sequence": "SetPortrait(role22,pic=1);\nSetPortrait(MC1,pic=6);",
+    "Description": "變數分歧",
+    "zh_TW": "哼哈哈！就這樣的小事啊。",
+    "zh_CN": "哼哈哈！就这样的小事啊。",
+    "links": [559]
+  },
+  {
+    "entryID": 479,
+    "actorID": "MC1",
+    "text": "1.[em1][威嚇][/em1]同為外族，大秦不在，黑狼孤立，可能獨活嗎？",
+    "Sequence": "BeginDiceRoll(Intimidation,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][威嚇][/em1]同為外族，大秦不在，黑狼孤立，可能獨活嗎？",
+    "zh_CN": "1.[em1][威吓][/em1]同为外族，大秦不在，黑狼孤立，可能独活吗？",
+    "links": [557]
+  },
+  {
+    "entryID": 480,
+    "actorID": "MC1",
+    "text": "2.[em1][口才][/em1]黑狼之名，已名列天下，若見義勇為，天地豈不更只有一字，服！",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,8);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][口才][/em1]黑狼之名，已名列天下，若見義勇為，天地豈不更只有一字，服！",
+    "zh_CN": "2.[em1][口才][/em1]黑狼之名，已名列天下，若见义勇为，天地岂不更只有一字，服！",
+    "links": [558]
+  },
+  {
+    "entryID": 481,
+    "actorID": "role22",
+    "text": "是啊，漢人向來對我們投以異樣眼光。\n想必這位美人也沒少受冷眼吧。",
+    "Sequence": "SetPortrait(role22,pic=2);\nSetPortrait(MC1,pic=6);\nShowInstantMessage(Exp_FeatExp,MC1,Intimidation,20); \nShowInstantMessage(Favorability,MC11,20,Agree);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟好感",
+    "zh_TW": "是啊，漢人向來對我們投以異樣眼光。\n想必這位美人也沒少受冷眼吧。",
+    "zh_CN": "是啊，汉人向来对我们投以异样眼光。 \n想必这位美人也没少受冷眼吧。",
+    "links": [482]
+  },
+  {
+    "entryID": 482,
+    "actorID": "role22",
+    "text": "這樣一說，妳我可算一家人。\n那本王當然不能袖手旁觀，就派人跟你們去吧。",
+    "Sequence": "SetPortrait(role22,pic=1);",
+    "zh_TW": "這樣一說，妳我可算一家人。\n那本王當然不能袖手旁觀，就派人跟你們去吧。",
+    "zh_CN": "这样一说，妳我可算一家人。 \n那本王当然不能袖手旁观，就派人跟你们去吧。",
+    "links": [483]
+  },
+  {
+    "entryID": 483,
+    "actorID": "role35",
+    "text": "[panel=2]多謝黑狼大王，\n大王氣度，不愧是一族之長。",
+    "Sequence": "SetPortrait(role35,pic=1);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=2]多謝黑狼大王，\n大王氣度，不愧是一族之長。",
+    "zh_CN": "[panel=2]多谢黑狼大王，\n大王气度，不愧是一族之长。",
+    "links": []
+  },
+  {
+    "entryID": 487,
+    "actorID": "role22",
+    "text": "你好大的膽子，竟敢威脅本王。\n就讓你明白，黑狼從不怕孤立，更不受脅迫。",
+    "Sequence": "SetPortrait(role22,pic=3);\nSetPortrait(MC1,pic=4);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "你好大的膽子，竟敢威脅本王。\n就讓你明白，黑狼從不怕孤立，更不受脅迫。",
+    "zh_CN": "你好大的胆子，竟敢威胁本王。 \n就让你明白，黑狼从不怕孤立，更不受胁迫。",
+    "links": [489]
+  },
+  {
+    "entryID": 489,
+    "actorID": "MC1",
+    "text": "等等，大王別走……！\n該死，都怪我弄巧成拙……",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "等等，大王別走……！\n該死，都怪我弄巧成拙……",
+    "zh_CN": "等等，大王别走……！ \n该死，都怪我弄巧成拙……",
+    "links": []
+  },
+  {
+    "entryID": 494,
+    "actorID": "role22",
+    "text": "這話好啊，說得好啊。\n天地同心，本王威名赫赫，豈容怪物撒野。",
+    "Sequence": "SetPortrait(role22,pic=1);\nSetPortrait(MC1,pic=5);\nShowInstantMessage(Exp_FeatExp,MC1,Persuasion,20); \nShowInstantMessage(Favorability,MC11,20,Agree);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗跟好感",
+    "zh_TW": "這話好啊，說得好啊。\n天地同心，本王威名赫赫，豈容怪物撒野。",
+    "zh_CN": "这话好啊，说得好啊。 \n天地同心，本王威名赫赫，岂容怪物撒野。",
+    "links": [574]
+  },
+  {
+    "entryID": 496,
+    "actorID": "role22",
+    "text": "哼！你們漢人就喜歡來吹捧這一套，\n別以為本王會上當。",
+    "Sequence": "SetPortrait(role22,pic=2);\nSetPortrait(MC1,pic=7);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "哼！你們漢人就喜歡來吹捧這一套，\n別以為本王會上當。",
+    "zh_CN": "哼！你们汉人就喜欢来吹捧这一套，\n别以为本王会上当。",
+    "links": [497]
+  },
+  {
+    "entryID": 497,
+    "actorID": "role22",
+    "text": "本王向來最厭惡這點，\n就一句，噁心！",
+    "Sequence": "SetPortrait(role22,pic=3);",
+    "zh_TW": "本王向來最厭惡這點，\n就一句，噁心！",
+    "zh_CN": "本王向来最厌恶这点，\n就一句，恶心！",
+    "links": [498]
+  },
+  {
+    "entryID": 498,
+    "actorID": "MC1",
+    "text": "等等，大王別走……！\n該死，都怪我弄巧成拙……",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "等等，大王別走……！\n該死，都怪我弄巧成拙……",
+    "zh_CN": "等等，大王别走……！ \n该死，都怪我弄巧成拙……",
+    "links": []
+  },
+  {
+    "entryID": 524,
+    "actorID": "MC1",
+    "text": "※褚人飛線",
+    "Sequence": "",
+    "zh_TW": "※褚人飛線",
+    "zh_CN": "※褚人飞线",
+    "links": [530, 393]
+  },
+  {
+    "entryID": 525,
+    "actorID": "MC1",
+    "text": "※甄筠線",
+    "Sequence": "",
+    "zh_TW": "※甄筠線",
+    "zh_CN": "※甄筠线",
+    "links": [538, 437]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC1",
+    "text": "※黑狼王線",
+    "Sequence": "",
+    "zh_TW": "※黑狼王線",
+    "zh_CN": "※黑狼王线",
+    "links": [548, 478]
+  },
+  {
+    "entryID": 530,
+    "actorID": "MC10",
+    "text": "情況老夫明白了……好！\n這事老夫幫了，老夫這就調派幫眾與你們前去。",
+    "Sequence": "SetPortrait(MC10,pic=1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(1,MC10,Proud);",
+    "Description": "變數分歧",
+    "zh_TW": "情況老夫明白了……好！\n這事老夫幫了，老夫這就調派幫眾與你們前去。",
+    "zh_CN": "情况老夫明白了……好！ \n这事老夫帮了，老夫这就调派帮众与你们前去。",
+    "links": [531]
+  },
+  {
+    "entryID": 531,
+    "actorID": "role35",
+    "text": "[panel=2]多謝幫主，\n幫主快人快語，不愧是當世豪傑。",
+    "Sequence": "SetPortrait(role35,pic=1);\nSetPortrait(MC1,pic=1);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]多謝幫主，\n幫主快人快語，不愧是當世豪傑。",
+    "zh_CN": "[panel=2]多谢帮主，\n帮主快人快语，不愧是当世豪杰。",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "MC10",
+    "text": "不必謝了，妳大秦是為遠來游子，\n而我赤龍幫多為流民，於苦相差無己。",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "不必謝了，妳大秦是為遠來游子，\n而我赤龍幫多為流民，於苦相差無己。",
+    "zh_CN": "不必谢了，妳大秦是为远来游子，\n而我赤龙帮多为流民，于苦相差无己。",
+    "links": [533]
+  },
+  {
+    "entryID": 533,
+    "actorID": "MC10",
+    "text": "可惜老夫有要事，無法沙場同行。\n這樣吧，老夫便傳你一招傍身吧。",
+    "Sequence": "SetPortrait(MC10,pic=1);\nShowReward(DominatingKick_Combat)@1;\nShowInstantMessage(Reward_SkillCard,MC1,DominatingKick_Combat)@1;",
+    "Description": "獲得技能卡",
+    "zh_TW": "可惜老夫有要事，無法沙場同行。\n這樣吧，老夫便傳你一招傍身吧。",
+    "zh_CN": "可惜老夫有要事，无法沙场同行。 \n这样吧，老夫便传你一招傍身吧。",
+    "links": []
+  },
+  {
+    "entryID": 538,
+    "actorID": "MC9",
+    "text": "我聽明白了，\n行吧，你我不是外人，就調點人幫你一些忙吧。",
+    "Sequence": "SetPortrait(role20,pic=1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(1,MC9,Proud);",
+    "Description": "變數分歧",
+    "zh_TW": "我聽明白了，\n行吧，你我不是外人，就調點人幫你一些忙吧。",
+    "zh_CN": "我听明白了，\n行吧，你我不是外人，就调点人帮你一些忙吧。",
+    "links": [539]
+  },
+  {
+    "entryID": 539,
+    "actorID": "role35",
+    "text": "[panel=2]多謝家主！\n家主之仁，是為大家風範。",
+    "Sequence": "SetPortrait(role35,pic=1);\nSetPortrait(MC1,pic=1);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]多謝家主！\n家主之仁，是為大家風範。",
+    "zh_CN": "[panel=2]多谢家主！ \n家主之仁，是为大家风范。",
+    "links": [540]
+  },
+  {
+    "entryID": 540,
+    "actorID": "MC9",
+    "text": "別急著謝，筠是看在這位小兄弟的面子。\n至於你們……",
+    "Sequence": "SetPortrait(role20,pic=3);",
+    "zh_TW": "別急著謝，筠是看在這位小兄弟的面子。\n至於你們……",
+    "zh_CN": "别急着谢，筠是看在这位小兄弟的面子。 \n至于你们……",
+    "links": [544]
+  },
+  {
+    "entryID": 541,
+    "actorID": "role35",
+    "text": "[panel=2]要是真有那一天，\n甄家之前，大秦傭兵絕不遲到。",
+    "Sequence": "SetPortrait(role35,pic=2);\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "[panel=2]要是真有那一天，\n甄家之前，大秦傭兵絕不遲到。",
+    "zh_CN": "[panel=2]要是真有那一天，\n甄家之前，大秦佣兵绝不迟到。",
+    "links": [542]
+  },
+  {
+    "entryID": 542,
+    "actorID": "MC9",
+    "text": "呵呵，這話中聽。\n筠有一策，你且納入，或許能有用途。",
+    "Sequence": "SetPortrait(role20,pic=1);\nShowReward(MindConquest_Tactics)@1;\nShowInstantMessage(Reward_SkillCard,MC1,MindConquest_Tactics)@1;",
+    "Description": "獲得技能卡",
+    "zh_TW": "呵呵，這話中聽。\n筠有一策，你且納入，或許能有用途。",
+    "zh_CN": "呵呵，这话中听。 \n筠有一策，你且纳入，或许能有用途。",
+    "links": []
+  },
+  {
+    "entryID": 544,
+    "actorID": "MC9",
+    "text": "假如，我是說假如甄家與人為敵，\n大秦傭兵知道該立於何方吧？",
+    "Sequence": "SetPortrait(role20,pic=4);",
+    "zh_TW": "假如，我是說假如甄家與人為敵，\n大秦傭兵知道該立於何方吧？",
+    "zh_CN": "假如，我是说假如甄家与人为敌，\n大秦佣兵知道该立于何方吧？",
+    "links": [541]
+  },
+  {
+    "entryID": 548,
+    "actorID": "role22",
+    "text": "哼哈哈！就這樣的小事。\n本王威名赫赫，豈容怪物撒野。",
+    "Sequence": "SetPortrait(role22,pic=1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(1,MC11,Proud);",
+    "Description": "變數分歧",
+    "zh_TW": "哼哈哈！就這樣的小事。\n本王威名赫赫，豈容怪物撒野。",
+    "zh_CN": "哼哈哈！就这样的小事。 \n本王威名赫赫，岂容怪物撒野。",
+    "links": [549]
+  },
+  {
+    "entryID": 549,
+    "actorID": "role22",
+    "text": "本王這就調派人手跟你們去，\n另外再給你們一點本王秘招，以備不時之需。",
+    "Sequence": "DisableAllCharacterExpression();\nShowReward(ChaosArrowLv1_Combat)@1;\nShowInstantMessage(Reward_SkillCard,MC1,ChaosArrowLv1_Combat)@1;",
+    "Description": "獲得技能卡",
+    "zh_TW": "本王這就調派人手跟你們去，\n另外再給你們一點本王秘招，以備不時之需。",
+    "zh_CN": "本王这就调派人手跟你们去，\n另外再给你们一点本王秘招，以备不时之需。",
+    "links": [550]
+  },
+  {
+    "entryID": 550,
+    "actorID": "role35",
+    "text": "[panel=2]多謝黑狼大王，\n大王氣度，不愧是一族之長。",
+    "Sequence": "SetPortrait(role35,pic=1);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=2]多謝黑狼大王，\n大王氣度，不愧是一族之長。",
+    "zh_CN": "[panel=2]多谢黑狼大王，\n大王气度，不愧是一族之长。",
+    "links": []
+  },
+  {
+    "entryID": 554,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [417, 421]
+  },
+  {
+    "entryID": 555,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [440, 446]
+  },
+  {
+    "entryID": 556,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [459, 463]
+  },
+  {
+    "entryID": 557,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [481, 487]
+  },
+  {
+    "entryID": 558,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [494, 496]
+  },
+  {
+    "entryID": 559,
+    "actorID": "role22",
+    "text": "本王是可以幫忙，\n但本王為何要幫，憑什麼該幫？",
+    "Sequence": "",
+    "zh_TW": "本王是可以幫忙，\n但本王為何要幫，憑什麼該幫？",
+    "zh_CN": "本王是可以帮忙，\n但本王为何要帮，凭什么该帮？",
+    "links": [479, 480]
+  },
+  {
+    "entryID": 574,
+    "actorID": "role22",
+    "text": "既然如此，\n本王就調派些人手跟你們去吧。",
+    "Sequence": "",
+    "zh_TW": "既然如此，\n本王就調派些人手跟你們去吧。",
+    "zh_CN": "既然如此，\n本王就调派些人手跟你们去吧。",
+    "links": [589]
+  },
+  {
+    "entryID": 584,
+    "actorID": "role2",
+    "text": "※可執行行動：找對象求援，和準備各種物資(火種糧食......等)。\n※求援相關事件",
+    "Sequence": "",
+    "zh_TW": "※可執行行動：找對象求援，和準備各種物資(火種糧食......等)。\n※求援相關事件",
+    "zh_CN": "※可执行行动：找对象求援，和准备各种物资(火种粮食......等)。 \n※求援相关事件",
+    "links": [524, 525, 526]
+  },
+  {
+    "entryID": 589,
+    "actorID": "role35",
+    "text": "[panel=2]多謝黑狼大王，\n大王氣度，不愧是一族之長。",
+    "Sequence": "SetPortrait(role35,pic=1);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=2]多謝黑狼大王，\n大王氣度，不愧是一族之長。",
+    "zh_CN": "[panel=2]多谢黑狼大王，\n大王气度，不愧是一族之长。",
+    "links": []
+  }
+]

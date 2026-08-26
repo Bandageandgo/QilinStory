@@ -1,0 +1,86 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role137",
+    "text": "「呱！甚風吹得到此？——是五郎差你們來的？立地太歲是也。走罷！」",
+    "Sequence": "",
+    "Description": "小溪村河童二哥那邊(立地太歲)",
+    "zh_CN": "「呱！甚风吹得到此？——是五郎差你们来的？立地太岁是也。走罢！」",
+    "links": [3]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role136",
+    "text": "「呱呱呱——是五哥差你們來尋我的？活閻羅是也！水里水里去——走，回見五哥！」",
+    "Sequence": "",
+    "Description": "後山水濂洞(活閻王)",
+    "zh_CN": "「呱呱呱——是五哥差你们来寻我的？活阎罗是也！水里水里去——走，回见五哥！」",
+    "links": [7]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"CF35\", 2, \"success\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1",
+    "Description": "變數更新",
+    "links": [4, 5]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestEntryState(\"CF35\", 3) == \"success\"",
+    "links": [6]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"CF35\", 4, \"success\")",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"CF35\", 3, \"success\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1",
+    "Description": "變數更新",
+    "links": [8, 9]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestEntryState(\"CF35\", 2) == \"success\"",
+    "links": [10]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"CF35\", 4, \"success\")",
+    "Description": "任務更新",
+    "links": []
+  }
+]

@@ -1,0 +1,360 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（撲通、撲通，你與廖淳一前一後落入冰冷刺骨的水潭中。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_FallWater);\nSetPortrait(MC1,pic=19);",
+    "zh_CN": "[panel=6]＊（扑通、扑通，你与廖淳一前一后落入冰冷刺骨的水潭中。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「哈啾！這水……也太冷了吧！簡直像冰窖一樣。廖大哥，你沒事吧？」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "「哈啾！这水……也太冷了吧！简直像冰窖一样。廖大哥，你没事吧？」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role127",
+    "text": "「沒事，我無礙。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=1);",
+    "zh_CN": "「没事，我无碍。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「那我們趕緊走吧！得趕快找到娜娜和雍仔才行！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「那我们赶紧走吧！得赶快找到娜娜和雍仔才行！」",
+    "links": []
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾窮盡半生，尋訪天下古蹟，終在這趙王洞深處尋得這片地下水脈。此地靈氣充沛，實乃世外桃源！）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（吾穷尽半生，寻访天下古迹，终在这赵王洞深处寻得这片地下水脉。此地灵气充沛，实乃世外桃源！）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然……順者水脈再往深處，竟藏有一座古老的祭壇。吾本欲探其究竟，卻發現那祭壇周遭的石壁上，刻滿了詭異的無面像。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然……顺者水脉再往深处，竟藏有一座古老的祭坛。吾本欲探其究竟，却发现那祭坛周遭的石壁上，刻满了诡异的无面像。）＊",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=6]＊（自那日從祭壇歸來，吾便夜夜噩夢。夢中總有淒厲哀嚎與誦經聲縈繞耳畔，洞中靈氣亦漸漸化為腥臭血氣。吾心神日漸耗弱，恐命不久矣。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（自那日从祭坛归来，吾便夜夜噩梦。梦中总有凄厉哀嚎与诵经声萦绕耳畔，洞中灵气亦渐渐化为腥臭血气。吾心神日渐耗弱，恐命不久矣。）＊",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那祭壇深處……到底封印著什麼？吾必須再探一次，若能解開此謎，吾這半生便不算虛度。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那祭坛深处……到底封印着什么？吾必须再探一次，若能解开此谜，吾这半生便不算虚度。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em7]最後的字跡已模糊不清，只剩下幾個狂亂的血痕[/em7]……沒有臉……他們也沒有臉……不要過去……）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（[em7]最后的字迹已模糊不清，只剩下几个狂乱的血痕[/em7]……没有脸……他们也没有脸……不要过去……）＊",
+    "links": []
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC22",
+    "text": "「放開本姑娘！你們這些不長眼的傢伙！快把我的無鋒劍和羅盤還給我！」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Shock);",
+    "zh_CN": "「放开本姑娘！你们这些不长眼的家伙！快把我的无锋剑和罗盘还给我！」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "role126",
+    "text": "「吵死了！這丫頭怎麼這麼多廢話？要不是卞頭領吩咐說這次的祭品務必保持精力，我現在就把妳剁了！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(role126,pic=2);",
+    "zh_CN": "「吵死了！这丫头怎么这么多废话？要不是卞头领吩咐说这次的祭品务必保持精力，我现在就把妳剁了！」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role126",
+    "text": "「就是，差點給丫頭給跑了。耽誤了卞頭領交代的事可就糟了，趕緊把這丫頭給帶回去！」",
+    "Sequence": "SetPortrait(role126,pic=1);",
+    "zh_CN": "「就是，差点给丫头给跑了。耽误了卞头领交代的事可就糟了，赶紧把这丫头给带回去！」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「娜娜！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Anger_3);",
+    "zh_CN": "「娜娜！」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role126",
+    "text": "「什麼人！竟敢擅闖——」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role126,pic=1);",
+    "zh_CN": "「什么人！竟敢擅闯——」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role127",
+    "text": "[panel=2]「怎麼？連我也不認識了嗎？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role127,pic=1);\nSetPortrait(MC1,pic=2);",
+    "zh_CN": "[panel=2]「怎么？连我也不认识了吗？」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role126",
+    "text": "「廖、廖頭領？！您……您不是被卞頭領關在……」",
+    "Sequence": "SetPortrait(role126,pic=2);",
+    "zh_CN": "「廖、廖头领？！您……您不是被卞头领关在……」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "role126",
+    "text": "「廖頭領饒命！我們也只是奉命行事啊！這丫頭我們不抓了，您、您大人有大量，把我們當個屁給放了吧！」",
+    "Sequence": "SetPortrait(role126,pic=1);",
+    "zh_CN": "「廖头领饶命！我们也只是奉命行事啊！这丫头我们不抓了，您、您大人有大量，把我们当个屁给放了吧！」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC22",
+    "text": "「[em7]趁著兩名教眾嚇得跪地求饒之際，猛地一腳踹翻其中一人，順勢掙脫了鬆開的繩索道[/em7]：哈哈！想困住本姑娘，你們再練個一百年吧！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);\nEnableCharacterExpression(1,MC22,Idea);",
+    "zh_CN": "「[em7]趁着两名教众吓得跪地求饶之际，猛地一脚踹翻其中一人，顺势挣脱了松开的绳索道[/em7]：哈哈！想困住本姑娘，你们再练个一百年吧！」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC22",
+    "text": "[panel=2]「大俠！我就知道你一定會來救我的！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=10);",
+    "zh_CN": "[panel=2]「大侠！我就知道你一定会来救我的！」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那兩名教眾跪在地上瑟瑟發抖再也沒有剛剛的氣焰。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=6]＊（那两名教众跪在地上瑟瑟发抖再也没有刚刚的气焰。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role127",
+    "text": "「小兄弟，你說該這等助紂為虐的敗類，如何處置？」",
+    "Sequence": "SetPortrait(role127,pic=1);",
+    "zh_CN": "「小兄弟，你说该这等助纣为虐的败类，如何处置？」",
+    "links": [22, 23, 3768]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「除惡務盡，不能留活口！」",
+    "Sequence": "",
+    "zh_CN": "「除恶务尽，不能留活口！」",
+    "links": [24]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「他們也只是聽命行事，讓他們滾吧。」",
+    "Sequence": "",
+    "zh_CN": "「他们也只是听命行事，让他们滚吧。」",
+    "links": [25]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「這種喪盡天良的人，留著也是禍害！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_CN": "「这种丧尽天良的人，留着也是祸害！」",
+    "links": [26]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「算了，首惡是卞喜，他們不過是些聽命辦事的小嘍囉。滾吧！別再讓我看到你們做傷天害理的事！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「算了，首恶是卞喜，他们不过是些听命办事的小喽啰。滚吧！别再让我看到你们做伤天害理的事！」",
+    "links": [27]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩名教眾聞言面如死灰，一人磕頭如搗蒜、口不擇言只求饒命，另一人卻猛地掙起往草叢裡滾逃——廖淳搶步截住去路，你亦不再遲疑。二人驚叫掙扎，終究難敵，頃刻間便被你們斃於當場。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(Punch_Single_ScreenWhite,Play);\nAudioControl(PlaySFX,Others_Sword_Single_ScreenRed);",
+    "zh_CN": "[panel=6]＊（两名教众闻言面如死灰，一人磕头如捣蒜、口不择言只求饶命，另一人却猛地挣起往草丛里滚逃——廖淳抢步截住去路，你亦不再迟疑。二人惊叫挣扎，终究难敌，顷刻间便被你们毙于当场。）＊",
+    "links": [3773]
+  },
+  {
+    "entryID": 27,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩名教眾千恩萬謝的連滾帶爬地逃跑了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nAudioControl(PlaySFX,Others_FootStep);",
+    "zh_CN": "[panel=6]＊（两名教众千恩万谢的连滚带爬地逃跑了。）＊",
+    "links": [3773]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「娜娜，妳沒受傷吧？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Description": "救完娜娜",
+    "zh_CN": "「娜娜，妳没受伤吧？」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC22",
+    "text": "[panel=2]「本姑娘福大命大，這點小場面算什麼！對了，大俠，雍仔呢？他沒跟你們在一起嗎？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(2,MC22,Question);",
+    "zh_CN": "[panel=2]「本姑娘福大命大，这点小场面算什么！对了，大侠，雍仔呢？他没跟你们在一起吗？」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「這正是我要說的。我們一路殺過來，只看到了妳，並沒有看到雍仔的下落。妳被抓的時候，有看到他嗎？」",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(2);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「这正是我要说的。我们一路杀过来，只看到了妳，并没有看到雍仔的下落。妳被抓的时候，有看到他吗？」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC22",
+    "text": "[panel=2]「我們中計之後，本姑娘索性裝昏到底，趁他們鬆懈後溜到這裡。途中聽他們在說:[em2]那個胖子靈力充沛，是絕佳的祭品[/em2]——八成說的就是雍仔！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=2);\nEnableCharacterExpression(2,MC22,Idea);",
+    "zh_CN": "[panel=2]「我们中计之后，本姑娘索性装昏到底，趁他们松懈后溜到这里。途中听他们在说:[em2]那个胖子灵力充沛，是绝佳的祭品[/em2]——八成说的就是雍仔！」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role127",
+    "text": "「[em2]祭品[/em2]是嗎…？卞喜在洞底藏了甚麼名堂，我至今也沒摸透，但若他們剛說的是真的，再拖一刻，你那朋友便多一分凶險。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(role127,pic=1);",
+    "zh_CN": "「[em2]祭品[/em2]是吗…？卞喜在洞底藏了什么名堂，我至今也没摸透，但若他们刚说的是真的，再拖一刻，你那朋友便多一分凶险。」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「那趕緊走吧！」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_CN": "「那赶紧走吧！」",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC22",
+    "text": "[panel=2]「也算我一個！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);",
+    "Script": "SetQuestEntryState(\"C1M2\", 2, \"success\");",
+    "Description": "任務更新",
+    "zh_CN": "[panel=2]「也算我一个！」",
+    "links": []
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點日記",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [5]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "救娜娜(強制)",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [10]
+  },
+  {
+    "entryID": 3768,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]順從殺意",
+    "Sequence": "",
+    "Conditions": "Variable[\"GodSlayerDestiny\"] == true",
+    "Description": "隱藏血刀選項",
+    "zh_TW": "[em2][隱藏選項][/em2]順從殺意",
+    "zh_CN": "[em2][隐藏选项][/em2]顺从杀意",
+    "links": [3770]
+  },
+  {
+    "entryID": 3769,
+    "actorID": "role2",
+    "text": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 1",
+    "Description": "殺意+1",
+    "zh_TW": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。）＊",
+    "zh_CN": "[panel=6]＊（随着生命的消逝，那股杀意终于饱餐一顿，带着令人战栗的愉悦感，重新蛰伏。）＊",
+    "links": [3771]
+  },
+  {
+    "entryID": 3770,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你並未多言，抽出腰間兵刃，隨後越過眾人，銀光耀動——）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你並未多言，抽出腰間兵刃，隨後越過眾人，銀光耀動——）＊",
+    "zh_CN": "[panel=6]＊（你并未多言，抽出腰间兵刃，随后越过众人，银光耀动——）＊",
+    "links": [3769]
+  },
+  {
+    "entryID": 3771,
+    "actorID": "role127",
+    "text": "「...」",
+    "Sequence": "SetPortrait(role127,pic=1);",
+    "zh_CN": "「...」",
+    "links": [3772]
+  },
+  {
+    "entryID": 3772,
+    "actorID": "MC22",
+    "text": "[panel=2]「...」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=13);",
+    "zh_CN": "[panel=2]「...」",
+    "links": [3773]
+  },
+  {
+    "entryID": 3773,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  }
+]

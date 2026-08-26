@@ -1,0 +1,1262 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role73",
+    "text": "「怎麼啦？小兄弟還有事？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「怎麼啦？小兄弟還有事？」",
+    "zh_CN": "「怎么啦？小兄弟还有事？」",
+    "links": [2, 270, 275, 304]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「童大哥，我想請您指點一二。」",
+    "Sequence": "",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 0",
+    "zh_TW": "「童大哥，我想請您指點一二。」",
+    "zh_CN": "「童大哥，我想请您指点一二。」",
+    "links": [272]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role73",
+    "text": "「我單獨餵招、指點你的破綻，每次收你一百五十錢，這…應該不過分吧？」",
+    "Sequence": "",
+    "zh_TW": "「我單獨餵招、指點你的破綻，每次收你一百五十錢，這…應該不過分吧？」",
+    "zh_CN": "「我单独喂招、指点你的破绽，每次收你一百五十钱，这…应该不过分吧？」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC8",
+    "text": "「一百五十錢？！這也太貴了！真過分！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Shock);",
+    "zh_TW": "「一百五十錢？！這也太貴了！真過分！」",
+    "zh_CN": "「一百五十钱？！这也太贵了！真过分！」",
+    "links": [273]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「那就拜託童大哥啦！！」",
+    "Sequence": "",
+    "zh_TW": "「那就拜託童大哥啦！！」",
+    "zh_CN": "「那就拜托童大哥啦！！」",
+    "links": [9]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「我再考慮一下…」",
+    "Sequence": "",
+    "zh_TW": "「我再考慮一下…」",
+    "zh_CN": "「我再考虑一下…」",
+    "links": []
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [10, 15]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role73",
+    "text": "「錢不夠啊，小兄弟。等你湊夠了再來吧。闖蕩江湖，沒錢寸步難行，這也是修行的一環。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Conditions": "IsCoinPass(150)  == false",
+    "zh_TW": "「錢不夠啊，小兄弟。等你湊夠了再來吧。闖蕩江湖，沒錢寸步難行，這也是修行的一環。」",
+    "zh_CN": "「钱不够啊，小兄弟。等你凑够了再来吧。闯荡江湖，没钱寸步难行，这也是修行的一环。」",
+    "links": []
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC8",
+    "text": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
+    "Sequence": "DisableCharacterExpression(1);\nModifyData(Coin,-150);\nSetPortrait(MC8,pic=3);",
+    "Conditions": "IsCoinPass(150)  == true",
+    "zh_TW": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
+    "zh_CN": "「呜…一百五十钱…表哥，你可一定要学到东西啊！」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role73",
+    "text": "「很好，有覺悟。看好了，我的槍只會出一次！」",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,25);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "zh_TW": "「很好，有覺悟。看好了，我的槍只會出一次！」",
+    "zh_CN": "「很好，有觉悟。看好了，我的枪只会出一次！」",
+    "links": [292]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（經過童淵餵招，你摸清了自己架勢上的破綻。武藝和武力提升了許多。）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,MartialArts,50);\nModifyData(AbilityExp,MC1,Strength,50);",
+    "Conditions": "IsPassFight()  == true",
+    "Script": "Variable[\"Role73DialogCount\"] = 1",
+    "zh_TW": "[panel=6]＊（經過童淵餵招，你摸清了自己架勢上的破綻。武藝和武力提升了許多。）＊",
+    "zh_CN": "[panel=6]＊（经过童渊喂招，你摸清了自己架势上的破绽。武艺和武力提升了许多。）＊",
+    "links": []
+  },
+  {
+    "entryID": 24,
+    "actorID": "role73",
+    "text": "「你的技巧已有雛形，但力量卻跟不上。槍是剛猛的兵器，沒有足夠的氣力，再精妙的招式也只是花架子。看來得從根本上錘鍊你。」",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "「你的技巧已有雛形，但力量卻跟不上。槍是剛猛的兵器，沒有足夠的氣力，再精妙的招式也只是花架子。看來得從根本上錘鍊你。」",
+    "zh_CN": "「你的技巧已有雏形，但力量却跟不上。枪是刚猛的兵器，没有足够的气力，再精妙的招式也只是花架子。看来得从根本上锤炼你。」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC8",
+    "text": "「表哥加油！錢不能白花呀！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "「表哥加油！錢不能白花呀！」",
+    "zh_CN": "「表哥加油！钱不能白花呀！」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在童淵的壓力下，你感覺自己的力量有了增長。武力經驗提升。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Strength,50);",
+    "Script": "Variable[\"Role73DialogCount\"] = 1",
+    "zh_TW": "[panel=6]＊（在童淵的壓力下，你感覺自己的力量有了增長。武力經驗提升。）＊",
+    "zh_CN": "[panel=6]＊（在童渊的压力下，你感觉自己的力量有了增长。武力经验提升。）＊",
+    "links": []
+  },
+  {
+    "entryID": 27,
+    "actorID": "role73",
+    "text": "「不錯不錯。你的氣力沉穩了不少，出招也更有章法了。」",
+    "Sequence": "",
+    "zh_TW": "「不錯不錯。你的氣力沉穩了不少，出招也更有章法了。」",
+    "zh_CN": "「不错不错。你的气力沉稳了不少，出招也更有章法了。」",
+    "links": [291]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「多謝童兄的指點！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「多謝童兄的指點！」",
+    "zh_CN": "「多谢童兄的指点！」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC8",
+    "text": "「太好了表哥！看來這錢花得值！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "「太好了表哥！看來這錢花得值！」",
+    "zh_CN": "「太好了表哥！看来这钱花得值！」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的根基似乎更加穩固了。武力經驗提升。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Strength,100);",
+    "zh_TW": "[panel=6]＊（你的根基似乎更加穩固了。武力經驗提升。）＊",
+    "zh_CN": "[panel=6]＊（你的根基似乎更加稳固了。武力经验提升。）＊",
+    "links": []
+  },
+  {
+    "entryID": 55,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你再次踏入這間廢棄的屋子，不知為何，心中總有一絲異樣的感覺。就在此時，懷中那枚赫連娜娜給你的石頭突然微微發燙，似乎與某樣東西產生了共鳴。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（你再次踏入這間廢棄的屋子，不知為何，心中總有一絲異樣的感覺。就在此時，懷中那枚赫連娜娜給你的石頭突然微微發燙，似乎與某樣東西產生了共鳴。）＊",
+    "zh_CN": "[panel=6]＊（你再次踏入这间废弃的屋子，不知为何，心中总有一丝异样的感觉。就在此时，怀中那枚赫连娜娜给你的石头突然微微发烫，似乎与某样东西产生了共鸣。）＊",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「嗯？這石頭…怎麼回事？」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「嗯？這石頭…怎麼回事？」",
+    "zh_CN": "「嗯？这石头…怎么回事？」",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC8",
+    "text": "「表哥，這不是那個赫連姑娘給你的石頭嗎？它怎麼在發光發熱？」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nDisableCharacterExpression(0);",
+    "zh_TW": "「表哥，這不是那個赫連姑娘給你的石頭嗎？它怎麼在發光發熱？」",
+    "zh_CN": "「表哥，这不是那个赫连姑娘给你的石头吗？它怎么在发光发热？」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你話音未落，手中的石頭光芒大作，一股清涼的氣息瞬間湧入你的腦海！）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你話音未落，手中的石頭光芒大作，一股清涼的氣息瞬間湧入你的腦海！）＊",
+    "zh_CN": "[panel=6]＊（你话音未落，手中的石头光芒大作，一股清凉的气息瞬间涌入你的脑海！）＊",
+    "links": [2055]
+  },
+  {
+    "entryID": 59,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的眼前景象變換，看到了一幕不屬於這個時代的場景。一名穿著奇異服飾的女子，正悲傷地佇立在河邊，手中緊握著一枚同樣發光的石頭。她的聲音直接在你的腦中響起，空靈而絕望。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你的眼前景象變換，看到了一幕不屬於這個時代的場景。一名穿著奇異服飾的女子，正悲傷地佇立在河邊，手中緊握著一枚同樣發光的石頭。她的聲音直接在你的腦中響起，空靈而絕望。）＊",
+    "zh_CN": "[panel=6]＊（你的眼前景象变换，看到了一幕不属于这个时代的场景。一名穿着奇异服饰的女子，正悲伤地伫立在河边，手中紧握着一枚同样发光的石头。她的声音直接在你的脑中响起，空灵而绝望。）＊",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "role2",
+    "text": "[panel=6]＊（星位盡失，瓊核已碎…歸期…無望矣…）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（星位盡失，瓊核已碎…歸期…無望矣…）＊",
+    "zh_CN": "[panel=6]＊（星位尽失，琼核已碎…归期…无望矣…）＊",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "role2",
+    "text": "[panel=6]＊（畫面一轉，你看到巨大的陰影從天而降，撞向遠處的山脈，引發劇烈的震動。女子驚恐地抬起頭，淚水滑落。最終，畫面隨著她絕望的眼神一同歸於黑暗。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（畫面一轉，你看到巨大的陰影從天而降，撞向遠處的山脈，引發劇烈的震動。女子驚恐地抬起頭，淚水滑落。最終，畫面隨著她絕望的眼神一同歸於黑暗。）＊",
+    "zh_CN": "[panel=6]＊（画面一转，你看到巨大的阴影从天而降，撞向远处的山脉，引发剧烈的震动。女子惊恐地抬起头，泪水滑落。最终，画面随着她绝望的眼神一同归于黑暗。）＊",
+    "links": []
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「呃啊…！」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
+    "zh_TW": "「呃啊…！」",
+    "zh_CN": "「呃啊…！」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC8",
+    "text": "「表哥！你到底怎麼了？你剛剛突然發呆，嚇死我了！」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Nervous_2);\nDisableCharacterExpression(0);",
+    "zh_TW": "「表哥！你到底怎麼了？你剛剛突然發呆，嚇死我了！」",
+    "zh_CN": "「表哥！你到底怎么了？你刚刚突然发呆，吓死我了！」",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「我…我好像…看到了一些…很久很久以前的記憶…」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "「我…我好像…看到了一些…很久很久以前的記憶…」",
+    "zh_CN": "「我…我好像…看到了一些…很久很久以前的记忆…」",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你攤開手掌，那枚石頭表面的光芒已經完全黯淡，變成了一塊普通的石頭。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(Inventory,RemoveItem,StarTearStone,1);\nModifyData(Inventory,AddItem,FadedTearstone,1);",
+    "zh_TW": "[panel=6]＊（你攤開手掌，那枚石頭表面的光芒已經完全黯淡，變成了一塊普通的石頭。）＊",
+    "zh_CN": "[panel=6]＊（你摊开手掌，那枚石头表面的光芒已经完全黯淡，变成了一块普通的石头。）＊",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "role2",
+    "text": "[panel=6]＊（巨大的陰影…歸期無望…赫連娜娜所追尋的秘密，似乎遠比想像的更加驚人。這座看似平凡的村莊，地下究竟隱藏著什麼？）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（巨大的陰影…歸期無望…赫連娜娜所追尋的秘密，似乎遠比想像的更加驚人。這座看似平凡的村莊，地下究竟隱藏著什麼？）＊",
+    "zh_CN": "[panel=6]＊（巨大的阴影…归期无望…赫连娜娜所追寻的秘密，似乎远比想像的更加惊人。这座看似平凡的村庄，地下究竟隐藏着什么？）＊",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你窺見了不知是誰的記憶，不知道為什麼但你感覺智力似乎有所提升。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Intelligence,100);",
+    "Script": "SetQuestState(\"CF07\", \"success\")",
+    "zh_TW": "[panel=6]＊（你窺見了不知是誰的記憶，不知道為什麼但你感覺智力似乎有所提升。）＊",
+    "zh_CN": "[panel=6]＊（你窥见了不知是谁的记忆，不知道为什么但你感觉智力似乎有所提升。）＊",
+    "links": []
+  },
+  {
+    "entryID": 257,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你帶著辛苦尋來的百年鐵木，再次來到村中空地。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"C0F3\", 2) == \"active\"",
+    "zh_TW": "[panel=6]＊（你帶著辛苦尋來的百年鐵木，再次來到村中空地。）＊",
+    "zh_CN": "[panel=6]＊（你带着辛苦寻来的百年铁木，再次来到村中空地。）＊",
+    "links": [258]
+  },
+  {
+    "entryID": 258,
+    "actorID": "MC1",
+    "text": "「童兄，幸不辱命，我將那百年鐵木取回來了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「童兄，幸不辱命，我將那百年鐵木取回來了！」",
+    "zh_CN": "「童兄，幸不辱命，我将那百年铁木取回来了！」",
+    "links": [259]
+  },
+  {
+    "entryID": 259,
+    "actorID": "role73",
+    "text": "「太好了！[var=PlayerLastName]兄弟，我果然沒有看錯你！此木質地堅實，確是上品！有了它，我的愛槍便能恢復如初了！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「太好了！[var=PlayerLastName]兄弟，我果然沒有看錯你！此木質地堅實，確是上品！有了它，我的愛槍便能恢復如初了！」",
+    "zh_CN": "「太好了！[var=PlayerLastName]兄弟，我果然没有看错你！此木质地坚实，确是上品！有了它，我的爱枪便能恢复如初了！」",
+    "links": [260]
+  },
+  {
+    "entryID": 260,
+    "actorID": "MC8",
+    "text": "[panel=2]「太好了！童大哥的槍有救了！那…這謝儀嘛…」",
+    "Sequence": "SetPortrait(MC8,pic=9);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_TW": "[panel=2]「太好了！童大哥的槍有救了！那…這謝儀嘛…」",
+    "zh_CN": "[panel=2]「太好了！童大哥的枪有救了！那…这谢仪嘛…」",
+    "links": [261]
+  },
+  {
+    "entryID": 261,
+    "actorID": "role73",
+    "text": "「小姑娘放心，[var=PlayerLastName]兄弟為我冒險，謝儀自然少不了！」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "「小姑娘放心，[var=PlayerLastName]兄弟為我冒險，謝儀自然少不了！」",
+    "zh_CN": "「小姑娘放心，[var=PlayerLastName]兄弟为我冒险，谢仪自然少不了！」",
+    "links": [264]
+  },
+  {
+    "entryID": 264,
+    "actorID": "role73",
+    "text": "「這是些許心意，請兄弟務必收下，日後行走江湖，或能用得上。」",
+    "Sequence": "ModifyData(Coin,400);",
+    "Description": "給錢",
+    "zh_TW": "「這是些許心意，請兄弟務必收下，日後行走江湖，或能用得上。」",
+    "zh_CN": "「这是些许心意，请兄弟务必收下，日后行走江湖，或能用得上。」",
+    "links": [265]
+  },
+  {
+    "entryID": 265,
+    "actorID": "role73",
+    "text": "「我準備待此地事了後就動身離開小溪村。之後我打算前往北方拜訪一位故友。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "「我準備待此地事了後就動身離開小溪村。之後我打算前往北方拜訪一位故友。」",
+    "zh_CN": "「我准备待此地事了后就动身离开小溪村。之后我打算前往北方拜访一位故友。」",
+    "links": [267]
+  },
+  {
+    "entryID": 266,
+    "actorID": "role73",
+    "text": "「青山不改，綠水長流，[var=PlayerLastName]兄弟，小姑娘，咱們之後江湖再見！」",
+    "Sequence": "",
+    "Script": "SetQuestState(\"C0F3\", \"success\");\nSetQuestEntryState(\"C0F3\", 2, \"success\")",
+    "zh_TW": "「青山不改，綠水長流，[var=PlayerLastName]兄弟，小姑娘，咱們之後江湖再見！」",
+    "zh_CN": "「青山不改，绿水长流，[var=PlayerLastName]兄弟，小姑娘，咱们之后江湖再见！」",
+    "links": []
+  },
+  {
+    "entryID": 267,
+    "actorID": "MC1",
+    "text": "「童老哥此去多加保重，願你武藝更上一層樓！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「童老哥此去多加保重，願你武藝更上一層樓！」",
+    "zh_CN": "「童老哥此去多加保重，愿你武艺更上一层楼！」",
+    "links": [268]
+  },
+  {
+    "entryID": 268,
+    "actorID": "MC8",
+    "text": "[panel=2]「童大哥一路順風！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「童大哥一路順風！」",
+    "zh_CN": "[panel=2]「童大哥一路顺风！」",
+    "links": [266]
+  },
+  {
+    "entryID": 270,
+    "actorID": "MC1",
+    "text": "「關於百年鐵木的事情…」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F3\") == \"active\"",
+    "zh_TW": "「關於百年鐵木的事情…」",
+    "zh_CN": "「关于百年铁木的事情…」",
+    "links": [257, 271]
+  },
+  {
+    "entryID": 271,
+    "actorID": "role73",
+    "text": "「小兄弟還有何事？」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F3\") == \"active\" and (CurrentQuestEntryState(\"C0F3\", 1) == \"active\")",
+    "zh_TW": "「小兄弟還有何事？」",
+    "zh_CN": "「小兄弟还有何事？」",
+    "links": []
+  },
+  {
+    "entryID": 272,
+    "actorID": "role73",
+    "text": "「可以是可以啦，但是我最近盤纏也是吃緊的很，不然…」",
+    "Sequence": "",
+    "zh_TW": "「可以是可以啦，但是我最近盤纏也是吃緊的很，不然…」",
+    "zh_CN": "「可以是可以啦，但是我最近盘缠也是吃紧的很，不然…」",
+    "links": [5]
+  },
+  {
+    "entryID": 273,
+    "actorID": "role73",
+    "text": "「……」",
+    "Sequence": "",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [7, 8]
+  },
+  {
+    "entryID": 274,
+    "actorID": "role73",
+    "text": "「那就老規矩，指導一次一百五十錢。」",
+    "Sequence": "",
+    "zh_TW": "「那就老規矩，指導一次一百五十錢。」",
+    "zh_CN": "「那就老规矩，指导一次一百五十钱。」",
+    "links": [276, 277]
+  },
+  {
+    "entryID": 275,
+    "actorID": "MC1",
+    "text": "「童大哥，我又來想請您指點一二啦。」",
+    "Sequence": "",
+    "Conditions": "Variable[\"Role73DialogCount\"] >= 1 and (Variable[\"Role73DialogCount\"] < 4)",
+    "zh_TW": "「童大哥，我又來想請您指點一二啦。」",
+    "zh_CN": "「童大哥，我又来想请您指点一二啦。」",
+    "links": [274]
+  },
+  {
+    "entryID": 276,
+    "actorID": "MC1",
+    "text": "「那就拜託童大哥啦！！」",
+    "Sequence": "",
+    "zh_TW": "「那就拜託童大哥啦！！」",
+    "zh_CN": "「那就拜托童大哥啦！！」",
+    "links": [283]
+  },
+  {
+    "entryID": 277,
+    "actorID": "MC1",
+    "text": "「我再考慮一下…」",
+    "Sequence": "",
+    "zh_TW": "「我再考慮一下…」",
+    "zh_CN": "「我再考虑一下…」",
+    "links": []
+  },
+  {
+    "entryID": 283,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [284, 10]
+  },
+  {
+    "entryID": 284,
+    "actorID": "MC8",
+    "text": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
+    "Sequence": "DisableCharacterExpression(1);\nModifyData(Coin,-150);\nSetPortrait(MC8,pic=3);",
+    "Conditions": "IsCoinPass(150)  == true",
+    "zh_TW": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
+    "zh_CN": "「呜…一百五十钱…表哥，你可一定要学到东西啊！」",
+    "links": [285]
+  },
+  {
+    "entryID": 285,
+    "actorID": "role73",
+    "text": "「很好，有覺悟。看好了，我的槍只會出一次！」",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,25);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "zh_TW": "「很好，有覺悟。看好了，我的槍只會出一次！」",
+    "zh_CN": "「很好，有觉悟。看好了，我的枪只会出一次！」",
+    "links": [297]
+  },
+  {
+    "entryID": 286,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你對招式的應用有了新的領悟。武藝提升了一點。）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,MartialArts,50);",
+    "Script": "Variable[\"Role73DialogCount\"] = 2",
+    "zh_TW": "[panel=6]＊（你對招式的應用有了新的領悟。武藝提升了一點。）＊",
+    "zh_CN": "[panel=6]＊（你对招式的应用有了新的领悟。武艺提升了一点。）＊",
+    "links": []
+  },
+  {
+    "entryID": 291,
+    "actorID": "role73",
+    "text": "「你已不再是當初的門外漢，但接下來，需要你自己去實戰中成長了。」",
+    "Sequence": "",
+    "Script": "Variable[\"Role73DialogCount\"] = 4",
+    "zh_TW": "「你已不再是當初的門外漢，但接下來，需要你自己去實戰中成長了。」",
+    "zh_CN": "「你已不再是当初的门外汉，但接下来，需要你自己去实战中成长了。」",
+    "links": [28]
+  },
+  {
+    "entryID": 292,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [20, 24]
+  },
+  {
+    "entryID": 295,
+    "actorID": "role2",
+    "text": "[panel=6]＊（經過童淵的指點，你的身法似乎更為靈活了。武藝和武力提升了許多。）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,MartialArts,50);\nModifyData(AbilityExp,MC1,Strength,50);",
+    "Script": "Variable[\"Role73DialogCount\"] = 3",
+    "zh_TW": "[panel=6]＊（經過童淵的指點，你的身法似乎更為靈活了。武藝和武力提升了許多。）＊",
+    "zh_CN": "[panel=6]＊（经过童渊的指点，你的身法似乎更为灵活了。武艺和武力提升了许多。）＊",
+    "links": []
+  },
+  {
+    "entryID": 296,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你對招式的應用有了新的領悟。武藝和武力提升了許多。）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,MartialArts,50);\nModifyData(AbilityExp,MC1,Strength,50);",
+    "Script": "Variable[\"Role73DialogCount\"] = 2",
+    "zh_TW": "[panel=6]＊（你對招式的應用有了新的領悟。武藝和武力提升了許多。）＊",
+    "zh_CN": "[panel=6]＊（你对招式的应用有了新的领悟。武艺和武力提升了许多。）＊",
+    "links": []
+  },
+  {
+    "entryID": 297,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [298, 299]
+  },
+  {
+    "entryID": 298,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "Description": "勝利",
+    "links": [300, 301, 302]
+  },
+  {
+    "entryID": 299,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "Description": "失敗",
+    "links": [303, 305, 306]
+  },
+  {
+    "entryID": 300,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 1",
+    "Description": "第2次",
+    "links": [296]
+  },
+  {
+    "entryID": 301,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 2",
+    "Description": "第3次",
+    "links": [295]
+  },
+  {
+    "entryID": 302,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 3",
+    "Description": "第4次",
+    "links": [27]
+  },
+  {
+    "entryID": 303,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 1",
+    "Description": "第二次",
+    "links": [286]
+  },
+  {
+    "entryID": 304,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 305,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 2",
+    "Description": "第3次",
+    "links": [307]
+  },
+  {
+    "entryID": 306,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"Role73DialogCount\"] == 3",
+    "Description": "第4次",
+    "links": [308]
+  },
+  {
+    "entryID": 307,
+    "actorID": "role2",
+    "text": "[panel=6]＊（經過童淵的指點，你的身法似乎更為靈活了。武力提升了一點。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Strength,50);",
+    "Script": "Variable[\"Role73DialogCount\"] = 3",
+    "zh_TW": "[panel=6]＊（經過童淵的指點，你的身法似乎更為靈活了。武力提升了一點。）＊",
+    "zh_CN": "[panel=6]＊（经过童渊的指点，你的身法似乎更为灵活了。武力提升了一点。）＊",
+    "links": []
+  },
+  {
+    "entryID": 308,
+    "actorID": "role73",
+    "text": "「不錯不錯。你的氣力沉穩了不少，出招也更有章法了。」",
+    "Sequence": "",
+    "zh_TW": "「不錯不錯。你的氣力沉穩了不少，出招也更有章法了。」",
+    "zh_CN": "「不错不错。你的气力沉稳了不少，出招也更有章法了。」",
+    "links": [312]
+  },
+  {
+    "entryID": 309,
+    "actorID": "MC1",
+    "text": "「多謝童兄的指點！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「多謝童兄的指點！」",
+    "zh_CN": "「多谢童兄的指点！」",
+    "links": [310]
+  },
+  {
+    "entryID": 310,
+    "actorID": "MC8",
+    "text": "「太好了表哥！看來這錢花得值！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "「太好了表哥！看來這錢花得值！」",
+    "zh_CN": "「太好了表哥！看来这钱花得值！」",
+    "links": [311]
+  },
+  {
+    "entryID": 311,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的根基似乎更加穩固了。武力經驗提升。）＊",
+    "Sequence": "ModifyData(AbilityExp,MC1,Strength,100);",
+    "zh_TW": "[panel=6]＊（你的根基似乎更加穩固了。武力經驗提升。）＊",
+    "zh_CN": "[panel=6]＊（你的根基似乎更加稳固了。武力经验提升。）＊",
+    "links": []
+  },
+  {
+    "entryID": 312,
+    "actorID": "role73",
+    "text": "「你已不再是當初的門外漢，但接下來，需要你自己去實戰中成長了。」",
+    "Sequence": "",
+    "Script": "Variable[\"Role73DialogCount\"] = 4",
+    "zh_TW": "「你已不再是當初的門外漢，但接下來，需要你自己去實戰中成長了。」",
+    "zh_CN": "「你已不再是当初的门外汉，但接下来，需要你自己去实战中成长了。」",
+    "links": [309]
+  },
+  {
+    "entryID": 316,
+    "actorID": "role2",
+    "text": "[panel=6]＊（突然，只一隻暴跳如雷的黝黑妖怪跳上岸來，而上次被你擊敗的妖怪大哥，也從他身後的水中冒了出來，臉色不善地瞪著你。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"FlokMonster\"] == 1",
+    "zh_TW": "[panel=6]＊（突然，只一隻暴跳如雷的黝黑妖怪跳上岸來，而上次被你擊敗的妖怪大哥，也從他身後的水中冒了出來，臉色不善地瞪著你。）＊",
+    "zh_CN": "[panel=6]＊（突然，只一只暴跳如雷的黝黑妖怪跳上岸来，而上次被你击败的妖怪大哥，也从他身后的水中冒了出来，脸色不善地瞪着你。）＊",
+    "links": [317]
+  },
+  {
+    "entryID": 317,
+    "actorID": "role121",
+    "text": "「大哥，就這小子上次打劫你是吧！？甭跟他廢話！看我捅他一萬個透明窟窿去！」",
+    "Sequence": "SetPortrait(role121,pic=1);",
+    "zh_TW": "「大哥，就這小子上次打劫你是吧！？甭跟他廢話！看我捅他一萬個透明窟窿去！」",
+    "zh_CN": "「大哥，就这小子上次打劫你是吧！？甭跟他废话！看我捅他一万个透明窟窿去！」",
+    "links": [318]
+  },
+  {
+    "entryID": 318,
+    "actorID": "role120",
+    "text": "[panel=4]「……小子，我承認你有些本事。但你千不該萬不該，奪我財寶。今天，就讓你見識我三弟的厲害！」",
+    "Sequence": "SetPortrait(role120,pic=4);",
+    "zh_TW": "[panel=4]「……小子，我承認你有些本事。但你千不該萬不該，奪我財寶。今天，就讓你見識我三弟的厲害！」",
+    "zh_CN": "[panel=4]「……小子，我承认你有些本事。但你千不该万不该，夺我财宝。今天，就让你见识我三弟的厉害！」",
+    "links": [319]
+  },
+  {
+    "entryID": 319,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，他們有兩個人……」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC8,pic=13);",
+    "zh_TW": "[panel=2]「表哥，他們有兩個人……」",
+    "zh_CN": "[panel=2]「表哥，他们有两个人……」",
+    "links": [320]
+  },
+  {
+    "entryID": 320,
+    "actorID": "MC1",
+    "text": "「正好，省得我麻煩。那你們就一起上吧！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,4);",
+    "zh_TW": "「正好，省得我麻煩。那你們就一起上吧！」",
+    "zh_CN": "「正好，省得我麻烦。那你们就一起上吧！」",
+    "links": [321]
+  },
+  {
+    "entryID": 321,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,26);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);\nDisableCharacterExpression(0);",
+    "Description": "進入戰鬥",
+    "links": [378]
+  },
+  {
+    "entryID": 322,
+    "actorID": "role120",
+    "text": "[panel=1]「英雄饒命！我們兄弟倆徹底服了！我們再也不敢找您麻煩了！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role120,pic=1);\nModifyData(Coin,150);",
+    "Conditions": "IsPassFight()  == true",
+    "Description": "獎勵",
+    "zh_TW": "[panel=1]「英雄饒命！我們兄弟倆徹底服了！我們再也不敢找您麻煩了！」",
+    "zh_CN": "[panel=1]「英雄饶命！我们兄弟俩彻底服了！我们再也不敢找您麻烦了！」",
+    "links": [379]
+  },
+  {
+    "entryID": 324,
+    "actorID": "MC8",
+    "text": "[panel=2]「嘻嘻，今日又是滿載而歸！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「嘻嘻，今日又是滿載而歸！」",
+    "zh_CN": "[panel=2]「嘻嘻，今日又是满载而归！」",
+    "links": [325]
+  },
+  {
+    "entryID": 325,
+    "actorID": "MC1",
+    "text": "「哈哈，本少俠這身本事可不是白練的。去罷去罷，改日再來孝敬也不遲。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「哈哈，本少俠這身本事可不是白練的。去罷去罷，改日再來孝敬也不遲。」",
+    "zh_CN": "「哈哈，本少侠这身本事可不是白练的。去罢去罢，改日再来孝敬也不迟。」",
+    "links": [381]
+  },
+  {
+    "entryID": 326,
+    "actorID": "role121",
+    "text": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role121,pic=3);",
+    "zh_TW": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
+    "zh_CN": "[panel=1]「大哥，我们走。看来这小子也不过如此。」",
+    "links": [327]
+  },
+  {
+    "entryID": 327,
+    "actorID": "role120",
+    "text": "[panel=1]「哈哈哈！看到沒！俺三弟一出手，你就變成軟腳蝦了！」",
+    "Sequence": "SetPortrait(role120,pic=1);",
+    "zh_TW": "[panel=1]「哈哈哈！看到沒！俺三弟一出手，你就變成軟腳蝦了！」",
+    "zh_CN": "[panel=1]「哈哈哈！看到没！俺三弟一出手，你就变成软脚虾了！」",
+    "links": [328]
+  },
+  {
+    "entryID": 328,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩隻妖怪耀武揚威一番後，得意洋洋地跳回了河裡。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"FlokMonster\"] = -1",
+    "Description": "河童系列關閉",
+    "zh_TW": "[panel=6]＊（兩隻妖怪耀武揚威一番後，得意洋洋地跳回了河裡。）＊",
+    "zh_CN": "[panel=6]＊（两只妖怪耀武扬威一番后，得意洋洋地跳回了河里。）＊",
+    "links": [329]
+  },
+  {
+    "entryID": 329,
+    "actorID": "MC8",
+    "text": "[panel=1]「表哥，你還好吧？」",
+    "Sequence": "SetPortrait(MC8,pic=13);",
+    "zh_TW": "[panel=1]「表哥，你還好吧？」",
+    "zh_CN": "[panel=1]「表哥，你还好吧？」",
+    "links": [330]
+  },
+  {
+    "entryID": 330,
+    "actorID": "MC1",
+    "text": "「…一時大意！」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「…一時大意！」",
+    "zh_CN": "「…一时大意！」",
+    "links": []
+  },
+  {
+    "entryID": 331,
+    "actorID": "role2",
+    "text": "[panel=6]＊（突然間，一個身影悄無聲息地出現在你面前，擋住了你的去路。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=6]＊（突然間，一個身影悄無聲息地出現在你面前，擋住了你的去路。）＊",
+    "zh_CN": "[panel=6]＊（突然间，一个身影悄无声息地出现在你面前，挡住了你的去路。）＊",
+    "links": [332]
+  },
+  {
+    "entryID": 332,
+    "actorID": "role122",
+    "text": "「你就是那個欺負我大哥和三弟的傢伙？哼，不過，也就到此為止了。今天我要讓你明白，我們兄弟不是好惹的！」",
+    "Sequence": "SetPortrait(role122,pic=1);",
+    "zh_TW": "「你就是那個欺負我大哥和三弟的傢伙？哼，不過，也就到此為止了。今天我要讓你明白，我們兄弟不是好惹的！」",
+    "zh_CN": "「你就是那个欺负我大哥和三弟的家伙？哼，不过，也就到此为止了。今天我要让你明白，我们兄弟不是好惹的！」",
+    "links": [333]
+  },
+  {
+    "entryID": 333,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這個傢伙看起來…跟前兩個不太一樣。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=13);",
+    "zh_TW": "[panel=2]「表哥，這個傢伙看起來…跟前兩個不太一樣。」",
+    "zh_CN": "[panel=2]「表哥，这个家伙看起来…跟前两个不太一样。」",
+    "links": [334]
+  },
+  {
+    "entryID": 334,
+    "actorID": "MC1",
+    "text": "「哦？那你想來試試？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,4);",
+    "zh_TW": "「哦？那你想來試試？」",
+    "zh_CN": "「哦？那你想来试试？」",
+    "links": [335]
+  },
+  {
+    "entryID": 335,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,27);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);\nDisableCharacterExpression(0);",
+    "Description": "進入戰鬥",
+    "links": [382]
+  },
+  {
+    "entryID": 336,
+    "actorID": "role122",
+    "text": "「可惡…我竟然會輸給你這種…」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role122,pic=3);",
+    "Conditions": "IsPassFight()  == true",
+    "zh_TW": "「可惡…我竟然會輸給你這種…」",
+    "zh_CN": "「可恶…我竟然会输给你这种…」",
+    "links": [337]
+  },
+  {
+    "entryID": 337,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在此時，河邊水花大作，之前被你擊敗的妖怪大哥和三弟衝了出來，護在二哥身前。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（就在此時，河邊水花大作，之前被你擊敗的妖怪大哥和三弟衝了出來，護在二哥身前。）＊",
+    "zh_CN": "[panel=6]＊（就在此时，河边水花大作，之前被你击败的妖怪大哥和三弟冲了出来，护在二哥身前。）＊",
+    "links": [338]
+  },
+  {
+    "entryID": 338,
+    "actorID": "role121",
+    "text": "[panel=4]「渾蛋！不准你動我二哥！」",
+    "Sequence": "SetPortrait(role121,pic=2);",
+    "zh_TW": "[panel=4]「渾蛋！不准你動我二哥！」",
+    "zh_CN": "[panel=4]「浑蛋！不准你动我二哥！」",
+    "links": [339]
+  },
+  {
+    "entryID": 339,
+    "actorID": "role120",
+    "text": "[panel=3]「英雄！英雄請高抬貴手！我二弟性子高傲，多有得罪，還請您大人有大量！我們兄弟三人，再也不敢與您為敵了！」",
+    "Sequence": "SetPortrait(role120,pic=3);",
+    "zh_TW": "[panel=3]「英雄！英雄請高抬貴手！我二弟性子高傲，多有得罪，還請您大人有大量！我們兄弟三人，再也不敢與您為敵了！」",
+    "zh_CN": "[panel=3]「英雄！英雄请高抬贵手！我二弟性子高傲，多有得罪，还请您大人有大量！我们兄弟三人，再也不敢与您为敌了！」",
+    "links": [340]
+  },
+  {
+    "entryID": 340,
+    "actorID": "role2",
+    "text": "[panel=6]＊（妖怪大哥從懷裡掏出一個更大的錢袋，恭敬地奉上。）＊",
+    "Sequence": "ModifyData(Coin,300);",
+    "Description": "獲得獎勵",
+    "zh_TW": "[panel=6]＊（妖怪大哥從懷裡掏出一個更大的錢袋，恭敬地奉上。）＊",
+    "zh_CN": "[panel=6]＊（妖怪大哥从怀里掏出一个更大的钱袋，恭敬地奉上。）＊",
+    "links": [342]
+  },
+  {
+    "entryID": 342,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇！表哥，這次的更多！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「哇！表哥，這次的更多！」",
+    "zh_CN": "[panel=2]「哇！表哥，这次的更多！」",
+    "links": [343]
+  },
+  {
+    "entryID": 343,
+    "actorID": "MC1",
+    "text": "「罷了。你們兄弟情深，倒也難得。錢我收下，你們走吧。日後好自為之，莫要再為非作歹。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「罷了。你們兄弟情深，倒也難得。錢我收下，你們走吧。日後好自為之，莫要再為非作歹。」",
+    "zh_CN": "「罢了。你们兄弟情深，倒也难得。钱我收下，你们走吧。日后好自为之，莫要再为非作歹。」",
+    "links": [344]
+  },
+  {
+    "entryID": 344,
+    "actorID": "role2",
+    "text": "[panel=6]＊（妖怪大哥連連道謝，然後扶起仍有些不甘的二哥，拉著還想叫囂的三弟，三兄弟互相攙扶著沉入水中，消失不見。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"FlokMonster\"] = 3",
+    "zh_TW": "[panel=6]＊（妖怪大哥連連道謝，然後扶起仍有些不甘的二哥，拉著還想叫囂的三弟，三兄弟互相攙扶著沉入水中，消失不見。）＊",
+    "zh_CN": "[panel=6]＊（妖怪大哥连连道谢，然后扶起仍有些不甘的二哥，拉着还想叫嚣的三弟，三兄弟互相搀扶着沉入水中，消失不见。）＊",
+    "links": []
+  },
+  {
+    "entryID": 345,
+    "actorID": "role122",
+    "text": "「我還以為有多大本事，原來是個銀樣鑞槍頭！光有蠻力是沒用的。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role122,pic=4);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "「我還以為有多大本事，原來是個銀樣鑞槍頭！光有蠻力是沒用的。」",
+    "zh_CN": "「我还以为有多大本事，原来是个银样镴枪头！光有蛮力是没用的。」",
+    "links": [346]
+  },
+  {
+    "entryID": 346,
+    "actorID": "role2",
+    "text": "[panel=6]＊（妖怪耀武揚威一番後，得意洋洋地跳回了河裡。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（妖怪耀武揚威一番後，得意洋洋地跳回了河裡。）＊",
+    "zh_CN": "[panel=6]＊（妖怪耀武扬威一番后，得意洋洋地跳回了河里。）＊",
+    "links": [347]
+  },
+  {
+    "entryID": 347,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你還好吧？我們…我們還是先回去吧…」",
+    "Sequence": "SetPortrait(MC8,pic=13);",
+    "zh_TW": "[panel=2]「表哥，你還好吧？我們…我們還是先回去吧…」",
+    "zh_CN": "[panel=2]「表哥，你还好吧？我们…我们还是先回去吧…」",
+    "links": [348]
+  },
+  {
+    "entryID": 348,
+    "actorID": "MC1",
+    "text": "「我…我今天沒吃飽，手軟了！等我吃飽飯，定要牠們好看！」",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "Script": "Variable[\"FlokMonster\"] = -1",
+    "Description": "河童系列關閉",
+    "zh_TW": "「我…我今天沒吃飽，手軟了！等我吃飽飯，定要牠們好看！」",
+    "zh_CN": "「我…我今天没吃饱，手软了！等我吃饱饭，定要它们好看！」",
+    "links": []
+  },
+  {
+    "entryID": 352,
+    "actorID": "role2",
+    "text": "[panel=6]＊（突然，釣竿猛地一沉，一股巨大的力道傳來！你急忙穩住身形，與水下的東西一番角力，終於將其拉出水面——竟是一個渾身翠綠、頭頂禿禿的古怪生物！）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"FlokMonster\"] == 0",
+    "zh_TW": "[panel=6]＊（突然，釣竿猛地一沉，一股巨大的力道傳來！你急忙穩住身形，與水下的東西一番角力，終於將其拉出水面——竟是一個渾身翠綠、頭頂禿禿的古怪生物！）＊",
+    "zh_CN": "[panel=6]＊（突然，钓竿猛地一沉，一股巨大的力道传来！你急忙稳住身形，与水下的东西一番角力，终于将其拉出水面——竟是一个浑身翠绿、头顶秃秃的古怪生物！）＊",
+    "links": [353]
+  },
+  {
+    "entryID": 353,
+    "actorID": "role120",
+    "text": "「嘖！真是豈有此理！哪來的小鬼，竟敢用這等劣質蚯蚓打擾本大爺睡覺！」",
+    "Sequence": "SetPortrait(role120,pic=4);",
+    "zh_TW": "「嘖！真是豈有此理！哪來的小鬼，竟敢用這等劣質蚯蚓打擾本大爺睡覺！」",
+    "zh_CN": "「啧！真是岂有此理！哪来的小鬼，竟敢用这等劣质蚯蚓打扰本大爷睡觉！」",
+    "links": [354]
+  },
+  {
+    "entryID": 354,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇啊！是、這是什麼怪物啊！怪噁心的！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Shock);",
+    "zh_TW": "[panel=2]「哇啊！是、這是什麼怪物啊！怪噁心的！」",
+    "zh_CN": "[panel=2]「哇啊！是、这是什么怪物啊！怪恶心的！」",
+    "links": [355]
+  },
+  {
+    "entryID": 355,
+    "actorID": "MC1",
+    "text": "「呔！何方妖物，竟敢在此作祟！看我伏虎拳的厲害！」",
+    "Sequence": "SetPortrait(MC1,pic=2);\nDisableCharacterExpression(2);",
+    "zh_TW": "「呔！何方妖物，竟敢在此作祟！看我伏虎拳的厲害！」",
+    "zh_CN": "「呔！何方妖物，竟敢在此作祟！看我伏虎拳的厉害！」",
+    "links": [356]
+  },
+  {
+    "entryID": 356,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,24);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);\nDisableCharacterExpression(0);",
+    "Description": "進入戰鬥",
+    "links": [369]
+  },
+  {
+    "entryID": 357,
+    "actorID": "role120",
+    "text": "「嗚…好漢饒命！是小的有眼不識泰山！這些亮晶晶的寶貝都孝敬給您，只求好漢饒我一命！」",
+    "Sequence": "SetPortrait(role120,pic=1);",
+    "Conditions": "IsPassFight()  == true",
+    "zh_TW": "「嗚…好漢饒命！是小的有眼不識泰山！這些亮晶晶的寶貝都孝敬給您，只求好漢饒我一命！」",
+    "zh_CN": "「呜…好汉饶命！是小的有眼不识泰山！这些亮晶晶的宝贝都孝敬给您，只求好汉饶我一命！」",
+    "links": [358]
+  },
+  {
+    "entryID": 358,
+    "actorID": "role2",
+    "text": "[panel=6]＊（妖怪從它腰間的小布袋裡，倒出了一堆亮閃閃的銅錢。）＊",
+    "Sequence": "ModifyData(Coin,150);\nModifyData(AbilityExp,MC1,Strength,100);",
+    "Description": "拿錢",
+    "zh_TW": "[panel=6]＊（妖怪從它腰間的小布袋裡，倒出了一堆亮閃閃的銅錢。）＊",
+    "zh_CN": "[panel=6]＊（妖怪从它腰间的小布袋里，倒出了一堆亮闪闪的铜钱。）＊",
+    "links": [359]
+  },
+  {
+    "entryID": 359,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇！如果多來幾隻這種怪物那我們不就發財了！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Proud);",
+    "zh_TW": "[panel=2]「哇！如果多來幾隻這種怪物那我們不就發財了！」",
+    "zh_CN": "[panel=2]「哇！如果多来几只这种怪物那我们不就发财了！」",
+    "links": [360]
+  },
+  {
+    "entryID": 360,
+    "actorID": "role120",
+    "text": "「…小小年紀卻說出這麼恐怖的話！」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(role120,pic=4);",
+    "zh_TW": "「…小小年紀卻說出這麼恐怖的話！」",
+    "zh_CN": "「…小小年纪却说出这么恐怖的话！」",
+    "links": [361]
+  },
+  {
+    "entryID": 361,
+    "actorID": "MC1",
+    "text": "「哼，你這小妖這次就放過你，下次小心點吧。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「哼，你這小妖這次就放過你，下次小心點吧。」",
+    "zh_CN": "「哼，你这小妖这次就放过你，下次小心点吧。」",
+    "links": [362]
+  },
+  {
+    "entryID": 362,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話剛說完，這妖怪一溜煙跳回河裡，消失不見了。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"FlokMonster\"] = 1",
+    "zh_TW": "[panel=6]＊（話剛說完，這妖怪一溜煙跳回河裡，消失不見了。）＊",
+    "zh_CN": "[panel=6]＊（话刚说完，这妖怪一溜烟跳回河里，消失不见了。）＊",
+    "links": []
+  },
+  {
+    "entryID": 363,
+    "actorID": "role120",
+    "text": "「哼，就這點三腳貓功夫，也敢學人來這條河釣魚？真是笑掉本大爺的大牙！」",
+    "Sequence": "SetPortrait(role120,pic=1);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "「哼，就這點三腳貓功夫，也敢學人來這條河釣魚？真是笑掉本大爺的大牙！」",
+    "zh_CN": "「哼，就这点三脚猫功夫，也敢学人来这条河钓鱼？真是笑掉本大爷的大牙！」",
+    "links": [364]
+  },
+  {
+    "entryID": 364,
+    "actorID": "role120",
+    "text": "「小子，這河邊可不太平，下次眼睛放亮點，別什麼都敢惹！」",
+    "Sequence": "SetPortrait(role120,pic=2);",
+    "zh_TW": "「小子，這河邊可不太平，下次眼睛放亮點，別什麼都敢惹！」",
+    "zh_CN": "「小子，这河边可不太平，下次眼睛放亮点，别什么都敢惹！」",
+    "links": [365]
+  },
+  {
+    "entryID": 365,
+    "actorID": "role2",
+    "text": "[panel=6]＊（妖怪嘲笑一番後，噗通一聲跳回河裡，消失不見了。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"FlokMonster\"] = -1",
+    "Description": "河童系列關閉",
+    "zh_TW": "[panel=6]＊（妖怪嘲笑一番後，噗通一聲跳回河裡，消失不見了。）＊",
+    "zh_CN": "[panel=6]＊（妖怪嘲笑一番后，噗通一声跳回河里，消失不见了。）＊",
+    "links": [366]
+  },
+  {
+    "entryID": 366,
+    "actorID": "MC8",
+    "text": "「表哥你沒事吧？這妖怪好兇…」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "「表哥你沒事吧？這妖怪好兇…」",
+    "zh_CN": "「表哥你没事吧？这妖怪好凶…」",
+    "links": [367]
+  },
+  {
+    "entryID": 367,
+    "actorID": "MC1",
+    "text": "「我…我只是一時大意！下次定不饒它！」",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "zh_TW": "「我…我只是一時大意！下次定不饒它！」",
+    "zh_CN": "「我…我只是一时大意！下次定不饶它！」",
+    "links": []
+  },
+  {
+    "entryID": 368,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();\nSetPortrait(MC1,pic=1);",
+    "Description": "初級小遊戲",
+    "links": [383]
+  },
+  {
+    "entryID": 369,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [357, 363]
+  },
+  {
+    "entryID": 370,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 376,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();\nSetPortrait(MC1,pic=1);",
+    "links": [316, 377]
+  },
+  {
+    "entryID": 377,
+    "actorID": "role2",
+    "text": "[panel=6]＊（平靜的河水，沒有什麼特別之處。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（平靜的河水，沒有什麼特別之處。）＊",
+    "zh_CN": "[panel=6]＊（平静的河水，没有什么特别之处。）＊",
+    "links": []
+  },
+  {
+    "entryID": 378,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [322, 326]
+  },
+  {
+    "entryID": 379,
+    "actorID": "role121",
+    "text": "[panel=4]「大哥，你何必跟這小子求饒！」",
+    "Sequence": "SetPortrait(role121,pic=2);",
+    "zh_TW": "[panel=4]「大哥，你何必跟這小子求饒！」",
+    "zh_CN": "[panel=4]「大哥，你何必跟这小子求饶！」",
+    "links": [380]
+  },
+  {
+    "entryID": 380,
+    "actorID": "role120",
+    "text": "[panel=1]「你懂什麼，留得青山在…」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role120,pic=1);",
+    "zh_TW": "[panel=1]「你懂什麼，留得青山在…」",
+    "zh_CN": "[panel=1]「你懂什么，留得青山在…」",
+    "links": [324]
+  },
+  {
+    "entryID": 381,
+    "actorID": "role2",
+    "text": "[panel=6]＊（於是，這綠色河妖拖著不甘願的黑色河妖，跳進河裡，消失不見了。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"FlokMonster\"] = 2",
+    "zh_TW": "[panel=6]＊（於是，這綠色河妖拖著不甘願的黑色河妖，跳進河裡，消失不見了。）＊",
+    "zh_CN": "[panel=6]＊（于是，这绿色河妖拖着不甘愿的黑色河妖，跳进河里，消失不见了。）＊",
+    "links": []
+  },
+  {
+    "entryID": 382,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [345, 336]
+  },
+  {
+    "entryID": 383,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "BeginMiniGame(Fishing,Default,Default,Default);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndMiniGame);\nContinue()@Message(EndMiniGame)",
+    "links": [352, 370]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "(CurrentQuestState(\"CF07\") == \"active\") and (CurrentQuestState(\"CF08\") == \"active\")",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [55]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [1]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [368]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [376]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "Variable[\"FlokMonster\"] == 2",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [331]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nShowMemory(M_005);\nSetContinueMode(original)@Message(EndMemory);\nContinue()@Message(EndMemory);",
+    "Description": "回憶模式",
+    "links": [62]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "過場演出",
+    "links": [2054]
+  }
+]

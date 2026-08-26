@@ -1,0 +1,551 @@
+[
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "成了，出口應該就在那了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "成了，出口應該就在那了。",
+    "zh_CN": "成了，出口应该就在那了。",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC3",
+    "text": "[panel=2]低下身！",
+    "Sequence": "SetPortrait(MC3,pic=2);",
+    "zh_TW": "[panel=2]低下身！",
+    "zh_CN": "[panel=2]低下身！",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "role2",
+    "text": "[panel=5]你下意識低身，子羽一刀橫劈，\n當場攔腰劈斷暗處竄出的怪物。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=5]你下意識低身，子羽一刀橫劈，\n當場攔腰劈斷暗處竄出的怪物。",
+    "zh_CN": "[panel=5]你下意识低身，子羽一刀横劈，\n当场拦腰劈断暗处窜出的怪物。",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "role4",
+    "text": "吼──！吼──！吼──！",
+    "Sequence": "",
+    "zh_TW": "吼──！吼──！吼──！",
+    "zh_CN": "吼──！吼──！吼──！",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "role2",
+    "text": "[panel=5]伴隨吼聲，暗處冒出點點紅光，\n怪物身影一一冒出。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]伴隨吼聲，暗處冒出點點紅光，\n怪物身影一一冒出。",
+    "zh_CN": "[panel=5]伴随吼声，暗处冒出点点红光，\n怪物身影一一冒出。",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC7",
+    "text": "[panel=2]看來有不速之客。",
+    "Sequence": "SetPortrait(MC7,pic=2);",
+    "zh_TW": "[panel=2]看來有不速之客。",
+    "zh_CN": "[panel=2]看来有不速之客。",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "role35",
+    "text": "[panel=2]既然來了，那我們就一盡地主之誼吧。",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "[panel=2]既然來了，那我們就一盡地主之誼吧。",
+    "zh_CN": "[panel=2]既然来了，那我们就一尽地主之谊吧。",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "role2",
+    "text": "[panel=5]就見斯蒂娜猶如輕燕，來去自如，\n好似此地為她而設，輕易穿梭擊殺怪物。",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]就見斯蒂娜猶如輕燕，來去自如，\n好似此地為她而設，輕易穿梭擊殺怪物。",
+    "zh_CN": "[panel=5]就见斯蒂娜犹如轻燕，来去自如，\n好似此地为她而设，轻易穿梭击杀怪物。",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "role2",
+    "text": "[panel=5]你們見巾幗不讓，立馬也加入戰鬥。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你們見巾幗不讓，立馬也加入戰鬥。",
+    "zh_CN": "[panel=5]你们见巾帼不让，立马也加入战斗。",
+    "links": [118]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC7",
+    "text": "那就請你幫我把牠們引過來。",
+    "Sequence": "",
+    "zh_TW": "那就請你幫我把牠們引過來。",
+    "zh_CN": "那就请你帮我把它们引过来。",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "role2",
+    "text": "[panel=5]郭嘉指著密道機關的尖銳殘骸。\n你心靈神會，立刻著手誘導怪物。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=5]郭嘉指著密道機關的尖銳殘骸。\n你心靈神會，立刻著手誘導怪物。",
+    "zh_CN": "[panel=5]郭嘉指着密道机关的尖锐残骸。 \n你心灵神会，立刻着手诱导怪物。",
+    "links": [129]
+  },
+  {
+    "entryID": 86,
+    "actorID": "role2",
+    "text": "[panel=5]一到定點，郭嘉立刻重擊石壁。\n就見石壁一路裂至怪物頭頂，開始塌陷。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]一到定點，郭嘉立刻重擊石壁。\n就見石壁一路裂至怪物頭頂，開始塌陷。",
+    "zh_CN": "[panel=5]一到定点，郭嘉立刻重击石壁。 \n就见石壁一路裂至怪物头顶，开始塌陷。",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "role2",
+    "text": "[panel=5]怪物立刻要躲，卻不知落石只是引子。\n裂口噴出急流，把怪物沖往奪命的尖銳殘骸。",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]怪物立刻要躲，卻不知落石只是引子。\n裂口噴出急流，把怪物沖往奪命的尖銳殘骸。",
+    "zh_CN": "[panel=5]怪物立刻要躲，却不知落石只是引子。 \n裂口喷出急流，把怪物冲往夺命的尖锐残骸。",
+    "links": []
+  },
+  {
+    "entryID": 89,
+    "actorID": "role2",
+    "text": "[panel=5]忽然，四周牆壁裂開，竟有怪物掘壁衝出。\n幸好你及時提醒，郭嘉才沒慘虧。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]忽然，四周牆壁裂開，竟有怪物掘壁衝出。\n幸好你及時提醒，郭嘉才沒慘虧。",
+    "zh_CN": "[panel=5]忽然，四周墙壁裂开，竟有怪物掘壁冲出。 \n幸好你及时提醒，郭嘉才没惨亏。",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "大家當心！牠們躲在牆裡！",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "大家當心！牠們躲在牆裡！",
+    "zh_CN": "大家当心！它们躲在墙里！",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC3",
+    "text": "[panel=2]自作聰明的孽畜，省得我費力追擊。",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=2]自作聰明的孽畜，省得我費力追擊。",
+    "zh_CN": "[panel=2]自作聪明的孽畜，省得我费力追击。",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role2",
+    "text": "[panel=5]子羽蓄力回身一刀，把怪物釘入壁中，\n連同牆內的也一併遭殃。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]子羽蓄力回身一刀，把怪物釘入壁中，\n連同牆內的也一併遭殃。",
+    "zh_CN": "[panel=5]子羽蓄力回身一刀，把怪物钉入壁中，\n连同墙内的也一并遭殃。",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC3",
+    "text": "[panel=2]偃武──開斬！！！",
+    "Sequence": "SetPortrait(MC3,pic=2);",
+    "zh_TW": "[panel=2]偃武──開斬！！！",
+    "zh_CN": "[panel=2]偃武──开斩！ ！ ！",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=5]子羽沒有拔出刀，而用力一橫，硬是劃開牆壁，\n藏於其中的怪物立時被開腸剖肚，血花四濺。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]子羽沒有拔出刀，而用力一橫，硬是劃開牆壁，\n藏於其中的怪物立時被開腸剖肚，血花四濺。",
+    "zh_CN": "[panel=5]子羽没有拔出刀，而用力一横，硬是划开墙壁，\n藏于其中的怪物立时被开肠剖肚，血花四溅。",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC3",
+    "text": "[panel=2]再來──！",
+    "Sequence": "",
+    "zh_TW": "[panel=2]再來──！",
+    "zh_CN": "[panel=2]再来──！",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "role2",
+    "text": "[panel=5]子羽殺威一喝，竟震得整個暗道都在晃動。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]子羽殺威一喝，竟震得整個暗道都在晃動。",
+    "zh_CN": "[panel=5]子羽杀威一喝，竟震得整个暗道都在晃动。",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "role35",
+    "text": "[panel=2]哈，有人開始殺得興起了，\n怪物們你們要倒楣了。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]哈，有人開始殺得興起了，\n怪物們你們要倒楣了。",
+    "zh_CN": "[panel=2]哈，有人开始杀得兴起了，\n怪物们你们要倒楣了。",
+    "links": [119, 120]
+  },
+  {
+    "entryID": 98,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [100]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "成了……等一下，斯蒂娜！",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "成了……等一下，斯蒂娜！",
+    "zh_CN": "成了……等一下，斯蒂娜！",
+    "links": [98]
+  },
+  {
+    "entryID": 100,
+    "actorID": "role2",
+    "text": "[panel=5]正當你以為斯蒂娜要遭殃之際，\n牆壁驟然破開，一隻宛如熊臂的手抓住怪物。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]正當你以為斯蒂娜要遭殃之際，\n牆壁驟然破開，一隻宛如熊臂的手抓住怪物。",
+    "zh_CN": "[panel=5]正当你以为斯蒂娜要遭殃之际，\n墙壁骤然破开，一只宛如熊臂的手抓住怪物。",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "role50",
+    "text": "就妳這老毛病──",
+    "Sequence": "",
+    "zh_TW": "就妳這老毛病──",
+    "zh_CN": "就妳这老毛病──",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "role2",
+    "text": "[panel=5]那人用力一砸，\n怪物不單身首異處，更被砸成一攤肉壁。",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]那人用力一砸，\n怪物不單身首異處，更被砸成一攤肉壁。",
+    "zh_CN": "[panel=5]那人用力一砸，\n怪物不单身首异处，更被砸成一摊肉壁。",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "role26",
+    "text": "找死啊！",
+    "Sequence": "SetPortrait(role26,pic=1);",
+    "zh_TW": "找死啊！",
+    "zh_CN": "找死啊！",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "父！父！父！父親？？？？？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "父！父！父！父親？？？？？",
+    "zh_CN": "父！父！父！父亲？ ？ ？ ？ ？",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role35",
+    "text": "[panel=2]欸？怎麼連董叔也來了，\n這下更熱鬧了，哈哈……",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "[panel=2]欸？怎麼連董叔也來了，\n這下更熱鬧了，哈哈……",
+    "zh_CN": "[panel=2]欸？怎么连董叔也来了，\n这下更热闹了，哈哈……",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "role26",
+    "text": "有屁話，等宰完這幫孽畜再說。\n(玩家名)你給老子當心點，老子可盯著你。",
+    "Sequence": "",
+    "zh_TW": "有屁話，等宰完這幫孽畜再說。\n(玩家名)你給老子當心點，老子可盯著你。",
+    "zh_CN": "有屁话，等宰完这帮孽畜再说。 \n(玩家名)你给老子当心点，老子可盯着你。",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC1",
+    "text": "是！是！是！",
+    "Sequence": "",
+    "zh_TW": "是！是！是！",
+    "zh_CN": "是！是！是！",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "role2",
+    "text": "[panel=5]──話是這樣說，但實際發生的，\n是董卓單方面的屠殺，迅速了結了戰鬥。",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]──話是這樣說，但實際發生的，\n是董卓單方面的屠殺，迅速了結了戰鬥。",
+    "zh_CN": "[panel=5]──话是这样说，但实际发生的，\n是董卓单方面的屠杀，迅速了结了战斗。",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "role26",
+    "text": "哼，還以為有多大能耐。\n孽畜就是孽畜，也就這樣而已。",
+    "Sequence": "SetPortrait(role26,pic=3);",
+    "zh_TW": "哼，還以為有多大能耐。\n孽畜就是孽畜，也就這樣而已。",
+    "zh_CN": "哼，还以为有多大能耐。 \n孽畜就是孽畜，也就这样而已。",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC7",
+    "text": "[panel=2]……果然在絕對的武力前，謀劃算計都是多餘。",
+    "Sequence": "SetPortrait(MC7,pic=5);",
+    "zh_TW": "[panel=2]……果然在絕對的武力前，謀劃算計都是多餘。",
+    "zh_CN": "[panel=2]……果然在绝对的武力前，谋划算计都是多余。",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "不對，他絕對不算正常，郭嘉你千萬別較真。\n父親你到底為何會出現在這啊？",
+    "Sequence": "",
+    "zh_TW": "不對，他絕對不算正常，郭嘉你千萬別較真。\n父親你到底為何會出現在這啊？",
+    "zh_CN": "不对，他绝对不算正常，郭嘉你千万别较真。 \n父亲你到底为何会出现在这啊？",
+    "links": [112]
+  },
+  {
+    "entryID": 112,
+    "actorID": "role26",
+    "text": "老子就碰巧經過，湊個熱鬧而已。",
+    "Sequence": "",
+    "zh_TW": "老子就碰巧經過，湊個熱鬧而已。",
+    "zh_CN": "老子就碰巧经过，凑个热闹而已。",
+    "links": [113]
+  },
+  {
+    "entryID": 113,
+    "actorID": "role35",
+    "text": "[panel=2]碰巧？啊哈！\n董叔，你這從西涼散步到雲中，不簡單啊。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]碰巧？啊哈！\n董叔，你這從西涼散步到雲中，不簡單啊。",
+    "zh_CN": "[panel=2]碰巧？啊哈！ \n董叔，你这从西凉散步到云中，不简单啊。",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "等一下，你們認識？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "等一下，你們認識？",
+    "zh_CN": "等一下，你们认识？",
+    "links": [115]
+  },
+  {
+    "entryID": 115,
+    "actorID": "role35",
+    "text": "[panel=2]那還用說，以前父親曾受雇董叔合力征討羌人，\n那時沒少受董叔照顧，我一身本領就多虧了他。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]那還用說，以前父親曾受雇董叔合力征討羌人，\n那時沒少受董叔照顧，我一身本領就多虧了他。",
+    "zh_CN": "[panel=2]那还用说，以前父亲曾受雇董叔合力征讨羌人，\n那时没少受董叔照顾，我一身本领就多亏了他。",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "role26",
+    "text": "少套近乎了，老子就教個幾天，打發時間而已。\n你們不是趕時間，還不快去幹正事。",
+    "Sequence": "SetPortrait(role26,pic=1);",
+    "zh_TW": "少套近乎了，老子就教個幾天，打發時間而已。\n你們不是趕時間，還不快去幹正事。",
+    "zh_CN": "少套近乎了，老子就教个几天，打发时间而已。 \n你们不是赶时间，还不快去干正事。",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "MC7",
+    "text": "[panel=2]（主角名）你先進去聯繫師父，\n我們在這把守，以防又有怪物侵入。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]（主角名）你先進去聯繫師父，\n我們在這把守，以防又有怪物侵入。",
+    "zh_CN": "[panel=2]（主角名）你先进去联系师父，\n我们在这把守，以防又有怪物侵入。",
+    "links": []
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC1",
+    "text": "郭嘉，小心後面！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "郭嘉，小心後面！",
+    "zh_CN": "郭嘉，小心后面！",
+    "links": [89]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC1",
+    "text": "1.輸人不輸陣，我們殺──！",
+    "Sequence": "",
+    "zh_TW": "1.輸人不輸陣，我們殺──！",
+    "zh_CN": "1.输人不输阵，我们杀──！",
+    "links": [121, 122]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC1",
+    "text": "2.[em1][智力][/em1]後面還會有其他戰鬥，別在這浪費太多力氣。",
+    "Sequence": "",
+    "zh_TW": "2.[em1][智力][/em1]後面還會有其他戰鬥，別在這浪費太多力氣。",
+    "zh_CN": "2.[em1][智力][/em1]后面还会有其他战斗，别在这浪费太多力气。",
+    "links": [123, 124]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC1",
+    "text": "➤1.進[戰鬥]成功",
+    "Sequence": "",
+    "zh_TW": "➤1.進[戰鬥]成功",
+    "zh_CN": "➤1.进[战斗]成功",
+    "links": [99]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC1",
+    "text": "➤1.進[戰鬥]失敗",
+    "Sequence": "",
+    "zh_TW": "➤1.進[戰鬥]失敗",
+    "zh_CN": "➤1.进[战斗]失败",
+    "links": [130]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC1",
+    "text": "➤2.進[智力]檢定。成功",
+    "Sequence": "",
+    "zh_TW": "➤2.進[智力]檢定。成功",
+    "zh_CN": "➤2.进[智力]检定。 成功",
+    "links": [125]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC1",
+    "text": "➤2.進[智力]檢定。失敗",
+    "Sequence": "",
+    "zh_TW": "➤2.進[智力]檢定。失敗",
+    "zh_CN": "➤2.进[智力]检定。 失败",
+    "links": [128]
+  },
+  {
+    "entryID": 125,
+    "actorID": "role2",
+    "text": "[panel=5]你聽到牆後隱約有流水聲，再觀四周地形，\n正巧有一死地，而郭嘉也與你對上眼神。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你聽到牆後隱約有流水聲，再觀四周地形，\n正巧有一死地，而郭嘉也與你對上眼神。",
+    "zh_CN": "[panel=5]你听到墙后隐约有流水声，再观四周地形，\n正巧有一死地，而郭嘉也与你对上眼神。",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC7",
+    "text": "看來我們所想一樣。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "看來我們所想一樣。",
+    "zh_CN": "看来我们所想一样。",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC1",
+    "text": "呵，真乃知音。\n你來主導，我來協助。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "呵，真乃知音。\n你來主導，我來協助。",
+    "zh_CN": "呵，真乃知音。 \n你来主导，我来协助。",
+    "links": [84]
+  },
+  {
+    "entryID": 128,
+    "actorID": "role2",
+    "text": "[panel=5]你環顧了四周，卻拿不定注意，\n怪物也沒打算給你時間，你只能著手戰鬥。",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]你環顧了四周，卻拿不定注意，\n怪物也沒打算給你時間，你只能著手戰鬥。",
+    "zh_CN": "[panel=5]你环顾了四周，却拿不定注意，\n怪物也没打算给你时间，你只能着手战斗。",
+    "links": [121, 122]
+  },
+  {
+    "entryID": 129,
+    "actorID": "role4",
+    "text": "吼──！吼──！",
+    "Sequence": "",
+    "zh_TW": "吼──！吼──！",
+    "zh_CN": "吼──！吼──！",
+    "links": [86]
+  },
+  {
+    "entryID": 130,
+    "actorID": "role2",
+    "text": "你不慎被怪物撲倒，\n隨即怪物蜂擁而至，就要把你大切八塊。",
+    "Sequence": "",
+    "zh_TW": "你不慎被怪物撲倒，\n隨即怪物蜂擁而至，就要把你大切八塊。",
+    "zh_CN": "你不慎被怪物扑倒，\n随即怪物蜂拥而至，就要把你大切八块。",
+    "links": [131]
+  },
+  {
+    "entryID": 131,
+    "actorID": "role2",
+    "text": "子羽立刻出手搭救，然其再強，也難逃疏失。\n他很快便為這一瞬間付出了血淋淋的代價。",
+    "Sequence": "",
+    "zh_TW": "子羽立刻出手搭救，然其再強，也難逃疏失。\n他很快便為這一瞬間付出了血淋淋的代價。",
+    "zh_CN": "子羽立刻出手搭救，然其再强，也难逃疏失。 \n他很快便为这一瞬间付出了血淋淋的代价。",
+    "links": [132]
+  },
+  {
+    "entryID": 132,
+    "actorID": "role2",
+    "text": "突然噩耗令眾人分神，斯蒂娜跟郭嘉接連遇害。",
+    "Sequence": "",
+    "zh_TW": "突然噩耗令眾人分神，斯蒂娜跟郭嘉接連遇害。",
+    "zh_CN": "突然噩耗令众人分神，斯蒂娜跟郭嘉接连遇害。",
+    "links": [133]
+  },
+  {
+    "entryID": 133,
+    "actorID": "role2",
+    "text": "眼見同伴慘亡，你頓時理智斷裂，\n瘋魔般殺向怪物，直至被淹沒其中……",
+    "Sequence": "",
+    "zh_TW": "眼見同伴慘亡，你頓時理智斷裂，\n瘋魔般殺向怪物，直至被淹沒其中……",
+    "zh_CN": "眼见同伴惨亡，你顿时理智断裂，\n疯魔般杀向怪物，直至被淹没其中……",
+    "links": []
+  },
+  {
+    "entryID": 134,
+    "actorID": "role2",
+    "text": "[panel=5]你們成功通過密道機關。\n隨即深處傳來隆隆聲響……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你們成功通過密道機關。\n隨即深處傳來隆隆聲響……",
+    "zh_CN": "[panel=5]你们成功通过密道机关。 \n随即深处传来隆隆声响……",
+    "links": [74]
+  }
+]

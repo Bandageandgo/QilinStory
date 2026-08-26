@@ -1,0 +1,814 @@
+[
+  {
+    "entryID": 3307,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "點擊黑衣武人",
+    "links": [3309, 3308, 3361, 3362, 3363]
+  },
+  {
+    "entryID": 3308,
+    "actorID": "role100",
+    "text": "「曼陀羅模樣與百合相近，故常有女子小娃不甚遭毒……但如今，毒花卻是我最後的依靠。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"CF14\") == \"active\"",
+    "Description": "武人結局未定",
+    "zh_TW": "「曼陀羅模樣與百合相近，故常有女子小娃不甚遭毒……但如今，毒花卻是我最後的依靠。」",
+    "zh_CN": "「曼陀罗模样与百合相近，故常有女子小娃不甚遭毒……但如今，毒花却是我最后的依靠。」",
+    "links": [3321, 3322, 3325, 3364, 3326, 3389]
+  },
+  {
+    "entryID": 3309,
+    "actorID": "role100",
+    "text": "「……莫要擾我。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"CF14\") == \"unassigned\"",
+    "zh_TW": "「……莫要擾我。」",
+    "zh_CN": "「……莫要扰我。」",
+    "links": [3310]
+  },
+  {
+    "entryID": 3310,
+    "actorID": "role100",
+    "text": "「我與你們並非一道。」",
+    "Sequence": "",
+    "zh_TW": "「我與你們並非一道。」",
+    "zh_CN": "「我与你们并非一道。」",
+    "links": [3372]
+  },
+  {
+    "entryID": 3311,
+    "actorID": "MC1",
+    "text": "「是誰下的手？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「是誰下的手？」",
+    "zh_CN": "「是谁下的手？」",
+    "links": [3316]
+  },
+  {
+    "entryID": 3312,
+    "actorID": "MC1",
+    "text": "「這位大哥，我替你找找藥物吧。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「這位大哥，我替你找找藥物吧。」",
+    "zh_CN": "「这位大哥，我替你找找药物吧。」",
+    "links": [3316]
+  },
+  {
+    "entryID": 3313,
+    "actorID": "role2",
+    "text": "[panel=6]＊（壑口如此，你推斷應是大刀所致，猶若力劈山河，純憑氣勁……）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（壑口如此，你推斷應是大刀所致，猶若力劈山河，純憑氣勁……）＊",
+    "zh_CN": "[panel=6]＊（壑口如此，你推断应是大刀所致，犹若力劈山河，纯凭气劲……）＊",
+    "links": [3311, 3312]
+  },
+  {
+    "entryID": 3314,
+    "actorID": "role100",
+    "text": "「別看了，看不出甚麼的。」",
+    "Sequence": "",
+    "zh_TW": "「別看了，看不出甚麼的。」",
+    "zh_CN": "「别看了，看不出什么的。」",
+    "links": [3311, 3312]
+  },
+  {
+    "entryID": 3315,
+    "actorID": "role100",
+    "text": "「呵，許是我這樣血腥之人入了廟堂，便遭報應了。」",
+    "Sequence": "",
+    "zh_TW": "「呵，許是我這樣血腥之人入了廟堂，便遭報應了。」",
+    "zh_CN": "「呵，许是我这样血腥之人入了庙堂，便遭报应了。」",
+    "links": [3317]
+  },
+  {
+    "entryID": 3316,
+    "actorID": "role100",
+    "text": "「不重要，已是晚了。」",
+    "Sequence": "",
+    "zh_TW": "「不重要，已是晚了。」",
+    "zh_CN": "「不重要，已是晚了。」",
+    "links": [3315]
+  },
+  {
+    "entryID": 3317,
+    "actorID": "role100",
+    "text": "「……小兄弟，你既願為一將死之人駐足，我有一不情之請，可否請你聽聽。」",
+    "Sequence": "",
+    "zh_TW": "「……小兄弟，你既願為一將死之人駐足，我有一不情之請，可否請你聽聽。」",
+    "zh_CN": "「……小兄弟，你既愿为一将死之人驻足，我有一不情之请，可否请你听听。」",
+    "links": [3318]
+  },
+  {
+    "entryID": 3318,
+    "actorID": "role100",
+    "text": "「我已無回天可能，命數如此，我無怨懟。\n只是刀傷猶若火焚，實在疼痛難忍。」",
+    "Sequence": "",
+    "zh_TW": "「我已無回天可能，命數如此，我無怨懟。\n只是刀傷猶若火焚，實在疼痛難忍。」",
+    "zh_CN": "「我已无回天可能，命数如此，我无怨怼。\n只是刀伤犹若火焚，实在疼痛难忍。」",
+    "links": [3319]
+  },
+  {
+    "entryID": 3319,
+    "actorID": "role100",
+    "text": "「我想請你替我找來一株[em2]曼陀羅花[/em2]，此花有毒，常在破敗之處生長……你若帶來，必有謝禮。」",
+    "Sequence": "",
+    "zh_TW": "「我想請你替我找來一株[em2]曼陀羅花[/em2]，此花有毒，常在破敗之處生長……你若帶來，必有謝禮。」",
+    "zh_CN": "「我想请你替我找来一株[em2]曼陀罗花[/em2]，此花有毒，常在破败之处生长……你若带来，必有谢礼。」",
+    "links": [3320]
+  },
+  {
+    "entryID": 3320,
+    "actorID": "MC1",
+    "text": "「毒花？你要拿它做甚？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「毒花？你要拿它做甚？」",
+    "zh_CN": "「毒花？你要拿它做甚？」",
+    "links": [3328]
+  },
+  {
+    "entryID": 3321,
+    "actorID": "MC1",
+    "text": "「好，我替你帶來，你且撐住。」",
+    "Sequence": "",
+    "zh_TW": "「好，我替你帶來，你且撐住。」",
+    "zh_CN": "「好，我替你带来，你且撑住。」",
+    "links": [3373]
+  },
+  {
+    "entryID": 3322,
+    "actorID": "MC1",
+    "text": "[em2]［醫術］[/em2]「莫要放棄，我能救你！」",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"MedicalExpertise\", 2)  == true",
+    "zh_TW": "[em2]［醫術］[/em2]「莫要放棄，我能救你！」",
+    "zh_CN": "[em2]［医术］[/em2]「莫要放弃，我能救你！」",
+    "links": [3323]
+  },
+  {
+    "entryID": 3323,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Manual,MedicalExpertiseCheck,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "links": [3335]
+  },
+  {
+    "entryID": 3324,
+    "actorID": "role100",
+    "text": "「你？小兄弟，莫要開玩笑了……」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「你？小兄弟，莫要開玩笑了……」",
+    "zh_CN": "「你？小兄弟，莫要开玩笑了……」",
+    "links": [3351]
+  },
+  {
+    "entryID": 3325,
+    "actorID": "MC1",
+    "text": "「趁其不備，攻擊對方。」",
+    "Sequence": "",
+    "Description": "殺死武人",
+    "zh_TW": "「趁其不備，攻擊對方。」",
+    "zh_CN": "「趁其不备，攻击对方。」",
+    "links": [3355]
+  },
+  {
+    "entryID": 3326,
+    "actorID": "MC1",
+    "text": "「此事與我何關？我沒興趣。」",
+    "Sequence": "",
+    "zh_TW": "「此事與我何關？我沒興趣。」",
+    "zh_CN": "「此事与我何关？我没兴趣。」",
+    "links": [3327]
+  },
+  {
+    "entryID": 3327,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 3328,
+    "actorID": "role100",
+    "text": "「哈哈！我已如此，還能做什麼呢？命定如此，我已掀不起什麼風浪啦。」",
+    "Sequence": "",
+    "zh_TW": "「哈哈！我已如此，還能做什麼呢？命定如此，我已掀不起什麼風浪啦。」",
+    "zh_CN": "「哈哈！我已如此，还能做什么呢？命定如此，我已掀不起什么风浪啦。」",
+    "links": [3329]
+  },
+  {
+    "entryID": 3329,
+    "actorID": "role100",
+    "text": "「萬物初生本無立場，黑白善惡醫毒救殺，不過俗者予之……我不過是，想借那花毒一用……」",
+    "Sequence": "",
+    "zh_TW": "「萬物初生本無立場，黑白善惡醫毒救殺，不過俗者予之……我不過是，想借那花毒一用……」",
+    "zh_CN": "「万物初生本无立场，黑白善恶医毒救杀，不过俗者予之……我不过是，想借那花毒一用……」",
+    "links": [3330]
+  },
+  {
+    "entryID": 3330,
+    "actorID": "role100",
+    "text": "「曼陀羅雖為毒，但於如今的我，便是救命解藥……能讓我減緩痛苦，安心前往極樂。」",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF14\", \"active\")",
+    "Description": "觸發任務",
+    "zh_TW": "「曼陀羅雖為毒，但於如今的我，便是救命解藥……能讓我減緩痛苦，安心前往極樂。」",
+    "zh_CN": "「曼陀罗虽为毒，但于如今的我，便是救命解药……能让我减缓痛苦，安心前往极乐。」",
+    "links": [3321, 3322, 3325, 3364, 3326, 3389]
+  },
+  {
+    "entryID": 3331,
+    "actorID": "role100",
+    "text": "「小兄弟……多、多謝。」",
+    "Sequence": "",
+    "zh_TW": "「小兄弟……多、多謝。」",
+    "zh_CN": "「小兄弟……多、多谢。」",
+    "links": [3332]
+  },
+  {
+    "entryID": 3332,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestState(\"CF14\",1,\"active\")",
+    "Description": "觸發任務",
+    "links": []
+  },
+  {
+    "entryID": 3333,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "黑幕轉場",
+    "links": [3334]
+  },
+  {
+    "entryID": 3334,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你將武者放平，取出隨身醫藥之物，就著晦暗燭光，克難地處理起那血紅的幽深壑口。）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=6]＊（你將武者放平，取出隨身醫藥之物，就著晦暗燭光，克難地處理起那血紅的幽深壑口。）＊",
+    "zh_CN": "[panel=6]＊（你将武者放平，取出随身医药之物，就着晦暗烛光，克难地处理起那血红的幽深壑口。）＊",
+    "links": [3336]
+  },
+  {
+    "entryID": 3335,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [3324, 3374]
+  },
+  {
+    "entryID": 3336,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不知過了多久，你聽那武者的喘息逐漸平靜，血水不再如泉水般湧出——）＊",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=6]（不知過了多久，你聽那武者的喘息逐漸平靜，血水不再如泉水般湧出——）＊",
+    "zh_CN": "[panel=6]＊（不知过了多久，你听那武者的喘息逐渐平静，血水不再如泉水般涌出——）＊",
+    "links": [3337]
+  },
+  {
+    "entryID": 3337,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "黑幕轉場",
+    "links": [3338]
+  },
+  {
+    "entryID": 3338,
+    "actorID": "role100",
+    "text": "「……我、我還活著？」",
+    "Sequence": "",
+    "zh_TW": "「……我、我還活著？」",
+    "zh_CN": "「……我、我还活着？」",
+    "links": [3375]
+  },
+  {
+    "entryID": 3339,
+    "actorID": "role100",
+    "text": "「小兄弟你……究竟是哪派神仙下凡？\n否則荒山野嶺，又怎會有如此高人相助於我？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「小兄弟你……究竟是哪派神仙下凡？\n否則荒山野嶺，又怎會有如此高人相助於我？」",
+    "zh_CN": "「小兄弟你……究竟是哪派神仙下凡？\n否则荒山野岭，又怎会有如此高人相助于我？」",
+    "links": [3340, 3341]
+  },
+  {
+    "entryID": 3340,
+    "actorID": "MC1",
+    "text": "「是你運氣好，碰上了我。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「是你運氣好，碰上了我。」",
+    "zh_CN": "「是你运气好，碰上了我。」",
+    "links": [3376]
+  },
+  {
+    "entryID": 3341,
+    "actorID": "MC1",
+    "text": "「別捧我，神仙救人是為渡世，我救人是要為吃飯的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「別捧我，神仙救人是為渡世，我救人是要為吃飯的。」",
+    "zh_CN": "「别捧我，神仙救人是为渡世，我救人是要为吃饭的。」",
+    "links": [3377]
+  },
+  {
+    "entryID": 3342,
+    "actorID": "role100",
+    "text": "「哈哈，小兄弟別謙虛了，有這本是，已與神仙無異，小兄弟，不如之後讓我替你在此立廟建碑——」",
+    "Sequence": "",
+    "zh_TW": "「哈哈，小兄弟別謙虛了，有這本是，已與神仙無異，小兄弟，不如之後讓我替你在此立廟建碑——」",
+    "zh_CN": "「哈哈，小兄弟别谦虚了，有这本是，已与神仙无异，小兄弟，不如之后让我替你在此立庙建碑——」",
+    "links": [3343]
+  },
+  {
+    "entryID": 3343,
+    "actorID": "MC1",
+    "text": "「不、倒也不必做到這種程度……」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "「不、倒也不必做到這種程度……」",
+    "zh_CN": "「不、倒也不必做到这种程度……」",
+    "links": [3346]
+  },
+  {
+    "entryID": 3344,
+    "actorID": "role100",
+    "text": "哈哈！小兄弟有趣得緊，你若是神仙，我便在這裡替你立寺蓋廟，供奉香火。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "哈哈！小兄弟有趣得緊，你若是神仙，我便在這裡替你立寺蓋廟，供奉香火。",
+    "zh_CN": "哈哈！小兄弟有趣得紧，你若是神仙，我便在这里替你立寺盖庙，供奉香火。",
+    "links": [3345]
+  },
+  {
+    "entryID": 3345,
+    "actorID": "role100",
+    "text": "你若非神仙，我便世俗了點，以薄禮相贈，絕不會讓你做白活。",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_TW": "你若非神仙，我便世俗了點，以薄禮相贈，絕不會讓你做白活。",
+    "zh_CN": "你若非神仙，我便世俗了点，以薄礼相赠，绝不会让你做白活。",
+    "links": [3346]
+  },
+  {
+    "entryID": 3346,
+    "actorID": "role100",
+    "text": "「小兄弟，還請你收下此物。」",
+    "Sequence": "ModifyData(Valuable,Player,Bloodblade,1);\nSetPortrait(MC1,pic=12);",
+    "Description": "獲得獎勵:染血黑刀",
+    "zh_TW": "「小兄弟，還請你收下此物。」",
+    "zh_CN": "「小兄弟，还请你收下此物。」",
+    "links": [3378]
+  },
+  {
+    "entryID": 3347,
+    "actorID": "role100",
+    "text": "「此乃我自一名高人手中獲得，而那名高人亦是從另一位高人手中獲得此物……」",
+    "Sequence": "",
+    "zh_TW": "「此乃我自一名高人手中獲得，而那名高人亦是從另一位高人手中獲得此物……」",
+    "zh_CN": "「此乃我自一名高人手中获得，而那名高人亦是从另一位高人手中获得此物……」",
+    "links": [3348]
+  },
+  {
+    "entryID": 3348,
+    "actorID": "role100",
+    "text": "「你且好生收著，雖然此刀現在鏽到無法使用，但終有一日，你也定會發現此刀的秘密…」",
+    "Sequence": "",
+    "zh_TW": "「你且好生收著，雖然此刀現在鏽到無法使用，但終有一日，你也定會發現此刀的秘密…」",
+    "zh_CN": "「你且好生收着，虽然此刀现在锈到无法使用，但终有一日，你也定会发现此刀的秘密…」",
+    "links": [3379]
+  },
+  {
+    "entryID": 3349,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestState(\"CF14\", \"success\")\nSetQuestEntryState(\"CF14\", 2, \"success\")",
+    "Description": "任務完成\n變數更新",
+    "links": [3350]
+  },
+  {
+    "entryID": 3350,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();\nModifyData(DnDAlignment,Player,GoodEvil,0.15);",
+    "Description": "仁心提升",
+    "links": []
+  },
+  {
+    "entryID": 3351,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "黑幕轉場",
+    "links": [3381]
+  },
+  {
+    "entryID": 3352,
+    "actorID": "role2",
+    "text": "[panel=6]＊（無奈技術不精，幾經周折，仍未能順利止血，反讓裂口逐漸裂開——）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=6]＊（無奈技術不精，幾經周折，仍未能順利止血，反讓裂口逐漸裂開——）＊",
+    "zh_CN": "[panel=6]＊（无奈技术不精，几经周折，仍未能顺利止血，反让裂口逐渐裂开——）＊",
+    "links": [3353]
+  },
+  {
+    "entryID": 3353,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "黑幕轉場",
+    "links": [3354]
+  },
+  {
+    "entryID": 3354,
+    "actorID": "role100",
+    "text": "「……夠了。小兄弟，命定如此。\n你去替我找那曼陀羅花罷……我已不願再受折磨。」",
+    "Sequence": "",
+    "zh_TW": "「……夠了。小兄弟，命定如此。\n你去替我找那曼陀羅花罷……我已不願再受折磨。」",
+    "zh_CN": "「……够了。小兄弟，命定如此。\n你去替我找那曼陀罗花罢……我已不愿再受折磨。」",
+    "links": [3321]
+  },
+  {
+    "entryID": 3355,
+    "actorID": "role100",
+    "text": "「你……！」",
+    "Sequence": "",
+    "zh_TW": "「你……！」",
+    "zh_CN": "「你……！」",
+    "links": [3356]
+  },
+  {
+    "entryID": 3356,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Play);\nAudioControl(PlaySFXOneShot,Others_Sword_Single_ScreenRed);\nSetContinueMode(original)@2;",
+    "links": [3357]
+  },
+  {
+    "entryID": 3357,
+    "actorID": "role2",
+    "text": "[panel=6]＊（未等武者出聲，你便以廟外電閃雷鳴做掩護，抽出對方腰間佩劍，手腕輕轉後一推，直入對方心窩。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（未等武者出聲，你便以廟外電閃雷鳴做掩護，抽出對方腰間佩劍，手腕輕轉後一推，直入對方心窩。）＊",
+    "zh_CN": "[panel=6]＊（未等武者出声，你便以庙外电闪雷鸣做掩护，抽出对方腰间佩剑，手腕轻转后一推，直入对方心窝。）＊",
+    "links": [3358]
+  },
+  {
+    "entryID": 3358,
+    "actorID": "role100",
+    "text": "「……」",
+    "Sequence": "",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [3359]
+  },
+  {
+    "entryID": 3359,
+    "actorID": "role2",
+    "text": "[panel=6]＊（武者屍身後靠，倚牆略是掙扎，最終溶於夜色，動也不動。）＊",
+    "Sequence": "ModifyData(Valuable,Player,Bloodblade,1);",
+    "Description": "獲得染血黑刀",
+    "zh_TW": "[panel=6]＊（武者屍身後靠，倚牆略是掙扎，最終溶於夜色，動也不動。）＊",
+    "zh_CN": "[panel=6]＊（武者尸身后靠，倚墙略是挣扎，最终溶于夜色，动也不动。）＊",
+    "links": [3360]
+  },
+  {
+    "entryID": 3360,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestState(\"CF14\", \"success\")\nSetQuestEntryState(\"CF14\", 3, \"success\")",
+    "Description": "任務完成\n變數更新",
+    "links": []
+  },
+  {
+    "entryID": 3361,
+    "actorID": "role2",
+    "text": "[panel=6]＊（屍身溶於夜色，唯有電光落入廟堂內的一瞬，才能勉強看見那雙混濁而猙獰，直瞪著自己的雙眼。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF14\", 3) == \"success\"",
+    "Description": "殺死武人_後續",
+    "zh_TW": "[panel=6]＊（屍身溶於夜色，唯有電光落入廟堂內的一瞬，才能勉強看見那雙混濁而猙獰，直瞪著自己的雙眼。）＊",
+    "zh_CN": "[panel=6]＊（尸身溶于夜色，唯有电光落入庙堂内的一瞬，才能勉强看见那双混浊而狰狞，直瞪着自己的双眼。）＊",
+    "links": []
+  },
+  {
+    "entryID": 3362,
+    "actorID": "role2",
+    "text": "[panel=6]＊（武人倚牆，面露淺笑，氣息淺淺……或許等雨停以後，他便會轉醒了吧。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF14\", 2) == \"success\"",
+    "Description": "醫治武人_後續",
+    "zh_TW": "[panel=6]＊（武人倚牆，面露淺笑，氣息淺淺……或許等雨停以後，他便會轉醒了吧。）＊",
+    "zh_CN": "[panel=6]＊（武人倚墙，面露浅笑，气息浅浅……或许等雨停以后，他便会转醒了吧。）＊",
+    "links": []
+  },
+  {
+    "entryID": 3363,
+    "actorID": "role2",
+    "text": "[panel=6]＊（武人倚牆，面露淺笑，再無生息。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF14\", 1) == \"success\"",
+    "Description": "安穩送走武人_後續",
+    "zh_TW": "[panel=6]＊（武人倚牆，面露淺笑，再無生息。）＊",
+    "zh_CN": "[panel=6]＊（武人倚墙，面露浅笑，再无生息。）＊",
+    "links": []
+  },
+  {
+    "entryID": 3364,
+    "actorID": "MC1",
+    "text": "「我把你說的曼陀羅花帶來了。」",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"Player\", \"DaturaMetel\")  == true",
+    "Description": "交出曼陀羅\n須檢測是否有蔓陀蘿",
+    "zh_TW": "「我把你說的曼陀羅花帶來了。」",
+    "zh_CN": "「我把你说的曼陀罗花带来了。」",
+    "links": [3365]
+  },
+  {
+    "entryID": 3365,
+    "actorID": "role100",
+    "text": "「此花有毒，常人不願靠近……小兄弟明知如此，仍願為我取來此毒，感激不盡。」",
+    "Sequence": "ModifyData(Valuable,Player,DaturaMetel,-1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);",
+    "Description": "失去：曼陀羅花*１\n信義提升",
+    "zh_TW": "「此花有毒，常人不願靠近……小兄弟明知如此，仍願為我取來此毒，感激不盡。」",
+    "zh_CN": "「此花有毒，常人不愿靠近……小兄弟明知如此，仍愿为我取来此毒，感激不尽。」",
+    "links": [3366]
+  },
+  {
+    "entryID": 3366,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你見武人輕嘆口氣，隨後將毒花揉成幾顆小球，混著花莖汁液服下。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你見武人輕嘆口氣，隨後將毒花揉成幾顆小球，混著花莖汁液服下。）＊",
+    "zh_CN": "[panel=6]＊（你见武人轻叹口气，随后将毒花揉成几颗小球，混着花茎汁液服下。）＊",
+    "links": [3367]
+  },
+  {
+    "entryID": 3367,
+    "actorID": "role100",
+    "text": "「對了，小兄弟，此物便做回禮，交予你罷。」",
+    "Sequence": "ModifyData(Valuable,Player,Bloodblade,1);",
+    "Description": "給予染血黑刀",
+    "zh_TW": "「對了，小兄弟，此物便做回禮，交予你罷。」",
+    "zh_CN": "「对了，小兄弟，此物便做回礼，交予你罢。」",
+    "links": [3368]
+  },
+  {
+    "entryID": 3368,
+    "actorID": "role100",
+    "text": "「此乃虎符切口，十數年前，我嘗於某為高人手中得之，好生收著，日後……定有……」",
+    "Sequence": "",
+    "zh_TW": "「此乃虎符切口，十數年前，我嘗於某為高人手中得之，好生收著，日後……定有……」",
+    "zh_CN": "「此乃虎符切口，十数年前，我尝于某为高人手中得之，好生收着，日后……定有……」",
+    "links": [3369]
+  },
+  {
+    "entryID": 3369,
+    "actorID": "role100",
+    "text": "「……」",
+    "Sequence": "",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [3370]
+  },
+  {
+    "entryID": 3370,
+    "actorID": "role2",
+    "text": "[panel=6]＊（武人倚牆，面露淺笑，再無生息。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（武人倚牆，面露淺笑，再無生息。）＊",
+    "zh_CN": "[panel=6]＊（武人倚墙，面露浅笑，再无生息。）＊",
+    "links": [3371]
+  },
+  {
+    "entryID": 3371,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestState(\"CF14\", \"success\")\nSetQuestEntryState(\"CF14\", 1, \"success\")",
+    "Description": "任務完成\n變數更新",
+    "links": []
+  },
+  {
+    "entryID": 3372,
+    "actorID": "role2",
+    "text": "[panel=6]＊（眼前人散發著的淡淡血腥，夾雜著一點雨露泥濘的腥羶氣味，細瞧，才見其側肩一道猙獰傷口。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（眼前人散發著的淡淡血腥，夾雜著一點雨露泥濘的腥羶氣味，細瞧，才見其側肩一道猙獰傷口。）＊",
+    "zh_CN": "[panel=6]＊（眼前人散发着的淡淡血腥，夹杂着一点雨露泥泞的腥膻气味，细瞧，才见其侧肩一道狰狞伤口。）＊",
+    "links": [3387]
+  },
+  {
+    "entryID": 3373,
+    "actorID": "MC1",
+    "text": "「我明白了，這位大哥你且撐住，我去找找你要的曼陀羅花來。」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_TW": "「我明白了，這位大哥你且撐住，我去找找你要的曼陀羅花來。」",
+    "zh_CN": "「我明白了，这位大哥你且撑住，我去找找你要的曼陀罗花来。」",
+    "links": [3331]
+  },
+  {
+    "entryID": 3374,
+    "actorID": "role100",
+    "text": "「想辦法？小兄弟，你能有甚麼辦法……？」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "「想辦法？小兄弟，你能有甚麼辦法……？」",
+    "zh_CN": "「想办法？小兄弟，你能有什么办法……？」",
+    "links": [3333]
+  },
+  {
+    "entryID": 3375,
+    "actorID": "MC1",
+    "text": "「當然，有小爺在這兒，十殿閻王也收不了你！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「當然，有小爺在這兒，十殿閻王也收不了你！」",
+    "zh_CN": "「当然，有小爷在这儿，十殿阎王也收不了你！」",
+    "links": [3339]
+  },
+  {
+    "entryID": 3376,
+    "actorID": "MC1",
+    "text": "「僥倖罷了，多虧大哥你這傷正巧是我熟稔之處，否則我也沒有法子。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「僥倖罷了，多虧大哥你這傷正巧是我熟稔之處，否則我也沒有法子。」",
+    "zh_CN": "「侥幸罢了，多亏大哥你这伤正巧是我熟稔之处，否则我也没有法子。」",
+    "links": [3342]
+  },
+  {
+    "entryID": 3377,
+    "actorID": "MC1",
+    "text": "縱如神醫扁鶴亦須五穀度日，大哥你別捧我，我治病不給折扣的。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "縱如神醫扁鶴亦須五穀度日，大哥你別捧我，我治病不給折扣的。",
+    "zh_CN": "纵如神医扁鹤亦须五谷度日，大哥你别捧我，我治病不给折扣的。",
+    "links": [3344]
+  },
+  {
+    "entryID": 3378,
+    "actorID": "MC1",
+    "text": "「這是……刀？」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「這是……刀？」",
+    "zh_CN": "「这是……刀？」",
+    "links": [3347]
+  },
+  {
+    "entryID": 3379,
+    "actorID": "MC1",
+    "text": "「唉！大哥！大哥！？」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「唉！大哥！大哥！？」",
+    "zh_CN": "「唉！大哥！大哥！？」",
+    "links": [3382]
+  },
+  {
+    "entryID": 3380,
+    "actorID": "MC1",
+    "text": "「倒是這玩意……總有一日，我也會發現此刀的秘密？真是，好歹也給一個真的能用的刀嘛。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「倒是這玩意……總有一日，我也會發現此刀的秘密？真是，好歹也給一個真的能用的刀嘛。」",
+    "zh_CN": "「倒是这玩意……总有一日，我也会发现此刀的秘密？真是，好歹也给一个真的能用的刀嘛。」",
+    "links": [3349]
+  },
+  {
+    "entryID": 3381,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你將武者放平，取出隨身醫藥之物，就著晦暗燭光，克難地處理起那血紅的幽深壑口。）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=6]＊（你將武者放平，取出隨身醫藥之物，就著晦暗燭光，克難地處理起那血紅的幽深壑口。）＊",
+    "zh_CN": "[panel=6]＊（你将武者放平，取出随身医药之物，就着晦暗烛光，克难地处理起那血红的幽深壑口。）＊",
+    "links": [3352]
+  },
+  {
+    "entryID": 3382,
+    "actorID": "MC1",
+    "text": "「……呼，嚇唬我啊，只是睡過去而已。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「……呼，嚇唬我啊，只是睡過去而已。」",
+    "zh_CN": "「……呼，吓唬我啊，只是睡过去而已。」",
+    "links": [3380]
+  },
+  {
+    "entryID": 3383,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,10);",
+    "links": [3384]
+  },
+  {
+    "entryID": 3384,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [3385, 3386]
+  },
+  {
+    "entryID": 3385,
+    "actorID": "role2",
+    "text": "[panel=6]＊（此人傷口由上至下，上窄下寬，又在靠近胸腹之處收刀，豁開一處大口。）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,Insight,10);DisableCharacterExpression();SetPortrait(MC1,pic=12);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=6]＊（此人傷口由上至下，上窄下寬，又在靠近胸腹之處收刀，豁開一處大口。）＊",
+    "zh_CN": "[panel=6]＊（此人伤口由上至下，上窄下宽，又在靠近胸腹之处收刀，豁开一处大口。）＊",
+    "links": [3313]
+  },
+  {
+    "entryID": 3386,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你只感覺方才醒神的朦朧仍未退去，眼神渙散，一道壑口由一分為二、二分為四……）＊",
+    "Sequence": "DisableCharacterExpression();SetPortrait(MC1,pic=12);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（你只感覺方才醒神的朦朧仍未退去，眼神渙散，一道壑口由一分為二、二分為四……）＊",
+    "zh_CN": "[panel=6]＊（你只感觉方才醒神的朦胧仍未退去，眼神涣散，一道壑口由一分为二、二分为四……）＊",
+    "links": [3314]
+  },
+  {
+    "entryID": 3387,
+    "actorID": "MC1",
+    "text": "「噁……好重的血腥味……！」",
+    "Sequence": "",
+    "zh_TW": "「噁……好重的血腥味……！」",
+    "zh_CN": "「恶……好重的血腥味……！」",
+    "links": [3383]
+  },
+  {
+    "entryID": 3388,
+    "actorID": "role2",
+    "text": "[panel=6]＊（殺意如毒火般灼燒著你的理智，它在尖叫、在渴望，催促你立刻撕碎眼前的獵物。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（殺意如毒火般灼燒著你的理智，它在尖叫、在渴望，催促你立刻撕碎眼前的獵物。）＊",
+    "zh_CN": "[panel=6]＊（杀意如毒火般灼烧着你的理智，它在尖叫、在渴望，催促你立刻撕碎眼前的猎物。）＊",
+    "links": [3391]
+  },
+  {
+    "entryID": 3389,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]順從殺意",
+    "Sequence": "",
+    "Conditions": "Variable[\"GodSlayerDestiny\"] == true",
+    "Description": "隱藏血刀選項",
+    "zh_TW": "[em2][隱藏選項][/em2]順從殺意",
+    "zh_CN": "[em2][隐藏选项][/em2]顺从杀意",
+    "links": [3388]
+  },
+  {
+    "entryID": 3390,
+    "actorID": "role2",
+    "text": "[panel=6]＊（未等武者出聲，你便以廟外電閃雷鳴做掩護，抽出對方腰間佩劍，手腕輕轉後一推，直入對方心窩。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（未等武者出聲，你便以廟外電閃雷鳴做掩護，抽出對方腰間佩劍，手腕輕轉後一推，直入對方心窩。）＊",
+    "zh_CN": "[panel=6]＊（未等武者出声，你便以庙外电闪雷鸣做掩护，抽出对方腰间佩剑，手腕轻转后一推，直入对方心窝。）＊",
+    "links": [3392]
+  },
+  {
+    "entryID": 3391,
+    "actorID": "role100",
+    "text": "「……」",
+    "Sequence": "",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [3390]
+  },
+  {
+    "entryID": 3392,
+    "actorID": "role2",
+    "text": "[panel=6]＊（武者屍身後靠，倚牆略是掙扎，最終溶於夜色，動也不動。）＊",
+    "Sequence": "ModifyData(Valuable,Player,Bloodblade,1);",
+    "Description": "獲得染血黑刀",
+    "zh_TW": "[panel=6]＊（武者屍身後靠，倚牆略是掙扎，最終溶於夜色，動也不動。）＊",
+    "zh_CN": "[panel=6]＊（武者尸身后靠，倚墙略是挣扎，最终溶于夜色，动也不动。）＊",
+    "links": [3395]
+  },
+  {
+    "entryID": 3393,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestState(\"CF14\", \"success\")\nSetQuestEntryState(\"CF14\", 3, \"success\")",
+    "Description": "任務完成\n變數更新",
+    "links": []
+  },
+  {
+    "entryID": 3394,
+    "actorID": "MC22",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC22,pic=4);",
+    "Conditions": "IsInTeam(\"MC22\")  == true",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [3393]
+  },
+  {
+    "entryID": 3395,
+    "actorID": "role2",
+    "text": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。）＊",
+    "Sequence": "",
+    "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 1",
+    "Description": "殺意+1",
+    "zh_TW": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。）＊",
+    "zh_CN": "[panel=6]＊（随着生命的消逝，那股杀意终于饱餐一顿，带着令人战栗的愉悦感，重新蛰伏。）＊",
+    "links": [3394, 3393]
+  }
+]

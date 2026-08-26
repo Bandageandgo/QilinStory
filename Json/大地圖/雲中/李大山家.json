@@ -1,0 +1,96 @@
+[
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "條件:CurrentQuestEntryState(\"CF16\", 3) == \"success\"",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2050]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "role130",
+    "text": "「現在大山和媳婦都平平安安的，老漢我這輩子也沒什麼遺憾了。」",
+    "Sequence": "",
+    "zh_TW": "「現在大山和媳婦都平平安安的，老漢我這輩子也沒什麼遺憾了。」",
+    "zh_CN": "「现在大山和媳妇都平平安安的，老汉我这辈子也没什么遗憾了。」",
+    "links": []
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "條件:CurrentQuestEntryState(\"CF16\", 3) == \"success\"",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2052]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "role128",
+    "text": "「恩公，等我養好了身子，之後有什麼事情您儘管吩咐！我李大山絕不推辭！」",
+    "Sequence": "",
+    "zh_TW": "「恩公，等我養好了身子，之後有什麼事情您儘管吩咐！我李大山絕不推辭！」",
+    "zh_CN": "「恩公，等我养好了身子，之后有什么事情您尽管吩咐！我李大山绝不推辞！」",
+    "links": []
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "條件:CurrentQuestEntryState(\"CF16\", 3) == \"success\"",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2054]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "role129",
+    "text": "「少俠，若不嫌棄，妾身可以親自為您講解一些辨識草藥、處理外傷的訣竅。」",
+    "Sequence": "",
+    "zh_TW": "「少俠，若不嫌棄，妾身可以親自為您講解一些辨識草藥、處理外傷的訣竅。」",
+    "zh_CN": "「少侠，若不嫌弃，妾身可以亲自为您讲解一些辨识草药、处理外伤的诀窍。」",
+    "links": [2055, 2056, 2058]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "role129",
+    "text": "「啊，少俠對醫理的見解竟如此深厚，妾身這點微末道行，實在是班門弄斧了。看來少俠在醫道上的造詣，早已遠勝妾身，實在沒什麼可以教您的了。」",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"MedicalExpertise\", 2)  == true",
+    "zh_TW": "「啊，少俠對醫理的見解竟如此深厚，妾身這點微末道行，實在是班門弄斧了。看來少俠在醫道上的造詣，早已遠勝妾身，實在沒什麼可以教您的了。」",
+    "zh_CN": "「啊，少侠对医理的见解竟如此深厚，妾身这点微末道行，实在是班门弄斧了。看来少侠在医道上的造诣，早已远胜妾身，实在没什么可以教您的了。」",
+    "links": []
+  },
+  {
+    "entryID": 2056,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張氏耐心地為你講解了幾種常見草藥的藥性與搭配禁忌，你聽得十分入神，感覺受益匪淺。）＊",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"MedicalExpertise\", 2)  ~= true",
+    "zh_TW": "[panel=6]＊（張氏耐心地為你講解了幾種常見草藥的藥性與搭配禁忌，你聽得十分入神，感覺受益匪淺。）＊",
+    "zh_CN": "[panel=6]＊（张氏耐心地为你讲解了几种常见草药的药性与搭配禁忌，你听得十分入神，感觉受益匪浅。）＊",
+    "links": [2057]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "ModifyData(FeatExp,Player,MedicalExpertise,50);",
+    "Description": "獲得醫術經驗",
+    "links": []
+  },
+  {
+    "entryID": 2058,
+    "actorID": "role129",
+    "text": "「少俠，妾身能教的都已經傾囊相授了。若少俠在野外受了傷，還請務必小心，切莫逞強。」",
+    "Sequence": "",
+    "zh_TW": "「少俠，妾身能教的都已經傾囊相授了。若少俠在野外受了傷，還請務必小心，切莫逞強。」",
+    "zh_CN": "「少侠，妾身能教的都已经倾囊相授了。若少侠在野外受了伤，还请务必小心，切莫逞强。」",
+    "links": []
+  }
+]

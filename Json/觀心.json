@@ -1,0 +1,1597 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "Variable[\"FindYourSelf\"] == 0",
+    "Description": "觀心觸發：籌措住宿費",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role2",
+    "text": "[panel=6]＊（茶博士那句[em2]長租一個月，約莫三百錢[/em2]，跟錢袋裡怎麼數都數不夠的銅板，又一起叮噹作響地冒了出來。）＊",
+    "Sequence": "EnableDialogueBG(Village);",
+    "zh_TW": "[panel=6]＊（茶博士那句[em2]長租一個月，約莫三百錢[/em2]，跟錢袋裡怎麼數都數不夠的銅板，又一起叮噹作響地冒了出來。）＊",
+    "zh_CN": "[panel=6]＊（茶博士那句[em2]长租一个月，约莫三百钱[/em2]，跟钱袋里怎么数都数不够的铜板，又一起叮当作响地冒了出来。）＊",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC8",
+    "text": "「三……三百錢？！表哥！我們身上哪有這許多錢！」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableEventBG(MC8NoMoney);",
+    "zh_CN": "「三……三百钱？！表哥！我们身上哪有这许多钱！」",
+    "links": [420]
+  },
+  {
+    "entryID": 6,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [9, 7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「話本裡的大俠，下山就是行俠仗義、揚名立萬。誰寫過……還得為住宿去煩惱？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「话本里的大侠，下山就是行侠仗义、扬名立万。谁写过……还得为住宿去烦恼？」",
+    "links": [10]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [169]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「為錢發愁？我跟靈犀流浪這些年，哪天不是在想今天睡哪、明天吃啥。這不算什麼新鮮事。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「为钱发愁？我跟灵犀流浪这些年，哪天不是在想今天睡哪、明天吃啥。这不算什么新鲜事。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「結果馬車要等一個月，客棧一開口——三百錢，還是得照掏照湊。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「结果马车要等一个月，客栈一开口——三百钱，还是得照掏照凑。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「只要一擺個俠客的派頭，甚麼都得花錢，旁人也樂得揩你錢。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「只要一摆个侠客的派头，什么都得花钱，旁人也乐得揩你钱。」",
+    "links": [14, 16, 18, 20]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "[em2][信義][/em2]「成為大俠這條路雖然辛苦但絕不能退。」",
+    "Sequence": "",
+    "zh_CN": "[em2][信义][/em2]「成为大侠这条路虽然辛苦但绝不能退。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「三百錢是掏了，床也有了。英豪府還在前頭——大俠的路，總得一步一步走，不能因為窮就退。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「三百钱是掏了，床也有了。英豪府还在前头——大侠的路，总得一步一步走，不能因为穷就退。」",
+    "links": [168]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "[em2][仁心][/em2]「靈犀不能跟著我睡野地。」",
+    "Sequence": "",
+    "zh_CN": "[em2][仁心][/em2]「灵犀不能跟着我睡野地。」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「三百錢是掏了，床也有了。靈犀能睡個安穩覺，比什麼都值。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\n;ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「三百钱是掏了，床也有了。灵犀能睡个安稳觉，比什么都值。」",
+    "links": [168]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "[em2][通達][/em2]「遊民哪日不為錢愁，有床就好。」",
+    "Sequence": "",
+    "zh_CN": "[em2][通达][/em2]「游民哪日不为钱愁，有床就好。」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「三百錢是掏了，床也有了。……算了，明天的事明天再想。哈哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「三百钱是掏了，床也有了。……算了，明天的事明天再想。哈哈。」",
+    "links": [168]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "[em2][機略][/em2]「英豪府還遠，這些以後都是小錢。」",
+    "Sequence": "",
+    "zh_CN": "[em2][机略][/em2]「英豪府还远，这些以后都是小钱。」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「三百錢是掏了，床也有了。……等我到了英豪府、變成大俠，這些都是小錢啦。哈哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「三百钱是掏了，床也有了。……等我到了英豪府、变成大侠，这些都是小钱啦。哈哈。」",
+    "links": [168]
+  },
+  {
+    "entryID": 22,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF35\", 1) == \"success\" and (CurrentQuestEntryState(\"CF37\", 1) == \"unassigned\")",
+    "Description": "觀心觸發：完成短命二郎任務",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你剛推門進房，窗台便傳來接連三聲「噗通」——三隻戴著不同小配件的青蛙排成一列，神氣十足地昂著頭。）＊",
+    "Sequence": "EnableDialogueBG(Home);\nEnableEventBG(ThreeFrogBrother,FullScreen);",
+    "Description": "事件圖",
+    "zh_CN": "[panel=6]＊（你刚推门进房，窗台便传来接连三声「噗通」——三只戴着不同小配件的青蛙排成一列，神气十足地昂着头。）＊",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role135",
+    "text": "「呱哈哈！小子，算你辦事不拖泥帶水！爺的兩位兄弟都找齊了，這筆人情，我們兄弟記下了！」",
+    "Sequence": "",
+    "zh_CN": "「呱哈哈！小子，算你办事不拖泥带水！爷的两位兄弟都找齐了，这笔人情，我们兄弟记下了！」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥你看！三位都到齊了耶！！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「表哥你看！三位都到齐了耶！！」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role135",
+    "text": "「咱兄弟不怕天、不怕地，不怕官司；大碗吃酒、大塊吃肉。貪官髒吏撞到爺們，照樣掀個底朝天！」",
+    "Sequence": "",
+    "zh_CN": "「咱兄弟不怕天、不怕地，不怕官司；大碗吃酒、大块吃肉。贪官脏吏撞到爷们，照样掀个底朝天！」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「倒是痛快。」",
+    "Sequence": ";SetPortrait(MC1,pic=12);",
+    "zh_CN": "「倒是痛快。」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role135",
+    "text": "「打魚一世蓼兒洼，不種青苗不種麻；酷吏贓官都殺盡…罷！罷！！」",
+    "Sequence": "",
+    "zh_CN": "「打鱼一世蓼儿洼，不种青苗不种麻；酷吏赃官都杀尽…罢！罢！！」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]打魚一世蓼兒洼，不種青苗不種麻；酷吏贓官都殺盡。罷！罷！[/em2]）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "[panel=6]＊（[em2]打鱼一世蓼儿洼，不种青苗不种麻；酷吏赃官都杀尽。罢！罢！[/em2]）＊",
+    "links": [422]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「靠水吃水，風浪裡討活，不求人憐。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「靠水吃水，风浪里讨活，不求人怜。」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「不靠田產、不靠門第。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「不靠田产、不靠门第。」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "「斬盡欺民害民的貪官惡吏。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「斩尽欺民害民的贪官恶吏。」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「……」",
+    "links": [39, 41, 43, 45]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「貪官不除，還算什麼俠？」",
+    "Sequence": "",
+    "zh_CN": "「贪官不除，还算什么侠？」",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「若朝廷縱著貪官惡吏，我等視而不見，還算什麼俠？……但這樣，會不會也算逆賊呢？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能卡",
+    "zh_CN": "「若朝廷纵着贪官恶吏，我等视而不见，还算什么侠？……但这样，会不会也算逆贼呢？」",
+    "links": [310]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「底下百姓受苦，不能視而不見。」",
+    "Sequence": "",
+    "zh_CN": "「底下百姓受苦，不能视而不见。」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「酷吏贓官害的是尋常百姓。我若有能力，豈能裝作沒看見？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能卡",
+    "zh_CN": "「酷吏赃官害的是寻常百姓。我若有能力，岂能装作没看见？」",
+    "links": [310]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「青蛙唱他的，我先顧好眼前。」",
+    "Sequence": "",
+    "zh_CN": "「青蛙唱他的，我先顾好眼前。」",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「歌是好歌，事是難事。……罷了罷了，先顧好靈犀，別的以後再說。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能卡",
+    "zh_CN": "「歌是好歌，事是难事。……罢了罢了，先顾好灵犀，别的以后再说。」",
+    "links": [310]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「若能揚名，英豪府說不定也會留意。」",
+    "Sequence": "",
+    "zh_CN": "「若能扬名，英豪府说不定也会留意。」",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「話本裡斬奸除惡的大俠，哪個不是名動天下？我若也走這條路……嘿嘿，說不定英豪府那邊也會高看一眼。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Proud);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得技能卡",
+    "zh_CN": "「话本里斩奸除恶的大侠，哪个不是名动天下？我若也走这条路……嘿嘿，说不定英豪府那边也会高看一眼。」",
+    "links": [310]
+  },
+  {
+    "entryID": 47,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 2) == \"unassigned\" and (CurrentQuestState(\"CF13\") == \"success\")",
+    "Description": "觀心觸發：首戰黑血屍",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "role2",
+    "text": "[panel=6]＊（霧重、墓深、鐵鍊刺耳。你又看見那被鎖在地上的枯瘦身影，和那口被拿起的一瞬間就震動的主墓室。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableEventBG(BlackbloodCorpseFight,FullScreen);",
+    "zh_CN": "[panel=6]＊（雾重、墓深、铁链刺耳。你又看见那被锁在地上的枯瘦身影，和那口被拿起的一瞬间就震动的主墓室。）＊",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC20",
+    "text": "[panel=2]「不……不好！觸動機關了！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(2,MC20,Nervous_2);",
+    "zh_CN": "[panel=2]「不……不好！触动机关了！」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "role2",
+    "text": "[panel=6]＊（黑氣翻湧、血筋暴起，你和雍仔節節敗退。胸口那一下重擊，現在想起來，還在隱隱作痛。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=6]＊（黑气翻涌、血筋暴起，你和雍仔节节败退。胸口那一下重击，现在想起来，还在隐隐作痛。）＊",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐，胸口舊傷隱隱發悶。正是——）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "[panel=6]＊（你盘膝静坐，胸口旧伤隐隐发闷。正是——）＊",
+    "links": [317]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「……好險。張大叔要是晚來半步，我今天就交代在墓裡了。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「……好险。张大叔要是晚来半步，我今天就交代在墓里了。」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「要是真完了……靈犀怎麼辦？她還在客棧裡等著我回來呢。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=14);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「要是真完了……灵犀怎么办？她还在客栈里等着我回来呢。」",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「且張大叔明明說，旁人受了這傷，十個有九個挺不住。我怎麼覺得……身子反而比以前更輕快？反應靈了，力氣大了，連腦子好像也轉得快些。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「且张大叔明明说，旁人受了这伤，十个有九个挺不住。我怎么觉得……身子反而比以前更轻快？反应灵了，力气大了，连脑子好像也转得快些。」",
+    "links": [62, 64, 66, 68]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「大俠怎能倒在這種地方。」",
+    "Sequence": "",
+    "zh_CN": "「大侠怎能倒在这种地方。」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "「……張大叔把我拉回來，不是讓我躺在客棧發抖的。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「……张大叔把我拉回来，不是让我躺在客栈发抖的。」",
+    "links": [315]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「變強了，才好護住靈犀。」",
+    "Sequence": "",
+    "zh_CN": "「变强了，才好护住灵犀。」",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「……若是真能變強，也好。靈犀還在客棧等我，我得有本事護她周全。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「……若是真能变强，也好。灵犀还在客栈等我，我得有本事护她周全。」",
+    "links": [315]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC1",
+    "text": "「人還活著就行，怪事以後再說。」",
+    "Sequence": "",
+    "zh_CN": "「人还活着就行，怪事以后再说。」",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "「……怪事。算了，就當我天生命好。人還活著，別自己嚇自己。哈哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「……怪事。算了，就当我天生命好。人还活着，别自己吓自己。哈哈。」",
+    "links": [315]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「力氣靈了、腦子快了，以後總用得上。」",
+    "Sequence": "",
+    "zh_CN": "「力气灵了、脑子快了，以后总用得上。」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC1",
+    "text": "「……管他什麼屍氣不屍氣，力氣大了、腦子轉快了，打架能多幾分便宜，就不虧。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「……管他什么尸气不尸气，力气大了、脑子转快了，打架能多几分便宜，就不亏。」",
+    "links": [315]
+  },
+  {
+    "entryID": 70,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF08\", 3) == \"success\" and (CurrentQuestEntryState(\"CF37\", 3) == \"unassigned\")",
+    "Description": "觀心觸發：赫連娜娜1",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "role2",
+    "text": "[panel=6]＊（後山深處，三個狗頭人圍著樹上籠子手舞足蹈。籠裡的赫連娜娜一還指揮你擺高手架勢、一邊嘀咕她爹筆記裡的「王霸之氣」怎麼沒用——場面荒唐得不像話。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Forest);\nEnableEventBG(MC22Cage);",
+    "zh_CN": "[panel=6]＊（后山深处，三个狗头人围着树上笼子手舞足蹈。笼里的赫连娜娜一还指挥你摆高手架势、一边嘀咕她爹笔记里的「王霸之气」怎么没用——场面荒唐得不像话。）＊",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC22",
+    "text": "[panel=1]「少俠！？你來得正好！……咱倆聯手把它給取了，保證你吃不了虧！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「少侠！？你来得正好！……咱俩联手把它给取了，保证你吃不了亏！」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐，後山那幕又浮上來——籠子、狗頭人、還有掛在樹上指揮你擺架勢的赫連娜娜。種種荒唐，正是——）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你盘膝静坐，后山那幕又浮上来——笼子、狗头人、还有挂在树上指挥你摆架势的赫连娜娜。种种荒唐，正是——）＊",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]深林妖氛籠鐵鎖，羅盤指處誰人信。算無遺策！誰信得？[/em2]）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "[panel=6]＊（[em2]深林妖氛笼铁锁，罗盘指处谁人信。算无遗策！谁信得？[/em2]）＊",
+    "links": [426]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "「赫連姑娘的主意，時靈時不靈。王霸之氣那套，狗頭人可不買帳。說她靠譜吧，人掛在籠子裡；說她胡扯吧，又總像知道點什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「赫连姑娘的主意，时灵时不灵。王霸之气那套，狗头人可不买帐。说她靠谱吧，人挂在笼子里；说她胡扯吧，又总像知道点什么。」",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC1",
+    "text": "「可當初說後山妖氣沖天、近日宜往一行……這塊她倒沒說錯。後山確實不太對勁。或許，還真有兩下子？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「可当初说后山妖气冲天、近日宜往一行……这块她倒没说错。后山确实不太对劲。或许，还真有两下子？」",
+    "links": [82, 84, 86, 88]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "「見人有難，大俠哪能袖手旁觀。」",
+    "Sequence": "",
+    "zh_CN": "「见人有难，大侠哪能袖手旁观。」",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "「掛在籠子裡還指揮我擺架勢……但我若轉身就走那也不用在江湖上混了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「挂在笼子里还指挥我摆架势……但我若转身就走那也不用在江湖上混了。」",
+    "links": [322]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC1",
+    "text": "「她一個人亂闖後山，放著不管過意不去。」",
+    "Sequence": "",
+    "zh_CN": "「她一个人乱闯后山，放着不管过意不去。」",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「嘴上逞強，人卻掛在籠子裡。後山妖氣又邪，她一個人亂闖，遲早出事。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「嘴上逞强，人却挂在笼子里。后山妖气又邪，她一个人乱闯，迟早出事。」",
+    "links": [322]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "「羅盤時靈時不靈，隨她折騰吧。」",
+    "Sequence": "",
+    "zh_CN": "「罗盘时灵时不灵，随她折腾吧。」",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC1",
+    "text": "「救也救了，隨她去吧。……反正閒著也是閒著，多個人也挺熱鬧的。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「救也救了，随她去吧。……反正闲着也是闲着，多个人也挺热闹的。」",
+    "links": [322]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「妖氣那塊她沒說錯，跟著瞧瞧不吃虧。」",
+    "Sequence": "",
+    "zh_CN": "「妖气那块她没说错，跟着瞧瞧不吃亏。」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC1",
+    "text": "「妖氣她說中了，羅盤說不定還真有用。救都救了，說不定還能蹭點寶……嘻嘻，英雄救美，說出去也好聽。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Proud);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「妖气她说中了，罗盘说不定还真有用。救都救了，说不定还能蹭点宝……嘻嘻，英雄救美，说出去也好听。」",
+    "links": [322]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雷鳴般的瀑布、水霧裡縱身一躍。你以為要粉身碎骨，卻被水流送入水簾洞——洞中央立着一尊身披戰甲、手持長矛的女神像，與中原女子的溫婉截然不同。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Cave);\nEnableEventBG(ZhongWeiHomeGoddessStatue);",
+    "zh_CN": "[panel=6]＊（雷鸣般的瀑布、水雾里纵身一跃。你以为要粉身碎骨，却被水流送入水帘洞——洞中央立着一尊身披战甲、手持长矛的女神像，与中原女子的温婉截然不同。）＊",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC1",
+    "text": "「乖乖……這姐姐長得真彪悍！這身甲冑，這副筋骨……嘖嘖，要是活著，怕是一拳能打死我。」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_CN": "「乖乖……这姐姐长得真彪悍！这身甲胄，这副筋骨……啧啧，要是活着，怕是一拳能打死我。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "role2",
+    "text": "[panel=6]＊（神像基座上刻滿篆文。你湊近細讀——）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（神像基座上刻满篆文。你凑近细读——）＊",
+    "links": [329]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾族不願為奴，遂隱於深山，封印逆流河口，以此神像鎮之。後世有緣人，若得吾族傳承，當以此力守護蒼生，勿蹈秦王覆轍。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾族不愿为奴，遂隐于深山，封印逆流河口，以此神像镇之。后世有缘人，若得吾族传承，当以此力守护苍生，勿蹈秦王覆辙。）＊",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「極西之地？逆流河？助秦統一？這……這可是驚天大祕密啊！原來書上沒寫的都在這兒呢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=4);",
+    "zh_CN": "「极西之地？逆流河？助秦统一？这……这可是惊天大秘密啊！原来书上没写的都在这儿呢！」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐，水聲在洞外轟鳴。石刻上的字句——）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "[panel=6]＊（你盘膝静坐，水声在洞外轰鸣。石刻上的字句——）＊",
+    "links": [324]
+  },
+  {
+    "entryID": 101,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": ";ModifyData(FeatExp,Player,Insight,10);",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC1",
+    "text": "「再說他們曾助秦王掃六合，這功勞可不小；秦王偏為[em2]秦王欲求長生[/em2]緊追不捨……與他們何關？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「再说他们曾助秦王扫六合，这功劳可不小；秦王偏为[em2]秦王欲求长生[/em2]紧追不舍……与他们何关？」",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「族人[em2]不願為奴[/em2]，躲進大山……秦皇還那麼執著，難道跟秦皇欲求長生有關係嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「族人[em2]不愿为奴[/em2]，躲进大山……秦皇还那么执着，难道跟秦皇欲求长生有关系吗？」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "「最後那句——[em2]守護蒼生，勿蹈秦王覆轍[/em2]……更是沒頭沒尾的」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「最后那句——[em2]守护苍生，勿蹈秦王覆辙[/em2]……更是没头没尾的」",
+    "links": [106, 108, 110, 112]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "「他不仁，我則不義。」",
+    "Sequence": "",
+    "zh_CN": "「他不仁，我则不义。」",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC1",
+    "text": "「秦皇先壞信義，這部族若要報仇，我不覺得理虧。江湖上也是認這理。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=10);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「秦皇先坏信义，这部族若要报仇，我不觉得理亏。江湖上也是认这理。」",
+    "links": [327]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC1",
+    "text": "「立了大功後……反而換來的流亡…」",
+    "Sequence": "",
+    "zh_CN": "「立了大功后……反而换来的流亡…」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC1",
+    "text": "「功勞那麼大，換來的卻是躲進深山……難怪暴秦只傳二世。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「功劳那么大，换来的却是躲进深山……难怪暴秦只传二世。」",
+    "links": [327]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC1",
+    "text": "「換作是我，也只會先躲進深山保命。」",
+    "Sequence": "",
+    "zh_CN": "「换作是我，也只会先躲进深山保命。」",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "「換作是我，早躲進深山了。守護蒼生？……就先顧不上了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「换作是我，早躲进深山了。守护苍生？……就先顾不上了。」",
+    "links": [327]
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "「當初就不該幫秦——該自謀出路。」",
+    "Sequence": "",
+    "zh_CN": "「当初就不该帮秦——该自谋出路。」",
+    "links": [113]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "「要成大事，哪能寄人籬下？換作是我，壓根不把寶押在秦王身上。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「要成大事，哪能寄人篱下？换作是我，压根不把宝押在秦王身上。」",
+    "links": [327]
+  },
+  {
+    "entryID": 163,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableDialogueBG(Home);\nContinue();",
+    "Description": "觀心、開背景圖",
+    "links": [166]
+  },
+  {
+    "entryID": 164,
+    "actorID": "role2",
+    "text": "[panel=6]＊（氣息漸緩，萬籟俱沉。內外俱寂，寂至若有針墜於地，亦清晰可聞。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（气息渐缓，万籁俱沉。内外俱寂，寂至若有针坠于地，亦清晰可闻。）＊",
+    "links": [167]
+  },
+  {
+    "entryID": 166,
+    "actorID": "MC1",
+    "text": "「此身非我，此念亦非我—",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlaySFX,Others_GrassInWind);",
+    "zh_CN": "「此身非我，此念亦非我—",
+    "links": [314]
+  },
+  {
+    "entryID": 167,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
+    "links": [309]
+  },
+  {
+    "entryID": 168,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nEnableDialogueBG(Home);\nStopAllParticle();",
+    "Script": "Variable[\"FindYourSelf\"] = 1;\nSetQuestState(\"CF37\", \"active\");",
+    "Description": "變數更新、觸發任務、關閉冥想",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [312]
+  },
+  {
+    "entryID": 169,
+    "actorID": "MC1",
+    "text": "「話本裡的大俠，下山就是行俠仗義、揚名立萬。誰寫過……還得為住宿去煩惱？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「话本里的大侠，下山就是行侠仗义、扬名立万。谁写过……还得为住宿去烦恼？」",
+    "links": [10]
+  },
+  {
+    "entryID": 309,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(original)@0.5;\nContinue()@0.5;",
+    "links": [1, 22, 47, 70, 330, 332, 382, 357, 418]
+  },
+  {
+    "entryID": 310,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nEnableDialogueBG(Home);\nStopAllParticle();",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 1, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [313]
+  },
+  {
+    "entryID": 311,
+    "actorID": "MC1",
+    "text": "「靠水吃水，風浪裡討活，不求人憐。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「靠水吃水，风浪里讨活，不求人怜。」",
+    "links": [35]
+  },
+  {
+    "entryID": 312,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 313,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(StopMusic);\nDisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 314,
+    "actorID": "MC1",
+    "text": "「此身非我，此念亦非我\n旁觀如鏡，始見本心。」",
+    "Sequence": "DisableDialogueBG();\nPlayOrStopParticle(Meditate,Play);",
+    "zh_CN": "「此身非我，此念亦非我\n旁观如镜，始见本心。」",
+    "links": [164]
+  },
+  {
+    "entryID": 315,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nStopAllParticle();\nEnableDialogueBG(Home);",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 2, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [313]
+  },
+  {
+    "entryID": 317,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]魂隨斷霧寒冉冉，黑氣翻湧退無門；僥倖生還氣轉橫。福禍未卜！且由天！[/em2]）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（[em2]魂随断雾寒冉冉，黑气翻涌退无门；侥幸生还气转横。福祸未卜！且由天！[/em2]）＊",
+    "links": [424]
+  },
+  {
+    "entryID": 318,
+    "actorID": "MC1",
+    "text": "「……好險。張大叔要是晚來半步，我今天就交代在墓裡了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "zh_CN": "「……好险。张大叔要是晚来半步，我今天就交代在墓里了。」",
+    "links": [58]
+  },
+  {
+    "entryID": 321,
+    "actorID": "MC1",
+    "text": "「赫連姑娘的主意，時靈時不靈。王霸之氣那套，狗頭人可不買帳。說她靠譜吧，人掛在籠子裡；說她胡扯吧，又總像知道點什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「赫连姑娘的主意，时灵时不灵。王霸之气那套，狗头人可不买帐。说她靠谱吧，人挂在笼子里；说她胡扯吧，又总像知道点什么。」",
+    "links": [80]
+  },
+  {
+    "entryID": 322,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nEnableDialogueBG(Home);\nStopAllParticle();",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 3, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [313]
+  },
+  {
+    "entryID": 324,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]極西遠客助秦皇，史冊無書掩舊功；兔死狗烹方隱去。守蒼生！莫覆轍！[/em2]）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（[em2]极西远客助秦皇，史册无书掩旧功；兔死狗烹方隐去。守苍生！莫覆辙！[/em2]）＊",
+    "links": [428]
+  },
+  {
+    "entryID": 327,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nStopAllParticle();\nEnableDialogueBG(Home);",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 4, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [442]
+  },
+  {
+    "entryID": 329,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾族本居極西之地，受神諭指引，跨越逆流之河來到中土。時值亂世，吾族助秦王掃六合，統天下。然秦王欲求長生，窺視吾族血脈之力。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾族本居极西之地，受神谕指引，跨越逆流之河来到中土。时值乱世，吾族助秦王扫六合，统天下。然秦王欲求长生，窥视吾族血脉之力。）＊",
+    "links": [94]
+  },
+  {
+    "entryID": 330,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 4) == \"unassigned\" and (CurrentQuestState(\"CF12\") == \"success\")",
+    "Description": "觀心觸發：宗緯家瀑布洞窟",
+    "links": [91]
+  },
+  {
+    "entryID": 331,
+    "actorID": "MC1",
+    "text": "開始對話",
+    "Sequence": "",
+    "zh_CN": "开始对话",
+    "links": []
+  },
+  {
+    "entryID": 332,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 5) == \"unassigned\" and (CurrentQuestState(\"CF16\") == \"success\")",
+    "Description": "觀心觸發：完成黑鐵嶺深淵祭壇",
+    "links": [334]
+  },
+  {
+    "entryID": 333,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]鹽鐵之利，國之大柄[/em2]；[em2]私吞礦石者，斬；私鑄兵器者，族誅[/em2]。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（[em2]盐铁之利，国之大柄[/em2]；[em2]私吞矿石者，斩；私铸兵器者，族诛[/em2]。）＊",
+    "links": [337]
+  },
+  {
+    "entryID": 334,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雲中廣場上，李四額頭磕得流血，哭喊著：黑鐵嶺吃人了——三十里外的礦坑裡，符咒剝落的鐵門後，是腐爛與硫磺的濁氣。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Heding);\nEnableEventBG(LiDashanFight);",
+    "zh_CN": "[panel=6]＊（云中广场上，李四额头磕得流血，哭喊着：黑铁岭吃人了——三十里外的矿坑里，符咒剥落的铁门后，是腐烂与硫磺的浊气。）＊",
+    "links": [333]
+  },
+  {
+    "entryID": 337,
+    "actorID": "role2",
+    "text": "[panel=6]＊（祭壇中央，泥塑小人像額頭嵌著第三隻眼——妖異紅光，像活物般跳動。李大山滿身黑筋，喃喃要獻血給神。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（祭坛中央，泥塑小人像额头嵌着第三只眼——妖异红光，像活物般跳动。李大山满身黑筋，喃喃要献血给神。）＊",
+    "links": [338]
+  },
+  {
+    "entryID": 338,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐，礦坑裡讀過的字句，正是——）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你盘膝静坐，矿坑里读过的字句，正是——）＊",
+    "links": [339]
+  },
+  {
+    "entryID": 339,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]恰如裸身臥荒丘，潛伏爪牙只忍受；飄蓬江海謾嗟吁。鐵門一鎖！難逃脫！[/em2]）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "[panel=6]＊（[em2]恰如裸身卧荒丘，潜伏爪牙只忍受；飘蓬江海谩嗟吁。铁门一锁！难逃脱！[/em2]）＊",
+    "links": [430]
+  },
+  {
+    "entryID": 342,
+    "actorID": "MC1",
+    "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「告示上写着[em2]盐铁之利，国之大柄[/em2]，私吞者斩。这些矿工挖了一辈子，到头来连一块矿渣都换不了一顿饱饭。」",
+    "links": [345]
+  },
+  {
+    "entryID": 345,
+    "actorID": "MC1",
+    "text": "「出事了，官府不查，只會把鐵門一鎖。對上面來說，這礦坑裡埋的哪是人，不過是幾斤[em2]鹽鐵之利[/em2]罷了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「出事了，官府不查，只会把铁门一锁。对上面来说，这矿坑里埋的哪是人，不过是几斤[em2]盐铁之利[/em2]罢了。」",
+    "links": [349, 351, 353, 355]
+  },
+  {
+    "entryID": 349,
+    "actorID": "MC1",
+    "text": "「管他官府封不封，人命不能這樣填進去。」",
+    "Sequence": "",
+    "zh_CN": "「管他官府封不封，人命不能这样填进去。」",
+    "links": [350]
+  },
+  {
+    "entryID": 350,
+    "actorID": "MC1",
+    "text": "「官府鐵門一鎖，就想把這筆爛帳埋了。但若由著他們把人當祭品填進去，這天下還有什麼俠義可言？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=10);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「官府铁门一锁，就想把这笔烂帐埋了。但若由著他们把人当祭品填进去，这天下还有什么侠义可言？」",
+    "links": [403]
+  },
+  {
+    "entryID": 351,
+    "actorID": "MC1",
+    "text": "「李大山他們……其實只是想活下去吧。」",
+    "Sequence": "",
+    "zh_CN": "「李大山他们……其实只是想活下去吧。」",
+    "links": [352]
+  },
+  {
+    "entryID": 352,
+    "actorID": "MC1",
+    "text": "「人被逼到絕路竟至到拜一塊來路不明的神像。而李四額頭上的血…人命才是這黑鐵嶺最該看重的事情。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「人被逼到绝路竟至到拜一块来路不明的神像。而李四额头上的血…人命才是这黑铁岭最该看重的事情。」",
+    "links": [403]
+  },
+  {
+    "entryID": 353,
+    "actorID": "MC1",
+    "text": "「官老爺的刀，地底下的神……」",
+    "Sequence": "",
+    "zh_CN": "「官老爷的刀，地底下的神……」",
+    "links": [354]
+  },
+  {
+    "entryID": 354,
+    "actorID": "MC1",
+    "text": "「上面有國之大柄壓著，下面有吃人的紅水晶等著。換作是我，也只能跟他們一樣潛伏忍受嗎？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「上面有国之大柄压着，下面有吃人的红水晶等着。换作是我，也只能跟他们一样潜伏忍受吗？」",
+    "links": [403]
+  },
+  {
+    "entryID": 355,
+    "actorID": "MC1",
+    "text": "「借神鬼之名掩蓋人禍，這水深得很。」",
+    "Sequence": "",
+    "zh_CN": "「借神鬼之名掩盖人祸，这水深得很。」",
+    "links": [356]
+  },
+  {
+    "entryID": 356,
+    "actorID": "MC1",
+    "text": "「[em2]鹽鐵之利[/em2]才是根源。這所謂的妖邪，怕是有人巴不得它鬧大，好掩蓋下面見不得光的勾當。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「[em2]盐铁之利[/em2]才是根源。这所谓的妖邪，怕是有人巴不得它闹大，好掩盖下面见不得光的勾当。」",
+    "links": [403]
+  },
+  {
+    "entryID": 357,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 7) == \"unassigned\" and (CurrentQuestState(\"C1M2\") == \"success\")",
+    "Description": "觀心觸發：完成趙王洞祭壇前廳戰鬥",
+    "links": [358]
+  },
+  {
+    "entryID": 358,
+    "actorID": "role2",
+    "text": "[panel=6]＊（血色與黑霧吞沒視線。胸口那股飢餓如野火竄起——不只是妖物與同伴，那是一股想要[em2]吞噬天下[/em2]的狂妄衝動。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Relic);\nEnableEventBG(WhiteTigerDaoistFight,FullScreen);",
+    "zh_CN": "[panel=6]＊（血色与黑雾吞没视线。胸口那股饥饿如野火窜起——不只是妖物与同伴，那是一股想要[em2]吞噬天下[/em2]的狂妄冲动。）＊",
+    "links": [359]
+  },
+  {
+    "entryID": 359,
+    "actorID": "role2",
+    "text": "[panel=6]＊（腦中有個聲音步步進逼：[em2]吞噬這一切[/em2]。指甲掐進掌心，五臟六腑像要裂開。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（脑中有个声音步步进逼：[em2]吞噬这一切[/em2]。指甲掐进掌心，五脏六腑像要裂开。）＊",
+    "links": [360]
+  },
+  {
+    "entryID": 360,
+    "actorID": "MC21",
+    "text": "「總有一天，你會心甘情願祈求吾的。」",
+    "Sequence": "",
+    "zh_CN": "「总有一天，你会心甘情愿祈求吾的。」",
+    "links": [361]
+  },
+  {
+    "entryID": 361,
+    "actorID": "role2",
+    "text": "[panel=6]＊（飢餓驟退。你撐不住昏死過去。迷濛中，一雙寬大的手把你從地上拉起——）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（饥饿骤退。你撑不住昏死过去。迷蒙中，一双宽大的手把你从地上拉起——）＊",
+    "links": [362]
+  },
+  {
+    "entryID": 362,
+    "actorID": "MC5",
+    "text": "「……小子，你能撐到現在，是個漢子。剩下的交給我吧！」",
+    "Sequence": "SetPortrait(MC5,pic=8);",
+    "zh_CN": "「……小子，你能撑到现在，是个汉子。剩下的交给我吧！」",
+    "links": [363]
+  },
+  {
+    "entryID": 363,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐，趙王洞裡那股腥甜氣息，又像貼著喉嚨爬了上來。種種邪念——）＊",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_CN": "[panel=6]＊（你盘膝静坐，赵王洞里那股腥甜气息，又像贴着喉咙爬了上来。种种邪念——）＊",
+    "links": [364]
+  },
+  {
+    "entryID": 364,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]突生吞噬天下意，此念原非吾本心；咬牙拒作吞噬奴。誰為主！還未知曉！[/em2]）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "[panel=6]＊（[em2]突生吞噬天下意，此念原非吾本心；咬牙拒作吞噬奴。谁为主！还未知晓！[/em2]）＊",
+    "links": [434]
+  },
+  {
+    "entryID": 367,
+    "actorID": "MC1",
+    "text": "「戰後倒在地上，滿腦子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，還是這天地萬物……竟都成了我想一口吞下的微塵。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);",
+    "zh_CN": "「战后倒在地上，满脑子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，还是这天地万物……竟都成了我想一口吞下的微尘。」",
+    "links": [370]
+  },
+  {
+    "entryID": 370,
+    "actorID": "MC1",
+    "text": "「那股飢火勒住喉嚨，逼著我在[em2]吞噬[/em2]與[em2]被吞噬[/em2]之間選一個。[em2]此念原非吾本心[/em2]……但我記不得自己是撐住了，還是已經讓步了半寸。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「那股饥火勒住喉咙，逼着我在[em2]吞噬[/em2]与[em2]被吞噬[/em2]之间选一个。[em2]此念原非吾本心[/em2]……但我记不得自己是撑住了，还是已经让步了半寸。」",
+    "links": [371]
+  },
+  {
+    "entryID": 371,
+    "actorID": "MC1",
+    "text": "「洞裡那個聲音說，[em2]總有一天你會心甘情願祈求吾[/em2]。……連是人是鬼都說不清，卻像是在我心底扎了根。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「洞里那个声音说，[em2]总有一天你会心甘情愿祈求吾[/em2]。……连是人是鬼都说不清，却像是在我心底扎了根。」",
+    "links": [372]
+  },
+  {
+    "entryID": 372,
+    "actorID": "MC1",
+    "text": "「這副身子裡，[em2]誰為主[/em2]？……醒來時人在英豪府，賈詡卻留了卷竹簡。這一切，難道不是巧合？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「这副身子里，[em2]谁为主[/em2]？……醒来时人在英豪府，贾诩却留了卷竹简。这一切，难道不是巧合？」",
+    "links": [374, 376, 378, 380]
+  },
+  {
+    "entryID": 374,
+    "actorID": "MC1",
+    "text": "「祈求牠？……就算死，我也不答應。」",
+    "Sequence": "",
+    "zh_CN": "「祈求它？……就算死，我也不答应。」",
+    "links": [375]
+  },
+  {
+    "entryID": 375,
+    "actorID": "MC1",
+    "text": "「沒有人可以控制我。那個聲音想讓我當[em2]吞噬奴[/em2]？我死也不認這命。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=13);\nModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「没有人可以控制我。那个声音想让我当[em2]吞噬奴[/em2]？我死也不认这命。」",
+    "links": [414]
+  },
+  {
+    "entryID": 376,
+    "actorID": "MC1",
+    "text": "「這股力量太邪……絕不能讓它傷了自己人。」",
+    "Sequence": "",
+    "zh_CN": "「这股力量太邪……绝不能让它伤了自己人。」",
+    "links": [377]
+  },
+  {
+    "entryID": 377,
+    "actorID": "MC1",
+    "text": "「這力量再強，若是會傷了同伴、傷了靈犀，我拼死也得把它死死按住。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「这力量再强，若是会伤了同伴、伤了灵犀，我拼死也得把它死死按住。」",
+    "links": [414]
+  },
+  {
+    "entryID": 378,
+    "actorID": "MC1",
+    "text": "「管它什麼力量，現在沒事就好。」",
+    "Sequence": "",
+    "zh_CN": "「管它什么力量，现在没事就好。」",
+    "links": [379]
+  },
+  {
+    "entryID": 379,
+    "actorID": "MC1",
+    "text": "「是人是鬼、誰做主……想破頭也沒用。反正這股力量現在安分了，人也活著回來了。是福是禍，走一步看一步吧。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);\nModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「是人是鬼、谁做主……想破头也没用。反正这股力量现在安分了，人也活着回来了。是福是祸，走一步看一步吧。」",
+    "links": [414]
+  },
+  {
+    "entryID": 380,
+    "actorID": "MC1",
+    "text": "「若是這『吞噬』之力能為我所用……」",
+    "Sequence": "",
+    "zh_CN": "「若是这『吞噬』之力能为我所用……」",
+    "links": [381]
+  },
+  {
+    "entryID": 381,
+    "actorID": "MC1",
+    "text": "「[em2]吞噬天下[/em2]……這力量若是能被我駕馭，還有什麼成不了的事？只要能讓我變強，管它是妖是魔。誰為主？自然是我來做它的主！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「[em2]吞噬天下[/em2]……这力量若是能被我驾驭，还有什么成不了的事？只要能让我变强，管它是妖是魔。谁为主？自然是我来做它的主！」",
+    "links": [414]
+  },
+  {
+    "entryID": 382,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 6) == \"unassigned\" and (IsSkillObtained(\"Player\", \"SanCaiUnity\")  == true)",
+    "Description": "觀心觸發：完成英豪府遴選大樹守衛大澈大悟",
+    "links": [383]
+  },
+  {
+    "entryID": 383,
+    "actorID": "role2",
+    "text": "[panel=6]＊（大樹守衛摘下那頂可笑的水桶，露出一張滄桑的臉龐。他眼神清明，再無半分瘋癲。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(HallOfHeroes);\nEnableEventBG(TreeGuardianLeave);",
+    "zh_CN": "[panel=6]＊（大树守卫摘下那顶可笑的水桶，露出一张沧桑的脸庞。他眼神清明，再无半分疯癫。）＊",
+    "links": [384]
+  },
+  {
+    "entryID": 384,
+    "actorID": "role133",
+    "text": "「我本是『三才門』的三師弟。當年為了湊齊三絕，我與大師兄聯手，將二師哥逼上了絕路。」",
+    "Sequence": "",
+    "zh_CN": "「我本是『三才门』的三师弟。当年为了凑齐三绝，我与大师兄联手，将二师哥逼上了绝路。」",
+    "links": [385]
+  },
+  {
+    "entryID": 385,
+    "actorID": "role133",
+    "text": "「我苦尋『四神拳』不得，執念深種入骨。最終走火入魔……」",
+    "Sequence": "",
+    "zh_CN": "「我苦寻『四神拳』不得，执念深种入骨。最终走火入魔……」",
+    "links": [386]
+  },
+  {
+    "entryID": 386,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐，看著他牽驢遠去的背影。這百年的恩怨糾葛，在心底一字一字凝成幾句——）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你盘膝静坐，看着他牵驴远去的背影。这百年的恩怨纠葛，在心底一字一字凝成几句——）＊",
+    "links": [387]
+  },
+  {
+    "entryID": 387,
+    "actorID": "role2",
+    "text": "[panel=6]＊（[em2]手足相煎爭殘篇，執念入魔守空樹；一敗夢醒傳三才。恩怨散盡隱山林！[/em2]）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "[panel=6]＊（[em2]手足相煎争残篇，执念入魔守空树；一败梦醒传三才。恩怨散尽隐山林！[/em2]）＊",
+    "links": [432]
+  },
+  {
+    "entryID": 390,
+    "actorID": "MC1",
+    "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「为了三绝合一[em2]逼死同门[/em2]……那无字碑下的二师哥，到死只盼着来生能做个普通兄弟。」",
+    "links": [393]
+  },
+  {
+    "entryID": 393,
+    "actorID": "MC1",
+    "text": "「大樹哥[em2]執念深種[/em2]，瘋瘋癲癲守了半輩子樹……這天下第一的武功，竟能把人折磨成這副鬼樣子。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "zh_CN": "「大树哥[em2]执念深种[/em2]，疯疯癫癫守了半辈子树……这天下第一的武功，竟能把人折磨成这副鬼样子。」",
+    "links": [395, 397, 399, 401]
+  },
+  {
+    "entryID": 395,
+    "actorID": "MC1",
+    "text": "「同門這份情分，怎能說扔就扔。」",
+    "Sequence": "",
+    "zh_CN": "「同门这份情分，怎能说扔就扔。」",
+    "links": [396]
+  },
+  {
+    "entryID": 396,
+    "actorID": "MC1",
+    "text": "「大師兄和三師弟壞了規矩，竟把二師哥逼上絕路。要是換成我，寧可不要這[em2]三絕合一[/em2]，也絕不幹這種[em2]逼死同門[/em2]的勾當。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "zh_CN": "「大师兄和三师弟坏了规矩，竟把二师哥逼上绝路。要是换成我，宁可不要这[em2]三绝合一[/em2]，也绝不干这种[em2]逼死同门[/em2]的勾当。」",
+    "links": [410]
+  },
+  {
+    "entryID": 397,
+    "actorID": "MC1",
+    "text": "「那句只盼來生做兄弟……聽著真讓人心酸。」",
+    "Sequence": "",
+    "zh_CN": "「那句只盼来生做兄弟……听着真让人心酸。」",
+    "links": [398]
+  },
+  {
+    "entryID": 398,
+    "actorID": "MC1",
+    "text": "「無字碑下那位前輩，到死只盼來生能做個普通兄弟……整場遊戲竟沒有贏家。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "zh_CN": "「无字碑下那位前辈，到死只盼来生能做个普通兄弟……整场游戏竟没有赢家。」",
+    "links": [410]
+  },
+  {
+    "entryID": 399,
+    "actorID": "MC1",
+    "text": "「爭不到的東西，一開始就不該惦記。」",
+    "Sequence": "",
+    "zh_CN": "「争不到的东西，一开始就不该惦记。」",
+    "links": [400]
+  },
+  {
+    "entryID": 400,
+    "actorID": "MC1",
+    "text": "「為了湊齊絕學把自己逼瘋，真是何苦來哉。帶著自己本來的功夫下山逍遙，不比在這荒郊野外守半輩子樹強？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=9);\nModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "zh_CN": "「为了凑齐绝学把自己逼疯，真是何苦来哉。带着自己本来的功夫下山逍遥，不比在这荒郊野外守半辈子树强？」",
+    "links": [410]
+  },
+  {
+    "entryID": 401,
+    "actorID": "MC1",
+    "text": "「逼死同門又把自己逼瘋，這條路也太虧了。」",
+    "Sequence": "",
+    "zh_CN": "「逼死同门又把自己逼疯，这条路也太亏了。」",
+    "links": [402]
+  },
+  {
+    "entryID": 402,
+    "actorID": "MC1",
+    "text": "「跟人聯手鬧出人命，又為了一本拳法把自己逼成瘋子。總會有別的法子，犯不著把自己搭進去。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "zh_CN": "「跟人联手闹出人命，又为了一本拳法把自己逼成疯子。总会有别的法子，犯不着把自己搭进去。」",
+    "links": [410]
+  },
+  {
+    "entryID": 403,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nStopAllParticle();\nEnableDialogueBG(Home);",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 5, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [442]
+  },
+  {
+    "entryID": 405,
+    "actorID": "MC1",
+    "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「告示上写着[em2]盐铁之利，国之大柄[/em2]，私吞者斩。这些矿工挖了一辈子，到头来连一块矿渣都换不了一顿饱饭。」",
+    "links": [345]
+  },
+  {
+    "entryID": 408,
+    "actorID": "MC1",
+    "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「为了三绝合一[em2]逼死同门[/em2]……那无字碑下的二师哥，到死只盼着来生能做个普通兄弟。」",
+    "links": [393]
+  },
+  {
+    "entryID": 409,
+    "actorID": "MC1",
+    "text": "「石刻說他們來自[em2]極西之地[/em2]，那便不是尋常中原人了——可極西之地是哪？我可從沒聽有人說過。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「石刻说他们来自[em2]极西之地[/em2]，那便不是寻常中原人了——可极西之地是哪？我可从没听有人说过。」",
+    "links": [102]
+  },
+  {
+    "entryID": 410,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nStopAllParticle();\nEnableDialogueBG(Home);",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 6, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [442]
+  },
+  {
+    "entryID": 413,
+    "actorID": "MC1",
+    "text": "「戰後倒在地上，滿腦子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，還是這天地萬物……竟都成了我想一口吞下的微塵。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「战后倒在地上，满脑子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，还是这天地万物……竟都成了我想一口吞下的微尘。」",
+    "links": [370]
+  },
+  {
+    "entryID": 414,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼，膝上的麒麟骰靜靜躺著。方才不論怎麼想，心裡那股亂念，總算沉了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nModifyData(LifeExp,100);\nStopAllParticle();\nEnableDialogueBG(Home);",
+    "Script": "Variable[\"FindYourSelf\"] = Variable[\"FindYourSelf\"] + 1;\nSetQuestEntryState(\"CF37\", 7, \"success\");",
+    "Description": "變數更新、任務更新",
+    "zh_CN": "[panel=6]＊（你睁开眼，膝上的麒麟骰静静躺着。方才不论怎么想，心里那股乱念，总算沉了下去。）＊",
+    "links": [442]
+  },
+  {
+    "entryID": 416,
+    "actorID": "MC1",
+    "text": "青蛙找玩",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF35\", 1, \"success\");\nSetQuestState(\"C1M2\", \"success\");\nSetQuestState(\"CF16\", \"success\");\nSetQuestState(\"CF12\", \"success\");\nSetQuestEntryState(\"CF08\", 3, \"success\");\n",
+    "Description": "測試條件完成",
+    "zh_TW": "青蛙找玩",
+    "zh_CN": "青蛙找玩",
+    "links": []
+  },
+  {
+    "entryID": 417,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(LifeExp,30);\nDisableDialogueBG();\nStopAllParticle();\nContinue();",
+    "Description": "獲得生活經驗",
+    "links": []
+  },
+  {
+    "entryID": 418,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你盤膝靜坐——路上遇過的人、聽過的事，連細枝末節都不受控地浮上腦海。）＊",
+    "Sequence": "EnableDialogueBG(Home);",
+    "zh_CN": "[panel=6]＊（你盘膝静坐——路上遇过的人、听过的事，连细枝末节都不受控地浮上脑海。）＊",
+    "links": [419]
+  },
+  {
+    "entryID": 419,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不知過了多久，心裡那股亂念漸漸沉下去，倒也頗有所感。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（不知过了多久，心里那股乱念渐渐沉下去，倒也颇有所感。）＊",
+    "links": [417]
+  },
+  {
+    "entryID": 420,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG();\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "links": [6]
+  },
+  {
+    "entryID": 421,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [311, 435]
+  },
+  {
+    "entryID": 422,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG();\nOpenPanel(1, close);\nOpenPanel(2, close);\nDisableEventBG(FullScreen);",
+    "links": [421]
+  },
+  {
+    "entryID": 423,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [318, 436]
+  },
+  {
+    "entryID": 424,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nOpenPanel(1, close);\nOpenPanel(2, close);\nDisableEventBG(FullScreen);",
+    "links": [423]
+  },
+  {
+    "entryID": 425,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [321, 437]
+  },
+  {
+    "entryID": 426,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG();\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "links": [425]
+  },
+  {
+    "entryID": 427,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [409, 438]
+  },
+  {
+    "entryID": 428,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG();\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "links": [427]
+  },
+  {
+    "entryID": 429,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [405, 439]
+  },
+  {
+    "entryID": 430,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG();\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "links": [429]
+  },
+  {
+    "entryID": 431,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [408, 440]
+  },
+  {
+    "entryID": 432,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG();\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "links": [431]
+  },
+  {
+    "entryID": 433,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Description": "開啟冥想",
+    "links": [413, 441]
+  },
+  {
+    "entryID": 434,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,2);\nDisableCharacterExpression(2);\nDisableEventBG(FullScreen);\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "links": [433]
+  },
+  {
+    "entryID": 435,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [32]
+  },
+  {
+    "entryID": 436,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [55]
+  },
+  {
+    "entryID": 437,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [77]
+  },
+  {
+    "entryID": 438,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [101]
+  },
+  {
+    "entryID": 439,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [342]
+  },
+  {
+    "entryID": 440,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [390]
+  },
+  {
+    "entryID": 441,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "骰子閃光特效",
+    "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
+    "links": [367]
+  },
+  {
+    "entryID": 442,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(StopMusic);\nDisableDialogueBG();\nContinue();",
+    "links": []
+  }
+]

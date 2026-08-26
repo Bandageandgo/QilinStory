@@ -1,0 +1,20 @@
+[
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayVideo(Intro);\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
+    "Description": "序章劇情動畫",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "序章正式開始",
+    "Sequence": "LoadLevel(XiaoxiVillage);\nContinue();",
+    "Description": "變數更新",
+    "zh_TW": "序章正式開始",
+    "zh_CN": "序章正式开始",
+    "links": []
+  }
+]

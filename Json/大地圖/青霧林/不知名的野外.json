@@ -1,0 +1,576 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（山路似乎到了盡頭，前方是一處斷崖，雲霧繚繞，深不見底。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "[panel=6]＊（山路似乎到了尽头，前方是一处断崖，云雾缭绕，深不见底。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「這……這就沒了？日記裡說的『跳下懸崖』，該不會真要我跳下去吧？這要是摔下去，豈不是成了肉餅？」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_CN": "「这……这就没了？日记里说的『跳下悬崖』，该不会真要我跳下去吧？这要是摔下去，岂不是成了肉饼？」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「別慌！話本裡常說，絕境之處必有生路！此地地形奇特，定有蹊蹺！待我搜搜！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
+    "zh_CN": "「别慌！话本里常说，绝境之处必有生路！此地地形奇特，定有蹊跷！待我搜搜！」",
+    "links": []
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "[panel=6]＊（下到懸崖底部，眼前豁然開朗。這裡竟是一處幽靜的山谷，不遠處有一座簡陋但雅致的[em2]隱士小屋[/em2]，旁邊還有一方[em2]池塘[/em2]和一棵巨大的[em2]古樹[/em2]。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（下到悬崖底部，眼前豁然开朗。这里竟是一处幽静的山谷，不远处有一座简陋但雅致的[em2]隐士小屋[/em2]，旁边还有一方[em2]池塘[/em2]和一棵巨大的[em2]古树[/em2]。）＊",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「呼……還好終於踩到地面了，這條命算是撿回來了！」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「呼……还好终于踩到地面了，这条命算是捡回来了！」",
+    "links": []
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（推開小屋的門，屋內陳設簡單，積滿了灰塵。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（推开小屋的门，屋内陈设简单，积满了灰尘。）＊",
+    "links": []
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「嘖嘖，這木人的做工……真是精細啊！這關節，這用料……要是能搬回家擺著，每天練上兩手，那多威風！不知道能不能拆下來帶走呢……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Conditions": "CurrentQuestState(\"CF09\") == \"unassigned\"",
+    "Description": "首次點木人樁",
+    "zh_CN": "「啧啧，这木人的做工……真是精细啊！这关节，这用料……要是能搬回家摆着，每天练上两手，那多威风！不知道能不能拆下来带走呢……」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（正當你的手剛碰到木人的瞬間，木人內部突然傳來機關啟動的咔咔聲，緊接著它的手臂猛地抬了起來！）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（正当你的手刚碰到木人的瞬间，木人内部突然传来机关启动的咔咔声，紧接着它的手臂猛地抬了起来！）＊",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「唉唉……？動、動了？！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Script": "SetQuestState(\"CF09\", \"active\")",
+    "Description": "接取任務",
+    "zh_CN": "「唉唉……？动、动了？！」",
+    "links": [2054]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「呼……呼……這木頭疙瘩……還真是有兩下子！不愧是前輩留下的寶貝，這硬度、這力道，差點就把本大俠給拆了……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=3);",
+    "zh_CN": "「呼……呼……这木头疙瘩……还真是有两下子！不愧是前辈留下的宝贝，这硬度、这力道，差点就把本大侠给拆了……」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「不過嘛，終究還是死物！在本大俠精妙絕倫的武功面前，還不是得乖乖躺下！哈哈！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_CN": "「不过嘛，终究还是死物！在本大侠精妙绝伦的武功面前，还不是得乖乖躺下！哈哈！」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「啊！我的寶貝！這下全被打爛了！嗚嗚嗚……我的機關術……我的寶貝樁子……帶不走了……血本無歸啊！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "「啊！我的宝贝！这下全被打烂了！呜呜呜……我的机关术……我的宝贝桩子……带不走了……血本无归啊！」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在你心痛不已時，你發現散落的木塊中，有一個暗格彈了出來，裡面似乎放著什麼東西。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（就在你心痛不已时，你发现散落的木块中，有一个暗格弹了出来，里面似乎放着什么东西。）＊",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「嗯？這是什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「嗯？这是什么？」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「原來這裡還藏有秘笈！這藏的…真是別出心裁啊！這下可發財了！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nModifyData(Skill,Player,FourPunch);\nShowHint(Skill,FourPunch);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Script": "SetQuestState(\"CF09\", \"success\");",
+    "Description": "獲得四神拳",
+    "zh_CN": "「原来这里还藏有秘笈！这藏的…真是别出心裁啊！这下可发财了！」",
+    "links": [2068]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「這……這木頭人怎麼比真人都厲害！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);",
+    "zh_CN": "「这……这木头人怎么比真人都厉害！」",
+    "links": []
+  },
+  {
+    "entryID": 18,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這牆壁堅固異常，似乎需要極強的勁力才能打破。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（这墙壁坚固异常，似乎需要极强的劲力才能打破。）＊",
+    "links": [19, 23, 2067]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「施展剛學會的四神拳『收』式，轟開暗牆。」",
+    "Sequence": "",
+    "Conditions": "IsSkillObtained(\"Player\", \"FourPunch\")  == true",
+    "zh_CN": "[em2][隐藏选项][/em2]「施展刚学会的四神拳『收』式，轰开暗墙。」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「剛好拿來試試新學的招式！四神歸一，收！」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_CN": "「刚好拿来试试新学的招式！四神归一，收！」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你運起四神拳的獨門勁力，一拳轟出！牆壁應聲而碎，露出一個隱蔽的暗格。）＊",
+    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Play);",
+    "zh_CN": "[panel=6]＊（你运起四神拳的独门劲力，一拳轰出！墙壁应声而碎，露出一个隐蔽的暗格。）＊",
+    "links": []
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "[em2][武藝檢定][/em2]「運氣於掌，轟開暗牆」",
+    "Sequence": "",
+    "zh_CN": "[em2][武艺检定][/em2]「运气于掌，轰开暗墙」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,MartialArtsCheck,15);",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「運氣於掌，轟開暗牆！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「运气于掌，轰开暗墙！」",
+    "links": [26, 28]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你運起全身功力，一掌轟出！只聽「轟隆」一聲，牆壁破開一個大洞。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);\nPlayOrStopParticle(BrokenWall_Right,Play);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "[panel=6]＊（你运起全身功力，一掌轰出！只听「轰隆」一声，墙壁破开一个大洞。）＊",
+    "links": []
+  },
+  {
+    "entryID": 28,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你一掌打在牆上，牆壁紋絲不動，你的手掌卻紅腫了一大片。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "[panel=6]＊（你一掌打在墙上，墙壁纹丝不动，你的手掌却红肿了一大片。）＊",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "「嗷！疼疼疼！這牆是用鐵做的嗎？！」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Hp,Player,-10);",
+    "Description": "扣十滴血",
+    "zh_CN": "「嗷！疼疼疼！这墙是用铁做的吗？！」",
+    "links": []
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（古樹下立著一塊無字墓碑，孤零零地立在那裡。樹影婆娑，顯得格外淒涼。看碑上苔痕，這墓立下似乎有些年頭了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（古树下立着一块无字墓碑，孤零零地立在那里。树影婆娑，显得格外凄凉。看碑上苔痕，这墓立下似乎有些年头了。）＊",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「前輩莫怪，晚輩[var=PlayerLastName][var=PlayerFirstName]路過此地，借寶地歇息片刻。看這墓碑無字，想必前輩生前也是位不喜虛名的高人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「前辈莫怪，晚辈[var=PlayerLastName][var=PlayerFirstName]路过此地，借宝地歇息片刻。看这墓碑无字，想必前辈生前也是位不喜虚名的高人。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「不過……這深山老林的，誰會在這立碑呢？這土包看起來……倒像是有些年頭了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「不过……这深山老林的，谁会在这立碑呢？这土包看起来……倒像是有些年头了。」",
+    "links": [33, 34]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「在此休息」",
+    "Sequence": "ModifyData(Rest);\nDisableCharacterExpression(0);",
+    "Description": "回復狀態",
+    "zh_CN": "「在此休息」",
+    "links": []
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「挖掘墓地」",
+    "Sequence": "ModifyData(DnDAlignment,Player,LawChaos,-0.15);\nDisableCharacterExpression(0);",
+    "Description": "增加通達",
+    "zh_CN": "「挖掘墓地」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「咳！話本裡都說了，前輩高人往往會把最重要的絕學隨身攜帶……」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_CN": "「咳！话本里都说了，前辈高人往往会把最重要的绝学随身携带……」",
+    "links": [2059]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你費了一番功夫，終於挖開了墳包。泥土散開，露出了一具森森白骨，白骨的手骨部分，緊緊抓著一個鐵盒。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你费了一番功夫，终于挖开了坟包。泥土散开，露出了一具森森白骨，白骨的手骨部分，紧紧抓着一个铁盒。）＊",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「前輩莫怪，借過借過……」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「前辈莫怪，借过借过……」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role2",
+    "text": "[panel=6]＊（打開鐵盒，裡面除了一些碎銀外，還有一封未寄出的信。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（打开铁盒，里面除了一些碎银外，还有一封未寄出的信。）＊",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]『師兄、師弟：當你們看到這封信時，我已經不在了。四神拳譜我已毀去，你們永遠也別想得到。我們師出同門，本該情同手足，奈何權欲薰心……若有來世，願我們只做普通兄弟，不再練武。』",
+    "Sequence": "",
+    "zh_CN": "[panel=6]『师兄、师弟：当你们看到这封信时，我已经不在了。四神拳谱我已毁去，你们永远也别想得到。我们师出同门，本该情同手足，奈何权欲薰心……若有来世，愿我们只做普通兄弟，不再练武。』",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「原來前輩至死都還掛念著那兩位師兄弟……只可惜，這封信永遠也寄不出去了。」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「原来前辈至死都还挂念着那两位师兄弟……只可惜，这封信永远也寄不出去了。」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「前輩，您的遺願，晚輩知曉了！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_CN": "「前辈，您的遗愿，晚辈知晓了！」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「（雖然有點不敬，但有了這些盤纏，至少不用餓肚子了……多謝前輩！）」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(Coin,350);\nDisableCharacterExpression(0);",
+    "Description": "獲得金錢",
+    "zh_CN": "「（虽然有点不敬，但有了这些盘缠，至少不用饿肚子了……多谢前辈！）」",
+    "links": []
+  },
+  {
+    "entryID": 43,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這是一方碧綠的池塘，水波不興。水底似乎隱隱有黑影游動。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（这是一方碧绿的池塘，水波不兴。水底似乎隐隐有黑影游动。）＊",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「咕嚕……忙活了半天，肚子也餓了。既然來了，不如釣幾條魚充飢？」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「咕噜……忙活了半天，肚子也饿了。既然来了，不如钓几条鱼充饥？」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你正準備釣魚時，突然水面劇烈翻騰，一個巨大的黑影破水而出！）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你正准备钓鱼时，突然水面剧烈翻腾，一个巨大的黑影破水而出！）＊",
+    "links": [48, 52]
+  },
+  {
+    "entryID": 48,
+    "actorID": "role121",
+    "text": "[panel=1]「吵死了！誰啊！不知道三爺我正在午睡嗎？還懂不懂規矩啊！」",
+    "Sequence": "SetPortrait(role121,pic=3);",
+    "Conditions": "Variable[\"FlokMonster\"] >= 2",
+    "Description": "在小溪村有打贏三弟",
+    "zh_CN": "[panel=1]「吵死了！谁啊！不知道三爷我正在午睡吗？还懂不懂规矩啊！」",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「咦？這不是小溪村那個送財河妖嗎？怎麼？小溪村混不下去，跑到這深山老林來躲債了？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_CN": "「咦？这不是小溪村那个送财河妖吗？怎么？小溪村混不下去，跑到这深山老林来躲债了？」",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role121",
+    "text": "[panel=1]「是你？！你這瘟神怎麼也跑這來了！我呸！我三爺可曾怕過誰！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role121,pic=2);",
+    "zh_CN": "[panel=1]「是你？！你这瘟神怎么也跑这来了！我呸！我三爷可曾怕过谁！」",
+    "links": [2066]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role121",
+    "text": "[panel=1]「大膽刁民！竟敢在本大爺的御花園裡偷魚！不知道這片水域是我三爺的地盤嗎？！」",
+    "Sequence": "SetPortrait(role121,pic=2);",
+    "zh_CN": "[panel=1]「大胆刁民！竟敢在本大爷的御花园里偷鱼！不知道这片水域是我三爷的地盘吗？！」",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「哇！妖怪？！這池塘裡怎麼會有河妖？！難道是住這的前輩養的畜生？！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_CN": "「哇！妖怪？！这池塘里怎么会有河妖？！难道是住这的前辈养的畜生？！」",
+    "links": [2061]
+  },
+  {
+    "entryID": 54,
+    "actorID": "role121",
+    "text": "[panel=1]「畜生？！渾小子！看我給你捅一萬個透明窟窿！！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role121,pic=1);",
+    "zh_CN": "[panel=1]「畜生？！浑小子！看我给你捅一万个透明窟窿！！」",
+    "links": [2062]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「呼……好險好險。雖這妖怪皮糙肉厚，但正好拿來試試我的拳頭！」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Conditions": "IsPassFight()  == true",
+    "zh_CN": "「呼……好险好险。虽这妖怪皮糙肉厚，但正好拿来试试我的拳头！」",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "role2",
+    "text": "[panel=6]＊（妖怪逃跑時掉出些亮晶晶的寶石，似乎是牠歷年搜刮來的財貨。）＊",
+    "Sequence": "ModifyData(Coin,200);",
+    "Description": "獲得金錢、",
+    "zh_CN": "[panel=6]＊（妖怪逃跑时掉出些亮晶晶的宝石，似乎是它历年搜刮来的财货。）＊",
+    "links": []
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「這魚……太兇了！風緊，扯呼！」",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_CN": "「这鱼……太凶了！风紧，扯呼！」",
+    "links": []
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [8, 2060]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,29);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [2055]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2056, 2057]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "links": [11]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "links": [17]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [18]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC1",
+    "text": "「嗯，在防止前輩的神功失傳！是敬重前輩武學！絕不是為了什麼陪葬的金銀珠寶！嗯，決計不是！」",
+    "Sequence": "SetPortrait(MC1,pic=10);\nDisableCharacterExpression(0);",
+    "zh_CN": "「嗯，在防止前辈的神功失传！是敬重前辈武学！绝不是为了什么陪葬的金银珠宝！嗯，决计不是！」",
+    "links": [36]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestState(\"CF09\") == \"active\"",
+    "Description": "再次點擊木人樁",
+    "links": [2054]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "MC1",
+    "text": "「唉！要我說啊，要養也養個大鵰之類的才有派頭！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_CN": "「唉！要我说啊，要养也养个大雕之类的才有派头！」",
+    "links": [54]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,30);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [2063]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2064, 2065]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "links": [55]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "links": [57]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role121",
+    "text": "[panel=1]「渾小子！看我給你捅一萬個透明窟窿！！」",
+    "Sequence": "SetPortrait(role121,pic=1);",
+    "zh_CN": "[panel=1]「浑小子！看我给你捅一万个透明窟窿！！」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "MC1",
+    "text": "「離開」",
+    "Sequence": "",
+    "zh_CN": "「离开」",
+    "links": []
+  },
+  {
+    "entryID": 2068,
+    "actorID": "MC1",
+    "text": "「還有這個壞掉的機關人，也順便帶走好了，搞不好還有辦法修復呢！」",
+    "Sequence": "ModifyData(Valuable,Player,DamagedMechanism,1);\nSetPortrait(MC1,pic=5);",
+    "Description": "獲得損毀的機關人",
+    "zh_TW": "「還有這個壞掉的機關人，也順便帶走好了，搞不好還有辦法修復呢！」",
+    "zh_CN": "「还有这个坏掉的机关人，也顺便带走好了，搞不好还有办法修复呢！」",
+    "links": []
+  }
+]

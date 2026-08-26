@@ -1,0 +1,703 @@
+[
+  {
+    "entryID": 81,
+    "actorID": "role2",
+    "text": "[panel=6]＊（今日你回到[em2]有間客棧[/em2]店小二一見你便滿臉堆笑地迎了上來，將你引至一旁。）＊",
+    "Sequence": "EnableDialogueBG(Lnn);\nSetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "播放音樂",
+    "zh_TW": "[panel=6]＊（今日你回到[em2]有間客棧[/em2]店小二一見你便滿臉堆笑地迎了上來，將你引至一旁。）＊",
+    "zh_CN": "[panel=6]＊（今日你回到[em2]有间客栈[/em2]店小二一见你便满脸堆笑地迎了上来，将你引至一旁。）＊",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "role115",
+    "text": "「[var=PlayerLastName]公子，您可真是貴人啊！前幾日您在後山義助的那位姑娘，小的後來斗膽問起您遺落的那方[em2]夜蘭手帕[/em2]，才知曉…那竟是我們老闆娘之物！」",
+    "Sequence": "",
+    "zh_TW": "「[var=PlayerLastName]公子，您可真是貴人啊！前幾日您在後山義助的那位姑娘，小的後來斗膽問起您遺落的那方[em2]夜蘭手帕[/em2]，才知曉…那竟是我們老闆娘之物！」",
+    "zh_CN": "「[var=PlayerLastName]公子，您可真是贵人啊！前几日您在后山义助的那位姑娘，小的后来斗胆问起您遗落的那方[em2]夜兰手帕[/em2]，才知晓…那竟是我们老板娘之物！」",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "「哦？這可真是…小二哥，你如何得知？莫不是消遣在下吧？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「哦？這可真是…小二哥，你如何得知？莫不是消遣在下吧？」",
+    "zh_CN": "「哦？这可真是…小二哥，你如何得知？莫不是消遣在下吧？」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "role115",
+    "text": "「公子有所不知，我們老闆娘平日白日裡忙於俗務，極少以真面目示人，村人所見多是她料理事務時的模樣。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「公子有所不知，我們老闆娘平日白日裡忙於俗務，極少以真面目示人，村人所見多是她料理事務時的模樣。」",
+    "zh_CN": "「公子有所不知，我们老板娘平日白日里忙于俗务，极少以真面目示人，村人所见多是她料理事务时的模样。」",
+    "links": [151]
+  },
+  {
+    "entryID": 85,
+    "actorID": "role115",
+    "text": "[panel=1]「老闆娘對公子高潔的品行和不凡的身手是讚不絕口。特意吩咐小的，今夜為公子備下了小店的鎮店名菜——『佳人笑』，定要請公子賞光，以表謝意！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「老闆娘對公子高潔的品行和不凡的身手是讚不絕口。特意吩咐小的，今夜為公子備下了小店的鎮店名菜——『佳人笑』，定要請公子賞光，以表謝意！」",
+    "zh_CN": "[panel=1]「老板娘对公子高洁的品行和不凡的身手是赞不绝口。特意吩咐小的，今夜为公子备下了小店的镇店名菜——『佳人笑』，定要请公子赏光，以表谢意！」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "「原來如此！哈哈哈！好！那就有勞小二哥了！也請務必代我向老闆娘轉達謝意，今天晚上是吧？我一定到！」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Idea);",
+    "zh_TW": "「原來如此！哈哈哈！好！那就有勞小二哥了！也請務必代我向老闆娘轉達謝意，今天晚上是吧？我一定到！」",
+    "zh_CN": "「原来如此！哈哈哈！好！那就有劳小二哥了！也请务必代我向老板娘转达谢意，今天晚上是吧？我一定到！」",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這天晚上，店小二引你至一間清幽的雅室，室內燭光搖曳，暗香浮動。未幾，他便小心翼翼地端上一道精緻絕倫的菜餚，霞光流轉，異香撲鼻，令人見之忘俗。菜名正是「佳人笑」。）＊",
+    "Sequence": "DisableCharacterExpression(0);PlayFeelFeedback(FadeInOutDirectional);EnableDialogueBG(StudyRoom)",
+    "zh_TW": "[panel=6]＊（這天晚上，店小二引你至一間清幽的雅室，室內燭光搖曳，暗香浮動。未幾，他便小心翼翼地端上一道精緻絕倫的菜餚，霞光流轉，異香撲鼻，令人見之忘俗。菜名正是「佳人笑」。）＊",
+    "zh_CN": "[panel=6]＊（这天晚上，店小二引你至一间清幽的雅室，室内烛光摇曳，暗香浮动。未几，他便小心翼翼地端上一道精致绝伦的菜肴，霞光流转，异香扑鼻，令人见之忘俗。菜名正是「佳人笑」。）＊",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "role115",
+    "text": "「公子請慢用。老闆娘吩咐，此菜乃她親手採集夜間沾露奇花異草，輔以秘法烹製而成，專為酬謝公子高義。她今夜略感風露，不便親見，特在屏風後向公子致意，還望公子海涵。」",
+    "Sequence": "",
+    "zh_TW": "「公子請慢用。老闆娘吩咐，此菜乃她親手採集夜間沾露奇花異草，輔以秘法烹製而成，專為酬謝公子高義。她今夜略感風露，不便親見，特在屏風後向公子致意，還望公子海涵。」",
+    "zh_CN": "「公子请慢用。老板娘吩咐，此菜乃她亲手采集夜间沾露奇花异草，辅以秘法烹制而成，专为酬谢公子高义。她今夜略感风露，不便亲见，特在屏风后向公子致意，还望公子海涵。」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你注意到房間一角立著一扇繪有山水墨竹的屏風，屏風後燭影綽綽，似有佳人安坐，隱約可聞環佩輕響與極淡的蘭麝之氣，與那夜蘭手帕的香氣頗為相似。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你注意到房間一角立著一扇繪有山水墨竹的屏風，屏風後燭影綽綽，似有佳人安坐，隱約可聞環佩輕響與極淡的蘭麝之氣，與那夜蘭手帕的香氣頗為相似。）＊",
+    "zh_CN": "[panel=6]＊（你注意到房间一角立着一扇绘有山水墨竹的屏风，屏风后烛影绰绰，似有佳人安坐，隐约可闻环佩轻响与极淡的兰麝之气，与那夜兰手帕的香气颇为相似。）＊",
+    "links": [90, 97, 102]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「盛情愧領，『佳人笑』真乃神品！」",
+    "Sequence": "",
+    "zh_TW": "「盛情愧領，『佳人笑』真乃神品！」",
+    "zh_CN": "「盛情愧领，『佳人笑』真乃神品！」",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC1",
+    "text": "「咳！這…色香味無一不佳！老闆娘不僅廚藝驚為天人，這份高義雅緻又深藏不露的風範，更是令晚生我萬分心折，佩服，佩服之至！」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Proud);",
+    "zh_TW": "「咳！這…色香味無一不佳！老闆娘不僅廚藝驚為天人，這份高義雅緻又深藏不露的風範，更是令晚生我萬分心折，佩服，佩服之至！」",
+    "zh_CN": "「咳！这…色香味无一不佳！老板娘不仅厨艺惊为天人，这份高义雅致又深藏不露的风范，更是令晚生我万分心折，佩服，佩服之至！」",
+    "links": [152]
+  },
+  {
+    "entryID": 92,
+    "actorID": "role117",
+    "text": "「更難得的是一片赤誠俠心，實乃當世罕見之君子。小女子能以『佳人笑』款待公子，亦是此菜的榮幸。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「更難得的是一片赤誠俠心，實乃當世罕見之君子。小女子能以『佳人笑』款待公子，亦是此菜的榮幸。」",
+    "zh_CN": "「更难得的是一片赤诚侠心，实乃当世罕见之君子。小女子能以『佳人笑』款待公子，亦是此菜的荣幸。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "role117",
+    "text": "[panel=3]「將我那份薄禮贈予[var=PlayerLastName]公子，聊表寸心。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「將我那份薄禮贈予[var=PlayerLastName]公子，聊表寸心。」",
+    "zh_CN": "[panel=3]「将我那份薄礼赠予[var=PlayerLastName]公子，聊表寸心。」",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=6]＊（店小二應聲，從屏風後走出，手中捧著一個精緻的食盒。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（店小二應聲，從屏風後走出，手中捧著一個精緻的食盒。）＊",
+    "zh_CN": "[panel=6]＊（店小二应声，从屏风后走出，手中捧着一个精致的食盒。）＊",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "role115",
+    "text": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
+    "Sequence": "ModifyData(FeatExp,MC1,Qi,50);ModifyData(AbilityExp,MC1,Strength,100);ModifyData(AbilityMaxLevel,MC1,Strength,2);EnableCharacterExpression(1,7,Anger_2);",
+    "zh_TW": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
+    "zh_CN": "[panel=1]「公子，这是老板娘特意为您准备的『龙涎香米』。此米乃吸收日月精华而生，极为罕见，据闻有滋养内息，延年益寿之奇效。老板娘说此物赠英雄，请您务必收下。」",
+    "links": [213]
+  },
+  {
+    "entryID": 96,
+    "actorID": "role117",
+    "text": "[panel=1]「夜色已深，公子慢用。若他日公子仍在此地，或許…我們還有緣再敘。」",
+    "Sequence": "PlayFeelFeedback(FadeInOutDirectional);\nDisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「夜色已深，公子慢用。若他日公子仍在此地，或許…我們還有緣再敘。」",
+    "zh_CN": "[panel=1]「夜色已深，公子慢用。若他日公子仍在此地，或许…我们还有缘再叙。」",
+    "links": [107]
+  },
+  {
+    "entryID": 97,
+    "actorID": "MC1",
+    "text": "「菜品絕妙，敢問老闆娘芳蹤？」",
+    "Sequence": "",
+    "zh_TW": "「菜品絕妙，敢問老闆娘芳蹤？」",
+    "zh_CN": "「菜品绝妙，敢问老板娘芳踪？」",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC1",
+    "text": "「此菜果然名不虛傳！我遊歷江湖，向來最敬佩身懷絕技的英雄美人…咳，我是說豪傑雅士！不知屏風後這位女中豪傑，能否賞光一見？」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「此菜果然名不虛傳！我遊歷江湖，向來最敬佩身懷絕技的英雄美人…咳，我是說豪傑雅士！不知屏風後這位女中豪傑，能否賞光一見？」",
+    "zh_CN": "「此菜果然名不虚传！我游历江湖，向来最敬佩身怀绝技的英雄美人…咳，我是说豪杰雅士！不知屏风后这位女中豪杰，能否赏光一见？」",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "role2",
+    "text": "[panel=6]＊（屏風後沉默良久，之前那若有若無的環佩聲也消失了。店小二面露尷尬之色。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（屏風後沉默良久，之前那若有若無的環佩聲也消失了。店小二面露尷尬之色。）＊",
+    "zh_CN": "[panel=6]＊（屏风后沉默良久，之前那若有若无的环佩声也消失了。店小二面露尴尬之色。）＊",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "role115",
+    "text": "[panel=1]「[乾咳一聲] [var=PlayerLastName]公子…我們老闆娘性喜清靜，不慣見客…尤其…唉，公子還是先用菜吧。這『佳人笑』涼了可就失了風味了。」",
+    "Sequence": "EnableCharacterExpression(0,NPC7,Nervous);",
+    "zh_TW": "[panel=1]「[乾咳一聲] [var=PlayerLastName]公子…我們老闆娘性喜清靜，不慣見客…尤其…唉，公子還是先用菜吧。這『佳人笑』涼了可就失了風味了。」",
+    "zh_CN": "[panel=1]「[干咳一声] [var=PlayerLastName]公子…我们老板娘性喜清静，不惯见客…尤其…唉，公子还是先用菜吧。这『佳人笑』凉了可就失了风味了。」",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你雖覺「佳人笑」美味，但屏風後再無聲息，氣氛不免有些沉悶。看來是言多有失，唐突了佳人。）＊",
+    "Sequence": "DisableDialogueBG();\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（你雖覺「佳人笑」美味，但屏風後再無聲息，氣氛不免有些沉悶。看來是言多有失，唐突了佳人。）＊",
+    "zh_CN": "[panel=6]＊（你虽觉「佳人笑」美味，但屏风后再无声息，气氛不免有些沉闷。看来是言多有失，唐突了佳人。）＊",
+    "links": []
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC1",
+    "text": "「菜是不錯，何為『佳人笑』？」",
+    "Sequence": "",
+    "zh_TW": "「菜是不錯，何為『佳人笑』？」",
+    "zh_CN": "「菜是不错，何为『佳人笑』？」",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「嗯，此菜風味確實不凡，老闆娘費心了。在下心中有個小小疑問，這『佳人笑』之名，聽來頗有意趣。莫非此名背後，有何特別說法？」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「嗯，此菜風味確實不凡，老闆娘費心了。在下心中有個小小疑問，這『佳人笑』之名，聽來頗有意趣。莫非此名背後，有何特別說法？」",
+    "zh_CN": "「嗯，此菜风味确实不凡，老板娘费心了。在下心中有个小小疑问，这『佳人笑』之名，听来颇有意趣。莫非此名背后，有何特别说法？」",
+    "links": [153]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role2",
+    "text": "[panel=6]＊（屏風後傳來一聲極輕的嘆息，若有若無。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（屏風後傳來一聲極輕的嘆息，若有若無。）＊",
+    "zh_CN": "[panel=6]＊（屏风后传来一声极轻的叹息，若有若无。）＊",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "role117",
+    "text": "[panel=5]「不過是個菜名罷了，公子不必深究。請慢用。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=5]「不過是個菜名罷了，公子不必深究。請慢用。」",
+    "zh_CN": "[panel=5]「不过是个菜名罢了，公子不必深究。请慢用。」",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你用完了「佳人笑」，滋味雖好，卻總覺得少了些什麼。屏風後的那位老闆娘，似乎並未因你的言語而展露笑顏。）＊",
+    "Sequence": "DisableDialogueBG();",
+    "zh_TW": "[panel=6]＊（你用完了「佳人笑」，滋味雖好，卻總覺得少了些什麼。屏風後的那位老闆娘，似乎並未因你的言語而展露笑顏。）＊",
+    "zh_CN": "[panel=6]＊（你用完了「佳人笑」，滋味虽好，却总觉得少了些什么。屏风后的那位老板娘，似乎并未因你的言语而展露笑颜。）＊",
+    "links": []
+  },
+  {
+    "entryID": 107,
+    "actorID": "role2",
+    "text": "[panel=6]＊（數日後的深夜，你被店小二恭敬地請至客棧後院的一處清雅小亭。亭中燭光搖曳，石桌旁坐著的正是「一枝花」。她摘下了面紗，但你只覺她今夜似乎心事重重。）＊",
+    "Sequence": "DisableDialogueBG();\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18);\nEnableDialogueBG(Village_Sakura);",
+    "Description": "切換音樂",
+    "zh_TW": "[panel=6]＊（數日後的深夜，你被店小二恭敬地請至客棧後院的一處清雅小亭。亭中燭光搖曳，石桌旁坐著的正是「一枝花」。她摘下了面紗，但你只覺她今夜似乎心事重重。）＊",
+    "zh_CN": "[panel=6]＊（数日后的深夜，你被店小二恭敬地请至客栈后院的一处清雅小亭。亭中烛光摇曳，石桌旁坐着的正是「一枝花」。她摘下了面纱，但你只觉她今夜似乎心事重重。）＊",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "role118",
+    "text": "「公子，深夜叨擾，還望海涵。前些時日公子對小女子的『佳人笑』以及…對小女子本人的那份敬重與理解，讓小女子銘感五內。」",
+    "Sequence": "",
+    "zh_TW": "「公子，深夜叨擾，還望海涵。前些時日公子對小女子的『佳人笑』以及…對小女子本人的那份敬重與理解，讓小女子銘感五內。」",
+    "zh_CN": "「公子，深夜叨扰，还望海涵。前些时日公子对小女子的『佳人笑』以及…对小女子本人的那份敬重与理解，让小女子铭感五内。」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC1",
+    "text": "「老闆娘言重了，能品嚐到如此佳餚是我的福氣。但看老闆娘今夜眉間似有愁緒，不知是否有在下能分憂之處？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「老闆娘言重了，能品嚐到如此佳餚是我的福氣。但看老闆娘今夜眉間似有愁緒，不知是否有在下能分憂之處？」",
+    "zh_CN": "「老板娘言重了，能品尝到如此佳肴是我的福气。但看老板娘今夜眉间似有愁绪，不知是否有在下能分忧之处？」",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "role118",
+    "text": "「公子慧眼…實不相瞞，小女子確有一事困擾已久，甚至…說來也是身不由己的苦楚。我這夜晚的模樣，並非…並非我所願長久維持的形態。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「公子慧眼…實不相瞞，小女子確有一事困擾已久，甚至…說來也是身不由己的苦楚。我這夜晚的模樣，並非…並非我所願長久維持的形態。」",
+    "zh_CN": "「公子慧眼…实不相瞒，小女子确有一事困扰已久，甚至…说来也是身不由己的苦楚。我这夜晚的模样，并非…并非我所愿长久维持的形态。」",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "role118",
+    "text": "「傳聞在這附近的山嶺深處，生長著一種名為[em2]返真草[/em2]的奇寶。此草…能助我擺脫束縛，顯露出…[em2]我真正的樣貌[/em2]。」",
+    "Sequence": "",
+    "zh_TW": "「傳聞在這附近的山嶺深處，生長著一種名為[em2]返真草[/em2]的奇寶。此草…能助我擺脫束縛，顯露出…[em2]我真正的樣貌[/em2]。」",
+    "zh_CN": "「传闻在这附近的山岭深处，生长着一种名为[em2]返真草[/em2]的奇宝。此草…能助我摆脱束缚，显露出…[em2]我真正的样貌[/em2]。」",
+    "links": [188]
+  },
+  {
+    "entryID": 151,
+    "actorID": "role115",
+    "text": "「唯有在夜深人靜，月上中天之時，她才會褪去疲憊，展露…展露那傾城之姿，獨自靜享片刻安寧。那晚您遇到的，正是老闆娘夜遊散心，不想卻……唉，幸得公子出手！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「唯有在夜深人靜，月上中天之時，她才會褪去疲憊，展露…展露那傾城之姿，獨自靜享片刻安寧。那晚您遇到的，正是老闆娘夜遊散心，不想卻……唉，幸得公子出手！」",
+    "zh_CN": "「唯有在夜深人静，月上中天之时，她才会褪去疲惫，展露…展露那倾城之姿，独自静享片刻安宁。那晚您遇到的，正是老板娘夜游散心，不想却……唉，幸得公子出手！」",
+    "links": [85]
+  },
+  {
+    "entryID": 152,
+    "actorID": "role117",
+    "text": "「公子謬讚了，些許拙技，不足掛齒。公子不僅身手不凡，品鑒亦是獨到。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「公子謬讚了，些許拙技，不足掛齒。公子不僅身手不凡，品鑒亦是獨到。」",
+    "zh_CN": "「公子谬赞了，些许拙技，不足挂齿。公子不仅身手不凡，品鉴亦是独到。」",
+    "links": [92]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "「倘若老闆娘方便，還望不吝賜教一二，讓在下也能增長些見聞。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "「倘若老闆娘方便，還望不吝賜教一二，讓在下也能增長些見聞。」",
+    "zh_CN": "「倘若老板娘方便，还望不吝赐教一二，让在下也能增长些见闻。」",
+    "links": [104]
+  },
+  {
+    "entryID": 169,
+    "actorID": "role118",
+    "text": "[panel=2]「不知公子…是否願意為我尋來這[em2]返真草[/em2]？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
+    "Sequence": "SetPortrait(NPC10,pic=3);EnableCharacterExpression(2,NPC10,Sad);",
+    "zh_TW": "[panel=2]「不知公子…是否願意為我尋來這[em2]返真草[/em2]？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
+    "zh_CN": "[panel=2]「不知公子…是否愿意为我寻来这[em2]返真草[/em2]？让我有片刻…能做回真正的自己，也让公子…在我将真心托付之前，见一见卸下所有伪装的我。」",
+    "links": [170, 171, 172]
+  },
+  {
+    "entryID": 170,
+    "actorID": "MC1",
+    "text": "「請告知『返真草』所在，我即刻便去！」",
+    "Sequence": "SetContinueMode(false);\nShowMemory(M_004);\nSetContinueMode(original)@Message(EndMemory);\nContinue()@Message(EndMemory);",
+    "zh_TW": "「請告知『返真草』所在，我即刻便去！」",
+    "zh_CN": "「请告知『返真草』所在，我即刻便去！」",
+    "links": [173]
+  },
+  {
+    "entryID": 171,
+    "actorID": "MC1",
+    "text": "「此事聽來兇險，老闆娘可否容我思量一番？」",
+    "Sequence": "",
+    "zh_TW": "「此事聽來兇險，老闆娘可否容我思量一番？」",
+    "zh_CN": "「此事听来凶险，老板娘可否容我思量一番？」",
+    "links": [183]
+  },
+  {
+    "entryID": 172,
+    "actorID": "MC1",
+    "text": "「顯露真容？老闆娘現在的模樣，已是傾國傾城，何必多此一舉？」",
+    "Sequence": "",
+    "zh_TW": "「顯露真容？老闆娘現在的模樣，已是傾國傾城，何必多此一舉？」",
+    "zh_CN": "「显露真容？老板娘现在的模样，已是倾国倾城，何必多此一举？」",
+    "links": [183]
+  },
+  {
+    "entryID": 173,
+    "actorID": "role2",
+    "text": "[panel=6]＊（是夜，你帶著『返真草』回到客棧後院，一枝花已在亭中等候，見你歸來，眼中滿是期盼與緊張。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（是夜，你帶著『返真草』回到客棧後院，一枝花已在亭中等候，見你歸來，眼中滿是期盼與緊張。）＊",
+    "zh_CN": "[panel=6]＊（是夜，你带着『返真草』回到客栈后院，一枝花已在亭中等候，见你归来，眼中满是期盼与紧张。）＊",
+    "links": [174]
+  },
+  {
+    "entryID": 174,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她接過『返真草』，緊緊地攥在手中，指尖微微顫抖。她凝視著藥草，又抬頭深深地看著你，眼中神色複雜，似有千言萬語。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（她接過『返真草』，緊緊地攥在手中，指尖微微顫抖。她凝視著藥草，又抬頭深深地看著你，眼中神色複雜，似有千言萬語。）＊",
+    "zh_CN": "[panel=6]＊（她接过『返真草』，紧紧地攥在手中，指尖微微颤抖。她凝视着药草，又抬头深深地看着你，眼中神色复杂，似有千言万语。）＊",
+    "links": [175]
+  },
+  {
+    "entryID": 175,
+    "actorID": "role118",
+    "text": "「這返真草品相極佳…公子果然非同凡響。」",
+    "Sequence": "",
+    "zh_TW": "「這返真草品相極佳…公子果然非同凡響。」",
+    "zh_CN": "「这返真草品相极佳…公子果然非同凡响。」",
+    "links": [176]
+  },
+  {
+    "entryID": 176,
+    "actorID": "role118",
+    "text": "[panel=2]「但在此之前，我還有最後一個，也是最重要的一個問題想問你。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(NPC10,pic=8);",
+    "zh_TW": "[panel=2]「但在此之前，我還有最後一個，也是最重要的一個問題想問你。」",
+    "zh_CN": "[panel=2]「但在此之前，我还有最后一个，也是最重要的一个问题想问你。」",
+    "links": [177]
+  },
+  {
+    "entryID": 177,
+    "actorID": "role118",
+    "text": "[panel=2]「若我…若我真正的面目，與常人迥異，甚至…甚至在世人眼中醜陋不堪、如同精怪異物…你是否還會像今夜這般待我？」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「若我…若我真正的面目，與常人迥異，甚至…甚至在世人眼中醜陋不堪、如同精怪異物…你是否還會像今夜這般待我？」",
+    "zh_CN": "[panel=2]「若我…若我真正的面目，与常人迥异，甚至…甚至在世人眼中丑陋不堪、如同精怪异物…你是否还会像今夜这般待我？」",
+    "links": [178, 181]
+  },
+  {
+    "entryID": 178,
+    "actorID": "MC1",
+    "text": "[em2][調情檢定][/em2]「我所鍾情的，是妳的靈魂與真心。」",
+    "Sequence": "",
+    "zh_TW": "[em2][調情檢定][/em2]「我所鍾情的，是妳的靈魂與真心。」",
+    "zh_CN": "[em2][调情检定][/em2]「我所钟情的，是妳的灵魂与真心。」",
+    "links": [185]
+  },
+  {
+    "entryID": 179,
+    "actorID": "role118",
+    "text": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
+    "Sequence": "ModifyData(FeatExp,MC1,Flirting,100);\nDisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
+    "zh_CN": "[panel=2]「（闻言，她浑身一震，霎时间泪如泉涌。她没有再说什么，只是紧紧地、紧紧地握住了你的手。）」",
+    "links": [180]
+  },
+  {
+    "entryID": 180,
+    "actorID": "role2",
+    "text": "[panel=6]＊（此刻，言語已是多餘——此時無聲勝有聲。）＊",
+    "Sequence": "",
+    "Script": "SetQuestState(\"C0F4\", \"success\")",
+    "zh_TW": "[panel=6]＊（此刻，言語已是多餘——此時無聲勝有聲。）＊",
+    "zh_CN": "[panel=6]＊（此刻，言语已是多余——此时无声胜有声。）＊",
+    "links": [2068]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC1",
+    "text": "「此事…若真如此，我恐怕需要時間來適應。」",
+    "Sequence": "",
+    "zh_TW": "「此事…若真如此，我恐怕需要時間來適應。」",
+    "zh_CN": "「此事…若真如此，我恐怕需要时间来适应。」",
+    "links": [182]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "「…若真如妳所言，妳的真實面貌與常人有極大差異…此事確實太過駭人聽聞。」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「…若真如妳所言，妳的真實面貌與常人有極大差異…此事確實太過駭人聽聞。」",
+    "zh_CN": "「…若真如妳所言，妳的真实面貌与常人有极大差异…此事确实太过骇人听闻。」",
+    "links": [191]
+  },
+  {
+    "entryID": 183,
+    "actorID": "role118",
+    "text": "「罷了罷了，是小女子我唐突了。」",
+    "Sequence": "",
+    "Script": "SetQuestState(\"C0F4\", \"abandoned\")",
+    "zh_TW": "「罷了罷了，是小女子我唐突了。」",
+    "zh_CN": "「罢了罢了，是小女子我唐突了。」",
+    "links": [184]
+  },
+  {
+    "entryID": 184,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一枝花說完後便離開了此地，只剩你獨自吹風。）＊",
+    "Sequence": "DisableDialogueBG();",
+    "zh_TW": "[panel=6]＊（一枝花說完後便離開了此地，只剩你獨自吹風。）＊",
+    "zh_CN": "[panel=6]＊（一枝花说完后便离开了此地，只剩你独自吹风。）＊",
+    "links": []
+  },
+  {
+    "entryID": 185,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,5);",
+    "links": [192]
+  },
+  {
+    "entryID": 186,
+    "actorID": "role118",
+    "text": "「你是個好人，但不行……我們的差距不是有辦法可以解決的，你還年輕，走吧……」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「你是個好人，但不行……我們的差距不是有辦法可以解決的，你還年輕，走吧……」",
+    "zh_CN": "「你是个好人，但不行……我们的差距不是有办法可以解决的，你还年轻，走吧……」",
+    "links": [187]
+  },
+  {
+    "entryID": 187,
+    "actorID": "role2",
+    "text": "[panel=6]＊（此刻，言語已是多餘，好人一生平安，走吧。）＊",
+    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeInOutDirectional);",
+    "Script": "SetQuestState(\"C0F4\", \"success\")",
+    "zh_TW": "[panel=6]＊（此刻，言語已是多餘，好人一生平安，走吧。）＊",
+    "zh_CN": "[panel=6]＊（此刻，言语已是多余，好人一生平安，走吧。）＊",
+    "links": []
+  },
+  {
+    "entryID": 188,
+    "actorID": "role118",
+    "text": "「只是那地方異常兇險，小女子夜晚不便前往，白日…白日的我，更是力有未逮。」",
+    "Sequence": "",
+    "zh_TW": "「只是那地方異常兇險，小女子夜晚不便前往，白日…白日的我，更是力有未逮。」",
+    "zh_CN": "「只是那地方异常凶险，小女子夜晚不便前往，白日…白日的我，更是力有未逮。」",
+    "links": [189]
+  },
+  {
+    "entryID": 189,
+    "actorID": "role118",
+    "text": "[panel=2]「[var=PlayerLastName]公子，我知道這個請求或許唐突…但你屢次出手相助，高義薄雲，是我唯一能信任之人。」",
+    "Sequence": "SetPortrait(NPC10,pic=3);EnableCharacterExpression(2,NPC10,Sad);",
+    "zh_TW": "[panel=2]「[var=PlayerLastName]公子，我知道這個請求或許唐突…但你屢次出手相助，高義薄雲，是我唯一能信任之人。」",
+    "zh_CN": "[panel=2]「[var=PlayerLastName]公子，我知道这个请求或许唐突…但你屡次出手相助，高义薄云，是我唯一能信任之人。」",
+    "links": [169]
+  },
+  {
+    "entryID": 191,
+    "actorID": "MC1",
+    "text": "「我…我不敢保證自己能立刻接受。或許，我需要一些時間來…來適應和思考。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「我…我不敢保證自己能立刻接受。或許，我需要一些時間來…來適應和思考。」",
+    "zh_CN": "「我…我不敢保证自己能立刻接受。或许，我需要一些时间来…来适应和思考。」",
+    "links": [187]
+  },
+  {
+    "entryID": 192,
+    "actorID": "MC1",
+    "text": "「噓，我不許你胡說，我所鍾情的，是妳的靈魂與真心，而現在我只想吻妳倔強的嘴。」",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「噓，我不許你胡說，我所鍾情的，是妳的靈魂與真心，而現在我只想吻妳倔強的嘴。」",
+    "zh_CN": "「嘘，我不许你胡说，我所钟情的，是妳的灵魂与真心，而现在我只想吻妳倔强的嘴。」",
+    "links": [179, 186]
+  },
+  {
+    "entryID": 213,
+    "actorID": "MC1",
+    "text": "「咳！有得吃又有得拿，那怎麼好意思！」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Surprise_2);\nDisableCharacterExpression(1);",
+    "zh_TW": "「咳！有得吃又有得拿，那怎麼好意思！」",
+    "zh_CN": "「咳！有得吃又有得拿，那怎么好意思！」",
+    "links": [96]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [81]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "role119",
+    "text": "[var=PlayerLastName]哥哥……",
+    "Sequence": "SetContinueMode(false);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_22);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;",
+    "Description": "播放音樂",
+    "zh_TW": "[var=PlayerLastName]哥哥……",
+    "zh_CN": "[var=PlayerLastName]哥哥……",
+    "links": [2055]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC1",
+    "text": "「嗯，天亮了，靈犀還在等我呢。」",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "zh_TW": "「嗯，天亮了，靈犀還在等我呢。」",
+    "zh_CN": "「嗯，天亮了，灵犀还在等我呢。」",
+    "links": [2056]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC1",
+    "text": "「你不要這樣嘛，我說話算話，一定會負責的。」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「你不要這樣嘛，我說話算話，一定會負責的。」",
+    "zh_CN": "「你不要这样嘛，我说话算话，一定会负责的。」",
+    "links": [2057]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
+    "Description": "獲得夜闌手帕",
+    "links": []
+  },
+  {
+    "entryID": 2055,
+    "actorID": "role119",
+    "text": "你要走了……？",
+    "Sequence": "",
+    "zh_TW": "你要走了……？",
+    "zh_CN": "你要走了……？",
+    "links": [2052]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "role119",
+    "text": "天不弄人，是人自擾。\n無心則靜，無欲則了。",
+    "Sequence": "",
+    "zh_TW": "天不弄人，是人自擾。\n無心則靜，無欲則了。",
+    "zh_CN": "天不弄人，是人自扰。\n无心则静，无欲则了。",
+    "links": [2053]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "role119",
+    "text": "……",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "……",
+    "zh_CN": "……",
+    "links": [2058, 2059]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "MC1",
+    "text": "[em2][調情檢定][/em2]「再怎麼說，我也是個夕陽武士，你這樣是留不住我的。」",
+    "Sequence": "",
+    "zh_TW": "[em2][調情檢定][/em2]「再怎麼說，我也是個夕陽武士，你這樣是留不住我的。」",
+    "zh_CN": "[em2][调情检定][/em2]「再怎么说，我也是个夕阳武士，你这样是留不住我的。」",
+    "links": [2061]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC1",
+    "text": "「原來這才是妳原本的模樣……」",
+    "Sequence": "",
+    "zh_TW": "「原來這才是妳原本的模樣……」",
+    "zh_CN": "「原来这才是妳原本的模样……」",
+    "links": [2060]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC1",
+    "text": "「真如妳所言，妳的真實面貌與常人有極大差異，妳該不會是村口的茶博士吧？」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「真如妳所言，妳的真實面貌與常人有極大差異，妳該不會是村口的茶博士吧？」",
+    "zh_CN": "「真如妳所言，妳的真实面貌与常人有极大差异，妳该不会是村口的茶博士吧？」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,18);",
+    "links": [2067]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "role119",
+    "text": "……他是我堂哥！而且我們長得差那麼多！",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "……他是我堂哥！而且我們長得差那麼多！",
+    "zh_CN": "……他是我堂哥！而且我们长得差那么多！",
+    "links": [2057]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "role119",
+    "text": "唉，罷了罷了，男兒本就該志在四方，你走吧。",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "唉，罷了罷了，男兒本就該志在四方，你走吧。",
+    "zh_CN": "唉，罢了罢了，男儿本就该志在四方，你走吧。",
+    "links": [2066]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "role119",
+    "text": "哼，留不住你的心，我也要留住你的人！",
+    "Sequence": "EnableCharacterExpression(0,NPC40,Anger_2);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "哼，留不住你的心，我也要留住你的人！",
+    "zh_CN": "哼，留不住你的心，我也要留住你的人！",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你連滾帶爬的逃出去，嚇得屁滾尿流。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Script": "SetQuestState(\"CF04\", \"success\")",
+    "Description": "達成一枝花結局的條件BD",
+    "zh_TW": "[panel=6]＊（你連滾帶爬的逃出去，嚇得屁滾尿流。）＊",
+    "zh_CN": "[panel=6]＊（你连滚带爬的逃出去，吓得屁滚尿流。）＊",
+    "links": [2054]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role2",
+    "text": "[panel=6]＊（和一枝花告別後，你回到了自己的房間後仍心有餘悸。）＊",
+    "Sequence": "SetPortrait(MC1,pic=7);\nModifyData(FeatExp,MC1,Flirting,20);",
+    "Script": "SetQuestState(\"CF04\", \"failure\")",
+    "Description": "失敗一枝花任務",
+    "zh_TW": "[panel=6]＊（和一枝花告別後，你回到了自己的房間後仍心有餘悸。）＊",
+    "zh_CN": "[panel=6]＊（和一枝花告别后，你回到了自己的房间后仍心有余悸。）＊",
+    "links": [2054]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "MC1",
+    "text": "「再怎麼說，我也是個夕陽武士，我沒有辦法留在這個小村子。」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「再怎麼說，我也是個夕陽武士，我沒有辦法留在這個小村子。」",
+    "zh_CN": "「再怎么说，我也是个夕阳武士，我没有办法留在这个小村子。」",
+    "links": [2063, 2064]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nLoadLevel(ExploreMap)@1;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Description": "換場景",
+    "links": []
+  }
+]

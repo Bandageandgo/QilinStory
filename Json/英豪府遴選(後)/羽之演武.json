@@ -1,0 +1,483 @@
+[
+  {
+    "entryID": 4058,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF25\", 1) == \"unassigned\"",
+    "links": [
+      4059
+    ]
+  },
+  {
+    "entryID": 4059,
+    "actorID": "MC3",
+    "text": "「……是你……也好，趁此機會，\n不會有人打擾，可驗證你的實力。」 ",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "「……是你……也好，趁此機會，\n不會有人打擾，可驗證你的實力。」 ",
+    "zh_CN": "「……是你……也好，趁此机会，\n不会有人打扰，可验证你的实力。」",
+    "links": [
+      4060
+    ]
+  },
+  {
+    "entryID": 4060,
+    "actorID": "MC22",
+    "text": "[panel=2]「唔！大俠，你是哪根筋不對，居然挑最凶的這位……這一看肯定就籤王……」 ",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "zh_TW": "[panel=2]「唔！大俠，你是哪根筋不對，居然挑最凶的這位……這一看肯定就籤王……」 ",
+    "zh_CN": "[panel=2]「唔！大侠，你是哪根筋不对，居然挑最凶的这位……这一看肯定就签王……」",
+    "links": [
+      4061
+    ]
+  },
+  {
+    "entryID": 4061,
+    "actorID": "MC3",
+    "text": "「想得羽認同，那就試著在戰鬥中──」",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "zh_TW": "「想得羽認同，那就試著在戰鬥中──」",
+    "zh_CN": "「想得羽认同，那就试着在战斗中──」",
+    "links": [
+      4062
+    ]
+  },
+  {
+    "entryID": 4062,
+    "actorID": "MC3",
+    "text": "「──打敗我！」 ",
+    "Sequence": "SetPortrait(MC3,pic=2);",
+    "zh_TW": "「──打敗我！」 ",
+    "zh_CN": "「──打败我！」",
+    "links": [
+      4063
+    ]
+  },
+  {
+    "entryID": 4063,
+    "actorID": "MC1",
+    "text": "「還真的是籤王！！！」 ",
+    "Sequence": "SetPortrait(MC1,pic=19);\nEnableCharacterExpression(0,MC1,Shock);\nSetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",
+    "zh_TW": "「還真的是籤王！！！」 ",
+    "zh_CN": "「还真的是签王！！！」",
+    "links": [
+      4064
+    ]
+  },
+  {
+    "entryID": 4064,
+    "actorID": "MC20",
+    "text": "[panel=2]「沒事沒事，讓我來交涉！」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nSetPortrait(MC20,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "[panel=2]「沒事沒事，讓我來交涉！」",
+    "zh_CN": "[panel=2]「没事没事，让我来交涉！」",
+    "links": [
+      4116
+    ]
+  },
+  {
+    "entryID": 4065,
+    "actorID": "MC3",
+    "text": "「不是。」",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "zh_TW": "「不是。」",
+    "zh_CN": "「不是。」",
+    "links": [
+      4066
+    ]
+  },
+  {
+    "entryID": 4066,
+    "actorID": "MC1",
+    "text": "「呼……至少……」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「呼……至少……」",
+    "zh_CN": "「呼……至少……」",
+    "links": [
+      4067
+    ]
+  },
+  {
+    "entryID": 4067,
+    "actorID": "MC3",
+    "text": "「不是我打死你，就是你被我打死，\n這樣就不成你死我活了。」",
+    "Sequence": "SetPortrait(MC3,pic=2);",
+    "zh_TW": "「不是我打死你，就是你被我打死，\n這樣就不成你死我活了。」",
+    "zh_CN": "「不是我打死你，就是你被我打死，\n这样就不成你死我活了。」",
+    "links": [
+      4068
+    ]
+  },
+  {
+    "entryID": 4068,
+    "actorID": "MC1",
+    "text": "「且慢！好像有點道理，\n卻又好像哪裡不對勁！」",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_TW": "「且慢！好像有點道理，\n卻又好像哪裡不對勁！」",
+    "zh_CN": "「且慢！好像有点道理，\n却又好像哪里不对劲！」",
+    "links": [
+      4117
+    ]
+  },
+  {
+    "entryID": 4069,
+    "actorID": "MC3",
+    "text": "「……我說笑的。」",
+    "Sequence": "SetPortrait(MC3,pic=5);",
+    "zh_TW": "「……我說笑的。」",
+    "zh_CN": "「……我说笑的。」",
+    "links": [
+      4070
+    ]
+  },
+  {
+    "entryID": 4070,
+    "actorID": "MC1",
+    "text": "「老大，你要不要去照一下你那張臉，\n再跟我這是說笑……」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「老大，你要不要去照一下你那張臉，\n再跟我這是說笑……」",
+    "zh_CN": "「老大，你要不要去照一下你那张脸，\n再跟我这是说笑……」",
+    "links": [
+      4071
+    ]
+  },
+  {
+    "entryID": 4071,
+    "actorID": "MC3",
+    "text": "「畢竟賈師父有交代，這是考試，不能動真格。\n你要想挑戰，羽在此隨時奉陪。」",
+    "Sequence": "SetPortrait(MC3,pic=1);\nDisableAllCharacterExpression();\nDisableDialogueBG();",
+    "Script": "SetQuestState(\"CF25\", \"active\");\nSetQuestEntryState(\"CF25\", 1, \"success\");\nSetQuestEntryState(\"CF25\", 2, \"active\")",
+    "Description": "觸發任務、更新任務",
+    "zh_TW": "「畢竟賈師父有交代，這是考試，不能動真格。\n你要想挑戰，羽在此隨時奉陪。」",
+    "zh_CN": "「毕竟贾师父有交代，这是考试，不能动真格。\n你要想挑战，羽在此随时奉陪。」",
+    "links": []
+  },
+  {
+    "entryID": 4072,
+    "actorID": "MC3",
+    "text": "「做好受傷的準備了嗎？」 ",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "「做好受傷的準備了嗎？」 ",
+    "zh_CN": "「做好受伤的准备了吗？」",
+    "links": [
+      4073,
+      4074
+    ]
+  },
+  {
+    "entryID": 4073,
+    "actorID": "MC1",
+    "text": "「打斷骨頭顛倒勇，請指教吧！」",
+    "Sequence": "",
+    "zh_TW": "「打斷骨頭顛倒勇，請指教吧！」",
+    "zh_CN": "「打断骨头颠倒勇，请指教吧！」",
+    "links": [
+      4118
+    ]
+  },
+  {
+    "entryID": 4074,
+    "actorID": "MC1",
+    "text": "「慢！這前提怪怪的，我還要去做更多心理準備！」 ",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();",
+    "Description": "離開任務",
+    "zh_TW": "「慢！這前提怪怪的，我還要去做更多心理準備！」 ",
+    "zh_CN": "「慢！这前提怪怪的，我还要去做更多心理准备！」",
+    "links": []
+  },
+  {
+    "entryID": 4075,
+    "actorID": "role2",
+    "text": "[panel=6]＊（經過一番苦戰，或者更該說你追我打，子羽收起了刀。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（經過一番苦戰，或者更該說你追我打，子羽收起了刀。）＊",
+    "zh_CN": "[panel=6]＊（经过一番苦战，或者更该说你追我打，子羽收起了刀。）＊",
+    "links": [
+      4079
+    ]
+  },
+  {
+    "entryID": 4076,
+    "actorID": "role2",
+    "text": "[panel=6]＊（果不其然，即便對手不是全力，\n你也是被痛揍一頓，直往家中掛病號。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=6]＊（果不其然，即便對手不是全力，\n你也是被痛揍一頓，直往家中掛病號。）＊",
+    "zh_CN": "[panel=6]＊（果不其然，即便对手不是全力，\n你也是被痛揍一顿，直往家中挂病号。）＊",
+    "links": [
+      4077
+    ]
+  },
+  {
+    "entryID": 4077,
+    "actorID": "MC8",
+    "text": "「這下手還真穩準狠。\n恰好拿捏在痛死你，又不讓你死，小犀佩服。」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nSetPortrait(MC1,pic=16);",
+    "zh_TW": "「這下手還真穩準狠。\n恰好拿捏在痛死你，又不讓你死，小犀佩服。」",
+    "zh_CN": "「这下手还真稳准狠。\n恰好拿捏在痛死你，又不让你死，小犀佩服。」",
+    "links": [
+      4078
+    ]
+  },
+  {
+    "entryID": 4078,
+    "actorID": "MC1",
+    "text": "「…聽聽妳自己說的還是人話嗎…」 ",
+    "Sequence": "EnableCharacterExpression(0,MC1,Pain);",
+    "zh_TW": "「…聽聽妳自己說的還是人話嗎…」 ",
+    "zh_CN": "「…听听妳自己说的还是人话吗…」",
+    "links": [
+      4096
+    ]
+  },
+  {
+    "entryID": 4079,
+    "actorID": "MC3",
+    "text": "「可以了。」 ",
+    "Sequence": "SetPortrait(MC3,pic=3);",
+    "zh_TW": "「可以了。」 ",
+    "zh_CN": "「可以了。」",
+    "links": [
+      4080
+    ]
+  },
+  {
+    "entryID": 4080,
+    "actorID": "MC1",
+    "text": "「咦？結束了？我還能再打……」 ",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「咦？結束了？我還能再打……」 ",
+    "zh_CN": "「咦？结束了？我还能再打……」",
+    "links": [
+      4081
+    ]
+  },
+  {
+    "entryID": 4081,
+    "actorID": "MC3",
+    "text": "「還真是死要面子啊，你都快站不住了，還打什麼。不過能撐這麼久……還算勉強可以。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "「還真是死要面子啊，你都快站不住了，還打什麼。不過能撐這麼久……還算勉強可以。」",
+    "zh_CN": "「还真是死要面子啊，你都快站不住了，还打什么。不过能撑这么久……还算勉强可以。」",
+    "links": [
+      4082
+    ]
+  },
+  {
+    "entryID": 4082,
+    "actorID": "MC1",
+    "text": "「莫非，這是說我通過了？」 ",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「莫非，這是說我通過了？」 ",
+    "zh_CN": "「莫非，这是说我通过了？」",
+    "links": [
+      4083
+    ]
+  },
+  {
+    "entryID": 4083,
+    "actorID": "role2",
+    "text": "[panel=6]＊（哪知子羽突然橫掌一劈，\n你下意識出招還擊。）＊",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Punch_Single_ScreenWhite,Play)@0.2;\nPlayOrStopParticle(Sword_Single_ScreenWhite,Play);\nSetContinueMode(original);",
+    "zh_TW": "[panel=6]＊（哪知子羽突然橫掌一劈，\n你下意識出招還擊。）＊",
+    "zh_CN": "[panel=6]＊（哪知子羽突然横掌一劈，\n你下意识出招还击。）＊",
+    "links": [
+      4084
+    ]
+  },
+  {
+    "entryID": 4084,
+    "actorID": "MC1",
+    "text": "「嗚呃！好痛……這怪力……嗯？」 ",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「嗚呃！好痛……這怪力……嗯？」 ",
+    "zh_CN": "「呜呃！好痛……这怪力……嗯？」",
+    "links": [
+      4099
+    ]
+  },
+  {
+    "entryID": 4085,
+    "actorID": "MC3",
+    "text": "「剛才戰鬥，你也算有領略。\n那一招就當是給你入門禮。」 ",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「剛才戰鬥，你也算有領略。\n那一招就當是給你入門禮。」 ",
+    "zh_CN": "「刚才战斗，你也算有领略。\n那一招就当是给你入门礼。」",
+    "links": [
+      4122
+    ]
+  },
+  {
+    "entryID": 4086,
+    "actorID": "MC8",
+    "text": "「表哥，原來他人還挺好的……\n難怪都說不可以貌取人……」 ",
+    "Sequence": "SetPortrait(MC1,pic=5);\nSetPortrait(MC8,pic=5);",
+    "zh_TW": "「表哥，原來他人還挺好的……\n難怪都說不可以貌取人……」 ",
+    "zh_CN": "「表哥，原来他人还挺好的……\n难怪都说不可以貌取人……」",
+    "links": [
+      4087
+    ]
+  },
+  {
+    "entryID": 4087,
+    "actorID": "MC3",
+    "text": "「等遴選結束，你就[em2]回來報到[/em2]。」",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();",
+    "Script": "SetQuestState(\"CF25\", \"success\");\nSetQuestEntryState(\"CF25\", 2, \"success\");\nSetQuestEntryState(\"C1M1\", 4, \"success\");",
+    "Description": "任務更新",
+    "zh_TW": "「等遴選結束，你就[em2]回來報到[/em2]。」",
+    "zh_CN": "「等遴选结束，你就[em2]回来报到[/em2]。」",
+    "links": []
+  },
+  {
+    "entryID": 4090,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Punch_Multiple_ScreenWhite,Play);\nPlayOrStopParticle(Sword_Multiple_ScreenWhite,Play);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "links": [
+      4075
+    ]
+  },
+  {
+    "entryID": 4093,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF25\", 2) == \"active\"",
+    "links": [
+      4072
+    ]
+  },
+  {
+    "entryID": 4096,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 4099,
+    "actorID": "MC1",
+    "text": "「我怎麼還能站著，我剛那一招是……」 ",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "「我怎麼還能站著，我剛那一招是……」 ",
+    "zh_CN": "「我怎么还能站着，我刚那一招是……」",
+    "links": [
+      4085
+    ]
+  },
+  {
+    "entryID": 4100,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Conditions": "CurrentQuestState(\"CF25\") ~= \"success\"",
+    "links": [
+      4058,
+      4093
+    ]
+  },
+  {
+    "entryID": 4101,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "羽之演武",
+    "links": [
+      4100,
+      4115
+    ]
+  },
+  {
+    "entryID": 4115,
+    "actorID": "role2",
+    "text": "[panel=6]＊（子羽不再理會你們，他單手翻開那卷破舊的竹簡，連頭也不抬，彷彿周遭的一切都與他無關。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（子羽不再理會你們，他單手翻開那卷破舊的竹簡，連頭也不抬，彷彿周遭的一切都與他無關。）＊",
+    "zh_CN": "[panel=6]＊（子羽不再理会你们，他单手翻开那卷破旧的竹简，连头也不抬，仿佛周遭的一切都与他无关。）＊",
+    "links": []
+  },
+  {
+    "entryID": 4116,
+    "actorID": "MC20",
+    "text": "[panel=2]「這位壯士，敢問這勝負應該不是要拚個你死我活吧？大家以武會友點到為止吧。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nSetPortrait(MC20,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "[panel=2]「這位壯士，敢問這勝負應該不是要拚個你死我活吧？大家以武會友點到為止吧。」",
+    "zh_CN": "[panel=2]「这位壮士，敢问这胜负应该不是要拼个你死我活吧？大家以武会友点到为止吧。」",
+    "links": [
+      4065
+    ]
+  },
+  {
+    "entryID": 4117,
+    "actorID": "MC20",
+    "text": "[panel=2]「哈哈，好像交涉失敗了。」 ",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=2]「哈哈，好像交涉失敗了。」 ",
+    "zh_CN": "[panel=2]「哈哈，好像交涉失败了。」",
+    "links": [
+      4069
+    ]
+  },
+  {
+    "entryID": 4118,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,48);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [
+      4121
+    ]
+  },
+  {
+    "entryID": 4119,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "Description": "戰鬥成功",
+    "links": [
+      4090
+    ]
+  },
+  {
+    "entryID": 4120,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "Description": "戰鬥失敗",
+    "links": [
+      4076
+    ]
+  },
+  {
+    "entryID": 4121,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [
+      4119,
+      4120
+    ]
+  },
+  {
+    "entryID": 4122,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,OneStrokeDeparture);\nShowHint(Skill,OneStrokeDeparture);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Description": "獲得一刀啟程技能卡",
+    "links": [
+      4086
+    ]
+  },
+  {
+    "entryID": 4123,
+    "actorID": "MC22",
+    "text": "「大俠，這房間看來沒人哦！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Description": "不給進根據地",
+    "zh_TW": "「大俠，這房間看來沒人哦！」",
+    "zh_CN": "「大侠，这房间看来没人哦！」",
+    "links": []
+  }
+]

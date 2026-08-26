@@ -1,0 +1,452 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=5]──這一日，你跟呂信完成工作，\n呂信請你到客棧暢飲……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]──這一日，你跟呂信完成工作，\n呂信請你到客棧暢飲……",
+    "zh_CN": "[panel=5]──这一日，你跟吕信完成工作，\n吕信请你到客栈畅饮……",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC2",
+    "text": "掌櫃的，把你們最好的酒都拿來吧。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "掌櫃的，把你們最好的酒都拿來吧。",
+    "zh_CN": "掌柜的，把你们最好的酒都拿来吧。",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "師兄，這的酒很貴的！？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "師兄，這的酒很貴的！？",
+    "zh_CN": "师兄，这的酒很贵的！ ？",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC2",
+    "text": "擔心什麼，這不是剛拿到報酬嗎。\n你就放大膽喝，這頓師兄擔了。",
+    "Sequence": "",
+    "zh_TW": "擔心什麼，這不是剛拿到報酬嗎。\n你就放大膽喝，這頓師兄擔了。",
+    "zh_CN": "担心什么，这不是刚拿到报酬吗。 \n你就放大胆喝，这顿师兄担了。",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "師兄好氣魄，那師弟就不客氣了。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "師兄好氣魄，那師弟就不客氣了。",
+    "zh_CN": "师兄好气魄，那师弟就不客气了。",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role18",
+    "text": "嗚嗚……",
+    "Sequence": "",
+    "zh_TW": "嗚嗚……",
+    "zh_CN": "呜呜……",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=5]正當你們要開始，\n就聽見隔壁桌一名父女不斷哭啼……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]正當你們要開始，\n就聽見隔壁桌一名父女不斷哭啼……",
+    "zh_CN": "[panel=5]正当你们要开始，\n就听见隔壁桌一名父女不断哭啼……",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC2",
+    "text": "[panel=2]還沒喝，便有人助興了……\n好了好了，別哭了，兩位何故如此哭哭啼啼的？",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_TW": "[panel=2]還沒喝，便有人助興了……\n好了好了，別哭了，兩位何故如此哭哭啼啼的？",
+    "zh_CN": "[panel=2]还没喝，便有人助兴了……\n好了好了，别哭了，两位何故如此哭哭啼啼的？",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role39",
+    "text": "啊！對不住，攪了二位壯士的酒興，只是……",
+    "Sequence": "",
+    "zh_TW": "啊！對不住，攪了二位壯士的酒興，只是……",
+    "zh_CN": "啊！对不住，搅了二位壮士的酒兴，只是……",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC2",
+    "text": "[panel=2]別只是了，一看就知道有故事的。\n是什麼事，但說無妨。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]別只是了，一看就知道有故事的。\n是什麼事，但說無妨。",
+    "zh_CN": "[panel=2]别只是了，一看就知道有故事的。 \n是什么事，但说无妨。",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "role39",
+    "text": "事情是這樣的……",
+    "Sequence": "",
+    "zh_TW": "事情是這樣的……",
+    "zh_CN": "事情是这样的……",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role2",
+    "text": "[panel=5]故事並不複雜，不外乎就是土匪看上良家女子，\n脅迫霸佔的老生常談……",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]故事並不複雜，不外乎就是土匪看上良家女子，\n脅迫霸佔的老生常談……",
+    "zh_CN": "[panel=5]故事并不复杂，不外乎就是土匪看上良家女子，\n胁迫霸占的老生常谈……",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "欺人太甚，師兄我看這事……",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "欺人太甚，師兄我看這事……",
+    "zh_CN": "欺人太甚，师兄我看这事……",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=5]這時，呂信不知何時已不在位上……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]這時，呂信不知何時已不在位上……",
+    "zh_CN": "[panel=5]这时，吕信不知何时已不在位上……",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=5]然不出多久，呂信就提著一個布袋回來。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]然不出多久，呂信就提著一個布袋回來。",
+    "zh_CN": "[panel=5]然不出多久，吕信就提着一个布袋回来。",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "師兄你這是跑去哪了？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "師兄你這是跑去哪了？",
+    "zh_CN": "师兄你这是跑去哪了？",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC2",
+    "text": "[panel=2]沒去哪。\n兩位看一下，認不認得這位仁兄。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]沒去哪。\n兩位看一下，認不認得這位仁兄。",
+    "zh_CN": "[panel=2]没去哪。 \n两位看一下，认不认得这位仁兄。",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "role2",
+    "text": "[panel=5]呂信揭開布袋，赫然是顆人頭。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]呂信揭開布袋，赫然是顆人頭。",
+    "zh_CN": "[panel=5]吕信揭开布袋，赫然是颗人头。",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "role39",
+    "text": "啊！是那土匪，就是那位土匪惡霸。\n多謝壯士！壯士仁義啊！",
+    "Sequence": "",
+    "zh_TW": "啊！是那土匪，就是那位土匪惡霸。\n多謝壯士！壯士仁義啊！",
+    "zh_CN": "啊！是那土匪，就是那位土匪恶霸。 \n多谢壮士！壮士仁义啊！",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC2",
+    "text": "[panel=2]不必說那些陳詞了。\n這些錢你們拿去，快快另找個地方安生吧。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]不必說那些陳詞了。\n這些錢你們拿去，快快另找個地方安生吧。",
+    "zh_CN": "[panel=2]不必说那些陈词了。 \n这些钱你们拿去，快快另找个地方安生吧。",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "[panel=5]呂信拿了錢袋給他們，\n父女連聲拜謝了許久，才肯離開……",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]呂信拿了錢袋給他們，\n父女連聲拜謝了許久，才肯離開……",
+    "zh_CN": "[panel=5]吕信拿了钱袋给他们，\n父女连声拜谢了许久，才肯离开……",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "師兄你動作還真快……\n我還沒聽完，你人就出發了……",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "師兄你動作還真快……\n我還沒聽完，你人就出發了……",
+    "zh_CN": "师兄你动作还真快……\n我还没听完，你人就出发了……",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC2",
+    "text": "我這人最受不了等了。\n這種事聽到重點，便足矣。",
+    "Sequence": "",
+    "zh_TW": "我這人最受不了等了。\n這種事聽到重點，便足矣。",
+    "zh_CN": "我这人最受不了等了。 \n这种事听到重点，便足矣。",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC2",
+    "text": "好了，沒人叨擾了，我們喝吧。",
+    "Sequence": "",
+    "zh_TW": "好了，沒人叨擾了，我們喝吧。",
+    "zh_CN": "好了，没人叨扰了，我们喝吧。 ",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role2",
+    "text": "[panel=5]就這樣，你們喝了將近一個時辰。\n你顯然快不行了，奇怪是呂信還沒離開打算……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]就這樣，你們喝了將近一個時辰。\n你顯然快不行了，奇怪是呂信還沒離開打算……",
+    "zh_CN": "[panel=5]就这样，你们喝了将近一个时辰。 \n你显然快不行了，奇怪是吕信还没离开打算……",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "唔呃……師兄，我們該走了吧……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "唔呃……師兄，我們該走了吧……",
+    "zh_CN": "唔呃……师兄，我们该走了吧……",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC2",
+    "text": "還早，再喝一會。",
+    "Sequence": "",
+    "zh_TW": "還早，再喝一會。",
+    "zh_CN": "还早，再喝一会。",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "可是……唔！先不說我喝不下了……\n光是剛剛我們就遇到……",
+    "Sequence": "",
+    "zh_TW": "可是……唔！先不說我喝不下了……\n光是剛剛我們就遇到……",
+    "zh_CN": "可是……唔！先不说我喝不下了……\n光是刚刚我们就遇到……",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC1",
+    "text": "六個乞丐、三個借錢周轉、四個賣身葬父……\n每一個……你眼都不眨就給錢……",
+    "Sequence": "",
+    "zh_TW": "六個乞丐、三個借錢周轉、四個賣身葬父……\n每一個……你眼都不眨就給錢……",
+    "zh_CN": "六个乞丐、三个借钱周转、四个卖身葬父……\n每一个……你眼都不眨就给钱……",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "你都沒聽到，旁邊客人都說你是散財義士了……",
+    "Sequence": "",
+    "zh_TW": "你都沒聽到，旁邊客人都說你是散財義士了……",
+    "zh_CN": "你都没听到，旁边客人都说你是散财义士了……",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC2",
+    "text": "哈哈，這叫法還挺有意思的……",
+    "Sequence": "",
+    "zh_TW": "哈哈，這叫法還挺有意思的……",
+    "zh_CN": "哈哈，这叫法还挺有意思的……",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role12",
+    "text": "哪個混帳是呂信！給老子滾出來！",
+    "Sequence": "",
+    "zh_TW": "哪個混帳是呂信！給老子滾出來！",
+    "zh_CN": "哪个混帐是吕信！给老子滚出来！",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=5]突然外頭來了大隊人馬，叫喊著要呂信出來……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]突然外頭來了大隊人馬，叫喊著要呂信出來……",
+    "zh_CN": "[panel=5]突然外头来了大队人马，叫喊着要吕信出来……",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "怎麼回事？這些人是……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "怎麼回事？這些人是……",
+    "zh_CN": "怎么回事？这些人是……",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC2",
+    "text": "應該是剛殺的土匪同夥吧。\n聚集得還真慢，我去去就回。",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_TW": "應該是剛殺的土匪同夥吧。\n聚集得還真慢，我去去就回。",
+    "zh_CN": "应该是刚杀的土匪同伙吧。 \n聚集得还真慢，我去去就回。",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC2",
+    "text": "[panel=2]呂信在此，有何指教啊。",
+    "Sequence": "OpenPanel(0, close);\nSetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]呂信在此，有何指教啊。",
+    "zh_CN": "[panel=2]吕信在此，有何指教啊。",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "role12",
+    "text": "就是你？\n殺我清風寨兄弟，還在牆下留名，有種啊你。",
+    "Sequence": "",
+    "zh_TW": "就是你？\n殺我清風寨兄弟，還在牆下留名，有種啊你。",
+    "zh_CN": "就是你？ \n杀我清风寨兄弟，还在墙下留名，有种啊你。",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC2",
+    "text": "[panel=2]還行，要不這樣寫，\n怎麼叫你們一夥自投羅網呢。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]還行，要不這樣寫，\n怎麼叫你們一夥自投羅網呢。",
+    "zh_CN": "[panel=2]还行，要不这样写，\n怎么叫你们一伙自投罗网呢。",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role12",
+    "text": "還敢囂張！今日我全寨百人已把這團團包圍，\n看你還能往拿逃！",
+    "Sequence": "",
+    "zh_TW": "還敢囂張！今日我全寨百人已把這團團包圍，\n看你還能往拿逃！",
+    "zh_CN": "还敢嚣张！今日我全寨百人已把这团团包围，\n看你还能往拿逃！",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC2",
+    "text": "[panel=2]包圍我？說錯了吧，應該是──",
+    "Sequence": "",
+    "zh_TW": "[panel=2]包圍我？說錯了吧，應該是──",
+    "zh_CN": "[panel=2]包围我？说错了吧，应该是──",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC2",
+    "text": "[panel=2]──我包圍了你們！",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=2]──我包圍了你們！",
+    "zh_CN": "[panel=2]──我包围了你们！",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "role2",
+    "text": "[panel=5]正如呂信所言，眼下此景無疑羊入虎口，\n只是孰羊孰虎，自有分曉……",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]正如呂信所言，眼下此景無疑羊入虎口，\n只是孰羊孰虎，自有分曉……",
+    "zh_CN": "[panel=5]正如吕信所言，眼下此景无疑羊入虎口，\n只是孰羊孰虎，自有分晓……",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC2",
+    "text": "真無趣，這樣也配叫百人了。",
+    "Sequence": "SetPortrait(MC2,pic=3);",
+    "zh_TW": "真無趣，這樣也配叫百人了。",
+    "zh_CN": "真无趣，这样也配叫百人了。",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "……師兄剛一直不走，\n莫非是為一勞永逸，免得這些賊寇追殺那父女？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "……師兄剛一直不走，\n莫非是為一勞永逸，免得這些賊寇追殺那父女？",
+    "zh_CN": "……师兄刚一直不走，\n莫非是为一劳永逸，免得这些贼寇追杀那父女？",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC2",
+    "text": "簡單的事就是要一次解決到位。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "簡單的事就是要一次解決到位。",
+    "zh_CN": "简单的事就是要一次解决到位。",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "可是……現在有個急需解決的小問題，\n酒錢你還夠嗎？",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "可是……現在有個急需解決的小問題，\n酒錢你還夠嗎？",
+    "zh_CN": "可是……现在有个急需解决的小问题，\n酒钱你还够吗？",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC2",
+    "text": "這個……要不一起打雜吧。",
+    "Sequence": "",
+    "zh_TW": "這個……要不一起打雜吧。",
+    "zh_CN": "这个……要不一起打杂吧。",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "role2",
+    "text": "[panel=5]就這樣，你們一起打雜，償還超支的酒錢……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]就這樣，你們一起打雜，償還超支的酒錢……",
+    "zh_CN": "[panel=5]就这样，你们一起打杂，偿还超支的酒钱……",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "role2",
+    "text": "[panel=5]要說粗枝大葉，不是，要說思慮周密，也不對。\n對這位師兄，你實難給個定論。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]要說粗枝大葉，不是，要說思慮周密，也不對。\n對這位師兄，你實難給個定論。",
+    "zh_CN": "[panel=5]要说粗枝大叶，不是，要说思虑周密，也不对。 \n对这位师兄，你实难给个定论。",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role2",
+    "text": "[panel=5]即便多年之後再見，其名仍是不受天下拘束……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]即便多年之後再見，其名仍是不受天下拘束……",
+    "zh_CN": "[panel=5]即便多年之后再见，其名仍是不受天下拘束……",
+    "links": []
+  }
+]

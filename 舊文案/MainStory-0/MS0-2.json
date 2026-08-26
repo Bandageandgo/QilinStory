@@ -1,0 +1,591 @@
+[
+  {
+    "entryID": 276,
+    "actorID": "MC1",
+    "text": "嘗到厲害了吧。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,MC1,Proud);",
+    "zh_TW": "嘗到厲害了吧。",
+    "zh_CN": "尝到厉害了吧。",
+    "links": [277]
+  },
+  {
+    "entryID": 277,
+    "actorID": "role4",
+    "text": "吼──吼──吼──",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3)->Message(EndFade);\nSetGameObjectShake(P1,ShakeNormal,YAxis,1,15,0);\nSetContinueMode(original)@Message(EndFade);\nDisableCharacterExpression(0);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──吼──吼──",
+    "zh_CN": "吼──吼──吼──",
+    "links": [280]
+  },
+  {
+    "entryID": 278,
+    "actorID": "role2",
+    "text": "[panel=5]就見怪物的大吼，\n引來了同伴把你團團圍住，隨即──",
+    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(Smoke_Dust,Play);",
+    "zh_TW": "[panel=5]就見怪物的大吼，\n引來了同伴把你團團圍住，隨即──",
+    "zh_CN": "[panel=5]就见怪物的大吼，\n引来了同伴把你团团围住，随即──",
+    "links": [282]
+  },
+  {
+    "entryID": 279,
+    "actorID": "MC1",
+    "text": "……呃……該……死……太大意了……",
+    "Sequence": "",
+    "zh_TW": "……呃……該……死……太大意了……",
+    "zh_CN": "……呃……该……死……太大意了……",
+    "links": [284]
+  },
+  {
+    "entryID": 280,
+    "actorID": "MC1",
+    "text": "什麼！？怎麼會……",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "什麼！？怎麼會……",
+    "zh_CN": "什么！ ？怎么会……",
+    "links": [278]
+  },
+  {
+    "entryID": 281,
+    "actorID": "role4",
+    "text": "吼！",
+    "Sequence": "EnableDialogueBG(MountainForest);\nShowInstantMessage(Influence_Fame,50);\nShowInstantMessage(Exp_FeatExp,MC1,Strength,100); \nSetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3)->Message(EndFade);\nSetGameObjectShake(P1,ShakeNormal,XYAxis,1,10,0);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "Conditions": "(CurrentQuestEntryState(\"MS02\", 1) == \"active\") and (IsPassFight()  == true)",
+    "Description": "獲得威名跟專長經驗",
+    "zh_TW": "吼！",
+    "zh_CN": "吼！",
+    "links": [276]
+  },
+  {
+    "entryID": 282,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=4);\nSetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,1,20,0)->Message(EndShake);\nSetContinueMode(original)@Message(EndShake);\nContinue()@Message(EndShake);",
+    "links": [284]
+  },
+  {
+    "entryID": 283,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(MountainForest);\nSetPortrait(MC1,pic=4);\nSetContinueMode(false);\nSetGameObjectShake(P0,ShakeNormal,XYAxis,1,15,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "(CurrentQuestEntryState(\"MS02\", 1) == \"active\") and (IsPassFight()  == false)",
+    "links": [279]
+  },
+  {
+    "entryID": 284,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(Smoke_Dust,Stop);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close)@1;\nEnableDialogueBG(Clinic)@1;\nAudioControl(PlaySFXOneShot,Fire)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [285]
+  },
+  {
+    "entryID": 285,
+    "actorID": "MC1",
+    "text": "……嗚呃……\n我……還活著？",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "……嗚呃……\n我……還活著？",
+    "zh_CN": "……呜呃……\n我……还活着？",
+    "links": [286]
+  },
+  {
+    "entryID": 286,
+    "actorID": "role25",
+    "text": "是人都搶著多活幾天，就你嫌還活太長。\n要不讓你永遠睡下去好了。",
+    "Sequence": "",
+    "zh_TW": "是人都搶著多活幾天，就你嫌還活太長。\n要不讓你永遠睡下去好了。",
+    "zh_CN": "是人都抢着多活几天，就你嫌还活太长。 \n要不让你永远睡下去好了。",
+    "links": [287]
+  },
+  {
+    "entryID": 287,
+    "actorID": "MC1",
+    "text": "……是妳……？",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "……是妳……？",
+    "zh_CN": "……是妳……？",
+    "links": [288]
+  },
+  {
+    "entryID": 288,
+    "actorID": "MC6",
+    "text": "我不叫妳。\n我有姓張，單名寧。",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nDisableAllCharacterExpression();",
+    "zh_TW": "我不叫妳。\n我有姓張，單名寧。",
+    "zh_CN": "我不叫妳。 \n我有姓张，单名宁。",
+    "links": [289]
+  },
+  {
+    "entryID": 289,
+    "actorID": "MC1",
+    "text": "抱歉，我無意冒犯……\n……那些怪物呢……？",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "抱歉，我無意冒犯……\n……那些怪物呢……？",
+    "zh_CN": "抱歉，我无意冒犯……\n……那些怪物呢……？",
+    "links": [290]
+  },
+  {
+    "entryID": 290,
+    "actorID": "MC6",
+    "text": "很遺憾，讓我暫且用藥煙趕走了，\n沒機會給你英雄救美了。",
+    "Sequence": "",
+    "zh_TW": "很遺憾，讓我暫且用藥煙趕走了，\n沒機會給你英雄救美了。",
+    "zh_CN": "很遗憾，让我暂且用药烟赶走了，\n没机会给你英雄救美了。",
+    "links": [291]
+  },
+  {
+    "entryID": 291,
+    "actorID": "MC1",
+    "text": "就妳一人……！？",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "就妳一人……！？",
+    "zh_CN": "就妳一人……！ ？",
+    "links": [318]
+  },
+  {
+    "entryID": 298,
+    "actorID": "role2",
+    "text": "[panel=5]張寧提起了滾燙的藥壺……",
+    "Sequence": "AudioControl(PlaySFXOneShot,Fire);",
+    "zh_TW": "[panel=5]張寧提起了滾燙的藥壺……",
+    "zh_CN": "[panel=5]张宁提起了滚烫的药壶……",
+    "links": [373]
+  },
+  {
+    "entryID": 300,
+    "actorID": "MC6",
+    "text": "藥拿去吧，此藥能活血化瘀。\n不過藥性猛烈，不宜多喝。",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nDisableAllCharacterExpression();",
+    "zh_TW": "藥拿去吧，此藥能活血化瘀。\n不過藥性猛烈，不宜多喝。",
+    "zh_CN": "药拿去吧，此药能活血化瘀。 \n不过药性猛烈，不宜多喝。",
+    "links": [303]
+  },
+  {
+    "entryID": 303,
+    "actorID": "MC1",
+    "text": "……我就順口問一下喔，喝多了會如何？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "……我就順口問一下喔，喝多了會如何？",
+    "zh_CN": "……我就顺口问一下喔，喝多了会如何？",
+    "links": [304]
+  },
+  {
+    "entryID": 304,
+    "actorID": "MC6",
+    "text": "那就看造化了，運氣好，滋養内息，\n差的話……反正苟活於世，死了說不定更快活。",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nEnableCharacterExpression(1,MC6,Proud);",
+    "zh_TW": "那就看造化了，運氣好，滋養内息，\n差的話……反正苟活於世，死了說不定更快活。",
+    "zh_CN": "那就看造化了，运气好，滋养内息，\n差的话……反正苟活于世，死了说不定更快活。",
+    "links": [391]
+  },
+  {
+    "entryID": 305,
+    "actorID": "MC1",
+    "text": "1.可以別把恐怖的事，說得這般輕描淡寫嗎！我喝一點就是了。",
+    "Sequence": "",
+    "zh_TW": "1.可以別把恐怖的事，說得這般輕描淡寫嗎！我喝一點就是了。",
+    "zh_CN": "1.可以别把恐怖的事，说得这般轻描淡写吗！我喝一点就是了。",
+    "links": [356]
+  },
+  {
+    "entryID": 306,
+    "actorID": "MC1",
+    "text": "2.[em1][內功][/em1]吉人自有天相，我一身修為防身，還怕區區藥湯，喝完給妳看！",
+    "Sequence": "BeginDiceRoll(Qi,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][內功][/em1]吉人自有天相，我一身修為防身，還怕區區藥湯，喝完給妳看！",
+    "zh_CN": "2.[em1][内功][/em1]吉人自有天相，我一身修为防身，还怕区区药汤，喝完给妳看！",
+    "links": [355]
+  },
+  {
+    "entryID": 307,
+    "actorID": "role2",
+    "text": "[panel=5]你淺嚐了藥湯，苦味立即化作暖意流經四肢……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "[panel=5]你淺嚐了藥湯，苦味立即化作暖意流經四肢……",
+    "zh_CN": "[panel=5]你浅尝了药汤，苦味立即化作暖意流经四肢……",
+    "links": [359]
+  },
+  {
+    "entryID": 308,
+    "actorID": "MC1",
+    "text": "喔喔……我的體內湧出了無窮真力……啊……\n我要變強了，十倍百倍，哈沒哈沒……哈──！",
+    "Sequence": "SetContinueMode(false);\nAudioControl(PlaySFXOneShot,Notice);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1,Proud);\nShowInstantMessage(Exp_FeatExp,MC1,Qi,20);\nShowReward(StrongAndSturdyLv1_Versatile)@1;\nShowInstantMessage(Reward_SkillCard,MC1,StrongAndSturdyLv1_Versatile)@1;\nSetContinueMode(original)@1.5;",
+    "Description": "獲得技能卡跟專長經驗",
+    "zh_TW": "喔喔……我的體內湧出了無窮真力……啊……\n我要變強了，十倍百倍，哈沒哈沒……哈──！",
+    "zh_CN": "喔喔……我的体内涌出了无穷真力……啊……\n我要变强了，十倍百倍，哈没哈没……哈──！",
+    "links": [364]
+  },
+  {
+    "entryID": 309,
+    "actorID": "MC1",
+    "text": "呃啊！我的體內有股熊熊烈火……\n……它在發出怒吼啊啊啊……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nSetContinueMode(false);\nEnableCharacterExpression(0,MC1,Nervous_2);\nSetGameObjectShake(P0,ShakeNormal,XAxis,1,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
+    "zh_TW": "呃啊！我的體內有股熊熊烈火……\n……它在發出怒吼啊啊啊……",
+    "zh_CN": "呃啊！我的体内有股熊熊烈火……\n……它在发出怒吼啊啊啊……",
+    "links": [310]
+  },
+  {
+    "entryID": 310,
+    "actorID": "MC6",
+    "text": "看來有人素行不良，被懲罰了。\n不過還活著，也算蒼天留情了。",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nEnableCharacterExpression(1,MC6,Proud);\nDisableCharacterExpression(0);",
+    "zh_TW": "看來有人素行不良，被懲罰了。\n不過還活著，也算蒼天留情了。",
+    "zh_CN": "看来有人素行不良，被惩罚了。 \n不过还活着，也算苍天留情了。",
+    "links": [370]
+  },
+  {
+    "entryID": 311,
+    "actorID": "MC6",
+    "text": "是說，我從剛就有個疑問，\n你那顆骰子怎麼一直在發光？",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);\nEnableCharacterExpression(1,MC6,Question);\nSetPortrait(MC6,pic=4);;\nSetPortrait(MC1,pic=6);",
+    "zh_TW": "是說，我從剛就有個疑問，\n你那顆骰子怎麼一直在發光？",
+    "zh_CN": "是说，我从刚就有个疑问，\n你那颗骰子怎么一直在发光？",
+    "links": [312]
+  },
+  {
+    "entryID": 312,
+    "actorID": "MC1",
+    "text": "是麒麟一面……！\n姑娘，此地可是[em2]英豪府[/em2]？",
+    "Sequence": "DisableAllCharacterExpression();\nSetPortrait(MC1,pic=7);",
+    "Description": "事件圖",
+    "zh_TW": "是麒麟一面……！\n姑娘，此地可是[em2]英豪府[/em2]？",
+    "zh_CN": "是麒麟一面……！ \n姑娘，此地可是[em2]英豪府[/em2]？",
+    "links": [313]
+  },
+  {
+    "entryID": 313,
+    "actorID": "MC6",
+    "text": "我這才沒那麼晦氣。\n但硬要說，此地[em2]河東[/em2]，離那[em2]雲中[/em2]也不遠。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "我這才沒那麼晦氣。\n但硬要說，此地[em2]河東[/em2]，離那[em2]雲中[/em2]也不遠。",
+    "zh_CN": "我这才没那么晦气。 \n但硬要说，此地[em2]河东[/em2]，离那[em2]云中[/em2]也不远。",
+    "links": [314]
+  },
+  {
+    "entryID": 314,
+    "actorID": "MC1",
+    "text": "哈哈！如此說來，我果然沒選錯路。\n接下來只要往英豪府便可……",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "哈哈！如此說來，我果然沒選錯路。\n接下來只要往英豪府便可……",
+    "zh_CN": "哈哈！如此说来，我果然没选错路。 \n接下来只要往英豪府便可……",
+    "links": [315]
+  },
+  {
+    "entryID": 315,
+    "actorID": "MC6",
+    "text": "你是要不要回答我的問題。",
+    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "zh_TW": "你是要不要回答我的問題。",
+    "zh_CN": "你是要不要回答我的问题。",
+    "links": [298]
+  },
+  {
+    "entryID": 316,
+    "actorID": "MC1",
+    "text": "咦？突然這般好心……應該不是毒藥吧？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "咦？突然這般好心……應該不是毒藥吧？",
+    "zh_CN": "咦？突然这般好心……应该不是毒药吧？",
+    "links": [386]
+  },
+  {
+    "entryID": 318,
+    "actorID": "role2",
+    "text": "[panel=5]話才脫口，\n沸騰藥湯就直接澆在你的頭上……",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]話才脫口，\n沸騰藥湯就直接澆在你的頭上……",
+    "zh_CN": "[panel=5]话才脱口，\n沸腾药汤就直接浇在你的头上……",
+    "links": [319]
+  },
+  {
+    "entryID": 319,
+    "actorID": "MC1",
+    "text": "啊啊啊──────！",
+    "Sequence": "SetPortrait(MC1,pic=7);\nSetContinueMode(false);\nSetGameObjectShake(P0,ShakeNormal,XYAxis,1,20,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
+    "zh_TW": "啊啊啊──────！",
+    "zh_CN": "啊啊啊──────！",
+    "links": [320]
+  },
+  {
+    "entryID": 320,
+    "actorID": "MC6",
+    "text": "抱歉了，藥壺滑手了。",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "抱歉了，藥壺滑手了。",
+    "zh_CN": "抱歉了，药壶滑手了。",
+    "links": [371]
+  },
+  {
+    "entryID": 321,
+    "actorID": "MC1",
+    "text": "（妳都下手了才說……\n是誰說醫者都很和善的……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "（妳都下手了才說……\n是誰說醫者都很和善的……）",
+    "zh_CN": "（妳都下手了才说……\n是谁说医者都很和善的……）",
+    "links": [300]
+  },
+  {
+    "entryID": 355,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [357, 358]
+  },
+  {
+    "entryID": 356,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [307]
+  },
+  {
+    "entryID": 357,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "轉場",
+    "links": [308]
+  },
+  {
+    "entryID": 358,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "轉場",
+    "links": [309]
+  },
+  {
+    "entryID": 359,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [311]
+  },
+  {
+    "entryID": 361,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableDialogueBG()@1;\nOpenPanel(1, close)@1;\nOpenPanel(0, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [365]
+  },
+  {
+    "entryID": 362,
+    "actorID": "MC6",
+    "text": "癡傻無藥醫……\n玩夠了就給我把弄倒的東西收好。",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nDisableAllCharacterExpression();",
+    "zh_TW": "癡傻無藥醫……\n玩夠了就給我把弄倒的東西收好。",
+    "zh_CN": "痴傻无药医……\n玩够了就给我把弄倒的东西收好。",
+    "links": [363]
+  },
+  {
+    "entryID": 363,
+    "actorID": "MC1",
+    "text": "喔好……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "喔好……",
+    "zh_CN": "喔好……",
+    "links": [359]
+  },
+  {
+    "entryID": 364,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,1,10,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [362]
+  },
+  {
+    "entryID": 365,
+    "actorID": "MC1",
+    "text": "話說回來，并州我人生地不熟的，\n現在前去叩門，未免倉促。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "話說回來，并州我人生地不熟的，\n現在前去叩門，未免倉促。",
+    "zh_CN": "话说回来，并州我人生地不熟的，\n现在前去叩门，未免仓促。",
+    "links": [366]
+  },
+  {
+    "entryID": 366,
+    "actorID": "MC1",
+    "text": "有了！怎麼就忘了，我還有王牌小犀。\n先到她那蹭上一頓飯，我記得她是住在[em2]晉陽[/em2]吧。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Script": "SetQuestState(\"MS02\", \"success\");\nSetQuestEntryState(\"MS02\", 1, \"success\");\nSetQuestState(\"MS03\", \"active\");\nSetQuestEntryState(\"MS03\", 1, \"active\")",
+    "Description": "變數更新",
+    "zh_TW": "有了！怎麼就忘了，我還有王牌小犀。\n先到她那蹭上一頓飯，我記得她是住在[em2]晉陽[/em2]吧。",
+    "zh_CN": "有了！怎么就忘了，我还有王牌小犀。 \n先到她那蹭上一顿饭，我记得她是住在[em2]晋阳[/em2]吧。",
+    "links": []
+  },
+  {
+    "entryID": 370,
+    "actorID": "MC1",
+    "text": "嗚……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nDisableAllCharacterExpression();",
+    "zh_TW": "嗚……",
+    "zh_CN": "呜……",
+    "links": [359]
+  },
+  {
+    "entryID": 371,
+    "actorID": "MC1",
+    "text": "唔呃……就算我說錯話，也不至於吧……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Pain);",
+    "zh_TW": "唔呃……就算我說錯話，也不至於吧……",
+    "zh_CN": "唔呃……就算我说错话，也不至于吧……",
+    "links": [372]
+  },
+  {
+    "entryID": 372,
+    "actorID": "MC6",
+    "text": "言者無心，聽者有意。不過算了，\n這年頭肯出頭的傻子不多了，不跟你計較就是。",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nDisableAllCharacterExpression();",
+    "zh_TW": "言者無心，聽者有意。不過算了，\n這年頭肯出頭的傻子不多了，不跟你計較就是。",
+    "zh_CN": "言者无心，听者有意。不过算了，\n这年头肯出头的傻子不多了，不跟你计较就是。",
+    "links": [321]
+  },
+  {
+    "entryID": 373,
+    "actorID": "MC1",
+    "text": "我說我說，手下留情！\n此骰名喚麒麟骰，是我母留給我的上古奇物。",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "zh_TW": "我說我說，手下留情！\n此骰名喚麒麟骰，是我母留給我的上古奇物。",
+    "zh_CN": "我说我说，手下留情！ \n此骰名唤麒麟骰，是我母留给我的上古奇物。",
+    "links": [374]
+  },
+  {
+    "entryID": 374,
+    "actorID": "MC6",
+    "text": "麒麟骰是嗎……\n所以發光是何故？",
+    "Sequence": "SetPortrait(MC6,pic=3);;\nDisableAllCharacterExpression();",
+    "zh_TW": "麒麟骰是嗎……\n所以發光是何故？",
+    "zh_CN": "麒麟骰是吗……\n所以发光是何故？",
+    "links": [375]
+  },
+  {
+    "entryID": 375,
+    "actorID": "MC1",
+    "text": "詳細我也說不清，\n妳就想成是蒼天指引吧。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "詳細我也說不清，\n妳就想成是蒼天指引吧。",
+    "zh_CN": "详细我也说不清，\n妳就想成是苍天指引吧。",
+    "links": [377]
+  },
+  {
+    "entryID": 376,
+    "actorID": "MC6",
+    "text": "[em2]麒麟為正，饕餮為凶，福禍相倚[/em2]……\n據悉上古奇門異術繁多，想必還另有玄妙吧？",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_TW": "[em2]麒麟為正，饕餮為凶，福禍相倚[/em2]……\n據悉上古奇門異術繁多，想必還另有玄妙吧？",
+    "zh_CN": "[em2]麒麟为正，饕餮为凶，福祸相倚[/em2]……\n据悉上古奇门异术繁多，想必还另有玄妙吧？",
+    "links": [380]
+  },
+  {
+    "entryID": 377,
+    "actorID": "MC1",
+    "text": "往日，但凡我走往正確道路，\n或將涉險犯錯，它都會藉此警示我。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "往日，但凡我走往正確道路，\n或將涉險犯錯，它都會藉此警示我。",
+    "zh_CN": "往日，但凡我走往正确道路，\n或将涉险犯错，它都会借此警示我。",
+    "links": [376]
+  },
+  {
+    "entryID": 380,
+    "actorID": "MC1",
+    "text": "……也沒那麼厲害，何時發光，由它擅自作主。\n我也就平日當尋常骰子用罷了。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "……也沒那麼厲害，何時發光，由它擅自作主。\n我也就平日當尋常骰子用罷了。",
+    "zh_CN": "……也没那么厉害，何时发光，由它擅自作主。 \n我也就平日当寻常骰子用罢了。",
+    "links": [382]
+  },
+  {
+    "entryID": 382,
+    "actorID": "MC6",
+    "text": "一個骰子還頗脾性的啊。\n所以你是想到英豪府借閱藏書，摸透此骰？",
+    "Sequence": "",
+    "zh_TW": "一個骰子還頗脾性的啊。\n所以你是想到英豪府借閱藏書，摸透此骰？",
+    "zh_CN": "一个骰子还颇脾性的啊。 \n所以你是想到英豪府借阅藏书，摸透此骰？",
+    "links": [389]
+  },
+  {
+    "entryID": 383,
+    "actorID": "MC1",
+    "text": "（……惡夢之事，\n想來她也不信，還是不提了……）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（……惡夢之事，\n想來她也不信，還是不提了……）",
+    "zh_CN": "（……恶梦之事，\n想来她也不信，还是不提了……）",
+    "links": [384]
+  },
+  {
+    "entryID": 384,
+    "actorID": "MC1",
+    "text": "也全非如此，素聞英豪府誅怪為志，\n這等濟世俠義，我嚮往已久。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "也全非如此，素聞英豪府誅怪為志，\n這等濟世俠義，我嚮往已久。",
+    "zh_CN": "也全非如此，素闻英豪府诛怪为志，\n这等济世侠义，我向往已久。",
+    "links": [385]
+  },
+  {
+    "entryID": 385,
+    "actorID": "MC6",
+    "text": "俠義為志？呵，傻人真有傻福。\n也罷，這金創藥你拿去，用不上賣了換錢也行。",
+    "Sequence": "",
+    "Description": "獲得道具",
+    "zh_TW": "俠義為志？呵，傻人真有傻福。\n也罷，這金創藥你拿去，用不上賣了換錢也行。",
+    "zh_CN": "侠义为志？呵，傻人真有傻福。 \n也罢，这金创药你拿去，用不上卖了换钱也行。",
+    "links": [316]
+  },
+  {
+    "entryID": 386,
+    "actorID": "MC6",
+    "text": "我是不喜歡欠人情，\n也沒興趣替人收屍罷了。",
+    "Sequence": "SetPortrait(MC6,pic=3);;\nDisableAllCharacterExpression();",
+    "zh_TW": "我是不喜歡欠人情，\n也沒興趣替人收屍罷了。",
+    "zh_CN": "我是不喜欢欠人情，\n也没兴趣替人收尸罢了。",
+    "links": [387]
+  },
+  {
+    "entryID": 387,
+    "actorID": "MC1",
+    "text": "（就是找到機會非損我不可嗎……\n真是一點都不可愛的姑娘……）",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "（就是找到機會非損我不可嗎……\n真是一點都不可愛的姑娘……）",
+    "zh_CN": "（就是找到机会非损我不可吗……\n真是一点都不可爱的姑娘……）",
+    "links": [388]
+  },
+  {
+    "entryID": 388,
+    "actorID": "MC1",
+    "text": "那就謝過姑娘。\n叨擾甚久，我先告辭了。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "那就謝過姑娘。\n叨擾甚久，我先告辭了。",
+    "zh_CN": "那就谢过姑娘。 \n叨扰甚久，我先告辞了。",
+    "links": [361]
+  },
+  {
+    "entryID": 389,
+    "actorID": "MC1",
+    "text": "那可不是，指引我往英豪府的，也是此骰。",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "那可不是，指引我往英豪府的，也是此骰。",
+    "zh_CN": "那可不是，指引我往英豪府的，也是此骰。",
+    "links": [390]
+  },
+  {
+    "entryID": 390,
+    "actorID": "MC6",
+    "text": "也是此骰……\n難道你一切決定，都這樣任由它牽著鼻子走？",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_TW": "也是此骰……\n難道你一切決定，都這樣任由它牽著鼻子走？",
+    "zh_CN": "也是此骰……\n难道你一切决定，都这样任由它牵着鼻子走？",
+    "links": [383]
+  },
+  {
+    "entryID": 391,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nContinue();",
+    "links": [305, 306]
+  }
+]

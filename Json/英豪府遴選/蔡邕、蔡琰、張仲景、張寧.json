@@ -1,0 +1,446 @@
+[
+  {
+    "entryID": 41,
+    "actorID": "role2",
+    "text": "[panel=6]＊（書房內只見兩位氣質迥異的中年男子正相對而坐，品茗對弈。其中一位，正是自小溪村一別後、許久未見——張仲景。而在他們身旁，兩名少女正湊在一塊兒，興致勃勃地嘰嘰喳喳說個不停。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（書房內只見兩位氣質迥異的中年男子正相對而坐，品茗對弈。其中一位，正是自小溪村一別後、許久未見——張仲景。而在他們身旁，兩名少女正湊在一塊兒，興致勃勃地嘰嘰喳喳說個不停。）＊",
+    "zh_CN": "[panel=6]＊（书房内只见两位气质迥异的中年男子正相对而坐，品茗对弈。其中一位，正是自小溪村一别后、许久未见——张仲景。而在他们身旁，两名少女正凑在一块儿，兴致勃勃地叽叽喳喳说个不停。）＊",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「大叔？！你怎麼會在這裡？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_CN": "「大叔？！你怎么会在这里？」",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC13",
+    "text": "「喲，這不是我們家那命大的小子嗎？怎麼，這遴選大會，你也來湊熱鬧了？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC13,pic=1);",
+    "zh_CN": "「哟，这不是我们家那命大的小子吗？怎么，这遴选大会，你也来凑热闹了？」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「大叔，自從小溪村一別，您救了我一命又傳我長生功，我一直想找機會好好謝謝您……師傅！」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「大叔，自从小溪村一别，您救了我一命又传我长生功，我一直想找机会好好谢谢您……师傅！」",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC13",
+    "text": "「停停停！打住！我說過多少次了，別叫我師傅！我這人最怕麻煩，收個徒弟還得天天管著，多累人啊。我教你那點吐納功夫，不過是看你被那黑血屍撓得太慘，順手拉你一把罷了。叫大叔就行！」",
+    "Sequence": "SetPortrait(MC13,pic=3);",
+    "zh_CN": "「停停停！打住！我说过多少次了，别叫我师傅！我这人最怕麻烦，收个徒弟还得天天管着，多累人啊。我教你那点吐纳功夫，不过是看你被那黑血尸挠得太惨，顺手拉你一把罢了。叫大叔就行！」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC6",
+    "text": "「原來你就是那個在小溪村差點被黑血屍啃了的笨蛋？我還以為是哪個命硬的傢伙，原來是你。」",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_CN": "「原来你就是那个在小溪村差点被黑血尸啃了的笨蛋？我还以为是哪个命硬的家伙，原来是你。」",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「張寧姑娘？你怎麼也在這？」",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「张宁姑娘？你怎么也在这？」",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC13",
+    "text": "「咦？你們兩個小傢伙居然認識？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC13,pic=1);",
+    "zh_CN": "「咦？你们两个小家伙居然认识？」",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC6",
+    "text": "「能不認識嗎？某個心懷天下的大忙人，把我一個人丟去小溪村後山採藥！要不是這笨蛋突然衝出來幫忙，雖然最後還是暈過去了，我差點就被那群屍鬼給生吞了！」",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_CN": "「能不认识吗？某个心怀天下的大忙人，把我一个人丢去小溪村后山采药！要不是这笨蛋突然冲出来帮忙，虽然最后还是晕过去了，我差点就被那群尸鬼给生吞了！」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC13",
+    "text": "「哦？英雄救美啊？小子，你該不會是看上我家這丫頭了吧？」",
+    "Sequence": "SetPortrait(MC13,pic=5);",
+    "zh_CN": "「哦？英雄救美啊？小子，你该不会是看上我家这丫头了吧？」",
+    "links": [52, 57]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "[em2][調情檢定][/em2]「大叔說笑了，不過張寧姑娘確實讓人敬佩。」",
+    "Sequence": "",
+    "zh_CN": "[em2][调情检定][/em2]「大叔说笑了，不过张宁姑娘确实让人敬佩。」",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,10);",
+    "links": [2053]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「張寧姑娘醫術高明又生得好看，當時在後山那驚鴻一瞥，確實讓我難以忘懷啊。」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「张宁姑娘医术高明又生得好看，当时在后山那惊鸿一瞥，确实让我难以忘怀啊。」",
+    "links": [56]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC6",
+    "text": "「……油嘴滑舌！我看你當時是被屍鬼嚇傻了，連東南西北都分不清了吧。再胡說八道，我就給你配一副啞藥！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Flirting,10);\nSetPortrait(MC6,pic=5);;\nModifyData(FavorabilityExp,MC6,20);",
+    "Description": "好感增加",
+    "zh_CN": "「……油嘴滑舌！我看你当时是被尸鬼吓傻了，连东南西北都分不清了吧。再胡说八道，我就给你配一副哑药！」",
+    "links": [60]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC6",
+    "text": "「你的腦子是被黑血屍啃乾淨了嗎？就你那點三腳貓功夫，連自己都護不住，還想學人油腔滑調？省省吧。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=2);;",
+    "zh_CN": "「你的脑子是被黑血尸啃干净了吗？就你那点三脚猫功夫，连自己都护不住，还想学人油腔滑调？省省吧。」",
+    "links": [60]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「大叔別開玩笑！我只是路見不平。」",
+    "Sequence": "",
+    "zh_CN": "「大叔别开玩笑！我只是路见不平。」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「大叔你別亂開玩笑！當時情況危急，我只是路見不平拔刀相助而已！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_CN": "「大叔你别乱开玩笑！当时情况危急，我只是路见不平拔刀相助而已！」",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC6",
+    "text": "「算你有自知之明。就你當時那副慘狀，誰看了都覺得是個累贅。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=1);;",
+    "zh_CN": "「算你有自知之明。就你当时那副惨状，谁看了都觉得是个累赘。」",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「不過，真是讓人訝異，她、她是大叔你的女兒？！」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "zh_CN": "「不过，真是让人讶异，她、她是大叔你的女儿？！」",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC6",
+    "text": "「很不幸，這就是事實。我也很希望自己沒有這種把親生女兒丟在荒山野嶺的爹。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=2);;",
+    "zh_CN": "「很不幸，这就是事实。我也很希望自己没有这种把亲生女儿丢在荒山野岭的爹。」",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC13",
+    "text": "「咳，寧兒啊，有外人在呢，好歹給爹留點面子。爹那不是為了鍛鍊你的實戰經驗嗎？再說了，爹可是把畢生心血的醫書都傳授給你了。」",
+    "Sequence": "SetPortrait(MC13,pic=3);",
+    "zh_CN": "「咳，宁儿啊，有外人在呢，好歹给爹留点面子。爹那不是为了锻炼你的实战经验吗？再说了，爹可是把毕生心血的医书都传授给你了。」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC6",
+    "text": "「是啊。要不是我靠著在流離區給人治病積攢了點實力，好不容易才進了這英豪府當藥師，你現在大概只能對著我的牌位唸你的醫經了。」",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_CN": "「是啊。要不是我靠着在流离区给人治病积攒了点实力，好不容易才进了这英豪府当药师，你现在大概只能对着我的牌位念你的医经了。」",
+    "links": [64, 75]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC24",
+    "text": "[panel=2]「哈哈哈！仲景老弟，看來你這身醫術傳沒傳下去不好說，但這張不饒人的利嘴，令嬡倒是青出於藍啊！」",
+    "Sequence": "SetPortrait(MC24,pic=2);",
+    "Conditions": "CurrentQuestState(\"CF17\") == \"success\"",
+    "zh_CN": "[panel=2]「哈哈哈！仲景老弟，看来你这身医术传没传下去不好说，但这张不饶人的利嘴，令嫒倒是青出于蓝啊！」",
+    "links": [4084]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「蔡先生，琰妹妹，沒想到你們也在這裡。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「蔡先生，琰妹妹，没想到你们也在这里。」",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC23",
+    "text": "[panel=2]「大哥哥！你來啦！我正聽寧兒姐姐講這藥理呢，原來這草藥的君臣佐使，跟音律的宮商角徵羽一樣有趣！」",
+    "Sequence": "SetPortrait(MC23,pic=3);",
+    "zh_CN": "[panel=2]「大哥哥！你来啦！我正听宁儿姐姐讲这药理呢，原来这草药的君臣佐使，跟音律的宫商角征羽一样有趣！」",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC6",
+    "text": "「這丫頭確實聰慧，我不過隨口提了幾句毒理與藥性，她竟能舉一反三，過目不忘。」",
+    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "zh_CN": "「这丫头确实聪慧，我不过随口提了几句毒理与药性，她竟能举一反三，过目不忘。」",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC24",
+    "text": "「哼，聰慧有餘，定性不足！若是她能把這份心思用在研讀經史典籍上，我也不至於天天被她氣得頭疼。這丫頭就是三分鐘熱度，明日指不定又跑去搗鼓什麼機關木甲了。」",
+    "Sequence": "SetPortrait(MC24,pic=1);",
+    "zh_CN": "「哼，聪慧有余，定性不足！若是她能把这份心思用在研读经史典籍上，我也不至于天天被她气得头疼。这丫头就是三分钟热度，明日指不定又跑去捣鼓什么机关木甲了。」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC23",
+    "text": "[panel=2]「略略略！那些經史子集無聊死了，哪有寧兒姐姐的毒藥好玩！爹爹就是個老頑固！」",
+    "Sequence": "SetPortrait(MC24,pic=4);\nSetPortrait(MC23,pic=2);",
+    "zh_CN": "[panel=2]「略略略！那些经史子集无聊死了，哪有宁儿姐姐的毒药好玩！爹爹就是个老顽固！」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC13",
+    "text": "「哈哈哈！伯喈兄，你這寶貝女兒的脾性，倒是對我的胃口。我們這兩個做長輩的，今天難得在這英豪府碰上一面，倒讓這些小輩看了笑話。」",
+    "Sequence": "SetPortrait(MC13,pic=5);\nSetPortrait(MC24,pic=4);",
+    "zh_CN": "「哈哈哈！伯喈兄，你这宝贝女儿的脾性，倒是对我的胃口。我们这两个做长辈的，今天难得在这英豪府碰上一面，倒让这些小辈看了笑话。」",
+    "links": [71, 83]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC24",
+    "text": "[panel=2]「[em3][你救下了李大山][/em3]說起來，你能在那種險境下為了救一個素不相識的礦工，果斷擊碎邪像，並硬生生承受住那股詭異黑氣的反噬。這份實力與決斷，確實令人刮目相看。」",
+    "Sequence": "SetPortrait(MC24,pic=3);\nModifyData(FavorabilityExp,MC24,20);",
+    "Conditions": "CurrentQuestEntryState(\"CF16\", 3) == \"success\"",
+    "Description": "好感提升",
+    "zh_CN": "[panel=2]「[em3][你救下了李大山][/em3]说起来，你能在那种险境下为了救一个素不相识的矿工，果断击碎邪像，并硬生生承受住那股诡异黑气的反噬。这份实力与决断，确实令人刮目相看。」",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC13",
+    "text": "「哦？還有這等事？為了救人硬扛邪氣反噬？呵呵，小子，雖然行事莽撞了些，但這份捨己救人的仁心，倒是不枉我當初在小溪村救你一命。」",
+    "Sequence": "SetPortrait(MC13,pic=4);\nModifyData(FavorabilityExp,MC13,100);",
+    "Description": "好感提升",
+    "zh_CN": "「哦？还有这等事？为了救人硬扛邪气反噬？呵呵，小子，虽然行事莽撞了些，但这份舍己救人的仁心，倒是不枉我当初在小溪村救你一命。」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC6",
+    "text": "「硬扛邪氣？你這笨蛋是嫌自己命太長了嗎？這種以命換命的救人方式愚蠢至極！不過……作為一個醫者，我並不討厭你這種笨蛋。算你還有些良心。」",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nModifyData(FavorabilityExp,MC6,20);",
+    "Description": "好感提升",
+    "zh_CN": "「硬扛邪气？你这笨蛋是嫌自己命太长了吗？这种以命换命的救人方式愚蠢至极！不过……作为一个医者，我并不讨厌你这种笨蛋。算你还有些良心。」",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「當時情況緊急，我也沒想那麼多，總不能見死不救吧。」",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Shy);",
+    "zh_CN": "「当时情况紧急，我也没想那么多，总不能见死不救吧。」",
+    "links": [83]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC24",
+    "text": "[panel=2]「哦？這位就是你常提起的那位，身具奇異命格的小友？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC24,pic=3);",
+    "zh_CN": "[panel=2]「哦？这位就是你常提起的那位，身具奇异命格的小友？」",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC13",
+    "text": "「正是。小子，過來見過蔡伯喈先生。他可是當今天下無所不知的奇人，精通經史子集、機關算術，脾氣嘛……跟我一樣古怪。」",
+    "Sequence": "SetPortrait(MC13,pic=3);",
+    "zh_CN": "「正是。小子，过来见过蔡伯喈先生。他可是当今天下无所不知的奇人，精通经史子集、机关算术，脾气嘛……跟我一样古怪。」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC1",
+    "text": "「晚輩見過蔡先生。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「晚辈见过蔡先生。」",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC24",
+    "text": "「哦，能讓他看上眼的人，倒是不多。我乃蔡邕，這是我女兒蔡琰。」",
+    "Sequence": "SetPortrait(MC24,pic=1);",
+    "zh_CN": "「哦，能让他看上眼的人，倒是不多。我乃蔡邕，这是我女儿蔡琰。」",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC23",
+    "text": "「大哥哥好！我叫蔡琰。你就是寧兒姐姐口中那個笨蛋嗎？」",
+    "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_CN": "「大哥哥好！我叫蔡琰。你就是宁儿姐姐口中那个笨蛋吗？」",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC1",
+    "text": "「呃……算是吧。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_CN": "「呃……算是吧。」",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC13",
+    "text": "「好了小子，敘舊就到這吧。遴選大會可不是鬧著玩的，英豪府裡藏龍臥虎。你可別給我丟臉，活著出來，大叔請你喝酒！」",
+    "Sequence": "SetPortrait(MC13,pic=5);",
+    "zh_CN": "「好了小子，叙旧就到这吧。遴选大会可不是闹着玩的，英豪府里藏龙卧虎。你可别给我丢脸，活着出来，大叔请你喝酒！」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC1",
+    "text": "「多謝張寧姑娘，多謝大叔，還有蔡先生、琰妹妹。我會小心的！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Script": "SetQuestEntryState(\"C1M1\", 7, \"success\")",
+    "Description": "任務更新",
+    "zh_CN": "「多谢张宁姑娘，多谢大叔，还有蔡先生、琰妹妹。我会小心的！」",
+    "links": []
+  },
+  {
+    "entryID": 2051,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "大的房間(強制觸發)",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [41]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC1",
+    "text": "「大叔別拿我尋開心了。不過說實話，雖然張寧姑娘嘴巴毒了點，但那份為了救人敢獨闖後山的膽識，確實讓我十分敬佩……」",
+    "Sequence": "SetPortrait(MC1,pic=15);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "「大叔別拿我尋開心了。不過說實話，雖然張寧姑娘嘴巴毒了點，但那份為了救人敢獨闖後山的膽識，確實讓我十分敬佩……」",
+    "zh_CN": "「大叔别拿我寻开心了。不过说实话，虽然张宁姑娘嘴巴毒了点，但那份为了救人敢独闯后山的胆识，确实让我十分敬佩……」",
+    "links": [55]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2052, 54]
+  },
+  {
+    "entryID": 4084,
+    "actorID": "MC24",
+    "text": "「少俠，我們又見面了。」",
+    "Sequence": "SetPortrait(MC24,pic=1);",
+    "zh_CN": "「少侠，我们又见面了。」",
+    "links": [65]
+  },
+  {
+    "entryID": 4087,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "蔡邕",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4088]
+  },
+  {
+    "entryID": 4088,
+    "actorID": "MC24",
+    "text": "「遴選凶險，切記戒驕戒躁。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC24,pic=3);",
+    "zh_CN": "「遴选凶险，切记戒骄戒躁。」",
+    "links": []
+  },
+  {
+    "entryID": 4090,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "蔡琰",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4091]
+  },
+  {
+    "entryID": 4091,
+    "actorID": "MC23",
+    "text": "「大哥哥加油！之後記得來竹林找我玩！」",
+    "Sequence": "",
+    "zh_CN": "「大哥哥加油！之后记得来竹林找我玩！」",
+    "links": []
+  },
+  {
+    "entryID": 4093,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "張仲景",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4094]
+  },
+  {
+    "entryID": 4094,
+    "actorID": "MC13",
+    "text": "「去吧去吧。大叔我還得再跟這老古板殺上幾盤。」",
+    "Sequence": "SetPortrait(MC13,pic=5);\nSetPortrait(MC24,pic=4);",
+    "zh_CN": "「去吧去吧。大叔我还得再跟这老古板杀上几盘。」",
+    "links": []
+  },
+  {
+    "entryID": 4095,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "張寧",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4096]
+  },
+  {
+    "entryID": 4096,
+    "actorID": "MC6",
+    "text": "「自己小心注意些，我可不想再費神去救你第二次。」",
+    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "zh_CN": "「自己小心注意些，我可不想再费神去救你第二次。」",
+    "links": []
+  }
+]

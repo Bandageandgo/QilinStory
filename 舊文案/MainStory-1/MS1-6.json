@@ -1,0 +1,221 @@
+[
+  {
+    "entryID": 397,
+    "actorID": "role2",
+    "text": "[panel=5]──歷經艱險，\n你們成功救出大秦傭兵。",
+    "Sequence": "",
+    "Description": "變數分歧",
+    "zh_TW": "[panel=5]──歷經艱險，\n你們成功救出大秦傭兵。",
+    "zh_CN": "[panel=5]──历经艰险，\n你们成功救出大秦佣兵。",
+    "links": [405]
+  },
+  {
+    "entryID": 405,
+    "actorID": "role35",
+    "text": "太好了，你們眾人都沒事。",
+    "Sequence": "SetPortrait(role35,pic=1);",
+    "zh_TW": "太好了，你們眾人都沒事。",
+    "zh_CN": "太好了，你们众人都没事。",
+    "links": [406]
+  },
+  {
+    "entryID": 406,
+    "actorID": "role37",
+    "text": "[panel=2]哈哈！真是可惜，隊長妳來早了。\n我們都準備好大戰一場，到地府見老隊長。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]哈哈！真是可惜，隊長妳來早了。\n我們都準備好大戰一場，到地府見老隊長。",
+    "zh_CN": "[panel=2]哈哈！真是可惜，队长妳来早了。 \n我们都准备好大战一场，到地府见老队长。",
+    "links": [407]
+  },
+  {
+    "entryID": 407,
+    "actorID": "role35",
+    "text": "想得美呢，有張大夫在這，\n你們誰都別想走，都給我去她那報到！",
+    "Sequence": "",
+    "zh_TW": "想得美呢，有張大夫在這，\n你們誰都別想走，都給我去她那報到！",
+    "zh_CN": "想得美呢，有张大夫在这，\n你们谁都别想走，都给我去她那报到！",
+    "links": [408]
+  },
+  {
+    "entryID": 408,
+    "actorID": "MC1",
+    "text": "看起來他們的狀況都還不錯。",
+    "Sequence": "OpenPanel(2, close);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "看起來他們的狀況都還不錯。",
+    "zh_CN": "看起来他们的状况都还不错。",
+    "links": [409]
+  },
+  {
+    "entryID": 409,
+    "actorID": "role35",
+    "text": "幸虧來得及時……",
+    "Sequence": "",
+    "zh_TW": "幸虧來得及時……",
+    "zh_CN": "幸亏来得及时……",
+    "links": [426]
+  },
+  {
+    "entryID": 426,
+    "actorID": "role2",
+    "text": "[panel=5]這時，斯蒂娜解下了配劍遞給你。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這時，斯蒂娜解下了配劍遞給你。",
+    "zh_CN": "[panel=5]这时，斯蒂娜解下了配剑递给你。",
+    "links": [427]
+  },
+  {
+    "entryID": 427,
+    "actorID": "role35",
+    "text": "這把劍雖舊，但隨爹征戰多年，\n也算歷經淬鍊的上乘寶劍。",
+    "Sequence": "SetPortrait(role35,pic=2);",
+    "zh_TW": "這把劍雖舊，但隨爹征戰多年，\n也算歷經淬鍊的上乘寶劍。",
+    "zh_CN": "这把剑虽旧，但随爹征战多年，\n也算历经淬链的上乘宝剑。",
+    "links": [428]
+  },
+  {
+    "entryID": 428,
+    "actorID": "MC1",
+    "text": "這！這太貴重了，我不能收下。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "這！這太貴重了，我不能收下。",
+    "zh_CN": "这！这太贵重了，我不能收下。",
+    "links": [429]
+  },
+  {
+    "entryID": 429,
+    "actorID": "role35",
+    "text": "你想多了，如今我最貴重的寶物──",
+    "Sequence": "SetPortrait(role35,pic=1);\nDisableAllCharacterExpression();",
+    "zh_TW": "你想多了，如今我最貴重的寶物──",
+    "zh_CN": "你想多了，如今我最贵重的宝物──",
+    "links": [442]
+  },
+  {
+    "entryID": 430,
+    "actorID": "role35",
+    "text": "是他們。",
+    "Sequence": "",
+    "zh_TW": "是他們。",
+    "zh_CN": "是他们。",
+    "links": [431]
+  },
+  {
+    "entryID": 431,
+    "actorID": "MC1",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [432]
+  },
+  {
+    "entryID": 432,
+    "actorID": "MC1",
+    "text": "我了解了，我會好好珍惜這口劍。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Description": "獲得貴重品",
+    "zh_TW": "我了解了，我會好好珍惜這口劍。",
+    "zh_CN": "我了解了，我会好好珍惜这口剑。",
+    "links": [433]
+  },
+  {
+    "entryID": 433,
+    "actorID": "role4",
+    "text": "吼──吼──吼──",
+    "Sequence": "EnableCharacterExpression(1,Monster,Anger_3);\nSetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──吼──吼──",
+    "zh_CN": "吼──吼──吼──",
+    "links": [434]
+  },
+  {
+    "entryID": 434,
+    "actorID": "MC1",
+    "text": "還有怪物嗎？真是沒完沒了……\n快去叫大家！趁牠們還沒追來，離開這。",
+    "Sequence": "DisableAllCharacterExpression();\nSetPortrait(MC1,pic=6);",
+    "zh_TW": "還有怪物嗎？真是沒完沒了……\n快去叫大家！趁牠們還沒追來，離開這。",
+    "zh_CN": "还有怪物吗？真是没完没了……\n快去叫大家！趁它们还没追来，离开这。",
+    "links": []
+  },
+  {
+    "entryID": 435,
+    "actorID": "role2",
+    "text": "[panel=5]──歷經苦戰，\n你們總算擊退怪物，救出大秦傭兵，但……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "Description": "變數分歧",
+    "zh_TW": "[panel=5]──歷經苦戰，\n你們總算擊退怪物，救出大秦傭兵，但……",
+    "zh_CN": "[panel=5]──历经苦战，\n你们总算击退怪物，救出大秦佣兵，但……",
+    "links": [436]
+  },
+  {
+    "entryID": 436,
+    "actorID": "role37",
+    "text": "唔……隊長……妳果然找到援兵回來……\n抱歉……沒能守好防線……我們實在太餓……",
+    "Sequence": "",
+    "zh_TW": "唔……隊長……妳果然找到援兵回來……\n抱歉……沒能守好防線……我們實在太餓……",
+    "zh_CN": "唔……队长……妳果然找到援兵回来……\n抱歉……没能守好防线……我们实在太饿……",
+    "links": [437]
+  },
+  {
+    "entryID": 437,
+    "actorID": "role35",
+    "text": "[panel=2]別這樣說，你們都盡力了，\n你們快去給張寧治療。",
+    "Sequence": "SetPortrait(role35,pic=4);",
+    "zh_TW": "[panel=2]別這樣說，你們都盡力了，\n你們快去給張寧治療。",
+    "zh_CN": "[panel=2]别这样说，你们都尽力了，\n你们快去给张宁治疗。",
+    "links": [438]
+  },
+  {
+    "entryID": 438,
+    "actorID": "MC1",
+    "text": "抱歉，若我們能再早一點趕到……",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=9);",
+    "zh_TW": "抱歉，若我們能再早一點趕到……",
+    "zh_CN": "抱歉，若我们能再早一点赶到……",
+    "links": [439]
+  },
+  {
+    "entryID": 439,
+    "actorID": "role35",
+    "text": "[panel=2]千萬別這樣想，\n若沒你們，情況就不只如此。",
+    "Sequence": "SetPortrait(role35,pic=3);",
+    "zh_TW": "[panel=2]千萬別這樣想，\n若沒你們，情況就不只如此。",
+    "zh_CN": "[panel=2]千万别这样想，\n若没你们，情况就不只如此。",
+    "links": [443]
+  },
+  {
+    "entryID": 440,
+    "actorID": "role4",
+    "text": "吼──吼──吼──",
+    "Sequence": "EnableCharacterExpression(1,Monster,Anger_3);\nSetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──吼──吼──",
+    "zh_CN": "吼──吼──吼──",
+    "links": [441]
+  },
+  {
+    "entryID": 441,
+    "actorID": "MC1",
+    "text": "嘖！還有怪物嗎……沒時間逗留了，\n快叫大家起來，盡力離開這。",
+    "Sequence": "DisableAllCharacterExpression();\nSetPortrait(MC1,pic=4);",
+    "zh_TW": "嘖！還有怪物嗎……沒時間逗留了，\n快叫大家起來，盡力離開這。",
+    "zh_CN": "啧！还有怪物吗……没时间逗留了，\n快叫大家起来，尽力离开这。",
+    "links": []
+  },
+  {
+    "entryID": 442,
+    "actorID": "role2",
+    "text": "[panel=5]斯蒂娜望向大秦傭兵。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]斯蒂娜望向大秦傭兵。",
+    "zh_CN": "[panel=5]斯蒂娜望向大秦佣兵。",
+    "links": [430]
+  },
+  {
+    "entryID": 443,
+    "actorID": "role35",
+    "text": "[panel=2]真要怪，一切只怪是我個隊長失職……",
+    "Sequence": "",
+    "zh_TW": "[panel=2]真要怪，一切只怪是我個隊長失職……",
+    "zh_CN": "[panel=2]真要怪，一切只怪是我个队长失职……",
+    "links": [440]
+  }
+]

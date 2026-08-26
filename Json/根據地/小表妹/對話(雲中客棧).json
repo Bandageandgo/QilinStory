@@ -1,0 +1,559 @@
+[
+  {
+    "entryID": 189,
+    "actorID": "MC8",
+    "text": "「表哥你看！這新登記的青蛙好漢，能夠跟二郎先生討賞囉！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
+    "Conditions": "CurrentQuestEntryState(\"CF36\", 2) == \"active\" and (Variable[\"FrogCounting\"] >= 2)",
+    "Description": "兌換青蛙獎勵1",
+    "zh_CN": "「表哥你看！这新登记的青蛙好汉，能够跟二郎先生讨赏啰！」",
+    "links": [190]
+  },
+  {
+    "entryID": 190,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音剛落，窗台上「噗通」一聲，跳上來一隻體型較小、頸上掛著小布袋的小青蛙。牠把布袋一卸，朝蕭靈犀「呱呱」叫了兩聲，便又跳走了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（话音刚落，窗台上「噗通」一声，跳上来一只体型较小、颈上挂着小布袋的小青蛙。它把布袋一卸，朝萧灵犀「呱呱」叫了两声，便又跳走了。）＊",
+    "links": [191]
+  },
+  {
+    "entryID": 191,
+    "actorID": "MC8",
+    "text": "「來啦來啦～這是二郎先生送來的賞錢，表哥拿好！」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nModifyData(Coin,200);\nAudioControl(PlaySFXOneShot,Others_GetCoin);",
+    "Description": "給獎勵",
+    "zh_CN": "「来啦来啦～这是二郎先生送来的赏钱，表哥拿好！」",
+    "links": [192]
+  },
+  {
+    "entryID": 192,
+    "actorID": "MC8",
+    "text": "「他還捎了一條江湖祕聞給我們——[em2]說是小溪村本來有三個好釣點，可如今都被河妖們給霸佔了，村裡誰也不敢靠近呢！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「他还捎了一条江湖秘闻给我们——[em2]说是小溪村本来有三个好钓点，可如今都被河妖们给霸占了，村里谁也不敢靠近呢！[/em2]」",
+    "links": [193]
+  },
+  {
+    "entryID": 193,
+    "actorID": "MC8",
+    "text": "「河妖耶——表哥你聽聽，說不定他們藏著好多寶貝呢！等我們有空，就一起去瞧瞧嘛～」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"CF36\", 2, \"success\");\nSetQuestEntryState(\"CF36\", 3, \"active\")",
+    "Description": "任務更新",
+    "zh_CN": "「河妖耶——表哥你听听，说不定他们藏着好多宝贝呢！等我们有空，就一起去瞧瞧嘛～」",
+    "links": [249]
+  },
+  {
+    "entryID": 209,
+    "actorID": "MC8",
+    "text": "「表哥表哥～這英豪府也太豪氣了吧！免費的房間、免費的飯菜，飯菜還能吃到飽耶！人家恨不得多塞點在懷裡帶走呢～早知道英雄大會這麼晚開，咱們應該再早點出發來雲中才對嘛！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "Conditions": "Variable[\"SisterTalk2\"] == 0",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 1",
+    "zh_CN": "「表哥表哥～这英豪府也太豪气了吧！免费的房间、免费的饭菜，饭菜还能吃到饱耶！人家恨不得多塞点在怀里带走呢～早知道英雄大会这么晚开，咱们应该再早点出发来云中才对嘛！」",
+    "links": []
+  },
+  {
+    "entryID": 210,
+    "actorID": "MC8",
+    "text": "「表哥…你說奇不奇怪，那個賣糖炒栗子的老婆婆，怎麼好像走到哪都會出現呀？荒廢的礦坑深處那種地方根本不可能會有生意吧？她到底是賣給誰呀？該不會其實是…什麼神仙化的吧？」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "Conditions": "Variable[\"SisterTalk2\"] == 1",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 1",
+    "zh_CN": "「表哥…你说奇不奇怪，那个卖糖炒栗子的老婆婆，怎么好像走到哪都会出现呀？荒废的矿坑深处那种地方根本不可能会有生意吧？她到底是卖给谁呀？该不会其实是…什么神仙化的吧？」",
+    "links": []
+  },
+  {
+    "entryID": 211,
+    "actorID": "MC8",
+    "text": "「表哥…雲中的蒲元先生好古怪喔！他個子明明還沒表哥你高呢，但使那柄青銅大鎚時就跟搧扇子似的——」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"SisterTalk2\"] == 5",
+    "zh_CN": "「表哥…云中的蒲元先生好古怪喔！他个子明​​明还没表哥你高呢，但使那柄青铜大锤时就跟扇扇子似的——」",
+    "links": [250]
+  },
+  {
+    "entryID": 212,
+    "actorID": "MC8",
+    "text": "「那個叫蔡琰的女孩，跟人家年紀差不多耶。她會彈琴、又能讀書，還那麼自由自在的…」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_CN": "「那个叫蔡琰的女孩，跟人家年纪差不多耶。她会弹琴、又能读书，还那么自由自在的…」",
+    "links": [251]
+  },
+  {
+    "entryID": 213,
+    "actorID": "MC8",
+    "text": "「那個蔡先生對女兒也太兇了吧！動不動就要她抄《水經》——人家光聽到名字就頭暈了！」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "zh_CN": "「那个蔡先生对女儿也太凶了吧！动不动就要她抄《水经》——人家光听到名字就头晕了！」",
+    "links": [252]
+  },
+  {
+    "entryID": 214,
+    "actorID": "MC8",
+    "text": "「表哥…街頭那個波斯的阿莎姐姐怪怪的，好像在找什麼特別的東西。你不會身上有吧？有的話咱們可得賣貴點喔！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "Conditions": "Variable[\"SisterTalk2\"] == 2",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 1",
+    "zh_CN": "「表哥…街头那个波斯的阿莎姐姐怪怪的，好像在找什么特别的东西。你不会身上有吧？有的话咱们可得卖贵点喔！」",
+    "links": []
+  },
+  {
+    "entryID": 215,
+    "actorID": "MC8",
+    "text": "「噗哈哈哈——表哥，那個頭上戴水桶、騎驢拿掃把的守衛真的好好笑喔！輸了還能找一堆藉口，什麼老驢打噴嚏、什麼水桶進沙子…要是把這幾條全記下來，下次表哥跟人家吵架輸了也能拿來用呢！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "Conditions": "Variable[\"SisterTalk2\"] == 3",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 1",
+    "zh_CN": "「噗哈哈哈——表哥，那个头上戴水桶、骑驴拿扫把的守卫真的好好笑喔！输了还能找一堆借口，什么老驴打喷嚏、什么水桶进沙子…要是把这几条全记下来，下次表哥跟人家吵架输了也能拿来用呢！」",
+    "links": []
+  },
+  {
+    "entryID": 216,
+    "actorID": "MC8",
+    "text": "「那個揹著巨刀的人好嚇人喔！他單手就拄著那比門板還大的刀耶！表哥…那種刀你揮得動嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=4);",
+    "Conditions": "Variable[\"SisterTalk2\"] == 4",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 1",
+    "zh_CN": "「那个背着巨刀的人好吓人喔！他单手就拄着那比门板还大的刀耶！表哥…那种刀你挥得动吗？」",
+    "links": []
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC8",
+    "text": "「咦？表哥又來找小犀啦～人家該說的都說完啦。你不如出去幫青蛙好漢再找幾位兄弟，順便帶點新鮮事回來嘛～」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "「咦？表哥又来找小犀啦～人家该说的都说完啦。你不如出去帮青蛙好汉再找几位兄弟，顺便带点新鲜事回来嘛～」",
+    "links": []
+  },
+  {
+    "entryID": 220,
+    "actorID": "MC8",
+    "text": "",
+    "Sequence": "SetPortrait(MC8,pic=1);\nContinue();",
+    "Description": "點蕭靈犀",
+    "links": [224, 253]
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC8",
+    "text": "「他這次捎來的祕聞更厲害呢——[em2]說是這有間客棧呀，從前住過一位旅人，動身去找傳說中仙人留下的祕境，卻一去不回。至今他的房間，還原封不動地留在客棧裡呢！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「他这次捎来的秘闻更厉害呢——[em2]说是这有间客栈呀，从前住过一位旅人，动身去找传说中仙人留下的秘境，却一去不回。至今他的房间，还原封不动地留在客栈里呢！[/em2]」",
+    "links": [222]
+  },
+  {
+    "entryID": 222,
+    "actorID": "MC8",
+    "text": "「仙人祕境耶——表哥你想想，那位旅人留下的房間裡，會不會還藏著什麼線索或寶貝呀～？」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"CF36\", 3, \"success\");\nSetQuestEntryState(\"CF36\", 4, \"active\");",
+    "Description": "任務更新",
+    "zh_CN": "「仙人秘境耶——表哥你想想，那位旅人留下的房间里，会不会还藏着什么线索或宝贝呀～？」",
+    "links": [249]
+  },
+  {
+    "entryID": 223,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "(雲中)",
+    "links": [209, 211, 210, 214, 215, 216, 219]
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC8",
+    "text": "「表哥！今天有什麼想法呢？」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "「表哥！今天有什麼想法呢？」",
+    "zh_CN": "「表哥！今天有什么想法呢？」",
+    "links": [248, 226, 227]
+  },
+  {
+    "entryID": 225,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [189, 228, 235, 240, 245, 232]
+  },
+  {
+    "entryID": 226,
+    "actorID": "MC1",
+    "text": "最近這有什麼新鮮事嗎？",
+    "Sequence": "",
+    "Description": "不能兌換獎勵時出現的日常對話",
+    "zh_TW": "最近這有什麼新鮮事嗎？",
+    "zh_CN": "最近这有什么新鲜事吗？",
+    "links": [223]
+  },
+  {
+    "entryID": 227,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 228,
+    "actorID": "MC8",
+    "text": "「表哥你看！這新登記的青蛙好漢，能夠跟二郎先生討賞囉！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
+    "Conditions": "Variable[\"FrogCounting\"] >= 3 and (CurrentQuestEntryState(\"CF36\", 3) == \"active\")",
+    "Description": "兌換青蛙獎勵2",
+    "zh_CN": "「表哥你看！这新登记的青蛙好汉，能够跟二郎先生讨赏啰！」",
+    "links": [229]
+  },
+  {
+    "entryID": 229,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音剛落，窗台上「噗通」一聲，跳上來一隻體型較小、頸上掛著小布袋的小青蛙。牠把布袋一卸，朝蕭靈犀「呱呱」叫了兩聲，便又跳走了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（话音刚落，窗台上「噗通」一声，跳上来一只体型较小、颈上挂着小布袋的小青蛙。它把布袋一卸，朝萧灵犀「呱呱」叫了两声，便又跳走了。）＊",
+    "links": [230]
+  },
+  {
+    "entryID": 230,
+    "actorID": "MC8",
+    "text": "「來啦來啦～這是二郎先生送來的賞錢，表哥拿好！」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nModifyData(Coin,200);\nAudioControl(PlaySFXOneShot,Others_GetCoin);",
+    "Description": "給獎勵",
+    "zh_CN": "「来啦来啦～这是二郎先生送来的赏钱，表哥拿好！」",
+    "links": [221]
+  },
+  {
+    "entryID": 232,
+    "actorID": "MC8",
+    "text": "「沒有了哦，暫時沒有新的消息囉。」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "「沒有了哦，暫時沒有新的消息囉。」",
+    "zh_CN": "「没有了哦，暂时没有新的消息啰。」",
+    "links": []
+  },
+  {
+    "entryID": 233,
+    "actorID": "MC8",
+    "text": "「[em2]聽說是翠影潭邊上有位釣者，日日垂竿、風雨不改，可那釣竿上頭從來不掛餌。[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「[em2]听说是翠影潭边上有位钓者，日日垂竿、风雨不改，可那钓竿上头从来不挂饵。[/em2]」",
+    "links": [234]
+  },
+  {
+    "entryID": 234,
+    "actorID": "MC8",
+    "text": "「不掛餌哪釣得到魚嘛～表哥你說，他到底是真的在釣魚，還是在釣什麼別的東西呀？聽起來好神祕喔，咱們找個機會也去翠影潭瞧瞧嘛～」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"CF36\", 4, \"success\");\nSetQuestEntryState(\"CF36\", 5, \"active\")",
+    "Description": "任務更新",
+    "zh_CN": "「不挂饵哪钓得到鱼嘛～表哥你说，他到底是真的在钓鱼，还是在钓什么别的东西呀？听起来好神秘喔，咱们找个机会也去翠影潭瞧瞧嘛～」",
+    "links": [249]
+  },
+  {
+    "entryID": 235,
+    "actorID": "MC8",
+    "text": "「表哥你看！這新登記的青蛙好漢，能夠跟二郎先生討賞囉！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
+    "Conditions": "Variable[\"FrogCounting\"] >= 5 and (CurrentQuestEntryState(\"CF36\", 4) == \"active\")",
+    "Description": "兌換青蛙獎勵3",
+    "zh_CN": "「表哥你看！这新登记的青蛙好汉，能够跟二郎先生讨赏啰！」",
+    "links": [236]
+  },
+  {
+    "entryID": 236,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音剛落，窗台上「噗通」一聲，跳上來一隻體型較小、頸上掛著小布袋的小青蛙。牠把布袋一卸，朝蕭靈犀「呱呱」叫了兩聲，便又跳走了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（话音刚落，窗台上「噗通」一声，跳上来一只体型较小、颈上挂着小布袋的小青蛙。它把布袋一卸，朝萧灵犀「呱呱」叫了两声，便又跳走了。）＊",
+    "links": [237]
+  },
+  {
+    "entryID": 237,
+    "actorID": "MC8",
+    "text": "「來啦來啦～這是二郎先生送來的賞錢，表哥拿好！」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nModifyData(Coin,400);\nAudioControl(PlaySFXOneShot,Others_GetCoin);",
+    "Description": "給獎勵",
+    "zh_CN": "「来啦来啦～这是二郎先生送来的赏钱，表哥拿好！」",
+    "links": [233]
+  },
+  {
+    "entryID": 238,
+    "actorID": "MC8",
+    "text": "「[em2]前些日子雲中大白天裡，有顆星石自九霄之外墜下，硬生生砸穿了一戶民房的屋瓦！整間屋子燒得焦黑，連石頭都還燙手呢！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「[em2]前些日子云中大白天里，有颗星石自九霄之外坠下，硬生生砸穿了一户民房的屋瓦！整间屋子烧得焦黑，连石头都还烫手呢！[/em2]」",
+    "links": [239]
+  },
+  {
+    "entryID": 239,
+    "actorID": "MC8",
+    "text": "「天上掉下來的石頭耶——表哥你說，會不會是天上的仙人不小心掉了寶貝下凡呀？要是給咱們撿到，可不就一夜暴富啦！」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"CF36\", 5, \"success\");\nSetQuestEntryState(\"CF36\", 6, \"active\")",
+    "Description": "任務更新",
+    "zh_CN": "「天上掉下来的石头耶——表哥你说，会不会是天上的仙人不小心掉了宝贝下凡呀？要是给咱们捡到，可不就一夜暴富啦！」",
+    "links": [249]
+  },
+  {
+    "entryID": 240,
+    "actorID": "MC8",
+    "text": "「表哥你看！這新登記的青蛙好漢，能夠跟二郎先生討賞囉！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
+    "Conditions": "Variable[\"FrogCounting\"] >= 8 and (CurrentQuestEntryState(\"CF36\", 5) == \"active\")",
+    "Description": "兌換青蛙獎勵4",
+    "zh_CN": "「表哥你看！这新登记的青蛙好汉，能够跟二郎先生讨赏啰！」",
+    "links": [241]
+  },
+  {
+    "entryID": 241,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音剛落，窗台上「噗通」一聲，跳上來一隻體型較小、頸上掛著小布袋的小青蛙。牠把布袋一卸，朝蕭靈犀「呱呱」叫了兩聲，便又跳走了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（话音刚落，窗台上「噗通」一声，跳上来一只体型较小、颈上挂着小布袋的小青蛙。它把布袋一卸，朝萧灵犀「呱呱」叫了两声，便又跳走了。）＊",
+    "links": [242]
+  },
+  {
+    "entryID": 242,
+    "actorID": "MC8",
+    "text": "「來啦來啦～這是二郎先生送來的賞錢，表哥拿好！」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nModifyData(Coin,600);\nAudioControl(PlaySFXOneShot,Others_GetCoin);",
+    "Description": "給獎勵",
+    "zh_CN": "「来啦来啦～这是二郎先生送来的赏钱，表哥拿好！」",
+    "links": [238]
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC8",
+    "text": "「[em2]這回的話人家也聽不太明白呢…好像是湧煙嶺深處內有乾坤，但那地方挺邪門的…進去的人，沒幾個能囫圇個兒出來……[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);",
+    "zh_CN": "「[em2]这回的话人家也听不太明白呢…好像是涌烟岭深处内有乾坤，但那地方挺邪门的…进去的人，没几个能囫囵个儿出来……[/em2]」",
+    "links": [244]
+  },
+  {
+    "entryID": 244,
+    "actorID": "MC8",
+    "text": "「表哥你說，那種地方到底是藏著天大的寶物，還是…天大的麻煩呀？」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"CF36\", 6, \"success\");\nSetQuestEntryState(\"CF36\", 7, \"active\")",
+    "Description": "任務更新",
+    "zh_CN": "「表哥你说，那种地方到底是藏着天大的宝物，还是…天大的麻烦呀？」",
+    "links": [249]
+  },
+  {
+    "entryID": 245,
+    "actorID": "MC8",
+    "text": "「表哥你看！這新登記的青蛙好漢，能夠跟二郎先生討賞囉！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
+    "Conditions": "Variable[\"FrogCounting\"] >= 10 and (CurrentQuestEntryState(\"CF36\", 6) == \"active\")",
+    "Description": "兌換青蛙獎勵5",
+    "zh_CN": "「表哥你看！这新登记的青蛙好汉，能够跟二郎先生讨赏啰！」",
+    "links": [246]
+  },
+  {
+    "entryID": 246,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音剛落，窗台上「噗通」一聲，跳上來一隻體型較小、頸上掛著小布袋的小青蛙。牠把布袋一卸，朝蕭靈犀「呱呱」叫了兩聲，便又跳走了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（话音刚落，窗台上「噗通」一声，跳上来一只体型较小、颈上挂着小布袋的小青蛙。它把布袋一卸，朝萧灵犀「呱呱」叫了两声，便又跳走了。）＊",
+    "links": [247]
+  },
+  {
+    "entryID": 247,
+    "actorID": "MC8",
+    "text": "「來啦來啦～這是二郎先生送來的賞錢，表哥拿好！」",
+    "Sequence": "SetPortrait(MC8,pic=1);\nModifyData(Coin,400);\nAudioControl(PlaySFXOneShot,Others_GetCoin);",
+    "Description": "給獎勵",
+    "zh_CN": "「来啦来啦～这是二郎先生送来的赏钱，表哥拿好！」",
+    "links": [243]
+  },
+  {
+    "entryID": 248,
+    "actorID": "MC1",
+    "text": "現在找回好漢的進度如何？",
+    "Sequence": "",
+    "zh_TW": "現在找回好漢的進度如何？",
+    "zh_CN": "现在找回好汉的进度如何？",
+    "links": [225]
+  },
+  {
+    "entryID": 249,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [225]
+  },
+  {
+    "entryID": 250,
+    "actorID": "MC8",
+    "text": "「還有他打鐵時還哼著怪怪的調子，人家一個字也聽不懂呢…」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "「还有他打铁时还哼着怪怪的调子，人家一个字也听不懂呢…」",
+    "links": [212]
+  },
+  {
+    "entryID": 251,
+    "actorID": "MC8",
+    "text": "「要是我也能像她一樣多好呢…不過她說要彈琴給表哥聽…哼，人家才不羨慕呢！」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_CN": "「要是我也能像她一样多好呢…不过她说要弹琴给表哥听…哼，人家才不羡慕呢！」",
+    "links": [213]
+  },
+  {
+    "entryID": 252,
+    "actorID": "MC8",
+    "text": "「當大學問家的女兒原來也這麼辛苦呀，幸好小犀沒這種爹…呃不是，小犀沒有爹娘啦，可是…還是有表哥嘛！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nModifyData(FavorabilityExp,MC8,20);",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 1",
+    "Description": "加好感",
+    "zh_CN": "「当大学问家的女儿原来也这么辛苦呀，幸好小犀没这种爹…呃不是，小犀没有爹娘啦，可是…还是有表哥嘛！」",
+    "links": []
+  },
+  {
+    "entryID": 253,
+    "actorID": "role2",
+    "text": "[panel=6]＊（只見蕭靈犀蹲在窗台邊，正神神祕祕地與一隻熟面孔的青蛙嘀嘀咕咕。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"CF35\") == \"unassigned\"",
+    "zh_CN": "[panel=6]＊（只见萧灵犀蹲在窗台边，正神神秘秘地与一只熟面孔的青蛙嘀嘀咕咕。）＊",
+    "links": [254]
+  },
+  {
+    "entryID": 254,
+    "actorID": "MC1",
+    "text": "「靈犀，妳在嘀嘀咕咕地說什麼呢？」",
+    "Sequence": "SetPortrait(MC1,pic=confuse);EnableCharacterExpression(0,MC1,Question);",
+    "zh_CN": "「灵犀，妳在嘀嘀咕咕地说什么呢？」",
+    "links": [255]
+  },
+  {
+    "entryID": 255,
+    "actorID": "MC8",
+    "text": "[panel=2]「噓——表哥小聲點啦！二郎先生剛剛特地從窗戶跳進來，跟人家交代正事呢！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「嘘——表哥小声点啦！二郎先生刚刚特地从窗户跳进来，跟人家交代正事呢！」",
+    "links": [256]
+  },
+  {
+    "entryID": 256,
+    "actorID": "role135",
+    "text": "「呱！小兄弟，往後爺要傳啥消息、交代啥事兒，都讓這丫頭轉達就成了，爺懶得跟你不長眼的小子廢話。」",
+    "Sequence": "",
+    "zh_CN": "「呱！小兄弟，往后爷要传啥消息、交代啥事儿，都让这丫头转达就成了，爷懒得跟你不长眼的小子废话。」",
+    "links": [257]
+  },
+  {
+    "entryID": 257,
+    "actorID": "MC1",
+    "text": "「……為何要透過靈犀？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1,Question);",
+    "zh_CN": "「……为何要透过灵犀？」",
+    "links": [258]
+  },
+  {
+    "entryID": 258,
+    "actorID": "role135",
+    "text": "「呱！其一，你個頭高、腰間還掛著傢伙，活像個來抓青蛙剝皮燉湯的廚子！我那些兄弟遠遠瞧見你就掉頭蹬腿，談個屁的買賣！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「呱！其一，你个头高、腰间还挂着家伙，活像个来抓青蛙剥皮炖汤的厨子！我那些兄弟远远瞧见你就掉头蹬腿，谈个屁的买卖！」",
+    "links": [259]
+  },
+  {
+    "entryID": 259,
+    "actorID": "role135",
+    "text": "「其二，這丫頭個子小、心眼活，重要的是眼力比你小子利上百倍！」",
+    "Sequence": "",
+    "zh_CN": "「其二，这丫头个子小、心眼活，重要的是眼力比你小子利上百倍！」",
+    "links": [260]
+  },
+  {
+    "entryID": 260,
+    "actorID": "role135",
+    "text": "「其三嘛——爺爺看這丫頭順眼！跟她說話舒坦！呱哈哈！」",
+    "Sequence": "",
+    "zh_CN": "「其三嘛——爷爷看这丫头顺眼！跟她说话舒坦！呱哈哈！」",
+    "links": [261]
+  },
+  {
+    "entryID": 261,
+    "actorID": "MC8",
+    "text": "[panel=2]「嘿嘿！表哥你聽到了沒～以後表哥你只要負責跟著人家跑腿就行啦——」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「嘿嘿！表哥你听到了没～以后表哥你只要负责跟着人家跑腿就行啦——」",
+    "links": [262]
+  },
+  {
+    "entryID": 262,
+    "actorID": "MC1",
+    "text": "「跑腿…？明明我的年紀比妳大…」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「跑腿…？明明我的年纪比妳大…」",
+    "links": [263]
+  },
+  {
+    "entryID": 263,
+    "actorID": "role135",
+    "text": "「呱！丫頭，這本是爺給妳作為紀錄的——往後你們每尋回一位兄弟，妳就在簿子上點一筆。湊夠了數，爺自會派小的們捎著賞錢跟祕聞來找妳。」",
+    "Sequence": "",
+    "zh_CN": "「呱！丫头，这本是爷给妳作为纪录的——往后你们每寻回一位兄弟，妳就在簿子上点一笔。凑够了数，爷自会派小的们捎着赏钱跟秘闻来找妳。」",
+    "links": [264]
+  },
+  {
+    "entryID": 264,
+    "actorID": "MC8",
+    "text": "[panel=2]「嗯！這本人家會記得清清楚楚的，二郎先生你放心！」",
+    "Sequence": "SetPortrait(MC8,pic=8);",
+    "zh_CN": "[panel=2]「嗯！这本人家会记得清清楚楚的，二郎先生你放心！」",
+    "links": [265]
+  },
+  {
+    "entryID": 265,
+    "actorID": "role135",
+    "text": "「呱！記住嘍，小子——往後每尋回我們青蛙兄弟，先帶來找這丫頭通報登記；爺這邊一收到信，就會差兄弟送賞錢與祕聞來。先帳後銀，童叟無欺！」",
+    "Sequence": "",
+    "zh_CN": "「呱！记住喽，小子——往后每寻回我们青蛙兄弟，先带来找这丫头通报登记；爷这边一收到信，就会差兄弟送赏钱与秘闻来。先帐后银，童叟无欺！」",
+    "links": [266]
+  },
+  {
+    "entryID": 266,
+    "actorID": "role135",
+    "text": "「呱哈哈，爺先走一步，告辭！」",
+    "Sequence": "",
+    "zh_CN": "「呱哈哈，爷先走一步，告辞！」",
+    "links": [267]
+  },
+  {
+    "entryID": 267,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一聲蛙鳴，短命二郎竄出窗外，眨眼便沒了蹤影。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（一声蛙鸣，短命二郎窜出窗外，眨眼便没了踪影。）＊",
+    "links": [268]
+  },
+  {
+    "entryID": 268,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥…二郎先生看起來雖然凶巴巴的。但表哥你不要怕他嘛，我們以後一起多幫他找幾位兄弟好不好～」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「表哥…二郎先生看起来虽然凶巴巴的。但表哥你不要怕他嘛，我们以后一起多帮他找几位兄弟好不好～」",
+    "links": [269]
+  },
+  {
+    "entryID": 269,
+    "actorID": "MC1",
+    "text": "「我哪有怕…」",
+    "Sequence": "SetPortrait(MC1,pic=smile);",
+    "zh_CN": "「我哪有怕…」",
+    "links": [270]
+  },
+  {
+    "entryID": 270,
+    "actorID": "role2",
+    "text": "[panel=6]＊（窗外蛙鳴漸遠，蕭靈犀趕緊把帳本揣進懷裡——這就是所謂的江湖奇遇，可喜可賀。）＊",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF36\", \"active\");\nSetQuestEntryState(\"CF36\", 1, \"success\");\nSetQuestEntryState(\"CF36\", 2, \"active\");",
+    "Description": "觸發任務",
+    "zh_CN": "[panel=6]＊（窗外蛙鸣渐远，萧灵犀赶紧把帐本揣进怀里——这就是所谓的江湖奇遇，可喜可贺。）＊",
+    "links": []
+  }
+]

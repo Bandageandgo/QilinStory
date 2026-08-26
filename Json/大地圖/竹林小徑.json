@@ -1,0 +1,1083 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（穿過一片竹林，眼前豁然開朗。竹林深處，隱約可見一座雅致的茅草竹屋。琴聲悠揚，伴隨著少女清脆的笑聲傳來。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（穿過一片竹林，眼前豁然開朗。竹林深處，隱約可見一座雅致的茅草竹屋。琴聲悠揚，伴隨著少女清脆的笑聲傳來。）＊",
+    "zh_CN": "[panel=6]＊（穿过一片竹林，眼前豁然开朗。竹林深处，隐约可见一座雅致的茅草竹屋。琴声悠扬，伴随着少女清脆的笑声传来。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC23",
+    "text": "「大哥哥！你真的來啦！蒲伯伯說你找到了寒鐵，我就知道你一定會來的！」",
+    "Sequence": "",
+    "zh_CN": "「大哥哥！你真的来啦！蒲伯伯说你找到了寒铁，我就知道你一定会来的！」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「答應過妳的事，自然要做到。前輩在嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(FavorabilityExp,MC23,100);",
+    "Description": "蔡琰好感度提升",
+    "zh_CN": "「答应過妳的事，自然要做到。前辈在吗？」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC24",
+    "text": "「琰兒，不得無禮。小兄弟，既然來了，便進來喝杯粗茶吧。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「琰儿，不得无礼。小兄弟，既然来了，便进来喝杯粗茶吧。」",
+    "links": [2051]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你跟隨蔡邕進入竹屋。屋內陳設簡樸，卻堆滿了各種竹簡、帛書，甚至還有一些看似古老的石板殘片。蔡邕示意你坐下，親自為你斟了一杯茶。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你跟随蔡邕进入竹屋。屋内陈设简朴，却堆满了各种竹简、帛书，甚至还有一些看似古老的石板残片。蔡邕示意你坐下，亲自为你斟了一杯茶。）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC24",
+    "text": "「我已從蒲兄得知寒鐵之事。你年紀輕輕，卻能在那等凶險之地全身而退，足見有些本事。且我向來不喜欠人人情，你有何所求我將盡力滿足你。」",
+    "Sequence": "",
+    "zh_TW": "「我已從蒲兄得知寒鐵之事。你年紀輕輕，卻能在那等凶險之地全身而退，足見有些本事。且我向來不喜欠人人情，你有何所求我將盡力滿足你。」",
+    "zh_CN": "「我已从蒲兄得知寒铁之事。你年纪轻轻，却能在那等凶险之地全身而退，足见有些本事。且我向来不喜欠人人情，你有何所求我将尽力满足你。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「前輩言重了。晚輩初入江湖，對天下大勢、人情世事皆是一知半解。知道前輩學究天人，我只求能得前輩幾句指點，便心滿意足了。」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "「前輩言重了。晚輩初入江湖，對天下大勢、人情世事皆是一知半解。知道前輩學究天人，我只求能得前輩幾句指點，便心滿意足了。」",
+    "zh_CN": "「前辈言重了。晚辈初入江湖，对天下大势、人情世事皆是一知半解。知道前辈学究天人，我只求能得前辈几句指点，便心满意足了。」",
+    "links": [2052]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「前輩乃當世大儒，名滿天下，為何會隱居在這偏遠苦寒的雲中之地？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_CN": "「前辈乃当世大儒，名满天下，为何会隐居在这偏远苦寒的云中之地？」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC24",
+    "text": "「名滿天下？不過是虛名罷了。朝堂之上，外戚與宦官如水火不容，互相傾軋。我本想置身事外，但見天象示警、災異頻發，終究忍不住上了一道密疏。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「名满天下？不过是虚名罢了。朝堂之上，外戚与宦官如水火不容，互相倾轧。我本想置身事外，但见天象示警、灾异频发，终究忍不住上了一道密疏。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC24",
+    "text": "「當今聖上……其實並非全然昏聵。他看了我的奏疏，也曾嘆息動容。只可惜……聖上起身更衣時，一時疏忽，將奏疏留在了案上。那曹節等閹黨便趁機偷看，洩露了內容。」",
+    "Sequence": "SetPortrait(MC1,pic=19);",
+    "zh_CN": "「当今圣上……其实并非全然昏聩。他看了我的奏疏，也曾叹息动容。只可惜……圣上起身更衣时，一时疏忽，将奏疏留在了案上。那曹节等阉党便趁机偷看，泄露了内容。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「所以，前輩便遭了那些宦官的報復？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1,Surprise);",
+    "zh_CN": "「所以，前辈便遭了那些宦官的报复？」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC24",
+    "text": "「不錯。他們羅織罪名，欲置我於死地。若非有人死命相保，聖上也念及舊情，我這條命早就沒了。最終被判了髡刑，流放朔方。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「不错。他们罗织罪名，欲置我于死地。若非有人死命相保，圣上也念及旧情，我这条命早就没了。最终被判了髡刑，流放朔方。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC23",
+    "text": "「嘻嘻！爹爹明明也想借這個機會脫身，好出來尋找那些奇怪的石頭和古書嘛！」",
+    "Sequence": "",
+    "zh_TW": "「嘻嘻！爹爹明明也想借這個機會脫身，好出來尋找那些奇怪的石頭和古書嘛！」",
+    "zh_CN": "「嘻嘻！爹爹明明也想借这个机会脱身，好出来寻找那些奇怪的石头和古书嘛！」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC24",
+    "text": "「…這流放倒也正合我意。洛陽那泥潭我早待膩了，來這并州正好圖個清淨，做些正事。況且……近來此地異象頻生，我也想親自查探一番。」",
+    "Sequence": "",
+    "zh_TW": "「…這流放倒也正合我意。洛陽那泥潭我早待膩了，來這并州正好圖個清淨，做些正事。況且……近來此地異象頻生，我也想親自查探一番。」",
+    "zh_CN": "「…这流放倒也正合我意。洛阳那泥潭我早待腻了，来这并州正好图个清净，做些正事。况且……近来此地异象频生，我也想亲自查探一番。」",
+    "links": [2054, 2053]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「前輩所說真正該做的事，莫非與屋內這些古怪的石板有關？」",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "「前輩所說真正該做的事，莫非與屋內這些古怪的石板有關？」",
+    "zh_CN": "「前辈所说真正该做的事，莫非与屋内这些古怪的石板有关？」",
+    "links": [2055]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestState(\"CF24\", \"active\");\nSetQuestState(\"CF34\", \"active\")",
+    "Description": "觸發任務",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「多謝前輩指點迷津，獲益良多。天色不早了，我這就告辭，前輩也早些休息！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「多謝前輩指點迷津，獲益良多。天色不早了，我這就告辭，前輩也早些休息！」",
+    "zh_CN": "「多谢前辈指点迷津，获益良多。天色不早了，我这就告辞，前辈也早些休息！」",
+    "links": [2061]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「前輩方才提到并州異象頻生，不知具體是指何事？晚輩一路走來，也曾聽聞雲中西山有些古怪傳聞。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_CN": "「前辈方才提到并州异象频生，不知具体是指何事？晚辈一路走来，也曾听闻云中西山有些古怪传闻。」",
+    "links": [2058]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「那我就恭敬不如從命了，多謝前輩收留。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「那我就恭敬不如从命了，多谢前辈收留。」",
+    "links": [2062]
+  },
+  {
+    "entryID": 31,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Description": "關閉背景圖",
+    "links": []
+  },
+  {
+    "entryID": 32,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(WakeUp);\nSetContinueMode(original)@5.2;\nContinue()@5.2;",
+    "Description": "演出",
+    "links": [2065]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（深夜，萬籟俱寂。忽聽得極輕微的一聲破空之響。你霍地驚醒，一條黑影已閃進屋來，白光遞到，直取咽喉！）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（深夜，万籁俱寂。忽听得极轻微的一声破空之响。你霍地惊醒，一条黑影已闪进屋来，白光递到，直取咽喉！）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「什麼人？！你要幹嗎！？」",
+    "Sequence": "SetPortrait(MC1,pic=19);EnableCharacterExpression(0,MC1,Shock);",
+    "zh_TW": "「什麼人？！你要幹嗎！？」",
+    "zh_CN": "「什么人？！你要干吗！？」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "role85",
+    "text": "「要你命的人！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「要你命的人！」",
+    "links": [2063]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在你們即將交手之際，竹屋的門突然被推開。蔡邕披著外衣，手持一盞油燈，平靜地站在門口。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（就在你们即将交手之际，竹屋的门突然被推开。蔡邕披着外衣，手持一盏油灯，平静地站在门口。）＊",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC24",
+    "text": "「陽球派你來的吧？他那點心思，老夫十二年前就領教過了。」",
+    "Sequence": "",
+    "zh_CN": "「阳球派你来的吧？他那点心思，老夫十二年前就领教过了。」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role85",
+    "text": "「你……你早就知道我會來？！」",
+    "Sequence": "",
+    "zh_TW": "「你……你早就知道我會來？！」",
+    "zh_CN": "「你……你早就知道我会来？！」",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC24",
+    "text": "「我在這竹林外，佈下了奇門遁甲之陣。你一踏入竹林，我便知曉了。你能無聲無息地闖到這裡，身手確實了得。但你可知，你剛才踏錯了三步，若非我手下留情，你早已萬箭穿心。」",
+    "Sequence": "",
+    "zh_TW": "「我在這竹林外，佈下了奇門遁甲之陣。你一踏入竹林，我便知曉了。你能無聲無息地闖到這裡，身手確實了得。但你可知，你剛才踏錯了三步，若非我手下留情，你早已萬箭穿心。」",
+    "zh_CN": "「我在这竹林外，布下了奇门遁甲之阵。你一踏入竹林，我便知晓了。你能无声无息地闯到这里，身手确实了得。但你可知，你刚才踏错了三步，若非我手下留情，你早已万箭穿心。」",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "role85",
+    "text": "「所以……你現在想怎樣？」",
+    "Sequence": "",
+    "zh_TW": "「所以……你現在想怎樣？」",
+    "zh_CN": "「所以……你现在想怎样？」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC24",
+    "text": "「你也是受人指使，身不由己。老夫與陽球的恩怨，與你無關。你且回去告訴他，蔡伯喈已是個死人，這世上，只有一個在竹林中研究古籍的瘋老頭。滾吧。」",
+    "Sequence": "",
+    "zh_CN": "「你也是受人指使，身不由己。老夫与阳球的恩怨，与你无关。你且回去告诉他，蔡伯喈已是个死人，这世上，只有一个在竹林中研究古籍的疯老头。滚吧。」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "role2",
+    "text": "[panel=6]＊（刺客愣在原地，看著眼前這位手無縛雞之力、卻氣度如淵的大儒，最終長嘆一聲，收起兵刃，朝蔡邕深深鞠了一躬，轉身消失在夜色中。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（刺客愣在原地，看着眼前这位手无缚鸡之力、却气度如渊的大儒，最终长叹一声，收起兵刃，朝蔡邕深深鞠了一躬，转身消失在夜色中。）＊",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「前輩……您這……不戰而屈人之兵，晚輩佩服得五體投地！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(FavorabilityExp,MC24,50);",
+    "Description": "蔡邕好感度提升",
+    "zh_CN": "「前辈……您这……不战而屈人之兵，晚辈佩服得五体投地！」",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC24",
+    "text": "「哼，任你武功再高，也敵不過人心與算計。你且歇息吧，明日還有正事要做。」",
+    "Sequence": "",
+    "zh_TW": "「哼，任你武功再高，也敵不過人心與算計。你且歇息吧，明日還有正事要做。」",
+    "zh_CN": "「哼，任你武功再高，也敌不过人心与算计。你且歇息吧，明日还有正事要做。」",
+    "links": [2066]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC24",
+    "text": "「小兄弟，你又來了。近日在江湖上走動，可有什麼有趣的經歷？或是……又收集到了什麼古怪的物件？」",
+    "Sequence": "",
+    "zh_CN": "「小兄弟，你又来了。近日在江湖上走动，可有什么有趣的经历？或是……又收集到了什么古怪的物件？」",
+    "links": [2069, 2070, 64]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「前輩博古通今，不知可曾聽聞過江湖上有個叫三才門的門派？晚輩偶然間得知了他們的一門武學，名為[em2]四神拳[/em2]，似乎還與[em2]灼金手[/em2]、[em2]流雲反掌[/em2]齊名。」",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "「前輩博古通今，不知可曾聽聞過江湖上有個叫三才門的門派？晚輩偶然間得知了他們的一門武學，名為[em2]四神拳[/em2]，似乎還與[em2]灼金手[/em2]、[em2]流雲反掌[/em2]齊名。」",
+    "zh_CN": "「前辈博古通今，不知可曾听闻过江湖上有个叫三才门的门派？晚辈偶然间得知了他们的一门武学，名为[em2]四神拳[/em2]，似乎还与[em2]灼金手[/em2]、[em2]流云反掌[/em2]齐名。」",
+    "links": [2072]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你在蔡邕面前演練了一番四神拳。蔡邕僅憑肉眼觀察與古籍中的記憶，便一針見血地指出了你在發力與步法配合上的幾處致命破綻，並以《易經》中的四象之理為你重新剖析了拳法的精髓。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你在蔡邕面前演练了一番四神拳。蔡邕仅凭肉眼观察与古籍中的记忆，便一针见血地指出了你在发力与步法配合上的几处致命破绽，并以《易经》中的四象之理为你重新剖析了拳法的精髓。）＊",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「前輩真乃神人也！晚輩受教了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "zh_CN": "「前辈真乃神人也！晚辈受教了！」",
+    "links": [2076]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role2",
+    "text": "[panel=6]＊（而後蔡邕又說了些武學理論，你對拳理的有了一番新的見解。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,MartialArts,100);\nDisableCharacterExpression(0);",
+    "Script": "SetQuestEntryState(\"CF24\", 1, \"success\")",
+    "Description": "武藝經驗提升,任務更新",
+    "zh_CN": "[panel=6]＊（而后蔡邕又说了些武学理论，你对拳理的有了一番新的见解。）＊",
+    "links": []
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「前輩，晚輩在黑鐵嶺礦坑深處尋找寒鐵時，見到了一尊極為詭異的神像。那神像生有第三隻眼，且似乎能散發出迷惑人心的氣息，險些讓晚輩著了道。」",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "zh_CN": "「前辈，晚辈在黑铁岭矿坑深处寻找寒铁时，见到了一尊极为诡异的神像。那神像生有第三只眼，且似乎能散发出迷惑人心的气息，险些让晚辈着了道。」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC24",
+    "text": "「第三隻眼……迷惑人心……你且詳細說說那神像的模樣與周遭的佈置。」",
+    "Sequence": "",
+    "zh_CN": "「第三只眼……迷惑人心……你且详细说说那神像的模样与周遭的布置。」",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你將在黑鐵嶺礦坑深處的所見所聞，以及那種令人心生狂躁與幻覺的詭異感受，一五一十地告訴了蔡邕。）＊",
+    "Sequence": "ModifyData(FavorabilityExp,MC24,50);",
+    "Description": "蔡邕好感度提升",
+    "zh_CN": "[panel=6]＊（你将在黑铁岭矿坑深处的所见所闻，以及那种令人心生狂躁与幻觉的诡异感受，一五一十地告诉了蔡邕。）＊",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC24",
+    "text": "「西域諸國之外，穿越漫漫黃沙，更有極西之地，名為波斯。那裡的人深目高鼻，城郭建築多以五彩琉璃鑲嵌穹頂，在烈日下熠熠生輝。」",
+    "Sequence": "",
+    "zh_TW": "「西域諸國之外，穿越漫漫黃沙，更有極西之地，名為波斯。那裡的人深目高鼻，城郭建築多以五彩琉璃鑲嵌穹頂，在烈日下熠熠生輝。」",
+    "zh_CN": "「西域诸国之外，穿越漫漫黄沙，更有极西之地，名为波斯。那里的人深目高鼻，城郭建筑多以五彩琉璃镶嵌穹顶，在烈日下熠熠生辉。」",
+    "links": [2079]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC24",
+    "text": "「我早年收集異邦志異時，曾在一卷殘卷中看過隻言片語。那惡神之屬，常以詭異之姿顯化，擅長蠱惑人心、引人墮落。你所描述的那尊三眼邪像，其氣息與行事，倒與那殘卷中記載的惡神崇拜有幾分相似。」",
+    "Sequence": "",
+    "zh_TW": "「我早年收集異邦志異時，曾在一卷殘卷中看過隻言片語。那惡神之屬，常以詭異之姿顯化，擅長蠱惑人心、引人墮落。你所描述的那尊三眼邪像，其氣息與行事，倒與那殘卷中記載的惡神崇拜有幾分相似。」",
+    "zh_CN": "「我早年收集异邦志异时，曾在一卷残卷中看过只言片语。那恶神之属，常以诡异之姿显化，擅长蛊惑人心、引人堕落。你所描述的那尊三眼邪像，其气息与行事，倒与那残卷中记载的恶神崇拜有几分相似。」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「前輩的意思是，這中原地界，竟有西域邪教的勢力滲透？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1,Surprise);",
+    "zh_CN": "「前辈的意思是，这中原地界，竟有西域邪教的势力渗透？」",
+    "links": [2080]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「多謝前輩解惑，晚輩定當謹記在心。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「多谢前辈解惑，晚辈定当谨记在心。」",
+    "links": [2082]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「晚輩只是路過，特來拜見前輩。見前輩安好，晚輩這便告辭，不打擾前輩清修了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「晚辈只是路过，特来拜见前辈。见前辈安好，晚辈这便告辞，不打扰前辈清修了。」",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC24",
+    "text": "「去吧。這天下的秘密，還多著呢。」",
+    "Sequence": "",
+    "zh_CN": "「去吧。这天下的秘密，还多著呢。」",
+    "links": []
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC23",
+    "text": "「大哥哥你來啦。別吵我喔，我正在算這幾枚輪牙怎麼咬合呢。」",
+    "Sequence": "",
+    "Conditions": "IsFavorabilityLevelPass(\"MC23\", 2)  == false",
+    "Description": "好感度低時",
+    "zh_TW": "「大哥哥你來啦。別吵我喔，我正在算這幾枚輪牙怎麼咬合呢。」",
+    "zh_CN": "「大哥哥你来啦。别吵我喔，我正在算这几枚轮牙怎么咬合呢。」",
+    "links": []
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "第一次到竹林小屋(強制)",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "EnableDialogueBG(StudyRoom);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_37);\nContinue();",
+    "Description": "開背景圖、放音樂",
+    "links": [5]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC24",
+    "text": "「呵，倒是不貪心。也罷，你心中若有什麼疑慮，直言便是。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nDisableCharacterExpression(0);",
+    "zh_TW": "「呵，倒是不貪心。也罷，你心中若有什麼疑慮，直言便是。」",
+    "zh_CN": "「呵，倒是不贪心。也罢，你心中若有什么疑虑，直言便是。」",
+    "links": [9]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC1",
+    "text": "「真正該做的事？」",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_CN": "「真正该做的事？」",
+    "links": [17]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC1",
+    "text": "「并州異象頻生？」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_CN": "「并州异象频生？」",
+    "links": [24]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC24",
+    "text": "「你倒是有眼光。昔年我見經籍傳抄多有謬弊，便奏請皇上正定六經。我親以丹砂書碑，命工匠鐫刻立於太學門外，世稱[em2]熹平石經[/em2]。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "「你倒是有眼光。昔年我見經籍傳抄多有謬弊，便奏請皇上正定六經。我親以丹砂書碑，命工匠鐫刻立於太學門外，世稱[em2]熹平石經[/em2]。」",
+    "zh_CN": "「你倒是有眼光。昔年我见经籍传抄多有谬弊，便奏请皇上正定六经。我亲以丹砂书碑，命工匠镌刻立于太学门外，世称[em2]熹平石经[/em2]。」",
+    "links": [2056]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC24",
+    "text": "「然而，這世間學問，又豈止儒家經典？我在編纂石經時，隱約察覺有些歷史與知識，似乎被人刻意抹去或隱藏了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「然而，這世間學問，又豈止儒家經典？我在編纂石經時，隱約察覺有些歷史與知識，似乎被人刻意抹去或隱藏了。」",
+    "zh_CN": "「然而，这世间学问，又岂止儒家经典？我在编纂石经时，隐约察觉有些历史与知识，似乎被人刻意抹去或隐藏了。」",
+    "links": [2057]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "MC24",
+    "text": "「小兄弟，你常在江湖走動，日後若碰見什麼帶有奇特古物，或是經歷了什麼異象見聞，皆可來此尋我。這世上任何被隱藏的[em2]知識[/em2]，對我而言都有價值。若能帶回來讓我參詳一二，我定有重謝。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「小兄弟，你常在江湖走動，日後若碰見什麼帶有奇特古物，或是經歷了什麼異象見聞，皆可來此尋我。這世上任何被隱藏的[em2]知識[/em2]，對我而言都有價值。若能帶回來讓我參詳一二，我定有重謝。」",
+    "zh_CN": "「小兄弟，你常在江湖走动，日后若碰见什么带有奇特古物，或是经历了什么异象见闻，皆可来此寻我。这世上任何被隐藏的[em2]知识[/em2]，对我而言都有价值。若能带回来让我参详一二，我定有重谢。」",
+    "links": [21]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "MC24",
+    "text": "「你說的可是那冒著蒸氣、甚至山壁炸裂的異象？」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "「你說的可是那冒著蒸氣、甚至山壁炸裂的異象？」",
+    "zh_CN": "「你说的可是那冒着蒸气、甚至山壁炸裂的异象？」",
+    "links": [2059]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC24",
+    "text": "「這并州地處邊疆，朝廷鞭長莫及，怪事頻出，朝中多置若罔聞。然我觀星測地，確信這異象絕非尋常地動。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "「這并州地處邊疆，朝廷鞭長莫及，怪事頻出，朝中多置若罔聞。然我觀星測地，確信這異象絕非尋常地動。」",
+    "zh_CN": "「这并州地处边疆，朝廷鞭长莫及，怪事频出，朝中多置若罔闻。然我观星测地，确信这异象绝非寻常地动。」",
+    "links": [2060]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC24",
+    "text": "「這天地氣機似在暗中變動，有些被掩埋的往昔之物，正在蠢蠢欲動。西山異象興許只是開端而已。若你真有意追查，還請多加小心，莫要輕舉妄動。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);",
+    "zh_TW": "「這天地氣機似在暗中變動，有些被掩埋的往昔之物，正在蠢蠢欲動。西山異象興許只是開端而已。若你真有意追查，還請多加小心，莫要輕舉妄動。」",
+    "zh_CN": "「这天地气机似在暗中变动，有些被掩埋的往昔之物，正在蠢蠢欲动。西山异象兴许只是开端而已。若你真有意追查，还请多加小心，莫要轻举妄动。」",
+    "links": [16]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "MC24",
+    "text": "「行了，別急著走。這竹林外夜裡豺狼多。後頭有間空著的偏房，反正也沒人用，你若不嫌棄，就自己去將就對付一晚吧。日後路過，想歇腳也隨你。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「行了，別急著走。這竹林外夜裡豺狼多。後頭有間空著的偏房，反正也沒人用，你若不嫌棄，就自己去將就對付一晚吧。日後路過，想歇腳也隨你。」",
+    "zh_CN": "「行了，别急着走。这竹林外夜里豺狼多。后头有间空着的偏房，反正也没人用，你若不嫌弃，就自己去将就对付一晚吧。日后路过，想歇脚也随你。」",
+    "links": [28]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC24",
+    "text": "「嗯，別客氣了，去吧。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FavorabilityExp,MC24,100);",
+    "Description": "蔡邕好感度提升",
+    "zh_TW": "「嗯，別客氣了，去吧。」",
+    "zh_CN": "「嗯，别客气了，去吧。」",
+    "links": [31]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "role85",
+    "text": "「……等等，你這毛頭小子是誰？！蔡伯喈呢？！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「……等等，你這毛頭小子是誰？！蔡伯喈呢？！」",
+    "zh_CN": "「……等等，你这毛头小子是谁？！蔡伯喈呢？！」",
+    "links": [2064]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "role85",
+    "text": "「該死，怎跑出來一個莫名其妙的小鬼！但既然你看到了我的臉，那就只能先送你上路了！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「該死，怎跑出來一個莫名其妙的小鬼！但既然你看到了我的臉，那就只能先送你上路了！」",
+    "zh_CN": "「该死，怎跑出来一个莫名其妙的小鬼！但既然你看到了我的脸，那就只能先送你上路了！」",
+    "links": [36]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你跟躺在竹榻上，聽著窗外沙沙的竹葉聲，漸漸進入了夢鄉。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你跟躺在竹榻上，聽著窗外沙沙的竹葉聲，漸漸進入了夢鄉。）＊",
+    "zh_CN": "[panel=6]＊（你跟躺在竹榻上，听着窗外沙沙的竹叶声，渐渐进入了梦乡。）＊",
+    "links": [33]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nModifyData(Rest)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "休息演出",
+    "links": [2067]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role2",
+    "text": "[panel=6]＊（次日清晨，陽光穿透竹葉灑在窗櫺上。你從榻上起身，但蔡邕那句[em2]任你武功再高，也敵不過人心與算計[/em2]像根拔不掉的刺在心裡。）＊",
+    "Sequence": "ModifyData(LifeExp,100);",
+    "Description": "獲得生活經驗",
+    "zh_TW": "[panel=6]＊（次日清晨，陽光穿透竹葉灑在窗櫺上。你從榻上起身，但蔡邕那句[em2]任你武功再高，也敵不過人心與算計[/em2]像根拔不掉的刺在心裡。）＊",
+    "zh_CN": "[panel=6]＊（次日清晨，阳光穿透竹叶洒在窗棂上。你从榻上起身，但蔡邕那句[em2]任你武功再高，也敌不过人心与算计[/em2]像根拔不掉的刺在心里。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2068,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊蔡邕",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [45]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "MC1",
+    "text": "「前輩可知這世上有個叫三才門的流派？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "IsSkillObtained(\"Player\", \"FourPunch\")  == true and (CurrentQuestEntryState(\"CF24\", 1) ~= \"success\")",
+    "Description": "要有四神拳",
+    "zh_TW": "「前輩可知這世上有個叫三才門的流派？」",
+    "zh_CN": "「前辈可知这世上有个叫三才门的流派？」",
+    "links": [46]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "MC1",
+    "text": "「晚輩在黑鐵嶺尋鐵時，險些被一尊邪異的神像亂了心智。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "CurrentQuestState(\"CF16\") == \"success\" and (CurrentQuestEntryState(\"CF24\", 2) ~= \"success\")",
+    "Description": "要完成任務CF16",
+    "zh_TW": "「晚輩在黑鐵嶺尋鐵時，險些被一尊邪異的神像亂了心智。」",
+    "zh_CN": "「晚辈在黑铁岭寻铁时，险些被一尊邪异的神像乱了心智。」",
+    "links": [53]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC24",
+    "text": "「三才門……我倒是在一些武林舊典中見過這個名字。此門派創派祖師以天地人三才為基，創出了三門絕學，正是你所說的這三樣。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FavorabilityExp,MC24,50);",
+    "Description": "蔡邕好感度提升",
+    "zh_TW": "「三才門……我倒是在一些武林舊典中見過這個名字。此門派創派祖師以天地人三才為基，創出了三門絕學，正是你所說的這三樣。」",
+    "zh_CN": "「三才门……我倒是在一些武林旧典中见过这个名字。此门派创派祖师以天地人三才为基，创出了三门绝学，正是你所说的这三样。」",
+    "links": [2073]
+  },
+  {
+    "entryID": 2073,
+    "actorID": "MC24",
+    "text": "「我當年翻閱那古籍時，雖未深究其修煉之法，但對其招式綱要倒還有些印象。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「我当年翻阅那古籍时，虽未深究其修炼之法，但对其招式纲要倒还有些印象。」",
+    "links": [2075]
+  },
+  {
+    "entryID": 2074,
+    "actorID": "MC24",
+    "text": "「這三門武功本是同源，卻又相生相剋。你既得了四神拳，你先且演練幾招，我雖不通武藝，但這拳理中的奧秘，我還是一眼便能看出的。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「这三门武功本是同源，却又相生相克。你既得了四神拳，你先且演练几招，我虽不通武艺，但这拳理中的奥秘，我还是一眼便能看出的。」",
+    "links": [50]
+  },
+  {
+    "entryID": 2075,
+    "actorID": "MC24",
+    "text": "「這四神拳講究四象方位，拳勢變化萬千。而另外兩門絕學，一為灼金掌，走的是剛猛霸道之路，號稱能熔金化鐵；二為流雲反掌，則輕靈飄逸，擅長借力打力。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「这四神拳讲究四象方位，拳势变化万千。而另外两门绝学，一为灼金掌，走的是刚猛霸道之路，号称能熔金化铁；二为流云反掌，则轻灵飘逸，擅长借力打力。」",
+    "links": [2074]
+  },
+  {
+    "entryID": 2076,
+    "actorID": "MC24",
+    "text": "「[em6]走到書案前，提筆在一卷空白竹簡上快速書寫，片刻後，說道[/em6]：拿去吧。這是我憑記憶默寫下來的《灼金掌》殘篇。雖不完整，但其剛猛之理與你的四神拳正好互補。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「[em6]走到书案前，提笔在一卷空白竹简上快速书写，片刻后，说道[/em6]：拿去吧。这是我凭记忆默写下来的《灼金掌》残篇。虽不完整，但其刚猛之理与你的四神拳正好互补。」",
+    "links": [2077]
+  },
+  {
+    "entryID": 2077,
+    "actorID": "MC1",
+    "text": "「這……這等絕學，前輩竟如此輕易便傳授給晚輩？大恩大德，晚輩沒齒難忘！」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1,Idea);\nModifyData(Valuable,Player,GoldPalmBook,1);",
+    "Description": "獲得灼金掌要略",
+    "zh_CN": "「这……这等绝学，前辈竟如此轻易便传授给晚辈？大恩大德，晚辈没齿难忘！」",
+    "links": [2078]
+  },
+  {
+    "entryID": 2078,
+    "actorID": "MC24",
+    "text": "「呵，你若真想謝我，日後多留心那些失落的古物殘碑便是。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「呵，你若真想谢我，日后多留心那些失落的古物残碑便是。」",
+    "links": [52]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "MC24",
+    "text": "「其地盛行一教，名曰拜火教。此教信奉善惡二元之說，認為世間乃是善神[em2]阿胡拉·馬茲達[/em2]與惡神[em2]安格拉·曼紐[/em2]交戰之所。他們在城中築起高大的聖火壇，日夜燃燒不滅。」",
+    "Sequence": "",
+    "zh_TW": "「其地盛行一教，名曰拜火教。此教信奉善惡二元之說，認為世間乃是善神[em2]阿胡拉·馬茲達[/em2]與惡神[em2]安格拉·曼紐[/em2]交戰之所。他們在城中築起高大的聖火壇，日夜燃燒不滅。」",
+    "zh_CN": "「其地盛行一教，名曰拜火教。此教信奉善恶二元之说，认为世间乃是善神[em2]阿胡拉·马兹达[/em2]与恶神[em2]安格拉·曼纽[/em2]交战之所。他们在城中筑起高大的圣火坛，日夜燃烧不灭。」",
+    "links": [57]
+  },
+  {
+    "entryID": 2080,
+    "actorID": "MC24",
+    "text": "「我也不敢斷言。畢竟那只是殘卷中的隻言片語，且西域距離此地萬里之遙，這等邪教如何能在此地生根發芽？或許只是某種古老巫蠱之術的變種罷了。不過……」",
+    "Sequence": "",
+    "zh_TW": "「我也不敢斷言。畢竟那只是殘卷中的隻言片語，且西域距離此地萬里之遙，這等邪教如何能在此地生根發芽？或許只是某種古老巫蠱之術的變種罷了。不過……」",
+    "zh_CN": "「我也不敢断言。毕竟那只是残卷中的只言片语，且西域距离此地万里之遥，这等邪教如何能在此地生根发芽？或许只是某种古老巫蛊之术的变种罢了。不过……」",
+    "links": [2081]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "MC24",
+    "text": "「這天地氣機的變動，或許正引得這些牛鬼蛇神紛紛現世。你日後若再遇見這等邪異之物，切記守住本心，不可被其幻象所迷。」",
+    "Sequence": "",
+    "zh_TW": "「這天地氣機的變動，或許正引得這些牛鬼蛇神紛紛現世。你日後若再遇見這等邪異之物，切記守住本心，不可被其幻象所迷。」",
+    "zh_CN": "「这天地气机的变动，或许正引得这些牛鬼蛇神纷纷现世。你日后若再遇见这等邪异之物，切记守住本心，不可被其幻象所迷。」",
+    "links": [61]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蔡邕娓娓說道那些關於西域的奇聞軼事，這些奇妙的見聞彷彿在你眼前展開。你暗暗將這些珍貴的見聞給記下，無形中增長了不少學識。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,200);\nModifyData(AbilityExp,MC1,Intelligence,100);\nDisableCharacterExpression(0);",
+    "Script": "SetQuestEntryState(\"CF24\", 2, \"success\")",
+    "Description": "學識、智力經驗提升,任務更新",
+    "zh_TW": "[panel=6]＊（蔡邕娓娓說道那些關於西域的奇聞軼事，這些奇妙的見聞彷彿在你眼前展開。你暗暗將這些珍貴的見聞給記下，無形中增長了不少學識。）＊",
+    "zh_CN": "[panel=6]＊（蔡邕娓娓说道那些关于西域的奇闻轶事，这些奇妙的见闻仿佛在你眼前展开。你暗暗将这些珍贵的见闻给记下，无形中增长了不少学识。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2083,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊蔡琰",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [67, 2084]
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC23",
+    "text": "「大哥哥你終於來啦！爹爹成天把我關在這竹林裡，我都快悶出病來了！快跟我說說外頭有什麼好玩的事！」",
+    "Sequence": "",
+    "Conditions": "IsFavorabilityLevelPass(\"MC23\", 2)  == true",
+    "zh_TW": "「大哥哥你終於來啦！爹爹成天把我關在這竹林裡，我都快悶出病來了！快跟我說說外頭有什麼好玩的事！」",
+    "zh_CN": "「大哥哥你终于来啦！爹爹成天把我关在这竹林里，我都快闷出病来了！快跟我说说外头有什么好玩的事！」",
+    "links": []
+  },
+  {
+    "entryID": 2085,
+    "actorID": "MC1",
+    "text": "「嗯？這幾塊木板……似乎與周圍的地板不同。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Question);",
+    "Description": "點擊木板",
+    "zh_TW": "「嗯？這幾塊木板……似乎與周圍的地板不同。」",
+    "zh_CN": "「嗯？这几块木板……似乎与周围的地板不同。」",
+    "links": [2087]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "role2",
+    "text": "[panel=6]＊（隨著正確的順序踩下，木板機關應聲開啟。一條通往地下的暗道顯露出來，入口處架著一截通往下面的梯子。）＊",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF24\", 3, \"success\")",
+    "Description": "任務更新",
+    "zh_TW": "[panel=6]＊（隨著正確的順序踩下，木板機關應聲開啟。一條通往地下的暗道顯露出來，入口處架著一截通往下面的梯子。）＊",
+    "zh_CN": "[panel=6]＊（随着正确的顺序踩下，木板机关应声开启。一条通往地下的暗道显露出来，入口处架着一截通往下面的梯子。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2087,
+    "actorID": "MC1",
+    "text": "「這四片木板上還刻著[em2]四句殘文：貴賤位矣、乾坤定矣、卑高以陳、天尊地卑。[/em2]」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "「這四片木板上還刻著[em2]四句殘文：貴賤位矣、乾坤定矣、卑高以陳、天尊地卑。[/em2]」",
+    "zh_CN": "「这四片木板上还刻着[em2]四句残文：贵贱位矣、乾坤定矣、卑高以陈、天尊地卑。[/em2]」",
+    "links": [2088]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,KnowledgeCheck,10);",
+    "links": [2089]
+  },
+  {
+    "entryID": 2089,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2090, 2091]
+  },
+  {
+    "entryID": 2090,
+    "actorID": "MC1",
+    "text": "「這些出自於《易經·繫辭上》的[em2]天尊地卑，乾坤定矣。卑高以陳，貴賤位矣。[/em2]，所以這第一片，應該是……」",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);DisableCharacterExpression();SetPortrait(MC1,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「這些出自於《易經·繫辭上》的[em2]天尊地卑，乾坤定矣。卑高以陳，貴賤位矣。[/em2]，所以這第一片，應該是……」",
+    "zh_CN": "「这些出自于《易经·系辞上》的[em2]天尊地卑，乾坤定矣。卑高以陈，贵贱位矣。[/em2]，所以这第一片，应该是……」",
+    "links": [2093]
+  },
+  {
+    "entryID": 2091,
+    "actorID": "MC1",
+    "text": "「要先踩的第一片，應該是……」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "「要先踩的第一片，應該是……」",
+    "zh_CN": "「要先踩的第一片，应该是……」",
+    "links": [2093]
+  },
+  {
+    "entryID": 2093,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2094, 2095, 2096, 2097]
+  },
+  {
+    "entryID": 2094,
+    "actorID": "MC1",
+    "text": "貴賤位矣",
+    "Sequence": "",
+    "zh_CN": "贵贱位矣",
+    "links": [2170]
+  },
+  {
+    "entryID": 2095,
+    "actorID": "MC1",
+    "text": "乾坤定矣",
+    "Sequence": "",
+    "zh_CN": "乾坤定矣",
+    "links": [2183]
+  },
+  {
+    "entryID": 2096,
+    "actorID": "MC1",
+    "text": "卑高以陳",
+    "Sequence": "",
+    "zh_CN": "卑高以陈",
+    "links": [2184]
+  },
+  {
+    "entryID": 2097,
+    "actorID": "MC1",
+    "text": "天尊地卑",
+    "Sequence": "",
+    "zh_CN": "天尊地卑",
+    "links": [2112]
+  },
+  {
+    "entryID": 2110,
+    "actorID": "role2",
+    "text": "[panel=6]＊（毫無反應。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（毫無反應。）＊",
+    "zh_CN": "[panel=6]＊（毫无反应。）＊",
+    "links": []
+  },
+  {
+    "entryID": 2112,
+    "actorID": "MC1",
+    "text": "「接下來第二片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「接下來第二片，應該是……」",
+    "zh_CN": "「接下来第二片，应该是……」",
+    "links": [2189, 2190, 2192]
+  },
+  {
+    "entryID": 2170,
+    "actorID": "MC1",
+    "text": "「接下來第二片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「接下來第二片，應該是……」",
+    "zh_CN": "「接下来第二片，应该是……」",
+    "links": [2174, 2175, 2173]
+  },
+  {
+    "entryID": 2171,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2172, 2176]
+  },
+  {
+    "entryID": 2172,
+    "actorID": "MC1",
+    "text": "卑高以陳、天尊地卑",
+    "Sequence": "",
+    "zh_CN": "卑高以陈、天尊地卑",
+    "links": [2110]
+  },
+  {
+    "entryID": 2173,
+    "actorID": "MC1",
+    "text": "乾坤定矣",
+    "Sequence": "",
+    "zh_CN": "乾坤定矣",
+    "links": [2171]
+  },
+  {
+    "entryID": 2174,
+    "actorID": "MC1",
+    "text": "卑高以陳",
+    "Sequence": "",
+    "zh_CN": "卑高以陈",
+    "links": [2179]
+  },
+  {
+    "entryID": 2175,
+    "actorID": "MC1",
+    "text": "天尊地卑",
+    "Sequence": "",
+    "zh_CN": "天尊地卑",
+    "links": [2180]
+  },
+  {
+    "entryID": 2176,
+    "actorID": "MC1",
+    "text": "天尊地卑、卑高以陳",
+    "Sequence": "",
+    "zh_CN": "天尊地卑、卑高以陈",
+    "links": [2110]
+  },
+  {
+    "entryID": 2177,
+    "actorID": "MC1",
+    "text": "乾坤定矣、天尊地卑",
+    "Sequence": "",
+    "zh_CN": "乾坤定矣、天尊地卑",
+    "links": [2110]
+  },
+  {
+    "entryID": 2178,
+    "actorID": "MC1",
+    "text": "天尊地卑、乾坤定矣",
+    "Sequence": "",
+    "zh_CN": "天尊地卑、乾坤定矣",
+    "links": [2110]
+  },
+  {
+    "entryID": 2179,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2177, 2178]
+  },
+  {
+    "entryID": 2180,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2181, 2182]
+  },
+  {
+    "entryID": 2181,
+    "actorID": "MC1",
+    "text": "卑高以陳、乾坤定矣",
+    "Sequence": "",
+    "zh_CN": "卑高以陈、乾坤定矣",
+    "links": [2110]
+  },
+  {
+    "entryID": 2182,
+    "actorID": "MC1",
+    "text": "乾坤定矣、卑高以陳",
+    "Sequence": "",
+    "zh_CN": "乾坤定矣、卑高以陈",
+    "links": [2110]
+  },
+  {
+    "entryID": 2183,
+    "actorID": "MC1",
+    "text": "「接下來第二片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「接下來第二片，應該是……」",
+    "zh_CN": "「接下来第二片，应该是……」",
+    "links": [2174, 2187, 2175]
+  },
+  {
+    "entryID": 2184,
+    "actorID": "MC1",
+    "text": "「接下來第二片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「接下來第二片，應該是……」",
+    "zh_CN": "「接下来第二片，应该是……」",
+    "links": [2173, 2175, 2187]
+  },
+  {
+    "entryID": 2185,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2186, 2188]
+  },
+  {
+    "entryID": 2186,
+    "actorID": "MC1",
+    "text": "卑高以陳、天尊地卑",
+    "Sequence": "",
+    "zh_CN": "卑高以陈、天尊地卑",
+    "links": [2110]
+  },
+  {
+    "entryID": 2187,
+    "actorID": "MC1",
+    "text": "貴賤位矣",
+    "Sequence": "",
+    "zh_CN": "贵贱位矣",
+    "links": [2185]
+  },
+  {
+    "entryID": 2188,
+    "actorID": "MC1",
+    "text": "天尊地卑、卑高以陳",
+    "Sequence": "",
+    "zh_CN": "天尊地卑、卑高以陈",
+    "links": [2110]
+  },
+  {
+    "entryID": 2189,
+    "actorID": "MC1",
+    "text": "乾坤定矣",
+    "Sequence": "",
+    "zh_CN": "乾坤定矣",
+    "links": [2193]
+  },
+  {
+    "entryID": 2190,
+    "actorID": "MC1",
+    "text": "卑高以陳",
+    "Sequence": "",
+    "zh_CN": "卑高以陈",
+    "links": [2196]
+  },
+  {
+    "entryID": 2192,
+    "actorID": "MC1",
+    "text": "貴賤位矣",
+    "Sequence": "",
+    "zh_CN": "贵贱位矣",
+    "links": [2197]
+  },
+  {
+    "entryID": 2193,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2194, 2195]
+  },
+  {
+    "entryID": 2194,
+    "actorID": "MC1",
+    "text": "卑高以陳，貴賤位矣",
+    "Sequence": "",
+    "zh_CN": "卑高以陈，贵贱位矣",
+    "links": [2086]
+  },
+  {
+    "entryID": 2195,
+    "actorID": "MC1",
+    "text": "貴賤位矣，卑高以陳",
+    "Sequence": "",
+    "zh_CN": "贵贱位矣，卑高以陈",
+    "links": [2110]
+  },
+  {
+    "entryID": 2196,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2199, 2200]
+  },
+  {
+    "entryID": 2197,
+    "actorID": "MC1",
+    "text": "「再來第三片、第四片，應該是……」",
+    "Sequence": "",
+    "zh_TW": "「再來第三片、第四片，應該是……」",
+    "zh_CN": "「再来第三片、第四片，应该是……」",
+    "links": [2181, 2182]
+  },
+  {
+    "entryID": 2199,
+    "actorID": "MC1",
+    "text": "貴賤位矣，乾坤定矣",
+    "Sequence": "",
+    "zh_CN": "贵贱位矣，乾坤定矣",
+    "links": [2110]
+  },
+  {
+    "entryID": 2200,
+    "actorID": "MC1",
+    "text": "乾坤定矣，貴賤位矣",
+    "Sequence": "",
+    "zh_CN": "乾坤定矣，贵贱位矣",
+    "links": [2110]
+  }
+]

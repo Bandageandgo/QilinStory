@@ -1,0 +1,415 @@
+[
+  {
+    "entryID": 467,
+    "actorID": "MC4",
+    "text": "談事講究真心誠意，\n誠意何來，真心何在。",
+    "Sequence": "SetPortrait(MC11,pic=3);\nEnableCharacterExpression(1,MC4,Meditate);",
+    "zh_TW": "談事講究真心誠意，\n誠意何來，真心何在。",
+    "zh_CN": "谈事讲究真心诚意，\n诚意何来，真心何在。",
+    "links": [468]
+  },
+  {
+    "entryID": 468,
+    "actorID": "MC1",
+    "text": "晚輩今日確實一片赤誠……",
+    "Sequence": "SetPortrait(MC1,pic=6);\nDisableAllCharacterExpression();",
+    "zh_TW": "晚輩今日確實一片赤誠……",
+    "zh_CN": "晚辈今日确实一片赤诚……",
+    "links": [469]
+  },
+  {
+    "entryID": 469,
+    "actorID": "MC4",
+    "text": "朽木難雕。\n賈某今日還有要事，你請回吧。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "朽木難雕。\n賈某今日還有要事，你請回吧。",
+    "zh_CN": "朽木难雕。 \n贾某今日还有要事，你请回吧。",
+    "links": [471]
+  },
+  {
+    "entryID": 471,
+    "actorID": "MC1",
+    "text": "真心誠意……莫不是投其所好……",
+    "Sequence": "SetPortrait(MC1,pic=3);\nOpenPanel(1, close);",
+    "zh_TW": "真心誠意……莫不是投其所好……",
+    "zh_CN": "真心诚意……莫不是投其所好……",
+    "links": [472]
+  },
+  {
+    "entryID": 472,
+    "actorID": "role2",
+    "text": "[panel=5]你不禁聯想到剛才房內解剖景象。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]你不禁聯想到剛才房內解剖景象。",
+    "zh_CN": "[panel=5]你不禁联想到刚才房内解剖景象。",
+    "links": [494]
+  },
+  {
+    "entryID": 473,
+    "actorID": "MC4",
+    "text": "閣下這次又是因何而來？",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC11,pic=1);",
+    "zh_TW": "閣下這次又是因何而來？",
+    "zh_CN": "阁下这次又是因何而来？",
+    "links": [474, 475, 476]
+  },
+  {
+    "entryID": 474,
+    "actorID": "MC1",
+    "text": "1.（拿出能裝800錢的大袋子）",
+    "Sequence": "",
+    "Conditions": "IsCoinPass(\"MC1\", 800)  == true",
+    "zh_TW": "1.（拿出能裝800錢的大袋子）",
+    "zh_CN": "1.（拿出能装800钱的大袋子）",
+    "links": [478]
+  },
+  {
+    "entryID": 475,
+    "actorID": "MC1",
+    "text": "2.[em1][口才][/em1]（拿出裝有400錢的小袋子）",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,18);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Conditions": "IsCoinPass(\"MC1\", 400)  == true",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][口才][/em1]（拿出裝有400錢的小袋子）",
+    "zh_CN": "2.[em1][口才][/em1]（拿出装有400钱的小袋子）",
+    "links": [477]
+  },
+  {
+    "entryID": 476,
+    "actorID": "MC1",
+    "text": "3.（離開）",
+    "Sequence": "",
+    "Description": "離開任務",
+    "zh_TW": "3.（離開）",
+    "zh_CN": "3.（离开）",
+    "links": [497]
+  },
+  {
+    "entryID": 477,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [481, 480]
+  },
+  {
+    "entryID": 478,
+    "actorID": "MC1",
+    "text": "晚輩懵懂，不懂真心實意，卻知海水難估其量。\n人心亦是，今日雖薄，來日未嘗心比金堅。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "晚輩懵懂，不懂真心實意，卻知海水難估其量。\n人心亦是，今日雖薄，來日未嘗心比金堅。",
+    "zh_CN": "晚辈懵懂，不懂真心实意，却知海水难估其量。 \n人心亦是，今日虽薄，来日未尝心比金坚。",
+    "links": [479]
+  },
+  {
+    "entryID": 479,
+    "actorID": "MC4",
+    "text": "心比金堅，呵呵……\n孺子可教。",
+    "Sequence": "SetPortrait(MC11,pic=3);\nEnableCharacterExpression(1,MC4,Proud);\nShowInstantMessage(Reward_Coin,-800);",
+    "Description": "扣800錢",
+    "zh_TW": "心比金堅，呵呵……\n孺子可教。",
+    "zh_CN": "心比金坚，呵呵……\n孺子可教。",
+    "links": [491]
+  },
+  {
+    "entryID": 480,
+    "actorID": "MC4",
+    "text": "此舉令人費解啊，\n賈某素不收禮的，請回吧。",
+    "Sequence": "SetPortrait(MC1,pic=8);\nSetPortrait(MC11,pic=4);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "此舉令人費解啊，\n賈某素不收禮的，請回吧。",
+    "zh_CN": "此举令人费解啊，\n贾某素不收礼的，请回吧。",
+    "links": [499]
+  },
+  {
+    "entryID": 481,
+    "actorID": "MC4",
+    "text": "閣下此舉令人費解，\n須知賈某素不收禮的。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC11,pic=4);\nEnableCharacterExpression(1,MC4,Question);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "閣下此舉令人費解，\n須知賈某素不收禮的。",
+    "zh_CN": "阁下此举令人费解，\n须知贾某素不收礼的。",
+    "links": [482]
+  },
+  {
+    "entryID": 482,
+    "actorID": "MC1",
+    "text": "晚輩清楚，此非禮也，\n而是一還前輩當日指點之恩。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nDisableAllCharacterExpression();",
+    "zh_TW": "晚輩清楚，此非禮也，\n而是一還前輩當日指點之恩。",
+    "zh_CN": "晚辈清楚，此非礼也，\n而是一还前辈当日指点之恩。",
+    "links": [483]
+  },
+  {
+    "entryID": 483,
+    "actorID": "MC4",
+    "text": "賈某不記得自己有說過什麼。",
+    "Sequence": "",
+    "zh_TW": "賈某不記得自己有說過什麼。",
+    "zh_CN": "贾某不记得自己有说过什么。",
+    "links": [484]
+  },
+  {
+    "entryID": 484,
+    "actorID": "MC1",
+    "text": "不言是不知，前輩之不言即晚輩之不知，\n不言之誨，如同再造。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1,Idea);",
+    "zh_TW": "不言是不知，前輩之不言即晚輩之不知，\n不言之誨，如同再造。",
+    "zh_CN": "不言是不知，前辈之不言即晚辈之不知，\n不言之诲，如同再造。",
+    "links": [485]
+  },
+  {
+    "entryID": 485,
+    "actorID": "MC4",
+    "text": "呵呵，賈某不言，你卻得教益。\n此恩該報，該報。",
+    "Sequence": "EnableCharacterExpression(1,MC4,Proud);\nSetPortrait(MC11,pic=3);\nDisableCharacterExpression(0);\nShowInstantMessage(Exp_FeatExp,MC1,Persuasion,20);\nShowInstantMessage(Reward_Coin,-400);",
+    "Description": "獲得專長經驗／扣400錢",
+    "zh_TW": "呵呵，賈某不言，你卻得教益。\n此恩該報，該報。",
+    "zh_CN": "呵呵，贾某不言，你却得教益。 \n此恩该报，该报。",
+    "links": [491]
+  },
+  {
+    "entryID": 491,
+    "actorID": "MC4",
+    "text": "自今日，你便是英豪府的一員。\n此書便予你，就當是見面禮吧。",
+    "Sequence": "SetPortrait(MC11,pic=1);\nDisableAllCharacterExpression();\nShowInstantMessage(Influence_Merit,75);",
+    "Description": "獲得功勳跟貴重品書",
+    "zh_TW": "自今日，你便是英豪府的一員。\n此書便予你，就當是見面禮吧。",
+    "zh_CN": "自今日，你便是英豪府的一员。 \n此书便予你，就当是见面礼吧。",
+    "links": [492]
+  },
+  {
+    "entryID": 492,
+    "actorID": "MC1",
+    "text": "是！弟子拜見師父！",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "是！弟子拜見師父！",
+    "zh_CN": "是！弟子拜见师父！",
+    "links": [512]
+  },
+  {
+    "entryID": 494,
+    "actorID": "MC1",
+    "text": "……還是問小犀好了，\n她住在并州許久，應該掌握不少情報。",
+    "Sequence": "",
+    "Script": "SetQuestState(\"FS03\", \"active\");\nSetQuestEntryState(\"FS03\", 1, \"success\");\nSetQuestEntryState(\"FS03\", 2, \"active\")",
+    "Description": "變數更新",
+    "zh_TW": "……還是問小犀好了，\n她住在并州許久，應該掌握不少情報。",
+    "zh_CN": "……还是问小犀好了，\n她住在并州许久，应该掌握不少情报。",
+    "links": [519]
+  },
+  {
+    "entryID": 495,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes_StudyRoom);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS03\", 1) == \"active\"",
+    "links": [500]
+  },
+  {
+    "entryID": 496,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 497,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [496]
+  },
+  {
+    "entryID": 498,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 499,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [498]
+  },
+  {
+    "entryID": 500,
+    "actorID": "MC1",
+    "text": "拜見賈……\n唔！這什麼味道……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "zh_TW": "拜見賈……\n唔！這什麼味道……",
+    "zh_CN": "拜见贾……\n唔！这什么味道……",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "role2",
+    "text": "[panel=5]你一踏進房內，就聞到某種腐爛惡臭。\n仔細一看，桌上擺著數具被剖開的怪物屍體。",
+    "Sequence": "SetPortrait(MC1,pic=7);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]你一踏進房內，就聞到某種腐爛惡臭。\n仔細一看，桌上擺著數具被剖開的怪物屍體。",
+    "zh_CN": "[panel=5]你一踏进房内，就闻到某种腐烂恶臭。 \n仔细一看，桌上摆着数具被剖开的怪物尸体。",
+    "links": [502]
+  },
+  {
+    "entryID": 502,
+    "actorID": "MC4",
+    "text": "有客人啊？\n不好意思，賈某剛正好忙完手邊事。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "有客人啊？\n不好意思，賈某剛正好忙完手邊事。",
+    "zh_CN": "有客人啊？ \n不好意思，贾某刚正好忙完手边事。",
+    "links": [503]
+  },
+  {
+    "entryID": 503,
+    "actorID": "MC1",
+    "text": "這些怪物屍體……\n敢問前輩是在做什麼？",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "這些怪物屍體……\n敢問前輩是在做什麼？",
+    "zh_CN": "这些怪物尸体……\n敢问前辈是在做什么？",
+    "links": [504]
+  },
+  {
+    "entryID": 504,
+    "actorID": "MC4",
+    "text": "解剖，孫子云知己知彼，百戰百勝。\n有興趣也來一隻試手？",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "解剖，孫子云知己知彼，百戰百勝。\n有興趣也來一隻試手？",
+    "zh_CN": "解剖，孙子云知己知彼，百战百胜。 \n有兴趣也来一只试手？",
+    "links": [505]
+  },
+  {
+    "entryID": 505,
+    "actorID": "MC1",
+    "text": "呃……前輩好意，晚輩暫時心領了，\n晚輩今日是為遴選……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "呃……前輩好意，晚輩暫時心領了，\n晚輩今日是為遴選……",
+    "zh_CN": "呃……前辈好意，晚辈暂时心领了，\n晚辈今日是为遴选……",
+    "links": [467]
+  },
+  {
+    "entryID": 507,
+    "actorID": "MC8",
+    "text": "你問賈詡嗎？他這人雖說很難捉摸，\n古里古怪，卻是出了名嗜錢如命。",
+    "Sequence": "SetPortrait(role6,pic=4);",
+    "zh_TW": "你問賈詡嗎？他這人雖說很難捉摸，\n古里古怪，卻是出了名嗜錢如命。",
+    "zh_CN": "你问贾诩吗？他这人虽说很难捉摸，\n古里古怪，却是出了名嗜钱如命。",
+    "links": [508]
+  },
+  {
+    "entryID": 508,
+    "actorID": "MC1",
+    "text": "啊？就這麼簡單？",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "啊？就這麼簡單？",
+    "zh_CN": "啊？就这么简单？",
+    "links": [509]
+  },
+  {
+    "entryID": 509,
+    "actorID": "MC8",
+    "text": "就是這麼簡單。\n喔對了，通常他要錢，會是[em2]八百[/em2]起跳。",
+    "Sequence": "SetPortrait(role6,pic=6);\nDisableAllCharacterExpression();",
+    "zh_TW": "就是這麼簡單。\n喔對了，通常他要錢，會是[em2]八百[/em2]起跳。",
+    "zh_CN": "就是这么简单。 \n喔对了，通常他要钱，会是[em2]八百[/em2]起跳。",
+    "links": [510]
+  },
+  {
+    "entryID": 510,
+    "actorID": "MC1",
+    "text": "唔！好個錢鬼……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Script": "SetQuestEntryState(\"FS03\", 2, \"success\");\nSetQuestEntryState(\"FS03\", 3, \"active\")",
+    "Description": "變數更新",
+    "zh_TW": "唔！好個錢鬼……",
+    "zh_CN": "唔！好个钱鬼……",
+    "links": [523]
+  },
+  {
+    "entryID": 512,
+    "actorID": "MC4",
+    "text": "別急，等遴選結束，\n你[em2]回英豪府報到[/em2]，那時才算正式入門。",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "別急，等遴選結束，\n你[em2]回英豪府報到[/em2]，那時才算正式入門。",
+    "zh_CN": "别急，等遴选结束，\n你[em2]回英豪府报到[/em2]，那时才算正式入门。",
+    "links": [513]
+  },
+  {
+    "entryID": 513,
+    "actorID": "MC4",
+    "text": "在那之前，我們可以先來上一些課。\n我這正好有兩隻怪物屍體。",
+    "Sequence": "EnableCharacterExpression(1,MC4,Proud);",
+    "zh_TW": "在那之前，我們可以先來上一些課。\n我這正好有兩隻怪物屍體。",
+    "zh_CN": "在那之前，我们可以先来上一些课。 \n我这正好有两只怪物尸体。",
+    "links": [514]
+  },
+  {
+    "entryID": 514,
+    "actorID": "role2",
+    "text": "[panel=5]盛情難卻，無路可退，\n你只能跟著解剖怪物，直到滿身惡臭離去……",
+    "Sequence": "DisableAllCharacterExpression();\nShowInstantMessage(Exp_FeatExp,MC1,MedicalExpertise,20);\nShowInstantMessage(Exp_FeatExp,MC1,Knowledge,20);",
+    "Script": "SetQuestState(\"FS03\", \"success\");\nSetQuestEntryState(\"FS03\", 3, \"success\");\nSetQuestEntryState(\"MS05\", 1, \"success\");\nSetQuestEntryState(\"MS05\", 2, \"active\")",
+    "Description": "獲得專長經驗／變數更新",
+    "zh_TW": "[panel=5]盛情難卻，無路可退，\n你只能跟著解剖怪物，直到滿身惡臭離去……",
+    "zh_CN": "[panel=5]盛情难却，无路可退，\n你只能跟着解剖怪物，直到满身恶臭离去……",
+    "links": [516]
+  },
+  {
+    "entryID": 515,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 516,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [515]
+  },
+  {
+    "entryID": 518,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 519,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [518]
+  },
+  {
+    "entryID": 520,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Home);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS03\", 2) == \"active\"",
+    "links": [507]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 523,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [522]
+  },
+  {
+    "entryID": 524,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes_StudyRoom);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS03\", 3) == \"active\"",
+    "links": [473]
+  }
+]

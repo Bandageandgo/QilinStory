@@ -1,0 +1,134 @@
+[
+  {
+    "entryID": 814,
+    "actorID": "MC20",
+    "text": "「……啊啊啊啊啊啊！！」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nDisableCharacterExpression(1);\nAudioControl(PlaySFX,Others_WoodFloor_Break);",
+    "Description": "音效",
+    "zh_TW": "「……啊啊啊啊啊啊！！」",
+    "zh_CN": "「……啊啊啊啊啊啊！！」",
+    "links": [816]
+  },
+  {
+    "entryID": 815,
+    "actorID": "MC20",
+    "text": "「等等，兄弟，這間屋子好像有什麼玄機……且讓我來探探！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(1,MC20,Question);",
+    "zh_TW": "「等等，兄弟，這間屋子好像有什麼玄機……且讓我來探探！」",
+    "zh_CN": "「等等，兄弟，这间屋子好像有什么玄机……且让我来探探！」",
+    "links": [825]
+  },
+  {
+    "entryID": 816,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你只來得及聽見一聲驚呼，便看見雍仔腳下的腐朽木板應聲斷裂。他身影一晃，帶著一陣塵土與木屑跌入黑暗之中，只留下空蕩的洞口在你眼前張開。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你只來得及聽見一聲驚呼，便看見雍仔腳下的腐朽木板應聲斷裂。他身影一晃，帶著一陣塵土與木屑跌入黑暗之中，只留下空蕩的洞口在你眼前張開。）＊",
+    "zh_CN": "[panel=6]＊（你只来得及听见一声惊呼，便看见雍仔脚下的腐朽木板应声断裂。他身影一晃，带着一阵尘土与木屑跌入黑暗之中，只留下空荡的洞口在你眼前张开。）＊",
+    "links": [823]
+  },
+  {
+    "entryID": 817,
+    "actorID": "MC1",
+    "text": "「喂、喂！雍仔，你沒事吧？」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「喂、喂！雍仔，你沒事吧？」",
+    "zh_CN": "「喂、喂！雍仔，你没事吧？」",
+    "links": [818]
+  },
+  {
+    "entryID": 818,
+    "actorID": "MC20",
+    "text": "「咳咳……沒、沒事！你快看，我這裡……有驚人的發現！」",
+    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,MC20,Idea);",
+    "zh_TW": "「咳咳……沒、沒事！你快看，我這裡……有驚人的發現！」",
+    "zh_CN": "「咳咳……没、没事！你快看，我这里……有惊人的发现！」",
+    "links": [819]
+  },
+  {
+    "entryID": 819,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你好奇心壓過了遲疑。望著漆黑的缺口，你終於下定決心，縱身一躍，跟著落了下去……）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（你好奇心壓過了遲疑。望著漆黑的缺口，你終於下定決心，縱身一躍，跟著落了下去……）＊",
+    "zh_CN": "[panel=6]＊（你好奇心压过了迟疑。望着漆黑的缺口，你终于下定决心，纵身一跃，跟着落了下去……）＊",
+    "links": [824]
+  },
+  {
+    "entryID": 820,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你隨著碎裂的木板與塵土落下，重重踩在冰冷堅硬的地面上。）＊",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_TW": "[panel=6]＊（你隨著碎裂的木板與塵土落下，重重踩在冰冷堅硬的地面上。）＊",
+    "zh_CN": "[panel=6]＊（你随着碎裂的木板与尘土落下，重重踩在冰冷坚硬的地面上。）＊",
+    "links": [821]
+  },
+  {
+    "entryID": 821,
+    "actorID": "role2",
+    "text": "[panel=6]＊（眼前是一處幽暗的墓室，四壁斑駁的石磚隱約刻著古老符紋，石燭台上殘留著未燃盡的蠟淚，似乎有人曾在此停留過。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（眼前是一處幽暗的墓室，四壁斑駁的石磚隱約刻著古老符紋，石燭台上殘留著未燃盡的蠟淚，似乎有人曾在此停留過。）＊",
+    "zh_CN": "[panel=6]＊（眼前是一处幽暗的墓室，四壁斑驳的石砖隐约刻着古老符纹，石烛台上残留着未燃尽的蜡泪，似乎有人曾在此停留过。）＊",
+    "links": [822]
+  },
+  {
+    "entryID": 822,
+    "actorID": "MC1",
+    "text": "「看來我們闖進不得了的地方了。」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_TW": "「看來我們闖進不得了的地方了。」",
+    "zh_CN": "「看来我们闯进不得了的地方了。」",
+    "links": [826]
+  },
+  {
+    "entryID": 823,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@1.2;\nContinue()@1.2;",
+    "Description": "823雍仔掉落",
+    "links": [817]
+  },
+  {
+    "entryID": 824,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@1.2;\nContinue()@1.2;",
+    "Description": "824跳下去",
+    "links": [820]
+  },
+  {
+    "entryID": 825,
+    "actorID": "MC20",
+    "text": "「這兒肯定藏著什麼寶...」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(1);",
+    "zh_TW": "「這兒肯定藏著什麼寶...」",
+    "zh_CN": "「这儿肯定藏着什么宝...」",
+    "links": [814]
+  },
+  {
+    "entryID": 826,
+    "actorID": "MC20",
+    "text": "「看這些陳設，桌椅未蒙塵，爐灶尚有餘溫，分明是常年有人居住的模樣。奇怪的是...卻不見半點打鬥或匆忙搬遷的痕跡。這裡的人，就像是憑空消失了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);\nEnableCharacterExpression(1,MC20,Question);",
+    "zh_TW": "「看這些陳設，桌椅未蒙塵，爐灶尚有餘溫，分明是常年有人居住的模樣。奇怪的是...卻不見半點打鬥或匆忙搬遷的痕跡。這裡的人，就像是憑空消失了。」",
+    "zh_CN": "「看这些陈设，桌椅未蒙尘，炉灶尚有余温，分明是常年有人居住的模样。奇怪的是...却不见半点打斗或匆忙搬迁的痕迹。这里的人，就像是凭空消失了。」",
+    "links": [827]
+  },
+  {
+    "entryID": 827,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 828,
+    "actorID": "MC1",
+    "text": "「哦哦，荒郊野嶺的這裡居然會有間屋子！？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「哦哦，荒郊野嶺的這裡居然會有間屋子！？」",
+    "zh_CN": "「哦哦，荒郊野岭的这里居然会有间屋子！？」",
+    "links": [815]
+  }
+]

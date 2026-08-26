@@ -1,0 +1,690 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（時光飛逝，轉眼四月已經要結束。）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlaySFXOneShot,Others_Bird);",
+    "Description": "放音效",
+    "zh_TW": "[panel=6]＊（時光飛逝，轉眼四月已經要結束。）＊",
+    "zh_CN": "[panel=6]＊（时光飞逝，转眼四月已经要结束。）＊",
+    "links": [14]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「嘖，這小村的日子雖安逸，卻也無聊得緊…」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nAudioControl(Play Music,BGM_19);",
+    "zh_TW": "「嘖，這小村的日子雖安逸，卻也無聊得緊…」",
+    "zh_CN": "「啧，这小村的日子虽安逸，却也无聊得紧…」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「哎呀！我想起來了！雍仔道長！古墓！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
+    "zh_TW": "「哎呀！我想起來了！雍仔道長！古墓！」",
+    "zh_CN": "「哎呀！我想起来了！雍仔道长！古墓！」",
+    "links": [15]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC8",
+    "text": "「表哥，你說的是我們剛到村子時認識的那個胖乎乎，看起來不大牢靠的道士？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "zh_TW": "「表哥，你說的是我們剛到村子時認識的那個胖乎乎，看起來不大牢靠的道士？」",
+    "zh_CN": "「表哥，你说的是我们刚到村子时认识的那个胖乎乎，看起来不大牢靠的道士？」",
+    "links": [16]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？」",
+    "zh_CN": "「灵犀妳想到哪里去了！我辈江湖儿女，岂会做那鸡鸣狗盗之徒？」",
+    "links": [17]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「再說，與人有約，豈能失信？我等會便去那林中與雍仔道長會合！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1-1,pic=8);",
+    "zh_TW": "「再說，與人有約，豈能失信？我等會便去那林中與雍仔道長會合！」",
+    "zh_CN": "「再说，与人有约，岂能失信？我等会便去那林中与雍仔道长会合！」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC8",
+    "text": "「唉，我就知道攔不住你。表哥，萬事小心，若真有危險，保命要緊！」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "「唉，我就知道攔不住你。表哥，萬事小心，若真有危險，保命要緊！」",
+    "zh_CN": "「唉，我就知道拦不住你。表哥，万事小心，若真有危险，保命要紧！」",
+    "links": [18]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「哈哈，放心放心，表哥我吉人天相，區區古墓何足道哉！等我滿載而歸，給你買十串飴糖！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「哈哈，放心放心，表哥我吉人天相，區區古墓何足道哉！等我滿載而歸，給你買十串飴糖！」",
+    "zh_CN": "「哈哈，放心放心，表哥我吉人天相，区区古墓何足道哉！等我满载而归，给你买十串饴糖！」",
+    "links": [298]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role2",
+    "text": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
+    "zh_CN": "[panel=6]＊（今日天色阴沉，浓雾渐起，林间光线昏暗，寂静无声，只有脚步踩在枯叶上的沙沙声，以及远处偶尔传来的几声鸦啼，平添了几分诡异萧索的气氛。）＊",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「終於到了，趁霧還沒有太濃，趕緊去找雍仔吧。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「終於到了，趁霧還沒有太濃，趕緊去找雍仔吧。」",
+    "zh_CN": "「终于到了，趁雾还没有太浓，赶紧去找雍仔吧。」",
+    "links": []
+  },
+  {
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小溪村的日子平淡而規律，你每日除了與[em2]靈犀[/em2]鬥嘴，便是在房中打坐或揮舞幾下木棍，偶爾也去村裡閒逛，聽些雞毛蒜皮的鄉野趣聞。)",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（小溪村的日子平淡而規律，你每日除了與[em2]靈犀[/em2]鬥嘴，便是在房中打坐或揮舞幾下木棍，偶爾也去村裡閒逛，聽些雞毛蒜皮的鄉野趣聞。)",
+    "zh_CN": "[panel=6]＊（小溪村的日子平淡而规律，你每日除了与[em2]灵犀[/em2]斗嘴，便是在房中打坐或挥舞几下木棍，偶尔也去村里闲逛，听些鸡毛蒜皮的乡野趣闻。)",
+    "links": [2]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「我們約好要去探村外林子深處的古墓！算算日子，可不就是今天了嗎？！」",
+    "Sequence": "",
+    "zh_TW": "「我們約好要去探村外林子深處的古墓！算算日子，可不就是今天了嗎？！」",
+    "zh_CN": "「我们约好要去探村外林子深处的古墓！算算日子，可不就是今天了吗？！」",
+    "links": [4]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC8",
+    "text": "「那個胖道士說後山森林有前朝的寶藏，還邀你一起去。」",
+    "Sequence": "SetPortrait(MC8,pic=9);",
+    "zh_TW": "「那個胖道士說後山森林有前朝的寶藏，還邀你一起去。」",
+    "zh_CN": "「那个胖道士说后山森林有前朝的宝藏，还邀你一起去。」",
+    "links": [299]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「況且雍仔道長說那是前朝古墓，內藏奇珍異寶，更有失傳秘籍！此乃探險尋寶，增長見聞，與盜墓截然不同！」",
+    "Sequence": "",
+    "zh_TW": "「況且雍仔道長說那是前朝古墓，內藏奇珍異寶，更有失傳秘籍！此乃探險尋寶，增長見聞，與盜墓截然不同！」",
+    "zh_CN": "「况且雍仔道长说那是前朝古墓，内藏奇珍异宝，更有失传秘籍！此乃探险寻宝，增长见闻，与盗墓截然不同！」",
+    "links": [6]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC8",
+    "text": "「我在客棧等你回來，可別讓我等太久，不然我就…我就把你的私房錢都拿去買飴糖串！」",
+    "Sequence": "",
+    "zh_TW": "「我在客棧等你回來，可別讓我等太久，不然我就…我就把你的私房錢都拿去買飴糖串！」",
+    "zh_CN": "「我在客栈等你回来，可别让我等太久，不然我就…我就把你的私房钱都拿去买饴糖串！」",
+    "links": [8]
+  },
+  {
+    "entryID": 298,
+    "actorID": "MC1",
+    "text": "「事不宜遲，別讓雍仔等太久了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「事不宜遲，別讓雍仔等太久了。」",
+    "zh_CN": "「事不宜迟，别让雍仔等太久了。」",
+    "links": [300]
+  },
+  {
+    "entryID": 299,
+    "actorID": "MC8",
+    "text": "「表哥，你還真相信那胖道士啊？！真要去盜墓不成？聽起來就很危險！」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "「表哥，你還真相信那胖道士啊？！真要去盜墓不成？聽起來就很危險！」",
+    "zh_CN": "「表哥，你还真相信那胖道士啊？！真要去盗墓不成？听起来就很危险！」",
+    "links": [5]
+  },
+  {
+    "entryID": 300,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(XiaoxiVillageTomb,XiaoxiVillageTomb_NorthEntrance);\nContinue();",
+    "Script": "SetQuestState(\"CF13\", \"success\")",
+    "Description": "完成\"提升能力\"任務",
+    "links": []
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [1]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "MC1",
+    "text": "開始對話",
+    "Sequence": "",
+    "zh_CN": "开始对话",
+    "links": []
+  },
+  {
+    "entryID": 2051,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這天早晨。你正打盹，蕭靈犀卻在數桌上僅剩的銅錢。）＊",
+    "Sequence": "EnableDialogueBG(Home);",
+    "Description": "蕭靈犀的野望1",
+    "zh_CN": "[panel=6]＊（这天早晨。你正打盹，萧灵犀却在数桌上仅剩的铜钱。）＊",
+    "links": [2052]
+  },
+  {
+    "entryID": 2052,
+    "actorID": "MC8",
+    "text": "「二十七、二十八、二十九……唉，交了三百錢房租，就剩這點了。」",
+    "Sequence": "SetPortrait(MC8,pic=3);\nEnableCharacterExpression(1,MC8,Meditate);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);",
+    "Description": "蕭靈犀主題曲",
+    "zh_CN": "「二十七、二十八、二十九……唉，交了三百钱房租，就剩这点了。」",
+    "links": [2053]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC1",
+    "text": "「還夠用吧？有床睡、有飯吃，比睡野地強多了。」",
+    "Sequence": "DisableCharacterExpression(1)\n;SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「还够用吧？有床睡、有饭吃，比睡野地强多了。」",
+    "links": [2150]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC8",
+    "text": "「表哥！雲中物價貴得很，英豪府遴選又要置辦行頭——咱們現在是坐吃山空！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=2);",
+    "zh_CN": "「表哥！云中物价贵得很，英豪府遴选又要置办行头——咱们现在是坐吃山空！」",
+    "links": [2055]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC1",
+    "text": "「那不然呢？去跟大公雞再鬥三回合？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「那不然呢？去跟大公鸡再斗三回合？」",
+    "links": [2056]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC8",
+    "text": "「鬥雞能賺幾個錢？山賊把路一封，財源也進不來——人家想要去村裡收看看貨物搞不好有寶貝呢，勇敢開拓，這才是通商的第一步！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Idea);",
+    "zh_CN": "「斗鸡能赚几个钱？山贼把路一封，财源也进不来——人家想要去村里收看看货物搞不好有宝贝呢，勇敢开拓，这才是通商的第一步！」",
+    "links": [2057]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她撕下點蛙簿空白頁折成小帳冊，拉著你出門。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她撕下点蛙簿空白页折成小帐册，拉着你出门。）＊",
+    "links": [2145]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "role2",
+    "text": "[panel=6]＊（村口茶攤。茶博士正撥著算籌。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（村口茶摊。茶博士正拨着算筹。）＊",
+    "links": [2059]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "role105",
+    "text": "[panel=1]「子曰：君子固窮……可老子不想固窮啊。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「子曰：君子固穷……可老子不想固穷啊。」",
+    "links": [2060]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC8",
+    "text": "[panel=2]「茶博士，您上回帳本裡不是寫著——[em2]有錢自遠方來，才亦樂乎[/em2]？現在遠方的人有錢也過不來啦。」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「茶博士，您上回帐本里不是写着——[em2]有钱自远方来，才亦乐乎[/em2]？现在远方的人有钱也过不来啦。」",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role105",
+    "text": "[panel=1]「小丫頭，記性倒好。怎麼，你們兄妹倆無事不登三寶殿，今天怎來我這啦？」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=1]「小丫头，记性倒好。怎么，你们兄妹俩无事不登三宝殿，今天怎来我这啦？」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC8",
+    "text": "[panel=2]「嘻嘻，讓您見笑啦。小犀在客棧做點小買賣——誰有貨托咱們過手標價，有人買就賣，賣了跟您分帳。您茶攤見的人多，有沒有願意試試的？」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「嘻嘻，让您见笑啦。小犀在客栈做点小买卖——谁有货托咱们过手标价，有人买就卖，卖了跟您分帐。您茶摊见的人多，有没有愿意试试的？」",
+    "links": [2063]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "role105",
+    "text": "[panel=1]「做買賣？你這小丫頭，算籌撥得倒快。但免談。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=1]「做买卖？你这小丫头，算筹拨得倒快。但免谈。」",
+    "links": [2064]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "MC8",
+    "text": "[panel=2]「又不是白拿。小犀幫您標價、記帳，賣了分您九成……再說，櫃底那個沾灰的盒子，放著也是放著吧？」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Meditate);\nEnableEventBG(MC8NoMoney);",
+    "zh_CN": "[panel=2]「又不是白拿。小犀帮您标价、记帐，卖了分您九成……再说，柜底那个沾灰的盒子，放着也是放着吧？」",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nDisableCharacterExpression(2);\nBeginDiceRoll(Auto,InsightCheck,10);",
+    "links": [2066]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2067, 2068]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你瞧見茶博士目光往櫃底一閃，指尖在算盤上停了半拍——那盒子，他並非當真忘了。）＊",
+    "Sequence": ";ModifyData(FeatExp,Player,Insight,10);",
+    "zh_CN": "[panel=6]＊（你瞧见茶博士目光往柜底一闪，指尖在算盘上停了半拍——那盒子，他并非当真忘了。）＊",
+    "links": [2069]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "role2",
+    "text": "[panel=6]＊（茶博士撥算盤的聲音依舊平穩，你也說不清他到底在不在意那個盒子。）＊",
+    "Sequence": ";",
+    "zh_CN": "[panel=6]＊（茶博士拨算盘的声音依旧平稳，你也说不清他到底在不在意那个盒子。）＊",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "role105",
+    "text": "[panel=1]「……眼睛倒是尖。」",
+    "Sequence": "DisableEventBG();",
+    "zh_CN": "[panel=1]「……眼睛倒是尖。」",
+    "links": [2070, 2071, 2072]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「茶博士，小犀年紀小，說話直了些，您別見怪。」",
+    "Sequence": "",
+    "zh_CN": "[em2][口才检定][/em2]「茶博士，小犀年纪小，说话直了些，您别见怪。」",
+    "links": [2073]
+  },
+  {
+    "entryID": 2071,
+    "actorID": "MC1",
+    "text": "「九一分帳，說定了便一銅錢不少。」",
+    "Sequence": "",
+    "zh_CN": "「九一分帐，说定了便一铜钱不少。」",
+    "links": [2078]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC1",
+    "text": "「先試一試，賣不出再收回便是。」",
+    "Sequence": "",
+    "zh_CN": "「先试一试，卖不出再收回便是。」",
+    "links": [2080]
+  },
+  {
+    "entryID": 2073,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,6);",
+    "links": [2074]
+  },
+  {
+    "entryID": 2074,
+    "actorID": "MC1",
+    "text": "「茶博士，小犀年紀小，說話直了些。托您過手的貨，她記帳比誰都清楚，您就讓她試一試嘛。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「茶博士，小犀年纪小，说话直了些。托您过手的货，她记帐比谁都清楚，您就让她试一试嘛。」",
+    "links": [2075, 2076]
+  },
+  {
+    "entryID": 2075,
+    "actorID": "role105",
+    "text": "[panel=1]「……成，就讓妳試試。」",
+    "Sequence": ";DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_CN": "[panel=1]「……成，就让妳试试。」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2076,
+    "actorID": "MC1",
+    "text": "「茶博士，小犀她……呃……」",
+    "Sequence": ";SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_CN": "「茶博士，小犀她……呃……」",
+    "links": [2077]
+  },
+  {
+    "entryID": 2077,
+    "actorID": "role105",
+    "text": "[panel=1]「結巴什麼？……罷了，看在小丫頭記性好的份上，讓她試試。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「结巴什么？……罢了，看在小丫头记性好的份上，让她试试。」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2078,
+    "actorID": "MC1",
+    "text": "「九一分帳，說定了便一銅錢不少。茶博士的貨，小犀絕不短您分文。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「九一分帐，说定了便一铜钱不少。茶博士的货，小犀绝不短您分文。」",
+    "links": [2079]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "role105",
+    "text": "[panel=1]「哼，口氣倒硬。……成，讓妳試試。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「哼，口气倒硬。……成，让妳试试。」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2080,
+    "actorID": "MC1",
+    "text": "「先試一試嘛，賣不出再收回，茶博士您又不損什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「先试一试嘛，卖不出再收回，茶博士您又不损什么。」",
+    "links": [2081]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "role105",
+    "text": "[panel=1]「……你們這些小鬼頭。成，試試就試試。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「……你们这些小鬼头。成，试试就试试。」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "role2",
+    "text": "[panel=6]＊（茶博士嘆口氣，蹲到櫃底，摸出一只[em2]雀羽面具[/em2]，羽毛尚帶光澤，卻沾了層薄灰。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（茶博士叹口气，蹲到柜底，摸出一只[em2]雀羽面具[/em2]，羽毛尚带光泽，却沾了层薄灰。）＊",
+    "links": [2083]
+  },
+  {
+    "entryID": 2083,
+    "actorID": "role105",
+    "text": "[panel=1]「這玩意兒跟了我些年，就放你那過手，標個價，賣了九一分——我九，你一。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「这玩意儿跟了我些年，就放你那过手，标个价，卖了九一分——我九，你一。」",
+    "links": [2084]
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC8",
+    "text": "[panel=2]「入帳！小犀記下了！」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_CN": "[panel=2]「入帐！小犀记下了！」",
+    "links": [2146]
+  },
+  {
+    "entryID": 2085,
+    "actorID": "role2",
+    "text": "[panel=6]＊（村東小屋。滿臉橫肉的書生抱著竹簡發呆。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（村东小屋。满脸横肉的书生抱着竹简发呆。）＊",
+    "links": [2086]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "role111",
+    "text": "「子曰……唉，子曰了半天，[em2]《孝經》[/em2]、[em2]《論語》[/em2]攢了一摞，過路書商不來，這書難道當柴燒？」",
+    "Sequence": "",
+    "zh_CN": "「子曰……唉，子曰了半天，[em2]《孝经》[/em2]、[em2]《论语》[/em2]攒了一摞，过路书商不来，这书难道当柴烧？」",
+    "links": [2087]
+  },
+  {
+    "entryID": 2087,
+    "actorID": "MC8",
+    "text": "[panel=2]「書生哥哥，托幾本在客棧試試嘛。有人買，小犀記帳分您；沒人買，再搬回來就是。」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「书生哥哥，托几本在客栈试试嘛。有人买，小犀记帐分您；没人买，再搬回来就是。」",
+    "links": [2088]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "role111",
+    "text": "「……你看得懂這些？」",
+    "Sequence": "",
+    "zh_CN": "「……你看得懂这些？」",
+    "links": [2089]
+  },
+  {
+    "entryID": 2089,
+    "actorID": "MC8",
+    "text": "[panel=2]「看不懂，可總有人要。放小棧，比堆在這兒發霉強。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=2]「看不懂，可总有人要。放小栈，比堆在这儿发霉强。」",
+    "links": [2090]
+  },
+  {
+    "entryID": 2090,
+    "actorID": "role111",
+    "text": "「……也罷，拿兩本去。」",
+    "Sequence": "",
+    "zh_CN": "「……也罢，拿两本去。」",
+    "links": [2147]
+  },
+  {
+    "entryID": 2091,
+    "actorID": "role2",
+    "text": "[panel=6]＊（村中空地。郎中正曬藥材。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（村中空地。郎中正晒药材。）＊",
+    "links": [2092]
+  },
+  {
+    "entryID": 2092,
+    "actorID": "MC13",
+    "text": "「雲遊的人，走哪兒都撿點東西——藥方、舊記，還有不知從哪兒換來的[em2]武學秘笈[/em2]……」",
+    "Sequence": "SetPortrait(MC13,pic=1);",
+    "zh_CN": "「云游的人，走哪儿都捡点东西——药方、旧记，还有不知从哪儿换来的[em2]武学秘笈[/em2]……」",
+    "links": [2093]
+  },
+  {
+    "entryID": 2093,
+    "actorID": "MC8",
+    "text": "[panel=2]「大叔行走江湖，包袱裡的寶貝比藥箱還沉吧？小犀在客棧做小生意——您若有用不著的[em2]秘笈[/em2]，托小犀過手標價，賣了再分您。」",
+    "Sequence": "SetPortrait(MC8,pic=1);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_CN": "[panel=2]「大叔行走江湖，包袱里的宝贝比药箱还沉吧？小犀在客栈做小生意——您若有用不着的[em2]秘笈[/em2]，托小犀过手标价，卖了再分您。」",
+    "links": [2094]
+  },
+  {
+    "entryID": 2094,
+    "actorID": "MC13",
+    "text": "「小生意？成。挑幾本……咳，幾本[em2]不礙我修行[/em2]的，交你們過手試賣。別亂標價。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC13,pic=5);",
+    "zh_CN": "「小生意？成。挑几本……咳，几本[em2]不碍我修行[/em2]的，交你们过手试卖。别乱标价。」",
+    "links": [2095]
+  },
+  {
+    "entryID": 2095,
+    "actorID": "MC8",
+    "text": "[panel=2]「口碑比黑心錢長久！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「口碑比黑心钱长久！」",
+    "links": [2096]
+  },
+  {
+    "entryID": 2096,
+    "actorID": "MC13",
+    "text": "「……這句是我該說的吧？」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC13,pic=3);",
+    "zh_CN": "「……这句是我该说的吧？」",
+    "links": [2097]
+  },
+  {
+    "entryID": 2097,
+    "actorID": "role2",
+    "text": "[panel=6]＊（日落，客棧裡。堆了從村民手中收來的貨；帳冊上寫滿品名與價錢。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（日落，客栈里。堆了从村民手中收来的货；帐册上写满品名与价钱。）＊",
+    "links": [2148]
+  },
+  {
+    "entryID": 2098,
+    "actorID": "MC8",
+    "text": "「茶博士的面具、書生的書、大叔的秘笈……[em2]生意開張啦！[/em2]」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "「茶博士的面具、书生的书、大叔的秘笈……[em2]生意开张啦！[/em2]」",
+    "links": [2099]
+  },
+  {
+    "entryID": 2099,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她把帳冊往你手裡一塞，又指了指那幾冊秘笈，眼睛亮晶晶的。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她把帐册往你手里一塞，又指了指那几册秘笈，眼睛亮晶晶的。）＊",
+    "links": [2100]
+  },
+  {
+    "entryID": 2100,
+    "actorID": "MC8",
+    "text": "「表哥，以後想買什麼，在房裡跟小犀說就行——不用滿村跑。等到了[em2]雲中[/em2]，好貨更多，人家再請行商托貨，生意還能擴！」",
+    "Sequence": "SetPortrait(MC8,pic=1);EnableCharacterExpression(1,MC8,Meditate);",
+    "zh_CN": "「表哥，以后想买什么，在房里跟小犀说就行——不用满村跑。等到了[em2]云中[/em2]，好货更多，人家再请行商托货，生意还能扩！」",
+    "links": [2101]
+  },
+  {
+    "entryID": 2101,
+    "actorID": "MC1",
+    "text": "「……所以我是掌櫃，還是腳夫？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_CN": "「……所以我是掌柜，还是脚夫？」",
+    "links": [2102]
+  },
+  {
+    "entryID": 2102,
+    "actorID": "MC8",
+    "text": "「掌櫃！工錢兩枚五銖！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);EnableCharacterExpression(1,MC8,Meditate);",
+    "zh_CN": "「掌柜！工钱两枚五铢！」",
+    "links": [2103]
+  },
+  {
+    "entryID": 2103,
+    "actorID": "role115",
+    "text": "[panel=2]「兩位……咱這是客棧，不是貨棧啊。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=2]「两位……咱这是客栈，不是货栈啊。」",
+    "links": [2104]
+  },
+  {
+    "entryID": 2104,
+    "actorID": "MC8",
+    "text": "「小二哥放心，不佔走道！過路客要買，還得先問小犀呢。」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nDisableCharacterExpression(1);",
+    "zh_CN": "「小二哥放心，不占走道！过路客要买，还得先问小犀呢。」",
+    "links": [2106]
+  },
+  {
+    "entryID": 2106,
+    "actorID": "role2",
+    "text": "[panel=6]＊（馬車鈴聲仍未響起。可這個等不起來的小姑娘，已在客棧房裡搭好了第一個據點——等著把這條路，一路拓到雲中去。）＊",
+    "Sequence": "Shop(AddItem,MC8,PeacockFeatherMask,1);\nShop(AddItem,MC8,CloudSwordBook,1);\nShop(AddItem,MC8,ArmoredBladeBook,1);\nShop(AddItem,MC8,BreakthroughBook,1);\nShop(AddItem,MC8,GreatBearJing,1);\nShop(AddItem,MC8,BlackMambaJing,1);\nShop(AddItem,MC8,MoziArtOfWar,1);\nShop(AddItem,MC8,WarringStrategies,1);\nShop(AddItem,MC8,LightStepClothShoes,1);\nShop(AddItem,MC8,WarringStrategies,1);\nShop(AddItem,MC8,FilialPietyBook,1);\nShop(AddItem,MC8,AnalectsOfConfucius,1);\nShop(AddItem,MC8,IronRing,10);",
+    "Description": "商品更新",
+    "zh_CN": "[panel=6]＊（马车铃声仍未响起。可这个等不起来的小姑娘，已在客栈房里搭好了第一个据点——等着把这条路，一路拓到云中去。）＊",
+    "links": [2149]
+  },
+  {
+    "entryID": 2145,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Farmland)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [2058]
+  },
+  {
+    "entryID": 2146,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(StudyRoom)@1;\nOpenPanel(1, close)@1;\nDisableCharacterExpression(2)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [2085]
+  },
+  {
+    "entryID": 2147,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(TrainingGround)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [2091]
+  },
+  {
+    "entryID": 2148,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Lnn)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [2098]
+  },
+  {
+    "entryID": 2149,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 2150,
+    "actorID": "MC8",
+    "text": "「夠用？表哥你自己算算日子——茶博士說的那[em2]一個月[/em2]，早就滿了。馬車呢？連個車轍印子都沒瞧見。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=2);\nEnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「夠用？表哥你自己算算日子——茶博士說的那[em2]一個月[/em2]，早就滿了。馬車呢？連個車轍印子都沒瞧見。」",
+    "zh_CN": "「够用？表哥你自己算算日子——茶博士说的那[em2]一个月[/em2]，早就满了。马车呢？连个车辙印子都没瞧见。」",
+    "links": [2151]
+  },
+  {
+    "entryID": 2151,
+    "actorID": "MC1",
+    "text": "「……我還當是自己躺糊塗了。縣衙不是說一個月就通車？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「……我還當是自己躺糊塗了。縣衙不是說一個月就通車？」",
+    "zh_CN": "「……我还当是自己躺糊涂了。县衙不是说一个月就通车？」",
+    "links": [2152]
+  },
+  {
+    "entryID": 2152,
+    "actorID": "MC8",
+    "text": "「山頭上的賊沒剿乾淨，衙門哪敢放車出去。掌櫃的說，得湊齊護送的人手、結成[em2]車隊[/em2]才走得成——[em2]快則兩月，慢則入秋[/em2]。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=1);\nEnableCharacterExpression(1,MC8,Meditate);",
+    "zh_TW": "「山頭上的賊沒剿乾淨，衙門哪敢放車出去。掌櫃的說，得湊齊護送的人手、結成[em2]車隊[/em2]才走得成——[em2]快則兩月，慢則入秋[/em2]。」",
+    "zh_CN": "「山头上的贼没剿干净，衙门哪敢放车出去。掌柜的说，得凑齐护送的人手、结成[em2]车队[/em2]才走得成——[em2]快则两月，慢则入秋[/em2]。」",
+    "links": [2054]
+  }
+]

@@ -1,0 +1,439 @@
+[
+  {
+    "entryID": 394,
+    "actorID": "MC1",
+    "text": "這居然有麵攤……\n正好餓了，吃碗麵再上路。",
+    "Sequence": "",
+    "zh_TW": "這居然有麵攤……\n正好餓了，吃碗麵再上路。",
+    "zh_CN": "这居然有面摊……\n正好饿了，吃碗面再上路。",
+    "links": [395]
+  },
+  {
+    "entryID": 395,
+    "actorID": "role24",
+    "text": "[panel=2]大王，求您發發慈悲……",
+    "Sequence": "",
+    "zh_TW": "[panel=2]大王，求您發發慈悲……",
+    "zh_CN": "[panel=2]大王，求您发发慈悲……",
+    "links": [396]
+  },
+  {
+    "entryID": 396,
+    "actorID": "MC1",
+    "text": "是出了什麼事？",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Question);",
+    "zh_TW": "是出了什麼事？",
+    "zh_CN": "是出了什么事？",
+    "links": [397]
+  },
+  {
+    "entryID": 397,
+    "actorID": "role22",
+    "text": "本王難得到這，就是為了品嘗這碗麵的滋味。\n今日這好心情，全被你們給壞了。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "本王難得到這，就是為了品嘗這碗麵的滋味。\n今日這好心情，全被你們給壞了。",
+    "zh_CN": "本王难得到这，就是为了品尝这碗面的滋味。 \n今日这好心情，全被你们给坏了。",
+    "links": [398]
+  },
+  {
+    "entryID": 398,
+    "actorID": "role24",
+    "text": "[panel=2]不不不，我們絕不敢打擾大王您，\n實在是有不得已的苦衷……",
+    "Sequence": "",
+    "zh_TW": "[panel=2]不不不，我們絕不敢打擾大王您，\n實在是有不得已的苦衷……",
+    "zh_CN": "[panel=2]不不不，我们绝不敢打扰大王您，\n实在是有不得已的苦衷……",
+    "links": [400]
+  },
+  {
+    "entryID": 400,
+    "actorID": "role22",
+    "text": "什麼苦衷？你們是說本王虧待了你們？\n黑狼氏族沒有按約定保護你們？",
+    "Sequence": "SetPortrait(role22,pic=4);",
+    "zh_TW": "什麼苦衷？你們是說本王虧待了你們？\n黑狼氏族沒有按約定保護你們？",
+    "zh_CN": "什么苦衷？你们是说本王亏待了你们？ \n黑狼氏族没有按约定保护你们？",
+    "links": [401]
+  },
+  {
+    "entryID": 401,
+    "actorID": "role24",
+    "text": "沒有沒有，自從大王派人來，就沒人再敢騷擾。\n但大王要求的上貢，我們實在有些負擔不起了。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "沒有沒有，自從大王派人來，就沒人再敢騷擾。\n但大王要求的上貢，我們實在有些負擔不起了。",
+    "zh_CN": "没有没有，自从大王派人来，就没人再敢骚扰。 \n但大王要求的上贡，我们实在有些负担不起了。",
+    "links": [403]
+  },
+  {
+    "entryID": 403,
+    "actorID": "role22",
+    "text": "哼！身為屬民，這本就你們該盡的義務。\n不想的話，你們去找赤龍幫或甄家好了。",
+    "Sequence": "SetPortrait(role22,pic=1);",
+    "zh_TW": "哼！身為屬民，這本就你們該盡的義務。\n不想的話，你們去找赤龍幫或甄家好了。",
+    "zh_CN": "哼！身为属民，这本就你们该尽的义务。 \n不想的话，你们去找赤龙帮或甄家好了。",
+    "links": [404]
+  },
+  {
+    "entryID": 404,
+    "actorID": "role24",
+    "text": "[panel=2]不行啊大王！\n我們就想過安生日子……",
+    "Sequence": "",
+    "zh_TW": "[panel=2]不行啊大王！\n我們就想過安生日子……",
+    "zh_CN": "[panel=2]不行啊大王！ \n我们就想过安生日子……",
+    "links": [405]
+  },
+  {
+    "entryID": 405,
+    "actorID": "role22",
+    "text": "煩死了！現在是要哭，好顯得本王欺負你們嗎？\n喂！那邊在吃麵的，你來評評理。",
+    "Sequence": "SetPortrait(role22,pic=3);",
+    "zh_TW": "煩死了！現在是要哭，好顯得本王欺負你們嗎？\n喂！那邊在吃麵的，你來評評理。",
+    "zh_CN": "烦死了！现在是要哭，好显得本王欺负你们吗？ \n喂！那边在吃面的，你来评评理。",
+    "links": [406]
+  },
+  {
+    "entryID": 406,
+    "actorID": "MC1",
+    "text": "啊？是叫我？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "zh_TW": "啊？是叫我？",
+    "zh_CN": "啊？是叫我？",
+    "links": [407]
+  },
+  {
+    "entryID": 407,
+    "actorID": "role22",
+    "text": "廢話，這裡除了你，還有誰。\n你來說說，本王可有刁難他們？",
+    "Sequence": "SetPortrait(role22,pic=4);\nDisableCharacterExpression(0);",
+    "zh_TW": "廢話，這裡除了你，還有誰。\n你來說說，本王可有刁難他們？",
+    "zh_CN": "废话，这里除了你，还有谁。 \n你来说说，本王可有刁难他们？",
+    "links": [408]
+  },
+  {
+    "entryID": 408,
+    "actorID": "MC1",
+    "text": "（……吃碗麵，也能有我的事……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "（……吃碗麵，也能有我的事……）",
+    "zh_CN": "（……吃碗面，也能有我的事……）",
+    "links": [445]
+  },
+  {
+    "entryID": 409,
+    "actorID": "MC1",
+    "text": "1.[em1][口才][/em1]仁義者王天下，大王乃仁義之相，自有寬厚之心。",
+    "Sequence": "BeginDiceRoll(Persuasion,Manual,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "1.[em1][口才][/em1]仁義者王天下，大王乃仁義之相，自有寬厚之心。",
+    "zh_CN": "1.[em1][口才][/em1]仁义者王天下，大王乃仁义之相，自有宽厚之心。",
+    "links": [413]
+  },
+  {
+    "entryID": 410,
+    "actorID": "MC1",
+    "text": "2.[em1][厚黑][/em1]事留一線，日後好見。何不略施小惠，來日謀取更大的利益。",
+    "Sequence": "BeginDiceRoll(Realpolitik,Manual,14);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Description": "檢定",
+    "zh_TW": "2.[em1][厚黑][/em1]事留一線，日後好見。何不略施小惠，來日謀取更大的利益。",
+    "zh_CN": "2.[em1][厚黑][/em1]事留一线，日后好见。何不略施小惠，来日谋取更大的利益。",
+    "links": [425]
+  },
+  {
+    "entryID": 411,
+    "actorID": "MC1",
+    "text": "3.有求於人，受恩於人，本就該償還。",
+    "Sequence": "",
+    "zh_TW": "3.有求於人，受恩於人，本就該償還。",
+    "zh_CN": "3.有求于人，受恩于人，本就该偿还。",
+    "links": [432]
+  },
+  {
+    "entryID": 412,
+    "actorID": "MC1",
+    "text": "4.我就是路過吃碗麵，我已經吃飽了，告辭。",
+    "Sequence": "",
+    "zh_TW": "4.我就是路過吃碗麵，我已經吃飽了，告辭。",
+    "zh_CN": "4.我就是路过吃碗面，我已经吃饱了，告辞。",
+    "links": [436]
+  },
+  {
+    "entryID": 413,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [414, 415]
+  },
+  {
+    "entryID": 414,
+    "actorID": "role22",
+    "text": "……這話有點道理……\n好！就免了你們的徵招，就你們有這優待。",
+    "Sequence": "SetPortrait(role22,pic=1);\nSetPortrait(MC1,pic=1);\nDisableAllCharacterExpression();\nShowInstantMessage(Exp_FeatExp,MC1,Persuasion,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "……這話有點道理……\n好！就免了你們的徵招，就你們有這優待。",
+    "zh_CN": "……这话有点道理……\n好！就免了你们的征招，就你们有这优待。",
+    "links": [416]
+  },
+  {
+    "entryID": 415,
+    "actorID": "role22",
+    "text": "一堆廢話，小子，聽好了，\n有的人就是下賤，不思進取，老想靠別人。",
+    "Sequence": "SetPortrait(role22,pic=2);\nSetPortrait(MC1,pic=6);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "一堆廢話，小子，聽好了，\n有的人就是下賤，不思進取，老想靠別人。",
+    "zh_CN": "一堆废话，小子，听好了，\n有的人就是下贱，不思进取，老想靠别人。",
+    "links": [420]
+  },
+  {
+    "entryID": 416,
+    "actorID": "role24",
+    "text": "[panel=2]謝謝大王！謝謝大王！\n大王您果然仁義啊。",
+    "Sequence": "ShowInstantMessage(Influence_Reputation,50);",
+    "Description": "獲得名聲",
+    "zh_TW": "[panel=2]謝謝大王！謝謝大王！\n大王您果然仁義啊。",
+    "zh_CN": "[panel=2]谢谢大王！谢谢大王！ \n大王您果然仁义啊。",
+    "links": [417]
+  },
+  {
+    "entryID": 417,
+    "actorID": "role22",
+    "text": "哼哈哈……中聽好聽！你們多說點，要大力說。\n要告訴全天下人，本王有多仁，有多義。",
+    "Sequence": "EnableCharacterExpression(1,MC11,Proud);",
+    "zh_TW": "哼哈哈……中聽好聽！你們多說點，要大力說。\n要告訴全天下人，本王有多仁，有多義。",
+    "zh_CN": "哼哈哈……中听好听！你们多说点，要大力说。 \n要告诉全天下人，本王有多仁，有多义。",
+    "links": [418]
+  },
+  {
+    "entryID": 418,
+    "actorID": "role22",
+    "text": "對了，差點忘了你，你小子勸諫也有功。\n今日你要吃多少麵，本王都包了，哼哈哈……",
+    "Sequence": "OpenPanel(2, close);\nDisableAllCharacterExpression();",
+    "zh_TW": "對了，差點忘了你，你小子勸諫也有功。\n今日你要吃多少麵，本王都包了，哼哈哈……",
+    "zh_CN": "对了，差点忘了你，你小子劝谏也有功。 \n今日你要吃多少面，本王都包了，哼哈哈……",
+    "links": [419]
+  },
+  {
+    "entryID": 419,
+    "actorID": "MC1",
+    "text": "（……堂堂一族之長只請吃麵，太吝嗇了吧……\n算了，就給他多吃幾碗……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nShowInstantMessage(Reward_Coin,50);",
+    "Description": "獲得錢",
+    "zh_TW": "（……堂堂一族之長只請吃麵，太吝嗇了吧……\n算了，就給他多吃幾碗……）",
+    "zh_CN": "（……堂堂一族之长只请吃面，太吝啬了吧……\n算了，就给他多吃几碗……）",
+    "links": [443]
+  },
+  {
+    "entryID": 420,
+    "actorID": "role22",
+    "text": "本王放了這次就會有第二次，第三次，\n到時他們就會吃定了本王。",
+    "Sequence": "",
+    "zh_TW": "本王放了這次就會有第二次，第三次，\n到時他們就會吃定了本王。",
+    "zh_CN": "本王放了这次就会有第二次，第三次，\n到时他们就会吃定了本王。",
+    "links": [421]
+  },
+  {
+    "entryID": 421,
+    "actorID": "role22",
+    "text": "你們這些賤民聽好！再跟本王囉嗦，\n不用等別人動手，本王就滅了你們！",
+    "Sequence": "SetPortrait(role22,pic=3);",
+    "zh_TW": "你們這些賤民聽好！再跟本王囉嗦，\n不用等別人動手，本王就滅了你們！",
+    "zh_CN": "你们这些贱民听好！再跟本王啰嗦，\n不用等别人动手，本王就灭了你们！",
+    "links": [422]
+  },
+  {
+    "entryID": 422,
+    "actorID": "role2",
+    "text": "[panel=5]黑狼王一放話，\n人群立刻四散而逃。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]黑狼王一放話，\n人群立刻四散而逃。",
+    "zh_CN": "[panel=5]黑狼王一放话，\n人群立刻四散而逃。",
+    "links": [442]
+  },
+  {
+    "entryID": 423,
+    "actorID": "role22",
+    "text": "總算可以好好吃麵了。\n老闆，先給本王來個五碗。",
+    "Sequence": "SetPortrait(role22,pic=1);\nEnableCharacterExpression(1,MC11,Proud);",
+    "zh_TW": "總算可以好好吃麵了。\n老闆，先給本王來個五碗。",
+    "zh_CN": "总算可以好好吃面了。 \n老板，先给本王来个五碗。",
+    "links": [424]
+  },
+  {
+    "entryID": 424,
+    "actorID": "MC1",
+    "text": "（你是有心情了，\n可換我沒心情吃了……）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nDisableAllCharacterExpression();",
+    "zh_TW": "（你是有心情了，\n可換我沒心情吃了……）",
+    "zh_CN": "（你是有心情了，\n可换我没心情吃了……）",
+    "links": [443]
+  },
+  {
+    "entryID": 425,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [426, 427]
+  },
+  {
+    "entryID": 426,
+    "actorID": "role22",
+    "text": "哦？這話還挺賊的……\n好！就免了你們的徵招。",
+    "Sequence": "SetPortrait(role22,pic=1);\nSetPortrait(MC1,pic=5);\nDisableAllCharacterExpression();\nShowInstantMessage(Exp_FeatExp,MC1,Realpolitik,20);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "哦？這話還挺賊的……\n好！就免了你們的徵招。",
+    "zh_CN": "哦？这话还挺贼的……\n好！就免了你们的征招。",
+    "links": [428]
+  },
+  {
+    "entryID": 427,
+    "actorID": "role22",
+    "text": "你的話是很有趣，但是這幫人就是些下賤的人，\n到時只會食髓知味，吃定本王。",
+    "Sequence": "SetPortrait(role22,pic=2);\nSetPortrait(MC1,pic=3);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "你的話是很有趣，但是這幫人就是些下賤的人，\n到時只會食髓知味，吃定本王。",
+    "zh_CN": "你的话是很有趣，但是这帮人就是些下贱的人，\n到时只会食髓知味，吃定本王。",
+    "links": [421]
+  },
+  {
+    "entryID": 428,
+    "actorID": "role22",
+    "text": "但得給本王牢牢記好，給本王用力記好，\n是誰給了你們這份恩惠。",
+    "Sequence": "SetPortrait(role22,pic=3);",
+    "zh_TW": "但得給本王牢牢記好，給本王用力記好，\n是誰給了你們這份恩惠。",
+    "zh_CN": "但得给本王牢牢记好，给本王用力记好，\n是谁给了你们这份恩惠。",
+    "links": [429]
+  },
+  {
+    "entryID": 429,
+    "actorID": "role24",
+    "text": "[panel=2]是！謝謝大王，謝謝大王！\n大王的大恩大德，我們一定會記得。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Influence_Reputation,50);",
+    "Description": "獲得名聲",
+    "zh_TW": "[panel=2]是！謝謝大王，謝謝大王！\n大王的大恩大德，我們一定會記得。",
+    "zh_CN": "[panel=2]是！谢谢大王，谢谢大王！ \n大王的大恩大德，我们一定会记得。",
+    "links": [430]
+  },
+  {
+    "entryID": 430,
+    "actorID": "role22",
+    "text": "小子，你的勸諫有功，本王絕不虧待你。\n這點獎勵，你就拿去吧。",
+    "Sequence": "SetPortrait(role22,pic=1);\nOpenPanel(2, close);",
+    "zh_TW": "小子，你的勸諫有功，本王絕不虧待你。\n這點獎勵，你就拿去吧。",
+    "zh_CN": "小子，你的劝谏有功，本王绝不亏待你。 \n这点奖励，你就拿去吧。",
+    "links": [431]
+  },
+  {
+    "entryID": 431,
+    "actorID": "MC1",
+    "text": "（怎麼好像我變成你手下了……\n也罷，有獎勵，不拿白不拿。）",
+    "Sequence": "SetPortrait(MC1,pic=8);\nShowInstantMessage(Reward_Coin,200);",
+    "Description": "獲得錢",
+    "zh_TW": "（怎麼好像我變成你手下了……\n也罷，有獎勵，不拿白不拿。）",
+    "zh_CN": "（怎么好像我变成你手下了……\n也罢，有奖励，不拿白不拿。）",
+    "links": [443]
+  },
+  {
+    "entryID": 432,
+    "actorID": "role22",
+    "text": "聽到了沒有，連你們漢人都這樣說了，\n還有什麼好廢話的。",
+    "Sequence": "SetPortrait(role22,pic=1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(1,MC11,Proud);",
+    "zh_TW": "聽到了沒有，連你們漢人都這樣說了，\n還有什麼好廢話的。",
+    "zh_CN": "听到了没有，连你们汉人都这样说了，\n还有什么好废话的。",
+    "links": [433]
+  },
+  {
+    "entryID": 433,
+    "actorID": "role22",
+    "text": "你們這些賤民聽好！再跟本王囉嗦，\n不用等別人動手，本王就滅了你們！",
+    "Sequence": "SetPortrait(role22,pic=3);\nDisableAllCharacterExpression();",
+    "zh_TW": "你們這些賤民聽好！再跟本王囉嗦，\n不用等別人動手，本王就滅了你們！",
+    "zh_CN": "你们这些贱民听好！再跟本王啰嗦，\n不用等别人动手，本王就灭了你们！",
+    "links": [434]
+  },
+  {
+    "entryID": 434,
+    "actorID": "role2",
+    "text": "[panel=5]黑狼王一放話，\n人群立刻四散而逃。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]黑狼王一放話，\n人群立刻四散而逃。",
+    "zh_CN": "[panel=5]黑狼王一放话，\n人群立刻四散而逃。",
+    "links": [441]
+  },
+  {
+    "entryID": 435,
+    "actorID": "role22",
+    "text": "小子，你雖是漢人，卻明辨是非，本王喜歡你。\n今日你要吃多少麵，本王都包了，哼哈哈……",
+    "Sequence": "ShowInstantMessage(Favorability,MC11,20,Agree);",
+    "Description": "獲得好感",
+    "zh_TW": "小子，你雖是漢人，卻明辨是非，本王喜歡你。\n今日你要吃多少麵，本王都包了，哼哈哈……",
+    "zh_CN": "小子，你虽是汉人，却明辨是非，本王喜欢你。 \n今日你要吃多少面，本王都包了，哼哈哈……",
+    "links": [419]
+  },
+  {
+    "entryID": 436,
+    "actorID": "role2",
+    "text": "[panel=5]你不等黑狼王反應，\n便匆匆付錢離開……",
+    "Sequence": "SetPortrait(MC1,pic=4);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=5]你不等黑狼王反應，\n便匆匆付錢離開……",
+    "zh_CN": "[panel=5]你不等黑狼王反应，\n便匆匆付钱离开……",
+    "links": [440]
+  },
+  {
+    "entryID": 437,
+    "actorID": "MC1",
+    "text": "啊！走太快，忘了讓老闆找零……\n都怪那個黑狼王！莫名其妙……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "啊！走太快，忘了讓老闆找零……\n都怪那個黑狼王！莫名其妙……",
+    "zh_CN": "啊！走太快，忘了让老板找零……\n都怪那个黑狼王！莫名其妙……",
+    "links": [443]
+  },
+  {
+    "entryID": 439,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Forest);\nAudioControl(PlaySFXOneShot,Bird);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndFade);\nFade(in,1,#000000)->Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "(Variable[\"MS0_4\"] == true) and (Variable[\"FS0_5\"] == false)",
+    "links": [394]
+  },
+  {
+    "entryID": 440,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [437]
+  },
+  {
+    "entryID": 441,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [435]
+  },
+  {
+    "entryID": 442,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [423]
+  },
+  {
+    "entryID": 443,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Script": "Variable[\"FS0_5\"] = true",
+    "links": [444]
+  },
+  {
+    "entryID": 444,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 445,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nContinue();",
+    "links": [409, 410, 411, 412]
+  }
+]

@@ -1,0 +1,461 @@
+[
+  {
+    "entryID": 497,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [500, 510]
+  },
+  {
+    "entryID": 500,
+    "actorID": "role2",
+    "text": "[panel=5]浪費了將近一年時光，幸虧有郭嘉出手，\n這才勉強穩固了英豪府內政財務。",
+    "Sequence": "",
+    "Description": "變數分歧",
+    "zh_TW": "[panel=5]浪費了將近一年時光，幸虧有郭嘉出手，\n這才勉強穩固了英豪府內政財務。",
+    "zh_CN": "[panel=5]浪费了将近一年时光，幸亏有郭嘉出手，\n这才勉强稳固了英豪府内政财务。",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "role2",
+    "text": "[panel=5]也因此，你得以抽空研讀藏書，\n嘗試從零碎線索，了解麒麟骰奧妙，但……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]也因此，你得以抽空研讀藏書，\n嘗試從零碎線索，了解麒麟骰奧妙，但……",
+    "zh_CN": "[panel=5]也因此，你得以抽空研读藏书，\n尝试从零碎线索，了解麒麟骰奥妙，但……",
+    "links": [502]
+  },
+  {
+    "entryID": 502,
+    "actorID": "MC1",
+    "text": "不行，文獻太過零散，根本湊不成一塊……\n骰子的事，也就之前的竹簡……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "不行，文獻太過零散，根本湊不成一塊……\n骰子的事，也就之前的竹簡……",
+    "zh_CN": "不行，文献太过零散，根本凑不成一块……\n骰子的事，也就之前的竹简……",
+    "links": [503]
+  },
+  {
+    "entryID": 503,
+    "actorID": "MC7",
+    "text": "看來你想調查的事，毫無進展。",
+    "Sequence": "",
+    "zh_TW": "看來你想調查的事，毫無進展。",
+    "zh_CN": "看来你想调查的事，毫无进展。",
+    "links": [504]
+  },
+  {
+    "entryID": 504,
+    "actorID": "MC1",
+    "text": "……你什麼時候來的？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……你什麼時候來的？",
+    "zh_CN": "……你什么时候来的？",
+    "links": [505]
+  },
+  {
+    "entryID": 505,
+    "actorID": "MC7",
+    "text": "藏書庫不專屬於你。\n請放心，我沒興趣窺你的調查。",
+    "Sequence": "SetPortrait(MC7,pic=3);",
+    "zh_TW": "藏書庫不專屬於你。\n請放心，我沒興趣窺你的調查。",
+    "zh_CN": "藏书库不专属于你。 \n请放心，我没兴趣窥你的调查。",
+    "links": [506]
+  },
+  {
+    "entryID": 506,
+    "actorID": "MC7",
+    "text": "我只想告訴你，碰上瓶頸，\n出外走走，或許會突發靈感。",
+    "Sequence": "",
+    "zh_TW": "我只想告訴你，碰上瓶頸，\n出外走走，或許會突發靈感。",
+    "zh_CN": "我只想告诉你，碰上瓶颈，\n出外走走，或许会突发灵感。",
+    "links": [507]
+  },
+  {
+    "entryID": 507,
+    "actorID": "MC1",
+    "text": "……有道理。那你要一起去透透氣嗎？",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "……有道理。那你要一起去透透氣嗎？",
+    "zh_CN": "……有道理。那你要一起去透透气吗？",
+    "links": [508]
+  },
+  {
+    "entryID": 508,
+    "actorID": "MC7",
+    "text": "書使我冷靜。\n而且有賴某些人的不可靠，我還有很多事要忙。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "書使我冷靜。\n而且有賴某些人的不可靠，我還有很多事要忙。",
+    "zh_CN": "书使我冷静。 \n而且有赖某些人的不可靠，我还有很多事要忙。",
+    "links": [509]
+  },
+  {
+    "entryID": 509,
+    "actorID": "MC1",
+    "text": "呃……那就不打擾你了。",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "呃……那就不打擾你了。",
+    "zh_CN": "呃……那就不打扰你了。",
+    "links": [520]
+  },
+  {
+    "entryID": 510,
+    "actorID": "role2",
+    "text": "[panel=5]這一日，你如往常抽空研讀藏書，\n想從支離線索，了解麒麟骰奧妙，但……",
+    "Sequence": "",
+    "Description": "變數分歧",
+    "zh_TW": "[panel=5]這一日，你如往常抽空研讀藏書，\n想從支離線索，了解麒麟骰奧妙，但……",
+    "zh_CN": "[panel=5]这一日，你如往常抽空研读藏书，\n想从支离线索，了解麒麟骰奥妙，但……",
+    "links": [511]
+  },
+  {
+    "entryID": 511,
+    "actorID": "MC1",
+    "text": "不行，文獻太過零散，根本湊不成一塊……\n骰子的事，也就之前的竹簡……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "不行，文獻太過零散，根本湊不成一塊……\n骰子的事，也就之前的竹簡……",
+    "zh_CN": "不行，文献太过零散，根本凑不成一块……\n骰子的事，也就之前的竹简……",
+    "links": [512]
+  },
+  {
+    "entryID": 512,
+    "actorID": "MC7",
+    "text": "看來你想調查的事，毫無進展。",
+    "Sequence": "",
+    "zh_TW": "看來你想調查的事，毫無進展。",
+    "zh_CN": "看来你想调查的事，毫无进展。",
+    "links": [513]
+  },
+  {
+    "entryID": 513,
+    "actorID": "MC1",
+    "text": "……你什麼時候來的？",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……你什麼時候來的？",
+    "zh_CN": "……你什么时候来的？",
+    "links": [514]
+  },
+  {
+    "entryID": 514,
+    "actorID": "MC7",
+    "text": "藏書庫不專屬於你。\n請放心，我沒興趣窺你的調查。",
+    "Sequence": "SetPortrait(MC7,pic=3);",
+    "zh_TW": "藏書庫不專屬於你。\n請放心，我沒興趣窺你的調查。",
+    "zh_CN": "藏书库不专属于你。 \n请放心，我没兴趣窥你的调查。",
+    "links": [515]
+  },
+  {
+    "entryID": 515,
+    "actorID": "MC7",
+    "text": "我只想告訴你，碰上瓶頸，\n出外走走，或許會突發靈感。",
+    "Sequence": "",
+    "zh_TW": "我只想告訴你，碰上瓶頸，\n出外走走，或許會突發靈感。",
+    "zh_CN": "我只想告诉你，碰上瓶颈，\n出外走走，或许会突发灵感。",
+    "links": [516]
+  },
+  {
+    "entryID": 516,
+    "actorID": "MC1",
+    "text": "……有道理。那你要一起去透透氣嗎？",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "……有道理。那你要一起去透透氣嗎？",
+    "zh_CN": "……有道理。那你要一起去透透气吗？",
+    "links": [517]
+  },
+  {
+    "entryID": 517,
+    "actorID": "MC7",
+    "text": "書使我冷靜，而且我有出任務。",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "書使我冷靜，而且我有出任務。",
+    "zh_CN": "书使我冷静，而且我有出任务。",
+    "links": [518]
+  },
+  {
+    "entryID": 518,
+    "actorID": "MC1",
+    "text": "我不是那個意思……\n算了，不打擾你了。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "我不是那個意思……\n算了，不打擾你了。",
+    "zh_CN": "我不是那个意思……\n算了，不打扰你了。",
+    "links": [520]
+  },
+  {
+    "entryID": 520,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nSetContinueMode(false);\nFade(stay,1,#000000);\nEnableDialogueBG(Yunzhong)@1;\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Description": "換場景",
+    "links": [521]
+  },
+  {
+    "entryID": 521,
+    "actorID": "role2",
+    "text": "[panel=5]你漫無目的遊走，看著經過的人們，\n實難跟那場惡夢聯想一起。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "[panel=5]你漫無目的遊走，看著經過的人們，\n實難跟那場惡夢聯想一起。",
+    "zh_CN": "[panel=5]你漫无目的游走，看着经过的人们，\n实难跟那场恶梦联想一起。",
+    "links": [522]
+  },
+  {
+    "entryID": 522,
+    "actorID": "role2",
+    "text": "[panel=5]猝然，懷中震動──",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_2);",
+    "zh_TW": "[panel=5]猝然，懷中震動──",
+    "zh_CN": "[panel=5]猝然，怀中震动──",
+    "links": [523]
+  },
+  {
+    "entryID": 523,
+    "actorID": "MC1",
+    "text": "麒麟骰？怎麼了！？",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1,Surprise_2);",
+    "zh_TW": "麒麟骰？怎麼了！？",
+    "zh_CN": "麒麟骰？怎么了！ ？",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "role56",
+    "text": "唉呀呀，真沒想會有這等事。",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nPlayOrStopParticle(Wind_Right,Play);\nSetContinueMode(original)@2;\nPlayOrStopParticle(Wind_Right,Stop)@2;",
+    "zh_TW": "唉呀呀，真沒想會有這等事。",
+    "zh_CN": "唉呀呀，真没想会有这等事。",
+    "links": [525]
+  },
+  {
+    "entryID": 525,
+    "actorID": "role2",
+    "text": "[panel=5]來人一臉微笑，而他手中──\n──另一顆麒麟骰！",
+    "Sequence": "",
+    "zh_TW": "[panel=5]來人一臉微笑，而他手中──\n──另一顆麒麟骰！",
+    "zh_CN": "[panel=5]来人一脸微笑，而他手中──\n──另一颗麒麟骰！",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC1",
+    "text": "麒麟骰！你怎麼會有……",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "麒麟骰！你怎麼會有……",
+    "zh_CN": "麒麟骰！你怎么会有……",
+    "links": [527]
+  },
+  {
+    "entryID": 527,
+    "actorID": "role42",
+    "text": "麒麟骰？你是說[em2]饕餮骰[/em2]吧？\n喔！我明白了，鬼谷經是這樣記載吧。",
+    "Sequence": "SetPortrait(role42,pic=4);",
+    "zh_TW": "麒麟骰？你是說[em2]饕餮骰[/em2]吧？\n喔！我明白了，鬼谷經是這樣記載吧。",
+    "zh_CN": "麒麟骰？你是说[em2]饕餮骰[/em2]吧？ \n喔！我明白了，鬼谷经是这样记载吧。",
+    "links": [528]
+  },
+  {
+    "entryID": 528,
+    "actorID": "MC1",
+    "text": "饕餮骰……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "饕餮骰……",
+    "zh_CN": "饕餮骰……",
+    "links": [529]
+  },
+  {
+    "entryID": 529,
+    "actorID": "role42",
+    "text": "嗯嗯，讀的書不同，\n記載有落差，那也不奇怪。",
+    "Sequence": "SetPortrait(role42,pic=1);",
+    "zh_TW": "嗯嗯，讀的書不同，\n記載有落差，那也不奇怪。",
+    "zh_CN": "嗯嗯，读的书不同，\n记载有落差，那也不奇怪。",
+    "links": [530]
+  },
+  {
+    "entryID": 530,
+    "actorID": "MC1",
+    "text": "別一個人自顧自弄懂，我這可一堆問題。\n你到底是誰，為何也有此骰？",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "別一個人自顧自弄懂，我這可一堆問題。\n你到底是誰，為何也有此骰？",
+    "zh_CN": "别一个人自顾自弄懂，我这可一堆问题。 \n你到底是谁，为何也有此骰？",
+    "links": [531]
+  },
+  {
+    "entryID": 531,
+    "actorID": "role42",
+    "text": "我是何人，恕本人不便透露。\n至於骰子，這你要問古人到底做了多少。",
+    "Sequence": "SetPortrait(role42,pic=3);",
+    "zh_TW": "我是何人，恕本人不便透露。\n至於骰子，這你要問古人到底做了多少。",
+    "zh_CN": "我是何人，恕本人不便透露。 \n至于骰子，这你要问古人到底做了多少。",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "role42",
+    "text": "好了，我回答完了，換我發問，你也……\n見過那場夢了？物怪九黎，蒼生淪陷。",
+    "Sequence": "SetPortrait(role42,pic=1);",
+    "zh_TW": "好了，我回答完了，換我發問，你也……\n見過那場夢了？物怪九黎，蒼生淪陷。",
+    "zh_CN": "好了，我回答完了，换我发问，你也……\n见过那场梦了？物怪九黎，苍生沦陷。",
+    "links": [533, 534, 535]
+  },
+  {
+    "entryID": 533,
+    "actorID": "MC1",
+    "text": "1.…………",
+    "Sequence": "",
+    "zh_TW": "1.…………",
+    "zh_CN": "1.…………",
+    "links": [536]
+  },
+  {
+    "entryID": 534,
+    "actorID": "MC1",
+    "text": "2.你那也算回答，那這個問題，你去問莊周如何？",
+    "Sequence": "",
+    "zh_TW": "2.你那也算回答，那這個問題，你去問莊周如何？",
+    "zh_CN": "2.你那也算回答，那这个问题，你去问庄周如何？",
+    "links": [538]
+  },
+  {
+    "entryID": 535,
+    "actorID": "MC1",
+    "text": "3.我有過很多夢，有遨遊天下，有富賈三千，太多太多了……",
+    "Sequence": "",
+    "zh_TW": "3.我有過很多夢，有遨遊天下，有富賈三千，太多太多了……",
+    "zh_CN": "3.我有过很多梦，有遨游天下，有富贾三千，太多太多了……",
+    "links": [539]
+  },
+  {
+    "entryID": 536,
+    "actorID": "role42",
+    "text": "察覺對方已非一般，既不正面回答，\n也不否定，以退為進。",
+    "Sequence": "SetPortrait(MC1,pic=9);\nSetPortrait(role42,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Insight,20);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "察覺對方已非一般，既不正面回答，\n也不否定，以退為進。",
+    "zh_CN": "察觉对方已非一般，既不正面回答，\n也不否定，以退为进。",
+    "links": [537]
+  },
+  {
+    "entryID": 537,
+    "actorID": "role42",
+    "text": "以你的年紀，這是很好的做法。\n不過我猜你應該還無法掌握骰子吧。",
+    "Sequence": "",
+    "zh_TW": "以你的年紀，這是很好的做法。\n不過我猜你應該還無法掌握骰子吧。",
+    "zh_CN": "以你的年纪，这是很好的做法。 \n不过我猜你应该还无法掌握骰子吧。",
+    "links": [540]
+  },
+  {
+    "entryID": 538,
+    "actorID": "role42",
+    "text": "說話別那麼衝，但年輕人這也難免。\n我想你還無法掌握骰子吧。",
+    "Sequence": "SetPortrait(MC1,pic=2);\nSetPortrait(role42,pic=4);\nShowInstantMessage(Exp_FeatExp,MC1,Intimidation,20);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "說話別那麼衝，但年輕人這也難免。\n我想你還無法掌握骰子吧。",
+    "zh_CN": "说话别那么冲，但年轻人这也难免。 \n我想你还无法掌握骰子吧。",
+    "links": [540]
+  },
+  {
+    "entryID": 539,
+    "actorID": "role42",
+    "text": "顧左右而言它，以圖從我這套更多話。\n如此多心，可是無法掌握骰子的。",
+    "Sequence": "SetPortrait(MC1,pic=5);\nSetPortrait(role42,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,Realpolitik,20);",
+    "Description": "獲得專長經驗",
+    "zh_TW": "顧左右而言它，以圖從我這套更多話。\n如此多心，可是無法掌握骰子的。",
+    "zh_CN": "顾左右而言它，以图从我这套更多话。 \n如此多心，可是无法掌握骰子的。",
+    "links": [540]
+  },
+  {
+    "entryID": 540,
+    "actorID": "role42",
+    "text": "今日有緣，且教你點訣竅好了。",
+    "Sequence": "SetPortrait(role42,pic=1);",
+    "zh_TW": "今日有緣，且教你點訣竅好了。",
+    "zh_CN": "今日有缘，且教你点诀窍好了。",
+    "links": [541]
+  },
+  {
+    "entryID": 541,
+    "actorID": "role42",
+    "text": "不要畏懼骰子，更不要被骰子牽著走。\n只要你足夠強悍，骰子會回應你的意念。",
+    "Sequence": "SetPortrait(role42,pic=2);",
+    "zh_TW": "不要畏懼骰子，更不要被骰子牽著走。\n只要你足夠強悍，骰子會回應你的意念。",
+    "zh_CN": "不要畏惧骰子，更不要被骰子牵着走。 \n只要你足够强悍，骰子会回应你的意念。",
+    "links": [542]
+  },
+  {
+    "entryID": 542,
+    "actorID": "MC1",
+    "text": "回應意念……你是說骰子能控制……？",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "回應意念……你是說骰子能控制……？",
+    "zh_CN": "回应意念……你是说骰子能控制……？",
+    "links": [543]
+  },
+  {
+    "entryID": 543,
+    "actorID": "role2",
+    "text": "[panel=5]此時──",
+    "Sequence": "",
+    "Description": "事件圖",
+    "zh_TW": "[panel=5]此時──",
+    "zh_CN": "[panel=5]此时──",
+    "links": [544]
+  },
+  {
+    "entryID": 544,
+    "actorID": "role42",
+    "text": "看來你有事該忙了，來日再見吧。",
+    "Sequence": "SetPortrait(role42,pic=1);",
+    "zh_TW": "看來你有事該忙了，來日再見吧。",
+    "zh_CN": "看来你有事该忙了，来日再见吧。",
+    "links": [545]
+  },
+  {
+    "entryID": 545,
+    "actorID": "MC1",
+    "text": "等等……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "等等……",
+    "zh_CN": "等等……",
+    "links": [546]
+  },
+  {
+    "entryID": 546,
+    "actorID": "role55",
+    "text": "可算找到你了，草包。有人上門求助，\n你有[em2]三日[/em2]處理手邊事，處理完就回來。",
+    "Sequence": "",
+    "zh_TW": "可算找到你了，草包。有人上門求助，\n你有[em2]三日[/em2]處理手邊事，處理完就回來。",
+    "zh_CN": "可算找到你了，草包。有人上门求助，\n你有[em2]三日[/em2]处理手边事，处理完就回来。",
+    "links": [547]
+  },
+  {
+    "entryID": 547,
+    "actorID": "MC1",
+    "text": "……我知道了……\n別再用殺人眼光瞪我了……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_TW": "……我知道了……\n別再用殺人眼光瞪我了……",
+    "zh_CN": "……我知道了……\n别再用杀人眼光瞪我了……",
+    "links": [548]
+  },
+  {
+    "entryID": 548,
+    "actorID": "MC1",
+    "text": "（剛才那人的事，只能暫時先放一邊了……）",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=3);\nDisableAllCharacterExpression();",
+    "Description": "變數更新",
+    "zh_TW": "（剛才那人的事，只能暫時先放一邊了……）",
+    "zh_CN": "（刚才那人的事，只能暂时先放一边了……）",
+    "links": [550]
+  },
+  {
+    "entryID": 549,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 550,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [549]
+  }
+]

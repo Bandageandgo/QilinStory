@@ -1,0 +1,901 @@
+[
+  {
+    "entryID": 60,
+    "actorID": "MC4",
+    "text": "[panel=1]「自己找上門來，是想通了，肯說實話了？」",
+    "Sequence": "EnableDialogueBG(StudyRoom);\nAudioControl(PlayMusic,BGM_47);",
+    "Description": "財務危機",
+    "zh_TW": "[panel=1]「自己找上門來，是想通了，肯說實話了？」",
+    "zh_CN": "[panel=1]「自己找上门来，是想通了，肯说实话了？」",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「……還沒有，但我也沒其它選擇了吧？否則你也不必繼續留著我。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「……還沒有，但我也沒其它選擇了吧？否則你也不必繼續留著我。」",
+    "zh_CN": "「……还没有，但我也没其它选择了吧？否则你也不必继续留着我。」",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「只是我好歹也是拜師的，師者不該先替學徒解惑，竹簡出自何處？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「只是我好歹也是拜師的，師者不該先替學徒解惑，竹簡出自何處？」",
+    "zh_CN": "「只是我好歹也是拜师的，师者不该先替学徒解惑，竹简出自何处？」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "role2",
+    "text": "[panel=6]＊（聽到你的回應，賈詡露出一絲不易察覺的微笑，瞥了一眼藏書庫。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（聽到你的回應，賈詡露出一絲不易察覺的微笑，瞥了一眼藏書庫。）＊",
+    "zh_CN": "[panel=6]＊（听到你的回应，贾诩露出一丝不易察觉的微笑，瞥了一眼藏书库。）＊",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「……《鬼谷經》……莫非……是那位鬼谷子？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「……《鬼谷經》……莫非……是那位鬼谷子？」",
+    "zh_CN": "「……《鬼谷经》……莫非……是那位鬼谷子？」",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC4",
+    "text": "[panel=1]「戰國之世，九黎橫生，百家伐異，各闢門道。」",
+    "Sequence": "EnableCharacterExpression(1,MC4,Meditate);\nSetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=1]「戰國之世，九黎橫生，百家伐異，各闢門道。」",
+    "zh_CN": "[panel=1]「战国之世，九黎横生，百家伐异，各辟门道。」",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC4",
+    "text": "[panel=1]「可嘆，秦帝毀書，古學斷絕，殘存不過奇文異錄。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「可嘆，秦帝毀書，古學斷絕，殘存不過奇文異錄。」",
+    "zh_CN": "[panel=1]「可叹，秦帝毁书，古学断绝，残存不过奇文异录。」",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC4",
+    "text": "[panel=1]「茫茫歲月，三傑尋其遺創英豪。如今古學再剩唯此處斷簡片章。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「茫茫歲月，三傑尋其遺創英豪。如今古學再剩唯此處斷簡片章。」",
+    "zh_CN": "[panel=1]「茫茫岁月，三杰寻其遗创英豪。如今古学再剩唯此处断简片章。」",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC4",
+    "text": "[panel=1]「不過，詳加研讀，還是多有益處……」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「不過，詳加研讀，還是多有益處……」",
+    "zh_CN": "[panel=1]「不过，详加研读，还是多有益处……」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC4",
+    "text": "[panel=1]「師者已授業，現在換學生了。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=1]「師者已授業，現在換學生了。」",
+    "zh_CN": "[panel=1]「师者已授业，现在换学生了。」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「……好吧。瞞了師父這麼久，是弟子不是。」",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「……好吧。瞞了師父這麼久，是弟子不是。」",
+    "zh_CN": "「……好吧。瞒了师父这么久，是弟子不是。」",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「自故鄉大火後流落江湖，弟子反覆夢見并州淪陷、城牆上戰死……逼真得不像尋常惡夢。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「自故鄉大火後流落江湖，弟子反覆夢見并州淪陷、城牆上戰死……逼真得不像尋常惡夢。」",
+    "zh_CN": "「自故乡大火后流落江湖，弟子反复梦见并州沦陷、城墙上战死……逼真得不像寻常恶梦。」",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "「娘親留下的麒麟骰每每異動，夢便更甚。弟子不知這預兆何意，只覺坐立難安。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「娘親留下的麒麟骰每每異動，夢便更甚。弟子不知這預兆何意，只覺坐立難安。」",
+    "zh_CN": "「娘亲留下的麒麟骰每每异动，梦便更甚。弟子不知这预兆何意，只觉坐立难安。」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC4",
+    "text": "[panel=1]「九黎盡出，中原淪陷。有意思，有意思……這世道總算有了點趣味。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=9);",
+    "zh_TW": "[panel=1]「九黎盡出，中原淪陷。有意思，有意思……這世道總算有了點趣味。」",
+    "zh_CN": "[panel=1]「九黎尽出，中原沦陷。有意思，有意思……这世道总算有了点趣味。」",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC4",
+    "text": "[panel=1]「不過要讓你失望了，正如竹簡殘缺，此夢我也無從可解。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "[panel=1]「不過要讓你失望了，正如竹簡殘缺，此夢我也無從可解。」",
+    "zh_CN": "[panel=1]「不过要让你失望了，正如竹简残缺，此梦我也无从可解。」",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC1",
+    "text": "「我也沒想過會太順利。反正骰子指引，必有其意，答案遲早自會浮現。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「我也沒想過會太順利。反正骰子指引，必有其意，答案遲早自會浮現。」",
+    "zh_CN": "「我也没想过会太顺利。反正骰子指引，必有其意，答案迟早自会浮现。」",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC4",
+    "text": "[panel=1]「呵呵，此夢就暫且別告知其他人，省得添亂。現在說回正事，料理本府的生計……」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「呵呵，此夢就暫且別告知其他人，省得添亂。現在說回正事，料理本府的生計……」",
+    "zh_CN": "[panel=1]「呵呵，此梦就暂且别告知其他人，省得添乱。现在说回正事，料理本府的生计……」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "AudioControl(StopMusic);\nOpenPanel(1, close);\nAudioControl(PlayMusic,BGM_19);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nDisableDialogueBG();\nEnableDialogueBG(HallOfHeroes);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC4",
+    "text": "[panel=1]「諸位，新人加入，象徵本府將踏上新的時代。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「諸位，新人加入，象徵本府將踏上新的時代。」",
+    "zh_CN": "[panel=1]「诸位，新人加入，象征本府将踏上新的时代。」",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC2",
+    "text": "[panel=1]「又是這套，從年前聽到年尾，只變四字……撿要緊的說，上一年虧了多少？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「又是這套，從年前聽到年尾，只變四字……撿要緊的說，上一年虧了多少？」",
+    "zh_CN": "[panel=1]「又是这套，从年前听到年尾，只变四字……捡要紧的说，上一年亏了多少？」",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=6]＊（彷彿習以為常，徐榮攤開了帳冊──）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（彷彿習以為常，徐榮攤開了帳冊──）＊",
+    "zh_CN": "[panel=6]＊（仿佛习以为常，徐荣摊开了账册──）＊",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC1",
+    "text": "「紅色……紅色……這不全是虧空嗎！？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "zh_TW": "「紅色……紅色……這不全是虧空嗎！？」",
+    "zh_CN": "「红色……红色……这不全是亏空吗！？」",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥！小犀剛盤過帳了——何止是虧空，下個月的米錢都快見底囉！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「表哥！小犀剛盤過帳了——何止是虧空，下個月的米錢都快見底囉！」",
+    "zh_CN": "[panel=2]「表哥！小犀刚盘过账了——何止是亏空，下个月的米钱都快见底啰！」",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC22",
+    "text": "[panel=2]「咦？要沒米了？這英豪府怎麼跟我想像中的差這麼多……」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=9);",
+    "zh_TW": "[panel=2]「咦？要沒米了？這英豪府怎麼跟我想像中的差這麼多……」",
+    "zh_CN": "[panel=2]「咦？要没米了？这英豪府怎么跟我想象中的差这么多……」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC20",
+    "text": "[panel=2]「咳咳！道爺向來視錢財如浮雲……可浮雲不能當飯吃啊！」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「咳咳！道爺向來視錢財如浮雲……可浮雲不能當飯吃啊！」",
+    "zh_CN": "[panel=2]「咳咳！道爷向来视钱财如浮云……可浮云不能当饭吃啊！」",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC4",
+    "text": "[panel=1]「兩位大能，你們在府上白吃白住這些個月，湯藥與吃喝花用，賈某都已記在帳上了。既然本府庫房眼看見底，兩位是否也該拿出點誠意了？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「兩位大能，你們在府上白吃白住這些個月，湯藥與吃喝花用，賈某都已記在帳上了。既然本府庫房眼看見底，兩位是否也該拿出點誠意了？」",
+    "zh_CN": "[panel=1]「两位大能，你们在府上白吃白住这些个月，汤药与吃喝花用，贾某都已记在账上了。既然本府库房眼看见底，两位是否也该拿出点诚意了？」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC7",
+    "text": "[panel=1]「……至少我看還有些府裡日常的營生。照舊打理，還不至於關門收攤。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「……至少我看還有些府裡日常的營生。照舊打理，還不至於關門收攤。」",
+    "zh_CN": "[panel=1]「……至少我看还有些府里日常的营生。照旧打理，还不至于关门收摊。」",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC5",
+    "text": "[panel=1]「郭嘉說到點子上了……」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「郭嘉說到點子上了……」",
+    "zh_CN": "[panel=1]「郭嘉说到点子上了……」",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC4",
+    "text": "[panel=1]「此乃本府要務，未免你們散漫，這一年的工夫，你們好生打理，把虧空填平。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「此乃本府要務，未免你們散漫，這一年的工夫，你們好生打理，把虧空填平。」",
+    "zh_CN": "[panel=1]「此乃本府要务，未免你们散漫，这一年的工夫，你们好生打理，把亏空填平。」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC4",
+    "text": "[panel=1]「若能得并州三家豪強出資相助，那是最好，往後度支無憂。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「若能得并州三家豪強出資相助，那是最好，往後度支無憂。」",
+    "zh_CN": "[panel=1]「若能得并州三家豪强出资相助，那是最好，往后度支无忧。」",
+    "links": [90, 97, 102, 106]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「既入了英豪府，這一關，我當盡力。」",
+    "Sequence": "",
+    "zh_TW": "「既入了英豪府，這一關，我當盡力。」",
+    "zh_CN": "「既入了英豪府，这一关，我当尽力。」",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC1",
+    "text": "「話雖如此，既然入了英豪府，我定當盡一份力！」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Description": "信義提升",
+    "zh_TW": "「話雖如此，既然入了英豪府，我定當盡一份力！」",
+    "zh_CN": "「话虽如此，既然入了英豪府，我定当尽一份力！」",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC4",
+    "text": "[panel=1]「呵呵，這才像話。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「呵呵，這才像話。」",
+    "zh_CN": "[panel=1]「呵呵，这才像话。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC5",
+    "text": "[panel=1]「入了府門，便是同袍。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「入了府門，便是同袍。」",
+    "zh_CN": "[panel=1]「入了府门，便是同袍。」",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC5",
+    "text": "[panel=1]「你願意盡力，很好。但記著，真到了關頭，不是一個人逞英雄就算了，是得讓身邊的人信你、跟得上你。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「你願意盡力，很好。但記著，真到了關頭，不是一個人逞英雄就算了，是得讓身邊的人信你、跟得上你。」",
+    "zh_CN": "[panel=1]「你愿意尽力，很好。但记着，真到了关头，不是一个人逞英雄就算了，是得让身边的人信你、跟得上你。」",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「徐師父教訓的是。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「徐師父教訓的是。」",
+    "zh_CN": "「徐师父教训的是。」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(AbilityMaxLevel,Player,Leadership,5);\nContinue();",
+    "links": [109]
+  },
+  {
+    "entryID": 97,
+    "actorID": "MC1",
+    "text": "「我為人人，人人為我！」",
+    "Sequence": "",
+    "zh_TW": "「我為人人，人人為我！」",
+    "zh_CN": "「我为人人，人人为我！」",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC1",
+    "text": "「見大夥兒受困而不幫，這可不成。這事我管了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Description": "仁心提升",
+    "zh_TW": "「見大夥兒受困而不幫，這可不成。這事我管了。」",
+    "zh_CN": "「见大伙儿受困而不帮，这可不成。这事我管了。」",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=3);EnableCharacterExpression(2,MC8,Pain);",
+    "zh_TW": "[panel=2]「表哥……」",
+    "zh_CN": "[panel=2]「表哥……」",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC8",
+    "text": "[panel=2]「你看帳冊這行——下個月的米錢，只夠一半人吃飽……」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=3);",
+    "zh_TW": "[panel=2]「你看帳冊這行——下個月的米錢，只夠一半人吃飽……」",
+    "zh_CN": "[panel=2]「你看账册这行——下个月的米钱，只够一半人吃饱……」",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);\nModifyData(AbilityMaxLevel,Player,Politics,5);",
+    "zh_TW": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
+    "zh_CN": "「嗯，所以我才说不能不管。不过妳的眼睛倒利。」",
+    "links": [109]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC1",
+    "text": "「船到橋頭自然直，日子總能過下去。」",
+    "Sequence": "",
+    "zh_TW": "「船到橋頭自然直，日子總能過下去。」",
+    "zh_CN": "「船到桥头自然直，日子总能过下去。」",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「也罷。船到橋頭自然直，天塌下來當被蓋。算籌撥一撥，日子總能過下去的。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Description": "通達提升",
+    "zh_TW": "「也罷。船到橋頭自然直，天塌下來當被蓋。算籌撥一撥，日子總能過下去的。」",
+    "zh_CN": "「也罢。船到桥头自然直，天塌下来当被盖。算筹拨一拨，日子总能过下去的。」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC20",
+    "text": "[panel=1]「正是！世道艱難，隨遇而安。有時一張嘴，比一柄劍還管用——道爺我這兒，倒有幾句說人的訣竅。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「正是！世道艱難，隨遇而安。有時一張嘴，比一柄劍還管用——道爺我這兒，倒有幾句說人的訣竅。」",
+    "zh_CN": "[panel=1]「正是！世道艰难，随遇而安。有时一张嘴，比一柄剑还管用——道爷我这儿，倒有几句说人的诀窍。」",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC1",
+    "text": "「……道長願教，在下洗耳恭聽。反正多學點總沒壞處。」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nModifyData(AbilityMaxLevel,Player,Charisma,5);",
+    "zh_TW": "「……道長願教，在下洗耳恭聽。反正多學點總沒壞處。」",
+    "zh_CN": "「……道长愿教，在下洗耳恭听。反正多学点总没坏处。」",
+    "links": [109]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "「若能引來金主填平這虧空，倒也不壞。」",
+    "Sequence": "",
+    "zh_TW": "「若能引來金主填平這虧空，倒也不壞。」",
+    "zh_CN": "「若能引来金主填平这亏空，倒也不坏。」",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC1",
+    "text": "「嗯…填平虧空若能引來三家金主，英豪府根基穩了，對我也不是壞事。這并州的門道，正好順便摸清楚。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Description": "機略提升",
+    "zh_TW": "「嗯…填平虧空若能引來三家金主，英豪府根基穩了，對我也不是壞事。這并州的門道，正好順便摸清楚。」",
+    "zh_CN": "「嗯…填平亏空若能引来三家金主，英豪府根基稳了，对我也不是坏事。这并州的门道，正好顺便摸清楚。」",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC7",
+    "text": "[panel=1]「眼明手快。并州三家各懷心思，你若看得清利害所在，在三家之間便大有周旋餘地。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(AbilityMaxLevel,Player,Intelligence,5);",
+    "zh_TW": "[panel=1]「眼明手快。并州三家各懷心思，你若看得清利害所在，在三家之間便大有周旋餘地。」",
+    "zh_CN": "[panel=1]「眼明手快。并州三家各怀心思，你若看得清利害所在，在三家之间便大有周旋余地。」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC4",
+    "text": "[panel=1]「話說在前頭——本府這一年的窟窿，攏共是三萬六千錢。填不平，明年這道門，可就未必開得成了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「話說在前頭——本府這一年的窟窿，攏共是三萬六千錢。填不平，明年這道門，可就未必開得成了。」",
+    "zh_CN": "[panel=1]「话说在前头——本府这一年的窟窿，拢共是三万六千钱。填不平，明年这道门，可就未必开得成了。」",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC1",
+    "text": "「三萬六千……這數目，可不是擺攤賣藝湊得出來的。」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "zh_TW": "「三萬六千……這數目，可不是擺攤賣藝湊得出來的。」",
+    "zh_CN": "「三万六千……这数目，可不是摆摊卖艺凑得出来的。」",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC4",
+    "text": "[panel=1]「所以得找肯掏錢的主。并州境內，鄴城甄家財雄勢大，雁門赤龍幫——這兩家，一直想把手伸得更遠，雲中就是他們的角逐之地。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「所以得找肯掏錢的主。并州境內，鄴城甄家財雄勢大，雁門赤龍幫——這兩家，一直想把手伸得更遠，雲中就是他們的角逐之地。」",
+    "zh_CN": "[panel=1]「所以得找肯掏钱的主。并州境内，邺城甄家财雄势大，雁门赤龙帮——这两家，一直想把手伸得更远，云中就是他们的角逐之地。」",
+    "links": [112]
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC4",
+    "text": "[panel=1]「只是——以貌取人，乃人之天性。連自身都打理不好，旁人便先看輕了你，還談什麼交涉議事？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「只是——以貌取人，乃人之天性。連自身都打理不好，旁人便先看輕了你，還談什麼交涉議事？」",
+    "zh_CN": "[panel=1]「只是——以貌取人，乃人之天性。连自身都打理不好，旁人便先看轻了你，还谈什么交涉议事？」",
+    "links": [113]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "「師父的意思是……要談出資，得先把英豪府的裡子面子都撐起來？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "zh_TW": "「師父的意思是……要談出資，得先把英豪府的裡子面子都撐起來？」",
+    "zh_CN": "「师父的意思是……要谈出资，得先把英豪府的里子面子都撑起来？」",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC4",
+    "text": "[panel=1]「孺子可教。同樣是向人伸手，衣著整潔者討來的，旁人當作『告貸』；蓬頭垢面者討來的，才叫『乞討』。人心如此，不服不行。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「孺子可教。同樣是向人伸手，衣著整潔者討來的，旁人當作『告貸』；蓬頭垢面者討來的，才叫『乞討』。人心如此，不服不行。」",
+    "zh_CN": "[panel=1]「孺子可教。同样是向人伸手，衣着整洁者讨来的，旁人当作『告贷』；蓬头垢面者讨来的，才叫『乞讨』。人心如此，不服不行。」",
+    "links": [115]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC4",
+    "text": "[panel=1]「當然，若另有其他機會，錢從哪來不打緊，湊齊了就成。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「當然，若另有其他機會，錢從哪來不打緊，湊齊了就成。」",
+    "zh_CN": "[panel=1]「当然，若另有其他机会，钱从哪来不打紧，凑齐了就成。」",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC1",
+    "text": "「……行，這差事我接下了。我倒要看看這并州的門道，究竟有多深。」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「……行，這差事我接下了。我倒要看看這并州的門道，究竟有多深。」",
+    "zh_CN": "「……行，这差事我接下了。我倒要看看这并州的门道，究竟有多深。」",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nOpenPanel(1, close);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;\nDisableEventBG();\nEnableDialogueBG(Houses_Ranger);",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "role2",
+    "text": "[panel=6]＊（散會後，你才踏進廂房，赫連娜娜已經佔了桌邊正位。她先不急著亮那三張紙，反而拿炭筆在桌面中央畫了個歪歪扭扭的圈，寫上「并州」兩字。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_30);",
+    "zh_TW": "[panel=6]＊（散會後，你才踏進廂房，赫連娜娜已經佔了桌邊正位。她先不急著亮那三張紙，反而拿炭筆在桌面中央畫了個歪歪扭扭的圈，寫上「并州」兩字。）＊",
+    "zh_CN": "[panel=6]＊（散会后，你才踏进厢房，赫连娜娜已经占了桌边正位。她先不急着亮那三张纸，反而拿炭笔在桌面中央画了个歪歪扭扭的圈，写上「并州」两字。）＊",
+    "links": [120]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC22",
+    "text": "[panel=1]「坐好坐好！大俠接下這爛攤子，本軍師先替你把這局勢掰扯掰扯——」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_TW": "[panel=1]「坐好坐好！大俠接下這爛攤子，本軍師先替你把這局勢掰扯掰扯——」",
+    "zh_CN": "[panel=1]「坐好坐好！大侠接下这烂摊子，本军师先替你把这局势掰扯掰扯——」",
+    "links": [121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC8",
+    "text": "[panel=2]「娜娜姐好神氣！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「娜娜姐好神氣！」",
+    "zh_CN": "[panel=2]「娜娜姐好神气！」",
+    "links": [122]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC20",
+    "text": "[panel=3]「咳咳！道爺旁聽。軍師開講，弟子洗耳。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=3]「咳咳！道爺旁聽。軍師開講，弟子洗耳。」",
+    "zh_CN": "[panel=3]「咳咳！道爷旁听。军师开讲，弟子洗耳。」",
+    "links": [123]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC22",
+    "text": "[panel=1]「先講[em2]并州[/em2]。可別當這兒跟你們中原一樣。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「先講[em2]并州[/em2]。可別當這兒跟你們中原一樣。」",
+    "zh_CN": "[panel=1]「先讲[em2]并州[/em2]。可别当这儿跟你们中原一样。」",
+    "links": [124]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC22",
+    "text": "「并州卡在北邊門戶：太原、上黨往南連著中原；雲中、雁門、朔方、五原這一路，貼著塞外。」",
+    "Sequence": "",
+    "zh_TW": "「并州卡在北邊門戶：太原、上黨往南連著中原；雲中、雁門、朔方、五原這一路，貼著塞外。」",
+    "zh_CN": "「并州卡在北边门户：太原、上党往南连着中原；云中、雁门、朔方、五原这一路，贴着塞外。」",
+    "links": [159]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC20",
+    "text": "[panel=3]「正是！漢人一套、胡人一套——并州這地方，從來不是一本帳算得清的。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「正是！漢人一套、胡人一套——并州這地方，從來不是一本帳算得清的。」",
+    "zh_CN": "[panel=3]「正是！汉人一套、胡人一套——并州这地方，从来不是一本账算得清的。」",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC22",
+    "text": "[panel=1]「要緊的來了——并州的山頭林立，可[em2]不只是地形[/em2]。山背後是幫口：官家一撥、豪族一撥、落草的一撥、塞外過來的又一撥。」",
+    "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_TW": "[panel=1]「要緊的來了——并州的山頭林立，可[em2]不只是地形[/em2]。山背後是幫口：官家一撥、豪族一撥、落草的一撥、塞外過來的又一撥。」",
+    "zh_CN": "[panel=1]「要紧的来了——并州的山头林立，可[em2]不只是地形[/em2]。山背后是帮口：官家一拨、豪族一拨、落草的一拨、塞外过来的又一拨。」",
+    "links": [160]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC8",
+    "text": "[panel=2]「那……我們英豪府在的[em2]雲中[/em2]呢？」",
+    "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「那……我們英豪府在的[em2]雲中[/em2]呢？」",
+    "zh_CN": "[panel=2]「那……我们英豪府在的[em2]云中[/em2]呢？」",
+    "links": [128]
+  },
+  {
+    "entryID": 128,
+    "actorID": "MC22",
+    "text": "[panel=1]「問到點子上了。[em2]雲中[/em2]啊——正好卡在這些山頭中間的肥肉。往東往南能通商路，往北往西能碰塞上。誰握著雲中，誰就握著并州這盤棋的氣眼。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=5);",
+    "zh_TW": "[panel=1]「問到點子上了。[em2]雲中[/em2]啊——正好卡在這些山頭中間的肥肉。往東往南能通商路，往北往西能碰塞上。誰握著雲中，誰就握著并州這盤棋的氣眼。」",
+    "zh_CN": "[panel=1]「问到点子上了。[em2]云中[/em2]啊——正好卡在这些山头中间的肥肉。往东往南能通商路，往北往西能碰塞上。谁握着云中，谁就握着并州这盘棋的气眼。」",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "MC22",
+    "text": "[panel=1]「可偏偏——這塊肥肉，現在有三隻手同時伸過來。」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_TW": "[panel=1]「可偏偏——這塊肥肉，現在有三隻手同時伸過來。」",
+    "zh_CN": "[panel=1]「可偏偏——这块肥肉，现在有三只手同时伸过来。」",
+    "links": [130]
+  },
+  {
+    "entryID": 130,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她這才把那三張紙甩開，分別拍在圈外三個方位：雁門、鄴城、朔方。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（她這才把那三張紙甩開，分別拍在圈外三個方位：雁門、鄴城、朔方。）＊",
+    "zh_CN": "[panel=6]＊（她这才把那三张纸甩开，分别拍在圈外三个方位：雁门、邺城、朔方。）＊",
+    "links": [131]
+  },
+  {
+    "entryID": 131,
+    "actorID": "MC22",
+    "text": "[panel=1]「東邊雁門、南邊鄴城、北邊朔方——三家都想在雲中插旗。英豪府正好坐在交叉點上。」",
+    "Sequence": "SetPortrait(MC22,pic=4);",
+    "zh_TW": "[panel=1]「東邊雁門、南邊鄴城、北邊朔方——三家都想在雲中插旗。英豪府正好坐在交叉點上。」",
+    "zh_CN": "[panel=1]「东边雁门、南边邺城、北边朔方——三家都想在云中插旗。英豪府正好坐在交叉点上。」",
+    "links": [132]
+  },
+  {
+    "entryID": 132,
+    "actorID": "MC8",
+    "text": "[panel=2]「想在雲中插旗…什麼意思？」",
+    "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「想在雲中插旗…什麼意思？」",
+    "zh_CN": "[panel=2]「想在云中插旗…什么意思？」",
+    "links": [133]
+  },
+  {
+    "entryID": 133,
+    "actorID": "MC22",
+    "text": "[panel=1]「嘿嘿，讓本軍師一個個說給你聽——」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "[panel=1]「嘿嘿，讓本軍師一個個說給你聽——」",
+    "zh_CN": "[panel=1]「嘿嘿，让本军师一个个说给你听——」",
+    "links": [134]
+  },
+  {
+    "entryID": 134,
+    "actorID": "MC22",
+    "text": "[panel=1]「第一家，[em2]雁門[/em2]那邊——[em2]赤龍幫[/em2]。幫主叫[em2]褚人飛[/em2]，年紀不小了，可雁門那塊沒王法的地界，他一跺腳，底下人都得跟著顫。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「第一家，[em2]雁門[/em2]那邊——[em2]赤龍幫[/em2]。幫主叫[em2]褚人飛[/em2]，年紀不小了，可雁門那塊沒王法的地界，他一跺腳，底下人都得跟著顫。」",
+    "zh_CN": "[panel=1]「第一家，[em2]雁门[/em2]那边——[em2]赤龙帮[/em2]。帮主叫[em2]褚人飞[/em2]，年纪不小了，可雁门那块没王法的地界，他一跺脚，底下人都得跟着颤。」",
+    "links": [135]
+  },
+  {
+    "entryID": 135,
+    "actorID": "MC22",
+    "text": "[panel=1]「說白了就是落草的山賊堆成幫：不過啊——褚幫主倒是個說一不二的人物。現在他想往雲中伸手，偏偏南邊有甄家、北邊有黑狼卡著，動不了。缺的，就是一個願意認他那面旗的人。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「說白了就是落草的山賊堆成幫：不過啊——褚幫主倒是個說一不二的人物。現在他想往雲中伸手，偏偏南邊有甄家、北邊有黑狼卡著，動不了。缺的，就是一個願意認他那面旗的人。」",
+    "zh_CN": "[panel=1]「说白了就是落草的山贼堆成帮：不过啊——褚帮主倒是个说一不二的人物。现在他想往云中伸手，偏偏南边有甄家、北边有黑狼卡着，动不了。缺的，就是一个愿意认他那面旗的人。」",
+    "links": [136]
+  },
+  {
+    "entryID": 136,
+    "actorID": "MC20",
+    "text": "[panel=3]「褚幫主認的是江湖規矩——願賭服輸、一言既出。你講這套，他才認你；空口白話，他連眼皮都不抬。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「褚幫主認的是江湖規矩——願賭服輸、一言既出。你講這套，他才認你；空口白話，他連眼皮都不抬。」",
+    "zh_CN": "[panel=3]「褚帮主认的是江湖规矩——愿赌服输、一言既出。你讲这套，他才认你；空口白话，他连眼皮都不抬。」",
+    "links": [137]
+  },
+  {
+    "entryID": 137,
+    "actorID": "MC22",
+    "text": "[panel=1]「所以大俠你去雁門，別以為拱手作揖就能掏到銀子——得讓他眼睛一亮，覺得跟你打交道有意思、也划算。你不是最愛逞英雄嗎？這回可有地方使勁了。」",
+    "Sequence": "SetPortrait(MC22,pic=11);",
+    "zh_TW": "[panel=1]「所以大俠你去雁門，別以為拱手作揖就能掏到銀子——得讓他眼睛一亮，覺得跟你打交道有意思、也划算。你不是最愛逞英雄嗎？這回可有地方使勁了。」",
+    "zh_CN": "[panel=1]「所以大侠你去雁门，别以为拱手作揖就能掏到银子——得让他眼睛一亮，觉得跟你打交道有意思、也划算。你不是最爱逞英雄吗？这回可有地方使劲了。」",
+    "links": [138]
+  },
+  {
+    "entryID": 138,
+    "actorID": "MC1",
+    "text": "「……你這誇人，怎麼聽起來像罵人。」",
+    "Sequence": "SetPortrait(MC1,pic=10);",
+    "zh_TW": "「……你這誇人，怎麼聽起來像罵人。」",
+    "zh_CN": "「……你这夸人，怎么听起来像骂人。」",
+    "links": [139]
+  },
+  {
+    "entryID": 139,
+    "actorID": "MC8",
+    "text": "[panel=2]「不過赤龍若肯出錢，小犀覺得可以談談——他們收了錢就認帳，至少不會說好了又反悔。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=2]「不過赤龍若肯出錢，小犀覺得可以談談——他們收了錢就認帳，至少不會說好了又反悔。」",
+    "zh_CN": "[panel=2]「不过赤龙若肯出钱，小犀觉得可以谈谈——他们收了钱就认账，至少不会说好了又反悔。」",
+    "links": [140]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC22",
+    "text": "[panel=1]「第二家，[em2]鄴城甄家[/em2]。大俠你聽過那句沒？『[em2]甄家三日，做狗也富[/em2]』——誇張歸誇張，家底厚成那樣，口袋裡掉點渣都夠咱們吃半年。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「第二家，[em2]鄴城甄家[/em2]。大俠你聽過那句沒？『[em2]甄家三日，做狗也富[/em2]』——誇張歸誇張，家底厚成那樣，口袋裡掉點渣都夠咱們吃半年。」",
+    "zh_CN": "[panel=1]「第二家，[em2]邺城甄家[/em2]。大侠你听过那句没？『[em2]甄家三日，做狗也富[/em2]』——夸张归夸张，家底厚成那样，口袋里掉点渣都够咱们吃半年。」",
+    "links": [141]
+  },
+  {
+    "entryID": 141,
+    "actorID": "MC8",
+    "text": "[panel=2]「哇……做狗也富？那做人豈不是……」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「哇……做狗也富？那做人豈不是……」",
+    "zh_CN": "[panel=2]「哇……做狗也富？那做人岂不是……」",
+    "links": [142]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC22",
+    "text": "[panel=1]「當家的那位[em2]甄筠[/em2]啊——瞧著不過三十出頭，其實三十好幾了，駐顏有術，瞧著教人牙癢。且心裡門兒清；屋子裡容不得一點髒，最愛稀奇古怪的寶貝。但據說還跟自家族妹甄氏不合，見了就皺眉。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=1]「當家的那位[em2]甄筠[/em2]啊——瞧著不過三十出頭，其實三十好幾了，駐顏有術，瞧著教人牙癢。且心裡門兒清；屋子裡容不得一點髒，最愛稀奇古怪的寶貝。但據說還跟自家族妹甄氏不合，見了就皺眉。」",
+    "zh_CN": "[panel=1]「当家的那位[em2]甄筠[/em2]啊——瞧着不过三十出头，其实三十好几了，驻颜有术，瞧着教人牙痒。且心里门儿清；屋子里容不得一点脏，最爱稀奇古怪的宝贝。但据说还跟自家族妹甄氏不合，见了就皱眉。」",
+    "links": [143]
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC22",
+    "text": "[panel=1]「跟她談，別想著江湖那一套。她要看的是：實際的利益、與你本身的價值。師父說什麼『告貸』跟『乞討』——八成就是防這種貴人！」",
+    "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_TW": "[panel=1]「跟她談，別想著江湖那一套。她要看的是：實際的利益、與你本身的價值。師父說什麼『告貸』跟『乞討』——八成就是防這種貴人！」",
+    "zh_CN": "[panel=1]「跟她谈，别想着江湖那一套。她要看的是：实际的利益、与你本身的价值。师父说什么『告贷』跟『乞讨』——八成就是防这种贵人！」",
+    "links": [144]
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC20",
+    "text": "[panel=3]「軍師言之有理。跟世家打交道，先得虛張聲勢一番。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「軍師言之有理。跟世家打交道，先得虛張聲勢一番。」",
+    "zh_CN": "[panel=3]「军师言之有理。跟世家打交道，先得虚张声势一番。」",
+    "links": [145]
+  },
+  {
+    "entryID": 145,
+    "actorID": "MC1",
+    "text": "「……記下來了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「……記下來了。」",
+    "zh_CN": "「……记下来了。」",
+    "links": [146]
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC22",
+    "text": "[panel=1]「最後這家——[em2]朔方黑狼氏族[/em2]。草原上來的，據說是南匈奴那一支。嘴上歸了漢朝，但還過著草原的日子；誰強聽誰的，漢人那套規矩他們懶得理，漢人也不待見他們。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=8);",
+    "zh_TW": "[panel=1]「最後這家——[em2]朔方黑狼氏族[/em2]。草原上來的，據說是南匈奴那一支。嘴上歸了漢朝，但還過著草原的日子；誰強聽誰的，漢人那套規矩他們懶得理，漢人也不待見他們。」",
+    "zh_CN": "[panel=1]「最后这家——[em2]朔方黑狼氏族[/em2]。草原上来的，据说是南匈奴那一支。嘴上归了汉朝，但还过着草原的日子；谁强听谁的，汉人那套规矩他们懒得理，汉人也不待见他们。」",
+    "links": [147]
+  },
+  {
+    "entryID": 147,
+    "actorID": "MC22",
+    "text": "[panel=1]「族長[em2]黑狼王[/em2]，比大俠大不了幾歲，賭癮重、身子也浪，見了漢人就翻白眼。赤龍跟甄家都煩他——可煩歸煩，誰都怕他把籌碼押到對面去，只好由他從中撈油水。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「族長[em2]黑狼王[/em2]，比大俠大不了幾歲，賭癮重、身子也浪，見了漢人就翻白眼。赤龍跟甄家都煩他——可煩歸煩，誰都怕他把籌碼押到對面去，只好由他從中撈油水。」",
+    "zh_CN": "[panel=1]「族长[em2]黑狼王[/em2]，比大侠大不了几岁，赌瘾重、身子也浪，见了汉人就翻白眼。赤龙跟甄家都烦他——可烦归烦，谁都怕他把筹码押到对面去，只好由他从中捞油水。」",
+    "links": [148]
+  },
+  {
+    "entryID": 148,
+    "actorID": "MC22",
+    "text": "[panel=1]「草原上這種人，本姑娘見過：夠狠就誰都忌憚，可一搭上夥，也最容易被咬。金子是有，代價難說。本姑娘一句話——能不動他，就別動。真走投無路再說。」",
+    "Sequence": "SetPortrait(MC22,pic=4);",
+    "zh_TW": "[panel=1]「草原上這種人，本姑娘見過：夠狠就誰都忌憚，可一搭上夥，也最容易被咬。金子是有，代價難說。本姑娘一句話——能不動他，就別動。真走投無路再說。」",
+    "zh_CN": "[panel=1]「草原上这种人，本姑娘见过：够狠就谁都忌惮，可一搭上伙，也最容易被咬。金子是有，代价难说。本姑娘一句话——能不动他，就别动。真走投无路再说。」",
+    "links": [149]
+  },
+  {
+    "entryID": 149,
+    "actorID": "MC8",
+    "text": "[panel=2]「小犀同意！三萬六千先盯[em2]赤龍[/em2]跟[em2]甄家[/em2]；黑狼……真沒轍再說。」",
+    "Sequence": "SetPortrait(MC8,pic=8);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_TW": "[panel=2]「小犀同意！三萬六千先盯[em2]赤龍[/em2]跟[em2]甄家[/em2]；黑狼……真沒轍再說。」",
+    "zh_CN": "[panel=2]「小犀同意！三万六千先盯[em2]赤龙[/em2]跟[em2]甄家[/em2]；黑狼……真没辙再说。」",
+    "links": [150]
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC20",
+    "text": "[panel=3]「軍師定調，道爺附議。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「軍師定調，道爺附議。」",
+    "zh_CN": "[panel=3]「军师定调，道爷附议。」",
+    "links": [151]
+  },
+  {
+    "entryID": 151,
+    "actorID": "MC1",
+    "text": "「并州山頭雜、雲中是肥肉；雁門得讓他認得這套規矩，鄴城……銀子他們不缺，得找破口才鑽得進去，朔方……暫且擱著。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「并州山頭雜、雲中是肥肉；雁門得讓他認得這套規矩，鄴城……銀子他們不缺，得找破口才鑽得進去，朔方……暫且擱著。」",
+    "zh_CN": "「并州山头杂、云中是肥肉；雁门得让他认得这套规矩，邺城……银子他们不缺，得找破口才钻得进去，朔方……暂且搁着。」",
+    "links": [152]
+  },
+  {
+    "entryID": 152,
+    "actorID": "MC22",
+    "text": "[panel=1]「這就對了！赤龍講規矩，甄家找機會！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);",
+    "zh_TW": "[panel=1]「這就對了！赤龍講規矩，甄家找機會！」",
+    "zh_CN": "[panel=1]「这就对了！赤龙讲规矩，甄家找机会！」",
+    "links": [153]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC8",
+    "text": "[panel=2]「娜娜姐……你平常看起來一點也不可靠，今天倒講得好清楚。」",
+    "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「娜娜姐……你平常看起來一點也不可靠，今天倒講得好清楚。」",
+    "zh_CN": "[panel=2]「娜娜姐……你平常看起来一点也不可靠，今天倒讲得好清楚。」",
+    "links": [154]
+  },
+  {
+    "entryID": 154,
+    "actorID": "MC1",
+    "text": "「……說真的。我還以為你在雲中就只會拉我去挖寶、惹麻煩。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_TW": "「……說真的。我還以為你在雲中就只會拉我去挖寶、惹麻煩。」",
+    "zh_CN": "「……说真的。我还以为你在云中就只会拉我去挖宝、惹麻烦。」",
+    "links": [155]
+  },
+  {
+    "entryID": 155,
+    "actorID": "MC22",
+    "text": "[panel=1]「哼！本姑娘在街頭晃，可不是閒著玩的——并州這情勢早摸了個大概。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);",
+    "zh_TW": "[panel=1]「哼！本姑娘在街頭晃，可不是閒著玩的——并州這情勢早摸了個大概。」",
+    "zh_CN": "[panel=1]「哼！本姑娘在街头晃，可不是闲着玩的——并州这情势早摸了个大概。」",
+    "links": [156]
+  },
+  {
+    "entryID": 156,
+    "actorID": "MC20",
+    "text": "[panel=3]「哈哈！有錢能使鬼推磨——沒錢，道爺我也得跟著你們推。走吧！」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「哈哈！有錢能使鬼推磨——沒錢，道爺我也得跟著你們推。走吧！」",
+    "zh_CN": "[panel=3]「哈哈！有钱能使鬼推磨——没钱，道爷我也得跟着你们推。走吧！」",
+    "links": [157]
+  },
+  {
+    "entryID": 157,
+    "actorID": "role2",
+    "text": "[panel=6]＊（廂房油燈搖晃。并州的大局、雲中的肥肉、三隻伸過來的手——狗頭軍師一層層攤開。接下來，該選哪一步棋，便是你的事了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（廂房油燈搖晃。并州的大局、雲中的肥肉、三隻伸過來的手——狗頭軍師一層層攤開。接下來，該選哪一步棋，便是你的事了。）＊",
+    "zh_CN": "[panel=6]＊（厢房油灯摇晃。并州的大局、云中的肥肉、三只伸过来的手——狗头军师一层层摊开。接下来，该选哪一步棋，便是你的事了。）＊",
+    "links": [158]
+  },
+  {
+    "entryID": 158,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Script": "SetQuestState(\"C2M1\", \"active\")",
+    "Description": "觸發任務",
+    "links": []
+  },
+  {
+    "entryID": 159,
+    "actorID": "MC22",
+    "text": "「漢人屯田牧馬，匈奴、雜胡也在這兒落腳——南邊還有南匈奴的王庭蹲過。幫口一多，規矩就雜；誰強誰說話，誰弱誰低頭。」",
+    "Sequence": "",
+    "zh_TW": "「漢人屯田牧馬，匈奴、雜胡也在這兒落腳——南邊還有南匈奴的王庭蹲過。幫口一多，規矩就雜；誰強誰說話，誰弱誰低頭。」",
+    "zh_CN": "「汉人屯田牧马，匈奴、杂胡也在这儿落脚——南边还有南匈奴的王庭蹲过。帮口一多，规矩就杂；谁强谁说话，谁弱谁低头。」",
+    "links": [125]
+  },
+  {
+    "entryID": 160,
+    "actorID": "MC22",
+    "text": "[panel=1]「你以為爬過一座山就太平？下一座山，換一幫人喊號令。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「你以為爬過一座山就太平？下一座山，換一幫人喊號令。」",
+    "zh_CN": "[panel=1]「你以为爬过一座山就太平？下一座山，换一帮人喊号令。」",
+    "links": [127]
+  }
+]

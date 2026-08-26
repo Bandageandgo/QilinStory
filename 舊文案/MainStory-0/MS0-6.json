@@ -1,0 +1,902 @@
+[
+  {
+    "entryID": 447,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Village);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestState(\"MS06\") == \"active\"",
+    "links": [448]
+  },
+  {
+    "entryID": 448,
+    "actorID": "MC1",
+    "text": "就是這裡嗎？看起來與尋常村子無異……\n先找人打聽一下好了。",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "就是這裡嗎？看起來與尋常村子無異……\n先找人打聽一下好了。",
+    "zh_CN": "就是这里吗？看起来与寻常村子无异……\n先找人打听一下好了。",
+    "links": [624]
+  },
+  {
+    "entryID": 624,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [625]
+  },
+  {
+    "entryID": 625,
+    "actorID": "role39",
+    "text": "你問習俗？那你來得真是時候。\n我們這的河神，長久以來庇護我們這風調雨水。",
+    "Sequence": "",
+    "zh_TW": "你問習俗？那你來得真是時候。\n我們這的河神，長久以來庇護我們這風調雨水。",
+    "zh_CN": "你问习俗？那你来得真是时候。 \n我们这的河神，长久以来庇护我们这风调雨水。",
+    "links": [626]
+  },
+  {
+    "entryID": 626,
+    "actorID": "role39",
+    "text": "為此我們每年都會舉行祭典感謝河神。",
+    "Sequence": "",
+    "zh_TW": "為此我們每年都會舉行祭典感謝河神。",
+    "zh_CN": "为此我们每年都会举行祭典感谢河神。",
+    "links": [627]
+  },
+  {
+    "entryID": 627,
+    "actorID": "MC1",
+    "text": "河神啊……這我懂。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "河神啊……這我懂。",
+    "zh_CN": "河神啊……这我懂。",
+    "links": [628]
+  },
+  {
+    "entryID": 628,
+    "actorID": "MC1",
+    "text": "以前在涼州，常聽些部族告誡要敬畏感激神明。\n因此常獻上牛羊之類的，作為祭祀。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "以前在涼州，常聽些部族告誡要敬畏感激神明。\n因此常獻上牛羊之類的，作為祭祀。",
+    "zh_CN": "以前在凉州，常听些部族告诫要敬畏感激神明。 \n因此常献上牛羊之类的，作为祭祀。",
+    "links": [629]
+  },
+  {
+    "entryID": 629,
+    "actorID": "role39",
+    "text": "哈哈，確實確實，不過我們這有些不同。\n我們的河神並不要牲畜，而是──新娘。",
+    "Sequence": "",
+    "zh_TW": "哈哈，確實確實，不過我們這有些不同。\n我們的河神並不要牲畜，而是──新娘。",
+    "zh_CN": "哈哈，确实确实，不过我们这有些不同。 \n我们的河神并不要牲畜，而是──新娘。",
+    "links": [630]
+  },
+  {
+    "entryID": 630,
+    "actorID": "MC1",
+    "text": "新……娘？等等，你是指人……？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "新……娘？等等，你是指人……？",
+    "zh_CN": "新……娘？等等，你是指人……？",
+    "links": [631]
+  },
+  {
+    "entryID": 631,
+    "actorID": "role39",
+    "text": "沒錯沒錯，就是年輕女子。\n據耆老說，河神十分孤單，所以很想有個伴。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "沒錯沒錯，就是年輕女子。\n據耆老說，河神十分孤單，所以很想有個伴。",
+    "zh_CN": "没错没错，就是年轻女子。 \n据耆老说，河神十分孤单，所以很想有个伴。",
+    "links": [632]
+  },
+  {
+    "entryID": 632,
+    "actorID": "role39",
+    "text": "一旦它孤單的時候，河水就會氾濫。\n可娶了新娘後，就會天平地安，五穀豐收。",
+    "Sequence": "",
+    "zh_TW": "一旦它孤單的時候，河水就會氾濫。\n可娶了新娘後，就會天平地安，五穀豐收。",
+    "zh_CN": "一旦它孤单的时候，河水就会泛滥。 \n可娶了新娘后，就会天平地安，五谷丰收。",
+    "links": [633]
+  },
+  {
+    "entryID": 633,
+    "actorID": "role2",
+    "text": "[panel=5]所聽所聞，匪夷所思，農民見你沒再提問，\n便興高財烈地回村準備所謂祭典……",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=5]所聽所聞，匪夷所思，農民見你沒再提問，\n便興高財烈地回村準備所謂祭典……",
+    "zh_CN": "[panel=5]所听所闻，匪夷所思，农民见你没再提问，\n便兴高财烈地回村准备所谓祭典……",
+    "links": [634]
+  },
+  {
+    "entryID": 634,
+    "actorID": "MC1",
+    "text": "……河神娶妻……這不就是迷信之說……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "……河神娶妻……這不就是迷信之說……",
+    "zh_CN": "……河神娶妻……这不就是迷信之说……",
+    "links": [635]
+  },
+  {
+    "entryID": 635,
+    "actorID": "role5",
+    "text": "你……你是來調查村子的差役？",
+    "Sequence": "",
+    "zh_TW": "你……你是來調查村子的差役？",
+    "zh_CN": "你……你是来调查村子的差役？",
+    "links": [636]
+  },
+  {
+    "entryID": 636,
+    "actorID": "MC1",
+    "text": "我？我不是差役，我只是……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "我？我不是差役，我只是……",
+    "zh_CN": "我？我不是差役，我只是……",
+    "links": [637]
+  },
+  {
+    "entryID": 637,
+    "actorID": "role5",
+    "text": "拜託你，救救我的孫女。\n這個村子瘋了，所有人都瘋了。",
+    "Sequence": "",
+    "zh_TW": "拜託你，救救我的孫女。\n這個村子瘋了，所有人都瘋了。",
+    "zh_CN": "拜托你，救救我的孙女。 \n这个村子疯了，所有人都疯了。",
+    "links": [638]
+  },
+  {
+    "entryID": 638,
+    "actorID": "role5",
+    "text": "我的孫女她才只有十來歲……\n他們竟然就要把她丟入河中，給河神作新娘……",
+    "Sequence": "",
+    "zh_TW": "我的孫女她才只有十來歲……\n他們竟然就要把她丟入河中，給河神作新娘……",
+    "zh_CN": "我的孙女她才只有十来岁……\n他们竟然就要把她丢入河中，给河神作新娘……",
+    "links": [639]
+  },
+  {
+    "entryID": 639,
+    "actorID": "MC1",
+    "text": "這麼小的孩子，怎麼可以……",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "這麼小的孩子，怎麼可以……",
+    "zh_CN": "这么小的孩子，怎么可以……",
+    "links": [640]
+  },
+  {
+    "entryID": 640,
+    "actorID": "role5",
+    "text": "求求你救救她吧，求求你，拜託你。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "求求你救救她吧，求求你，拜託你。",
+    "zh_CN": "求求你救救她吧，求求你，拜托你。",
+    "links": [641]
+  },
+  {
+    "entryID": 641,
+    "actorID": "role2",
+    "text": "[panel=5]老婆婆跪在你面前，\n不斷叩頭，彷彿都要把頭叩穿了。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]老婆婆跪在你面前，\n不斷叩頭，彷彿都要把頭叩穿了。",
+    "zh_CN": "[panel=5]老婆婆跪在你面前，\n不断叩头，仿佛都要把头叩穿了。",
+    "links": [642]
+  },
+  {
+    "entryID": 642,
+    "actorID": "MC1",
+    "text": "（此為仁義，我當制止。\n可迷信這事，外人該如何下手……）",
+    "Sequence": "SetPortrait(MC1,pic=9);\nOpenPanel(1, close);",
+    "zh_TW": "（此為仁義，我當制止。\n可迷信這事，外人該如何下手……）",
+    "zh_CN": "（此为仁义，我当制止。\n可迷信这事，外人该如何下手……）",
+    "links": [643]
+  },
+  {
+    "entryID": 643,
+    "actorID": "role2",
+    "text": "[panel=5]正當你思考決斷時，麒麟骰發出了異光，\n但這次不再是祥瑞象徵……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]正當你思考決斷時，麒麟骰發出了異光，\n但這次不再是祥瑞象徵……",
+    "zh_CN": "[panel=5]正当你思考决断时，麒麟骰发出了异光，\n但这次不再是祥瑞象征……",
+    "links": [644]
+  },
+  {
+    "entryID": 644,
+    "actorID": "MC1",
+    "text": "饕餮……！\n難道你是在警告說我別插手此事……可是……",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "饕餮……！\n難道你是在警告說我別插手此事……可是……",
+    "zh_CN": "饕餮……！ \n难道你是在警告说我别插手此事……可是……",
+    "links": [645]
+  },
+  {
+    "entryID": 645,
+    "actorID": "MC1",
+    "text": "（饕餮之兆，不是決斷有錯，\n就是將有大難，從無失準……）",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "（饕餮之兆，不是決斷有錯，\n就是將有大難，從無失準……）",
+    "zh_CN": "（饕餮之兆，不是决断有错，\n就是将有大难，从无失准……）",
+    "links": [646]
+  },
+  {
+    "entryID": 646,
+    "actorID": "MC1",
+    "text": "…………\n…………",
+    "Sequence": "",
+    "zh_TW": "…………\n…………",
+    "zh_CN": "…………\n…………",
+    "links": [647, 648]
+  },
+  {
+    "entryID": 647,
+    "actorID": "MC1",
+    "text": "1.不！人命關天，這事不能不管！",
+    "Sequence": "",
+    "zh_TW": "1.不！人命關天，這事不能不管！",
+    "zh_CN": "1.不！人命关天，这事不能不管！",
+    "links": [651]
+  },
+  {
+    "entryID": 648,
+    "actorID": "MC1",
+    "text": "2.……骰子……我相信你……",
+    "Sequence": "",
+    "zh_TW": "2.……骰子……我相信你……",
+    "zh_CN": "2.……骰子……我相信你……",
+    "links": [649]
+  },
+  {
+    "entryID": 649,
+    "actorID": "role2",
+    "text": "[panel=5]你選擇了指引，不顧哀求，轉頭離去……\n但你不知道這是對，還是錯……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "[panel=5]你選擇了指引，不顧哀求，轉頭離去……\n但你不知道這是對，還是錯……",
+    "zh_CN": "[panel=5]你选择了指引，不顾哀求，转头离去……\n但你不知道这是对，还是错……",
+    "links": [650]
+  },
+  {
+    "entryID": 650,
+    "actorID": "role2",
+    "text": "[panel=5]因為時間不能回頭，既然選了，\n那當下的真相注定埋葬……",
+    "Sequence": "ShowInstantMessage(Influence_Merit,100);\nShowReward(UnsolvableSolution_Title)@1;\nShowInstantMessage(Reward_SkillCard,MC1,UnsolvableSolution_Title)@1;",
+    "Description": "獲得功勳跟技能卡",
+    "zh_TW": "[panel=5]因為時間不能回頭，既然選了，\n那當下的真相注定埋葬……",
+    "zh_CN": "[panel=5]因为时间不能回头，既然选了，\n那当下的真相注定埋葬……",
+    "links": [685]
+  },
+  {
+    "entryID": 651,
+    "actorID": "role2",
+    "text": "[panel=5]你允諾了老婆婆，\n對方連聲叩謝，直呼活神仙，真神仙。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你允諾了老婆婆，\n對方連聲叩謝，直呼活神仙，真神仙。",
+    "zh_CN": "[panel=5]你允诺了老婆婆，\n对方连声叩谢，直呼活神仙，真神仙。",
+    "links": [652]
+  },
+  {
+    "entryID": 652,
+    "actorID": "MC1",
+    "text": "……接下來……先不論信奉之說，\n關鍵還是在真有風雨改變的現象……",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "……接下來……先不論信奉之說，\n關鍵還是在真有風雨改變的現象……",
+    "zh_CN": "……接下来……先不论信奉之说，\n关键还是在真有风雨改变的现象……",
+    "links": [653]
+  },
+  {
+    "entryID": 653,
+    "actorID": "MC1",
+    "text": "足以左右風雨……異怪……\n假若是九黎怪物……",
+    "Sequence": "EnableCharacterExpression(0,MC1,Meditate);",
+    "zh_TW": "足以左右風雨……異怪……\n假若是九黎怪物……",
+    "zh_CN": "足以左右风雨……异怪……\n假若是九黎怪物……",
+    "links": [654]
+  },
+  {
+    "entryID": 654,
+    "actorID": "MC1",
+    "text": "凡事必有蹤，\n就到那河神出沒處，便見分曉。",
+    "Sequence": "SetPortrait(MC1,pic=6);\nDisableAllCharacterExpression();",
+    "zh_TW": "凡事必有蹤，\n就到那河神出沒處，便見分曉。",
+    "zh_CN": "凡事必有踪，\n就到那河神出没处，便见分晓。",
+    "links": [655]
+  },
+  {
+    "entryID": 655,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [656]
+  },
+  {
+    "entryID": 656,
+    "actorID": "role2",
+    "text": "[panel=5]你開始小心旁敲側擊，欲探出河神所在……",
+    "Sequence": "",
+    "Description": "進小遊戲",
+    "zh_TW": "[panel=5]你開始小心旁敲側擊，欲探出河神所在……",
+    "zh_CN": "[panel=5]你开始小心旁敲侧击，欲探出河神所在……",
+    "links": [661, 659]
+  },
+  {
+    "entryID": 659,
+    "actorID": "role2",
+    "text": "[panel=5]你行動似乎過於露骨，引來村人注意，\n於是趕忙收斂些。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你行動似乎過於露骨，引來村人注意，\n於是趕忙收斂些。",
+    "zh_CN": "[panel=5]你行动似乎过于露骨，引来村人注意，\n于是赶忙收敛些。",
+    "links": [660]
+  },
+  {
+    "entryID": 660,
+    "actorID": "MC1",
+    "text": "得再小心點才行。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "得再小心點才行。",
+    "zh_CN": "得再小心点才行。",
+    "links": [655]
+  },
+  {
+    "entryID": 661,
+    "actorID": "role2",
+    "text": "[panel=5]經過一番調查，\n你終於找到了所謂河神出沒的河區。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]經過一番調查，\n你終於找到了所謂河神出沒的河區。",
+    "zh_CN": "[panel=5]经过一番调查，\n你终于找到了所谓河神出没的河区。",
+    "links": [662]
+  },
+  {
+    "entryID": 662,
+    "actorID": "MC1",
+    "text": "河神啊河神，你若真乃正神，\n這點冒犯，還請恕罪。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "河神啊河神，你若真乃正神，\n這點冒犯，還請恕罪。",
+    "zh_CN": "河神啊河神，你若真乃正神，\n这点冒犯，还请恕罪。",
+    "links": [663]
+  },
+  {
+    "entryID": 663,
+    "actorID": "role2",
+    "text": "[panel=5]你凝勁往水內發招，要問河中物。\n隨即河水奔騰，一條蛟蛇身影竄出──",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你凝勁往水內發招，要問河中物。\n隨即河水奔騰，一條蛟蛇身影竄出──",
+    "zh_CN": "[panel=5]你凝劲往水内发招，要问河中物。 \n随即河水奔腾，一条蛟蛇身影窜出──",
+    "links": [664]
+  },
+  {
+    "entryID": 664,
+    "actorID": "role4",
+    "text": "吼──吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──吼──！",
+    "zh_CN": "吼──吼──！",
+    "links": [665]
+  },
+  {
+    "entryID": 665,
+    "actorID": "MC1",
+    "text": "該說不意外，果然是怪物作祟嗎。",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "該說不意外，果然是怪物作祟嗎。",
+    "zh_CN": "该说不意外，果然是怪物作祟吗。",
+    "links": [666]
+  },
+  {
+    "entryID": 666,
+    "actorID": "role4",
+    "text": "吼──！",
+    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);",
+    "zh_TW": "吼──！",
+    "zh_CN": "吼──！",
+    "links": [667]
+  },
+  {
+    "entryID": 667,
+    "actorID": "MC1",
+    "text": "迷信的根源！\n這次要勞煩你親自走一趟見見村人了！",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=2);",
+    "Description": "進戰鬥",
+    "zh_TW": "迷信的根源！\n這次要勞煩你親自走一趟見見村人了！",
+    "zh_CN": "迷信的根源！ \n这次要劳烦你亲自走一趟见见村人了！",
+    "links": [671, 670]
+  },
+  {
+    "entryID": 670,
+    "actorID": "role2",
+    "text": "[panel=5]你不慎被怪物拖入水，隨即成為盤中餐。\n如此一生，不勝唏噓……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你不慎被怪物拖入水，隨即成為盤中餐。\n如此一生，不勝唏噓……",
+    "zh_CN": "[panel=5]你不慎被怪物拖入水，随即成为盘中餐。 \n如此一生，不胜唏嘘……",
+    "links": []
+  },
+  {
+    "entryID": 671,
+    "actorID": "role2",
+    "text": "[panel=5]你成功擊殺了怪物，\n並帶著屍體，所謂河神真相回到村子。",
+    "Sequence": "SetPortrait(MC1,pic=1);\nShowInstantMessage(Influence_Merit,100);",
+    "zh_TW": "[panel=5]你成功擊殺了怪物，\n並帶著屍體，所謂河神真相回到村子。",
+    "zh_CN": "[panel=5]你成功击杀了怪物，\n并带着尸体，所谓河神真相回到村子。",
+    "links": [672]
+  },
+  {
+    "entryID": 672,
+    "actorID": "MC1",
+    "text": "真相就是如此，河水氾濫，\n還是風調雨順，都只是怪物一時喜好。",
+    "Sequence": "",
+    "zh_TW": "真相就是如此，河水氾濫，\n還是風調雨順，都只是怪物一時喜好。",
+    "zh_CN": "真相就是如此，河水泛滥，\n还是风调雨顺，都只是怪物一时喜好。",
+    "links": [673]
+  },
+  {
+    "entryID": 673,
+    "actorID": "MC1",
+    "text": "此後不會再有怪物大鬧河水，\n你們不必再為此獻上人祭了。",
+    "Sequence": "",
+    "zh_TW": "此後不會再有怪物大鬧河水，\n你們不必再為此獻上人祭了。",
+    "zh_CN": "此后不会再有怪物大闹河水，\n你们不必再为此献上人祭了。",
+    "links": [674]
+  },
+  {
+    "entryID": 674,
+    "actorID": "role2",
+    "text": "[panel=5]正當你以為問題解決，皆大歡喜。\n豈料村人竟一個個拿出武器，惡狠狠瞪著你。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]正當你以為問題解決，皆大歡喜。\n豈料村人竟一個個拿出武器，惡狠狠瞪著你。",
+    "zh_CN": "[panel=5]正当你以为问题解决，皆大欢喜。 \n岂料村人竟一个个拿出武器，恶狠狠瞪着你。",
+    "links": [675]
+  },
+  {
+    "entryID": 675,
+    "actorID": "role39",
+    "text": "你……你這受詛咒的傢伙，\n竟然殺了我們的河神……",
+    "Sequence": "",
+    "zh_TW": "你……你這受詛咒的傢伙，\n竟然殺了我們的河神……",
+    "zh_CN": "你……你这受诅咒的家伙，\n竟然杀了我们的河神……",
+    "links": [676]
+  },
+  {
+    "entryID": 676,
+    "actorID": "MC1",
+    "text": "你們……看清楚了，\n那才不是什麼河神，牠只是怪物，是隻孽畜。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "你們……看清楚了，\n那才不是什麼河神，牠只是怪物，是隻孽畜。",
+    "zh_CN": "你们……看清楚了，\n那才不是什么河神，它只是怪物，是只孽畜。",
+    "links": [677]
+  },
+  {
+    "entryID": 677,
+    "actorID": "role39",
+    "text": "說什麼鬼話，我們早就看過河神樣貌，\n我們世世代代，奉河神為上，世世代代……",
+    "Sequence": "",
+    "zh_TW": "說什麼鬼話，我們早就看過河神樣貌，\n我們世世代代，奉河神為上，世世代代……",
+    "zh_CN": "说什么鬼话，我们早就看过河神样貌，\n我们世世代代，奉河神为上，世世代代……",
+    "links": [678]
+  },
+  {
+    "entryID": 678,
+    "actorID": "role39",
+    "text": "而你……\n該死的孽障，殺了我們的河神！",
+    "Sequence": "",
+    "zh_TW": "而你……\n該死的孽障，殺了我們的河神！",
+    "zh_CN": "而你……\n该死的孽障，杀了我们的河神！",
+    "links": [679]
+  },
+  {
+    "entryID": 679,
+    "actorID": "role39",
+    "text": "不對，老一輩好像說過，河神是不會死的。\n啊……對！只要獻上新祭品，祂就會重生了……",
+    "Sequence": "",
+    "zh_TW": "不對，老一輩好像說過，河神是不會死的。\n啊……對！只要獻上新祭品，祂就會重生了……",
+    "zh_CN": "不对，老一辈好像说过，河神是不会死的。 \n啊……对！只要献上新祭品，祂就会重生了……",
+    "links": [716]
+  },
+  {
+    "entryID": 680,
+    "actorID": "role2",
+    "text": "[panel=5]神將復活的惡念一生，\n眾村人立刻圍住了他們的新祭品──你。",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=5]神將復活的惡念一生，\n眾村人立刻圍住了他們的新祭品──你。",
+    "zh_CN": "[panel=5]神将复活的恶念一生，\n众村人立刻围住了他们的新祭品──你。",
+    "links": [681]
+  },
+  {
+    "entryID": 681,
+    "actorID": "role2",
+    "text": "[panel=5]這瞬間你弄明白了，\n這些人並非被陋習所騙。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這瞬間你弄明白了，\n這些人並非被陋習所騙。",
+    "zh_CN": "[panel=5]这瞬间你弄明白了，\n这些人并非被陋习所骗。",
+    "links": [682]
+  },
+  {
+    "entryID": 682,
+    "actorID": "role2",
+    "text": "[panel=5]他們早就知道真相，但他們深信著，\n一直以來都是信著，因為他們是真正的教徒……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]他們早就知道真相，但他們深信著，\n一直以來都是信著，因為他們是真正的教徒……",
+    "zh_CN": "[panel=5]他们早就知道真相，但他们深信着，\n一直以来都是信着，因为他们是真正的教徒……",
+    "links": [683]
+  },
+  {
+    "entryID": 683,
+    "actorID": "role39",
+    "text": "河神啊，河神啊，\n請您接受這罪惡的祭品，重新庇護我們吧！",
+    "Sequence": "",
+    "zh_TW": "河神啊，河神啊，\n請您接受這罪惡的祭品，重新庇護我們吧！",
+    "zh_CN": "河神啊，河神啊，\n请您接受这罪恶的祭品，重新庇护我们吧！",
+    "links": [684]
+  },
+  {
+    "entryID": 684,
+    "actorID": "role2",
+    "text": "[panel=5]村人群起而攻，而你只有一條路……\n饕餮所示之路，想活下去，只有這條路……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]村人群起而攻，而你只有一條路……\n饕餮所示之路，想活下去，只有這條路……",
+    "zh_CN": "[panel=5]村人群起而攻，而你只有一条路……\n饕餮所示之路，想活下去，只有这条路……",
+    "links": [729]
+  },
+  {
+    "entryID": 685,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(5, close);\nOpenPanel(1, close);\nOpenPanel(0, close);\nSetContinueMode(false);\nFade(stay,1,#000000)->Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [731]
+  },
+  {
+    "entryID": 686,
+    "actorID": "MC4",
+    "text": "河神娶妻嗎……\n嗯，你的調查結果，我收下了。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "河神娶妻嗎……\n嗯，你的調查結果，我收下了。",
+    "zh_CN": "河神娶妻吗……\n嗯，你的调查结果，我收下了。",
+    "links": [687]
+  },
+  {
+    "entryID": 687,
+    "actorID": "MC1",
+    "text": "…………",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [688]
+  },
+  {
+    "entryID": 688,
+    "actorID": "MC4",
+    "text": "怎麼了，對自己的決定還是在意？\n不必多想，我說過現場你可自行判斷。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "怎麼了，對自己的決定還是在意？\n不必多想，我說過現場你可自行判斷。",
+    "zh_CN": "怎么了，对自己的决定还是在意？ \n不必多想，我说过现场你可自行判断。",
+    "links": [691, 697]
+  },
+  {
+    "entryID": 691,
+    "actorID": "MC1",
+    "text": "不是的……這……並不是我想做的……\n仁義、俠義不該這樣……",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Description": "變數分歧",
+    "zh_TW": "不是的……這……並不是我想做的……\n仁義、俠義不該這樣……",
+    "zh_CN": "不是的……这……并不是我想做的……\n仁义、侠义不该这样……",
+    "links": [692]
+  },
+  {
+    "entryID": 692,
+    "actorID": "MC1",
+    "text": "……我只能不斷告訴自己，\n至少那對祖孫沒事了……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "……我只能不斷告訴自己，\n至少那對祖孫沒事了……",
+    "zh_CN": "……我只能不断告诉自己，\n至少那对祖孙没事了……",
+    "links": [693]
+  },
+  {
+    "entryID": 693,
+    "actorID": "MC4",
+    "text": "不對吧，\n你真正慶幸的是自己活下來了。",
+    "Sequence": "",
+    "zh_TW": "不對吧，\n你真正慶幸的是自己活下來了。",
+    "zh_CN": "不对吧，\n你真正庆幸的是自己活下来了。",
+    "links": [694]
+  },
+  {
+    "entryID": 694,
+    "actorID": "MC1",
+    "text": "……！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "……！",
+    "zh_CN": "……！",
+    "links": [695]
+  },
+  {
+    "entryID": 695,
+    "actorID": "MC4",
+    "text": "你只不過扯開了文人想像的屁話，\n像個人一樣活在現實，僅此而已。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "你只不過扯開了文人想像的屁話，\n像個人一樣活在現實，僅此而已。",
+    "zh_CN": "你只不过扯开了文人想像的屁话，\n像个人一样活在现实，仅此而已。",
+    "links": [696]
+  },
+  {
+    "entryID": 696,
+    "actorID": "MC4",
+    "text": "否則就不該站在這了，而是橫屍荒野。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "否則就不該站在這了，而是橫屍荒野。",
+    "zh_CN": "否则就不该站在这了，而是横尸荒野。",
+    "links": [709]
+  },
+  {
+    "entryID": 697,
+    "actorID": "MC1",
+    "text": "不是的……我……無視那老婆婆的哀求……\n仁義、俠義不該這樣……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Description": "變數分歧",
+    "zh_TW": "不是的……我……無視那老婆婆的哀求……\n仁義、俠義不該這樣……",
+    "zh_CN": "不是的……我……无视那老婆婆的哀求……\n仁义、侠义不该这样……",
+    "links": [698]
+  },
+  {
+    "entryID": 698,
+    "actorID": "MC4",
+    "text": "是嗎，那賈某就說幾個事，\n也許你會好受一點。",
+    "Sequence": "",
+    "zh_TW": "是嗎，那賈某就說幾個事，\n也許你會好受一點。",
+    "zh_CN": "是吗，那贾某就说几个事，\n也许你会好受一点。",
+    "links": [699]
+  },
+  {
+    "entryID": 699,
+    "actorID": "MC4",
+    "text": "你說河神娶妻行之有年，\n換言之，舉行過不只一次。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "你說河神娶妻行之有年，\n換言之，舉行過不只一次。",
+    "zh_CN": "你说河神娶妻行之有年，\n换言之，举行过不只一次。",
+    "links": [700]
+  },
+  {
+    "entryID": 700,
+    "actorID": "MC4",
+    "text": "那老太婆總不會是這些日子才搬進那村子吧，\n會有如此剛好之事？",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "那老太婆總不會是這些日子才搬進那村子吧，\n會有如此剛好之事？",
+    "zh_CN": "那老太婆总不会是这些日子才搬进那村子吧，\n会有如此刚好之事？",
+    "links": [701]
+  },
+  {
+    "entryID": 701,
+    "actorID": "MC1",
+    "text": "應該不是，但聽那婆婆的話，\n她應該早就覺得村子瘋了。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "應該不是，但聽那婆婆的話，\n她應該早就覺得村子瘋了。",
+    "zh_CN": "应该不是，但听那婆婆的话，\n她应该早就觉得村子疯了。",
+    "links": [702]
+  },
+  {
+    "entryID": 702,
+    "actorID": "MC4",
+    "text": "「早就」？\n這是她親口所說，還是你的替她下的註解？",
+    "Sequence": "",
+    "zh_TW": "「早就」？\n這是她親口所說，還是你的替她下的註解？",
+    "zh_CN": "「早就​​」？ \n这是她亲口所说，还是你的替她下的注解？",
+    "links": [703]
+  },
+  {
+    "entryID": 703,
+    "actorID": "MC4",
+    "text": "當前幾年的時候，同樣的習俗，這婆婆又在哪？\n──別人的孫女不是孫女嗎？",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "zh_TW": "當前幾年的時候，同樣的習俗，這婆婆又在哪？\n──別人的孫女不是孫女嗎？",
+    "zh_CN": "当前几年的时候，同样的习俗，这婆婆又在哪？ \n──别人的孙女不是孙女吗？",
+    "links": [704]
+  },
+  {
+    "entryID": 704,
+    "actorID": "MC1",
+    "text": "……！",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "……！",
+    "zh_CN": "……！",
+    "links": [705]
+  },
+  {
+    "entryID": 705,
+    "actorID": "MC4",
+    "text": "我再換個問題好了。\n你可知河神新娘的人選，是如何選出的？",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "我再換個問題好了。\n你可知河神新娘的人選，是如何選出的？",
+    "zh_CN": "我再换个问题好了。 \n你可知河神新娘的人选，是如何选出的？",
+    "links": [706]
+  },
+  {
+    "entryID": 706,
+    "actorID": "MC1",
+    "text": "這……我不清楚……但……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "這……我不清楚……但……",
+    "zh_CN": "这……我不清楚……但……",
+    "links": [707]
+  },
+  {
+    "entryID": 707,
+    "actorID": "MC4",
+    "text": "肯定不是自願的，所以村人是如何有共識的呢？\n其中細思，外人不足道論，當心深挖。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "肯定不是自願的，所以村人是如何有共識的呢？\n其中細思，外人不足道論，當心深挖。",
+    "zh_CN": "肯定不是自愿的，所以村人是如何有共识的呢？ \n其中细思，外人不足道论，当心深挖。",
+    "links": [708]
+  },
+  {
+    "entryID": 708,
+    "actorID": "role2",
+    "text": "[panel=5]聽聞到此，背脊已是寒毛直豎……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]聽聞到此，背脊已是寒毛直豎……",
+    "zh_CN": "[panel=5]听闻到此，背脊已是寒毛直竖……",
+    "links": [709]
+  },
+  {
+    "entryID": 709,
+    "actorID": "MC1",
+    "text": "……賈師父，我想問你……\n你是不是早摸清了那座村子的事。",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "……賈師父，我想問你……\n你是不是早摸清了那座村子的事。",
+    "zh_CN": "……贾师父，我想问你……\n你是不是早摸清了那座村子的事。",
+    "links": [710]
+  },
+  {
+    "entryID": 710,
+    "actorID": "MC4",
+    "text": "賈某不是神，最多猜到一二而已。\n不過也算印證你那骰子真為。",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "賈某不是神，最多猜到一二而已。\n不過也算印證你那骰子真為。",
+    "zh_CN": "贾某不是神，最多猜到一二而已。 \n不过也算印证你那骰子真为。",
+    "links": [711]
+  },
+  {
+    "entryID": 711,
+    "actorID": "MC1",
+    "text": "骰子真偽？你就為了這個原因，\n所以才派我……",
+    "Sequence": "",
+    "zh_TW": "骰子真偽？你就為了這個原因，\n所以才派我……",
+    "zh_CN": "骰子真伪？你就为了这个原因，\n所以才派我……",
+    "links": [712]
+  },
+  {
+    "entryID": 712,
+    "actorID": "role2",
+    "text": "[panel=5]面對質問，賈詡只是拿出一張古老竹簡給你。\n內容十分模糊，但依稀尚可辨別……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]面對質問，賈詡只是拿出一張古老竹簡給你。\n內容十分模糊，但依稀尚可辨別……",
+    "zh_CN": "[panel=5]面对质问，贾诩只是拿出一张古老竹简给你。 \n内容十分模糊，但依稀尚可辨别……",
+    "links": [713]
+  },
+  {
+    "entryID": 713,
+    "actorID": "MC1",
+    "text": "[em2]「異寶……麒麟之骰……解吉凶，現命數……」[/em2]",
+    "Sequence": "",
+    "zh_TW": "[em2]「異寶……麒麟之骰……解吉凶，現命數……」[/em2]",
+    "zh_CN": "[em2]「异宝……麒麟之骰……解吉凶，现命数……」[/em2]",
+    "links": [714]
+  },
+  {
+    "entryID": 714,
+    "actorID": "MC4",
+    "text": "要質問之前，\n先問問你自己隱藏了什麼吧。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "要質問之前，\n先問問你自己隱藏了什麼吧。",
+    "zh_CN": "要质问之前，\n先问问你自己隐藏了什么吧。",
+    "links": [715]
+  },
+  {
+    "entryID": 715,
+    "actorID": "role2",
+    "text": "△上字卡「序章結束」",
+    "Sequence": "",
+    "zh_TW": "△上字卡「序章結束」",
+    "zh_CN": "△上字卡「序章结束」",
+    "links": []
+  },
+  {
+    "entryID": 716,
+    "actorID": "MC1",
+    "text": "…………",
+    "Sequence": "",
+    "zh_TW": "…………",
+    "zh_CN": "…………",
+    "links": [725]
+  },
+  {
+    "entryID": 719,
+    "actorID": "role2",
+    "text": "[panel=5]察覺事有不對勁，你下意識厲聲大喝！\n這聲示警威嚇，震懾了眾多村人，並逃之夭夭。",
+    "Sequence": "EnableCharacterExpression(0,MC1,Anger_3);\nSetPortrait(MC1,pic=2);\nShowInstantMessage(Check,Intimidation,Success);\nShowInstantMessage(Exp_FeatExp,MC1,Intimidation,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]察覺事有不對勁，你下意識厲聲大喝！\n這聲示警威嚇，震懾了眾多村人，並逃之夭夭。",
+    "zh_CN": "[panel=5]察觉事有不对劲，你下意识厉声大喝！ \n这声示警威吓，震慑了众多村人，并逃之夭夭。",
+    "links": [720]
+  },
+  {
+    "entryID": 720,
+    "actorID": "role2",
+    "text": "[panel=5]然而卻還有一群人，他們沉浸在神的妄想，\n圍住了他們的新祭品──你。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=5]然而卻還有一群人，他們沉浸在神的妄想，\n圍住了他們的新祭品──你。",
+    "zh_CN": "[panel=5]然而却还有一群人，他们沉浸在神的妄想，\n围住了他们的新祭品──你。",
+    "links": [721]
+  },
+  {
+    "entryID": 721,
+    "actorID": "role2",
+    "text": "[panel=5]這瞬間你弄明白了，\n這些人並非被陋習所騙。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這瞬間你弄明白了，\n這些人並非被陋習所騙。",
+    "zh_CN": "[panel=5]这瞬间你弄明白了，\n这些人并非被陋习所骗。",
+    "links": [722]
+  },
+  {
+    "entryID": 722,
+    "actorID": "role2",
+    "text": "[panel=5]他們早就知道真相，但他們深信著，\n一直以來都是信著，因為他們是真正的教徒……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]他們早就知道真相，但他們深信著，\n一直以來都是信著，因為他們是真正的教徒……",
+    "zh_CN": "[panel=5]他们早就知道真相，但他们深信着，\n一直以来都是信着，因为他们是真正的教徒……",
+    "links": [723]
+  },
+  {
+    "entryID": 723,
+    "actorID": "role39",
+    "text": "河神啊，河神啊，\n請您接受這罪惡的祭品，重新庇護我們吧！",
+    "Sequence": "",
+    "zh_TW": "河神啊，河神啊，\n請您接受這罪惡的祭品，重新庇護我們吧！",
+    "zh_CN": "河神啊，河神啊，\n请您接受这罪恶的祭品，重新庇护我们吧！",
+    "links": [724]
+  },
+  {
+    "entryID": 724,
+    "actorID": "role2",
+    "text": "[panel=5]你，只剩一條路……\n饕餮所示之路，想活下去，只有這條路……",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "[panel=5]你，只剩一條路……\n饕餮所示之路，想活下去，只有這條路……",
+    "zh_CN": "[panel=5]你，只剩一条路……\n饕餮所示之路，想活下去，只有这条路……",
+    "links": [729]
+  },
+  {
+    "entryID": 725,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "BeginDiceRoll(Intimidation,Auto,12);\nContinue();",
+    "Description": "背景檢定",
+    "links": [727]
+  },
+  {
+    "entryID": 727,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [719, 680]
+  },
+  {
+    "entryID": 729,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "OpenPanel(5, close);\nOpenPanel(1, close);\nOpenPanel(0, close);\nSetContinueMode(false);\nPlayOrStopParticle(Punch_Multiple_ScreenWhite,Play);\nPlayOrStopParticle(BloodSplash_X,Play);\nPlayOrStopParticle(BloodStain_2,Play);\nDelay(1);\nPlayOrStopParticle(Sword_Multiple_ScreenWhite,Play)@0.5;\nPlayOrStopParticle(BloodSplash_X,Play)@0.5;\nPlayOrStopParticle(BloodStain_2,Play)@0.5;\nFade(stay,1.5,#000000)@1;",
+    "links": [732]
+  },
+  {
+    "entryID": 730,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowInstantMessage(Influence_Merit,100);\nShowReward(LiveOrDie_Title)@1;\nShowInstantMessage(Reward_SkillCard,MC1,LiveOrDie_Title)@1;\nEnableDialogueBG(HallOfHeroes_StudyRoom);\nFade(in,2,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Description": "獲得功勳跟技能卡\n換場景",
+    "links": [686]
+  },
+  {
+    "entryID": 731,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes_StudyRoom);\nFade(in,2,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [686]
+  },
+  {
+    "entryID": 732,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue()@0.5;",
+    "links": [730]
+  }
+]

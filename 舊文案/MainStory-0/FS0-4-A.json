@@ -1,0 +1,399 @@
+[
+  {
+    "entryID": 674,
+    "actorID": "role2",
+    "text": "[panel=5]你一到赤龍幫，思考如何開場時，\n正好碰上幫眾壓著一人進來……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]你一到赤龍幫，思考如何開場時，\n正好碰上幫眾壓著一人進來……",
+    "zh_CN": "[panel=5]你一到赤龙帮，思考如何开场时，\n正好碰上帮众压着一人进来……",
+    "links": [675]
+  },
+  {
+    "entryID": 675,
+    "actorID": "role13",
+    "text": "[panel=2]幫主，\n就是這狗東西在咱們地盤賣五石粉。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]幫主，\n就是這狗東西在咱們地盤賣五石粉。",
+    "zh_CN": "[panel=2]帮主，\n就是这狗东西在咱们地盘卖五石粉。",
+    "links": [676]
+  },
+  {
+    "entryID": 676,
+    "actorID": "MC1",
+    "text": "（五石粉……\n我記得那是一種傷身害人的成癮毒物……）",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "（五石粉……\n我記得那是一種傷身害人的成癮毒物……）",
+    "zh_CN": "（五石粉……\n我记得那是一种伤身害人的成瘾毒物……）",
+    "links": [677]
+  },
+  {
+    "entryID": 677,
+    "actorID": "MC10",
+    "text": "老夫記得嚴令禁止了這些害人毒物。",
+    "Sequence": "SetPortrait(MC10,pic=4);\nEnableCharacterExpression(1,MC10,Meditate);",
+    "zh_TW": "老夫記得嚴令禁止了這些害人毒物。",
+    "zh_CN": "老夫记得严令禁止了这些害人毒物。",
+    "links": [678]
+  },
+  {
+    "entryID": 678,
+    "actorID": "role16",
+    "text": "[panel=2]饒命啊，幫主……小的只是一時鬼迷心竅，\n就饒了小的一回吧……",
+    "Sequence": "SetGameObjectShake(P2,ShakeNormal,XAxis,60,5,0);\nDisableAllCharacterExpression();",
+    "zh_TW": "[panel=2]饒命啊，幫主……小的只是一時鬼迷心竅，\n就饒了小的一回吧……",
+    "zh_CN": "[panel=2]饶命啊，帮主……小的只是一时鬼迷心窍，\n就饶了小的一回吧……",
+    "links": [679]
+  },
+  {
+    "entryID": 679,
+    "actorID": "MC10",
+    "text": "你他奶奶的！\n毒狗的話跟放屁一樣，你敢壞老夫規矩！",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "你他奶奶的！\n毒狗的話跟放屁一樣，你敢壞老夫規矩！",
+    "zh_CN": "你他奶奶的！ \n毒狗的话跟放屁一样，你敢坏老夫规矩！",
+    "links": [710]
+  },
+  {
+    "entryID": 680,
+    "actorID": "role2",
+    "text": "[panel=5]只見褚人飛十指硬深深嵌入那人頭骨，\n霎那間氣勁爆出，毒狗當場屍骨無存。",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=5]只見褚人飛十指硬深深嵌入那人頭骨，\n霎那間氣勁爆出，毒狗當場屍骨無存。",
+    "zh_CN": "[panel=5]只见褚人飞十指硬深深嵌入那人头骨，\n霎那间气劲爆出，毒狗当场尸骨无存。",
+    "links": [681]
+  },
+  {
+    "entryID": 681,
+    "actorID": "MC10",
+    "text": "換你了，有屁快放。",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "換你了，有屁快放。",
+    "zh_CN": "换你了，有屁快放。",
+    "links": [682]
+  },
+  {
+    "entryID": 682,
+    "actorID": "role2",
+    "text": "[panel=5]經過剛才，你已知眼前之人殺伐果決，\n索性便直說來意……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=5]經過剛才，你已知眼前之人殺伐果決，\n索性便直說來意……",
+    "zh_CN": "[panel=5]经过刚才，你已知眼前之人杀伐果决，\n索性便直说来意……",
+    "links": [705]
+  },
+  {
+    "entryID": 683,
+    "actorID": "MC10",
+    "text": "哈哈……徐老弟這題目有點意思，\n英豪府遴選老夫的確也在關注。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "哈哈……徐老弟這題目有點意思，\n英豪府遴選老夫的確也在關注。",
+    "zh_CN": "哈哈……徐老弟这题目有点意思，\n英豪府遴选老夫的确也在关注。",
+    "links": [694]
+  },
+  {
+    "entryID": 684,
+    "actorID": "MC10",
+    "text": "這味道……香啊……小子眼光不差，確實好酒。\n但你不會以為這樣就能打發老夫了？",
+    "Sequence": "SetPortrait(MC10,pic=1);\nEnableCharacterExpression(1,MC10,Proud);",
+    "zh_TW": "這味道……香啊……小子眼光不差，確實好酒。\n但你不會以為這樣就能打發老夫了？",
+    "zh_CN": "这味道……香啊……小子眼光不差，确实好酒。 \n但你不会以为这样就能打发老夫了？",
+    "links": [685]
+  },
+  {
+    "entryID": 685,
+    "actorID": "MC1",
+    "text": "怎麼會，此等美酒，獨飲太可惜了。\n若幫主不嫌，晚輩斗膽先乾為敬。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "怎麼會，此等美酒，獨飲太可惜了。\n若幫主不嫌，晚輩斗膽先乾為敬。",
+    "zh_CN": "怎么会，此等美酒，独饮太可惜了。 \n若帮主不嫌，晚辈斗胆先干为敬。",
+    "links": [686]
+  },
+  {
+    "entryID": 686,
+    "actorID": "MC10",
+    "text": "哈哈哈！這就對了。\n來！咱們一起喝幾杯。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "哈哈哈！這就對了。\n來！咱們一起喝幾杯。",
+    "zh_CN": "哈哈哈！这就对了。 \n来！咱们一起喝几杯。",
+    "links": [687]
+  },
+  {
+    "entryID": 687,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "BeginDiceRoll(AlcoholTolerance,Manual,10);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "links": [688]
+  },
+  {
+    "entryID": 688,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [690, 689]
+  },
+  {
+    "entryID": 689,
+    "actorID": "MC10",
+    "text": "這樣就倒，不中用的東西。\n把他丟出去，省得礙了老夫酒興。",
+    "Sequence": "SetPortrait(MC10,pic=3);\nSetPortrait(MC1,pic=4);",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "這樣就倒，不中用的東西。\n把他丟出去，省得礙了老夫酒興。",
+    "zh_CN": "这样就倒，不中用的东西。 \n把他丢出去，省得碍了老夫酒兴。",
+    "links": [703]
+  },
+  {
+    "entryID": 690,
+    "actorID": "role2",
+    "text": "[panel=5]酒過幾巡，罈中見底。",
+    "Sequence": "SetPortrait(MC10,pic=1);\nSetPortrait(MC1,pic=1);\nShowInstantMessage(Exp_FeatExp,MC1,AlcoholTolerance,20);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "獲得專長經驗",
+    "zh_TW": "[panel=5]酒過幾巡，罈中見底。",
+    "zh_CN": "[panel=5]酒过几巡，坛中见底。",
+    "links": [691]
+  },
+  {
+    "entryID": 691,
+    "actorID": "MC10",
+    "text": "痛快痛快，好久如此喝得痛快！\n你小子老夫喜歡，信物拿去吧。",
+    "Sequence": "SetPortrait(MC10,pic=1);\nEnableCharacterExpression(1,MC10,Proud);\nShowInstantMessage(Favorability,MC10,10,Agree);",
+    "Description": "獲得好感",
+    "zh_TW": "痛快痛快，好久如此喝得痛快！\n你小子老夫喜歡，信物拿去吧。",
+    "zh_CN": "痛快痛快，好久如此喝得痛快！ \n你小子老夫喜欢，信物拿去吧。",
+    "links": [692]
+  },
+  {
+    "entryID": 692,
+    "actorID": "MC1",
+    "text": "多謝幫主！",
+    "Sequence": "SetPortrait(MC1,pic=5);\nDisableAllCharacterExpression();",
+    "zh_TW": "多謝幫主！",
+    "zh_CN": "多谢帮主！",
+    "links": [693]
+  },
+  {
+    "entryID": 693,
+    "actorID": "role13",
+    "text": "[panel=2]幫主，晉陽來了急報。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]幫主，晉陽來了急報。",
+    "zh_CN": "[panel=2]帮主，晋阳来了急报。",
+    "links": [696]
+  },
+  {
+    "entryID": 694,
+    "actorID": "MC10",
+    "text": "畢竟是潛在投資對象，\n老夫也不想他們盡挑些廢物。",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "畢竟是潛在投資對象，\n老夫也不想他們盡挑些廢物。",
+    "zh_CN": "毕竟是潜在投资对象，\n老夫也不想他们尽挑些废物。",
+    "links": [706]
+  },
+  {
+    "entryID": 695,
+    "actorID": "MC1",
+    "text": "……呃……嗚！好想吐……",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Pain);",
+    "zh_TW": "……呃……嗚！好想吐……",
+    "zh_CN": "……呃……呜！好想吐……",
+    "links": [719]
+  },
+  {
+    "entryID": 696,
+    "actorID": "MC10",
+    "text": "他娘的！是啥狗屁事？老夫喝得正高興呢。\n你最好是真的有要緊事，不然待會就拿你泡酒！",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "他娘的！是啥狗屁事？老夫喝得正高興呢。\n你最好是真的有要緊事，不然待會就拿你泡酒！",
+    "zh_CN": "他娘的！是啥狗屁事？老夫喝得正高兴呢。 \n你最好是真的有要紧事，不然待会就拿你泡酒！",
+    "links": [697]
+  },
+  {
+    "entryID": 697,
+    "actorID": "role13",
+    "text": "[panel=2]是……那……那個……咱們晉陽賭坊，\n其中一間……被甄家贏光了。",
+    "Sequence": "",
+    "zh_TW": "[panel=2]是……那……那個……咱們晉陽賭坊，\n其中一間……被甄家贏光了。",
+    "zh_CN": "[panel=2]是……那……那个……咱们晋阳赌坊，\n其中一间……被甄家赢光了。",
+    "links": [698]
+  },
+  {
+    "entryID": 698,
+    "actorID": "MC10",
+    "text": "直娘賊的……\n小鬼！老夫沒空招呼你了，你自便吧。",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "直娘賊的……\n小鬼！老夫沒空招呼你了，你自便吧。",
+    "zh_CN": "直娘贼的……\n小鬼！老夫没空招呼你了，你自便吧。",
+    "links": [699]
+  },
+  {
+    "entryID": 699,
+    "actorID": "MC1",
+    "text": "這褚幫主火氣真是陰晴不定。\n也罷，東西已到手，趕緊溜，省得被掃到。",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);\nSetPortrait(MC1,pic=9);\nDisableAllCharacterExpression();",
+    "Script": "SetQuestState(\"FS04-A\", \"success\");\nSetQuestEntryState(\"FS04-A\", 2, \"success\");\nSetQuestEntryState(\"FS04\", 2, \"success\")",
+    "Description": "變數更新",
+    "zh_TW": "這褚幫主火氣真是陰晴不定。\n也罷，東西已到手，趕緊溜，省得被掃到。",
+    "zh_CN": "这褚帮主火气真是阴晴不定。 \n也罢，东西已到手，赶紧溜，省得被扫到。",
+    "links": [701]
+  },
+  {
+    "entryID": 700,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "AudioControl(PlaySFXOneShot,Fire);\nEnableDialogueBG(Mansion_RedDragonGang);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS04-A\", 1) == \"active\"",
+    "links": [674]
+  },
+  {
+    "entryID": 701,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [702]
+  },
+  {
+    "entryID": 702,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "links": [714]
+  },
+  {
+    "entryID": 703,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [704]
+  },
+  {
+    "entryID": 704,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": [695]
+  },
+  {
+    "entryID": 705,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [683]
+  },
+  {
+    "entryID": 706,
+    "actorID": "MC10",
+    "text": "既然是題目……就算不是題目，\n做人該有的基本禮數，你小子也該懂吧。",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "既然是題目……就算不是題目，\n做人該有的基本禮數，你小子也該懂吧。",
+    "zh_CN": "既然是题目……就算不是题目，\n做人该有的基本礼数，你小子也该懂吧。",
+    "links": [707]
+  },
+  {
+    "entryID": 707,
+    "actorID": "role2",
+    "text": "[panel=5]這時你注意到四周堆積如山的酒罈。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]這時你注意到四周堆積如山的酒罈。",
+    "zh_CN": "[panel=5]这时你注意到四周堆积如山的酒坛。",
+    "links": [708]
+  },
+  {
+    "entryID": 708,
+    "actorID": "MC1",
+    "text": "晚輩這就去準備。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Script": "SetQuestState(\"FS04-A\", \"active\");\nSetQuestEntryState(\"FS04-A\", 1, \"success\");\nSetQuestEntryState(\"FS04-A\", 2, \"active\")",
+    "Description": "變數更新",
+    "zh_TW": "晚輩這就去準備。",
+    "zh_CN": "晚辈这就去准备。",
+    "links": [712]
+  },
+  {
+    "entryID": 709,
+    "actorID": "MC1",
+    "text": "不知這禮數是否合幫主您口味？",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"AlcoholTolerance\", 1)  == true",
+    "zh_TW": "不知這禮數是否合幫主您口味？",
+    "zh_CN": "不知这礼数是否合帮主您口味？",
+    "links": [684]
+  },
+  {
+    "entryID": 710,
+    "actorID": "MC10",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=4);\nSetContinueMode(false);\nPlayOrStopParticle(Punch_Single_ScreenRed,Play);\nPlayOrStopParticle(BloodSplash_Left,Play);\nSetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);\nOpenPanel(2, close);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "links": [680]
+  },
+  {
+    "entryID": 711,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 712,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [711]
+  },
+  {
+    "entryID": 713,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "AudioControl(PlaySFXOneShot,Fire);\nEnableDialogueBG(Mansion_RedDragonGang);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Conditions": "CurrentQuestEntryState(\"FS04-A\", 2) == \"active\"",
+    "links": [709, 715]
+  },
+  {
+    "entryID": 714,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "",
+    "Conditions": "(CurrentQuestState(\"FS04-A\") == \"success\") and (CurrentQuestState(\"FS04-B\") == \"success\")",
+    "Script": "SetQuestEntryState(\"FS04\", 4, \"active\")",
+    "Description": "變數更新：AB任務完成",
+    "links": []
+  },
+  {
+    "entryID": 715,
+    "actorID": "MC1",
+    "text": "褚幫主好酒，酒量不足，恐怕不能讓他盡興。",
+    "Sequence": "",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"AlcoholTolerance\", 1)  == false",
+    "zh_TW": "褚幫主好酒，酒量不足，恐怕不能讓他盡興。",
+    "zh_CN": "褚帮主好酒，酒量不足，恐怕不能让他尽兴。",
+    "links": [717]
+  },
+  {
+    "entryID": 716,
+    "actorID": "MC1",
+    "text": "得先準備些好酒再來談。",
+    "Sequence": "",
+    "zh_TW": "得先準備些好酒再來談。",
+    "zh_CN": "得先准备些好酒再来谈。",
+    "links": [718]
+  },
+  {
+    "entryID": 717,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 718,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 719,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  }
+]

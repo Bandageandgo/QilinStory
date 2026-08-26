@@ -1,0 +1,1124 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "MC1",
+    "text": "「好重的血味……這裡就是最深處了嗎？感覺連呼吸都變得困難了。」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Description": "開場",
+    "zh_CN": "「好重的血味……这里就是最深处了吗？感觉连呼吸都变得困难了。」",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "「哇！我的羅盤在這裡指針亂轉！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=4);\nEnableCharacterExpression(2,MC22,Idel);",
+    "zh_CN": "「哇！我的罗盘在这里指针乱转！」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role127",
+    "text": "「你們兩個小心點，不知前方還有什麼機關。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "「你们两个小心点，不知前方还有什么机关。」",
+    "links": []
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC22",
+    "text": "「大俠！你該不會是想打退堂鼓吧？雍仔還在裡面等著我們去救呢！」",
+    "Sequence": "SetPortrait(MC22,pic=11);",
+    "Description": "離開",
+    "zh_CN": "「大侠！你该不会是想打退堂鼓吧？雍仔还在里面等着我们去救呢！」",
+    "links": []
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾終究還是沒能抵擋住好奇心，踏入了這無面祭壇。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾终究还是没能抵挡住好奇心，踏入了这无面祭坛。）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（錯了……全錯了！）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（错了……全错了！）＊",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那根本不是什麼佛，那是來自深淵的邪祟！）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那根本不是什么佛，那是来自深渊的邪祟！）＊",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾只是看了神像一眼，腦中便如有萬千毒蛇撕咬。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾只是看了神像一眼，脑中便如有万千毒蛇撕咬。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾的身體開始異變，皮膚長出了青色的鱗片……）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾的身体开始异变，皮肤长出了青色的鳞片……）＊",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾出不去了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾出不去了。）＊",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "role2",
+    "text": "[panel=6]＊（若有後人至此，切記，不可直視神像，不可聽其靡靡之音……）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（若有后人至此，切记，不可直视神像，不可听其靡靡之音……）＊",
+    "links": [2055]
+  },
+  {
+    "entryID": 13,
+    "actorID": "role2",
+    "text": "[panel=6]＊（今日又被派來這鬼地方站崗。）＊",
+    "Sequence": "",
+    "Description": "太平道教眾的日記",
+    "zh_CN": "[panel=6]＊（今日又被派来这鬼地方站岗。）＊",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role2",
+    "text": "[panel=6]＊（洞裡又濕又冷，真懷念老家的熱炕頭。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（洞里又湿又冷，真怀念老家的热炕头。）＊",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=6]＊（最近伙食越來越差了，廚房那邊老是熬些腥臭的肉湯，聞著就噁心。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（最近伙食越来越差了，厨房那边老是熬些腥臭的肉汤，闻着就恶心。）＊",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role2",
+    "text": "[panel=6]＊（老王昨天喝了一口，今天整個人都魔怔了，嘴裡一直唸叨著什麼[em2]神功大成[/em2]。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（老王昨天喝了一口，今天整个人都魔怔了，嘴里一直念叨着什么[em2]神功大成[/em2]。）＊",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "role2",
+    "text": "[panel=6]＊（原本加入太平道還以為總比在老家餓死要來的好，現在這裡也不是久居之地，還是找機會跑掉吧。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（原本加入太平道还以为总比在老家饿死要来的好，现在这里也不是久居之地，还是找机会跑掉吧。）＊",
+    "links": []
+  },
+  {
+    "entryID": 18,
+    "actorID": "role2",
+    "text": "[panel=6]＊（石頭上竟插著兩把造型奇異的劍，一長一短。但劍身都彎曲如蛇，且劍柄處雕刻著栩栩如生的毒蛇吐信圖案，透著一股森寒之氣。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（石头上竟插着两把造型奇异的剑，一长一短。但剑身都弯曲如蛇，且剑柄处雕刻着栩栩如生的毒蛇吐信图案，透着一股森寒之气。）＊",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC22",
+    "text": "「哇！這對劍長得好奇怪，像條蛇一樣。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=11);\nEnableCharacterExpression(2,MC22,Question);",
+    "zh_CN": "「哇！这对剑长得好奇怪，像条蛇一样。」",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「這劍似乎被死死卡在石頭裡了，我來試試能不能拔出來！」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=2);",
+    "zh_CN": "「这剑似乎被死死卡在石头里了，我来试试能不能拔出来！」",
+    "links": []
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（只聽「錚」的一聲清脆劍鳴，蛇形怪劍應聲而出，劍刃在昏暗的光線下閃爍著幽綠的寒芒。）＊",
+    "Sequence": ";ModifyData(AbilityExp,Player,Ability_STR,10);",
+    "Description": "檢定成功",
+    "zh_CN": "[panel=6]＊（只听「铮」的一声清脆剑鸣，蛇形怪剑应声而出，剑刃在昏暗的光线下闪烁着幽绿的寒芒。）＊",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role127",
+    "text": "「好劍！！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_CN": "「好剑！！」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC22",
+    "text": "「[em7]指著石裂開的地方，道[/em7]：大俠快看！石頭裡面還藏著東西！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);EnableCharacterExpression(2,MC22,Surprise_2);",
+    "zh_CN": "「[em7]指着石裂开的地方，道[/em7]：大侠快看！石头里面还藏着东西！」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "role2",
+    "text": "[panel=6]＊（石裂中有一卷木牘、一幅帛圖，字跡近秦篆。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（石裂中有一卷木牍、一幅帛图，字迹近秦篆。）＊",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role2",
+    "text": "[panel=6]＊（吾鑄此劍，尋寶入洞。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（吾铸此剑，寻宝入洞。）＊",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role2",
+    "text": "[panel=6]＊（貪念既起，自掘墳墓。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（贪念既起，自掘坟墓。）＊",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（寶藏藏於祭壇東穴，繪圖在帛。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（宝藏藏于祭坛东穴，绘图在帛。）＊",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "role2",
+    "text": "[panel=6]＊（後人按圖索驥，可得。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（后人按图索骥，可得。）＊",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "EnableEventBG(DiceGlow);",
+    "Description": "事件圖(缺)",
+    "zh_CN": "「……」",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC22",
+    "text": "「哇！竟然還真有藏寶圖！大俠，等咱們出去之後，一定要去找看看！」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Idea);",
+    "zh_CN": "「哇！竟然还真有藏宝图！大侠，等咱们出去之后，一定要去找看看！」",
+    "links": [2058]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC20",
+    "text": "「孽畜還不住手！本道長乃茅山嫡傳，你敢動我試試——」",
+    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,role89,Proud);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_13);",
+    "Description": "音樂",
+    "zh_CN": "「孽畜还不住手！本道长乃茅山嫡传，你敢动我试试——」",
+    "links": [2061]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC20",
+    "text": "「等、等等！先別動爪子！火氣別那麼大，咱們萬事好商量阿！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Nervous_2);",
+    "zh_CN": "「等、等等！先别动爪子！火气别那么大，咱们万事好商量阿！」",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在千鈞一髮之際，赫連娜娜眼珠一轉突然從懷中摸出一串銅錢，猛地朝反方向的石壁擲去。「叮、叮叮叮」的一連脆響，那妖物瞬猛地轉過頭去。）＊",
+    "Sequence": "PlayOrStopParticle(Smoke_Dust,Play);\nDisableCharacterExpression(1);\nAudioControl(PlaySFX,Others_CoinDroping);",
+    "zh_CN": "[panel=6]＊（就在千钧一发之际，赫连娜娜眼珠一转突然从怀中摸出一串铜钱，猛地朝反方向的石壁掷去。「叮、叮叮叮」的一连脆响，那妖物瞬猛地转过头去。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC22",
+    "text": "「趁現在！」",
+    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Anger_3);",
+    "zh_CN": "「趁现在！」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你心領神會地快速滑步向前並躍起，緊接者劍光一閃，精準地挑斷了綁住雍仔的粗繩。雍仔踉蹌落地，揉著手腕連退兩步，隨即從懷中抓出一疊符籙。）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);\nDisableCharacterExpression(1);\nSetPanel(MC22, 2, immediate);\nPlayOrStopParticle(Smoke_Dust,Stop);",
+    "zh_CN": "[panel=6]＊（你心领神会地快速滑步向前并跃起，紧接者剑光一闪，精准地挑断了绑住雍仔的粗绳。雍仔踉跄落地，揉着手腕连退两步，随即从怀中抓出一叠符箓。）＊",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC20",
+    "text": "「[em7]咬破指尖，凌空畫符，道[/em7]：好！既然下來了，本道長這就讓牠嘗嘗茅山正宗的厲害！急急如律令！」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Idea);",
+    "zh_CN": "「[em7]咬破指尖，凌空画符，道[/em7]：好！既然下来了，本道长这就让它尝尝茅山正宗的厉害！急急如律令！」",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "role2",
+    "text": "[panel=6]＊（白虎道妖這才意識到上當，受刺激般連聲怒吼，朝你們猛撲而來。）＊",
+    "Sequence": "PlayOrStopParticle(DarkCloud,Play);\nDisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（白虎道妖这才意识到上当，受刺激般连声怒吼，朝你们猛扑而来。）＊",
+    "links": [4163]
+  },
+  {
+    "entryID": 45,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的視線被血色與黑霧吞沒。外界的聲音漸漸遠去，時間彷彿被凍結。此刻，你感覺到胸口那股異常的飢餓感如野火般竄起，幾乎要將理智燒毀——這是一股想吞噬眼前妖物的狂暴衝動！）＊",
+    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(BloodStain_1,Play);\nSetPortrait(MC1,pic=16);",
+    "zh_CN": "[panel=6]＊（你的视线被血色与黑雾吞没。外界的声音渐渐远去，时间仿佛被冻结。此刻，你感觉到胸口那股异常的饥饿感如野火般窜起，几乎要将理智烧毁——这是一股想吞噬眼前妖物的狂暴冲动！）＊",
+    "links": [46, 47]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「放任衝動，任由飢餓感蔓延」",
+    "Sequence": "",
+    "zh_CN": "「放任冲动，任由饥饿感蔓延」",
+    "links": [54]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「咬緊牙關，努力保持理智」",
+    "Sequence": "",
+    "zh_CN": "「咬紧牙关，努力保持理智」",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那股衝動並無平息，反而越發猛烈！指甲深深掐進掌心，現在，倒在地上的妖物、甚至一旁受傷的同伴，竟都變成了散發著誘人氣息的血肉。[em2]那股無聲的意志在腦海中步步進逼：吃掉牠們。[/em2]）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那股冲动并无平息，反而越发猛烈！指甲深深掐进掌心，现在，倒在地上的妖物、甚至一旁受伤的同伴，竟都变成了散发着诱人气息的血肉。[em2]那股无声的意志在脑海中步步进逼：吃掉它们。[/em2]）＊",
+    "links": [49, 50]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「順從這股渴望」",
+    "Sequence": "",
+    "zh_CN": "「顺从这股渴望」",
+    "links": [54]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「死守最後的理智，拒絕這股扭曲的認知」",
+    "Sequence": "",
+    "zh_CN": "「死守最后的理智，拒绝这股扭曲的认知」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "role2",
+    "text": "[panel=6]＊（彷彿有千萬隻螞蟻在啃咬你的腦髓。無窮無盡的飢餓感竟像化為實質且死死勒住你的咽喉，[em2]你知道：若不吞噬別人，就只能被這股力量吞噬！你已經遊走在崩潰的邊緣。[/em2]）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（仿佛有千万只蚂蚁在啃咬你的脑髓。无穷无尽的饥饿感竟像化为实质且死死勒住你的咽喉，[em2]你知道：若不吞噬别人，就只能被这股力量吞噬！你已经游走在崩溃的边缘。[/em2]）＊",
+    "links": [52, 53]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「徹底屈服，洩洪壓力」",
+    "Sequence": "",
+    "zh_CN": "「彻底屈服，泄洪压力」",
+    "links": [54]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「你知道沒有任何人可以控制你」",
+    "Sequence": "",
+    "zh_CN": "「你知道没有任何人可以控制你」",
+    "links": [55]
+  },
+  {
+    "entryID": 54,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你放棄了掙扎，任由那莫名的意志接管身體。你的嘴角不受控制地扯出一抹冷笑，眼中透出凶光——）＊",
+    "Sequence": "ModifyData(AbilityMaxLevel,Player,Leadership,2);\nModifyData(AbilityMaxLevel,Player,Strength,2);\nModifyData(AbilityMaxLevel,Player,Intelligence,2);\nModifyData(AbilityMaxLevel,Player,Politics,2);\nModifyData(AbilityMaxLevel,Player,Charisma,2);",
+    "Description": "饕餮的誘惑獎勵-超級大漢人",
+    "zh_CN": "[panel=6]＊（你放弃了挣扎，任由那莫名的意志接管身体。你的嘴角不受控制地扯出一抹冷笑，眼中透出凶光——）＊",
+    "links": [57]
+  },
+  {
+    "entryID": 55,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你死咬著牙關，憑著最後一絲清明死死將那股衝動壓在心底，即便劇痛讓你的五臟六腑都彷彿要裂開，你也未曾挪動半步。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你死咬着牙关，凭着最后一丝清明死死将那股冲动压在心底，即便剧痛让你的五脏六腑都仿佛要裂开，你也未曾挪动半步。）＊",
+    "links": [4171]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC21",
+    "text": "「總有一天，你會心甘情願祈求吾的。」",
+    "Sequence": "",
+    "Script": "Variable[\"HungryDesire\"] = Variable[\"HungryDesire\"] + 1",
+    "Description": "饕餮誘惑失敗次數+1",
+    "zh_CN": "「总有一天，你会心甘情愿祈求吾的。」",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那股似無窮無盡且永不會獲得滿足的強烈飢餓感驟然間退去，隨著窒息般的壓迫感消散，你終於撐不住，徹底昏死了過去。）＊",
+    "Sequence": "AudioControl(StopMusic);\nStopAllParticle();\nOpenPanel(1, close);",
+    "Description": "停掉音樂",
+    "zh_CN": "[panel=6]＊（那股似无穷无尽且永不会获得满足的强烈饥饿感骤然间退去，随着窒息般的压迫感消散，你终于撑不住，彻底昏死了过去。）＊",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在意識徹底沉陷之前的迷濛中，你隱約聽到一陣沉穩的腳步聲靠近。一雙寬大粗糙的手將你從冰冷的地面上拉起……）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（在意识彻底沉陷之前的迷蒙中，你隐约听到一阵沉稳的脚步声靠近。一双宽大粗糙的手将你从冰冷的地面上拉起……）＊",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC5",
+    "text": "「[em7]聲音有些模糊，帶著無奈與一絲讚賞[/em7]：小子，你能撐到現在，是個漢子。剩下的交給我吧！」",
+    "Sequence": "",
+    "zh_CN": "「[em7]声音有些模糊，带着无奈与一丝赞赏[/em7]：小子，你能撑到现在，是个汉子。剩下的交给我吧！」",
+    "links": [4166]
+  },
+  {
+    "entryID": 60,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不知過了多久，一陣安神的藥香將你喚醒。你發現自己正躺在一間完全陌生的客房裡。身上的傷口已經被人妥善包紮過。）＊",
+    "Sequence": "ModifyData(AbilityMaxLevel,Player,Leadership,5);\nModifyData(AbilityMaxLevel,Player,Strength,5);\nModifyData(AbilityMaxLevel,Player,Intelligence,5);\nModifyData(AbilityMaxLevel,Player,Politics,5);\nModifyData(AbilityMaxLevel,Player,Charisma,5);\nEnableDialogueBG(Clinic);\nAudioControl(PlayMusic,BGM_31);",
+    "Description": "超級大漢人5維上限上升、背景圖，放音樂",
+    "zh_CN": "[panel=6]＊（不知过了多久，一阵安神的药香将你唤醒。你发现自己正躺在一间完全陌生的客房里。身上的伤口已经被人妥善包扎过。）＊",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你剛要起身，胸口便一陣劇痛。低頭一看，全身已纏滿繃帶。床邊，一名臉色蒼白的少女端著一碗冒綠泡的藥湯，一雙銳利大眼冷冷盯著你。）＊",
+    "Sequence": "",
+    "Description": "睜開眼演出",
+    "zh_CN": "[panel=6]＊（你刚要起身，胸口便一阵剧痛。低头一看，全身已缠满绷带。床边，一名脸色苍白的少女端着一碗冒绿泡的药汤，一双锐利大眼冷冷盯着你。）＊",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC6",
+    "text": "「受到這樣的傷害，換做普通人早就當場經脈寸斷了……但你……不僅經脈完好無損，這一個月居然就像只是單純在昏睡而已，簡直不可思議。」",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nEnableCharacterExpression(1,MC3,Idea);",
+    "zh_CN": "「受到这样的伤害，换做普通人早就当场经脉寸断了……但你……不仅经脉完好无损，这一个月居然就像只是单纯在昏睡而已，简直不可思议。」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC6",
+    "text": "「看來這碗本來可用作續命的珍貴湯藥，現在看來也只配給你當補充營養的補品了。趁熱喝了！」",
+    "Sequence": "SetPortrait(MC6,pic=3);;\nDisableCharacterExpression(1);",
+    "zh_CN": "「看来这碗本来可用作续命的珍贵汤药，现在看来也只配给你当补充营养的补品了。趁热喝了！」",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雖然嘴巴毒辣，但你眼尖地捕捉到，她看緊繃的肩膀明顯放鬆了下來，嘴角甚至不自覺地勾起一抹極淺、極不易察覺的微笑。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（虽然嘴巴毒辣，但你眼尖地捕捉到，她看紧绷的肩膀明显放松了下来，嘴角甚至不自觉地勾起一抹极浅、极不易察觉的微笑。）＊",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「妳……沒想到笑起來挺好看的…」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "zh_CN": "「妳……没想到笑起来挺好看的…」",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC6",
+    "text": "「你的腦子是被血煞啃乾淨了嗎？！再胡說八道，我就給你配一副啞藥！再晚醒一天，我就要把你丟出去當肥料了！」",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nSetPortrait(MC1,pic=19)@0.2;\nDisableCharacterExpression(0);",
+    "zh_CN": "「你的脑子是被血煞啃干净了吗？！再胡说八道，我就给你配一副哑药！再晚醒一天，我就要把你丢出去当肥料了！」",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥！你終於醒了！嚇死小犀了……嗚嗚……張寧姊姊說你的脈象亂得像一團麻，我還以為……以為你再也醒不過來了……嗚嗚……」",
+    "Sequence": "SetPortrait(MC8,pic=10);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(2,MC8,Meditate);",
+    "zh_CN": "[panel=2]「表哥！你终于醒了！吓死小犀了……呜呜……张宁姊​​姊说你的脉象乱得像一团麻，我还以为……以为你再也醒不过来了……呜呜……」",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC6",
+    "text": "「好了，靈犀妹妹乖，別哭了。眼淚又不能當藥引子，這笨蛋既然能睜開眼，我保證他絕對死不了。來，先把眼淚擦擦。」",
+    "Sequence": "SetPortrait(MC6,pic=1);;\nSetPortrait(MC8,pic=3);\nSetPortrait(MC1,pic=10)@0.2;\nDisableCharacterExpression(2);",
+    "zh_CN": "「好了，灵犀妹妹乖，别哭了。眼泪又不能当药引子，这笨蛋既然能睁开眼，我保证他绝对死不了。来，先把眼泪擦擦。」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC6",
+    "text": "「至於你！下次再敢把自己搞成這副德性，我就……我就……」",
+    "Sequence": "SetPortrait(MC6,pic=2);;\nSetPortrait(MC1,pic=9);",
+    "zh_CN": "「至于你！下次再敢把自己搞成这副德性，我就……我就……」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC6",
+    "text": "「[em7]話說到一半，實在忍不住笑了出來，隨即雙頰漲得通紅，慌亂地轉過身去[/em7]：總、總之我去叫外面那兩個吵死人的傢伙進來！省得他們天天在我的藥房外頭探頭探腦，妨礙得很！」",
+    "Sequence": "SetPortrait(MC6,pic=5);;",
+    "zh_CN": "「[em7]话说到一半，实在忍不住笑了出来，随即双颊涨得通红，慌乱地转过身去[/em7]：总、总之我去叫外面那两个吵死人的家伙进来！省得他们天天在我的药房外头探头探脑，妨碍得很！」",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不一會兒，伴隨著一陣喧鬧的腳步聲，赫連娜娜和雍仔急匆匆地衝進了客房。他們這一個月一直在英豪府作些打雜的事情，就等著你醒來的這一天。）＊",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_35);",
+    "Description": "換音樂",
+    "zh_CN": "[panel=6]＊（不一会儿，伴随着一阵喧闹的脚步声，赫连娜娜和雍仔急匆匆地冲进了客房。他们这一个月一直在英豪府作些打杂的事情，就等着你醒来的这一天。）＊",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC22",
+    "text": "「[var=PlayerFirstName]！我就說你命大福大造化大！本姑娘認可的人，哪有那麼容易交代在那種破山洞裡！」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
+    "zh_CN": "「[var=PlayerFirstName]！我就说你命大福大造化大！本姑娘认可的人，哪有那么容易交代在那种破山洞里！」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC20",
+    "text": "「嘿嘿，某個嘴硬丫頭可不是這麼說的啊。你昏迷這一個月，她三天兩頭就來問你醒了沒，連跑腿都不敢走遠……」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "「嘿嘿，某个嘴硬丫头可不是这么说的啊。你昏迷这一个月，她三天两头就来问你醒了没，连跑腿都不敢走远……」",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC22",
+    "text": "「哇！小道士你閉嘴！再胡說我就拿你試劍！」",
+    "Sequence": "SetPortrait(MC22,pic=7);",
+    "zh_CN": "「哇！小道士你闭嘴！再胡说我就拿你试剑！」",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你昏迷的這一個月裡，雍仔和娜娜都留在英豪府幫忙打雜。兩人天天拌嘴、互相拆台，倒也在吵吵鬧鬧中熟稔了起來。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你昏迷的这一个月里，雍仔和娜娜都留在英豪府帮忙打杂。两人天天拌嘴、互相拆台，倒也在吵吵闹闹中熟稔了起来。）＊",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC20",
+    "text": "「表哥啊！你可算醒了！這一個月本道長天天替你誦經祈福，連飯都少吃了一大碗！為了給你求平安符，我連珍藏的硃砂都用光了，你可得記我一功！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "「表哥啊！你可算醒了！这一个月本道长天天替你诵经祈福，连饭都少吃了一大碗！为了给你求平安符，我连珍藏的朱砂都用光了，你可得记我一功！」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC8",
+    "text": "[panel=2]「胖道士哥哥……你可以不要學我說話嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_CN": "[panel=2]「胖道士哥哥……你可以不要学我说话吗？」",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC20",
+    "text": "「……『哥哥』我收下了，『胖』那個字就免了吧。」",
+    "Sequence": "",
+    "zh_CN": "「……『哥哥』我收下了，『胖』那个字就免了吧。」",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "MC1",
+    "text": "「[em7]看著這群吵鬧卻真誠的同伴，嘴角忍不住上揚，緊繃的心情終於完全放鬆下來[/em7]：咳……讓你們擔心了。我沒事，就是感覺……睡了很久。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「[em7]看着这群吵闹却真诚的同伴，嘴角忍不住上扬，紧绷的心情终于完全放松下来[/em7]：咳……让你们担心了。我没事，就是感觉……睡了很久。」",
+    "links": [80]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=6]＊（房間裡的氣氛瞬間變得輕鬆熱鬧起來。沒過多久，聽聞你醒來的消息，英豪府的其他眾人也陸續來到了客房探望。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（房间里的气氛瞬间变得轻松热闹起来。没过多久，听闻你醒来的消息，英豪府的其他众人也陆续来到了客房探望。）＊",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC2",
+    "text": "「喲！[var=PlayerFirstName]小弟醒啦！那種鬼地方走一遭還能全鬚全尾回來，算你有種！沒給英豪府丟臉！傷好了，大哥請你喝一頓，一醉方休！」",
+    "Sequence": "SetPortrait(MC2,pic=1);\nSetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);\nEnableCharacterExpression(1,MC2,Meditate);",
+    "zh_CN": "「哟！[var=PlayerFirstName]小弟醒啦！那种鬼地方走一遭还能全须全尾回来，算你有种！没给英豪府丢脸！伤好了，大哥请你喝一顿，一醉方休！」",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC6",
+    "text": "[panel=2]「全鬚全尾…？這樣子形容還是第一次見到…」",
+    "Sequence": "SetPortrait(MC6,pic=4);;\nEnableCharacterExpression(2,MC6,Question);\nDisableCharacterExpression(1);",
+    "zh_CN": "[panel=2]「全须全尾…？这样子形容还是第一次见到…」",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC5",
+    "text": "[panel=3]「呵，能活著回來就好。看你瘦了這一大圈，今晚我親自下廚，給你做頓好的補補身子！我那獨門的遼東羹，保證你吃完生龍活虎！」",
+    "Sequence": "EnableCharacterExpression(3,MC5,Meditate);\nDisableCharacterExpression(2);",
+    "zh_CN": "[panel=3]「呵，能活着回来就好。看你瘦了这一大圈，今晚我亲自下厨，给你做顿好的补补身子！我那独门的辽东羹，保证你吃完生龙活虎！」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC3",
+    "text": "[panel=4]「能從那種邪物手下活命，甚至護住了同伴，算你勉強合格了。好好養傷，等你恢復了，我們再打一場。」",
+    "Sequence": "DisableCharacterExpression(3);\nEnableCharacterExpression(4,MC3,Meditate);",
+    "zh_CN": "[panel=4]「能从那种邪物手下活命，甚至护住了同伴，算你勉强合格了。好好养伤，等你恢复了，我们再打一场。」",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC7",
+    "text": "[panel=2]「哎呀呀，大家都擠在這裡做什麼，病人需要靜養，徐老師的羹還是留給呂信吃吧。不過看你這精神頭，想必是沒大礙了。大難不死，必有後福啊。」",
+    "Sequence": "SetPortrait(MC7,pic=3);\nEnableCharacterExpression(2,MC7,Meditate);\nDisableCharacterExpression(4);",
+    "zh_CN": "[panel=2]「哎呀呀，大家都挤在这里做什么，病人需要静养，徐老师的羹还是留给吕信吃吧。不过看你这精神头，想必是没大碍了。大难不死，必有后福啊。」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就在眾人喧鬧之際，門外傳來了平穩的腳步聲。那腳步聲不急不緩。眾人立刻止住了聲音，自覺地讓開了一條路。賈詡面無表情地走了進來，目光深邃地掃了你一眼。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=6]＊（就在众人喧闹之际，门外传来了平稳的脚步声。那脚步声不急不缓。众人立刻止住了声音，自觉地让开了一条路。贾诩面无表情地走了进来，目光深邃地扫了你一眼。）＊",
+    "links": [4172]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC4",
+    "text": "「[em7]站在窗邊看著外頭的景色，道[/em7]：趙王洞的經過，廖淳臨走前都已經交代清楚了。趙王洞的事，算是暫時告一段落。」",
+    "Sequence": "AudioControl(PlayMusic,BGM_42);\nEnableCharacterExpression(1,MC4,Meditate);",
+    "Description": "撥放音樂",
+    "zh_CN": "「[em7]站在窗边看着外头的景色，道[/em7]：赵王洞的经过，廖淳临走前都已经交代清楚了。赵王洞的事，算是暂时告一段落。」",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC1",
+    "text": "「賈師父……我們在祭壇根本沒見到卞喜，反而遇到一頭半人半虎的怪物。那到底是什麼東西？」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1,Question);\nDisableCharacterExpression(1);",
+    "zh_CN": "「贾师父……我们在祭坛根本没见到卞喜，反而遇到一头半人半虎的怪物。那到底是什么东西？」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC4",
+    "text": "「卞喜不過是個被貪念驅使的棋子，跑了便跑了。至於那怪物……」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "「卞喜不过是个被贪念驱使的棋子，跑了便跑了。至于那怪物……」",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC4",
+    "text": "「[em7]轉過身，目光銳利地直視你[/em7]：殷商時期，曾有一種極其殘酷的古老祭祀。人們妄圖透過血煞與獻祭，從天那裡獲得不可思議的力量。那頭白虎妖物，不過是這種祭祀催生出的失敗品罷了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「[em7]转过身，目光锐利地直视你[/em7]：殷商时期，曾有一种极其残酷的古老祭祀。人们妄图透过血煞与献祭，从天那里获得不可思议的力量。那头白虎妖物，不过是这种祭祀催生出的失败品罢了。」",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC4",
+    "text": "「怎麼？看你這副表情，是對那洞裡的東西心有餘悸，還是對自己差點把命交代在裡面感到後怕？」",
+    "Sequence": "EnableCharacterExpression(1,MC4,Question);\nSetPortrait(MC4,pic=2);\nSetPortrait(MC1,pic=8);",
+    "zh_CN": "「怎么？看你这副表情，是对那洞里的东西心有余悸，还是对自己差点把命交代在里面感到后怕？」",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC4",
+    "text": "「不必多想。我說過，現場情況由你自行判斷。既然能活著回來，過程如何就不重要了。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC4,pic=3);",
+    "zh_CN": "「不必多想。我说过，现场情况由你自行判断。既然能活着回来，过程如何就不重要了。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC1",
+    "text": "「那你是不是……早就摸清了那裡有什麼？你根本就知道，那裡不是普通的失蹤案，對吧？」",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "zh_CN": "「那你是不是……早就摸清了那里有什么？你根本就知道，那里不是普通的失踪案，对吧？」",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC4",
+    "text": "「賈某不是神仙，只是猜測而已。若事事都要查得一清二楚才敢動手，英豪府早就關門了。」",
+    "Sequence": "SetPortrait(MC1,pic=10);",
+    "zh_CN": "「贾某不是神仙，只是猜测而已。若事事都要查得一清二楚才敢动手，英豪府早就关门了。」",
+    "links": [4173]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC4",
+    "text": "「不過……這次的結果，也算印證了你身上那顆骰子的真偽。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「不过……这次的结果，也算印证了你身上那颗骰子的真伪。」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC1",
+    "text": "「骰子真偽？你……你、難道你就為了測試這顆骰子，才派我去那種地方？！」",
+    "Sequence": "SetPortrait(MC1,pic=19);",
+    "zh_CN": "「骰子真伪？你……你、难道你就为了测试这颗骰子，才派我去那种地方？！」",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "role2",
+    "text": "[panel=6]＊（面對你憤怒與不解的質問，賈詡並沒有辯解。他只是平靜地從寬大的袖中拿出一卷破舊的古老竹簡，隨手扔到了你的床榻前。）＊",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_CN": "[panel=6]＊（面对你愤怒与不解的质问，贾诩并没有辩解。他只是平静地从宽大的袖中拿出一卷破旧的古老竹简，随手扔到了你的床榻前。）＊",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你下意識地撿起竹簡。上面的字跡因為年代久遠而十分模糊，但依稀尚可辨別出幾句令人心驚的描述……[em2]「異寶……麒麟之骰……解吉凶，現命數……然貪念若熾，必反噬其主……」[/em2]）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=6]＊（你下意识地捡起竹简。上面的字迹因为年代久远而十分模糊，但依稀尚可辨别出几句令人心惊的描述……[em2]「异宝……麒麟之骰……解吉凶，现命数……然贪念若炽，必反噬其主……」[/em2]）＊",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC4",
+    "text": "「要質問別人之前，先問問你自己……隱藏了什麼吧。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "「要质问别人之前，先问问你自己……隐藏了什么吧。」",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡的腳步聲漸漸遠去，最終消失在走廊盡頭。只留下你獨自坐在床榻上，看著手中那卷揭示了部分真相的竹簡……）＊",
+    "Sequence": "OpenPanel(1,close);",
+    "zh_CN": "[panel=6]＊（贾诩的脚步声渐渐远去，最终消失在走廊尽头。只留下你独自坐在床榻上，看着手中那卷揭示了部分真相的竹简……）＊",
+    "links": [4174]
+  },
+  {
+    "entryID": 101,
+    "actorID": "role2",
+    "text": "[panel=6]＊（數日後，你終於徹底痊癒，胸口的劇痛也完全消失。這天，徐榮大步走進了客房。）＊",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_32);",
+    "Description": "切音樂",
+    "zh_CN": "[panel=6]＊（数日后，你终于彻底痊愈，胸口的剧痛也完全消失。这天，徐荣大步走进了客房。）＊",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC5",
+    "text": "「小子，恢復得不錯嘛！張寧那丫頭這次也是下了本了，這些藥確實管用。」",
+    "Sequence": "",
+    "zh_CN": "「小子，恢复得不错嘛！张宁那丫头这次也是下了本了，这些药确实管用。」",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC5",
+    "text": "「走，帶你去看看你以後住的地方。」",
+    "Sequence": "",
+    "zh_CN": "「走，带你去看看你以后住的地方。」",
+    "links": [4234]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你跟隨徐榮穿過長廊，來到了一間樸素但整潔的房間。）＊",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);",
+    "zh_CN": "[panel=6]＊（你跟随徐荣穿过长廊，来到了一间朴素但整洁的房间。）＊",
+    "links": [4235]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC5",
+    "text": "「喏，這就是你以後的房間了。不大但遮風避雨不成問題。」",
+    "Sequence": "",
+    "zh_CN": "「喏，这就是你以后的房间了。不大但遮风避雨不成问题。」",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC1",
+    "text": "「沒事，這裡很好。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「没事，这里很好。」",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC5",
+    "text": "「另外，跟你說一聲。咱們英豪府呢，其實……沒什麼規矩。平時鬆散得很，大家都是各忙各的。」",
+    "Sequence": "",
+    "zh_CN": "「另外，跟你说一声。咱们英豪府呢，其实……没什么规矩。平时松散得很，大家都是各忙各的。」",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC5",
+    "text": "「但要是真有什麼棘手的委託或是重要任務，賈老怪自然會派人通知我們。至於沒有任務的時候嘛……」",
+    "Sequence": "",
+    "zh_CN": "「但要是真有什么棘手的委托或是重要任务，贾老怪自然会派人通知我们。至于没有任务的时候嘛……」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC5",
+    "text": "「就自己看著辦吧！練武、逛街、接點小委託賺酒錢，隨你便。這幾天你就先好好熟悉一下環境，放鬆放鬆吧！」",
+    "Sequence": "",
+    "zh_CN": "「就自己看着办吧！练武、逛街、接点小委托赚酒钱，随你便。这几天你就先好好熟悉一下环境，放松放松吧！」",
+    "links": [4240]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC5",
+    "text": "「咱們這地方雖然人不多，規矩也散漫，但既然進了這扇門，你便再不是無根無底的江湖散人。以後天塌下來，有府裡這幫兄弟跟你一起扛。好好休息吧，小兄弟。」",
+    "Sequence": "",
+    "zh_CN": "「咱们这地方虽然人不多，规矩也散漫，但既然进了这扇门，你便再不是无根无底的江湖散人。以后天塌下来，有府里这帮兄弟跟你一起扛。好好休息吧，小兄弟。」",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "role2",
+    "text": "[panel=6]＊（徐榮交代完便轉身離開，留下你獨自站在這間屬於自己的房間裡。）＊",
+    "Sequence": "OpenPanel(1,close);",
+    "zh_CN": "[panel=6]＊（徐荣交代完便转身离开，留下你独自站在这间属于自己的房间里。）＊",
+    "links": [4238]
+  },
+  {
+    "entryID": 112,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你不禁滿意地笑了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=5);\nMapLock(Command_HallOfHeroes, unlock);\nMapLock(Command_YunzhongInn, lock);",
+    "Description": "解鎖英豪府根據地、鎖雲中客棧",
+    "zh_CN": "[panel=6]＊（你不禁满意地笑了。）＊",
+    "links": [4237]
+  },
+  {
+    "entryID": 2053,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "跪拜的人像",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2054]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你注意到蒲團前跪著一尊詭異的石像。湊近一看，石像旁邊的地面上，竟然還刻著字：）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你注意到蒲团前跪着一尊诡异的石像。凑近一看，石像旁边的地面上，竟然还刻着字：）＊",
+    "links": [5]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC1",
+    "text": "「這青石堅硬無比，竟有人能以指代筆，入石三分……留下這字跡的前輩，其功力之高深，實在令人匪夷所思！」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「这青石坚硬无比，竟有人能以指代笔，入石三分……留下这字迹的前辈，其功力之高深，实在令人匪夷所思！」",
+    "links": []
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "點擊石中劍、武力檢定10，可以無限嘗試",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [18]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "MC1",
+    "text": "「呼……不行，紋絲不動，看來我的力氣還不夠。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=16);",
+    "Description": "檢定失敗",
+    "zh_CN": "「呼……不行，纹丝不动，看来我的力气还不够。」",
+    "links": []
+  },
+  {
+    "entryID": 2058,
+    "actorID": "role127",
+    "text": "[panel=2]「娜娜姑娘，留下此圖之人既說是自掘墳墓，這其中必定有非常之凶險。」 ",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=2]「娜娜姑娘，留下此图之人既说是自掘坟墓，这其中必定有非常之凶险。」",
+    "links": [2059]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC1",
+    "text": "「廖大哥說得對。圖先收好，當務之急是救雍仔。走吧！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「廖大哥说得对。图先收好，当务之急是救雍仔。走吧！」",
+    "links": []
+  },
+  {
+    "entryID": 2060,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "大廳強制劇情",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [37]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話音未落，那半人半虎的妖物猛地張開血盆大口，發出一聲震耳欲聾的咆哮，鋒利的巨爪直接拍向雍仔面門。）＊",
+    "Sequence": "PlayFeelFeedback(CinemachineImpulse,0.5,0.5,1);\nAudioControl(PlaySFX,Others_Roar);",
+    "zh_CN": "[panel=6]＊（话音未落，那半人半虎的妖物猛地张开血盆大口，发出一声震耳欲聋的咆哮，锋利的巨爪直接拍向雍仔面门。）＊",
+    "links": [38]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "白虎道妖戰鬥結束",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [4169]
+  },
+  {
+    "entryID": 4159,
+    "actorID": "MC1",
+    "text": "「怎……怎麼會……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "「怎……怎么会……」",
+    "links": [4160]
+  },
+  {
+    "entryID": 4160,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);\nContinue();",
+    "Description": "BD",
+    "links": []
+  },
+  {
+    "entryID": 4161,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == true",
+    "Description": "戰鬥成功",
+    "links": [4164]
+  },
+  {
+    "entryID": 4162,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false",
+    "Description": "戰鬥失敗",
+    "links": [4159]
+  },
+  {
+    "entryID": 4163,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [4165]
+  },
+  {
+    "entryID": 4164,
+    "actorID": "MC1",
+    "text": "「哈哈，降妖除魔這事我可是越做越純熟囉！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「哈哈，降妖除魔这事我可是越做越纯熟啰！」",
+    "links": []
+  },
+  {
+    "entryID": 4165,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,4);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [4161, 4162]
+  },
+  {
+    "entryID": 4166,
+    "actorID": "MC5",
+    "text": "「但賈老怪這傢伙，到底在想甚麼呢…」",
+    "Sequence": "",
+    "zh_CN": "「但贾老怪这家伙，到底在想什么呢…」",
+    "links": [4168]
+  },
+  {
+    "entryID": 4168,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nDisableEventBG(FullScreen);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Script": "SetQuestState(\"C1M2\", \"success\")",
+    "Description": "轉場，完成任務",
+    "links": [60]
+  },
+  {
+    "entryID": 4169,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Play);\nAudioControl(PlaySFX,Others_Sword_Single_ScreenRed);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_38);\nContinue();",
+    "links": [4170]
+  },
+  {
+    "entryID": 4170,
+    "actorID": "MC1",
+    "text": "「呃啊——！」",
+    "Sequence": "SetPortrait(MC1,pic=19);",
+    "zh_CN": "「呃啊——！」",
+    "links": [4241]
+  },
+  {
+    "entryID": 4171,
+    "actorID": "MC21",
+    "text": "「…」",
+    "Sequence": "",
+    "zh_CN": "「…」",
+    "links": [56]
+  },
+  {
+    "entryID": 4172,
+    "actorID": "role2",
+    "text": "[panel=6]＊（其他人見狀，互相交換了個眼神，紛紛找了個藉口退出了房間，只留下你和賈詡兩人。）＊",
+    "Sequence": "AudioControl(StopMusic);\nOpenPanel(1,close);\nOpenPanel(2,close);\nOpenPanel(3,close);\nOpenPanel(4,close);",
+    "Description": "停止音樂",
+    "zh_CN": "[panel=6]＊（其他人见状，互相交换了个眼神，纷纷找了个借口退出了房间，只留下你和贾诩两人。）＊",
+    "links": [87]
+  },
+  {
+    "entryID": 4173,
+    "actorID": "MC4",
+    "text": "「不過，鎮壓邪物、完成委託、領取酬金——英豪府向來便是如此。你該明白，我們為何而存在了吧。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「不过，镇压邪物、完成委托、领取酬金——英豪府向来便是如此。你该明白，我们为何而存在了吧。」",
+    "links": [95]
+  },
+  {
+    "entryID": 4174,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(GameDate,180,3,Early);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Clinic)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "推進日期,轉場",
+    "links": [101]
+  },
+  {
+    "entryID": 4234,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Description": "淡入",
+    "links": [104]
+  },
+  {
+    "entryID": 4235,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Description": "淡出",
+    "links": [4239]
+  },
+  {
+    "entryID": 4236,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_3);\nContinue();",
+    "Description": "第一章 - 完",
+    "links": []
+  },
+  {
+    "entryID": 4237,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(Command_HallOfHeroes);\nSetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1) ;\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
+    "Description": "播放影片,關閉音樂、轉移到英豪府根據地",
+    "links": [4236]
+  },
+  {
+    "entryID": 4238,
+    "actorID": "role2",
+    "text": "[panel=6]＊（看著窗外灑落的陽光…）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（看着窗外洒落的阳光…）＊",
+    "links": [112]
+  },
+  {
+    "entryID": 4239,
+    "actorID": "role2",
+    "text": "[panel=6]＊（房間裡一應俱全，陽光透過窗櫺灑在地板上，顯得格外溫馨。）＊",
+    "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Houses_Warrior);",
+    "zh_CN": "[panel=6]＊（房间里一应俱全，阳光透过窗棂洒在地板上，显得格外温馨。）＊",
+    "links": [105]
+  },
+  {
+    "entryID": 4240,
+    "actorID": "MC5",
+    "text": "「還有一點你得記住——」",
+    "Sequence": "",
+    "zh_CN": "「还有一点你得记住——」",
+    "links": [110]
+  },
+  {
+    "entryID": 4241,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableEventBG(WhiteTigerDaoistFight,FullScreen);\nContinue();",
+    "links": [45]
+  }
+]

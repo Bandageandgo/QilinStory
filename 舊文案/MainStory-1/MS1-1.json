@@ -1,0 +1,364 @@
+[
+  {
+    "entryID": 496,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "EnableDialogueBG(HallOfHeroes_StudyRoom);\nSetPortrait(MC1,pic=1);\nSetContinueMode(false);\nFade(in,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [497]
+  },
+  {
+    "entryID": 497,
+    "actorID": "MC4",
+    "text": "主動找我，是作好坦白了？",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "主動找我，是作好坦白了？",
+    "zh_CN": "主动找我，是作好坦白了？",
+    "links": [498]
+  },
+  {
+    "entryID": 498,
+    "actorID": "MC1",
+    "text": "……還沒有，但我也沒其它選擇了吧？\n否則你也不必繼續留著我。",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "……還沒有，但我也沒其它選擇了吧？\n否則你也不必繼續留著我。",
+    "zh_CN": "……还没有，但我也没其它选择了吧？ \n否则你也不必继续留着我。",
+    "links": [544]
+  },
+  {
+    "entryID": 499,
+    "actorID": "role2",
+    "text": "[panel=5]聽到你的回應，\n賈詡露出不意察覺的微笑，瞥了一眼藏書庫。",
+    "Sequence": "",
+    "zh_TW": "[panel=5]聽到你的回應，\n賈詡露出不意察覺的微笑，瞥了一眼藏書庫。",
+    "zh_CN": "[panel=5]听到你的回应，\n贾诩露出不意察觉的微笑，瞥了一眼藏书库。",
+    "links": [500]
+  },
+  {
+    "entryID": 500,
+    "actorID": "MC1",
+    "text": "……[em2]《鬼谷經》[/em2]……\n莫非……是那位鬼谷子？",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1,Meditate);",
+    "zh_TW": "……[em2]《鬼谷經》[/em2]……\n莫非……是那位鬼谷子？",
+    "zh_CN": "……[em2]《鬼谷经》[/em2]……\n莫非……是那位鬼谷子？",
+    "links": [501]
+  },
+  {
+    "entryID": 501,
+    "actorID": "MC4",
+    "text": "戰國之世，九黎橫生，百家伐異，各闢門道。",
+    "Sequence": "SetPortrait(MC11,pic=3);\nDisableAllCharacterExpression();",
+    "zh_TW": "戰國之世，九黎橫生，百家伐異，各闢門道。",
+    "zh_CN": "战国之世，九黎横生，百家伐异，各辟门道。",
+    "links": [502]
+  },
+  {
+    "entryID": 502,
+    "actorID": "MC4",
+    "text": "可嘆，秦帝毀書，古學斷絕，\n殘存不過奇文異錄。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "可嘆，秦帝毀書，古學斷絕，\n殘存不過奇文異錄。",
+    "zh_CN": "可叹，秦帝毁书，古学断绝，\n残存不过奇文异录。",
+    "links": [542]
+  },
+  {
+    "entryID": 503,
+    "actorID": "MC1",
+    "text": "原來如此……",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "原來如此……",
+    "zh_CN": "原来如此……",
+    "links": [507]
+  },
+  {
+    "entryID": 507,
+    "actorID": "MC4",
+    "text": "不過，詳加研讀，還是多有益處……",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "Description": "教學",
+    "zh_TW": "不過，詳加研讀，還是多有益處……",
+    "zh_CN": "不过，详加研读，还是多有益处……",
+    "links": [508]
+  },
+  {
+    "entryID": 508,
+    "actorID": "MC4",
+    "text": "師者已授業，現在換學生了。",
+    "Sequence": "",
+    "zh_TW": "師者已授業，現在換學生了。",
+    "zh_CN": "师者已授业，现在换学生了。",
+    "links": [509]
+  },
+  {
+    "entryID": 509,
+    "actorID": "role2",
+    "text": "[panel=5]你稍作思索之後，開始講述此行另一個目的……",
+    "Sequence": "",
+    "zh_TW": "[panel=5]你稍作思索之後，開始講述此行另一個目的……",
+    "zh_CN": "[panel=5]你稍作思索之后，开始讲述此行另一个目的……",
+    "links": [624]
+  },
+  {
+    "entryID": 510,
+    "actorID": "MC4",
+    "text": "九黎盡出，中原淪陷。\n有意思，有意思……這世道總算有了點趣味。",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "zh_TW": "九黎盡出，中原淪陷。\n有意思，有意思……這世道總算有了點趣味。",
+    "zh_CN": "九黎尽出，中原沦陷。 \n有意思，有意思……这世道总算有了点趣味。",
+    "links": [514]
+  },
+  {
+    "entryID": 514,
+    "actorID": "MC4",
+    "text": "不過要讓你失望了，\n正如竹簡殘缺，此夢我也無從可解。",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "不過要讓你失望了，\n正如竹簡殘缺，此夢我也無從可解。",
+    "zh_CN": "不过要让你失望了，\n正如竹简残缺，此梦我也无从可解。",
+    "links": [543]
+  },
+  {
+    "entryID": 515,
+    "actorID": "MC4",
+    "text": "呵呵，此夢就暫且別告知其他人，省得添亂。\n現在回到生活重點，來處理本府的生計……",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "呵呵，此夢就暫且別告知其他人，省得添亂。\n現在回到生活重點，來處理本府的生計……",
+    "zh_CN": "呵呵，此梦就暂且别告知其他人，省得添乱。 \n现在回到生活重点，来处理本府的生计……",
+    "links": [519]
+  },
+  {
+    "entryID": 518,
+    "actorID": "MC4",
+    "text": "諸位，新人加入，\n象徵本府將踏上新的時代。",
+    "Sequence": "",
+    "zh_TW": "諸位，新人加入，\n象徵本府將踏上新的時代。",
+    "zh_CN": "诸位，新人加入，\n象征本府将踏上新的时代。",
+    "links": [520]
+  },
+  {
+    "entryID": 519,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nEnableDialogueBG(HallOfHeroes)@1;\nContinue()@Message(EndFade);",
+    "links": [518]
+  },
+  {
+    "entryID": 520,
+    "actorID": "MC2",
+    "text": "[panel=2]又是這套，從年前聽到年尾，只變四字……\n直說重點，上一年虧了多少？",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_TW": "[panel=2]又是這套，從年前聽到年尾，只變四字……\n直說重點，上一年虧了多少？",
+    "zh_CN": "[panel=2]又是这套，从年前听到年尾，只变四字……\n直说重点，上一年亏了多少？",
+    "links": [521]
+  },
+  {
+    "entryID": 521,
+    "actorID": "role2",
+    "text": "[panel=5]彷彿習以為常，徐榮攤開了帳冊──",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=5]彷彿習以為常，徐榮攤開了帳冊──",
+    "zh_CN": "[panel=5]仿佛习以为常，徐荣摊开了帐册──",
+    "links": [522]
+  },
+  {
+    "entryID": 522,
+    "actorID": "MC1",
+    "text": "紅色……紅色……\n這不都全赤字嗎！？",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Surprise);",
+    "zh_TW": "紅色……紅色……\n這不都全赤字嗎！？",
+    "zh_CN": "红色……红色……\n这不都全赤字吗！ ？",
+    "links": [523]
+  },
+  {
+    "entryID": 523,
+    "actorID": "MC4",
+    "text": "啊啊，正如諸位看見的，本府已是搖搖欲墜。\n若再不改善，恐怕撐不過明年……",
+    "Sequence": "SetPortrait(MC11,pic=4);\nDisableAllCharacterExpression();",
+    "zh_TW": "啊啊，正如諸位看見的，本府已是搖搖欲墜。\n若再不改善，恐怕撐不過明年……",
+    "zh_CN": "啊啊，正如诸位看见的，本府已是摇摇欲坠。 \n若再不改善，恐怕撑不过明年……",
+    "links": [524]
+  },
+  {
+    "entryID": 524,
+    "actorID": "MC1",
+    "text": "不對不對！\n再怎麼說，都太誇張了！",
+    "Sequence": "",
+    "zh_TW": "不對不對！\n再怎麼說，都太誇張了！",
+    "zh_CN": "不对不对！ \n再怎么说，都太夸张了！",
+    "links": [525]
+  },
+  {
+    "entryID": 525,
+    "actorID": "MC4",
+    "text": "還不是怪徐兄沒拿到這次朝廷補助。\n話說回來，這次朝廷拒絕的理由為何？",
+    "Sequence": "",
+    "zh_TW": "還不是怪徐兄沒拿到這次朝廷補助。\n話說回來，這次朝廷拒絕的理由為何？",
+    "zh_CN": "还不是怪徐兄没拿到这次朝廷补助。 \n话说回来，这次朝廷拒绝的理由为何？",
+    "links": [526]
+  },
+  {
+    "entryID": 526,
+    "actorID": "MC5",
+    "text": "[panel=2]「內容太過光怪離奇，還請慎思」……",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "[panel=2]「內容太過光怪離奇，還請慎思」……",
+    "zh_CN": "[panel=2]「内容太过光怪离奇，还请慎思」……",
+    "links": [528]
+  },
+  {
+    "entryID": 528,
+    "actorID": "MC2",
+    "text": "所以我就說，要換一個路線包裝……",
+    "Sequence": "SetPortrait(MC2,pic=5);",
+    "zh_TW": "所以我就說，要換一個路線包裝……",
+    "zh_CN": "所以我就说，要换一个路线包装……",
+    "links": [529]
+  },
+  {
+    "entryID": 529,
+    "actorID": "MC3",
+    "text": "[panel=2]你還敢說，上次給你寫了幾個月，\n總共字數一百零八字。",
+    "Sequence": "SetPortrait(MC3,pic=5);",
+    "zh_TW": "[panel=2]你還敢說，上次給你寫了幾個月，\n總共字數一百零八字。",
+    "zh_CN": "[panel=2]你还敢说，上次给你写了几个月，\n总共字数一百零八字。",
+    "links": [530]
+  },
+  {
+    "entryID": 530,
+    "actorID": "MC2",
+    "text": "哇，難道要像你，寫了個幾萬字，\n還沒進重點，虧你是讀春秋的。",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "哇，難道要像你，寫了個幾萬字，\n還沒進重點，虧你是讀春秋的。",
+    "zh_CN": "哇，难道要像你，写了个几万字，\n还没进重点，亏你是读春秋的。",
+    "links": [531]
+  },
+  {
+    "entryID": 531,
+    "actorID": "MC3",
+    "text": "[panel=2]…………",
+    "Sequence": "SetPortrait(MC3,pic=6);",
+    "zh_TW": "[panel=2]…………",
+    "zh_CN": "[panel=2]…………",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "MC1",
+    "text": "呃……賈師父又寫了什麼？",
+    "Sequence": "SetPortrait(MC1,pic=9);\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "呃……賈師父又寫了什麼？",
+    "zh_CN": "呃……贾师父又写了什么？",
+    "links": [533]
+  },
+  {
+    "entryID": 533,
+    "actorID": "MC4",
+    "text": "殺怪物賺大錢，英豪發大財。",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "殺怪物賺大錢，英豪發大財。",
+    "zh_CN": "杀怪物赚大钱，英豪发大财。",
+    "links": [534]
+  },
+  {
+    "entryID": 534,
+    "actorID": "MC1",
+    "text": "（這群人是認真的？我該不會真上了賊船？\n現在下船還來得及嗎……）",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "zh_TW": "（這群人是認真的？我該不會真上了賊船？\n現在下船還來得及嗎……）",
+    "zh_CN": "（这群人是认真的？我该不会真上了贼船？\n现在下船还来得及吗……）",
+    "links": [535]
+  },
+  {
+    "entryID": 535,
+    "actorID": "MC7",
+    "text": "……至少我看還有些[em2]日常工作[/em2]。\n正常處理，還不至於關門收攤。",
+    "Sequence": "DisableAllCharacterExpression();",
+    "zh_TW": "……至少我看還有些[em2]日常工作[/em2]。\n正常處理，還不至於關門收攤。",
+    "zh_CN": "……至少我看还有些[em2]日常工作[/em2]。 \n正常处理，还不至于关门收摊。",
+    "links": [536]
+  },
+  {
+    "entryID": 536,
+    "actorID": "MC5",
+    "text": "郭嘉講到重點了……",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "Description": "教學",
+    "zh_TW": "郭嘉講到重點了……",
+    "zh_CN": "郭嘉讲到重点了……",
+    "links": [537]
+  },
+  {
+    "entryID": 537,
+    "actorID": "MC4",
+    "text": "此乃本府要務，未免你們散漫，\n這一年的時間，你們好好運用，赤字變黑字。",
+    "Sequence": "",
+    "zh_TW": "此乃本府要務，未免你們散漫，\n這一年的時間，你們好好運用，赤字變黑字。",
+    "zh_CN": "此乃本府要务，未免你们散漫，\n这一年的时间，你们好好运用，赤字变黑字。",
+    "links": [538]
+  },
+  {
+    "entryID": 538,
+    "actorID": "MC4",
+    "text": "若能并州三個實力派組織的投資，那是最好，\n那時往後財務無憂。",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "若能并州三個實力派組織的投資，那是最好，\n那時往後財務無憂。",
+    "zh_CN": "若能并州三个实力派组织的投资，那是最好，\n那时往后财务无忧。",
+    "links": [539]
+  },
+  {
+    "entryID": 539,
+    "actorID": "MC1",
+    "text": "……這不是我想要的江湖生活……",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Description": "變數更新",
+    "zh_TW": "……這不是我想要的江湖生活……",
+    "zh_CN": "……这不是我想要的江湖生活……",
+    "links": [541]
+  },
+  {
+    "entryID": 540,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 541,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nFade(out,1,#000000)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [540]
+  },
+  {
+    "entryID": 542,
+    "actorID": "MC4",
+    "text": "茫茫歲月，三傑尋其遺創英豪。\n如今古學再剩唯此處斷簡片章。",
+    "Sequence": "",
+    "zh_TW": "茫茫歲月，三傑尋其遺創英豪。\n如今古學再剩唯此處斷簡片章。",
+    "zh_CN": "茫茫岁月，三杰寻其遗创英豪。 \n如今古学再剩唯此处断简片章。",
+    "links": [503]
+  },
+  {
+    "entryID": 543,
+    "actorID": "MC1",
+    "text": "我也沒想過會太順利。\n反正骰子指引，必有其意，答案遲早自會浮現。",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "我也沒想過會太順利。\n反正骰子指引，必有其意，答案遲早自會浮現。",
+    "zh_CN": "我也没想过会太顺利。 \n反正骰子指引，必有其意，答案迟早自会浮现。",
+    "links": [515]
+  },
+  {
+    "entryID": 544,
+    "actorID": "MC1",
+    "text": "只是我好歹也是拜師的，\n師者不該先替學徒解惑，竹簡出自何處？",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "只是我好歹也是拜師的，\n師者不該先替學徒解惑，竹簡出自何處？",
+    "zh_CN": "只是我好歹也是拜师的，\n师者不该先替学徒解惑，竹简出自何处？",
+    "links": [499]
+  },
+  {
+    "entryID": 624,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "OpenPanel(5, close);\nSetContinueMode(false);\nFade(stay,1,#000000);\nFade(in,1,#000000)@1->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "links": [510]
+  }
+]

@@ -1,0 +1,231 @@
+[
+  {
+    "entryID": 19,
+    "actorID": "MC13",
+    "text": "「嗯，小子，氣色看起來還不錯嘛。那[em2]長生經[/em2]練得如何了？可別三天打魚兩天曬網，把大叔我的心血給糟蹋了。」",
+    "Sequence": "SetPortrait(MC13,pic=1);\nEnableDialogueBG(Houses_Doctor);\nSetPortrait(MC1,pic=8);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_16);",
+    "Description": "關閉音樂，放主題曲",
+    "zh_TW": "「嗯，小子，氣色看起來還不錯嘛。那[em2]長生經[/em2]練得如何了？可別三天打魚兩天曬網，把大叔我的心血給糟蹋了。」",
+    "zh_CN": "「嗯，小子，气色看起来还不错嘛。那[em2]长生经[/em2]练得如何了？可别三天打鱼两天晒网，把大叔我的心血给糟蹋了。」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「大叔放心！我每日都有用心修習，只覺身體輕快了不少，之前那股陰寒之氣也沒那麼難受了！」",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_TW": "「大叔放心！我每日都有用心修習，只覺身體輕快了不少，之前那股陰寒之氣也沒那麼難受了！」",
+    "zh_CN": "「大叔放心！我每日都有用心修习，只觉身体轻快了不少，之前那股阴寒之气也没那么难受了！」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC13",
+    "text": "「那就好。不過嘛，內功雖能固本培元，但你小子之前中的屍毒頗為麻煩，雖說拔除了大半，誰也保不準有沒有些許殘毒潛伏。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC13,pic=2);",
+    "zh_TW": "「那就好。不過嘛，內功雖能固本培元，但你小子之前中的屍毒頗為麻煩，雖說拔除了大半，誰也保不準有沒有些許殘毒潛伏。」",
+    "zh_CN": "「那就好。不过嘛，内功虽能固本培元，但你小子之前中的尸毒颇为麻烦，虽说拔除了大半，谁也保不准有没有些许残毒潜伏。」",
+    "links": [35]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「真的嗎？大叔！那太好了！若能學得一招半式，日後不僅能自保，說不定還能助人懸壺濟世呢！請大叔務必指教！」",
+    "Sequence": "SetPortrait(MC1,pic=17);EnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "zh_TW": "「真的嗎？大叔！那太好了！若能學得一招半式，日後不僅能自保，說不定還能助人懸壺濟世呢！請大叔務必指教！」",
+    "zh_CN": "「真的吗？大叔！那太好了！若能学得一招半式，日后不仅能自保，说不定还能助人悬壶济世呢！请大叔务必指教！」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC13",
+    "text": "「哦？口氣倒不小，還想著懸壺濟世？小子，醫道之深，浩如煙海，可不是三言兩語就能學成的。我先教你些[em2]基礎的藥理和自救之法[/em2]，你且用心學著。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC13,pic=5);",
+    "zh_TW": "「哦？口氣倒不小，還想著懸壺濟世？小子，醫道之深，浩如煙海，可不是三言兩語就能學成的。我先教你些[em2]基礎的藥理和自救之法[/em2]，你且用心學著。」",
+    "zh_CN": "「哦？口气倒不小，还想着悬壶济世？小子，医道之深，浩如烟海，可不是三言两语就能学成的。我先教你些[em2]基础的药理和自救之法[/em2]，你且用心学着。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC13",
+    "text": "「…譬如這[em2]斷腸草[/em2]，名字嚇人，但若炮製得法，少少用上一星半點，反倒是活血化瘀的良藥。」",
+    "Sequence": "SetPortrait(MC13,pic=1);\nModifyData(FeatExp,Player,MedicalExpertise,100);",
+    "Description": "給予醫術經驗",
+    "zh_TW": "「…譬如這[em2]斷腸草[/em2]，名字嚇人，但若炮製得法，少少用上一星半點，反倒是活血化瘀的良藥。」",
+    "zh_CN": "「…譬如这[em2]断肠草[/em2]，名字吓人，但若炮制得法，微量反倒是活血化瘀的良药。」",
+    "links": [37]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「多謝大叔指點，我一定會牢牢記住的！」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「多謝大叔指點，我一定會牢牢記住的！」",
+    "zh_CN": "「多谢大叔指点，我一定会牢牢记住的！」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC13",
+    "text": "「(打了個哈欠，揮揮手)行了，今日就先到這。能記住多少，全看你自己的造化。小子，江湖路遠，好自為之吧。我還有事，先走了。」",
+    "Sequence": "",
+    "zh_TW": "「(打了個哈欠，揮揮手)行了，今日就先到這。能記住多少，全看你自己的造化。小子，江湖路遠，好自為之吧。我還有事，先走了。」",
+    "zh_CN": "「(打了个哈欠，挥挥手)行了，今日就先到这。能记住多少，全看你自己的造化。小子，江湖路远，好自为之吧。我还有事，先走了。」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「大叔，您…您這就要走了？不多留幾日指點指點晚輩？或者，此去何方，若有晚輩能幫上忙的…」",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_TW": "「大叔，您…您這就要走了？不多留幾日指點指點晚輩？或者，此去何方，若有晚輩能幫上忙的…」",
+    "zh_CN": "「大叔，您…您这就要走了？不多留几日指点指点晚辈？或者，此去何方，若有晚辈能帮上忙的…」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC13",
+    "text": "「怎麼，小子，莫非是怕老子我跑了，沒人給你收拾爛攤子？」",
+    "Sequence": "SetPortrait(MC13,pic=5);",
+    "zh_TW": "「怎麼，小子，莫非是怕老子我跑了，沒人給你收拾爛攤子？」",
+    "zh_CN": "「怎么，小子，莫非是怕老子我跑了，没人给你收拾烂摊子？」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥他是怕他那半吊子的武功和醫術可怎麼辦…」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「表哥他是怕他那半吊子的武功和醫術可怎麼辦…」",
+    "zh_CN": "[panel=2]「表哥他是怕他那半吊子的武功和医术可怎么办…」",
+    "links": [31]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC13",
+    "text": "「那古墓中的妖物，已被我的迷魂百草煙重創，失了部分元神，一時半會兒恢復不了元氣，但終究是個禍害。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「那古墓中的妖物，已被我的迷魂百草煙重創，失了部分元神，一時半會兒恢復不了元氣，但終究是個禍害。」",
+    "zh_CN": "「那古墓中的妖物，已被我的迷魂百草烟重创，失了部分元神，一时半会儿恢复不了元气，但终究是个祸害。」",
+    "links": [41]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC13",
+    "text": "「天下無不散的筵席。我雲遊慣了，一個地方可待不久。接下來，我打算往北方去，那邊有些故人舊事，也有些稀罕藥材，正好去瞧瞧。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=1);",
+    "zh_TW": "「天下無不散的筵席。我雲遊慣了，一個地方可待不久。接下來，我打算往北方去，那邊有些故人舊事，也有些稀罕藥材，正好去瞧瞧。」",
+    "zh_CN": "「天下无不散的筵席。我云游惯了，一个地方可待不久。接下来，我打算往北方去，那边有些故人旧事，也有些稀罕药材，正好去瞧瞧。」",
+    "links": [40]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「大叔教誨，晚輩銘記在心，定不負大叔厚望！他日江湖再見！」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Script": "SetQuestState(\"C0M2\", \"active\")",
+    "zh_TW": "「大叔教誨，晚輩銘記在心，定不負大叔厚望！他日江湖再見！」",
+    "zh_CN": "「大叔教诲，晚辈铭记在心，定不负大叔厚望！他日江湖再见！」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC13",
+    "text": "「好小子，有志氣！走了！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC13,pic=5);",
+    "zh_TW": "「好小子，有志氣！走了！」",
+    "zh_CN": "「好小子，有志气！走了！」",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張仲景話音未落，身形一晃，已飄然遠去，轉瞬便消失在小徑盡頭。你佇立良久...）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（張仲景話音未落，身形一晃，已飄然遠去，轉瞬便消失在小徑盡頭。你佇立良久...）＊",
+    "zh_CN": "[panel=6]＊（张仲景话音未落，身形一晃，已飘然远去，转瞬便消失在小径尽头。你伫立良久...）＊",
+    "links": [36]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC13",
+    "text": "「我看你對醫藥似乎也有些興趣，不如我再教你幾手粗淺的醫術，至少讓你日後能應付些小傷小病，不至於被人隨便下點藥就撂倒了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC13,pic=3);",
+    "zh_TW": "「我看你對醫藥似乎也有些興趣，不如我再教你幾手粗淺的醫術，至少讓你日後能應付些小傷小病，不至於被人隨便下點藥就撂倒了。」",
+    "zh_CN": "「我看你对医药似乎也有些兴趣，不如我再教你几手粗浅的医术，至少让你日后能应付些小伤小病，不至于被人随便下点药就撂倒了。」",
+    "links": [22]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role2",
+    "text": "[panel=6]＊（開啟了新的命盤[em2]懸壺濟世[/em2]）＊",
+    "Sequence": "",
+    "Script": "Variable[\"DoctorDestiny\"] = true",
+    "Description": "解鎖醫師命盤",
+    "zh_TW": "[panel=6]＊（開啟了新的命盤[em2]懸壺濟世[/em2]）＊",
+    "zh_CN": "[panel=6]＊（开启了新的命盘[em2]悬壶济世[/em2]）＊",
+    "links": [2050]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC13",
+    "text": "「而這[em2]七星海棠[/em2]，看似無害，其花粉卻能使人昏睡。喏，這些常見的毒草藥草，你先認個臉熟。」",
+    "Sequence": "",
+    "zh_TW": "「而這[em2]七星海棠[/em2]，看似無害，其花粉卻能使人昏睡。喏，這些常見的毒草藥草，你先認個臉熟。」",
+    "zh_CN": "「而这[em2]七星海棠[/em2]，看似无害，其花粉却能使人昏睡。喏，这些常见的毒草药草，你先认个脸熟。」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC13",
+    "text": "「江湖險惡，你以後得多個心眼。」",
+    "Sequence": "",
+    "zh_TW": "「江湖險惡，你以後得多個心眼。」",
+    "zh_CN": "「江湖险恶，你以后得多个心眼。」",
+    "links": [25]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC13",
+    "text": "「我看這小溪村山清水秀，正是你固本培元的好地方。他日若真有所成，江湖自會相見。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=1);",
+    "zh_TW": "「我看這小溪村山清水秀，正是你固本培元的好地方。他日若真有所成，江湖自會相見。」",
+    "zh_CN": "「我看这小溪村山清水秀，正是你固本培元的好地方。他日若真有所成，江湖自会相见。」",
+    "links": [30]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC13",
+    "text": "「待你小子[em2]長生經略有小成後[/em2]，若有餘力，不妨去除此獠，也算為民除害，積攢些江湖歷練。」",
+    "Sequence": "",
+    "zh_TW": "「待你小子[em2]長生經略有小成後[/em2]，若有餘力，不妨去除此獠，也算為民除害，積攢些江湖歷練。」",
+    "zh_CN": "「待你小子[em2]长生经略有小成后[/em2]，若有余力，不妨去除此獠，也算为民除害，积攒些江湖历练。」",
+    "links": [32]
+  },
+  {
+    "entryID": 2049,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [19]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在生活中或的經驗:[em2]生活經驗[/em2]可以用於命盤來獲得[em2]技能[/em2]。）＊",
+    "Sequence": "DisableDialogueBG();",
+    "zh_TW": "[panel=6]＊（在生活中或的經驗:[em2]生活經驗[/em2]可以用於命盤來獲得[em2]技能[/em2]。）＊",
+    "zh_CN": "[panel=6]＊（在生活中或的经验:[em2]生活经验[/em2]可以用于命盘来获得[em2]技能[/em2]。）＊",
+    "links": [2051]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ExecutePanelBaseManager(TalentTree,Enter);\nShowNoviceTeaching(TalentTree);\nContinue();",
+    "Description": "命盤教學",
+    "links": []
+  }
+]

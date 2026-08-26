@@ -1,0 +1,382 @@
+[
+  {
+    "entryID": 2053,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在山間行走時，突遇惡煞攔路找麻煩……）＊",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=6]＊（在山間行走時，突遇惡煞攔路找麻煩……）＊",
+    "zh_CN": "[panel=6]＊（在山间行走时，突遇恶煞拦路找麻烦……）＊",
+    "links": [2060]
+  },
+  {
+    "entryID": 2054,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「別惹我，我不當人的。」",
+    "Sequence": "",
+    "Description": "檢定",
+    "zh_TW": "[em2][威嚇檢定][/em2]「別惹我，我不當人的。」",
+    "zh_CN": "[em2][威吓检定][/em2]「别惹我，我不当人的。」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「我看你也是一位英雄，人說英雄相惜，何苦為難呢。」",
+    "Sequence": "",
+    "Description": "檢定",
+    "zh_TW": "[em2][口才檢定][/em2]「我看你也是一位英雄，人說英雄相惜，何苦為難呢。」",
+    "zh_CN": "[em2][口才检定][/em2]「我看你也是一位英雄，人说英雄相惜，何苦为难呢。」",
+    "links": [2063]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "role2",
+    "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，只敢放狠話，灰溜溜逃走了……）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,20);\nModifyData(LifeExp,50);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，只敢放狠話，灰溜溜逃走了……）＊",
+    "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，只敢放狠话，灰溜溜逃走了……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2057,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的態度著實很橫，\n於是對方便決定讓你橫著躺出去……）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=6]＊（你的態度著實很橫，\n於是對方便決定讓你橫著躺出去……）＊",
+    "zh_CN": "[panel=6]＊（你的态度着实很横，\n于是对方便决定让你横着躺出去……）＊",
+    "links": [2069]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "role2",
+    "text": "[panel=6]＊（讚美之語，誰不愛聽呢。\n對方不只放行，還給禮物，英雄兩字真好用……）＊",
+    "Sequence": "ModifyData(FeatExp,MC1,Persuasion,20);\nModifyData(Coin,50);\nModifyData(LifeExp,50);",
+    "Conditions": "IsPassDice()  == true",
+    "zh_TW": "[panel=6]＊（讚美之語，誰不愛聽呢。\n對方不只放行，還給禮物，英雄兩字真好用……）＊",
+    "zh_CN": "[panel=6]＊（赞美之语，谁不爱听呢。\n对方不只放行，还给礼物，英雄两字真好用……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2059,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你是當對方英雄，可對方未必當你是英雄。\n結果就是一拳送你，免費變小丑……）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "zh_TW": "[panel=6]＊（你是當對方英雄，可對方未必當你是英雄。\n結果就是一拳送你，免費變小丑……）＊",
+    "zh_CN": "[panel=6]＊（你是当对方英雄，可对方未必当你是英雄。\n结果就是一拳送你，免费变小丑……）＊",
+    "links": [2069]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "role12",
+    "text": "「此山是我開，此樹是我栽！\n小子！混哪路的！」",
+    "Sequence": "",
+    "zh_TW": "「此山是我開，此樹是我栽！\n小子！混哪路的！」",
+    "zh_CN": "「此山是我开，此树是我栽！\n小子！混哪路的！」",
+    "links": [2054, 2055, 2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "MC1",
+    "text": "「不用廢話，戰吧！」",
+    "Sequence": "",
+    "zh_TW": "「不用廢話，戰吧！」",
+    "zh_CN": "「不用废话，战吧！」",
+    "links": [2065]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,14);",
+    "links": [2064]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,12);",
+    "links": [2066]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "MC1",
+    "text": "「我現在還當你是個人，跟你講道理。再逼我，我怕我會忘了該怎麼做人。到時候，我只會把你當成一塊擋路的垃圾...一掌拍碎。」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "「我現在還當你是個人，跟你講道理。再逼我，我怕我會忘了該怎麼做人。到時候，我只會把你當成一塊擋路的垃圾...一掌拍碎。」",
+    "zh_CN": "「我现在还当你是个人，跟你讲道理。再逼我，我怕我会忘了该怎么做人。到时候，我只会把你当成一块挡路的垃圾...一掌拍碎。」",
+    "links": [2056, 2057]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,19);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進戰鬥",
+    "links": [2073]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "MC1",
+    "text": "「閣下氣度恢弘，絕非無名之輩。你我既無深仇大恨，江湖上好漢惜好漢，又何必在此作生死之搏，徒增傷損？不如就此罷手，不打不相識，交個朋友如何？」",
+    "Sequence": "SetPortrait(MC1,pic=17);",
+    "zh_TW": "「閣下氣度恢弘，絕非無名之輩。你我既無深仇大恨，江湖上好漢惜好漢，又何必在此作生死之搏，徒增傷損？不如就此罷手，不打不相識，交個朋友如何？」",
+    "zh_CN": "「阁下气度恢弘，绝非无名之辈。你我既无深仇大恨，江湖上好汉惜好汉，又何必在此作生死之搏，徒增伤损？不如就此罢手，不打不相识，交个朋友如何？」",
+    "links": [2058, 2059]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role2",
+    "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == true",
+    "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
+    "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，灰溜溜逃走了……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2068,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
+    "Sequence": "ModifyData(Coin,-500);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
+    "zh_CN": "[panel=6]＊（在你身上的钱被掠夺了不少后，\n对方便放你离去……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2069,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,19);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進戰鬥",
+    "links": [2074]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "role2",
+    "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
+    "Sequence": "",
+    "Conditions": "IsPassFight()  == true",
+    "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
+    "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，灰溜溜逃走了……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2071,
+    "actorID": "role2",
+    "text": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
+    "Sequence": "ModifyData(Coin,-500);",
+    "Conditions": "IsPassFight()  == false",
+    "zh_TW": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
+    "zh_CN": "[panel=6]＊（在你身上的钱被掠夺了不少后，\n对方便放你离去……）＊",
+    "links": []
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2053]
+  },
+  {
+    "entryID": 2073,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2067, 2068]
+  },
+  {
+    "entryID": 2074,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [2070, 2071]
+  },
+  {
+    "entryID": 2075,
+    "actorID": "role2",
+    "text": "[panel=6]＊（──行至中途，黃土大地，紅楓隨風飄落，\n其景之愁美，令你不禁停步觀賞……）＊",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "[panel=6]＊（──行至中途，黃土大地，紅楓隨風飄落，\n其景之愁美，令你不禁停步觀賞……）＊",
+    "zh_CN": "[panel=6]＊（──行至中途，黄土大地，红枫随风飘落，\n其景之愁美，令你不禁停步观赏……）＊",
+    "links": [2076]
+  },
+  {
+    "entryID": 2076,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然在朱影之下，你瞥見樹下坐著一名刀客。\n他低著頭沉吟不決，似乎受困於某個難題。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（然在朱影之下，你瞥見樹下坐著一名刀客。\n他低著頭沉吟不決，似乎受困於某個難題。）＊",
+    "zh_CN": "[panel=6]＊（然在朱影之下，你瞥见树下坐着一名刀客。\n他低着头沉吟不决，似乎受困于某个难题。）＊",
+    "links": [2077]
+  },
+  {
+    "entryID": 2077,
+    "actorID": "role85",
+    "text": "「……你，過來。」",
+    "Sequence": "",
+    "zh_TW": "「……你，過來。」",
+    "zh_CN": "「……你，过来。」",
+    "links": [2078]
+  },
+  {
+    "entryID": 2078,
+    "actorID": "MC1",
+    "text": "「咦？我……？」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「咦？我……？」",
+    "zh_CN": "「咦？我……？」",
+    "links": [2079]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "role85",
+    "text": "「別讓我說第二次。」",
+    "Sequence": "",
+    "zh_TW": "「別讓我說第二次。」",
+    "zh_CN": "「别让我说第二次。」",
+    "links": [2080]
+  },
+  {
+    "entryID": 2080,
+    "actorID": "role2",
+    "text": "[panel=6]＊（霎時一陣狂風襲來，刀者的刀發出陣陣龍吟，\n紅葉不再淒美，反而像是索命血脂。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（霎時一陣狂風襲來，刀者的刀發出陣陣龍吟，\n紅葉不再淒美，反而像是索命血脂。）＊",
+    "zh_CN": "[panel=6]＊（霎时一阵狂风袭来，刀者的刀发出阵阵龙吟，\n红叶不再凄美，反而像是索命血脂。）＊",
+    "links": [2081]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [2082]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "role85",
+    "text": "「回答我[em2]『天運人功理不窮，有功無運也難逢。\n因何鎮日紛紛亂？只為陰陽數不同。』[/em2]」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「回答我[em2]『天運人功理不窮，有功無運也難逢。\n因何鎮日紛紛亂？只為陰陽數不同。』[/em2]」",
+    "zh_CN": "「回答我[em2]『天运人功理不穷，有功无运也难逢。\n因何镇日纷纷乱？只为阴阳数不同。』[/em2]」",
+    "links": [2083]
+  },
+  {
+    "entryID": 2083,
+    "actorID": "MC1",
+    "text": "（這……是隱語嗎？）",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "（這……是隱語嗎？）",
+    "zh_CN": "（这……是隐语吗？）",
+    "links": [2084, 2085, 2086, 2087]
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC1",
+    "text": "謎底日晷也。",
+    "Sequence": "",
+    "zh_TW": "謎底日晷也。",
+    "zh_CN": "谜底日晷也。",
+    "links": [2090]
+  },
+  {
+    "entryID": 2085,
+    "actorID": "MC1",
+    "text": "謎底卦盤也。",
+    "Sequence": "",
+    "zh_TW": "謎底卦盤也。",
+    "zh_CN": "谜底卦盘也。",
+    "links": [2090]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "MC1",
+    "text": "謎底算盤也。",
+    "Sequence": "",
+    "zh_TW": "謎底算盤也。",
+    "zh_CN": "谜底算盘也。",
+    "links": [2088]
+  },
+  {
+    "entryID": 2087,
+    "actorID": "MC1",
+    "text": "謎底秤毫也。",
+    "Sequence": "",
+    "zh_TW": "謎底秤毫也。",
+    "zh_CN": "谜底秤毫也。",
+    "links": [2090]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "role85",
+    "text": "「千般萬算，終不如天算。我們會再碰面的……」",
+    "Sequence": "ModifyData(AbilityExp,MC1,Intelligence,50);",
+    "Description": "獲得智力經驗",
+    "zh_TW": "「千般萬算，終不如天算。我們會再碰面的……」",
+    "zh_CN": "「千般万算，终不如天算。我们会再碰面的……」",
+    "links": [2089]
+  },
+  {
+    "entryID": 2089,
+    "actorID": "role2",
+    "text": "[panel=6]＊（楓葉再起，刀者已不見蹤影。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（楓葉再起，刀者已不見蹤影。）＊",
+    "zh_CN": "[panel=6]＊（枫叶再起，刀者已不见踪影。）＊",
+    "links": [2093]
+  },
+  {
+    "entryID": 2090,
+    "actorID": "role85",
+    "text": "「……你也不是我要等的人……」",
+    "Sequence": "",
+    "zh_TW": "「……你也不是我要等的人……」",
+    "zh_CN": "「……你也不是我要等的人……」",
+    "links": [2091]
+  },
+  {
+    "entryID": 2091,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（就見刀客嘆了口氣，\n楓葉吹起，人也跟著不見蹤影。）＊",
+    "zh_CN": "[panel=6]＊（就见刀客叹了口气，\n枫叶吹起，人也跟着不见踪影。）＊",
+    "links": [2092]
+  },
+  {
+    "entryID": 2092,
+    "actorID": "MC1",
+    "text": "「此人究竟是何方高人……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「此人究竟是何方高人……」",
+    "zh_CN": "「此人究竟是何方高人……」",
+    "links": []
+  },
+  {
+    "entryID": 2093,
+    "actorID": "MC1",
+    "text": "「此人究竟是何方高人……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Description": "刀客對話次數=1",
+    "zh_TW": "「此人究竟是何方高人……」",
+    "zh_CN": "「此人究竟是何方高人……」",
+    "links": []
+  },
+  {
+    "entryID": 2094,
+    "actorID": "MC1",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2075]
+  }
+]

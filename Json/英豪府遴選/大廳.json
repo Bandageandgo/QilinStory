@@ -1,0 +1,288 @@
+[
+  {
+    "entryID": 530,
+    "actorID": "MC4",
+    "text": "「諸位遠道而來，實為本府榮幸。\n賈某不喜廢言，便開門見山了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC4,pic=1);",
+    "zh_TW": "「諸位遠道而來，實為本府榮幸。\n賈某不喜廢言，便開門見山了。」",
+    "zh_CN": "「诸位远道而来，实为本府荣幸。\n贾某不喜废言，便开门见山了。」",
+    "links": [531]
+  },
+  {
+    "entryID": 531,
+    "actorID": "MC4",
+    "text": "「我英豪府，顧名思義，只要一時俊傑。」",
+    "Sequence": "SetPortrait(MC4,pic=2);",
+    "zh_TW": "「我英豪府，顧名思義，只要一時俊傑。」",
+    "zh_CN": "「我英豪府，顾名思义，只要一时俊杰。」",
+    "links": [532]
+  },
+  {
+    "entryID": 532,
+    "actorID": "MC4",
+    "text": "「諸位肯定在想這廝初立不久，\n憑什麼大放厥詞。」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nSetPortrait(MC4,pic=4);",
+    "zh_TW": "「諸位肯定在想這廝初立不久，\n憑什麼大放厥詞。」",
+    "zh_CN": "「诸位肯定在想这厮初立不久，\n凭什么大放厥词。」",
+    "links": [533]
+  },
+  {
+    "entryID": 533,
+    "actorID": "MC4",
+    "text": "「是的，本府規模尚小，\n但前景看好。這底氣便在本府來歷。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "「是的，本府規模尚小，\n但前景看好。這底氣便在本府來歷。」",
+    "zh_CN": "「是的，本府规模尚小，\n但前景看好。这底气便在本府来历。」",
+    "links": [534]
+  },
+  {
+    "entryID": 534,
+    "actorID": "role2",
+    "text": "[panel=6]＊（正當眾人凝神要聽賈詡接下之言，\n有一書生上前，年紀之輕，立刻吸引眾人目光。\n）＊",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "[panel=6]＊（正當眾人凝神要聽賈詡接下之言，\n有一書生上前，年紀之輕，立刻吸引眾人目光。\n）＊",
+    "zh_CN": "[panel=6]＊（正当众人凝神要听贾诩接下之言，\n有一书生上前，年纪之轻，立刻吸引众人目光。\n）＊",
+    "links": [535]
+  },
+  {
+    "entryID": 535,
+    "actorID": "role31",
+    "text": "[panel=2]「當年漢室初建，九黎肆虐，\n三傑為救蒼生，奏請廣納英雄討伐。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「當年漢室初建，九黎肆虐，\n三傑為救蒼生，奏請廣納英雄討伐。」",
+    "zh_CN": "[panel=2]「当年汉室初建，九黎肆虐，\n三杰为救苍生，奏请广纳英雄讨伐。」",
+    "links": [547]
+  },
+  {
+    "entryID": 536,
+    "actorID": "role31",
+    "text": "[panel=2]「不過按記載，歷經長年亂局，傳承早已斷了。如今之府，恐怕名非其實。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「不過按記載，歷經長年亂局，傳承早已斷了。如今之府，恐怕名非其實。」",
+    "zh_CN": "[panel=2]「不过按记载，历经长年乱局，传承早已断了。如今之府，恐怕名非其实。」",
+    "links": [555]
+  },
+  {
+    "entryID": 538,
+    "actorID": "MC4",
+    "text": "「有意思的傢伙，你叫什麼名字？」",
+    "Sequence": "EnableCharacterExpression(1,MC4,Proud);",
+    "zh_TW": "「有意思的傢伙，你叫什麼名字？」",
+    "zh_CN": "「有意思的家伙，你叫什么名字？」",
+    "links": [539]
+  },
+  {
+    "entryID": 539,
+    "actorID": "MC7",
+    "text": "[panel=2]「穎川郭嘉。」",
+    "Sequence": "SetPortrait(MC1,pic=6);\nSetPortrait(MC7,pic=4);\nDisableCharacterExpression(0);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=2]「穎川郭嘉。」",
+    "zh_CN": "[panel=2]「颖川郭嘉。」",
+    "links": [556]
+  },
+  {
+    "entryID": 540,
+    "actorID": "MC4",
+    "text": "「呵呵，誠如他所言，正統傳承已沒，\n賈某不過是個竊名之徒，本府更無朝廷支持。」",
+    "Sequence": "OpenPanel(2, close);\nSetPortrait(MC1,pic=3);\nSetPortrait(MC4,pic=1);",
+    "zh_TW": "「呵呵，誠如他所言，正統傳承已沒，\n賈某不過是個竊名之徒，本府更無朝廷支持。」",
+    "zh_CN": "「呵呵，诚如他所言，正统传承已没，\n贾某不过是个窃名之徒，本府更无朝廷支持。」",
+    "links": [548]
+  },
+  {
+    "entryID": 541,
+    "actorID": "MC4",
+    "text": "「我們這有四個人，\n只要諸位[em2]在2月前取得一位認可[/em2]，便算過關。」",
+    "Sequence": "SetPortrait(MC4,pic=1);\nEnableCharacterExpression(1,MC4,Idea);",
+    "zh_TW": "「我們這有四個人，\n只要諸位[em2]在2月前取得一位認可[/em2]，便算過關。」",
+    "zh_CN": "「我们这有四个人，\n只要诸位[em2]在2月前取得一位认可[/em2]，便算过关。」",
+    "links": [549]
+  },
+  {
+    "entryID": 542,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡之言令人驚愕。\n不一會，大部分的人便嘴上咒罵，紛紛離去……）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Meditate);",
+    "zh_TW": "[panel=6]＊（賈詡之言令人驚愕。\n不一會，大部分的人便嘴上咒罵，紛紛離去……）＊",
+    "zh_CN": "[panel=6]＊（贾诩之言令人惊愕。\n不一会，大部分的人便嘴上咒骂，纷纷离去……）＊",
+    "links": [557]
+  },
+  {
+    "entryID": 543,
+    "actorID": "MC3",
+    "text": "「[em2]英豪府的練武場[/em2]，等你們。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "「[em2]英豪府的練武場[/em2]，等你們。」",
+    "zh_CN": "「[em2]英豪府的练武场[/em2]，等你们。」",
+    "links": [553]
+  },
+  {
+    "entryID": 544,
+    "actorID": "MC1",
+    "text": "「四個人……也就是四種不同考題嗎……」",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=9);",
+    "Script": "SetQuestEntryState(\"C1M1\", 2, \"active\")",
+    "Description": "任務更新",
+    "zh_TW": "「四個人……也就是四種不同考題嗎……」",
+    "zh_CN": "「四个人……也就是四种不同考题吗……」",
+    "links": [559]
+  },
+  {
+    "entryID": 546,
+    "actorID": "MC4",
+    "text": "「留下的人，賈某就不再贅言。\n遴選如何選，不必想得太複雜。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "「留下的人，賈某就不再贅言。\n遴選如何選，不必想得太複雜。」",
+    "zh_CN": "「留下的人，贾某就不再赘言。\n遴选如何选，不必想得太复杂。」",
+    "links": [541]
+  },
+  {
+    "entryID": 547,
+    "actorID": "role31",
+    "text": "[panel=2]「高祖深知其害，全力支持建立英豪府遏止災禍。英豪府也就此傳承，以防怪物再現。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「高祖深知其害，全力支持建立英豪府遏止災禍。英豪府也就此傳承，以防怪物再現。」",
+    "zh_CN": "[panel=2]「高祖深知其害，全力支持建立英豪府遏止灾祸。英豪府也就此传承，以防怪物再现。」",
+    "links": [552]
+  },
+  {
+    "entryID": 548,
+    "actorID": "MC4",
+    "text": "「但名非名，實虛實。\n是否繼續參加，諸位有智，自行判斷吧。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "「但名非名，實虛實。\n是否繼續參加，諸位有智，自行判斷吧。」",
+    "zh_CN": "「但名非名，实虚实。\n是否继续参加，诸位有智，自行判断吧。」",
+    "links": [542]
+  },
+  {
+    "entryID": 549,
+    "actorID": "MC2",
+    "text": "「嘿！我會在[em2]雲中的某處上古遺跡[/em2]等候。至於詳細位置，你們自己有手有腳吧。」",
+    "Sequence": "SetPortrait(MC2,pic=1);\nDisableCharacterExpression(1);",
+    "zh_TW": "「嘿！我會在[em2]雲中的某處上古遺跡[/em2]等候。至於詳細位置，你們自己有手有腳吧。」",
+    "zh_CN": "「嘿！我会在[em2]云中的某处上古遗迹[/em2]等候。至于详细位置，你们自己有手有脚吧。」",
+    "links": [543]
+  },
+  {
+    "entryID": 550,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_41);\nContinue()@Message(EndEntryEvent);",
+    "Description": "大廳演出,音樂",
+    "links": [4231]
+  },
+  {
+    "entryID": 552,
+    "actorID": "MC4",
+    "text": "「小伙子有做功課啊。」",
+    "Sequence": "SetPortrait(MC4,pic=4);",
+    "zh_TW": "「小伙子有做功課啊。」",
+    "zh_CN": "「小伙子有做功课啊。」",
+    "links": [536]
+  },
+  {
+    "entryID": 553,
+    "actorID": "MC5",
+    "text": "「想找我或賈詡，就來[em2]英豪府[/em2]吧。\n言盡於此，各位可以開始了。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "「想找我或賈詡，就來[em2]英豪府[/em2]吧。\n言盡於此，各位可以開始了。」",
+    "zh_CN": "「想找我或贾诩，就来[em2]英豪府[/em2]吧。\n言尽于此，各位可以开始了。」",
+    "links": [544]
+  },
+  {
+    "entryID": 554,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "大廳開場",
+    "links": [4232]
+  },
+  {
+    "entryID": 555,
+    "actorID": "MC22",
+    "text": "「斷了？\n難道是指眼前英豪府是假的不是……？」",
+    "Sequence": "SetPortrait(MC1,pic=9);\nSetPortrait(MC22,pic=9);",
+    "zh_TW": "「斷了？\n難道是指眼前英豪府是假的不是……？」",
+    "zh_CN": "「断了？\n难道是指眼前英豪府是假的不是……？」",
+    "links": [538]
+  },
+  {
+    "entryID": 556,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nModifyData(AddNewCharacter,MC7);\nModifyData(IsAbleToJoinTeam,MC7,flase);\nShowHint(Character,MC7);\nSetContinueMode(original)@Message(EndHintCharacter);",
+    "Description": "獲得人物情報",
+    "links": [540]
+  },
+  {
+    "entryID": 557,
+    "actorID": "MC20",
+    "text": "「看來都是衝著名頭而來啊……不過，非正統又如何？實力是裝不來的，有這點就足矣。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);",
+    "zh_TW": "「看來都是衝著名頭而來啊……不過，非正統又如何？實力是裝不來的，有這點就足矣。」",
+    "zh_CN": "「看来都是冲著名头而来啊……不过，非正统又如何？实力是装不来的，有这点就足矣。」",
+    "links": [558]
+  },
+  {
+    "entryID": 558,
+    "actorID": "MC22",
+    "text": "「對呀對呀！最好多走幾個，少點人跟我們搶，等會兒遴選就輕鬆多啦！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_TW": "「對呀對呀！最好多走幾個，少點人跟我們搶，等會兒遴選就輕鬆多啦！」",
+    "zh_CN": "「对呀对呀！最好多走几个，少点人跟我们抢，等会儿遴选就轻松多啦！」",
+    "links": [546]
+  },
+  {
+    "entryID": 559,
+    "actorID": "MC22",
+    "text": "「沒錯！規則並沒有說要全部通過，我們只要挑一個最輕鬆的考官，然後通過他的考驗就行了。我們現在先去探探這四個人的口風，看看他們都出些什麼考題再決定吧！」",
+    "Sequence": "",
+    "zh_TW": "「沒錯！規則並沒有說要全部通過，我們只要挑一個最輕鬆的考官，然後通過他的考驗就行了。我們現在先去探探這四個人的口風，看看他們都出些什麼考題再決定吧！」",
+    "zh_CN": "「没错！规则并没有说要全部通过，我们只要挑一个最轻松的考官，然后通过他的考验就行了。我们现在先去探探这四个人的口风，看看他们都出些什么考题再决定吧！」",
+    "links": [560]
+  },
+  {
+    "entryID": 560,
+    "actorID": "MC20",
+    "text": "「嘿嘿，兄弟，果然在這裡見到你啦，既然要挑戰遴選，多個幫手總是好的。」",
+    "Sequence": "",
+    "zh_TW": "「嘿嘿，兄弟，果然在這裡見到你啦，既然要挑戰遴選，多個幫手總是好的。」",
+    "zh_CN": "「嘿嘿，兄弟，果然在这里见到你啦，既然要挑战遴选，多个帮手总是好的。」",
+    "links": [562]
+  },
+  {
+    "entryID": 561,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雍仔加入隊伍。）＊",
+    "Sequence": "ModifyData(IsAbleToJoinTeam,MC20,true);\nModifyData(IsInTeam,MC20,true);",
+    "Description": "雍仔加入隊伍",
+    "zh_TW": "[panel=6]＊（雍仔加入隊伍。）＊",
+    "zh_CN": "[panel=6]＊（雍仔加入队伍。）＊",
+    "links": []
+  },
+  {
+    "entryID": 562,
+    "actorID": "MC20",
+    "text": "「我雍仔別的沒有，就是有一身的義氣！咱們組個隊，把這遴選給穩穩地拿下！」",
+    "Sequence": "",
+    "zh_TW": "「我雍仔別的沒有，就是有一身的義氣！咱們組個隊，把這遴選給穩穩地拿下！」",
+    "zh_CN": "「我雍仔别的没有，就是有一身的义气！咱们组个队，把这遴选给稳稳地拿下！」",
+    "links": [561]
+  },
+  {
+    "entryID": 4231,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Description": "淡出",
+    "links": [530]
+  },
+  {
+    "entryID": 4232,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Description": "淡入",
+    "links": [550]
+  }
+]
