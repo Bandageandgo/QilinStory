@@ -174,12 +174,12 @@
 -   觸發實際的自動擲骰時，`Sequence` **不是**只寫 `BeginDiceRoll(Auto,FeatID,難度);`，更**沒有** `DiceRoll(...)` 這個指令。必須依 `給AI看的指南/擲骰指令轉換規則.md` 使用完整四段包裝，例如自動洞悉難度 12：
     ```
     SetContinueMode(false);
-    SetContinueMode(true)@Message(EndRoll);
+    SetContinueMode(original)@Message(EndRoll);
     Continue()@Message(EndRoll);
     BeginDiceRoll(Auto,InsightCheck,12);
     ```
     應遵循以下兩步驟結構：
-    1.  **檢定觸發節點**: 創建一個節點，其 `actorID` 通常為 `"MC0"` (或代表系統的ID)，`text` 欄位為**空字串 `""`**。`Sequence` 欄位**不能只寫** `BeginDiceRoll(Auto,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」使用完整包裝：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,FeatID,難度);`。此節點必須包含 `Description` 說明其為檢定觸發點。
+    1.  **檢定觸發節點**: 創建一個節點，其 `actorID` 通常為 `"MC0"` (或代表系統的ID)，`text` 欄位為**空字串 `""`**。`Sequence` 欄位**不能只寫** `BeginDiceRoll(Auto,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」使用完整包裝：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,FeatID,難度);`。此節點必須包含 `Description` 說明其為檢定觸發點。
         -   `links`: 此節點的 `links` 應指向緊隨其後的「空內容緩衝節點」。
     2.  **空內容緩衝節點**: 緊隨「檢定觸發節點」之後，必須插入一個**新的節點**（擲骰節點與成功／失敗分支之間**固定隔這一個節點**，`Conditions` 不可掛在這裡）。此節點的 `actorID` 為 `"MC0"`，`text` 為**空字串 `""`**；因為沒有對話可讓玩家點擊推進，`Sequence` **開頭必須為 `Continue();`**（否則擲骰結束後畫面會卡住、無法繼續），若無其他指令則 `Sequence` 僅為 `"Continue();"`。此節點必須包含 `Description` 說明其用途。
         -   `links`: 此「空內容緩衝節點」的 `links` 才指向檢定成功和失敗的實際劇情分支節點（或教學提示等）。
@@ -211,7 +211,7 @@
         -   `Sequence`: 通常為空字串 `""`。
         -   `Description`: 應包含描述此選項用途的文字，例如："選項1：魅力檢定"。
         -   `links`: **指向一個緊隨其後的、專用於觸發該選項檢定的「空對話擲骰節點」**。如果該選項無檢定，則直接指向選擇後的劇情分支。
-    4.  **空對話擲骰節點 (手動擲骰觸發)**: **緊隨在帶檢定的『選項節點』之後**，必須插入一個特殊的「空對話」JSON節點。此節點的 `text` 欄位為空字串 (`""`)，其 `Sequence` 欄位**不能只寫** `BeginDiceRoll(Manual,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md` 使用完整包裝：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,FeatID,難度);`。
+    4.  **空對話擲骰節點 (手動擲骰觸發)**: **緊隨在帶檢定的『選項節點』之後**，必須插入一個特殊的「空對話」JSON節點。此節點的 `text` 欄位為空字串 (`""`)，其 `Sequence` 欄位**不能只寫** `BeginDiceRoll(Manual,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md` 使用完整包裝：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,FeatID,難度);`。
         -   `actorID`: 通常為 `0` 或 `-1` (系統執行)。
         -   `text`: `""` (空字串)。
         -   `Description`: 應包含描述此節點用途的文字，例如："選項1的空對話擲骰節點"。
@@ -262,6 +262,8 @@
 
 ### 4.3 戰鬥相關指令 (依據 `給AI看的指南/戰鬥指令轉換規則.md`)
 
+> **⚠ 2026-08-27 更正**：本節與 §4.1 的四段包裝一律用 **`SetContinueMode(original)`**，不是 `true`（全案 `Json/` 戰鬥 60 處、擲骰 132 處皆為 `original`，零處 `true`）。本檔範例已全數改正。
+
 ⚠️ **禁止**只寫 `BeginFight(Combat,ID);` 或舊指令 `BeginCombat(...)`。戰鬥與擲骰一樣必須用 `SetContinueMode` 包住，否則打完畫面會卡住。**一場戰鬥固定四個對話節點**。細節與場次表見 `給AI看的指南/戰鬥指令轉換規則.md`。
 
 -   Markdown 的 `**Sequence SetContinueMode(false);BeginFight(...)...**` 轉成一個**獨立空對話節點**（`text: ""`），**不得**與上一句的 `SetPortrait`／表情合併。
@@ -271,7 +273,7 @@
 #### 4.3.1 單場戰鬥（四個節點）
 
 1.  **戰鬥觸發節點**: `actorID` 為 `"MC0"`（或 `0`），`text` 為 `""`。`Sequence` 必須寫滿四段：
-    `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`
+    `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`
     -   `Description`: 例如 `"戰鬥觸發節點：藍焰巨蛇"`。
     -   `links`: **只指向**緊隨其後的緩衝節點（不要在這裡分叉勝／敗）。
 2.  **緩衝節點**: `actorID` `"MC0"`，`text` `""`，`Sequence` **只有** `"Continue();"`。
@@ -286,7 +288,7 @@
   "entryID": 201,
   "actorID": "MC0",
   "text": "",
-  "Sequence": "SetContinueMode(false);BeginFight(Combat,77);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);",
+  "Sequence": "SetContinueMode(false);BeginFight(Combat,77);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
   "Description": "戰鬥觸發節點：藍焰巨蛇",
   "links": [202]
 }
@@ -327,7 +329,7 @@
 沒有合成場次。**每一場都是完整的四個節點**；第一場勝利才開第二場。第二場觸發節點的 Sequence **不要**再加開頭的 `Continue();`（第一場緩衝句已經 `Continue();` 過了）。
 
 1.  **第一場（例如黑狼 `76`）**: 觸發 → 緩衝。緩衝的 `links` 指向「第二場觸發（帶 `IsPassFight() == true`）」與「失敗」。
-2.  **第二場觸發**: 此節點同時是第一場的勝利分支：`"Conditions": "IsPassFight() == true"`，`Sequence` 為 `SetContinueMode(false);BeginFight(Combat,64);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`。`links` 只指向第二場緩衝。
+2.  **第二場觸發**: 此節點同時是第一場的勝利分支：`"Conditions": "IsPassFight() == true"`，`Sequence` 為 `SetContinueMode(false);BeginFight(Combat,64);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`。`links` 只指向第二場緩衝。
 3.  **第二場緩衝**: `Sequence` 為 `"Continue();"`。`links` 指向「兩場都贏」與「失敗」。
 4.  **兩場都贏**: `"Conditions": "IsPassFight() == true"`。
 5.  **失敗**: `"Conditions": "IsPassFight() == false"`（第一場或第二場戰敗皆可指向同一失敗節點，或各自寫失敗旁白）。
@@ -446,8 +448,8 @@
     -   **能用純樹狀分岔解決的，不要記狀態。** 子羽線六支已於 2026-08-25 拍板改為零旗標（見 `@角色設定/子羽.md`、`劇情/歸姓.md`）。
     -   **⚠ 大量舊創作稿仍寫著 `SetFlag(...)`**（24 份 .md、258 處）。**那些是錯的，轉檔時一律改寫成上面兩種寫法**，不要照抄。現行 `Json/` 裡唯一殘留的是 `大地圖/水濂洞.json` 的 `ZhenFamily_*` 一組（10 個節點），待處理。
 
--   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`，也不得掛 `Script`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
--   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
+-   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`，也不得掛 `Script`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
+-   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
 -   **養成任務對話背景圖（必守）**：`Json/主線事件/`、`Json/探索事件/` 的每段對話，第一格 `Sequence` 開頭 `EnableDialogueBG(ID);`，每條結尾補獨立空格 `DisableDialogueBG();Continue();`（`actorID "0"`、`text ""`）。漏關＝回養成介面看不到 UI。詳見 `給AI看的指南/畫面指令轉換規則.md` §1，本指南 §3.7。
 -   **轉場固定寫法（必守）**：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景@1］;SetContinueMode(original)@2.5;Continue()@2.5;`，獨立空格、四段不多不少、換景一律掛 `@1`、恢復點擊一律 `original`。裸寫 `EnableDialogueBG`／`PlayFeelFeedback` 不包四段都是錯。詳見 `給AI看的指南/畫面指令轉換規則.md` §2，本指南 §3.8。
 -   **畫面特效有開就有關（必守）**：每個 `PlayOrStopParticle(X,Play)` 往下必須找得到 `PlayOrStopParticle(X,Stop)` 或 `StopAllParticle()`，預設放下一格開頭。詳見 `給AI看的指南/畫面指令轉換規則.md` §3，本指南 §3.9。
@@ -502,7 +504,7 @@
     "entryID": 105,
     "actorID": "MC0",
     "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,CharismaCheck,5);",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,CharismaCheck,5);",
     "links": [106],
     "Description": "選項1的空對話擲骰節點"
   },
