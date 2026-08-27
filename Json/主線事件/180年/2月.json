@@ -777,5 +777,51 @@
     "zh_TW": "[panel=6]＊（發現趙王洞）＊",
     "zh_CN": "[panel=6]＊（发现赵王洞）＊",
     "links": [4062]
+  },
+  {
+    "entryID": 4088,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"C1M1\", 4, \"success\")",
+    "Description": "英豪府大廳門口",
+    "links": [4089, 4092]
+  },
+  {
+    "entryID": 4089,
+    "actorID": "MC1",
+    "text": "「離遴選期限，還有段時間……」",
+    "Sequence": "",
+    "Description": "條件待作者手工設定：CurrentQuestEntryState(\"C1M1\", 4) == \"success\"",
+    "zh_TW": "「離遴選期限，還有段時間……」",
+    "zh_CN": "「离遴选期限，还有段时间……」",
+    "links": [4090, 4091]
+  },
+  {
+    "entryID": 4090,
+    "actorID": "MC1",
+    "text": "「時間寶貴，再多加善用吧。」",
+    "Sequence": "",
+    "zh_TW": "「時間寶貴，再多加善用吧。」",
+    "zh_CN": "「时间宝贵，再多加善用吧。」",
+    "links": []
+  },
+  {
+    "entryID": 4091,
+    "actorID": "MC1",
+    "text": "「罷了，也無它事，就在這待到[em2]二月上旬[/em2]遴選結束吧。」",
+    "Sequence": "",
+    "zh_TW": "「罷了，也無它事，就在這待到[em2]二月上旬[/em2]遴選結束吧。」",
+    "zh_CN": "「罢了，也无它事，就在这待到[em2]二月上旬[/em2]遴选结束吧。」",
+    "links": [4072]
+  },
+  {
+    "entryID": 4092,
+    "actorID": "MC8",
+    "text": "「表哥，你還沒獲得任何一名考官的認可呢，要是耽誤了時間，我們這趟可就白跑了！」",
+    "Sequence": "",
+    "zh_TW": "「表哥，你還沒獲得任何一名考官的認可呢，要是耽誤了時間，我們這趟可就白跑了！」",
+    "zh_CN": "「表哥，你还没获得任何一名考官的认可呢，要是耽误了时间，我们这趟可就白跑了！」",
+    "links": []
   }
 ]
