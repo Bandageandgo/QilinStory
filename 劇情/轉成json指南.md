@@ -404,7 +404,16 @@
 -   **表情特效的禁用 (`DisableCharacterExpression`) 必須準確地放在下一個節點的 `Sequence` 開頭。**
 -   `links` 的指向必須準確，以保證對話流程的正確性。
 -   最終生成的JSON中，`Sequence` 字符串內的指令順序也很重要：一般對話節點通常是 `Disable...` (如果有) -> `SetPortrait` -> `Enable...` (如果有) -> `ModifyData` (如果適用)。**`BeginDiceRoll`／`BeginFight` 不得夾在立繪／表情同一條 Sequence 裡**，必須各自單獨放在空對話節點，並使用完整包裝。擲骰成敗用 `IsPassDice()`、戰鬥勝負用 `IsPassFight()`，皆寫在獨立的 `Conditions` 欄位，不要混入 `Sequence`。
--   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`、`SetFlag`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
+-   **⛔ `SetFlag`／`GetFlag` 不是引擎指令，一律禁用（已定，2026-08-27 作者指出）。** 對話**不能有旗標**。要記住「玩家做過什麼」只有兩條合法途徑：
+    1.  **變數**：寫在 **`Script`** 欄位——`Variable["名稱"] = true`／`Variable["名稱"] = Variable["名稱"] + 1`；讀在 **`Conditions`** 欄位——`Variable["名稱"] == true`、`Variable["名稱"] >= 2`，多條件用 `and (…)` 串接。
+        **⚠ 變數走 `Script`，不走 `Sequence`。** `Sequence` 只放立繪、表情、音效、演出、`ModifyData`、`BeginDiceRoll`／`BeginFight`。
+    2.  **任務狀態**：`SetQuestState("代號","active"／"success")`、`SetQuestEntryState("代號", N, "…")` 寫在 `Script`；讀用 `CurrentQuestState("代號") == "…"`、`CurrentQuestEntryState("代號", N) == "…"` 寫在 `Conditions`。
+        **⚠ 任務 entry 是玩家在任務日誌看得到的東西**，不要為了記一個內部狀態去多開 entry（`劇情/水濂洞.md` 2026-08-26 拍板：這種情形改用層層推導的分岔）。
+    -   **⛔ AI 不得自創變數（已定，2026-08-27 作者指出）。** 變數名不是隨手取的字串——**要先在 Unity 的變數表裡存在**，JSON 才讀得到。轉檔時：**①優先沿用既有變數**（全案現有 44 個，可用 `grep -o 'Variable\["[^"]*"\]' Json/ -r` 列出）；**②真的需要新的，就留 `＿＿` 佔位並列進待辦，由作者命名並建好，不得自己編一個寫進 JSON。**
+    -   **能用純樹狀分岔解決的，不要記狀態。** 子羽線六支已於 2026-08-25 拍板改為零旗標（見 `@角色設定/子羽.md`、`劇情/歸姓.md`）。
+    -   **⚠ 大量舊創作稿仍寫著 `SetFlag(...)`**（24 份 .md、258 處）。**那些是錯的，轉檔時一律改寫成上面兩種寫法**，不要照抄。現行 `Json/` 裡唯一殘留的是 `大地圖/水濂洞.json` 的 `ZhenFamily_*` 一組（10 個節點），待處理。
+
+-   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`，也不得掛 `Script`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
 -   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
 -   **只有特定類型的節點才應包含Description欄位**，包括檢定、擲骰、戰鬥、任務、選項等功能性節點。普通對話節點不應包含Description欄位。
 -   **對話文本統一性**: 確保所有對話文本的引號「」處理一致。根據1.1節規則，標準角色對話應包含引號。

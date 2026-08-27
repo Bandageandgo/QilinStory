@@ -294,7 +294,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（劍光落下，李大山停止了呼吸。人像額頭上那隻紅眼驟然一縮，紅光轉暗，卻始終不曾熄——你伸手將它從泥胎裡摳出，入手竟是溫的。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(Valuable,Player,EvilGodFragment,1);",
-    "Description": "獲得惡神碎片",
+    "Description": "獲得惡神碎片。⚠ 新貴重品 EvilGodFragment（2026-08-27 自創），Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片）。",
     "zh_TW": "[panel=6]＊（劍光落下，李大山停止了呼吸。人像額頭上那隻紅眼驟然一縮，紅光轉暗，卻始終不曾熄——你伸手將它從泥胎裡摳出，入手竟是溫的。）＊",
     "zh_CN": "[panel=6]＊（剑光落下，李大山停止了呼吸。人像额头上那只红眼骤然一缩，红光转暗，却始终不曾熄——你伸手将它从泥胎里抠出，入手竟是温的。）＊",
     "links": [3881]
@@ -322,7 +322,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（黑氣撞進胸口，五臟六腑像被人攥住了擰。你咬牙運起長生經，硬生生扛下這一擊——喉頭一甜，眼前發黑，卻終究沒有倒下。那顆「紅眼」滾落在碎泥之中，紅光一明一滅，仍是活的。你俯身將它拾起，入手燙得幾乎握不住。）＊",
     "Sequence": "ModifyData(Valuable,Player,EvilGodFragment,1);\nModifyData(AbilityExp,Player,Strength,-500);",
-    "Description": "獲得惡神碎片、硬扛黑氣：武力當前掉 5 級（−500 經驗）",
+    "Description": "獲得惡神碎片、硬扛黑氣：武力當前掉 5 級（−500 經驗）。⚠ 新貴重品 EvilGodFragment（2026-08-27 自創），Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片）。",
     "zh_CN": "[panel=6]＊（黑气撞进胸口，五脏六腑像被人攥住了拧。你咬牙运起长生经，硬生生扛下这一击——喉头一甜，眼前发黑，却终究没有倒下。那颗「红眼」滚落在碎泥之中，红光一明一灭，仍是活的。你俯身将它拾起，入手烫得几乎握不住。）＊",
     "links": [61]
   },
@@ -437,7 +437,7 @@
     "text": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著教人心寒的快意，重新蟄伏。祭壇上那隻紅眼映著滿地血色，光芒不減反盛。你走上前去，將它從泥胎裡挖了下來。）＊",
     "Sequence": "ModifyData(Valuable,Player,EvilGodFragment,1);",
     "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 2",
-    "Description": "殺意+2、獲得惡神碎片",
+    "Description": "殺意+2、獲得惡神碎片。⚠ 新貴重品 EvilGodFragment（2026-08-27 自創），Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片）。",
     "zh_CN": "[panel=6]＊（随着生命的消逝，那股杀意终于饱餐一顿，带着教人心寒的快意，重新蛰伏。祭坛上那只红眼映着满地血色，光芒不减反盛。你走上前去，将它从泥胎里挖了下来。）＊",
     "links": [78]
   },

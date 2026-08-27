@@ -2,25 +2,25 @@
   {
     "entryID": 1,
     "actorID": "MC1",
-    "text": "「好重的血味……這裡就是最深處了嗎？感覺連呼吸都變得困難了。」",
+    "text": "「好重的血味……這裡就是最深處了嗎？連呼吸都變得困難了。」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
     "Description": "開場",
-    "zh_CN": "「好重的血味……这里就是最深处了吗？感觉连呼吸都变得困难了。」",
+    "zh_CN": "「好重的血味……这里就是最深处了吗？连呼吸都变得困难了。」",
     "links": [2]
   },
   {
     "entryID": 2,
     "actorID": "MC22",
-    "text": "「哇！我的羅盤在這裡指針亂轉！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=4);\nEnableCharacterExpression(2,MC22,Idel);",
-    "zh_CN": "「哇！我的罗盘在这里指针乱转！」",
+    "text": "「哇！我的羅盤到了這兒就亂轉！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=4);\nEnableCharacterExpression(2,MC22,Idea);",
+    "zh_CN": "「哇！我的罗盘到了这儿就乱转！」",
     "links": [3]
   },
   {
     "entryID": 3,
     "actorID": "role127",
     "text": "「你們兩個小心點，不知前方還有什麼機關。」",
-    "Sequence": "DisableCharacterExpression(1);",
+    "Sequence": "DisableCharacterExpression(2);",
     "zh_CN": "「你们两个小心点，不知前方还有什么机关。」",
     "links": []
   },
@@ -52,9 +52,9 @@
   {
     "entryID": 7,
     "actorID": "role2",
-    "text": "[panel=6]＊（那根本不是什麼佛，那是來自深淵的邪祟！）＊",
+    "text": "[panel=6]＊（那根本不是什麼佛，那是幽冥深處的邪祟！）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（那根本不是什么佛，那是来自深渊的邪祟！）＊",
+    "zh_CN": "[panel=6]＊（那根本不是什么佛，那是幽冥深处的邪祟！）＊",
     "links": [8]
   },
   {
@@ -68,9 +68,9 @@
   {
     "entryID": 9,
     "actorID": "role2",
-    "text": "[panel=6]＊（吾的身體開始異變，皮膚長出了青色的鱗片……）＊",
+    "text": "[panel=6]＊（吾身漸生變異，膚上竟生青鱗……）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（吾的身体开始异变，皮肤长出了青色的鳞片……）＊",
+    "zh_CN": "[panel=6]＊（吾身渐生变异，肤上竟生青鳞……）＊",
     "links": [10]
   },
   {
@@ -133,9 +133,9 @@
   {
     "entryID": 18,
     "actorID": "role2",
-    "text": "[panel=6]＊（石頭上竟插著兩把造型奇異的劍，一長一短。但劍身都彎曲如蛇，且劍柄處雕刻著栩栩如生的毒蛇吐信圖案，透著一股森寒之氣。）＊",
+    "text": "[panel=6]＊（石頭上竟插著兩把形制奇古的劍，一長一短。但劍身都彎曲如蛇，且劍柄處雕刻著栩栩如生的毒蛇吐信圖案，透著一股森寒之氣。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（石头上竟插着两把造型奇异的剑，一长一短。但剑身都弯曲如蛇，且剑柄处雕刻着栩栩如生的毒蛇吐信图案，透着一股森寒之气。）＊",
+    "zh_CN": "[panel=6]＊（石头上竟插着两把形制奇古的剑，一长一短。但剑身都弯曲如蛇，且剑柄处雕刻着栩栩如生的毒蛇吐信图案，透着一股森寒之气。）＊",
     "links": [19]
   },
   {
@@ -158,7 +158,7 @@
     "entryID": 24,
     "actorID": "role2",
     "text": "[panel=6]＊（只聽「錚」的一聲清脆劍鳴，蛇形怪劍應聲而出，劍刃在昏暗的光線下閃爍著幽綠的寒芒。）＊",
-    "Sequence": ";ModifyData(AbilityExp,Player,Ability_STR,10);",
+    "Sequence": "ModifyData(AbilityExp,Player,Ability_STR,10);",
     "Description": "檢定成功",
     "zh_CN": "[panel=6]＊（只听「铮」的一声清脆剑鸣，蛇形怪剑应声而出，剑刃在昏暗的光线下闪烁着幽绿的寒芒。）＊",
     "links": [25]
@@ -232,7 +232,7 @@
     "entryID": 34,
     "actorID": "MC22",
     "text": "「哇！竟然還真有藏寶圖！大俠，等咱們出去之後，一定要去找看看！」",
-    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Idea);",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Idea);",
     "zh_CN": "「哇！竟然还真有藏宝图！大侠，等咱们出去之后，一定要去找看看！」",
     "links": [2058]
   },
@@ -240,7 +240,7 @@
     "entryID": 37,
     "actorID": "MC20",
     "text": "「孽畜還不住手！本道長乃茅山嫡傳，你敢動我試試——」",
-    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,role89,Proud);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_13);",
+    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Proud);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_13);",
     "Description": "音樂",
     "zh_CN": "「孽畜还不住手！本道长乃茅山嫡传，你敢动我试试——」",
     "links": [2061]
@@ -248,17 +248,17 @@
   {
     "entryID": 38,
     "actorID": "MC20",
-    "text": "「等、等等！先別動爪子！火氣別那麼大，咱們萬事好商量阿！」",
+    "text": "「等、等等！先別動爪子！火氣別那麼大，咱們萬事好商量啊！」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Nervous_2);",
-    "zh_CN": "「等、等等！先别动爪子！火气别那么大，咱们万事好商量阿！」",
+    "zh_CN": "「等、等等！先别动爪子！火气别那么大，咱们万事好商量啊！」",
     "links": [39]
   },
   {
     "entryID": 39,
     "actorID": "role2",
-    "text": "[panel=6]＊（就在千鈞一髮之際，赫連娜娜眼珠一轉突然從懷中摸出一串銅錢，猛地朝反方向的石壁擲去。「叮、叮叮叮」的一連脆響，那妖物瞬猛地轉過頭去。）＊",
+    "text": "[panel=6]＊（就在千鈞一髮之際，赫連娜娜眼珠一轉突然從懷中摸出一串銅錢，猛地朝反方向的石壁擲去。「叮、叮叮叮」的一連脆響，那妖物猛地轉過頭去。）＊",
     "Sequence": "PlayOrStopParticle(Smoke_Dust,Play);\nDisableCharacterExpression(1);\nAudioControl(PlaySFX,Others_CoinDroping);",
-    "zh_CN": "[panel=6]＊（就在千钧一发之际，赫连娜娜眼珠一转突然从怀中摸出一串铜钱，猛地朝反方向的石壁掷去。「叮、叮叮叮」的一连脆响，那妖物瞬猛地转过头去。）＊",
+    "zh_CN": "[panel=6]＊（就在千钧一发之际，赫连娜娜眼珠一转突然从怀中摸出一串铜钱，猛地朝反方向的石壁掷去。「叮、叮叮叮」的一连脆响，那妖物猛地转过头去。）＊",
     "links": [40]
   },
   {
@@ -272,9 +272,9 @@
   {
     "entryID": 41,
     "actorID": "role2",
-    "text": "[panel=6]＊（你心領神會地快速滑步向前並躍起，緊接者劍光一閃，精準地挑斷了綁住雍仔的粗繩。雍仔踉蹌落地，揉著手腕連退兩步，隨即從懷中抓出一疊符籙。）＊",
+    "text": "[panel=6]＊（你心領神會地快速滑步向前並躍起，緊接著劍光一閃，一劍挑斷了綁住雍仔的粗繩。雍仔踉蹌落地，揉著手腕連退兩步，隨即從懷中抓出一疊符籙。）＊",
     "Sequence": "SetPortrait(MC1,pic=2);\nDisableCharacterExpression(1);\nSetPanel(MC22, 2, immediate);\nPlayOrStopParticle(Smoke_Dust,Stop);",
-    "zh_CN": "[panel=6]＊（你心领神会地快速滑步向前并跃起，紧接者剑光一闪，精准地挑断了绑住雍仔的粗绳。雍仔踉跄落地，揉着手腕连退两步，随即从怀中抓出一叠符箓。）＊",
+    "zh_CN": "[panel=6]＊（你心领神会地快速滑步向前并跃起，紧接着剑光一闪，一剑挑断了绑住雍仔的粗绳。雍仔踉跄落地，揉着手腕连退两步，随即从怀中抓出一叠符箓。）＊",
     "links": [42]
   },
   {
@@ -288,9 +288,9 @@
   {
     "entryID": 43,
     "actorID": "role2",
-    "text": "[panel=6]＊（白虎道妖這才意識到上當，受刺激般連聲怒吼，朝你們猛撲而來。）＊",
+    "text": "[panel=6]＊（白虎道妖這才知道上了當，受刺激般連聲怒吼，朝你們猛撲而來。）＊",
     "Sequence": "PlayOrStopParticle(DarkCloud,Play);\nDisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（白虎道妖这才意识到上当，受刺激般连声怒吼，朝你们猛扑而来。）＊",
+    "zh_CN": "[panel=6]＊（白虎道妖这才知道上了当，受刺激般连声怒吼，朝你们猛扑而来。）＊",
     "links": [4163]
   },
   {
@@ -395,10 +395,10 @@
   {
     "entryID": 57,
     "actorID": "role2",
-    "text": "[panel=6]＊（那股似無窮無盡且永不會獲得滿足的強烈飢餓感驟然間退去，隨著窒息般的壓迫感消散，你終於撐不住，徹底昏死了過去。）＊",
+    "text": "[panel=6]＊（那股似無窮無盡、永不知饜足的餓意驟然退去，隨著窒息般的壓迫感消散，你終於撐不住，徹底昏死了過去。）＊",
     "Sequence": "AudioControl(StopMusic);\nStopAllParticle();\nOpenPanel(1, close);",
     "Description": "停掉音樂",
-    "zh_CN": "[panel=6]＊（那股似无穷无尽且永不会获得满足的强烈饥饿感骤然间退去，随着窒息般的压迫感消散，你终于撑不住，彻底昏死了过去。）＊",
+    "zh_CN": "[panel=6]＊（那股似无穷无尽、永不知餍足的饿意骤然退去，随着窒息般的压迫感消散，你终于撑不住，彻底昏死了过去。）＊",
     "links": [58]
   },
   {
@@ -438,25 +438,25 @@
   {
     "entryID": 62,
     "actorID": "MC6",
-    "text": "「受到這樣的傷害，換做普通人早就當場經脈寸斷了……但你……不僅經脈完好無損，這一個月居然就像只是單純在昏睡而已，簡直不可思議。」",
-    "Sequence": "SetPortrait(MC6,pic=1);;\nEnableCharacterExpression(1,MC3,Idea);",
-    "zh_CN": "「受到这样的伤害，换做普通人早就当场经脉寸断了……但你……不仅经脉完好无损，这一个月居然就像只是单纯在昏睡而已，简直不可思议。」",
+    "text": "「受了這樣的傷，換作旁人，早就當場經脈寸斷了……但你……不僅經脈完好無損，這一個月居然就像只是單純在昏睡而已，簡直不可思議。」",
+    "Sequence": "SetPortrait(MC6,pic=1);\nEnableCharacterExpression(1,MC6,Idea);",
+    "zh_CN": "「受了这样的伤，换作旁人，早就当场经脉寸断了……但你……不仅经脉完好无损，这一个月居然就像只是单纯在昏睡而已，简直不可思议。」",
     "links": [63]
   },
   {
     "entryID": 63,
     "actorID": "MC6",
-    "text": "「看來這碗本來可用作續命的珍貴湯藥，現在看來也只配給你當補充營養的補品了。趁熱喝了！」",
-    "Sequence": "SetPortrait(MC6,pic=3);;\nDisableCharacterExpression(1);",
-    "zh_CN": "「看来这碗本来可用作续命的珍贵汤药，现在看来也只配给你当补充营养的补品了。趁热喝了！」",
+    "text": "「看來這碗本來可用作續命的珍貴湯藥，現在也只配給你當個補身子的湯水了。趁熱喝了！」",
+    "Sequence": "SetPortrait(MC6,pic=3);\nDisableCharacterExpression(1);",
+    "zh_CN": "「看来这碗本来可用作续命的珍贵汤药，现在也只配给你当个补身子的汤水了。趁热喝了！」",
     "links": [64]
   },
   {
     "entryID": 64,
     "actorID": "role2",
-    "text": "[panel=6]＊（雖然嘴巴毒辣，但你眼尖地捕捉到，她看緊繃的肩膀明顯放鬆了下來，嘴角甚至不自覺地勾起一抹極淺、極不易察覺的微笑。）＊",
+    "text": "[panel=6]＊（雖然嘴巴毒辣，但你眼尖地捕捉到，她繃著的肩頭鬆了下來，嘴角微微一動，隨即又板起。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（虽然嘴巴毒辣，但你眼尖地捕捉到，她看紧绷的肩膀明显放松了下来，嘴角甚至不自觉地勾起一抹极浅、极不易察觉的微笑。）＊",
+    "zh_CN": "[panel=6]＊（虽然嘴巴毒辣，但你眼尖地捕捉到，她绷着的肩头松了下来，嘴角微微一动，随即又板起。）＊",
     "links": [65]
   },
   {
@@ -470,9 +470,9 @@
   {
     "entryID": 66,
     "actorID": "MC6",
-    "text": "「你的腦子是被血煞啃乾淨了嗎？！再胡說八道，我就給你配一副啞藥！再晚醒一天，我就要把你丟出去當肥料了！」",
-    "Sequence": "SetPortrait(MC6,pic=2);;\nSetPortrait(MC1,pic=19)@0.2;\nDisableCharacterExpression(0);",
-    "zh_CN": "「你的脑子是被血煞啃干净了吗？！再胡说八道，我就给你配一副哑药！再晚醒一天，我就要把你丢出去当肥料了！」",
+    "text": "「你的腦子是被血煞啃乾淨了嗎？！再胡說八道，我就給你配一副啞藥！再晚醒一天，我就要把你丟出去漚糞了！」",
+    "Sequence": "SetPortrait(MC6,pic=2);\nSetPortrait(MC1,pic=19)@0.2;\nDisableCharacterExpression(0);",
+    "zh_CN": "「你的脑子是被血煞啃干净了吗？！再胡说八道，我就给你配一副哑药！再晚醒一天，我就要把你丢出去沤粪了！」",
     "links": [67]
   },
   {
@@ -486,16 +486,16 @@
   {
     "entryID": 68,
     "actorID": "MC6",
-    "text": "「好了，靈犀妹妹乖，別哭了。眼淚又不能當藥引子，這笨蛋既然能睜開眼，我保證他絕對死不了。來，先把眼淚擦擦。」",
-    "Sequence": "SetPortrait(MC6,pic=1);;\nSetPortrait(MC8,pic=3);\nSetPortrait(MC1,pic=10)@0.2;\nDisableCharacterExpression(2);",
-    "zh_CN": "「好了，灵犀妹妹乖，别哭了。眼泪又不能当药引子，这笨蛋既然能睁开眼，我保证他绝对死不了。来，先把眼泪擦擦。」",
+    "text": "「好了，靈犀妹妹乖，別哭了。眼淚又不能當藥引子，這笨蛋既然能睜開眼，我保證他死不了。來，先把眼淚擦擦。」",
+    "Sequence": "SetPortrait(MC6,pic=1);\nSetPortrait(MC8,pic=3);\nSetPortrait(MC1,pic=10)@0.2;\nDisableCharacterExpression(2);",
+    "zh_CN": "「好了，灵犀妹妹乖，别哭了。眼泪又不能当药引子，这笨蛋既然能睁开眼，我保证他死不了。来，先把眼泪擦擦。」",
     "links": [69]
   },
   {
     "entryID": 69,
     "actorID": "MC6",
     "text": "「至於你！下次再敢把自己搞成這副德性，我就……我就……」",
-    "Sequence": "SetPortrait(MC6,pic=2);;\nSetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC6,pic=2);\nSetPortrait(MC1,pic=9);",
     "zh_CN": "「至于你！下次再敢把自己搞成这副德性，我就……我就……」",
     "links": [70]
   },
@@ -503,7 +503,7 @@
     "entryID": 70,
     "actorID": "MC6",
     "text": "「[em7]話說到一半，實在忍不住笑了出來，隨即雙頰漲得通紅，慌亂地轉過身去[/em7]：總、總之我去叫外面那兩個吵死人的傢伙進來！省得他們天天在我的藥房外頭探頭探腦，妨礙得很！」",
-    "Sequence": "SetPortrait(MC6,pic=5);;",
+    "Sequence": "SetPortrait(MC6,pic=5);",
     "zh_CN": "「[em7]话说到一半，实在忍不住笑了出来，随即双颊涨得通红，慌乱地转过身去[/em7]：总、总之我去叫外面那两个吵死人的家伙进来！省得他们天天在我的药房外头探头探脑，妨碍得很！」",
     "links": [71]
   },
@@ -583,9 +583,9 @@
   {
     "entryID": 80,
     "actorID": "role2",
-    "text": "[panel=6]＊（房間裡的氣氛瞬間變得輕鬆熱鬧起來。沒過多久，聽聞你醒來的消息，英豪府的其他眾人也陸續來到了客房探望。）＊",
+    "text": "[panel=6]＊（滿屋登時熱鬧了起來。沒過多久，聽聞你醒來的消息，英豪府的其他眾人也陸續來到了客房探望。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（房间里的气氛瞬间变得轻松热闹起来。没过多久，听闻你醒来的消息，英豪府的其他众人也陆续来到了客房探望。）＊",
+    "zh_CN": "[panel=6]＊（满屋登时热闹了起来。没过多久，听闻你醒来的消息，英豪府的其他众人也陆续来到了客房探望。）＊",
     "links": [81]
   },
   {
@@ -600,7 +600,7 @@
     "entryID": 82,
     "actorID": "MC6",
     "text": "[panel=2]「全鬚全尾…？這樣子形容還是第一次見到…」",
-    "Sequence": "SetPortrait(MC6,pic=4);;\nEnableCharacterExpression(2,MC6,Question);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC6,pic=4);\nEnableCharacterExpression(2,MC6,Question);\nDisableCharacterExpression(1);",
     "zh_CN": "[panel=2]「全须全尾…？这样子形容还是第一次见到…」",
     "links": [83]
   },
@@ -615,17 +615,17 @@
   {
     "entryID": 84,
     "actorID": "MC3",
-    "text": "[panel=4]「能從那種邪物手下活命，甚至護住了同伴，算你勉強合格了。好好養傷，等你恢復了，我們再打一場。」",
+    "text": "[panel=4]「能從那種邪物手下活命，甚至護住了同伴，算你勉強過得去。好好養傷，等你恢復了，我們再打一場。」",
     "Sequence": "DisableCharacterExpression(3);\nEnableCharacterExpression(4,MC3,Meditate);",
-    "zh_CN": "[panel=4]「能从那种邪物手下活命，甚至护住了同伴，算你勉强合格了。好好养伤，等你恢复了，我们再打一场。」",
+    "zh_CN": "[panel=4]「能从那种邪物手下活命，甚至护住了同伴，算你勉强过得去。好好养伤，等你恢复了，我们再打一场。」",
     "links": [85]
   },
   {
     "entryID": 85,
     "actorID": "MC7",
-    "text": "[panel=2]「哎呀呀，大家都擠在這裡做什麼，病人需要靜養，徐老師的羹還是留給呂信吃吧。不過看你這精神頭，想必是沒大礙了。大難不死，必有後福啊。」",
+    "text": "[panel=2]「哎呀呀，大家都擠在這裡做什麼，病人需要靜養，徐師父的羹還是留給呂信吃吧。不過看你這精神頭，想必是沒大礙了。大難不死，必有後福啊。」",
     "Sequence": "SetPortrait(MC7,pic=3);\nEnableCharacterExpression(2,MC7,Meditate);\nDisableCharacterExpression(4);",
-    "zh_CN": "[panel=2]「哎呀呀，大家都挤在这里做什么，病人需要静养，徐老师的羹还是留给吕信吃吧。不过看你这精神头，想必是没大碍了。大难不死，必有后福啊。」",
+    "zh_CN": "[panel=2]「哎呀呀，大家都挤在这里做什么，病人需要静养，徐师父的羹还是留给吕信吃吧。不过看你这精神头，想必是没大碍了。大难不死，必有后福啊。」",
     "links": [86]
   },
   {
@@ -649,7 +649,7 @@
     "entryID": 88,
     "actorID": "MC1",
     "text": "「賈師父……我們在祭壇根本沒見到卞喜，反而遇到一頭半人半虎的怪物。那到底是什麼東西？」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1,Question);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
     "zh_CN": "「贾师父……我们在祭坛根本没见到卞喜，反而遇到一头半人半虎的怪物。那到底是什么东西？」",
     "links": [89]
   },
@@ -664,9 +664,9 @@
   {
     "entryID": 90,
     "actorID": "MC4",
-    "text": "「[em7]轉過身，目光銳利地直視你[/em7]：殷商時期，曾有一種極其殘酷的古老祭祀。人們妄圖透過血煞與獻祭，從天那裡獲得不可思議的力量。那頭白虎妖物，不過是這種祭祀催生出的失敗品罷了。」",
+    "text": "「[em7]轉過身，目光銳利地直視你[/em7]：殷商之世，曾有一種極其殘酷的邪祭。人們妄圖以血煞與活人獻祭，向天索取不可思議的力量。那頭白虎妖物，不過是這種邪祭煉出來的廢物罷了。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「[em7]转过身，目光锐利地直视你[/em7]：殷商时期，曾有一种极其残酷的古老祭祀。人们妄图透过血煞与献祭，从天那里获得不可思议的力量。那头白虎妖物，不过是这种祭祀催生出的失败品罢了。」",
+    "zh_CN": "「[em7]转过身，目光锐利地直视你[/em7]：殷商之世，曾有一种极其残酷的邪祭。人们妄图以血煞与活人献祭，向天索取不可思议的力量。那头白虎妖物，不过是这种邪祭炼出来的废物罢了。」",
     "links": [91]
   },
   {
@@ -680,17 +680,17 @@
   {
     "entryID": 92,
     "actorID": "MC4",
-    "text": "「不必多想。我說過，現場情況由你自行判斷。既然能活著回來，過程如何就不重要了。」",
+    "text": "「不必多想。我說過，臨機應變，由你自斷。既然能活著回來，過程如何就不重要了。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC4,pic=3);",
-    "zh_CN": "「不必多想。我说过，现场情况由你自行判断。既然能活着回来，过程如何就不重要了。」",
+    "zh_CN": "「不必多想。我说过，临机应变，由你自断。既然能活着回来，过程如何就不重要了。」",
     "links": [93]
   },
   {
     "entryID": 93,
     "actorID": "MC1",
-    "text": "「那你是不是……早就摸清了那裡有什麼？你根本就知道，那裡不是普通的失蹤案，對吧？」",
-    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1,Nervous);",
-    "zh_CN": "「那你是不是……早就摸清了那里有什么？你根本就知道，那里不是普通的失踪案，对吧？」",
+    "text": "「那你是不是……早就摸清了那裡有什麼？你早就知道，那裡頭根本不是尋人那麼簡單，對吧？」",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "zh_CN": "「那你是不是……早就摸清了那里有什么？你早就知道，那里头根本不是寻人那么简单，对吧？」",
     "links": [94]
   },
   {
@@ -712,9 +712,9 @@
   {
     "entryID": 96,
     "actorID": "MC1",
-    "text": "「骰子真偽？你……你、難道你就為了測試這顆骰子，才派我去那種地方？！」",
+    "text": "「骰子真偽？你……你、難道你派我去那種地方，就是為了試這顆骰子？！」",
     "Sequence": "SetPortrait(MC1,pic=19);",
-    "zh_CN": "「骰子真伪？你……你、难道你就为了测试这颗骰子，才派我去那种地方？！」",
+    "zh_CN": "「骰子真伪？你……你、难道你派我去那种地方，就是为了试这颗骰子？！」",
     "links": [97]
   },
   {
@@ -809,9 +809,9 @@
   {
     "entryID": 108,
     "actorID": "MC5",
-    "text": "「但要是真有什麼棘手的委託或是重要任務，賈老怪自然會派人通知我們。至於沒有任務的時候嘛……」",
+    "text": "「但要是真有什麼棘手的委託或是要緊的差事，賈老怪自然會派人通知我們。至於沒有差事的時候嘛……」",
     "Sequence": "",
-    "zh_CN": "「但要是真有什么棘手的委托或是重要任务，贾老怪自然会派人通知我们。至于没有任务的时候嘛……」",
+    "zh_CN": "「但要是真有什么棘手的委托或是要紧的差事，贾老怪自然会派人通知我们。至于没有差事的时候嘛……」",
     "links": [109]
   },
   {
@@ -895,8 +895,8 @@
   {
     "entryID": 2058,
     "actorID": "role127",
-    "text": "[panel=2]「娜娜姑娘，留下此圖之人既說是自掘墳墓，這其中必定有非常之凶險。」 ",
-    "Sequence": "DisableCharacterExpression(1);",
+    "text": "[panel=2]「娜娜姑娘，留下此圖之人既說是自掘墳墓，這其中必定有非常之凶險。」",
+    "Sequence": "DisableCharacterExpression(2);",
     "zh_CN": "[panel=2]「娜娜姑娘，留下此图之人既说是自掘坟墓，这其中必定有非常之凶险。」",
     "links": [2059]
   },
@@ -1101,9 +1101,9 @@
   {
     "entryID": 4239,
     "actorID": "role2",
-    "text": "[panel=6]＊（房間裡一應俱全，陽光透過窗櫺灑在地板上，顯得格外溫馨。）＊",
+    "text": "[panel=6]＊（房間裡一應俱全，陽光透過窗櫺灑在地板上，收拾得明亮乾淨。）＊",
     "Sequence": "DisableDialogueBG();\nEnableDialogueBG(Houses_Warrior);",
-    "zh_CN": "[panel=6]＊（房间里一应俱全，阳光透过窗棂洒在地板上，显得格外温馨。）＊",
+    "zh_CN": "[panel=6]＊（房间里一应俱全，阳光透过窗棂洒在地板上，收拾得明亮干净。）＊",
     "links": [105]
   },
   {
