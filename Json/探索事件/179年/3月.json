@@ -92,7 +92,7 @@
     "entryID": 75,
     "actorID": "role73",
     "text": "「哦！[var=PlayerLastName]兄弟，你若真能替我取得那鐵木，老哥我定有重賞！」",
-    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC20,Idea);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「哦！[var=PlayerLastName]兄弟，你若真能替我取得那鐵木，老哥我定有重賞！」",
     "zh_CN": "「哦！[var=PlayerLastName]兄弟，你若真能替我取得那铁木，老哥我定有重赏！」",
     "links": [76]
@@ -129,7 +129,7 @@
     "entryID": 79,
     "actorID": "role73",
     "text": "「唉…也罷，是我強人所難了。」",
-    "Sequence": "EnableCharacterExpression(1,NPC20,Meditate);",
+    "Sequence": "",
     "zh_TW": "「唉…也罷，是我強人所難了。」",
     "zh_CN": "「唉…也罢，是我强人所难了。」",
     "links": [80]
@@ -147,7 +147,7 @@
     "entryID": 81,
     "actorID": "role73",
     "text": "「加上日夜苦練，槍桿上竟出現了一道細微的裂痕。雖不影響尋常使用，但若遇上真正的高手，恐怕會當場斷裂。」",
-    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC20,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「加上日夜苦練，槍桿上竟出現了一道細微的裂痕。雖不影響尋常使用，但若遇上真正的高手，恐怕會當場斷裂。」",
     "zh_CN": "「加上日夜苦练，枪杆上竟出现了一道细微的裂痕。虽不影响寻常使用，但若遇上真正的高手，恐怕会当场断裂。」",
     "links": [68]
@@ -290,7 +290,7 @@
     "entryID": 98,
     "actorID": "role115",
     "text": "「客官真是會說話！既然您這麼說了，小的就再多句嘴。我們老闆娘啊，最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC12,pic=5);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Ability_CHA,10);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "「客官真是會說話！既然您這麼說了，小的就再多句嘴。我們老闆娘啊，最佩服的就是那些行俠仗義、有真本事的英雄好漢！她常說，江湖兒女，當快意恩仇，行大丈夫事！」",
     "zh_CN": "「客官真是会说话！既然您这么说了，小的就再多句嘴。我们老板娘啊，最佩服的就是那些行侠仗义、有真本事的英雄好汉！她常说，江湖儿女，当快意恩仇，行大丈夫事！」",
@@ -327,7 +327,7 @@
     "entryID": 102,
     "actorID": "role115",
     "text": "「客官過獎了，也太看得起小的了。老闆娘的心思…小的實在是猜不透，也不敢妄言啊。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(NPC12,pic=nervous);",
+    "Sequence": "DisableCharacterExpression(0);",
     "Conditions": "IsPassDice() == false;",
     "zh_TW": "「客官過獎了，也太看得起小的了。老闆娘的心思…小的實在是猜不透，也不敢妄言啊。」",
     "zh_CN": "「客官过奖了，也太看得起小的了。老板娘的心思…小的实在是猜不透，也不敢妄言啊。」",
@@ -346,7 +346,7 @@
     "entryID": 104,
     "actorID": "MC1",
     "text": "「[em2]英雄好漢[/em2]…原來如此！多謝小二哥提點！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Surprise_2);",
     "zh_TW": "「[em2]英雄好漢[/em2]…原來如此！多謝小二哥提點！」",
     "zh_CN": "「[em2]英雄好汉[/em2]…原来如此！多谢小二哥提点！」",
     "links": [105]

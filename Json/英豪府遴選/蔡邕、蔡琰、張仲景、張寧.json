@@ -44,7 +44,7 @@
     "entryID": 47,
     "actorID": "MC6",
     "text": "「原來你就是那個在小溪村差點被黑血屍啃了的笨蛋？我還以為是哪個命硬的傢伙，原來是你。」",
-    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "Sequence": "SetPortrait(MC6,pic=1);",
     "zh_CN": "「原来你就是那个在小溪村差点被黑血尸啃了的笨蛋？我还以为是哪个命硬的家伙，原来是你。」",
     "links": [48]
   },
@@ -68,7 +68,7 @@
     "entryID": 50,
     "actorID": "MC6",
     "text": "「能不認識嗎？某個心懷天下的大忙人，把我一個人丟去小溪村後山採藥！要不是這笨蛋突然衝出來幫忙，雖然最後還是暈過去了，我差點就被那群屍鬼給生吞了！」",
-    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "Sequence": "SetPortrait(MC6,pic=3);",
     "zh_CN": "「能不认识吗？某个心怀天下的大忙人，把我一个人丢去小溪村后山采药！要不是这笨蛋突然冲出来帮忙，虽然最后还是晕过去了，我差点就被那群尸鬼给生吞了！」",
     "links": [51]
   },
@@ -108,7 +108,7 @@
     "entryID": 55,
     "actorID": "MC6",
     "text": "「……油嘴滑舌！我看你當時是被屍鬼嚇傻了，連東南西北都分不清了吧。再胡說八道，我就給你配一副啞藥！」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Flirting,10);\nSetPortrait(MC6,pic=5);;\nModifyData(FavorabilityExp,MC6,20);",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Flirting,10);\nSetPortrait(MC6,pic=5);\nModifyData(FavorabilityExp,MC6,20);",
     "Description": "好感增加",
     "zh_CN": "「……油嘴滑舌！我看你当时是被尸鬼吓傻了，连东南西北都分不清了吧。再胡说八道，我就给你配一副哑药！」",
     "links": [60]
@@ -117,7 +117,7 @@
     "entryID": 56,
     "actorID": "MC6",
     "text": "「你的腦子是被黑血屍啃乾淨了嗎？就你那點三腳貓功夫，連自己都護不住，還想學人油腔滑調？省省吧。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=2);;",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=2);",
     "zh_CN": "「你的脑子是被黑血尸啃干净了吗？就你那点三脚猫功夫，连自己都护不住，还想学人油腔滑调？省省吧。」",
     "links": [60]
   },
@@ -141,7 +141,7 @@
     "entryID": 59,
     "actorID": "MC6",
     "text": "「算你有自知之明。就你當時那副慘狀，誰看了都覺得是個累贅。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=1);;",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=1);",
     "zh_CN": "「算你有自知之明。就你当时那副惨状，谁看了都觉得是个累赘。」",
     "links": [60]
   },
@@ -157,7 +157,7 @@
     "entryID": 61,
     "actorID": "MC6",
     "text": "「不錯，正是家門不幸。我也很希望自己沒有這種把親生女兒丟在荒山野嶺的爹。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=2);;",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=2);",
     "zh_CN": "「不错，正是家门不幸。我也很希望自己没有这种把亲生女儿丢在荒山野岭的爹。」",
     "links": [62]
   },
@@ -173,7 +173,7 @@
     "entryID": 63,
     "actorID": "MC6",
     "text": "「是啊。要不是我靠著在流離區給人治病積攢了點本事，好不容易才進了這英豪府當藥師，你現在大概只能對著我的牌位唸你的醫經了。」",
-    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "Sequence": "SetPortrait(MC6,pic=3);",
     "zh_CN": "「是啊。要不是我靠着在流离区给人治病积攒了点本事，好不容易才进了这英豪府当药师，你现在大概只能对着我的牌位念你的医经了。」",
     "links": [64, 75]
   },
@@ -206,7 +206,7 @@
     "entryID": 67,
     "actorID": "MC6",
     "text": "「這丫頭確實聰慧，我不過隨口提了幾句毒理與藥性，她竟能舉一反三，過目不忘。」",
-    "Sequence": "SetPortrait(MC6,pic=1);;",
+    "Sequence": "SetPortrait(MC6,pic=1);",
     "zh_CN": "「这丫头确实聪慧，我不过随口提了几句毒理与药性，她竟能举一反三，过目不忘。」",
     "links": [68]
   },
@@ -257,7 +257,7 @@
     "entryID": 73,
     "actorID": "MC6",
     "text": "「硬扛邪氣？你這笨蛋是嫌自己命太長了嗎？這種以命換命的救人法子愚蠢至極！不過……行醫的看不慣見死不救。你這種笨蛋……不討厭。算你還有些良心。」",
-    "Sequence": "SetPortrait(MC6,pic=1);;\nModifyData(FavorabilityExp,MC6,20);",
+    "Sequence": "SetPortrait(MC6,pic=1);\nModifyData(FavorabilityExp,MC6,20);",
     "Description": "好感提升",
     "zh_CN": "「硬扛邪气？你这笨蛋是嫌自己命太长了吗？这种以命换命的救人法子愚蠢至极！不过……行医的看不惯见死不救。你这种笨蛋……不讨厌。算你还有些良心。」",
     "links": [74]
@@ -266,7 +266,7 @@
     "entryID": 74,
     "actorID": "MC1",
     "text": "「當時情況緊急，我也沒想那麼多，總不能見死不救吧。」",
-    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Shy);",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
     "zh_CN": "「当时情况紧急，我也没想那么多，总不能见死不救吧。」",
     "links": [83]
   },
@@ -439,7 +439,7 @@
     "entryID": 4096,
     "actorID": "MC6",
     "text": "「自己小心注意些，我可不想再費神去救你第二次。」",
-    "Sequence": "SetPortrait(MC6,pic=3);;",
+    "Sequence": "SetPortrait(MC6,pic=3);",
     "zh_CN": "「自己小心注意些，我可不想再费神去救你第二次。」",
     "links": []
   }

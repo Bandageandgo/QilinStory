@@ -104,7 +104,7 @@
     "entryID": 17,
     "actorID": "MC1",
     "text": "「三百錢是掏了，床也有了。靈犀能睡個安穩覺，比什麼都值。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\n;ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
     "zh_CN": "「三百钱是掏了，床也有了。灵犀能睡个安稳觉，比什么都值。」",
     "links": [168]
   },
@@ -186,7 +186,7 @@
     "entryID": 27,
     "actorID": "MC1",
     "text": "「倒是痛快。」",
-    "Sequence": ";SetPortrait(MC1,pic=12);",
+    "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_CN": "「倒是痛快。」",
     "links": [28]
   },
@@ -608,7 +608,7 @@
     "entryID": 101,
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
-    "Sequence": ";ModifyData(FeatExp,Player,Insight,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [102]
   },
@@ -1059,7 +1059,7 @@
     "entryID": 362,
     "actorID": "MC5",
     "text": "「……小子，你能撐到現在，是個漢子。剩下的交給我吧！」",
-    "Sequence": "SetPortrait(MC5,pic=8);",
+    "Sequence": "SetPortrait(MC5,pic=1);",
     "zh_CN": "「……小子，你能撑到现在，是个汉子。剩下的交给我吧！」",
     "links": [363]
   },

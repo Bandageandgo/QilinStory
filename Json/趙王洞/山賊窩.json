@@ -14,7 +14,7 @@
     "entryID": 2,
     "actorID": "role126",
     "text": "「哎呀！原來是廖頭領的朋友啊！快請快請！」",
-    "Sequence": "SetPortrait(role126,pic=1);\nDisableCharacterExpression(0);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "「哎呀！原来是廖头领的朋友啊！快请快请！」",
     "links": [
       4
@@ -44,7 +44,7 @@
     "entryID": 6,
     "actorID": "MC22",
     "text": "「咦？我的羅盤怎麼突然亂晃了……？」",
-    "Sequence": "SetPortrait(MC22,pic=4);\nEnableCharacterExpression(1,MC22,Idea);",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Idea);",
     "zh_CN": "「咦？我的罗盘怎么突然乱晃了……？」",
     "links": [
       4137
@@ -196,7 +196,7 @@
     "entryID": 22,
     "actorID": "role126",
     "text": "「吵什麼吵！哪這麼多話！再不安分點，當心老子整死你！」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_CN": "「吵什么吵！哪这么多话！再不安分点，当心老子整死你！」",
     "links": [
       23,
@@ -259,7 +259,7 @@
     "entryID": 30,
     "actorID": "role126",
     "text": "「給我好好待著，別想耍花樣！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(role126,pic=2);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "「给我好好待着，别想耍花样！」",
     "links": [
       45,
@@ -302,7 +302,7 @@
     "entryID": 36,
     "actorID": "role126",
     "text": "「狗屁！太守的姪子怎麼會沒帶護衛在外頭閒逛？你小子當我傻啊？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(role126,pic=2);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
     "Conditions": "IsPassDice()  == false",
     "zh_CN": "「狗屁！太守的侄子怎么会没带护卫在外头闲逛？你小子当我傻啊？」",
     "links": [
@@ -384,7 +384,7 @@
     "entryID": 50,
     "actorID": "role127",
     "text": "「小兄弟，好樣的！先去主廳，救你的朋友！」",
-    "Sequence": "SetPortrait(role127,pic=8);",
+    "Sequence": "SetPortrait(role127,pic=1);",
     "Script": "SetQuestEntryState(\"C1M2\", 1, \"active\");\nSetQuestEntryState(\"C1M2\", 2, \"active\");\nSetQuestEntryState(\"C1M2\", 3, \"active\")",
     "Description": "更新任務",
     "zh_CN": "「小兄弟，好样的！先去主厅，救你的朋友！」",
@@ -405,7 +405,7 @@
     "entryID": 53,
     "actorID": "role126",
     "text": "「喂！你、你這傢伙是怎麼跑出來的？老張人呢？」",
-    "Sequence": "SetPortrait(role126,pic=1);",
+    "Sequence": "",
     "Description": "教眾宿舍(強制觸發)",
     "zh_CN": "「喂！你、你这家伙是怎么跑出来的？老张人呢？」",
     "links": [
@@ -416,7 +416,7 @@
     "entryID": 55,
     "actorID": "role126",
     "text": "「別發呆了！趕緊把他們抓回牢房，不然被卞頭領知道就換我們倒大楣了！」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_TW": "「別發呆了！趕緊把他們抓回牢房，不然被卞頭領知道就換我們倒大楣了！」",
     "zh_CN": "「别发呆了！赶紧把他们抓回牢房，不然被卞头领知道就换我们倒大楣了！」",
     "links": [
@@ -427,7 +427,7 @@
     "entryID": 57,
     "actorID": "MC1",
     "text": "「哈哈，看來太平道不過如此。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Laugh);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「哈哈，看來太平道不過如此。」",
     "zh_CN": "「哈哈，看来太平道不过如此。」",
     "links": [
@@ -458,7 +458,7 @@
     "entryID": 64,
     "actorID": "role127",
     "text": "「看來卞喜已經到了喪心病狂的地步，連自己人都拿來湊數。你的朋友們似乎比想像的更加兇險，我們走！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=2);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(role127,pic=1);",
     "zh_CN": "「看来卞喜已经到了丧心病狂的地步，连自己人都拿来凑数。你的朋友们似乎比想像的更加凶险，我们走！」",
     "links": []
   },
@@ -477,7 +477,7 @@
     "entryID": 66,
     "actorID": "role126",
     "text": "「喂！小心些，要是糊了怎麼辦？小心老大拿你煲湯！」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_CN": "「喂！小心些，要是糊了怎么办？小心老大拿你煲汤！」",
     "links": [
       67
@@ -487,7 +487,7 @@
     "entryID": 67,
     "actorID": "role126",
     "text": "「我、我知道了……但、但張大哥，你你你……不覺得老大最近有點詭異……」",
-    "Sequence": "SetPortrait(role126,pic=1);",
+    "Sequence": "",
     "zh_CN": "「我、我知道了……但、但张大哥，你你你……不觉得老大最近有点诡异……」",
     "links": [
       68
@@ -497,7 +497,7 @@
     "entryID": 68,
     "actorID": "role126",
     "text": "「停停停。我知道你想說什麼，飯可以亂吃話可不能亂講，否則——」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_CN": "「停停停。我知道你想说什么，饭可以乱吃话可不能乱讲，否则——」",
     "links": [
       69
@@ -517,7 +517,7 @@
     "entryID": 70,
     "actorID": "role126",
     "text": "「等會兒，你是怎麼逃出來的！看守人呢？」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_CN": "「等会儿，你是怎么逃出来的！看守人呢？」",
     "links": [
       71
@@ -527,7 +527,7 @@
     "entryID": 71,
     "actorID": "role126",
     "text": "「張張張大哥！那、那白毛小子身後……是廖頭領！？」",
-    "Sequence": "SetPortrait(role126,pic=1);",
+    "Sequence": "",
     "zh_CN": "「张张张大哥！那、那白毛小子身后……是廖头领！？」",
     "links": [
       74
@@ -537,7 +537,7 @@
     "entryID": 74,
     "actorID": "role127",
     "text": "[panel=2]「哼，老子早覺得蹊蹺。卞喜那廝把我關進牢裡，卻連一口飯都不叫人送來。合著你們壓根不知道我被關在這兒？」",
-    "Sequence": "SetPortrait(role127,pic=1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Mindpain);",
+    "Sequence": "SetPortrait(role127,pic=1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
     "zh_CN": "[panel=2]「哼，老子早觉得蹊跷。卞喜那厮把我关进牢里，却连一口饭都不叫人送来。合着你们压根不知道我被关在这儿？」",
     "links": [
       75
@@ -547,7 +547,7 @@
     "entryID": 75,
     "actorID": "role126",
     "text": "「……廖頭領，只能算你運氣背，撞上我大刀張——只怕要倒大楣了！」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_CN": "「……廖头领，只能算你运气背，撞上我大刀张——只怕要倒大楣了！」",
     "links": [
       81
@@ -567,7 +567,7 @@
     "entryID": 83,
     "actorID": "role126",
     "text": "「誰、誰、誰怕你了——」",
-    "Sequence": "SetPortrait(role126,pic=2);",
+    "Sequence": "",
     "zh_CN": "「谁、谁、谁怕你了——」",
     "links": [
       4148
@@ -628,7 +628,7 @@
     "entryID": 94,
     "actorID": "MC1",
     "text": "「……廖大哥，你這烏鴉嘴能不能先收一收，說點中聽的，噁……」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Mindpain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
     "zh_CN": "「……廖大哥，你这乌鸦嘴能不能先收一收，说点中听的，恶……」",
     "links": [
       95
@@ -657,7 +657,7 @@
     "entryID": 97,
     "actorID": "role127",
     "text": "「冥頑不靈！今日我便替太平道清理門戶！」",
-    "Sequence": "SetPortrait(role127,pic=2);",
+    "Sequence": "SetPortrait(role127,pic=1);",
     "zh_CN": "「冥顽不灵！今日我便替太平道清理门户！」",
     "links": [
       4165
@@ -695,7 +695,7 @@
     "entryID": 104,
     "actorID": "role127",
     "text": "「小兄弟，從這坑口落進底下水潭，穿過潭子，可到趙王洞的深處。但我被囚那些日子，前頭究竟還有什麼，我也說不準……只曉得凶險恐怕只增不減。」",
-    "Sequence": "SetPortrait(role127,pic=8);",
+    "Sequence": "SetPortrait(role127,pic=1);",
     "Description": "跳下洞",
     "zh_CN": "「小兄弟，从这坑口落进底下水潭，穿过潭子，可到赵王洞的深处。但我被囚那些日子，前头究竟还有什么，我也说不准……只晓得凶险恐怕只增不减。」",
     "links": [
@@ -706,7 +706,7 @@
     "entryID": 105,
     "actorID": "MC1",
     "text": "「雍仔和娜娜生死未卜，我怎麼可能退縮？走吧，廖大哥，咱們去會會那個卞喜！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Forbearance);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_CN": "「雍仔和娜娜生死未卜，我怎么可能退缩？走吧，廖大哥，咱们去会会那个卞喜！」",
     "links": [
       106
@@ -837,7 +837,7 @@
     "entryID": 4136,
     "actorID": "role126",
     "text": "「馬的！即使之後會被首領責怪，今天也一定要把給你給宰了！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(role126,pic=2);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「馬的！即使之後會被首領責怪，今天也一定要把給你給宰了！」",
     "zh_CN": "「马的！即使之后会被首领责怪，今天也一定要把给你给宰了！」",
     "links": [
@@ -928,7 +928,7 @@
     "entryID": 4147,
     "actorID": "role126",
     "text": "「等、等等！廖頭領，您既然出來了，我等也無心與頭領作對，全是卞喜那廝瞞著弟兄們幹的——不如就放了我們吧！」",
-    "Sequence": "SetPortrait(role126,pic=1);",
+    "Sequence": "",
     "zh_CN": "「等、等等！廖头领，您既然出来了，我等也无心与头领作对，全是卞喜那厮瞒着弟兄们干的——不如就放了我们吧！」",
     "links": [
       83
@@ -938,7 +938,7 @@
     "entryID": 4148,
     "actorID": "role126",
     "text": "「小張，你是不是傻！？你看看廖頭領那把大刀，再看看你那把小刀，你是嫌命長是不是？」",
-    "Sequence": "SetPortrait(role126,pic=1);",
+    "Sequence": "",
     "zh_CN": "「小张，你是不是傻！？你看看廖头领那把大刀，再看看你那把小刀，你是嫌命长是不是？」",
     "links": [
       84
@@ -1035,7 +1035,7 @@
     "entryID": 4160,
     "actorID": "role127",
     "text": "「此次一去，一時三刻怕是難再折返這主廳；你若還有未竟之事，現下還來得及。」",
-    "Sequence": "SetPortrait(role127,pic=8);",
+    "Sequence": "SetPortrait(role127,pic=1);",
     "zh_CN": "「此次一去，一时三刻怕是难再折返这主厅；你若还有未竟之事，现下还来得及。」",
     "links": [
       4161,

@@ -1,6 +1,6 @@
-# Markdown 腳本轉 JSON 對話格式指南 (根據最新立繪、擲骰、戰鬥與貴重品規則修訂)
+# Markdown 腳本轉 JSON 對話格式指南 (根據最新立繪、擲骰、戰鬥、貴重品與畫面規則修訂)
 
-本文件旨在說明如何將 Markdown 格式的遊戲腳本（例如 `劇情/舊創作稿/初出茅廬之一.md`）轉換為遊戲引擎可讀取的 JSON 格式，並整合最新的 `給AI看的指南/立繪指令轉換規則.md`、`給AI看的指南/擲骰指令轉換規則.md`、`給AI看的指南/戰鬥指令轉換規則.md` 與 `給AI看的指南/貴重品指令轉換規則.md`。
+本文件旨在說明如何將 Markdown 格式的遊戲腳本（例如 `劇情/舊創作稿/初出茅廬之一.md`）轉換為遊戲引擎可讀取的 JSON 格式，並整合最新的 `給AI看的指南/立繪指令轉換規則.md`、`給AI看的指南/擲骰指令轉換規則.md`、`給AI看的指南/戰鬥指令轉換規則.md`、`給AI看的指南/貴重品指令轉換規則.md` 與 `給AI看的指南/畫面指令轉換規則.md`。
 
 ## JSON 結構
 
@@ -44,6 +44,12 @@
 -   `text` (String): 對話文字內容。
 -   `Sequence` (String): 特殊指令序列，用於觸發立繪變化、表情特效、擲骰、戰鬥等。如果沒有指令，則為空字串 `""`。**不要**把分支條件寫進 `Sequence`。
 -   `Conditions` (String, 僅用於條件分支節點): 節點成立條件。擲骰成功／失敗用 `"IsPassDice() == true"`／`"IsPassDice() == false"`；戰鬥勝利／失敗用 `"IsPassFight() == true"`／`"IsPassFight() == false"`。一般對話節點不需要此欄位。**禁止**把這些條件寫進 `Sequence`。
+    -   **⚠ `Conditions`／`Script` 寫的是 Lua 語法（已定，2026-08-27 作者指出）**：「不等於」一律 **`~=`**，**禁止 `!=`**；連接詞用 `and`／`or`／`not`，**不是 `&&`／`||`／`!`**。寫成 `!=` 引擎解析不了，那條分支等於永遠不成立（例：`CurrentQuestEntryState("CF40", 6) ~= "success"` ✅／`… != "success"` ❌）。舊創作稿裡有 `!=` 的寫法，**那些是錯的，轉檔時一律改成 `~=`**。
+    -   **⚠ 多條件串接：第二段起一律用小括號包住整段比較式（已定，2026-08-27 作者指出）。** 體例是 `A == x and (B == y)`、三段以上 `A == x and (B == y) and (C == z)`——**第一段不加括號，第二段起每一段都要**。少了括號引擎判不出來，那條分支等於永遠不成立（和 `!=` 一樣是「悄悄失效」，遊戲不會報錯）。
+        -   ✅ `CurrentQuestEntryState("CF40", 6) == "success" and (IsValuablesObtained("Player", "FadedTearstone") == true)`
+        -   ❌ `CurrentQuestEntryState("CF40", 6) == "success" and IsValuablesObtained("Player", "FadedTearstone") == true`
+        -   `or`／`not` 同理。**這是全案體例，不是 Lua 文法問題**——`Json/` 現有 59 條串接條件，Unity 條件編輯器產出的那 56 條全長這樣，照抄它就對了。
+    -   **⚠ 字串常量一定要帶引號**：`CurrentQuestState("C0F2") == "success"` ✅／`CurrentQuestState("C0F2") == success` ❌。沒引號在 Lua 是「未定義的變數」＝`nil`，永遠不相等，那條分支同樣永遠不成立。只有 `true`／`false`／`nil` 與數字不加引號。
 -   `links` (Array<Number>): 指向下一個或多個可能的對話節點的 `entryID` 列表。如果是對話終點，則為空陣列 `[]`。
 -   `Description` (String, 僅用於特定節點): 此欄位僅用於標註特殊功能節點，不應用於普通對話。只有以下情況需要添加此欄位：
     1. 自動檢定節點 (例如："自動洞悉檢定觸發點")
@@ -86,19 +92,23 @@
 
 #### 3.1 `SetPortrait` (換立繪)
 -   **觸發條件**: 每個包含主角 (`MC1`)、蕭靈犀 (`MC8`) 或甄筠 (`MC9`) 的對話行，都**必須**包含 `SetPortrait` 指令。
--   **規則**: 根據對話行中 `[...]` 內的立繪描述文字，查閱 `給AI看的指南/立繪指令轉換規則.md` 中的「立繪描述與`pic`參數對照表」，確定對應的 `角色ID` 和 `pic` 值。**注意 MC1／MC8 用 15 格通用編號（§3、§4.1、§4.2），甄筠 (`MC9`) 屬於五立繪角色，只能用 1～5（§4.3），不要混用 15 格數值。**
+-   **規則**: 根據對話行中 `[...]` 內的立繪描述文字，查閱 `給AI看的指南/立繪指令轉換規則.md` 中的「立繪描述與`pic`參數對照表」，確定對應的 `角色ID` 和 `pic` 值。**⚠ 每個角色的 `pic` 有效值都不一樣，動筆前先查該角色專屬表**：`MC1` 1–19（§3、§4.1、§4.1.1）；`MC8` 只有 1–6、9–11、13、14（§4.2.1，**7／8／12 沒圖、沒有 15**）；`MC22` 1–15 但 **6 沒圖**、且 4／11／12／15 與名目不符（§4.4）；甄筠 `MC9` 等五立繪角色只能用 1～5（§4.3）。**不要拿第 3 節名目總表直接套。**
 -   **格式**: `SetPortrait(角色ID,pic=圖片名稱);`
     *   例如：`燕不凡` `[尷尬/臉紅]` -> `SetPortrait(MC1,pic=7);`
     *   例如：`甄筠` `[似笑非笑，語氣輕鬆]` -> `SetPortrait(MC9,pic=1);`（一般，配合表情特效表達語氣，見 3.2）
     *   例如：`甄筠` `[搖頭拒絕／不屑]` -> `SetPortrait(MC9,pic=3);`（閉眼無奈）
 
+> **⛔ 沒有立繪的角色，不寫 `SetPortrait`／`EnableCharacterExpression`（已定，2026-08-27 作者確認）。** 有立繪的只有 `給AI看的指南/立繪指令轉換規則.md` §2 總表登記的角色（`MC1`–`MC24` 再加**茶博士 `role105`**，有立繪不等於 `MC` 開頭）；`role127`、`NPC33`、`NPC_Thug`、`Monster` 這類代號**不會有立繪切換**，替他們寫這兩個指令是空轉。他們說話那格 `Sequence` 只寫別的事，沒有就留 `""`。
+
 #### 3.2 `EnableCharacterExpression` (啟用表情特效)
 -   **觸發條件**: 如果對話情境需要額外的表情特效，在 `SetPortrait` 後緊跟 `EnableCharacterExpression`。
--   **規則**: 參考 `給AI看的指南/立繪指令轉換規則.md` 中的「情緒描述與表情名稱對照表」及立繪檔名，根據上下文和描述文字選擇合適的角色版本ID與表情名稱。
+-   **規則**: 參考 `給AI看的指南/立繪指令轉換規則.md` 中的「情緒描述與表情名稱對照表」（§5.2），根據上下文和描述文字選擇合適的角色版本ID與表情名稱。**不要從立繪檔名拆表情名稱**——立繪與表情特效是兩套資源。
 -   **格式**: `EnableCharacterExpression(位置,角色版本ID,表情名稱);`
     -   `位置`: `角色ID`為 `MC1` 時，位置固定為 `0`。其他角色作為當前發言者時，位置必須對應 `[panel=N]`（例如甄筠 `[panel=1]` → 位置 `1`；蕭靈犀開口時 `[panel=2]` → 位置 `2`）。NPC 說話者 panel **只用 1～3**：換人時在 1 ↔ 2 輪替（先 1、再 2 或取代 2、再回到 1）；同一人連說維持原位。**蕭靈犀自己開口永遠用 2**（即使她先開口也不標 1），但 **2 號位不是整場鎖給她**——下一個換人的 NPC 該站 2 就把她換掉。**只有三人同場、1 和 2 都不能讓時才上 3，不要用 4**。詳見 `給AI看的指南/文本創作指南.md` 2.1 節。
     -   `角色版本ID`: 用於區分角色不同時期或服裝的ID，例如 `MC1-1`, `MC8`, `MC9`。
-    -   `表情名稱`: 表情的英文名稱，例如 `Surprise`, `Proud`, `Angry` 等。
+    -   `表情名稱`: **只能是這 13 個之一**（已定，2026-08-27 作者提供對照表）：`Anger`（紅色生氣）、`Anger_2`（黃色圓圈生氣）、`Anger_3`（白色怒吼）、`Nervous`（一滴汗）、`Nervous_2`（滿頭大汗）、`Pain`（紫色痛苦）、`Proud`（閃星星自豪）、`Shock`（打雷震驚）、`Surprise`（不規則驚嘆號）、`Surprise_2`（圓形驚嘆號）、`Meditate`（點點點）、`Idea`（燈泡）、`Question`（圓形問號）。
+        **⛔ 這 13 個以外都不存在**，引擎掛不出特效：`Happy`、`Angry`、`Talk`、`Sad`、`Shy`、`Cry`、`Laugh`、`Sigh`、`Mindpain`、`Forbearance`、`Hopeful`、`Confused`、`Provocative`… 這類名字多半是**立繪檔名**或自創，不是特效 ID。**大小寫要一致**（`proud` ✗ → `Proud` ✓），**也不可以填數字**（數字只屬於 `SetPortrait` 的 `pic=`）。錯名怎麼改，查 `給AI看的指南/立繪指令轉換規則.md` §5.1.1a 對照表。
+        平淡、沒有明顯情緒的句子，**正解是整條 `EnableCharacterExpression` 不要寫**，不要硬塞一個特效。
     -   例如：`蕭靈犀` `[震驚/垮臉立繪]` -> `SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC8,Surprise);`
     -   例如：`甄筠` `[似笑非笑]` -> `SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);`（甄筠 pic 僅 1～5，表情特效不受立繪張數限制，仍可用完整的 13 種通用圖示）
 
@@ -133,6 +143,29 @@
 -   **禁止**：`ModifyData(Inventory,AddItem,...)`、`AddItem(...)`。沒有「一般道具」這條路徑，眼淚、信物、遺物等也一律用 `Valuable`。
 -   **特殊標籤**（CSV 另一欄，無數量參數）：`ModifyData(Valuable,MC1,SwordProficiency);` —— 不是「獲得物品」，不要拿來發蛟龍角。
 -   可與立繪／表情寫在同一條 `Sequence`。開啟貴重品便籤用 `ShowValuableMemo(ValuablesID);`，與獲得指令分開。
+
+#### 3.7 對話背景圖（養成任務首格開、尾格關）
+-   詳細規則與 ID 表見 `給AI看的指南/畫面指令轉換規則.md` §1。適用 `Json/主線事件/`、`Json/探索事件/` 的主線／支線任務對話；箱庭對話平常不開。
+-   **首格**：對話第一個節點的 `Sequence` **開頭**加 `EnableDialogueBG(背景ID);`，放在 `SetPortrait` 之前。
+    -   例如：`EnableDialogueBG(TrainingGround);SetPortrait(MC1,pic=1);AudioControl(PlayMusic,BGM_19);`
+-   **尾格**：對話**每一條**結尾（`links: []`）之前補一個獨立空節點：`actorID "0"`、`text ""`、`Sequence "DisableDialogueBG();Continue();"`。空節點所以 `Continue();` 必寫；`DisableDialogueBG()` 在 `Continue()` 之前。有幾個結尾就補幾個。
+-   **禁止**：漏關（回到養成介面時背景圖會蓋住 UI）；中途裸寫 `EnableDialogueBG(新ID)` 硬切（要走 §3.8 轉場、掛 `@1`）。
+-   Markdown：首句底下 `**Sequence EnableDialogueBG(ID);SetPortrait(...);**`；全篇最後獨立一行 `**Sequence DisableDialogueBG();Continue();**`。
+
+#### 3.8 轉場（固定複合指令）
+-   詳細規則見 `給AI看的指南/畫面指令轉換規則.md` §2。**畫面要切就轉場**：換對話背景圖、背景圖⇄事件圖、時間跳躍、`LoadLevel`、`ShowEnding`。
+-   **固定寫法，四段不多不少**（獨立空節點：`actorID "0"`、`text ""`；不得摻台詞、立繪、擲骰、戰鬥）：
+    `SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景指令］@1;SetContinueMode(original)@2.5;Continue()@2.5;`
+    -   ①禁止點擊 ②淡黑 0.5 秒後淡回（共 2.5 秒，參數照抄）③要換的東西全掛 `@1`（畫面全黑那一刻）④恢復點擊 `@2.5`（**`original`，不寫 `true`**）⑤`Continue()@2.5`。
+    -   例如換景：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);EnableDialogueBG(Forest)@1;SetContinueMode(original)@2.5;Continue()@2.5;`
+    -   只淡黑：`SetContinueMode(false);PlayFeelFeedback(FadeOut,1,#000000,1);SetContinueMode(original)@1;Continue()@1;`；從黑淡入：`SetContinueMode(false);PlayFeelFeedback(FadeIn,1,#000000,1);Continue()@1;`。
+-   Markdown：轉場獨立一行 `**Sequence SetContinueMode(false);PlayFeelFeedback(...);...;Continue()@2.5;**`，上面沒有台詞，轉 JSON 自成一格。
+
+#### 3.9 畫面特效（有開就有關）
+-   詳細規則與 ID 表見 `給AI看的指南/畫面指令轉換規則.md` §3。
+-   **開**：`PlayOrStopParticle(特效ID,Play);` 掛在特效發生那句（可與 `SetPortrait`／表情同格）。
+-   **關**：**下一格** `Sequence` 開頭 `PlayOrStopParticle(同ID,Stop);`（比照 `DisableCharacterExpression`）；特效需跨數句時延到該結束的那格關，**不得不關**。清場用 `StopAllParticle();`（轉場格 `SetContinueMode(false);` 之後，或尾格 `DisableDialogueBG();StopAllParticle();Continue();`）。
+-   既有 JSON 有些打擊特效沒關，**轉新稿時不要照抄**。ID 不在表上的不得使用。
 
 ### 4. 擲骰相關指令 (依據 `給AI看的指南/擲骰指令轉換規則.md`)
 
@@ -407,7 +440,7 @@
 -   **⛔ `SetFlag`／`GetFlag` 不是引擎指令，一律禁用（已定，2026-08-27 作者指出）。** 對話**不能有旗標**。要記住「玩家做過什麼」只有兩條合法途徑：
     1.  **變數**：寫在 **`Script`** 欄位——`Variable["名稱"] = true`／`Variable["名稱"] = Variable["名稱"] + 1`；讀在 **`Conditions`** 欄位——`Variable["名稱"] == true`、`Variable["名稱"] >= 2`，多條件用 `and (…)` 串接。
         **⚠ 變數走 `Script`，不走 `Sequence`。** `Sequence` 只放立繪、表情、音效、演出、`ModifyData`、`BeginDiceRoll`／`BeginFight`。
-    2.  **任務狀態**：`SetQuestState("代號","active"／"success")`、`SetQuestEntryState("代號", N, "…")` 寫在 `Script`；讀用 `CurrentQuestState("代號") == "…"`、`CurrentQuestEntryState("代號", N) == "…"` 寫在 `Conditions`。
+    2.  **任務狀態**：`SetQuestState("代號","active"／"success")`、`SetQuestEntryState("代號", N, "…")` 寫在 `Script`；讀用 `CurrentQuestState("代號") == "…"`、`CurrentQuestEntryState("代號", N) == "…"` 寫在 `Conditions`（**否定寫 `~=`，不是 `!=`**，見 §2 `Conditions` 欄位說明）。
         **⚠ 任務 entry 是玩家在任務日誌看得到的東西**，不要為了記一個內部狀態去多開 entry（`劇情/水濂洞.md` 2026-08-26 拍板：這種情形改用層層推導的分岔）。
     -   **⛔ AI 不得自創變數（已定，2026-08-27 作者指出）。** 變數名不是隨手取的字串——**要先在 Unity 的變數表裡存在**，JSON 才讀得到。轉檔時：**①優先沿用既有變數**（全案現有 44 個，可用 `grep -o 'Variable\["[^"]*"\]' Json/ -r` 列出）；**②真的需要新的，就留 `＿＿` 佔位並列進待辦，由作者命名並建好，不得自己編一個寫進 JSON。**
     -   **能用純樹狀分岔解決的，不要記狀態。** 子羽線六支已於 2026-08-25 拍板改為零旗標（見 `@角色設定/子羽.md`、`劇情/歸姓.md`）。
@@ -415,6 +448,9 @@
 
 -   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(true)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`，也不得掛 `Script`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
 -   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(true)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
+-   **養成任務對話背景圖（必守）**：`Json/主線事件/`、`Json/探索事件/` 的每段對話，第一格 `Sequence` 開頭 `EnableDialogueBG(ID);`，每條結尾補獨立空格 `DisableDialogueBG();Continue();`（`actorID "0"`、`text ""`）。漏關＝回養成介面看不到 UI。詳見 `給AI看的指南/畫面指令轉換規則.md` §1，本指南 §3.7。
+-   **轉場固定寫法（必守）**：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景@1］;SetContinueMode(original)@2.5;Continue()@2.5;`，獨立空格、四段不多不少、換景一律掛 `@1`、恢復點擊一律 `original`。裸寫 `EnableDialogueBG`／`PlayFeelFeedback` 不包四段都是錯。詳見 `給AI看的指南/畫面指令轉換規則.md` §2，本指南 §3.8。
+-   **畫面特效有開就有關（必守）**：每個 `PlayOrStopParticle(X,Play)` 往下必須找得到 `PlayOrStopParticle(X,Stop)` 或 `StopAllParticle()`，預設放下一格開頭。詳見 `給AI看的指南/畫面指令轉換規則.md` §3，本指南 §3.9。
 -   **只有特定類型的節點才應包含Description欄位**，包括檢定、擲骰、戰鬥、任務、選項等功能性節點。普通對話節點不應包含Description欄位。
 -   **對話文本統一性**: 確保所有對話文本的引號「」處理一致。根據1.1節規則，標準角色對話應包含引號。
 

@@ -13,7 +13,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「終於到了！這就是雲中！英豪府的英雄大會，我來了！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_CN": "「终于到了！这就是云中！英豪府的英雄大会，我来了！」",
     "links": [3]
   },
@@ -307,7 +307,7 @@
     "entryID": 42,
     "actorID": "MC1",
     "text": "「咦？這不是阿傑嗎？你怎麼跑到雲中賣起豬肉來了？」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_CN": "「咦？这不是阿杰吗？你怎么跑到云中卖起猪肉来了？」",
     "links": [43]
   },
@@ -417,7 +417,7 @@
     "entryID": 57,
     "actorID": "MC1",
     "text": "「這…這是哪門子的守衛？頭上戴的是水桶吧？手裡拿的是掃把吧？！」",
-    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_CN": "「这…这是哪门子的守卫？头上戴的是水桶吧？手里拿的是扫把吧？！」",
     "links": [58]
   },
@@ -425,7 +425,7 @@
     "entryID": 58,
     "actorID": "MC8",
     "text": "[panel=2]「表哥小心！他衝過來了！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=worried);EnableCharacterExpression(1,MC8,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=13);EnableCharacterExpression(1,MC8,Nervous_2);",
     "zh_CN": "[panel=2]「表哥小心！他冲过来了！」",
     "links": [4053]
   },
@@ -629,7 +629,7 @@
     "entryID": 82,
     "actorID": "MC1",
     "text": "「（冒著蒸氣的山洞？山壁炸裂？莫非是有什麼天地奇珍出世，又或者是某種強大妖獸的巢穴？看來西邊那座山，日後定要找機會去探一探。）」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_CN": "「（冒着蒸气的山洞？山壁炸裂？莫非是有什么天地奇珍出世，又或者是某种强大妖兽的巢穴？看来西边那座山，日后定要找机会去探一探。）」",
     "links": [83]
   },
@@ -663,7 +663,7 @@
     "entryID": 86,
     "actorID": "MC1",
     "text": "「姑娘這口音聽著不像中原人，怎麼稱呼？」",
-    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_CN": "「姑娘这口音听着不像中原人，怎么称呼？」",
     "links": [87]
   },
@@ -1431,7 +1431,7 @@
     "entryID": 4158,
     "actorID": "MC22",
     "text": "「不錯！關門起來是沒辦法做出好車的，就是要與人多多探討嘛。」",
-    "Sequence": "SetPortrait(MC22,pic=1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(1,MC22,Ideal);\nDisableCharacterExpression(0);",
+    "Sequence": "SetPortrait(MC22,pic=1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(1,MC22,Idea);\nDisableCharacterExpression(0);",
     "zh_TW": "「不錯！關門起來是沒辦法做出好車的，就是要與人多多探討嘛。」",
     "zh_CN": "「不错！关门起来是没办法做出好车的，就是要与人多多探讨嘛。」",
     "links": [4159]

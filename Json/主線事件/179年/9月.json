@@ -35,7 +35,7 @@
     "entryID": 3911,
     "actorID": "role28",
     "text": "「嘿，小兄弟，你也對這瘋老頭的話感興趣？」",
-    "Sequence": "SetPortrait(role28,pic=1);",
+    "Sequence": "",
     "zh_CN": "「嘿，小兄弟，你也对这疯老头的话感兴趣？」",
     "links": [3910]
   },
@@ -51,7 +51,7 @@
     "entryID": 3913,
     "actorID": "role28",
     "text": "「這瘋老頭叫李四，自從兒子媳婦失蹤後就神智不清了。不過嘛…空穴來風，未必無因。最近道上確實有傳聞，說三十里外的黑鐵嶺礦坑鬧鬼鬧得兇，似有妖邪作祟。」",
-    "Sequence": "SetPortrait(role28,pic=1);",
+    "Sequence": "",
     "zh_CN": "「这疯老头叫李四，自从儿子媳妇失踪后就神智不清了。不过嘛…空穴来风，未必无因。最近道上确实有传闻，说三十里外的黑铁岭矿坑闹鬼闹得凶，似有妖邪作祟。」",
     "links": [3914]
   },
@@ -59,7 +59,7 @@
     "entryID": 3914,
     "actorID": "MC22",
     "text": "[panel=2]「妖邪作祟？那可太好了！本姑娘走南闖北，最識得這個——越是這種生人勿近的地方，越有可能藏著沒被發現的寶貝！」",
-    "Sequence": "SetPortrait(MC22,pic=5)\n;EnableCharacterExpression(2,MC22_Idea);",
+    "Sequence": "SetPortrait(MC22,pic=5)\n;EnableCharacterExpression(2,MC22,Idea);",
     "zh_TW": "[panel=2]「妖邪作祟？那可太好了！本姑娘走南闖北，最識得這個——越是這種生人勿近的地方，越有可能藏著沒被發現的寶貝！」",
     "zh_CN": "[panel=2]「妖邪作祟？那可太好了！本姑娘走南闯北，最识得这个——越是这种生人勿近的地方，越有可能藏着没被发现的宝贝！」",
     "links": [3915]
@@ -68,7 +68,7 @@
     "entryID": 3915,
     "actorID": "role28",
     "text": "「哈哈，小姑娘有意思！那地方原本是官營鐵礦，據說挖到了什麼不祥之物，工人們接連發瘋失蹤，官府鎮壓不住才封閉了事。現在那裡可是禁地，尋常人躲都來不及。」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(role28,pic=1);",
+    "Sequence": "DisableCharacterExpression(2);",
     "zh_CN": "「哈哈，小姑娘有意思！那地方原本是官营铁矿，据说挖到了什么不祥之物，工人们接连发疯失踪，官府镇压不住才封闭了事。现在那里可是禁地，寻常人躲都来不及。」",
     "links": [3916]
   },
@@ -101,7 +101,7 @@
     "entryID": 3919,
     "actorID": "role28",
     "text": "「喂——！若是真搞到什麼寶貝，可別忘了回來請我喝酒啊——！」",
-    "Sequence": "SetPortrait(role28,pic=1);",
+    "Sequence": "",
     "zh_CN": "「喂——！若是真搞到什么宝贝，可别忘了回来请我喝酒啊——！」",
     "links": [3920]
   },

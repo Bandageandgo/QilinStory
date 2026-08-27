@@ -49,7 +49,7 @@
     "entryID": 6,
     "actorID": "MC1",
     "text": "「再說，與人有約，豈能失信？我等會便去那林中與雍仔道長會合！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1-1,pic=8);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);",
     "zh_TW": "「再說，與人有約，豈能失信？我等會便去那林中與雍仔道長會合！」",
     "zh_CN": "「再说，与人有约，岂能失信？我等会便去那林中与雍仔道长会合！」",
     "links": [7]
@@ -311,7 +311,7 @@
     "entryID": 2067,
     "actorID": "role2",
     "text": "[panel=6]＊（你瞧見茶博士目光往櫃底一閃，指尖在算盤上停了半拍——那盒子，他並非當真忘了。）＊",
-    "Sequence": ";ModifyData(FeatExp,Player,Insight,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
     "zh_CN": "[panel=6]＊（你瞧见茶博士目光往柜底一闪，指尖在算盘上停了半拍——那盒子，他并非当真忘了。）＊",
     "links": [2069]
   },
@@ -319,7 +319,7 @@
     "entryID": 2068,
     "actorID": "role2",
     "text": "[panel=6]＊（茶博士撥算盤的聲音依舊平穩，你也說不清他到底在不在意那個盒子。）＊",
-    "Sequence": ";",
+    "Sequence": "",
     "zh_CN": "[panel=6]＊（茶博士拨算盘的声音依旧平稳，你也说不清他到底在不在意那个盒子。）＊",
     "links": [2069]
   },
@@ -374,7 +374,7 @@
     "entryID": 2075,
     "actorID": "role105",
     "text": "[panel=1]「……成，就讓妳試試。」",
-    "Sequence": ";DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
     "Conditions": "IsPassDice()  == true",
     "zh_CN": "[panel=1]「……成，就让妳试试。」",
     "links": [2082]
@@ -383,7 +383,7 @@
     "entryID": 2076,
     "actorID": "MC1",
     "text": "「茶博士，小犀她……呃……」",
-    "Sequence": ";SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
     "Conditions": "IsPassDice()  == false",
     "zh_CN": "「茶博士，小犀她……呃……」",
     "links": [2077]

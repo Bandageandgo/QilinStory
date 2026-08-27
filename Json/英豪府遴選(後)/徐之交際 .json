@@ -38,7 +38,7 @@
     "entryID": 668,
     "actorID": "MC1",
     "text": "「唔……多謝前輩美意。\n但事關時間，晚輩還是想先談正事吧。」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
     "zh_TW": "「唔……多謝前輩美意。\n但事關時間，晚輩還是想先談正事吧。」",
     "zh_CN": "「唔……多谢前辈美意。 \n但事关时间，晚辈还是想先谈正事吧。」",
     "links": [669]
@@ -192,7 +192,7 @@
     "entryID": 685,
     "actorID": "role2",
     "text": "[panel=6]＊（於是你深深體會有些客套話，不能隨便亂說……）＊",
-    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1,Shock);",
+    "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Shock);",
     "Script": "SetQuestState(\"CF30\", \"success\");\nSetQuestEntryState(\"CF30\", 4, \"success\");\nSetQuestEntryState(\"C1M1\", 4, \"success\")",
     "Description": "變數更新",
     "zh_TW": "[panel=6]＊（於是你深深體會有些客套話，不能隨便亂說……）＊",

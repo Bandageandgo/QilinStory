@@ -97,7 +97,7 @@
     "entryID": 3217,
     "actorID": "role97",
     "text": "「得、得罪權貴？沒料到小兄弟年紀輕輕，竟有如此膽識，都說英雄出少年，小兄弟了不起啊！」",
-    "Sequence": "ControlStage(SetAnimator,阿緯,Talk);\nEnableCharacterExpression(1,NPC33,Nervous_2);",
+    "Sequence": "ControlStage(SetAnimator,阿緯,Talk);",
     "zh_TW": "「得、得罪權貴？沒料到小兄弟年紀輕輕，竟有如此膽識，都說英雄出少年，小兄弟了不起啊！」",
     "zh_CN": "「得、得罪权贵？没料到小兄弟年纪轻轻，竟有如此胆识，都说英雄出少年，小兄弟了不起啊！」",
     "links": [
@@ -108,7 +108,7 @@
     "entryID": 3218,
     "actorID": "role97",
     "text": "「……啊，你、你說的也對！\n……哈哈！那、那你進京後好好玩啊！好好玩！」",
-    "Sequence": "ControlStage(SetAnimator,阿緯,Talk);\nEnableCharacterExpression(1,NPC33,Nervous);",
+    "Sequence": "ControlStage(SetAnimator,阿緯,Talk);",
     "zh_TW": "「……啊，你、你說的也對！\n……哈哈！那、那你進京後好好玩啊！好好玩！」",
     "zh_CN": "「……啊，你、你说的也对！\n……哈哈！那、那你进京后好好玩啊！好好玩！」",
     "links": [
@@ -119,7 +119,7 @@
     "entryID": 3219,
     "actorID": "role97",
     "text": "「流民？這麼說小兄弟你的父母……已經……\n唉，小兄弟了不起啊，離開故鄉，想必不容易吧！」",
-    "Sequence": "ControlStage(SetAnimator,阿緯,Talk);\nEnableCharacterExpression(1,NPC33,Shock);",
+    "Sequence": "ControlStage(SetAnimator,阿緯,Talk);",
     "zh_TW": "「流民？這麼說小兄弟你的父母……已經……\n唉，小兄弟了不起啊，離開故鄉，想必不容易吧！」",
     "zh_CN": "「流民？这么说小兄弟你的父母……已经……\n唉，小兄弟了不起啊，离开故乡，想必不容易吧！」",
     "links": [
@@ -176,7 +176,7 @@
     "entryID": 3224,
     "actorID": "role97",
     "text": "「喔？小兄弟還是個讀書人……沒想到連讀書人都得背井離鄉……」",
-    "Sequence": "EnableCharacterExpression(1,NPC33,Idea);",
+    "Sequence": "",
     "zh_TW": "「喔？小兄弟還是個讀書人……沒想到連讀書人都得背井離鄉……」",
     "zh_CN": "「喔？小兄弟还是个读书人……没想到连读书人都得背井离乡……」",
     "links": [
@@ -187,7 +187,7 @@
     "entryID": 3225,
     "actorID": "role97",
     "text": "「唉！口氣這麼大，入了晉陽，可別水土不服啦！」",
-    "Sequence": "EnableCharacterExpression(1,NPC33,Meditate);",
+    "Sequence": "",
     "zh_TW": "「唉！口氣這麼大，入了晉陽，可別水土不服啦！」",
     "zh_CN": "「唉！口气这么大，入了晋阳，可别水土不服啦！」",
     "links": [
@@ -198,7 +198,7 @@
     "entryID": 3226,
     "actorID": "role97",
     "text": "「……說的也是，哪來這麼多理由。說到底，不都是為了錢麼……唉……」",
-    "Sequence": "EnableCharacterExpression(1,NPC33,Meditate);",
+    "Sequence": "",
     "zh_TW": "「……說的也是，哪來這麼多理由。說到底，不都是為了錢麼……唉……」",
     "zh_CN": "「……说的也是，哪来这么多理由。说到底，不都是为了钱么……唉……」",
     "links": [
@@ -209,7 +209,7 @@
     "entryID": 3227,
     "actorID": "role97",
     "text": "「啊？不記得了？小兄弟你逗我玩兒呢！咱們才出發幾日，哪來的不記得啊！」",
-    "Sequence": "EnableCharacterExpression(1,NPC33,Question);",
+    "Sequence": "",
     "zh_TW": "「啊？不記得了？小兄弟你逗我玩兒呢！咱們才出發幾日，哪來的不記得啊！」",
     "zh_CN": "「啊？不记得了？小兄弟你逗我玩儿呢！咱们才出发几日，哪来的不记得啊！」",
     "links": [
@@ -231,7 +231,7 @@
     "entryID": 3229,
     "actorID": "role97",
     "text": "「哈哈哈！我啊，除了拉弓射箭，埋設陷阱外，啥也不通，啥也不懂不過是年紀到了，我一個獵戶，哪來的錢兩娶個好媳婦……」",
-    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC33,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「哈哈哈！我啊，除了拉弓射箭，埋設陷阱外，啥也不通，啥也不懂不過是年紀到了，我一個獵戶，哪來的錢兩娶個好媳婦……」",
     "zh_CN": "「哈哈哈！我啊，除了拉弓射箭，埋设陷阱外，啥也不通，啥也不懂不过是年纪到了，我一个猎户，哪来的钱两娶个好媳妇……」",
     "links": [
@@ -911,7 +911,7 @@
     "entryID": 3582,
     "actorID": "MC22",
     "text": "[panel=2]「嘖嘖嘖，我看你，印堂發黑，烏雲蓋頂，這可是大凶之兆啊！輕則送命，重則…，唉，可惜、可惜啊…」",
-    "Sequence": "SetPortrait(MC22,pic=15);",
+    "Sequence": "SetPortrait(MC22,pic=8);",
     "Conditions": "IsInTeam(\"MC22\")  == true",
     "zh_TW": "[panel=2]「嘖嘖嘖，我看你，印堂發黑，烏雲蓋頂，這可是大凶之兆啊！輕則送命，重則…，唉，可惜、可惜啊…」",
     "zh_CN": "[panel=2]「啧啧啧，我看你，印堂发黑，乌云盖顶，这可是大凶之兆啊！轻则送命，重则…，唉，可惜、可惜啊…」",
@@ -2144,7 +2144,7 @@
     "entryID": 3758,
     "actorID": "MC22",
     "text": "「這位老哥看起來好像很緊張哦？」",
-    "Sequence": "SetPortrait(MC22,pic=12);",
+    "Sequence": "SetPortrait(MC22,pic=14);",
     "Conditions": "IsInTeam(\"MC22\")  == true",
     "zh_TW": "「這位老哥看起來好像很緊張哦？」",
     "zh_CN": "「这位老哥看起来好像很紧张哦？」",
@@ -2156,7 +2156,7 @@
     "entryID": 3760,
     "actorID": "MC1",
     "text": "「哈哈，好說好說！這江湖行走，靠的不光是拳腳，更得靠腦子！只要看破了其中的[em2]玄機[/em2]，哪怕是只蒼蠅飛過，我也能知道公母！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\n;EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「哈哈，好說好說！這江湖行走，靠的不光是拳腳，更得靠腦子！只要看破了其中的[em2]玄機[/em2]，哪怕是只蒼蠅飛過，我也能知道公母！」",
     "zh_CN": "「哈哈，好说好说！这江湖行走，靠的不光是拳脚，更得靠脑子！只要看破了其中的[em2]玄机[/em2]，哪怕是只苍蝇飞过，我也能知道公母！」",
     "links": [

@@ -352,7 +352,7 @@
     "entryID": 60,
     "actorID": "MC1",
     "text": "「嗯。當然不是特地為我準備的。」",
-    "Sequence": ";SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Flirting,20);",
+    "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Flirting,20);",
     "Conditions": "IsPassDice()  == true",
     "zh_CN": "「嗯。当然不是特地为我准备的。」",
     "links": [390]
@@ -377,7 +377,7 @@
     "entryID": 63,
     "actorID": "MC1",
     "text": "「那……多謝大夫帶藥。」",
-    "Sequence": ";SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
     "Conditions": "IsPassDice()  == false",
     "zh_CN": "「那……多谢大夫带药。」",
     "links": [64]
@@ -516,7 +516,7 @@
     "entryID": 84,
     "actorID": "MC1",
     "text": "「掩其不意……就是，呃，趁人不備？偷偷摸摸打？」",
-    "Sequence": ";SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
     "Conditions": "IsPassDice()  == false",
     "zh_CN": "「掩其不意……就是，呃，趁人不备？偷偷摸摸打？」",
     "links": [85]

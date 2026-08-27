@@ -675,7 +675,7 @@
     "entryID": 694,
     "actorID": "role4",
     "text": "「吼──！」",
-    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nEnableCharacterExpression(1,Monster,Anger_3);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);\nSetPortrait(MC1,pic=2);",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);\nSetPortrait(MC1,pic=2);",
     "zh_TW": "「吼──！」",
     "zh_CN": "「吼──！」",
     "links": [810]
@@ -702,7 +702,7 @@
     "entryID": 730,
     "actorID": "role4",
     "text": "「吼──吼──吼──」",
-    "Sequence": "DisableCharacterExpression(0);\nSetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3)->Message(EndFade);\nSetGameObjectShake(P1,ShakeNormal,YAxis,1,15,0);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Others_Roar);",
+    "Sequence": "DisableCharacterExpression(0);\nSetContinueMode(false);\n->Message(EndFade);\nSetGameObjectShake(P1,ShakeNormal,YAxis,1,15,0);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Others_Roar);",
     "zh_TW": "「吼──吼──吼──」",
     "zh_CN": "「吼──吼──吼──」",
     "links": [733]
@@ -738,7 +738,7 @@
     "entryID": 734,
     "actorID": "role4",
     "text": "「吼！」",
-    "Sequence": "SetContinueMode(false);\nEnableCharacterExpression(1,Monster,Anger_3)->Message(EndFade);\nSetGameObjectShake(P1,ShakeNormal,XYAxis,1,10,0);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Others_Roar);",
+    "Sequence": "SetContinueMode(false);\n->Message(EndFade);\nSetGameObjectShake(P1,ShakeNormal,XYAxis,1,10,0);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Others_Roar);",
     "zh_TW": "「吼！」",
     "zh_CN": "「吼！」",
     "links": [729]
@@ -1284,7 +1284,7 @@
     "entryID": 804,
     "actorID": "MC22",
     "text": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
-    "Sequence": "SetPortrait(MC22,pic=11);",
+    "Sequence": "SetPortrait(MC22,pic=3);",
     "zh_TW": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
     "zh_CN": "「[em7]偷偷擡眼看你，[/em7]少侠你武功高强，心地又好，总不忍瞧着我一个人去送死吧？」",
     "links": [802]
@@ -1481,7 +1481,7 @@
     "entryID": 2065,
     "actorID": "MC22",
     "text": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
-    "Sequence": "SetPortrait(MC22,pic=11);",
+    "Sequence": "SetPortrait(MC22,pic=3);",
     "zh_TW": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
     "zh_CN": "「[em7]偷偷擡眼看你，[/em7]少侠你武功高强，心地又好，总不忍瞧着我一个人去送死吧？」",
     "links": [2063]

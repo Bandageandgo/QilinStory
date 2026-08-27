@@ -422,7 +422,7 @@
     "entryID": 254,
     "actorID": "MC1",
     "text": "「靈犀，妳在嘀嘀咕咕地說什麼呢？」",
-    "Sequence": "SetPortrait(MC1,pic=confuse);EnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_CN": "「灵犀，妳在嘀嘀咕咕地说什么呢？」",
     "links": [255]
   },
@@ -446,7 +446,7 @@
     "entryID": 257,
     "actorID": "MC1",
     "text": "「……為何要透過靈犀？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_CN": "「……为何要透过灵犀？」",
     "links": [258]
   },
@@ -502,7 +502,7 @@
     "entryID": 264,
     "actorID": "MC8",
     "text": "[panel=2]「嗯！這本人家會記得清清楚楚的，二郎先生你放心！」",
-    "Sequence": "SetPortrait(MC8,pic=8);",
+    "Sequence": "SetPortrait(MC8,pic=5);",
     "zh_CN": "[panel=2]「嗯！这本人家会记得清清楚楚的，二郎先生你放心！」",
     "links": [265]
   },
@@ -542,7 +542,7 @@
     "entryID": 269,
     "actorID": "MC1",
     "text": "「我哪有怕…」",
-    "Sequence": "SetPortrait(MC1,pic=smile);",
+    "Sequence": "SetPortrait(MC1,pic=5);",
     "zh_CN": "「我哪有怕…」",
     "links": [270]
   },

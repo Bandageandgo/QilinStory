@@ -12,7 +12,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1_Meditate,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "Conditions": "Variable[\"FishCount\"] == 0 and (Variable[\"MyTime\"] < 6)",
     "zh_TW": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
     "zh_CN": "「嗯，这河水平缓，倒也适合垂钓。说不定能钓上几尾肥鱼，打打牙祭，体验一番渔家乐趣。」",
@@ -99,7 +99,7 @@
     "entryID": 17,
     "actorID": "MC1",
     "text": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？」",
     "zh_CN": "「哎，灵犀妳就是爱操心。这青天白日的，能有什么古怪？」",
     "links": [54]
@@ -158,7 +158,7 @@
     "entryID": 25,
     "actorID": "role2",
     "text": "[panel=6]＊（你猛地驚醒，額上滲著冷汗，眼神還有些渙散，似乎尚未從那場深邃的舊夢中掙脫出來。）＊",
-    "Sequence": "SetPortrait(MC1,pic=4); EnableCharacterExpression(0,MC1,Nervous_2);AudioControl(StopSFX);",
+    "Sequence": "SetPortrait(MC1,pic=4); EnableCharacterExpression(0,MC1-1,Nervous_2);AudioControl(StopSFX);",
     "zh_TW": "[panel=6]＊（你猛地驚醒，額上滲著冷汗，眼神還有些渙散，似乎尚未從那場深邃的舊夢中掙脫出來。）＊",
     "zh_CN": "[panel=6]＊（你猛地惊醒，额上渗着冷汗，眼神还有些涣散，似乎尚未从深邃的记忆中完全脱离。）＊",
     "links": [26]
@@ -176,7 +176,7 @@
     "entryID": 27,
     "actorID": "MC1",
     "text": "「又是那個場景…那雙眼睛…不，不會的…咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
-    "Sequence": "DisableCharacterExpression(1); \nSetPortrait(MC1,pic=11);\n EnableCharacterExpression(0,MC1-1_Pain,Pain);",
+    "Sequence": "DisableCharacterExpression(1); \nSetPortrait(MC1,pic=11);\n EnableCharacterExpression(0,MC1-1,Pain);",
     "Script": "SetQuestState(\"CF07\", \"active\")\nSetQuestEntryState(\"CF07\", 1, \"success\");",
     "Description": "觸發白日夢任務",
     "zh_TW": "「又是那個場景…那雙眼睛…不，不會的…咳…咳…沒…沒事！靈犀妳別擔心，作了個兇險嚇人的夢罷了。」",
@@ -205,7 +205,7 @@
     "entryID": 31,
     "actorID": "MC8",
     "text": "「好啦好啦，不管是大戰三百回合還是睡得像頭豬，此地陰森森的，我們還是趕快離開這個鬼地方，去找點正經事做吧！你的盤纏可還沒著落呢！」",
-    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC8,pic=3); ",
+    "Sequence": "DisableCharacterExpression(1); SetPortrait(MC8,pic=3);",
     "zh_TW": "「好啦好啦，不管是大戰三百回合還是睡得像頭豬，此地陰森森的，我們還是趕快離開這個鬼地方，去找點正經事做吧！你的盤纏可還沒著落呢！」",
     "zh_CN": "「好啦好啦，不管是大战三百回合还是睡得像头猪，此地阴森森的，我们还是赶快离开这个鬼地方，去找点正经事做吧！你的盘缠可还没着落呢！」",
     "links": [120]
@@ -262,7 +262,7 @@
     "entryID": 46,
     "actorID": "MC1",
     "text": "「此等奇物，確實罕見。不僅能解燃眉之急，或許還有其他妙用。靈犀，我可真行！對吧？對吧！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「此等奇物，確實罕見。不僅能解燃眉之急，或許還有其他妙用。靈犀，我可真行！對吧？對吧！」",
     "zh_CN": "「此等奇物，确实罕见。不仅能解燃眉之急，或许还有其他妙用。灵犀，我可真行！对吧？对吧！」",
     "links": [47]

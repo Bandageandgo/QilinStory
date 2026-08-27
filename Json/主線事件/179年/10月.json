@@ -108,7 +108,7 @@
     "entryID": 2173,
     "actorID": "MC19",
     "text": "[panel=1]「……小滑頭。三七便三七。」",
-    "Sequence": ";DisableCharacterExpression(2);ModifyData(FeatExp,Player,EconomicDevelopment,10);",
+    "Sequence": "DisableCharacterExpression(2);ModifyData(FeatExp,Player,EconomicDevelopment,10);",
     "Conditions": "IsPassDice()  == true",
     "zh_CN": "[panel=1]「……小滑头。三七便三七。」",
     "links": [2176]
@@ -181,7 +181,7 @@
     "entryID": 2182,
     "actorID": "MC6",
     "text": "「三七、柴胡、當歸……英豪府這幾個月採買的[em2]藥材[/em2]堆成山，[em2]藥品[/em2]也配了一批備用。過路客有病找不到人，還得來煩我。」",
-    "Sequence": "SetPortrait(MC6,pic=2);;",
+    "Sequence": "SetPortrait(MC6,pic=2);",
     "zh_CN": "「三七、柴胡、当归……英豪府这几个月采买的[em2]药材[/em2]堆成山，[em2]药品[/em2]也配了一批备用。过路客有病找不到人，还得来烦我。」",
     "links": [2183]
   },
@@ -197,7 +197,7 @@
     "entryID": 2184,
     "actorID": "MC6",
     "text": "「你這丫頭，帳算得還真精。那尋常藥材和幾種成品藥，交你發賣。但別亂標價。」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC6,pic=1);;",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC6,pic=1);",
     "zh_CN": "「你这丫头，账算得还真精。那寻常药材和几种成品药，交你发卖。但别乱标价。」",
     "links": [2185]
   },
@@ -213,7 +213,7 @@
     "entryID": 2186,
     "actorID": "MC6",
     "text": "「……哪來的青蛙。」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC6,pic=4);;",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC6,pic=4);",
     "zh_CN": "「……哪来的青蛙。」",
     "links": [2197]
   },

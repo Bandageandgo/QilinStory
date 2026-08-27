@@ -73,7 +73,7 @@
     "entryID": 206,
     "actorID": "MC1",
     "text": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1,Question);BeginDiceRoll(Manual,PersuasionCheck,10);",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);BeginDiceRoll(Manual,PersuasionCheck,10);",
     "zh_TW": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
     "zh_CN": "[em2][口才检定][/em2]「诸位，可否卖我个薄面？」",
     "links": [207]
@@ -101,7 +101,7 @@
     "entryID": 209,
     "actorID": "MC1",
     "text": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1,Anger);BeginDiceRoll(Manual,IntimidationCheck,12);",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);BeginDiceRoll(Manual,IntimidationCheck,12);",
     "zh_TW": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
     "zh_CN": "[em2][威吓检定][/em2]「滚！莫逼我出手！」",
     "links": [210]

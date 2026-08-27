@@ -49,7 +49,7 @@
     "entryID": 86,
     "actorID": "MC1",
     "text": "「原來如此！哈哈哈！好！那就有勞小二哥了！也請務必代我向老闆娘轉達謝意，今天晚上是吧？我一定到！」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Idea);",
     "zh_TW": "「原來如此！哈哈哈！好！那就有勞小二哥了！也請務必代我向老闆娘轉達謝意，今天晚上是吧？我一定到！」",
     "zh_CN": "「原来如此！哈哈哈！好！那就有劳小二哥了！也请务必代我向老板娘转达谢意，今天晚上是吧？我一定到！」",
     "links": [87]
@@ -94,7 +94,7 @@
     "entryID": 91,
     "actorID": "MC1",
     "text": "「咳！這…色香味無一不佳！老闆娘不僅廚藝驚為天人，這份高義雅緻又深藏不露的風範，更是令晚生我萬分心折，佩服，佩服之至！」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「咳！這…色香味無一不佳！老闆娘不僅廚藝驚為天人，這份高義雅緻又深藏不露的風範，更是令晚生我萬分心折，佩服，佩服之至！」",
     "zh_CN": "「咳！这…色香味无一不佳！老板娘不仅厨艺惊为天人，这份高义雅致又深藏不露的风范，更是令晚生我万分心折，佩服，佩服之至！」",
     "links": [152]
@@ -130,7 +130,7 @@
     "entryID": 95,
     "actorID": "role115",
     "text": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
-    "Sequence": "ModifyData(FeatExp,MC1,Qi,50);ModifyData(AbilityExp,MC1,Strength,100);ModifyData(AbilityMaxLevel,MC1,Strength,2);EnableCharacterExpression(1,7,Anger_2);",
+    "Sequence": "ModifyData(FeatExp,MC1,Qi,50);ModifyData(AbilityExp,MC1,Strength,100);ModifyData(AbilityMaxLevel,MC1,Strength,2);",
     "zh_TW": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
     "zh_CN": "[panel=1]「公子，这是老板娘特意为您准备的『龙涎香米』。此米乃吸收日月精华而生，极为罕见，据闻有滋养内息，延年益寿之奇效。老板娘说此物赠英雄，请您务必收下。」",
     "links": [213]
@@ -175,7 +175,7 @@
     "entryID": 100,
     "actorID": "role115",
     "text": "[panel=1]「[乾咳一聲] [var=PlayerLastName]公子…我們老闆娘性喜清靜，不慣見客…尤其…唉，公子還是先用菜吧。這『佳人笑』涼了可就失了風味了。」",
-    "Sequence": "EnableCharacterExpression(0,NPC7,Nervous);",
+    "Sequence": "",
     "zh_TW": "[panel=1]「[乾咳一聲] [var=PlayerLastName]公子…我們老闆娘性喜清靜，不慣見客…尤其…唉，公子還是先用菜吧。這『佳人笑』涼了可就失了風味了。」",
     "zh_CN": "[panel=1]「[干咳一声] [var=PlayerLastName]公子…我们老板娘性喜清静，不惯见客…尤其…唉，公子还是先用菜吧。这『佳人笑』凉了可就失了风味了。」",
     "links": [101]
@@ -311,7 +311,7 @@
     "entryID": 169,
     "actorID": "role118",
     "text": "[panel=2]「不知公子…是否願意為我尋來這[em2]返真草[/em2]？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
-    "Sequence": "SetPortrait(NPC10,pic=3);EnableCharacterExpression(2,NPC10,Sad);",
+    "Sequence": "",
     "zh_TW": "[panel=2]「不知公子…是否願意為我尋來這[em2]返真草[/em2]？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
     "zh_CN": "[panel=2]「不知公子…是否愿意为我寻来这[em2]返真草[/em2]？让我有片刻…能做回真正的自己，也让公子…在我将真心托付之前，见一见卸下所有伪装的我。」",
     "links": [170, 171, 172]
@@ -374,7 +374,7 @@
     "entryID": 176,
     "actorID": "role118",
     "text": "[panel=2]「但在此之前，我還有最後一個，也是最重要的一個問題想問你。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(NPC10,pic=8);",
+    "Sequence": "DisableCharacterExpression(2);",
     "zh_TW": "[panel=2]「但在此之前，我還有最後一個，也是最重要的一個問題想問你。」",
     "zh_CN": "[panel=2]「但在此之前，我还有最后一个，也是最重要的一个问题想问你。」",
     "links": [177]
@@ -494,7 +494,7 @@
     "entryID": 189,
     "actorID": "role118",
     "text": "[panel=2]「[var=PlayerLastName]公子，我知道這個請求或許唐突…但你屢次出手相助，高義薄雲，是我唯一能信任之人。」",
-    "Sequence": "SetPortrait(NPC10,pic=3);EnableCharacterExpression(2,NPC10,Sad);",
+    "Sequence": "",
     "zh_TW": "[panel=2]「[var=PlayerLastName]公子，我知道這個請求或許唐突…但你屢次出手相助，高義薄雲，是我唯一能信任之人。」",
     "zh_CN": "[panel=2]「[var=PlayerLastName]公子，我知道这个请求或许唐突…但你屡次出手相助，高义薄云，是我唯一能信任之人。」",
     "links": [169]
@@ -521,7 +521,7 @@
     "entryID": 213,
     "actorID": "MC1",
     "text": "「咳！有得吃又有得拿，那怎麼好意思！」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1_Cunning,Surprise_2);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Surprise_2);\nDisableCharacterExpression(1);",
     "zh_TW": "「咳！有得吃又有得拿，那怎麼好意思！」",
     "zh_CN": "「咳！有得吃又有得拿，那怎么好意思！」",
     "links": [96]
@@ -655,7 +655,7 @@
     "entryID": 2064,
     "actorID": "role119",
     "text": "哼，留不住你的心，我也要留住你的人！",
-    "Sequence": "EnableCharacterExpression(0,NPC40,Anger_2);",
+    "Sequence": "",
     "Conditions": "IsPassDice()  == false",
     "zh_TW": "哼，留不住你的心，我也要留住你的人！",
     "zh_CN": "哼，留不住你的心，我也要留住你的人！",

@@ -39,7 +39,7 @@
     "entryID": 5,
     "actorID": "MC1",
     "text": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1_Meditate,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
     "zh_CN": "「哦？鱼跃龙门？听闻英豪府遴选侠士，广纳天下英才，不知是何等盛事？」",
     "links": [6]
@@ -75,7 +75,7 @@
     "entryID": 9,
     "actorID": "MC1",
     "text": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其來歷也定然不凡吧？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1_Meditate,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其來歷也定然不凡吧？」",
     "zh_CN": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其来历也定然不凡吧？」",
     "links": [10]
@@ -236,7 +236,7 @@
     "entryID": 28,
     "actorID": "MC1",
     "text": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1_Meditate,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
     "zh_CN": "「小妹妹，妳怎么一个人在这里？是不是有人欺负妳？」",
     "links": [29]
@@ -298,7 +298,7 @@
     "entryID": 35,
     "actorID": "MC1",
     "text": "「這是…？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1_Meditate,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「這是…？」",
     "zh_CN": "「这是…？」",
     "links": [36]
@@ -426,7 +426,7 @@
     "entryID": 50,
     "actorID": "role5",
     "text": "[panel=1]「石頭？我看你們是『茅坑裡的石頭』──又臭又硬！怎麼講都講不聽，非要賴在這窮鄉僻壤做什麼？想沾染什麼晦氣不成？！」",
-    "Sequence": "SetPortrait(NPC6,pic=2);",
+    "Sequence": "",
     "zh_TW": "[panel=1]「石頭？我看你們是『茅坑裡的石頭』──又臭又硬！怎麼講都講不聽，非要賴在這窮鄉僻壤做什麼？想沾染什麼晦氣不成？！」",
     "zh_CN": "[panel=1]「石头？我看你们是『茅坑里的石头』──又臭又硬！怎么讲都讲不听，非要赖在这穷乡僻壤做什么？想沾染什么晦气不成？！」",
     "links": [51]
@@ -473,7 +473,7 @@
     "entryID": 55,
     "actorID": "MC1",
     "text": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
     "zh_CN": "「阿婆，此物名为『河神的眼泪』，是我们从一位小妹妹那里得来的。她看起来非常害怕河边…」",
     "links": [56]
@@ -540,7 +540,7 @@
     "entryID": 62,
     "actorID": "role5",
     "text": "[panel=1]「不准問！不准提！你們再不走，就真的走不掉了！滾！都給我滾——！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(NPC6,pic=2);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=1]「不准問！不准提！你們再不走，就真的走不掉了！滾！都給我滾——！」",
     "zh_CN": "[panel=1]「不准问！不准提！你们再不走，就真的走不掉了！滚！都给我滚——！」",
     "links": [63]
@@ -623,7 +623,7 @@
     "entryID": 72,
     "actorID": "MC1",
     "text": "[em2][耗時一個時辰][/em2]「道長身手不凡，不如切磋一下？點到為止。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
     "Conditions": "Variable[\"MyTime\"] < 6",
     "zh_TW": "[em2][耗時一個時辰][/em2]「道長身手不凡，不如切磋一下？點到為止。」",
     "zh_CN": "[em2][耗时一个时辰][/em2]「道长身手不凡，不如切磋一下？点到为止。」",

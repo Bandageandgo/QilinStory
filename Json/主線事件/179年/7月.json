@@ -170,7 +170,7 @@
     "entryID": 122,
     "actorID": "MC20",
     "text": "「這些日子貧道是寢食難安，總想著如何彌補…只是那妖物實在厲害，貧道…貧道怕又拖累了你。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC20,pic=3);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC20,pic=1);",
     "zh_TW": "「這些日子貧道是寢食難安，總想著如何彌補…只是那妖物實在厲害，貧道…貧道怕又拖累了你。」",
     "zh_CN": "「这些日子贫道是寝食难安，总想着如何弥补…只是那妖物实在厉害，贫道…贫道怕又拖累了你。」",
     "links": [
@@ -320,7 +320,7 @@
     "entryID": 225,
     "actorID": "MC20",
     "text": "「此物陰氣極重，若運用不當，恐有奇禍。兄弟，還是由貧道暫為保管，再行定奪如何？」",
-    "Sequence": "SetPortrait(MC20,pic=12);",
+    "Sequence": "SetPortrait(MC20,pic=1);",
     "zh_TW": "「此物陰氣極重，若運用不當，恐有奇禍。兄弟，還是由貧道暫為保管，再行定奪如何？」",
     "zh_CN": "「此物阴气极重，若运用不当，恐有奇祸。兄弟，还是由贫道暂为保管，再行定夺如何？」",
     "links": [
@@ -345,7 +345,7 @@
     "entryID": 227,
     "actorID": "MC1",
     "text": "「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」",
     "zh_CN": "「青山不改，绿水长流，他日江湖再见，定要与你痛饮三百杯，不醉不归！」",
     "links": [
@@ -400,7 +400,7 @@
     "entryID": 232,
     "actorID": "MC8",
     "text": "「表哥，雍仔道長走了，我們…也該準備準備了。下個月初，前往雲中的馬車隊就要出發了，我們可不能再耽擱了！」",
-    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Talk);",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Meditate);",
     "zh_TW": "「表哥，雍仔道長走了，我們…也該準備準備了。下個月初，前往雲中的馬車隊就要出發了，我們可不能再耽擱了！」",
     "zh_CN": "「表哥，雍仔道长走了，我们…也该准备准备了。下个月初，前往云中的马车队就要出发了，我们可不能再耽搁了！」",
     "links": [
@@ -411,7 +411,7 @@
     "entryID": 233,
     "actorID": "MC1",
     "text": "「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
     "zh_CN": "「嗯！妳說的对！男儿志在四方！是更广阔的江湖！待我将长生经融会贯通，定要在英豪府的遴选中拔得头筹，扬名立万！」",
     "links": [
@@ -474,7 +474,7 @@
     "entryID": 241,
     "actorID": "MC20",
     "text": "「這是…屍丹？看來是這老妖修煉多年的精華所在。兄弟，此物雖是妖物所留，但若運用得當，或許也有奇效。」",
-    "Sequence": "SetPortrait(MC20,pic=12);",
+    "Sequence": "SetPortrait(MC20,pic=1);",
     "zh_TW": "「這是…屍丹？看來是這老妖修煉多年的精華所在。兄弟，此物雖是妖物所留，但若運用得當，或許也有奇效。」",
     "zh_CN": "「这是…尸丹？看来是这老妖修炼多年的精华所在。兄弟，此物虽是妖物所留，但若运用得当，或许也有奇效。」",
     "links": [
@@ -496,7 +496,7 @@
     "entryID": 243,
     "actorID": "MC1",
     "text": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(DnDAlignment,MC1,LawChaos,0.15);\nEnableCharacterExpression(0,MC1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(DnDAlignment,MC1,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
     "zh_CN": "「尸丹…听起来就很邪门…还是让道长你拿着吧，我现在只想找地方歇歇脚，顺便看看有没有吃的…」",
     "links": [
@@ -542,7 +542,7 @@
     "entryID": 247,
     "actorID": "MC1",
     "text": "「這屍丹聽著是邪門，但咱們辛辛苦苦打生打死才得了這麼個玩意兒，直接扔了豈不可惜？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Meditate);\nModifyData(DnDAlignment,MC1,LawChaos,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,MC1,LawChaos,-0.15);",
     "zh_TW": "「這屍丹聽著是邪門，但咱們辛辛苦苦打生打死才得了這麼個玩意兒，直接扔了豈不可惜？」",
     "zh_CN": "「这尸丹听着是邪门，但咱们辛辛苦苦打生打死才得了这么个玩意儿，直接扔了岂不可惜？」",
     "links": [
@@ -577,7 +577,7 @@
     "entryID": 250,
     "actorID": "MC1",
     "text": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,0.15);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,0.15);",
     "zh_TW": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
     "zh_CN": "「雍仔，万万不可！此物乃集那黑血尸毕生怨毒邪气所化，留在世间，难保不会被歹人利用，或再生祸端！」",
     "links": [
@@ -624,7 +624,7 @@
     "entryID": 254,
     "actorID": "MC1",
     "text": "「此言差矣！這屍丹雖陰邪，但所謂[em2]孤陰不長，孤陽不生[/em2]，或許我正能以自身之長生經化解其戾氣，取其精華！」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,-0.15);",
     "zh_TW": "「此言差矣！這屍丹雖陰邪，但所謂[em2]孤陰不長，孤陽不生[/em2]，或許我正能以自身之長生經化解其戾氣，取其精華！」",
     "zh_CN": "「此言差矣！这尸丹虽阴邪，但所谓[em2]孤阴不长，孤阳不生[/em2]，或许我正能以自身之长生经化解其戾气，取其精华！」",
     "links": [
@@ -694,7 +694,7 @@
     "entryID": 260,
     "actorID": "MC1",
     "text": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
     "zh_CN": "「依我看，为绝后患，不如我等立刻合力，将此邪物彻底摧毁！」",
     "links": [
@@ -824,7 +824,7 @@
     "entryID": 291,
     "actorID": "MC20",
     "text": "「唉！罷了罷了，說來慚愧，那日若非貧道財迷心竅，也不會害你身陷險境！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC20,pic=3);\nEnableCharacterExpression(1,MC20,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Nervous_2);",
     "zh_TW": "「唉！罷了罷了，說來慚愧，那日若非貧道財迷心竅，也不會害你身陷險境！」",
     "zh_CN": "「唉！罢了罢了，说来惭愧，那日若非贫道财迷心窍，也不会害你身陷险境！」",
     "links": [
@@ -835,7 +835,7 @@
     "entryID": 292,
     "actorID": "MC20",
     "text": "「這些日子貧道是寢食難安，總想著如何彌補…只是那妖物實在厲害，貧道…貧道這幾日一直在這洞口守著就是怕這妖物跑出來危害小溪村的大家。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=3);EnableCharacterExpression(1,MC20,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Nervous_2);",
     "zh_TW": "「這些日子貧道是寢食難安，總想著如何彌補…只是那妖物實在厲害，貧道…貧道這幾日一直在這洞口守著就是怕這妖物跑出來危害小溪村的大家。」",
     "zh_CN": "「这些日子贫道是寝食难安，总想着如何弥补…只是那妖物实在厉害，贫道…贫道这几日一直在这洞口守着就是怕这妖物跑出来危害小溪村的大家。」",
     "links": [
@@ -1074,7 +1074,7 @@
     "entryID": 317,
     "actorID": "MC1",
     "text": "「道長、赫連姑娘，我看這樣，此物既然奇特，不如我們先帶上，日後到了大城鎮，找個行家鑑定一番，再決定如何處置？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.15);",
     "zh_TW": "「道長、赫連姑娘，我看這樣，此物既然奇特，不如我們先帶上，日後到了大城鎮，找個行家鑑定一番，再決定如何處置？」",
     "zh_CN": "「道长、赫连姑娘，我看这样，此物既然奇特，不如我们先带上，日后到了大城镇，找个行家鉴定一番，再决定如何处置？」",
     "links": [
@@ -1111,7 +1111,7 @@
     "entryID": 320,
     "actorID": "MC1",
     "text": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,0.15);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,0.15);",
     "zh_TW": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
     "zh_CN": "「雍仔，万万不可！此物乃集那黑血尸毕生怨毒邪气所化，留在世间，难保不会被歹人利用，或再生祸端！」",
     "links": [
@@ -1147,7 +1147,7 @@
     "entryID": 323,
     "actorID": "MC1",
     "text": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
     "zh_CN": "「依我看，为绝后患，不如我等立刻合力，将此邪物彻底摧毁！」",
     "links": [
@@ -1170,7 +1170,7 @@
     "entryID": 325,
     "actorID": "MC1",
     "text": "「道長此言差矣。富貴險中求，赫連姑娘，這血河舍利既是至寶，想必有不凡之處吧？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
     "zh_TW": "「道長此言差矣。富貴險中求，赫連姑娘，這血河舍利既是至寶，想必有不凡之處吧？」",
     "zh_CN": "「道长此言差矣。富贵险中求，赫连姑娘，这血河舍利既是至宝，想必有不凡之处吧？」",
     "links": [

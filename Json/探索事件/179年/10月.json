@@ -120,7 +120,7 @@
     "entryID": 2060,
     "actorID": "MC1",
     "text": "「住手！光天化日之下，竟敢強逼良家婦女？」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1_Anger);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
     "zh_CN": "「住手！光天化日之下，竟敢强逼良家妇女？」",
     "links": [2061]
   },
@@ -160,7 +160,7 @@
     "entryID": 2066,
     "actorID": "role13",
     "text": "「是是是！不過…這位好漢，咱們幫主老人家最敬重英雄。既然這姑娘說是我們出千，不如兩位親自去賭坊見見幫主？」",
-    "Sequence": "SetPortrait(NPC_Thug,pic=nervous);",
+    "Sequence": "",
     "zh_TW": "「是是是！不過…這位好漢，咱們幫主老人家最敬重英雄。既然這姑娘說是我們出千，不如兩位親自去賭坊見見幫主？」",
     "zh_CN": "「是是是！不过…这位好汉，咱们帮主老人家最敬重英雄。既然这姑娘说是我们出千，不如两位亲自去赌坊见见帮主？」",
     "links": [3666]
@@ -169,7 +169,7 @@
     "entryID": 2068,
     "actorID": "MC22",
     "text": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7] 啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
-    "Sequence": "SetPortrait(MC22,pic=10);\nEnableCharacterExpression(1,MC22_Surprise);",
+    "Sequence": "SetPortrait(MC22,pic=10);\nEnableCharacterExpression(1,MC22,Surprise);",
     "zh_TW": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7] 啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
     "zh_CN": "「[em7]瞥见了你，立刻戏精上身，大喊道[/em7] 啊！当家的！你终于来了！快救救妾身！他们要抓我去抵债！」",
     "links": [2069]
@@ -227,7 +227,7 @@
     "entryID": 2075,
     "actorID": "role13",
     "text": "「[em7]被你的氣勢嚇退半步[/em7] 呃…這…好漢息怒！咱們也是混口飯吃…不如這樣，兩位去賭坊見見幫主？咱們幫主說了，只要能在賭桌上贏過他，這債一筆勾銷，還送寶貝！」",
-    "Sequence": ";SetPortrait(MC1,pic=2);ModifyData(FeatExp,Player,Intimidation,10);",
+    "Sequence": "SetPortrait(MC1,pic=2);ModifyData(FeatExp,Player,Intimidation,10);",
     "Conditions": "IsPassDice()  == true",
     "zh_CN": "「[em7]被你的气势吓退半步[/em7] 呃…这…好汉息怒！咱们也是混口饭吃…不如这样，两位去赌坊见见帮主？咱们帮主说了，只要能在赌桌上赢过他，这债一笔勾销，还送宝贝！」",
     "links": [3673]
@@ -236,7 +236,7 @@
     "entryID": 2076,
     "actorID": "role13",
     "text": "「[em7]不屑地冷笑[/em7] 喲？還想動手？兄弟們，上！教教這小子規矩！」",
-    "Sequence": ";SetPortrait(MC1,pic=2);",
+    "Sequence": "SetPortrait(MC1,pic=2);",
     "Conditions": "IsPassDice()  == false",
     "zh_CN": "「[em7]不屑地冷笑[/em7] 哟？还想动手？兄弟们，上！教教这小子规矩！」",
     "links": [3663]
@@ -300,7 +300,7 @@
     "entryID": 3666,
     "actorID": "role13",
     "text": "「若真能贏過幫主，別說這五百錢，就是庫房裡的寶貝也雙手奉上！」",
-    "Sequence": "SetPortrait(NPC_Thug,pic=nervous);",
+    "Sequence": "",
     "zh_TW": "「若真能贏過幫主，別說這五百錢，就是庫房裡的寶貝也雙手奉上！」",
     "zh_CN": "「若真能赢过帮主，别说这五百钱，就是库房里的宝贝也双手奉上！」",
     "links": [3673]
@@ -439,7 +439,7 @@
     "entryID": 3686,
     "actorID": "MC1",
     "text": "「咳…晚輩初出茅廬，正想找些營生。若前輩需要，晚輩願替前輩尋來這寒鐵！」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
     "zh_CN": "「咳…晚辈初出茅庐，正想找些营生。若前辈需要，晚辈愿替前辈寻来这寒铁！」",
     "links": [3687]
   },

@@ -3,7 +3,7 @@
     "entryID": 2026,
     "actorID": "role87",
     "text": "「喂！小子你打破我的壺了，賠錢來！」",
-    "Sequence": "SetPortrait(MC37,pic=2);\nSetPortrait(MC1,pic=4);\nSetPortrait(role87,pic=2);",
+    "Sequence": "\nSetPortrait(MC1,pic=4);",
     "zh_TW": "「喂！小子你打破我的壺了，賠錢來！」",
     "zh_CN": "「喂！小子你打破我的壶了，赔钱来！」",
     "links": [2027]
@@ -21,7 +21,7 @@
     "entryID": 2028,
     "actorID": "role87",
     "text": "「勸你們快交錢，不然的話老子砂鍋大的拳頭可不會客氣的！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nSetPortrait(role87,pic=2);",
+    "Sequence": "SetPortrait(MC1,pic=13);",
     "zh_TW": "「勸你們快交錢，不然的話老子砂鍋大的拳頭可不會客氣的！」",
     "zh_CN": "「劝你们快交钱，不然的话老子砂锅大的拳头可不会客气的！」",
     "links": [2030]
@@ -48,7 +48,7 @@
     "entryID": 2033,
     "actorID": "role87",
     "text": "「是是是…小的知錯了，再也不敢了…」",
-    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,10);\nSetPortrait(role87,pic=2);\nModifyData(Coin,50);",
+    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,10);\nModifyData(Coin,50);",
     "Conditions": "IsPassDice() == true;",
     "Description": "拿錢",
     "zh_TW": "「是是是…小的知錯了，再也不敢了…」",
@@ -91,7 +91,7 @@
     "entryID": 2038,
     "actorID": "role87",
     "text": "「是是是……小的知錯了，再也不敢了……」",
-    "Sequence": "SetPortrait(role87,pic=2);",
+    "Sequence": "",
     "zh_TW": "「是是是……小的知錯了，再也不敢了……」",
     "zh_CN": "「是是是……小的知错了，再也不敢了……」",
     "links": [2047]
@@ -109,7 +109,7 @@
     "entryID": 2041,
     "actorID": "role87",
     "text": "「好啦好啦…我也是沒錢才會這樣啊，我保證下次決不再犯就是了！」",
-    "Sequence": "SetPortrait(role87,pic=2);",
+    "Sequence": "",
     "Conditions": "IsPassDice() == false;",
     "zh_TW": "「好啦好啦…我也是沒錢才會這樣啊，我保證下次決不再犯就是了！」",
     "zh_CN": "「好啦好啦…我也是没钱才会这样啊，我保证下次决不再犯就是了！」",
@@ -127,7 +127,7 @@
     "entryID": 2043,
     "actorID": "role87",
     "text": "「呸，還不趕緊把錢給老子交出來！」",
-    "Sequence": "SetPortrait(role87,pic=2);",
+    "Sequence": "",
     "zh_TW": "「呸，還不趕緊把錢給老子交出來！」",
     "zh_CN": "「呸，还不赶紧把钱给老子交出来！」",
     "links": [2044]
@@ -192,7 +192,7 @@
     "entryID": 2051,
     "actorID": "role42",
     "text": "「[em7]朝那漢子一瞪[/em7]蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=2);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=2);",
     "zh_TW": "「[em7]朝那漢子一瞪[/em7]蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
     "zh_CN": "「[em7]朝那汉子一瞪[/em7]蛋头！我不是跟你说过，别再搞这种鸡毛鸟事吗！」",
     "links": [2053]
@@ -201,7 +201,7 @@
     "entryID": 2052,
     "actorID": "role42",
     "text": "「唉唷，這裡還挺熱鬧的啊。」",
-    "Sequence": "PlayFeelFeedback(Position,P1,P1_OffScreenPos);\nSetPortrait(role42,pic=1);",
+    "Sequence": "PlayFeelFeedback(Position,P1,P1_OffScreenPos);\nSetPortrait(MC13,pic=1);",
     "zh_TW": "「唉唷，這裡還挺熱鬧的啊。」",
     "zh_CN": "「唉唷，这里还挺热闹的啊。」",
     "links": [2048]
@@ -210,7 +210,7 @@
     "entryID": 2053,
     "actorID": "role87",
     "text": "[panel=3]「……是，弟子只是一時技癢，又想著能替先生分些擔子……」",
-    "Sequence": "PlayFeelFeedback(RotationShake,P3,0.5,25,5);\nSetPortrait(role87,pic=2);",
+    "Sequence": "PlayFeelFeedback(RotationShake,P3,0.5,25,5);",
     "zh_TW": "[panel=3]「……是，弟子只是一時技癢，又想著能替先生分些擔子……」",
     "zh_CN": "[panel=3]「……是，弟子只是一时技痒，又想着能替先生分些担子……」",
     "links": [2055]
@@ -219,7 +219,7 @@
     "entryID": 2054,
     "actorID": "role87",
     "text": "[panel=3]「是、是…」",
-    "Sequence": "SetPortrait(role87,pic=2);",
+    "Sequence": "",
     "zh_TW": "[panel=3]「是、是…」",
     "zh_CN": "[panel=3]「是、是…」",
     "links": [2056]
@@ -228,7 +228,7 @@
     "entryID": 2055,
     "actorID": "role42",
     "text": "「算了算了！我當初救你，可不是讓你拿新來的人練把戲的！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=3);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=3);",
     "zh_TW": "「算了算了！我當初救你，可不是讓你拿新來的人練把戲的！」",
     "zh_CN": "「算了算了！我当初救你，可不是让你拿新来的人练把戏的！」",
     "links": [2054]
@@ -237,7 +237,7 @@
     "entryID": 2056,
     "actorID": "role42",
     "text": "「[em7]轉向你，咧嘴一笑[/em7]嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=1);",
     "zh_TW": "「[em7]轉向你，咧嘴一笑[/em7]嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
     "zh_CN": "「[em7]转向你，咧嘴一笑[/em7]嘿，小兄弟，气性挺大嘛，有意思。看在我的面子上，这事就算了吧——」",
     "links": [2057]
@@ -246,7 +246,7 @@
     "entryID": 2057,
     "actorID": "role42",
     "text": "「你若是肯幫忙跑一趟腿，說不定還能撈點好處——我這兒缺個嘴快腳快的，酬金嘛，絕不虧你。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=1);",
     "zh_TW": "「你若是肯幫忙跑一趟腿，說不定還能撈點好處——我這兒缺個嘴快腳快的，酬金嘛，絕不虧你。」",
     "zh_CN": "「你若是肯帮忙跑一趟腿，说不定还能捞点好处——我这儿缺个嘴快脚快的，酬金嘛，绝不亏你。」",
     "links": [2050]

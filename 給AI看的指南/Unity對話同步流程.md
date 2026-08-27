@@ -70,6 +70,8 @@
 }
 ```
 
+- `Conditions`／`Script` 是 **Lua**：「不等於」寫 **`~=`**（`!=` 是錯的，引擎讀不到，該分支永遠不成立），連接詞用 `and`／`or`／`not`。
+- **多條件串接第二段起一律加小括號**：`A == x and (B == y)` ✅／`A == x and B == y` ❌；字串常量一定帶引號：`== "success"` ✅／`== success` ❌。這兩種寫錯都不會報錯，只是該分支永遠走不到。詳見 `劇情/轉成json指南.md` §2 `Conditions` 欄位。
 - `zh_TW` / `zh_CN` / `en` 匯入時寫進 Dialogue System 的 `zh-TW` / `zh-CN` / `en` 多語欄位；JSON 沒帶這些欄位時，Unity 既有翻譯**不會**被清掉。
 - Unity 端會在每個節點蓋 `JsonEntryID` 印記、對話上蓋 `JsonSource` 印記，之後同步都靠印記精準對應，與節點順序無關。
 

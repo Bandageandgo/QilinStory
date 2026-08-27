@@ -28,7 +28,7 @@
     "entryID": 40,
     "actorID": "MC22",
     "text": "「[em7]緊張地抓著你的衣袖，手心全是汗[/em7] 大俠…全靠你了…要是輸了，我就真的要被抓去倒酒了…」",
-    "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22_Nervous);\nDisableCharacterExpression(0);",
+    "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22,Nervous);\nDisableCharacterExpression(0);",
     "zh_CN": "「[em7]紧张地抓着你的衣袖，手心全是汗[/em7] 大侠…全靠你了…要是输了，我就真的要被抓去倒酒了…」",
     "links": [131, 132, 133]
   },
@@ -200,7 +200,7 @@
     "entryID": 128,
     "actorID": "MC1",
     "text": "「聽聞幫主一生好武、好酒、好賭。既然是挑戰幫主，那無論是[em2]拳腳兵刃、千杯不醉，還是這骰子牌九[/em2]，只要能在一項上勝過幫主，便算是贏了，對吧？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「聽聞幫主一生好武、好酒、好賭。既然是挑戰幫主，那無論是[em2]拳腳兵刃、千杯不醉，還是這骰子牌九[/em2]，只要能在一項上勝過幫主，便算是贏了，對吧？」",
     "zh_CN": "「听闻帮主一生好武、好酒、好赌。既然是挑战帮主，那无论是[em2]拳脚兵刃、千杯不醉，还是这骰子牌九[/em2]，只要能在一项上胜过帮主，便算是赢了，对吧？」",
     "links": [129]
@@ -900,7 +900,7 @@
     "entryID": 4055,
     "actorID": "MC22",
     "text": "「呼……嚇死我了，還以為真要去倒酒了。大俠，我們快走吧！」",
-    "Sequence": "SetPortrait(MC22,pic=4);",
+    "Sequence": "SetPortrait(MC22,pic=13);",
     "Description": "任務成功的通用對話",
     "zh_TW": "「呼……嚇死我了，還以為真要去倒酒了。大俠，我們快走吧！」",
     "zh_CN": "「呼……吓死我了，还以为真要去倒酒了。大侠，我们快走吧！」",
@@ -1080,7 +1080,7 @@
     "entryID": 4077,
     "actorID": "MC8",
     "text": "「嗚……表哥你救救小犀啦！要是讓娜娜姐姐知道我把盤纏輸了這麼多……再讓小犀求一把，最後一把！」",
-    "Sequence": "SetPortrait(MC8,pic=3);EnableCharacterExpression(1,MC8,Cry);\nSetPortrait(MC1,pic=8);",
+    "Sequence": "SetPortrait(MC8,pic=3);EnableCharacterExpression(1,MC8,Pain);\nSetPortrait(MC1,pic=8);",
     "zh_CN": "「呜……表哥你救救小犀啦！要是让娜娜姐姐知道我把盘缠输了这么多……再让小犀求一把，最后一把！」",
     "links": [4117]
   },
@@ -1088,7 +1088,7 @@
     "entryID": 4078,
     "actorID": "MC8",
     "text": "「……我、我已經算不清我們虧多少了。可是如果不翻本，我們接下來難道要喝西北風嗎？表哥，你再借小犀……一小把，好不好？」",
-    "Sequence": "SetPortrait(MC8,pic=10);EnableCharacterExpression(1,MC8,Cry);\nSetPortrait(MC1,pic=11);",
+    "Sequence": "SetPortrait(MC8,pic=10);EnableCharacterExpression(1,MC8,Pain);\nSetPortrait(MC1,pic=11);",
     "zh_CN": "「……我、我已经算不清我们亏多少了。可是如果不翻本，我们接下来难道要喝西北风吗？表哥，你再借小犀……一小把，好不好？」",
     "links": [4124]
   },
@@ -1104,7 +1104,7 @@
     "entryID": 4080,
     "actorID": "MC8",
     "text": "「……不要了。」",
-    "Sequence": "SetPortrait(MC8,pic=12);\nSetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC8,pic=3);\nSetPortrait(MC1,pic=9);",
     "zh_CN": "「……不要了。」",
     "links": [4081]
   },
@@ -1112,7 +1112,7 @@
     "entryID": 4081,
     "actorID": "MC8",
     "text": "「……原來不管怎麼押，贏面總在莊家那頭。十賭九輸，這根本不是靠運氣就能贏的買賣，我太傻了……」",
-    "Sequence": "SetPortrait(MC8,pic=12);EnableCharacterExpression(1,MC8,Mindpain);",
+    "Sequence": "SetPortrait(MC8,pic=3);EnableCharacterExpression(1,MC8,Pain);",
     "zh_CN": "「……原来不管怎么押，赢面总在庄家那头。十赌九输，这根本不是靠运气就能赢的买卖，我太傻了……」",
     "links": [4082]
   },
@@ -1129,7 +1129,7 @@
     "entryID": 4083,
     "actorID": "MC8",
     "text": "「明明說好小犀要當帳房，管好表哥不亂花錢的，結果我自己卻犯了糊塗……我、我先離開這裡。等我冷靜下來，小犀會自己去跟娜娜姐姐認錯的。」",
-    "Sequence": "SetPortrait(MC8,pic=8);",
+    "Sequence": "SetPortrait(MC8,pic=3);",
     "zh_CN": "「明明说好小犀要当帐房，管好表哥不乱花钱的，结果我自己却犯了糊涂……我、我先离开这里。等我冷静下来，小犀会自己去跟娜娜姐姐认错的。」",
     "links": [4084]
   },
@@ -1619,7 +1619,7 @@
     "entryID": 4139,
     "actorID": "MC22",
     "text": "[panel=2]「照這樣看來，這獎品應該也不太…」",
-    "Sequence": "SetPortrait(MC22,pic=4);",
+    "Sequence": "SetPortrait(MC22,pic=13);",
     "zh_TW": "[panel=2]「照這樣看來，這獎品應該也不太…」",
     "zh_CN": "[panel=2]「照这样看来，这奖品应该也不太…」",
     "links": [4140]
@@ -2100,7 +2100,7 @@
     "entryID": 4199,
     "actorID": "role73",
     "text": "「算你厲害！」",
-    "Sequence": "SetPortrait(role73,pic=1);",
+    "Sequence": "",
     "Script": "SetQuestEntryState(\"CF27\", 5, \"success\");\nSetQuestEntryState(\"CF27\", 6, \"active\")",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
@@ -2169,7 +2169,7 @@
     "entryID": 4208,
     "actorID": "role105",
     "text": "「算你厲害！」",
-    "Sequence": "SetPortrait(role73,pic=1);",
+    "Sequence": "",
     "Script": "SetQuestEntryState(\"CF27\", 6, \"success\");\nSetQuestEntryState(\"CF27\", 7, \"active\")",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",

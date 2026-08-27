@@ -13,7 +13,7 @@
     "entryID": 3514,
     "actorID": "role98",
     "text": "「大、大哥您冷靜一下，冷靜一下。\n唉呦，小弟怎麼敢質疑你啊？不就是好奇嘛！」",
-    "Sequence": "EnableCharacterExpression(1,NPC29,Nervous);",
+    "Sequence": "",
     "zh_TW": "「大、大哥您冷靜一下，冷靜一下。\n唉呦，小弟怎麼敢質疑你啊？不就是好奇嘛！」",
     "zh_CN": "「大、大哥您冷静一下，冷静一下。\n唉呦，小弟怎么敢质疑你啊？不就是好奇嘛！」",
     "links": [
@@ -35,7 +35,7 @@
     "entryID": 3516,
     "actorID": "role98",
     "text": "「畢竟大哥你說……去投奔那[em2]白波軍[/em2]，跟著渠帥幹大事，可…那可是造反啊！是要掉腦袋的！真有這麼好的前程，會平白無故輪到我們這種升斗小民嗎？我、我心裡實在慌得很……」",
-    "Sequence": "EnableCharacterExpression(1,NPC29,Nervous);\nDisableCharacterExpression(1);",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「畢竟大哥你說……去投奔那[em2]白波軍[/em2]，跟著渠帥幹大事，可…那可是造反啊！是要掉腦袋的！真有這麼好的前程，會平白無故輪到我們這種升斗小民嗎？我、我心裡實在慌得很……」",
     "zh_CN": "「毕竟大哥你说……去投奔那[em2]白波军[/em2]，跟着渠帅干大事，可…那可是造反啊！是要掉脑袋的！真有这么好的前程，会平白无故轮到我们这种升斗小民吗？我、我心里实在慌得很……」",
     "links": [
@@ -86,7 +86,7 @@
     "entryID": 3521,
     "actorID": "role98",
     "text": "「可……可是……聽說官兵凶得很……萬一……」",
-    "Sequence": "EnableCharacterExpression(1,NPC29,Nervous);",
+    "Sequence": "",
     "zh_TW": "「可……可是……聽說官兵凶得很……萬一……」",
     "zh_CN": "「可……可是……听说官兵凶得很……万一……」",
     "links": [
@@ -747,7 +747,7 @@
     "entryID": 3582,
     "actorID": "MC22",
     "text": "[panel=5]「不過，你這麼能睡，果然是個狠角色！」",
-    "Sequence": "SetPortrait(MC22,pic=4);",
+    "Sequence": "SetPortrait(MC22,pic=5);",
     "Conditions": "IsInTeam(\"MC22\")  == true",
     "zh_TW": "[panel=5]「不過，你這麼能睡，果然是個狠角色！」",
     "zh_CN": "[panel=5]「不过，你这么能睡，果然是个狠角色！」",
@@ -1010,7 +1010,7 @@
     "entryID": 3605,
     "actorID": "role123",
     "text": "「咳、總覺得哪邊怪怪得...」",
-    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC26,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「咳、總覺得哪邊怪怪得...」",
     "zh_CN": "「咳、总觉得哪边怪怪得...」",
     "links": [
@@ -1055,7 +1055,7 @@
     "entryID": 3609,
     "actorID": "role123",
     "text": "「咳、總覺得哪邊怪怪得...」",
-    "Sequence": "DisableCharacterExpression(0);\nEnableCharacterExpression(1,NPC26,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「咳、總覺得哪邊怪怪得...」",
     "zh_CN": "「咳、总觉得哪边怪怪得...」",
     "links": [

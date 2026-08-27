@@ -22,7 +22,7 @@
     "entryID": 15,
     "actorID": "MC20",
     "text": "「兄弟請看，此處便是那古墓的入口！我已探查過，周遭並無強力禁制，只是入口被巧妙隱藏起來罷了。」",
-    "Sequence": "SetPortrait(MC20,pic=proud_or_confident);",
+    "Sequence": "SetPortrait(MC20,pic=1);",
     "zh_TW": "「兄弟請看，此處便是那古墓的入口！我已探查過，周遭並無強力禁制，只是入口被巧妙隱藏起來罷了。」",
     "zh_CN": "「兄弟请看，此处便是那古墓的入口！我已探查过，周遭并无强力禁制，只是入口被巧妙隐藏起来罢了。」",
     "links": [292]
@@ -40,7 +40,7 @@
     "entryID": 17,
     "actorID": "MC20",
     "text": "「嘿嘿，兄弟，莫被表象所迷惑！此處設有障眼法！若非貧道眼尖，尋常人等只怕就此錯過了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=smug);EnableCharacterExpression(1,MC20,Talk);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Proud);",
     "zh_TW": "「嘿嘿，兄弟，莫被表象所迷惑！此處設有障眼法！若非貧道眼尖，尋常人等只怕就此錯過了。」",
     "zh_CN": "「嘿嘿，兄弟，莫被表象所迷惑！此处设有障眼法！若非贫道眼尖，寻常人等只怕就此错过了。」",
     "links": [18, 293]
@@ -94,7 +94,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「這地方看起來有些詭異…」",
-    "Sequence": "AudioControl(PlaySFXOneShot,Others_FireCracking);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1,Nervous);",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_FireCracking);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Nervous);",
     "zh_TW": "「這地方看起來有些詭異…」",
     "zh_CN": "「这地方看起来有些诡异…」",
     "links": [26]
@@ -181,7 +181,7 @@
     "entryID": 35,
     "actorID": "MC1",
     "text": "「不行，雍仔。我覺得這鼎有問題，我們不能冒險。此地不宜久留，我們還是先想辦法離開吧。」",
-    "Sequence": ";SetPortrait(MC1,pic=8);ModifyData(AbilityExp,MC1,Charisma,25);",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(AbilityExp,MC1,Charisma,25);",
     "zh_TW": "「不行，雍仔。我覺得這鼎有問題，我們不能冒險。此地不宜久留，我們還是先想辦法離開吧。」",
     "zh_CN": "「不行，雍仔。我感觉这鼎有问题，我们不能冒险。此地不宜久留，我们还是先想办法离开吧。」",
     "links": [36]
@@ -324,7 +324,7 @@
     "entryID": 53,
     "actorID": "MC20",
     "text": "[panel=2]「呸！若非胖爺今日狀態不佳，定叫你魂飛魄散！」",
-    "Sequence": "SetPortrait(MC20,pic=11);",
+    "Sequence": "SetPortrait(MC20,pic=2);",
     "zh_TW": "[panel=2]「呸！若非胖爺今日狀態不佳，定叫你魂飛魄散！」",
     "zh_CN": "[panel=2]「呸！若非胖爷今日状态不佳，定叫你魂飞魄散！」",
     "links": [54]
@@ -388,7 +388,7 @@
     "entryID": 60,
     "actorID": "role116",
     "text": "[panel=1]「這是…什麼力量？！」",
-    "Sequence": "EnableCharacterExpression(1,MBoss13,Shock);",
+    "Sequence": "",
     "Script": "Variable[\"FirstBoss\"] = 1",
     "zh_TW": "[panel=1]「這是…什麼力量？！」",
     "zh_CN": "[panel=1]「这是…什么力量？！」",
@@ -461,7 +461,7 @@
     "entryID": 68,
     "actorID": "MC20",
     "text": "[panel=2]「張神醫！我兄弟他…他好像不行了！」",
-    "Sequence": "SetPortrait(MC20,pic=11);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_15);",
+    "Sequence": "SetPortrait(MC20,pic=2);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_15);",
     "Description": "播放音樂",
     "zh_TW": "[panel=2]「張神醫！我兄弟他…他好像不行了！」",
     "zh_CN": "[panel=2]「张神医！我兄弟他…他好像不行了！」",
@@ -534,7 +534,7 @@
     "entryID": 76,
     "actorID": "MC20",
     "text": "[panel=4]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=11);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=2);",
     "zh_TW": "[panel=4]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
     "zh_CN": "[panel=4]「都怪我…若不是我执意要去取那铜鼎…也不会…张神医，拜托了！」",
     "links": [77]
@@ -1201,7 +1201,7 @@
     "entryID": 292,
     "actorID": "MC20",
     "text": "「嘿嘿，若非貧道身懷師門秘傳的堪輿之術，凡人豈能得見？」",
-    "Sequence": "SetPortrait(MC20,pic=proud_or_confident);",
+    "Sequence": "SetPortrait(MC20,pic=1);",
     "zh_TW": "「嘿嘿，若非貧道身懷師門秘傳的堪輿之術，凡人豈能得見？」",
     "zh_CN": "「嘿嘿，若非贫道身怀师门秘传的堪舆之术，凡人岂能得见？」",
     "links": [16]
@@ -1210,7 +1210,7 @@
     "entryID": 293,
     "actorID": "MC20",
     "text": "「。看，這裡貼著一道[em2]隱匿符！[/em2]」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=smug);EnableCharacterExpression(1,MC20,Talk);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Proud);",
     "zh_TW": "「。看，這裡貼著一道[em2]隱匿符！[/em2]」",
     "zh_CN": "「。看，这里贴着一道[em2]隐匿符！[/em2]」",
     "links": [18]
@@ -1318,7 +1318,7 @@
     "entryID": 305,
     "actorID": "MC20",
     "text": "[panel=2]「兄弟！小心！」",
-    "Sequence": "SetPortrait(MC20,pic=11);\nEnableCharacterExpression(2,MC20,Surprise_2);",
+    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(2,MC20,Surprise_2);",
     "zh_TW": "[panel=2]「兄弟！小心！」",
     "zh_CN": "[panel=2]「兄弟！小心！」",
     "links": [304]
@@ -1475,7 +1475,7 @@
     "entryID": 325,
     "actorID": "role116",
     "text": "「[em7]獰笑霎時僵住，聲音陡然變調[/em7]，住…住手！那是吾的——！」",
-    "Sequence": "EnableCharacterExpression(1,MBoss13,Surprise);",
+    "Sequence": "",
     "Script": "Variable[\"FirstBoss\"] = 1",
     "zh_TW": "「[em7]獰笑霎時僵住，聲音陡然變調[/em7]，住…住手！那是吾的——！」",
     "zh_CN": "「[em7]狞笑霎时僵住，声音陡然变调[/em7]，住…住手！那是吾的——！」",

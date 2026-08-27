@@ -183,7 +183,7 @@
     "entryID": 2071,
     "actorID": "MC22",
     "text": "[panel=1]「那、那是自然！我爹……咳，我為了目標，向來是不屈不撓的！算、算你有眼光！」",
-    "Sequence": "ModifyData(FeatExp,MC1,Flirting,50);\nSetPortrait(MC22,pic=7);\nEnableCharacterExpression(1,MC22,Shy);\nModifyData(FavorabilityExp,MC22,25);",
+    "Sequence": "ModifyData(FeatExp,MC1,Flirting,50);\nSetPortrait(MC22,pic=7);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FavorabilityExp,MC22,25);",
     "Description": "增加好感度",
     "zh_TW": "[panel=1]「那、那是自然！我爹……咳，我為了目標，向來是不屈不撓的！算、算你有眼光！」",
     "zh_CN": "[panel=1]「那、那是自然！我爹……咳，我为了目标，向来是不屈不挠的！算、算你有眼光！」",
@@ -202,7 +202,7 @@
     "entryID": 2073,
     "actorID": "MC22",
     "text": "[panel=1]「哼，我的決心，還需要你來佩服？與其說這些廢話，不如想想怎麼辦正事。」",
-    "Sequence": ";SetPortrait(MC22,pic=2);\nSetPortrait(MC1,pic=10);\nEnableCharacterExpression(1,MC22,Anger);",
+    "Sequence": "SetPortrait(MC22,pic=2);\nSetPortrait(MC1,pic=10);\nEnableCharacterExpression(1,MC22,Anger);",
     "zh_TW": "[panel=1]「哼，我的決心，還需要你來佩服？與其說這些廢話，不如想想怎麼辦正事。」",
     "zh_CN": "[panel=1]「哼，我的决心，还需要你来佩服？与其说这些废话，不如想想怎么办正事。」",
     "links": [2074]
