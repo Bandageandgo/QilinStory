@@ -52,7 +52,7 @@
     "actorID": "MC1",
     "text": "「嘖嘖，這木人的做工……真是精細啊！這關節，這用料……要是能搬回家擺著，每天練上兩手，那多威風！不知道能不能拆下來帶走呢……」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "CurrentQuestState(\"CF09\") == \"unassigned\"",
+    "Conditions": "CurrentQuestState(\"CF09\") == \"unassigned\";",
     "Description": "首次點木人樁",
     "zh_CN": "「啧啧，这木人的做工……真是精细啊！这关节，这用料……要是能搬回家摆着，每天练上两手，那多威风！不知道能不能拆下来带走呢……」",
     "links": [9]
@@ -70,7 +70,7 @@
     "actorID": "MC1",
     "text": "「唉唉……？動、動了？！」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
-    "Script": "SetQuestState(\"CF09\", \"active\")",
+    "Script": "SetQuestState(\"CF09\", \"active\");",
     "Description": "接取任務",
     "zh_CN": "「唉唉……？动、动了？！」",
     "links": [2054]
@@ -146,7 +146,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「施展剛學會的四神拳『收』式，轟開暗牆。」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"FourPunch\")  == true",
+    "Conditions": "IsSkillObtained(\"Player\", \"FourPunch\")  == true;",
     "zh_CN": "[em2][隐藏选项][/em2]「施展刚学会的四神拳『收』式，轰开暗墙。」",
     "links": [20]
   },
@@ -164,6 +164,14 @@
     "text": "[panel=6]＊（你運起四神拳的獨門勁力，一拳轟出！牆壁應聲而碎，露出一個隱蔽的暗格。）＊",
     "Sequence": "PlayOrStopParticle(BrokenWall_Right,Play);",
     "zh_CN": "[panel=6]＊（你运起四神拳的独门劲力，一拳轰出！墙壁应声而碎，露出一个隐蔽的暗格。）＊",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);\nContinue();",
+    "Description": "收特效",
     "links": []
   },
   {
@@ -194,8 +202,16 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你運起全身功力，一掌轟出！只聽「轟隆」一聲，牆壁破開一個大洞。）＊",
     "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);\nPlayOrStopParticle(BrokenWall_Right,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（你运起全身功力，一掌轰出！只听「轰隆」一声，墙壁破开一个大洞。）＊",
+    "links": [2070]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);\nContinue();",
+    "Description": "收特效",
     "links": []
   },
   {
@@ -203,7 +219,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你一掌打在牆上，牆壁紋絲不動，你的手掌卻紅腫了一大片。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（你一掌打在墙上，墙壁纹丝不动，你的手掌却红肿了一大片。）＊",
     "links": [29]
   },
@@ -352,7 +368,7 @@
     "actorID": "role121",
     "text": "[panel=1]「吵死了！誰啊！不知道三爺我正在午睡嗎？還懂不懂規矩啊！」",
     "Sequence": "SetPortrait(role121,pic=3);",
-    "Conditions": "Variable[\"FlokMonster\"] >= 2",
+    "Conditions": "Variable[\"FlokMonster\"] >= 2;",
     "Description": "在小溪村有打贏三弟",
     "zh_CN": "[panel=1]「吵死了！谁啊！不知道三爷我正在午睡吗？还懂不懂规矩啊！」",
     "links": [49]
@@ -402,7 +418,7 @@
     "actorID": "MC1",
     "text": "「呼……好險好險。雖這妖怪皮糙肉厚，但正好拿來試試我的拳頭！」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_CN": "「呼……好险好险。虽这妖怪皮糙肉厚，但正好拿来试试我的拳头！」",
     "links": [56]
   },
@@ -420,7 +436,7 @@
     "actorID": "MC1",
     "text": "「這魚……太兇了！風緊，扯呼！」",
     "Sequence": "SetPortrait(MC1,pic=16);",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "zh_CN": "「这鱼……太凶了！风紧，扯呼！」",
     "links": []
   },
@@ -471,7 +487,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [11]
   },
   {
@@ -479,7 +495,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [17]
   },
   {
@@ -504,7 +520,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "CurrentQuestState(\"CF09\") == \"active\"",
+    "Conditions": "CurrentQuestState(\"CF09\") == \"active\";",
     "Description": "再次點擊木人樁",
     "links": [2054]
   },
@@ -536,7 +552,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [55]
   },
   {
@@ -544,7 +560,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [57]
   },
   {

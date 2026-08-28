@@ -39,7 +39,7 @@
     "actorID": "MC1",
     "text": "「真心誠意……莫不是投其所好……」",
     "Sequence": "SetPortrait(MC1,pic=12);\nOpenPanel(1, close);",
-    "Script": "SetQuestState(\"CF29\", \"active\");\nSetQuestEntryState(\"CF29\", 1, \"success\");\nSetQuestEntryState(\"CF29\", 2, \"active\")",
+    "Script": "SetQuestState(\"CF29\", \"active\");\nSetQuestEntryState(\"CF29\", 1, \"success\");\nSetQuestEntryState(\"CF29\", 2, \"active\");",
     "Description": "變數更新",
     "zh_TW": "「真心誠意……莫不是投其所好……」",
     "zh_CN": "「真心诚意……莫不是投其所好……」",
@@ -50,7 +50,7 @@
     "actorID": "MC4",
     "text": "「閣下這次又是因何而來？」",
     "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC4,pic=1);",
-    "Conditions": "IsCoinPass(2000)  == true",
+    "Conditions": "IsCoinPass(2000)  == true;",
     "zh_TW": "「閣下這次又是因何而來？」",
     "zh_CN": "「阁下这次又是因何而来？」",
     "links": [532, 534]
@@ -163,7 +163,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF29\", 2) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF29\", 2) == \"unassigned\";",
     "links": [552]
   },
   {
@@ -252,7 +252,7 @@
     "actorID": "MC1",
     "text": "「唔！好個錢鬼……」",
     "Sequence": "SetPortrait(MC1,pic=4);\nDisableAllCharacterExpression();",
-    "Script": "SetQuestEntryState(\"CF29\", 2, \"success\");\nSetQuestEntryState(\"CF29\", 3, \"active\")",
+    "Script": "SetQuestEntryState(\"CF29\", 2, \"success\");\nSetQuestEntryState(\"CF29\", 3, \"active\");",
     "Description": "變數更新",
     "zh_TW": "「唔！好個錢鬼……」",
     "zh_CN": "「唔！好个钱鬼……」",
@@ -281,7 +281,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（盛情難卻，無路可退，\n你只能跟著解剖怪物，直到滿身惡臭離去……）＊",
     "Sequence": "DisableAllCharacterExpression();\nModifyData(FeatExp,Player,MedicalExpertise,50);\nModifyData(FeatExp,Player,Knowledge,50);",
-    "Script": "SetQuestState(\"CF29\", \"success\");\nSetQuestEntryState(\"CF29\", 3, \"success\");\nSetQuestEntryState(\"C1M1\", 4, \"success\")",
+    "Script": "SetQuestState(\"CF29\", \"success\");\nSetQuestEntryState(\"CF29\", 3, \"success\");\nSetQuestEntryState(\"C1M1\", 4, \"success\");",
     "Description": "獲得專長經驗／變數更新",
     "zh_TW": "[panel=6]＊（盛情難卻，無路可退，\n你只能跟著解剖怪物，直到滿身惡臭離去……）＊",
     "zh_CN": "[panel=6]＊（盛情难却，无路可退，\n你只能跟着解剖怪物，直到满身恶臭离去……）＊",
@@ -292,7 +292,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF29\", 3) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF29\", 3) == \"active\";",
     "links": [531, 573]
   },
   {
@@ -317,7 +317,7 @@
     "entryID": 4229,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableAllCharacterExpression();\nSetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nDisableAllCharacterExpression();\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入",
     "links": [4231]
   },
@@ -325,7 +325,7 @@
     "entryID": 4230,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出",
     "links": [558]
   },

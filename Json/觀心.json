@@ -4,7 +4,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "Variable[\"FindYourSelf\"] == 0",
+    "Conditions": "Variable[\"FindYourSelf\"] == 0;",
     "Description": "觀心觸發：籌措住宿費",
     "links": [2]
   },
@@ -29,7 +29,7 @@
     "entryID": 6,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [9, 7]
   },
@@ -38,7 +38,7 @@
     "actorID": "MC1",
     "text": "「話本裡的大俠，下山就是行俠仗義、揚名立萬。誰寫過……還得為住宿去煩惱？」",
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「话本里的大侠，下山就是行侠仗义、扬名立万。谁写过……还得为住宿去烦恼？」",
     "links": [10]
   },
@@ -47,7 +47,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [169]
@@ -145,7 +145,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF35\", 1) == \"success\" and (CurrentQuestEntryState(\"CF37\", 1) == \"unassigned\")",
+    "Conditions": "CurrentQuestEntryState(\"CF35\", 1) == \"success\" and (CurrentQuestEntryState(\"CF37\", 1) == \"unassigned\");",
     "Description": "觀心觸發：完成短命二郎任務",
     "links": [23]
   },
@@ -311,7 +311,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF37\", 2) == \"unassigned\" and (CurrentQuestState(\"CF13\") == \"success\")",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 2) == \"unassigned\" and (CurrentQuestState(\"CF13\") == \"success\");",
     "Description": "觀心觸發：首戰黑血屍",
     "links": [48]
   },
@@ -440,7 +440,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF08\", 3) == \"success\" and (CurrentQuestEntryState(\"CF37\", 3) == \"unassigned\")",
+    "Conditions": "CurrentQuestEntryState(\"CF08\", 3) == \"success\" and (CurrentQuestEntryState(\"CF37\", 3) == \"unassigned\");",
     "Description": "觀心觸發：赫連娜娜1",
     "links": [71]
   },
@@ -615,9 +615,9 @@
   {
     "entryID": 102,
     "actorID": "MC1",
-    "text": "「再說他們曾助秦王掃六合，這功勞可不小；秦王偏為[em2]秦王欲求長生[/em2]緊追不捨……與他們何關？」",
+    "text": "「再說他們曾助秦王掃六合，這功勞可不小；秦王偏為[em2]欲求長生[/em2]而緊追不捨……與他們何關？」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
-    "zh_CN": "「再说他们曾助秦王扫六合，这功劳可不小；秦王偏为[em2]秦王欲求长生[/em2]紧追不舍……与他们何关？」",
+    "zh_CN": "「再说他们曾助秦王扫六合，这功劳可不小；秦王偏为[em2]欲求长生[/em2]而紧追不舍……与他们何关？」",
     "links": [103]
   },
   {
@@ -728,7 +728,7 @@
     "entryID": 167,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
     "links": [309]
   },
   {
@@ -771,7 +771,7 @@
     "actorID": "MC1",
     "text": "「靠水吃水，風浪裡討活，不求人憐。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「靠水吃水，风浪里讨活，不求人怜。」",
     "links": [35]
   },
@@ -828,7 +828,7 @@
     "actorID": "MC1",
     "text": "「赫連姑娘的主意，時靈時不靈。王霸之氣那套，狗頭人可不買帳。說她靠譜吧，人掛在籠子裡；說她胡扯吧，又總像知道點什麼。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「赫连姑娘的主意，时灵时不灵。王霸之气那套，狗头人可不买帐。说她靠谱吧，人挂在笼子里；说她胡扯吧，又总像知道点什么。」",
     "links": [80]
   },
@@ -873,7 +873,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF37\", 4) == \"unassigned\" and (CurrentQuestState(\"CF12\") == \"success\")",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 4) == \"unassigned\" and (CurrentQuestState(\"CF12\") == \"success\");",
     "Description": "觀心觸發：宗緯家瀑布洞窟",
     "links": [91]
   },
@@ -890,7 +890,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF37\", 5) == \"unassigned\" and (CurrentQuestState(\"CF16\") == \"success\")",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 5) == \"unassigned\" and (CurrentQuestState(\"CF16\") == \"success\");",
     "Description": "觀心觸發：完成黑鐵嶺深淵祭壇",
     "links": [334]
   },
@@ -1019,7 +1019,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF37\", 7) == \"unassigned\" and (CurrentQuestState(\"C1M2\") == \"success\")",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 7) == \"unassigned\" and (CurrentQuestState(\"C1M2\") == \"success\");",
     "Description": "觀心觸發：完成趙王洞祭壇前廳戰鬥",
     "links": [358]
   },
@@ -1180,7 +1180,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF37\", 6) == \"unassigned\" and (IsSkillObtained(\"Player\", \"SanCaiUnity\")  == true)",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 6) == \"unassigned\" and (IsSkillObtained(\"Player\", \"SanCaiUnity\")  == true);",
     "Description": "觀心觸發：完成英豪府遴選大樹守衛大澈大悟",
     "links": [383]
   },
@@ -1319,7 +1319,7 @@
     "actorID": "MC1",
     "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「告示上写着[em2]盐铁之利，国之大柄[/em2]，私吞者斩。这些矿工挖了一辈子，到头来连一块矿渣都换不了一顿饱饭。」",
     "links": [345]
   },
@@ -1328,7 +1328,7 @@
     "actorID": "MC1",
     "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「为了三绝合一[em2]逼死同门[/em2]……那无字碑下的二师哥，到死只盼着来生能做个普通兄弟。」",
     "links": [393]
   },
@@ -1337,7 +1337,7 @@
     "actorID": "MC1",
     "text": "「石刻說他們來自[em2]極西之地[/em2]，那便不是尋常中原人了——可極西之地是哪？我可從沒聽有人說過。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「石刻说他们来自[em2]极西之地[/em2]，那便不是寻常中原人了——可极西之地是哪？我可从没听有人说过。」",
     "links": [102]
   },
@@ -1356,7 +1356,7 @@
     "actorID": "MC1",
     "text": "「戰後倒在地上，滿腦子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，還是這天地萬物……竟都成了我想一口吞下的微塵。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「战后倒在地上，满脑子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，还是这天地万物……竟都成了我想一口吞下的微尘。」",
     "links": [370]
   },
@@ -1375,7 +1375,7 @@
     "actorID": "MC1",
     "text": "青蛙找玩",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF35\", 1, \"success\");\nSetQuestState(\"C1M2\", \"success\");\nSetQuestState(\"CF16\", \"success\");\nSetQuestState(\"CF12\", \"success\");\nSetQuestEntryState(\"CF08\", 3, \"success\");\n",
+    "Script": "SetQuestEntryState(\"CF35\", 1, \"success\");\nSetQuestState(\"C1M2\", \"success\");\nSetQuestState(\"CF16\", \"success\");\nSetQuestState(\"CF12\", \"success\");\nSetQuestEntryState(\"CF08\", 3, \"success\");",
     "Description": "測試條件完成",
     "zh_TW": "青蛙找玩",
     "zh_CN": "青蛙找玩",
@@ -1416,7 +1416,7 @@
     "entryID": 421,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [311, 435]
   },
@@ -1431,7 +1431,7 @@
     "entryID": 423,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [318, 436]
   },
@@ -1446,7 +1446,7 @@
     "entryID": 425,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [321, 437]
   },
@@ -1461,7 +1461,7 @@
     "entryID": 427,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [409, 438]
   },
@@ -1476,7 +1476,7 @@
     "entryID": 429,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [405, 439]
   },
@@ -1491,7 +1491,7 @@
     "entryID": 431,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [408, 440]
   },
@@ -1506,7 +1506,7 @@
     "entryID": 433,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [413, 441]
   },
@@ -1522,7 +1522,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [32]
@@ -1532,7 +1532,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [55]
@@ -1542,7 +1542,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [77]
@@ -1552,7 +1552,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [101]
@@ -1562,7 +1562,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [342]
@@ -1572,7 +1572,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [390]
@@ -1582,7 +1582,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [367]

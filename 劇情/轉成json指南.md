@@ -43,13 +43,15 @@
     -   `actorID` 為 `0` or `-1`: 通常用於系統提示、場景描述、檢定觸發等非角色發言的特殊節點。
 -   `text` (String): 對話文字內容。
 -   `Sequence` (String): 特殊指令序列，用於觸發立繪變化、表情特效、擲骰、戰鬥等。如果沒有指令，則為空字串 `""`。**不要**把分支條件寫進 `Sequence`。
--   `Conditions` (String, 僅用於條件分支節點): 節點成立條件。擲骰成功／失敗用 `"IsPassDice() == true"`／`"IsPassDice() == false"`；戰鬥勝利／失敗用 `"IsPassFight() == true"`／`"IsPassFight() == false"`。一般對話節點不需要此欄位。**禁止**把這些條件寫進 `Sequence`。
+-   `Conditions` (String, 僅用於條件分支節點): 節點成立條件。擲骰成功／失敗用 `"IsPassDice() == true;"`／`"IsPassDice() == false;"`；戰鬥勝利／失敗用 `"IsPassFight() == true;"`／`"IsPassFight() == false;"`。一般對話節點不需要此欄位。**禁止**把這些條件寫進 `Sequence`。
+    -   **⚠ `Conditions` 與 `Script` 一律以分號 `;` 結尾（已定，2026-08-27 作者拍板）**：`"IsPassDice() == false;"` ✅／`"IsPassDice() == false"` ❌；`Script` 多行時**最後一行也要**（`SetQuestEntryState("C0F1", 2, "active");` ✅）。Unity 套件會替最後一個指令自動補分號，所以少寫不會壞（棋局小遊戲那組 `Conditions` 全帶分號、分流正常，即為實證），但**全案體例統一寫上**，不要兩種混用。2026-08-27 已把 `Json/` 全部 744 條 `Conditions` 與 368 條 `Script` 補齊。
+    -   **⚠ 兩路分流的 else 不寫 `Conditions`（已定，2026-08-28 作者說明）**：同一個父節點分出兩條時，體例是**前一條掛條件、後一條留空**，留空的那條就是 `else`——條件不成立時才走它。這**不是漏寫**，回讀與稽核時不要列為疑點。例：`大地圖/翠影潭.json` `#36`（有條件）／`#2054`（空），`108蛙.json` `#4`／`#5`、`#8`／`#9`。
     -   **⚠ `Conditions`／`Script` 寫的是 Lua 語法（已定，2026-08-27 作者指出）**：「不等於」一律 **`~=`**，**禁止 `!=`**；連接詞用 `and`／`or`／`not`，**不是 `&&`／`||`／`!`**。寫成 `!=` 引擎解析不了，那條分支等於永遠不成立（例：`CurrentQuestEntryState("CF40", 6) ~= "success"` ✅／`… != "success"` ❌）。舊創作稿裡有 `!=` 的寫法，**那些是錯的，轉檔時一律改成 `~=`**。
     -   **⚠ 多條件串接：第二段起一律用小括號包住整段比較式（已定，2026-08-27 作者指出）。** 體例是 `A == x and (B == y)`、三段以上 `A == x and (B == y) and (C == z)`——**第一段不加括號，第二段起每一段都要**。少了括號引擎判不出來，那條分支等於永遠不成立（和 `!=` 一樣是「悄悄失效」，遊戲不會報錯）。
-        -   ✅ `CurrentQuestEntryState("CF40", 6) == "success" and (IsValuablesObtained("Player", "FadedTearstone") == true)`
+        -   ✅ `CurrentQuestEntryState("CF40", 6) == "success" and (IsValuablesObtained("Player", "FadedTearstone") == true);`
         -   ❌ `CurrentQuestEntryState("CF40", 6) == "success" and IsValuablesObtained("Player", "FadedTearstone") == true`
         -   `or`／`not` 同理。**這是全案體例，不是 Lua 文法問題**——`Json/` 現有 59 條串接條件，Unity 條件編輯器產出的那 56 條全長這樣，照抄它就對了。
-    -   **⚠ 字串常量一定要帶引號**：`CurrentQuestState("C0F2") == "success"` ✅／`CurrentQuestState("C0F2") == success` ❌。沒引號在 Lua 是「未定義的變數」＝`nil`，永遠不相等，那條分支同樣永遠不成立。只有 `true`／`false`／`nil` 與數字不加引號。
+    -   **⚠ 字串常量一定要帶引號**：`CurrentQuestState("C0F2") == "success";` ✅／`CurrentQuestState("C0F2") == success` ❌。沒引號在 Lua 是「未定義的變數」＝`nil`，永遠不相等，那條分支同樣永遠不成立。只有 `true`／`false`／`nil` 與數字不加引號。
 -   `links` (Array<Number>): 指向下一個或多個可能的對話節點的 `entryID` 列表。如果是對話終點，則為空陣列 `[]`。
 -   `Description` (String, 僅用於特定節點): 此欄位僅用於標註特殊功能節點，不應用於普通對話。只有以下情況需要添加此欄位：
     1. 自動檢定節點 (例如："自動洞悉檢定觸發點")
@@ -191,12 +193,12 @@
 -   **重要**：`IsPassDice() == true` / `IsPassDice() == false` 必須寫在節點的 **`Conditions`** 欄位，**禁止**寫進 `Sequence`。
 -   **成功分支標識**: 在檢定成功分支的第一個節點加入：
     ```json
-    "Conditions": "IsPassDice() == true",
+    "Conditions": "IsPassDice() == true;",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Insight,10);"
     ```
 -   **失敗分支標識**: 在檢定失敗分支的第一個節點加入：
     ```json
-    "Conditions": "IsPassDice() == false",
+    "Conditions": "IsPassDice() == false;",
     "Sequence": "DisableCharacterExpression(0);"
     ```
 -   **欄位分工**: `Conditions` 只負責「這條分支能不能走」；`Sequence` 只負責立繪、表情、`BeginDiceRoll`、`BeginFight`、`ModifyData` 等指令。
@@ -230,8 +232,8 @@
 -   **成功獎勵**：`ModifyData(FeatExp,Player,Persuasion,25);`（口才經驗 **+25**）。
 -   **失敗獎勵**：無經驗；`Sequence` 通常僅 `DisableCharacterExpression(0);` 等演出指令。
 -   **分支條件**（必寫於旁白或回應節點的 `Conditions` 欄位）：
-    - 成功：`"Conditions": "IsPassDice() == true"`
-    - 失敗：`"Conditions": "IsPassDice() == false"`
+    - 成功：`"Conditions": "IsPassDice() == true;"`
+    - 失敗：`"Conditions": "IsPassDice() == false;"`
 -   **角色發言節點的 `links`**：指向 **2 個** `entryID`（成功旁白、失敗旁白），**不是 3 個**。
 -   **已廢棄指令**：勿使用 `ModifyData(RangerFame,...)` 作為口才檢定獎勵；名氣／聲望改由其他系統或劇情節點處理。
 -   **即時訊息區範例**：成功寫 `[即時訊息區]: 口才成功！`；失敗寫 `[即時訊息區]: 口才失敗。`（勿寫「大成功」或「名氣提升」類舊文案）。
@@ -244,7 +246,7 @@
   "text": "[panel=6]＊（台下叫好四起。[即時訊息區]: 口才成功！）＊",
   "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
   "links": [120],
-  "Conditions": "IsPassDice() == true"
+  "Conditions": "IsPassDice() == true;"
 }
 ```
 
@@ -256,7 +258,7 @@
   "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。[即時訊息區]: 口才失敗。）＊",
   "Sequence": "DisableCharacterExpression(0);",
   "links": [120],
-  "Conditions": "IsPassDice() == false"
+  "Conditions": "IsPassDice() == false;"
 }
 ```
 
@@ -279,8 +281,8 @@
 2.  **緩衝節點**: `actorID` `"MC0"`，`text` `""`，`Sequence` **只有** `"Continue();"`。
     -   `Description`: 例如 `"戰鬥緩衝節點"`。
     -   `links`: 指向勝利與失敗兩個分支的第一個 `entryID`。
-3.  **勝利分支第一個節點**: `"Conditions": "IsPassFight() == true"`。Markdown 的 `**(戰鬥勝利)**` 對應此節點。Sequence **不必**再寫 `Continue();`。
-4.  **失敗分支第一個節點**: `"Conditions": "IsPassFight() == false"`。Markdown 的 `**(戰鬥失敗)**` 對應此節點。Sequence **不必**再寫 `Continue();`。戰敗可重試時，`links` 可指回戰鬥觸發節點或重試選項。
+3.  **勝利分支第一個節點**: `"Conditions": "IsPassFight() == true;"`。Markdown 的 `**(戰鬥勝利)**` 對應此節點。Sequence **不必**再寫 `Continue();`。
+4.  **失敗分支第一個節點**: `"Conditions": "IsPassFight() == false;"`。Markdown 的 `**(戰鬥失敗)**` 對應此節點。Sequence **不必**再寫 `Continue();`。戰敗可重試時，`links` 可指回戰鬥觸發節點或重試選項。
 
 **四節點範例：**
 ```json
@@ -309,7 +311,7 @@
   "actorID": "2",
   "text": "[panel=6]＊（……勝利描述……）＊",
   "Sequence": "",
-  "Conditions": "IsPassFight() == true",
+  "Conditions": "IsPassFight() == true;",
   "links": [204]
 }
 ```
@@ -319,7 +321,7 @@
   "actorID": "2",
   "text": "[panel=6]＊（……失敗描述……）＊",
   "Sequence": "",
-  "Conditions": "IsPassFight() == false",
+  "Conditions": "IsPassFight() == false;",
   "links": [211]
 }
 ```
@@ -328,11 +330,11 @@
 
 沒有合成場次。**每一場都是完整的四個節點**；第一場勝利才開第二場。第二場觸發節點的 Sequence **不要**再加開頭的 `Continue();`（第一場緩衝句已經 `Continue();` 過了）。
 
-1.  **第一場（例如黑狼 `76`）**: 觸發 → 緩衝。緩衝的 `links` 指向「第二場觸發（帶 `IsPassFight() == true`）」與「失敗」。
-2.  **第二場觸發**: 此節點同時是第一場的勝利分支：`"Conditions": "IsPassFight() == true"`，`Sequence` 為 `SetContinueMode(false);BeginFight(Combat,64);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`。`links` 只指向第二場緩衝。
+1.  **第一場（例如黑狼 `76`）**: 觸發 → 緩衝。緩衝的 `links` 指向「第二場觸發（帶 `IsPassFight() == true;`）」與「失敗」。
+2.  **第二場觸發**: 此節點同時是第一場的勝利分支：`"Conditions": "IsPassFight() == true;"`，`Sequence` 為 `SetContinueMode(false);BeginFight(Combat,64);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`。`links` 只指向第二場緩衝。
 3.  **第二場緩衝**: `Sequence` 為 `"Continue();"`。`links` 指向「兩場都贏」與「失敗」。
-4.  **兩場都贏**: `"Conditions": "IsPassFight() == true"`。
-5.  **失敗**: `"Conditions": "IsPassFight() == false"`（第一場或第二場戰敗皆可指向同一失敗節點，或各自寫失敗旁白）。
+4.  **兩場都贏**: `"Conditions": "IsPassFight() == true;"`。
+5.  **失敗**: `"Conditions": "IsPassFight() == false;"`（第一場或第二場戰敗皆可指向同一失敗節點，或各自寫失敗旁白）。
 
 《水濂洞的眼淚.md》場次：藍焰巨蛇 `77`；黑狼氏族 `76`；太平道 `64`。其他劇本以該場實際數字 ID 為準，**禁止** `BeginFight(Combat,雍仔)` 這類角色名。
 
@@ -352,7 +354,7 @@
 -   戰鬥節點 (`BeginFight` 所在節點):
     -   觸發節點的 `links` **只指向**緩衝節點。
     -   緩衝節點（`Sequence` 僅 `Continue();`）的 `links` 指向勝利與失敗兩個分支。
-    -   勝利／失敗第一個節點分別設 `Conditions` 為 `IsPassFight() == true`／`IsPassFight() == false`。
+    -   勝利／失敗第一個節點分別設 `Conditions` 為 `IsPassFight() == true;`／`IsPassFight() == false;`。
     -   連打兩場：第一場緩衝指向「第二場觸發（帶勝利條件）」與失敗；第二場再走一輪「觸發 → 緩衝 → 勝／敗」。
 -   對話結束/離開互動：`links` 為空陣列 `[]`。
 
@@ -440,16 +442,16 @@
 -   `links` 的指向必須準確，以保證對話流程的正確性。
 -   最終生成的JSON中，`Sequence` 字符串內的指令順序也很重要：一般對話節點通常是 `Disable...` (如果有) -> `SetPortrait` -> `Enable...` (如果有) -> `ModifyData` (如果適用)。**`BeginDiceRoll`／`BeginFight` 不得夾在立繪／表情同一條 Sequence 裡**，必須各自單獨放在空對話節點，並使用完整包裝。擲骰成敗用 `IsPassDice()`、戰鬥勝負用 `IsPassFight()`，皆寫在獨立的 `Conditions` 欄位，不要混入 `Sequence`。
 -   **⛔ `SetFlag`／`GetFlag` 不是引擎指令，一律禁用（已定，2026-08-27 作者指出）。** 對話**不能有旗標**。要記住「玩家做過什麼」只有兩條合法途徑：
-    1.  **變數**：寫在 **`Script`** 欄位——`Variable["名稱"] = true`／`Variable["名稱"] = Variable["名稱"] + 1`；讀在 **`Conditions`** 欄位——`Variable["名稱"] == true`、`Variable["名稱"] >= 2`，多條件用 `and (…)` 串接。
+    1.  **變數**：寫在 **`Script`** 欄位——`Variable["名稱"] = true;`／`Variable["名稱"] = Variable["名稱"] + 1;`（結尾帶 `;`）；讀在 **`Conditions`** 欄位——`Variable["名稱"] == true;`、`Variable["名稱"] >= 2;`，多條件用 `and (…)` 串接（結尾同樣帶 `;`）。
         **⚠ 變數走 `Script`，不走 `Sequence`。** `Sequence` 只放立繪、表情、音效、演出、`ModifyData`、`BeginDiceRoll`／`BeginFight`。
-    2.  **任務狀態**：`SetQuestState("代號","active"／"success")`、`SetQuestEntryState("代號", N, "…")` 寫在 `Script`；讀用 `CurrentQuestState("代號") == "…"`、`CurrentQuestEntryState("代號", N) == "…"` 寫在 `Conditions`（**否定寫 `~=`，不是 `!=`**，見 §2 `Conditions` 欄位說明）。
-        **⚠ 任務 entry 是玩家在任務日誌看得到的東西**，不要為了記一個內部狀態去多開 entry（`劇情/水濂洞.md` 2026-08-26 拍板：這種情形改用層層推導的分岔）。
+    2.  **任務狀態**：`SetQuestState("代號","active"／"success");`、`SetQuestEntryState("代號", N, "…");` 寫在 `Script`（結尾帶 `;`）；讀用 `CurrentQuestState("代號") == "…";`、`CurrentQuestEntryState("代號", N) == "…";` 寫在 `Conditions`（**否定寫 `~=`，不是 `!=`**，見 §2 `Conditions` 欄位說明）。
+        **⚠ 任務 entry 是玩家在任務日誌看得到的東西**，不要為了記一個內部狀態去多開 entry（`劇情/水濂洞/水濂洞.md` 2026-08-26 拍板：這種情形改用層層推導的分岔）。
     -   **⛔ AI 不得自創變數（已定，2026-08-27 作者指出）。** 變數名不是隨手取的字串——**要先在 Unity 的變數表裡存在**，JSON 才讀得到。轉檔時：**①優先沿用既有變數**（全案現有 44 個，可用 `grep -o 'Variable\["[^"]*"\]' Json/ -r` 列出）；**②真的需要新的，就留 `＿＿` 佔位並列進待辦，由作者命名並建好，不得自己編一個寫進 JSON。**
     -   **能用純樹狀分岔解決的，不要記狀態。** 子羽線六支已於 2026-08-25 拍板改為零旗標（見 `@角色設定/子羽.md`、`劇情/歸姓.md`）。
     -   **⚠ 大量舊創作稿仍寫著 `SetFlag(...)`**（24 份 .md、258 處）。**那些是錯的，轉檔時一律改寫成上面兩種寫法**，不要照抄。現行 `Json/` 裡唯一殘留的是 `大地圖/水濂洞.json` 的 `ZhenFamily_*` 一組（10 個節點），待處理。
 
 -   **擲骰節點固定寫法（必守）**：任何 `BeginDiceRoll(...)`（不論 `Auto` 或 `Manual`）**都不能單獨出現**，其所在節點的 `Sequence` 必須**就是這四段、不多不少**：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(...);`（此節點 `text` 為 `""`，不得再摻立繪、表情、`ModifyData`，也不得掛 `Script`）。擲骰節點的 `links` **只指向一個緩衝節點**，成功／失敗的 `Conditions` 寫在再下一層。緩衝節點要不要 `Continue();` **看它有沒有對話**：`text` 為 `""` 時**必須**在 `Sequence` 開頭加 `Continue();`（否則畫面會卡住）；`text` 有台詞時（例如主角把選項那句話說出來）**不要加**。詳見 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」一節，本指南 §4.1、§4.2 的步驟已同步此規則。
--   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true"`；④失敗 `"Conditions": "IsPassFight() == false"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
+-   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true;"`；④失敗 `"Conditions": "IsPassFight() == false;"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
 -   **養成任務對話背景圖（必守）**：`Json/主線事件/`、`Json/探索事件/` 的每段對話，第一格 `Sequence` 開頭 `EnableDialogueBG(ID);`，每條結尾補獨立空格 `DisableDialogueBG();Continue();`（`actorID "0"`、`text ""`）。漏關＝回養成介面看不到 UI。詳見 `給AI看的指南/畫面指令轉換規則.md` §1，本指南 §3.7。
 -   **轉場固定寫法（必守）**：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景@1］;SetContinueMode(original)@2.5;Continue()@2.5;`，獨立空格、四段不多不少、換景一律掛 `@1`、恢復點擊一律 `original`。裸寫 `EnableDialogueBG`／`PlayFeelFeedback` 不包四段都是錯。詳見 `給AI看的指南/畫面指令轉換規則.md` §2，本指南 §3.8。
 -   **畫面特效有開就有關（必守）**：每個 `PlayOrStopParticle(X,Play)` 往下必須找得到 `PlayOrStopParticle(X,Stop)` 或 `StopAllParticle()`，預設放下一格開頭。詳見 `給AI看的指南/畫面指令轉換規則.md` §3，本指南 §3.9。
@@ -521,7 +523,7 @@
     "text": "「不愧是年輕人，有魄力！」",
     "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,Player,Charisma,10);",
     "links": [120],
-    "Conditions": "IsPassDice() == true"
+    "Conditions": "IsPassDice() == true;"
   },
   {
     "entryID": 111,
@@ -529,7 +531,7 @@
     "text": "「口氣不小，希望你的錢包也像嘴巴一樣大...」",
     "Sequence": "DisableCharacterExpression(0);",
     "links": [121],
-    "Conditions": "IsPassDice() == false"
+    "Conditions": "IsPassDice() == false;"
   },
   {
     "entryID": 107,

@@ -249,7 +249,7 @@
     "entryID": 481,
     "actorID": "MC2",
     "text": "[panel=2]「沒搏命，何來刺激，\n但論取命，你還早呢！」",
-    "Sequence": "SetPortrait(MC2,pic=1);\nSetContinueMode(false);\nPlayOrStopParticle(BrokenWall,Play);\nPlayOrStopParticle(Sword_Multiple_ScreenWhite,Play);\nSetContinueMode(original)@1;",
+    "Sequence": "SetPortrait(MC2,pic=1);\nSetContinueMode(false);\nPlayOrStopParticle(BrokenWall_Right,Play);\nPlayOrStopParticle(Sword_Multiple_ScreenWhite,Play);\nSetContinueMode(original)@1;",
     "zh_TW": "[panel=2]「沒搏命，何來刺激，\n但論取命，你還早呢！」",
     "zh_CN": "[panel=2]「没搏命，何来刺激，\n但论取命，你还早呢！」",
     "links": [484]
@@ -258,14 +258,14 @@
     "entryID": 483,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetPortrait(MC1,pic=4);\nSetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,20,0.1)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Sequence": "PlayOrStopParticle(Punch_Multiple_ScreenWhite,Stop);\nSetPortrait(MC1,pic=4);\nSetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,20,0.1)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
     "links": [481]
   },
   {
     "entryID": 484,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,20,0.1)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
+    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);PlayOrStopParticle(Sword_Multiple_ScreenWhite,Stop);\nSetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,20,0.1)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nContinue()@Message(EndFade);",
     "links": [488]
   },
   {
@@ -299,7 +299,7 @@
     "entryID": 490,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,10,0.0);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,10,0.0);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [491]
   },
@@ -325,7 +325,7 @@
     "entryID": 495,
     "actorID": "role2",
     "text": "[panel=6]＊（刀掌不由分說，劈空而來，\n幸好你反應及時，才勉強躲開。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
+    "Sequence": "PlayOrStopParticle(Sword_Single_ScreenWhite,Stop);\nDisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（刀掌不由分說，劈空而來，\n幸好你反應及時，才勉強躲開。）＊",
     "zh_CN": "[panel=6]＊（刀掌不由分说，劈空而来，\n幸好你反应及时，才勉强躲开。）＊",
     "links": [496]
@@ -353,7 +353,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（就見那人收掌，雙眼閉上，\n面紅耳赤，宛若仙家，顯然是說到心坎裡了。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（就見那人收掌，雙眼閉上，\n面紅耳赤，宛若仙家，顯然是說到心坎裡了。）＊",
     "zh_CN": "[panel=6]＊（就见那人收掌，双眼闭上，\n面红耳赤，宛若仙家，显然是说到心坎里了。）＊",
     "links": [499]
@@ -472,7 +472,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你闖入其中，\n霎時兩方比鬥，變成了三方混戰……）＊",
     "Sequence": "SetPortrait(MC1,pic=13);",
-    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80)  == true",
+    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80)  == true;",
     "zh_TW": "[panel=6]＊（你闖入其中，\n霎時兩方比鬥，變成了三方混戰……）＊",
     "zh_CN": "[panel=6]＊（你闯入其中，\n霎时两方比斗，变成了三方混战……）＊",
     "links": [3977]
@@ -583,7 +583,7 @@
     "entryID": 525,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,10,0.0);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(BG,ShakeNormal,XYAxis,0.5,10,0.0);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [526]
   },
@@ -610,7 +610,7 @@
     "actorID": "MC1",
     "text": "「這種找死的話，還是想想就好了。」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80)  == false",
+    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80)  == false;",
     "zh_TW": "「這種找死的話，還是想想就好了。」",
     "zh_CN": "「这种找死的话，还是想想就好了。」",
     "links": [476]
@@ -649,12 +649,12 @@
   {
     "entryID": 535,
     "actorID": "role27",
-    "text": "…………",
+    "text": "「…………」",
     "Sequence": "SetPortrait(MC3,pic=3);\nShowInstantMessage(Exp_FeatExp,Player,Persuasion,20);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "獲得專長經驗",
-    "zh_TW": "…………",
-    "zh_CN": "…………",
+    "zh_TW": "「…………」",
+    "zh_CN": "「…………」",
     "links": [498]
   },
   {
@@ -662,7 +662,7 @@
     "actorID": "role27",
     "text": "「無端逢迎，不是小人，就是奸逆。」",
     "Sequence": "SetPortrait(MC3,pic=2);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「無端逢迎，不是小人，就是奸逆。」",
     "zh_CN": "「无端逢迎，不是小人，就是奸逆。」",
     "links": [540]
@@ -725,7 +725,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [514]
   },
@@ -734,7 +734,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [512]
   },
@@ -786,7 +786,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "MapLock(HallOfHeroes, unlock);",
-    "Script": "SetQuestState(\"C1M1\", \"active\");\nSetQuestEntryState(\"C1M1\", 1, \"active\")",
+    "Script": "SetQuestState(\"C1M1\", \"active\");\nSetQuestEntryState(\"C1M1\", 1, \"active\");",
     "Description": "觸發任務、解鎖英豪府",
     "links": []
   },
@@ -823,7 +823,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"C1M1\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"C1M1\", 1, \"success\");",
     "Description": "進入大廳，推進劇情、任務更新",
     "links": []
   },
@@ -842,7 +842,7 @@
     "actorID": "MC1",
     "text": "「剛才……多謝手下留情。」",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "Conditions": "CurrentQuestEntryState(\"C1M1\", 3) ~= \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"C1M1\", 3) ~= \"success\";",
     "zh_TW": "「剛才……多謝手下留情。」",
     "zh_CN": "「刚才……多谢手下留情。」",
     "links": [4038]
@@ -850,10 +850,10 @@
   {
     "entryID": 4038,
     "actorID": "MC3",
-    "text": "「[em7]頭也不抬，單手翻閱著一卷破舊的竹簡說道:[/em7]我沒留情。是你自己命大，躲過了要害。」",
+    "text": "「[em7]頭也不抬，單手翻閱著一卷破舊的竹簡說道[/em7]：我沒留情。是你自己命大，躲過了要害。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_TW": "「[em7]頭也不抬，單手翻閱著一卷破舊的竹簡說道:[/em7]我沒留情。是你自己命大，躲過了要害。」",
-    "zh_CN": "「[em7]头也不抬，单手翻阅着一卷破旧的竹简说道:[/em7]我没留情。是你自己命大，躲过了要害。」",
+    "zh_TW": "「[em7]頭也不抬，單手翻閱著一卷破舊的竹簡說道[/em7]：我沒留情。是你自己命大，躲過了要害。」",
+    "zh_CN": "「[em7]头也不抬，单手翻阅着一卷破旧的竹简说道[/em7]：我没留情。是你自己命大，躲过了要害。」",
     "links": [4039]
   },
   {
@@ -877,10 +877,10 @@
   {
     "entryID": 4041,
     "actorID": "MC22",
-    "text": "[panel=2]「[em7]從主角背後探出頭，小聲嘀咕:[/em7]什麼嘛……明明是個拿著大刀亂砍的危險人物，手裡居然還拿著一卷破竹簡裝斯文……」",
+    "text": "[panel=2]「[em7]從主角背後探出頭，小聲嘀咕[/em7]：什麼嘛……明明是個拿著大刀亂砍的危險人物，手裡居然還拿著一卷破竹簡裝斯文……」",
     "Sequence": "SetPortrait(MC1,pic=19);\nSetPortrait(MC22,pic=2);",
-    "zh_TW": "[panel=2]「[em7]從主角背後探出頭，小聲嘀咕:[/em7]什麼嘛……明明是個拿著大刀亂砍的危險人物，手裡居然還拿著一卷破竹簡裝斯文……」",
-    "zh_CN": "[panel=2]「[em7]从主角背后探出头，小声嘀咕:[/em7]什么嘛……明明是个拿着大刀乱砍的危险人物，手里居然还拿着一卷破竹简装斯文……」",
+    "zh_TW": "[panel=2]「[em7]從主角背後探出頭，小聲嘀咕[/em7]：什麼嘛……明明是個拿著大刀亂砍的危險人物，手裡居然還拿著一卷破竹簡裝斯文……」",
+    "zh_CN": "[panel=2]「[em7]从主角背后探出头，小声嘀咕[/em7]：什么嘛……明明是个拿着大刀乱砍的危险人物，手里居然还拿着一卷破竹简装斯文……」",
     "links": [4042]
   },
   {
@@ -910,7 +910,7 @@
     "entryID": 4045,
     "actorID": "MC1",
     "text": "「[em2]不以一眚掩大德[/em2]……出自《左傳》：不該因為一次的過失，就抹殺了一個人的品德與實力。看來，老兄雖然行事霸道，但心中仍有大義的準繩。」",
-    "Sequence": "ModifyData(FeatExp,MC1,Knowledge,10);\nEnableCharacterExpression(0,MC1-1,Proud);\nSetPortrait(MC1,pic=1);\nSetPortrait(MC3,pic=1);",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);\nEnableCharacterExpression(0,MC1-1,Proud);\nSetPortrait(MC1,pic=1);\nSetPortrait(MC3,pic=1);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "「[em2]不以一眚掩大德[/em2]……出自《左傳》：不該因為一次的過失，就抹殺了一個人的品德與實力。看來，老兄雖然行事霸道，但心中仍有大義的準繩。」",
     "zh_CN": "「[em2]不以一眚掩大德[/em2]……出自《左传》：不该因为一次的过失，就抹杀了一个人的品德与实力。看来，老兄虽然行事霸道，但心中仍有大义的准绳。」",
@@ -921,7 +921,7 @@
     "actorID": "MC1",
     "text": "「呃……不以一什麼掩大德？你這話是什麼意思？是說我們品德不好嗎？」",
     "Sequence": "SetPortrait(MC1,pic=4);\nSetPortrait(MC3,pic=5);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「呃……不以一什麼掩大德？你這話是什麼意思？是說我們品德不好嗎？」",
     "zh_CN": "「呃……不以一什么掩大德？你这话是什么意思？是说我们品德不好吗？」",
     "links": [4048]
@@ -929,10 +929,10 @@
   {
     "entryID": 4047,
     "actorID": "MC3",
-    "text": "「……哼。既然讀過書，就別像個莽夫一樣只會送死。活著通過遴選再說吧。」 ",
+    "text": "「……哼。既然讀過書，就別像個莽夫一樣只會送死。活著通過遴選再說吧。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=3);\nModifyData(FavorabilityExp,MC3,20);",
     "Description": "好感度提升",
-    "zh_TW": "「……哼。既然讀過書，就別像個莽夫一樣只會送死。活著通過遴選再說吧。」 ",
+    "zh_TW": "「……哼。既然讀過書，就別像個莽夫一樣只會送死。活著通過遴選再說吧。」",
     "zh_CN": "「……哼。既然读过书，就别像个莽夫一样只会送死。活着通过遴选再说吧。」",
     "links": [4049]
   },
@@ -948,11 +948,11 @@
   {
     "entryID": 4049,
     "actorID": "MC3",
-    "text": "「英豪府不是讓你們遊山玩水的地方。想在這裡活命，就收起你們的輕浮做派。若是沒有真本事……還是趁早離開吧。」 ",
+    "text": "「英豪府不是讓你們遊山玩水的地方。想在這裡活命，就收起你們的輕浮做派。若是沒有真本事……還是趁早離開吧。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "Script": "SetQuestEntryState(\"C1M1\", 3, \"success\")",
+    "Script": "SetQuestEntryState(\"C1M1\", 3, \"success\");",
     "Description": "任務更新",
-    "zh_TW": "「英豪府不是讓你們遊山玩水的地方。想在這裡活命，就收起你們的輕浮做派。若是沒有真本事……還是趁早離開吧。」 ",
+    "zh_TW": "「英豪府不是讓你們遊山玩水的地方。想在這裡活命，就收起你們的輕浮做派。若是沒有真本事……還是趁早離開吧。」",
     "zh_CN": "「英豪府不是让你们游山玩水的地方。想在这里活命，就收起你们的轻浮做派。若是没有真本事……还是趁早离开吧。」",
     "links": []
   },
@@ -980,7 +980,7 @@
     "actorID": "MC2",
     "text": "「喲，這不是那天在雲中村要去黑鐵嶺的傢伙嗎？」",
     "Sequence": "SetPortrait(MC2,pic=1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(1,MC2,Meditate);",
-    "Conditions": "CurrentQuestState(\"CF16\") ~= \"unassigned\"",
+    "Conditions": "CurrentQuestState(\"CF16\") ~= \"unassigned\";",
     "Description": "曾觸發黑鐵嶺任務",
     "zh_TW": "「喲，這不是那天在雲中村要去黑鐵嶺的傢伙嗎？」",
     "zh_CN": "「哟，这不是那天在云中村要去黑铁岭的家伙吗？」",
@@ -991,7 +991,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（呂信隨意地坐在石階上，拍了拍身上的塵土，對剛剛師父的雷霆震怒似乎完全沒放在心上。）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"C1M1\", 5) ~= \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"C1M1\", 5) ~= \"success\";",
     "zh_TW": "[panel=6]＊（呂信隨意地坐在石階上，拍了拍身上的塵土，對剛剛師父的雷霆震怒似乎完全沒放在心上。）＊",
     "zh_CN": "[panel=6]＊（吕信随意地坐在石阶上，拍了拍身上的尘土，对刚刚师父的雷霆震怒似乎完全没放在心上。）＊",
     "links": [4059, 4073]
@@ -1001,7 +1001,7 @@
     "actorID": "MC2",
     "text": "「哈！難怪這幾天沒見李四在街上遊蕩了，看來你還真的解決黑鐵嶺的麻煩了啊！」",
     "Sequence": "SetPortrait(MC2,pic=1);\nSetPortrait(MC1,pic=5);\nDisableCharacterExpression(1);",
-    "Conditions": "CurrentQuestState(\"CF16\") == \"success\"",
+    "Conditions": "CurrentQuestState(\"CF16\") == \"success\";",
     "Description": "已解決黑鐵嶺的任務",
     "zh_TW": "「哈！難怪這幾天沒見李四在街上遊蕩了，看來你還真的解決黑鐵嶺的麻煩了啊！」",
     "zh_CN": "「哈！难怪这几天没见李四在街上游荡了，看来你还真的解决黑铁岭的麻烦了啊！」",
@@ -1039,7 +1039,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]：說到喝酒，本姑娘這裡正好有壇好東西！這可是我們在吉祥賭場，從褚人飛那傢伙手裡贏來的好東西！就當作是謝你剛剛幫忙解圍的謝禮啦！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "Conditions": "IsValuablesObtained(\"Player\", \"FireWine\")  == true",
+    "Conditions": "IsValuablesObtained(\"Player\", \"FireWine\")  == true;",
     "Description": "有火酒",
     "zh_TW": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]：說到喝酒，本姑娘這裡正好有壇好東西！這可是我們在吉祥賭場，從褚人飛那傢伙手裡贏來的好東西！就當作是謝你剛剛幫忙解圍的謝禮啦！」",
     "zh_CN": "[panel=2]「[em7]赶紧掏出一个酒囊，得意地晃了晃，道[/em7]：说到喝酒，本姑娘这里正好有坛好东西！这可是我们在吉祥赌场，从褚人飞那家伙手里赢来的好东西！就当作是谢你刚刚帮忙解围的谢礼啦！」",
@@ -1234,7 +1234,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（呂信不再多言，轉身走到院落一角的石鎖旁，隨手抓起百斤重的石鎖上下拋接，彷彿剛才對話從未發生過。）＊",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"C1M1\", 5, \"success\")",
+    "Script": "SetQuestEntryState(\"C1M1\", 5, \"success\");",
     "Description": "任務更新",
     "zh_TW": "[panel=6]＊（呂信不再多言，轉身走到院落一角的石鎖旁，隨手抓起百斤重的石鎖上下拋接，彷彿剛才對話從未發生過。）＊",
     "zh_CN": "[panel=6]＊（吕信不再多言，转身走到院落一角的石锁旁，随手抓起百斤重的石锁上下抛接，仿佛刚才对话从未发生过。）＊",

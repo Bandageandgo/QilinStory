@@ -196,7 +196,7 @@
     "actorID": "MC1",
     "text": "「…真的這麼餓嗎？」",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=9);",
-    "Script": "SetQuestState(\"CF08\", \"active\")",
+    "Script": "SetQuestState(\"CF08\", \"active\");",
     "zh_TW": "「…真的這麼餓嗎？」",
     "zh_CN": "「…真的这么饿吗？」",
     "links": []
@@ -225,7 +225,7 @@
     "actorID": "role2",
     "text": "[panel=6][em3][背景：遊牧民族][/em3]（這人說話雖然神神叨叨，但那雙眼睛卻利得很。那股子藏不住的野勁，讓她顯得與周遭的一切格格不入。）",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=12);",
-    "Conditions": "IsBackGroundFit(\"Player\", \"Outlander\")  == true",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Outlander\")  == true;",
     "zh_TW": "[panel=6][em3][背景：遊牧民族][/em3]（這人說話雖然神神叨叨，但那雙眼睛卻利得很。那股子藏不住的野勁，讓她顯得與周遭的一切格格不入。）",
     "zh_CN": "[panel=6][em3][背景：游牧民族][/em3]（这人说话虽然神神叨叨，但那双眼睛却利得很。那股子藏不住的野劲，让她显得与周遭的一切格格不入。）",
     "links": [2054]

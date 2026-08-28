@@ -22,7 +22,7 @@
     "actorID": "MC1",
     "text": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
-    "Conditions": "Variable[\"MyTime\"] < 6",
+    "Conditions": "Variable[\"MyTime\"] < 6;",
     "zh_TW": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
     "zh_CN": "「哼，是正是邪，是美人还是夜叉，进去一探便知。不过…我们得先确定盘缠是否足够。」",
     "links": [4, 10]
@@ -32,7 +32,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你們清點了一下身上的錢財，正好足夠支付一個月的房錢。）＊",
     "Sequence": "CurrentCoin >= 300;",
-    "Conditions": "IsCoinPass(300)  == true",
+    "Conditions": "IsCoinPass(300)  == true;",
     "zh_TW": "[panel=6]＊（你們清點了一下身上的錢財，正好足夠支付一個月的房錢。）＊",
     "zh_CN": "[panel=6]＊（你们清点了一下身上的钱财，正好足够支付一个月的房钱。）＊",
     "links": [5, 8]
@@ -87,7 +87,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你們摸了摸錢袋，裡面的銅錢叮噹作響，卻遠遠不夠那三百錢的房錢。）＊",
     "Sequence": "CurrentCoin < 300;",
-    "Conditions": "IsCoinPass(300)  == false",
+    "Conditions": "IsCoinPass(300)  == false;",
     "zh_TW": "[panel=6]＊（你們摸了摸錢袋，裡面的銅錢叮噹作響，卻遠遠不夠那三百錢的房錢。）＊",
     "zh_CN": "[panel=6]＊（你们摸了摸钱袋，里面的铜钱叮当作响，却远远不够那三百钱的房钱。）＊",
     "links": [11]
@@ -144,7 +144,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你們摸了摸充實起來的錢袋，心中安定了不少。天色已晚，該找個地方歇息了。）＊",
     "Sequence": "",
-    "Conditions": "IsCoinPass(300)  == true",
+    "Conditions": "IsCoinPass(300)  == true;",
     "zh_TW": "[panel=6]＊（你們摸了摸充實起來的錢袋，心中安定了不少。天色已晚，該找個地方歇息了。）＊",
     "zh_CN": "[panel=6]＊（你们摸了摸充实起来的钱袋，心中安定了不少。天色已晚，该找个地方歇息了。）＊",
     "links": [17]
@@ -172,7 +172,7 @@
     "actorID": "MC8",
     "text": "「表哥…又冷…又餓…我們的錢還是不夠…嗚…我好想吃熱乎乎的包子…」",
     "Sequence": "SetPortrait(MC8,pic=6);",
-    "Conditions": "IsCoinPass(300)  == false",
+    "Conditions": "IsCoinPass(300)  == false;",
     "zh_TW": "「表哥…又冷…又餓…我們的錢還是不夠…嗚…我好想吃熱乎乎的包子…」",
     "zh_CN": "「表哥…又冷…又饿…我们的钱还是不够…呜…我好想吃热乎乎的包子…」",
     "links": [21]
@@ -191,7 +191,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（最終，你們不得不在村中尋了個勉強可以避風的廢棄柴房，蜷縮著度過了在小溪村的第一個夜晚。說書人口中的江湖豪情萬丈，此刻卻教冰冷的夜風和腹中飢火，砸了個粉碎。）＊",
     "Sequence": "",
-    "Conditions": "Variable[\"MyTime\"] >= 6;IsCoinPass(300)  == false",
+    "Conditions": "Variable[\"MyTime\"] >= 6;IsCoinPass(300)  == false;",
     "Script": "SetQuestState(\"C0M1\", \"failure\");",
     "zh_TW": "[panel=6]＊（最終，你們不得不在村中尋了個勉強可以避風的廢棄柴房，蜷縮著度過了在小溪村的第一個夜晚。說書人口中的江湖豪情萬丈，此刻卻教冰冷的夜風和腹中飢火，砸了個粉碎。）＊",
     "zh_CN": "[panel=6]＊（最终，你们不得不在村中寻了个勉强可以避风的废弃柴房，蜷缩着度过了在小溪村的第一个夜晚。说书人描绘的江湖豪情万丈，此刻却被冰冷的现实和腹中的饥饿感无情地击碎。）＊",
@@ -202,7 +202,7 @@
     "actorID": "MC1",
     "text": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
-    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "Conditions": "Variable[\"MyTime\"] >= 6;",
     "zh_TW": "「哼，是正是邪，是美人還是夜叉，進去一探便知。不過…我們得先確定盤纏是否足夠。」",
     "zh_CN": "「哼，是正是邪，是美人还是夜叉，进去一探便知。不过…我们得先确定盘缠是否足够。」",
     "links": [16, 20]
@@ -212,7 +212,7 @@
     "actorID": "MC1",
     "text": "「哦！此雞眼神不凡，難道是雞中豪傑！」",
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
-    "Conditions": "Variable[\"CAttack\"] == 0",
+    "Conditions": "Variable[\"CAttack\"] == 0;",
     "zh_TW": "「哦！此雞眼神不凡，難道是雞中豪傑！」",
     "zh_CN": "「哦！此鸡眼神不凡，难道是鸡中豪杰！」",
     "links": [105]
@@ -232,14 +232,14 @@
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",
-    "zh_CN": "…",
+    "zh_CN": "「…」",
     "links": [182, 104, 190]
   },
   {
     "entryID": 109,
     "actorID": "role114",
     "text": "「咕～咕～…」",
-    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Strength,5);",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,Player,Strength,5);",
     "zh_TW": "「咕～咕～…」",
     "zh_CN": "「咕～咕～…」",
     "links": []
@@ -266,7 +266,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "Variable[\"FastFight\"] = true",
+    "Script": "Variable[\"FastFight\"] = true;",
     "links": [180, 181]
   },
   {
@@ -274,8 +274,8 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
-    "Script": "Variable[\"CAttack\"] = Variable[\"CAttack\"] + 1",
+    "Conditions": "IsPassFight()  == true;",
+    "Script": "Variable[\"CAttack\"] = Variable[\"CAttack\"] + 1;",
     "links": [109]
   },
   {
@@ -283,7 +283,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [110]
   },
   {
@@ -291,7 +291,7 @@
     "actorID": "MC1",
     "text": "「哈哈！你是最後一隻了」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);",
-    "Conditions": "Variable[\"CAttack\"] == 2",
+    "Conditions": "Variable[\"CAttack\"] == 2;",
     "zh_TW": "「哈哈！你是最後一隻了」",
     "zh_CN": "「哈哈！你是最后一只了」",
     "links": [183]
@@ -309,7 +309,7 @@
     "entryID": 184,
     "actorID": "role114",
     "text": "「咕～咕～…」",
-    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,MC1,Strength,5);",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,Player,Strength,5);",
     "zh_TW": "「咕～咕～…」",
     "zh_CN": "「咕～咕～…」",
     "links": [191]
@@ -343,7 +343,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [184]
   },
   {
@@ -351,7 +351,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [185]
   },
   {
@@ -359,7 +359,7 @@
     "actorID": "MC1",
     "text": "「你也想打嗎，來呀！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Idea);",
-    "Conditions": "Variable[\"CAttack\"] == 1",
+    "Conditions": "Variable[\"CAttack\"] == 1;",
     "zh_TW": "「你也想打嗎，來呀！」",
     "zh_CN": "「你也想打吗，来呀！」",
     "links": [105]
@@ -386,7 +386,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
-    "Conditions": "CurrentQuestState(\"C0F1\") ~= \"active\"",
+    "Conditions": "CurrentQuestState(\"C0F1\") ~= \"active\";",
     "links": []
   },
   {
@@ -402,8 +402,8 @@
     "actorID": "0",
     "text": "",
     "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
-    "Conditions": "CurrentQuestState(\"C0F1\") == \"active\"",
-    "Script": "SetQuestState(\"C0F1\", \"failure\")",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"active\";",
+    "Script": "SetQuestState(\"C0F1\", \"failure\");",
     "links": []
   },
   {

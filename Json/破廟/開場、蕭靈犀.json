@@ -143,7 +143,7 @@
     "actorID": "MC1",
     "text": "「哎，別理他們了。反正閒著也是閒著，在雨停之前，找點事情來打發時間吧！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Script": "SetQuestState(\"C0M3\", \"active\");\nSetQuestEntryState(\"C0M3\", 1, \"active\")",
+    "Script": "SetQuestState(\"C0M3\", \"active\");\nSetQuestEntryState(\"C0M3\", 1, \"active\");",
     "Description": "開啟任務\"大夢初醒\"",
     "zh_TW": "「哎，別理他們了。反正閒著也是閒著，在雨停之前，找點事情來打發時間吧！」",
     "zh_CN": "「哎，别理他们了。反正闲着也是闲着，在雨停之前，找点事情来打发时间吧！」",
@@ -168,7 +168,7 @@
     "actorID": "MC22",
     "text": "「沒錯沒錯，搞不好這裡有寶物呢！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "Conditions": "IsInTeam(\"MC22\")  == true",
+    "Conditions": "IsInTeam(\"MC22\")  == true;",
     "zh_TW": "「沒錯沒錯，搞不好這裡有寶物呢！」",
     "zh_CN": "「没错没错，搞不好这里有宝物呢！」",
     "links": []
@@ -176,10 +176,10 @@
   {
     "entryID": 3529,
     "actorID": "role99",
-    "text": "「[em7]悄聲道：[/em7][em2]蒼天已死，黃天當立[/em2]這句話你沒聽過嗎？這大漢的氣數早就盡了！與其在這亂世裡像條狗一樣餓死，不如跟著郭太渠帥搏一把富貴！」",
+    "text": "「[em7]悄聲道[/em7]：[em2]蒼天已死，黃天當立[/em2]這句話你沒聽過嗎？這大漢的氣數早就盡了！與其在這亂世裡像條狗一樣餓死，不如跟著郭太渠帥搏一把富貴！」",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_TW": "「[em7]悄聲道：[/em7][em2]蒼天已死，黃天當立[/em2]這句話你沒聽過嗎？這大漢的氣數早就盡了！與其在這亂世裡像條狗一樣餓死，不如跟著郭太渠帥搏一把富貴！」",
-    "zh_CN": "「[em7]悄声道：[/em7][em2]苍天已死，黄天当立[/em2]这句话你没听过吗？这大汉的气数早就尽了！与其在这乱世里像条狗一样饿死，不如跟着郭太渠帅搏一把富贵！」",
+    "zh_TW": "「[em7]悄聲道[/em7]：[em2]蒼天已死，黃天當立[/em2]這句話你沒聽過嗎？這大漢的氣數早就盡了！與其在這亂世裡像條狗一樣餓死，不如跟著郭太渠帥搏一把富貴！」",
+    "zh_CN": "「[em7]悄声道[/em7]：[em2]苍天已死，黄天当立[/em2]这句话你没听过吗？这大汉的气数早就尽了！与其在这乱世里像条狗一样饿死，不如跟着郭太渠帅搏一把富贵！」",
     "links": [
       3530
     ]
@@ -254,7 +254,7 @@
     "entryID": 3536,
     "actorID": "role2",
     "text": "",
-    "Sequence": "BeginDiceRoll(Manual,InsightCheck,5);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,5);",
     "Description": "開始檢定",
     "links": [
       3537
@@ -274,7 +274,7 @@
     "entryID": 3538,
     "actorID": "role107",
     "text": "「嘎啊！！」",
-    "Sequence": "",
+    "Sequence": "PlayOrStopParticle(Sword_Single_ScreenRed,Stop);",
     "zh_TW": "「嘎啊！！」",
     "zh_CN": "「嘎啊！！」",
     "links": [
@@ -307,8 +307,8 @@
     "entryID": 3541,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Play);\nAudioControl(PlaySFXOneShot,Others_Sword_Single_ScreenRed);\nSetContinueMode(original)@2;\nModifyData(FeatExp,MC1,Insight,10);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Play);\nAudioControl(PlaySFXOneShot,Others_Sword_Single_ScreenRed);\nSetContinueMode(original)@2;\nModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice()  == true;",
     "links": [
       3538
     ]
@@ -352,7 +352,7 @@
     "actorID": "role107",
     "text": "「嘎呼！！」",
     "Sequence": "ControlStage(TriggerEvent,1,狗頭人出現);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「嘎呼！！」",
     "zh_CN": "「嘎呼！！」",
     "links": [
@@ -383,7 +383,7 @@
     "entryID": 3548,
     "actorID": "role123",
     "text": "「嘎呼！嘎呼！上鉤了！上鉤了！」",
-    "Sequence": "",
+    "Sequence": "PlayOrStopParticle(Sword_Single_ScreenRed,Stop);",
     "zh_TW": "「嘎呼！嘎呼！上鉤了！上鉤了！」",
     "zh_CN": "「嘎呼！嘎呼！上钩了！上钩了！」",
     "links": [
@@ -484,7 +484,7 @@
     "actorID": "role123",
     "text": "「嘎、嘎嗚嗚……小的！跑！小子，厲害！」",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_TW": "「嘎、嘎嗚嗚……小的！跑！小子，厲害！」",
     "zh_CN": "「嘎、嘎呜呜……小的！跑！小子，厉害！」",
     "links": [
@@ -746,11 +746,11 @@
   {
     "entryID": 3582,
     "actorID": "MC22",
-    "text": "[panel=5]「不過，你這麼能睡，果然是個狠角色！」",
+    "text": "[panel=1]「不過，你這麼能睡，果然是個狠角色！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "Conditions": "IsInTeam(\"MC22\")  == true",
-    "zh_TW": "[panel=5]「不過，你這麼能睡，果然是個狠角色！」",
-    "zh_CN": "[panel=5]「不过，你这么能睡，果然是个狠角色！」",
+    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "zh_TW": "[panel=1]「不過，你這麼能睡，果然是個狠角色！」",
+    "zh_CN": "[panel=1]「不过，你这么能睡，果然是个狠角色！」",
     "links": [
       3583
     ]
@@ -769,11 +769,11 @@
   {
     "entryID": 3584,
     "actorID": "MC22",
-    "text": "[panel=5]「媽呀，怎這裡也有狗頭人！？」",
+    "text": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "Sequence": "SetPortrait(MC22,pic=9);",
-    "Conditions": "IsInTeam(\"MC22\")  == true",
-    "zh_TW": "[panel=5]「媽呀，怎這裡也有狗頭人！？」",
-    "zh_CN": "[panel=5]「妈呀，怎这里也有狗头人！？」",
+    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "zh_TW": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
+    "zh_CN": "[panel=1]「妈呀，怎这里也有狗头人！？」",
     "links": [
       3550
     ]
@@ -781,11 +781,11 @@
   {
     "entryID": 3585,
     "actorID": "MC22",
-    "text": "[panel=5]「媽呀，怎這裡也有狗頭人！？」",
+    "text": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "Sequence": "SetPortrait(MC22,pic=9);",
-    "Conditions": "IsInTeam(\"MC22\")  == true",
-    "zh_TW": "[panel=5]「媽呀，怎這裡也有狗頭人！？」",
-    "zh_CN": "[panel=5]「妈呀，怎这里也有狗头人！？」",
+    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "zh_TW": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
+    "zh_CN": "[panel=1]「妈呀，怎这里也有狗头人！？」",
     "links": [
       3550
     ]
@@ -804,11 +804,11 @@
   {
     "entryID": 3587,
     "actorID": "MC22",
-    "text": "[panel=5]「等等！」",
-    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(5,MC22,Idea);",
-    "Conditions": "IsInTeam(\"MC22\")  == true",
-    "zh_TW": "[panel=5]「等等！」",
-    "zh_CN": "[panel=5]「等等！」",
+    "text": "[panel=1]「等等！」",
+    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Idea);",
+    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "zh_TW": "[panel=1]「等等！」",
+    "zh_CN": "[panel=1]「等等！」",
     "links": [
       3589
     ]
@@ -829,10 +829,10 @@
   {
     "entryID": 3589,
     "actorID": "MC22",
-    "text": "[panel=5]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
-    "Sequence": "SetPortrait(MC22,pic=1);\nDisableCharacterExpression(5);",
-    "zh_TW": "[panel=5]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
-    "zh_CN": "[panel=5]「打打杀杀的多不划算！不战而屈人之兵才是上策！我有一计——让他们心甘情愿替咱们办事，岂不比直接动手高明多了？」",
+    "text": "[panel=1]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
+    "Sequence": "SetPortrait(MC22,pic=1);\nDisableCharacterExpression(1);",
+    "zh_TW": "[panel=1]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
+    "zh_CN": "[panel=1]「打打杀杀的多不划算！不战而屈人之兵才是上策！我有一计——让他们心甘情愿替咱们办事，岂不比直接动手高明多了？」",
     "links": [
       3590,
       3597,
@@ -863,7 +863,7 @@
     "entryID": 3592,
     "actorID": "MC1",
     "text": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(5);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(1);",
     "zh_TW": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
     "zh_CN": "「好汉们，今日你们能从我这拿到五百钱，明日呢？拦路营生，终究不是长久之计。我这正好有个稳妥的委托，既能让各位赚得正当钱财，又能免去刀口舔血的风险。好汉们不妨考虑一下？」",
     "links": [
@@ -886,8 +886,8 @@
     "entryID": 3594,
     "actorID": "role123",
     "text": "「咳、咳、你且說看看，但話說在前頭，可別想唬騙我們！」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,MC1,EconomicDevelopment,10)",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10)",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「咳、咳、你且說看看，但話說在前頭，可別想唬騙我們！」",
     "zh_CN": "「咳、咳、你且说看看，但话说在前头，可别想唬骗我们！」",
     "links": [
@@ -921,7 +921,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「我有一個你們無法拒絕的提議。」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1)  == true",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1)  == true;",
     "zh_TW": "[em2][隱藏選項][/em2]「我有一個你們無法拒絕的提議。」",
     "zh_CN": "[em2][隐藏选项][/em2]「我有一个你们无法拒绝的提议。」",
     "links": [
@@ -932,7 +932,7 @@
     "entryID": 3598,
     "actorID": "MC1",
     "text": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(5);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(1);",
     "zh_TW": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
     "zh_CN": "「好汉们，今日你们能从我这拿到五百钱，明日呢？拦路营生，终究不是长久之计。我这正好有个稳妥的委托，既能让各位赚得正当钱财，又能免去刀口舔血的风险。好汉们不妨考虑一下？」",
     "links": [
@@ -964,10 +964,10 @@
   {
     "entryID": 3601,
     "actorID": "MC1",
-    "text": "「三次為限，三次之後，你我兩清，此約便了。且為了表達我的誠意[em2]事成之後[\\em2]我提高報酬至七百錢！」",
+    "text": "「三次為限，三次之後，你我兩清，此約便了。且為了表達我的誠意[em2]事成之後[/em2]我提高報酬至七百錢！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "zh_TW": "「三次為限，三次之後，你我兩清，此約便了。且為了表達我的誠意[em2]事成之後[\\em2]我提高報酬至七百錢！」",
-    "zh_CN": "「三次为限，三次之后，你我两清，此约便了。且为了表达我的诚意[em2]事成之后[\\em2]我提高报酬至七百钱！」",
+    "zh_TW": "「三次為限，三次之後，你我兩清，此約便了。且為了表達我的誠意[em2]事成之後[/em2]我提高報酬至七百錢！」",
+    "zh_CN": "「三次为限，三次之后，你我两清，此约便了。且为了表达我的诚意[em2]事成之后[/em2]我提高报酬至七百钱！」",
     "links": [
       3602
     ]
@@ -988,7 +988,7 @@
     "actorID": "role123",
     "text": "「胡說八道！一聽就是鬼扯！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「胡说八道！一听就是鬼扯！」",
     "links": [
@@ -1113,7 +1113,7 @@
     "actorID": "MC1",
     "text": "「君子一言既出駟馬難追！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Conditions": "IsCoinPass(500)  == true",
+    "Conditions": "IsCoinPass(500)  == true;",
     "zh_TW": "「君子一言既出駟馬難追！」",
     "zh_CN": "「君子一言既出驷马难追！」",
     "links": [
@@ -1125,7 +1125,7 @@
     "actorID": "MC1",
     "text": "「君子一言，快、快馬難追！」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "Conditions": "IsCoinPass(500)  == false",
+    "Conditions": "IsCoinPass(500)  == false;",
     "zh_TW": "「君子一言，快、快馬難追！」",
     "zh_CN": "「君子一言，快、快马难追！」",
     "links": [
@@ -1149,7 +1149,7 @@
     "actorID": "MC1",
     "text": "「哼，拿去吧，然後給我滾！」",
     "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-500);",
-    "Conditions": "IsCoinPass(500)  == true",
+    "Conditions": "IsCoinPass(500)  == true;",
     "zh_TW": "「哼，拿去吧，然後給我滾！」",
     "zh_CN": "「哼，拿去吧，然后给我滚！」",
     "links": [
@@ -1181,10 +1181,10 @@
   {
     "entryID": 3620,
     "actorID": "role106",
-    "text": "好兄弟！讓道！好兄弟！讓道！",
+    "text": "「好兄弟！讓道！好兄弟！讓道！」",
     "Sequence": "",
-    "zh_TW": "好兄弟！讓道！好兄弟！讓道！",
-    "zh_CN": "好兄弟！让道！好兄弟！让道！",
+    "zh_TW": "「好兄弟！讓道！好兄弟！讓道！」",
+    "zh_CN": "「好兄弟！让道！好兄弟！让道！」",
     "links": [
       3621
     ]
@@ -1262,7 +1262,7 @@
     "actorID": "MC1",
     "text": "「疑！？...身上的錢好像不夠...」",
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
-    "Conditions": "IsCoinPass(500)  == false",
+    "Conditions": "IsCoinPass(500)  == false;",
     "zh_TW": "「疑！？...身上的錢好像不夠...」",
     "zh_CN": "「疑！？...身上的钱好像不够...」",
     "links": [
@@ -1274,7 +1274,7 @@
     "actorID": "role123",
     "text": "「這小子滿嘴胡說八道！一聽就是鬼扯！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「這小子滿嘴胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「这小子满嘴胡说八道！一听就是鬼扯！」",
     "links": [
@@ -1348,7 +1348,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "ShowEnding(Ending_1);\nControlStage(SetCamera,PublicAct,null);\nContinue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "BD",
     "links": []
   },

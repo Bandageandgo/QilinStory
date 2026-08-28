@@ -62,7 +62,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（一聲清脆的機簧聲，厚重的鐵門緩緩打開了一道縫隙。）＊",
     "Sequence": "ModifyData(FeatExp,Player,SleightOfHand,10);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（一声清脆的机簧声，厚重的铁门缓缓打开了一道缝隙。）＊",
     "links": [24]
   },
@@ -87,7 +87,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableCharacterExpression(0);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF16\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"CF16\", 1, \"success\");",
     "Description": "任務更新",
     "links": []
   },
@@ -96,7 +96,7 @@
     "actorID": "MC1",
     "text": "「這鎖…機簧甚是繁複…不行，卡住了。」",
     "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「这锁…机簧甚是繁复…不行，卡住了。」",
     "links": [28]
   },
@@ -105,7 +105,7 @@
     "actorID": "MC22",
     "text": "「看來只能另尋他法了。還是先去別處轉轉吧。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);",
-    "Script": "SetQuestEntryState(\"CF16\", 1, \"active\")",
+    "Script": "SetQuestEntryState(\"CF16\", 1, \"active\");",
     "Description": "任務更新",
     "zh_CN": "「看来只能另寻他法了。还是先去别处转转吧。」",
     "links": [17]
@@ -168,8 +168,8 @@
     "actorID": "MC1",
     "text": "「這塊礦石沉重異常，且泛著幽幽藍光，莫非就是蒲元師傅提到的『寒鐵』？太好了，總算沒白跑一趟！」",
     "Sequence": "SetPortrait(MC1,pic=5);\nModifyData(Valuable,Player,ColdIronOre,1);",
-    "Conditions": "CurrentQuestState(\"CF17\") == \"active\"",
-    "Script": "SetQuestEntryState(\"CF17\", 1, \"active\")",
+    "Conditions": "CurrentQuestState(\"CF17\") == \"active\";",
+    "Script": "SetQuestEntryState(\"CF17\", 1, \"active\");",
     "Description": "獲得寒鐵礦、任務更新",
     "zh_CN": "「这块矿石沉重异常，且泛着幽幽蓝光，莫非就是蒲元师傅提到的『寒铁』？太好了，总算没白跑一趟！」",
     "links": []
@@ -188,7 +188,7 @@
     "actorID": "MC1",
     "text": "「那是…李大山？還有那個神像…」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "Script": "SetQuestEntryState(\"CF16\", 2, \"success\")",
+    "Script": "SetQuestEntryState(\"CF16\", 2, \"success\");",
     "Description": "任務更新",
     "zh_CN": "「那是…李大山？还有那个神像…」",
     "links": [41]
@@ -222,10 +222,10 @@
   {
     "entryID": 44,
     "actorID": "role129",
-    "text": "「[em7]從陰影中衝出，撲在李大山身上[/em7]大山！不要！求求你們，不要殺我丈夫！」",
+    "text": "「[em7]從陰影中衝出，撲在李大山身上[/em7]，大山！不要！求求你們，不要殺我丈夫！」",
     "Sequence": "",
-    "zh_TW": "「[em7]從陰影中衝出，撲在李大山身上[/em7]大山！不要！求求你們，不要殺我丈夫！」",
-    "zh_CN": "「[em7]从阴影中冲出，扑在李大山身上[/em7]大山！不要！求求你们，不要杀我丈夫！」",
+    "zh_TW": "「[em7]從陰影中衝出，撲在李大山身上[/em7]，大山！不要！求求你們，不要殺我丈夫！」",
+    "zh_CN": "「[em7]从阴影中冲出，扑在李大山身上[/em7]，大山！不要！求求你们，不要杀我丈夫！」",
     "links": [45]
   },
   {
@@ -276,7 +276,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「順從殺意。」",
     "Sequence": "",
-    "Conditions": "Variable[\"GodSlayerDestiny\"] == true",
+    "Conditions": "Variable[\"GodSlayerDestiny\"] == true;",
     "zh_TW": "[em2][隱藏選項][/em2]「順從殺意。」",
     "zh_CN": "[em2][隐藏选项][/em2]「顺从杀意。」",
     "links": [70]
@@ -345,10 +345,10 @@
   {
     "entryID": 64,
     "actorID": "role129",
-    "text": "「[em7]喜極而泣[/em7]大山…是你嗎？你終於醒了…太好了…真的太好了…」",
+    "text": "「[em7]喜極而泣[/em7]，大山…是你嗎？你終於醒了…太好了…真的太好了…」",
     "Sequence": "",
-    "zh_TW": "「[em7]喜極而泣[/em7]大山…是你嗎？你終於醒了…太好了…真的太好了…」",
-    "zh_CN": "「[em7]喜极而泣[/em7]大山…是你吗？你终于醒了…太好了…真的太好了…」",
+    "zh_TW": "「[em7]喜極而泣[/em7]，大山…是你嗎？你終於醒了…太好了…真的太好了…」",
+    "zh_CN": "「[em7]喜极而泣[/em7]，大山…是你吗？你终于醒了…太好了…真的太好了…」",
     "links": [65]
   },
   {
@@ -356,7 +356,7 @@
     "actorID": "role128",
     "text": "「媳婦！妳還活著！太好了…我以為…我以為我把妳害死了…嗚嗚嗚…」",
     "Sequence": "SetPortrait(role128,pic=1);",
-    "zh_CN": "「媳妇！妳还活着！太好了…我以为…我以为我把妳害死了…呜呜呜…」",
+    "zh_CN": "「媳妇！你还活着！太好了…我以为…我以为我把你害死了…呜呜呜…」",
     "links": [66]
   },
   {
@@ -436,7 +436,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著教人心寒的快意，重新蟄伏。祭壇上那隻紅眼映著滿地血色，光芒不減反盛。你走上前去，將它從泥胎裡挖了下來。）＊",
     "Sequence": "ModifyData(Valuable,Player,EvilGodFragment,1);",
-    "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 2",
+    "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 2;",
     "Description": "殺意+2、獲得惡神碎片。⚠ 新貴重品 EvilGodFragment（2026-08-27 自創），Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片）。",
     "zh_CN": "[panel=6]＊（随着生命的消逝，那股杀意终于饱餐一顿，带着教人心寒的快意，重新蛰伏。祭坛上那只红眼映着满地血色，光芒不减反盛。你走上前去，将它从泥胎里挖了下来。）＊",
     "links": [78]
@@ -466,7 +466,7 @@
     "text": "「咳咳...這味道，娜娜，妳確定這裡真有寶貝，而不是一堆爛骨頭？」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
     "zh_TW": "「咳咳...這味道，娜娜，妳確定這裡真有寶貝，而不是一堆爛骨頭？」",
-    "zh_CN": "「咳咳...这味道，娜娜，妳确定这里真有宝贝，而不是一堆烂骨头？」",
+    "zh_CN": "「咳咳...这味道，娜娜，你确定这里真有宝贝，而不是一堆烂骨头？」",
     "links": [2053]
   },
   {
@@ -484,18 +484,18 @@
     "text": "「行行行，聽妳的。不過我總覺得有什麼東西在盯著我們...」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Pain);",
     "zh_TW": "「行行行，聽妳的。不過我總覺得有什麼東西在盯著我們...」",
-    "zh_CN": "「行行行，听妳的。不过我总觉得有什么东西在盯着我们...」",
+    "zh_CN": "「行行行，听你的。不过我总觉得有什么东西在盯着我们...」",
     "links": [2055]
   },
   {
     "entryID": 2055,
     "actorID": "MC22",
-    "text": "「[em7]滿不在乎[/em7]放心啦！有本姑娘的直覺和大俠你的身手，什麼妖魔鬼怪還不是手到擒來？走，去那邊看看！」",
+    "text": "「[em7]滿不在乎[/em7]，放心啦！有本姑娘的直覺和大俠你的身手，什麼妖魔鬼怪還不是手到擒來？走，去那邊看看！」",
     "Sequence": "SetPortrait(MC22,pic=5);\nDisableAllCharacterExpression();",
-    "Script": "SetQuestEntryState(\"CF16\", 2, \"active\")",
+    "Script": "SetQuestEntryState(\"CF16\", 2, \"active\");",
     "Description": "任務更新",
-    "zh_TW": "「[em7]滿不在乎[/em7]放心啦！有本姑娘的直覺和大俠你的身手，什麼妖魔鬼怪還不是手到擒來？走，去那邊看看！」",
-    "zh_CN": "「[em7]满不在乎[/em7]放心啦！有本姑娘的直觉和大侠你的身手，什么妖魔鬼怪还不是手到擒来？走，去那边看看！」",
+    "zh_TW": "「[em7]滿不在乎[/em7]，放心啦！有本姑娘的直覺和大俠你的身手，什麼妖魔鬼怪還不是手到擒來？走，去那邊看看！」",
+    "zh_CN": "「[em7]满不在乎[/em7]，放心啦！有本姑娘的直觉和大侠你的身手，什么妖魔鬼怪还不是手到擒来？走，去那边看看！」",
     "links": []
   },
   {
@@ -511,7 +511,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [42]
   },
@@ -527,7 +527,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestState(\"CF16\", \"success\");\nSetQuestEntryState(\"CF16\", 3, \"success\")",
+    "Script": "SetQuestState(\"CF16\", \"success\");\nSetQuestEntryState(\"CF16\", 3, \"success\");",
     "Description": "任務更新",
     "links": []
   },
@@ -536,7 +536,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestState(\"CF16\", \"success\");\nSetQuestEntryState(\"CF16\", 5, \"success\")",
+    "Script": "SetQuestState(\"CF16\", \"success\");\nSetQuestEntryState(\"CF16\", 5, \"success\");",
     "Description": "任務更新",
     "links": []
   },
@@ -552,10 +552,10 @@
   {
     "entryID": 3875,
     "actorID": "MC22",
-    "text": "「[em7]伸懶腰[/em7]呼——總算是搞定了！雖然沒挖到什麼寶貝，但救人一命感覺也不錯！不過大俠，你竟然毫髮無傷，這未免也太神奇了吧？」",
+    "text": "「[em7]伸懶腰[/em7]，呼——總算是搞定了！雖然沒挖到什麼寶貝，但救人一命感覺也不錯！不過大俠，你竟然毫髮無傷，這未免也太神奇了吧？」",
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Question);\nDisableCharacterExpression(0);",
-    "zh_TW": "「[em7]伸懶腰[/em7]呼——總算是搞定了！雖然沒挖到什麼寶貝，但救人一命感覺也不錯！不過大俠，你竟然毫髮無傷，這未免也太神奇了吧？」",
-    "zh_CN": "「[em7]伸懒腰[/em7]呼——总算是搞定了！虽然没挖到什么宝贝，但救人一命感觉也不错！不过大侠，你竟然毫发无伤，这未免也太神奇了吧？」",
+    "zh_TW": "「[em7]伸懶腰[/em7]，呼——總算是搞定了！雖然沒挖到什麼寶貝，但救人一命感覺也不錯！不過大俠，你竟然毫髮無傷，這未免也太神奇了吧？」",
+    "zh_CN": "「[em7]伸懒腰[/em7]，呼——总算是搞定了！虽然没挖到什么宝贝，但救人一命感觉也不错！不过大侠，你竟然毫发无伤，这未免也太神奇了吧？」",
     "links": [3874]
   },
   {
@@ -570,28 +570,28 @@
   {
     "entryID": 3879,
     "actorID": "role128",
-    "text": "「[em7]憨厚地撓頭[/em7]俺…俺嘴笨，不會說話。總之，以後少俠若是有用得著俺李大山的地方，儘管開口！俺這條命都是你給的！」",
+    "text": "「[em7]憨厚地撓頭[/em7]，俺…俺嘴笨，不會說話。總之，以後少俠若是有用得著俺李大山的地方，儘管開口！俺這條命都是你給的！」",
     "Sequence": "SetPortrait(role128,pic=1);",
-    "zh_TW": "「[em7]憨厚地撓頭[/em7]俺…俺嘴笨，不會說話。總之，以後少俠若是有用得著俺李大山的地方，儘管開口！俺這條命都是你給的！」",
-    "zh_CN": "「[em7]憨厚地挠头[/em7]俺…俺嘴笨，不会说话。总之，以后少侠若是有用得着俺李大山的地方，尽管开口！俺这条命都是你给的！」",
+    "zh_TW": "「[em7]憨厚地撓頭[/em7]，俺…俺嘴笨，不會說話。總之，以後少俠若是有用得著俺李大山的地方，儘管開口！俺這條命都是你給的！」",
+    "zh_CN": "「[em7]憨厚地挠头[/em7]，俺…俺嘴笨，不会说话。总之，以后少侠若是有用得着俺李大山的地方，尽管开口！俺这条命都是你给的！」",
     "links": [3880]
   },
   {
     "entryID": 3880,
     "actorID": "MC1",
-    "text": "「[em7]擺手[/em7]路見不平，拔刀相助，這點小事何足掛齒！不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
+    "text": "「[em7]擺手[/em7]，路見不平，拔刀相助，這點小事何足掛齒！不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
-    "zh_TW": "「[em7]擺手[/em7]路見不平，拔刀相助，這點小事何足掛齒！不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
-    "zh_CN": "「[em7]摆手[/em7]路见不平，拔刀相助，这点小事何足挂齿！不过嘛……嘿嘿，若是日后有人问起，要好好说故事啊！对了，快些回去吧，李老伯还在家里等着你们呢。」",
+    "zh_TW": "「[em7]擺手[/em7]，路見不平，拔刀相助，這點小事何足掛齒！不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
+    "zh_CN": "「[em7]摆手[/em7]，路见不平，拔刀相助，这点小事何足挂齿！不过嘛……嘿嘿，若是日后有人问起，要好好说故事啊！对了，快些回去吧，李老伯还在家里等着你们呢。」",
     "links": [3878]
   },
   {
     "entryID": 3881,
     "actorID": "role129",
-    "text": "「[em7]癱軟在地[/em7]大山…大山！你醒醒啊！…嗚嗚…為什麼…為什麼會變成這樣…」",
+    "text": "「[em7]癱軟在地[/em7]，大山…大山！你醒醒啊！…嗚嗚…為什麼…為什麼會變成這樣…」",
     "Sequence": "",
-    "zh_TW": "「[em7]癱軟在地[/em7]大山…大山！你醒醒啊！…嗚嗚…為什麼…為什麼會變成這樣…」",
-    "zh_CN": "「[em7]瘫软在地[/em7]大山…大山！你醒醒啊！…呜呜…为什么…为什么会变成这样…」",
+    "zh_TW": "「[em7]癱軟在地[/em7]，大山…大山！你醒醒啊！…嗚嗚…為什麼…為什麼會變成這樣…」",
+    "zh_CN": "「[em7]瘫软在地[/em7]，大山…大山！你醒醒啊！…呜呜…为什么…为什么会变成这样…」",
     "links": [3882]
   },
   {
@@ -642,10 +642,10 @@
   {
     "entryID": 3887,
     "actorID": "MC22",
-    "text": "「[em7]踢著腳邊的碎石[/em7]喂……別板著一張臉嘛。雖然沒能救下那個大塊頭，但至少保住了他媳婦的命。若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
+    "text": "「[em7]踢著腳邊的碎石[/em7]，喂……別板著一張臉嘛。雖然沒能救下那個大塊頭，但至少保住了他媳婦的命。若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
     "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22,Question);",
-    "zh_TW": "「[em7]踢著腳邊的碎石[/em7]喂……別板著一張臉嘛。雖然沒能救下那個大塊頭，但至少保住了他媳婦的命。若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
-    "zh_CN": "「[em7]踢着脚边的碎石[/em7]喂……别板着一张脸嘛。虽然没能救下那个大块头，但至少保住了他媳妇的命。若你刚刚不出手，他们两个都得死……我们这样也算是做了好事，对吧？」",
+    "zh_TW": "「[em7]踢著腳邊的碎石[/em7]，喂……別板著一張臉嘛。雖然沒能救下那個大塊頭，但至少保住了他媳婦的命。若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
+    "zh_CN": "「[em7]踢着脚边的碎石[/em7]，喂……别板着一张脸嘛。虽然没能救下那个大块头，但至少保住了他媳妇的命。若你刚刚不出手，他们两个都得死……我们这样也算是做了好事，对吧？」",
     "links": [3888]
   },
   {
@@ -669,10 +669,10 @@
   {
     "entryID": 3890,
     "actorID": "MC1",
-    "text": "「[em7]冷冷地擦拭劍鋒[/em7]對敵人仁慈，就是對自己殘忍。況且她心智已毀，活著也是受罪，不如給個痛快。……走吧，結束了。」",
+    "text": "「[em7]冷冷地擦拭劍鋒[/em7]，對敵人仁慈，就是對自己殘忍。況且她心智已毀，活著也是受罪，不如給個痛快。……走吧，結束了。」",
     "Sequence": "",
-    "zh_TW": "「[em7]冷冷地擦拭劍鋒[/em7]對敵人仁慈，就是對自己殘忍。況且她心智已毀，活著也是受罪，不如給個痛快。……走吧，結束了。」",
-    "zh_CN": "「[em7]冷冷地擦拭剑锋[/em7]对敌人仁慈，就是对自己残忍。况且她心智已毁，活着也是受罪，不如给个痛快。……走吧，结束了。」",
+    "zh_TW": "「[em7]冷冷地擦拭劍鋒[/em7]，對敵人仁慈，就是對自己殘忍。況且她心智已毀，活著也是受罪，不如給個痛快。……走吧，結束了。」",
+    "zh_CN": "「[em7]冷冷地擦拭剑锋[/em7]，对敌人仁慈，就是对自己残忍。况且她心智已毁，活着也是受罪，不如给个痛快。……走吧，结束了。」",
     "links": [3873]
   },
   {
@@ -762,7 +762,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "Sequence": "ModifyData(Coin,-100);",
-    "Conditions": "IsCoinPass(100)  == true",
+    "Conditions": "IsCoinPass(100)  == true;",
     "zh_TW": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "zh_CN": "[panel=6]＊（你掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
     "links": [3904]
@@ -800,7 +800,7 @@
     "actorID": "MC22",
     "text": "「[em7]嘆氣[/em7]……走吧，再聽下去我覺得我腦袋都要有問題了。」",
     "Sequence": "SetPortrait(MC22,pic=3);",
-    "Script": "SetQuestEntryState(\"CF18\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"CF18\", 1, \"success\");",
     "Description": "這裡後就可以把阿婆對話給關掉了、任務更新",
     "zh_TW": "「[em7]嘆氣[/em7]……走吧，再聽下去我覺得我腦袋都要有問題了。」",
     "zh_CN": "「[em7]叹气[/em7]……走吧，再听下去我觉得我脑袋都要有问题了。」",
@@ -811,7 +811,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（黑刀刺入孔槽，發出一聲清脆的卡扣聲。緊接著，機關運作的轟鳴聲從下方沉悶地傳來。）＊",
     "Sequence": "ModifyData(Valuable,Player,Bloodblade,-1);",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Bloodblade\")  == true",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Bloodblade\")  == true;",
     "Description": "需要有染血的黑刀",
     "zh_TW": "[panel=6]＊（黑刀刺入孔槽，發出一聲清脆的卡扣聲。緊接著，機關運作的轟鳴聲從下方沉悶地傳來。）＊",
     "zh_CN": "[panel=6]＊（黑刀刺入孔槽，发出一声清脆的卡扣声。紧接着，机关运作的轰鸣声从下方沉闷地传来。）＊",
@@ -880,7 +880,7 @@
     "actorID": "MC1",
     "text": "「好吧，就用剛找到的繩子下去看看吧！」",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "Script": "SetQuestEntryState(\"CF16\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"CF16\", 1, \"success\");",
     "Description": "水井",
     "zh_TW": "「好吧，就用剛找到的繩子下去看看吧！」",
     "zh_CN": "「好吧，就用刚找到的绳子下去看看吧！」",
@@ -900,7 +900,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestState(\"CF16\", \"success\");\nSetQuestEntryState(\"CF16\", 4, \"success\")",
+    "Script": "SetQuestState(\"CF16\", \"success\");\nSetQuestEntryState(\"CF16\", 4, \"success\");",
     "Description": "任務更新",
     "links": []
   },
@@ -961,7 +961,7 @@
     "actorID": "MC1",
     "text": "（撿起一塊石頭扔進血池，看看有什麼反應。）",
     "Sequence": "",
-    "Conditions": "CurrentQuestState(\"CF21\") == \"unassigned\"",
+    "Conditions": "CurrentQuestState(\"CF21\") == \"unassigned\";",
     "zh_TW": "（撿起一塊石頭扔進血池，看看有什麼反應。）",
     "zh_CN": "（捡起一块石头扔进血池，看看有什么反应。）",
     "links": [3927]
@@ -1074,12 +1074,12 @@
   {
     "entryID": 3939,
     "actorID": "MC1",
-    "text": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7] 呼……好狠的一門練法！」",
+    "text": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7]，呼……好狠的一門練法！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
-    "Script": "SetQuestState(\"CF21\", \"active\")",
+    "Script": "SetQuestState(\"CF21\", \"active\");",
     "Description": "機略提升、觸發任務",
-    "zh_TW": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7] 呼……好狠的一門練法！」",
-    "zh_CN": "「[em7]猛地睁开双眼，眼底红芒一闪[/em7] 呼……好狠的一门练法！」",
+    "zh_TW": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7]，呼……好狠的一門練法！」",
+    "zh_CN": "「[em7]猛地睁开双眼，眼底红芒一闪[/em7]，呼……好狠的一门练法！」",
     "links": []
   },
   {
@@ -1096,7 +1096,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你猛地噴出一大口鮮血，狼狽地從血池中跌撞出來。勉強地保住了一命。）＊",
     "Sequence": "SetPortrait(MC1,pic=16);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
-    "Script": "SetQuestState(\"CF21\", \"abandoned\")",
+    "Script": "SetQuestState(\"CF21\", \"abandoned\");",
     "Description": "機略提升、任務毀棄",
     "zh_TW": "[panel=6]＊（你猛地噴出一大口鮮血，狼狽地從血池中跌撞出來。勉強地保住了一命。）＊",
     "zh_CN": "[panel=6]＊（你猛地喷出一大口鲜血，狼狈地从血池中跌撞出来。勉强地保住了一命。）＊",
@@ -1143,7 +1143,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（腥紅的血液失去束縛，如決堤般湧出，順著石板的縫隙迅速滲入地下。那股令人作嘔的甜香味，也在真氣的激盪下消散無蹤。）＊",
     "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
-    "Script": "SetQuestState(\"CF21\", \"abandoned\")",
+    "Script": "SetQuestState(\"CF21\", \"abandoned\");",
     "Description": "仁心提升、任務毀棄",
     "zh_TW": "[panel=6]＊（腥紅的血液失去束縛，如決堤般湧出，順著石板的縫隙迅速滲入地下。那股令人作嘔的甜香味，也在真氣的激盪下消散無蹤。）＊",
     "zh_CN": "[panel=6]＊（腥红的血液失去束缚，如决堤般涌出，顺着石板的缝隙迅速渗入地下。那股令人作呕的甜香味，也在真气的激荡下消散无踪。）＊",
@@ -1205,12 +1205,12 @@
   {
     "entryID": 3963,
     "actorID": "MC1",
-    "text": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7] 呼……好狠的一門練法！」",
+    "text": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7]，呼……好狠的一門練法！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
-    "Script": "SetQuestState(\"CF21\", \"active\")",
+    "Script": "SetQuestState(\"CF21\", \"active\");",
     "Description": "機略提升、觸發任務",
-    "zh_TW": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7] 呼……好狠的一門練法！」",
-    "zh_CN": "「[em7]猛地睁开双眼，眼底红芒一闪[/em7] 呼……好狠的一门练法！」",
+    "zh_TW": "「[em7]猛地睜開雙眼，眼底紅芒一閃[/em7]，呼……好狠的一門練法！」",
+    "zh_CN": "「[em7]猛地睁开双眼，眼底红芒一闪[/em7]，呼……好狠的一门练法！」",
     "links": []
   },
   {
@@ -1227,7 +1227,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你猛地噴出一大口鮮血，狼狽地從血池中跌撞出來。勉強地保住了一命。）＊",
     "Sequence": "SetPortrait(MC1,pic=16);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
-    "Script": "SetQuestState(\"CF21\", \"abandoned\")",
+    "Script": "SetQuestState(\"CF21\", \"abandoned\");",
     "Description": "機略提升、任務毀棄",
     "zh_TW": "[panel=6]＊（你猛地噴出一大口鮮血，狼狽地從血池中跌撞出來。勉強地保住了一命。）＊",
     "zh_CN": "[panel=6]＊（你猛地喷出一大口鲜血，狼狈地从血池中跌撞出来。勉强地保住了一命。）＊",
@@ -1265,7 +1265,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（腥紅的血液失去束縛，如決堤般湧出，順著石板的縫隙迅速滲入地下。那股令人作嘔的甜香味，也在真氣的激盪下消散無蹤。）＊",
     "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
-    "Script": "SetQuestState(\"CF21\", \"abandoned\")",
+    "Script": "SetQuestState(\"CF21\", \"abandoned\");",
     "Description": "仁心提升、任務毀棄",
     "zh_TW": "[panel=6]＊（腥紅的血液失去束縛，如決堤般湧出，順著石板的縫隙迅速滲入地下。那股令人作嘔的甜香味，也在真氣的激盪下消散無蹤。）＊",
     "zh_CN": "[panel=6]＊（腥红的血液失去束缚，如决堤般涌出，顺着石板的缝隙迅速渗入地下。那股令人作呕的甜香味，也在真气的激荡下消散无踪。）＊",
@@ -1284,10 +1284,10 @@
   {
     "entryID": 3971,
     "actorID": "MC22",
-    "text": "「[em7]探頭往下看了一眼，立刻縮了回來，臉色有些發白[/em7] 喂……大俠，你確定我們要下去嗎？這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
+    "text": "「[em7]探頭往下看了一眼，立刻縮了回來，臉色有些發白[/em7]，喂……大俠，你確定我們要下去嗎？這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
     "Sequence": "SetPortrait(MC22,pic=13);",
-    "zh_TW": "「[em7]探頭往下看了一眼，立刻縮了回來，臉色有些發白[/em7] 喂……大俠，你確定我們要下去嗎？這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
-    "zh_CN": "「[em7]探头往下看了一眼，立刻缩了回来，脸色有些发白[/em7] 喂……大侠，你确定我们要下去吗？这下面黑漆漆的，而且……我总觉得有一股让人很不舒服的气息。」",
+    "zh_TW": "「[em7]探頭往下看了一眼，立刻縮了回來，臉色有些發白[/em7]，喂……大俠，你確定我們要下去嗎？這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
+    "zh_CN": "「[em7]探头往下看了一眼，立刻缩了回来，脸色有些发白[/em7]，喂……大侠，你确定我们要下去吗？这下面黑漆漆的，而且……我总觉得有一股让人很不舒服的气息。」",
     "links": [3973]
   },
   {
@@ -1314,7 +1314,7 @@
     "text": "「妳說得對，還是謹慎為妙。我們先回去準備一下。」",
     "Sequence": "SetPortrait(MC1,pic=6);",
     "zh_TW": "「妳說得對，還是謹慎為妙。我們先回去準備一下。」",
-    "zh_CN": "「妳说得对，还是谨慎为妙。我们先回去准备一下。」",
+    "zh_CN": "「你说得对，还是谨慎为妙。我们先回去准备一下。」",
     "links": [3978]
   },
   {
@@ -1340,7 +1340,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你們順著冰冷的鐵鍊，緩緩滑入那片未知的黑暗深淵之中……）＊",
     "Sequence": "",
-    "Script": "Variable[\"BlackIronRidgeMineFirstJump\"] = true",
+    "Script": "Variable[\"BlackIronRidgeMineFirstJump\"] = true;",
     "Description": "更新變數",
     "zh_TW": "[panel=6]＊（你們順著冰冷的鐵鍊，緩緩滑入那片未知的黑暗深淵之中……）＊",
     "zh_CN": "[panel=6]＊（你们顺着冰冷的铁链，缓缓滑入那片未知的黑暗深渊之中……）＊",
@@ -1349,10 +1349,10 @@
   {
     "entryID": 3978,
     "actorID": "MC1",
-    "text": "「[em7]看著深淵，眉頭微皺[/em7] 嗯……妳說得對。這下面的氣息確實詭異，貿然下去太過冒險。我們還是先回去休整一番，準備妥當再來。」",
+    "text": "「[em7]看著深淵，眉頭微皺[/em7]，嗯……妳說得對。這下面的氣息確實詭異，貿然下去太過冒險。我們還是先回去休整一番，準備妥當再來。」",
     "Sequence": "SetPortrait(MC1,pic=6);",
-    "zh_TW": "「[em7]看著深淵，眉頭微皺[/em7] 嗯……妳說得對。這下面的氣息確實詭異，貿然下去太過冒險。我們還是先回去休整一番，準備妥當再來。」",
-    "zh_CN": "「[em7]看着深渊，眉头微皱[/em7] 嗯……妳说得对。这下面的气息确实诡异，贸然下去太过冒险。我们还是先回去休整一番，准备妥当再来。」",
+    "zh_TW": "「[em7]看著深淵，眉頭微皺[/em7]，嗯……妳說得對。這下面的氣息確實詭異，貿然下去太過冒險。我們還是先回去休整一番，準備妥當再來。」",
+    "zh_CN": "「[em7]看着深渊，眉头微皱[/em7]，嗯……你说得对。这下面的气息确实诡异，贸然下去太过冒险。我们还是先回去休整一番，准备妥当再来。」",
     "links": [3979]
   },
   {

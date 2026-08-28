@@ -130,7 +130,7 @@
     "entryID": 95,
     "actorID": "role115",
     "text": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
-    "Sequence": "ModifyData(FeatExp,MC1,Qi,50);ModifyData(AbilityExp,MC1,Strength,100);ModifyData(AbilityMaxLevel,MC1,Strength,2);",
+    "Sequence": "ModifyData(FeatExp,Player,Qi,50);ModifyData(AbilityExp,Player,Strength,100);ModifyData(AbilityMaxLevel,MC1,Strength,2);",
     "zh_TW": "[panel=1]「公子，這是老闆娘特意為您準備的『龍涎香米』。此米乃吸收日月精華而生，極為罕見，據聞有滋養內息，延年益壽之奇效。老闆娘說此物贈英雄，請您務必收下。」",
     "zh_CN": "[panel=1]「公子，这是老板娘特意为您准备的『龙涎香米』。此米乃吸收日月精华而生，极为罕见，据闻有滋养内息，延年益寿之奇效。老板娘说此物赠英雄，请您务必收下。」",
     "links": [213]
@@ -219,10 +219,10 @@
   {
     "entryID": 105,
     "actorID": "role117",
-    "text": "[panel=5]「不過是個菜名罷了，公子不必深究。請慢用。」",
+    "text": "[panel=3]「不過是個菜名罷了，公子不必深究。請慢用。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "[panel=5]「不過是個菜名罷了，公子不必深究。請慢用。」",
-    "zh_CN": "[panel=5]「不过是个菜名罢了，公子不必深究。请慢用。」",
+    "zh_TW": "[panel=3]「不過是個菜名罷了，公子不必深究。請慢用。」",
+    "zh_CN": "[panel=3]「不过是个菜名罢了，公子不必深究。请慢用。」",
     "links": [106]
   },
   {
@@ -394,15 +394,15 @@
     "text": "[em2][調情檢定][/em2]「我所鍾情的，是妳的靈魂與真心。」",
     "Sequence": "",
     "zh_TW": "[em2][調情檢定][/em2]「我所鍾情的，是妳的靈魂與真心。」",
-    "zh_CN": "[em2][调情检定][/em2]「我所钟情的，是妳的灵魂与真心。」",
+    "zh_CN": "[em2][调情检定][/em2]「我所钟情的，是你的灵魂与真心。」",
     "links": [185]
   },
   {
     "entryID": 179,
     "actorID": "role118",
     "text": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
-    "Sequence": "ModifyData(FeatExp,MC1,Flirting,100);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(FeatExp,Player,Flirting,100);\nDisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
     "zh_CN": "[panel=2]「（闻言，她浑身一震，霎时间泪如泉涌。她没有再说什么，只是紧紧地、紧紧地握住了你的手。）」",
     "links": [180]
@@ -412,7 +412,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（此刻，言語已是多餘——此時無聲勝有聲。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"C0F4\", \"success\")",
+    "Script": "SetQuestState(\"C0F4\", \"success\");",
     "zh_TW": "[panel=6]＊（此刻，言語已是多餘——此時無聲勝有聲。）＊",
     "zh_CN": "[panel=6]＊（此刻，言语已是多余——此时无声胜有声。）＊",
     "links": [2068]
@@ -432,7 +432,7 @@
     "text": "「…若真如妳所言，妳的真實面貌與常人有極大差異…此事確實太過駭人聽聞。」",
     "Sequence": "SetPortrait(MC1,pic=4);",
     "zh_TW": "「…若真如妳所言，妳的真實面貌與常人有極大差異…此事確實太過駭人聽聞。」",
-    "zh_CN": "「…若真如妳所言，妳的真实面貌与常人有极大差异…此事确实太过骇人听闻。」",
+    "zh_CN": "「…若真如你所言，你的真实面貌与常人有极大差异…此事确实太过骇人听闻。」",
     "links": [191]
   },
   {
@@ -440,7 +440,7 @@
     "actorID": "role118",
     "text": "「罷了罷了，是小女子我唐突了。」",
     "Sequence": "",
-    "Script": "SetQuestState(\"C0F4\", \"abandoned\")",
+    "Script": "SetQuestState(\"C0F4\", \"abandoned\");",
     "zh_TW": "「罷了罷了，是小女子我唐突了。」",
     "zh_CN": "「罢了罢了，是小女子我唐突了。」",
     "links": [184]
@@ -466,7 +466,7 @@
     "actorID": "role118",
     "text": "「你是個好人，但不行……我們的差距不是有辦法可以解決的，你還年輕，走吧……」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「你是個好人，但不行……我們的差距不是有辦法可以解決的，你還年輕，走吧……」",
     "zh_CN": "「你是个好人，但不行……我们的差距不是有办法可以解决的，你还年轻，走吧……」",
     "links": [187]
@@ -476,7 +476,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（此刻，言語已是多餘，好人一生平安，走吧。）＊",
     "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeInOutDirectional);",
-    "Script": "SetQuestState(\"C0F4\", \"success\")",
+    "Script": "SetQuestState(\"C0F4\", \"success\");",
     "zh_TW": "[panel=6]＊（此刻，言語已是多餘，好人一生平安，走吧。）＊",
     "zh_CN": "[panel=6]＊（此刻，言语已是多余，好人一生平安，走吧。）＊",
     "links": []
@@ -514,7 +514,7 @@
     "text": "「噓，我不許你胡說，我所鍾情的，是妳的靈魂與真心，而現在我只想吻妳倔強的嘴。」",
     "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「噓，我不許你胡說，我所鍾情的，是妳的靈魂與真心，而現在我只想吻妳倔強的嘴。」",
-    "zh_CN": "「嘘，我不许你胡说，我所钟情的，是妳的灵魂与真心，而现在我只想吻妳倔强的嘴。」",
+    "zh_CN": "「嘘，我不许你胡说，我所钟情的，是你的灵魂与真心，而现在我只想吻你倔强的嘴。」",
     "links": [179, 186]
   },
   {
@@ -538,11 +538,11 @@
   {
     "entryID": 2051,
     "actorID": "role119",
-    "text": "[var=PlayerLastName]哥哥……",
+    "text": "「[var=PlayerLastName]哥哥……」",
     "Sequence": "SetContinueMode(false);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_22);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;",
     "Description": "播放音樂",
-    "zh_TW": "[var=PlayerLastName]哥哥……",
-    "zh_CN": "[var=PlayerLastName]哥哥……",
+    "zh_TW": "「[var=PlayerLastName]哥哥……」",
+    "zh_CN": "「[var=PlayerLastName]哥哥……」",
     "links": [2055]
   },
   {
@@ -574,28 +574,28 @@
   {
     "entryID": 2055,
     "actorID": "role119",
-    "text": "你要走了……？",
+    "text": "「你要走了……？」",
     "Sequence": "",
-    "zh_TW": "你要走了……？",
-    "zh_CN": "你要走了……？",
+    "zh_TW": "「你要走了……？」",
+    "zh_CN": "「你要走了……？」",
     "links": [2052]
   },
   {
     "entryID": 2056,
     "actorID": "role119",
-    "text": "天不弄人，是人自擾。\n無心則靜，無欲則了。",
+    "text": "「天不弄人，是人自擾。\n無心則靜，無欲則了。」",
     "Sequence": "",
-    "zh_TW": "天不弄人，是人自擾。\n無心則靜，無欲則了。",
-    "zh_CN": "天不弄人，是人自扰。\n无心则静，无欲则了。",
+    "zh_TW": "「天不弄人，是人自擾。\n無心則靜，無欲則了。」",
+    "zh_CN": "「天不弄人，是人自扰。\n无心则静，无欲则了。」",
     "links": [2053]
   },
   {
     "entryID": 2057,
     "actorID": "role119",
-    "text": "……",
+    "text": "「……」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "……",
-    "zh_CN": "……",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
     "links": [2058, 2059]
   },
   {
@@ -613,7 +613,7 @@
     "text": "「原來這才是妳原本的模樣……」",
     "Sequence": "",
     "zh_TW": "「原來這才是妳原本的模樣……」",
-    "zh_CN": "「原来这才是妳原本的模样……」",
+    "zh_CN": "「原来这才是你原本的模样……」",
     "links": [2060]
   },
   {
@@ -622,7 +622,7 @@
     "text": "「真如妳所言，妳的真實面貌與常人有極大差異，妳該不會是村口的茶博士吧？」",
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
     "zh_TW": "「真如妳所言，妳的真實面貌與常人有極大差異，妳該不會是村口的茶博士吧？」",
-    "zh_CN": "「真如妳所言，妳的真实面貌与常人有极大差异，妳该不会是村口的茶博士吧？」",
+    "zh_CN": "「真如你所言，你的真实面貌与常人有极大差异，你该不会是村口的茶博士吧？」",
     "links": [2062]
   },
   {
@@ -635,30 +635,30 @@
   {
     "entryID": 2062,
     "actorID": "role119",
-    "text": "……他是我堂哥！而且我們長得差那麼多！",
+    "text": "「……他是我堂哥！而且我們長得差那麼多！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "……他是我堂哥！而且我們長得差那麼多！",
-    "zh_CN": "……他是我堂哥！而且我们长得差那么多！",
+    "zh_TW": "「……他是我堂哥！而且我們長得差那麼多！」",
+    "zh_CN": "「……他是我堂哥！而且我们长得差那么多！」",
     "links": [2057]
   },
   {
     "entryID": 2063,
     "actorID": "role119",
-    "text": "唉，罷了罷了，男兒本就該志在四方，你走吧。",
+    "text": "「唉，罷了罷了，男兒本就該志在四方，你走吧。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
-    "zh_TW": "唉，罷了罷了，男兒本就該志在四方，你走吧。",
-    "zh_CN": "唉，罢了罢了，男儿本就该志在四方，你走吧。",
+    "Conditions": "IsPassDice()  == true;",
+    "zh_TW": "「唉，罷了罷了，男兒本就該志在四方，你走吧。」",
+    "zh_CN": "「唉，罢了罢了，男儿本就该志在四方，你走吧。」",
     "links": [2066]
   },
   {
     "entryID": 2064,
     "actorID": "role119",
-    "text": "哼，留不住你的心，我也要留住你的人！",
+    "text": "「哼，留不住你的心，我也要留住你的人！」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
-    "zh_TW": "哼，留不住你的心，我也要留住你的人！",
-    "zh_CN": "哼，留不住你的心，我也要留住你的人！",
+    "Conditions": "IsPassDice()  == false;",
+    "zh_TW": "「哼，留不住你的心，我也要留住你的人！」",
+    "zh_CN": "「哼，留不住你的心，我也要留住你的人！」",
     "links": [2065]
   },
   {
@@ -666,7 +666,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你連滾帶爬的逃出去，嚇得屁滾尿流。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "Script": "SetQuestState(\"CF04\", \"success\")",
+    "Script": "SetQuestState(\"CF04\", \"success\");",
     "Description": "達成一枝花結局的條件BD",
     "zh_TW": "[panel=6]＊（你連滾帶爬的逃出去，嚇得屁滾尿流。）＊",
     "zh_CN": "[panel=6]＊（你连滚带爬的逃出去，吓得屁滚尿流。）＊",
@@ -676,8 +676,8 @@
     "entryID": 2066,
     "actorID": "role2",
     "text": "[panel=6]＊（和一枝花告別後，你回到了自己的房間後仍心有餘悸。）＊",
-    "Sequence": "SetPortrait(MC1,pic=7);\nModifyData(FeatExp,MC1,Flirting,20);",
-    "Script": "SetQuestState(\"CF04\", \"failure\")",
+    "Sequence": "SetPortrait(MC1,pic=7);\nModifyData(FeatExp,Player,Flirting,20);",
+    "Script": "SetQuestState(\"CF04\", \"failure\");",
     "Description": "失敗一枝花任務",
     "zh_TW": "[panel=6]＊（和一枝花告別後，你回到了自己的房間後仍心有餘悸。）＊",
     "zh_CN": "[panel=6]＊（和一枝花告别后，你回到了自己的房间后仍心有余悸。）＊",
@@ -696,7 +696,7 @@
     "entryID": 2068,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nLoadLevel(ExploreMap)@1;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nDisableDialogueBG()@1;\nLoadLevel(ExploreMap)@1;\nContinue()@1;",
     "Description": "換場景",
     "links": []
   }

@@ -22,7 +22,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"CF35\", 2, \"success\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1",
+    "Script": "SetQuestEntryState(\"CF35\", 2, \"success\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1;",
     "Description": "變數更新",
     "links": [4, 5]
   },
@@ -31,7 +31,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "CurrentQuestEntryState(\"CF35\", 3) == \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"CF35\", 3) == \"success\";",
     "links": [6]
   },
   {
@@ -46,7 +46,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"CF35\", 4, \"success\")",
+    "Script": "SetQuestEntryState(\"CF35\", 4, \"success\");",
     "Description": "任務更新",
     "links": []
   },
@@ -55,7 +55,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"CF35\", 3, \"success\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1",
+    "Script": "SetQuestEntryState(\"CF35\", 3, \"success\");\nVariable[\"FrogCounting\"] = Variable[\"FrogCounting\"] + 1;",
     "Description": "變數更新",
     "links": [8, 9]
   },
@@ -64,7 +64,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "CurrentQuestEntryState(\"CF35\", 2) == \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"CF35\", 2) == \"success\";",
     "links": [10]
   },
   {
@@ -79,7 +79,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"CF35\", 4, \"success\")",
+    "Script": "SetQuestEntryState(\"CF35\", 4, \"success\");",
     "Description": "任務更新",
     "links": []
   }

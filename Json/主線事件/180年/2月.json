@@ -27,7 +27,7 @@
     "text": "「付出勞力，換取酬金，合情合理。\n不過聽妳話意，你們倆認識？」",
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "「付出勞力，換取酬金，合情合理。\n不過聽妳話意，你們倆認識？」",
-    "zh_CN": "「付出劳力，换取酬金，合情合理。 \n不过听妳话意，你们俩认识？」",
+    "zh_CN": "「付出劳力，换取酬金，合情合理。 \n不过听你话意，你们俩认识？」",
     "links": [
       4004
     ]
@@ -49,7 +49,7 @@
     "text": "「等等！那當初聊到英豪府，\n妳怎麼全沒提起？」",
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「等等！那當初聊到英豪府，\n妳怎麼全沒提起？」",
-    "zh_CN": "「等等！那当初聊到英豪府，\n妳怎么全没提起？」",
+    "zh_CN": "「等等！那当初聊到英豪府，\n你怎么全没提起？」",
     "links": [
       4006
     ]
@@ -71,7 +71,7 @@
     "text": "「妳──」",
     "Sequence": "SetPortrait(MC1,pic=11);",
     "zh_TW": "「妳──」",
-    "zh_CN": "「妳──」",
+    "zh_CN": "「你──」",
     "links": [
       4008
     ]
@@ -168,7 +168,7 @@
     "entryID": 4016,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [
       4011
@@ -179,8 +179,8 @@
     "actorID": "role2",
     "text": "[panel=6]＊（結束的日期已至，遴選正式結束……）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"C1M1\", 4) == \"success\"",
-    "Script": "SetQuestState(\"C1M1\", \"success\")",
+    "Conditions": "CurrentQuestEntryState(\"C1M1\", 4) == \"success\";",
+    "Script": "SetQuestState(\"C1M1\", \"success\");",
     "Description": "任務完成",
     "zh_TW": "[panel=6]＊（結束的日期已至，遴選正式結束……）＊",
     "zh_CN": "[panel=6]＊（结束的日期已至，遴选正式结束……）＊",
@@ -271,10 +271,10 @@
   {
     "entryID": 4025,
     "actorID": "role125",
-    "text": "[panel=4]「[em7]卞喜不再理會你，轉頭說道[/em7]：英豪府聽著！念在你們同在誅怪略有出力，也為同道中人，不予追究你們一時無知。」",
+    "text": "[panel=1]「[em7]卞喜不再理會你，轉頭說道[/em7]：英豪府聽著！念在你們同在誅怪略有出力，也為同道中人，不予追究你們一時無知。」",
     "Sequence": "",
-    "zh_TW": "[panel=4]「[em7]卞喜不再理會你，轉頭說道[/em7]：英豪府聽著！念在你們同在誅怪略有出力，也為同道中人，不予追究你們一時無知。」",
-    "zh_CN": "[panel=4]「[em7]卞喜不再理会你，转头说道[/em7]：英豪府听着！念在你们同在诛怪略有出力，也为同道中人，不予追究你们一时无知。」",
+    "zh_TW": "[panel=1]「[em7]卞喜不再理會你，轉頭說道[/em7]：英豪府聽著！念在你們同在誅怪略有出力，也為同道中人，不予追究你們一時無知。」",
+    "zh_CN": "[panel=1]「[em7]卞喜不再理会你，转头说道[/em7]：英豪府听着！念在你们同在诛怪略有出力，也为同道中人，不予追究你们一时无知。」",
     "links": [
       4033
     ]
@@ -672,7 +672,7 @@
     "actorID": "MC1",
     "text": "「好吧，那就交給我吧，我去去就回。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Script": "SetQuestState(\"C1M2\", \"active\")",
+    "Script": "SetQuestState(\"C1M2\", \"active\");",
     "Description": "觸發任務",
     "zh_TW": "「好吧，那就交給我吧，我去去就回。」",
     "zh_CN": "「好吧，那就交给我吧，我去去就回。」",
@@ -820,10 +820,10 @@
   {
     "entryID": 4076,
     "actorID": "role125",
-    "text": "[panel=4]「高兄弟，且慢。這幾位『朋友』，我可是熟得很啊。」",
+    "text": "[panel=1]「高兄弟，且慢。這幾位『朋友』，我可是熟得很啊。」",
     "Sequence": "SetPortrait(role125,pic=4);",
-    "zh_TW": "[panel=4]「高兄弟，且慢。這幾位『朋友』，我可是熟得很啊。」",
-    "zh_CN": "[panel=4]「高兄弟，且慢。这几位『朋友』，我可是熟得很啊。」",
+    "zh_TW": "[panel=1]「高兄弟，且慢。這幾位『朋友』，我可是熟得很啊。」",
+    "zh_CN": "[panel=1]「高兄弟，且慢。这几位『朋友』，我可是熟得很啊。」",
     "links": [
       4077
     ]
@@ -842,10 +842,10 @@
   {
     "entryID": 4078,
     "actorID": "role125",
-    "text": "[panel=4]「哼，破廟那筆帳，老子遲早會跟你算。不過今日……」",
+    "text": "[panel=1]「哼，破廟那筆帳，老子遲早會跟你算。不過今日……」",
     "Sequence": "SetPortrait(role125,pic=3);",
-    "zh_TW": "[panel=4]「哼，破廟那筆帳，老子遲早會跟你算。不過今日……」",
-    "zh_CN": "[panel=4]「哼，破庙那笔帐，老子迟早会跟你算。不过今日……」",
+    "zh_TW": "[panel=1]「哼，破廟那筆帳，老子遲早會跟你算。不過今日……」",
+    "zh_CN": "[panel=1]「哼，破庙那笔帐，老子迟早会跟你算。不过今日……」",
     "links": [
       4025
     ]
@@ -854,7 +854,7 @@
     "entryID": 4079,
     "actorID": "role2",
     "text": "[panel=6]＊（…全場死寂，唯有英豪府眾人神色自若，旁人皆被這駭世武勇震懾得說不出話來。）＊",
-    "Sequence": "SetPortrait(MC1,pic=19);",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetPortrait(MC1,pic=19);",
     "zh_TW": "[panel=6]＊（…全場死寂，唯有英豪府眾人神色自若，旁人皆被這駭世武勇震懾得說不出話來。）＊",
     "zh_CN": "[panel=6]＊（…全场死寂，唯有英豪府众人神色自若，旁人皆被这骇世武勇震慑得说不出话来。）＊",
     "links": [
@@ -900,7 +900,7 @@
     "text": "「那妳呢？娜娜，難道也不打算加入英豪府嗎？」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「那妳呢？娜娜，難道也不打算加入英豪府嗎？」",
-    "zh_CN": "「那妳呢？娜娜，难道也不打算加入英豪府吗？」",
+    "zh_CN": "「那你呢？娜娜，难道也不打算加入英豪府吗？」",
     "links": [
       4084
     ]
@@ -931,7 +931,7 @@
     "entryID": 4086,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [
       4050

@@ -4,7 +4,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF25\", 1) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF25\", 1) == \"unassigned\";",
     "links": [
       4059
     ]
@@ -12,9 +12,9 @@
   {
     "entryID": 4059,
     "actorID": "MC3",
-    "text": "「……是你……也好，趁此機會，\n不會有人打擾，可驗證你的實力。」 ",
+    "text": "「……是你……也好，趁此機會，\n不會有人打擾，可驗證你的實力。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_TW": "「……是你……也好，趁此機會，\n不會有人打擾，可驗證你的實力。」 ",
+    "zh_TW": "「……是你……也好，趁此機會，\n不會有人打擾，可驗證你的實力。」",
     "zh_CN": "「……是你……也好，趁此机会，\n不会有人打扰，可验证你的实力。」",
     "links": [
       4060
@@ -23,9 +23,9 @@
   {
     "entryID": 4060,
     "actorID": "MC22",
-    "text": "[panel=2]「唔！大俠，你是哪根筋不對，居然挑最凶的這位……這一看肯定就籤王……」 ",
+    "text": "[panel=2]「唔！大俠，你是哪根筋不對，居然挑最凶的這位……這一看肯定就籤王……」",
     "Sequence": "SetPortrait(MC22,pic=13);",
-    "zh_TW": "[panel=2]「唔！大俠，你是哪根筋不對，居然挑最凶的這位……這一看肯定就籤王……」 ",
+    "zh_TW": "[panel=2]「唔！大俠，你是哪根筋不對，居然挑最凶的這位……這一看肯定就籤王……」",
     "zh_CN": "[panel=2]「唔！大侠，你是哪根筋不对，居然挑最凶的这位……这一看肯定就签王……」",
     "links": [
       4061
@@ -45,9 +45,9 @@
   {
     "entryID": 4062,
     "actorID": "MC3",
-    "text": "「──打敗我！」 ",
+    "text": "「──打敗我！」",
     "Sequence": "SetPortrait(MC3,pic=2);",
-    "zh_TW": "「──打敗我！」 ",
+    "zh_TW": "「──打敗我！」",
     "zh_CN": "「──打败我！」",
     "links": [
       4063
@@ -56,9 +56,9 @@
   {
     "entryID": 4063,
     "actorID": "MC1",
-    "text": "「還真的是籤王！！！」 ",
+    "text": "「還真的是籤王！！！」",
     "Sequence": "SetPortrait(MC1,pic=19);\nEnableCharacterExpression(0,MC1-1,Shock);\nSetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",
-    "zh_TW": "「還真的是籤王！！！」 ",
+    "zh_TW": "「還真的是籤王！！！」",
     "zh_CN": "「还真的是签王！！！」",
     "links": [
       4064
@@ -146,7 +146,7 @@
     "actorID": "MC3",
     "text": "「畢竟賈師父有交代，這是考試，不能動真格。\n你要想挑戰，羽在此隨時奉陪。」",
     "Sequence": "SetPortrait(MC3,pic=1);\nDisableAllCharacterExpression();\nDisableDialogueBG();",
-    "Script": "SetQuestState(\"CF25\", \"active\");\nSetQuestEntryState(\"CF25\", 1, \"success\");\nSetQuestEntryState(\"CF25\", 2, \"active\")",
+    "Script": "SetQuestState(\"CF25\", \"active\");\nSetQuestEntryState(\"CF25\", 1, \"success\");\nSetQuestEntryState(\"CF25\", 2, \"active\");",
     "Description": "觸發任務、更新任務",
     "zh_TW": "「畢竟賈師父有交代，這是考試，不能動真格。\n你要想挑戰，羽在此隨時奉陪。」",
     "zh_CN": "「毕竟贾师父有交代，这是考试，不能动真格。\n你要想挑战，羽在此随时奉陪。」",
@@ -155,9 +155,9 @@
   {
     "entryID": 4072,
     "actorID": "MC3",
-    "text": "「做好受傷的準備了嗎？」 ",
+    "text": "「做好受傷的準備了嗎？」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_TW": "「做好受傷的準備了嗎？」 ",
+    "zh_TW": "「做好受傷的準備了嗎？」",
     "zh_CN": "「做好受伤的准备了吗？」",
     "links": [
       4073,
@@ -178,10 +178,10 @@
   {
     "entryID": 4074,
     "actorID": "MC1",
-    "text": "「慢！這前提怪怪的，我還要去做更多心理準備！」 ",
+    "text": "「慢！這前提怪怪的，我還要去做更多心理準備！」",
     "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();",
     "Description": "離開任務",
-    "zh_TW": "「慢！這前提怪怪的，我還要去做更多心理準備！」 ",
+    "zh_TW": "「慢！這前提怪怪的，我還要去做更多心理準備！」",
     "zh_CN": "「慢！这前提怪怪的，我还要去做更多心理准备！」",
     "links": []
   },
@@ -189,7 +189,7 @@
     "entryID": 4075,
     "actorID": "role2",
     "text": "[panel=6]＊（經過一番苦戰，或者更該說你追我打，子羽收起了刀。）＊",
-    "Sequence": "",
+    "Sequence": "PlayOrStopParticle(Punch_Multiple_ScreenWhite,Stop);PlayOrStopParticle(Sword_Multiple_ScreenWhite,Stop);",
     "zh_TW": "[panel=6]＊（經過一番苦戰，或者更該說你追我打，子羽收起了刀。）＊",
     "zh_CN": "[panel=6]＊（经过一番苦战，或者更该说你追我打，子羽收起了刀。）＊",
     "links": [
@@ -221,10 +221,10 @@
   {
     "entryID": 4078,
     "actorID": "MC1",
-    "text": "「…聽聽妳自己說的還是人話嗎…」 ",
+    "text": "「…聽聽妳自己說的還是人話嗎…」",
     "Sequence": "EnableCharacterExpression(0,MC1-1,Pain);",
-    "zh_TW": "「…聽聽妳自己說的還是人話嗎…」 ",
-    "zh_CN": "「…听听妳自己说的还是人话吗…」",
+    "zh_TW": "「…聽聽妳自己說的還是人話嗎…」",
+    "zh_CN": "「…听听你自己说的还是人话吗…」",
     "links": [
       4096
     ]
@@ -232,9 +232,9 @@
   {
     "entryID": 4079,
     "actorID": "MC3",
-    "text": "「可以了。」 ",
+    "text": "「可以了。」",
     "Sequence": "SetPortrait(MC3,pic=3);",
-    "zh_TW": "「可以了。」 ",
+    "zh_TW": "「可以了。」",
     "zh_CN": "「可以了。」",
     "links": [
       4080
@@ -243,9 +243,9 @@
   {
     "entryID": 4080,
     "actorID": "MC1",
-    "text": "「咦？結束了？我還能再打……」 ",
+    "text": "「咦？結束了？我還能再打……」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "zh_TW": "「咦？結束了？我還能再打……」 ",
+    "zh_TW": "「咦？結束了？我還能再打……」",
     "zh_CN": "「咦？结束了？我还能再打……」",
     "links": [
       4081
@@ -265,9 +265,9 @@
   {
     "entryID": 4082,
     "actorID": "MC1",
-    "text": "「莫非，這是說我通過了？」 ",
+    "text": "「莫非，這是說我通過了？」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_TW": "「莫非，這是說我通過了？」 ",
+    "zh_TW": "「莫非，這是說我通過了？」",
     "zh_CN": "「莫非，这是说我通过了？」",
     "links": [
       4083
@@ -287,9 +287,9 @@
   {
     "entryID": 4084,
     "actorID": "MC1",
-    "text": "「嗚呃！好痛……這怪力……嗯？」 ",
-    "Sequence": "SetPortrait(MC1,pic=4);",
-    "zh_TW": "「嗚呃！好痛……這怪力……嗯？」 ",
+    "text": "「嗚呃！好痛……這怪力……嗯？」",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);PlayOrStopParticle(Sword_Single_ScreenWhite,Stop);\nSetPortrait(MC1,pic=4);",
+    "zh_TW": "「嗚呃！好痛……這怪力……嗯？」",
     "zh_CN": "「呜呃！好痛……这怪力……嗯？」",
     "links": [
       4099
@@ -298,9 +298,9 @@
   {
     "entryID": 4085,
     "actorID": "MC3",
-    "text": "「剛才戰鬥，你也算有領略。\n那一招就當是給你入門禮。」 ",
+    "text": "「剛才戰鬥，你也算有領略。\n那一招就當是給你入門禮。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "「剛才戰鬥，你也算有領略。\n那一招就當是給你入門禮。」 ",
+    "zh_TW": "「剛才戰鬥，你也算有領略。\n那一招就當是給你入門禮。」",
     "zh_CN": "「刚才战斗，你也算有领略。\n那一招就当是给你入门礼。」",
     "links": [
       4122
@@ -309,9 +309,9 @@
   {
     "entryID": 4086,
     "actorID": "MC8",
-    "text": "「表哥，原來他人還挺好的……\n難怪都說不可以貌取人……」 ",
+    "text": "「表哥，原來他人還挺好的……\n難怪都說不可以貌取人……」",
     "Sequence": "SetPortrait(MC1,pic=5);\nSetPortrait(MC8,pic=5);",
-    "zh_TW": "「表哥，原來他人還挺好的……\n難怪都說不可以貌取人……」 ",
+    "zh_TW": "「表哥，原來他人還挺好的……\n難怪都說不可以貌取人……」",
     "zh_CN": "「表哥，原来他人还挺好的……\n难怪都说不可以貌取人……」",
     "links": [
       4087
@@ -342,7 +342,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF25\", 2) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF25\", 2) == \"active\";",
     "links": [
       4072
     ]
@@ -357,9 +357,9 @@
   {
     "entryID": 4099,
     "actorID": "MC1",
-    "text": "「我怎麼還能站著，我剛那一招是……」 ",
+    "text": "「我怎麼還能站著，我剛那一招是……」",
     "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
-    "zh_TW": "「我怎麼還能站著，我剛那一招是……」 ",
+    "zh_TW": "「我怎麼還能站著，我剛那一招是……」",
     "zh_CN": "「我怎么还能站着，我刚那一招是……」",
     "links": [
       4085
@@ -370,7 +370,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
-    "Conditions": "CurrentQuestState(\"CF25\") ~= \"success\"",
+    "Conditions": "CurrentQuestState(\"CF25\") ~= \"success\";",
     "links": [
       4058,
       4093
@@ -410,9 +410,9 @@
   {
     "entryID": 4117,
     "actorID": "MC20",
-    "text": "[panel=2]「哈哈，好像交涉失敗了。」 ",
+    "text": "[panel=2]「哈哈，好像交涉失敗了。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "[panel=2]「哈哈，好像交涉失敗了。」 ",
+    "zh_TW": "[panel=2]「哈哈，好像交涉失敗了。」",
     "zh_CN": "[panel=2]「哈哈，好像交涉失败了。」",
     "links": [
       4069
@@ -433,7 +433,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [
       4090
@@ -444,7 +444,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [
       4076

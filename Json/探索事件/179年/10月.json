@@ -135,9 +135,9 @@
   {
     "entryID": 2062,
     "actorID": "MC22",
-    "text": "「[em7]見到你如獲大赦，立刻躲到你身後[/em7] 大俠！救命啊！這些人玩不起，出老千騙我錢！」",
+    "text": "「[em7]見到你如獲大赦，立刻躲到你身後[/em7]，大俠！救命啊！這些人玩不起，出老千騙我錢！」",
     "Sequence": "SetPortrait(MC22,pic=13);",
-    "zh_CN": "「[em7]见到你如获大赦，立刻躲到你身后[/em7] 大侠！救命啊！这些人玩不起，出老千骗我钱！」",
+    "zh_CN": "「[em7]见到你如获大赦，立刻躲到你身后[/em7]，大侠！救命啊！这些人玩不起，出老千骗我钱！」",
     "links": [2057, 2058]
   },
   {
@@ -168,10 +168,10 @@
   {
     "entryID": 2068,
     "actorID": "MC22",
-    "text": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7] 啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
+    "text": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7]，啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
     "Sequence": "SetPortrait(MC22,pic=10);\nEnableCharacterExpression(1,MC22,Surprise);",
-    "zh_TW": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7] 啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
-    "zh_CN": "「[em7]瞥见了你，立刻戏精上身，大喊道[/em7] 啊！当家的！你终于来了！快救救妾身！他们要抓我去抵债！」",
+    "zh_TW": "「[em7]瞥見了你，立刻戲精上身，大喊道[/em7]，啊！當家的！你終於來了！快救救妾身！他們要抓我去抵債！」",
+    "zh_CN": "「[em7]瞥见了你，立刻戏精上身，大喊道[/em7]，啊！当家的！你终于来了！快救救妾身！他们要抓我去抵债！」",
     "links": [2069]
   },
   {
@@ -179,7 +179,7 @@
     "actorID": "MC1",
     "text": "「……算妳狠。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);",
-    "zh_CN": "「……算妳狠。」",
+    "zh_CN": "「……算你狠。」",
     "links": [2070]
   },
   {
@@ -218,27 +218,27 @@
   {
     "entryID": 2074,
     "actorID": "MC1",
-    "text": "「[em7]拔劍出鞘半寸，殺氣外露[/em7] 錢沒有，命有一條，你們要嗎？」",
+    "text": "「[em7]拔劍出鞘半寸，殺氣外露[/em7]，錢沒有，命有一條，你們要嗎？」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "zh_CN": "「[em7]拔剑出鞘半寸，杀气外露[/em7] 钱没有，命有一条，你们要吗？」",
+    "zh_CN": "「[em7]拔剑出鞘半寸，杀气外露[/em7]，钱没有，命有一条，你们要吗？」",
     "links": [2075, 2076]
   },
   {
     "entryID": 2075,
     "actorID": "role13",
-    "text": "「[em7]被你的氣勢嚇退半步[/em7] 呃…這…好漢息怒！咱們也是混口飯吃…不如這樣，兩位去賭坊見見幫主？咱們幫主說了，只要能在賭桌上贏過他，這債一筆勾銷，還送寶貝！」",
+    "text": "「[em7]被你的氣勢嚇退半步[/em7]，呃…這…好漢息怒！咱們也是混口飯吃…不如這樣，兩位去賭坊見見幫主？咱們幫主說了，只要能在賭桌上贏過他，這債一筆勾銷，還送寶貝！」",
     "Sequence": "SetPortrait(MC1,pic=2);ModifyData(FeatExp,Player,Intimidation,10);",
-    "Conditions": "IsPassDice()  == true",
-    "zh_CN": "「[em7]被你的气势吓退半步[/em7] 呃…这…好汉息怒！咱们也是混口饭吃…不如这样，两位去赌坊见见帮主？咱们帮主说了，只要能在赌桌上赢过他，这债一笔勾销，还送宝贝！」",
+    "Conditions": "IsPassDice()  == true;",
+    "zh_CN": "「[em7]被你的气势吓退半步[/em7]，呃…这…好汉息怒！咱们也是混口饭吃…不如这样，两位去赌坊见见帮主？咱们帮主说了，只要能在赌桌上赢过他，这债一笔勾销，还送宝贝！」",
     "links": [3673]
   },
   {
     "entryID": 2076,
     "actorID": "role13",
-    "text": "「[em7]不屑地冷笑[/em7] 喲？還想動手？兄弟們，上！教教這小子規矩！」",
+    "text": "「[em7]不屑地冷笑[/em7]，喲？還想動手？兄弟們，上！教教這小子規矩！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "IsPassDice()  == false",
-    "zh_CN": "「[em7]不屑地冷笑[/em7] 哟？还想动手？兄弟们，上！教教这小子规矩！」",
+    "Conditions": "IsPassDice()  == false;",
+    "zh_CN": "「[em7]不屑地冷笑[/em7]，哟？还想动手？兄弟们，上！教教这小子规矩！」",
     "links": [3663]
   },
   {
@@ -263,7 +263,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你嘆了口氣。雖然明知是鴻門宴，但為了那傳說中的寶物，也為了幫這丫頭解圍，你決定前往[em2]雲中的吉祥賭坊[/em2]會一會那位赤龍幫幫主。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "Script": "SetQuestState(\"CF20\", \"active\")",
+    "Script": "SetQuestState(\"CF20\", \"active\");",
     "Description": "觸發任務",
     "zh_TW": "[panel=6]＊（你嘆了口氣。雖然明知是鴻門宴，但為了那傳說中的寶物，也為了幫這丫頭解圍，你決定前往[em2]雲中的吉祥賭坊[/em2]會一會那位赤龍幫幫主。）＊",
     "zh_CN": "[panel=6]＊（你叹了口气。虽然明知是鸿门宴，但为了那传说中的宝物，也为了帮这丫头解围，你决定前往[em2]云中的吉祥赌坊[/em2]会一会那位赤龙帮帮主。）＊",
@@ -292,7 +292,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [2064]
   },
@@ -368,7 +368,7 @@
     "entryID": 3678,
     "actorID": "0",
     "text": "",
-    "Sequence": "Continue();\nShowEnding(Ending_1);",
+    "Sequence": "DisableDialogueBG();\nContinue();\nShowEnding(Ending_1);",
     "Description": "BD",
     "links": []
   },
@@ -490,7 +490,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蔡邕微微頷首，不再多言，轉身繼續與蒲元討論起琴身的修復細節。而一旁的文姬則朝你扮了個鬼臉，你見狀也不再多作打擾，轉身離開了工坊。）＊",
     "Sequence": "",
-    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 100",
+    "Script": "Variable[\"SisterTalk2\"] = Variable[\"SisterTalk2\"] + 100;",
     "Description": "變數更新",
     "zh_TW": "[panel=6]＊（蔡邕微微頷首，不再多言，轉身繼續與蒲元討論起琴身的修復細節。而一旁的文姬則朝你扮了個鬼臉，你見狀也不再多作打擾，轉身離開了工坊。）＊",
     "zh_CN": "[panel=6]＊（蔡邕微微颔首，不再多言，转身继续与蒲元讨论起琴身的修复细节。而一旁的文姬则朝你扮了个鬼脸，你见状也不再多作打扰，转身离开了工坊。）＊",
@@ -510,7 +510,7 @@
     "entryID": 3904,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MC8FindSomething,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MC8FindSomething,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "換圖、音樂",
     "links": [771]
   },
@@ -549,7 +549,7 @@
     "text": "「琰兒，又在口無遮攔。妳若真閒得慌，回去把《水經》抄上一遍，免得成天只想著玩樂。」",
     "Sequence": "",
     "zh_TW": "「琰兒，又在口無遮攔。妳若真閒得慌，回去把《水經》抄上一遍，免得成天只想著玩樂。」",
-    "zh_CN": "「琰儿，又在口无遮拦。妳若真闲得慌，回去把《水经》抄上一遍，免得成天只想着玩乐。」",
+    "zh_CN": "「琰儿，又在口无遮拦。你若真闲得慌，回去把《水经》抄上一遍，免得成天只想着玩乐。」",
     "links": [3691]
   },
   {
@@ -584,7 +584,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableDialogueBG();\nContinue();",
-    "Script": "SetQuestState(\"CF17\", \"active\")",
+    "Script": "SetQuestState(\"CF17\", \"active\");",
     "Description": "觸發任務、關閉背景",
     "links": []
   },

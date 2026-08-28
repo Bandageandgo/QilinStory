@@ -78,7 +78,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你被猴群賞了傳聞中的奧義猴子百烈拳，立時倒地昏迷不醒……）＊",
     "Sequence": "SetPortrait(MC1,pic=16);",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "zh_TW": "[panel=6]＊（你被猴群賞了傳聞中的奧義猴子百烈拳，立時倒地昏迷不醒……）＊",
     "zh_CN": "[panel=6]＊（你被猴群赏了传闻中的奥义猴子百烈拳，立时倒地昏迷不醒……）＊",
     "links": [3898]
@@ -115,7 +115,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_TW": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
     "zh_CN": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
     "links": [2060]
@@ -199,7 +199,7 @@
     "actorID": "MC1",
     "text": "「真是奇妙的小猴。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "Script": "SetQuestEntryState(\"CF19\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"CF19\", 1, \"success\");",
     "Description": "更新任務",
     "zh_TW": "「真是奇妙的小猴。」",
     "zh_CN": "「真是奇妙的小猴。」",
@@ -218,7 +218,7 @@
     "entryID": 3886,
     "actorID": "role2",
     "text": "",
-    "Sequence": "BeginDiceRoll(Manual,IntimidationCheck,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
     "Description": "威嚇檢定",
     "links": [3889]
   },
@@ -227,7 +227,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "成功",
     "links": [3894]
   },
@@ -236,7 +236,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "Description": "失敗",
     "links": [2059]
   },
@@ -262,6 +262,14 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,43);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進戰鬥43",
+    "links": [3917]
+  },
+  {
+    "entryID": 3917,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
     "links": [2066, 2061]
   },
   {
@@ -292,7 +300,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（山林恢復了平靜，那隻異色的小猴子早已不知去向。你搖了搖頭，甩去心頭那絲莫名的雜念，轉身返回居所。）＊",
     "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(Forest);",
-    "Script": "SetQuestState(\"CF19\", \"active\")",
+    "Script": "SetQuestState(\"CF19\", \"active\");",
     "Description": "觸發任務",
     "zh_TW": "[panel=6]＊（山林恢復了平靜，那隻異色的小猴子早已不知去向。你搖了搖頭，甩去心頭那絲莫名的雜念，轉身返回居所。）＊",
     "zh_CN": "[panel=6]＊（山林恢复了平静，那只异色的小猴子早已不知去向。你摇了摇头，甩去心头那丝莫名的杂念，转身返回居所。）＊",
@@ -327,7 +335,7 @@
     "entryID": 3903,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MonkeyBully,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MonkeyBully,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "換圖",
     "links": [2053]
   },
@@ -335,7 +343,7 @@
     "entryID": 3904,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MonkeyWine,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MonkeyWine,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "換圖",
     "links": [2077]
   },
@@ -413,7 +421,7 @@
     "entryID": 3915,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MC8NoMoney,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(MC8NoMoney,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "換圖、音樂",
     "links": [3908]
   },

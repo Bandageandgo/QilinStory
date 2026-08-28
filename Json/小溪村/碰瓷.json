@@ -48,7 +48,7 @@
     "entryID": 2033,
     "actorID": "role87",
     "text": "「是是是…小的知錯了，再也不敢了…」",
-    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,10);\nModifyData(Coin,50);",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,10);\nModifyData(Coin,50);",
     "Conditions": "IsPassDice() == true;",
     "Description": "拿錢",
     "zh_TW": "「是是是…小的知錯了，再也不敢了…」",
@@ -68,7 +68,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [2036, 2032]
   },
   {
@@ -120,7 +120,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [2043]
   },
   {
@@ -146,7 +146,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "Variable[\"FastFight\"] = true",
+    "Script": "Variable[\"FastFight\"] = true;",
     "Description": "變數更新",
     "links": [2035, 2042]
   },
@@ -182,7 +182,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（言畢，他竟不等你回話，逕自轉身，幾步便到了後方那片曬藥的空地。）＊",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"C0M1\", 4, \"active\")",
+    "Script": "SetQuestEntryState(\"C0M1\", 4, \"active\");",
     "Description": "任務更新",
     "zh_TW": "[panel=6]＊（言畢，他竟不等你回話，逕自轉身，幾步便到了後方那片曬藥的空地。）＊",
     "zh_CN": "[panel=6]＊（言毕，他竟不等你回话，径自转身，几步便到了后方那片晒药的空地。）＊",
@@ -191,10 +191,10 @@
   {
     "entryID": 2051,
     "actorID": "role42",
-    "text": "「[em7]朝那漢子一瞪[/em7]蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
+    "text": "「[em7]朝那漢子一瞪[/em7]，蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
     "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=2);",
-    "zh_TW": "「[em7]朝那漢子一瞪[/em7]蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
-    "zh_CN": "「[em7]朝那汉子一瞪[/em7]蛋头！我不是跟你说过，别再搞这种鸡毛鸟事吗！」",
+    "zh_TW": "「[em7]朝那漢子一瞪[/em7]，蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
+    "zh_CN": "「[em7]朝那汉子一瞪[/em7]，蛋头！我不是跟你说过，别再搞这种鸡毛鸟事吗！」",
     "links": [2053]
   },
   {
@@ -236,10 +236,10 @@
   {
     "entryID": 2056,
     "actorID": "role42",
-    "text": "「[em7]轉向你，咧嘴一笑[/em7]嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
+    "text": "「[em7]轉向你，咧嘴一笑[/em7]，嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
     "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=1);",
-    "zh_TW": "「[em7]轉向你，咧嘴一笑[/em7]嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
-    "zh_CN": "「[em7]转向你，咧嘴一笑[/em7]嘿，小兄弟，气性挺大嘛，有意思。看在我的面子上，这事就算了吧——」",
+    "zh_TW": "「[em7]轉向你，咧嘴一笑[/em7]，嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
+    "zh_CN": "「[em7]转向你，咧嘴一笑[/em7]，嘿，小兄弟，气性挺大嘛，有意思。看在我的面子上，这事就算了吧——」",
     "links": [2057]
   },
   {

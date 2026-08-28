@@ -23,7 +23,7 @@
     "actorID": "role5",
     "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF18\", 3) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF18\", 3) == \"unassigned\";",
     "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
     "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
     "links": [102]
@@ -78,7 +78,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "Sequence": "ModifyData(Coin,-100);",
-    "Conditions": "IsCoinPass(100)  == true",
+    "Conditions": "IsCoinPass(100)  == true;",
     "zh_TW": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "zh_CN": "[panel=6]＊（你掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
     "links": [4083]
@@ -106,7 +106,7 @@
     "actorID": "role5",
     "text": "「[em7]笑容不變重複道[/em7]：糖炒栗子，一包一百錢。」",
     "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
-    "Script": "SetQuestEntryState(\"CF18\", 3, \"success\")",
+    "Script": "SetQuestEntryState(\"CF18\", 3, \"success\");",
     "Description": "獲得糖炒栗子、任務更新",
     "zh_TW": "「[em7]笑容不變重複道[/em7]：糖炒栗子，一包一百錢。」",
     "zh_CN": "「[em7]笑容不变重复道[/em7]：糖炒栗子，一包一百钱。」",

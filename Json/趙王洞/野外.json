@@ -308,7 +308,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]順從殺意",
     "Sequence": "",
-    "Conditions": "Variable[\"GodSlayerDestiny\"] == true",
+    "Conditions": "Variable[\"GodSlayerDestiny\"] == true;",
     "Description": "隱藏血刀選項",
     "zh_TW": "[em2][隱藏選項][/em2]順從殺意",
     "zh_CN": "[em2][隐藏选项][/em2]顺从杀意",
@@ -319,7 +319,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。）＊",
     "Sequence": "",
-    "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 1",
+    "Script": "Variable[\"KillKill\"] = Variable[\"KillKill\"] + 1;",
     "Description": "殺意+1",
     "zh_TW": "[panel=6]＊（隨著生命的消逝，那股殺意終於飽餐一頓，帶著令人戰慄的愉悅感，重新蟄伏。）＊",
     "zh_CN": "[panel=6]＊（随着生命的消逝，那股杀意终于饱餐一顿，带着令人战栗的愉悦感，重新蛰伏。）＊",
@@ -354,7 +354,7 @@
     "entryID": 3773,
     "actorID": "0",
     "text": "",
-    "Sequence": "Continue();",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nContinue();",
     "links": []
   }
 ]

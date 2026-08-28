@@ -39,10 +39,10 @@
   {
     "entryID": 5,
     "actorID": "MC22",
-    "text": "「[em7]嘀咕著，[/em7]奇怪……照我爹手札上寫的，只消擺出強者的氣勢，牠們不就該納頭便拜了嗎？難道……牠們瞧不出本姑娘是強者？」",
+    "text": "「[em7]嘀咕著[/em7]，奇怪……照我爹手札上寫的，只消擺出強者的氣勢，牠們不就該納頭便拜了嗎？難道……牠們瞧不出本姑娘是強者？」",
     "Sequence": "SetPortrait(MC22,pic=9);\nDisableCharacterExpression(1);\nEnableCharacterExpression(1,MC22,Idea);",
-    "zh_TW": "「[em7]嘀咕著，[/em7]奇怪……照我爹手札上寫的，只消擺出強者的氣勢，牠們不就該納頭便拜了嗎？難道……牠們瞧不出本姑娘是強者？」",
-    "zh_CN": "「[em7]嘀咕着，[/em7]奇怪……照我爹手札上写的，只消摆出强者的气势，它们不就该纳头便拜了吗？难道……它们瞧不出本姑娘是强者？」",
+    "zh_TW": "「[em7]嘀咕著[/em7]，奇怪……照我爹手札上寫的，只消擺出強者的氣勢，牠們不就該納頭便拜了嗎？難道……牠們瞧不出本姑娘是強者？」",
+    "zh_CN": "「[em7]嘀咕着[/em7]，奇怪……照我爹手札上写的，只消摆出强者的气势，它们不就该纳头便拜了吗？难道……它们瞧不出本姑娘是强者？」",
     "links": [6]
   },
   {
@@ -120,15 +120,15 @@
     "entryID": 14,
     "actorID": "role2",
     "text": "",
-    "Sequence": "",
+    "Sequence": "Continue();",
     "links": [15, 17]
   },
   {
     "entryID": 15,
     "actorID": "role2",
     "text": "[panel=6]＊（你步伐穩健，氣度沉凝，竟真有幾分宗師氣派。那幾個狗頭人被你這股氣勢所懾，面面相覷，不敢妄動。）＊",
-    "Sequence": "ModifyData(AbilityExp,MC1,Charisma,100);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(AbilityExp,Player,Charisma,100);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（你步伐穩健，氣度沉凝，竟真有幾分宗師氣派。那幾個狗頭人被你這股氣勢所懾，面面相覷，不敢妄動。）＊",
     "zh_CN": "[panel=6]＊（你步伐稳健，气度沉凝，竟真有几分宗师气派。那几个狗头人被你这股气势所慑，面面相觑，不敢妄动。）＊",
     "links": [16]
@@ -147,7 +147,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你正學著高人的姿態，不料腳下一滑，身形一個踉蹌，險些跌倒。方才那股氣勢，登時洩得乾乾淨淨。）＊",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你正學著高人的姿態，不料腳下一滑，身形一個踉蹌，險些跌倒。方才那股氣勢，登時洩得乾乾淨淨。）＊",
     "zh_CN": "[panel=6]＊（你正学着高人的姿态，不料脚下一滑，身形一个踉跄，险些跌倒。方才那股气势，登时泄得干干净净。）＊",
     "links": [18]
@@ -155,10 +155,10 @@
   {
     "entryID": 18,
     "actorID": "MC22",
-    "text": "「[em7]倒吸一口氣，[/em7]老天爺啊！你這是做什麼！罷了罷了，不打緊！聽著，快！擺出你最凶的臉色，就像上回在客棧逼問我那樣！再用劍指著牠們的頭領！」",
+    "text": "「[em7]倒吸一口氣[/em7]，老天爺啊！你這是做什麼！罷了罷了，不打緊！聽著，快！擺出你最凶的臉色，就像上回在客棧逼問我那樣！再用劍指著牠們的頭領！」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Shock);",
-    "zh_TW": "「[em7]倒吸一口氣，[/em7]老天爺啊！你這是做什麼！罷了罷了，不打緊！聽著，快！擺出你最凶的臉色，就像上回在客棧逼問我那樣！再用劍指著牠們的頭領！」",
-    "zh_CN": "「[em7]倒吸一口气，[/em7]老天爷啊！你这是做什么！罢了罢了，不打紧！听着，快！摆出你最凶的脸色，就像上回在客栈逼问我那样！再用剑指着它们的头领！」",
+    "zh_TW": "「[em7]倒吸一口氣[/em7]，老天爺啊！你這是做什麼！罷了罷了，不打緊！聽著，快！擺出你最凶的臉色，就像上回在客棧逼問我那樣！再用劍指著牠們的頭領！」",
+    "zh_CN": "「[em7]倒吸一口气[/em7]，老天爷啊！你这是做什么！罢了罢了，不打紧！听着，快！摆出你最凶的脸色，就像上回在客栈逼问我那样！再用剑指着它们的头领！」",
     "links": [68]
   },
   {
@@ -189,7 +189,7 @@
     "actorID": "MC1",
     "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "zh_CN": "「尔等土鸡瓦狗，哪个是能做主的？上前答话！」",
     "links": [23]
@@ -198,7 +198,7 @@
     "entryID": 23,
     "actorID": "role2",
     "text": "[panel=6]＊（你聲如洪鐘，字字清晰。狗頭人聽不懂你說什麼，可你嗓門裡那股不容置疑的威儀，硬生生教牠們停了那通亂跳。三個面面相覷，喉嚨裡咕嚕作響。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,30);\nDisableCharacterExpression(0);",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,30);\nDisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（你聲如洪鐘，字字清晰。狗頭人聽不懂你說什麼，可你嗓門裡那股不容置疑的威儀，硬生生教牠們停了那通亂跳。三個面面相覷，喉嚨裡咕嚕作響。）＊",
     "zh_CN": "[panel=6]＊（你声如洪钟，字字清晰。狗头人听不懂你说什么，可你嗓门里那股不容置疑的威仪，硬生生教它们停了那通乱跳。三个面面相觑，喉咙里咕噜作响。）＊",
     "links": [24]
@@ -217,7 +217,7 @@
     "actorID": "MC1",
     "text": "「咳！爾等……土雞瓦狗……哪個……呃……」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「咳！爾等……土雞瓦狗……哪個……呃……」",
     "zh_CN": "「咳！尔等……土鸡瓦狗……哪个……呃……」",
     "links": [26]
@@ -262,11 +262,11 @@
   {
     "entryID": 31,
     "actorID": "MC22",
-    "text": "「[em7]先是張大了嘴，半晌合不攏，隨即清了清嗓子，[/em7]咳！瞧見了嗎？我說什麼來著！只消照本姑娘的吩咐做，準保萬無一失！這，就叫[em2]算無遺策[/em2]！」",
+    "text": "「[em7]先是張大了嘴，半晌合不攏，隨即清了清嗓子[/em7]，咳！瞧見了嗎？我說什麼來著！只消照本姑娘的吩咐做，準保萬無一失！這，就叫[em2]算無遺策[/em2]！」",
     "Sequence": "SetPortrait(MC22,pic=13);\nModifyData(FavorabilityExp,MC22,50);\nEnableCharacterExpression(1,MC22,Meditate);",
     "Description": "增加好感度",
-    "zh_TW": "「[em7]先是張大了嘴，半晌合不攏，隨即清了清嗓子，[/em7]咳！瞧見了嗎？我說什麼來著！只消照本姑娘的吩咐做，準保萬無一失！這，就叫[em2]算無遺策[/em2]！」",
-    "zh_CN": "「[em7]先是张大了嘴，半晌合不拢，随即清了清嗓子，[/em7]咳！瞧见了吗？我说什么来着！只消照本姑娘的吩咐做，准保万无一失！这，就叫[em2]算无遗策[/em2]！」",
+    "zh_TW": "「[em7]先是張大了嘴，半晌合不攏，隨即清了清嗓子[/em7]，咳！瞧見了嗎？我說什麼來著！只消照本姑娘的吩咐做，準保萬無一失！這，就叫[em2]算無遺策[/em2]！」",
+    "zh_CN": "「[em7]先是张大了嘴，半晌合不拢，随即清了清嗓子[/em7]，咳！瞧见了吗？我说什么来着！只消照本姑娘的吩咐做，准保万无一失！这，就叫[em2]算无遗策[/em2]！」",
     "links": [2051]
   },
   {
@@ -325,8 +325,8 @@
     "entryID": 38,
     "actorID": "role2",
     "text": "[panel=6]＊（你話裡透出凜冽殺氣，劍刃寒光一閃。狗頭人對視一眼，怪叫著丟下傢伙，頭也不回竄進林子裡。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,100);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,100);\nDisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（你話裡透出凜冽殺氣，劍刃寒光一閃。狗頭人對視一眼，怪叫著丟下傢伙，頭也不回竄進林子裡。）＊",
     "zh_CN": "[panel=6]＊（你话里透出凛冽杀气，剑刃寒光一闪。狗头人对视一眼，怪叫着丢下家伙，头也不回窜进林子里。）＊",
     "links": [54]
@@ -336,7 +336,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你話說得狠，氣勢卻差著一截。狗頭人不退反進，尖叫著舉起了木棒石斧。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你話說得狠，氣勢卻差著一截。狗頭人不退反進，尖叫著舉起了木棒石斧。）＊",
     "zh_CN": "[panel=6]＊（你话说得狠，气势却差着一截。狗头人不退反进，尖叫着举起了木棒石斧。）＊",
     "links": [51]
@@ -351,18 +351,18 @@
   {
     "entryID": 41,
     "actorID": "MC1",
-    "text": "「[em7]掏出一枚銅錢，[/em7]此物，可換爾等活路。」",
+    "text": "「[em7]掏出一枚銅錢[/em7]，此物，可換爾等活路。」",
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_TW": "「[em7]掏出一枚銅錢，[/em7]此物，可換爾等活路。」",
-    "zh_CN": "「[em7]掏出一枚铜钱，[/em7]此物，可换尔等活路。」",
+    "zh_TW": "「[em7]掏出一枚銅錢[/em7]，此物，可換爾等活路。」",
+    "zh_CN": "「[em7]掏出一枚铜钱[/em7]，此物，可换尔等活路。」",
     "links": [42, 43]
   },
   {
     "entryID": 42,
     "actorID": "role2",
     "text": "[panel=6]＊（銅錢在日頭下閃著微光。這等愚頑之物，最禁不起亮晶晶的東西。牠們猶豫片刻，丟下傢伙，互相推搡著撲了上去。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Persuasion,30);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,30);\nDisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（銅錢在日頭下閃著微光。這等愚頑之物，最禁不起亮晶晶的東西。牠們猶豫片刻，丟下傢伙，互相推搡著撲了上去。）＊",
     "zh_CN": "[panel=6]＊（铜钱在日头下闪着微光。这等愚顽之物，最禁不起亮晶晶的东西。它们犹豫片刻，丢下家伙，互相推搡着扑了上去。）＊",
     "links": [54]
@@ -372,7 +372,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（狗頭人看看你手裡那枚銅錢，又看看籠中的獵物、你身上的行囊，似是覺得這筆買賣不划算。錢也要、人也要──牠們咆哮著舉起了傢伙。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（狗頭人看看你手裡那枚銅錢，又看看籠中的獵物、你身上的行囊，似是覺得這筆買賣不划算。錢也要、人也要──牠們咆哮著舉起了傢伙。）＊",
     "zh_CN": "[panel=6]＊（狗头人看看你手里那枚铜钱，又看看笼中的猎物、你身上的行囊，似是觉得这笔买卖不划算。钱也要、人也要──它们咆哮着举起了家伙。）＊",
     "links": [51]
@@ -387,18 +387,18 @@
   {
     "entryID": 45,
     "actorID": "MC1",
-    "text": "「[em7]遙指天際，[/em7]天上日月，皆為我所有。爾等，還不退下？」",
+    "text": "「[em7]遙指天際[/em7]，天上日月，皆為我所有。爾等，還不退下？」",
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_TW": "「[em7]遙指天際，[/em7]天上日月，皆為我所有。爾等，還不退下？」",
-    "zh_CN": "「[em7]遥指天际，[/em7]天上日月，皆为我所有。尔等，还不退下？」",
+    "zh_TW": "「[em7]遙指天際[/em7]，天上日月，皆為我所有。爾等，還不退下？」",
+    "zh_CN": "「[em7]遥指天际[/em7]，天上日月，皆为我所有。尔等，还不退下？」",
     "links": [46, 47]
   },
   {
     "entryID": 46,
     "actorID": "role2",
     "text": "[panel=6]＊（你聲音不大，卻不容置疑。狗頭人順著你的手指望向日頭，刺得牠們發出敬畏的尖叫。三個一齊丟下傢伙，匍匐在地，抖個不停。）＊",
-    "Sequence": "ModifyData(AbilityExp,MC1,Intelligence,100);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(AbilityExp,Player,Intelligence,100);\nDisableCharacterExpression(0);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（你聲音不大，卻不容置疑。狗頭人順著你的手指望向日頭，刺得牠們發出敬畏的尖叫。三個一齊丟下傢伙，匍匐在地，抖個不停。）＊",
     "zh_CN": "[panel=6]＊（你声音不大，却不容置疑。狗头人顺着你的手指望向日头，刺得它们发出敬畏的尖叫。三个一齐丢下家伙，匍匐在地，抖个不停。）＊",
     "links": [54]
@@ -408,7 +408,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你聲音雖響，卻無懾人之威。狗頭人順著你的手指望向日頭，又回頭看你，像是明白過來自己教人耍了。牠們怒吼一聲，舉起了傢伙。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你聲音雖響，卻無懾人之威。狗頭人順著你的手指望向日頭，又回頭看你，像是明白過來自己教人耍了。牠們怒吼一聲，舉起了傢伙。）＊",
     "zh_CN": "[panel=6]＊（你声音虽响，却无慑人之威。狗头人顺着你的手指望向日头，又回头看你，像是明白过来自己教人耍了。它们怒吼一声，举起了家伙。）＊",
     "links": [51]
@@ -460,11 +460,11 @@
   {
     "entryID": 55,
     "actorID": "MC22",
-    "text": "「[em7]從籠子裡爬出來，拍了拍身上的灰，[/em7]咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
+    "text": "「[em7]從籠子裡爬出來，拍了拍身上的灰[/em7]，咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
     "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(FavorabilityExp,MC22,25);\nEnableCharacterExpression(1,MC22,Proud);\nDisableEventBG();",
     "Description": "增加好感度;關閉事件圖",
-    "zh_TW": "「[em7]從籠子裡爬出來，拍了拍身上的灰，[/em7]咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
-    "zh_CN": "「[em7]从笼子里爬出来，拍了拍身上的灰，[/em7]咳咳！不错不错。你这根骨还行，孺子可教也！」",
+    "zh_TW": "「[em7]從籠子裡爬出來，拍了拍身上的灰[/em7]，咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
+    "zh_CN": "「[em7]从笼子里爬出来，拍了拍身上的灰[/em7]，咳咳！不错不错。你这根骨还行，孺子可教也！」",
     "links": [56]
   },
   {
@@ -488,10 +488,10 @@
   {
     "entryID": 58,
     "actorID": "MC22",
-    "text": "「[em7]故作神秘地壓低聲音，[/em7]此事說來話長……我其實是為著一件失落的秘寶而來。」",
+    "text": "「[em7]故作神秘地壓低聲音[/em7]，此事說來話長……我其實是為著一件失落的秘寶而來。」",
     "Sequence": "SetPortrait(MC22,pic=8);\nDisableCharacterExpression(0);",
-    "zh_TW": "「[em7]故作神秘地壓低聲音，[/em7]此事說來話長……我其實是為著一件失落的秘寶而來。」",
-    "zh_CN": "「[em7]故作神秘地压低声音，[/em7]此事说来话长……我其实是为着一件失落的秘宝而来。」",
+    "zh_TW": "「[em7]故作神秘地壓低聲音[/em7]，此事說來話長……我其實是為著一件失落的秘寶而來。」",
+    "zh_CN": "「[em7]故作神秘地压低声音[/em7]，此事说来话长……我其实是为着一件失落的秘宝而来。」",
     "links": [59]
   },
   {
@@ -506,10 +506,10 @@
   {
     "entryID": 60,
     "actorID": "MC22",
-    "text": "「[em7]見你上心，得意地挺了挺胸，[/em7]我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
+    "text": "「[em7]見你上心，得意地挺了挺胸[/em7]，我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
     "Sequence": "SetPortrait(MC22,pic=1);\nEnableCharacterExpression(1,MC22,Proud);",
-    "zh_TW": "「[em7]見你上心，得意地挺了挺胸，[/em7]我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
-    "zh_CN": "「[em7]见你上心，得意地挺了挺胸，[/em7]我夜观天象，此地龙脉之气汇聚，不日必有重宝出世。」",
+    "zh_TW": "「[em7]見你上心，得意地挺了挺胸[/em7]，我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
+    "zh_CN": "「[em7]见你上心，得意地挺了挺胸[/em7]，我夜观天象，此地龙脉之气汇聚，不日必有重宝出世。」",
     "links": [61]
   },
   {
@@ -563,7 +563,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_TW": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "zh_CN": "[panel=6]＊（你三下五除二，便将这几个狗头人打得落花流水。）＊",
     "links": [54]
@@ -573,7 +573,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "ShowEnding(Ending_1);",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "失敗結局",
     "links": []
   },
@@ -605,7 +605,7 @@
     "actorID": "MC1",
     "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "zh_CN": "「尔等土鸡瓦狗，哪个是能做主的？上前答话！」",
     "links": [72]
@@ -614,7 +614,7 @@
     "entryID": 72,
     "actorID": "role2",
     "text": "[panel=6]＊（你聲如洪鐘，字字清晰。狗頭人聽不懂你說什麼，可你嗓門裡那股不容置疑的威儀，硬生生教牠們停了那通亂跳。三個面面相覷，喉嚨裡咕嚕作響。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,30);\nDisableCharacterExpression(0);",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,30);\nDisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（你聲如洪鐘，字字清晰。狗頭人聽不懂你說什麼，可你嗓門裡那股不容置疑的威儀，硬生生教牠們停了那通亂跳。三個面面相覷，喉嚨裡咕嚕作響。）＊",
     "zh_CN": "[panel=6]＊（你声如洪钟，字字清晰。狗头人听不懂你说什么，可你嗓门里那股不容置疑的威仪，硬生生教它们停了那通乱跳。三个面面相觑，喉咙里咕噜作响。）＊",
     "links": [73]
@@ -640,7 +640,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_TW": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "zh_CN": "[panel=6]＊（你三下五除二，便将这几个狗头人打得落花流水。）＊",
     "links": [54]
@@ -650,7 +650,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "ShowEnding(Ending_1);",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "失敗結局",
     "links": []
   },
@@ -761,7 +761,7 @@
     "entryID": 737,
     "actorID": "role2",
     "text": "",
-    "Sequence": "PlayOrStopParticle(Smoke_Dust,Stop);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Clinic)@1;\nAudioControl(PauseLowerMusic)@1;\nAudioControl(PlaySFXOneShot,Fire)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Clinic)@1;\nAudioControl(PauseLowerMusic)@1;\nAudioControl(PlaySFXOneShot,Fire)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "開始換場景、關閉場景音樂",
     "links": [738]
   },
@@ -879,10 +879,18 @@
     "entryID": 750,
     "actorID": "MC1",
     "text": "[em2][內功檢定][/em2]「吉人自有天相，我這一身修為在，還怕區區一碗藥湯？喝給妳看！」",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,QiCheck,5);",
-    "Description": "檢定",
+    "Sequence": "",
+    "Description": "選項：內功檢定",
     "zh_TW": "[em2][內功檢定][/em2]「吉人自有天相，我這一身修為在，還怕區區一碗藥湯？喝給妳看！」",
     "zh_CN": "[em2][内功检定][/em2]「吉人自有天相，我这一身修为在，还怕区区一碗药汤？喝给你看！」",
+    "links": [2070]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,QiCheck,5);",
+    "Description": "內功檢定擲骰節點",
     "links": [765]
   },
   {
@@ -1007,8 +1015,9 @@
   {
     "entryID": 765,
     "actorID": "MC1",
-    "text": "",
-    "Sequence": "Continue();",
+    "text": "「吉人自有天相，我這一身修為在，還怕區區一碗藥湯？喝給妳看！」",
+    "Sequence": "",
+    "zh_CN": "「吉人自有天相，我这一身修为在，还怕区区一碗药汤？喝给你看！」",
     "links": [767, 768]
   },
   {
@@ -1024,7 +1033,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "轉場",
     "links": [752]
   },
@@ -1033,7 +1042,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "Description": "轉場",
     "links": [753]
   },
@@ -1234,7 +1243,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "Variable[\"FastFight\"] = true",
+    "Script": "Variable[\"FastFight\"] = true;",
     "links": [799, 800]
   },
   {
@@ -1242,7 +1251,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [734]
   },
   {
@@ -1250,16 +1259,16 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [736]
   },
   {
     "entryID": 801,
     "actorID": "MC22",
-    "text": "「[em7]語氣一轉，變得楚楚可憐，[/em7]我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
+    "text": "「[em7]語氣一轉，變得楚楚可憐[/em7]，我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
     "Sequence": "SetPortrait(MC22,pic=10);",
-    "zh_TW": "「[em7]語氣一轉，變得楚楚可憐，[/em7]我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
-    "zh_CN": "「[em7]语气一转，变得楚楚可怜，[/em7]我晓得，我一个弱女子孤身寻宝，是凶险了些。可这事，关着一个对我极要紧的人……」",
+    "zh_TW": "「[em7]語氣一轉，變得楚楚可憐[/em7]，我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
+    "zh_CN": "「[em7]语气一转，变得楚楚可怜[/em7]，我晓得，我一个弱女子孤身寻宝，是凶险了些。可这事，关着一个对我极要紧的人……」",
     "links": [804]
   },
   {
@@ -1283,10 +1292,10 @@
   {
     "entryID": 804,
     "actorID": "MC22",
-    "text": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
+    "text": "「[em7]偷偷抬眼看你[/em7]，少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
     "Sequence": "SetPortrait(MC22,pic=3);",
-    "zh_TW": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
-    "zh_CN": "「[em7]偷偷擡眼看你，[/em7]少侠你武功高强，心地又好，总不忍瞧着我一个人去送死吧？」",
+    "zh_TW": "「[em7]偷偷抬眼看你[/em7]，少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
+    "zh_CN": "「[em7]偷偷擡眼看你[/em7]，少侠你武功高强，心地又好，总不忍瞧着我一个人去送死吧？」",
     "links": [802]
   },
   {
@@ -1360,11 +1369,11 @@
   {
     "entryID": 2052,
     "actorID": "MC22",
-    "text": "「[em7]從籠子裡爬出來，拍了拍身上的灰，[/em7]咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
+    "text": "「[em7]從籠子裡爬出來，拍了拍身上的灰[/em7]，咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
     "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(FavorabilityExp,MC22,25);\nEnableCharacterExpression(1,MC22,Proud);\nDisableEventBG();",
     "Description": "增加好感度;關閉事件圖",
-    "zh_TW": "「[em7]從籠子裡爬出來，拍了拍身上的灰，[/em7]咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
-    "zh_CN": "「[em7]从笼子里爬出来，拍了拍身上的灰，[/em7]咳咳！不错不错。你这根骨还行，孺子可教也！」",
+    "zh_TW": "「[em7]從籠子裡爬出來，拍了拍身上的灰[/em7]，咳咳！不錯不錯。你這根骨還行，孺子可教也！」",
+    "zh_CN": "「[em7]从笼子里爬出来，拍了拍身上的灰[/em7]，咳咳！不错不错。你这根骨还行，孺子可教也！」",
     "links": [2053]
   },
   {
@@ -1388,10 +1397,10 @@
   {
     "entryID": 2055,
     "actorID": "MC22",
-    "text": "「[em7]故作神秘地壓低聲音，[/em7]此事說來話長……我其實是為著一件失落的秘寶而來。」",
+    "text": "「[em7]故作神秘地壓低聲音[/em7]，此事說來話長……我其實是為著一件失落的秘寶而來。」",
     "Sequence": "SetPortrait(MC22,pic=8);\nDisableCharacterExpression(0);",
-    "zh_TW": "「[em7]故作神秘地壓低聲音，[/em7]此事說來話長……我其實是為著一件失落的秘寶而來。」",
-    "zh_CN": "「[em7]故作神秘地压低声音，[/em7]此事说来话长……我其实是为着一件失落的秘宝而来。」",
+    "zh_TW": "「[em7]故作神秘地壓低聲音[/em7]，此事說來話長……我其實是為著一件失落的秘寶而來。」",
+    "zh_CN": "「[em7]故作神秘地压低声音[/em7]，此事说来话长……我其实是为着一件失落的秘宝而来。」",
     "links": [2056]
   },
   {
@@ -1406,10 +1415,10 @@
   {
     "entryID": 2057,
     "actorID": "MC22",
-    "text": "「[em7]見你上心，得意地挺了挺胸，[/em7]我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
+    "text": "「[em7]見你上心，得意地挺了挺胸[/em7]，我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
     "Sequence": "SetPortrait(MC22,pic=1);\nEnableCharacterExpression(1,MC22,Proud);",
-    "zh_TW": "「[em7]見你上心，得意地挺了挺胸，[/em7]我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
-    "zh_CN": "「[em7]见你上心，得意地挺了挺胸，[/em7]我夜观天象，此地龙脉之气汇聚，不日必有重宝出世。」",
+    "zh_TW": "「[em7]見你上心，得意地挺了挺胸[/em7]，我夜觀天象，此地龍脈之氣匯聚，不日必有重寶出世。」",
+    "zh_CN": "「[em7]见你上心，得意地挺了挺胸[/em7]，我夜观天象，此地龙脉之气汇聚，不日必有重宝出世。」",
     "links": [2058]
   },
   {
@@ -1453,10 +1462,10 @@
   {
     "entryID": 2062,
     "actorID": "MC22",
-    "text": "「[em7]語氣一轉，變得楚楚可憐，[/em7]我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
+    "text": "「[em7]語氣一轉，變得楚楚可憐[/em7]，我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
     "Sequence": "SetPortrait(MC22,pic=10);",
-    "zh_TW": "「[em7]語氣一轉，變得楚楚可憐，[/em7]我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
-    "zh_CN": "「[em7]语气一转，变得楚楚可怜，[/em7]我晓得，我一个弱女子孤身寻宝，是凶险了些。可这事，关着一个对我极要紧的人……」",
+    "zh_TW": "「[em7]語氣一轉，變得楚楚可憐[/em7]，我曉得，我一個弱女子孤身尋寶，是兇險了些。可這事，關著一個對我極要緊的人……」",
+    "zh_CN": "「[em7]语气一转，变得楚楚可怜[/em7]，我晓得，我一个弱女子孤身寻宝，是凶险了些。可这事，关着一个对我极要紧的人……」",
     "links": [2065]
   },
   {
@@ -1480,10 +1489,10 @@
   {
     "entryID": 2065,
     "actorID": "MC22",
-    "text": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
+    "text": "「[em7]偷偷抬眼看你[/em7]，少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
     "Sequence": "SetPortrait(MC22,pic=3);",
-    "zh_TW": "「[em7]偷偷抬眼看你，[/em7]少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
-    "zh_CN": "「[em7]偷偷擡眼看你，[/em7]少侠你武功高强，心地又好，总不忍瞧着我一个人去送死吧？」",
+    "zh_TW": "「[em7]偷偷抬眼看你[/em7]，少俠你武功高強，心地又好，總不忍瞧著我一個人去送死吧？」",
+    "zh_CN": "「[em7]偷偷擡眼看你[/em7]，少侠你武功高强，心地又好，总不忍瞧着我一个人去送死吧？」",
     "links": [2063]
   },
   {

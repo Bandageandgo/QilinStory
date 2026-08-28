@@ -157,7 +157,7 @@
     "entryID": 77,
     "actorID": "role2",
     "text": "",
-    "Sequence": "AudioControl(StopMusic);\nOpenPanel(1, close);\nAudioControl(PlayMusic,BGM_19);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nDisableDialogueBG();\nEnableDialogueBG(HallOfHeroes);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nAudioControl(StopMusic);\nOpenPanel(1, close)@1;\nAudioControl(PlayMusic,BGM_19);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableDialogueBG()@1;\nEnableDialogueBG(HallOfHeroes)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [78]
   },
   {
@@ -373,7 +373,7 @@
     "text": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
     "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);\nModifyData(AbilityMaxLevel,Player,Politics,5);",
     "zh_TW": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
-    "zh_CN": "「嗯，所以我才说不能不管。不过妳的眼睛倒利。」",
+    "zh_CN": "「嗯，所以我才说不能不管。不过你的眼睛倒利。」",
     "links": [109]
   },
   {
@@ -517,7 +517,7 @@
     "entryID": 117,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nOpenPanel(1, close);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;\nDisableEventBG();\nEnableDialogueBG(Houses_Ranger);",
+    "Sequence": "SetContinueMode(false);\nOpenPanel(1, close)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableEventBG()@1;\nEnableDialogueBG(Houses_Ranger)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [119]
   },
   {
@@ -876,7 +876,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableDialogueBG();\nContinue();",
-    "Script": "SetQuestState(\"C2M1\", \"active\")",
+    "Script": "SetQuestState(\"C2M1\", \"active\");",
     "Description": "觸發任務",
     "links": []
   },

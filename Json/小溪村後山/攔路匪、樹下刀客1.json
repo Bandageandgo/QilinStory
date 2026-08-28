@@ -32,8 +32,8 @@
     "entryID": 2056,
     "actorID": "role2",
     "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，只敢放狠話，灰溜溜逃走了……）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Intimidation,20);\nModifyData(LifeExp,50);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,20);\nModifyData(LifeExp,50);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，只敢放狠話，灰溜溜逃走了……）＊",
     "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，只敢放狠话，灰溜溜逃走了……）＊",
     "links": []
@@ -43,7 +43,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你的態度著實很橫，\n於是對方便決定讓你橫著躺出去……）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你的態度著實很橫，\n於是對方便決定讓你橫著躺出去……）＊",
     "zh_CN": "[panel=6]＊（你的态度着实很横，\n于是对方便决定让你横着躺出去……）＊",
     "links": [2069]
@@ -52,8 +52,8 @@
     "entryID": 2058,
     "actorID": "role2",
     "text": "[panel=6]＊（讚美之語，誰不愛聽呢。\n對方不只放行，還給禮物，英雄兩字真好用……）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Persuasion,20);\nModifyData(Coin,50);\nModifyData(LifeExp,50);",
-    "Conditions": "IsPassDice()  == true",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);\nModifyData(Coin,50);\nModifyData(LifeExp,50);",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（讚美之語，誰不愛聽呢。\n對方不只放行，還給禮物，英雄兩字真好用……）＊",
     "zh_CN": "[panel=6]＊（赞美之语，谁不爱听呢。\n对方不只放行，还给礼物，英雄两字真好用……）＊",
     "links": []
@@ -63,7 +63,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你是當對方英雄，可對方未必當你是英雄。\n結果就是一拳送你，免費變小丑……）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你是當對方英雄，可對方未必當你是英雄。\n結果就是一拳送你，免費變小丑……）＊",
     "zh_CN": "[panel=6]＊（你是当对方英雄，可对方未必当你是英雄。\n结果就是一拳送你，免费变小丑……）＊",
     "links": [2069]
@@ -131,7 +131,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，灰溜溜逃走了……）＊",
     "links": []
@@ -141,7 +141,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "Sequence": "ModifyData(Coin,-500);",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "zh_TW": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "zh_CN": "[panel=6]＊（在你身上的钱被掠夺了不少后，\n对方便放你离去……）＊",
     "links": []
@@ -159,7 +159,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，灰溜溜逃走了……）＊",
     "links": []
@@ -169,7 +169,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "Sequence": "ModifyData(Coin,-500);",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "zh_TW": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "zh_CN": "[panel=6]＊（在你身上的钱被掠夺了不少后，\n对方便放你离去……）＊",
     "links": []
@@ -272,10 +272,10 @@
   {
     "entryID": 2083,
     "actorID": "MC1",
-    "text": "（這……是隱語嗎？）",
+    "text": "「這……是隱語麼？」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "（這……是隱語嗎？）",
-    "zh_CN": "（这……是隐语吗？）",
+    "zh_TW": "「這……是隱語麼？」",
+    "zh_CN": "「这……是隐语么？」",
     "links": [2084, 2085, 2086, 2087]
   },
   {
@@ -318,7 +318,7 @@
     "entryID": 2088,
     "actorID": "role85",
     "text": "「千般萬算，終不如天算。我們會再碰面的……」",
-    "Sequence": "ModifyData(AbilityExp,MC1,Intelligence,50);",
+    "Sequence": "ModifyData(AbilityExp,Player,Intelligence,50);",
     "Description": "獲得智力經驗",
     "zh_TW": "「千般萬算，終不如天算。我們會再碰面的……」",
     "zh_CN": "「千般万算，终不如天算。我们会再碰面的……」",

@@ -39,8 +39,8 @@
     "entryID": 5,
     "actorID": "role73",
     "text": "「哈哈哈，小姑娘多慮了。我名童淵，只是暫時滯留此地，閒來無事，手癢罷了。純粹切磋，不涉金錢。如何？」",
-    "Sequence": "DisableCharacterExpression(1);",
-    "Script": "SetQuestEntryState(\"C0M1\", 6, \"active\")",
+    "Sequence": "DisableCharacterExpression(2);",
+    "Script": "SetQuestEntryState(\"C0M1\", 6, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「哈哈哈，小姑娘多慮了。我名童淵，只是暫時滯留此地，閒來無事，手癢罷了。純粹切磋，不涉金錢。如何？」",
     "zh_CN": "「哈哈哈，小姑娘多虑了。我名童渊，只是暂时滞留此地，闲来无事，手痒罢了。纯粹切磋，不涉金钱。如何？」",
@@ -256,7 +256,7 @@
     "actorID": "MC1",
     "text": "「學習[em2]風起[/em2]好了，讓敵人更難打中自己。」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"RisingWindLv1\")  == false and (IsCoinPass(100)  == true)",
+    "Conditions": "IsSkillObtained(\"Player\", \"RisingWindLv1\")  == false and (IsCoinPass(100)  == true);",
     "zh_TW": "「學習[em2]風起[/em2]好了，讓敵人更難打中自己。」",
     "zh_CN": "「学习[em2]风起[/em2]好了，让敌人更难打中自己。」",
     "links": [31]
@@ -266,7 +266,7 @@
     "actorID": "MC1",
     "text": "「學習[em2]破軍[/em2]好了，可以減少未命中的情況。」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"BreakerLv1\")  == false and (IsCoinPass(100)  == true)",
+    "Conditions": "IsSkillObtained(\"Player\", \"BreakerLv1\")  == false and (IsCoinPass(100)  == true);",
     "zh_TW": "「學習[em2]破軍[/em2]好了，可以減少未命中的情況。」",
     "zh_CN": "「学习[em2]破军[/em2]好了，可以减少未命中的情况。」",
     "links": [30]
@@ -275,7 +275,7 @@
     "entryID": 43,
     "actorID": "MC8",
     "text": "[panel=2]「而且…天王老子是誰啊！另外切磋該不會要收錢吧？」",
-    "Sequence": "SetPortrait(MC8,pic=6);EnableCharacterExpression(1,MC8,Question);",
+    "Sequence": "SetPortrait(MC8,pic=6);EnableCharacterExpression(2,MC8,Question);",
     "zh_TW": "[panel=2]「而且…天王老子是誰啊！另外切磋該不會要收錢吧？」",
     "zh_CN": "[panel=2]「而且…天王老子是谁啊！另外切磋该不会要收钱吧？」",
     "links": [5]
@@ -321,7 +321,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你們路過村中的一片空地，只見一名身材挺拔的青年正在專注地練習槍法…。）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"C0M1\", 6) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"C0M1\", 6) == \"unassigned\";",
     "zh_TW": "[panel=6]＊（你們路過村中的一片空地，只見一名身材挺拔的青年正在專注地練習槍法…。）＊",
     "zh_CN": "[panel=6]＊（你们路过村中的一片空地，只见一名身材挺拔的青年正在专注地练习枪法…。）＊",
     "links": [1]
@@ -331,7 +331,7 @@
     "actorID": "role73",
     "text": "「閒來無事，純粹切磋，不涉金錢。如何？」",
     "Sequence": "DisableCharacterExpression(1);",
-    "Conditions": "CurrentQuestEntryState(\"C0M1\", 6) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"C0M1\", 6) == \"active\";",
     "zh_TW": "「閒來無事，純粹切磋，不涉金錢。如何？」",
     "zh_CN": "「闲来无事，纯粹切磋，不涉金钱。如何？」",
     "links": [7, 45]
@@ -349,7 +349,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "Variable[\"FastFight\"] = true",
+    "Script": "Variable[\"FastFight\"] = true;",
     "Description": "變數更新",
     "links": [184, 185]
   },
@@ -358,7 +358,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [10]
   },
   {
@@ -366,7 +366,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [17]
   },
   {

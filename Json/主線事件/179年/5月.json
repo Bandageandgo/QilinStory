@@ -123,7 +123,7 @@
     "actorID": "MC1",
     "text": "「大叔教誨，晚輩銘記在心，定不負大叔厚望！他日江湖再見！」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
-    "Script": "SetQuestState(\"C0M2\", \"active\")",
+    "Script": "SetQuestState(\"C0M2\", \"active\");",
     "zh_TW": "「大叔教誨，晚輩銘記在心，定不負大叔厚望！他日江湖再見！」",
     "zh_CN": "「大叔教诲，晚辈铭记在心，定不负大叔厚望！他日江湖再见！」",
     "links": [33]
@@ -160,7 +160,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（開啟了新的命盤[em2]懸壺濟世[/em2]）＊",
     "Sequence": "",
-    "Script": "Variable[\"DoctorDestiny\"] = true",
+    "Script": "Variable[\"DoctorDestiny\"] = true;",
     "Description": "解鎖醫師命盤",
     "zh_TW": "[panel=6]＊（開啟了新的命盤[em2]懸壺濟世[/em2]）＊",
     "zh_CN": "[panel=6]＊（开启了新的命盘[em2]悬壶济世[/em2]）＊",
@@ -214,10 +214,10 @@
   {
     "entryID": 2050,
     "actorID": "role2",
-    "text": "[panel=6]＊（在生活中或的經驗:[em2]生活經驗[/em2]可以用於命盤來獲得[em2]技能[/em2]。）＊",
+    "text": "[panel=6]＊（在生活中或的經驗：[em2]生活經驗[/em2]可以用於命盤來獲得[em2]技能[/em2]。）＊",
     "Sequence": "DisableDialogueBG();",
-    "zh_TW": "[panel=6]＊（在生活中或的經驗:[em2]生活經驗[/em2]可以用於命盤來獲得[em2]技能[/em2]。）＊",
-    "zh_CN": "[panel=6]＊（在生活中或的经验:[em2]生活经验[/em2]可以用于命盘来获得[em2]技能[/em2]。）＊",
+    "zh_TW": "[panel=6]＊（在生活中或的經驗：[em2]生活經驗[/em2]可以用於命盤來獲得[em2]技能[/em2]。）＊",
+    "zh_CN": "[panel=6]＊（在生活中或的经验：[em2]生活经验[/em2]可以用于命盘来获得[em2]技能[/em2]。）＊",
     "links": [2051]
   },
   {

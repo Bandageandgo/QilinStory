@@ -21,7 +21,7 @@
     "actorID": "role101",
     "text": "「不過在這小村裡也實在是無聊的緊，小兄弟。\n反正咱們閒者也是閒者，要不陪我玩一把？」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"StreetTactics\")  == false",
+    "Conditions": "IsSkillObtained(\"Player\", \"StreetTactics\")  == false;",
     "zh_TW": "「不過在這小村裡也實在是無聊的緊，小兄弟。\n反正咱們閒者也是閒者，要不陪我玩一把？」",
     "zh_CN": "「不过在这小村里也实在是无聊的紧，小兄弟。\n反正咱们闲者也是闲者，要不陪我玩一把？」",
     "links": [2508, 2558, 2507]
@@ -85,7 +85,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginMiniGame(Drinking,Default,Default,AlcoholTolerance,NPC25);\nSetContinueMode(original)@Message(EndMiniGame);\nContinue()@Message(EndMiniGame)",
-    "Script": "Variable[\"F_BoxMapM01_33\"] = 1",
+    "Script": "Variable[\"F_BoxMapM01_33\"] = 1;",
     "Description": "喝酒小遊戲",
     "links": [2510]
   },
@@ -128,7 +128,7 @@
     "entryID": 2473,
     "actorID": "role2",
     "text": "",
-    "Sequence": "BeginDiceRoll(Manual,FlirtingCheck,12);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,12);",
     "Description": "開始檢定",
     "links": [2474]
   },
@@ -146,7 +146,7 @@
     "actorID": "role102",
     "text": "「……「你的天長地久」？\n呵呵呵……小哥可真會說話……呵呵呵！」",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Flirting,20);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「……「你的天長地久」？\n呵呵呵……小哥可真會說話……呵呵呵！」",
     "zh_CN": "「……「你的天长地久」？ \n呵呵呵……小哥可真会说话……呵呵呵！ 」",
     "links": [2522]
@@ -192,7 +192,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "Variable[\"F_BoxMapM01_12\"] = true",
+    "Script": "Variable[\"F_BoxMapM01_12\"] = true;",
     "Description": "變數更新",
     "links": []
   },
@@ -200,7 +200,7 @@
     "entryID": 2483,
     "actorID": "role2",
     "text": "",
-    "Sequence": "BeginDiceRoll(Manual,PersuasionCheck,15);\nSetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll)",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,15);",
     "Description": "開始檢定",
     "links": [2484]
   },
@@ -216,7 +216,7 @@
     "actorID": "role102",
     "text": "「嗯……若是直白的說了，倒也是無趣……」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「嗯……若是直白的說了，倒也是無趣……」",
     "zh_CN": "「嗯……若是直白的说了，倒也是无趣……」",
     "links": [2486]
@@ -224,10 +224,10 @@
   {
     "entryID": 2486,
     "actorID": "role102",
-    "text": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
+    "text": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]，\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
     "Sequence": "",
-    "zh_TW": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
-    "zh_CN": "「[em7]盈盈一笑，向主角行了个万福礼[/em7]\n小女子无以为报，便送小哥……一句吉言吧！\n祝小哥往后行走江湖，桃花朵朵开，却片叶不沾身～」",
+    "zh_TW": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]，\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
+    "zh_CN": "「[em7]盈盈一笑，向主角行了个万福礼[/em7]，\n小女子无以为报，便送小哥……一句吉言吧！\n祝小哥往后行走江湖，桃花朵朵开，却片叶不沾身～」",
     "links": [2528]
   },
   {
@@ -244,7 +244,7 @@
     "actorID": "role102",
     "text": "「呵呵，奴家雖不討厭有話直說的男人，但此處著實無聊的很……小哥就當是陪陪我的興致，努力猜猜？」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「呵呵，奴家雖不討厭有話直說的男人，但此處著實無聊的很……小哥就當是陪陪我的興致，努力猜猜？」",
     "zh_CN": "「呵呵，奴家虽不讨厌有话直说的男人，但此处着实无聊的很……小哥就当是陪陪我的兴致，努力猜猜？」",
     "links": [2489]
@@ -263,7 +263,7 @@
     "actorID": "MC1",
     "text": "「姑娘想要的可是此物？」",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Buddhlood\")  == true and (Variable[\"F_BoxMapM01_12\"] == true)",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Buddhlood\")  == true and (Variable[\"F_BoxMapM01_12\"] == true);",
     "Description": "條件：若擁有【佛血酒】，佛血酒可以在水井中獲得",
     "zh_TW": "「姑娘想要的可是此物？」",
     "zh_CN": "「姑娘想要的可是此物？」",
@@ -292,7 +292,7 @@
     "entryID": 2495,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [2496]
   },
   {
@@ -308,7 +308,7 @@
     "entryID": 2497,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [2498]
   },
   {
@@ -402,7 +402,7 @@
     "actorID": "role101",
     "text": "「哈哈，小兄弟還太嫩哩！\n來，爺爺我在這兒等你呢，你要想喝，隨時奉陪！」",
     "Sequence": "",
-    "Conditions": "IsPassMiniGame()  == false",
+    "Conditions": "IsPassMiniGame()  == false;",
     "zh_TW": "「哈哈，小兄弟還太嫩哩！\n來，爺爺我在這兒等你呢，你要想喝，隨時奉陪！」",
     "zh_CN": "「哈哈，小兄弟还太嫩哩！\n来，爷爷我在这儿等你呢，你要想喝，随时奉陪！」",
     "links": [2518]
@@ -412,7 +412,7 @@
     "actorID": "role101",
     "text": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
     "Sequence": "",
-    "Conditions": "IsPassMiniGame()  == true",
+    "Conditions": "IsPassMiniGame()  == true;",
     "zh_TW": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
     "zh_CN": "「唉！小……噶儿！小哥～了不起啊～\n嘿嘿！能拼赢我的家伙……噶儿！第一次见！」",
     "links": [2515]
@@ -494,7 +494,7 @@
     "actorID": "role102",
     "text": "「……」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
     "links": [2523]
@@ -666,7 +666,7 @@
     "actorID": "MC1",
     "text": "「好重的酒味…」",
     "Sequence": "SetPortrait(MC1,pic=11);\nSetContinueMode(false);\nSetGameObjectShake(P0,ShakeNormal,XYAxis,1,20,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
-    "Conditions": "Variable[\"F_BoxMapM01_12\"] == false",
+    "Conditions": "Variable[\"F_BoxMapM01_12\"] == false;",
     "zh_TW": "「好重的酒味…」",
     "zh_CN": "「好重的酒味…」",
     "links": [2468]
@@ -676,7 +676,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（毫無反應，這位仁兄忙著呼呼大睡。）＊",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"StreetTactics\")  == true",
+    "Conditions": "IsSkillObtained(\"Player\", \"StreetTactics\")  == true;",
     "zh_TW": "[panel=6]＊（毫無反應，這位仁兄忙著呼呼大睡。）＊",
     "zh_CN": "[panel=6]＊（毫无反应，这位仁兄忙者呼呼大睡。）＊",
     "links": []
@@ -703,7 +703,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這位大姊自飲自樂，完全不理你。）＊",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Buddhlood\")  == false and (Variable[\"F_BoxMapM01_12\"] == true)",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Buddhlood\")  == false and (Variable[\"F_BoxMapM01_12\"] == true);",
     "zh_TW": "[panel=6]＊（這位大姊自飲自樂，完全不理你。）＊",
     "zh_CN": "[panel=6]＊（这位大姊自饮自乐，完全不理你。）＊",
     "links": []
@@ -784,7 +784,7 @@
     "text": "「這酒的名字，就叫……與妳天長地久！不知姐姐願不願意嘗一口？」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「這酒的名字，就叫……與妳天長地久！不知姐姐願不願意嘗一口？」",
-    "zh_CN": "「这酒的名字，就叫……与妳天长地久！不知姐姐愿不愿意尝一口？」",
+    "zh_CN": "「这酒的名字，就叫……与你天长地久！不知姐姐愿不愿意尝一口？」",
     "links": [2475, 2524]
   },
   {
@@ -792,8 +792,8 @@
     "actorID": "MC1",
     "text": "[em2][酒量檢定][跳過小遊戲][/em2]「當然沒問題囉…」",
     "Sequence": "",
-    "Conditions": "Variable[\"MyTime\"] < 6",
-    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Conditions": "Variable[\"MyTime\"] < 6;",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1;",
     "zh_TW": "[em2][酒量檢定][跳過小遊戲][/em2]「當然沒問題囉…」",
     "zh_CN": "[em2][酒量检定][跳过小游戏][/em2]「当然没问题啰…」",
     "links": [2559]
@@ -819,7 +819,7 @@
     "actorID": "MC1",
     "text": "「壞了，玩過頭了……嗚嗚，好、好暈，好想吐……」",
     "Sequence": "SetPortrait(MC1,pic=6);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「壞了，玩過頭了……嗚嗚，好、好暈，好想吐……」",
     "zh_CN": "「坏了，玩过头了……呜呜，好、好晕，好想吐……」",
     "links": [2562]
@@ -838,7 +838,7 @@
     "actorID": "role101",
     "text": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「唉！小……噶兒！小哥～了不起啊～\n嘿嘿！能拚贏我的傢伙……噶兒！第一次見！」",
     "zh_CN": "「唉！小……噶儿！小哥～了不起啊～\n嘿嘿！能拼赢我的家伙……噶儿！第一次见！」",
     "links": [2515]
@@ -848,7 +848,7 @@
     "actorID": "role2",
     "text": "[panel=6][em3][背景：街頭混混][/em3]（雖然這番話旁人聽起來或許刺耳，但在你看來卻倍感親切。這等市井伎倆，才是能讓你活下去的硬道理。）",
     "Sequence": "",
-    "Conditions": "IsBackGroundFit(\"Player\", \"Charlatan\")  == true",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Charlatan\")  == true;",
     "zh_TW": "[panel=6][em3][背景：街頭混混][/em3]（雖然這番話旁人聽起來或許刺耳，但在你看來卻倍感親切。這等市井伎倆，才是能讓你活下去的硬道理。）",
     "zh_CN": "[panel=6][em3][背景：街头混混][/em3]（虽然这番话旁人听起来或许刺耳，但在你看来却倍感亲切。这等市井伎俩，才是能让你活下去的硬道理。）",
     "links": [2565]

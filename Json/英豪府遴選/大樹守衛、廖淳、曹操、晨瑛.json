@@ -4,7 +4,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（大樹守衛的氣質截然不同，雖然依然穿著那身奇怪的裝扮，但站姿淵渟嶽峙，眼神清明。）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestState(\"CF22\") == \"success\"",
+    "Conditions": "CurrentQuestState(\"CF22\") == \"success\";",
     "zh_CN": "[panel=6]＊（大树守卫的气质截然不同，虽然依然穿着那身奇怪的装扮，但站姿渊渟岳峙，眼神清明。）＊",
     "links": [25]
   },
@@ -154,7 +154,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4182, 4183]
   },
   {
@@ -162,7 +162,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4182, 4183]
   },
   {
@@ -178,7 +178,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsSkillObtained(\"Player\", \"ScorchingGoldPalm\")  == true",
+    "Conditions": "IsSkillObtained(\"Player\", \"ScorchingGoldPalm\")  == true;",
     "Description": "有灼金掌",
     "links": [31]
   },
@@ -363,7 +363,7 @@
     "entryID": 4203,
     "actorID": "role133",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nDisableEventBG(FullScreen);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableEventBG(FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "大樹守衛消失",
     "links": []
   },
@@ -415,7 +415,7 @@
     "entryID": 4216,
     "actorID": "role133",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nContinue();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "大樹守衛消失",
     "links": []
   },
@@ -449,7 +449,7 @@
     "actorID": "role127",
     "text": "「那就先祝兄弟旗開得勝，在這大會中脫穎而出。」",
     "Sequence": "SetPortrait(role127,pic=1);",
-    "Script": "SetQuestEntryState(\"C1M1\", 6, \"success\")",
+    "Script": "SetQuestEntryState(\"C1M1\", 6, \"success\");",
     "Description": "任務更新",
     "zh_CN": "「那就先祝兄弟旗开得胜，在这大会中脱颖而出。」",
     "links": []
@@ -459,7 +459,7 @@
     "actorID": "role127",
     "text": "「那就先祝兄弟旗開得勝，在這大會中脫穎而出。」",
     "Sequence": "SetPortrait(role127,pic=1);",
-    "Conditions": "CurrentQuestEntryState(\"C1M1\", 6) == \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"C1M1\", 6) == \"success\";",
     "zh_CN": "「那就先祝兄弟旗开得胜，在这大会中脱颖而出。」",
     "links": []
   },
@@ -557,7 +557,7 @@
     "entryID": 4234,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nEnableEventBG(TreeGuardianLeave,FullScreen);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nEnableEventBG(TreeGuardianLeave,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "事件圖",
     "links": [4202]
   }

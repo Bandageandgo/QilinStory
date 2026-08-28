@@ -158,7 +158,7 @@
     "entryID": 24,
     "actorID": "role2",
     "text": "[panel=6]＊（只聽「錚」的一聲清脆劍鳴，蛇形怪劍應聲而出，劍刃在昏暗的光線下閃爍著幽綠的寒芒。）＊",
-    "Sequence": "ModifyData(AbilityExp,Player,Ability_STR,10);",
+    "Sequence": "ModifyData(AbilityExp,Player,Strength,10);",
     "Description": "檢定成功",
     "zh_CN": "[panel=6]＊（只听「铮」的一声清脆剑鸣，蛇形怪剑应声而出，剑刃在昏暗的光线下闪烁着幽绿的寒芒。）＊",
     "links": [25]
@@ -296,101 +296,38 @@
   {
     "entryID": 45,
     "actorID": "role2",
-    "text": "[panel=6]＊（你的視線被血色與黑霧吞沒。外界的聲音漸漸遠去，時間彷彿被凍結。此刻，你感覺到胸口那股異常的飢餓感如野火般竄起，幾乎要將理智燒毀——這是一股想吞噬眼前妖物的狂暴衝動！）＊",
-    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(BloodStain_1,Play);\nSetPortrait(MC1,pic=16);",
-    "zh_CN": "[panel=6]＊（你的视线被血色与黑雾吞没。外界的声音渐渐远去，时间仿佛被冻结。此刻，你感觉到胸口那股异常的饥饿感如野火般窜起，几乎要将理智烧毁——这是一股想吞噬眼前妖物的狂暴冲动！）＊",
-    "links": [46, 47]
+    "text": "[panel=6]＊（你的視線被血色與黑霧吞沒。外界的聲音漸漸遠去，四下聲息俱杳，天地似乎都停了。此刻，一股邪火自胸口竄起，燒得你神智漸失——你只想撲上去，把眼前那妖物生吞了！）＊",
+    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(BloodStain_1,Play);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Description": "共同旁白①。⚠ 待作者確認：原本是 SetPortrait(MC1,pic=16)，追蹤檔改為受傷的 pic=11，請看畫面是否正確。",
+    "zh_CN": "[panel=6]＊（你的视线被血色与黑雾吞没。外界的声音渐渐远去，四下声息俱杳，天地似乎都停了。此刻，一股邪火自胸口窜起，烧得你神智渐失——你只想扑上去，把眼前那妖物生吞了！）＊",
+    "links": [48]
   },
   {
     "entryID": 46,
     "actorID": "MC1",
-    "text": "「放任衝動，任由飢餓感蔓延」",
+    "text": "「……幫我。」",
     "Sequence": "",
-    "zh_CN": "「放任冲动，任由饥饿感蔓延」",
-    "links": [54]
+    "Description": "第一次選擇．開口。⛔ 選項不得寫成「向饕餮祈求」「使用力量」；選項節點不加 Sequence。",
+    "zh_CN": "「……帮我。」",
+    "links": [4245]
   },
   {
     "entryID": 47,
     "actorID": "MC1",
-    "text": "「咬緊牙關，努力保持理智」",
+    "text": "「………」",
     "Sequence": "",
-    "zh_CN": "「咬紧牙关，努力保持理智」",
-    "links": [48]
+    "Description": "第一次選擇．不開口。選項節點不加 Sequence。",
+    "zh_CN": "「………」",
+    "links": [4276]
   },
   {
     "entryID": 48,
     "actorID": "role2",
-    "text": "[panel=6]＊（那股衝動並無平息，反而越發猛烈！指甲深深掐進掌心，現在，倒在地上的妖物、甚至一旁受傷的同伴，竟都變成了散發著誘人氣息的血肉。[em2]那股無聲的意志在腦海中步步進逼：吃掉牠們。[/em2]）＊",
+    "text": "[panel=6]＊（那股邪勁沒有平息，反而越發猛烈。你的指甲深深掐進掌心——可是在你的感知裡，倒在地上的妖物、甚至一旁受傷的同伴，竟都變成了散發著誘人氣息的「血肉」。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（那股冲动并无平息，反而越发猛烈！指甲深深掐进掌心，现在，倒在地上的妖物、甚至一旁受伤的同伴，竟都变成了散发着诱人气息的血肉。[em2]那股无声的意志在脑海中步步进逼：吃掉它们。[/em2]）＊",
-    "links": [49, 50]
-  },
-  {
-    "entryID": 49,
-    "actorID": "MC1",
-    "text": "「順從這股渴望」",
-    "Sequence": "",
-    "zh_CN": "「顺从这股渴望」",
-    "links": [54]
-  },
-  {
-    "entryID": 50,
-    "actorID": "MC1",
-    "text": "「死守最後的理智，拒絕這股扭曲的認知」",
-    "Sequence": "",
-    "zh_CN": "「死守最后的理智，拒绝这股扭曲的认知」",
-    "links": [51]
-  },
-  {
-    "entryID": 51,
-    "actorID": "role2",
-    "text": "[panel=6]＊（彷彿有千萬隻螞蟻在啃咬你的腦髓。無窮無盡的飢餓感竟像化為實質且死死勒住你的咽喉，[em2]你知道：若不吞噬別人，就只能被這股力量吞噬！你已經遊走在崩潰的邊緣。[/em2]）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（仿佛有千万只蚂蚁在啃咬你的脑髓。无穷无尽的饥饿感竟像化为实质且死死勒住你的咽喉，[em2]你知道：若不吞噬别人，就只能被这股力量吞噬！你已经游走在崩溃的边缘。[/em2]）＊",
-    "links": [52, 53]
-  },
-  {
-    "entryID": 52,
-    "actorID": "MC1",
-    "text": "「徹底屈服，洩洪壓力」",
-    "Sequence": "",
-    "zh_CN": "「彻底屈服，泄洪压力」",
-    "links": [54]
-  },
-  {
-    "entryID": 53,
-    "actorID": "MC1",
-    "text": "「你知道沒有任何人可以控制你」",
-    "Sequence": "",
-    "zh_CN": "「你知道没有任何人可以控制你」",
-    "links": [55]
-  },
-  {
-    "entryID": 54,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你放棄了掙扎，任由那莫名的意志接管身體。你的嘴角不受控制地扯出一抹冷笑，眼中透出凶光——）＊",
-    "Sequence": "ModifyData(AbilityMaxLevel,Player,Leadership,2);\nModifyData(AbilityMaxLevel,Player,Strength,2);\nModifyData(AbilityMaxLevel,Player,Intelligence,2);\nModifyData(AbilityMaxLevel,Player,Politics,2);\nModifyData(AbilityMaxLevel,Player,Charisma,2);",
-    "Description": "饕餮的誘惑獎勵-超級大漢人",
-    "zh_CN": "[panel=6]＊（你放弃了挣扎，任由那莫名的意志接管身体。你的嘴角不受控制地扯出一抹冷笑，眼中透出凶光——）＊",
-    "links": [57]
-  },
-  {
-    "entryID": 55,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你死咬著牙關，憑著最後一絲清明死死將那股衝動壓在心底，即便劇痛讓你的五臟六腑都彷彿要裂開，你也未曾挪動半步。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你死咬着牙关，凭着最后一丝清明死死将那股冲动压在心底，即便剧痛让你的五脏六腑都仿佛要裂开，你也未曾挪动半步。）＊",
-    "links": [4171]
-  },
-  {
-    "entryID": 56,
-    "actorID": "MC21",
-    "text": "「總有一天，你會心甘情願祈求吾的。」",
-    "Sequence": "",
-    "Script": "Variable[\"HungryDesire\"] = Variable[\"HungryDesire\"] + 1",
-    "Description": "饕餮誘惑失敗次數+1",
-    "zh_CN": "「总有一天，你会心甘情愿祈求吾的。」",
-    "links": [57]
+    "Description": "共同旁白②",
+    "zh_CN": "[panel=6]＊（那股邪劲没有平息，反而越发猛烈。你的指甲深深掐进掌心——可是在你的感知里，倒在地上的妖物、甚至一旁受伤的同伴，竟都变成了散发着诱人气息的「血肉」。）＊",
+    "links": [4243]
   },
   {
     "entryID": 57,
@@ -399,7 +336,7 @@
     "Sequence": "AudioControl(StopMusic);\nStopAllParticle();\nOpenPanel(1, close);",
     "Description": "停掉音樂",
     "zh_CN": "[panel=6]＊（那股似无穷无尽、永不知餍足的饿意骤然退去，随着窒息般的压迫感消散，你终于撑不住，彻底昏死了过去。）＊",
-    "links": [58]
+    "links": [4166]
   },
   {
     "entryID": 58,
@@ -497,13 +434,15 @@
     "text": "「至於你！下次再敢把自己搞成這副德性，我就……我就……」",
     "Sequence": "SetPortrait(MC6,pic=2);\nSetPortrait(MC1,pic=9);",
     "zh_CN": "「至于你！下次再敢把自己搞成这副德性，我就……我就……」",
-    "links": [70]
+    "links": [4360]
   },
   {
     "entryID": 70,
     "actorID": "MC6",
     "text": "「[em7]話說到一半，實在忍不住笑了出來，隨即雙頰漲得通紅，慌亂地轉過身去[/em7]：總、總之我去叫外面那兩個吵死人的傢伙進來！省得他們天天在我的藥房外頭探頭探腦，妨礙得很！」",
     "Sequence": "SetPortrait(MC6,pic=5);",
+    "Conditions": "Variable[\"＿＿4\"] == false;",
+    "Description": "原版：雍仔沒被拍倒時才說得通（「那兩個吵死人的傢伙」＝娜娜與雍仔）。⚠ 待作者填：Conditions 的 ＿＿4 變數名。",
     "zh_CN": "「[em7]话说到一半，实在忍不住笑了出来，随即双颊涨得通红，慌乱地转过身去[/em7]：总、总之我去叫外面那两个吵死人的家伙进来！省得他们天天在我的药房外头探头探脑，妨碍得很！」",
     "links": [71]
   },
@@ -512,7 +451,8 @@
     "actorID": "role2",
     "text": "[panel=6]＊（不一會兒，伴隨著一陣喧鬧的腳步聲，赫連娜娜和雍仔急匆匆地衝進了客房。他們這一個月一直在英豪府作些打雜的事情，就等著你醒來的這一天。）＊",
     "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_35);",
-    "Description": "換音樂",
+    "Conditions": "Variable[\"＿＿4\"] == false;",
+    "Description": "原版甦醒段（雍仔活蹦亂跳衝進來）——只在雍仔沒被拍倒時播。⚠ 待作者填：Conditions 的 ＿＿4 變數名。",
     "zh_CN": "[panel=6]＊（不一会儿，伴随着一阵喧闹的脚步声，赫连娜娜和雍仔急匆匆地冲进了客房。他们这一个月一直在英豪府作些打杂的事情，就等着你醒来的这一天。）＊",
     "links": [72]
   },
@@ -615,16 +555,16 @@
   {
     "entryID": 84,
     "actorID": "MC3",
-    "text": "[panel=4]「能從那種邪物手下活命，甚至護住了同伴，算你勉強過得去。好好養傷，等你恢復了，我們再打一場。」",
-    "Sequence": "DisableCharacterExpression(3);\nEnableCharacterExpression(4,MC3,Meditate);",
-    "zh_CN": "[panel=4]「能从那种邪物手下活命，甚至护住了同伴，算你勉强过得去。好好养伤，等你恢复了，我们再打一场。」",
+    "text": "[panel=1]「能從那種邪物手下活命，甚至護住了同伴，算你勉強過得去。好好養傷，等你恢復了，我們再打一場。」",
+    "Sequence": "DisableCharacterExpression(3);\nEnableCharacterExpression(1,MC3,Meditate);",
+    "zh_CN": "[panel=1]「能从那种邪物手下活命，甚至护住了同伴，算你勉强过得去。好好养伤，等你恢复了，我们再打一场。」",
     "links": [85]
   },
   {
     "entryID": 85,
     "actorID": "MC7",
     "text": "[panel=2]「哎呀呀，大家都擠在這裡做什麼，病人需要靜養，徐師父的羹還是留給呂信吃吧。不過看你這精神頭，想必是沒大礙了。大難不死，必有後福啊。」",
-    "Sequence": "SetPortrait(MC7,pic=3);\nEnableCharacterExpression(2,MC7,Meditate);\nDisableCharacterExpression(4);",
+    "Sequence": "SetPortrait(MC7,pic=3);\nEnableCharacterExpression(2,MC7,Meditate);\nDisableCharacterExpression(1);",
     "zh_CN": "[panel=2]「哎呀呀，大家都挤在这里做什么，病人需要静养，徐师父的羹还是留给吕信吃吧。不过看你这精神头，想必是没大碍了。大难不死，必有后福啊。」",
     "links": [86]
   },
@@ -957,7 +897,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [4164]
   },
@@ -966,7 +906,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [4159]
   },
@@ -991,6 +931,14 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,4);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥",
+    "links": [4242]
+  },
+  {
+    "entryID": 4242,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
     "links": [4161, 4162]
   },
   {
@@ -1005,10 +953,10 @@
     "entryID": 4168,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nDisableEventBG(FullScreen);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Script": "SetQuestState(\"C1M2\", \"success\")",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableEventBG(FullScreen)@1;\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(5, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Script": "SetQuestState(\"C1M2\", \"success\");",
     "Description": "轉場，完成任務",
-    "links": [60]
+    "links": [4307]
   },
   {
     "entryID": 4169,
@@ -1024,14 +972,6 @@
     "Sequence": "SetPortrait(MC1,pic=19);",
     "zh_CN": "「呃啊——！」",
     "links": [4241]
-  },
-  {
-    "entryID": 4171,
-    "actorID": "MC21",
-    "text": "「…」",
-    "Sequence": "",
-    "zh_CN": "「…」",
-    "links": [56]
   },
   {
     "entryID": 4172,
@@ -1054,15 +994,15 @@
     "entryID": 4174,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(GameDate,180,3,Early);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Clinic)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(GameDate,180,3,Early)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Clinic)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "推進日期,轉場",
-    "links": [101]
+    "links": [4367]
   },
   {
     "entryID": 4234,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入",
     "links": [104]
   },
@@ -1070,7 +1010,7 @@
     "entryID": 4235,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出",
     "links": [4239]
   },
@@ -1086,7 +1026,7 @@
     "entryID": 4237,
     "actorID": "0",
     "text": "",
-    "Sequence": "LoadLevel(Command_HallOfHeroes);\nSetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1) ;\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
+    "Sequence": "LoadLevel(Command_HallOfHeroes);\nSetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1);\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
     "Description": "播放影片,關閉音樂、轉移到英豪府根據地",
     "links": [4236]
   },
@@ -1118,7 +1058,1150 @@
     "entryID": 4241,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableEventBG(WhiteTigerDaoistFight,FullScreen);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableEventBG(WhiteTigerDaoistFight,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [45]
+  },
+  {
+    "entryID": 4243,
+    "actorID": "role2",
+    "text": "[panel=6]＊（有什麼東西在你懷裡醒了。它沒有說話，只是在看——透過你的眼睛，看那個扶著牆喘氣的胖道士，看那個拔刀擋在你身前的姑娘。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（有什么东西在你怀里醒了。它没有说话，只是在看——透过你的眼睛，看那个扶着墙喘气的胖道士，看那个拔刀挡在你身前的姑娘。）＊",
+    "links": [4244]
+  },
+  {
+    "entryID": 4244,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的手在抖。你知道自己撐不了多久：白虎道妖還沒倒下，而你連手上的武器都快握不住了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你的手在抖。你知道自己撑不了多久：白虎道妖还没倒下，而你连手上的武器都快握不住了。）＊",
+    "links": [46, 47]
+  },
+  {
+    "entryID": 4245,
+    "actorID": "MC1",
+    "text": "「[em7]幾乎聽不見自己的聲音[/em7]……幫我。」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Script": "Variable[\"＿＿1\"] = true;",
+    "Description": "⚠ 待作者填：變數名 ＿＿1（玩家開過口，醒來四條夢用它分流）。AI 不得自創變數，名字要先在 Unity 變數表建好。",
+    "zh_CN": "「[em7]几乎听不见自己的声音[/em7]……帮我。」",
+    "links": [4246]
+  },
+  {
+    "entryID": 4246,
+    "actorID": "role2",
+    "text": "[panel=6]＊（話出口的瞬間，那股熱從懷裡衝上來，衝過手臂、衝進握劍的手。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（话出口的瞬间，那股热从怀里冲上来，冲过手臂、冲进握剑的手。）＊",
+    "links": [4247]
+  },
+  {
+    "entryID": 4247,
+    "actorID": "MC21",
+    "text": "[panel=1]「終於。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "⚠ 顯示名必須是「少女」，揭露前不得出現「饕餮」二字。",
+    "zh_CN": "[panel=1]「终于。」",
+    "links": [4248]
+  },
+  {
+    "entryID": 4248,
+    "actorID": "role2",
+    "text": "[panel=6]＊（就一個詞。她沒有多說。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（就一个词。她没有多说。）＊",
+    "links": [4249]
+  },
+  {
+    "entryID": 4249,
+    "actorID": "role2",
+    "text": "[panel=6]＊（白虎道妖那身盤了不知多少年的黑氣，在一瞬間被抽得乾乾淨淨。牠連叫都沒叫出來，軟成一張皮，倒下去。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（白虎道妖那身盘了不知多少年的黑气，在一瞬间被抽得干干净净。它连叫都没叫出来，软成一张皮，倒下去。）＊",
+    "links": [4250]
+  },
+  {
+    "entryID": 4250,
+    "actorID": "role2",
+    "text": "[panel=6]＊（大廳安靜了。你站著，喘氣，覺得自己從來沒有這麼有力氣過。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（大厅安静了。你站着，喘气，觉得自己从来没有这么有力气过。）＊",
+    "links": [4251]
+  },
+  {
+    "entryID": 4251,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然後那股熱沒有退。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然后那股热没有退。）＊",
+    "links": [4252]
+  },
+  {
+    "entryID": 4252,
+    "actorID": "MC22",
+    "text": "[panel=2]「大俠……？剛才那是——」",
+    "Sequence": "SetPortrait(MC22,pic=14);\nEnableCharacterExpression(2,MC22,Question);",
+    "zh_CN": "[panel=2]「大侠……？刚才那是——」",
+    "links": [4253]
+  },
+  {
+    "entryID": 4253,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她的聲音聽起來很遠。你正看著她。你在想她身上有多少。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Anger);",
+    "zh_CN": "[panel=6]＊（她的声音听起来很远。你正看着她。你在想她身上有多少。）＊",
+    "links": [4254]
+  },
+  {
+    "entryID": 4254,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "門檻分流（狀態比較，⛔ 禁止 BeginDiceRoll）。⚠ 待作者填：看哪一項能力、門檻值多少——見 劇情/骰子場次_數值待定名單.md #7（整欄仍是「？」）。下面兩條分支的 Conditions 現為 ＿＿ 佔位。",
+    "links": [4255, 4267]
+  },
+  {
+    "entryID": 4255,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你朝她走了一步。）＊",
+    "Sequence": "",
+    "Conditions": "＿＿",
+    "Description": "⚠ 待作者填 Conditions：壓不住（狀態 < 門檻，絕大多數）。門檻項目與數值見名單 #7。",
+    "zh_CN": "[panel=6]＊（你朝她走了一步。）＊",
+    "links": [4256]
+  },
+  {
+    "entryID": 4256,
+    "actorID": "MC20",
+    "text": "[panel=1]「兄弟——？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Question);",
+    "zh_CN": "[panel=1]「兄弟——？」",
+    "links": [4257]
+  },
+  {
+    "entryID": 4257,
+    "actorID": "role2",
+    "text": "[panel=6]＊（第二步。你的手已經抬起來了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（第二步。你的手已经抬起来了。）＊",
+    "links": [4258]
+  },
+  {
+    "entryID": 4258,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一股邪氣在經脈裡橫衝直撞，撞到哪裡，哪裡的內力便散了。它不是在給你力氣——是把你自己的內力往外擠。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（一股邪气在经脉里横冲直撞，撞到哪里，哪里的内力便散了。它不是在给你力气——是把你自己的内力往外挤。）＊",
+    "links": [4259]
+  },
+  {
+    "entryID": 4259,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你想按住它。你按不住。你連自己還剩多少都數不出來了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你想按住它。你按不住。你连自己还剩多少都数不出来了。）＊",
+    "links": [4260]
+  },
+  {
+    "entryID": 4260,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然後有人從你身後把你整個人壓進地裡。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然后有人从你身后把你整个人压进地里。）＊",
+    "links": [4261]
+  },
+  {
+    "entryID": 4261,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那隻手很大，很重，按著你的後頸，像按住一頭掙扎的牲口。你聽見骨頭在響，不確定是誰的。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那只手很大，很重，按着你的后颈，像按住一头挣扎的牲口。你听见骨头在响，不确定是谁的。）＊",
+    "links": [4262]
+  },
+  {
+    "entryID": 4262,
+    "actorID": "MC5",
+    "text": "[panel=3]「[em7]另一隻手已經扣住你握劍的腕子[/em7]，小子。放手。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC5,pic=2);\nEnableCharacterExpression(3,MC5,Anger);",
+    "zh_CN": "[panel=3]「[em7]另一只手已经扣住你握剑的腕子[/em7]，小子。放手。」",
+    "links": [4263]
+  },
+  {
+    "entryID": 4263,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你放不了。你根本聽不懂他在說什麼。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你放不了。你根本听不懂他在说什么。）＊",
+    "links": [4264]
+  },
+  {
+    "entryID": 4264,
+    "actorID": "role2",
+    "text": "[panel=6]＊（於是他換了個辦法。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（于是他换了个办法。）＊",
+    "links": [4265]
+  },
+  {
+    "entryID": 4265,
+    "actorID": "role2",
+    "text": "[panel=6]＊（後腦一沉。那股熱、那個大廳、那兩張臉，一起熄了。）＊",
+    "Sequence": "DisableCharacterExpression(3);",
+    "zh_CN": "[panel=6]＊（后脑一沉。那股热、那个大厅、那两张脸，一起熄了。）＊",
+    "links": [4266]
+  },
+  {
+    "entryID": 4266,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ModifyData(＿＿);",
+    "Description": "代價節點：她吃了，而且沒停。⚠ 待作者填：名單 #7「壓不住」欄——當前值 −？／能力最大值 +？（建議高於壓得住）。填好後把 ModifyData(＿＿) 換成實際指令。",
+    "links": [4166]
+  },
+  {
+    "entryID": 4267,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你朝她走了一步。）＊",
+    "Sequence": "",
+    "Conditions": "＿＿",
+    "Description": "⚠ 待作者填 Conditions：壓得住（狀態 ≥ 門檻，少數）。門檻項目與數值見名單 #7。",
+    "zh_CN": "[panel=6]＊（你朝她走了一步。）＊",
+    "links": [4268]
+  },
+  {
+    "entryID": 4268,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然後你把劍插進地裡，整個人跪了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "[panel=6]＊（然后你把剑插进地里，整个人跪了下去。）＊",
+    "links": [4269]
+  },
+  {
+    "entryID": 4269,
+    "actorID": "role2",
+    "text": "[panel=6]＊（心神大亂。再慢一步，人便要朝那個聲音走過去。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（心神大乱。再慢一步，人便要朝那个声音走过去。）＊",
+    "links": [4270]
+  },
+  {
+    "entryID": 4270,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你催動自身內力去抗。內力沿經脈一寸寸耗去，如以血澆火——火未滅，自己先空了一截。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你催动自身内力去抗。内力沿经脉一寸寸耗去，如以血浇火——火未灭，自己先空了一截。）＊",
+    "links": [4271]
+  },
+  {
+    "entryID": 4271,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那股邪氣還在胸口，只是不再亂竄。你只覺內力已失了大半，渾身虛浮，說不出的難受。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那股邪气还在胸口，只是不再乱窜。你只觉内力已失了大半，浑身虚浮，说不出的难受。）＊",
+    "links": [4272]
+  },
+  {
+    "entryID": 4272,
+    "actorID": "role2",
+    "text": "[panel=6]＊（熱退了。你跪在原地發抖，抖得停不下來。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（热退了。你跪在原地发抖，抖得停不下来。）＊",
+    "links": [4273]
+  },
+  {
+    "entryID": 4273,
+    "actorID": "role2",
+    "text": "[panel=6]＊（腳步聲。有人在你面前蹲了下來，看了你很久，才伸手把你扶住。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（脚步声。有人在你面前蹲了下来，看了你很久，才伸手把你扶住。）＊",
+    "links": [4274]
+  },
+  {
+    "entryID": 4274,
+    "actorID": "MC5",
+    "text": "[panel=3]「[em7]沒有問你剛才在做什麼[/em7]，……鬆手。劍不會跑。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC5,pic=3);\nEnableCharacterExpression(3,MC5,Meditate);",
+    "zh_CN": "[panel=3]「[em7]没有问你刚才在做什么[/em7]，……松手。剑不会跑。」",
+    "links": [4275]
+  },
+  {
+    "entryID": 4275,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(3);\nModifyData(＿＿);",
+    "Script": "Variable[\"＿＿2\"] = true;",
+    "Description": "代價節點：她吃了，他自己壓住了。⚠ 待作者填兩項：①名單 #7「壓得住」欄的當前 −／最大 ＋，換掉 ModifyData(＿＿)；②變數名 ＿＿2（他自己壓住的，醒來夢 A-1／A-2 用它分流）。",
+    "links": [57]
+  },
+  {
+    "entryID": 4276,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你死咬著牙關，憑著最後一絲清明死死將那股邪勁壓在心底。你沒有開口。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "[panel=6]＊（你死咬着牙关，凭着最后一丝清明死死将那股邪劲压在心底。你没有开口。）＊",
+    "links": [4277]
+  },
+  {
+    "entryID": 4277,
+    "actorID": "role2",
+    "text": "[panel=6]＊（劇痛讓你的五臟六腑都像要裂開。你沒有挪動半步。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（剧痛让你的五脏六腑都像要裂开。你没有挪动半步。）＊",
+    "links": [4278]
+  },
+  {
+    "entryID": 4278,
+    "actorID": "role2",
+    "text": "[panel=6]＊（白虎道妖沒有補上那一下。牠歪著頭看你，像在看一件已經不會動的東西。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（白虎道妖没有补上那一下。它歪着头看你，像在看一件已经不会动的东西。）＊",
+    "links": [4279]
+  },
+  {
+    "entryID": 4279,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然後牠轉過身，朝那個扶著牆、還在喘的胖道士走過去。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然后它转过身，朝那个扶着墙、还在喘的胖道士走过去。）＊",
+    "links": [4280]
+  },
+  {
+    "entryID": 4280,
+    "actorID": "MC20",
+    "text": "[panel=1]「……等、等等！有話好——」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Nervous_2);",
+    "zh_CN": "[panel=1]「……等、等等！有话好——」",
+    "links": [4281]
+  },
+  {
+    "entryID": 4281,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一爪。符紙飛得滿廳都是。雍仔撞上石壁，滑下去，就不動了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Script": "Variable[\"＿＿4\"] = true;",
+    "Description": "⚠ 待作者填：變數名 ＿＿4（雍仔被拍倒了，康復段延遲揭露用它分流）。⛔ 旁白只寫「不動了」，不得寫死、不得讓任何角色確認死亡——這是後面回收的關鍵。",
+    "zh_CN": "[panel=6]＊（一爪。符纸飞得满厅都是。雍仔撞上石壁，滑下去，就不动了。）＊",
+    "links": [4282]
+  },
+  {
+    "entryID": 4282,
+    "actorID": "MC22",
+    "text": "[panel=2]「雍仔——！」",
+    "Sequence": "SetPortrait(MC22,pic=10);\nEnableCharacterExpression(2,MC22,Pain);",
+    "zh_CN": "[panel=2]「雍仔——！」",
+    "links": [4283]
+  },
+  {
+    "entryID": 4283,
+    "actorID": "role2",
+    "text": "[panel=6]＊（牠又回過頭來看你。牠樂在其中。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=6]＊（它又回过头来看你。它乐在其中。）＊",
+    "links": [4284]
+  },
+  {
+    "entryID": 4284,
+    "actorID": "MC21",
+    "text": "[panel=1]「[em7]不以為然[/em7]，真不入流。殺，還沒殺夠。」",
+    "Sequence": "SetPortrait(MC21,pic=3);\nEnableCharacterExpression(1,MC21,Anger_2);",
+    "Description": "⚠ 顯示名必須是「少女」。這句罵的是道妖，不是主角。",
+    "zh_CN": "[panel=1]「[em7]不以为然[/em7]，真不入流。杀，还没杀够。」",
+    "links": [4285]
+  },
+  {
+    "entryID": 4285,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她沒有看倒下去的那個。視線在大廳裡慢慢轉，停在還能動的東西上——看了一眼你。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她没有看倒下去的那个。视线在大厅里慢慢转，停在还能动的东西上——看了一眼你。）＊",
+    "links": [4286]
+  },
+  {
+    "entryID": 4286,
+    "actorID": "MC21",
+    "text": "[panel=1]「你呢。再等，牠就換一塊。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "⚠ 顯示名必須是「少女」。「一塊」是她的單位，不得改成「一個人」。",
+    "zh_CN": "[panel=1]「你呢。再等，它就换一块。」",
+    "links": [4287, 4288]
+  },
+  {
+    "entryID": 4287,
+    "actorID": "MC1",
+    "text": "「……幫我。」",
+    "Sequence": "",
+    "Description": "第二次選擇。字面與第一次完全相同，價錢不同。",
+    "zh_CN": "「……帮我。」",
+    "links": [4245]
+  },
+  {
+    "entryID": 4288,
+    "actorID": "MC1",
+    "text": "「………」",
+    "Sequence": "",
+    "zh_CN": "「………」",
+    "links": [4289]
+  },
+  {
+    "entryID": 4289,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你沒有開口。你去搆那把劍。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "[panel=6]＊（你没有开口。你去够那把剑。）＊",
+    "links": [4290]
+  },
+  {
+    "entryID": 4290,
+    "actorID": "role2",
+    "text": "[panel=6]＊（手指合不攏，你用另一隻手把它們一根一根壓上劍柄。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（手指合不拢，你用另一只手把它们一根一根压上剑柄。）＊",
+    "links": [4291]
+  },
+  {
+    "entryID": 4291,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那東西還在等你。牠不急，你急。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（那东西还在等你。它不急，你急。）＊",
+    "links": [4292]
+  },
+  {
+    "entryID": 4292,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,＿＿);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "二次拒絕．進入戰鬥（白虎道妖／重傷狀態）。⚠ 待作者填：戰鬥場次 ID（BeginFight(Combat,＿＿)），追蹤檔明令不可沿用其他場次數字。",
+    "links": [4293]
+  },
+  {
+    "entryID": 4293,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [4294, 4298]
+  },
+  {
+    "entryID": 4294,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "Variable[\"＿＿3\"] = true;",
+    "Conditions": "IsPassFight()  == true;",
+    "Description": "戰鬥成功。⚠ 待作者填：變數名 ＿＿3（二次拒絕打贏了）。醒來時 IsPassFight() 已失效，夢 B-1／B-2 一定要靠變數分流。",
+    "links": [4295]
+  },
+  {
+    "entryID": 4295,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不知道第幾下之後，那東西不動了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（不知道第几下之后，那东西不动了。）＊",
+    "links": [4296]
+  },
+  {
+    "entryID": 4296,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你也站不住了。劍先落地，然後是你。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "[panel=6]＊（你也站不住了。剑先落地，然后是你。）＊",
+    "links": [4297]
+  },
+  {
+    "entryID": 4297,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡那個從頭到尾只是靜靜看著。她沒有出手，連聲音也沒有。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Description": "全劇唯一一條「她一口都沒吃到」的通關方式：能力不掉、最大值也不漲。",
+    "zh_CN": "[panel=6]＊（怀里那个从头到尾只是静静看着。她没有出手，连声音也没有。）＊",
+    "links": [58]
+  },
+  {
+    "entryID": 4298,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight()  == false;",
+    "Description": "戰鬥失敗",
+    "links": [4299]
+  },
+  {
+    "entryID": 4299,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的劍脫手了。你聽見自己的膝蓋撞在石板上，聲音很遠。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "[panel=6]＊（你的剑脱手了。你听见自己的膝盖撞在石板上，声音很远。）＊",
+    "links": [4300]
+  },
+  {
+    "entryID": 4300,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那隻爪子舉起來了。懷裡那個東西沒有動。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那只爪子举起来了。怀里那个东西没有动。）＊",
+    "links": [4301]
+  },
+  {
+    "entryID": 4301,
+    "actorID": "role2",
+    "text": "[panel=6]＊（第一下你還擋了。第二下之後，你就數不清了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（第一下你还挡了。第二下之后，你就数不清了。）＊",
+    "links": [4302]
+  },
+  {
+    "entryID": 4302,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然後那身黑氣忽然被什麼從中間劈開。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然后那身黑气忽然被什么从中间劈开。）＊",
+    "links": [4303]
+  },
+  {
+    "entryID": 4303,
+    "actorID": "MC5",
+    "text": "[panel=3]「——讓開！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC5,pic=2);\nEnableCharacterExpression(3,MC5,Anger);",
+    "zh_CN": "[panel=3]「——让开！」",
+    "links": [4304]
+  },
+  {
+    "entryID": 4304,
+    "actorID": "role2",
+    "text": "[panel=6]＊（後面的事你只看得見片段：刀光、翻倒的火盆、那東西被逼退時發出的聲音。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（后面的事你只看得见片段：刀光、翻倒的火盆、那东西被逼退时发出的声音。）＊",
+    "links": [4305]
+  },
+  {
+    "entryID": 4305,
+    "actorID": "role2",
+    "text": "[panel=6]＊（最後是一雙寬大粗糙的手把你從冰冷的地面上抱起來。那個人一邊走一邊在罵，罵得很難聽，可是沒有停下腳步。）＊",
+    "Sequence": "DisableCharacterExpression(3);",
+    "zh_CN": "[panel=6]＊（最后是一双宽大粗糙的手把你从冰冷的地面上抱起来。那个人一边走一边在骂，骂得很难听，可是没有停下脚步。）＊",
+    "links": [4306]
+  },
+  {
+    "entryID": 4306,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ModifyData(＿＿);",
+    "Description": "打輸：被打成半死，當前值大掉（屬傷害系統，不進名單 #7；她一口都沒吃到，最大值不漲）。⚠ 待作者填：當前值大掉的數值，換掉 ModifyData(＿＿)。",
+    "links": [4168]
+  },
+  {
+    "entryID": 4307,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "醒來四條夢的分流。四條都有夢——她每次都在，因為那片空本來就是她在的地方。",
+    "links": [4308, 4315, 4322, 4327]
+  },
+  {
+    "entryID": 4308,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那片無窮大的空又回來了。沒有溫度，沒有光——跟上一次一模一樣。你原以為會有什麼不同。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"＿＿1\"] == true and (Variable[\"＿＿2\"] == true);",
+    "Description": "夢 A-1：開口．壓得住（他自己跪下來停的）。⚠ 待作者填：Conditions 裡的 ＿＿1／＿＿2 變數名。",
+    "zh_CN": "[panel=6]＊（那片无穷大的空又回来了。没有温度，没有光——跟上一次一模一样。你原以为会有什么不同。）＊",
+    "links": [4309]
+  },
+  {
+    "entryID": 4309,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小姑娘坐在原處。她也跟上一次一模一樣。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（小姑娘坐在原处。她也跟上一次一模一样。）＊",
+    "links": [4310]
+  },
+  {
+    "entryID": 4310,
+    "actorID": "MC21",
+    "text": "[panel=1]「你跪下去了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "zh_CN": "[panel=1]「你跪下去了。」",
+    "links": [4311]
+  },
+  {
+    "entryID": 4311,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "",
+    "zh_CN": "「……」",
+    "links": [4312]
+  },
+  {
+    "entryID": 4312,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她沒有問為什麼。你等了一會兒，發現她也不打算問。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她没有问为什么。你等了一会儿，发现她也不打算问。）＊",
+    "links": [4313]
+  },
+  {
+    "entryID": 4313,
+    "actorID": "MC21",
+    "text": "[panel=1]「那個身上還有的。你不要了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "「你不要了」是過去式的報告，不是催他下次拿多一點。不得改寫成任何指向下一次的句子。",
+    "zh_CN": "[panel=1]「那个身上还有的。你不要了。」",
+    "links": [4314]
+  },
+  {
+    "entryID": 4314,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有責怪的意思，也沒有可惜。像在說今天沒有下雨。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（没有责怪的意思，也没有可惜。像在说今天没有下雨。）＊",
+    "links": [4331, 4332]
+  },
+  {
+    "entryID": 4315,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那片無窮大的空又回來了。沒有溫度，沒有光——跟上一次一模一樣。你原以為會有什麼不同。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"＿＿1\"] == true and (Variable[\"＿＿2\"] == false);",
+    "Description": "夢 A-2：開口．壓不住（徐榮把他打昏的）。⚠ 待作者填：Conditions 裡的 ＿＿1／＿＿2 變數名。",
+    "zh_CN": "[panel=6]＊（那片无穷大的空又回来了。没有温度，没有光——跟上一次一模一样。你原以为会有什么不同。）＊",
+    "links": [4316]
+  },
+  {
+    "entryID": 4316,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小姑娘坐在原處。她也跟上一次一模一樣。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（小姑娘坐在原处。她也跟上一次一模一样。）＊",
+    "links": [4317]
+  },
+  {
+    "entryID": 4317,
+    "actorID": "MC21",
+    "text": "[panel=1]「你走了兩步。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "zh_CN": "[panel=1]「你走了两步。」",
+    "links": [4318]
+  },
+  {
+    "entryID": 4318,
+    "actorID": "MC1",
+    "text": "「我沒有——」",
+    "Sequence": "",
+    "zh_CN": "「我没有——」",
+    "links": [4319]
+  },
+  {
+    "entryID": 4319,
+    "actorID": "MC21",
+    "text": "[panel=1]「有個大的把你按住了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "徐榮一律寫「那個大的」「有個大的」，不得寫成「那個人」——她不用人的量詞。",
+    "zh_CN": "[panel=1]「有个大的把你按住了。」",
+    "links": [4320]
+  },
+  {
+    "entryID": 4320,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她說的是那隻按著你後頸的手。她沒有說那是誰。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她说的是那只按着你后颈的手。她没有说那是谁。）＊",
+    "links": [4321]
+  },
+  {
+    "entryID": 4321,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她也沒有提娜娜。在她那裡，剛才發生的事情似乎只有「兩步」和「一隻手」。）＊",
+    "Sequence": "",
+    "Description": "最狠的地方是她漏掉的那件事——他差一點對娜娜動手，她連提都沒提。旁白只做觀察，不得下任何結論。",
+    "zh_CN": "[panel=6]＊（她也没有提娜娜。在她那里，刚才发生的事情似乎只有「两步」和「一只手」。）＊",
+    "links": [4333, 4334]
+  },
+  {
+    "entryID": 4322,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那片無窮大的空又回來了。小姑娘坐在原處，沒有走過來。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"＿＿1\"] == false and (Variable[\"＿＿3\"] == true);",
+    "Description": "夢 B-1：拒絕到底．戰鬥勝利。⚠ 待作者填：Conditions 裡的 ＿＿1／＿＿3 變數名。醒來時 IsPassFight() 已失效，一定要用變數。",
+    "zh_CN": "[panel=6]＊（那片无穷大的空又回来了。小姑娘坐在原处，没有走过来。）＊",
+    "links": [4323]
+  },
+  {
+    "entryID": 4323,
+    "actorID": "MC21",
+    "text": "[panel=1]「……你把那個打死了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "zh_CN": "[panel=1]「……你把那个打死了。」",
+    "links": [4324]
+  },
+  {
+    "entryID": 4324,
+    "actorID": "MC21",
+    "text": "[panel=1]「用你自己的。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "這兩句是報告，不是稱讚也不是抱怨。評價要在乎對方，而她不在乎。",
+    "zh_CN": "[panel=1]「用你自己的。」",
+    "links": [4325]
+  },
+  {
+    "entryID": 4325,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她看了你很久，久到你以為她要說第三句。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她看了你很久，久到你以为她要说第三句。）＊",
+    "links": [4326]
+  },
+  {
+    "entryID": 4326,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她沒有。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她没有。）＊",
+    "links": [4335, 4336]
+  },
+  {
+    "entryID": 4327,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那片無窮大的空又回來了。小姑娘坐在原處，兩隻腳晃著。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"＿＿1\"] == false and (Variable[\"＿＿3\"] == false);",
+    "Description": "夢 B-2：拒絕到底．戰鬥失敗。⚠ 待作者填：Conditions 裡的 ＿＿1／＿＿3 變數名。",
+    "zh_CN": "[panel=6]＊（那片无穷大的空又回来了。小姑娘坐在原处，两只脚晃着。）＊",
+    "links": [4328]
+  },
+  {
+    "entryID": 4328,
+    "actorID": "MC21",
+    "text": "[panel=1]「哼。又搞砸了。」",
+    "Sequence": "SetPortrait(MC21,pic=2);\nEnableCharacterExpression(1,MC21,Anger);",
+    "Description": "她不討債、不抱怨自己沒吃到、不說「早叫你開口」。",
+    "zh_CN": "[panel=1]「哼。又搞砸了。」",
+    "links": [4329]
+  },
+  {
+    "entryID": 4329,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她看著你，晃著腳，什麼也沒問。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她看着你，晃着脚，什么也没问。）＊",
+    "links": [4330]
+  },
+  {
+    "entryID": 4330,
+    "actorID": "MC21",
+    "text": "[panel=1]「……有人把你搬走了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "第二句是報告，她講徐榮用「有人」。",
+    "zh_CN": "[panel=1]「……有人把你搬走了。」",
+    "links": [4337, 4338]
+  },
+  {
+    "entryID": 4331,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true;",
+    "Description": "惡神碎片分支閘門：身上有「惡神碎片」才走碎片段（劇情/惡神碎片(夢).md 整合進來）。⚠ 待作者處理：新貴重品 EvilGodFragment 是 2026-08-27 自創，Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片），否則這個 Conditions 永遠為 false。",
+    "links": [4340]
+  },
+  {
+    "entryID": 4332,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == false;",
+    "Description": "沒有惡神碎片：直接收夢。",
+    "links": [4339]
+  },
+  {
+    "entryID": 4333,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true;",
+    "Description": "惡神碎片分支閘門：身上有「惡神碎片」才走碎片段（劇情/惡神碎片(夢).md 整合進來）。⚠ 待作者處理：新貴重品 EvilGodFragment 是 2026-08-27 自創，Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片），否則這個 Conditions 永遠為 false。",
+    "links": [4340]
+  },
+  {
+    "entryID": 4334,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == false;",
+    "Description": "沒有惡神碎片：直接收夢。",
+    "links": [4339]
+  },
+  {
+    "entryID": 4335,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true;",
+    "Description": "惡神碎片分支閘門：身上有「惡神碎片」才走碎片段（劇情/惡神碎片(夢).md 整合進來）。⚠ 待作者處理：新貴重品 EvilGodFragment 是 2026-08-27 自創，Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片），否則這個 Conditions 永遠為 false。",
+    "links": [4340]
+  },
+  {
+    "entryID": 4336,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == false;",
+    "Description": "沒有惡神碎片：直接收夢。",
+    "links": [60]
+  },
+  {
+    "entryID": 4337,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true;",
+    "Description": "惡神碎片分支閘門：身上有「惡神碎片」才走碎片段（劇情/惡神碎片(夢).md 整合進來）。⚠ 待作者處理：新貴重品 EvilGodFragment 是 2026-08-27 自創，Unity 貴重品表尚未建檔，同步前須先建（顯示名：惡神碎片），否則這個 Conditions 永遠為 false。",
+    "links": [4340]
+  },
+  {
+    "entryID": 4338,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"EvilGodFragment\") == false;",
+    "Description": "沒有惡神碎片：直接收夢。",
+    "links": [4339]
+  },
+  {
+    "entryID": 4339,
+    "actorID": "role2",
+    "text": "[panel=6]＊（然後那片空也沒有了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然后那片空也没有了。）＊",
+    "links": [60]
+  },
+  {
+    "entryID": 4340,
+    "actorID": "MC21",
+    "text": "[panel=1]「[em7]懶洋洋地[/em7]，你身上那塊，還在動。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "惡神碎片段（來源：劇情/惡神碎片(夢).md）。⚠ 原稿沒寫 SetPortrait（該檔待確認 #3 說 MC21 立繪未登記），此處依趙王洞本場體例補上 pic=1，若 MC21 無立繪請整段拿掉 SetPortrait。",
+    "zh_CN": "[panel=1]「[em7]懒洋洋地[/em7]，你身上那块，还在动。」",
+    "links": [4341]
+  },
+  {
+    "entryID": 4341,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡那顆碎片忽然燙了一下，隔著衣襟燙進皮肉裡。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（怀里那颗碎片忽然烫了一下，隔着衣襟烫进皮肉里。）＊",
+    "links": [4342, 4343]
+  },
+  {
+    "entryID": 4342,
+    "actorID": "MC1",
+    "text": "「這東西……留在我身上，會出事嗎？」",
+    "Sequence": "",
+    "Description": "第一格只表態，她預設不答。選項不加 Sequence。",
+    "zh_CN": "「这东西……留在我身上，会出事吗？」",
+    "links": [4344]
+  },
+  {
+    "entryID": 4343,
+    "actorID": "MC1",
+    "text": "「這種東西，我拿著才安穩。」",
+    "Sequence": "",
+    "zh_CN": "「这种东西，我拿着才安稳。」",
+    "links": [4344]
+  },
+  {
+    "entryID": 4344,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,CharismaCheck,18);",
+    "Description": "背景魅力檢定 難度 18（兩條表態之後人人都擲，不因選了哪一句而變）。",
+    "links": [4345]
+  },
+  {
+    "entryID": 4345,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [4346, 4349]
+  },
+  {
+    "entryID": 4346,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她看了你一眼。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == true;",
+    "Description": "魅力檢定成功",
+    "zh_CN": "[panel=6]＊（她看了你一眼。）＊",
+    "links": [4347]
+  },
+  {
+    "entryID": 4347,
+    "actorID": "MC21",
+    "text": "[panel=1]「一塊還活的。那邊喝過血，所以還熱。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "zh_CN": "[panel=1]「一块还活的。那边喝过血，所以还热。」",
+    "links": [4348]
+  },
+  {
+    "entryID": 4348,
+    "actorID": "MC21",
+    "text": "[panel=1]「那邊那個抱著它太久了。你自己看見他成什麼樣子。」",
+    "Sequence": "SetPortrait(MC21,pic=1);\nModifyData(AbilityExp,Player,Charisma,10);",
+    "Description": "她講李大山用「那邊那個」，不說「那個人」。⛔ 不得把赤眼殘片與凶戾連起來，不得說出「凶戾」二字。",
+    "zh_CN": "[panel=1]「那边那个抱着它太久了。你自己看见他成什么样子。」",
+    "links": [4350, 4351]
+  },
+  {
+    "entryID": 4349,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她還是沒有答。目光仍落在你懷裡那處，一動不動。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false;",
+    "Description": "魅力檢定失敗",
+    "zh_CN": "[panel=6]＊（她还是没有答。目光仍落在你怀里那处，一动不动。）＊",
+    "links": [4350, 4351]
+  },
+  {
+    "entryID": 4350,
+    "actorID": "MC1",
+    "text": "「拿去吧。這東西擱在我身上，我也睡不安穩。」",
+    "Sequence": "",
+    "Description": "第二格：真的給。",
+    "zh_CN": "「拿去吧。这东西搁在我身上，我也睡不安稳。」",
+    "links": [4352]
+  },
+  {
+    "entryID": 4351,
+    "actorID": "MC1",
+    "text": "「……不。這個我自己留著。」",
+    "Sequence": "",
+    "Description": "第二格：不給。不給沒有懲罰，也不會再問第二次。",
+    "zh_CN": "「……不。这个我自己留着。」",
+    "links": [4358]
+  },
+  {
+    "entryID": 4352,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把那顆碎片托在掌心，遞了過去。她沒有伸手接——只是往前傾了一點，掌心那顆東西便自己矮了下去，像被抽乾的水。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你把那颗碎片托在掌心，递了过去。她没有伸手接——只是往前倾了一点，掌心那颗东西便自己矮了下去，像被抽干的水。）＊",
+    "links": [4353]
+  },
+  {
+    "entryID": 4353,
+    "actorID": "role2",
+    "text": "[panel=6]＊（連一點聲音都沒有。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（连一点声音都没有。）＊",
+    "links": [4354]
+  },
+  {
+    "entryID": 4354,
+    "actorID": "MC21",
+    "text": "[panel=1]「[em7]打了個呵欠[/em7]，吃了。堆在你身上了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "Description": "「吃了。堆在你身上了。」落在她吞下之後，是報告不是招攬。",
+    "zh_CN": "[panel=1]「[em7]打了个呵欠[/em7]，吃了。堆在你身上了。」",
+    "links": [4355]
+  },
+  {
+    "entryID": 4355,
+    "actorID": "MC1",
+    "text": "「……堆在我身上？」",
+    "Sequence": "",
+    "zh_CN": "「……堆在我身上？」",
+    "links": [4356]
+  },
+  {
+    "entryID": 4356,
+    "actorID": "MC21",
+    "text": "[panel=1]「[em7]轉過身去[/em7]，吾倦了。」",
+    "Sequence": "SetPortrait(MC21,pic=1);",
+    "zh_CN": "[panel=1]「[em7]转过身去[/em7]，吾倦了。」",
+    "links": [4357]
+  },
+  {
+    "entryID": 4357,
+    "actorID": "role2",
+    "text": "[panel=6]＊（四周的黑暗慢慢合攏。你想再問一句，話還沒到嘴邊，那片空就散了。）＊",
+    "Sequence": "ModifyData(Valuable,Player,EvilGodFragment,-1);\nModifyData(AbilityMaxLevel,Player,Strength,5);",
+    "Description": "遞出去：移除惡神碎片、武力最大等級 +5（名單 #11，2026-08-27 拍板）。⚠ 待作者確認：名單 #11 的「當前值減多少／要不要看門檻」仍待填；另 EvilGodFragment 需先在 Unity 貴重品表建檔，收回指令才生效。",
+    "zh_CN": "[panel=6]＊（四周的黑暗慢慢合拢。你想再问一句，话还没到嘴边，那片空就散了。）＊",
+    "links": [60]
+  },
+  {
+    "entryID": 4358,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她轉開視線，像忽然覺得這裡沒什麼可看的。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她转开视线，像忽然觉得这里没什么可看的。）＊",
+    "links": [4359]
+  },
+  {
+    "entryID": 4359,
+    "actorID": "role2",
+    "text": "[panel=6]＊（四周的黑暗慢慢合攏。碎片還在你懷裡，涼了下去。）＊",
+    "Sequence": "",
+    "Description": "不給：無獎懲，碎片留在身上，日後仍可另作處置（菈沙那條線）。",
+    "zh_CN": "[panel=6]＊（四周的黑暗慢慢合拢。碎片还在你怀里，凉了下去。）＊",
+    "links": [60]
+  },
+  {
+    "entryID": 4360,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "甦醒段分流：雍仔倒下的那條線不得讓任何人回答他的下落，讓玩家帶著「我害死他了」躺完這一段。",
+    "links": [4377, 70]
+  },
+  {
+    "entryID": 4361,
+    "actorID": "role2",
+    "text": "[panel=6]＊（不一會兒，伴隨著一陣急促的腳步聲，赫連娜娜一個人衝進了客房。她這一個月一直在英豪府作些打雜的事情，聽說你醒了，藥碗都還沒放下就跑了過來。）＊",
+    "Sequence": "",
+    "Description": "⚠ 本節點與底下「醒替」各句是新寫的（追蹤檔只給方向、沒給台詞），請作者審。對照原版 #71–#78（雍仔活蹦亂跳衝進來）。分流在 #4377／#70。",
+    "zh_CN": "[panel=6]＊（不一会儿，伴随着一阵急促的脚步声，赫连娜娜一个人冲进了客房。她这一个月一直在英豪府作些打杂的事情，听说你醒了，药碗都还没放下就跑了过来。）＊",
+    "links": [4362]
+  },
+  {
+    "entryID": 4362,
+    "actorID": "MC22",
+    "text": "[panel=2]「[var=PlayerFirstName]！我就說你命大福大造化大！本姑娘認可的人，哪有那麼容易交代在那種破山洞裡！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);\nEnableCharacterExpression(2,MC22,Proud);",
+    "Description": "⚠ 新寫（沿用原版 #72 台詞）。",
+    "zh_CN": "[panel=2]「[var=PlayerFirstName]！我就说你命大福大造化大！本姑娘认可的人，哪有那么容易交代在那种破山洞里！」",
+    "links": [4363]
+  },
+  {
+    "entryID": 4363,
+    "actorID": "MC1",
+    "text": "「……雍仔呢？」",
+    "Sequence": "",
+    "Description": "⚠ 新寫。主角問雍仔的下落——這裡不得給答案。",
+    "zh_CN": "「……雍仔呢？」",
+    "links": [4364]
+  },
+  {
+    "entryID": 4364,
+    "actorID": "role2",
+    "text": "[panel=6]＊（娜娜端著碗的手停了一下。她低頭把藥吹了兩口，才推到你面前。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "Description": "⚠ 新寫。擋話：只做動作，不給答案。",
+    "zh_CN": "[panel=6]＊（娜娜端着碗的手停了一下。她低头把药吹了两口，才推到你面前。）＊",
+    "links": [4365]
+  },
+  {
+    "entryID": 4365,
+    "actorID": "MC22",
+    "text": "[panel=2]「他還沒醒。別問了，先把藥喝了。」",
+    "Sequence": "SetPortrait(MC22,pic=8);\nEnableCharacterExpression(2,MC22,Meditate);",
+    "Description": "⚠ 新寫。追蹤檔指定的擋話：「他還沒醒」「別問了，先喝藥」。不得洩漏雍仔生死。",
+    "zh_CN": "[panel=2]「他还没醒。别问了，先把药喝了。」",
+    "links": [4366]
+  },
+  {
+    "entryID": 4366,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她說完就走到窗邊去，背對著你，把窗子推開了一條縫。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "Description": "⚠ 新寫。",
+    "zh_CN": "[panel=6]＊（她说完就走到窗边去，背对着你，把窗子推开了一条缝。）＊",
+    "links": [80]
+  },
+  {
+    "entryID": 4367,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "雍仔延遲揭露分流（僅「不開口」線）。",
+    "links": [4369, 4368]
+  },
+  {
+    "entryID": 4368,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"＿＿4\"] == false;",
+    "Description": "雍仔沒被拍倒（開口線）：跳過延遲揭露。⚠ 待作者填：Conditions 的 ＿＿4 變數名。",
+    "links": [101]
+  },
+  {
+    "entryID": 4369,
+    "actorID": "role2",
+    "text": "[panel=6]＊（廊下傳來熟悉的聒噪聲，中氣不足，但確實是那個聲音。）＊",
+    "Sequence": "",
+    "Conditions": "Variable[\"＿＿4\"] == true;",
+    "Description": "雍仔延遲揭露：他沒死，但傷了根本。⚠ 待作者填：Conditions 的 ＿＿4 變數名。",
+    "zh_CN": "[panel=6]＊（廊下传来熟悉的聒噪声，中气不足，但确实是那个声音。）＊",
+    "links": [4370]
+  },
+  {
+    "entryID": 4370,
+    "actorID": "MC20",
+    "text": "[panel=1]「唉喲喂——輕點輕點！本道長這把老骨頭，可經不起姑娘妳這麼按！」",
+    "Sequence": "SetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Pain);",
+    "zh_CN": "[panel=1]「唉哟喂——轻点轻点！本道长这把老骨头，可经不起姑娘你这么按！」",
+    "links": [4371]
+  },
+  {
+    "entryID": 4371,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他被張寧半扶半推地帶進來，臉色蠟黃，走一步喘一下。看見你，他先愣了一下，隨即笑得比誰都大聲。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Proud);",
+    "zh_CN": "[panel=6]＊（他被张宁半扶半推地带进来，脸色蜡黄，走一步喘一下。看见你，他先愣了一下，随即笑得比谁都大声。）＊",
+    "links": [4372]
+  },
+  {
+    "entryID": 4372,
+    "actorID": "MC20",
+    "text": "[panel=1]「嘿！醒啦？我就說嘛，能被那玩意兒撂倒的人，還沒生出來呢！」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「嘿！醒啦？我就说嘛，能被那玩意儿撂倒的人，还没生出来呢！」",
+    "links": [4373]
+  },
+  {
+    "entryID": 4373,
+    "actorID": "MC6",
+    "text": "[panel=2]「他的話你聽一半就行。那一爪傷了根本，往後畫符、行氣，都得看老天爺賞不賞臉。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC6,pic=3);\nEnableCharacterExpression(2,MC6,Meditate);",
+    "zh_CN": "[panel=2]「他的话你听一半就行。那一爪伤了根本，往后画符、行气，都得看老天爷赏不赏脸。」",
+    "links": [4374]
+  },
+  {
+    "entryID": 4374,
+    "actorID": "MC20",
+    "text": "[panel=1]「[em7]擺手擺得飛快[/em7]，小事小事！道爺我本來就是靠一張嘴吃飯的——」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Nervous);",
+    "zh_CN": "[panel=1]「[em7]摆手摆得飞快[/em7]，小事小事！道爷我本来就是靠一张嘴吃饭的——」",
+    "links": [4375]
+  },
+  {
+    "entryID": 4375,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他說著要掐個訣給你看，指尖動了兩下，什麼都沒有。他愣了一瞬，把手收回袖子裡。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Question);",
+    "zh_CN": "[panel=6]＊（他说着要掐个诀给你看，指尖动了两下，什么都没有。他愣了一瞬，把手收回袖子里。）＊",
+    "links": [4376]
+  },
+  {
+    "entryID": 4376,
+    "actorID": "MC20",
+    "text": "[panel=1]「……嗨，今日風水不對。改天，改天再讓你開開眼。」",
+    "Sequence": "DisableCharacterExpression(1);\nModifyData(＿＿);",
+    "Description": "雍仔五維減弱。⚠ 待作者填：扣哪幾項、扣多少（走 ModifyData(AbilityExp,MC20,能力ID,負值);），換掉 ModifyData(＿＿)。⚠ 這個減弱必須在後面被吃到（水濂洞畫符那場至少要有一處失手／不敢上前／被頂替），否則等於沒發生。",
+    "zh_CN": "[panel=1]「……嗨，今日风水不对。改天，改天再让你开开眼。」",
+    "links": [101]
+  },
+  {
+    "entryID": 4377,
+    "actorID": "MC6",
+    "text": "「[em7]話說到一半，實在忍不住笑了出來，隨即紅著臉別過頭去[/em7]：總、總之我去叫娜娜進來。她在外頭杵了一早上，杵得我心煩。」",
+    "Sequence": "",
+    "Conditions": "Variable[\"＿＿4\"] == true;",
+    "Description": "⚠ 新寫（追蹤檔只給方向、沒給台詞），請作者審。原版 #70 說「那兩個吵死人的傢伙」，但雍仔被拍倒那條線他還躺著，說不通，故另寫一句只叫娜娜。⚠ 待作者填：Conditions 的 ＿＿4 變數名。",
+    "zh_CN": "「[em7]话说到一半，实在忍不住笑了出来，随即红着脸别过头去[/em7]：总、总之我去叫娜娜进来。她在外头杵了一早上，杵得我心烦。」",
+    "links": [4361]
   }
 ]

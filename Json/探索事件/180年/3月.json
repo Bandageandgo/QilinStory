@@ -31,7 +31,7 @@
     "actorID": "MC1",
     "text": "「既然這木鳥是為了防身而造，威力自然是首要。我們不如去尋找更堅韌的材料來替換發條，我願助妳一臂之力！」",
     "Sequence": "SetPortrait(MC1,pic=13);",
-    "zh_CN": "「既然这木鸟是为了防身而造，威力自然是首要。我们不如去寻找更坚韧的材料来替换发条，我愿助妳一臂之力！」",
+    "zh_CN": "「既然这木鸟是为了防身而造，威力自然是首要。我们不如去寻找更坚韧的材料来替换发条，我愿助你一臂之力！」",
     "links": [2105]
   },
   {
@@ -169,7 +169,7 @@
     "text": "「琰兒妹妹，我前些日子在野外，遇到了一個會打拳的木人樁，還從裡面找到了一些奇怪的機關零件。妳看看這個。」",
     "Sequence": "SetPortrait(MC1,pic=8);\nEnableDialogueBG(Farmland);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_37);",
     "Description": "主題曲、背景圖",
-    "zh_CN": "「琰儿妹妹，我前些日子在野外，遇到了一个会打拳的木人桩，还从里面找到了一些奇怪的机关零件。妳看看这个。」",
+    "zh_CN": "「琰儿妹妹，我前些日子在野外，遇到了一个会打拳的木人桩，还从里面找到了一些奇怪的机关零件。你看看这个。」",
     "links": [4134]
   },
   {
@@ -212,7 +212,7 @@
     "text": "「哎喲，別晃了別晃了！什麼木人樁能讓妳這麼興奮？拿來我瞧瞧。」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「哎喲，別晃了別晃了！什麼木人樁能讓妳這麼興奮？拿來我瞧瞧。」",
-    "zh_CN": "「哎哟，别晃了别晃了！什么木人桩能让妳这么兴奋？拿来我瞧瞧。」",
+    "zh_CN": "「哎哟，别晃了别晃了！什么木人桩能让你这么兴奋？拿来我瞧瞧。」",
     "links": [4122]
   },
   {
@@ -220,7 +220,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"CF23\", 1, \"active\")",
+    "Script": "SetQuestEntryState(\"CF23\", 1, \"active\");",
     "Description": "任務更新",
     "links": [4138]
   },
@@ -275,7 +275,7 @@
     "text": "「行行行，算妳一份！不過…修復這玩意兒可不是那麼簡單。我需要機關零件，才能就著這副架子讓它恢復原本的本事。」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「行行行，算妳一份！不過…修復這玩意兒可不是那麼簡單。我需要機關零件，才能就著這副架子讓它恢復原本的本事。」",
-    "zh_CN": "「行行行，算妳一份！不过…修复这玩意儿可不是那么简单。我需要机关零件，才能就着这副架子让它恢复原本的本事。」",
+    "zh_CN": "「行行行，算你一份！不过…修复这玩意儿可不是那么简单。我需要机关零件，才能就着这副架子让它恢复原本的本事。」",
     "links": [4132]
   },
   {
@@ -354,7 +354,7 @@
     "entryID": 4137,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Yunzhong)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Yunzhong)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [4119]
   },
@@ -443,7 +443,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableCharacterExpression(0);\nDisableDialogueBG();\nMapLock(JinYangArena, unlock);\nContinue();",
-    "Script": "SetQuestState(\"CF38\", \"active\")",
+    "Script": "SetQuestState(\"CF38\", \"active\");",
     "Description": "任務更新、地點解鎖",
     "links": []
   },
@@ -644,7 +644,7 @@
     "actorID": "MC9",
     "text": "「[em7]眉梢微挑[/em7]，呵……是筠小看你了。看來你跟那些只會伸手要錢的莽夫，倒是不同。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Idea);\nModifyData(AbilityExp,Player,Politics,50);",
-    "Conditions": "IsPassDice() == true",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「[em7]眉梢微挑[/em7]，呵……是筠小看你了。看來你跟那些只會伸手要錢的莽夫，倒是不同。」",
     "zh_CN": "「[em7]眉梢微挑[/em7]，呵……是筠小看你了。看来你跟那些只会伸手要钱的莽夫，倒是不同。」",
     "links": [4172]
@@ -652,11 +652,11 @@
   {
     "entryID": 4171,
     "actorID": "MC9",
-    "text": "「[em7]似笑非笑[/em7]布局？公子才入府不久，并州的水有多深，筠勸你少說兩句為妙。不過——話雖如此，筠也不是聽不進人話的。」",
+    "text": "「[em7]似笑非笑[/em7]，布局？公子才入府不久，并州的水有多深，筠勸你少說兩句為妙。不過——話雖如此，筠也不是聽不進人話的。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Conditions": "IsPassDice() == false",
-    "zh_TW": "「[em7]似笑非笑[/em7]布局？公子才入府不久，并州的水有多深，筠勸你少說兩句為妙。不過——話雖如此，筠也不是聽不進人話的。」",
-    "zh_CN": "「[em7]似笑非笑[/em7]布局？公子才入府不久，并州的水有多深，筠劝你少说两句为妙。不过——话虽如此，筠也不是听不进人话的。」",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「[em7]似笑非笑[/em7]，布局？公子才入府不久，并州的水有多深，筠勸你少說兩句為妙。不過——話雖如此，筠也不是聽不進人話的。」",
+    "zh_CN": "「[em7]似笑非笑[/em7]，布局？公子才入府不久，并州的水有多深，筠劝你少说两句为妙。不过——话虽如此，筠也不是听不进人话的。」",
     "links": [4172]
   },
   {
@@ -802,11 +802,11 @@
   {
     "entryID": 4188,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]挑眉，倒有些意外[/em7]呵，不只是個蠻幹的莽夫。實話跟你說——筠是聽那商隊提過，水濂洞附近的地脈有異，隱約還混著些以前沒見過的礦光。至於裡頭到底是什麼名堂……」",
+    "text": "[panel=1]「[em7]挑眉，倒有些意外[/em7]，呵，不只是個蠻幹的莽夫。實話跟你說——筠是聽那商隊提過，水濂洞附近的地脈有異，隱約還混著些以前沒見過的礦光。至於裡頭到底是什麼名堂……」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=4);EnableCharacterExpression(1,MC9,Surprise);ModifyData(AbilityExp,Player,Intelligence,50);",
-    "Conditions": "IsPassDice() == true",
-    "zh_TW": "[panel=1]「[em7]挑眉，倒有些意外[/em7]呵，不只是個蠻幹的莽夫。實話跟你說——筠是聽那商隊提過，水濂洞附近的地脈有異，隱約還混著些以前沒見過的礦光。至於裡頭到底是什麼名堂……」",
-    "zh_CN": "[panel=1]「[em7]挑眉，倒有些意外[/em7]呵，不只是个蛮干的莽夫。实话跟你说——筠是听那商队提过，水濂洞附近的地脉有异，隐约还混着些以前没见过的矿光。至于里头到底是什么名堂……」",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「[em7]挑眉，倒有些意外[/em7]，呵，不只是個蠻幹的莽夫。實話跟你說——筠是聽那商隊提過，水濂洞附近的地脈有異，隱約還混著些以前沒見過的礦光。至於裡頭到底是什麼名堂……」",
+    "zh_CN": "[panel=1]「[em7]挑眉，倒有些意外[/em7]，呵，不只是个蛮干的莽夫。实话跟你说——筠是听那商队提过，水濂洞附近的地脉有异，隐约还混着些以前没见过的矿光。至于里头到底是什么名堂……」",
     "links": [4189]
   },
   {
@@ -821,11 +821,11 @@
   {
     "entryID": 4191,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]似笑非笑[/em7]公子連這都要問？筠只負責出價，不負責解惑——這種問題，去水濂洞親眼瞧，比問筠準得多。」",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]，公子連這都要問？筠只負責出價，不負責解惑——這種問題，去水濂洞親眼瞧，比問筠準得多。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Conditions": "IsPassDice() == false",
-    "zh_TW": "[panel=1]「[em7]似笑非笑[/em7]公子連這都要問？筠只負責出價，不負責解惑——這種問題，去水濂洞親眼瞧，比問筠準得多。」",
-    "zh_CN": "[panel=1]「[em7]似笑非笑[/em7]公子连这都要问？筠只负责出价，不负责解惑——这种问题，去水濂洞亲眼瞧，比问筠准得多。」",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「[em7]似笑非笑[/em7]，公子連這都要問？筠只負責出價，不負責解惑——這種問題，去水濂洞親眼瞧，比問筠準得多。」",
+    "zh_CN": "[panel=1]「[em7]似笑非笑[/em7]，公子连这都要问？筠只负责出价，不负责解惑——这种问题，去水濂洞亲眼瞧，比问筠准得多。」",
     "links": [4216]
   },
   {
@@ -848,11 +848,11 @@
   {
     "entryID": 4194,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]搖扇，語氣淡了幾分[/em7]公子這一問，倒問到了點子上。水濂洞地處偏僻，甄家的人一動，明眼人都看得出甄家惦記上了什麼——赤龍幫、黑狼那邊，未必肯乾坐著看。」",
+    "text": "[panel=1]「[em7]搖扇，語氣淡了幾分[/em7]，公子這一問，倒問到了點子上。水濂洞地處偏僻，甄家的人一動，明眼人都看得出甄家惦記上了什麼——赤龍幫、黑狼那邊，未必肯乾坐著看。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);ModifyData(FeatExp,Player,Strategy,50);",
-    "Conditions": "IsPassDice() == true",
-    "zh_TW": "[panel=1]「[em7]搖扇，語氣淡了幾分[/em7]公子這一問，倒問到了點子上。水濂洞地處偏僻，甄家的人一動，明眼人都看得出甄家惦記上了什麼——赤龍幫、黑狼那邊，未必肯乾坐著看。」",
-    "zh_CN": "[panel=1]「[em7]摇扇，语气淡了几分[/em7]公子这一问，倒问到了点子上。水濂洞地处偏僻，甄家的人一动，明眼人都看得出甄家惦记上了什么——赤龙帮、黑狼那边，未必肯干坐着看。」",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「[em7]搖扇，語氣淡了幾分[/em7]，公子這一問，倒問到了點子上。水濂洞地處偏僻，甄家的人一動，明眼人都看得出甄家惦記上了什麼——赤龍幫、黑狼那邊，未必肯乾坐著看。」",
+    "zh_CN": "[panel=1]「[em7]摇扇，语气淡了几分[/em7]，公子这一问，倒问到了点子上。水濂洞地处偏僻，甄家的人一动，明眼人都看得出甄家惦记上了什么——赤龙帮、黑狼那边，未必肯干坐着看。」",
     "links": [4195]
   },
   {
@@ -867,11 +867,11 @@
   {
     "entryID": 4197,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]似笑非笑[/em7]公子倒是問得直接。人手嘛，總有更要緊的地方去用，這點小事，勞煩外人跑一趟也無妨。」",
+    "text": "[panel=1]「[em7]似笑非笑[/em7]，公子倒是問得直接。人手嘛，總有更要緊的地方去用，這點小事，勞煩外人跑一趟也無妨。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Conditions": "IsPassDice() == false",
-    "zh_TW": "[panel=1]「[em7]似笑非笑[/em7]公子倒是問得直接。人手嘛，總有更要緊的地方去用，這點小事，勞煩外人跑一趟也無妨。」",
-    "zh_CN": "[panel=1]「[em7]似笑非笑[/em7]公子倒是问得直接。人手嘛，总有更要紧的地方去用，这点小事，劳烦外人跑一趟也无妨。」",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「[em7]似笑非笑[/em7]，公子倒是問得直接。人手嘛，總有更要緊的地方去用，這點小事，勞煩外人跑一趟也無妨。」",
+    "zh_CN": "[panel=1]「[em7]似笑非笑[/em7]，公子倒是问得直接。人手嘛，总有更要紧的地方去用，这点小事，劳烦外人跑一趟也无妨。」",
     "links": [4216]
   },
   {
@@ -894,21 +894,21 @@
   {
     "entryID": 4200,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]輕笑，並不否認[/em7]公子這眼力，倒是沒白費。若真有稀罕物件，消息一旦傳開，甄家在并州商賈間，也能落個『識貨』的名頭——這買賣，划算的地方，從來不只一處。」",
+    "text": "[panel=1]「[em7]輕笑，並不否認[/em7]，公子這眼力，倒是沒白費。若真有稀罕物件，消息一旦傳開，甄家在并州商賈間，也能落個『識貨』的名頭——這買賣，划算的地方，從來不只一處。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=5);EnableCharacterExpression(1,MC9,Proud);ModifyData(FeatExp,Player,Insight,50);",
-    "Conditions": "IsPassDice() == true",
-    "zh_TW": "[panel=1]「[em7]輕笑，並不否認[/em7]公子這眼力，倒是沒白費。若真有稀罕物件，消息一旦傳開，甄家在并州商賈間，也能落個『識貨』的名頭——這買賣，划算的地方，從來不只一處。」",
-    "zh_CN": "[panel=1]「[em7]轻笑，并不否认[/em7]公子这眼力，倒是没白费。若真有稀罕物件，消息一旦传开，甄家在并州商贾间，也能落个『识货』的名头——这买卖，划算的地方，从来不只一处。」",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「[em7]輕笑，並不否認[/em7]，公子這眼力，倒是沒白費。若真有稀罕物件，消息一旦傳開，甄家在并州商賈間，也能落個『識貨』的名頭——這買賣，划算的地方，從來不只一處。」",
+    "zh_CN": "[panel=1]「[em7]轻笑，并不否认[/em7]，公子这眼力，倒是没白费。若真有稀罕物件，消息一旦传开，甄家在并州商贾间，也能落个『识货』的名头——这买卖，划算的地方，从来不只一处。」",
     "links": [4216]
   },
   {
     "entryID": 4202,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]搖頭，不置可否[/em7]公子想太多了。筠是生意人，圖的從來只有一樣——划不划算。」",
+    "text": "[panel=1]「[em7]搖頭，不置可否[/em7]，公子想太多了。筠是生意人，圖的從來只有一樣——划不划算。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Conditions": "IsPassDice() == false",
-    "zh_TW": "[panel=1]「[em7]搖頭，不置可否[/em7]公子想太多了。筠是生意人，圖的從來只有一樣——划不划算。」",
-    "zh_CN": "[panel=1]「[em7]摇头，不置可否[/em7]公子想太多了。筠是生意人，图的从来只有一样——划不划算。」",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「[em7]搖頭，不置可否[/em7]，公子想太多了。筠是生意人，圖的從來只有一樣——划不划算。」",
+    "zh_CN": "[panel=1]「[em7]摇头，不置可否[/em7]，公子想太多了。筠是生意人，图的从来只有一样——划不划算。」",
     "links": [4216]
   },
   {
@@ -1033,7 +1033,7 @@
     "entryID": 4217,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nOpenPanel(1, close);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Ye)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG()@1;\nOpenPanel(1, close)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Ye)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [4213]
   },
@@ -1042,7 +1042,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableDialogueBG();\nContinue();",
-    "Script": "SetQuestState(\"CF40\", \"active\")",
+    "Script": "SetQuestState(\"CF40\", \"active\");",
     "Description": "任務更新",
     "links": []
   },

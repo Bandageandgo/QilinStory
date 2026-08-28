@@ -4,7 +4,7 @@
     "actorID": "MC3",
     "text": "「……新秀賽。哄鬧而已。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=3);",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 2) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 2) == \"unassigned\";",
     "zh_CN": "「……新秀赛。哄闹而已。」",
     "links": [17]
   },
@@ -143,7 +143,7 @@
     "actorID": "MC2",
     "text": "「哈！這不是我們英豪府的人？來赤龍幫撐場面啊？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 3) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 3) == \"unassigned\";",
     "zh_CN": "「哈！这不是我们英豪府的人？来赤龙帮撑场面啊？」",
     "links": [34]
   },
@@ -289,7 +289,7 @@
     "actorID": "MC6",
     "text": "「又上擂台？上回傷還沒完全好，今天就敢跑來逞能？」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=3);",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 5) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 5) == \"unassigned\";",
     "zh_CN": "「又上擂台？上回伤还没完全好，今天就敢跑来逞能？」",
     "links": [387]
   },
@@ -353,7 +353,7 @@
     "actorID": "MC1",
     "text": "「嗯。當然不是特地為我準備的。」",
     "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Flirting,20);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「嗯。当然不是特地为我准备的。」",
     "links": [390]
   },
@@ -378,7 +378,7 @@
     "actorID": "MC1",
     "text": "「那……多謝大夫帶藥。」",
     "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「那……多谢大夫带药。」",
     "links": [64]
   },
@@ -419,7 +419,7 @@
     "actorID": "MC1",
     "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 4) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 4) == \"unassigned\";",
     "zh_CN": "「咦！？你也来了？我还以为你对这种事没兴趣呢。」",
     "links": [69]
   },
@@ -491,7 +491,7 @@
     "actorID": "MC1",
     "text": "「掩其不意……所以得先摸清對方虛實，再談出手？」",
     "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Strategy,20);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「掩其不意……所以得先摸清对方虚实，再谈出手？」",
     "links": [78]
   },
@@ -517,7 +517,7 @@
     "actorID": "MC1",
     "text": "「掩其不意……就是，呃，趁人不備？偷偷摸摸打？」",
     "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「掩其不意……就是，呃，趁人不备？偷偷摸摸打？」",
     "links": [85]
   },
@@ -630,7 +630,7 @@
     "actorID": "MC23",
     "text": "「嗚哇──好多人！鼓聲好響！今天這個比武大會要寫進見聞錄哪一個目錄啊？」",
     "Sequence": "SetPortrait(MC23,pic=1);",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 6) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 6) == \"unassigned\";",
     "zh_CN": "「呜哇──好多人！鼓声好响！今天这个比武大会要写进见闻录哪一个目录啊？」",
     "links": [102]
   },
@@ -710,7 +710,7 @@
     "actorID": "MC23",
     "text": "「太史公？爹爹書房裡是有……你講得頭頭是道，下來要是接不上，我可要笑你！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「太史公？爹爹书房里是有……你讲得头头是道，下来要是接不上，我可要笑你！」",
     "links": [396]
   },
@@ -727,7 +727,7 @@
     "actorID": "MC23",
     "text": "「哇——你也讀過太史公！爹爹總說列傳最重『其人其事』，與你說的正好接上！那等你下來，咱們一起補！」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);\nModifyData(FeatExp,Player,Knowledge,20);\nModifyData(FavorabilityExp,MC23,50);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "Description": "增加好感",
     "zh_CN": "「哇——你也读过太史公！爹爹总说列传最重『其人其事』，与你说的正好接上！那等你下来，咱们一起补！」",
     "links": [114]
@@ -761,7 +761,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（擂台旁圍了一圈人。一名身著赤龍幫服色的年輕擂手方才落敗，垂頭喪氣地杵在場邊。）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 7) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 7) == \"unassigned\";",
     "zh_CN": "[panel=6]＊（擂台旁围了一圈人。一名身着赤龙帮服色的年轻擂手方才落败，垂头丧气地杵在场边。）＊",
     "links": [414]
   },
@@ -890,7 +890,7 @@
     "actorID": "MC1",
     "text": "「……真威風。這句，算你贏了。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=4);",
-    "Script": "SetQuestEntryState(\"CF38\", 7, \"success\")",
+    "Script": "SetQuestEntryState(\"CF38\", 7, \"success\");",
     "Description": "任務更新",
     "zh_CN": "「……真威风。这句，算你赢了。」",
     "links": []
@@ -959,7 +959,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetPortrait(MC3,pic=1);\nSetPortrait(MC1,pic=1);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF38\", 2, \"success\")",
+    "Script": "SetQuestEntryState(\"CF38\", 2, \"success\");",
     "links": []
   },
   {
@@ -975,7 +975,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetPortrait(MC2,pic=1);\nSetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF38\", 3, \"success\")",
+    "Script": "SetQuestEntryState(\"CF38\", 3, \"success\");",
     "links": []
   },
   {
@@ -999,7 +999,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetPortrait(MC7,pic=1);\nSetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF38\", 4, \"success\")",
+    "Script": "SetQuestEntryState(\"CF38\", 4, \"success\");",
     "links": []
   },
   {
@@ -1015,7 +1015,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetPortrait(MC6,pic=1);\nSetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF38\", 5, \"success\")",
+    "Script": "SetQuestEntryState(\"CF38\", 5, \"success\");",
     "links": []
   },
   {
@@ -1063,7 +1063,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetPortrait(MC23,pic=1);\nSetPortrait(MC1,pic=1);\nDisableCharacterExpression(0);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF38\", 6, \"success\")",
+    "Script": "SetQuestEntryState(\"CF38\", 6, \"success\");",
     "links": []
   },
   {
@@ -1240,7 +1240,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（再睜眼，人已躺在英豪府。也不知是誰把你從擂台邊扛回來的，渾身痠疼——這一敗，赤龍幫那筆銀錢，是再也提不得了。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF38\", \"failure\");\nSetQuestEntryState(\"C2M1\", 1, \"failure\")",
+    "Script": "SetQuestState(\"CF38\", \"failure\");\nSetQuestEntryState(\"C2M1\", 1, \"failure\");",
     "Description": "任務失敗",
     "zh_CN": "[panel=6]＊（再睁眼，人已躺在英豪府。也不知是谁把你从擂台边扛回来的，浑身酸疼——这一败，赤龙帮那笔银钱，是再也提不得了。）＊",
     "links": [700]
@@ -1395,7 +1395,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好此起彼落！）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（台下叫好此起彼落！）＊",
     "links": [704]
   },
@@ -1404,7 +1404,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [704]
   },
@@ -1428,7 +1428,7 @@
     "entryID": 444,
     "actorID": "MC20",
     "text": "「道法自然……輸，也自然。承讓了。」",
-    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Pain);",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Pain);",
     "zh_CN": "「道法自然……输，也自然。承让了。」",
     "links": [445]
   },
@@ -1525,7 +1525,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好此起彼落！）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（台下叫好此起彼落！）＊",
     "links": [709]
   },
@@ -1534,7 +1534,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [709]
   },
@@ -1558,7 +1558,7 @@
     "entryID": 465,
     "actorID": "MC22",
     "text": "「唔……本姑娘的劍還差了點火候！算你厲害——這場，本姑娘認了！」",
-    "Sequence": "SetPortrait(MC22,pic=9);",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetPortrait(MC22,pic=9);",
     "zh_CN": "「唔……本姑娘的剑还差了点火候！算你厉害——这场，本姑娘认了！」",
     "links": [466]
   },
@@ -1735,7 +1735,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（全场轰然炸开，喝采如雷——声势压人。）＊",
     "links": [715]
   },
@@ -1744,7 +1744,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [715]
   },
@@ -1768,7 +1768,7 @@
     "entryID": 496,
     "actorID": "MC8",
     "text": "「唉呀，到底還是輸給表哥了……可是嘿嘿，小犀這套雙劍，有沒有嚇你一大跳？」",
-    "Sequence": "SetPortrait(MC8,pic=9);EnableCharacterExpression(1,MC8,Surprise);",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetPortrait(MC8,pic=9);EnableCharacterExpression(1,MC8,Surprise);",
     "zh_CN": "「唉呀，到底还是输给表哥了……可是嘿嘿，小犀这套双剑，有没有吓你一大跳？」",
     "links": [497]
   },
@@ -1913,7 +1913,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（全场轰然炸开，喝采如雷——声势压人。）＊",
     "links": [720]
   },
@@ -1922,7 +1922,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [720]
   },
@@ -1946,7 +1946,7 @@
     "entryID": 523,
     "actorID": "role125",
     "text": "「呸……算你走運！這筆帳，老子先給你記著——走著瞧！」",
-    "Sequence": "SetPortrait(role125,pic=2);",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetPortrait(role125,pic=2);",
     "zh_CN": "「呸……算你走运！这笔帐，老子先给你记着——走着瞧！」",
     "links": [524]
   },
@@ -2059,7 +2059,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好四起——這話直爽、不玩虛的，正合并州漢子的胃口；連對面那持斧大漢都咧嘴頷了頷首。）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（台下叫好四起——这话直爽、不玩虚的，正合并州汉子的胃口；连对面那持斧大汉都咧嘴颔了颔首。）＊",
     "links": [726]
   },
@@ -2068,7 +2068,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [726]
   },
@@ -2092,7 +2092,7 @@
     "entryID": 547,
     "actorID": "role58",
     "text": "「[em7]撓撓頭，哈哈大笑[/em7]，痛快！這回是你贏了——老子服！」",
-    "Sequence": "",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);",
     "zh_CN": "「[em7]挠挠头，哈哈大笑[/em7]，痛快！这回是你赢了——老子服！」",
     "links": [548]
   },
@@ -2430,7 +2430,7 @@
     "actorID": "MC1",
     "text": "「是、是。」",
     "Sequence": "SetPortrait(MC1,pic=19);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「是、是。」",
     "links": [765]
   },
@@ -2584,7 +2584,7 @@
     "actorID": "MC10",
     "text": "「老子看人，向來八九不離十。一言既出，駟馬難追——赤龍幫這一注，老子獨個兒押你英豪府了。」",
     "Sequence": "SetPortrait(MC1,pic=17);",
-    "Script": "SetQuestEntryState(\"C2M1\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"C2M1\", 1, \"success\");",
     "Description": "任務更新",
     "zh_CN": "「老子看人，向来八九不离十。一言既出，驷马难追——赤龙帮这一注，老子独个儿押你英豪府了。」",
     "links": [842]
@@ -2740,7 +2740,7 @@
     "actorID": "MC10",
     "text": "「[em7]先是一怔，隨即仰頭大笑[/em7]，哈哈！有種！你全勝奪魁，想必你的名號明日將要響遍并州！」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC10,pic=1);",
-    "Script": "SetQuestEntryState(\"C2M1\", 1, \"failure\")",
+    "Script": "SetQuestEntryState(\"C2M1\", 1, \"failure\");",
     "Description": "任務更新",
     "zh_CN": "「[em7]先是一怔，随即仰头大笑[/em7]，哈哈！有种！你全胜夺魁，想必你的名号明日将要响遍并州！」",
     "links": [658]
@@ -2848,7 +2848,7 @@
     "entryID": 699,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nLoadLevel(Command_HallOfHeroes);\nEnableDialogueBG(Home);\nSetContinueMode(original)@2.5;\nMapLock(JinYangArena, lock);\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "移出地圖、地圖鎖起來",
     "links": [417]
   },
@@ -2863,7 +2863,7 @@
     "entryID": 701,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b1)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b1)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "境頭轉場到擂台上",
     "links": [424]
   },
@@ -2887,7 +2887,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [443]
   },
   {
@@ -2895,14 +2895,14 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [416]
   },
   {
     "entryID": 708,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b2)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b2)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [448]
   },
@@ -2926,7 +2926,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [464]
   },
   {
@@ -2934,14 +2934,14 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [416]
   },
   {
     "entryID": 713,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b3)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b3)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [469]
   },
@@ -2973,7 +2973,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [495]
   },
   {
@@ -2981,14 +2981,14 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [416]
   },
   {
     "entryID": 719,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b4)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b4)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [501]
   },
@@ -3012,7 +3012,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [522]
   },
   {
@@ -3020,14 +3020,14 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [416]
   },
   {
     "entryID": 724,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b5)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b5)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [527]
   },
@@ -3035,7 +3035,7 @@
     "entryID": 725,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b6)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b6)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [551]
   },
@@ -3059,7 +3059,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [546]
   },
   {
@@ -3067,7 +3067,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [416]
   },
   {
@@ -3098,7 +3098,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [574]
   },
   {
@@ -3106,7 +3106,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [416]
   },
@@ -3114,7 +3114,7 @@
     "entryID": 736,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b7)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b7)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [579]
   },
@@ -3122,8 +3122,8 @@
     "entryID": 737,
     "actorID": "role73",
     "text": "「[var=PlayerLastName]兄弟，你的『百鳥朝鳳』已臻精通，形神俱足。今日我便將此槍最後一式——一槍出，百鳥齊發，橫掃當場的訣竅傳於你。日後須勤修不輟，莫辜負了這套絕學！」",
-    "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\")  == true",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);",
+    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\")  == true;",
     "zh_TW": "「[var=PlayerLastName]兄弟，你的『百鳥朝鳳』已臻精通，形神俱足。今日我便將此槍最後一式——一槍出，百鳥齊發，橫掃當場的訣竅傳於你。日後須勤修不輟，莫辜負了這套絕學！」",
     "zh_CN": "「[var=PlayerLastName]兄弟，你的『百鸟朝凤』已臻精通，形神俱足。今日我便将此枪最后一式——一枪出，百鸟齐发，横扫当场的诀窍传于你。日后须勤修不辍，莫辜负了这套绝学！」",
     "links": [738]
@@ -3143,7 +3143,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（全場轟然炸開，喝采如雷——老對手再聚擂台，這份豪氣把氣氛推到頂，聲勢先壓人三分。）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（全场轰然炸开，喝采如雷——老对手再聚擂台，这份豪气把气氛推到顶，声势先压人三分。）＊",
     "links": [731]
   },
@@ -3152,7 +3152,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [731]
   },
@@ -3161,7 +3161,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [743]
   },
@@ -3185,7 +3185,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [599]
   },
   {
@@ -3193,7 +3193,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [416]
   },
@@ -3202,7 +3202,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下靜了一瞬，繼而爆出敬重叫好——這話不煽不酸，正合并州邊境漢子們的胃口。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,50);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（台下静了一瞬，继而爆出敬重叫好——这话不煽不酸，正合并州边境汉子们的胃口。）＊",
     "links": [743]
   },
@@ -3210,7 +3210,7 @@
     "entryID": 748,
     "actorID": "role2",
     "text": "[panel=6]＊（再定睛，他已扶穩眼罩、收刀退步認負。）＊",
-    "Sequence": "SetPortrait(MC1,pic=4);\nOpenPanel(1, close);",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetPortrait(MC1,pic=4);\nOpenPanel(1, close);",
     "zh_CN": "[panel=6]＊（再定睛，他已扶稳眼罩、收刀退步认负。）＊",
     "links": [754]
   },
@@ -3218,7 +3218,7 @@
     "entryID": 749,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [609]
   },
@@ -3250,7 +3250,7 @@
     "entryID": 753,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nControlStage(TriggerEvent,Arena,b8)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,b8)@0.5;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場，場上人物更換",
     "links": [604]
   },
@@ -3258,7 +3258,7 @@
     "entryID": 754,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [600]
   },
@@ -3289,7 +3289,7 @@
     "actorID": "MC1",
     "text": "「是是是。」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「是是是。」",
     "links": [616]
   },
@@ -3298,7 +3298,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [760]
   },
@@ -3322,7 +3322,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [626]
   },
   {
@@ -3330,7 +3330,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [767]
   },
@@ -3339,7 +3339,7 @@
     "actorID": "role2",
     "text": "＊（台下叫好聲浪滾滾，連赤龍幫眾都被這股豪氣感染，忍不住跟著喝采起來。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,100);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "＊（台下叫好声浪滚滚，连赤龙帮众都被这股豪气感染，忍不住跟着喝采起来。）＊",
     "links": [760]
   },
@@ -3365,7 +3365,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（再睜眼，人已躺在英豪府。也不知是誰把你從擂台邊扛回來的，渾身痠疼——這一敗，赤龍幫那筆銀錢，是再也提不得了。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF38\", \"failure\");\nSetQuestEntryState(\"C2M1\", 1, \"failure\")",
+    "Script": "SetQuestState(\"CF38\", \"failure\");\nSetQuestEntryState(\"C2M1\", 1, \"failure\");",
     "Description": "任務失敗",
     "zh_CN": "[panel=6]＊（再睁眼，人已躺在英豪府。也不知是谁把你从擂台边扛回来的，浑身酸疼——这一败，赤龙帮那笔银钱，是再也提不得了。）＊",
     "links": [770]
@@ -3374,7 +3374,7 @@
     "entryID": 769,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nLoadLevel(Command_HallOfHeroes);\nEnableDialogueBG(Home);\nSetContinueMode(original)@2.5;\nMapLock(JinYangArena, lock);\nContinue()@2.5;",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "移出地圖、地圖鎖起來",
     "links": [768]
   },
@@ -3389,7 +3389,7 @@
     "entryID": 772,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@1;\nEnableDialogueBG(Lnn);\nAudioControl(PlaySFX,Others_FootStep);\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Lnn)@1;\nAudioControl(PlaySFX,Others_FootStep);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [669]
   },
@@ -3542,7 +3542,7 @@
     "actorID": "MC1",
     "text": "「成了。銀子到手。」",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"success\";",
     "zh_CN": "「成了。银子到手。」",
     "links": [796]
   },
@@ -3551,7 +3551,7 @@
     "actorID": "MC1",
     "text": "「冠軍拿了。銀子則……飛了。」",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"failure\"",
+    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"failure\";",
     "zh_CN": "「冠军拿了。银子则……飞了。」",
     "links": [802]
   },
@@ -3690,7 +3690,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（烈酒入喉，你面不改色，反而笑得愈發狂放。這份氣魄與酒量，讓在場眾人皆是眼前一亮。）＊",
     "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,100);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（烈酒入喉，你面不改色，反而笑得愈发狂放。这份气魄与酒量，让在场众人皆是眼前一亮。）＊",
     "links": [813]
   },
@@ -3753,7 +3753,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（一罈走完，你眼神依舊清亮。反倒是旁邊——郭嘉的舌頭，已經開始打結了。）＊",
     "Sequence": "DisableCharacterExpression(1);ModifyData(FeatExp,Player,AlcoholTolerance,100);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（一坛走完，你眼神依旧清亮。反倒是旁边——郭嘉的舌头，已经开始打结了。）＊",
     "links": [821]
   },
@@ -3786,7 +3786,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這罈老酒後勁極猛，半罈下肚，天旋地轉——你和郭嘉幾乎同時軟倒在桌沿。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（这坛老酒后劲极猛，半坛下肚，天旋地转——你和郭嘉几乎同时软倒在桌沿。）＊",
     "links": [825]
   },
@@ -3827,7 +3827,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（烈酒入喉如刀割，你猛地嗆咳起來，咳得眼淚都快出來了，方才那豪氣干雲的架勢頓時破了功。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（烈酒入喉如刀割，你猛地呛咳起来，咳得眼泪都快出来了，方才那豪气干云的架势顿时破了功。）＊",
     "links": [830]
   },
@@ -3883,7 +3883,7 @@
     "entryID": 836,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nLoadLevel(Command_HallOfHeroes);\nEnableDialogueBG(Home);\nSetContinueMode(original)@2.5;\nMapLock(JinYangArena, lock);\nDisableDialogueBG();\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "移出地圖、地圖鎖起來",
     "links": []
   },
@@ -3891,7 +3891,7 @@
     "entryID": 837,
     "actorID": "role2",
     "text": "[panel=6]＊（——電光石火間，旁觀者中不乏高手看出勝負已分。場邊的褚人飛身子微微前傾，目光死死釘在你身上。）＊",
-    "Sequence": "",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);",
     "zh_CN": "[panel=6]＊（——电光石火间，旁观者中不乏高手看出胜负已分。场边的褚人飞身子微微前倾，目光死死钉在你身上。）＊",
     "links": [628, 629]
   },
@@ -3914,7 +3914,7 @@
     "entryID": 841,
     "actorID": "role2",
     "text": "[panel=6]＊（酒過半巡後。）＊",
-    "Sequence": "DisableCharacterExpression(2);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(PlayMusic,BGM_25);",
+    "Sequence": "SetContinueMode(false);\nDisableCharacterExpression(2);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(PlayMusic,BGM_25);\nSetContinueMode(original)@2.5;",
     "zh_CN": "[panel=6]＊（酒过半巡后。）＊",
     "links": [785]
   },
@@ -3981,7 +3981,7 @@
     "actorID": "role5",
     "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF18\", 4) == \"unassigned\"",
+    "Conditions": "CurrentQuestEntryState(\"CF18\", 4) == \"unassigned\";",
     "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
     "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
     "links": [4092, 4093]
@@ -4009,7 +4009,7 @@
     "actorID": "MC1",
     "text": "「啊，竟然沒帶錢出來！？」",
     "Sequence": "SetPortrait(MC1,pic=19);",
-    "Conditions": "IsCoinPass(100)  == false",
+    "Conditions": "IsCoinPass(100)  == false;",
     "zh_TW": "「啊，竟然沒帶錢出來！？」",
     "zh_CN": "「啊，竟然没带钱出来！？」",
     "links": [4100]
@@ -4019,7 +4019,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "Sequence": "ModifyData(Coin,-100);",
-    "Conditions": "IsCoinPass(100)  == true",
+    "Conditions": "IsCoinPass(100)  == true;",
     "zh_TW": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "zh_CN": "[panel=6]＊（你掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
     "links": [4098]
@@ -4029,7 +4029,7 @@
     "actorID": "role5",
     "text": "「[em7]笑容不變重複道[/em7]：糖炒栗子，一包一百錢。」",
     "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
-    "Script": "SetQuestEntryState(\"CF18\", 4, \"success\")",
+    "Script": "SetQuestEntryState(\"CF18\", 4, \"success\");",
     "Description": "獲得糖炒栗子、任務更新",
     "zh_TW": "「[em7]笑容不變重複道[/em7]：糖炒栗子，一包一百錢。」",
     "zh_CN": "「[em7]笑容不变重复道[/em7]：糖炒栗子，一包一百钱。」",
@@ -4057,7 +4057,7 @@
     "entryID": 4101,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@3;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "呂信、子羽、郭嘉走近、轉場，場上人物更換",
     "links": [642]
   },
@@ -4065,7 +4065,7 @@
     "entryID": 4102,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@3;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "呂信、子羽、郭嘉走近、轉場，場上人物更換",
     "links": [664]
   },
@@ -4073,7 +4073,7 @@
     "entryID": 4103,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1.5) ;\nOpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(3, close);\nEnableEventBG(DrinkingParty,FullScreen);\nAudioControl(StopMusic);\nContinue()@1.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1.5);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nOpenPanel(3, close)@1;\nEnableEventBG(DrinkingParty,FullScreen)@1;\nAudioControl(StopMusic);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "事件圖",
     "links": [835]
   },
@@ -4081,7 +4081,7 @@
     "entryID": 4104,
     "actorID": "role2",
     "text": "[panel=6]＊（酒過半巡後。）＊",
-    "Sequence": "DisableCharacterExpression(2);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;",
+    "Sequence": "SetContinueMode(false);\nDisableCharacterExpression(2);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;",
     "zh_CN": "[panel=6]＊（酒过半巡后。）＊",
     "links": [775]
   },
@@ -4089,7 +4089,7 @@
     "entryID": 4105,
     "actorID": "role73",
     "text": "「[em7]收槍抱拳[/em7]，好個點到為止——這一槍，你收得比出得還漂亮。這一場，是你贏了。」",
-    "Sequence": "",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);",
     "Description": "第六戰：未習得 RightTimeLv2_Combat 時的替代收場",
     "zh_CN": "「[em7]收枪抱拳[/em7]，好个点到为止——这一枪，你收得比出得还漂亮。这一场，是你赢了。」",
     "links": [576]

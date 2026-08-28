@@ -121,7 +121,7 @@
     "actorID": "MC1",
     "text": "「四個人……也就是四種不同考題嗎……」",
     "Sequence": "OpenPanel(1, close);\nSetPortrait(MC1,pic=9);",
-    "Script": "SetQuestEntryState(\"C1M1\", 2, \"active\")",
+    "Script": "SetQuestEntryState(\"C1M1\", 2, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「四個人……也就是四種不同考題嗎……」",
     "zh_CN": "「四个人……也就是四种不同考题吗……」",
@@ -273,7 +273,7 @@
     "entryID": 4231,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出",
     "links": [530]
   },
@@ -281,7 +281,7 @@
     "entryID": 4232,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入",
     "links": [550]
   }

@@ -32,7 +32,7 @@
     "text": "「哦，妳的意思是…？」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「哦，妳的意思是…？」",
-    "zh_CN": "「哦，妳的意思是…？」",
+    "zh_CN": "「哦，你的意思是…？」",
     "links": [69]
   },
   {
@@ -158,7 +158,7 @@
     "text": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
     "zh_TW": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
-    "zh_CN": "「唉，好吧好吧，听妳的便是，今日就先练练我这虎虎生风的『伏虎拳』！」",
+    "zh_CN": "「唉，好吧好吧，听你的便是，今日就先练练我这虎虎生风的『伏虎拳』！」",
     "links": [2051]
   },
   {
@@ -174,7 +174,7 @@
     "entryID": 84,
     "actorID": "role2",
     "text": "[panel=6]＊（一番晨練下來，你只覺筋骨舒展，氣血暢通了不少。）＊",
-    "Sequence": "ModifyData(AbilityExp,MC1,Ability_STR,15);",
+    "Sequence": "ModifyData(AbilityExp,Player,Strength,15);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（一番晨練下來，你只覺筋骨舒展，氣血暢通了不少。）＊",
     "zh_CN": "[panel=6]＊（一番晨练下来，你只觉筋骨舒展，气血畅通了不少。）＊",
@@ -202,7 +202,7 @@
     "entryID": 87,
     "actorID": "role2",
     "text": "[panel=6]＊（你胡亂揮舞了一陣，把自己累得夠嗆，卻沒覺出什麼長進。）＊",
-    "Sequence": "ModifyData(AbilityExp,MC1,Ability_STR,5);",
+    "Sequence": "ModifyData(AbilityExp,Player,Strength,5);",
     "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你胡亂揮舞了一陣，把自己累得夠嗆，卻沒覺出什麼長進。）＊",
     "zh_CN": "[panel=6]＊（你胡乱挥舞了一阵，把自己累得够呛，却没觉出什么长进。）＊",
@@ -298,7 +298,7 @@
     "actorID": "MC8",
     "text": "[panel=2]「而且畢竟都花錢了，不好好利用這些鍛鍊設施就是浪費！」",
     "Sequence": "SetPortrait(MC8,pic=2);",
-    "Script": "SetQuestState(\"CF13\", \"active\")",
+    "Script": "SetQuestState(\"CF13\", \"active\");",
     "Description": "開啟任務",
     "zh_TW": "[panel=2]「而且畢竟都花錢了，不好好利用這些鍛鍊設施就是浪費！」",
     "zh_CN": "[panel=2]「而且毕竟都花钱了，不好好利用这些锻炼设施就是浪费！」",

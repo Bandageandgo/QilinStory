@@ -42,7 +42,7 @@
     "text": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？」",
-    "zh_CN": "「灵犀妳想到哪里去了！我辈江湖儿女，岂会做那鸡鸣狗盗之徒？」",
+    "zh_CN": "「灵犀你想到哪里去了！我辈江湖儿女，岂会做那鸡鸣狗盗之徒？」",
     "links": [17]
   },
   {
@@ -158,7 +158,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "LoadLevel(XiaoxiVillageTomb,XiaoxiVillageTomb_NorthEntrance);\nContinue();",
-    "Script": "SetQuestState(\"CF13\", \"success\")",
+    "Script": "SetQuestState(\"CF13\", \"success\");",
     "Description": "完成\"提升能力\"任務",
     "links": []
   },
@@ -375,8 +375,8 @@
     "actorID": "role105",
     "text": "[panel=1]「……成，就讓妳試試。」",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true",
-    "zh_CN": "[panel=1]「……成，就让妳试试。」",
+    "Conditions": "IsPassDice()  == true;",
+    "zh_CN": "[panel=1]「……成，就让你试试。」",
     "links": [2082]
   },
   {
@@ -384,7 +384,7 @@
     "actorID": "MC1",
     "text": "「茶博士，小犀她……呃……」",
     "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「茶博士，小犀她……呃……」",
     "links": [2077]
   },
@@ -409,7 +409,7 @@
     "actorID": "role105",
     "text": "[panel=1]「哼，口氣倒硬。……成，讓妳試試。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=1]「哼，口气倒硬。……成，让妳试试。」",
+    "zh_CN": "[panel=1]「哼，口气倒硬。……成，让你试试。」",
     "links": [2082]
   },
   {
@@ -625,7 +625,7 @@
     "entryID": 2145,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Farmland)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Farmland)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [2058]
   },
@@ -633,7 +633,7 @@
     "entryID": 2146,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(StudyRoom)@1;\nOpenPanel(1, close)@1;\nDisableCharacterExpression(2)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(StudyRoom)@1;\nOpenPanel(1, close)@1;\nDisableCharacterExpression(2)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [2085]
   },
@@ -641,7 +641,7 @@
     "entryID": 2147,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(TrainingGround)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(TrainingGround)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [2091]
   },
@@ -649,7 +649,7 @@
     "entryID": 2148,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nEnableDialogueBG(Lnn)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Lnn)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [2098]
   },

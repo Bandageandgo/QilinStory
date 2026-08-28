@@ -174,14 +174,14 @@
     "entryID": 34,
     "actorID": "0",
     "text": "",
-    "Sequence": "",
+    "Sequence": "Continue();",
     "links": [83, 43]
   },
   {
     "entryID": 35,
     "actorID": "MC1",
     "text": "「不行，雍仔。我覺得這鼎有問題，我們不能冒險。此地不宜久留，我們還是先想辦法離開吧。」",
-    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(AbilityExp,MC1,Charisma,25);",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(AbilityExp,Player,Charisma,25);",
     "zh_TW": "「不行，雍仔。我覺得這鼎有問題，我們不能冒險。此地不宜久留，我們還是先想辦法離開吧。」",
     "zh_CN": "「不行，雍仔。我感觉这鼎有问题，我们不能冒险。此地不宜久留，我们还是先想办法离开吧。」",
     "links": [36]
@@ -215,14 +215,14 @@
     "entryID": 39,
     "actorID": "0",
     "text": "",
-    "Sequence": "",
+    "Sequence": "Continue();",
     "links": [40, 43]
   },
   {
     "entryID": 40,
     "actorID": "MC1",
     "text": "「雍仔，這東西明顯很不對勁啊。但如果你執意要取…」",
-    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(AbilityExp,MC1,Charisma,25);",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(AbilityExp,Player,Charisma,25);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "「雍仔，這東西明顯很不對勁啊。但如果你執意要取…」",
     "zh_CN": "「雍仔，这东西明显很不对劲啊。但如果你执意要取…」",
@@ -389,7 +389,7 @@
     "actorID": "role116",
     "text": "[panel=1]「這是…什麼力量？！」",
     "Sequence": "",
-    "Script": "Variable[\"FirstBoss\"] = 1",
+    "Script": "Variable[\"FirstBoss\"] = 1;",
     "zh_TW": "[panel=1]「這是…什麼力量？！」",
     "zh_CN": "[panel=1]「这是…什么力量？！」",
     "links": [323]
@@ -533,10 +533,10 @@
   {
     "entryID": 76,
     "actorID": "MC20",
-    "text": "[panel=4]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
+    "text": "[panel=3]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=2);",
-    "zh_TW": "[panel=4]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
-    "zh_CN": "[panel=4]「都怪我…若不是我执意要去取那铜鼎…也不会…张神医，拜托了！」",
+    "zh_TW": "[panel=3]「都怪我…若不是我執意要去取那銅鼎…也不會…張神醫，拜託了！」",
+    "zh_CN": "[panel=3]「都怪我…若不是我执意要去取那铜鼎…也不会…张神医，拜托了！」",
     "links": [77]
   },
   {
@@ -613,26 +613,26 @@
   {
     "entryID": 85,
     "actorID": "MC1",
-    "text": "哼…",
+    "text": "「哼……」",
     "Sequence": "SetPortrait(MC1,pic=16);\nPlayOrStopParticle(BloodStain_1,Play);\nAudioControl(PlaySFX,Others_BoneBreaking);",
-    "zh_TW": "哼…",
-    "zh_CN": "哼…",
+    "zh_TW": "「哼……」",
+    "zh_CN": "「哼……」",
     "links": [52]
   },
   {
     "entryID": 86,
     "actorID": "MC1",
-    "text": "…",
+    "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=16);\nContinue();",
-    "zh_TW": "…",
-    "zh_CN": "…",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
     "links": [68]
   },
   {
     "entryID": 87,
     "actorID": "role2",
     "text": "[panel=6]＊（一夜過去。）＊",
-    "Sequence": "EnableDialogueBG(Home);\nSetContinueMode(false);\nModifyData(GameDate,179,5,Early);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;\nModifyData(IsInTeam,MC20,false);\nModifyData(IsAbleToJoinTeam,MC20,false);",
+    "Sequence": "SetContinueMode(false);\nEnableDialogueBG(Home)@1;\nModifyData(GameDate,179,5,Early)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nModifyData(IsInTeam,MC20,false);\nModifyData(IsAbleToJoinTeam,MC20,false);\nSetContinueMode(original)@2.5;",
     "Description": "雍仔離開隊伍、時間前進",
     "zh_TW": "[panel=6]＊（一夜過去。）＊",
     "zh_CN": "[panel=6]＊（一夜过去。）＊",
@@ -720,7 +720,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [303]
   },
@@ -729,7 +729,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [85]
   },
@@ -892,11 +892,11 @@
   },
   {
     "entryID": 254,
-    "actorID": "MC13",
-    "text": "[panel=1](念到此處，微微頷首，隨即陷入沉思，開始自言自語)",
+    "actorID": "role2",
+    "text": "[panel=6]＊（張仲景念到此處，微微頷首，隨即陷入沉思，自言自語起來。）＊",
     "Sequence": "SetPortrait(MC13,pic=3);",
-    "zh_TW": "[panel=1](念到此處，微微頷首，隨即陷入沉思，開始自言自語)",
-    "zh_CN": "[panel=1](念到此处，微微颔首，随即陷入沉思，开始自言自语)",
+    "zh_TW": "[panel=6]＊（張仲景念到此處，微微頷首，隨即陷入沉思，自言自語起來。）＊",
+    "zh_CN": "[panel=6]＊（张仲景念到此处，微微颔首，随即陷入沉思，自言自语起来。）＊",
     "links": [288]
   },
   {
@@ -939,7 +939,7 @@
     "entryID": 259,
     "actorID": "MC13",
     "text": "「哈哈哈！對對對！正是[em2]陰陽交泰，如日如月！[/em2]好小子，你這記性倒是不壞！老子還以為你聽了就忘呢！」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(MC13,pic=5);ModifyData(FeatExp,MC1,Qi,10);",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(MC13,pic=5);ModifyData(FeatExp,Player,Qi,10);",
     "zh_TW": "「哈哈哈！對對對！正是[em2]陰陽交泰，如日如月！[/em2]好小子，你這記性倒是不壞！老子還以為你聽了就忘呢！」",
     "zh_CN": "「哈哈哈！对对对！正是[em2]阴阳交泰，如日如月！[/em2]好小子，你这记性倒是不坏！老子还以为你听了就忘呢！」",
     "links": [260]
@@ -974,9 +974,9 @@
   {
     "entryID": 263,
     "actorID": "MC13",
-    "text": "「呵呵，小子，『丹田如爐，真火自生』那可是開篇第一句，這都記混啦？看來你還得用心多記幾遍。」 ",
+    "text": "「呵呵，小子，『丹田如爐，真火自生』那可是開篇第一句，這都記混啦？看來你還得用心多記幾遍。」",
     "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(MC13,pic=1);",
-    "zh_TW": "「呵呵，小子，『丹田如爐，真火自生』那可是開篇第一句，這都記混啦？看來你還得用心多記幾遍。」 ",
+    "zh_TW": "「呵呵，小子，『丹田如爐，真火自生』那可是開篇第一句，這都記混啦？看來你還得用心多記幾遍。」",
     "zh_CN": "「呵呵，小子，『丹田如炉，真火自生』那可是开篇第一句，这都记混啦？看来你还得用心多记几遍。」",
     "links": [287]
   },
@@ -1028,9 +1028,9 @@
   {
     "entryID": 269,
     "actorID": "MC13",
-    "text": "「哦？『返照歸一，萬法皆焚』？小子，你這可就跳到結尾去了！心急吃不了熱豆腐啊，一步一步來。」 ",
+    "text": "「哦？『返照歸一，萬法皆焚』？小子，你這可就跳到結尾去了！心急吃不了熱豆腐啊，一步一步來。」",
     "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(0);SetPortrait(MC13,pic=1);",
-    "zh_TW": "「哦？『返照歸一，萬法皆焚』？小子，你這可就跳到結尾去了！心急吃不了熱豆腐啊，一步一步來。」 ",
+    "zh_TW": "「哦？『返照歸一，萬法皆焚』？小子，你這可就跳到結尾去了！心急吃不了熱豆腐啊，一步一步來。」",
     "zh_CN": "「哦？『返照归一，万法皆焚』？小子，你这可就跳到结尾去了！心急吃不了热豆腐啊，一步一步来。」",
     "links": [286]
   },
@@ -1091,10 +1091,10 @@
   {
     "entryID": 279,
     "actorID": "MC13",
-    "text": "[panel=4]「行了行了，小子，少來這些虛禮。」",
+    "text": "[panel=1]「行了行了，小子，少來這些虛禮。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC13,pic=5);",
-    "zh_TW": "[panel=4]「行了行了，小子，少來這些虛禮。」",
-    "zh_CN": "[panel=4]「行了行了，小子，少来这些虚礼。」",
+    "zh_TW": "[panel=1]「行了行了，小子，少來這些虛禮。」",
+    "zh_CN": "[panel=1]「行了行了，小子，少来这些虚礼。」",
     "links": [294]
   },
   {
@@ -1183,7 +1183,7 @@
     "actorID": "MC1",
     "text": "「看來這個就是童大哥在找的鐵木了，黑不溜秋的，真行嗎？」",
     "Sequence": "SetPortrait(MC1,pic=6);",
-    "Script": "SetQuestEntryState(\"C0F3\", 1, \"success\")\nSetQuestEntryState(\"C0F3\", 2, \"active\")",
+    "Script": "SetQuestEntryState(\"C0F3\", 1, \"success\")\nSetQuestEntryState(\"C0F3\", 2, \"active\");",
     "zh_TW": "「看來這個就是童大哥在找的鐵木了，黑不溜秋的，真行嗎？」",
     "zh_CN": "「看来这个就是童大哥在找的铁木了，黑不溜秋的，真行吗？」",
     "links": []
@@ -1218,10 +1218,10 @@
   {
     "entryID": 294,
     "actorID": "MC13",
-    "text": "[panel=4]「你只要別三天打魚兩天曬網，把我的心法給練岔了氣，就算對得起我了。」",
+    "text": "[panel=1]「你只要別三天打魚兩天曬網，把我的心法給練岔了氣，就算對得起我了。」",
     "Sequence": "",
-    "zh_TW": "[panel=4]「你只要別三天打魚兩天曬網，把我的心法給練岔了氣，就算對得起我了。」",
-    "zh_CN": "[panel=4]「你只要别三天打鱼两天晒网，把我的心法给练岔了气，就算对得起我了。」",
+    "zh_TW": "[panel=1]「你只要別三天打魚兩天曬網，把我的心法給練岔了氣，就算對得起我了。」",
+    "zh_CN": "[panel=1]「你只要别三天打鱼两天晒网，把我的心法给练岔了气，就算对得起我了。」",
     "links": [295]
   },
   {
@@ -1326,10 +1326,10 @@
   {
     "entryID": 306,
     "actorID": "MC1",
-    "text": "哼…",
+    "text": "「哼……」",
     "Sequence": "SetPortrait(MC1,pic=16);\nPlayOrStopParticle(BloodStain_1,Play);\nAudioControl(PlaySFX,Others_BoneBreaking);",
-    "zh_TW": "哼…",
-    "zh_CN": "哼…",
+    "zh_TW": "「哼……」",
+    "zh_CN": "「哼……」",
     "links": [307]
   },
   {
@@ -1352,7 +1352,7 @@
     "entryID": 309,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場特效",
     "links": [249]
   },
@@ -1476,7 +1476,7 @@
     "actorID": "role116",
     "text": "「[em7]獰笑霎時僵住，聲音陡然變調[/em7]，住…住手！那是吾的——！」",
     "Sequence": "",
-    "Script": "Variable[\"FirstBoss\"] = 1",
+    "Script": "Variable[\"FirstBoss\"] = 1;",
     "zh_TW": "「[em7]獰笑霎時僵住，聲音陡然變調[/em7]，住…住手！那是吾的——！」",
     "zh_CN": "「[em7]狞笑霎时僵住，声音陡然变调[/em7]，住…住手！那是吾的——！」",
     "links": [324]
@@ -1521,7 +1521,7 @@
     "entryID": 331,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
     "links": [332]
   },
   {
@@ -1553,7 +1553,7 @@
     "entryID": 426,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [333]
   },
@@ -1572,7 +1572,7 @@
     "text": "「這是何處……？姑娘，墓裡那一回，可是妳救了我？」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「這是何處……？姑娘，墓裡那一回，可是妳救了我？」",
-    "zh_CN": "「这是何处……？姑娘，墓里那一回，可是妳救了我？」",
+    "zh_CN": "「这是何处……？姑娘，墓里那一回，可是你救了我？」",
     "links": [429]
   },
   {
@@ -1608,7 +1608,7 @@
     "text": "「妳說不必謝，那我就不謝了。」",
     "Sequence": "SetPortrait(MC1,pic=4);",
     "zh_TW": "「妳說不必謝，那我就不謝了。」",
-    "zh_CN": "「妳說不必谢，那我就不谢了。」",
+    "zh_CN": "「你說不必谢，那我就不谢了。」",
     "links": [434]
   },
   {
@@ -1673,7 +1673,7 @@
     "text": "「等、等——小妹妹，妳說話怎麼跟猜謎似的！？」",
     "Sequence": "SetPortrait(MC1,pic=10);EnableCharacterExpression(0,MC1-1,Anger);",
     "zh_TW": "「等、等——小妹妹，妳說話怎麼跟猜謎似的！？」",
-    "zh_CN": "「等、等——小妹妹，妳說话怎么跟猜谜似的！？」",
+    "zh_CN": "「等、等——小妹妹，你說话怎么跟猜谜似的！？」",
     "links": [440]
   },
   {
@@ -1761,7 +1761,7 @@
     "entryID": 450,
     "actorID": "role2",
     "text": "[panel=6]＊（他清了清嗓子，接下來的數個時辰，張仲景為你講解了[em2]長生經[/em2]總綱每一個字義。你聽得入神，許多地方仍不明所以，卻也把那些口訣硬記住了。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Qi,100);",
+    "Sequence": "ModifyData(FeatExp,Player,Qi,100);",
     "zh_TW": "[panel=6]＊（他清了清嗓子，接下來的數個時辰，張仲景為你講解了[em2]長生經[/em2]總綱每一個字義。你聽得入神，許多地方仍不明所以，卻也把那些口訣硬記住了。）＊",
     "zh_CN": "[panel=6]＊（他清了清嗓子，接下来的数个时辰，张仲景为你讲解了[em2]长生经[/em2]总纲每一个字义。你听得入神，许多地方仍不明所以，却也把那些口诀硬记住了。）＊",
     "links": [278]
@@ -1822,14 +1822,14 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "links": [450]
   },
   {
     "entryID": 2060,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nStopAllParticle();\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nStopAllParticle();\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場特效",
     "links": [87]
   },

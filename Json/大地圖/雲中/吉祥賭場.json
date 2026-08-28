@@ -27,9 +27,9 @@
   {
     "entryID": 40,
     "actorID": "MC22",
-    "text": "「[em7]緊張地抓著你的衣袖，手心全是汗[/em7] 大俠…全靠你了…要是輸了，我就真的要被抓去倒酒了…」",
+    "text": "「[em7]緊張地抓著你的衣袖，手心全是汗[/em7]，大俠…全靠你了…要是輸了，我就真的要被抓去倒酒了…」",
     "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22,Nervous);\nDisableCharacterExpression(0);",
-    "zh_CN": "「[em7]紧张地抓着你的衣袖，手心全是汗[/em7] 大侠…全靠你了…要是输了，我就真的要被抓去倒酒了…」",
+    "zh_CN": "「[em7]紧张地抓着你的衣袖，手心全是汗[/em7]，大侠…全靠你了…要是输了，我就真的要被抓去倒酒了…」",
     "links": [131, 132, 133]
   },
   {
@@ -43,9 +43,9 @@
   {
     "entryID": 44,
     "actorID": "MC1",
-    "text": "「[em7]不動聲色地將手按在桌上，暗勁一吐[/em7] 既然幫主如此豪氣，那我也陪您賭一把大的。押豹子。」",
+    "text": "「[em7]不動聲色地將手按在桌上，暗勁一吐[/em7]，既然幫主如此豪氣，那我也陪您賭一把大的。押豹子。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
-    "zh_CN": "「[em7]不动声色地将手按在桌上，暗劲一吐[/em7] 既然帮主如此豪气，那我也陪您赌一把大的。押豹子。」",
+    "zh_CN": "「[em7]不动声色地将手按在桌上，暗劲一吐[/em7]，既然帮主如此豪气，那我也陪您赌一把大的。押豹子。」",
     "links": [4036]
   },
   {
@@ -73,7 +73,7 @@
     "actorID": "MC1",
     "text": "「赤龍翻江，豹子通殺。」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "Conditions": "CurrentQuestState(\"CF20\") == \"active\"",
+    "Conditions": "CurrentQuestState(\"CF20\") == \"active\";",
     "Description": "已觸發CF20任務",
     "zh_TW": "「赤龍翻江，豹子通殺。」",
     "zh_CN": "「赤龙翻江，豹子通杀。」",
@@ -84,7 +84,7 @@
     "actorID": "role13",
     "text": "「原來是熟客，進去吧。」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF20\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"CF20\", 1, \"success\");",
     "Description": "任務更新、守衛位置變換",
     "zh_TW": "「原來是熟客，進去吧。」",
     "zh_CN": "「原来是熟客，进去吧。」",
@@ -93,10 +93,10 @@
   {
     "entryID": 71,
     "actorID": "MC22",
-    "text": "[panel=2]「[em7]躲在你身後，探出半個腦袋[/em7] 少…少瞧不起人！這是我請來的高手！」",
+    "text": "[panel=2]「[em7]躲在你身後，探出半個腦袋[/em7]，少…少瞧不起人！這是我請來的高手！」",
     "Sequence": "SetPortrait(MC22,pic=13);EnableCharacterExpression(2,MC22,Meditate);",
-    "zh_TW": "[panel=2]「[em7]躲在你身後，探出半個腦袋[/em7] 少…少瞧不起人！這是我請來的高手！」",
-    "zh_CN": "[panel=2]「[em7]躲在你身后，探出半个脑袋[/em7] 少…少瞧不起人！这是我请来的高手！」",
+    "zh_TW": "[panel=2]「[em7]躲在你身後，探出半個腦袋[/em7]，少…少瞧不起人！這是我請來的高手！」",
+    "zh_CN": "[panel=2]「[em7]躲在你身后，探出半个脑袋[/em7]，少…少瞧不起人！这是我请来的高手！」",
     "links": [37]
   },
   {
@@ -117,7 +117,7 @@
     "entryID": 119,
     "actorID": "role2",
     "text": "[panel=6]＊（褚人飛話剛說完，就直接搖起骰子來，骰盅落桌，發出沉悶的聲響。但你聽那聲音，那骰子疑似內部灌了水銀。這老幫主看似豪爽，實則也是個老千。若是在賭桌上硬碰硬，恐怕勝算渺茫。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,Insight,10)\n;SetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10)\n;SetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（褚人飛話剛說完，就直接搖起骰子來，骰盅落桌，發出沉悶的聲響。但你聽那聲音，那骰子疑似內部灌了水銀。這老幫主看似豪爽，實則也是個老千。若是在賭桌上硬碰硬，恐怕勝算渺茫。）＊",
     "zh_CN": "[panel=6]＊（褚人飞话刚说完，就直接摇起骰子来，骰盅落桌，发出沉闷的声响。但你听那声音，那骰子疑似内部灌了水银。这老帮主看似豪爽，实则也是个老千。若是在赌桌上硬碰硬，恐怕胜算渺茫。）＊",
@@ -128,7 +128,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（褚人飛話剛說完，就直接搖起骰子來，骰盅落桌，發出沉悶的聲響。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（褚人飛話剛說完，就直接搖起骰子來，骰盅落桌，發出沉悶的聲響。）＊",
     "zh_CN": "[panel=6]＊（褚人飞话刚说完，就直接摇起骰子来，骰盅落桌，发出沉闷的声响。）＊",
     "links": [121]
@@ -181,19 +181,19 @@
   {
     "entryID": 126,
     "actorID": "MC1",
-    "text": "「[em7]上前一步，按住賭桌邊緣[/em7] 褚幫主，慢著。剛才說的可是[em2]贏過你[/em2]，可沒說一定要在這張賭桌上贏你吧？」",
+    "text": "「[em7]上前一步，按住賭桌邊緣[/em7]，褚幫主，慢著。剛才說的可是[em2]贏過你[/em2]，可沒說一定要在這張賭桌上贏你吧？」",
     "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_TW": "「[em7]上前一步，按住賭桌邊緣[/em7] 褚幫主，慢著。剛才說的可是[em2]贏過你[/em2]，可沒說一定要在這張賭桌上贏你吧？」",
-    "zh_CN": "「[em7]上前一步，按住赌桌边缘[/em7] 褚帮主，慢着。刚才说的可是[em2]赢过你[/em2]，可没说一定要在这张赌桌上赢你吧？」",
+    "zh_TW": "「[em7]上前一步，按住賭桌邊緣[/em7]，褚幫主，慢著。剛才說的可是[em2]贏過你[/em2]，可沒說一定要在這張賭桌上贏你吧？」",
+    "zh_CN": "「[em7]上前一步，按住赌桌边缘[/em7]，褚帮主，慢着。刚才说的可是[em2]赢过你[/em2]，可没说一定要在这张赌桌上赢你吧？」",
     "links": [127]
   },
   {
     "entryID": 127,
     "actorID": "MC10",
-    "text": "「[em7]眉毛一挑，停止了轉動鐵膽[/em7] 哦？小子，你想玩什麼花樣？」",
+    "text": "「[em7]眉毛一挑，停止了轉動鐵膽[/em7]，哦？小子，你想玩什麼花樣？」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "「[em7]眉毛一挑，停止了轉動鐵膽[/em7] 哦？小子，你想玩什麼花樣？」",
-    "zh_CN": "「[em7]眉毛一挑，停止了转动铁胆[/em7] 哦？小子，你想玩什么花样？」",
+    "zh_TW": "「[em7]眉毛一挑，停止了轉動鐵膽[/em7]，哦？小子，你想玩什麼花樣？」",
+    "zh_CN": "「[em7]眉毛一挑，停止了转动铁胆[/em7]，哦？小子，你想玩什么花样？」",
     "links": [128]
   },
   {
@@ -217,10 +217,10 @@
   {
     "entryID": 130,
     "actorID": "MC10",
-    "text": "「[em7]愣了一下，隨即爆發出更大的笑聲[/em7] 哈哈哈哈！好小子，竟敢跟老子玩文字遊戲！不過……老子喜歡！好！老子今天就依你！比武、鬥酒、還是賭博，規矩你定！老子奉陪到底！」",
+    "text": "「[em7]愣了一下，隨即爆發出更大的笑聲[/em7]，哈哈哈哈！好小子，竟敢跟老子玩文字遊戲！不過……老子喜歡！好！老子今天就依你！比武、鬥酒、還是賭博，規矩你定！老子奉陪到底！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "「[em7]愣了一下，隨即爆發出更大的笑聲[/em7] 哈哈哈哈！好小子，竟敢跟老子玩文字遊戲！不過……老子喜歡！好！老子今天就依你！比武、鬥酒、還是賭博，規矩你定！老子奉陪到底！」",
-    "zh_CN": "「[em7]愣了一下，随即爆发出更大的笑声[/em7] 哈哈哈哈！好小子，竟敢跟老子玩文字游戏！不过……老子喜欢！好！老子今天就依你！比武、斗酒、还是赌博，规矩你定！老子奉陪到底！」",
+    "zh_TW": "「[em7]愣了一下，隨即爆發出更大的笑聲[/em7]，哈哈哈哈！好小子，竟敢跟老子玩文字遊戲！不過……老子喜歡！好！老子今天就依你！比武、鬥酒、還是賭博，規矩你定！老子奉陪到底！」",
+    "zh_CN": "「[em7]愣了一下，随即爆发出更大的笑声[/em7]，哈哈哈哈！好小子，竟敢跟老子玩文字游戏！不过……老子喜欢！好！老子今天就依你！比武、斗酒、还是赌博，规矩你定！老子奉陪到底！」",
     "links": [40]
   },
   {
@@ -263,7 +263,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [3984]
   },
@@ -272,7 +272,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [3981]
   },
@@ -293,10 +293,10 @@
   {
     "entryID": 3982,
     "actorID": "MC10",
-    "text": "「[em7]猛地站起身，渾身骨骼劈啪作響[/em7] 好！有膽識！小子，接招！」",
+    "text": "「[em7]猛地站起身，渾身骨骼劈啪作響[/em7]，好！有膽識！小子，接招！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "「[em7]猛地站起身，渾身骨骼劈啪作響[/em7] 好！有膽識！小子，接招！」",
-    "zh_CN": "「[em7]猛地站起身，浑身骨骼劈啪作响[/em7] 好！有胆识！小子，接招！」",
+    "zh_TW": "「[em7]猛地站起身，渾身骨骼劈啪作響[/em7]，好！有膽識！小子，接招！」",
+    "zh_CN": "「[em7]猛地站起身，浑身骨骼劈啪作响[/em7]，好！有胆识！小子，接招！」",
     "links": [3977]
   },
   {
@@ -304,7 +304,7 @@
     "actorID": "MC10",
     "text": "「哈哈哈哈！痛快！真是痛快！長江後浪推前浪，老子今天算是有活動到筋骨了！」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,150);",
-    "Script": "SetQuestEntryState(\"CF20\", 2, \"success\")",
+    "Script": "SetQuestEntryState(\"CF20\", 2, \"success\");",
     "Description": "任務更新、好感度提升",
     "zh_TW": "「哈哈哈哈！痛快！真是痛快！長江後浪推前浪，老子今天算是有活動到筋骨了！」",
     "zh_CN": "「哈哈哈哈！痛快！真是痛快！长江后浪推前浪，老子今天算是有活动到筋骨了！」",
@@ -332,10 +332,10 @@
   {
     "entryID": 3986,
     "actorID": "MC10",
-    "text": "「[em7]眼睛一亮[/em7]拼酒？哈哈哈哈！在雁門，還沒人敢跟老子叫板酒量！來人，上[em2]九醞春[/em2]！換大碗！」",
+    "text": "「[em7]眼睛一亮[/em7]，拼酒？哈哈哈哈！在雁門，還沒人敢跟老子叫板酒量！來人，上[em2]九醞春[/em2]！換大碗！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "「[em7]眼睛一亮[/em7]拼酒？哈哈哈哈！在雁門，還沒人敢跟老子叫板酒量！來人，上[em2]九醞春[/em2]！換大碗！」",
-    "zh_CN": "「[em7]眼睛一亮[/em7]拼酒？哈哈哈哈！在雁门，还没人敢跟老子叫板酒量！来人，上[em2]九酝春[/em2]！换大碗！」",
+    "zh_TW": "「[em7]眼睛一亮[/em7]，拼酒？哈哈哈哈！在雁門，還沒人敢跟老子叫板酒量！來人，上[em2]九醞春[/em2]！換大碗！」",
+    "zh_CN": "「[em7]眼睛一亮[/em7]，拼酒？哈哈哈哈！在雁门，还没人敢跟老子叫板酒量！来人，上[em2]九酝春[/em2]！换大碗！」",
     "links": [3987]
   },
   {
@@ -365,7 +365,7 @@
     "entryID": 3990,
     "actorID": "role2",
     "text": "[panel=6]＊（你面不改色地飲盡第一碗。褚人飛見狀，大笑著連乾三碗，氣氛瞬間熱烈起來。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你面不改色地飲盡第一碗。褚人飛見狀，大笑著連乾三碗，氣氛瞬間熱烈起來。）＊",
     "zh_CN": "[panel=6]＊（你面不改色地饮尽第一碗。褚人飞见状，大笑着连干三碗，气氛瞬间热烈起来。）＊",
@@ -376,7 +376,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這九醞春對你來說太過刺激，你第一碗下肚便覺得酒氣直衝腦門，忍不住咳了幾聲。褚人飛見狀，目光中透著幾分輕蔑。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（這九醞春對你來說太過刺激，你第一碗下肚便覺得酒氣直衝腦門，忍不住咳了幾聲。褚人飛見狀，目光中透著幾分輕蔑。）＊",
     "zh_CN": "[panel=6]＊（这九酝春对你来说太过刺激，你第一碗下肚便觉得酒气直冲脑门，忍不住咳了几声。褚人飞见状，目光中透着几分轻蔑。）＊",
     "links": [3994]
@@ -435,7 +435,7 @@
     "entryID": 3999,
     "actorID": "role2",
     "text": "[panel=6]＊（你暗自運轉內功化解酒氣，越喝越順。反觀褚人飛，雖然依舊豪邁，但眼神已有了幾分醉意。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你暗自運轉內功化解酒氣，越喝越順。反觀褚人飛，雖然依舊豪邁，但眼神已有了幾分醉意。）＊",
     "zh_CN": "[panel=6]＊（你暗自运转内功化解酒气，越喝越顺。反观褚人飞，虽然依旧豪迈，但眼神已有了几分醉意。）＊",
@@ -446,7 +446,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "zh_CN": "[panel=6]＊（你连喝几碗，酒气直冲脑门，已经有些站不稳了。褚人飞则越喝越精神，仿佛这点酒对他来说只是白开水。）＊",
     "links": [4002]
@@ -454,11 +454,11 @@
   {
     "entryID": 4001,
     "actorID": "MC10",
-    "text": "「[em7]打了個酒嗝[/em7] 痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
+    "text": "「[em7]打了個酒嗝[/em7]，痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,50);",
     "Description": "好感度提升",
-    "zh_TW": "「[em7]打了個酒嗝[/em7] 痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
-    "zh_CN": "「[em7]打了个酒嗝[/em7] 痛快！老子好久没遇到对手了！最后一轮，定胜负！」",
+    "zh_TW": "「[em7]打了個酒嗝[/em7]，痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
+    "zh_CN": "「[em7]打了个酒嗝[/em7]，痛快！老子好久没遇到对手了！最后一轮，定胜负！」",
     "links": [4010]
   },
   {
@@ -497,7 +497,7 @@
     "entryID": 4006,
     "actorID": "role2",
     "text": "[panel=6]＊（你暗自運轉內功化解酒氣，越喝越順。反觀褚人飛，雖然依舊豪邁，但眼神已有了幾分醉意。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你暗自運轉內功化解酒氣，越喝越順。反觀褚人飛，雖然依舊豪邁，但眼神已有了幾分醉意。）＊",
     "zh_CN": "[panel=6]＊（你暗自运转内功化解酒气，越喝越顺。反观褚人飞，虽然依旧豪迈，但眼神已有了几分醉意。）＊",
@@ -508,7 +508,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "zh_CN": "[panel=6]＊（你连喝几碗，酒气直冲脑门，已经有些站不稳了。褚人飞则越喝越精神，仿佛这点酒对他来说只是白开水。）＊",
     "links": [4009]
@@ -516,11 +516,11 @@
   {
     "entryID": 4008,
     "actorID": "MC10",
-    "text": "「[em7]打了個酒嗝[/em7] 痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
+    "text": "「[em7]打了個酒嗝[/em7]，痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,50);",
     "Description": "好感度提升",
-    "zh_TW": "「[em7]打了個酒嗝[/em7] 痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
-    "zh_CN": "「[em7]打了个酒嗝[/em7] 痛快！老子好久没遇到对手了！最后一轮，定胜负！」",
+    "zh_TW": "「[em7]打了個酒嗝[/em7]，痛快！老子好久沒遇到對手了！最後一輪，定勝負！」",
+    "zh_CN": "「[em7]打了个酒嗝[/em7]，痛快！老子好久没遇到对手了！最后一轮，定胜负！」",
     "links": [4019]
   },
   {
@@ -559,7 +559,7 @@
     "entryID": 4013,
     "actorID": "role2",
     "text": "[panel=6]＊（終於，褚人飛在狂飲數十碗後，終於不勝酒力，身形一晃，重重地跌坐在椅子上。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（終於，褚人飛在狂飲數十碗後，終於不勝酒力，身形一晃，重重地跌坐在椅子上。）＊",
     "zh_CN": "[panel=6]＊（终于，褚人飞在狂饮数十碗后，终于不胜酒力，身形一晃，重重地跌坐在椅子上。）＊",
@@ -570,7 +570,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "zh_CN": "[panel=6]＊（你终于支撑不住，眼前一黑，醉倒在赌桌上。褚人飞见状，发出震耳欲聋的嘲笑声。）＊",
     "links": [4016]
@@ -578,11 +578,11 @@
   {
     "entryID": 4015,
     "actorID": "MC10",
-    "text": "「[em7]大著舌頭，揮了揮手[/em7] 嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
+    "text": "「[em7]大著舌頭，揮了揮手[/em7]，嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,50);",
     "Description": "好感度提升",
-    "zh_TW": "「[em7]大著舌頭，揮了揮手[/em7] 嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
-    "zh_CN": "「[em7]大着舌头，挥了挥手[/em7] 嗝……好小子……！老子……老子今天算是服了！愿赌服输！这丫头的欠条……撕了！那盒子……拿走拿走！别在这碍老子的眼……老子还要再喝……」",
+    "zh_TW": "「[em7]大著舌頭，揮了揮手[/em7]，嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
+    "zh_CN": "「[em7]大着舌头，挥了挥手[/em7]，嗝……好小子……！老子……老子今天算是服了！愿赌服输！这丫头的欠条……撕了！那盒子……拿走拿走！别在这碍老子的眼……老子还要再喝……」",
     "links": [4018]
   },
   {
@@ -598,8 +598,8 @@
     "entryID": 4017,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(Coin,-500);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
-    "Script": "SetQuestState(\"CF20\", \"failure\")",
+    "Sequence": "SetContinueMode(false);\nModifyData(Coin,-500);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
+    "Script": "SetQuestState(\"CF20\", \"failure\");",
     "Description": "任務失敗、淡入",
     "links": [4228]
   },
@@ -608,7 +608,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "ModifyData(Valuable,Player,FireWine,3);",
-    "Script": "SetQuestEntryState(\"CF20\", 3, \"success\")",
+    "Script": "SetQuestEntryState(\"CF20\", 3, \"success\");",
     "Description": "任務更新、給予獎勵\"火酒\"",
     "links": [4055]
   },
@@ -639,7 +639,7 @@
     "entryID": 4022,
     "actorID": "role2",
     "text": "[panel=6]＊（終於，褚人飛在狂飲數十碗後，終於不勝酒力，身形一晃，重重地跌坐在椅子上。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（終於，褚人飛在狂飲數十碗後，終於不勝酒力，身形一晃，重重地跌坐在椅子上。）＊",
     "zh_CN": "[panel=6]＊（终于，褚人飞在狂饮数十碗后，终于不胜酒力，身形一晃，重重地跌坐在椅子上。）＊",
@@ -650,7 +650,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "zh_CN": "[panel=6]＊（你终于支撑不住，眼前一黑，醉倒在赌桌上。褚人飞见状，发出震耳欲聋的嘲笑声。）＊",
     "links": [4025]
@@ -658,11 +658,11 @@
   {
     "entryID": 4024,
     "actorID": "MC10",
-    "text": "「[em7]大著舌頭，揮了揮手[/em7] 嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
+    "text": "「[em7]大著舌頭，揮了揮手[/em7]，嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,50);",
     "Description": "好感度提升",
-    "zh_TW": "「[em7]大著舌頭，揮了揮手[/em7] 嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
-    "zh_CN": "「[em7]大着舌头，挥了挥手[/em7] 嗝……好小子……！老子……老子今天算是服了！愿赌服输！这丫头的欠条……撕了！那盒子……拿走拿走！别在这碍老子的眼……老子还要再喝……」",
+    "zh_TW": "「[em7]大著舌頭，揮了揮手[/em7]，嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
+    "zh_CN": "「[em7]大着舌头，挥了挥手[/em7]，嗝……好小子……！老子……老子今天算是服了！愿赌服输！这丫头的欠条……撕了！那盒子……拿走拿走！别在这碍老子的眼……老子还要再喝……」",
     "links": [4018]
   },
   {
@@ -701,7 +701,7 @@
     "entryID": 4030,
     "actorID": "role2",
     "text": "[panel=6]＊（終於，褚人飛在狂飲數十碗後，終於不勝酒力，身形一晃，重重地跌坐在椅子上。）＊",
-    "Sequence": "ModifyData(FeatExp,MC1,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,50);\nSetPortrait(MC1,pic=12);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（終於，褚人飛在狂飲數十碗後，終於不勝酒力，身形一晃，重重地跌坐在椅子上。）＊",
     "zh_CN": "[panel=6]＊（终于，褚人飞在狂饮数十碗后，终于不胜酒力，身形一晃，重重地跌坐在椅子上。）＊",
@@ -712,7 +712,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "zh_CN": "[panel=6]＊（你终于支撑不住，眼前一黑，醉倒在赌桌上。褚人飞见状，发出震耳欲聋的嘲笑声。）＊",
     "links": [4033]
@@ -720,11 +720,11 @@
   {
     "entryID": 4032,
     "actorID": "MC10",
-    "text": "「[em7]大著舌頭，揮了揮手[/em7] 嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
+    "text": "「[em7]大著舌頭，揮了揮手[/em7]，嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,50);",
     "Description": "好感度提升",
-    "zh_TW": "「[em7]大著舌頭，揮了揮手[/em7] 嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
-    "zh_CN": "「[em7]大着舌头，挥了挥手[/em7] 嗝……好小子……！老子……老子今天算是服了！愿赌服输！这丫头的欠条……撕了！那盒子……拿走拿走！别在这碍老子的眼……老子还要再喝……」",
+    "zh_TW": "「[em7]大著舌頭，揮了揮手[/em7]，嗝……好小子……！老子……老子今天算是服了！願賭服輸！這丫頭的欠條……撕了！那盒子……拿走拿走！別在這礙老子的眼……老子還要再喝……」",
+    "zh_CN": "「[em7]大着舌头，挥了挥手[/em7]，嗝……好小子……！老子……老子今天算是服了！愿赌服输！这丫头的欠条……撕了！那盒子……拿走拿走！别在这碍老子的眼……老子还要再喝……」",
     "links": [4018]
   },
   {
@@ -766,7 +766,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你試圖干預賭局，但褚人飛畢竟是賭道老手，手法老辣。骰盅揭開——一二三，小！）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你試圖干預賭局，但褚人飛畢竟是賭道老手，手法老辣。骰盅揭開——一二三，小！）＊",
     "zh_CN": "[panel=6]＊（你试图干预赌局，但褚人飞毕竟是赌道老手，手法老辣。骰盅揭开——一二三，小！）＊",
     "links": [4043]
@@ -785,7 +785,7 @@
     "actorID": "MC10",
     "text": "「老子說話算話！既然你贏了我，這把寶刀就賞給你了！這可是老子當年跟一個西域刀客賭命贏來的寶貝，留在老子這也是生鏽，就當是給你的見面禮了！」",
     "Sequence": "ModifyData(Valuable,Player,DragonSlayerBlade,1);",
-    "Script": "SetQuestEntryState(\"CF20\", 4, \"success\")",
+    "Script": "SetQuestEntryState(\"CF20\", 4, \"success\");",
     "Description": "給予獎勵游龍刀、任務更新",
     "zh_TW": "「老子說話算話！既然你贏了我，這把寶刀就賞給你了！這可是老子當年跟一個西域刀客賭命贏來的寶貝，留在老子這也是生鏽，就當是給你的見面禮了！」",
     "zh_CN": "「老子说话算话！既然你赢了我，这把宝刀就赏给你了！这可是老子当年跟一个西域刀客赌命赢来的宝贝，留在老子这也是生锈，就当是给你的见面礼了！」",
@@ -812,10 +812,10 @@
   {
     "entryID": 4045,
     "actorID": "MC1",
-    "text": "「[em7]拔劍出鞘[/em7] 褚幫主，既然文的不行，那就只能來武的了！」",
+    "text": "「[em7]拔劍出鞘[/em7]，褚幫主，既然文的不行，那就只能來武的了！」",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=2);",
-    "zh_TW": "「[em7]拔劍出鞘[/em7] 褚幫主，既然文的不行，那就只能來武的了！」",
-    "zh_CN": "「[em7]拔剑出鞘[/em7] 褚帮主，既然文的不行，那就只能来武的了！」",
+    "zh_TW": "「[em7]拔劍出鞘[/em7]，褚幫主，既然文的不行，那就只能來武的了！」",
+    "zh_CN": "「[em7]拔剑出鞘[/em7]，褚帮主，既然文的不行，那就只能来武的了！」",
     "links": [4054]
   },
   {
@@ -831,7 +831,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "戰鬥成功",
     "links": [4052]
   },
@@ -840,7 +840,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "Description": "戰鬥失敗",
     "links": [4050]
   },
@@ -863,7 +863,7 @@
     "actorID": "MC10",
     "text": "「哈哈哈哈！痛快！真是痛快！沒想到你小子賭術不精，手底下的功夫倒是硬得很！」",
     "Sequence": "ModifyData(FavorabilityExp,MC10,150);",
-    "Script": "SetQuestEntryState(\"CF20\", 2, \"success\")",
+    "Script": "SetQuestEntryState(\"CF20\", 2, \"success\");",
     "Description": "任務更新、好感度提升",
     "zh_TW": "「哈哈哈哈！痛快！真是痛快！沒想到你小子賭術不精，手底下的功夫倒是硬得很！」",
     "zh_CN": "「哈哈哈哈！痛快！真是痛快！没想到你小子赌术不精，手底下的功夫倒是硬得很！」",
@@ -890,10 +890,10 @@
   {
     "entryID": 4054,
     "actorID": "MC10",
-    "text": "「[em7]拍案而起[/em7] 敬酒不吃吃罰酒！小子，找死！」",
+    "text": "「[em7]拍案而起[/em7]，敬酒不吃吃罰酒！小子，找死！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "「[em7]拍案而起[/em7] 敬酒不吃吃罰酒！小子，找死！」",
-    "zh_CN": "「[em7]拍案而起[/em7] 敬酒不吃吃罚酒！小子，找死！」",
+    "zh_TW": "「[em7]拍案而起[/em7]，敬酒不吃吃罰酒！小子，找死！」",
+    "zh_CN": "「[em7]拍案而起[/em7]，敬酒不吃吃罚酒！小子，找死！」",
     "links": [4046]
   },
   {
@@ -918,19 +918,19 @@
   {
     "entryID": 4057,
     "actorID": "MC22",
-    "text": "「[em7]激動之下，她轉身緊緊抱住了你[/em7] 嗚哇！大俠！你太厲害了！我還以為這輩子都要在那個鬼地方倒酒了！」",
+    "text": "「[em7]激動之下，她轉身緊緊抱住了你[/em7]，嗚哇！大俠！你太厲害了！我還以為這輩子都要在那個鬼地方倒酒了！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_TW": "「[em7]激動之下，她轉身緊緊抱住了你[/em7] 嗚哇！大俠！你太厲害了！我還以為這輩子都要在那個鬼地方倒酒了！」",
-    "zh_CN": "「[em7]激动之下，她转身紧紧抱住了你[/em7] 呜哇！大侠！你太厉害了！我还以为这辈子都要在那个鬼地方倒酒了！」",
+    "zh_TW": "「[em7]激動之下，她轉身緊緊抱住了你[/em7]，嗚哇！大俠！你太厲害了！我還以為這輩子都要在那個鬼地方倒酒了！」",
+    "zh_CN": "「[em7]激动之下，她转身紧紧抱住了你[/em7]，呜哇！大侠！你太厉害了！我还以为这辈子都要在那个鬼地方倒酒了！」",
     "links": [4058]
   },
   {
     "entryID": 4058,
     "actorID": "MC22",
-    "text": "「[em7]意識到自己失態，連忙鬆開手，有些不好意思地整理了一下衣服[/em7] 咳咳…總之，今天多謝你啦！」",
+    "text": "「[em7]意識到自己失態，連忙鬆開手，有些不好意思地整理了一下衣服[/em7]，咳咳…總之，今天多謝你啦！」",
     "Sequence": "SetPortrait(MC22,pic=7);",
-    "zh_TW": "「[em7]意識到自己失態，連忙鬆開手，有些不好意思地整理了一下衣服[/em7] 咳咳…總之，今天多謝你啦！」",
-    "zh_CN": "「[em7]意识到自己失态，连忙松开手，有些不好意思地整理了一下衣服[/em7] 咳咳…总之，今天多谢你啦！」",
+    "zh_TW": "「[em7]意識到自己失態，連忙鬆開手，有些不好意思地整理了一下衣服[/em7]，咳咳…總之，今天多謝你啦！」",
+    "zh_CN": "「[em7]意识到自己失态，连忙松开手，有些不好意思地整理了一下衣服[/em7]，咳咳…总之，今天多谢你啦！」",
     "links": [4059]
   },
   {
@@ -978,30 +978,30 @@
   {
     "entryID": 4065,
     "actorID": "MC1",
-    "text": "「[em7]突然靠近她，在她耳邊低語[/em7] 不過，比起雲中雙俠，我更喜歡……」",
+    "text": "「[em7]突然靠近她，在她耳邊低語[/em7]，不過，比起雲中雙俠，我更喜歡……」",
     "Sequence": "SetPortrait(MC1,pic=14);\nSetPortrait(MC22,pic=7);\nModifyData(FeatExp,Player,Flirting,50);",
     "Conditions": "IsPassDice() == true;",
-    "zh_TW": "「[em7]突然靠近她，在她耳邊低語[/em7] 不過，比起雲中雙俠，我更喜歡……」",
-    "zh_CN": "「[em7]突然靠近她，在她耳边低语[/em7] 不过，比起云中双侠，我更喜欢……」",
+    "zh_TW": "「[em7]突然靠近她，在她耳邊低語[/em7]，不過，比起雲中雙俠，我更喜歡……」",
+    "zh_CN": "「[em7]突然靠近她，在她耳边低语[/em7]，不过，比起云中双侠，我更喜欢……」",
     "links": [4067]
   },
   {
     "entryID": 4067,
     "actorID": "MC22",
-    "text": "「[em7]像受驚的兔子一樣跳開，滿臉通紅[/em7] 你、你幹嘛！對…了！分錢分錢！」",
+    "text": "「[em7]像受驚的兔子一樣跳開，滿臉通紅[/em7]，你、你幹嘛！對…了！分錢分錢！」",
     "Sequence": "SetPortrait(MC22,pic=7);\nEnableCharacterExpression(1,MC22,Meditate);\nModifyData(FavorabilityExp,MC22,25);",
-    "zh_TW": "「[em7]像受驚的兔子一樣跳開，滿臉通紅[/em7] 你、你幹嘛！對…了！分錢分錢！」",
-    "zh_CN": "「[em7]像受惊的兔子一样跳开，满脸通红[/em7] 你、你干嘛！对…了！分钱分钱！」",
+    "zh_TW": "「[em7]像受驚的兔子一樣跳開，滿臉通紅[/em7]，你、你幹嘛！對…了！分錢分錢！」",
+    "zh_CN": "「[em7]像受惊的兔子一样跳开，满脸通红[/em7]，你、你干嘛！对…了！分钱分钱！」",
     "links": [4072]
   },
   {
     "entryID": 4068,
     "actorID": "MC1",
-    "text": "「[em7]突然靠近她，在她耳邊低語[/em7] 不過，比起雲中雙俠，我更喜歡……」",
+    "text": "「[em7]突然靠近她，在她耳邊低語[/em7]，不過，比起雲中雙俠，我更喜歡……」",
     "Sequence": "SetPortrait(MC1,pic=14);\nSetPortrait(MC22,pic=9);",
-    "Conditions": "IsPassDice()  == false",
-    "zh_TW": "「[em7]突然靠近她，在她耳邊低語[/em7] 不過，比起雲中雙俠，我更喜歡……」",
-    "zh_CN": "「[em7]突然靠近她，在她耳边低语[/em7] 不过，比起云中双侠，我更喜欢……」",
+    "Conditions": "IsPassDice()  == false;",
+    "zh_TW": "「[em7]突然靠近她，在她耳邊低語[/em7]，不過，比起雲中雙俠，我更喜歡……」",
+    "zh_CN": "「[em7]突然靠近她，在她耳边低语[/em7]，不过，比起云中双侠，我更喜欢……」",
     "links": [4069]
   },
   {
@@ -1036,7 +1036,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你塞給娜娜沉甸甸的一袋銀子，她哼著小曲離開了。你看著她的背影，不禁莞爾一笑。這雲中城，似乎比想像中要有趣得多。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC22,25);\nDisableCharacterExpression(1);",
-    "Script": "SetQuestState(\"CF20\", \"success\")",
+    "Script": "SetQuestState(\"CF20\", \"success\");",
     "Description": "完成任務、提高好感度",
     "zh_TW": "[panel=6]＊（你塞給娜娜沉甸甸的一袋銀子，她哼著小曲離開了。你看著她的背影，不禁莞爾一笑。這雲中城，似乎比想像中要有趣得多。）＊",
     "zh_CN": "[panel=6]＊（你塞给娜娜沉甸甸的一袋银子，她哼着小曲离开了。你看着她的背影，不禁莞尔一笑。这云中城，似乎比想像中要有趣得多。）＊",
@@ -1055,7 +1055,7 @@
     "actorID": "MC8",
     "text": "「表哥！你來得正好！一連六七把都開大了，這把押『小』包贏不輸！趕緊借我錢待會就可以加倍還你了！」",
     "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Idea);\nSetPortrait(MC1,pic=12);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_35);",
-    "Script": "SetQuestState(\"CF26\", \"active\")",
+    "Script": "SetQuestState(\"CF26\", \"active\");",
     "Description": "觸發任務、蕭靈犀主題曲",
     "zh_CN": "「表哥！你来得正好！一连六七把都开大了，这把押『小』包赢不输！赶紧借我钱待会就可以加倍还你了！」",
     "links": [4096]
@@ -1138,7 +1138,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀沒再回頭看籌碼堆，快步往賭場出口走去。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"success\")",
+    "Script": "SetQuestState(\"CF26\", \"success\");",
     "Description": "任務完成",
     "zh_CN": "[panel=6]＊（萧灵犀没再回头看筹码堆，快步往赌场出口走去。）＊",
     "links": [4132]
@@ -1148,7 +1148,7 @@
     "actorID": "role134",
     "text": "「各位看官！各位豪傑！吉祥擂台，生死有命，飛龍在天！只要你有膽量站上去，[em2]就算你厲害！[/em2]」",
     "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_32);",
-    "Conditions": "CurrentQuestState(\"CF27\") ~= \"active\"",
+    "Conditions": "CurrentQuestState(\"CF27\") ~= \"active\";",
     "Description": "音樂",
     "zh_TW": "「各位看官！各位豪傑！吉祥擂台，生死有命，飛龍在天！只要你有膽量站上去，[em2]就算你厲害！[/em2]」",
     "zh_CN": "「各位看官！各位豪杰！吉祥擂台，生死有命，飞龙在天！只要你有胆量站上去，[em2]就算你厉害！[/em2]」",
@@ -1211,7 +1211,7 @@
     "entryID": 4092,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、扣錢、好感度提升",
     "links": [4075]
   },
@@ -1230,7 +1230,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"failure\")",
+    "Script": "SetQuestState(\"CF26\", \"failure\");",
     "Description": "任務失敗",
     "zh_TW": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "zh_CN": "[panel=6]＊（萧灵犀气鼓鼓地头也不回地跑出了赌场。）＊",
@@ -1240,7 +1240,7 @@
     "entryID": 4095,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失",
     "links": []
   },
@@ -1273,7 +1273,7 @@
     "entryID": 4099,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、扣錢、好感度提升",
     "links": [4076]
   },
@@ -1292,7 +1292,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"failure\")",
+    "Script": "SetQuestState(\"CF26\", \"failure\");",
     "Description": "任務失敗",
     "zh_TW": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "zh_CN": "[panel=6]＊（萧灵犀气鼓鼓地头也不回地跑出了赌场。）＊",
@@ -1302,7 +1302,7 @@
     "entryID": 4102,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失",
     "links": []
   },
@@ -1335,7 +1335,7 @@
     "entryID": 4106,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、扣錢、好感度提升",
     "links": [4077]
   },
@@ -1354,7 +1354,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"failure\")",
+    "Script": "SetQuestState(\"CF26\", \"failure\");",
     "Description": "任務失敗",
     "zh_TW": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "zh_CN": "[panel=6]＊（萧灵犀气鼓鼓地头也不回地跑出了赌场。）＊",
@@ -1364,7 +1364,7 @@
     "entryID": 4109,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失",
     "links": []
   },
@@ -1397,7 +1397,7 @@
     "entryID": 4113,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、扣錢、好感度提升",
     "links": [4078]
   },
@@ -1416,7 +1416,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"failure\")",
+    "Script": "SetQuestState(\"CF26\", \"failure\");",
     "Description": "任務失敗",
     "zh_TW": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "zh_CN": "[panel=6]＊（萧灵犀气鼓鼓地头也不回地跑出了赌场。）＊",
@@ -1426,7 +1426,7 @@
     "entryID": 4116,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失",
     "links": []
   },
@@ -1459,7 +1459,7 @@
     "entryID": 4120,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nModifyData(Coin,-50);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、扣錢、好感度提升",
     "links": [4079]
   },
@@ -1478,7 +1478,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"failure\")",
+    "Script": "SetQuestState(\"CF26\", \"failure\");",
     "Description": "任務失敗",
     "zh_TW": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "zh_CN": "[panel=6]＊（萧灵犀气鼓鼓地头也不回地跑出了赌场。）＊",
@@ -1488,7 +1488,7 @@
     "entryID": 4123,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失",
     "links": []
   },
@@ -1521,7 +1521,7 @@
     "entryID": 4127,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nModifyData(FavorabilityExp,MC8,5);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、好感度提升",
     "links": [4080]
   },
@@ -1540,7 +1540,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF26\", \"failure\")",
+    "Script": "SetQuestState(\"CF26\", \"failure\");",
     "Description": "任務失敗",
     "zh_TW": "[panel=6]＊（蕭靈犀氣鼓鼓地頭也不回地跑出了賭場。）＊",
     "zh_CN": "[panel=6]＊（萧灵犀气鼓鼓地头也不回地跑出了赌场。）＊",
@@ -1550,7 +1550,7 @@
     "entryID": 4130,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失",
     "links": []
   },
@@ -1565,7 +1565,7 @@
     "entryID": 4132,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場、蕭靈犀消失指令",
     "links": []
   },
@@ -1701,7 +1701,7 @@
     "actorID": "MC1",
     "text": "「求之不得！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 1) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 1) == \"active\";",
     "Description": "第一場",
     "zh_TW": "「求之不得！」",
     "zh_CN": "「求之不得！」",
@@ -1754,7 +1754,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4161]
   },
   {
@@ -1762,7 +1762,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4162]
   },
   {
@@ -1779,7 +1779,7 @@
     "actorID": "role106",
     "text": "「算你厲害！」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF27\", 1, \"success\");\nSetQuestEntryState(\"CF27\", 2, \"active\")",
+    "Script": "SetQuestEntryState(\"CF27\", 1, \"success\");\nSetQuestEntryState(\"CF27\", 2, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
     "zh_CN": "「算你厉害！」",
@@ -1797,7 +1797,7 @@
     "actorID": "role134",
     "text": "「少俠，準備好了嗎？」",
     "Sequence": "DisableCharacterExpression(2);",
-    "Conditions": "CurrentQuestState(\"CF27\") == \"active\" and (CurrentQuestEntryState(\"CF27\", 7) == \"unassigned\")",
+    "Conditions": "CurrentQuestState(\"CF27\") == \"active\" and (CurrentQuestEntryState(\"CF27\", 7) == \"unassigned\");",
     "zh_TW": "「少俠，準備好了嗎？」",
     "zh_CN": "「少侠，准备好了吗？」",
     "links": [4150, 4164, 4175, 4183, 4193, 4202, 4166]
@@ -1807,7 +1807,7 @@
     "actorID": "MC1",
     "text": "「求之不得！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 2) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 2) == \"active\";",
     "Description": "第二場",
     "zh_TW": "「求之不得！」",
     "zh_CN": "「求之不得！」",
@@ -1860,7 +1860,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4173]
   },
   {
@@ -1868,7 +1868,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4174]
   },
   {
@@ -1885,7 +1885,7 @@
     "actorID": "role57",
     "text": "「算你厲害！」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF27\", 2, \"success\");\nSetQuestEntryState(\"CF27\", 3, \"active\")",
+    "Script": "SetQuestEntryState(\"CF27\", 2, \"success\");\nSetQuestEntryState(\"CF27\", 3, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
     "zh_CN": "「算你厉害！」",
@@ -1903,7 +1903,7 @@
     "actorID": "MC1",
     "text": "「求之不得！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 3) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 3) == \"active\";",
     "Description": "第三場",
     "zh_TW": "「求之不得！」",
     "zh_CN": "「求之不得！」",
@@ -1938,7 +1938,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4181]
   },
   {
@@ -1946,7 +1946,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4182]
   },
   {
@@ -1954,7 +1954,7 @@
     "actorID": "role114",
     "text": "「算你厲害！」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF27\", 3, \"success\");\nSetQuestEntryState(\"CF27\", 4, \"active\")",
+    "Script": "SetQuestEntryState(\"CF27\", 3, \"success\");\nSetQuestEntryState(\"CF27\", 4, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
     "zh_CN": "「算你厉害！」",
@@ -1972,7 +1972,7 @@
     "actorID": "MC1",
     "text": "「求之不得！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 4) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 4) == \"active\";",
     "Description": "第四場",
     "zh_TW": "「求之不得！」",
     "zh_CN": "「求之不得！」",
@@ -2007,7 +2007,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4191]
   },
   {
@@ -2015,7 +2015,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4190]
   },
   {
@@ -2030,7 +2030,7 @@
     "actorID": "role121",
     "text": "「算你厲害！」",
     "Sequence": "SetPortrait(role121,pic=3);",
-    "Script": "SetQuestEntryState(\"CF27\", 4, \"success\");\nSetQuestEntryState(\"CF27\", 5, \"active\")",
+    "Script": "SetQuestEntryState(\"CF27\", 4, \"success\");\nSetQuestEntryState(\"CF27\", 5, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
     "zh_CN": "「算你厉害！」",
@@ -2050,7 +2050,7 @@
     "actorID": "MC1",
     "text": "「求之不得！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 5) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 5) == \"active\";",
     "Description": "第五場",
     "zh_TW": "「求之不得！」",
     "zh_CN": "「求之不得！」",
@@ -2085,7 +2085,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4199]
   },
   {
@@ -2093,7 +2093,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4200]
   },
   {
@@ -2101,7 +2101,7 @@
     "actorID": "role73",
     "text": "「算你厲害！」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF27\", 5, \"success\");\nSetQuestEntryState(\"CF27\", 6, \"active\")",
+    "Script": "SetQuestEntryState(\"CF27\", 5, \"success\");\nSetQuestEntryState(\"CF27\", 6, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
     "zh_CN": "「算你厉害！」",
@@ -2119,7 +2119,7 @@
     "actorID": "MC1",
     "text": "「求之不得！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 6) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 6) == \"active\";",
     "Description": "第六場",
     "zh_TW": "「求之不得！」",
     "zh_CN": "「求之不得！」",
@@ -2154,7 +2154,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [4208]
   },
   {
@@ -2162,7 +2162,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [4209]
   },
   {
@@ -2170,7 +2170,7 @@
     "actorID": "role105",
     "text": "「算你厲害！」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF27\", 6, \"success\");\nSetQuestEntryState(\"CF27\", 7, \"active\")",
+    "Script": "SetQuestEntryState(\"CF27\", 6, \"success\");\nSetQuestEntryState(\"CF27\", 7, \"active\");",
     "Description": "任務更新",
     "zh_TW": "「算你厲害！」",
     "zh_CN": "「算你厉害！」",
@@ -2188,7 +2188,7 @@
     "actorID": "role134",
     "text": "「哎喲，少俠深藏不露啊！居然把小溪村的挑戰者全給挑翻了。喏，[em2]算你厲害[/em2]。」",
     "Sequence": "DisableCharacterExpression(2);",
-    "Conditions": "CurrentQuestEntryState(\"CF27\", 7) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 7) == \"active\";",
     "zh_TW": "「哎喲，少俠深藏不露啊！居然把小溪村的挑戰者全給挑翻了。喏，[em2]算你厲害[/em2]。」",
     "zh_CN": "「哎哟，少侠深藏不露啊！居然把小溪村的挑战者全给挑翻了。喏，[em2]算你厉害[/em2]。」",
     "links": [4211]
@@ -2292,7 +2292,7 @@
     "entryID": 4223,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入",
     "links": [4224]
   },
@@ -2308,7 +2308,7 @@
     "entryID": 4225,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出",
     "links": [4056]
   },
@@ -2316,7 +2316,7 @@
     "entryID": 4227,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出",
     "links": []
   },
@@ -2334,7 +2334,7 @@
     "text": "「喲？這不是剛才那丫頭嗎？怎麼，找了個乳臭未乾的小子來翻本？高祖當年起事還有個樊噲，妳這又是哪路神仙？」",
     "Sequence": "",
     "zh_TW": "「喲？這不是剛才那丫頭嗎？怎麼，找了個乳臭未乾的小子來翻本？高祖當年起事還有個樊噲，妳這又是哪路神仙？」",
-    "zh_CN": "「哟？这不是刚才那丫头吗？怎么，找了个乳臭未干的小子来翻本？高祖当年起事还有个樊哙，妳这又是哪路神仙？」",
+    "zh_CN": "「哟？这不是刚才那丫头吗？怎么，找了个乳臭未干的小子来翻本？高祖当年起事还有个樊哙，你这又是哪路神仙？」",
     "links": [3995]
   }
 ]

@@ -14,7 +14,7 @@
     "text": "[panel=3]「聽聞[em2]有間客棧的老闆娘一枝花[/em2]，是少見的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面紗，讓哥幾個瞧瞧妳的真面目！」",
     "Sequence": "",
     "zh_TW": "[panel=3]「聽聞[em2]有間客棧的老闆娘一枝花[/em2]，是少見的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面紗，讓哥幾個瞧瞧妳的真面目！」",
-    "zh_CN": "[panel=3]「听闻[em2]有间客栈的老板娘一枝花[/em2]，是少见的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面纱，让哥几个瞧瞧妳的真面目！」",
+    "zh_CN": "[panel=3]「听闻[em2]有间客栈的老板娘一枝花[/em2]，是少见的美人，勾人魂魄。小娘子，你莫非就是那美人？快快摘下面纱，让哥几个瞧瞧你的真面目！」",
     "links": [200]
   },
   {
@@ -73,16 +73,25 @@
     "entryID": 206,
     "actorID": "MC1",
     "text": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);BeginDiceRoll(Manual,PersuasionCheck,10);",
+    "Sequence": "",
+    "Description": "選項：口才檢定",
     "zh_TW": "[em2][口才檢定][/em2]「諸位，可否賣我個薄面？」",
     "zh_CN": "[em2][口才检定][/em2]「诸位，可否卖我个薄面？」",
+    "links": [2050]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,10);",
+    "Description": "口才檢定擲骰節點",
     "links": [207]
   },
   {
     "entryID": 207,
     "actorID": "MC1",
     "text": "「咳，幾位壯士且慢動手！在下江湖上人稱…嗯，這個暫且不提。這位姑娘若有得罪，還請看在在下幾分薄面上，高抬貴手，化干戈為玉帛可好？」",
-    "Sequence": "",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「咳，幾位壯士且慢動手！在下江湖上人稱…嗯，這個暫且不提。這位姑娘若有得罪，還請看在在下幾分薄面上，高抬貴手，化干戈為玉帛可好？」",
     "zh_CN": "「咳，几位壮士且慢动手！在下江湖上人称…嗯，这个暂且不提。这位姑娘若有得罪，还请看在在下几分薄面上，高抬贵手，化干戈为玉帛可好？」",
     "links": [208, 233]
@@ -92,7 +101,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
     "zh_CN": "[panel=6]＊（两名山贼稍稍退后，山贼头目上前一步，准备单独与你较量。）＊",
     "links": [245]
@@ -101,16 +110,25 @@
     "entryID": 209,
     "actorID": "MC1",
     "text": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nSetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);BeginDiceRoll(Manual,IntimidationCheck,12);",
+    "Sequence": "",
+    "Description": "選項：威嚇檢定",
     "zh_TW": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
     "zh_CN": "[em2][威吓检定][/em2]「滚！莫逼我出手！」",
+    "links": [2051]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
+    "Description": "威嚇檢定擲骰節點",
     "links": [210]
   },
   {
     "entryID": 210,
     "actorID": "MC1",
     "text": "「哼，看來爾等是不見棺材不掉淚了！也罷！我專治各路不服！爾等若再執迷不悟，不肯束手就擒，那就休怪我劍下無情，拳腳也無眼了！」",
-    "Sequence": "",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
     "zh_TW": "「哼，看來爾等是不見棺材不掉淚了！也罷！我專治各路不服！爾等若再執迷不悟，不肯束手就擒，那就休怪我劍下無情，拳腳也無眼了！」",
     "zh_CN": "「哼，看来尔等是不见棺材不掉泪了！也罢！我专治各路不服！尔等若再执迷不悟，不肯束手就擒，那就休怪我剑下无情，拳脚也无眼了！」",
     "links": [208, 233]
@@ -119,7 +137,7 @@
     "entryID": 211,
     "actorID": "role2",
     "text": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
-    "Sequence": "ModifyData(AbilityExp,MC1,Strength,50);",
+    "Sequence": "ModifyData(AbilityExp,Player,Strength,50);",
     "Conditions": "IsPassFight()  == true;",
     "zh_TW": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
     "zh_CN": "[panel=6]＊（你一番拳脚，将这伙山贼打得落花流水，抱头鼠窜而去。）＊",
@@ -210,7 +228,7 @@
     "actorID": "role117",
     "text": "「公子高風亮節，小女子心生敬佩。小女子這便告辭，公子也請保重。」",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF04\", \"active\")",
+    "Script": "SetQuestState(\"CF04\", \"active\");",
     "zh_TW": "「公子高風亮節，小女子心生敬佩。小女子這便告辭，公子也請保重。」",
     "zh_CN": "「公子高风亮节，小女子心生敬佩。小女子这便告辞，公子也请保重。」",
     "links": [222]

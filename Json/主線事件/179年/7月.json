@@ -272,7 +272,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（本已元氣大傷的黑血屍漸漸不支，在你與雍仔的聯手攻擊下，終於發出一聲不甘的哀嚎，最終化為一灘黑水，只留下一枚閃爍着奇異光芒的黑色珠子。）＊",
     "Sequence": "ModifyData(Valuable,Player,BlackSkull,1);",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "Description": "獲得無名人頭骨",
     "zh_TW": "[panel=6]＊（本已元氣大傷的黑血屍漸漸不支，在你與雍仔的聯手攻擊下，終於發出一聲不甘的哀嚎，最終化為一灘黑水，只留下一枚閃爍着奇異光芒的黑色珠子。）＊",
     "zh_CN": "[panel=6]＊（本已元气大伤的黑血尸渐渐不支，在你与雍仔的联手攻击下，终于发出一声不甘的哀嚎，最终化为一滩黑水，只留下一枚闪烁着奇异光芒的黑色珠子。）＊",
@@ -285,7 +285,7 @@
     "actorID": "MC1",
     "text": "「呼…呼…妖…妖孽…終於…授首了！ 」",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "Script": "SetQuestState(\"CF05\", \"active\")",
+    "Script": "SetQuestState(\"CF05\", \"active\");",
     "Description": "觸發靜觀其變任務",
     "zh_TW": "「呼…呼…妖…妖孽…終於…授首了！ 」",
     "zh_CN": "「呼…呼…妖…妖孽…终于…授首了！ 」",
@@ -413,7 +413,7 @@
     "text": "「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
-    "zh_CN": "「嗯！妳說的对！男儿志在四方！是更广阔的江湖！待我将长生经融会贯通，定要在英豪府的遴选中拔得头筹，扬名立万！」",
+    "zh_CN": "「嗯！你說的对！男儿志在四方！是更广阔的江湖！待我将长生经融会贯通，定要在英豪府的遴选中拔得头筹，扬名立万！」",
     "links": [
       234
     ]
@@ -433,7 +433,7 @@
     "entryID": 237,
     "actorID": "role2",
     "text": "[panel=6]＊（只見主墓室中央，那黑血屍果然還在，它身上的黑氣比之上次稀薄了不少，氣息也萎靡了許多，但眼神中的怨毒卻絲毫不減。）＊",
-    "Sequence": "DisableCharacterExpression(5);",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "[panel=6]＊（只見主墓室中央，那黑血屍果然還在，它身上的黑氣比之上次稀薄了不少，氣息也萎靡了許多，但眼神中的怨毒卻絲毫不減。）＊",
     "zh_CN": "[panel=6]＊（只见主墓室中央，那黑血尸果然还在，它身上的黑气比之上次稀薄了不少，气息也萎靡了许多，但眼神中的怨毒却丝毫不减。）＊",
     "links": [
@@ -519,7 +519,7 @@
     "actorID": "MC20",
     "text": "「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。放心，待貧道研究一番，若真有能化解其陰氣、化害為利之法，也定不會忘了兄弟你今日之功。」",
     "Sequence": "ModifyData(FavorabilityExp,MC20,20);",
-    "Script": "Variable[\"FatFriendDie\"] = false;\nSetQuestEntryState(\"CF05\", 1, \"active\")",
+    "Script": "Variable[\"FatFriendDie\"] = false;\nSetQuestEntryState(\"CF05\", 1, \"active\");",
     "Description": "雍仔好感度提升、觸發任務\"靜觀其變-1\"、雍仔死亡變數更新",
     "zh_TW": "「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。放心，待貧道研究一番，若真有能化解其陰氣、化害為利之法，也定不會忘了兄弟你今日之功。」",
     "zh_CN": "「兄弟果然高义！贫道定会妥善处置此物，绝不让其为祸人间。放心，待贫道研究一番，若真有能化解其阴气、化害为利之法，也定不会忘了兄弟你今日之功。」",
@@ -554,7 +554,7 @@
     "actorID": "MC20",
     "text": "「兄弟所言，倒也不失為一個法子。貧道對此物也是一知半解，若能尋得高人指點，確能更好地處置。也罷，便依兄弟之見，待日後到了繁華之地，我等再設法探尋其奧秘與價值。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Script": "SetQuestEntryState(\"CF05\", 3, \"active\");\nVariable[\"DarkHeroDestiny\"] = true",
+    "Script": "SetQuestEntryState(\"CF05\", 3, \"active\");\nVariable[\"DarkHeroDestiny\"] = true;",
     "Description": "觸發任務\"靜觀其變-3\"、梟雄命盤",
     "zh_TW": "「兄弟所言，倒也不失為一個法子。貧道對此物也是一知半解，若能尋得高人指點，確能更好地處置。也罷，便依兄弟之見，待日後到了繁華之地，我等再設法探尋其奧秘與價值。」",
     "zh_CN": "「兄弟所言，倒也不失为一个法子。贫道对此物也是一知半解，若能寻得高人指点，确能更好地处置。也罢，便依兄弟之见，待日后到了繁华之地，我等再设法探寻其奥秘与价值。」",
@@ -601,7 +601,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你與雍仔運起內力，費了好一番功夫，終於將那屍丹徹底化為飛灰。）＊",
     "Sequence": "",
-    "Script": "Variable[\"HeroDestiny\"] = true;\nSetQuestState(\"CF05\", \"success\")",
+    "Script": "Variable[\"HeroDestiny\"] = true;\nSetQuestState(\"CF05\", \"success\");",
     "Description": "解鎖雲龍繞日命盤，完成靜觀其變任務",
     "zh_TW": "[panel=6]＊（你與雍仔運起內力，費了好一番功夫，終於將那屍丹徹底化為飛灰。）＊",
     "zh_CN": "[panel=6]＊（你与雍仔运起内力，费了好一番功夫，终于将那尸丹彻底化为飞灰。）＊",
@@ -658,7 +658,7 @@
     "actorID": "MC20",
     "text": "「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。」",
     "Sequence": "ModifyData(FavorabilityExp,MC20,-20);",
-    "Script": "Variable[\"DarkHeroDestiny\"] = true",
+    "Script": "Variable[\"DarkHeroDestiny\"] = true;",
     "Description": "雍仔好感度下降、塚虎枯骨命盤",
     "zh_TW": "「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。」",
     "zh_CN": "「也罢！[var=PlayerLastName]兄弟你福缘深厚，非同常人，或许真有过人之法。既然你执意如此，贫道便将此物交予你。」",
@@ -671,7 +671,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（二人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊",
     "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_32);\nEnableDialogueBG(Farmland);",
-    "Script": "SetQuestState(\"C0M2\", \"success\")",
+    "Script": "SetQuestState(\"C0M2\", \"success\");",
     "Description": "關閉地圖音樂、開啟序章結局音樂、任務更新",
     "zh_TW": "[panel=6]＊（二人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊",
     "zh_CN": "[panel=6]＊（二人检查一番，确认再无其他异常，便一同离开了古墓。阳光洒在身上，驱散了墓中的阴寒，也洗去了连日的阴霾。）＊",
@@ -868,7 +868,7 @@
     "actorID": "MC1",
     "text": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
-    "Conditions": "CurrentQuestState(\"CF08\") == \"success\"",
+    "Conditions": "CurrentQuestState(\"CF08\") == \"success\";",
     "zh_TW": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
     "zh_CN": "「呼…又来到这鬼地方了…上次的教训还历历在目，这次可不能再大意了…」",
     "links": [
@@ -889,10 +889,10 @@
   {
     "entryID": 300,
     "actorID": "MC22",
-    "text": "[panel=5]「別唉聲嘆氣的了！牠越兇，就說明身後的寶貝越珍貴！快點解決牠，我們好進去尋寶！」",
-    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(0,MC22,Proud);",
-    "zh_TW": "[panel=5]「別唉聲嘆氣的了！牠越兇，就說明身後的寶貝越珍貴！快點解決牠，我們好進去尋寶！」",
-    "zh_CN": "[panel=5]「别唉声叹气的了！它越凶，就说明身后的宝贝越珍贵！快点解决它，我们好进去寻宝！」",
+    "text": "[panel=1]「別唉聲嘆氣的了！牠越兇，就說明身後的寶貝越珍貴！快點解決牠，我們好進去尋寶！」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "[panel=1]「別唉聲嘆氣的了！牠越兇，就說明身後的寶貝越珍貴！快點解決牠，我們好進去尋寶！」",
+    "zh_CN": "[panel=1]「别唉声叹气的了！它越凶，就说明身后的宝贝越珍贵！快点解决它，我们好进去寻宝！」",
     "links": [
       237
     ]
@@ -900,11 +900,11 @@
   {
     "entryID": 302,
     "actorID": "MC22",
-    "text": "[panel=5]「喂！醜八怪！識相的就趕緊讓開，別擋著本姑娘尋寶的路！」",
+    "text": "[panel=1]「喂！醜八怪！識相的就趕緊讓開，別擋著本姑娘尋寶的路！」",
     "Sequence": "SetPortrait(MC22,pic=2);",
-    "Conditions": "CurrentQuestState(\"CF08\") == \"success\"",
-    "zh_TW": "[panel=5]「喂！醜八怪！識相的就趕緊讓開，別擋著本姑娘尋寶的路！」",
-    "zh_CN": "[panel=5]「喂！丑八怪！识相的就赶紧让开，别挡着本姑娘寻宝的路！」",
+    "Conditions": "CurrentQuestState(\"CF08\") == \"success\";",
+    "zh_TW": "[panel=1]「喂！醜八怪！識相的就趕緊讓開，別擋著本姑娘尋寶的路！」",
+    "zh_CN": "[panel=1]「喂！丑八怪！识相的就赶紧让开，别挡着本姑娘寻宝的路！」",
     "links": [
       219
     ]
@@ -914,7 +914,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你話音未落，一道身影已經從你身邊竄了過去，直奔那枚黑色珠子。）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestState(\"CF08\") == \"success\"",
+    "Conditions": "CurrentQuestState(\"CF08\") == \"success\";",
     "zh_TW": "[panel=6]＊（你話音未落，一道身影已經從你身邊竄了過去，直奔那枚黑色珠子。）＊",
     "zh_CN": "[panel=6]＊（你话音未落，一道身影已经从你身边窜了过去，直奔那枚黑色珠子。）＊",
     "links": [
@@ -1050,7 +1050,7 @@
     "actorID": "MC20",
     "text": "[panel=3]「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。」",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FavorabilityExp,MC20,20);",
-    "Script": "Variable[\"FatFriendDie\"] = false;\nSetQuestEntryState(\"CF05\", 1, \"active\")",
+    "Script": "Variable[\"FatFriendDie\"] = false;\nSetQuestEntryState(\"CF05\", 1, \"active\");",
     "Description": "雍仔好感度提升、觸發任務\"靜觀其變-1\"、雍仔死亡變數更新",
     "zh_TW": "[panel=3]「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。」",
     "zh_CN": "[panel=3]「兄弟果然高义！贫道定会妥善处置此物，绝不让其为祸人间。」",
@@ -1086,7 +1086,7 @@
     "actorID": "MC20",
     "text": "[panel=3]「嗯…此法倒也穩妥。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Script": "SetQuestEntryState(\"CF05\", 2, \"active\")",
+    "Script": "SetQuestEntryState(\"CF05\", 2, \"active\");",
     "Description": "觸發任務\"靜觀其變-2\"",
     "zh_TW": "[panel=3]「嗯…此法倒也穩妥。」",
     "zh_CN": "[panel=3]「嗯…此法倒也稳妥。」",
@@ -1099,7 +1099,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「算你有點腦子！不過得由我保管！交給這道士，天曉得他會不會拿去當夜明珠賣了！」",
     "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(FavorabilityExp,MC20,-20);",
-    "Script": "Variable[\"NanaChose1\"] = true;\nVariable[\"NanaDemon\"] = Variable[\"NanaDemon\"] + 1",
+    "Script": "Variable[\"NanaChose1\"] = true;\nVariable[\"NanaDemon\"] = Variable[\"NanaDemon\"] + 1;",
     "Description": "娜娜變數更新",
     "zh_TW": "[panel=1]「算你有點腦子！不過得由我保管！交給這道士，天曉得他會不會拿去當夜明珠賣了！」",
     "zh_CN": "[panel=1]「算你有点脑子！不过得由我保管！交给这道士，天晓得他会不会拿去当夜明珠卖了！」",
@@ -1135,7 +1135,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你與雍仔運起內力，費了好一番功夫，終於將那屍丹徹底化為飛灰。）＊",
     "Sequence": "",
-    "Script": "Variable[\"HeroDestiny\"] = true;\nSetQuestState(\"CF05\", \"success\")",
+    "Script": "Variable[\"HeroDestiny\"] = true;\nSetQuestState(\"CF05\", \"success\");",
     "Description": "解鎖雲龍繞日命盤、完成靜觀其變任務",
     "zh_TW": "[panel=6]＊（你與雍仔運起內力，費了好一番功夫，終於將那屍丹徹底化為飛灰。）＊",
     "zh_CN": "[panel=6]＊（你与雍仔运起内力，费了好一番功夫，终于将那尸丹彻底化为飞灰。）＊",
@@ -1157,11 +1157,11 @@
   {
     "entryID": 324,
     "actorID": "MC22",
-    "text": "[panel=1][em7]愣了一愣，發出驚天動地的哀嚎[/em7]「啊——！你、你們兩個敗家子！暴殄天物啊！」",
+    "text": "[panel=1]「[em7]愣了一愣，發出驚天動地的哀嚎[/em7]，啊——！你、你們兩個敗家子！暴殄天物啊！」",
     "Sequence": "SetPortrait(MC22,pic=9);\nModifyData(FavorabilityExp,MC22,-20);",
     "Description": "降低娜娜好感度",
-    "zh_TW": "[panel=1][em7]愣了一愣，發出驚天動地的哀嚎[/em7]「啊——！你、你們兩個敗家子！暴殄天物啊！」",
-    "zh_CN": "[panel=1][em7]愣了一愣，发出惊天动地的哀嚎[/em7]「啊——！你、你们两个败家子！暴殄天物啊！」",
+    "zh_TW": "[panel=1]「[em7]愣了一愣，發出驚天動地的哀嚎[/em7]，啊——！你、你們兩個敗家子！暴殄天物啊！」",
+    "zh_CN": "[panel=1]「[em7]愣了一愣，发出惊天动地的哀嚎[/em7]，啊——！你、你们两个败家子！暴殄天物啊！」",
     "links": [
       322
     ]
@@ -1204,7 +1204,7 @@
     "actorID": "MC20",
     "text": "「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。」",
     "Sequence": "ModifyData(FavorabilityExp,MC20,-20);",
-    "Script": "Variable[\"DarkHeroDestiny\"] = true",
+    "Script": "Variable[\"DarkHeroDestiny\"] = true;",
     "Description": "雍仔好感度下降、塚虎枯骨命盤",
     "zh_TW": "「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。」",
     "zh_CN": "「也罢！[var=PlayerLastName]兄弟你福缘深厚，非同常人，或许真有过人之法。既然你执意如此，贫道便将此物交予你。」",
@@ -1230,7 +1230,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（三人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊",
     "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_32);\nEnableDialogueBG(Farmland);\nModifyData(IsInTeam,MC20,false);\nModifyData(IsAbleToJoinTeam,MC20,false);",
-    "Script": "SetQuestState(\"C0M2\", \"success\")",
+    "Script": "SetQuestState(\"C0M2\", \"success\");",
     "Description": "雍仔離開隊伍、關閉地圖音樂、開啟序章結局音樂、任務更新",
     "zh_TW": "[panel=6]＊（三人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊",
     "zh_CN": "[panel=6]＊（三人检查一番，确认再无其他异常，便一同离开了古墓。阳光洒在身上，驱散了墓中的阴寒，也洗去了连日的阴霾。）＊",
@@ -1310,7 +1310,7 @@
     "actorID": "role119",
     "text": "「我最近好想吃酸的哦，嘻嘻！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "CurrentQuestState(\"CF04\") == \"success\"",
+    "Conditions": "CurrentQuestState(\"CF04\") == \"success\";",
     "Description": "一枝花結婚結局",
     "zh_TW": "「我最近好想吃酸的哦，嘻嘻！」",
     "zh_CN": "「我最近好想吃酸的哦，嘻嘻！」",
@@ -1431,10 +1431,10 @@
   {
     "entryID": 359,
     "actorID": "MC1",
-    "text": "[em7]對蕭靈犀小聲嘀咕[/em7]「…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」",
+    "text": "「[em7]對蕭靈犀小聲嘀咕[/em7]…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」",
     "Sequence": "SetPortrait(MC1,pic=11);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_TW": "[em7]對蕭靈犀小聲嘀咕[/em7]「…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」",
-    "zh_CN": "[em7]对萧灵犀小声嘀咕[/em7]「…盘缠的事…路上我们再想想办法…总不能在新人面前丢了面子…」",
+    "zh_TW": "「[em7]對蕭靈犀小聲嘀咕[/em7]…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」",
+    "zh_CN": "「[em7]对萧灵犀小声嘀咕[/em7]…盘缠的事…路上我们再想想办法…总不能在新人面前丢了面子…」",
     "links": [
       340
     ]
@@ -1472,10 +1472,10 @@
   {
     "entryID": 364,
     "actorID": "MC1",
-    "text": "(真的還要再去招惹那怪物嗎？上次的教訓還不夠？我幾乎是從鬼門關前爬回來的…)",
+    "text": "「[em7]眉頭一皺，手按舊傷[/em7]，那怪物……當真還要再去招惹？上回的教訓還不夠麼。我這條命，是從鬼門關前爬回來的。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "(真的還要再去招惹那怪物嗎？上次的教訓還不夠？我幾乎是從鬼門關前爬回來的…)",
-    "zh_CN": "(真的还要再去招惹那怪物吗？上次的教训还不够？我几乎是从鬼门关前爬回来的…)",
+    "zh_TW": "「[em7]眉頭一皺，手按舊傷[/em7]，那怪物……當真還要再去招惹？上回的教訓還不夠麼。我這條命，是從鬼門關前爬回來的。」",
+    "zh_CN": "「[em7]眉头一皱，手按旧伤[/em7]，那怪物……当真还要再去招惹？上回的教训还不够么。我这条命，是从鬼门关前爬回来的。」",
     "links": [
       365
     ]
@@ -1483,10 +1483,10 @@
   {
     "entryID": 365,
     "actorID": "MC1",
-    "text": "(若再有一次，恐怕就沒這般好運了。這並非我惹出的禍事，沒道理由我來拼命。我的路在英豪府，不能在此橫生枝節。)",
+    "text": "「再來一回，未必還有這般運氣。這禍事又不是我惹出來的，沒道理要我去拼命。我的路在英豪府，不能在這裡橫生枝節。」",
     "Sequence": "SetPortrait(MC1,pic=4);",
-    "zh_TW": "(若再有一次，恐怕就沒這般好運了。這並非我惹出的禍事，沒道理由我來拼命。我的路在英豪府，不能在此橫生枝節。)",
-    "zh_CN": "(若再有一次，恐怕就没这般好运了。这并非我惹出的祸事，没道理由我来拼命。我的路在英豪府，不能在此横生枝节。)",
+    "zh_TW": "「再來一回，未必還有這般運氣。這禍事又不是我惹出來的，沒道理要我去拼命。我的路在英豪府，不能在這裡橫生枝節。」",
+    "zh_CN": "「再来一回，未必还有这般运气。这祸事又不是我惹出来的，没道理要我去拼命。我的路在英豪府，不能在这里横生枝节。」",
     "links": [
       366
     ]
@@ -1542,8 +1542,8 @@
     "actorID": "role2",
     "text": "[panel=6]＊（序章 - 完）＊",
     "Sequence": "DisableDialogueBG();\nDisableCharacterExpression(0);\nAudioControl(PauseLowerMusic);",
-    "Conditions": "CurrentQuestState(\"CF08\") == \"success\"",
-    "Script": "SetQuestState(\"C0M2\", \"failure\")",
+    "Conditions": "CurrentQuestState(\"CF08\") == \"success\";",
+    "Script": "SetQuestState(\"C0M2\", \"failure\");",
     "Description": "有遇到娜娜,關閉音樂、任務更新",
     "zh_TW": "[panel=6]＊（序章 - 完）＊",
     "zh_CN": "[panel=6]＊（序章 - 完）＊",
@@ -1659,7 +1659,7 @@
     "actorID": "role105",
     "text": "「[em3]輕裝快馬，不繫名韁[/em3]。寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」",
     "Sequence": "ModifyData(ChancePoint,5);",
-    "Conditions": "Variable[\"FatFriendDie\"] == false",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
     "Description": "屍丹給了雍仔、獲得機會點",
     "zh_TW": "「[em3]輕裝快馬，不繫名韁[/em3]。寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」",
     "zh_CN": "「[em3]轻装快马，不系名缰[/em3]。宝物也好，累赘也罢，你一撒手就全给了旁人，落得个逍遥自在。这份随遇而安的劲儿，我看着最顺眼。江湖路长，你这份逍遥，才是真正能保命的东西。」",
@@ -1694,7 +1694,7 @@
     "actorID": "role105",
     "text": "「[em3]輕裝快馬，不繫名韁[/em3]。寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」",
     "Sequence": "ModifyData(ChancePoint,5);",
-    "Conditions": "Variable[\"NanaChose1\"] == true",
+    "Conditions": "Variable[\"NanaChose1\"] == true;",
     "Description": "屍丹給了娜娜、獲得機會點",
     "zh_TW": "「[em3]輕裝快馬，不繫名韁[/em3]。寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」",
     "zh_CN": "「[em3]轻装快马，不系名缰[/em3]。宝物也好，累赘也罢，你一撒手就全给了旁人，落得个逍遥自在。这份随遇而安的劲儿，我看着最顺眼。江湖路长，你这份逍遥，才是真正能保命的东西。」",
@@ -1733,7 +1733,7 @@
     "actorID": "role105",
     "text": "「[em3]其志如雲，不與群芳爭艷；其心如龍，唯願繞日而行。[/em3]。」",
     "Sequence": "",
-    "Conditions": "Variable[\"HeroDestiny\"] == true",
+    "Conditions": "Variable[\"HeroDestiny\"] == true;",
     "Description": "毀掉屍丹(英雄命盤為True)",
     "zh_TW": "「[em3]其志如雲，不與群芳爭艷；其心如龍，唯願繞日而行。[/em3]。」",
     "zh_CN": "「[em3]其志如云，不与群芳争艳；其心如龙，唯愿绕日而行。[/em3]。」",
@@ -1757,7 +1757,7 @@
     "actorID": "role105",
     "text": "「[em3]其思如淵，不與百鳥爭鳴；其行如虎，唯願踏骨而興。[/em3]。」",
     "Sequence": "",
-    "Conditions": "Variable[\"DarkHeroDestiny\"] == true",
+    "Conditions": "Variable[\"DarkHeroDestiny\"] == true;",
     "Description": "留者屍丹(梟雄命盤=True)",
     "zh_TW": "「[em3]其思如淵，不與百鳥爭鳴；其行如虎，唯願踏骨而興。[/em3]。」",
     "zh_CN": "「[em3]其思如渊，不与百鸟争鸣；其行如虎，唯愿踏骨而兴。 [/em3]。 」",
@@ -1781,7 +1781,7 @@
     "actorID": "role105",
     "text": "「[em3]輕裝快馬，不繫名韁[/em3]。」",
     "Sequence": "ModifyData(ChancePoint,5);",
-    "Conditions": "Variable[\"FatFriendDie\"] == false",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
     "Description": "屍丹給了雍仔、獲得機會點",
     "zh_TW": "「[em3]輕裝快馬，不繫名韁[/em3]。」",
     "zh_CN": "「[em3]轻装快马，不系名缰[/em3]。」",
@@ -1816,7 +1816,7 @@
     "actorID": "role105",
     "text": "「[em3]輕裝快馬，不繫名韁[/em3]。」",
     "Sequence": "ModifyData(ChancePoint,5);",
-    "Conditions": "Variable[\"NanaChose1\"] == true",
+    "Conditions": "Variable[\"NanaChose1\"] == true;",
     "Description": "屍丹給了娜娜、獲得機會點",
     "zh_TW": "「[em3]輕裝快馬，不繫名韁[/em3]。」",
     "zh_CN": "「[em3]轻装快马，不系名缰[/em3]。」",
@@ -1905,7 +1905,7 @@
     "entryID": 2228,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場,切換音樂",
     "links": [
       2259
@@ -1916,7 +1916,7 @@
     "actorID": "role105",
     "text": "「[em3]其志如雲，不與群芳爭艷；其心如龍，唯願繞日而行。[/em3]。」",
     "Sequence": "",
-    "Conditions": "Variable[\"HeroDestiny\"] == true",
+    "Conditions": "Variable[\"HeroDestiny\"] == true;",
     "Description": "毀掉屍丹(英雄命盤為True)",
     "zh_TW": "「[em3]其志如雲，不與群芳爭艷；其心如龍，唯願繞日而行。[/em3]。」",
     "zh_CN": "「[em3]其志如云，不与群芳争艳；其心如龙，唯愿绕日而行。[/em3]。」",
@@ -1929,7 +1929,7 @@
     "actorID": "role105",
     "text": "「[em3]其思如淵，不與百鳥爭鳴；其行如虎，唯願踏骨而興。[/em3]。」",
     "Sequence": "",
-    "Conditions": "Variable[\"DarkHeroDestiny\"] == true",
+    "Conditions": "Variable[\"DarkHeroDestiny\"] == true;",
     "Description": "留者屍丹(梟雄命盤=True)",
     "zh_TW": "「[em3]其思如淵，不與百鳥爭鳴；其行如虎，唯願踏骨而興。[/em3]。」",
     "zh_CN": "「[em3]其思如渊，不与百鸟争鸣；其行如虎，唯愿踏骨而兴。 [/em3]。 」",
@@ -2174,7 +2174,7 @@
     "actorID": "role124",
     "text": "[panel=1]＊（你頭繫黃巾，手中握著一把捲刃的柴刀，正與無數面容枯槁的農民一起衝向城牆。你只是一股巨大、瘋狂的浪潮中，最卑微的一粒微塵。你奮力嘶吼著，向著那些你曾嚮往的曾經發起決死的衝鋒。）＊",
     "Sequence": "SetPortrait(MC1,pic=3);\nPlayOrStopParticle(Smoke_Dust,Play);",
-    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true)",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true);",
     "Description": "主角結局-草芥",
     "zh_TW": "[panel=1]＊（你頭繫黃巾，手中握著一把捲刃的柴刀，正與無數面容枯槁的農民一起衝向城牆。你只是一股巨大、瘋狂的浪潮中，最卑微的一粒微塵。你奮力嘶吼著，向著那些你曾嚮往的曾經發起決死的衝鋒。）＊",
     "zh_CN": "[panel=1]＊（你头系黄巾，手中握着一把卷刃的柴刀，正与无数面容枯槁的农民一起冲向城墙。你只是一股巨大、疯狂的浪潮中，最卑微的一粒微尘。你奋力嘶吼着，向着那些你曾向往的曾经发起决死的冲锋。）＊",
@@ -2253,7 +2253,7 @@
     "entryID": 2284,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nAudioControl(StopMusic);\nContinue()@1.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nAudioControl(StopMusic);\nContinue()@1;",
     "Description": "淡入轉場,關閉音樂",
     "links": [
       2291
@@ -2263,8 +2263,8 @@
     "entryID": 2285,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true)",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true);",
     "Description": "草芥轉場,播放音樂",
     "links": [
       2270
@@ -2274,7 +2274,7 @@
     "entryID": 2286,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1) ;\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
+    "Sequence": "SetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1);\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
     "Description": "播放影片,關閉音樂",
     "links": [
       2258
@@ -2284,8 +2284,8 @@
     "entryID": 2287,
     "actorID": "role2",
     "text": "",
-    "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(Houses);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nContinue()@1;",
-    "Conditions": "Variable[\"FatFriendDie\"] == false",
+    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen);\nEnableDialogueBG(Houses);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
     "Description": "淡出轉場",
     "links": [
       2282
@@ -2295,7 +2295,7 @@
     "entryID": 2288,
     "actorID": "role2",
     "text": "",
-    "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(StudyRoom);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen);\nEnableDialogueBG(StudyRoom);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出轉場",
     "links": [
       2283
@@ -2305,7 +2305,7 @@
     "entryID": 2289,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_28)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_28)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "一將功成轉場,播放音樂",
     "links": [
       2270
@@ -2314,10 +2314,10 @@
   {
     "entryID": 2290,
     "actorID": "MC1",
-    "text": "...",
+    "text": "「……」",
     "Sequence": "SetContinueMode(false);\nSetPortrait(MC1,pic=19);\nSetContinueMode(original);\nContinue();",
-    "zh_TW": "...",
-    "zh_CN": "...",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
     "links": [
       2273
     ]
@@ -2325,11 +2325,11 @@
   {
     "entryID": 2291,
     "actorID": "MC20",
-    "text": "[panel=1]...",
+    "text": "[panel=1]「……」",
     "Sequence": "SetPortrait(MC20,pic=1);\nContinue();",
     "Description": "雍仔換表情",
-    "zh_TW": "[panel=1]...",
-    "zh_CN": "[panel=1]...",
+    "zh_TW": "[panel=1]「……」",
+    "zh_CN": "[panel=1]「……」",
     "links": [
       2287,
       2288
@@ -2527,8 +2527,8 @@
     "entryID": 2309,
     "actorID": "role2",
     "text": "",
-    "Sequence": "EnableDialogueBG(Wilderness);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nContinue()@1;",
-    "Conditions": "Variable[\"NanaChose1\"] == true",
+    "Sequence": "SetContinueMode(false);\nEnableDialogueBG(Wilderness);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Conditions": "Variable[\"NanaChose1\"] == true;",
     "Description": "淡出轉場",
     "links": [
       2318
@@ -2650,7 +2650,7 @@
     "entryID": 2320,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場,切換音樂",
     "links": [
       2292
@@ -2660,7 +2660,7 @@
     "entryID": 2321,
     "actorID": "role2",
     "text": "",
-    "Sequence": "PlayOrStopParticle(Sword_Single_ScreenRed,Stop);\nSetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1.5;",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Stop);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入轉場",
     "links": [
       2335
@@ -2670,7 +2670,7 @@
     "entryID": 2322,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nAudioControl(StopMusic);\nContinue()@1.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nAudioControl(StopMusic);\nContinue()@1;",
     "Description": "淡入轉場,關閉音樂",
     "links": [
       2337
@@ -2680,8 +2680,8 @@
     "entryID": 2323,
     "actorID": "role2",
     "text": "",
-    "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(Houses);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nContinue()@1;",
-    "Conditions": "Variable[\"FatFriendDie\"] == false",
+    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen);\nEnableDialogueBG(Houses);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
     "Description": "淡出轉場",
     "links": [
       2316
@@ -2691,7 +2691,7 @@
     "entryID": 2324,
     "actorID": "role2",
     "text": "",
-    "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(StudyRoom);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen);\nEnableDialogueBG(StudyRoom);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出轉場",
     "links": [
       2317
@@ -2700,10 +2700,10 @@
   {
     "entryID": 2325,
     "actorID": "MC1",
-    "text": "...",
+    "text": "「……」",
     "Sequence": "SetContinueMode(false);\nSetPortrait(MC1,pic=19);\nSetContinueMode(original);\nContinue();",
-    "zh_TW": "...",
-    "zh_CN": "...",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
     "links": [
       2306
     ]
@@ -2712,7 +2712,7 @@
     "entryID": 2326,
     "actorID": "role2",
     "text": "",
-    "Sequence": "EnableDialogueBG(Cave);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nEnableDialogueBG(Cave);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出轉場",
     "links": [
       2319
@@ -2766,7 +2766,7 @@
     "actorID": "role124",
     "text": "[panel=1]＊（你頭繫黃巾，手中握著一把捲刃的柴刀，正與無數面容枯槁的農民一起衝向城牆。你只是一股巨大、瘋狂的浪潮中，最卑微的一粒微塵。你奮力嘶吼著，向著那些你曾嚮往的曾經發起決死的衝鋒。）＊",
     "Sequence": "SetPortrait(MC1,pic=3);\nPlayOrStopParticle(Smoke_Dust,Play);",
-    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true)",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true);",
     "Description": "主角結局-草芥",
     "zh_TW": "[panel=1]＊（你頭繫黃巾，手中握著一把捲刃的柴刀，正與無數面容枯槁的農民一起衝向城牆。你只是一股巨大、瘋狂的浪潮中，最卑微的一粒微塵。你奮力嘶吼著，向著那些你曾嚮往的曾經發起決死的衝鋒。）＊",
     "zh_CN": "[panel=1]＊（你头系黄巾，手中握着一把卷刃的柴刀，正与无数面容枯槁的农民一起冲向城墙。你只是一股巨大、疯狂的浪潮中，最卑微的一粒微尘。你奋力嘶吼着，向着那些你曾向往的曾经发起决死的冲锋。）＊",
@@ -2778,8 +2778,8 @@
     "entryID": 2332,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true)",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Conditions": "CurrentQuestState(\"C0F1\") == \"success\" and (Variable[\"HeroDestiny\"] == true);",
     "Description": "草芥轉場,播放音樂",
     "links": [
       2329
@@ -2789,7 +2789,7 @@
     "entryID": 2333,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1) ;\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
+    "Sequence": "SetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1);\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
     "Description": "播放影片,關閉音樂",
     "links": [
       2327
@@ -2799,7 +2799,7 @@
     "entryID": 2334,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_28)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_28)@1;\nDisableDialogueBG()@1;\nEnableEventBG(Rhino,FullScreen)@1;\nOpenPanel(1,close)@1;\nOpenPanel(0,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "一將功成轉場,播放音樂",
     "links": [
       2329
@@ -2808,11 +2808,11 @@
   {
     "entryID": 2335,
     "actorID": "MC1",
-    "text": "...",
+    "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "主角換表情",
-    "zh_TW": "...",
-    "zh_CN": "...",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
     "links": [
       2336
     ]
@@ -2820,11 +2820,11 @@
   {
     "entryID": 2336,
     "actorID": "MC22",
-    "text": "[panel=1]...",
+    "text": "[panel=1]「……」",
     "Sequence": "SetPortrait(MC22,pic=3);\nContinue();",
     "Description": "娜娜換表情",
-    "zh_TW": "[panel=1]...",
-    "zh_CN": "[panel=1]...",
+    "zh_TW": "[panel=1]「……」",
+    "zh_CN": "[panel=1]「……」",
     "links": [
       2309,
       2326
@@ -2833,11 +2833,11 @@
   {
     "entryID": 2337,
     "actorID": "MC20",
-    "text": "[panel=1]...",
+    "text": "[panel=1]「……」",
     "Sequence": "SetPortrait(MC20,pic=1);\nContinue();",
     "Description": "雍仔換表情",
-    "zh_TW": "[panel=1]...",
-    "zh_CN": "[panel=1]...",
+    "zh_TW": "[panel=1]「……」",
+    "zh_CN": "[panel=1]「……」",
     "links": [
       2323,
       2324
@@ -2880,7 +2880,7 @@
     "entryID": 2341,
     "actorID": "role2",
     "text": "",
-    "Sequence": "LoadLevel(AbandonedTemple,AbandonedTemple);\nModifyData(ChancePoint,2);\nMapLock(Command_XiaoxiVillageInn, lock);\nDisableEventBG(FullScreen);\nContinue();",
+    "Sequence": "LoadLevel(AbandonedTemple,AbandonedTemple);\nModifyData(ChancePoint,2);\nMapLock(Command_XiaoxiVillageInn, lock);\nDisableEventBG(FullScreen);\nDisableDialogueBG();\nContinue();",
     "Description": "轉到破廟、獲得機會點、關閉根據地",
     "links": []
   },
@@ -2908,9 +2908,9 @@
   {
     "entryID": 2344,
     "actorID": "role2",
-    "text": "旁白的聲音：「客官耳聞不差！我今日所說的，正是《天下見聞錄》，第一回:并州乍現麒麟兒　妖氛忽起試鋒芒。」",
+    "text": "旁白的聲音：「客官耳聞不差！我今日所說的，正是《天下見聞錄》，第一回：并州乍現麒麟兒　妖氛忽起試鋒芒。」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "zh_CN": "旁白的声音：「客官耳闻不差！我今日所说的，正是《天下见闻录》，第一回:并州乍现麒麟儿　妖氛忽起试锋芒。」",
+    "zh_CN": "旁白的声音：「客官耳闻不差！我今日所说的，正是《天下见闻录》，第一回：并州乍现麒麟儿　妖氛忽起试锋芒。」",
     "links": [
       2345
     ]
@@ -2959,7 +2959,7 @@
     "entryID": 2349,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nOpenPanel(2, close);\nSetContinueMode(false);\nEnableDialogueBG(Lnn)@1;\nDisableEventBG(FullScreen);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nEnableDialogueBG(Lnn)@1;\nDisableEventBG(FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [
       2342
@@ -2969,7 +2969,7 @@
     "entryID": 2350,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [
       2351
@@ -3070,7 +3070,7 @@
     "entryID": 2361,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場",
     "links": [
       2341
@@ -3160,8 +3160,8 @@
     "entryID": 2371,
     "actorID": "0",
     "text": "",
-    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(4, close);\nDisableEventBG(FullScreen);\nAudioControl(StopMusic);\nSetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
-    "Conditions": "CurrentQuestEntryState(\"CF05\", 3) == \"active\"",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(4, close);\nDisableEventBG(FullScreen);\nAudioControl(StopMusic);\nSetContinueMode(false);\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Stop)@0.5;\nPlayOrStopParticle(DiceTransition_Normal,Play);\nAudioControl(PlaySFX,Fight_TransitionIn);\nContinue()@2;",
+    "Conditions": "CurrentQuestEntryState(\"CF05\", 3) == \"active\";",
     "Description": "如果是靜觀其變3",
     "links": [
       2372
@@ -3203,7 +3203,7 @@
     "entryID": 2375,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1) ;\nPlayOrStopParticle(Meditate,Play);\nContinue();",
+    "Sequence": "SetContinueMode(false);\nDisableDialogueBG();\nPlayFeelFeedback(FadeOut,0.5,#000000,1);\nPlayOrStopParticle(Meditate,Play);\nSetContinueMode(original)@0.5;\nContinue()@0.5;",
     "Description": "開啟冥想",
     "links": [
       2373
@@ -3249,7 +3249,7 @@
     "text": "「墓裡那一回，是妳出手救了我。」",
     "Sequence": "SetPortrait(MC1,pic=4)",
     "zh_TW": "「墓裡那一回，是妳出手救了我。」",
-    "zh_CN": "「墓里那一回，是妳出手救了我。」",
+    "zh_CN": "「墓里那一回，是你出手救了我。」",
     "links": [
       2395
     ]
@@ -3260,7 +3260,7 @@
     "text": "「妳說過，我也有會有處。」",
     "Sequence": "SetPortrait(MC1,pic=4);",
     "zh_TW": "「妳說過，我也有會有處。」",
-    "zh_CN": "「妳說过，我也有会有处。」",
+    "zh_CN": "「你說过，我也有会有处。」",
     "links": [
       2396
     ]
@@ -3292,7 +3292,7 @@
     "entryID": 2392,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nStopAllParticle();\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nStopAllParticle();\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場特效",
     "links": [
       2404
@@ -3327,7 +3327,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "Description": "信義提升",
     "zh_TW": "「墓裡那一回，要不是妳出手，我早沒了。這事我一直記著。」",
-    "zh_CN": "「墓里那一回，要不是妳出手，我早没了。这事我一直记着。」",
+    "zh_CN": "「墓里那一回，要不是你出手，我早没了。这事我一直记着。」",
     "links": [
       2384
     ]
@@ -3339,7 +3339,7 @@
     "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "Description": "機略提升",
     "zh_TW": "「給了妳……我倒想知道，這玩意兒到底值多少。」",
-    "zh_CN": "「给了妳……我倒想知道，这玩意儿到底值多少。」",
+    "zh_CN": "「给了你……我倒想知道，这玩意儿到底值多少。」",
     "links": [
       2384
     ]
@@ -3350,7 +3350,7 @@
     "text": "「便給妳罷。」",
     "Sequence": "SetPortrait(MC1,pic=4)",
     "zh_TW": "「便給妳罷。」",
-    "zh_CN": "「便给妳罢。」",
+    "zh_CN": "「便给你罢。」",
     "links": [
       2399
     ]
@@ -3371,10 +3371,10 @@
     "actorID": "MC1",
     "text": "「便給妳罷。妳既看著它，若我還捨不得，那可顯得太吝嗇了。」",
     "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Proud);",
-    "Script": "SetQuestState(\"CF05\", \"success\");\nSetQuestEntryState(\"CF05\", 3, \"success\")",
+    "Script": "SetQuestState(\"CF05\", \"success\");\nSetQuestEntryState(\"CF05\", 3, \"success\");",
     "Description": "完成任務",
     "zh_TW": "「便給妳罷。妳既看著它，若我還捨不得，那可顯得太吝嗇了。」",
-    "zh_CN": "「便给妳罢。妳既看着它，若我还舍不得，那可显得太吝啬了。」",
+    "zh_CN": "「便给你罢。你既看着它，若我还舍不得，那可显得太吝啬了。」",
     "links": [
       2401
     ]
@@ -3484,7 +3484,7 @@
     "entryID": 2410,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nStopAllParticle();\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nStopAllParticle();\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場特效",
     "links": [
       2412

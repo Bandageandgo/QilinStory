@@ -13,7 +13,7 @@
     "actorID": "MC1",
     "text": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
-    "Conditions": "Variable[\"FishCount\"] == 0 and (Variable[\"MyTime\"] < 6)",
+    "Conditions": "Variable[\"FishCount\"] == 0 and (Variable[\"MyTime\"] < 6);",
     "zh_TW": "「嗯，這河水平緩，倒也適合垂釣。說不定能釣上幾尾肥魚，打打牙祭，體驗一番漁家樂趣。」",
     "zh_CN": "「嗯，这河水平缓，倒也适合垂钓。说不定能钓上几尾肥鱼，打打牙祭，体验一番渔家乐趣。」",
     "links": [3]
@@ -32,7 +32,7 @@
     "actorID": "MC1",
     "text": "[em2][耗時一個時辰][/em2]「試試手氣，釣幾尾魚上來。」",
     "Sequence": "",
-    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1;",
     "Description": "扣時間",
     "zh_TW": "[em2][耗時一個時辰][/em2]「試試手氣，釣幾尾魚上來。」",
     "zh_CN": "[em2][耗时一个时辰][/em2]「试试手气，钓几尾鱼上来。」",
@@ -62,7 +62,7 @@
     "actorID": "MC1",
     "text": "「還是先辦正事要緊。」",
     "Sequence": "",
-    "Conditions": "Variable[\"MyTime\"] < 6",
+    "Conditions": "Variable[\"MyTime\"] < 6;",
     "zh_TW": "「還是先辦正事要緊。」",
     "zh_CN": "「还是先办正事要紧。」",
     "links": []
@@ -81,7 +81,7 @@
     "actorID": "MC1",
     "text": "「嘿，這屋子雖然破舊，倒也算個遮風避雨的去處。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
-    "Conditions": "Variable[\"MyTime\"] < 6",
+    "Conditions": "Variable[\"MyTime\"] < 6;",
     "zh_TW": "「嘿，這屋子雖然破舊，倒也算個遮風避雨的去處。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
     "zh_CN": "「嘿，这屋子虽然破旧，倒也算个遮风避雨的去处。看那草堆，躺上去定然比睡在硬邦邦的地上舒服多了。」",
     "links": [16]
@@ -101,16 +101,16 @@
     "text": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「哎，靈犀妳就是愛操心。這青天白日的，能有什麼古怪？」",
-    "zh_CN": "「哎，灵犀妳就是爱操心。这青天白日的，能有什么古怪？」",
+    "zh_CN": "「哎，灵犀你就是爱操心。这青天白日的，能有什么古怪？」",
     "links": [54]
   },
   {
     "entryID": 18,
     "actorID": "MC8",
-    "text": "「[em7]跺了跺腳[/em7]表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "text": "「[em7]跺了跺腳[/em7]，表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);",
-    "zh_TW": "「[em7]跺了跺腳[/em7]表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
-    "zh_CN": "「[em7]跺了跺脚[/em7]表哥！你怎么老是这样！我们还有盘缠要赚，还有客栈要去呢！在这摆明就是闹鬼的地方睡觉，多危险啊！」",
+    "zh_TW": "「[em7]跺了跺腳[/em7]，表哥！你怎麼老是這樣！我們還有盤纏要賺，還有客棧要去呢！在這擺明就是鬧鬼的地方睡覺，多危險啊！」",
+    "zh_CN": "「[em7]跺了跺脚[/em7]，表哥！你怎么老是这样！我们还有盘缠要赚，还有客栈要去呢！在这摆明就是闹鬼的地方睡觉，多危险啊！」",
     "links": [19]
   },
   {
@@ -127,7 +127,7 @@
     "actorID": "MC1",
     "text": "[em2][耗時一個時辰][/em2]「就在這草堆上小憩片刻。」",
     "Sequence": "",
-    "Conditions": "Variable[\"MyTime\"] < 6",
+    "Conditions": "Variable[\"MyTime\"] < 6;",
     "zh_TW": "[em2][耗時一個時辰][/em2]「就在這草堆上小憩片刻。」",
     "zh_CN": "[em2][耗时一个时辰][/em2]「就在这草堆上小憩片刻。」",
     "links": [21]
@@ -137,7 +137,7 @@
     "actorID": "MC1",
     "text": "「就這麼說定了！天塌下來有高個子頂著，我先睡上一覺再說！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1;",
     "Description": "消耗時間",
     "zh_TW": "「就這麼說定了！天塌下來有高個子頂著，我先睡上一覺再說！」",
     "zh_CN": "「就这么说定了！天塌下来有高个子顶着，我先睡为敬！」",
@@ -148,7 +148,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。[em2]蕭靈犀無奈地在一旁警戒[/em2]。時間很快過去了…）＊",
     "Sequence": "AudioControl(PlaySFXOneShot,Others_Water);",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Rivertear\")  == true",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Rivertear\")  == true;",
     "Description": "需要有河神的眼淚",
     "zh_TW": "[panel=6]＊（你說著便往草堆上一躺，隨意撥了撥稻草，調整了個舒服的姿勢，沒一會兒便傳出了均勻的呼吸聲。[em2]蕭靈犀無奈地在一旁警戒[/em2]。時間很快過去了…）＊",
     "zh_CN": "[panel=6]＊（你说着便往草堆上一躺，随意拨了拨稻草，调整了个舒服的姿势，没一会儿便传出了均匀的呼吸声。[em2]萧灵犀无奈地在一旁警戒[/em2]。时间很快过去了…）＊",
@@ -189,7 +189,7 @@
     "text": "「啊——舒服！靈犀啊，妳就別板著臉了，你看我這不是精神百倍了嗎？果然忙裡偷閒才是正經。」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「啊——舒服！靈犀啊，妳就別板著臉了，你看我這不是精神百倍了嗎？果然忙裡偷閒才是正經。」",
-    "zh_CN": "「啊——舒服！灵犀啊，妳就别板着脸了，你看我这不是精神百倍了吗？果然忙里偷闲才是硬道理。」",
+    "zh_CN": "「啊——舒服！灵犀啊，你就别板着脸了，你看我这不是精神百倍了吗？果然忙里偷闲才是硬道理。」",
     "links": [31]
   },
   {
@@ -225,7 +225,7 @@
     "text": "「呃…好吧，既然靈犀妳這麼說，此地或許真有些不妥。我們還是謹慎為上，另尋他處歇腳便是。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=7);",
     "zh_TW": "「呃…好吧，既然靈犀妳這麼說，此地或許真有些不妥。我們還是謹慎為上，另尋他處歇腳便是。」",
-    "zh_CN": "「呃…好吧，既然灵犀妳这么说，此地或许真有些不妥。我们还是谨慎为上，另寻他处歇脚便是。」",
+    "zh_CN": "「呃…好吧，既然灵犀你这么说，此地或许真有些不妥。我们还是谨慎为上，另寻他处歇脚便是。」",
     "links": []
   },
   {
@@ -242,8 +242,8 @@
     "actorID": "MC1",
     "text": "[em2][耗時一個時辰][/em2]「水流大、有難度的獵場才是我的歸宿！」",
     "Sequence": "",
-    "Conditions": "Variable[\"FishCount\"] > 0 and (Variable[\"MyTime\"] < 6)",
-    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Conditions": "Variable[\"FishCount\"] > 0 and (Variable[\"MyTime\"] < 6);",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1;",
     "Description": "扣時間",
     "zh_TW": "[em2][耗時一個時辰][/em2]「水流大、有難度的獵場才是我的歸宿！」",
     "zh_CN": "[em2][耗时一个时辰][/em2]「水流大、有难度的猎场才是我的归宿！」",
@@ -333,7 +333,7 @@
     "actorID": "MC8",
     "text": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
     "Sequence": "SetPortrait(MC8,pic=4);",
-    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "Conditions": "Variable[\"MyTime\"] >= 6;",
     "zh_TW": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
     "zh_CN": "「表哥，时间不早了，没有时间做这事了，还是先去[em2]客栈[/em2]打尖吧。」",
     "links": []
@@ -343,7 +343,7 @@
     "actorID": "MC8",
     "text": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
     "Sequence": "SetPortrait(MC8,pic=4);",
-    "Conditions": "Variable[\"MyTime\"] >= 6",
+    "Conditions": "Variable[\"MyTime\"] >= 6;",
     "zh_TW": "「表哥，時間不早了，沒有時間做這事了，還是先去[em2]客棧[/em2]打尖吧。」",
     "zh_CN": "「表哥，时间不早了，没有时间做这事了，还是先去[em2]客栈[/em2]打尖吧。」",
     "links": []
@@ -353,7 +353,7 @@
     "actorID": "MC8",
     "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
     "Sequence": "SetPortrait(MC8,pic=4);",
-    "Conditions": "Variable[\"MyTime\"] >= 5",
+    "Conditions": "Variable[\"MyTime\"] >= 5;",
     "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
     "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
     "links": []
@@ -363,7 +363,7 @@
     "actorID": "MC8",
     "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
     "Sequence": "SetPortrait(MC8,pic=4);",
-    "Conditions": "Variable[\"MyTime\"] == 5",
+    "Conditions": "Variable[\"MyTime\"] == 5;",
     "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
     "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
     "links": []
@@ -373,7 +373,7 @@
     "actorID": "MC8",
     "text": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
     "Sequence": "SetPortrait(MC8,pic=4);",
-    "Conditions": "Variable[\"MyTime\"] == 5",
+    "Conditions": "Variable[\"MyTime\"] == 5;",
     "zh_TW": "「表哥，離天黑只剩[em2]一個時辰[/em2]，時間快到囉。」",
     "zh_CN": "「表哥，离天黑只剩[em2]一个时辰[/em2]，时间快到啰。」",
     "links": []
@@ -388,10 +388,10 @@
   {
     "entryID": 108,
     "actorID": "MC1",
-    "text": "…",
+    "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(LifeExp,10);",
-    "zh_TW": "…",
-    "zh_CN": "…",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
     "links": [115, 118]
   },
   {
@@ -413,7 +413,7 @@
     "actorID": "MC1",
     "text": "「所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
     "Sequence": "",
-    "Script": "Variable[\"FishCount\"] = Variable[\"FishCount\"] +1",
+    "Script": "Variable[\"FishCount\"] = Variable[\"FishCount\"] +1;",
     "Description": "+1釣魚次數",
     "zh_TW": "「所謂靜心垂釣，方能有所得吧。江湖之路，亦是如此。」",
     "zh_CN": "「所谓静心垂钓，方能有所得吧。江湖之路，亦是如此。」",
@@ -424,8 +424,8 @@
     "actorID": "MC1",
     "text": "[em2][耗時一個時辰][/em2](跳過小遊戲僅獲得少許生活經驗)",
     "Sequence": "",
-    "Conditions": "Variable[\"FishCount\"] > 0 and (Variable[\"MyTime\"] < 6)",
-    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1",
+    "Conditions": "Variable[\"FishCount\"] > 0 and (Variable[\"MyTime\"] < 6);",
+    "Script": "Variable[\"MyTime\"] = Variable[\"MyTime\"] + 1;",
     "Description": "扣時間",
     "zh_TW": "[em2][耗時一個時辰][/em2](跳過小遊戲僅獲得少許生活經驗)",
     "zh_CN": "[em2][耗时一个时辰][/em2](跳过小游戏仅获得少许生活经验)",
@@ -436,8 +436,8 @@
     "actorID": "role2",
     "text": "[panel=6]＊（就在你剛收竿不久後，突然一條全身金黃色的魚自己跳上岸，真是了不得的幸運啊。）＊",
     "Sequence": "",
-    "Conditions": "Variable[\"FishCount\"] == 1",
-    "Script": "Variable[\"FishCount\"] = 3",
+    "Conditions": "Variable[\"FishCount\"] == 1;",
+    "Script": "Variable[\"FishCount\"] = 3;",
     "Description": "釣魚次數=3",
     "zh_TW": "[panel=6]＊（就在你剛收竿不久後，突然一條全身金黃色的魚自己跳上岸，真是了不得的幸運啊。）＊",
     "zh_CN": "[panel=6]＊（就在你刚收竿不久后，突然一条全身金黄色的鱼自己跳上岸，真是了不得的幸运啊。）＊",
@@ -501,7 +501,7 @@
     "entryID": 2051,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場演出",
     "links": [55]
   },
@@ -509,7 +509,7 @@
     "entryID": 2052,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "過場演出",
     "links": [30]
   },

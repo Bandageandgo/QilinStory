@@ -36,7 +36,7 @@
     "actorID": "MC1",
     "text": "「該不會是出什麼事了吧？不行，我得去看看。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Script": "SetQuestState(\"CF10\", \"active\")\nSetQuestEntryState(\"CF10\", 1, \"active\")\nSetQuestEntryState(\"CF10\", 2, \"active\")",
+    "Script": "SetQuestState(\"CF10\", \"active\")\nSetQuestEntryState(\"CF10\", 1, \"active\")\nSetQuestEntryState(\"CF10\", 2, \"active\");",
     "Description": "觸發任務",
     "zh_CN": "「该不会是出什么事了吧？不行，我得去看看。」",
     "links": []
@@ -46,7 +46,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這是一個簡易的營地，但此刻顯得異常凌亂。地面上還有拖拽的痕跡。）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF10\", 1) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF10\", 1) == \"active\";",
     "zh_CN": "[panel=6]＊（这是一个简易的营地，但此刻显得异常凌乱。地面上还有拖拽的痕迹。）＊",
     "links": [7]
   },
@@ -81,7 +81,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（清澈的水潭中，隱約飄浮著幾片破碎的葉子和……一絲淡淡的血跡？）＊",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF10\", 2) == \"active\"",
+    "Conditions": "CurrentQuestEntryState(\"CF10\", 2) == \"active\";",
     "zh_CN": "[panel=6]＊（清澈的水潭中，隐约飘浮着几片破碎的叶子和……一丝淡淡的血迹？）＊",
     "links": [15]
   },
@@ -198,7 +198,7 @@
     "actorID": "role97",
     "text": "[panel=1]「呼……多虧老弟你來得及時，不然我和這小傢伙今天都要交代在這了。」",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF10\",4, \"success\")\nSetQuestState(\"CF10\", \"success\")",
+    "Script": "SetQuestEntryState(\"CF10\",4, \"success\")\nSetQuestState(\"CF10\", \"success\");",
     "Description": "任務完成",
     "zh_CN": "[panel=1]「呼……多亏老弟你来得及时，不然我和这小家伙今天都要交代在这了。」",
     "links": [41]
@@ -287,7 +287,7 @@
     "actorID": "role106",
     "text": "「頓頓……有肉？真的？」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「顿顿……有肉？真的？」",
     "links": [56, 57, 58]
   },
@@ -296,7 +296,7 @@
     "actorID": "role106",
     "text": "「你……瘦。沒肉。騙子！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「你……瘦。没肉。骗子！」",
     "links": [54]
   },
@@ -330,7 +330,7 @@
     "actorID": "MC1",
     "text": "[em2][信義][/em2]「[給他三百錢]」",
     "Sequence": "",
-    "Conditions": "IsCoinPass(300)  == true",
+    "Conditions": "IsCoinPass(300)  == true;",
     "zh_CN": "[em2][信义][/em2]「[给他三百钱]」",
     "links": [55]
   },
@@ -362,7 +362,7 @@
     "actorID": "MC1",
     "text": "「這叫『放長線釣大魚』，懂嗎？現在少吃一口肉，將來還你一整頭豬！」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「这叫『放长线钓大鱼』，懂吗？现在少吃一口肉，将来还你一整头猪！」",
     "links": [62]
   },
@@ -370,7 +370,7 @@
     "entryID": 62,
     "actorID": "role106",
     "text": "「長線……大魚？好！鍋子……給你！敲它……我就來！」",
-    "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);AddItem(Summon_Pot,1);",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);ModifyData(Valuable,Player,Summon_Pot,1);",
     "zh_CN": "「长线……大鱼？好！锅子……给你！敲它……我就来！」",
     "links": [2078]
   },
@@ -379,7 +379,7 @@
     "actorID": "role106",
     "text": "「不！騙子！沒錢……不給！」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「不！骗子！没钱……不给！」",
     "links": [64]
   },
@@ -396,7 +396,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（獲得了狗頭人的召喚信物。）＊",
     "Sequence": "ModifyData(Valuable,Player,CallingDogBrother,3);",
-    "Script": "Variable[\"HireDogMan\"] = true",
+    "Script": "Variable[\"HireDogMan\"] = true;",
     "Description": "獲得貴種品、變數更新",
     "zh_CN": "[panel=6]＊（获得了狗头人的召唤信物。）＊",
     "links": []
@@ -404,9 +404,9 @@
   {
     "entryID": 67,
     "actorID": "role97",
-    "text": "「[em7]一屁股坐在地上，擦著汗[/em7]呼……多虧老弟你來得及時，不然我和這小傢伙今天都要交代在這了。不過……老弟你怎麼會跑到這深山老林來？」",
+    "text": "「[em7]一屁股坐在地上，擦著汗[/em7]，呼……多虧老弟你來得及時，不然我和這小傢伙今天都要交代在這了。不過……老弟你怎麼會跑到這深山老林來？」",
     "Sequence": "",
-    "zh_CN": "「[em7]一屁股坐在地上，擦着汗[/em7]呼……多亏老弟你来得及时，不然我和这小家伙今天都要交代在这了。不过……老弟你怎么会跑到这深山老林来？」",
+    "zh_CN": "「[em7]一屁股坐在地上，擦着汗[/em7]，呼……多亏老弟你来得及时，不然我和这小家伙今天都要交代在这了。不过……老弟你怎么会跑到这深山老林来？」",
     "links": [2087]
   },
   {
@@ -438,7 +438,7 @@
     "actorID": "role97",
     "text": "「我是在叫你別去送死！那地方陰森森的，連狼群都不敢靠近，你自己小心點。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Script": "SetQuestState(\"CF11\", \"active\")",
+    "Script": "SetQuestState(\"CF11\", \"active\");",
     "Description": "激活任務",
     "zh_CN": "「我是在叫你别去送死！那地方阴森森的，连狼群都不敢靠近，你自己小心点。」",
     "links": []
@@ -464,7 +464,7 @@
     "actorID": "MC1",
     "text": "[em2][武藝檢定][/em2]「運氣丹田，全力一擊！」",
     "Sequence": "",
-    "Conditions": "Variable[\"HealerSandals\"] == false",
+    "Conditions": "Variable[\"HealerSandals\"] == false;",
     "zh_CN": "[em2][武艺检定][/em2]「运气丹田，全力一击！」",
     "links": [76]
   },
@@ -496,7 +496,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（「砰！」的一聲悶響，大樹劇烈搖晃，落葉紛飛。緊接著，「啪嗒」一聲，一個東西掉在了你面前。）＊",
     "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=6]＊（「砰！」的一声闷响，大树剧烈摇晃，落叶纷飞。紧接着，「啪嗒」一声，一个东西掉在了你面前。）＊",
     "links": [79]
   },
@@ -514,7 +514,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（「砰！」你一掌打在樹幹上，大樹紋絲不動，反倒是你的手腕傳來一陣劇痛。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=6]＊（「砰！」你一掌打在树干上，大树纹丝不动，反倒是你的手腕传来一阵剧痛。）＊",
     "links": [81]
   },
@@ -594,7 +594,7 @@
     "entryID": 90,
     "actorID": "role2",
     "text": "[panel=6]＊（你縱身一躍，身體急速下墜。就在你以為要粉身碎骨時…）＊",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;",
     "zh_CN": "[panel=6]＊（你纵身一跃，身体急速下坠。就在你以为要粉身碎骨时…）＊",
     "links": [2107]
   },
@@ -603,7 +603,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（洞穴內別有洞天，中央矗立著一座巨大的女神像。神像身披戰甲，手持長矛，英姿颯爽，與中原女子的溫婉截然不同。）＊",
     "Sequence": "",
-    "Script": "SetQuestState(\"CF12\", \"active\")",
+    "Script": "SetQuestState(\"CF12\", \"active\");",
     "Description": "觸發任務",
     "zh_CN": "[panel=6]＊（洞穴内别有洞天，中央矗立着一座巨大的女神像。神像身披战甲，手持长矛，英姿飒爽，与中原女子的温婉截然不同。）＊",
     "links": []
@@ -668,7 +668,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你不知不覺跟著這些「蝌蚪」的軌跡運轉體內氣息。只覺一股暖流從丹田升起，原本滯澀的經脈竟然暢通無阻。）＊",
     "Sequence": "SetContinueMode(false);\nModifyData(Skill,Player,HiddenPlotSutra);\nShowHint(Skill,HiddenPlotSutra);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
-    "Script": "SetQuestState(\"CF12\", \"success\")",
+    "Script": "SetQuestState(\"CF12\", \"success\");",
     "Description": "獲得無間藏機訣技能卡、完成任務",
     "zh_CN": "[panel=6]＊（你不知不觉跟着这些「蝌蚪」的轨迹运转体内气息。只觉一股暖流从丹田升起，原本滞涩的经脉竟然畅通无阻。）＊",
     "links": []
@@ -686,7 +686,7 @@
     "actorID": "MC1",
     "text": "「嘖，白高興一場。還以為是什麼絕世祕笈呢，結果就是哪個孩童的鬼畫符。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);",
-    "Script": "SetQuestState(\"CF12\", \"success\")",
+    "Script": "SetQuestState(\"CF12\", \"success\");",
     "Description": "完成任務",
     "zh_CN": "「啧，白高兴一场。还以为是什么绝世秘笈呢，结果就是哪个孩童的鬼画符。」",
     "links": []
@@ -828,7 +828,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true",
+    "Conditions": "IsPassFight()  == true;",
     "links": [2112]
   },
   {
@@ -836,7 +836,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false",
+    "Conditions": "IsPassFight()  == false;",
     "links": [2075]
   },
   {
@@ -869,17 +869,17 @@
   {
     "entryID": 2077,
     "actorID": "role106",
-    "text": "「[em7]接過錢，開心地遞過鍋子[/em7]錢……香！鍋子……給你！戰鬥……敲它！我就來！」",
+    "text": "「[em7]接過錢，開心地遞過鍋子[/em7]，錢……香！鍋子……給你！戰鬥……敲它！我就來！」",
     "Sequence": "",
-    "zh_CN": "「[em7]接过钱，开心地递过锅子[/em7]钱……香！锅子……给你！战斗……敲它！我就来！」",
+    "zh_CN": "「[em7]接过钱，开心地递过锅子[/em7]，钱……香！锅子……给你！战斗……敲它！我就来！」",
     "links": [2115]
   },
   {
     "entryID": 2078,
     "actorID": "role106",
-    "text": "「[em7]伸出三根手指[/em7]但是……只能三次！幫多了……吃虧！！」",
+    "text": "「[em7]伸出三根手指[/em7]，但是……只能三次！幫多了……吃虧！！」",
     "Sequence": "",
-    "zh_CN": "「[em7]伸出三根手指[/em7]但是……只能三次！帮多了……吃亏！！」",
+    "zh_CN": "「[em7]伸出三根手指[/em7]，但是……只能三次！帮多了……吃亏！！」",
     "links": [66]
   },
   {
@@ -887,7 +887,7 @@
     "actorID": "MC1",
     "text": "「罷了，看你吃得這麼香，我就不打擾你了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Script": "Variable[\"HireDogMan\"] = true",
+    "Script": "Variable[\"HireDogMan\"] = true;",
     "Description": "變數更新",
     "zh_CN": "「罢了，看你吃得这么香，我就不打扰你了。」",
     "links": []
@@ -897,7 +897,7 @@
     "actorID": "MC1",
     "text": "「不過我需要個信物，比如你身上那個亮閃閃的鍋子？」",
     "Sequence": "ModifyData(Coin,-300);\nSetPortrait(MC1,pic=13);",
-    "Conditions": "IsCoinPass(300)  == true",
+    "Conditions": "IsCoinPass(300)  == true;",
     "Description": "減少300錢",
     "zh_CN": "「不过我需要个信物，比如你身上那个亮闪闪的锅子？」",
     "links": [2077]
@@ -907,7 +907,7 @@
     "actorID": "MC1",
     "text": "「啊，沒帶錢在身上。」",
     "Sequence": "SetPortrait(MC1,pic=7);",
-    "Conditions": "IsCoinPass(300)  ~= true",
+    "Conditions": "IsCoinPass(300)  ~= true;",
     "zh_CN": "「啊，没带钱在身上。」",
     "links": [2082]
   },
@@ -916,7 +916,7 @@
     "actorID": "role106",
     "text": "「小子，你在尋老子開心是不是！？」",
     "Sequence": "",
-    "Script": "Variable[\"HireDogMan\"] = true",
+    "Script": "Variable[\"HireDogMan\"] = true;",
     "Description": "變數更新",
     "zh_CN": "「小子，你在寻老子开心是不是！？」",
     "links": [2084]
@@ -926,7 +926,7 @@
     "actorID": "role106",
     "text": "「真香啊！」",
     "Sequence": "",
-    "Conditions": "Variable[\"HireDogMan\"] == true",
+    "Conditions": "Variable[\"HireDogMan\"] == true;",
     "zh_CN": "「真香啊！」",
     "links": []
   },
@@ -935,7 +935,7 @@
     "actorID": "MC1",
     "text": "「…說話好流利…」",
     "Sequence": "SetPortrait(MC1,pic=4);",
-    "Conditions": "IsCoinPass(300)  ~= true",
+    "Conditions": "IsCoinPass(300)  ~= true;",
     "zh_CN": "「…说话好流利…」",
     "links": []
   },
@@ -954,7 +954,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你們回到上層平台，分食了那隻烤得恰到好處的乳豬。好不酒足飯飽。）＊",
     "Sequence": "ModifyData(Rest);",
-    "Conditions": "CurrentQuestState(\"CF11\") == \"unassigned\"",
+    "Conditions": "CurrentQuestState(\"CF11\") == \"unassigned\";",
     "Description": "休息",
     "zh_CN": "[panel=6]＊（你们回到上层平台，分食了那只烤得恰到好处的乳猪。好不酒足饭饱。）＊",
     "links": [67]
@@ -1013,7 +1013,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableCharacterExpression(0);\nContinue();",
-    "Script": "Variable[\"HealerSandals\"] = true",
+    "Script": "Variable[\"HealerSandals\"] = true;",
     "Description": "變數更新",
     "links": []
   },
@@ -1032,7 +1032,7 @@
     "actorID": "MC1",
     "text": "「這可是幾百尺高啊！會死人的吧？！」",
     "Sequence": "SetPortrait(MC1,pic=13);\nDisableCharacterExpression(0);",
-    "Script": "SetQuestEntryState(\"CF11\", 1, \"success\")",
+    "Script": "SetQuestEntryState(\"CF11\", 1, \"success\");",
     "Description": "任務更新",
     "zh_CN": "「这可是几百尺高啊！会死人的吧？！」",
     "links": []
@@ -1104,7 +1104,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「專注於圖形。」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true;",
     "zh_CN": "[em2][隐藏选项][/em2]「专注于图形。」",
     "links": [98]
   },
@@ -1113,7 +1113,7 @@
     "actorID": "MC1",
     "text": "「試著破解其中奧妙。」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  == true",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  == true;",
     "zh_CN": "「试着破解其中奥妙。」",
     "links": [101]
   },
@@ -1122,7 +1122,7 @@
     "actorID": "MC1",
     "text": "離開",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"MC1\", \"Knowledge\", 1)  == true",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"Knowledge\", 1)  == true;",
     "zh_CN": "离开",
     "links": []
   },
@@ -1159,7 +1159,7 @@
     "actorID": "MC1",
     "text": "「這裡沒啥值得查的了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Conditions": "CurrentQuestState(\"CF12\") ~= \"active\"",
+    "Conditions": "CurrentQuestState(\"CF12\") ~= \"active\";",
     "zh_CN": "「这里没啥值得查的了。」",
     "links": []
   },
@@ -1184,7 +1184,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你支付了三百錢，獲得了狗頭人的召喚信物。看來這傢伙雖然貪吃，但帳算得很精。）＊",
     "Sequence": "ModifyData(Valuable,Player,CallingDogBrother,3);",
-    "Script": "Variable[\"HireDogMan\"] = true",
+    "Script": "Variable[\"HireDogMan\"] = true;",
     "Description": "獲得貴種品、變數更新",
     "zh_CN": "[panel=6]＊（你支付了三百钱，获得了狗头人的召唤信物。看来这家伙虽然贪吃，但帐算得很精。）＊",
     "links": []
@@ -1192,9 +1192,9 @@
   {
     "entryID": 2115,
     "actorID": "role106",
-    "text": "「[em7]伸出三根手指[/em7]但是……只能三次！幫多了……吃虧！！」",
+    "text": "「[em7]伸出三根手指[/em7]，但是……只能三次！幫多了……吃虧！！」",
     "Sequence": "",
-    "zh_CN": "「[em7]伸出三根手指[/em7]但是……只能三次！帮多了……吃亏！！」",
+    "zh_CN": "「[em7]伸出三根手指[/em7]，但是……只能三次！帮多了……吃亏！！」",
     "links": [2114]
   },
   {
@@ -1202,7 +1202,7 @@
     "actorID": "MC1",
     "text": "「乖乖……這神像。」",
     "Sequence": "SetPortrait(MC1,pic=3);\nEnableEventBG(ZhongWeiHomeGoddessStatue);",
-    "Conditions": "CurrentQuestState(\"CF12\") == \"active\"",
+    "Conditions": "CurrentQuestState(\"CF12\") == \"active\";",
     "zh_CN": "「乖乖……这神像。」",
     "links": [92]
   },
@@ -1211,7 +1211,7 @@
     "actorID": "MC1",
     "text": "離開",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true;",
     "zh_CN": "离开",
     "links": []
   },
@@ -1227,7 +1227,7 @@
     "entryID": 4234,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1) ;\nSetContinueMode(original)@1;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "淡出",
     "links": [90]
   },
@@ -1235,7 +1235,7 @@
     "entryID": 4235,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1) ;\nContinue()@1;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入",
     "links": [4233]
   }

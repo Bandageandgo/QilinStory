@@ -100,7 +100,7 @@
     "actorID": "MC1",
     "text": "「張寧姑娘醫術高明又生得好看，當時在後山那驚鴻一瞥，確實讓我難以忘懷啊。」",
     "Sequence": "SetPortrait(MC1,pic=13);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「张宁姑娘医术高明又生得好看，当时在后山那惊鸿一瞥，确实让我难以忘怀啊。」",
     "links": [56]
   },
@@ -182,7 +182,7 @@
     "actorID": "MC24",
     "text": "[panel=2]「哈哈哈！仲景老弟，看來你這身醫術傳沒傳下去不好說，但這張不饒人的利嘴，令嬡倒是青出於藍啊！」",
     "Sequence": "SetPortrait(MC24,pic=2);",
-    "Conditions": "CurrentQuestState(\"CF17\") == \"success\"",
+    "Conditions": "CurrentQuestState(\"CF17\") == \"success\";",
     "zh_CN": "[panel=2]「哈哈哈！仲景老弟，看来你这身医术传没传下去不好说，但这张不饶人的利嘴，令嫒倒是青出于蓝啊！」",
     "links": [4084]
   },
@@ -239,7 +239,7 @@
     "actorID": "MC24",
     "text": "[panel=2]「[em3][你救下了李大山][/em3]說起來，你能在那種險境下為了救一個素不相識的礦工，果斷擊碎邪像，並硬生生承受住那股詭異黑氣的反噬。這份本事與決斷，確實令人刮目相看。」",
     "Sequence": "SetPortrait(MC24,pic=3);\nModifyData(FavorabilityExp,MC24,20);",
-    "Conditions": "CurrentQuestEntryState(\"CF16\", 3) == \"success\"",
+    "Conditions": "CurrentQuestEntryState(\"CF16\", 3) == \"success\";",
     "Description": "好感提升",
     "zh_CN": "[panel=2]「[em3][你救下了李大山][/em3]说起来，你能在那种险境下为了救一个素不相识的矿工，果断击碎邪像，并硬生生承受住那股诡异黑气的反噬。这份本事与决断，确实令人刮目相看。」",
     "links": [72]
@@ -331,7 +331,7 @@
     "actorID": "MC1",
     "text": "「多謝張寧姑娘，多謝大叔，還有蔡先生、琰妹妹。我會小心的！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Script": "SetQuestEntryState(\"C1M1\", 7, \"success\")",
+    "Script": "SetQuestEntryState(\"C1M1\", 7, \"success\");",
     "Description": "任務更新",
     "zh_CN": "「多谢张宁姑娘，多谢大叔，还有蔡先生、琰妹妹。我会小心的！」",
     "links": []
@@ -351,7 +351,7 @@
     "actorID": "MC1",
     "text": "「大叔別拿我尋開心了。不過說實話，雖然張寧姑娘嘴上不饒人了點，但那份為了救人敢獨闖後山的膽識，確實讓我十分敬佩……」",
     "Sequence": "SetPortrait(MC1,pic=15);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「大叔別拿我尋開心了。不過說實話，雖然張寧姑娘嘴上不饒人了點，但那份為了救人敢獨闖後山的膽識，確實讓我十分敬佩……」",
     "zh_CN": "「大叔别拿我寻开心了。不过说实话，虽然张宁姑娘嘴上不饶人了点，但那份为了救人敢独闯后山的胆识，确实让我十分敬佩……」",
     "links": [55]

@@ -22,7 +22,7 @@
     "actorID": "MC1",
     "text": "「妳這掌櫃當上癮了是吧……」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
-    "zh_CN": "「妳这掌柜当上瘾了是吧……」",
+    "zh_CN": "「你这掌柜当上瘾了是吧……」",
     "links": [2163]
   },
   {
@@ -109,7 +109,7 @@
     "actorID": "MC19",
     "text": "[panel=1]「……小滑頭。三七便三七。」",
     "Sequence": "DisableCharacterExpression(2);ModifyData(FeatExp,Player,EconomicDevelopment,10);",
-    "Conditions": "IsPassDice()  == true",
+    "Conditions": "IsPassDice()  == true;",
     "zh_CN": "[panel=1]「……小滑头。三七便三七。」",
     "links": [2176]
   },
@@ -118,7 +118,7 @@
     "actorID": "MC8",
     "text": "[panel=2]「那、那二八分也好……小犀一定幫您賣得妥妥的！」",
     "Sequence": "SetPortrait(MC8,pic=13);EnableCharacterExpression(2,MC8,Meditate);",
-    "Conditions": "IsPassDice()  == false",
+    "Conditions": "IsPassDice()  == false;",
     "zh_CN": "[panel=2]「那、那二八分也好……小犀一定帮您卖得妥妥的！」",
     "links": [2175]
   },
@@ -262,14 +262,14 @@
     "entryID": 2192,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nContinue()@1;\nOpenPanel(1, close);\nDisableDialogueBG();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [2164]
   },
   {
     "entryID": 2193,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nContinue()@1;\nDisableDialogueBG();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [2195]
   },
   {
@@ -292,14 +292,14 @@
     "entryID": 2196,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nContinue()@1;\nDisableDialogueBG();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [2181]
   },
   {
     "entryID": 2197,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nOpenPanel(1, close);\nOpenPanel(2, close);\nContinue()@1;\nDisableDialogueBG();",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [2187]
   },
   {
