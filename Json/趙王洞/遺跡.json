@@ -2,6 +2,7 @@
   {
     "entryID": 1,
     "actorID": "MC1",
+    "title": "開場",
     "text": "「好重的血味……這裡就是最深處了嗎？連呼吸都變得困難了。」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
     "Description": "開場",
@@ -27,6 +28,7 @@
   {
     "entryID": 4,
     "actorID": "MC22",
+    "title": "離開",
     "text": "「大俠！你該不會是想打退堂鼓吧？雍仔還在裡面等著我們去救呢！」",
     "Sequence": "SetPortrait(MC22,pic=8);",
     "Description": "離開",
@@ -92,6 +94,7 @@
   {
     "entryID": 13,
     "actorID": "role2",
+    "title": "太平道教眾的日記",
     "text": "[panel=6]＊（今日又被派來這鬼地方站崗。）＊",
     "Sequence": "",
     "Description": "太平道教眾的日記",
@@ -157,6 +160,7 @@
   {
     "entryID": 24,
     "actorID": "role2",
+    "title": "拔劍成功",
     "text": "[panel=6]＊（只聽「錚」的一聲清脆劍鳴，蛇形怪劍應聲而出，劍刃在昏暗的光線下閃爍著幽綠的寒芒。）＊",
     "Sequence": "ModifyData(AbilityExp,Player,Strength,10);",
     "Description": "檢定成功",
@@ -790,6 +794,7 @@
   {
     "entryID": 2053,
     "actorID": "MC1",
+    "title": "跪拜的人像",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "跪拜的人像",
@@ -816,6 +821,7 @@
   {
     "entryID": 2056,
     "actorID": "MC1",
+    "title": "點擊石中劍",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點擊石中劍、武力檢定10，可以無限嘗試",
@@ -826,6 +832,7 @@
   {
     "entryID": 2057,
     "actorID": "MC1",
+    "title": "拔劍失敗",
     "text": "「呼……不行，紋絲不動，看來我的力氣還不夠。」",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=16);",
     "Description": "檢定失敗",
@@ -851,6 +858,7 @@
   {
     "entryID": 2060,
     "actorID": "MC1",
+    "title": "白虎道妖",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "大廳強制劇情",
@@ -869,6 +877,7 @@
   {
     "entryID": 2062,
     "actorID": "MC1",
+    "title": "白虎道妖戰鬥結束",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "白虎道妖戰鬥結束",
@@ -932,14 +941,6 @@
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,4);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥",
     "links": [4242]
-  },
-  {
-    "entryID": 4242,
-    "actorID": "role2",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "戰鬥緩衝節點",
-    "links": [4161, 4162]
   },
   {
     "entryID": 4166,
@@ -1060,6 +1061,14 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableEventBG(WhiteTigerDaoistFight,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "links": [45]
+  },
+  {
+    "entryID": 4242,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [4161, 4162]
   },
   {
     "entryID": 4243,
@@ -1487,8 +1496,8 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "Variable[\"＿＿3\"] = true;",
     "Conditions": "IsPassFight()  == true;",
+    "Script": "Variable[\"＿＿3\"] = true;",
     "Description": "戰鬥成功。⚠ 待作者填：變數名 ＿＿3（二次拒絕打贏了）。醒來時 IsPassFight() 已失效，夢 B-1／B-2 一定要靠變數分流。",
     "links": [4295]
   },

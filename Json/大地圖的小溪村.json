@@ -381,6 +381,7 @@
   {
     "entryID": 270,
     "actorID": "MC1",
+    "title": "百年老木(完)",
     "text": "「關於百年鐵木的事情…」",
     "Sequence": "",
     "Conditions": "CurrentQuestState(\"C0F3\") == \"active\";",
@@ -758,8 +759,8 @@
     "entryID": 326,
     "actorID": "role121",
     "text": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
-    "Conditions": "IsPassFight()  == false;",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role121,pic=3);",
+    "Conditions": "IsPassFight()  == false;",
     "zh_TW": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
     "zh_CN": "[panel=1]「大哥，我们走。看来这小子也不过如此。」",
     "links": [327]
@@ -1135,6 +1136,7 @@
   {
     "entryID": 376,
     "actorID": "0",
+    "title": "觀看水面",
     "text": "",
     "Sequence": "Continue();\nSetPortrait(MC1,pic=1);",
     "links": [316, 377]
@@ -1200,6 +1202,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "白日夢2",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "(CurrentQuestState(\"CF07\") == \"active\") and (CurrentQuestState(\"CF08\") == \"active\")",
@@ -1210,6 +1213,7 @@
   {
     "entryID": 2050,
     "actorID": "MC1",
+    "title": "付學費給童淵",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「……」",
@@ -1219,6 +1223,7 @@
   {
     "entryID": 2051,
     "actorID": "MC1",
+    "title": "釣魚釣到河童",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「……」",
@@ -1228,6 +1233,7 @@
   {
     "entryID": 2052,
     "actorID": "MC1",
+    "title": "打河童大哥和三弟",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「……」",
@@ -1237,6 +1243,7 @@
   {
     "entryID": 2053,
     "actorID": "MC1",
+    "title": "三兄弟出現",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "Variable[\"FlokMonster\"] == 2",

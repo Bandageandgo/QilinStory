@@ -116,6 +116,7 @@
   {
     "entryID": 16,
     "actorID": "role112",
+    "title": "第一次找村長",
     "text": "「喲！哪來的年輕人？面生得很啊！稀客稀客！」",
     "Sequence": "",
     "Conditions": "CurrentQuestEntryState(\"C0M1\", 2) == \"active\";",
@@ -227,6 +228,7 @@
   {
     "entryID": 28,
     "actorID": "MC1",
+    "title": "解開棋局後找村長",
     "text": "「村口石桌那盤殘局…」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "Conditions": "Variable[\"ChessGame\"] == true;",
@@ -629,6 +631,7 @@
   {
     "entryID": 104,
     "actorID": "role112",
+    "title": "第二次找村長",
     "text": "「喲！年輕人！稀客稀客！」",
     "Sequence": "",
     "zh_TW": "「喲！年輕人！稀客稀客！」",
@@ -748,6 +751,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "村長開頭",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",
@@ -757,6 +761,7 @@
   {
     "entryID": 2050,
     "actorID": "MC1",
+    "title": "樹下棋局",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",

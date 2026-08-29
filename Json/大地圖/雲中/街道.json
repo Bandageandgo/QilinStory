@@ -2,6 +2,7 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "開場",
     "text": "[panel=6]＊（馬車顛簸了數日，沿著山道盤旋而上，終於在一處開闊地停下。眼前並非高牆深塹的大城，而是一片依山而建的聚落。）＊",
     "Sequence": "SetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_39);",
     "Description": "開場、音樂",
@@ -213,6 +214,7 @@
   {
     "entryID": 30,
     "actorID": "role2",
+    "title": "講台",
     "text": "[panel=6]＊（廣場中央設有一個木製的演講台，平時供文人雅士或江湖說書人在此高談闊論。此刻台上空無一人。）＊",
     "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,Others_Talking);",
     "Description": "可以點擊3次、人聲音效",
@@ -553,6 +555,7 @@
   {
     "entryID": 73,
     "actorID": "role2",
+    "title": "英豪府門口",
     "text": "[panel=6]＊（只見大門緊閉，透著一股莊嚴肅穆的氣息。）＊",
     "Sequence": "",
     "Description": "英豪府門口、CurrentQuestState(\"C1M1\") == \"unassigned\"",
@@ -579,6 +582,7 @@
   {
     "entryID": 76,
     "actorID": "role2",
+    "title": "發現湧煙嶺",
     "text": "[panel=6]＊（路過街角時，你們偶然聽見兩名江湖人士正在低聲交談，神色頗為凝重。）＊",
     "Sequence": "",
     "Description": "發現湧煙嶺",
@@ -731,6 +735,7 @@
   {
     "entryID": 110,
     "actorID": "role2",
+    "title": "開場",
     "text": "[panel=6]＊（廣場中三兩成群的人物或抱劍而立，或低聲交談，氣氛不鬧，卻透著一股躁動——與小溪村的淳樸寧靜截然不同。）＊",
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "[panel=6]＊（廣場中三兩成群的人物或抱劍而立，或低聲交談，氣氛不鬧，卻透著一股躁動——與小溪村的淳樸寧靜截然不同。）＊",
@@ -740,6 +745,7 @@
   {
     "entryID": 111,
     "actorID": "role2",
+    "title": "開場",
     "text": "[panel=6]＊（[em2]雲中[/em2]地處各方勢力夾縫，官府鞭長莫及，無人管束；名義上這一帶是[em2]英豪府[/em2]的地盤，實則龍蛇混雜，成了江湖中人北上南下時慣常落腳、換消息、等風向的去處。）＊",
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "[panel=6]＊（[em2]雲中[/em2]地處各方勢力夾縫，官府鞭長莫及，無人管束；名義上這一帶是[em2]英豪府[/em2]的地盤，實則龍蛇混雜，成了江湖中人北上南下時慣常落腳、換消息、等風向的去處。）＊",
@@ -813,6 +819,7 @@
   {
     "entryID": 4057,
     "actorID": "MC1",
+    "title": "大樹守衛",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "大樹守衛",
@@ -910,6 +917,7 @@
   {
     "entryID": 4067,
     "actorID": "MC1",
+    "title": "初見阿SA",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "初見阿SA(強制)",
@@ -958,6 +966,7 @@
   {
     "entryID": 4083,
     "actorID": "MC1",
+    "title": "回報任務:浦元的奇思妙想",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "回報任務:浦元的奇思妙想",
@@ -1060,6 +1069,7 @@
   {
     "entryID": 4101,
     "actorID": "MC1",
+    "title": "啊傑",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "滿足Variable[\"JieFriendDie\"] == false",
@@ -1070,6 +1080,7 @@
   {
     "entryID": 4105,
     "actorID": "MC1",
+    "title": "客棧NPC1",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "客棧NPC1",
@@ -1116,6 +1127,7 @@
   {
     "entryID": 4110,
     "actorID": "MC1",
+    "title": "客棧NPC2",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "客棧NPC2",
@@ -1180,6 +1192,7 @@
   {
     "entryID": 4117,
     "actorID": "MC1",
+    "title": "天外殞鐵",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "破屋子進去觸發",
@@ -1245,6 +1258,7 @@
   {
     "entryID": 4138,
     "actorID": "MC1",
+    "title": "阿婆",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "阿婆",

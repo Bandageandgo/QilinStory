@@ -166,6 +166,7 @@
   {
     "entryID": 19,
     "actorID": "role2",
+    "title": "赫連娜娜逃跑演出",
     "text": "[panel=6]＊（她話音未落，不等你們反應，便已收起包袱，如腳底抹油般一溜煙地跑向了後山。）＊",
     "Sequence": "SetContinueMode(false);\nDisableCharacterExpression(1);\nSetContinueMode(original)@Message(EndEntryEvent);",
     "Description": "赫連娜娜逃跑演出",
@@ -213,6 +214,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "赫連娜娜",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "初見娜娜(強制)",

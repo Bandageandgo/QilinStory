@@ -208,6 +208,7 @@
   {
     "entryID": 3885,
     "actorID": "MC1",
+    "title": "猴兒酒1",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Forest);\nContinue();",
     "zh_TW": "「...」",
@@ -265,14 +266,6 @@
     "links": [3917]
   },
   {
-    "entryID": 3917,
-    "actorID": "role2",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "戰鬥緩衝節點",
-    "links": [2066, 2061]
-  },
-  {
     "entryID": 3896,
     "actorID": "MC1",
     "text": "「豈有此理！路見不平，拔刀相助！只要作惡即使是猴子我也照管！」",
@@ -309,6 +302,7 @@
   {
     "entryID": 3900,
     "actorID": "MC1",
+    "title": "猴兒酒2",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Forest);\nContinue();",
     "zh_TW": "「...」",
@@ -411,6 +405,7 @@
   {
     "entryID": 3914,
     "actorID": "MC1",
+    "title": "賺錢！賺錢！賺錢！",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableDialogueBG(Home);\nContinue();",
     "zh_TW": "「...」",
@@ -434,5 +429,13 @@
     "zh_TW": "「你的格局還真不是一般的大！」",
     "zh_CN": "「你的格局还真不是一般的大！」",
     "links": [3913]
+  },
+  {
+    "entryID": 3917,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [2066, 2061]
   }
 ]

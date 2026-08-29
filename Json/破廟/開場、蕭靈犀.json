@@ -2,12 +2,11 @@
   {
     "entryID": 3513,
     "actorID": "role97",
+    "title": "開場醒來",
     "text": "",
     "Sequence": "Continue();",
     "Description": "開始時觸發",
-    "links": [
-      3522
-    ]
+    "links": [3522]
   },
   {
     "entryID": 3514,
@@ -16,9 +15,7 @@
     "Sequence": "",
     "zh_TW": "「大、大哥您冷靜一下，冷靜一下。\n唉呦，小弟怎麼敢質疑你啊？不就是好奇嘛！」",
     "zh_CN": "「大、大哥您冷静一下，冷静一下。\n唉呦，小弟怎么敢质疑你啊？不就是好奇嘛！」",
-    "links": [
-      3516
-    ]
+    "links": [3516]
   },
   {
     "entryID": 3515,
@@ -27,9 +24,7 @@
     "Sequence": "",
     "zh_TW": "「他媽的！你罵我做甚？媽的，老子做大哥的好心帶他翻身，還得聽他婆媽！」",
     "zh_CN": "「他妈的！你骂我做甚？妈的，老子做大哥的好心带他翻身，还得听他婆妈！」",
-    "links": [
-      3514
-    ]
+    "links": [3514]
   },
   {
     "entryID": 3516,
@@ -38,9 +33,7 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「畢竟大哥你說……去投奔那[em2]白波軍[/em2]，跟著渠帥幹大事，可…那可是造反啊！是要掉腦袋的！真有這麼好的前程，會平白無故輪到我們這種升斗小民嗎？我、我心裡實在慌得很……」",
     "zh_CN": "「毕竟大哥你说……去投奔那[em2]白波军[/em2]，跟着渠帅干大事，可…那可是造反啊！是要掉脑袋的！真有这么好的前程，会平白无故轮到我们这种升斗小民吗？我、我心里实在慌得很……」",
-    "links": [
-      3520
-    ]
+    "links": [3520]
   },
   {
     "entryID": 3517,
@@ -49,9 +42,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Nervous);",
     "zh_TW": "「兩位大哥，咱們走了這麼久，敢問……現在離雲中還有多遠啊？」",
     "zh_CN": "「两位大哥，咱们走了这么久，敢问……现在离云中还有多远啊？」",
-    "links": [
-      3524
-    ]
+    "links": [3524]
   },
   {
     "entryID": 3518,
@@ -67,9 +58,7 @@
     "Sequence": "",
     "zh_TW": "「你們兩個給我差不多點！\n吵吵鬧鬧的丟不丟人吶，咱們這兒還有小孩子在呢！」",
     "zh_CN": "「你们两个给我差不多点！\n吵吵闹闹的丢不丢人呐，咱们这儿还有小孩子在呢！」",
-    "links": [
-      3515
-    ]
+    "links": [3515]
   },
   {
     "entryID": 3520,
@@ -78,9 +67,7 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「噓！閉上你的烏鴉嘴！這種掉腦袋的話你也敢在這兒嚷嚷？」",
     "zh_CN": "「嘘！闭上你的乌鸦嘴！这种掉脑袋的话你也敢在这儿​​嚷嚷？」",
-    "links": [
-      3529
-    ]
+    "links": [3529]
   },
   {
     "entryID": 3521,
@@ -89,9 +76,7 @@
     "Sequence": "",
     "zh_TW": "「可……可是……聽說官兵凶得很……萬一……」",
     "zh_CN": "「可……可是……听说官兵凶得很……万一……」",
-    "links": [
-      3531
-    ]
+    "links": [3531]
   },
   {
     "entryID": 3522,
@@ -101,9 +86,7 @@
     "Description": "解鎖破廟",
     "zh_TW": "「唔啊啊～～\n壞了，聽著雨聲就這樣睡了過去……」",
     "zh_CN": "「唔啊啊～～\n坏了，听着雨声就这样睡了过去……」",
-    "links": [
-      3523
-    ]
+    "links": [3523]
   },
   {
     "entryID": 3523,
@@ -112,9 +95,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);",
     "zh_TW": "「……不是，這是哪啊？已經到雲中了嗎？」",
     "zh_CN": "「……不是，这是哪啊？已经到云中了吗？」",
-    "links": [
-      3519
-    ]
+    "links": [3519]
   },
   {
     "entryID": 3524,
@@ -123,9 +104,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「小兄弟，我看你是睡糊塗啦。方才咱們才翻過前頭那山頭，老天爺就說變臉就變臉，降下這場大雨。」",
     "zh_CN": "「小兄弟，我看你是睡糊涂啦。方才咱们才翻过前头那山头，老天爷就说变脸就变脸，降下这场大雨。」",
-    "links": [
-      3527
-    ]
+    "links": [3527]
   },
   {
     "entryID": 3525,
@@ -134,9 +113,7 @@
     "Sequence": "",
     "zh_TW": "「若沒有老子知道這間破廟，大家早吃西北風去了！」",
     "zh_CN": "「若没有老子知道这间破庙，大家早吃西北风去了！」",
-    "links": [
-      3526
-    ]
+    "links": [3526]
   },
   {
     "entryID": 3526,
@@ -147,10 +124,7 @@
     "Description": "開啟任務\"大夢初醒\"",
     "zh_TW": "「哎，別理他們了。反正閒著也是閒著，在雨停之前，找點事情來打發時間吧！」",
     "zh_CN": "「哎，别理他们了。反正闲着也是闲着，在雨停之前，找点事情来打发时间吧！」",
-    "links": [
-      3528,
-      3518
-    ]
+    "links": [3528, 3518]
   },
   {
     "entryID": 3527,
@@ -159,9 +133,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「幸好有這座破廟能躲一躲，看來咱們得先在這兒歇歇腳，等雨停了。」",
     "zh_CN": "「幸好有这座破庙能躲一躲，看来咱们得先在这儿歇歇脚，等雨停了。」",
-    "links": [
-      3525
-    ]
+    "links": [3525]
   },
   {
     "entryID": 3528,
@@ -180,9 +152,7 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「[em7]悄聲道[/em7]：[em2]蒼天已死，黃天當立[/em2]這句話你沒聽過嗎？這大漢的氣數早就盡了！與其在這亂世裡像條狗一樣餓死，不如跟著郭太渠帥搏一把富貴！」",
     "zh_CN": "「[em7]悄声道[/em7]：[em2]苍天已死，黄天当立[/em2]这句话你没听过吗？这大汉的气数早就尽了！与其在这乱世里像条狗一样饿死，不如跟着郭太渠帅搏一把富贵！」",
-    "links": [
-      3530
-    ]
+    "links": [3530]
   },
   {
     "entryID": 3530,
@@ -191,9 +161,7 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「再說啦，渠帥可是天公將軍的嫡傳弟子，法力無邊，撒豆成兵！跟著他不僅吃香喝辣，還能修得長生不老！這可是千載難逢的翻身機會，你懂個屁！」",
     "zh_CN": "「再说啦，渠帅可是天公将军的嫡传弟子，法力无边，撒豆成兵！跟着他不仅吃香喝辣，还能修得长生不老！这可是千载难逢的翻身机会，你懂个屁！」",
-    "links": [
-      3521
-    ]
+    "links": [3521]
   },
   {
     "entryID": 3531,
@@ -202,9 +170,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（阿傑似乎感覺到了你的目光，猛地推了阿佑一把，兩人立刻噤聲，警惕地打量著你。）＊",
     "zh_CN": "[panel=6]＊（阿杰似乎感觉到了你的目光，猛地推了阿佑一把，两人立刻噤声，警惕地打量着你。）＊",
-    "links": [
-      3532
-    ]
+    "links": [3532]
   },
   {
     "entryID": 3532,
@@ -213,9 +179,7 @@
     "Sequence": "SetPortrait(MC1,pic=14);",
     "zh_TW": "「[em7]伸了個懶腰，打了個哈欠[/em7]…這一覺睡得真沉。\n哎，大哥，這雨怎麼還沒停啊？吵得我這腦殼嗡嗡響。」",
     "zh_CN": "「[em7]伸了个懒腰，打了个哈欠[/em7]…这一觉睡得真沉。\n哎，大哥，这雨怎么还没停啊？吵得我这脑壳嗡嗡响。」",
-    "links": [
-      3533
-    ]
+    "links": [3533]
   },
   {
     "entryID": 3533,
@@ -224,20 +188,17 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（見你這副迷迷糊糊的模樣，阿傑眼中的警惕之色稍減，顯然是信了你的話，認為你只是剛被雨聲吵醒，並未聽到他們談話的內容。一旁的阿佑更是明顯鬆了口氣，擦了擦額頭的冷汗。）＊",
     "zh_CN": "[panel=6]＊（见你这副迷迷糊糊的模样，阿杰眼中的警惕之色稍减，显然是信了你的话，认为你只是刚被雨声吵醒，并未听到他们谈话的内容。一旁的阿佑更是明显松了口气，擦了擦额头的冷汗。）＊",
-    "links": [
-      3517
-    ]
+    "links": [3517]
   },
   {
     "entryID": 3534,
     "actorID": "MC8",
+    "title": "小犀對話",
     "text": "「…………啊！表哥表哥！你終於醒啦！」",
     "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Idea);\nControlStage(SetCamera,1,小犀);",
     "zh_TW": "「…………啊！表哥表哥！你終於醒啦！」",
     "zh_CN": "「…………啊！表哥表哥！你终于醒啦！」",
-    "links": [
-      3561
-    ]
+    "links": [3561]
   },
   {
     "entryID": 3535,
@@ -246,9 +207,7 @@
     "Sequence": "SetContinueMode(false);\nControlStage(SetCamera,1,狗頭人);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "zh_TW": "[panel=6]＊（你們鬥嘴還沒結束，就聽附近傳來一陣窸窣，蟲鳴鳥叫戛然而止，一股毛骨悚然攀附上背——）＊",
     "zh_CN": "[panel=6]＊（你们斗嘴还没结束，就听附近传来一阵窸窣，虫鸣鸟叫戛然而止，一股毛骨悚然攀附上背——）＊",
-    "links": [
-      3536
-    ]
+    "links": [3536]
   },
   {
     "entryID": 3536,
@@ -256,19 +215,14 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,5);",
     "Description": "開始檢定",
-    "links": [
-      3537
-    ]
+    "links": [3537]
   },
   {
     "entryID": 3537,
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3541,
-      3545
-    ]
+    "links": [3541, 3545]
   },
   {
     "entryID": 3538,
@@ -277,9 +231,7 @@
     "Sequence": "PlayOrStopParticle(Sword_Single_ScreenRed,Stop);",
     "zh_TW": "「嘎啊！！」",
     "zh_CN": "「嘎啊！！」",
-    "links": [
-      3539
-    ]
+    "links": [3539]
   },
   {
     "entryID": 3539,
@@ -288,9 +240,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": "[panel=2]「哇啊！表、表哥，那是什麼聲音？」",
     "zh_CN": "[panel=2]「哇啊！表、表哥，那是什么声音？」",
-    "links": [
-      3540
-    ]
+    "links": [3540]
   },
   {
     "entryID": 3540,
@@ -299,9 +249,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（你順著枝枒斷裂聲響，雙目一凜，朝著那方向甩出腳邊碎石，隨後便聽草叢中傳來一聲哀號……）＊",
     "zh_CN": "[panel=6]＊（你顺着枝桠断裂声响，双目一凛，朝着那方向甩出脚边碎石，随后便听草丛中传来一声哀号……）＊",
-    "links": [
-      3573
-    ]
+    "links": [3573]
   },
   {
     "entryID": 3541,
@@ -309,9 +257,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Play);\nAudioControl(PlaySFXOneShot,Others_Sword_Single_ScreenRed);\nSetContinueMode(original)@2;\nModifyData(FeatExp,Player,Insight,10);",
     "Conditions": "IsPassDice()  == true;",
-    "links": [
-      3538
-    ]
+    "links": [3538]
   },
   {
     "entryID": 3542,
@@ -320,9 +266,7 @@
     "Sequence": "ControlStage(TriggerEvent,1,狗頭人出現);",
     "zh_TW": "「嘎、嘎啊！高、高手，識破、隱身！高手！」",
     "zh_CN": "「嘎、嘎啊！高、高手，识破、隐身！高手！」",
-    "links": [
-      3543
-    ]
+    "links": [3543]
   },
   {
     "entryID": 3543,
@@ -331,9 +275,7 @@
     "Sequence": "",
     "zh_TW": "「厲害！厲害！」",
     "zh_CN": "「厉害！厉害！」",
-    "links": [
-      3574
-    ]
+    "links": [3574]
   },
   {
     "entryID": 3544,
@@ -342,10 +284,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Nervous_2);\nDisableCharacterExpression(0);",
     "zh_TW": "[panel=2]「……別、別看小犀啦！\n我甚麼都不知道了啦！」",
     "zh_CN": "[panel=2]「……别、别看小犀啦！\n我什么都不知道了啦！」",
-    "links": [
-      3585,
-      3550
-    ]
+    "links": [3585, 3550]
   },
   {
     "entryID": 3545,
@@ -355,9 +294,7 @@
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「嘎呼！！」",
     "zh_CN": "「嘎呼！！」",
-    "links": [
-      3546
-    ]
+    "links": [3546]
   },
   {
     "entryID": 3546,
@@ -366,18 +303,14 @@
     "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Shock);",
     "zh_TW": "[panel=2]「哇啊！」",
     "zh_CN": "[panel=2]「哇啊！」",
-    "links": [
-      3547
-    ]
+    "links": [3547]
   },
   {
     "entryID": 3547,
     "actorID": "role2",
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Play);\nAudioControl(PlaySFXOneShot,Others_Sword_Single_ScreenRed);\nSetContinueMode(original)@2;\nDisableCharacterExpression(2);",
-    "links": [
-      3548
-    ]
+    "links": [3548]
   },
   {
     "entryID": 3548,
@@ -386,9 +319,7 @@
     "Sequence": "PlayOrStopParticle(Sword_Single_ScreenRed,Stop);",
     "zh_TW": "「嘎呼！嘎呼！上鉤了！上鉤了！」",
     "zh_CN": "「嘎呼！嘎呼！上钩了！上钩了！」",
-    "links": [
-      3549
-    ]
+    "links": [3549]
   },
   {
     "entryID": 3549,
@@ -397,10 +328,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": "[panel=2]「……」",
     "zh_CN": "[panel=2]「……」",
-    "links": [
-      3584,
-      3550
-    ]
+    "links": [3584, 3550]
   },
   {
     "entryID": 3550,
@@ -409,9 +337,7 @@
     "Sequence": "DisableCharacterExpression(2);",
     "zh_TW": "「此山，我開！此廟，我栽！要命！留財！」",
     "zh_CN": "「此山，我开！此庙，我栽！要命！留财！」",
-    "links": [
-      3551
-    ]
+    "links": [3551]
   },
   {
     "entryID": 3551,
@@ -420,9 +346,7 @@
     "Sequence": "",
     "zh_TW": "「留財！留財！留財！」",
     "zh_CN": "「留财！留财！留财！」",
-    "links": [
-      3552
-    ]
+    "links": [3552]
   },
   {
     "entryID": 3552,
@@ -431,9 +355,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「你們在這要做什麼？！」",
     "zh_CN": "「你们在这要做什么？！」",
-    "links": [
-      3553
-    ]
+    "links": [3553]
   },
   {
     "entryID": 3553,
@@ -442,9 +364,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「藏起來！等待！獵物！\n牛車、來！躲起來，等待！落單！」",
     "zh_CN": "「藏起来！等待！猎物！\n牛车、来！躲起来，等待！落单！」",
-    "links": [
-      3554
-    ]
+    "links": [3554]
   },
   {
     "entryID": 3554,
@@ -453,9 +373,7 @@
     "Sequence": "",
     "zh_TW": "「落單！落單！上鉤！上鉤！」",
     "zh_CN": "「落单！落单！上钩！上钩！」",
-    "links": [
-      3555
-    ]
+    "links": [3555]
   },
   {
     "entryID": 3555,
@@ -464,9 +382,7 @@
     "Sequence": "",
     "zh_TW": "「我等不願做無謂殺生，只消交出銀兩，我等便大慈大悲！饒過你們！」",
     "zh_CN": "「我等不愿做无谓杀生，只消交出银两，我等便大慈大悲！饶过你们！」",
-    "links": [
-      3556
-    ]
+    "links": [3556]
   },
   {
     "entryID": 3556,
@@ -475,9 +391,7 @@
     "Sequence": "",
     "zh_TW": "「對！交出銀兩！交出銀兩！咱們便饒你一命！」",
     "zh_CN": "「对！交出银两！交出银两！咱们便饶你一命！」",
-    "links": [
-      3577
-    ]
+    "links": [3577]
   },
   {
     "entryID": 3557,
@@ -487,9 +401,7 @@
     "Conditions": "IsPassFight()  == true;",
     "zh_TW": "「嘎、嘎嗚嗚……小的！跑！小子，厲害！」",
     "zh_CN": "「嘎、嘎呜呜……小的！跑！小子，厉害！」",
-    "links": [
-      3558
-    ]
+    "links": [3558]
   },
   {
     "entryID": 3558,
@@ -498,9 +410,7 @@
     "Sequence": "SetPortrait(MC8,pic=5);",
     "zh_TW": "「噗哧！聽牠大話說的，真跑起來還不是一溜煙就沒了人影！」",
     "zh_CN": "「噗哧！听它大话说的，真跑起来还不是一溜烟就没了人影！」",
-    "links": [
-      3575
-    ]
+    "links": [3575]
   },
   {
     "entryID": 3559,
@@ -508,19 +418,14 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,5);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥",
-    "links": [
-      3560
-    ]
+    "links": [3560]
   },
   {
     "entryID": 3560,
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3557,
-      3636
-    ]
+    "links": [3557, 3636]
   },
   {
     "entryID": 3561,
@@ -529,10 +434,7 @@
     "Sequence": "SetPortrait(MC8,pic=3);",
     "zh_TW": "「表哥都睡了大半日了！還以為是身體不舒服，害小犀擔心得要命，都不知該怎麼辦了。」",
     "zh_CN": "「表哥都睡了大半日了！还以为是身体不舒服，害小犀担心得要命，都不知该怎么办了。」",
-    "links": [
-      3582,
-      3583
-    ]
+    "links": [3582, 3583]
   },
   {
     "entryID": 3562,
@@ -541,9 +443,7 @@
     "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);",
     "zh_TW": "「哼哼……好啦，不說這些了。小犀方才和阿傑叔叔打聽過啦，聽說晉陽有不少好吃的！還有表哥之前說要帶我去吃的綠豆湯呢！」",
     "zh_CN": "「哼哼……好啦，不说这些了。小犀方才和阿杰叔叔打听过啦，听说晋阳有不少好吃的！还有表哥之前说要带我去吃的绿豆汤呢！」",
-    "links": [
-      3563
-    ]
+    "links": [3563]
   },
   {
     "entryID": 3563,
@@ -552,9 +452,7 @@
     "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
     "zh_TW": "「比起這個，咱們不是坐車嗎？怎麼會在破廟裡？」",
     "zh_CN": "「比起这个，咱们不是坐车吗？怎么会在破庙里？」",
-    "links": [
-      3564
-    ]
+    "links": [3564]
   },
   {
     "entryID": 3564,
@@ -563,9 +461,7 @@
     "Sequence": "SetPortrait(MC8,pic=13);\nEnableCharacterExpression(1,MC8,Meditate);\nDisableCharacterExpression(0);",
     "zh_TW": "「唔，說到這小犀就來氣……！表哥一上車就開始睡覺，都不知道那車夫多過分！」",
     "zh_CN": "「唔，说到这小犀就来气……！表哥一上车就开始睡觉，都不知道那车夫多过分！」",
-    "links": [
-      3565
-    ]
+    "links": [3565]
   },
   {
     "entryID": 3565,
@@ -574,9 +470,7 @@
     "Sequence": "SetPortrait(MC8,pic=2);\nDisableCharacterExpression(1);",
     "zh_TW": "「咱們自從上了馬車後就晝夜不歇的不停趕路，小犀屁股都要被馬車顛開花啦！」",
     "zh_CN": "「咱们自从上了马车后就昼夜不歇的不停赶路，小犀屁股都要被马车颠开花啦！」",
-    "links": [
-      3566
-    ]
+    "links": [3566]
   },
   {
     "entryID": 3566,
@@ -585,9 +479,7 @@
     "Sequence": "SetPortrait(MC8,pic=3);",
     "zh_TW": "「結果問了問車夫，說是再撐一下，等到了驛站就能歇息了……結果才剛看到那驛站旗子尖兒呢！」",
     "zh_CN": "「结果问了问车夫，说是再撑一下，等到了驿站就能歇息了……结果才刚看到那驿站旗子尖儿呢！」",
-    "links": [
-      3569
-    ]
+    "links": [3569]
   },
   {
     "entryID": 3568,
@@ -596,9 +488,7 @@
     "Sequence": "SetPortrait(MC8,pic=6);\nDisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);",
     "zh_TW": "「你還待得住呀？裡面無聊得連個銅板都撿不到，我還不如出來透透氣呢！」",
     "zh_CN": "「你还待得住呀？里面无聊得连个铜板都捡不到，我还不如出来透透气呢！」",
-    "links": [
-      3562
-    ]
+    "links": [3562]
   },
   {
     "entryID": 3569,
@@ -607,9 +497,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": "「那車夫叔叔就突然驅馬拐彎，把咱們拉上了旁邊的山路……說是咱們人多，走大路不好！」",
     "zh_CN": "「那车夫叔叔就突然驱马拐弯，把咱们拉上了旁边的山路……说是咱们人多，走大路不好！」",
-    "links": [
-      3570
-    ]
+    "links": [3570]
   },
   {
     "entryID": 3570,
@@ -618,9 +506,7 @@
     "Sequence": "SetPortrait(MC8,pic=3);",
     "zh_TW": "「結果前腳上山，後腳就起了大霧……這下倒好了，咱們上不去山頂，又下不了山，只能卡在這兒……」",
     "zh_CN": "「结果前脚上山，后脚就起了大雾……这下倒好了，咱们上不去山顶，又下不了山，只能卡在这儿……」",
-    "links": [
-      3571
-    ]
+    "links": [3571]
   },
   {
     "entryID": 3571,
@@ -629,9 +515,7 @@
     "Sequence": "SetPortrait(MC8,pic=2);",
     "zh_TW": "「唔，若不是阿傑叔叔湊巧找到這座廟避雨，小犀就要抓很多很多蟲子，趁車夫叔叔睡著時扔在他臉上…！」",
     "zh_CN": "「唔，若不是阿杰叔叔凑巧找到这座庙避雨，小犀就要抓很多很多虫子，趁车夫叔叔睡着时扔在他脸上…！」",
-    "links": [
-      3572
-    ]
+    "links": [3572]
   },
   {
     "entryID": 3572,
@@ -640,9 +524,7 @@
     "Sequence": "SetPortrait(MC1,pic=9);",
     "zh_TW": "「好好好，息怒！息怒！」",
     "zh_CN": "「好好好，息怒！息怒！」",
-    "links": [
-      3535
-    ]
+    "links": [3535]
   },
   {
     "entryID": 3573,
@@ -651,9 +533,7 @@
     "Sequence": "SetPortrait(MC1,pic=2);",
     "zh_TW": "「男子漢大丈夫，躲躲藏藏做甚麼？出來！」",
     "zh_CN": "「男子汉大丈夫，躲躲藏藏做什么？出来！」",
-    "links": [
-      3542
-    ]
+    "links": [3542]
   },
   {
     "entryID": 3574,
@@ -662,9 +542,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「…………」",
     "zh_CN": "「…………」",
-    "links": [
-      3544
-    ]
+    "links": [3544]
   },
   {
     "entryID": 3575,
@@ -673,9 +551,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「雨一直下，氣氛不算融洽，算啦，再晃晃吧。」",
     "zh_CN": "「雨一直下，气氛不算融洽，算啦，再晃晃吧。」",
-    "links": [
-      3633
-    ]
+    "links": [3633]
   },
   {
     "entryID": 3576,
@@ -684,9 +560,7 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「小犀，他們說給錢就放人。」",
     "zh_CN": "「小犀，他们说给钱就放人。」",
-    "links": [
-      3578
-    ]
+    "links": [3578]
   },
   {
     "entryID": 3577,
@@ -695,9 +569,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Question);",
     "zh_TW": "[panel=2]「唔哇！他們到底怎麼了？」",
     "zh_CN": "[panel=2]「唔哇！他们到底怎么了？」",
-    "links": [
-      3576
-    ]
+    "links": [3576]
   },
   {
     "entryID": 3578,
@@ -706,9 +578,7 @@
     "Sequence": "SetPortrait(MC8,pic=6);",
     "zh_TW": "[panel=2]「咦？要錢？」",
     "zh_CN": "[panel=2]「咦？要钱？」",
-    "links": [
-      3579
-    ]
+    "links": [3579]
   },
   {
     "entryID": 3579,
@@ -717,9 +587,7 @@
     "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Anger);\nDisableCharacterExpression(2);",
     "zh_TW": "[panel=2]「他、們、要、錢？」",
     "zh_CN": "[panel=2]「他、们、要、钱？」",
-    "links": [
-      3580
-    ]
+    "links": [3580]
   },
   {
     "entryID": 3580,
@@ -728,9 +596,7 @@
     "Sequence": "SetPortrait(MC1,pic=9);\nDisableCharacterExpression(2);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「姑且先問問哦，那你們是需要多少錢才能放我們走？」",
     "zh_CN": "「姑且先问问哦，那你们是需要多少钱才能放我们走？」",
-    "links": [
-      3586
-    ]
+    "links": [3586]
   },
   {
     "entryID": 3581,
@@ -739,9 +605,7 @@
     "Sequence": "",
     "zh_TW": "「嘿！要錢沒有，要命，自己來拿！」",
     "zh_CN": "「嘿！要钱没有，要命，自己来拿！」",
-    "links": [
-      3559
-    ]
+    "links": [3559]
   },
   {
     "entryID": 3582,
@@ -751,9 +615,7 @@
     "Conditions": "IsInTeam(\"MC22\")  == true;",
     "zh_TW": "[panel=1]「不過，你這麼能睡，果然是個狠角色！」",
     "zh_CN": "[panel=1]「不过，你这么能睡，果然是个狠角色！」",
-    "links": [
-      3583
-    ]
+    "links": [3583]
   },
   {
     "entryID": 3583,
@@ -762,9 +624,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
     "zh_TW": "「不過你一個人跑出來淋雨做什麼？」",
     "zh_CN": "「不过你一个人跑出来淋雨做什么？」",
-    "links": [
-      3568
-    ]
+    "links": [3568]
   },
   {
     "entryID": 3584,
@@ -774,9 +634,7 @@
     "Conditions": "IsInTeam(\"MC22\")  == true;",
     "zh_TW": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "zh_CN": "[panel=1]「妈呀，怎这里也有狗头人！？」",
-    "links": [
-      3550
-    ]
+    "links": [3550]
   },
   {
     "entryID": 3585,
@@ -786,9 +644,7 @@
     "Conditions": "IsInTeam(\"MC22\")  == true;",
     "zh_TW": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "zh_CN": "[panel=1]「妈呀，怎这里也有狗头人！？」",
-    "links": [
-      3550
-    ]
+    "links": [3550]
   },
   {
     "entryID": 3586,
@@ -797,9 +653,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「咳、看你這麼有誠意……那、那就收你個五百錢好了。下不為例啊！」",
     "zh_CN": "「咳、看你这么有诚意……那、那就收你个五百钱好了。下不为例啊！」",
-    "links": [
-      3588
-    ]
+    "links": [3588]
   },
   {
     "entryID": 3587,
@@ -809,9 +663,7 @@
     "Conditions": "IsInTeam(\"MC22\")  == true;",
     "zh_TW": "[panel=1]「等等！」",
     "zh_CN": "[panel=1]「等等！」",
-    "links": [
-      3589
-    ]
+    "links": [3589]
   },
   {
     "entryID": 3588,
@@ -820,11 +672,7 @@
     "Sequence": "SetPortrait(MC8,pic=2);",
     "zh_TW": "[panel=2]「表哥表哥，別愣著啦！他們是想搶我們的錢！快用伏虎拳把他們打跑！這可是我們將來買綠豆糕的本錢啊！」",
     "zh_CN": "[panel=2]「表哥表哥，别愣着啦！他们是想抢我们的钱！快用伏虎拳把他们打跑！这可是我们将来买绿豆糕的本钱啊！」",
-    "links": [
-      3587,
-      3616,
-      3581
-    ]
+    "links": [3587, 3616, 3581]
   },
   {
     "entryID": 3589,
@@ -833,11 +681,7 @@
     "Sequence": "SetPortrait(MC22,pic=1);\nDisableCharacterExpression(1);",
     "zh_TW": "[panel=1]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
     "zh_CN": "[panel=1]「打打杀杀的多不划算！不战而屈人之兵才是上策！我有一计——让他们心甘情愿替咱们办事，岂不比直接动手高明多了？」",
-    "links": [
-      3590,
-      3597,
-      3581
-    ]
+    "links": [3590, 3597, 3581]
   },
   {
     "entryID": 3590,
@@ -846,18 +690,14 @@
     "Sequence": "",
     "zh_TW": "[em2][經濟檢定][/em2]「我有一個提議。」",
     "zh_CN": "[em2][经济检定][/em2]「我有一个提议。」",
-    "links": [
-      3591
-    ]
+    "links": [3591]
   },
   {
     "entryID": 3591,
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,10);",
-    "links": [
-      3592
-    ]
+    "links": [3592]
   },
   {
     "entryID": 3592,
@@ -866,10 +706,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(1);",
     "zh_TW": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
     "zh_CN": "「好汉们，今日你们能从我这拿到五百钱，明日呢？拦路营生，终究不是长久之计。我这正好有个稳妥的委托，既能让各位赚得正当钱财，又能免去刀口舔血的风险。好汉们不妨考虑一下？」",
-    "links": [
-      3594,
-      3603
-    ]
+    "links": [3594, 3603]
   },
   {
     "entryID": 3593,
@@ -878,9 +715,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「而我所求的是一個承諾——在我日後的旅途中，當我需要援助之時，各位需無條件出手助我三次。」",
     "zh_CN": "「而我所求的是一个承诺——在我日后的旅途中，当我需要援助之时，各位需无条件出手助我三次。」",
-    "links": [
-      3595
-    ]
+    "links": [3595]
   },
   {
     "entryID": 3594,
@@ -890,9 +725,7 @@
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「咳、咳、你且說看看，但話說在前頭，可別想唬騙我們！」",
     "zh_CN": "「咳、咳、你且说看看，但话说在前头，可别想唬骗我们！」",
-    "links": [
-      3593
-    ]
+    "links": [3593]
   },
   {
     "entryID": 3595,
@@ -901,9 +734,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「無論是陷入何等戰鬥，只要我有需要，各位便需盡快前來支援。」",
     "zh_CN": "「无论是陷入何等战斗，只要我有需要，各位便需尽快前来支援。」",
-    "links": [
-      3596
-    ]
+    "links": [3596]
   },
   {
     "entryID": 3596,
@@ -912,9 +743,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「三次為限，三次之後，你我兩清，此約便了。不知各位好漢，對這樁皆大歡喜的買賣，意下如何？」",
     "zh_CN": "「三次为限，三次之后，你我两清，此约便了。不知各位好汉，对这桩皆大欢喜的买卖，意下如何？」",
-    "links": [
-      3605
-    ]
+    "links": [3605]
   },
   {
     "entryID": 3597,
@@ -924,9 +753,7 @@
     "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1)  == true;",
     "zh_TW": "[em2][隱藏選項][/em2]「我有一個你們無法拒絕的提議。」",
     "zh_CN": "[em2][隐藏选项][/em2]「我有一个你们无法拒绝的提议。」",
-    "links": [
-      3598
-    ]
+    "links": [3598]
   },
   {
     "entryID": 3598,
@@ -935,9 +762,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(1);",
     "zh_TW": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
     "zh_CN": "「好汉们，今日你们能从我这拿到五百钱，明日呢？拦路营生，终究不是长久之计。我这正好有个稳妥的委托，既能让各位赚得正当钱财，又能免去刀口舔血的风险。好汉们不妨考虑一下？」",
-    "links": [
-      3599
-    ]
+    "links": [3599]
   },
   {
     "entryID": 3599,
@@ -946,9 +771,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「而我所求的是一個承諾——在我日後的旅途中，當我需要援助之時，各位需無條件出手助我三次。」",
     "zh_CN": "「而我所求的是一个承诺——在我日后的旅途中，当我需要援助之时，各位需无条件出手助我三次。」",
-    "links": [
-      3600
-    ]
+    "links": [3600]
   },
   {
     "entryID": 3600,
@@ -957,9 +780,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「無論是陷入何等戰鬥，只要我有需要，各位便需盡快前來支援。」",
     "zh_CN": "「无论是陷入何等战斗，只要我有需要，各位便需尽快前来支援。」",
-    "links": [
-      3601
-    ]
+    "links": [3601]
   },
   {
     "entryID": 3601,
@@ -968,9 +789,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「三次為限，三次之後，你我兩清，此約便了。且為了表達我的誠意[em2]事成之後[/em2]我提高報酬至七百錢！」",
     "zh_CN": "「三次为限，三次之后，你我两清，此约便了。且为了表达我的诚意[em2]事成之后[/em2]我提高报酬至七百钱！」",
-    "links": [
-      3602
-    ]
+    "links": [3602]
   },
   {
     "entryID": 3602,
@@ -979,9 +798,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「不知各位英雄，對這樁皆大歡喜的買賣，意下如何？」",
     "zh_CN": "「不知各位英雄，对这桩皆大欢喜的买卖，意下如何？」",
-    "links": [
-      3609
-    ]
+    "links": [3609]
   },
   {
     "entryID": 3603,
@@ -991,9 +808,7 @@
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「胡说八道！一听就是鬼扯！」",
-    "links": [
-      3604
-    ]
+    "links": [3604]
   },
   {
     "entryID": 3604,
@@ -1002,9 +817,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": " [panel=2]「哇啊，別再說啦，他們都衝過來了！」",
     "zh_CN": "[panel=2]「哇啊，别再说啦，他们都冲过来了！」",
-    "links": [
-      3559
-    ]
+    "links": [3559]
   },
   {
     "entryID": 3605,
@@ -1013,9 +826,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「咳、總覺得哪邊怪怪得...」",
     "zh_CN": "「咳、总觉得哪边怪怪得...」",
-    "links": [
-      3606
-    ]
+    "links": [3606]
   },
   {
     "entryID": 3606,
@@ -1024,9 +835,7 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "[panel=3]「大、大哥，這小子的提議倒也不差，在這鳥不拉屎的地方想遇到買賣都等個好幾天...」",
     "zh_CN": "[panel=3]「大、大哥，这小子的提议倒也不差，在这鸟不拉屎的地方想遇到买卖都等个好几天...」",
-    "links": [
-      3607
-    ]
+    "links": [3607]
   },
   {
     "entryID": 3607,
@@ -1035,10 +844,7 @@
     "Sequence": "",
     "zh_TW": "「好、好吧，但這500錢得現在馬上給！」",
     "zh_CN": "「好、好吧，但这500钱得现在马上给！」",
-    "links": [
-      3608,
-      3613
-    ]
+    "links": [3608, 3613]
   },
   {
     "entryID": 3608,
@@ -1047,9 +853,7 @@
     "Sequence": "",
     "zh_TW": "「算了！要錢沒有，要命，看你們有沒有這個本事！」",
     "zh_CN": "「算了！要钱没有，要命，看你们有没有这个本事！」",
-    "links": [
-      3559
-    ]
+    "links": [3559]
   },
   {
     "entryID": 3609,
@@ -1058,9 +862,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「咳、總覺得哪邊怪怪得...」",
     "zh_CN": "「咳、总觉得哪边怪怪得...」",
-    "links": [
-      3610
-    ]
+    "links": [3610]
   },
   {
     "entryID": 3610,
@@ -1069,9 +871,7 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "[panel=3]「大、大哥，這小子的提議倒也不差，在這鳥不拉屎的地方想遇到買賣都等個好幾天...」",
     "zh_CN": "[panel=3]「大、大哥，这小子的提议倒也不差，在这鸟不拉屎的地方想遇到买卖都等个好几天...」",
-    "links": [
-      3611
-    ]
+    "links": [3611]
   },
   {
     "entryID": 3611,
@@ -1080,9 +880,7 @@
     "Sequence": "",
     "zh_TW": "「好、好吧，到時這報酬七百錢可一分都不能少！」",
     "zh_CN": "「好、好吧，到时这报酬七百钱可一分都不能少！」",
-    "links": [
-      3612
-    ]
+    "links": [3612]
   },
   {
     "entryID": 3612,
@@ -1092,9 +890,7 @@
     "Description": "給予道具",
     "zh_TW": "「拿去吧，當你有需要時就敲打這個鍋子，當我們聽到這聲響自然會出現幫助你！」",
     "zh_CN": "「拿去吧，当你有需要时就敲打这个锅子，当我们听到这声响自然会出现帮助你！」",
-    "links": [
-      3632
-    ]
+    "links": [3632]
   },
   {
     "entryID": 3613,
@@ -1103,10 +899,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "[em2]花費五百錢[/em2]「當然沒問題！」",
     "zh_CN": "[em2]花费五百钱[/em2]「当然没问题！」",
-    "links": [
-      3614,
-      3615
-    ]
+    "links": [3614, 3615]
   },
   {
     "entryID": 3614,
@@ -1116,9 +909,7 @@
     "Conditions": "IsCoinPass(500)  == true;",
     "zh_TW": "「君子一言既出駟馬難追！」",
     "zh_CN": "「君子一言既出驷马难追！」",
-    "links": [
-      3625
-    ]
+    "links": [3625]
   },
   {
     "entryID": 3615,
@@ -1128,9 +919,7 @@
     "Conditions": "IsCoinPass(500)  == false;",
     "zh_TW": "「君子一言，快、快馬難追！」",
     "zh_CN": "「君子一言，快、快马难追！」",
-    "links": [
-      3627
-    ]
+    "links": [3627]
   },
   {
     "entryID": 3616,
@@ -1139,10 +928,7 @@
     "Sequence": "",
     "zh_TW": "[em2][花費500錢][/em2]「拿去，然後滾。」",
     "zh_CN": "[em2][花费500钱][/em2]「拿去，然后滚。」",
-    "links": [
-      3617,
-      3637
-    ]
+    "links": [3617, 3637]
   },
   {
     "entryID": 3617,
@@ -1152,9 +938,7 @@
     "Conditions": "IsCoinPass(500)  == true;",
     "zh_TW": "「哼，拿去吧，然後給我滾！」",
     "zh_CN": "「哼，拿去吧，然后给我滚！」",
-    "links": [
-      3618
-    ]
+    "links": [3618]
   },
   {
     "entryID": 3618,
@@ -1163,9 +947,7 @@
     "Sequence": "",
     "zh_TW": " [panel=2]「哇啊！那是……！」",
     "zh_CN": "[panel=2]「哇啊！那是……！」",
-    "links": [
-      3619
-    ]
+    "links": [3619]
   },
   {
     "entryID": 3619,
@@ -1174,9 +956,7 @@
     "Sequence": "",
     "zh_TW": "「哈！上道！上道！你，好人！是兄弟！」",
     "zh_CN": "「哈！上道！上道！你，好人！是兄弟！」",
-    "links": [
-      3620
-    ]
+    "links": [3620]
   },
   {
     "entryID": 3620,
@@ -1185,9 +965,7 @@
     "Sequence": "",
     "zh_TW": "「好兄弟！讓道！好兄弟！讓道！」",
     "zh_CN": "「好兄弟！让道！好兄弟！让道！」",
-    "links": [
-      3621
-    ]
+    "links": [3621]
   },
   {
     "entryID": 3621,
@@ -1196,9 +974,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": "「……退、退走了……」",
     "zh_CN": "「……退、退走了……」",
-    "links": [
-      3622
-    ]
+    "links": [3622]
   },
   {
     "entryID": 3622,
@@ -1207,9 +983,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「嘿，倒是守信。」",
     "zh_CN": "「嘿，倒是守信。」",
-    "links": [
-      3623
-    ]
+    "links": [3623]
   },
   {
     "entryID": 3623,
@@ -1218,9 +992,7 @@
     "Sequence": "SetPortrait(MC8,pic=11);",
     "zh_TW": "「我、的錢錢……」",
     "zh_CN": "「我、的钱钱……」",
-    "links": [
-      3624
-    ]
+    "links": [3624]
   },
   {
     "entryID": 3624,
@@ -1229,9 +1001,7 @@
     "Sequence": "SetPortrait(MC1,pic=11);",
     "zh_TW": "「總、總覺得背上被尖刀刺著一樣……」",
     "zh_CN": "「总、总觉得背上被尖刀刺着一样……」",
-    "links": [
-      3575
-    ]
+    "links": [3575]
   },
   {
     "entryID": 3625,
@@ -1241,9 +1011,7 @@
     "Description": "花費500錢",
     "zh_TW": "「不錯不錯！」",
     "zh_CN": "「不错不错！」",
-    "links": [
-      3626
-    ]
+    "links": [3626]
   },
   {
     "entryID": 3626,
@@ -1253,9 +1021,7 @@
     "Description": "給予道具",
     "zh_TW": "「拿去吧，當你有需要時就敲打這個鍋子，當我們聽到這聲響自然會出現幫助你！」",
     "zh_CN": "「拿去吧，当你有需要时就敲打这个锅子，当我们听到这声响自然会出现帮助你！」",
-    "links": [
-      3630
-    ]
+    "links": [3630]
   },
   {
     "entryID": 3627,
@@ -1265,9 +1031,7 @@
     "Conditions": "IsCoinPass(500)  == false;",
     "zh_TW": "「疑！？...身上的錢好像不夠...」",
     "zh_CN": "「疑！？...身上的钱好像不够...」",
-    "links": [
-      3628
-    ]
+    "links": [3628]
   },
   {
     "entryID": 3628,
@@ -1277,9 +1041,7 @@
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「這小子滿嘴胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「这小子满嘴胡说八道！一听就是鬼扯！」",
-    "links": [
-      3629
-    ]
+    "links": [3629]
   },
   {
     "entryID": 3629,
@@ -1288,9 +1050,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": " [panel=2]「哇啊，別再說啦，他們都衝過來了！」",
     "zh_CN": "[panel=2]「哇啊，别再说啦，他们都冲过来了！」",
-    "links": [
-      3559
-    ]
+    "links": [3559]
   },
   {
     "entryID": 3630,
@@ -1299,9 +1059,7 @@
     "Sequence": "SetPortrait(MC8,pic=5);\nControlStage(SetCamera,null)",
     "zh_TW": "「噗哧！用敲鍋子打鐵來召集人馬倒也有趣！」",
     "zh_CN": "「噗哧！用敲锅子打铁来召集人马倒也有趣！」",
-    "links": [
-      3631
-    ]
+    "links": [3631]
   },
   {
     "entryID": 3631,
@@ -1310,9 +1068,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「雨一直下，氣氛不算融洽，不錯啦也是有收穫，那再晃晃吧。」",
     "zh_CN": "「雨一直下，气氛不算融洽，不错啦也是有收获，那再晃晃吧。」",
-    "links": [
-      3633
-    ]
+    "links": [3633]
   },
   {
     "entryID": 3632,
@@ -1321,9 +1077,7 @@
     "Sequence": "SetPortrait(MC8,pic=5);\nControlStage(SetCamera,null)",
     "zh_TW": "「噗哧！用敲鍋子打鐵來召集人馬倒也有趣！」",
     "zh_CN": "「噗哧！用敲锅子打铁来召集人马倒也有趣！」",
-    "links": [
-      3634
-    ]
+    "links": [3634]
   },
   {
     "entryID": 3633,
@@ -1339,9 +1093,7 @@
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「雨一直下，氣氛不算融洽，不錯啦也是有收穫，那再晃晃吧。」",
     "zh_CN": "「雨一直下，气氛不算融洽，不错啦也是有收获，那再晃晃吧。」",
-    "links": [
-      3633
-    ]
+    "links": [3633]
   },
   {
     "entryID": 3636,
@@ -1359,9 +1111,7 @@
     "Sequence": "",
     "zh_TW": "「哎呀…錢好像不夠…」",
     "zh_CN": "「哎呀…钱好像不够…」",
-    "links": [
-      3638
-    ]
+    "links": [3638]
   },
   {
     "entryID": 3638,
@@ -1370,8 +1120,6 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「胡说八道！一听就是鬼扯！」",
-    "links": [
-      3604
-    ]
+    "links": [3604]
   }
 ]

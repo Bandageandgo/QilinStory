@@ -586,6 +586,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "賣魚給茶博士",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",
@@ -595,6 +596,7 @@
   {
     "entryID": 2050,
     "actorID": "MC1",
+    "title": "初見牧羊人",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "links": [1, 2053]
@@ -629,6 +631,7 @@
   {
     "entryID": 2070,
     "actorID": "role2",
+    "title": "第一幕結束，前進第二幕",
     "text": "[panel=6]＊（你們深吸一口氣，推開了「有間客棧」的門。）＊",
     "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(0);\nModifyData(Coin,-300);",
     "Script": "SetQuestState(\"C0M1\", \"success\");",
@@ -640,6 +643,7 @@
   {
     "entryID": 2071,
     "actorID": "0",
+    "title": "有間客棧結束",
     "text": "",
     "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
     "Conditions": "CurrentQuestState(\"C0F1\") ~= \"active\";",
@@ -648,6 +652,7 @@
   {
     "entryID": 2072,
     "actorID": "0",
+    "title": "有間客棧結束",
     "text": "",
     "Sequence": "LoadLevel(Command_XiaoxiVillageInn);\nContinue();",
     "Conditions": "CurrentQuestState(\"C0F1\") == \"active\";",

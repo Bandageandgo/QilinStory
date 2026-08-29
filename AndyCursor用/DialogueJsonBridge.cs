@@ -40,6 +40,8 @@ using System.Text;
 ///
 /// 自動排版：匯入時新建的節點會自動排進畫布——整段新對話依 START 起的層級由上往下排；
 ///   既有對話新增的節點排在「連到它的節點」下方，位置被占走就往右挪，不會全部疊在原點。
+///   舊版工具建的節點全疊在原點 (0,0)：同步時會連同這些一起排；也可用匯入頁的
+///   「把疊在原點的節點排進畫布」一次處理整個資料庫（只改位置、不碰文案）。
 /// </summary>
 public class DialogueJsonBridge : EditorWindow
 {
@@ -214,6 +216,38 @@ public class DialogueJsonBridge : EditorWindow
             ImportFolder(jsonRootPath);
         }
         GUI.enabled = true;
+
+        EditorGUILayout.Space(10);
+        EditorGUILayout.LabelField("舊版工具建的節點會全疊在畫布原點 (0,0)；這顆只改節點位置，不碰任何文案欄位。", EditorStyles.miniLabel);
+        if (GUILayout.Button("把疊在原點 (0,0) 的節點排進畫布（整個資料庫）", GUILayout.Height(24)))
+        {
+            LayoutUnplacedInDatabase();
+        }
+    }
+
+    /// <summary>整個資料庫裡疊在原點的節點一次排好；不改任何文案欄位。</summary>
+    private void LayoutUnplacedInDatabase()
+    {
+        var targets = database.conversations.Where(c => c.dialogueEntries.Any(IsUnplaced)).ToList();
+        if (targets.Count == 0)
+        {
+            EditorUtility.DisplayDialog("不用排", "資料庫裡沒有疊在原點 (0,0) 的節點。", "確定");
+            return;
+        }
+        int nodes = targets.Sum(c => c.dialogueEntries.Count(IsUnplaced));
+        if (!EditorUtility.DisplayDialog("重排節點座標",
+            $"{targets.Count} 段對話、共 {nodes} 個節點疊在原點 (0,0)，要排進畫布嗎？\n\n" +
+            string.Join("\n", targets.Take(15).Select(c => "• " + c.Title)) + (targets.Count > 15 ? "\n…" : "") +
+            "\n\n只改節點位置，不動文案。套用後可 Ctrl+Z 復原。", "排", "取消"))
+        {
+            return;
+        }
+
+        Undo.RecordObject(database, "重排原點節點");
+        foreach (var c in targets) LayoutUnplacedEntries(c, null);
+        EditorUtility.SetDirty(database);
+        AssetDatabase.SaveAssets();
+        Debug.Log($"✓ 已重排 {targets.Count} 段對話、{nodes} 個原點節點。Dialogue Editor 若開著，切換一次對話即可看到新位置。");
     }
 
     private void ImportFolder(string folder)
@@ -575,12 +609,14 @@ public class DialogueJsonBridge : EditorWindow
         var orphans = plan.orphans;
         var changedPairs = plan.changedPairs;
 
+        int unplaced = conversation.dialogueEntries.Count(IsUnplaced);
         string summary =
             $"對話：{conversation.Title}\n檔案：{key}.json\n\n" +
             $"• 內容更新：{changedPairs.Count} 個節點\n" +
             $"• 新增節點：{toAdd.Count} 個{(toAdd.Count > 0 ? $"（entryID: {string.Join(", ", toAdd.Select(x => x.entryID))}）" : "")}\n" +
             $"• 移除節點：{toRemove.Count} 個{(toRemove.Count > 0 ? $"（Entry: {string.Join(", ", toRemove.Select(x => x.id))}）" : "")}\n" +
             $"• 依 JSON 重建連線\n" +
+            (unplaced > 0 ? $"• 疊在原點 (0,0) 的舊節點 {unplaced} 個，順便排進畫布（只改位置）\n" : "") +
             (orphans.Count > 0 ? $"\n⚠ 有 {orphans.Count} 個無印記節點（Entry: {string.Join(", ", orphans.Select(x => x.id))}）不會被更動。\n" : "") +
             (!hasStamps ? "\n（首次同步：將依順序對應並補上 JsonEntryID 印記）\n" : "") +
             "\n套用後可 Ctrl+Z 復原。";
@@ -628,8 +664,11 @@ public class DialogueJsonBridge : EditorWindow
         RebuildEntryLinks(startEntry, new List<int> { jsonEntries[0].entryID }, dbByJsonId, conversation.id);
         RebuildLinks(conversation, jsonEntries, dbByJsonId);
 
-        // 5. 新增的節點排進畫布（連線建好之後才知道它們的上游在哪）
-        AutoLayoutNewEntries(conversation, jsonEntries, dbByJsonId, toAdd);
+        // 5. 排版：這次新增的節點，加上舊版工具留在原點 (0,0) 的既有節點，一起排進畫布
+        //    （連線建好之後才知道它們的上游在哪）
+        var added = toAdd.Where(a => dbByJsonId.ContainsKey(a.entryID)).Select(a => dbByJsonId[a.entryID]);
+        int relaid = LayoutUnplacedEntries(conversation, added) - toAdd.Count;
+        if (relaid > 0) Debug.Log($"  ↳ 另有 {relaid} 個原本疊在原點的舊節點一併排進畫布。");
 
         // 對話補上來源印記（= 這次用來對應的檔案路徑鍵）
         Field.SetValue(conversation.fields, JSON_SOURCE_FIELD, key);
@@ -750,9 +789,16 @@ public class DialogueJsonBridge : EditorWindow
 
     // ── 自動排版 ──
 
+    /// <summary>節點還沒被排過：舊版工具建的節點全疊在原點，寬度 0 則是從沒進過畫布。</summary>
+    private static bool IsUnplaced(DialogueEntry e)
+    {
+        return e.canvasRect.width == 0 || (e.canvasRect.x == 0 && e.canvasRect.y == 0);
+    }
+
     /// <summary>
     /// 整段對話重排：從 START 沿連線做 BFS 分層，同層由左到右、層與層由上往下；
-    /// 連不到的節點放在最底層。只在新建對話時用（既有對話不動使用者排好的位置）。
+    /// 連不到的節點放在最底層。用在新建對話、以及整段節點全疊在原點的舊對話
+    ///（有節點是使用者排過的對話不走這條，改用 LayoutUnplacedEntries 只補沒位置的）。
     /// </summary>
     private void AutoLayoutConversation(Conversation conversation)
     {
@@ -800,33 +846,47 @@ public class DialogueJsonBridge : EditorWindow
     }
 
     /// <summary>
-    /// 既有對話新增節點的排版：放在第一個連到它的節點正下方，該位置被占就往右挪；
-    /// 沒有任何上游的放到整張畫布最底下。依 JSON 順序處理，新節點串在一起時會由上往下接著排。
+    /// 補排沒位置的節點：對話裡疊在原點 (0,0) 的節點，加上 extra（這次新增的），
+    /// 各放在第一個連到它的已定位節點正下方，該位置被占就往右挪；每輪先排「上游已定位」的，
+    /// 串在一起的新節點會由上往下接著排；全都找不到上游時，拿列表最前面那個放到畫布最底下。
+    /// 整段對話全部沒位置時改走 AutoLayoutConversation 整段重排。沿資料庫連線找上游，不靠 JSON。
     /// </summary>
-    private void AutoLayoutNewEntries(Conversation conversation, List<JsonEntry> jsonEntries,
-                                      Dictionary<int, DialogueEntry> dbByJsonId, List<JsonEntry> added)
+    /// <returns>實際排了幾個節點</returns>
+    private int LayoutUnplacedEntries(Conversation conversation, IEnumerable<DialogueEntry> extra)
     {
-        if (added == null || added.Count == 0) return;
+        var pending = new HashSet<DialogueEntry>(conversation.dialogueEntries.Where(IsUnplaced));
+        if (extra != null) foreach (var e in extra) pending.Add(e);
+        if (pending.Count == 0) return 0;
+        int total = pending.Count;
 
-        var pending = new HashSet<DialogueEntry>(
-            added.Where(a => dbByJsonId.ContainsKey(a.entryID)).Select(a => dbByJsonId[a.entryID]));
-
-        foreach (var je in jsonEntries)
+        if (pending.Count >= conversation.dialogueEntries.Count)
         {
-            if (!dbByJsonId.TryGetValue(je.entryID, out var entry) || !pending.Contains(entry)) continue;
+            AutoLayoutConversation(conversation);
+            return total;
+        }
 
-            // 上游 = JSON 裡 links 含這個 entryID、且已經有位置（非待排）的節點
-            var parent = jsonEntries
-                .Where(p => p.links != null && p.links.Contains(je.entryID))
-                .Select(p => dbByJsonId.TryGetValue(p.entryID, out var pe) ? pe : null)
-                .FirstOrDefault(pe => pe != null && !pending.Contains(pe));
-            if (parent == null && jsonEntries.Count > 0 && jsonEntries[0].entryID == je.entryID)
-                parent = conversation.GetFirstDialogueEntry();   // 第一個節點的上游是 START
+        var start = conversation.GetFirstDialogueEntry();
+        var order = conversation.dialogueEntries.Where(pending.Contains).ToList();
+
+        while (pending.Count > 0)
+        {
+            DialogueEntry entry = null, parent = null;
+            foreach (var candidate in order)
+            {
+                if (!pending.Contains(candidate)) continue;
+                parent = FindPlacedParent(conversation, candidate, pending);
+                if (parent != null) { entry = candidate; break; }
+            }
+            if (entry == null) entry = order.First(pending.Contains);
 
             Rect rect;
             if (parent != null)
             {
                 rect = new Rect(parent.canvasRect.x, parent.canvasRect.y + NODE_V_SPACING, NODE_WIDTH, NODE_HEIGHT);
+            }
+            else if (entry == start)
+            {
+                rect = new Rect(CANVAS_MARGIN, CANVAS_MARGIN, NODE_WIDTH, NODE_HEIGHT);   // START 沒上游，放左上
             }
             else
             {
@@ -844,6 +904,20 @@ public class DialogueJsonBridge : EditorWindow
             entry.canvasRect = rect;
             pending.Remove(entry);
         }
+        return total;
+    }
+
+    /// <summary>第一個連到 entry、且已經有位置（不在待排名單）的節點；沒有就回 null。</summary>
+    private static DialogueEntry FindPlacedParent(Conversation conversation, DialogueEntry entry, HashSet<DialogueEntry> pending)
+    {
+        foreach (var e in conversation.dialogueEntries)
+        {
+            if (e == entry || pending.Contains(e)) continue;
+            if (e.outgoingLinks.Any(l => l.destinationConversationID == conversation.id &&
+                                         l.destinationDialogueID == entry.id))
+                return e;
+        }
+        return null;
     }
 
     /// <summary>rect 是否與畫布上任何已定位的節點重疊（待排的新節點還沒位置，不算）。</summary>

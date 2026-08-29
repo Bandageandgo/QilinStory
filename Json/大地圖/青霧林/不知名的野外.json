@@ -42,6 +42,7 @@
   {
     "entryID": 6,
     "actorID": "role2",
+    "title": "進去隱士的屋子",
     "text": "[panel=6]＊（推開小屋的門，屋內陳設簡單，積滿了灰塵。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（推开小屋的门，屋内陈设简单，积满了灰尘。）＊",
@@ -50,6 +51,7 @@
   {
     "entryID": 8,
     "actorID": "MC1",
+    "title": "首次點木人樁",
     "text": "「嘖嘖，這木人的做工……真是精細啊！這關節，這用料……要是能搬回家擺著，每天練上兩手，那多威風！不知道能不能拆下來帶走呢……」",
     "Sequence": "SetPortrait(MC1,pic=12);",
     "Conditions": "CurrentQuestState(\"CF09\") == \"unassigned\";",
@@ -78,6 +80,7 @@
   {
     "entryID": 11,
     "actorID": "MC1",
+    "title": "打贏木人樁",
     "text": "「呼……呼……這木頭疙瘩……還真是有兩下子！不愧是前輩留下的寶貝，這硬度、這力道，差點就把本大俠給拆了……」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=3);",
     "zh_CN": "「呼……呼……这木头疙瘩……还真是有两下子！不愧是前辈留下的宝贝，这硬度、这力道，差点就把本大侠给拆了……」",
@@ -167,14 +170,6 @@
     "links": [2069]
   },
   {
-    "entryID": 2069,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);\nContinue();",
-    "Description": "收特效",
-    "links": []
-  },
-  {
     "entryID": 23,
     "actorID": "MC1",
     "text": "[em2][武藝檢定][/em2]「運氣於掌，轟開暗牆」",
@@ -207,14 +202,6 @@
     "links": [2070]
   },
   {
-    "entryID": 2070,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);\nContinue();",
-    "Description": "收特效",
-    "links": []
-  },
-  {
     "entryID": 28,
     "actorID": "role2",
     "text": "[panel=6]＊（你一掌打在牆上，牆壁紋絲不動，你的手掌卻紅腫了一大片。）＊",
@@ -235,6 +222,7 @@
   {
     "entryID": 30,
     "actorID": "role2",
+    "title": "點擊墓碑",
     "text": "[panel=6]＊（古樹下立著一塊無字墓碑，孤零零地立在那裡。樹影婆娑，顯得格外淒涼。看碑上苔痕，這墓立下似乎有些年頭了。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（古树下立着一块无字墓碑，孤零零地立在那里。树影婆娑，显得格外凄凉。看碑上苔痕，这墓立下似乎有些年头了。）＊",
@@ -342,6 +330,7 @@
   {
     "entryID": 43,
     "actorID": "role2",
+    "title": "點池塘遇到河妖三弟",
     "text": "[panel=6]＊（這是一方碧綠的池塘，水波不興。水底似乎隱隱有黑影游動。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（这是一方碧绿的池塘，水波不兴。水底似乎隐隐有黑影游动。）＊",
@@ -443,6 +432,7 @@
   {
     "entryID": 2050,
     "actorID": "MC1",
+    "title": "死路",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -452,6 +442,7 @@
   {
     "entryID": 2051,
     "actorID": "MC1",
+    "title": "下到下方區域後",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -461,6 +452,7 @@
   {
     "entryID": 2052,
     "actorID": "MC1",
+    "title": "點木人樁",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -501,6 +493,7 @@
   {
     "entryID": 2058,
     "actorID": "MC1",
+    "title": "點牆壁",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -518,6 +511,7 @@
   {
     "entryID": 2060,
     "actorID": "role2",
+    "title": "再次點擊木人樁",
     "text": "",
     "Sequence": "Continue();",
     "Conditions": "CurrentQuestState(\"CF09\") == \"active\";",
@@ -587,6 +581,22 @@
     "Description": "獲得損毀的機關人",
     "zh_TW": "「還有這個壞掉的機關人，也順便帶走好了，搞不好還有辦法修復呢！」",
     "zh_CN": "「还有这个坏掉的机关人，也顺便带走好了，搞不好还有办法修复呢！」",
+    "links": []
+  },
+  {
+    "entryID": 2069,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);\nContinue();",
+    "Description": "收特效",
+    "links": []
+  },
+  {
+    "entryID": 2070,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "PlayOrStopParticle(BrokenWall_Right,Stop);\nContinue();",
+    "Description": "收特效",
     "links": []
   }
 ]

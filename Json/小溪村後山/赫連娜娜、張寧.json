@@ -664,6 +664,7 @@
   {
     "entryID": 79,
     "actorID": "role2",
+    "title": "走到空地",
     "text": "[panel=6]＊（空地上，三個瘦小的狗頭人正圍著一個吊在樹上的籠子手舞足蹈。籠裡那人，正是赫連娜娜。）＊",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=13);\nEnableDialogueBG(Forest);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_30);",
     "Description": "關閉地圖音樂、放主題曲、對話背景圖開啟",
@@ -884,14 +885,6 @@
     "zh_TW": "[em2][內功檢定][/em2]「吉人自有天相，我這一身修為在，還怕區區一碗藥湯？喝給妳看！」",
     "zh_CN": "[em2][内功检定][/em2]「吉人自有天相，我这一身修为在，还怕区区一碗药汤？喝给你看！」",
     "links": [2070]
-  },
-  {
-    "entryID": 2070,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,QiCheck,5);",
-    "Description": "內功檢定擲骰節點",
-    "links": [765]
   },
   {
     "entryID": 751,
@@ -1301,6 +1294,7 @@
   {
     "entryID": 809,
     "actorID": "0",
+    "title": "怪物攻擊張寧演出",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@2;\nContinue()@2;",
     "Description": "怪物攻擊張寧演出",
@@ -1309,6 +1303,7 @@
   {
     "entryID": 810,
     "actorID": "0",
+    "title": "向前衝演出",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@2;\nContinue()@2;",
     "Description": "向前衝演出",
@@ -1317,6 +1312,7 @@
   {
     "entryID": 811,
     "actorID": "0",
+    "title": "出現三隻怪物演出",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@1.2;\nContinue()@1.2;",
     "Description": "出現三隻怪物演出",
@@ -1325,6 +1321,7 @@
   {
     "entryID": 812,
     "actorID": "0",
+    "title": "三隻怪物攻擊演出",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@2;\nContinue()@2;",
     "Description": "三隻怪物攻擊演出",
@@ -1342,6 +1339,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "後山赫連娜娜被抓",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「……」",
@@ -1351,6 +1349,7 @@
   {
     "entryID": 2050,
     "actorID": "MC1",
+    "title": "張寧事件開始",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「……」",
@@ -1498,6 +1497,7 @@
   {
     "entryID": 2066,
     "actorID": "MC1",
+    "title": "點擊張寧家的門",
     "text": "「還是別打擾張姑娘了吧。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「還是別打擾張姑娘了吧。」",
@@ -1525,5 +1525,13 @@
     "text": "",
     "Sequence": "ShowNoviceTeaching(SpellTao);\nContinue();",
     "links": []
+  },
+  {
+    "entryID": 2070,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,QiCheck,5);",
+    "Description": "內功檢定擲骰節點",
+    "links": [765]
   }
 ]

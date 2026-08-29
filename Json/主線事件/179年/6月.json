@@ -180,14 +180,6 @@
     "links": [2110]
   },
   {
-    "entryID": 2110,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,8);",
-    "Description": "調情檢定擲骰節點",
-    "links": [2084]
-  },
-  {
     "entryID": 2071,
     "actorID": "MC22",
     "text": "[panel=1]「那、那是自然！我爹……咳，我為了目標，向來是不屈不撓的！算、算你有眼光！」",
@@ -317,6 +309,7 @@
   {
     "entryID": 2085,
     "actorID": "MC1",
+    "title": "赫連娜娜來訪",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -352,6 +345,7 @@
   {
     "entryID": 2089,
     "actorID": "MC1",
+    "title": "解鎖大地圖",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -527,5 +521,13 @@
     "zh_TW": "「再說了，衙門總算湊齊護送的人手，[em2]車隊定在入秋發[/em2]。咱們還有兩三個月好待——這段日子要是白躺過去，到了[em2]雲中[/em2]拿什麼跟人比？」",
     "zh_CN": "「再说了，衙门总算凑齐护送的人手，[em2]车队定在入秋发[/em2]。咱们还有两三个月好待——这段日子要是白躺过去，到了[em2]云中[/em2]拿什么跟人比？」",
     "links": [2094]
+  },
+  {
+    "entryID": 2110,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,8);",
+    "Description": "調情檢定擲骰節點",
+    "links": [2084]
   }
 ]

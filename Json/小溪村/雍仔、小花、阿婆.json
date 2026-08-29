@@ -226,6 +226,7 @@
   {
     "entryID": 27,
     "actorID": "role2",
+    "title": "初見小花",
     "text": "[panel=6]＊（在廢棄小屋的後方，一個瘦弱的小女孩瑟縮在角落，緊緊抱著一個有些髒舊的布娃娃。她低著頭，似乎在躲避著什麼，眼神充滿驚恐與不安。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（在廢棄小屋的後方，一個瘦弱的小女孩瑟縮在角落，緊緊抱著一個有些髒舊的布娃娃。她低著頭，似乎在躲避著什麼，眼神充滿驚恐與不安。）＊",
@@ -361,6 +362,7 @@
   {
     "entryID": 43,
     "actorID": "role2",
+    "title": "初見阿婆",
     "text": "[panel=6]＊（河邊的小破廟前，一位滿臉皺紋的阿婆正佝僂著身子整理香案。她注意到你們走近，立刻板起臉孔，眼神銳利地上下打量著你們，顯得十分不友善。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（河邊的小破廟前，一位滿臉皺紋的阿婆正佝僂著身子整理香案。她注意到你們走近，立刻板起臉孔，眼神銳利地上下打量著你們，顯得十分不友善。）＊",
@@ -415,6 +417,7 @@
   {
     "entryID": 49,
     "actorID": "MC1",
+    "title": "給阿婆石頭",
     "text": "「阿婆，這塊石頭是路邊撿的，看起來油光水滑，還挺沉，您瞧瞧？」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "Conditions": "IsValuablesObtained(\"Player\", \"\")  == true;",
@@ -444,6 +447,7 @@
   {
     "entryID": 52,
     "actorID": "MC1",
+    "title": "給阿婆梳子",
     "text": "「阿婆，這把木梳雖舊，但齒還算整齊，或許您用得上？」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「阿婆，這把木梳雖舊，但齒還算整齊，或許您用得上？」",
@@ -472,6 +476,7 @@
   {
     "entryID": 55,
     "actorID": "MC1",
+    "title": "給阿婆河神的眼淚",
     "text": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
     "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
@@ -510,6 +515,7 @@
   {
     "entryID": 59,
     "actorID": "role2",
+    "title": "當給過阿婆滿三個東西",
     "text": "[panel=6]＊（當你將三件不起眼的小物件都交給阿婆後，她緊繃的臉孔終於鬆弛下來，長長地嘆了口氣，眼神複雜地望著你們，又似乎是望向波光粼粼的河面，帶著一絲絕望。）＊",
     "Sequence": "",
     "Conditions": "Variable[\"MyCounter\"] == 3;",
@@ -642,6 +648,7 @@
   {
     "entryID": 74,
     "actorID": "MC1",
+    "title": "和雍仔切磋",
     "text": "",
     "Sequence": "Continue()",
     "links": [72, 75, 101]
@@ -758,6 +765,7 @@
   {
     "entryID": 187,
     "actorID": "role5",
+    "title": "給完阿婆所有道具厚的對話",
     "text": "「唉，這兩個可憐的撿破爛的孩子。」",
     "Sequence": "",
     "zh_TW": "「唉，這兩個可憐的撿破爛的孩子。」",
@@ -842,6 +850,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "初見雍仔",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",

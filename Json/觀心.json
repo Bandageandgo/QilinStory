@@ -703,6 +703,7 @@
   {
     "entryID": 163,
     "actorID": "0",
+    "title": "觀心",
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=8);\nEnableDialogueBG(Home);\nContinue();",
     "Description": "觀心、開背景圖",
@@ -880,6 +881,7 @@
   {
     "entryID": 331,
     "actorID": "MC1",
+    "title": "START",
     "text": "開始對話",
     "Sequence": "",
     "zh_CN": "开始对话",
@@ -1373,6 +1375,7 @@
   {
     "entryID": 416,
     "actorID": "MC1",
+    "title": "測試青蛙",
     "text": "青蛙找玩",
     "Sequence": "",
     "Script": "SetQuestEntryState(\"CF35\", 1, \"success\");\nSetQuestState(\"C1M2\", \"success\");\nSetQuestState(\"CF16\", \"success\");\nSetQuestState(\"CF12\", \"success\");\nSetQuestEntryState(\"CF08\", 3, \"success\");",

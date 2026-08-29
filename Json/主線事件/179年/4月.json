@@ -75,6 +75,7 @@
   {
     "entryID": 10,
     "actorID": "role2",
+    "title": "進入後山的對話",
     "text": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
@@ -138,6 +139,7 @@
   {
     "entryID": 298,
     "actorID": "MC1",
+    "title": "前去後山",
     "text": "「事不宜遲，別讓雍仔等太久了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「事不宜遲，別讓雍仔等太久了。」",
@@ -165,6 +167,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "4月下旬_強制事件(1)",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -174,6 +177,7 @@
   {
     "entryID": 2050,
     "actorID": "MC1",
+    "title": "START",
     "text": "開始對話",
     "Sequence": "",
     "zh_CN": "开始对话",
@@ -182,6 +186,7 @@
   {
     "entryID": 2051,
     "actorID": "role2",
+    "title": "蕭靈犀的野望1",
     "text": "[panel=6]＊（這天早晨。你正打盹，蕭靈犀卻在數桌上僅剩的銅錢。）＊",
     "Sequence": "EnableDialogueBG(Home);",
     "Description": "蕭靈犀的野望1",

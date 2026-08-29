@@ -310,6 +310,7 @@
   {
     "entryID": 169,
     "actorID": "role118",
+    "title": "返真草",
     "text": "[panel=2]「不知公子…是否願意為我尋來這[em2]返真草[/em2]？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
     "Sequence": "",
     "zh_TW": "[panel=2]「不知公子…是否願意為我尋來這[em2]返真草[/em2]？讓我有片刻…能做回真正的自己，也讓公子…在我將真心託付之前，見一見卸下所有偽裝的我。」",
@@ -529,6 +530,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "一枝花(3)",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
@@ -537,7 +539,8 @@
   },
   {
     "entryID": 2051,
-    "actorID": "role119",
+    "actorID": "role 119",
+    "title": "狗頭人演出場景",
     "text": "「[var=PlayerLastName]哥哥……」",
     "Sequence": "SetContinueMode(false);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_22);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nSetContinueMode(original)@1;",
     "Description": "播放音樂",
@@ -573,7 +576,7 @@
   },
   {
     "entryID": 2055,
-    "actorID": "role119",
+    "actorID": "role 119",
     "text": "「你要走了……？」",
     "Sequence": "",
     "zh_TW": "「你要走了……？」",
@@ -582,7 +585,7 @@
   },
   {
     "entryID": 2056,
-    "actorID": "role119",
+    "actorID": "role 119",
     "text": "「天不弄人，是人自擾。\n無心則靜，無欲則了。」",
     "Sequence": "",
     "zh_TW": "「天不弄人，是人自擾。\n無心則靜，無欲則了。」",
@@ -591,7 +594,7 @@
   },
   {
     "entryID": 2057,
-    "actorID": "role119",
+    "actorID": "role 119",
     "text": "「……」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「……」",
@@ -634,7 +637,7 @@
   },
   {
     "entryID": 2062,
-    "actorID": "role119",
+    "actorID": "role 119",
     "text": "「……他是我堂哥！而且我們長得差那麼多！」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「……他是我堂哥！而且我們長得差那麼多！」",
@@ -643,7 +646,7 @@
   },
   {
     "entryID": 2063,
-    "actorID": "role119",
+    "actorID": "role 119",
     "text": "「唉，罷了罷了，男兒本就該志在四方，你走吧。」",
     "Sequence": "DisableCharacterExpression(0);",
     "Conditions": "IsPassDice()  == true;",
@@ -653,7 +656,7 @@
   },
   {
     "entryID": 2064,
-    "actorID": "role119",
+    "actorID": "role 119",
     "text": "「哼，留不住你的心，我也要留住你的人！」",
     "Sequence": "",
     "Conditions": "IsPassDice()  == false;",

@@ -2,6 +2,7 @@
   {
     "entryID": 13,
     "actorID": "MC20",
+    "title": "與雍仔會合的對話",
     "text": "「兄弟！你可算來了！貧道還以為你把這事給忘了呢！時辰不早，咱們速速啟程，那古墓裡的寶貝可等不及了！」",
     "Sequence": "",
     "zh_TW": "「兄弟！你可算來了！貧道還以為你把這事給忘了呢！時辰不早，咱們速速啟程，那古墓裡的寶貝可等不及了！」",
@@ -93,6 +94,7 @@
   {
     "entryID": 25,
     "actorID": "MC1",
+    "title": "進到古墓的對話",
     "text": "「這地方看起來有些詭異…」",
     "Sequence": "AudioControl(PlaySFXOneShot,Others_FireCracking);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Nervous);",
     "zh_TW": "「這地方看起來有些詭異…」",
@@ -121,6 +123,7 @@
   {
     "entryID": 28,
     "actorID": "role2",
+    "title": "鏡頭移轉到石台的對話",
     "text": "[panel=6]＊（在那被鎖人影的不遠處，有一個半人高的石台，石台上供奉著一個佈滿銅綠的古舊銅鼎，鼎身雕刻著繁複的雲紋，看起來頗有年代，似乎是件值錢的寶貝。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（在那被鎖人影的不遠處，有一個半人高的石台，石台上供奉著一個佈滿銅綠的古舊銅鼎，鼎身雕刻著繁複的雲紋，看起來頗有年代，似乎是件值錢的寶貝。）＊",
@@ -259,6 +262,7 @@
   {
     "entryID": 46,
     "actorID": "role2",
+    "title": "拿起鼎的對話",
     "text": "[panel=6]＊（就在銅鼎離開石台的一剎那，整個主墓室猛然劇烈震動起來！塵土簌簌落下，那被鐵鍊鎖在地上的人影發出低沉而痛苦的嘶吼，身上的鐵鍊繃得筆直，發出刺耳的摩擦聲！）＊",
     "Sequence": "AudioControl(PlaySFXOneShot,Others_Rumble);\nModifyData(Valuable,Player,DaKeDing,1);",
     "Description": "獲得大克鼎",
@@ -613,6 +617,7 @@
   {
     "entryID": 85,
     "actorID": "MC1",
+    "title": "戰鬥結束後",
     "text": "「哼……」",
     "Sequence": "SetPortrait(MC1,pic=16);\nPlayOrStopParticle(BloodStain_1,Play);\nAudioControl(PlaySFX,Others_BoneBreaking);",
     "zh_TW": "「哼……」",
@@ -622,6 +627,7 @@
   {
     "entryID": 86,
     "actorID": "MC1",
+    "title": "戰鬥結束後",
     "text": "「……」",
     "Sequence": "SetPortrait(MC1,pic=16);\nContinue();",
     "zh_TW": "「……」",
@@ -658,6 +664,7 @@
   {
     "entryID": 90,
     "actorID": "role2",
+    "title": "洞口顯示出來後的對話",
     "text": "[panel=6]＊（只見那隱匿符發出一陣微弱的光芒，隨即化為飛灰。原本看似普通的山壁竟如同水波般晃動起來，一個更加深邃、散發著古老氣息的入口緩緩顯現，石壁兩側依稀可見人工開鑿的痕跡。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（只見那隱匿符發出一陣微弱的光芒，隨即化為飛灰。原本看似普通的山壁竟如同水波般晃動起來，一個更加深邃、散發著古老氣息的入口緩緩顯現，石壁兩側依稀可見人工開鑿的痕跡。）＊",
@@ -676,6 +683,7 @@
   {
     "entryID": 103,
     "actorID": "role2",
+    "title": "進入後山的對話",
     "text": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（今日天色陰沉，濃霧漸起，林間光線昏暗，寂靜無聲，只有腳步踩在枯葉上的沙沙聲，以及遠處偶爾傳來的幾聲鴉啼，平添了幾分詭異蕭索的氣氛。）＊",
@@ -694,6 +702,7 @@
   {
     "entryID": 137,
     "actorID": "role2",
+    "title": "黑血屍突破封印後的對話",
     "text": "[panel=6]＊（那怪物發出刺耳的尖嘯，化作一道黑影撲了上來！一場惡戰在所難免！）＊",
     "Sequence": "DisableCharacterExpression(0);AudioControl(PlaySFXOneShot,Others_Roar);",
     "zh_TW": "[panel=6]＊（那怪物發出刺耳的尖嘯，化作一道黑影撲了上來！一場惡戰在所難免！）＊",
@@ -736,6 +745,7 @@
   {
     "entryID": 237,
     "actorID": "role2",
+    "title": "甦醒",
     "text": "[panel=6]＊（又是一番藥浴的煎熬，但這一次，你感覺體內的暖流愈發清晰，原本堵塞的經脈似乎也通暢了不少。終於，你緩緩睜開了沉重的眼皮。）＊",
     "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_16);\nModifyData(AbilityMaxLevel,Player,Leadership,5);\nModifyData(AbilityMaxLevel,Player,Strength,5);\nModifyData(AbilityMaxLevel,Player,Intelligence,5);\nModifyData(AbilityMaxLevel,Player,Politics,5);\nModifyData(AbilityMaxLevel,Player,Charisma,5);",
     "Description": "切換音樂、超級大漢人5維上限提升",
@@ -1181,6 +1191,7 @@
   {
     "entryID": 290,
     "actorID": "MC1",
+    "title": "百年老木",
     "text": "「看來這個就是童大哥在找的鐵木了，黑不溜秋的，真行嗎？」",
     "Sequence": "SetPortrait(MC1,pic=6);",
     "Script": "SetQuestEntryState(\"C0F3\", 1, \"success\")\nSetQuestEntryState(\"C0F3\", 2, \"active\");",
@@ -1244,6 +1255,7 @@
   {
     "entryID": 297,
     "actorID": "MC1",
+    "title": "前去後山",
     "text": "「事不宜遲，前面就是後山，別讓雍仔等太久了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
     "zh_TW": "「事不宜遲，前面就是後山，別讓雍仔等太久了。」",
@@ -1298,6 +1310,7 @@
   {
     "entryID": 303,
     "actorID": "MC1",
+    "title": "戰鬥結束後",
     "text": "「哈哈！你這老妖怪，也不過如此！還是乖乖自己躺回土裡去吧！」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);\nModifyData(AbilityMaxLevel,MC1,Leadership,2);\nModifyData(AbilityMaxLevel,MC1,Strength,2);\nModifyData(AbilityMaxLevel,MC1,Intelligence,2);\nModifyData(AbilityMaxLevel,MC1,Politics,2);\nModifyData(AbilityMaxLevel,MC1,Charisma,2);",
     "Description": "戰勝獎勵",
@@ -1326,6 +1339,7 @@
   {
     "entryID": 306,
     "actorID": "MC1",
+    "title": "戰鬥結束後",
     "text": "「哼……」",
     "Sequence": "SetPortrait(MC1,pic=16);\nPlayOrStopParticle(BloodStain_1,Play);\nAudioControl(PlaySFX,Others_BoneBreaking);",
     "zh_TW": "「哼……」",
@@ -1359,6 +1373,7 @@
   {
     "entryID": 310,
     "actorID": "MC13",
+    "title": "測試",
     "text": "「這便是[em2]長生經總綱要訣[/em2]。此心法講求以意領氣，以氣化形，非一朝一夕之功。」",
     "Sequence": "SetPortrait(MC13,pic=3);",
     "zh_TW": "「這便是[em2]長生經總綱要訣[/em2]。此心法講求以意領氣，以氣化形，非一朝一夕之功。」",
@@ -1836,6 +1851,7 @@
   {
     "entryID": 2061,
     "actorID": "MC20",
+    "title": "第一次入主墓室前的戰前提醒",
     "text": "「慢著慢著——進了那道門，可就沒空讓你翻包袱、換兵刃了。趁這會兒，該換的換上，該分的分派妥當。道爺我話說在前頭：裡頭真有什麼，臨陣可容不得你手忙腳亂。」",
     "Sequence": "SetPortrait(MC20,pic=1);",
     "Description": "第一次入主墓室前的戰前提醒",

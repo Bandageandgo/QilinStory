@@ -2,6 +2,7 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "開場",
     "text": "[panel=6]＊（山壁間一道白練般的瀑布傾瀉而下，水花濺在洞口的岩石上，遠遠望去，竟像是懸了一整幅水做的簾幕——）＊",
     "Sequence": "",
     "Description": "開場（首次自動觸發）",
@@ -114,6 +115,33 @@
     "links": [19]
   },
   {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「給窮苦人用，總比門口亮刀嚇人有道理。」",
+    "Sequence": "",
+    "Description": "選項2：跟太平道",
+    "zh_CN": "「给穷苦人用，总比门口亮刀吓人有道理。」",
+    "links": [23]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「兩邊都給我讓開。我進洞辦事，不站任何一邊。」",
+    "Sequence": "",
+    "Description": "選項3：威嚇檢定 難度15",
+    "zh_CN": "[em2][威吓检定][/em2]「两边都给我让开。我进洞办事，不站任何一边。」",
+    "links": [27]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「洞口這兩撥，一個不留。」",
+    "Sequence": "",
+    "Description": "選項4：主動開戰",
+    "zh_CN": "「洞口这两拨，一个不留。」",
+    "links": [35]
+  },
+  {
     "entryID": 19,
     "actorID": "MC1",
     "text": "「在那邊拖拖拉拉，寶物就讓人搬光了。我跟黑狼——太平道的讓開！」",
@@ -129,22 +157,6 @@
     "Sequence": "",
     "zh_CN": "「哈。汉人里倒有识相的。」",
     "links": [4120]
-  },
-  {
-    "entryID": 4120,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);BeginFight(Combat,64);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-    "Description": "戰鬥觸發節點：太平道",
-    "links": [4121]
-  },
-  {
-    "entryID": 4121,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "戰鬥緩衝節點：太平道",
-    "links": [21, 4124]
   },
   {
     "entryID": 21,
@@ -164,41 +176,6 @@
     "links": [4104]
   },
   {
-    "entryID": 4104,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Script": "SetQuestEntryState(\"CF40\", 3, \"success\");",
-    "Description": "轉場，黑狼在洞口旁，太平道則留下一具屍體其它消失、任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4124,
-    "actorID": "MC1",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsPassFight() == false;",
-    "Description": "戰鬥失敗",
-    "links": [4125]
-  },
-  {
-    "entryID": 4125,
-    "actorID": "role2",
-    "text": "",
-    "Sequence": "ShowEnding(Ending_1);",
-    "Description": "壞結局",
-    "links": []
-  },
-  {
-    "entryID": 16,
-    "actorID": "MC1",
-    "text": "「給窮苦人用，總比門口亮刀嚇人有道理。」",
-    "Sequence": "",
-    "Description": "選項2：跟太平道",
-    "zh_CN": "「给穷苦人用，总比门口亮刀吓人有道理。」",
-    "links": [23]
-  },
-  {
     "entryID": 23,
     "actorID": "MC1",
     "text": "「給窮苦人用，總比門口亮刀嚇人有道理。若有寶物，也不該讓外族給搶去了。」",
@@ -216,30 +193,6 @@
     "links": [4114]
   },
   {
-    "entryID": 4114,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);BeginFight(Combat,76);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-    "Description": "戰鬥觸發節點：黑狼氏族",
-    "links": [4115]
-  },
-  {
-    "entryID": 4115,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "戰鬥緩衝節點：黑狼氏族",
-    "links": [4117, 4118]
-  },
-  {
-    "entryID": 4117,
-    "actorID": "MC1",
-    "text": "",
-    "Sequence": "SetPortrait(MC1,pic=2);\nContinue();",
-    "Conditions": "IsPassFight() == true;",
-    "links": [25]
-  },
-  {
     "entryID": 25,
     "actorID": "role140",
     "text": "[panel=2]「山不是漢人的，洞不是漢人挖的，寶也不是漢人埋的。哼——愛進就進。」",
@@ -254,41 +207,6 @@
     "Sequence": "",
     "zh_CN": "[panel=6]＊（太平道让出半边洞口。黑狼退到崖边，狼牙在水雾里发亮。）＊",
     "links": [4103]
-  },
-  {
-    "entryID": 4103,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Script": "SetQuestEntryState(\"CF40\", 4, \"success\");",
-    "Description": "轉場，太平道在洞口旁，黑狼留下一具屍體其它則不見、任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4118,
-    "actorID": "MC1",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsPassFight() == false;",
-    "Description": "戰鬥失敗",
-    "links": [4119]
-  },
-  {
-    "entryID": 4119,
-    "actorID": "role2",
-    "text": "",
-    "Sequence": "ShowEnding(Ending_1);",
-    "Description": "壞結局",
-    "links": []
-  },
-  {
-    "entryID": 17,
-    "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2]「兩邊都給我讓開。我進洞辦事，不站任何一邊。」",
-    "Sequence": "",
-    "Description": "選項3：威嚇檢定 難度15",
-    "zh_CN": "[em2][威吓检定][/em2]「两边都给我让开。我进洞办事，不站任何一边。」",
-    "links": [27]
   },
   {
     "entryID": 27,
@@ -333,14 +251,6 @@
     "links": [4105]
   },
   {
-    "entryID": 4105,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場，太平道、黑狼不見",
-    "links": []
-  },
-  {
     "entryID": 32,
     "actorID": "role140",
     "text": "[panel=1]「嚇唬誰？不站邊，就是誰的人都不是——上！」",
@@ -366,6 +276,39 @@
     "links": [39]
   },
   {
+    "entryID": 35,
+    "actorID": "MC1",
+    "text": "「吵夠了。——洞口這兩撥，一個不留。」",
+    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
+    "Description": "機略提升",
+    "zh_CN": "「吵够了。——洞口这两拨，一个不留。」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC8",
+    "text": "[panel=2]「表、表哥……？」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Nervous);",
+    "zh_CN": "[panel=2]「表、表哥……？」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "role140",
+    "text": "[panel=1]「好大的膽子——漢兒找死！」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=1]「好大的胆子——汉儿找死！」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role126",
+    "text": "[panel=2]「反、反了——動手啊！」",
+    "Sequence": "",
+    "zh_CN": "[panel=2]「反、反了——动手啊！」",
+    "links": [39]
+  },
+  {
     "entryID": 39,
     "actorID": "0",
     "text": "",
@@ -380,15 +323,6 @@
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點：黑狼氏族",
     "links": [4108, 4109]
-  },
-  {
-    "entryID": 4108,
-    "actorID": "MC1",
-    "text": "「我就說、還有誰！」",
-    "Sequence": "SetPortrait(MC1,pic=13);",
-    "Conditions": "IsPassFight() == true;",
-    "zh_CN": "「我就说、还有谁！」",
-    "links": [41]
   },
   {
     "entryID": 41,
@@ -425,143 +359,9 @@
     "links": [4113]
   },
   {
-    "entryID": 4113,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Script": "SetQuestEntryState(\"CF40\", 5, \"success\");",
-    "Description": "轉場，太平道、黑狼屍體、任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4111,
-    "actorID": "MC1",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsPassFight() == false;",
-    "Description": "戰鬥失敗",
-    "links": [4112]
-  },
-  {
-    "entryID": 4112,
-    "actorID": "role2",
-    "text": "",
-    "Sequence": "ShowEnding(Ending_1);",
-    "Description": "壞結局",
-    "links": []
-  },
-  {
-    "entryID": 4109,
-    "actorID": "MC1",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsPassFight() == false;",
-    "Description": "戰鬥失敗",
-    "links": [4110]
-  },
-  {
-    "entryID": 4110,
-    "actorID": "role2",
-    "text": "",
-    "Sequence": "ShowEnding(Ending_1);",
-    "Description": "壞結局",
-    "links": []
-  },
-  {
-    "entryID": 18,
-    "actorID": "MC1",
-    "text": "「洞口這兩撥，一個不留。」",
-    "Sequence": "",
-    "Description": "選項4：主動開戰",
-    "zh_CN": "「洞口这两拨，一个不留。」",
-    "links": [35]
-  },
-  {
-    "entryID": 35,
-    "actorID": "MC1",
-    "text": "「吵夠了。——洞口這兩撥，一個不留。」",
-    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
-    "Description": "機略提升",
-    "zh_CN": "「吵够了。——洞口这两拨，一个不留。」",
-    "links": [36]
-  },
-  {
-    "entryID": 36,
-    "actorID": "MC8",
-    "text": "[panel=2]「表、表哥……？」",
-    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Nervous);",
-    "zh_CN": "[panel=2]「表、表哥……？」",
-    "links": [37]
-  },
-  {
-    "entryID": 37,
-    "actorID": "role140",
-    "text": "[panel=1]「好大的膽子——漢兒找死！」",
-    "Sequence": "DisableCharacterExpression(2);",
-    "zh_CN": "[panel=1]「好大的胆子——汉儿找死！」",
-    "links": [38]
-  },
-  {
-    "entryID": 38,
-    "actorID": "role126",
-    "text": "[panel=2]「反、反了——動手啊！」",
-    "Sequence": "",
-    "zh_CN": "[panel=2]「反、反了——动手啊！」",
-    "links": [39]
-  },
-  {
-    "entryID": 4126,
-    "actorID": "role140",
-    "text": "「哈，漢人裡也有明理的。兄弟，趕快進去吧。」",
-    "Sequence": "",
-    "Description": "點擊黑狼氏族(條件:SetQuestEntryState(\"CF40\", 3, \"success\"))",
-    "zh_CN": "「哈，汉人里也有明理的。兄弟，赶快进去吧。」",
-    "links": []
-  },
-  {
-    "entryID": 4127,
-    "actorID": "role126",
-    "text": "「多謝你幫咱們一把。兄弟，趕快進去吧。」",
-    "Sequence": "",
-    "Description": "點擊太平道人條件(SetQuestEntryState(\"CF40\", 4, \"success\"))",
-    "zh_CN": "「多谢你帮咱们一把。兄弟，赶快进去吧。」",
-    "links": []
-  },
-  {
-    "entryID": 4129,
-    "actorID": "role2",
-    "text": "[panel=6]＊（方才打鬥留下的屍體，倒在水濂洞門口；懷中還揣著一面長生玉牌。）＊",
-    "Sequence": "",
-    "Description": "點擊太平道的屍體(條件:SetQuestEntryState(\"CF40\", 3, \"success\"))",
-    "zh_CN": "[panel=6]＊（方才打斗留下的尸体，倒在水濂洞门口；怀中还揣着一面长生玉牌。）＊",
-    "links": [4130]
-  },
-  {
-    "entryID": 4130,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Valuable,Player,GoldenNecklace,1);\nContinue();",
-    "links": []
-  },
-  {
-    "entryID": 4131,
-    "actorID": "role2",
-    "text": "[panel=6]＊（方才打鬥留下的屍體，頸間還掛著一串獸牙項鍊。）＊",
-    "Sequence": "",
-    "Description": "點擊黑狼氏族的屍體條件(SetQuestEntryState(\"CF40\", 4, \"success\"))",
-    "zh_CN": "[panel=6]＊（方才打斗留下的尸体，颈间还挂着一串兽牙项链。）＊",
-    "links": [4132]
-  },
-  {
-    "entryID": 4132,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Valuable,Player,BeastFangNecklace,1);\nContinue();",
-    "links": []
-  },
-  {
     "entryID": 51,
     "actorID": "role2",
+    "title": "進洞開場",
     "text": "[panel=6]＊（甫一入洞，霉味與香燭味撲面而來。石壁兩側整整齊齊擺著歷年香客送來的供品——乾癟的瓜果、褪色的綢緞、甚至還有幾件銹跡斑斑的兵器，堆得像座小丘。）＊",
     "Sequence": "",
     "Description": "進洞劇情(主動觸發)",
@@ -591,14 +391,6 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=9);",
     "zh_CN": "[panel=2]「嘿嘿，小犀就是随口说说嘛……」",
     "links": [4133]
-  },
-  {
-    "entryID": 4133,
-    "actorID": "MC8",
-    "text": "[panel=2]「欸？表哥你看這邊，還留著人家求願的牌子！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Surprise);",
-    "zh_CN": "[panel=2]「欸？表哥你看这边，还留着人家求愿的牌子！」",
-    "links": [55]
   },
   {
     "entryID": 55,
@@ -659,6 +451,7 @@
   {
     "entryID": 81,
     "actorID": "role2",
+    "title": "壁畫",
     "text": "[panel=6]＊（石壁上竟繪著壁畫。一幅色澤鮮豔，明顯是後人重新補繪——畫中河神慈眉善目，端坐雲端，俯瞰跪拜的村民，一派祥和景象。）＊",
     "Sequence": "",
     "Description": "箱庭：中洞真假壁畫",
@@ -691,13 +484,6 @@
     "links": [4156]
   },
   {
-    "entryID": 4156,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableCharacterExpression(1);\nContinue();",
-    "links": [85, 86]
-  },
-  {
     "entryID": 85,
     "actorID": "MC1",
     "text": "[em2][學識檢定][/em2]「先看上頭這幅畫的筆法。」",
@@ -705,6 +491,15 @@
     "Description": "選項1：學識檢定 難度12",
     "zh_CN": "[em2][学识检定][/em2]「先看上头这幅画的笔法。」",
     "links": [87]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "[em2][需要武力80][/em2]直接鑿開泥灰，把底下的畫全部露出來。",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Description": "選項2：需要武力80（無擲骰）",
+    "zh_CN": "[em2][需要武力80][/em2]直接凿开泥灰，把底下的画全部露出来。",
+    "links": [109]
   },
   {
     "entryID": 87,
@@ -772,62 +567,12 @@
     "links": [4157, 99]
   },
   {
-    "entryID": 4157,
-    "actorID": "role2",
-    "text": "[panel=6]＊（泥灰簌簌剝落。底下那幅古畫重見天日：一艘怪舟從天上墜進山谷，舟腹正中嵌著一顆淚滴模樣的亮石頭。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice() == true;",
-    "zh_CN": "[panel=6]＊（泥灰簌簌剥落。底下那幅古画重见天日：一艘怪舟从天上坠进山谷，舟腹正中嵌着一颗泪滴模样的亮石头。）＊",
-    "links": [4160]
-  },
-  {
-    "entryID": 4160,
-    "actorID": "role2",
-    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。後人在上頭補了慈眉善目的河神。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。后人在上头补了慈眉善目的河神。）＊",
-    "links": [4158]
-  },
-  {
-    "entryID": 4158,
-    "actorID": "MC8",
-    "text": "[panel=2]「畫中那人的衣服好奇怪…表哥，這河神該不會是……」",
-    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Idea);",
-    "zh_CN": "[panel=2]「画中那人的衣服好奇怪…表哥，这河神该不会是……」",
-    "links": [4159]
-  },
-  {
-    "entryID": 4159,
-    "actorID": "MC20",
-    "text": "「該不會什麼？靈犀妹妹別自己嚇自己——本道長瞧了半天，就是一幅老畫。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC20,pic=1);EnableCharacterExpression(3,MC20,Nervous_2);",
-    "zh_CN": "「该不会什么？灵犀妹妹别自己吓自己——本道长瞧了半天，就是一幅老画。」",
-    "links": [4162]
-  },
-  {
-    "entryID": 4162,
-    "actorID": "MC8",
-    "text": "[panel=2]「人家想說的是神仙哩！」",
-    "Sequence": "SetPortrait(MC8,pic=5);",
-    "zh_CN": "[panel=2]「人家想说的是神仙哩！」",
-    "links": [97]
-  },
-  {
     "entryID": 97,
     "actorID": "MC22",
     "text": "「[em7]吹了聲口哨[/em7]——哦，藏起來的秘密！這才是探險尋寶嘛，大俠，快快快，裡頭還不定藏著什麼呢！」",
     "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=5);EnableCharacterExpression(4,MC22,Proud);ModifyData(FeatExp,Player,Insight,10);",
     "zh_CN": "「[em7]吹了声口哨[/em7]——哦，藏起来的秘密！这才是探险寻宝嘛，大侠，快快快，里头还不定藏着什么呢！」",
     "links": [4163]
-  },
-  {
-    "entryID": 4163,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableCharacterExpression(1);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF40\", 6, \"success\");",
-    "Description": "任務更新",
-    "links": []
   },
   {
     "entryID": 99,
@@ -916,15 +661,6 @@
     "links": []
   },
   {
-    "entryID": 86,
-    "actorID": "MC1",
-    "text": "[em2][需要武力80][/em2]直接鑿開泥灰，把底下的畫全部露出來。",
-    "Sequence": "DisableCharacterExpression(1);",
-    "Description": "選項2：需要武力80（無擲骰）",
-    "zh_CN": "[em2][需要武力80][/em2]直接凿开泥灰，把底下的画全部露出来。",
-    "links": [109]
-  },
-  {
     "entryID": 109,
     "actorID": "MC1",
     "text": "「管它畫的是什麼，先鑿開再說！」",
@@ -940,14 +676,6 @@
     "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80) == true;",
     "zh_CN": "[panel=6]＊（泥灰簌簌剥落。底下那幅古画重见天日：一艘怪舟从天上坠进山谷，舟腹正中嵌着一颗泪滴模样的亮石头。）＊",
     "links": [4153]
-  },
-  {
-    "entryID": 4153,
-    "actorID": "role2",
-    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。後人在上頭補了慈眉善目的河神。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。后人在上头补了慈眉善目的河神。）＊",
-    "links": [111]
   },
   {
     "entryID": 111,
@@ -966,58 +694,9 @@
     "links": [4161]
   },
   {
-    "entryID": 4161,
-    "actorID": "MC8",
-    "text": "[panel=2]「人家想說的是神仙哩！」",
-    "Sequence": "SetPortrait(MC8,pic=5);",
-    "zh_CN": "[panel=2]「人家想说的是神仙哩！」",
-    "links": [4164]
-  },
-  {
-    "entryID": 4164,
-    "actorID": "MC22",
-    "text": "「[em7]吹了聲口哨[/em7]——哦，藏起來的秘密！這才是探險尋寶嘛，大俠，快快快，裡頭還不定藏著什麼呢！」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=5);EnableCharacterExpression(4,MC22,Proud);ModifyData(FeatExp,Player,Insight,10);",
-    "zh_CN": "「[em7]吹了声口哨[/em7]——哦，藏起来的秘密！这才是探险寻宝嘛，大侠，快快快，里头还不定藏着什么呢！」",
-    "links": [4165]
-  },
-  {
-    "entryID": 4165,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableCharacterExpression(1);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF40\", 6, \"success\");",
-    "Description": "任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4152,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你一拳砸上泥灰，牆面只掉了幾塊碎屑。底下那層還死死黏著，連邊角都撬不開。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=6]＊（你一拳砸上泥灰，墙面只掉了几块碎屑。底下那层还死死黏着，连边角都撬不开。）＊",
-    "links": [4154]
-  },
-  {
-    "entryID": 4154,
-    "actorID": "MC22",
-    "text": "「力氣不夠就別硬砸了。」",
-    "Sequence": "SetPortrait(MC22,pic=13);",
-    "Script": "SetQuestEntryState(\"CF40\", 6, \"failure\");",
-    "Description": "任務更新",
-    "zh_CN": "「力气不够就别硬砸了。」",
-    "links": []
-  },
-  {
-    "entryID": 4155,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "links": []
-  },
-  {
     "entryID": 113,
     "actorID": "role2",
+    "title": "巨蛇",
     "text": "[panel=6]＊（甬道盡頭豁然開朗。一片圓形石坪鋪開，中央是一泓發著幽藍光的水潭；潭後石壁刻著一圈日輪般的機關，正中凹槽隱約泛著水光。）＊",
     "Sequence": "DisableCharacterExpression(3);",
     "Description": "箱庭：中央石坪(強制觸發)",
@@ -1057,14 +736,6 @@
     "links": [4166]
   },
   {
-    "entryID": 4166,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@4;\nContinue()@4;",
-    "Description": "巨蛇出來的演出",
-    "links": [118]
-  },
-  {
     "entryID": 118,
     "actorID": "role2",
     "text": "[panel=6]＊（話音未落，潭面猛地炸開。一條通體幽藍的巨蛇破水而出，鱗片映著藍光，張口噴出的不是熱浪，是一蓬藍色的火。火捲過石坪，黑狼的刀、太平道的黃巾，轉眼便有人倒下。）＊",
@@ -1098,6 +769,15 @@
     "links": [124]
   },
   {
+    "entryID": 123,
+    "actorID": "MC1",
+    "text": "「不急，讓他們先上。」",
+    "Sequence": "",
+    "Description": "選項2：讓兩派消耗",
+    "zh_CN": "「不急，让他们先上。」",
+    "links": [125]
+  },
+  {
     "entryID": 124,
     "actorID": "MC1",
     "text": "「現在打。再拖，這裡就沒活人了。」",
@@ -1108,11 +788,47 @@
     "links": [4171]
   },
   {
-    "entryID": 4171,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Hp,Player,-30);\nModifyData(Hp,MC20,-30);\nModifyData(Hp,MC22,-30);\nStopAllParticle();\nContinue();",
-    "Description": "扣血",
+    "entryID": 125,
+    "actorID": "MC1",
+    "text": "「讓他們先消耗。我們再動手。」",
+    "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nModifyData(FeatExp,Player,Realpolitik,50);",
+    "Description": "機略提升,厚黑經驗",
+    "zh_CN": "「让他们先消耗。我们再动手。」",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠這計妙啊！那火邪門得很，硬衝只會變火炭——等缺口出來，咱們再上！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Idea);\nModifyData(FavorabilityExp,MC22,10);",
+    "Description": "娜娜好感度提升",
+    "zh_CN": "[panel=1]「大侠这计妙啊！那火邪门得很，硬冲只会变火炭——等缺口出来，咱们再上！」",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC20",
+    "text": "[panel=2]「…………」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(2,MC20,Nervous);",
+    "zh_CN": "[panel=2]「…………」",
+    "links": [128]
+  },
+  {
+    "entryID": 128,
+    "actorID": "role2",
+    "text": "[panel=6]＊（石坪上的罵聲很快被藍火蓋過。黑狼族人還在砍，太平道人還在喊，可人一個個倒下。巨蛇噴火噴得猛，動作卻明顯慢了——兩邊拿命給你們換出了一個缺口。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nStopAllParticle();",
+    "Script": "SetQuestEntryState(\"CF40\", 8, \"success\");",
+    "Description": "任務更新",
+    "zh_CN": "[panel=6]＊（石坪上的骂声很快被蓝火盖过。黑狼族人还在砍，太平道人还在喊，可人一个个倒下。巨蛇喷火喷得猛，动作却明显慢了——两边拿命给你们换出了一个缺口。）＊",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "MC1",
+    "text": "「就是現在！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "zh_CN": "「就是现在！」",
     "links": [130]
   },
   {
@@ -1174,22 +890,6 @@
     "links": [4173]
   },
   {
-    "entryID": 4173,
-    "actorID": "MC22",
-    "text": "[panel=1]「[em7]把角湊近火光翻了翻[/em7]，傳說蛟龍頭上長出兩支角，就能化龍。好險它只長了一支——成龍之路就讓咱們給砍斷了！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=4)",
-    "zh_CN": "[panel=1]「[em7]把角凑近火光翻了翻[/em7]，传说蛟龙头上长出两支角，就能化龙。好险它只长了一支——成龙之路就让咱们给砍断了！」",
-    "links": [4174]
-  },
-  {
-    "entryID": 4174,
-    "actorID": "MC22",
-    "text": "「筆記裡說，這角要是鍛進兵刃，那股寒火就散不掉！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=3);",
-    "zh_CN": "「笔记里说，这角要是锻进兵刃，那股寒火就散不掉！」",
-    "links": [137]
-  },
-  {
     "entryID": 137,
     "actorID": "MC22",
     "text": "[panel=1]「大俠，現在呢？先回去交差？」",
@@ -1207,30 +907,6 @@
     "links": [140]
   },
   {
-    "entryID": 140,
-    "actorID": "MC1",
-    "text": "「走吧。回去交差。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_CN": "「走吧。回去交差。」",
-    "links": [4175]
-  },
-  {
-    "entryID": 4175,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);LoadLevel(RiverGodCave,RiverGodCave)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場 、移動到入口",
-    "links": [200]
-  },
-  {
-    "entryID": 200,
-    "actorID": "MC20",
-    "text": "[panel=1]「……回去罷。這洞邪門，久留不得。」",
-    "Sequence": "SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Nervous);",
-    "zh_CN": "[panel=1]「……回去罢。这洞邪门，久留不得。」",
-    "links": []
-  },
-  {
     "entryID": 139,
     "actorID": "MC1",
     "text": "「再看看。」",
@@ -1238,6 +914,14 @@
     "Description": "選項2：繼續探索",
     "zh_CN": "「再看看。」",
     "links": [141]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC1",
+    "text": "「走吧。回去交差。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「走吧。回去交差。」",
+    "links": [4175]
   },
   {
     "entryID": 141,
@@ -1274,98 +958,6 @@
     "links": [4172]
   },
   {
-    "entryID": 4172,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ShowEnding(Ending_1);",
-    "links": []
-  },
-  {
-    "entryID": 123,
-    "actorID": "MC1",
-    "text": "「不急，讓他們先上。」",
-    "Sequence": "",
-    "Description": "選項2：讓兩派消耗",
-    "zh_CN": "「不急，让他们先上。」",
-    "links": [125]
-  },
-  {
-    "entryID": 125,
-    "actorID": "MC1",
-    "text": "「讓他們先消耗。我們再動手。」",
-    "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nModifyData(FeatExp,Player,Realpolitik,50);",
-    "Description": "機略提升,厚黑經驗",
-    "zh_CN": "「让他们先消耗。我们再动手。」",
-    "links": [126]
-  },
-  {
-    "entryID": 126,
-    "actorID": "MC22",
-    "text": "[panel=1]「大俠這計妙啊！那火邪門得很，硬衝只會變火炭——等缺口出來，咱們再上！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Idea);\nModifyData(FavorabilityExp,MC22,10);",
-    "Description": "娜娜好感度提升",
-    "zh_CN": "[panel=1]「大侠这计妙啊！那火邪门得很，硬冲只会变火炭——等缺口出来，咱们再上！」",
-    "links": [127]
-  },
-  {
-    "entryID": 127,
-    "actorID": "MC20",
-    "text": "[panel=2]「…………」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(2,MC20,Nervous);",
-    "zh_CN": "[panel=2]「…………」",
-    "links": [128]
-  },
-  {
-    "entryID": 128,
-    "actorID": "role2",
-    "text": "[panel=6]＊（石坪上的罵聲很快被藍火蓋過。黑狼族人還在砍，太平道人還在喊，可人一個個倒下。巨蛇噴火噴得猛，動作卻明顯慢了——兩邊拿命給你們換出了一個缺口。）＊",
-    "Sequence": "DisableCharacterExpression(2);\nStopAllParticle();",
-    "Script": "SetQuestEntryState(\"CF40\", 8, \"success\");",
-    "Description": "任務更新",
-    "zh_CN": "[panel=6]＊（石坪上的骂声很快被蓝火盖过。黑狼族人还在砍，太平道人还在喊，可人一个个倒下。巨蛇喷火喷得猛，动作却明显慢了——两边拿命给你们换出了一个缺口。）＊",
-    "links": [129]
-  },
-  {
-    "entryID": 129,
-    "actorID": "MC1",
-    "text": "「就是現在！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
-    "zh_CN": "「就是现在！」",
-    "links": [130]
-  },
-  {
-    "entryID": 4167,
-    "actorID": "role2",
-    "text": "[panel=6]＊（被巨蛇火焰燒得焦黑的屍體。）＊",
-    "Sequence": "",
-    "Description": "點擊太平道的屍體CurrentQuestEntryState(\"CF40\", 8) == \"success\"",
-    "zh_CN": "[panel=6]＊（被巨蛇火焰烧得焦黑的尸体。）＊",
-    "links": [4168]
-  },
-  {
-    "entryID": 4168,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Valuable,Player,GoldenNecklace,1);\nContinue();",
-    "links": []
-  },
-  {
-    "entryID": 4169,
-    "actorID": "role2",
-    "text": "[panel=6]＊（被巨蛇火焰燒得焦黑的屍體。）＊",
-    "Sequence": "",
-    "Description": "點擊黑狼氏族的屍體條件CurrentQuestEntryState(\"CF40\", 8) == \"success\"",
-    "zh_CN": "[panel=6]＊（被巨蛇火焰烧得焦黑的尸体。）＊",
-    "links": [4170]
-  },
-  {
-    "entryID": 4170,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Valuable,Player,BeastFangNecklace,1);\nContinue();",
-    "links": []
-  },
-  {
     "entryID": 145,
     "actorID": "role2",
     "text": "[panel=6]＊（機關裡傳來一陣沉悶的咔咔聲，像是多年未動的機栝在咬合。隨即水聲大作——左側那堵平得像牆的水面往下抽，露出一條往更深處去的石徑。原先被水沒過的左下角，也多出一塊剛露出的小石坪。）＊",
@@ -1384,17 +976,9 @@
     "links": [4150]
   },
   {
-    "entryID": 4150,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Script": "SetQuestState(\"CF41\", \"active\");",
-    "Description": "觸發任務",
-    "links": []
-  },
-  {
     "entryID": 149,
     "actorID": "MC8",
+    "title": "點擊石座",
     "text": "[panel=2]「這……這是椅子？怎麼這麼小。給誰坐的啊？」",
     "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
     "Description": "點擊石座",
@@ -1442,17 +1026,630 @@
     "links": [4151]
   },
   {
-    "entryID": 4151,
+    "entryID": 200,
+    "actorID": "MC20",
+    "text": "[panel=1]「……回去罷。這洞邪門，久留不得。」",
+    "Sequence": "SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Nervous);",
+    "zh_CN": "[panel=1]「……回去罢。这洞邪门，久留不得。」",
+    "links": []
+  },
+  {
+    "entryID": 201,
+    "actorID": "role2",
+    "text": "[panel=6]＊（回到鄴城甄府，甄筠早已備好茶水等候，見你們風塵僕僕地歸來，目光中頗有興味。）＊",
+    "Sequence": "EnableDialogueBG(StudyRoom);",
+    "Description": "交差",
+    "zh_CN": "[panel=6]＊（回到邺城甄府，甄筠早已备好茶水等候，见你们风尘仆仆地归来，目光中颇有兴味。）＊",
+    "links": [202]
+  },
+  {
+    "entryID": 202,
+    "actorID": "MC9",
+    "text": "[panel=1]「喲，回來得比筠預想的快。看樣子——是有收穫了？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "zh_CN": "[panel=1]「哟，回来得比筠预想的快。看样子——是有收获了？」",
+    "links": [4274, 4275, 4276, 4277]
+  },
+  {
+    "entryID": 203,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "SetQuestEntryState(\"CF41\", 1, \"success\");",
-    "Description": "任務更新",
+    "Description": "（廢）舊情境乙分流，已斷連，保留不刪",
+    "links": [205]
+  },
+  {
+    "entryID": 204,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "（廢）舊情境甲分流，已斷連，保留不刪",
+    "links": [209]
+  },
+  {
+    "entryID": 205,
+    "actorID": "MC1",
+    "text": "「家主，水濂洞裡帶回一樣東西。叫不出名，我也估不準它值多少。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Description": "（未連入節點，保留不刪）",
+    "zh_CN": "「家主，水濂洞里带回一样东西。叫不出名，我也估不准它值多少。」",
+    "links": [206]
+  },
+  {
+    "entryID": 206,
+    "actorID": "MC9",
+    "text": "[panel=1]「……鐵不像鐵，石不像石。筠最吃這一套——估得出價的，叫貨；估不出價的，才叫奇貨。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Idea);",
+    "zh_CN": "[panel=1]「……铁不像铁，石不像石。筠最吃这一套——估得出价的，叫货；估不出价的，才叫奇货。」",
+    "links": [207]
+  },
+  {
+    "entryID": 207,
+    "actorID": "MC1",
+    "text": "「那便交給家主。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "zh_CN": "「那便交给家主。」",
+    "links": [208]
+  },
+  {
+    "entryID": 208,
+    "actorID": "MC9",
+    "text": "[panel=1]「行。這筆本錢，筠出了。雲中往後，也算有甄家一份。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "Description": "賣淚成交（活淚／凡石共用）。⚠ 作者：「投資成立」任務狀態掛此",
+    "zh_CN": "[panel=1]「行。这笔本钱，筠出了。云中往后，也算有甄家一份。」",
+    "links": [4291]
+  },
+  {
+    "entryID": 209,
+    "actorID": "MC1",
+    "text": "「家主，水濂洞裡撞上一條怪蛇，通體發藍，噴的也是藍火。費了好一番功夫才拿下牠，這是牠留下的東西。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "zh_CN": "「家主，水濂洞里撞上一条怪蛇，通体发蓝，喷的也是蓝火。费了好一番功夫才拿下它，这是它留下的东西。」",
+    "links": [210]
+  },
+  {
+    "entryID": 210,
+    "actorID": "MC9",
+    "text": "[panel=1]「……一支角？公子莫不是找錯了方向？筠要的可不是什麼奇珍異獸的邊角料。」",
+    "Sequence": "SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Question);",
+    "zh_CN": "[panel=1]「……一支角？公子莫不是找错了方向？筠要的可不是什么奇珍异兽的边角料。」",
+    "links": [211]
+  },
+  {
+    "entryID": 211,
+    "actorID": "MC1",
+    "text": "「家主莫急，且聽在下細說這蛟龍角的門道。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "zh_CN": "「家主莫急，且听在下细说这蛟龙角的门道。」",
+    "links": [212]
+  },
+  {
+    "entryID": 212,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,PersuasionCheck,7);",
+    "Description": "空對話擲骰節點：口才檢定 難度7",
+    "links": [213]
+  },
+  {
+    "entryID": 213,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "口才檢定後的空緩衝節點",
+    "links": [214, 216]
+  },
+  {
+    "entryID": 214,
+    "actorID": "MC1",
+    "text": "「家主請看，這蛟龍角通體幽藍，寒裡帶火，天下罕見，尋常匠人便是想仿都仿不出來——但凡識貨的行家看了，誰不多看兩眼？家主走南闖北，難道沒有識貨的門路？」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_CN": "「家主请看，这蛟龙角通体幽蓝，寒里带火，天下罕见，寻常匠人便是想仿都仿不出来——但凡识货的行家看了，谁不多看两眼？家主走南闯北，难道没有识货的门路？」",
+    "links": [215]
+  },
+  {
+    "entryID": 215,
+    "actorID": "MC9",
+    "text": "[panel=1]「……公子這張嘴，倒是比帶回來的東西更值錢。罷了，看在你這番說辭的份上，這筆本錢，筠出了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(FeatExp,Player,Persuasion,25);",
+    "Description": "交蛟龍角・口才成功。⚠ 作者：「投資成立」任務狀態掛此",
+    "zh_CN": "[panel=1]「……公子这张嘴，倒是比带回来的东西更值钱。罢了，看在你这番说辞的份上，这笔本钱，筠出了。」",
+    "links": [220]
+  },
+  {
+    "entryID": 216,
+    "actorID": "MC1",
+    "text": "「這、這蛟龍角乃是藍焰巨蛇精華所化，尋常人可求不來……」",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_CN": "「这、这蛟龙角乃是蓝焰巨蛇精华所化，寻常人可求不来……」",
+    "links": [217]
+  },
+  {
+    "entryID": 217,
+    "actorID": "MC9",
+    "text": "[panel=1]「角是角。寒裡帶火，瞧著新鮮。可『天下罕見』四個字，筠聽過的貨色，比這支角還長。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "zh_CN": "[panel=1]「角是角。寒里带火，瞧着新鲜。可『天下罕见』四个字，筠听过的货色，比这支角还长。」",
+    "links": [218]
+  },
+  {
+    "entryID": 218,
+    "actorID": "MC9",
+    "text": "[panel=1]「說辭稀鬆。不過人既跑了這一趟，空手而回，倒不像做生意的樣子。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「说辞稀松。不过人既跑了这一趟，空手而回，倒不像做生意的样子。」",
+    "links": [219]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC9",
+    "text": "[panel=1]「這筆本錢，筠出了。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "Description": "交蛟龍角・口才失敗仍成交。⚠ 作者：「投資成立」任務狀態掛此",
+    "zh_CN": "[panel=1]「这笔本钱，筠出了。」",
+    "links": [220]
+  },
+  {
+    "entryID": 220,
+    "actorID": "MC9",
+    "text": "[panel=1]「不過——話，筠也說在前頭。這次與英豪府的結盟—」",
+    "Sequence": "SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "Description": "共通結尾：獨家條件",
+    "zh_CN": "[panel=1]「不过——话，筠也说在前头。这次与英豪府的结盟—」",
+    "links": [221]
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC9",
+    "text": "[panel=1]「既然收了甄家的銀子，雲中往後便只認英豪府與鄴城甄家。赤龍幫的旗、黑狼的金子，都別再往英豪府門裡送。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「既然收了甄家的银子，云中往后便只认英豪府与邺城甄家。赤龙帮的旗、黑狼的金子，都别再往英豪府门里送。」",
+    "links": [222]
+  },
+  {
+    "entryID": 222,
+    "actorID": "MC9",
+    "text": "[panel=1]「兩邊都想要？那甄家這筆，當沒有過。筠最厭的，就是一桌菜兩家分。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "zh_CN": "[panel=1]「两边都想要？那甄家这笔，当没有过。筠最厌的，就是一桌菜两家分。」",
+    "links": [223]
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC1",
+    "text": "「……家主說得明白。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「……家主说得明白。」",
+    "links": [224]
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC9",
+    "text": "[panel=1]「說開就好。往後有難處，衝著甄家這塊牌子來便是。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
+    "zh_CN": "[panel=1]「说开就好。往后有难处，冲着甄家这块牌子来便是。」",
+    "links": [225, 226]
+  },
+  {
+    "entryID": 225,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"HeBoKeepsake\") == true;",
+    "Description": "河神底細追問（僅還淚：持有河伯贈禮）",
+    "links": [227]
+  },
+  {
+    "entryID": 226,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"HeBoKeepsake\") == false;",
+    "Description": "跳過河神追問（未還淚）",
+    "links": [4308]
+  },
+  {
+    "entryID": 227,
+    "actorID": "MC9",
+    "text": "[panel=1]「話說回來，公子這一趟，可有摸清那所謂『河神』的底細？這東西，總不會是憑空掉出來的吧？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Question);",
+    "zh_CN": "[panel=1]「话说回来，公子这一趟，可有摸清那所谓『河神』的底细？这东西，总不会是凭空掉出来的吧？」",
+    "links": [228, 229]
+  },
+  {
+    "entryID": 228,
+    "actorID": "MC1",
+    "text": "「洞裡安靜。這是路上遇見的人給的念想，別無其他。」",
+    "Sequence": "",
+    "Description": "選項1：隱瞞",
+    "zh_CN": "「洞里安静。这是路上遇见的人给的念想，别无其他。」",
+    "links": [230]
+  },
+  {
+    "entryID": 229,
+    "actorID": "MC1",
+    "text": "「……那不是神。是個困在洞裡的殊方之人。東西還了她，她暫時走不成，石像還在。」",
+    "Sequence": "",
+    "Description": "選項2：如實以告",
+    "zh_CN": "「……那不是神。是个困在洞里的殊方之人。东西还了她，她暂时走不成，石像还在。」",
+    "links": [233]
+  },
+  {
+    "entryID": 230,
+    "actorID": "MC1",
+    "text": "「洞裡安靜。這是路上遇見的人給的念想，別無其他。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "zh_CN": "「洞里安静。这是路上遇见的人给的念想，别无其他。」",
+    "links": [231]
+  },
+  {
+    "entryID": 231,
+    "actorID": "MC9",
+    "text": "[panel=1]「……也罷。生意做成，何必刨根究底。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "zh_CN": "[panel=1]「……也罢。生意做成，何必刨根究底。」",
+    "links": [232]
+  },
+  {
+    "entryID": 232,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把河伯的事咽了下去。至少這會兒，不必讓甄家惦記那座還立著的石像。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（你把河伯的事咽了下去。至少这会儿，不必让甄家惦记那座还立着的石像。）＊",
+    "links": [4308]
+  },
+  {
+    "entryID": 233,
+    "actorID": "MC1",
+    "text": "「見著了。不是神，是個困在洞裡的殊方之人。眼淚還了她——她暫時走不成，石像還在。我勸家主，往後別急著打那洞的主意。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「见着了。不是神，是个困在洞里的殊方之人。眼泪还了她——她暂时走不成，石像还在。我劝家主，往后别急着打那洞的主意。」",
+    "links": [234]
+  },
+  {
+    "entryID": 234,
+    "actorID": "MC9",
+    "text": "[panel=1]「還在？呵，公子的話，越說越有意思了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=4);EnableCharacterExpression(1,MC9,Surprise);",
+    "zh_CN": "[panel=1]「还在？呵，公子的话，越说越有意思了。」",
+    "links": [235]
+  },
+  {
+    "entryID": 235,
+    "actorID": "MC9",
+    "text": "[panel=1]「不過——公子既然特意提醒，筠記下了。估不準的東西，筠愛收；估不準的洞，筠不急著挖。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
+    "zh_CN": "[panel=1]「不过——公子既然特意提醒，筠记下了。估不准的东西，筠爱收；估不准的洞，筠不急着挖。」",
+    "links": [236]
+  },
+  {
+    "entryID": 236,
+    "actorID": "role2",
+    "text": "[panel=6]＊（甄筠似乎把這話聽進去了，只是那雙眼底一閃而過的算計，讓人猜不透她究竟是動了惻隱，還是另有盤算。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（甄筠似乎把这话听进去了，只是那双眼底一闪而过的算计，让人猜不透她究竟是动了恻隐，还是另有盘算。）＊",
+    "links": [4308]
+  },
+  {
+    "entryID": 237,
+    "actorID": "role2",
+    "text": "[panel=6]＊（回英豪府的路上，蕭靈犀始終沒怎麼說話，直到快到府門前，才低聲開口。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（回英豪府的路上，萧灵犀始终没怎么说话，直到快到府门前，才低声开口。）＊",
+    "links": [238]
+  },
+  {
+    "entryID": 238,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……這一趟，你心裡是怎麼想的？」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「表哥……这一趟，你心里是怎么想的？」",
+    "links": [239, 240, 241]
+  },
+  {
+    "entryID": 239,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Rivertear\") == true;",
+    "Description": "結算分支：未見河伯（暫以「仍持活淚」判；⚠ 作者改任務狀態——「不還・回去」的人也持活淚）",
+    "links": [242]
+  },
+  {
+    "entryID": 240,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"HeBoKeepsake\") == true;",
+    "Description": "結算分支：還給她（持有河伯贈禮）",
+    "links": [244]
+  },
+  {
+    "entryID": 241,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"FadedTearstone\") == true;",
+    "Description": "結算分支：不還・讓她喝（持有褪色的河神眼淚）",
+    "links": [246]
+  },
+  {
+    "entryID": 242,
+    "actorID": "MC1",
+    "text": "「這一趟，倒更像是尋常的除妖差事，沒有話本裡那些牽腸掛肚的難處，反倒輕鬆。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_CN": "「这一趟，倒更像是寻常的除妖差事，没有话本里那些牵肠挂肚的难处，反倒轻松。」",
+    "links": [243]
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC8",
+    "text": "[panel=2]「是呀，除妖、奪寶，乾淨俐落！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Proud);",
+    "zh_CN": "[panel=2]「是呀，除妖、夺宝，干净俐落！」",
+    "links": [248]
+  },
+  {
+    "entryID": 244,
+    "actorID": "MC1",
+    "text": "「怎麼想？該還的還了。她一時半會兒走不了，石像還在——可這世道，總不能什麼都拿良心去換。」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "zh_CN": "「怎么想？该还的还了。她一时半会儿走不了，石像还在——可这世道，总不能什么都拿良心去换。」",
+    "links": [245]
+  },
+  {
+    "entryID": 245,
+    "actorID": "MC8",
+    "text": "[panel=2]「嗯！小犀也是這麼想的！那薄片再怪，也比表哥變成見死不救的人強。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Proud);",
+    "zh_CN": "[panel=2]「嗯！小犀也是这么想的！那薄片再怪，也比表哥变成见死不救的人强。」",
+    "links": [248]
+  },
+  {
+    "entryID": 246,
+    "actorID": "MC1",
+    "text": "「……交差的角還在。她那邊，再喚也不應了。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "zh_CN": "「……交差的角还在。她那边，再唤也不应了。」",
+    "links": [247]
+  },
+  {
+    "entryID": 247,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……英豪府這麼多人等著過日子。這份欠，日後有機會，再還就是了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「表哥……英豪府这么多人等着过日子。这份欠，日后有机会，再还就是了。」",
+    "links": [248]
+  },
+  {
+    "entryID": 248,
+    "actorID": "role2",
+    "text": "[panel=6]＊（無論這一趟你選擇了如何面對水濂洞，這段經歷都已悄悄埋進了你的江湖路——日後這份因果，終會有清算的一天。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=6]＊（无论这一趟你选择了如何面对水濂洞，这段经历都已悄悄埋进了你的江湖路——日后这份因果，终会有清算的一天。）＊",
     "links": []
+  },
+  {
+    "entryID": 4103,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Script": "SetQuestEntryState(\"CF40\", 4, \"success\");",
+    "Description": "轉場，太平道在洞口旁，黑狼留下一具屍體其它則不見、任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4104,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Script": "SetQuestEntryState(\"CF40\", 3, \"success\");",
+    "Description": "轉場，黑狼在洞口旁，太平道則留下一具屍體其它消失、任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4105,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場，太平道、黑狼不見",
+    "links": []
+  },
+  {
+    "entryID": 4108,
+    "actorID": "MC1",
+    "text": "「我就說、還有誰！」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "Conditions": "IsPassFight() == true;",
+    "zh_CN": "「我就说、还有谁！」",
+    "links": [41]
+  },
+  {
+    "entryID": 4109,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "links": [4110]
+  },
+  {
+    "entryID": 4110,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "壞結局",
+    "links": []
+  },
+  {
+    "entryID": 4111,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "links": [4112]
+  },
+  {
+    "entryID": 4112,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "壞結局",
+    "links": []
+  },
+  {
+    "entryID": 4113,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Script": "SetQuestEntryState(\"CF40\", 5, \"success\");",
+    "Description": "轉場，太平道、黑狼屍體、任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4114,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);BeginFight(Combat,76);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
+    "Description": "戰鬥觸發節點：黑狼氏族",
+    "links": [4115]
+  },
+  {
+    "entryID": 4115,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點：黑狼氏族",
+    "links": [4117, 4118]
+  },
+  {
+    "entryID": 4117,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=2);\nContinue();",
+    "Conditions": "IsPassFight() == true;",
+    "links": [25]
+  },
+  {
+    "entryID": 4118,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "links": [4119]
+  },
+  {
+    "entryID": 4119,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "壞結局",
+    "links": []
+  },
+  {
+    "entryID": 4120,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);BeginFight(Combat,64);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
+    "Description": "戰鬥觸發節點：太平道",
+    "links": [4121]
+  },
+  {
+    "entryID": 4121,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點：太平道",
+    "links": [21, 4124]
+  },
+  {
+    "entryID": 4124,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "links": [4125]
+  },
+  {
+    "entryID": 4125,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "壞結局",
+    "links": []
+  },
+  {
+    "entryID": 4126,
+    "actorID": "role140",
+    "title": "點擊黑狼氏族",
+    "text": "「哈，漢人裡也有明理的。兄弟，趕快進去吧。」",
+    "Sequence": "",
+    "Description": "點擊黑狼氏族(條件:SetQuestEntryState(\"CF40\", 3, \"success\"))",
+    "zh_CN": "「哈，汉人里也有明理的。兄弟，赶快进去吧。」",
+    "links": []
+  },
+  {
+    "entryID": 4127,
+    "actorID": "role126",
+    "title": "點擊太平道人",
+    "text": "「多謝你幫咱們一把。兄弟，趕快進去吧。」",
+    "Sequence": "",
+    "Description": "點擊太平道人條件(SetQuestEntryState(\"CF40\", 4, \"success\"))",
+    "zh_CN": "「多谢你帮咱们一把。兄弟，赶快进去吧。」",
+    "links": []
+  },
+  {
+    "entryID": 4129,
+    "actorID": "role2",
+    "title": "點擊太平道的屍體",
+    "text": "[panel=6]＊（方才打鬥留下的屍體，倒在水濂洞門口；懷中還揣著一面長生玉牌。）＊",
+    "Sequence": "",
+    "Description": "點擊太平道的屍體(條件:SetQuestEntryState(\"CF40\", 3, \"success\"))",
+    "zh_CN": "[panel=6]＊（方才打斗留下的尸体，倒在水濂洞门口；怀中还揣着一面长生玉牌。）＊",
+    "links": [4130]
+  },
+  {
+    "entryID": 4130,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Valuable,Player,GoldenNecklace,1);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 4131,
+    "actorID": "role2",
+    "title": "點擊太平道的屍體",
+    "text": "[panel=6]＊（方才打鬥留下的屍體，頸間還掛著一串獸牙項鍊。）＊",
+    "Sequence": "",
+    "Description": "點擊黑狼氏族的屍體條件(SetQuestEntryState(\"CF40\", 4, \"success\"))",
+    "zh_CN": "[panel=6]＊（方才打斗留下的尸体，颈间还挂着一串兽牙项链。）＊",
+    "links": [4132]
+  },
+  {
+    "entryID": 4132,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Valuable,Player,BeastFangNecklace,1);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 4133,
+    "actorID": "MC8",
+    "text": "[panel=2]「欸？表哥你看這邊，還留著人家求願的牌子！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Surprise);",
+    "zh_CN": "[panel=2]「欸？表哥你看这边，还留着人家求愿的牌子！」",
+    "links": [55]
   },
   {
     "entryID": 4135,
     "actorID": "role2",
+    "title": "有文字的石片",
     "text": "[panel=6]＊（座面與石背的縫裡，卡著一塊薄薄的石片。水退之後才露邊角，不像供品，倒像這張椅子自己掉下來的。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
     "Description": "要通過洞察檢定14才會出現該石片",
@@ -1470,20 +1667,14 @@
     "links": [4144]
   },
   {
-    "entryID": 4144,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,14);",
-    "Description": "選項1的空對話擲骰節點：學識檢定 難度14",
-    "links": [4145]
-  },
-  {
-    "entryID": 4145,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "學識檢定後的空緩衝節點",
-    "links": [4138, 4147]
+    "entryID": 4137,
+    "actorID": "MC1",
+    "text": "「不予理會。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF41\", 2) == \"unassigned\";",
+    "Description": "選項2：不予理會",
+    "zh_CN": "「不予理会。」",
+    "links": [4142]
   },
   {
     "entryID": 4138,
@@ -1503,39 +1694,12 @@
     "links": [4149]
   },
   {
-    "entryID": 4149,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableCharacterExpression(2);",
-    "Script": "SetQuestEntryState(\"CF41\", 2, \"success\");",
-    "Description": "任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4147,
-    "actorID": "MC1",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsPassDice() == false;",
-    "links": [4140]
-  },
-  {
     "entryID": 4140,
     "actorID": "MC20",
     "text": "[panel=1]「這銘文太古老了，誰知道寫的哪年的事。擱著吧——本道長可不想在這兒耗。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);",
     "zh_CN": "[panel=1]「这铭文太古老了，谁知道写的哪年的事。搁着吧——本道长可不想在这儿耗。」",
     "links": []
-  },
-  {
-    "entryID": 4137,
-    "actorID": "MC1",
-    "text": "「不予理會。」",
-    "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF41\", 2) == \"unassigned\";",
-    "Description": "選項2：不予理會",
-    "zh_CN": "「不予理会。」",
-    "links": [4142]
   },
   {
     "entryID": 4142,
@@ -1546,6 +1710,30 @@
     "links": []
   },
   {
+    "entryID": 4144,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,14);",
+    "Description": "選項1的空對話擲骰節點：學識檢定 難度14",
+    "links": [4145]
+  },
+  {
+    "entryID": 4145,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "學識檢定後的空緩衝節點",
+    "links": [4138, 4147]
+  },
+  {
+    "entryID": 4147,
+    "actorID": "MC1",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassDice() == false;",
+    "links": [4140]
+  },
+  {
     "entryID": 4148,
     "actorID": "MC20",
     "text": "[panel=1]「這銘文太古老了，誰知道寫的哪年的事。擱著吧——本道長可不想在這兒耗。」",
@@ -1554,12 +1742,272 @@
     "links": []
   },
   {
-    "entryID": 4303,
-    "actorID": "role2",
+    "entryID": 4149,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(2);",
+    "Script": "SetQuestEntryState(\"CF41\", 2, \"success\");",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4150,
+    "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Description": "點擊石像",
-    "links": [4184, 4261, 4309]
+    "Script": "SetQuestState(\"CF41\", \"active\");",
+    "Description": "觸發任務",
+    "links": []
+  },
+  {
+    "entryID": 4151,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Script": "SetQuestEntryState(\"CF41\", 1, \"success\");",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4152,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你一拳砸上泥灰，牆面只掉了幾塊碎屑。底下那層還死死黏著，連邊角都撬不開。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（你一拳砸上泥灰，墙面只掉了几块碎屑。底下那层还死死黏着，连边角都撬不开。）＊",
+    "links": [4154]
+  },
+  {
+    "entryID": 4153,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。後人在上頭補了慈眉善目的河神。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。后人在上头补了慈眉善目的河神。）＊",
+    "links": [111]
+  },
+  {
+    "entryID": 4154,
+    "actorID": "MC22",
+    "text": "「力氣不夠就別硬砸了。」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "Script": "SetQuestEntryState(\"CF40\", 6, \"failure\");",
+    "Description": "任務更新",
+    "zh_CN": "「力气不够就别硬砸了。」",
+    "links": []
+  },
+  {
+    "entryID": 4155,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": []
+  },
+  {
+    "entryID": 4156,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "links": [85, 86]
+  },
+  {
+    "entryID": 4157,
+    "actorID": "role2",
+    "text": "[panel=6]＊（泥灰簌簌剝落。底下那幅古畫重見天日：一艘怪舟從天上墜進山谷，舟腹正中嵌著一顆淚滴模樣的亮石頭。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_CN": "[panel=6]＊（泥灰簌簌剥落。底下那幅古画重见天日：一艘怪舟从天上坠进山谷，舟腹正中嵌着一颗泪滴模样的亮石头。）＊",
+    "links": [4160]
+  },
+  {
+    "entryID": 4158,
+    "actorID": "MC8",
+    "text": "[panel=2]「畫中那人的衣服好奇怪…表哥，這河神該不會是……」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Idea);",
+    "zh_CN": "[panel=2]「画中那人的衣服好奇怪…表哥，这河神该不会是……」",
+    "links": [4159]
+  },
+  {
+    "entryID": 4159,
+    "actorID": "MC20",
+    "text": "「該不會什麼？靈犀妹妹別自己嚇自己——本道長瞧了半天，就是一幅老畫。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC20,pic=1);EnableCharacterExpression(3,MC20,Nervous_2);",
+    "zh_CN": "「该不会什么？灵犀妹妹别自己吓自己——本道长瞧了半天，就是一幅老画。」",
+    "links": [4162]
+  },
+  {
+    "entryID": 4160,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。後人在上頭補了慈眉善目的河神。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。后人在上头补了慈眉善目的河神。）＊",
+    "links": [4158]
+  },
+  {
+    "entryID": 4161,
+    "actorID": "MC8",
+    "text": "[panel=2]「人家想說的是神仙哩！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「人家想说的是神仙哩！」",
+    "links": [4164]
+  },
+  {
+    "entryID": 4162,
+    "actorID": "MC8",
+    "text": "[panel=2]「人家想說的是神仙哩！」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「人家想说的是神仙哩！」",
+    "links": [97]
+  },
+  {
+    "entryID": 4163,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF40\", 6, \"success\");",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4164,
+    "actorID": "MC22",
+    "text": "「[em7]吹了聲口哨[/em7]——哦，藏起來的秘密！這才是探險尋寶嘛，大俠，快快快，裡頭還不定藏著什麼呢！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=5);EnableCharacterExpression(4,MC22,Proud);ModifyData(FeatExp,Player,Insight,10);",
+    "zh_CN": "「[em7]吹了声口哨[/em7]——哦，藏起来的秘密！这才是探险寻宝嘛，大侠，快快快，里头还不定藏着什么呢！」",
+    "links": [4165]
+  },
+  {
+    "entryID": 4165,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF40\", 6, \"success\");",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4166,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@4;\nContinue()@4;",
+    "Description": "巨蛇出來的演出",
+    "links": [118]
+  },
+  {
+    "entryID": 4167,
+    "actorID": "role2",
+    "title": "點擊太平道的屍體",
+    "text": "[panel=6]＊（被巨蛇火焰燒得焦黑的屍體。）＊",
+    "Sequence": "",
+    "Description": "點擊太平道的屍體CurrentQuestEntryState(\"CF40\", 8) == \"success\"",
+    "zh_CN": "[panel=6]＊（被巨蛇火焰烧得焦黑的尸体。）＊",
+    "links": [4168]
+  },
+  {
+    "entryID": 4168,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Valuable,Player,GoldenNecklace,1);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 4169,
+    "actorID": "role2",
+    "title": "點擊太平道的屍體",
+    "text": "[panel=6]＊（被巨蛇火焰燒得焦黑的屍體。）＊",
+    "Sequence": "",
+    "Description": "點擊黑狼氏族的屍體條件CurrentQuestEntryState(\"CF40\", 8) == \"success\"",
+    "zh_CN": "[panel=6]＊（被巨蛇火焰烧得焦黑的尸体。）＊",
+    "links": [4170]
+  },
+  {
+    "entryID": 4170,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Valuable,Player,BeastFangNecklace,1);\nContinue();",
+    "links": []
+  },
+  {
+    "entryID": 4171,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Hp,Player,-30);\nModifyData(Hp,MC20,-30);\nModifyData(Hp,MC22,-30);\nStopAllParticle();\nContinue();",
+    "Description": "扣血",
+    "links": [130]
+  },
+  {
+    "entryID": 4172,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "links": []
+  },
+  {
+    "entryID": 4173,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]把角湊近火光翻了翻[/em7]，傳說蛟龍頭上長出兩支角，就能化龍。好險它只長了一支——成龍之路就讓咱們給砍斷了！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=4)",
+    "zh_CN": "[panel=1]「[em7]把角凑近火光翻了翻[/em7]，传说蛟龙头上长出两支角，就能化龙。好险它只长了一支——成龙之路就让咱们给砍断了！」",
+    "links": [4174]
+  },
+  {
+    "entryID": 4174,
+    "actorID": "MC22",
+    "text": "「筆記裡說，這角要是鍛進兵刃，那股寒火就散不掉！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=3);",
+    "zh_CN": "「笔记里说，这角要是锻进兵刃，那股寒火就散不掉！」",
+    "links": [137]
+  },
+  {
+    "entryID": 4175,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);LoadLevel(RiverGodCave,RiverGodCave)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場 、移動到入口",
+    "links": [200]
+  },
+  {
+    "entryID": 4176,
+    "actorID": "MC8",
+    "title": "出口對話",
+    "text": "[panel=2]「表哥，現在要回鄴城交差了嗎！」",
+    "Sequence": "SetPortrait(MC8,pic=1);DisableCharacterExpression(1);",
+    "Description": "出口對話",
+    "zh_CN": "[panel=2]「表哥，现在要回邺城交差了吗！」",
+    "links": [4179, 4180]
+  },
+  {
+    "entryID": 4179,
+    "actorID": "MC1",
+    "text": "「走吧。回去交差。」",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"Player\", \"DragonHorn\") == true;",
+    "Description": "選項1：返回出口交差",
+    "zh_CN": "「走吧。回去交差。」",
+    "links": [4181]
+  },
+  {
+    "entryID": 4180,
+    "actorID": "MC1",
+    "text": "「再看看。」",
+    "Sequence": "",
+    "Description": "選項2：繼續探索",
+    "zh_CN": "「再看看。」",
+    "links": [4182]
+  },
+  {
+    "entryID": 4181,
+    "actorID": "MC1",
+    "text": "「走吧。回去交差。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「走吧。回去交差。」",
+    "links": [201]
+  },
+  {
+    "entryID": 4182,
+    "actorID": "MC1",
+    "text": "「不急。再看看。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「不急。再看看。」",
+    "links": []
   },
   {
     "entryID": 4184,
@@ -1602,6 +2050,159 @@
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC20,pic=1);EnableCharacterExpression(2,MC20,Idea);",
     "zh_CN": "[panel=2]「唔……让道爷瞧瞧。本道长观里供的那几尊，持剑的是镇煞，捧珠的是聚灵。这尊倒好，两手空空还特地留了个圆窝——分明原本供着一件灵物，后来没了。」",
     "links": [4207]
+  },
+  {
+    "entryID": 4189,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這圓洞……原本是要放什麼的？看著空空的。」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) ~= \"success\";",
+    "zh_CN": "[panel=2]「表哥，这圆洞……原本是要放什么的？看着空空的。」",
+    "links": [4190]
+  },
+  {
+    "entryID": 4190,
+    "actorID": "MC20",
+    "text": "[panel=2]「空在那兒——依本道長看，[em2]不是沒東西，是原本的東西沒了[/em2]。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC20,pic=1);",
+    "zh_CN": "[panel=2]「空在那儿——依本道长看，[em2]不是没东西，是原本的东西没了[/em2]。」",
+    "links": [4191]
+  },
+  {
+    "entryID": 4191,
+    "actorID": "MC1",
+    "text": "[em2][洞悉檢定][/em2]「細看那圓窩。」",
+    "Sequence": "",
+    "Description": "第一步：洞悉檢定 難度16",
+    "zh_CN": "[em2][洞悉检定][/em2]「细看那圆窝。」",
+    "links": [4194]
+  },
+  {
+    "entryID": 4192,
+    "actorID": "MC1",
+    "text": "[em2][學識檢定][/em2]「從古籍裡找說法。」",
+    "Sequence": "",
+    "Description": "第二步：學識檢定 難度16（接在洞悉成功之後）",
+    "zh_CN": "[em2][学识检定][/em2]「从古籍里找说法。」",
+    "links": [4199]
+  },
+  {
+    "entryID": 4193,
+    "actorID": "MC1",
+    "text": "「把兩條線索串起來。」",
+    "Sequence": "",
+    "Description": "第三步：把兩條線索串起來（接在學識成功之後）",
+    "zh_CN": "「把两条线索串起来。」",
+    "links": [4204]
+  },
+  {
+    "entryID": 4194,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,InsightCheck,16);",
+    "Description": "第一步的空對話擲骰節點：洞悉檢定 難度16",
+    "links": [4195]
+  },
+  {
+    "entryID": 4195,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接洞悉檢定結果",
+    "links": [4196, 4206]
+  },
+  {
+    "entryID": 4196,
+    "actorID": "MC1",
+    "text": "「這圓洞不是雕來擺樣子的——內壁磨得極光，還留著一圈嵌了許多年的舊痕。原本有東西在這裡待過很久，後來被取走了。」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_CN": "「这圆洞不是雕来摆样子的——内壁磨得极光，还留着一圈嵌了许多年的旧痕。原本有东西在这里待过很久，后来被取走了。」",
+    "links": [4197]
+  },
+  {
+    "entryID": 4197,
+    "actorID": "MC8",
+    "text": "[panel=2]「真的誒？那原本放的是什麼？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "zh_CN": "[panel=2]「真的诶？那原本放的是什么？」",
+    "links": [4198]
+  },
+  {
+    "entryID": 4198,
+    "actorID": "MC22",
+    "text": "[panel=1]「東西沒了，這點看清了。至於當初供的是什麼——還得有個說法。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22,Meditate);",
+    "zh_CN": "[panel=1]「东西没了，这点看清了。至于当初供的是什么——还得有个说法。」",
+    "links": [4192]
+  },
+  {
+    "entryID": 4199,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,16);",
+    "Description": "第二步的空對話擲骰節點：學識檢定 難度16",
+    "links": [4200]
+  },
+  {
+    "entryID": 4200,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接學識檢定結果",
+    "links": [4201, 4206]
+  },
+  {
+    "entryID": 4201,
+    "actorID": "MC1",
+    "text": "「古籍裡記過：神像持物，物在則靈，物失則枯。持劍是鎮煞，捧珠是聚靈——這尊空著手還留著圓窩，等的就是一件被取走的靈物。」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_CN": "「古籍里记过：神像持物，物在则灵，物失则枯。持剑是镇煞，捧珠是聚灵——这尊空着手还留着圆窝，等的就是一件被取走的灵物。」",
+    "links": [4202]
+  },
+  {
+    "entryID": 4202,
+    "actorID": "MC8",
+    "text": "[panel=2]「靈物……那要找什麼嵌回去？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "zh_CN": "[panel=2]「灵物……那要找什么嵌回去？」",
+    "links": [4203]
+  },
+  {
+    "entryID": 4203,
+    "actorID": "MC22",
+    "text": "[panel=1]「說法有了。嵌什麼，還差一點。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22,Meditate);",
+    "zh_CN": "[panel=1]「说法有了。嵌什么，还差一点。」",
+    "links": [4193]
+  },
+  {
+    "entryID": 4204,
+    "actorID": "MC1",
+    "text": "「圓窩裡供過東西，神像等的是一件被取走的靈物。——兩條對上了。」",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "zh_CN": "「圆窝里供过东西，神像等的是一件被取走的灵物。——两条对上了。」",
+    "links": [4205]
+  },
+  {
+    "entryID": 4205,
+    "actorID": "MC8",
+    "text": "[panel=2]「那……上哪兒找那件靈物？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "zh_CN": "[panel=2]「那……上哪儿找那件灵物？」",
+    "links": [4207]
+  },
+  {
+    "entryID": 4206,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你想了又想，還是沒有頭緒。石像仍立在水窪中央，兩手空空托著那個圓洞。沒有光、沒有聲，什麼也沒發生——這條路到此為止，再看、再想，也推不下去了。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "SetQuestEntryState(\"CF40\", 9, \"failure\");",
+    "Description": "三步推導任一步失敗；任務更新（CF40 第 9 項 failure）",
+    "zh_CN": "[panel=6]＊（你想了又想，还是没有头绪。石像仍立在水洼中央，两手空空托着那个圆洞。没有光、没有声，什么也没发生——这条路到此为止，再看、再想，也推不下去了。）＊",
+    "links": []
   },
   {
     "entryID": 4207,
@@ -1653,6 +2254,23 @@
     "links": [4215]
   },
   {
+    "entryID": 4213,
+    "actorID": "MC1",
+    "text": "「供著靈物……什麼樣的靈物，會讓一整座石像空著手等？」",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_CN": "「供着灵物……什么样的灵物，会让一整座石像空着手等？」",
+    "links": [4214]
+  },
+  {
+    "entryID": 4214,
+    "actorID": "MC22",
+    "text": "[panel=1]「等等——點醒本姑娘了！東西掉了能跑多遠？外頭就是溪，小溪村那顆溫熱石頭，村民不就管它叫『河神的眼淚』？大俠，嵌回去試試！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Idea);",
+    "zh_CN": "[panel=1]「等等——点醒本姑娘了！东西掉了能跑多远？外头就是溪，小溪村那颗温热石头，村民不就管它叫『河神的眼泪』？大侠，嵌回去试试！」",
+    "links": [4215]
+  },
+  {
     "entryID": 4215,
     "actorID": "MC8",
     "text": "[panel=2]「試試看嘛試試看嘛！」",
@@ -1686,20 +2304,21 @@
     "links": [4220]
   },
   {
+    "entryID": 4219,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) ~= \"success\";",
+    "Description": "空內容緩衝節點：未知真畫不加算生活經驗",
+    "links": [4220]
+  },
+  {
     "entryID": 4220,
     "actorID": "role2",
     "text": "[panel=6]＊（你取出那顆觸手溫熱的淚石，對準圓洞按了進去。嚴絲合縫，像這雙手等了不知多少年。懷中的麒麟骰忽然微微發燙，輕輕震了一下。下一瞬，石坪、火把、蕭靈犀的臉，全都在水色光影裡遠去，像白日裡墜入了一場夢。）＊",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "[panel=6]＊（你取出那颗触手温热的泪石，对准圆洞按了进去。严丝合缝，像这双手等了不知多少年。怀中的麒麟骰忽然微微发烫，轻轻震了一下。下一瞬，石坪、火把、萧灵犀的脸，全都在水色光影里远去，像白日里坠入了一场梦。）＊",
     "links": [4304]
-  },
-  {
-    "entryID": 4304,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場 ",
-    "links": [4221]
   },
   {
     "entryID": 4221,
@@ -1782,14 +2401,6 @@
     "links": [4307]
   },
   {
-    "entryID": 4307,
-    "actorID": "role2",
-    "text": "[panel=1]「[em7]熟悉的女聲[/em7]，如今沉於石下，毀了。淚還我，舟魂稍復，吾可徐徐補之。補成之後，吾便能歸去來處。非今日能去，亦非羽化飛升。」",
-    "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=1]「[em7]熟悉的女声[/em7]，如今沉于石下，毁了。泪还我，舟魂稍复，吾可徐徐补之。补成之后，吾便能归去来处。非今日能去，亦非羽化飞升。」",
-    "links": [4232]
-  },
-  {
     "entryID": 4232,
     "actorID": "role2",
     "text": "[panel=6]＊（她的目光忽然偏了一下。不是看你的臉，是看你懷中那枚微微發燙的麒麟骰。）＊",
@@ -1815,29 +2426,21 @@
     "links": [4237]
   },
   {
+    "entryID": 4236,
+    "actorID": "MC1",
+    "text": "「[em7]意念[/em7]，對不住……這滴眼淚，我還不能還。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
+    "Description": "選項：不還",
+    "zh_CN": "「[em7]意念[/em7]，对不住……这滴眼泪，我还不能还。」",
+    "links": [4251]
+  },
+  {
     "entryID": 4237,
     "actorID": "role2",
     "text": "[panel=1]「[em7]意念[/em7]……謝爾。此情，吾誌之。」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "[panel=1]「[em7]意念[/em7]……谢尔。此情，吾志之。」",
     "links": [4272]
-  },
-  {
-    "entryID": 4272,
-    "actorID": "role2",
-    "text": "[panel=6]＊（她收下了。然後她又往你懷裡那個方向看了一眼——比第一次久一點。）＊",
-    "Sequence": "",
-    "Description": "還線第二眼（零台詞）",
-    "zh_CN": "[panel=6]＊（她收下了。然后她又往你怀里那个方向看了一眼——比第一次久一点。）＊",
-    "links": [4273]
-  },
-  {
-    "entryID": 4273,
-    "actorID": "role2",
-    "text": "[panel=6]＊（然後她轉開視線。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（然后她转开视线。）＊",
-    "links": [4238]
   },
   {
     "entryID": 4238,
@@ -1854,14 +2457,6 @@
     "Sequence": "ModifyData(Valuable,Player,HeBoKeepsake,1);",
     "zh_CN": "[panel=1]「[em7]熟悉的女声[/em7]，此乃舟壳残片，随吾有年。不值钱，权作念想，尔且收着。」",
     "links": [4298]
-  },
-  {
-    "entryID": 4298,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Valuable,Player,DragonVeinJadePendant,1);\nContinue();",
-    "Description": "獲得貴重品:龍脈靈玉墜",
-    "links": [4240]
   },
   {
     "entryID": 4240,
@@ -1888,47 +2483,12 @@
     "links": [4305]
   },
   {
-    "entryID": 4305,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場 ",
-    "links": [4302]
-  },
-  {
-    "entryID": 4302,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\");",
-    "Description": "任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4236,
-    "actorID": "MC1",
-    "text": "「[em7]意念[/em7]，對不住……這滴眼淚，我還不能還。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
-    "Description": "選項：不還",
-    "zh_CN": "「[em7]意念[/em7]，对不住……这滴眼泪，我还不能还。」",
-    "links": [4251]
-  },
-  {
     "entryID": 4251,
     "actorID": "role2",
     "text": "[panel=1]「[em7]意念[/em7]……吾知。世人皆有不得已之事。」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "[panel=1]「[em7]意念[/em7]……吾知。世人皆有不得已之事。」",
     "links": [4262, 4263]
-  },
-  {
-    "entryID": 4262,
-    "actorID": "MC1",
-    "text": "「[em7]沒去攔懷裡那股熱[/em7]……由它去。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
-    "Description": "選項1：讓她喝",
-    "zh_CN": "「[em7]没去拦怀里那股热[/em7]……由它去。」",
-    "links": [4252]
   },
   {
     "entryID": 4252,
@@ -1956,14 +2516,6 @@
     "links": [4265]
   },
   {
-    "entryID": 4265,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你在石像前站了一會，伸手把那顆石頭從圓洞裡摳了出來。涼的。握多久，都不會再溫了。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你在石像前站了一会，伸手把那颗石头从圆洞里抠了出来。凉的。握多久，都不会再温了。）＊",
-    "links": [4255]
-  },
-  {
     "entryID": 4255,
     "actorID": "MC1",
     "text": "「……她？」",
@@ -1978,14 +2530,6 @@
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);EnableCharacterExpression(2,MC8,Nervous);",
     "zh_CN": "[panel=2]「表哥？你的脸色怎么这么难看……发生什么事了？」",
     "links": [4306]
-  },
-  {
-    "entryID": 4306,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場 ",
-    "links": [4257]
   },
   {
     "entryID": 4257,
@@ -2012,13 +2556,23 @@
     "links": [4301]
   },
   {
-    "entryID": 4301,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\");",
-    "Description": "任務更新",
+    "entryID": 4261,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你想了又想，還是沒有頭緒。石像仍立在水窪中央，兩手空空托著那個圓洞。沒有光、沒有聲，什麼也沒發生——這條路到此為止，再看、再想，也推不下去了。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(2);",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 9) == \"failure\";",
+    "Description": "推導失敗過：再點只剩這一句",
+    "zh_CN": "[panel=6]＊（你想了又想，还是没有头绪。石像仍立在水洼中央，两手空空托着那个圆洞。没有光、没有声，什么也没发生——这条路到此为止，再看、再想，也推不下去了。）＊",
     "links": []
+  },
+  {
+    "entryID": 4262,
+    "actorID": "MC1",
+    "text": "「[em7]沒去攔懷裡那股熱[/em7]……由它去。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Description": "選項1：讓她喝",
+    "zh_CN": "「[em7]没去拦怀里那股热[/em7]……由它去。」",
+    "links": [4252]
   },
   {
     "entryID": 4263,
@@ -2036,6 +2590,14 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "[panel=6]＊（意念退了下去，像潮水退过石面，什么也没带走。你只觉眼前一黑，随即有人用力摇你——）＊",
     "links": [4266]
+  },
+  {
+    "entryID": 4265,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你在石像前站了一會，伸手把那顆石頭從圓洞裡摳了出來。涼的。握多久，都不會再溫了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你在石像前站了一会，伸手把那颗石头从圆洞里抠了出来。凉的。握多久，都不会再温了。）＊",
+    "links": [4255]
   },
   {
     "entryID": 4266,
@@ -2087,246 +2649,21 @@
     "links": [4297]
   },
   {
-    "entryID": 4297,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "links": [],
-    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\");",
-    "Description": "任務更新（不還・回去線收尾）"
-  },
-  {
-    "entryID": 4219,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) ~= \"success\";",
-    "Description": "空內容緩衝節點：未知真畫不加算生活經驗",
-    "links": [4220]
-  },
-  {
-    "entryID": 4213,
-    "actorID": "MC1",
-    "text": "「供著靈物……什麼樣的靈物，會讓一整座石像空著手等？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
-    "Conditions": "IsPassDice() == false;",
-    "zh_CN": "「供着灵物……什么样的灵物，会让一整座石像空着手等？」",
-    "links": [4214]
-  },
-  {
-    "entryID": 4214,
-    "actorID": "MC22",
-    "text": "[panel=1]「等等——點醒本姑娘了！東西掉了能跑多遠？外頭就是溪，小溪村那顆溫熱石頭，村民不就管它叫『河神的眼淚』？大俠，嵌回去試試！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Idea);",
-    "zh_CN": "[panel=1]「等等——点醒本姑娘了！东西掉了能跑多远？外头就是溪，小溪村那颗温热石头，村民不就管它叫『河神的眼泪』？大侠，嵌回去试试！」",
-    "links": [4215]
-  },
-  {
-    "entryID": 4189,
-    "actorID": "MC8",
-    "text": "[panel=2]「表哥，這圓洞……原本是要放什麼的？看著空空的。」",
-    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
-    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) ~= \"success\";",
-    "zh_CN": "[panel=2]「表哥，这圆洞……原本是要放什么的？看着空空的。」",
-    "links": [4190]
-  },
-  {
-    "entryID": 4190,
-    "actorID": "MC20",
-    "text": "[panel=2]「空在那兒——依本道長看，[em2]不是沒東西，是原本的東西沒了[/em2]。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC20,pic=1);",
-    "zh_CN": "[panel=2]「空在那儿——依本道长看，[em2]不是没东西，是原本的东西没了[/em2]。」",
-    "links": [4191]
-  },
-  {
-    "entryID": 4191,
-    "actorID": "MC1",
-    "text": "[em2][洞悉檢定][/em2]「細看那圓窩。」",
-    "Sequence": "",
-    "Description": "第一步：洞悉檢定 難度16",
-    "zh_CN": "[em2][洞悉检定][/em2]「细看那圆窝。」",
-    "links": [4194]
-  },
-  {
-    "entryID": 4194,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,InsightCheck,16);",
-    "Description": "第一步的空對話擲骰節點：洞悉檢定 難度16",
-    "links": [4195]
-  },
-  {
-    "entryID": 4195,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "空內容緩衝節點，用於連接洞悉檢定結果",
-    "links": [4196, 4206]
-  },
-  {
-    "entryID": 4196,
-    "actorID": "MC1",
-    "text": "「這圓洞不是雕來擺樣子的——內壁磨得極光，還留著一圈嵌了許多年的舊痕。原本有東西在這裡待過很久，後來被取走了。」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Insight,10);",
-    "Conditions": "IsPassDice() == true;",
-    "zh_CN": "「这圆洞不是雕来摆样子的——内壁磨得极光，还留着一圈嵌了许多年的旧痕。原本有东西在这里待过很久，后来被取走了。」",
-    "links": [4197]
-  },
-  {
-    "entryID": 4197,
-    "actorID": "MC8",
-    "text": "[panel=2]「真的誒？那原本放的是什麼？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
-    "zh_CN": "[panel=2]「真的诶？那原本放的是什么？」",
-    "links": [4198]
-  },
-  {
-    "entryID": 4198,
-    "actorID": "MC22",
-    "text": "[panel=1]「東西沒了，這點看清了。至於當初供的是什麼——還得有個說法。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22,Meditate);",
-    "zh_CN": "[panel=1]「东西没了，这点看清了。至于当初供的是什么——还得有个说法。」",
-    "links": [4192]
-  },
-  {
-    "entryID": 4192,
-    "actorID": "MC1",
-    "text": "[em2][學識檢定][/em2]「從古籍裡找說法。」",
-    "Sequence": "",
-    "Description": "第二步：學識檢定 難度16（接在洞悉成功之後）",
-    "zh_CN": "[em2][学识检定][/em2]「从古籍里找说法。」",
-    "links": [4199]
-  },
-  {
-    "entryID": 4199,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,16);",
-    "Description": "第二步的空對話擲骰節點：學識檢定 難度16",
-    "links": [4200]
-  },
-  {
-    "entryID": 4200,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "空內容緩衝節點，用於連接學識檢定結果",
-    "links": [4201, 4206]
-  },
-  {
-    "entryID": 4201,
-    "actorID": "MC1",
-    "text": "「古籍裡記過：神像持物，物在則靈，物失則枯。持劍是鎮煞，捧珠是聚靈——這尊空著手還留著圓窩，等的就是一件被取走的靈物。」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Knowledge,10);",
-    "Conditions": "IsPassDice() == true;",
-    "zh_CN": "「古籍里记过：神像持物，物在则灵，物失则枯。持剑是镇煞，捧珠是聚灵——这尊空着手还留着圆窝，等的就是一件被取走的灵物。」",
-    "links": [4202]
-  },
-  {
-    "entryID": 4202,
-    "actorID": "MC8",
-    "text": "[panel=2]「靈物……那要找什麼嵌回去？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
-    "zh_CN": "[panel=2]「灵物……那要找什么嵌回去？」",
-    "links": [4203]
-  },
-  {
-    "entryID": 4203,
-    "actorID": "MC22",
-    "text": "[panel=1]「說法有了。嵌什麼，還差一點。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22,Meditate);",
-    "zh_CN": "[panel=1]「说法有了。嵌什么，还差一点。」",
-    "links": [4193]
-  },
-  {
-    "entryID": 4193,
-    "actorID": "MC1",
-    "text": "「把兩條線索串起來。」",
-    "Sequence": "",
-    "Description": "第三步：把兩條線索串起來（接在學識成功之後）",
-    "zh_CN": "「把两条线索串起来。」",
-    "links": [4204]
-  },
-  {
-    "entryID": 4204,
-    "actorID": "MC1",
-    "text": "「圓窩裡供過東西，神像等的是一件被取走的靈物。——兩條對上了。」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_CN": "「圆窝里供过东西，神像等的是一件被取走的灵物。——两条对上了。」",
-    "links": [4205]
-  },
-  {
-    "entryID": 4205,
-    "actorID": "MC8",
-    "text": "[panel=2]「那……上哪兒找那件靈物？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
-    "zh_CN": "[panel=2]「那……上哪儿找那件灵物？」",
-    "links": [4207]
-  },
-  {
-    "entryID": 4206,
+    "entryID": 4272,
     "actorID": "role2",
-    "text": "[panel=6]＊（你想了又想，還是沒有頭緒。石像仍立在水窪中央，兩手空空托著那個圓洞。沒有光、沒有聲，什麼也沒發生——這條路到此為止，再看、再想，也推不下去了。）＊",
-    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(2);",
-    "Conditions": "IsPassDice() == false;",
-    "Script": "SetQuestEntryState(\"CF40\", 9, \"failure\");",
-    "Description": "三步推導任一步失敗；任務更新（CF40 第 9 項 failure）",
-    "zh_CN": "[panel=6]＊（你想了又想，还是没有头绪。石像仍立在水洼中央，两手空空托着那个圆洞。没有光、没有声，什么也没发生——这条路到此为止，再看、再想，也推不下去了。）＊",
-    "links": []
-  },
-  {
-    "entryID": 4261,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你想了又想，還是沒有頭緒。石像仍立在水窪中央，兩手空空托著那個圓洞。沒有光、沒有聲，什麼也沒發生——這條路到此為止，再看、再想，也推不下去了。）＊",
-    "Sequence": "DisableCharacterExpression(1);\nDisableCharacterExpression(2);",
-    "Conditions": "CurrentQuestEntryState(\"CF40\", 9) == \"failure\";",
-    "zh_CN": "[panel=6]＊（你想了又想，还是没有头绪。石像仍立在水洼中央，两手空空托着那个圆洞。没有光、没有声，什么也没发生——这条路到此为止，再看、再想，也推不下去了。）＊",
-    "links": [],
-    "Description": "推導失敗過：再點只剩這一句"
-  },
-  {
-    "entryID": 4176,
-    "actorID": "MC8",
-    "text": "[panel=2]「表哥，現在要回鄴城交差了嗎！」",
-    "Sequence": "SetPortrait(MC8,pic=1);DisableCharacterExpression(1);",
-    "Description": "出口對話",
-    "zh_CN": "[panel=2]「表哥，现在要回邺城交差了吗！」",
-    "links": [4179, 4180]
-  },
-  {
-    "entryID": 4179,
-    "actorID": "MC1",
-    "text": "「走吧。回去交差。」",
+    "text": "[panel=6]＊（她收下了。然後她又往你懷裡那個方向看了一眼——比第一次久一點。）＊",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"DragonHorn\") == true;",
-    "Description": "選項1：返回出口交差",
-    "zh_CN": "「走吧。回去交差。」",
-    "links": [4181]
+    "Description": "還線第二眼（零台詞）",
+    "zh_CN": "[panel=6]＊（她收下了。然后她又往你怀里那个方向看了一眼——比第一次久一点。）＊",
+    "links": [4273]
   },
   {
-    "entryID": 4181,
-    "actorID": "MC1",
-    "text": "「走吧。回去交差。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_CN": "「走吧。回去交差。」",
-    "links": [201]
-  },
-  {
-    "entryID": 201,
+    "entryID": 4273,
     "actorID": "role2",
-    "text": "[panel=6]＊（回到鄴城甄府，甄筠早已備好茶水等候，見你們風塵僕僕地歸來，目光中頗有興味。）＊",
-    "Sequence": "EnableDialogueBG(StudyRoom);",
-    "Description": "交差",
-    "zh_CN": "[panel=6]＊（回到邺城甄府，甄筠早已备好茶水等候，见你们风尘仆仆地归来，目光中颇有兴味。）＊",
-    "links": [202]
-  },
-  {
-    "entryID": 202,
-    "actorID": "MC9",
-    "text": "[panel=1]「喲，回來得比筠預想的快。看樣子——是有收穫了？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "zh_CN": "[panel=1]「哟，回来得比筠预想的快。看样子——是有收获了？」",
-    "links": [4274, 4275, 4276, 4277]
+    "text": "[panel=6]＊（然後她轉開視線。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（然后她转开视线。）＊",
+    "links": [4238]
   },
   {
     "entryID": 4274,
@@ -2338,346 +2675,6 @@
     "links": [209]
   },
   {
-    "entryID": 209,
-    "actorID": "MC1",
-    "text": "「家主，水濂洞裡撞上一條怪蛇，通體發藍，噴的也是藍火。費了好一番功夫才拿下牠，這是牠留下的東西。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
-    "zh_CN": "「家主，水濂洞里撞上一条怪蛇，通体发蓝，喷的也是蓝火。费了好一番功夫才拿下它，这是它留下的东西。」",
-    "links": [210]
-  },
-  {
-    "entryID": 210,
-    "actorID": "MC9",
-    "text": "[panel=1]「……一支角？公子莫不是找錯了方向？筠要的可不是什麼奇珍異獸的邊角料。」",
-    "Sequence": "SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Question);",
-    "zh_CN": "[panel=1]「……一支角？公子莫不是找错了方向？筠要的可不是什么奇珍异兽的边角料。」",
-    "links": [211]
-  },
-  {
-    "entryID": 211,
-    "actorID": "MC1",
-    "text": "「家主莫急，且聽在下細說這蛟龍角的門道。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
-    "zh_CN": "「家主莫急，且听在下细说这蛟龙角的门道。」",
-    "links": [212]
-  },
-  {
-    "entryID": 212,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,PersuasionCheck,7);",
-    "Description": "空對話擲骰節點：口才檢定 難度7",
-    "links": [213]
-  },
-  {
-    "entryID": 213,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "口才檢定後的空緩衝節點",
-    "links": [214, 216]
-  },
-  {
-    "entryID": 214,
-    "actorID": "MC1",
-    "text": "「家主請看，這蛟龍角通體幽藍，寒裡帶火，天下罕見，尋常匠人便是想仿都仿不出來——但凡識貨的行家看了，誰不多看兩眼？家主走南闖北，難道沒有識貨的門路？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
-    "Conditions": "IsPassDice() == true;",
-    "zh_CN": "「家主请看，这蛟龙角通体幽蓝，寒里带火，天下罕见，寻常匠人便是想仿都仿不出来——但凡识货的行家看了，谁不多看两眼？家主走南闯北，难道没有识货的门路？」",
-    "links": [215]
-  },
-  {
-    "entryID": 215,
-    "actorID": "MC9",
-    "text": "[panel=1]「……公子這張嘴，倒是比帶回來的東西更值錢。罷了，看在你這番說辭的份上，這筆本錢，筠出了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Description": "交蛟龍角・口才成功。⚠ 作者：「投資成立」任務狀態掛此",
-    "zh_CN": "[panel=1]「……公子这张嘴，倒是比带回来的东西更值钱。罢了，看在你这番说辞的份上，这笔本钱，筠出了。」",
-    "links": [220]
-  },
-  {
-    "entryID": 220,
-    "actorID": "MC9",
-    "text": "[panel=1]「不過——話，筠也說在前頭。這次與英豪府的結盟—」",
-    "Sequence": "SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Description": "共通結尾：獨家條件",
-    "zh_CN": "[panel=1]「不过——话，筠也说在前头。这次与英豪府的结盟—」",
-    "links": [221]
-  },
-  {
-    "entryID": 221,
-    "actorID": "MC9",
-    "text": "[panel=1]「既然收了甄家的銀子，雲中往後便只認英豪府與鄴城甄家。赤龍幫的旗、黑狼的金子，都別再往英豪府門裡送。」",
-    "Sequence": "",
-    "zh_CN": "[panel=1]「既然收了甄家的银子，云中往后便只认英豪府与邺城甄家。赤龙帮的旗、黑狼的金子，都别再往英豪府门里送。」",
-    "links": [222]
-  },
-  {
-    "entryID": 222,
-    "actorID": "MC9",
-    "text": "[panel=1]「兩邊都想要？那甄家這筆，當沒有過。筠最厭的，就是一桌菜兩家分。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "zh_CN": "[panel=1]「两边都想要？那甄家这笔，当没有过。筠最厌的，就是一桌菜两家分。」",
-    "links": [223]
-  },
-  {
-    "entryID": 223,
-    "actorID": "MC1",
-    "text": "「……家主說得明白。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_CN": "「……家主说得明白。」",
-    "links": [224]
-  },
-  {
-    "entryID": 224,
-    "actorID": "MC9",
-    "text": "[panel=1]「說開就好。往後有難處，衝著甄家這塊牌子來便是。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "zh_CN": "[panel=1]「说开就好。往后有难处，冲着甄家这块牌子来便是。」",
-    "links": [225, 226]
-  },
-  {
-    "entryID": 225,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsValuablesObtained(\"Player\", \"HeBoKeepsake\") == true;",
-    "Description": "河神底細追問（僅還淚：持有河伯贈禮）",
-    "links": [227]
-  },
-  {
-    "entryID": 227,
-    "actorID": "MC9",
-    "text": "[panel=1]「話說回來，公子這一趟，可有摸清那所謂『河神』的底細？這東西，總不會是憑空掉出來的吧？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Question);",
-    "zh_CN": "[panel=1]「话说回来，公子这一趟，可有摸清那所谓『河神』的底细？这东西，总不会是凭空掉出来的吧？」",
-    "links": [228, 229]
-  },
-  {
-    "entryID": 228,
-    "actorID": "MC1",
-    "text": "「洞裡安靜。這是路上遇見的人給的念想，別無其他。」",
-    "Sequence": "",
-    "Description": "選項1：隱瞞",
-    "zh_CN": "「洞里安静。这是路上遇见的人给的念想，别无其他。」",
-    "links": [230]
-  },
-  {
-    "entryID": 230,
-    "actorID": "MC1",
-    "text": "「洞裡安靜。這是路上遇見的人給的念想，別無其他。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
-    "zh_CN": "「洞里安静。这是路上遇见的人给的念想，别无其他。」",
-    "links": [231]
-  },
-  {
-    "entryID": 231,
-    "actorID": "MC9",
-    "text": "[panel=1]「……也罷。生意做成，何必刨根究底。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
-    "zh_CN": "[panel=1]「……也罢。生意做成，何必刨根究底。」",
-    "links": [232]
-  },
-  {
-    "entryID": 232,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你把河伯的事咽了下去。至少這會兒，不必讓甄家惦記那座還立著的石像。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（你把河伯的事咽了下去。至少这会儿，不必让甄家惦记那座还立着的石像。）＊",
-    "links": [4308]
-  },
-  {
-    "entryID": 4308,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);LoadLevel(Command_HallOfHeroes)@1;OpenPanel(1,close)@1;DisableDialogueBG()@1;EnableDialogueBG(Home)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：離開甄府，回英豪府根據地",
-    "links": [237]
-  },
-  {
-    "entryID": 237,
-    "actorID": "role2",
-    "text": "[panel=6]＊（回英豪府的路上，蕭靈犀始終沒怎麼說話，直到快到府門前，才低聲開口。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（回英豪府的路上，萧灵犀始终没怎么说话，直到快到府门前，才低声开口。）＊",
-    "links": [238]
-  },
-  {
-    "entryID": 238,
-    "actorID": "MC8",
-    "text": "[panel=2]「表哥……這一趟，你心裡是怎麼想的？」",
-    "Sequence": "SetPortrait(MC8,pic=1);",
-    "zh_CN": "[panel=2]「表哥……这一趟，你心里是怎么想的？」",
-    "links": [239, 240, 241]
-  },
-  {
-    "entryID": 239,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Rivertear\") == true;",
-    "Description": "結算分支：未見河伯（暫以「仍持活淚」判；⚠ 作者改任務狀態——「不還・回去」的人也持活淚）",
-    "links": [242]
-  },
-  {
-    "entryID": 242,
-    "actorID": "MC1",
-    "text": "「這一趟，倒更像是尋常的除妖差事，沒有話本裡那些牽腸掛肚的難處，反倒輕鬆。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
-    "zh_CN": "「这一趟，倒更像是寻常的除妖差事，没有话本里那些牵肠挂肚的难处，反倒轻松。」",
-    "links": [243]
-  },
-  {
-    "entryID": 243,
-    "actorID": "MC8",
-    "text": "[panel=2]「是呀，除妖、奪寶，乾淨俐落！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Proud);",
-    "zh_CN": "[panel=2]「是呀，除妖、夺宝，干净俐落！」",
-    "links": [248]
-  },
-  {
-    "entryID": 248,
-    "actorID": "role2",
-    "text": "[panel=6]＊（無論這一趟你選擇了如何面對水濂洞，這段經歷都已悄悄埋進了你的江湖路——日後這份因果，終會有清算的一天。）＊",
-    "Sequence": "DisableCharacterExpression(2);",
-    "zh_CN": "[panel=6]＊（无论这一趟你选择了如何面对水濂洞，这段经历都已悄悄埋进了你的江湖路——日后这份因果，终会有清算的一天。）＊",
-    "links": []
-  },
-  {
-    "entryID": 240,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsValuablesObtained(\"Player\", \"HeBoKeepsake\") == true;",
-    "Description": "結算分支：還給她（持有河伯贈禮）",
-    "links": [244]
-  },
-  {
-    "entryID": 244,
-    "actorID": "MC1",
-    "text": "「怎麼想？該還的還了。她一時半會兒走不了，石像還在——可這世道，總不能什麼都拿良心去換。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
-    "zh_CN": "「怎么想？该还的还了。她一时半会儿走不了，石像还在——可这世道，总不能什么都拿良心去换。」",
-    "links": [245]
-  },
-  {
-    "entryID": 245,
-    "actorID": "MC8",
-    "text": "[panel=2]「嗯！小犀也是這麼想的！那薄片再怪，也比表哥變成見死不救的人強。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Proud);",
-    "zh_CN": "[panel=2]「嗯！小犀也是这么想的！那薄片再怪，也比表哥变成见死不救的人强。」",
-    "links": [248]
-  },
-  {
-    "entryID": 241,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsValuablesObtained(\"Player\", \"FadedTearstone\") == true;",
-    "Description": "結算分支：不還・讓她喝（持有褪色的河神眼淚）",
-    "links": [246]
-  },
-  {
-    "entryID": 246,
-    "actorID": "MC1",
-    "text": "「……交差的角還在。她那邊，再喚也不應了。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
-    "zh_CN": "「……交差的角还在。她那边，再唤也不应了。」",
-    "links": [247]
-  },
-  {
-    "entryID": 247,
-    "actorID": "MC8",
-    "text": "[panel=2]「表哥……英豪府這麼多人等著過日子。這份欠，日後有機會，再還就是了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=1);",
-    "zh_CN": "[panel=2]「表哥……英豪府这么多人等着过日子。这份欠，日后有机会，再还就是了。」",
-    "links": [248]
-  },
-  {
-    "entryID": 229,
-    "actorID": "MC1",
-    "text": "「……那不是神。是個困在洞裡的殊方之人。東西還了她，她暫時走不成，石像還在。」",
-    "Sequence": "",
-    "Description": "選項2：如實以告",
-    "zh_CN": "「……那不是神。是个困在洞里的殊方之人。东西还了她，她暂时走不成，石像还在。」",
-    "links": [233]
-  },
-  {
-    "entryID": 233,
-    "actorID": "MC1",
-    "text": "「見著了。不是神，是個困在洞裡的殊方之人。眼淚還了她——她暫時走不成，石像還在。我勸家主，往後別急著打那洞的主意。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_CN": "「见着了。不是神，是个困在洞里的殊方之人。眼泪还了她——她暂时走不成，石像还在。我劝家主，往后别急着打那洞的主意。」",
-    "links": [234]
-  },
-  {
-    "entryID": 234,
-    "actorID": "MC9",
-    "text": "[panel=1]「還在？呵，公子的話，越說越有意思了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=4);EnableCharacterExpression(1,MC9,Surprise);",
-    "zh_CN": "[panel=1]「还在？呵，公子的话，越说越有意思了。」",
-    "links": [235]
-  },
-  {
-    "entryID": 235,
-    "actorID": "MC9",
-    "text": "[panel=1]「不過——公子既然特意提醒，筠記下了。估不準的東西，筠愛收；估不準的洞，筠不急著挖。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Meditate);",
-    "zh_CN": "[panel=1]「不过——公子既然特意提醒，筠记下了。估不准的东西，筠爱收；估不准的洞，筠不急着挖。」",
-    "links": [236]
-  },
-  {
-    "entryID": 236,
-    "actorID": "role2",
-    "text": "[panel=6]＊（甄筠似乎把這話聽進去了，只是那雙眼底一閃而過的算計，讓人猜不透她究竟是動了惻隱，還是另有盤算。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（甄筠似乎把这话听进去了，只是那双眼底一闪而过的算计，让人猜不透她究竟是动了恻隐，还是另有盘算。）＊",
-    "links": [4308]
-  },
-  {
-    "entryID": 226,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsValuablesObtained(\"Player\", \"HeBoKeepsake\") == false;",
-    "Description": "跳過河神追問（未還淚）",
-    "links": [4308]
-  },
-  {
-    "entryID": 216,
-    "actorID": "MC1",
-    "text": "「這、這蛟龍角乃是藍焰巨蛇精華所化，尋常人可求不來……」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "Conditions": "IsPassDice() == false;",
-    "zh_CN": "「这、这蛟龙角乃是蓝焰巨蛇精华所化，寻常人可求不来……」",
-    "links": [217]
-  },
-  {
-    "entryID": 217,
-    "actorID": "MC9",
-    "text": "[panel=1]「角是角。寒裡帶火，瞧著新鮮。可『天下罕見』四個字，筠聽過的貨色，比這支角還長。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "zh_CN": "[panel=1]「角是角。寒里带火，瞧着新鲜。可『天下罕见』四个字，筠听过的货色，比这支角还长。」",
-    "links": [218]
-  },
-  {
-    "entryID": 218,
-    "actorID": "MC9",
-    "text": "[panel=1]「說辭稀鬆。不過人既跑了這一趟，空手而回，倒不像做生意的樣子。」",
-    "Sequence": "",
-    "zh_CN": "[panel=1]「说辞稀松。不过人既跑了这一趟，空手而回，倒不像做生意的样子。」",
-    "links": [219]
-  },
-  {
-    "entryID": 219,
-    "actorID": "MC9",
-    "text": "[panel=1]「這筆本錢，筠出了。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "Description": "交蛟龍角・口才失敗仍成交。⚠ 作者：「投資成立」任務狀態掛此",
-    "zh_CN": "[panel=1]「这笔本钱，筠出了。」",
-    "links": [220]
-  },
-  {
     "entryID": 4275,
     "actorID": "MC1",
     "text": "[em2][口才檢定][/em2]「家主，這趟帶回的東西，天下只此一顆。」",
@@ -2686,6 +2683,25 @@
     "Description": "選項2：拿河神的眼淚交差（活淚；須看過真畫）",
     "zh_CN": "[em2][口才检定][/em2]「家主，这趟带回的东西，天下只此一颗。」",
     "links": [4278]
+  },
+  {
+    "entryID": 4276,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「家主，這趟帶回的東西，天下只此一顆。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) == \"success\" and (IsValuablesObtained(\"Player\", \"FadedTearstone\") == true);",
+    "Description": "選項2：拿河神的眼淚交差（褪色的河神眼淚；須看過真畫）",
+    "zh_CN": "[em2][口才检定][/em2]「家主，这趟带回的东西，天下只此一颗。」",
+    "links": [4278]
+  },
+  {
+    "entryID": 4277,
+    "actorID": "MC1",
+    "text": "「家主，這筆買賣，在下不做了。」",
+    "Sequence": "",
+    "Description": "選項3：拒絕合作",
+    "zh_CN": "「家主，这笔买卖，在下不做了。」",
+    "links": [4292]
   },
   {
     "entryID": 4278,
@@ -2737,40 +2753,6 @@
     "links": [206]
   },
   {
-    "entryID": 206,
-    "actorID": "MC9",
-    "text": "[panel=1]「……鐵不像鐵，石不像石。筠最吃這一套——估得出價的，叫貨；估不出價的，才叫奇貨。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Idea);",
-    "zh_CN": "[panel=1]「……铁不像铁，石不像石。筠最吃这一套——估得出价的，叫货；估不出价的，才叫奇货。」",
-    "links": [207]
-  },
-  {
-    "entryID": 207,
-    "actorID": "MC1",
-    "text": "「那便交給家主。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
-    "zh_CN": "「那便交给家主。」",
-    "links": [208]
-  },
-  {
-    "entryID": 208,
-    "actorID": "MC9",
-    "text": "[panel=1]「行。這筆本錢，筠出了。雲中往後，也算有甄家一份。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "Description": "賣淚成交（活淚／凡石共用）。⚠ 作者：「投資成立」任務狀態掛此",
-    "zh_CN": "[panel=1]「行。这笔本钱，筠出了。云中往后，也算有甄家一份。」",
-    "links": [4291]
-  },
-  {
-    "entryID": 4291,
-    "actorID": "MC9",
-    "text": "[panel=1]「[em7]從案下取出一串錢，推到你面前[/em7]，這是另算的。兩千錢——買公子這雙認貨的眼。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(Coin,2000);",
-    "Description": "賣淚額外獎勵：2,000 錢（角自留）",
-    "zh_CN": "[panel=1]「[em7]从案下取出一串钱，推到你面前[/em7]，这是另算的。两千钱——买公子这双认货的眼。」",
-    "links": [220]
-  },
-  {
     "entryID": 4284,
     "actorID": "0",
     "text": "",
@@ -2804,6 +2786,16 @@
     "links": [4289]
   },
   {
+    "entryID": 4288,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]把石頭推回來[/em7]，故事，筠聽了。貨，筠不收。公子另拿別的來——或者，這筆就算了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "賣淚檢定失敗（口才或厚黑）：退回交角／拒絕",
+    "zh_CN": "[panel=1]「[em7]把石头推回来[/em7]，故事，筠听了。货，筠不收。公子另拿别的来——或者，这笔就算了。」",
+    "links": [4274, 4277]
+  },
+  {
     "entryID": 4289,
     "actorID": "0",
     "text": "",
@@ -2821,23 +2813,13 @@
     "links": [206]
   },
   {
-    "entryID": 4288,
+    "entryID": 4291,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]把石頭推回來[/em7]，故事，筠聽了。貨，筠不收。公子另拿別的來——或者，這筆就算了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "賣淚檢定失敗（口才或厚黑）：退回交角／拒絕",
-    "zh_CN": "[panel=1]「[em7]把石头推回来[/em7]，故事，筠听了。货，筠不收。公子另拿别的来——或者，这笔就算了。」",
-    "links": [4274, 4277]
-  },
-  {
-    "entryID": 4277,
-    "actorID": "MC1",
-    "text": "「家主，這筆買賣，在下不做了。」",
-    "Sequence": "",
-    "Description": "選項3：拒絕合作",
-    "zh_CN": "「家主，这笔买卖，在下不做了。」",
-    "links": [4292]
+    "text": "[panel=1]「[em7]從案下取出一串錢，推到你面前[/em7]，這是另算的。兩千錢——買公子這雙認貨的眼。」",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(Coin,2000);",
+    "Description": "賣淚額外獎勵：2,000 錢（角自留）",
+    "zh_CN": "[panel=1]「[em7]从案下取出一串钱，推到你面前[/em7]，这是另算的。两千钱——买公子这双认货的眼。」",
+    "links": [220]
   },
   {
     "entryID": 4292,
@@ -2857,56 +2839,161 @@
     "links": [4308]
   },
   {
-    "entryID": 4276,
-    "actorID": "MC1",
-    "text": "[em2][口才檢定][/em2]「家主，這趟帶回的東西，天下只此一顆。」",
-    "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) == \"success\" and (IsValuablesObtained(\"Player\", \"FadedTearstone\") == true);",
-    "Description": "選項2：拿河神的眼淚交差（褪色的河神眼淚；須看過真畫）",
-    "zh_CN": "[em2][口才检定][/em2]「家主，这趟带回的东西，天下只此一颗。」",
-    "links": [4278]
+    "entryID": 4184,
+    "actorID": "role2",
+    "title": "點擊石像",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "點擊石像",
+    "links": [4184, 4261]
   },
   {
-    "entryID": 4180,
-    "actorID": "MC1",
-    "text": "「再看看。」",
-    "Sequence": "",
-    "Description": "選項2：繼續探索",
-    "zh_CN": "「再看看。」",
-    "links": [4182]
+    "entryID": 4175,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場 ",
+    "links": [4221]
   },
   {
-    "entryID": 4182,
-    "actorID": "MC1",
-    "text": "「不急。再看看。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「不急。再看看。」",
+    "entryID": 4230,
+    "actorID": "role2",
+    "text": "[panel=1]「[em7]熟悉的女聲[/em7]，如今沉於石下，毀了。淚還我，舟魂稍復，吾可徐徐補之。補成之後，吾便能歸去來處。非今日能去，亦非羽化飛升。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「[em7]熟悉的女声[/em7]，非江河渡人之舟。洞壁所绘、腹中一滴亮石者，即吾旧物。那是载吾越山海、破云雾、至此荒陬的一叶——如今沉于石下，毁了。泪还我，舟魂稍复，吾可徐徐补之。补成之后，吾便能归去来处。非今日能去，亦非羽化飞升。」",
+    "links": [4232]
+  },
+  {
+    "entryID": 4297,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
     "links": []
   },
   {
-    "entryID": 203,
+    "entryID": 4298,
     "actorID": "0",
     "text": "",
-    "Sequence": "Continue();",
-    "Description": "（廢）舊情境乙分流，已斷連，保留不刪",
-    "links": [205]
+    "Sequence": "ModifyData(Valuable,Player,DragonVeinJadePendant,1);\nContinue();",
+    "Description": "獲得貴重品:龍脈靈玉墜",
+    "links": [4240]
   },
   {
-    "entryID": 204,
+    "entryID": 4175,
     "actorID": "0",
     "text": "",
-    "Sequence": "Continue();",
-    "Description": "（廢）舊情境甲分流，已斷連，保留不刪",
-    "links": [209]
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場 ",
+    "links": []
   },
   {
-    "entryID": 205,
-    "actorID": "MC1",
-    "text": "「家主，水濂洞裡帶回一樣東西。叫不出名，我也估不準它值多少。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
-    "zh_CN": "「家主，水濂洞里带回一样东西。叫不出名，我也估不准它值多少。」",
-    "links": [206],
-    "Description": "（未連入節點，保留不刪）"
+    "entryID": 4175,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場 ",
+    "links": [4257]
+  },
+  {
+    "entryID": 4301,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\")",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4302,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\")",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4303,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "點擊石像",
+    "links": [4184, 4261, 4309]
+  },
+  {
+    "entryID": 4304,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場 ",
+    "links": [4221]
+  },
+  {
+    "entryID": 4307,
+    "actorID": "role2",
+    "text": "[panel=1]「[em7]熟悉的女聲[/em7]，如今沉於石下，毀了。淚還我，舟魂稍復，吾可徐徐補之。補成之後，吾便能歸去來處。非今日能去，亦非羽化飛升。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「[em7]熟悉的女声[/em7]，如今沉于石下，毁了。泪还我，舟魂稍复，吾可徐徐补之。补成之后，吾便能归去来处。非今日能去，亦非羽化飞升。」",
+    "links": [4232]
+  },
+  {
+    "entryID": 4298,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Valuable,Player,DragonVeinJadePendant,1);\nContinue();",
+    "Description": "獲得貴重品:龍脈靈玉墜",
+    "links": [4240]
+  },
+  {
+    "entryID": 4305,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場 ",
+    "links": [4302]
+  },
+  {
+    "entryID": 4302,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\");",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4306,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場 ",
+    "links": [4257]
+  },
+  {
+    "entryID": 4301,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\");",
+    "Description": "任務更新",
+    "links": []
+  },
+  {
+    "entryID": 4297,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\");",
+    "Description": "任務更新（不還・回去線收尾）",
+    "links": []
+  },
+  {
+    "entryID": 4308,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);LoadLevel(Command_HallOfHeroes)@1;OpenPanel(1,close)@1;DisableDialogueBG()@1;EnableDialogueBG(Home)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場：離開甄府，回英豪府根據地",
+    "links": [237]
   },
   {
     "entryID": 4309,

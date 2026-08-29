@@ -819,6 +819,7 @@
   {
     "entryID": 207,
     "actorID": "0",
+    "title": "回心轉意找郎中接任務",
     "text": "",
     "Sequence": "Continue()",
     "Conditions": "CurrentQuestState(\"C0F1\") == \"unassigned\";",
@@ -866,6 +867,7 @@
   {
     "entryID": 212,
     "actorID": "0",
+    "title": "找郎中回報任務",
     "text": "",
     "Sequence": "Continue()",
     "Conditions": "CurrentQuestState(\"C0F2\") == \"success\" and (CurrentQuestState(\"C0F1\") == \"active\");",
@@ -892,6 +894,7 @@
   {
     "entryID": 215,
     "actorID": "MC1",
+    "title": "還未完成郎中任務",
     "text": "",
     "Sequence": "Continue();",
     "Conditions": "CurrentQuestState(\"C0F1\") == \"active\" and (CurrentQuestState(\"C0F2\") ~= \"success\");",
@@ -900,6 +903,7 @@
   {
     "entryID": 216,
     "actorID": "role42",
+    "title": "問到龜涎石了嗎？我的百歲羹等不及了！",
     "text": "「問到龜涎石了嗎？我的百歲羹等不及了！」",
     "Sequence": "",
     "zh_TW": "「問到龜涎石了嗎？我的百歲羹等不及了！」",
@@ -1110,6 +1114,7 @@
   {
     "entryID": 2047,
     "actorID": "MC1",
+    "title": "觸發：第一次與正在整理藥材的郎中對話",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Script": "SetQuestEntryState(\"C0M1\", 4, \"success\");",
@@ -1121,6 +1126,7 @@
   {
     "entryID": 2048,
     "actorID": "MC1",
+    "title": "第二次以後找郎中對話",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",
@@ -1130,6 +1136,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "觸發：與苦思的學究對話",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",

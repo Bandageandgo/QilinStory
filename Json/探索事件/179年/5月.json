@@ -80,14 +80,6 @@
     "links": [2050]
   },
   {
-    "entryID": 2050,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,10);",
-    "Description": "口才檢定擲骰節點",
-    "links": [207]
-  },
-  {
     "entryID": 207,
     "actorID": "MC1",
     "text": "「咳，幾位壯士且慢動手！在下江湖上人稱…嗯，這個暫且不提。這位姑娘若有得罪，還請看在在下幾分薄面上，高抬貴手，化干戈為玉帛可好？」",
@@ -115,14 +107,6 @@
     "zh_TW": "[em2][威嚇檢定][/em2]「滾！莫逼我出手！」",
     "zh_CN": "[em2][威吓检定][/em2]「滚！莫逼我出手！」",
     "links": [2051]
-  },
-  {
-    "entryID": 2051,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
-    "Description": "威嚇檢定擲骰節點",
-    "links": [210]
   },
   {
     "entryID": 210,
@@ -399,6 +383,7 @@
   {
     "entryID": 248,
     "actorID": "MC1",
+    "title": "START",
     "text": "開始對話",
     "Sequence": "",
     "zh_TW": "開始對話",
@@ -408,10 +393,27 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "一枝花(2)",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
     "zh_CN": "「...」",
     "links": [229]
+  },
+  {
+    "entryID": 2050,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,10);",
+    "Description": "口才檢定擲骰節點",
+    "links": [207]
+  },
+  {
+    "entryID": 2051,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
+    "Description": "威嚇檢定擲骰節點",
+    "links": [210]
   }
 ]

@@ -2,6 +2,7 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "戰鬥前童淵的對話",
     "text": "[panel=6]＊（他手中長槍如龍，每一次刺出都帶著破風之聲，顯然功底不凡。他注意到你們的到來，停下動作，將槍立在身側，[em2]目光投了過來[/em2]。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（他手中長槍如龍，每一次刺出都帶著破風之聲，顯然功底不凡。他注意到你們的到來，停下動作，將槍立在身側，[em2]目光投了過來[/em2]。）＊",
@@ -67,6 +68,7 @@
   {
     "entryID": 10,
     "actorID": "role2",
+    "title": "勝利後的對話",
     "text": "[panel=6]＊（經過一番激鬥，你抓住童淵槍法中的一個破綻，險勝一招。童淵收槍後撤，臉上雖有驚訝，但更多的是欣賞。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（經過一番激鬥，你抓住童淵槍法中的一個破綻，險勝一招。童淵收槍後撤，臉上雖有驚訝，但更多的是欣賞。）＊",
@@ -76,6 +78,7 @@
   {
     "entryID": 11,
     "actorID": "role73",
+    "title": "勝利後的對話",
     "text": "「不錯不錯！想不到在這小村落，還有如此身手之人！不錯，你很不錯！」",
     "Sequence": "",
     "zh_TW": "「不錯不錯！想不到在這小村落，還有如此身手之人！不錯，你很不錯！」",
@@ -85,6 +88,7 @@
   {
     "entryID": 12,
     "actorID": "MC1",
+    "title": "勝利後的對話",
     "text": "「哎呀，童兄你也是槍法如神，小弟只是僥倖得手。」",
     "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
     "zh_TW": "「哎呀，童兄你也是槍法如神，小弟只是僥倖得手。」",
@@ -94,6 +98,7 @@
   {
     "entryID": 13,
     "actorID": "role73",
+    "title": "勝利後的對話",
     "text": "「你身手不錯，是塊料。不過江湖可不是僅靠武藝的。」",
     "Sequence": "",
     "zh_TW": "「你身手不錯，是塊料。不過江湖可不是僅靠武藝的。」",
@@ -103,6 +108,7 @@
   {
     "entryID": 15,
     "actorID": "MC8",
+    "title": "勝利後的對話",
     "text": "「童大哥的槍法真是出神入化！我表哥最是勤奮好學，若能得童大哥指點一二，定能受益終生！」",
     "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Surprise_2);\nDisableCharacterExpression(0);",
     "zh_TW": "「童大哥的槍法真是出神入化！我表哥最是勤奮好學，若能得童大哥指點一二，定能受益終生！」",
@@ -112,6 +118,7 @@
   {
     "entryID": 16,
     "actorID": "role73",
+    "title": "勝利後的對話",
     "text": "「哈哈，小姑娘真會說話。既然你這麼說，我便將我自創的一式槍法傳授於你表哥，看好了！此招名為[em2]百鳥朝鳳[/em2]！」",
     "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「哈哈，小姑娘真會說話。既然你這麼說，我便將我自創的一式槍法傳授於你表哥，看好了！此招名為[em2]百鳥朝鳳[/em2]！」",
@@ -121,6 +128,7 @@
   {
     "entryID": 17,
     "actorID": "role2",
+    "title": "失敗後的對話",
     "text": "[panel=6]＊（童淵的槍法快如閃電，密不透風。數個回合後，你便被他槍尖抵住了喉嚨，動彈不得。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（童淵的槍法快如閃電，密不透風。數個回合後，你便被他槍尖抵住了喉嚨，動彈不得。）＊",
@@ -175,6 +183,7 @@
   {
     "entryID": 23,
     "actorID": "role73",
+    "title": "戰鬥後再次對話",
     "text": "[panel=1]「怎麼，是想再來一場，還是想學點真東西？」",
     "Sequence": "",
     "zh_TW": "[panel=1]「怎麼，是想再來一場，還是想學點真東西？」",
@@ -319,6 +328,7 @@
   {
     "entryID": 48,
     "actorID": "role2",
+    "title": "首次童淵的對話",
     "text": "[panel=6]＊（你們路過村中的一片空地，只見一名身材挺拔的青年正在專注地練習槍法…。）＊",
     "Sequence": "",
     "Conditions": "CurrentQuestEntryState(\"C0M1\", 6) == \"unassigned\";",
@@ -329,6 +339,7 @@
   {
     "entryID": 49,
     "actorID": "role73",
+    "title": "再次對話(未戰鬥)",
     "text": "「閒來無事，純粹切磋，不涉金錢。如何？」",
     "Sequence": "DisableCharacterExpression(1);",
     "Conditions": "CurrentQuestEntryState(\"C0M1\", 6) == \"active\";",
@@ -372,6 +383,7 @@
   {
     "entryID": 2049,
     "actorID": "MC1",
+    "title": "進入對話",
     "text": "「…」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「…」",

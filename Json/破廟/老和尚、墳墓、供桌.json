@@ -2,16 +2,12 @@
   {
     "entryID": 3321,
     "actorID": "MC1",
+    "title": "僧人",
     "text": "",
     "Sequence": "Continue();",
     "Conditions": "Variable[\"F_BoxMapM01_21\"] == 0;",
     "Description": "若首次調查_僧人",
-    "links": [
-      3322,
-      3326,
-      3343,
-      3344
-    ]
+    "links": [3322, 3326, 3343, 3344]
   },
   {
     "entryID": 3322,
@@ -21,9 +17,7 @@
     "Conditions": "CurrentQuestState(\"CF15\") == \"unassigned\";",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
-    "links": [
-      3323
-    ]
+    "links": [3323]
   },
   {
     "entryID": 3323,
@@ -32,9 +26,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（一人白髮蒼蒼，雙腿盤坐，正對秘道入口，紅燭搖盪，其影瘦骨嶙峋，又顯格外磣磕。）＊",
     "zh_CN": "[panel=6]＊（一人白发苍苍，双腿盘坐，正对秘道入口，红烛摇荡，其影瘦骨嶙峋，又显格外碜磕。）＊",
-    "links": [
-      3324
-    ]
+    "links": [3324]
   },
   {
     "entryID": 3324,
@@ -43,9 +35,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（紅燭黑影延長拉伸，攀附於密道天井，竟用影子成了座困不住人的監牢。）＊",
     "zh_CN": "[panel=6]＊（红烛黑影延长拉伸，攀附于密道天井，竟用影子成了座困不住人的监牢。）＊",
-    "links": [
-      3325
-    ]
+    "links": [3325]
   },
   {
     "entryID": 3325,
@@ -54,9 +44,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（密道不時傳出细若蚊蠅的誦經聲，卻在密道內百轉千迴，入耳已猶如撞鐘，令人頭暈目眩。）＊",
     "zh_CN": "[panel=6]＊（密道不时传出细若蚊蝇的诵经声，却在密道内百转千回，入耳已犹如撞钟，令人头晕目眩。）＊",
-    "links": [
-      3327
-    ]
+    "links": [3327]
   },
   {
     "entryID": 3326,
@@ -76,9 +64,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（連著一層皮囊的手臂高舉，掌心朝天平放，彷若正托舉著某物，細瞧，上面某個東西閃閃發光……）＊",
     "zh_CN": "[panel=6]＊（连着一层皮囊的手臂高举，掌心朝天平放，仿若正托举着某物，细瞧，上面某个东西闪闪发光……）＊",
-    "links": [
-      3328
-    ]
+    "links": [3328]
   },
   {
     "entryID": 3328,
@@ -87,9 +73,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]（此人單手伸出，旱地般的掌心裂出道道怵目驚心的裂痕，手心中央，安靜地躺著「半枚」白玉神像。）",
     "zh_CN": "[panel=6]（此人单手伸出，旱地般的掌心裂出道道怵目惊心的裂痕，手心中央，安静地躺着「半枚」白玉神像。）",
-    "links": [
-      3329
-    ]
+    "links": [3329]
   },
   {
     "entryID": 3329,
@@ -98,9 +82,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]（那觀音透亮柔潤，就連這密道通紅也未能將其染得半分雜色。）",
     "zh_CN": "[panel=6]（那观音透亮柔润，就连这密道通红也未能将其染得半分杂色。）",
-    "links": [
-      3330
-    ]
+    "links": [3330]
   },
   {
     "entryID": 3330,
@@ -109,9 +91,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]（然好像是老天作弄，觀音佛性如此，卻不知為何，在中間攔腰裂開，裂口以上不翼而飛。）",
     "zh_CN": "[panel=6]（然好像是老天作弄，观音佛性如此，却不知为何，在中间拦腰裂开，裂口以上不翼而飞。）",
-    "links": [
-      3331
-    ]
+    "links": [3331]
   },
   {
     "entryID": 3331,
@@ -127,14 +107,13 @@
   {
     "entryID": 3332,
     "actorID": "role108",
+    "title": "給出觀音",
     "text": "「……」",
     "Sequence": "",
     "Description": "滿足條件CurrentQuestEntryState(\"CF15\", 1) == \"active\"",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
-    "links": [
-      3333
-    ]
+    "links": [3333]
   },
   {
     "entryID": 3333,
@@ -143,9 +122,7 @@
     "Sequence": "",
     "zh_TW": "「此處為檻，此地為牢，有進而無出。」",
     "zh_CN": "「此处为槛，此地为牢，有进而无出。」",
-    "links": [
-      3334
-    ]
+    "links": [3334]
   },
   {
     "entryID": 3334,
@@ -154,9 +131,7 @@
     "Sequence": "",
     "zh_TW": "「則入此者，盡皆肝腦塗地，獻予佛子，以示法相。」",
     "zh_CN": "「则入此者，尽皆肝脑涂地，献予佛子，以示法相。」",
-    "links": [
-      3335
-    ]
+    "links": [3335]
   },
   {
     "entryID": 3335,
@@ -165,9 +140,7 @@
     "Sequence": "",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
-    "links": [
-      3336
-    ]
+    "links": [3336]
   },
   {
     "entryID": 3336,
@@ -176,9 +149,7 @@
     "Sequence": "",
     "zh_TW": "如是我聞：「嘗有愚者，年十又五，入山悟道；\n得佛子賜，春雪未化，也得悟之。」",
     "zh_CN": "如是我闻：「尝有愚者，年十又五，入山悟道；\n得佛子赐，春雪未化，也得悟之。」",
-    "links": [
-      3337
-    ]
+    "links": [3337]
   },
   {
     "entryID": 3337,
@@ -187,9 +158,7 @@
     "Sequence": "",
     "zh_TW": "「然後愚頓，茅塞不開，眾生皆應，惟其如頑石，嚴冬來去，以此，塵俗變幻，金身蒙灰。」",
     "zh_CN": "「然后愚顿，茅塞不开，众生皆应，惟其如顽石，严冬来去，以此，尘俗变幻，金身蒙灰。」",
-    "links": [
-      3338
-    ]
+    "links": [3338]
   },
   {
     "entryID": 3338,
@@ -198,9 +167,7 @@
     "Sequence": "",
     "zh_TW": "「終日，頑石入魔，血染佛子，無無明，屠戮眾生，佛寺盡毀，仍無無明。」",
     "zh_CN": "「终日，顽石入魔，血染佛子，无无明，屠戮众生，佛寺尽毁，仍无无明。」",
-    "links": [
-      3339
-    ]
+    "links": [3339]
   },
   {
     "entryID": 3339,
@@ -209,9 +176,7 @@
     "Sequence": "",
     "zh_TW": "「……以此，佛子血性，作繭自縛，仍為頑石也。」",
     "zh_CN": "「……以此，佛子血性，作茧自缚，仍为顽石也。」",
-    "links": [
-      3340
-    ]
+    "links": [3340]
   },
   {
     "entryID": 3340,
@@ -222,9 +187,7 @@
     "Description": "任務更新",
     "zh_TW": "「此及我也。」",
     "zh_CN": "「此及我也。」",
-    "links": [
-      3342
-    ]
+    "links": [3342]
   },
   {
     "entryID": 3341,
@@ -235,9 +198,7 @@
     "Description": "殺意變數=1",
     "zh_TW": "[panel=6]＊（有股狂暴的殺意默默地在你體內扎根。）＊",
     "zh_CN": "[panel=6]＊（有股狂暴的杀意默默地在你体内扎根。）＊",
-    "links": [
-      3356
-    ]
+    "links": [3356]
   },
   {
     "entryID": 3342,
@@ -246,9 +207,7 @@
     "Sequence": "SetPortrait(MC1,pic=2);",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
-    "links": [
-      3341
-    ]
+    "links": [3341]
   },
   {
     "entryID": 3343,
@@ -258,9 +217,7 @@
     "Conditions": "CurrentQuestEntryState(\"CF15\", 1) == \"success\";",
     "zh_TW": "「殺！殺！殺！殺！殺！殺！殺！」",
     "zh_CN": "「杀！杀！杀！杀！杀！杀！杀！」",
-    "links": [
-      3348
-    ]
+    "links": [3348]
   },
   {
     "entryID": 3344,
@@ -278,19 +235,14 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,32);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥",
-    "links": [
-      3346
-    ]
+    "links": [3346]
   },
   {
     "entryID": 3346,
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3353,
-      3355
-    ]
+    "links": [3353, 3355]
   },
   {
     "entryID": 3347,
@@ -307,9 +259,7 @@
     "Sequence": "",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
-    "links": [
-      3349
-    ]
+    "links": [3349]
   },
   {
     "entryID": 3349,
@@ -318,10 +268,7 @@
     "Sequence": "",
     "zh_TW": "「……當真？」",
     "zh_CN": "「……当真？」",
-    "links": [
-      3350,
-      3351
-    ]
+    "links": [3350, 3351]
   },
   {
     "entryID": 3350,
@@ -330,9 +277,7 @@
     "Sequence": "SetPortrait(MC1,pic=2);",
     "zh_TW": "「殺！殺！殺！殺！殺！殺！殺！」",
     "zh_CN": "「杀！杀！杀！杀！杀！杀！杀！」",
-    "links": [
-      3345
-    ]
+    "links": [3345]
   },
   {
     "entryID": 3351,
@@ -341,9 +286,7 @@
     "Sequence": "SetPortrait(MC1,pic=2);",
     "zh_TW": "放棄",
     "zh_CN": "放弃",
-    "links": [
-      3352
-    ]
+    "links": [3352]
   },
   {
     "entryID": 3352,
@@ -362,9 +305,7 @@
     "Conditions": "IsPassFight()  == false;",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
-    "links": [
-      3347
-    ]
+    "links": [3347]
   },
   {
     "entryID": 3354,
@@ -385,9 +326,7 @@
     "Conditions": "IsPassFight()  == true;",
     "zh_TW": "「……嗡阿吽。」",
     "zh_CN": "「……嗡阿吽。」",
-    "links": [
-      3354
-    ]
+    "links": [3354]
   },
   {
     "entryID": 3356,
@@ -407,12 +346,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（敗壁頹垣，矗立幾座孤寂土丘，你發現這其中一塊土丘前立著破敗的石碑，碑上文字有些模糊不清。）＊",
     "zh_CN": "[panel=6]＊（败壁颓垣，矗立几座孤寂土丘，你发现这其中一块土丘前立着破败的石碑，碑上文字有些模糊不清。）＊",
-    "links": [
-      3358,
-      3361,
-      3359,
-      3360
-    ]
+    "links": [3358, 3361, 3359, 3360]
   },
   {
     "entryID": 3358,
@@ -422,9 +356,7 @@
     "Conditions": "Variable[\"F_BoxMapM01_16\"] == 0;",
     "zh_TW": "[em2]［學識］[/em2]「檢查石碑文字。」",
     "zh_CN": "[em2]［学识］[/em2]「检查石碑文字。」",
-    "links": [
-      3370
-    ]
+    "links": [3370]
   },
   {
     "entryID": 3359,
@@ -433,10 +365,7 @@
     "Sequence": "",
     "zh_TW": "[em2][耗時一個時辰][/em2][em2]［武力］[/em2]「嘗試以毅力挖開土丘，看看是否藏有寶貝。」",
     "zh_CN": "[em2][耗时一个时辰][/em2][em2]［武力］[/em2]「尝试以毅力挖开土丘，看看是否藏有宝贝。」",
-    "links": [
-      3369,
-      3404
-    ]
+    "links": [3369, 3404]
   },
   {
     "entryID": 3360,
@@ -445,9 +374,7 @@
     "Sequence": "",
     "zh_TW": "離開。",
     "zh_CN": "离开。",
-    "links": [
-      3379
-    ]
+    "links": [3379]
   },
   {
     "entryID": 3361,
@@ -457,10 +384,7 @@
     "Conditions": "Variable[\"F_BoxMapM01_16\"] == 1;",
     "zh_TW": "「尋找土丘較為松散之處，將之刨開瞧瞧。」",
     "zh_CN": "「寻找土丘较为松散之处，将之刨开瞧瞧。」",
-    "links": [
-      3367,
-      3366
-    ]
+    "links": [3367, 3366]
   },
   {
     "entryID": 3362,
@@ -470,9 +394,7 @@
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「怪了，這石碑看起來像是不久前插上去的一樣，連打磨也沒有，怪扎人的，啊……！」",
     "zh_CN": "「怪了，这石碑看起来像是不久前插上去的一样，连打磨也没有，怪扎人的，啊……！」",
-    "links": [
-      3377
-    ]
+    "links": [3377]
   },
   {
     "entryID": 3363,
@@ -482,9 +404,7 @@
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你琢磨許久，卻仍沒能從中看出什麼端倪。）＊",
     "zh_CN": "[panel=6]＊（你琢磨许久，却仍没能从中看出什么端倪。）＊",
-    "links": [
-      3365
-    ]
+    "links": [3365]
   },
   {
     "entryID": 3364,
@@ -493,9 +413,7 @@
     "Sequence": "Continue();",
     "Script": "Variable[\"F_BoxMapM01_16\"] = 1;",
     "Description": "變數更新",
-    "links": [
-      3357
-    ]
+    "links": [3357]
   },
   {
     "entryID": 3365,
@@ -504,9 +422,7 @@
     "Sequence": "Continue();",
     "Script": "Variable[\"F_BoxMapM01_16\"] = 2;",
     "Description": "變數更新",
-    "links": [
-      3357
-    ]
+    "links": [3357]
   },
   {
     "entryID": 3366,
@@ -526,9 +442,7 @@
     "Conditions": "IsValuablesObtained(\"Player\", \"Irondig\")  == true;",
     "zh_TW": "[panel=6]＊（你抄起方才所拿的鐵鏟，小心翼翼地挖開這意外鬆軟的墳頭土，不消半刻——）＊",
     "zh_CN": "[panel=6]＊（你抄起方才所拿的铁铲，小心翼翼地挖开这意外松软的坟头土，不消半刻——）＊",
-    "links": [
-      3368
-    ]
+    "links": [3368]
   },
   {
     "entryID": 3368,
@@ -536,9 +450,7 @@
     "text": "",
     "Sequence": "ControlStage(TriggerEvent,1,墳墓_移除蓋上的土);\nContinue();",
     "Description": "給予挖開旗標",
-    "links": [
-      3391
-    ]
+    "links": [3391]
   },
   {
     "entryID": 3369,
@@ -550,9 +462,7 @@
     "Description": "消耗時辰",
     "zh_TW": "[panel=6]＊（只覺這墳頭土是濕黏纏人——）＊",
     "zh_CN": "[panel=6]＊（只觉这坟头土是湿黏缠人——）＊",
-    "links": [
-      3374
-    ]
+    "links": [3374]
   },
   {
     "entryID": 3370,
@@ -560,9 +470,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,KnowledgeCheck,10);",
     "Description": "學識檢定",
-    "links": [
-      3375
-    ]
+    "links": [3375]
   },
   {
     "entryID": 3371,
@@ -572,9 +480,7 @@
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "[panel=6]＊（吸一口氣，以勁破之，嘗試幾回，總算是找著訣竅……）＊",
     "zh_CN": "[panel=6]＊（吸一口气，以劲破之，尝试几回，总算是找着诀窍……）＊",
-    "links": [
-      3368
-    ]
+    "links": [3368]
   },
   {
     "entryID": 3372,
@@ -584,9 +490,7 @@
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（嘗試許久仍不得要領，你只得狼狽放棄。）＊",
     "zh_CN": "[panel=6]＊（尝试许久仍不得要领，你只得狼狈放弃。）＊",
-    "links": [
-      3373
-    ]
+    "links": [3373]
   },
   {
     "entryID": 3373,
@@ -601,29 +505,21 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,StrengthCheck,12);",
     "Description": "武力檢定",
-    "links": [
-      3376
-    ]
+    "links": [3376]
   },
   {
     "entryID": 3375,
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3362,
-      3363
-    ]
+    "links": [3362, 3363]
   },
   {
     "entryID": 3376,
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3371,
-      3372
-    ]
+    "links": [3371, 3372]
   },
   {
     "entryID": 3377,
@@ -633,20 +529,17 @@
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「這兒的土摸起來也不大對勁，和旁邊相比鬆動許多……此地偏僻，誰會閒來無事到這兒翻土？」",
     "zh_CN": "「这儿的土摸起来也不大对劲，和旁边相比松动许多……此地偏僻，谁会闲来无事到这儿翻土？」",
-    "links": [
-      3364
-    ]
+    "links": [3364]
   },
   {
     "entryID": 3378,
     "actorID": "MC1",
+    "title": "墳墓",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "zh_TW": "「...」",
     "zh_CN": "「...」",
-    "links": [
-      3357
-    ]
+    "links": [3357]
   },
   {
     "entryID": 3379,
@@ -658,13 +551,10 @@
   {
     "entryID": 3380,
     "actorID": "MC1",
+    "title": "調查屍體",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3381,
-      3383,
-      3392
-    ]
+    "links": [3381, 3383, 3392]
   },
   {
     "entryID": 3381,
@@ -673,9 +563,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);",
     "zh_TW": "「嘶……脖頸處只有一道極細的血線。一劍封喉，奪其性命，想來出手的是個絕頂高手。」",
     "zh_CN": "「嘶……脖颈处只有一道极细的血线。一剑封喉，夺其性命，想来出手的是个绝顶高手。」",
-    "links": [
-      3382
-    ]
+    "links": [3382]
   },
   {
     "entryID": 3382,
@@ -684,9 +572,7 @@
     "Sequence": "SetPortrait(MC1,pic=3);",
     "zh_TW": "「只是，這看起來怎麼都像個普通的老婆子，面對老者仍毫無猶疑地取其性命，究竟有何深仇大恨？」",
     "zh_CN": "「只是，这看起来怎么都像个普通的老婆子，面对老者仍毫无犹疑地取其性命，究竟有何深仇大恨？」",
-    "links": [
-      3389
-    ]
+    "links": [3389]
   },
   {
     "entryID": 3383,
@@ -696,10 +582,7 @@
     "Conditions": "Variable[\"F_BoxMapM01_19\"] == 3;",
     "zh_TW": "[panel=6]＊（霏雨不絕，讓那本已冰涼的屍體又透出一絲悲戚冷意。）＊",
     "zh_CN": "[panel=6]＊（霏雨不绝，让那本已冰凉的尸体又透出一丝悲戚冷意。）＊",
-    "links": [
-      3384,
-      3385
-    ]
+    "links": [3384, 3385]
   },
   {
     "entryID": 3384,
@@ -708,9 +591,7 @@
     "Sequence": "",
     "zh_TW": "「將屍身重新安葬。」",
     "zh_CN": "「将尸身重新安葬。」",
-    "links": [
-      3386
-    ]
+    "links": [3386]
   },
   {
     "entryID": 3385,
@@ -727,9 +608,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,1,墳墓_蓋上土堆)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "藏起屍體；黑幕",
-    "links": [
-      3387
-    ]
+    "links": [3387]
   },
   {
     "entryID": 3387,
@@ -740,9 +619,7 @@
     "Description": "更新變數",
     "zh_TW": "[panel=6]＊（你將那本來的土坑挖得更深，還未免再次「誤會」，又重新擺正了那應當是充作墓碑的石板。）＊",
     "zh_CN": "[panel=6]＊（你将那本来的土坑挖得更深，还未免再次「误会」，又重新摆正了那应当是充作墓碑的石板。）＊",
-    "links": [
-      3393
-    ]
+    "links": [3393]
   },
   {
     "entryID": 3389,
@@ -751,9 +628,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「且，屍身未腐，其傷口又有些許濕黏……莫非這屍身才新葬不久？不然，這屍身又怎會保存如此完好……」",
     "zh_CN": "「且，尸身未腐，其伤口又有些许湿黏……莫非这尸身才新葬不久？不然，这尸身又怎会保存如此完好……」",
-    "links": [
-      3390
-    ]
+    "links": [3390]
   },
   {
     "entryID": 3390,
@@ -773,9 +648,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（不消半刻，碰到了異物，撥開泥土，一具身穿粗布麻衣的女性屍體赫然顯露出來。）＊",
     "zh_CN": "[panel=6]＊（不消半刻，碰到了异物，拨开泥土，一具身穿粗布麻衣的女性尸体赫然显露出来。）＊",
-    "links": [
-      3380
-    ]
+    "links": [3380]
   },
   {
     "entryID": 3392,
@@ -794,9 +667,7 @@
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
     "zh_TW": "「咦？這是……？」",
     "zh_CN": "「咦？这是……？」",
-    "links": [
-      3394
-    ]
+    "links": [3394]
   },
   {
     "entryID": 3394,
@@ -805,9 +676,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);",
     "zh_TW": "「[em7]伸手從土裡摳出一塊沾著泥巴的玉石，在衣襟上擦了擦[/em7]，一塊殘缺的玉珮？看這切口和成色，像是半個圓……」",
     "zh_CN": "「[em7]伸手从土里抠出一块沾着泥巴的玉石，在衣襟上擦了擦[/em7]，一块残缺的玉珮？看这切口和成色，像是半个圆……」",
-    "links": [
-      3395
-    ]
+    "links": [3395]
   },
   {
     "entryID": 3395,
@@ -817,9 +686,7 @@
     "Description": "獲得殘缺的上半圓玉珮",
     "zh_TW": "「嘿嘿，不管了，既是有緣得見，那就先由本少俠代為保管吧。說不定日後能湊成一對呢！」",
     "zh_CN": "「嘿嘿，不管了，既是有缘得见，那就先由本少侠代为保管吧。说不定日后能凑成一对呢！」",
-    "links": [
-      3405
-    ]
+    "links": [3405]
   },
   {
     "entryID": 3396,
@@ -829,19 +696,15 @@
     "Conditions": "Variable[\"F_BoxMapM01_30\"] == false;",
     "zh_TW": "[panel=6]＊（三只亮如水鏡的銅盤放在桌上，盤上中央又放滿了蓮子，蓮子顆顆飽滿，未染上半點灰塵。）＊",
     "zh_CN": "[panel=6]＊（三只亮如水镜的铜盘放在桌上，盘上中央又放满了莲子，莲子颗颗饱满，未染上半点灰尘。）＊",
-    "links": [
-      3398
-    ]
+    "links": [3398]
   },
   {
     "entryID": 3397,
     "actorID": "role2",
+    "title": "供桌",
     "text": "",
     "Sequence": "Continue();",
-    "links": [
-      3396,
-      3402
-    ]
+    "links": [3396, 3402]
   },
   {
     "entryID": 3398,
@@ -850,9 +713,7 @@
     "Sequence": "SetPortrait(MC8,pic=4);",
     "zh_TW": "「嗯？這裡這麼破舊，應該已荒廢很久了吧？那怎麼會有供品放在桌上……」",
     "zh_CN": "「嗯？这里这么破旧，应该已荒废很久了吧？那怎么会有供品放在桌上……」",
-    "links": [
-      3399
-    ]
+    "links": [3399]
   },
   {
     "entryID": 3399,
@@ -861,9 +722,7 @@
     "Sequence": "SetPortrait(MC8,pic=1);",
     "zh_TW": "「……嗯？表哥表哥！你看看這木桌旁邊，好像有人刻字在這兒呢！……瞧，在這裡！」",
     "zh_CN": "「……嗯？表哥表哥！你看看这木桌旁边，好像有人刻字在这儿呢！……瞧，在这里！」",
-    "links": [
-      3400
-    ]
+    "links": [3400]
   },
   {
     "entryID": 3400,
@@ -872,9 +731,7 @@
     "Sequence": "",
     "zh_TW": "「左有鯉魚躍，中孕蓮子來，右置白花落，何愁兮下不成孩。」",
     "zh_CN": "「左有鲤鱼跃，中孕莲子来，右置白花落，何愁兮下不成孩。」",
-    "links": [
-      3401
-    ]
+    "links": [3401]
   },
   {
     "entryID": 3401,
@@ -895,9 +752,7 @@
     "Conditions": "Variable[\"F_BoxMapM01_30\"] == true;",
     "zh_TW": "「左置白花落，中孕蓮子來，右有鯉魚躍，何愁兮下不成孩。」……既然刻在這兒，感覺是某種暗語呢！",
     "zh_CN": "「左置白花落，中孕莲子来，右有鲤鱼跃，何愁兮下不成孩。」……既然刻在这儿，感觉是某种暗语呢！",
-    "links": [
-      3403
-    ]
+    "links": [3403]
   },
   {
     "entryID": 3403,

@@ -222,6 +222,7 @@
   {
     "entryID": 43,
     "actorID": "role97",
+    "title": "戰鬥結束",
     "text": "[panel=1]「你也認得它？哈哈，說來話長。上次它從你手裡逃跑後，在山裡被野狗追。我看它可憐就救了一把，誰知道這傢伙就賴上我了。」",
     "Sequence": "",
     "zh_CN": "[panel=1]「你也认得它？哈哈，说来话长。上次它从你手里逃跑后，在山里被野狗追。我看它可怜就救了一把，谁知道这家伙就赖上我了。」",
@@ -718,6 +719,7 @@
   {
     "entryID": 2059,
     "actorID": "MC1",
+    "title": "入場對話(下層)",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "入場對話(下層)",
@@ -728,6 +730,7 @@
   {
     "entryID": 2060,
     "actorID": "MC1",
+    "title": "點擊營地",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點擊營地",
@@ -738,6 +741,7 @@
   {
     "entryID": 2061,
     "actorID": "MC1",
+    "title": "點擊箭，點擊後箭消失",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "營地通過背景洞悉檢定出現箭，且點擊箭出現的對話",
@@ -748,6 +752,7 @@
   {
     "entryID": 2063,
     "actorID": "MC1",
+    "title": "點擊腳印，點擊後腳印消失",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "池塘邊通過背景洞悉檢定出現，且點擊出現的對話",
@@ -758,6 +763,7 @@
   {
     "entryID": 2064,
     "actorID": "MC1",
+    "title": "點擊藤蔓(必須要調查過水塘、營地)",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "藤蔓出現的條件:CurrentQuestEntryState(\"CF10\", 2) == \"success\"",
@@ -791,6 +797,7 @@
   {
     "entryID": 2068,
     "actorID": "MC1",
+    "title": "點擊烤乳豬",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點擊烤乳豬",
@@ -801,6 +808,7 @@
   {
     "entryID": 2069,
     "actorID": "MC1",
+    "title": "到空地觸發的對話",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "觸發條件:CurrentQuestState(\"CF10\"4) == \"active\"",
@@ -859,6 +867,7 @@
   {
     "entryID": 2076,
     "actorID": "MC1",
+    "title": "跟狗頭人對話",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "跟狗頭人對話",
@@ -942,6 +951,7 @@
   {
     "entryID": 2085,
     "actorID": "MC1",
+    "title": "跟宗緯對話",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "跟宗緯對話",
@@ -970,6 +980,7 @@
   {
     "entryID": 2088,
     "actorID": "MC1",
+    "title": "點粉紅大樹",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點粉紅大樹",
@@ -1020,6 +1031,7 @@
   {
     "entryID": 2094,
     "actorID": "MC1",
+    "title": "點正確的枯樹",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點擊正確的枯樹",
@@ -1048,6 +1060,7 @@
   {
     "entryID": 2097,
     "actorID": "MC1",
+    "title": "準備跳瀑布",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點擊 在瀑布出現的新互動,出現條件:CurrentQuestEntryState(\"CF11\", 1) == \"success\"",
@@ -1066,6 +1079,7 @@
   {
     "entryID": 2099,
     "actorID": "MC1",
+    "title": "點女神雕像",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點女神雕像",
@@ -1084,6 +1098,7 @@
   {
     "entryID": 2101,
     "actorID": "MC1",
+    "title": "點出口(瀑布後的洞穴)",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點出口(瀑布後的洞穴)",
@@ -1147,6 +1162,7 @@
   {
     "entryID": 2108,
     "actorID": "MC1",
+    "title": "點擊水潭",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "點擊水潭",
@@ -1166,6 +1182,7 @@
   {
     "entryID": 2111,
     "actorID": "0",
+    "title": "空地戰鬥開始演出",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@9;\nContinue()@9;",
     "Description": "空地戰鬥開始演出",
@@ -1174,6 +1191,7 @@
   {
     "entryID": 2112,
     "actorID": "role2",
+    "title": "空地戰鬥勝利演出",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@0.1;\nContinue()@0.1;",
     "Description": "空地戰鬥勝利演出",
@@ -1218,6 +1236,7 @@
   {
     "entryID": 4233,
     "actorID": "role2",
+    "title": "瀑布跳下演出",
     "text": "",
     "Sequence": "AudioControl(PlaySFXOneShot,Others_FallWater);\nContinue()@Message(EndEntryEvent);",
     "Description": "瀑布跳下演出",

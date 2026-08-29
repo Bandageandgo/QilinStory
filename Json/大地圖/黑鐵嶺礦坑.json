@@ -11,6 +11,7 @@
   {
     "entryID": 16,
     "actorID": "MC22",
+    "title": "點擊木門",
     "text": "「鎖住了啊，而且這鎖…嘖嘖，是魯班鎖變出來的路數，硬砸肯定不行，一動蠻力便牽動機關塌方。」",
     "Sequence": "SetPortrait(MC22,pic=8);",
     "Description": "點擊木門(需要消耗開鎖工具)",
@@ -113,6 +114,7 @@
   {
     "entryID": 30,
     "actorID": "role2",
+    "title": "進到礦坑內部",
     "text": "[panel=6]＊（礦坑內穢氣瀰漫，盡是腐爛與硫磺的氣味。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（矿坑内秽气弥漫，尽是腐烂与硫磺的气味。）＊",
@@ -121,6 +123,7 @@
   {
     "entryID": 31,
     "actorID": "role2",
+    "title": "布告欄",
     "text": "[panel=6]＊（一塊殘破的木製告示板，上面貼著一張泛黃的官府通告，字跡雖已模糊，但仍可辨識出其中的內容。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);",
     "zh_TW": "[panel=6]＊（一塊殘破的木製告示板，上面貼著一張泛黃的官府通告，字跡雖已模糊，但仍可辨識出其中的內容。）＊",
@@ -139,6 +142,7 @@
   {
     "entryID": 33,
     "actorID": "role2",
+    "title": "礦工的休息室的床或牆壁",
     "text": "[panel=6]＊（幾張破爛的木床，地上散落著礦工的私人物品。[em2]牆上刻著歪歪扭扭的字：別睡著…睡著了就會聽到那個聲音…[/em2]）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（幾張破爛的木床，地上散落著礦工的私人物品。[em2]牆上刻著歪歪扭扭的字：別睡著…睡著了就會聽到那個聲音…[/em2]）＊",
@@ -156,6 +160,7 @@
   {
     "entryID": 35,
     "actorID": "role2",
+    "title": "進入食堂",
     "text": "[panel=6]＊（這裡曾經是礦工們吃飯的地方，但現在桌椅東倒西歪，且地上有乾涸的暗紅色痕跡。）＊",
     "Sequence": "",
     "Description": "這裡要放染血的日記Blooddiary",
@@ -177,6 +182,7 @@
   {
     "entryID": 39,
     "actorID": "role2",
+    "title": "BOSS戰",
     "text": "[panel=6]＊（只見大廳中一詭異的祭壇，供奉著一尊泥塑人像。這人像面目扭曲，額頭中央竟長著第三隻眼——那是一顆散發著妖異紅光的晶體，彷彿活物般跳動著，充滿了誘惑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（只見大廳中一詭異的祭壇，供奉著一尊泥塑人像。這人像面目扭曲，額頭中央竟長著第三隻眼——那是一顆散發著妖異紅光的晶體，彷彿活物般跳動著，充滿了誘惑。）＊",
@@ -453,6 +459,7 @@
   {
     "entryID": 2051,
     "actorID": "MC1",
+    "title": "開場",
     "text": "「...」",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Description": "開場",
@@ -678,6 +685,7 @@
   {
     "entryID": 3891,
     "actorID": "role2",
+    "title": "辦公室",
     "text": "[panel=6]＊（你在佈滿灰塵的案桌上發現了一封揉皺的信紙，墨跡潦草，似乎寫信之人心煩意亂，最終沒有寄出。）＊",
     "Sequence": "",
     "Description": "這裡要放染血的日記Unsentletter",
@@ -715,6 +723,7 @@
   {
     "entryID": 3895,
     "actorID": "role2",
+    "title": "糖炒栗子阿婆",
     "text": "[panel=6]＊（突然間，空氣中竟飄來了一股格格不入的香甜氣息。昏暗的角落裡，一個熟悉的身影正推著小車，慢悠悠地翻炒著鍋裡的沙礫。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（突然間，空氣中竟飄來了一股格格不入的香甜氣息。昏暗的角落裡，一個熟悉的身影正推著小車，慢悠悠地翻炒著鍋裡的沙礫。）＊",
@@ -809,6 +818,7 @@
   {
     "entryID": 3906,
     "actorID": "role2",
+    "title": "插入黑刀後",
     "text": "[panel=6]＊（黑刀刺入孔槽，發出一聲清脆的卡扣聲。緊接著，機關運作的轟鳴聲從下方沉悶地傳來。）＊",
     "Sequence": "ModifyData(Valuable,Player,Bloodblade,-1);",
     "Conditions": "IsValuablesObtained(\"Player\", \"Bloodblade\")  == true;",
@@ -820,6 +830,7 @@
   {
     "entryID": 3907,
     "actorID": "role2",
+    "title": "第一次點插槽",
     "text": "[panel=6]＊（石桌中央鑲著一道狹長而筆直的孔槽，邊緣被磨得光滑，黯淡石面上殘留著深色的刮痕與斑駁痕跡。）＊",
     "Sequence": "",
     "Description": "第一次點插槽",
@@ -848,6 +859,7 @@
   {
     "entryID": 3910,
     "actorID": "role2",
+    "title": "尚未解完機關點石門",
     "text": "[panel=6]＊（沉重的石門緊緊封閉，阻斷了去路。從門縫的結構來看，似乎需要啟動特定的機關才能打開。）＊",
     "Sequence": "",
     "Description": "未解開機關時點擊石門",
@@ -858,6 +870,7 @@
   {
     "entryID": 3911,
     "actorID": "role2",
+    "title": "解完機關後點石門",
     "text": "[panel=6]＊（不遠處傳來一陣沉重的機關咬合聲，緊接著是岩石相互摩擦的低鳴。）＊",
     "Sequence": "",
     "Description": "解開機關時當下跳出的對話",
@@ -868,6 +881,7 @@
   {
     "entryID": 3912,
     "actorID": "role2",
+    "title": "監獄",
     "text": "[panel=6]＊（空氣中凝滯著令人作嘔的腐臭。石板縫隙間積滿了黏稠的腥紅，那液體仍在緩緩流動，彷彿正從某處源源不斷地湧出。）＊",
     "Sequence": "",
     "Description": "進到監獄的旁白",
@@ -878,6 +892,7 @@
   {
     "entryID": 3913,
     "actorID": "MC1",
+    "title": "水井",
     "text": "「好吧，就用剛找到的繩子下去看看吧！」",
     "Sequence": "SetPortrait(MC1,pic=11);",
     "Script": "SetQuestEntryState(\"CF16\", 1, \"success\");",
@@ -930,6 +945,7 @@
   {
     "entryID": 3919,
     "actorID": "role2",
+    "title": "進入密室",
     "text": "[panel=6]＊（來到地底深處的一間密室，眼前赫然出現一間隱蔽的地下密室。密室中央，是一個由白骨堆砌而成的巨大池子。上方石壁的裂縫中，暗紅色的血液如瀑布般源源不斷地注入池內，發出令人毛骨悚然的滴答聲。）＊",
     "Sequence": "",
     "Description": "進入密室",
@@ -940,6 +956,7 @@
   {
     "entryID": 3920,
     "actorID": "role2",
+    "title": "點擊血池",
     "text": "[panel=6]＊（奇異的是，這滿池的鮮血竟沒有絲毫腐臭，反而散發著一股異樣的甜香。池面翻滾著微弱的紅光，彷彿蘊含著某種古老而邪惡的生命力。）＊",
     "Sequence": "",
     "Description": "點擊血池",
@@ -1274,6 +1291,7 @@
   {
     "entryID": 3970,
     "actorID": "role2",
+    "title": "跳下去的洞口前",
     "text": "[panel=6]＊（你們來到一個洞口前。下方是一片深不見底的黑暗，陰冷的風夾雜著濃重的血腥味從深淵中呼嘯而上。崖邊垂著一條粗壯但佈滿青苔的鐵鍊，似乎是通往更深處的唯一途徑。）＊",
     "Sequence": "",
     "Description": "跳下去的洞口前",
@@ -1367,6 +1385,7 @@
   {
     "entryID": 3980,
     "actorID": "MC22",
+    "title": "水道",
     "text": "「呼……大俠，這裡的事情都處理完了吧？我剛才觀察了一下這條暗河的水流，水勢平緩且帶著一絲外頭的微風！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
     "Description": "水道",
@@ -1423,6 +1442,7 @@
   {
     "entryID": 3986,
     "actorID": "0",
+    "title": "寒鐵礦",
     "text": "",
     "Sequence": "Continue();",
     "links": [38, 3987]
