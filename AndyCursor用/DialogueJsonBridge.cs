@@ -548,12 +548,19 @@ public class DialogueJsonBridge : EditorWindow
 
         if (hasStamps)
         {
+            var dupStamps = new List<string>();
             foreach (var e in dbEntries)
             {
                 var f = Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD);
-                if (f != null && int.TryParse(f.value, out int jid) && !dbByJsonId.ContainsKey(jid))
-                    dbByJsonId.Add(jid, e);
+                if (f == null || !int.TryParse(f.value, out int jid)) continue;
+                if (!dbByJsonId.ContainsKey(jid)) dbByJsonId.Add(jid, e);
+                else dupStamps.Add($"Entry {e.id}（印記 {jid} 已被 Entry {dbByJsonId[jid].id} 用掉）");
             }
+            // 印記重複的副本（Unity 裡複製貼上來的）對不到 JSON，會被當成無印記節點放著不動；
+            // 匯出一次會替它們改配新號，之後 JSON 才管得到它們。
+            if (dupStamps.Count > 0)
+                Debug.LogWarning($"[{conversation.Title}] {dupStamps.Count} 個節點的 JsonEntryID 印記重複，這次同步不會動它們：\n  " +
+                                 string.Join("\n  ", dupStamps) + "\n  請先「匯出」這段對話一次，工具會替副本改配新號，再由文案端決定去留。");
         }
         else
         {
@@ -1115,6 +1122,7 @@ public class DialogueJsonBridge : EditorWindow
             var f = Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD);
             entryToJsonId[e.id] = (f != null && int.TryParse(f.value, out int jid)) ? jid : e.id;
         }
+        RenumberDuplicateJsonIds(conversation, dbEntries, entryToJsonId);
 
         var sb = new StringBuilder();
         sb.Append("[\n");
@@ -1168,6 +1176,32 @@ public class DialogueJsonBridge : EditorWindow
             }
         }
         return path;
+    }
+
+    /// <summary>
+    /// 印記重複時（Unity 裡複製貼上節點會連 JsonEntryID 一起複製），後出現的副本改配新號並寫回印記，
+    /// 免得匯出的 JSON 有重複 entryID 匯不回去。副本列在 Console，文案端看到新號的節點再決定去留
+    ///（JSON 裡刪掉它，下次同步就會從 Unity 移除）。先出現的那個保留原號，不保證它就是「正本」。
+    /// </summary>
+    private void RenumberDuplicateJsonIds(Conversation conversation, List<DialogueEntry> dbEntries, Dictionary<int, int> entryToJsonId)
+    {
+        int next = entryToJsonId.Values.DefaultIfEmpty(0).Max() + 1;
+        var seen = new HashSet<int>();
+        var renamed = new List<string>();
+        foreach (var e in dbEntries)
+        {
+            int jid = entryToJsonId[e.id];
+            if (seen.Add(jid)) continue;
+            int fresh = next++;
+            entryToJsonId[e.id] = fresh;
+            seen.Add(fresh);
+            Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, fresh.ToString());
+            renamed.Add($"Entry {e.id}：印記 {jid} 與別的節點重複 → 改為 {fresh}");
+        }
+        if (renamed.Count == 0) return;
+        EditorUtility.SetDirty(database);
+        Debug.LogWarning($"[{conversation.Title}] {renamed.Count} 個節點的 JsonEntryID 印記重複（多半是 Unity 裡複製貼上的副本），已改配新號並寫回資料庫：\n  " +
+                         string.Join("\n  ", renamed) + "\n  請文案端檢查這些新號節點是要保留還是刪除。");
     }
 
     /// <summary>「小溪村後山/赫連娜娜、張寧」→「小溪村後山\赫連娜娜、張寧」（依平台分隔符）。</summary>

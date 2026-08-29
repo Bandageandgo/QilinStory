@@ -2839,78 +2839,12 @@
     "links": [4308]
   },
   {
-    "entryID": 4184,
-    "actorID": "role2",
-    "title": "點擊石像",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "點擊石像",
-    "links": [4184, 4261]
-  },
-  {
-    "entryID": 4175,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場 ",
-    "links": [4221]
-  },
-  {
-    "entryID": 4230,
-    "actorID": "role2",
-    "text": "[panel=1]「[em7]熟悉的女聲[/em7]，如今沉於石下，毀了。淚還我，舟魂稍復，吾可徐徐補之。補成之後，吾便能歸去來處。非今日能去，亦非羽化飛升。」",
-    "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=1]「[em7]熟悉的女声[/em7]，非江河渡人之舟。洞壁所绘、腹中一滴亮石者，即吾旧物。那是载吾越山海、破云雾、至此荒陬的一叶——如今沉于石下，毁了。泪还我，舟魂稍复，吾可徐徐补之。补成之后，吾便能归去来处。非今日能去，亦非羽化飞升。」",
-    "links": [4232]
-  },
-  {
-    "entryID": 4297,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "links": []
-  },
-  {
     "entryID": 4298,
     "actorID": "0",
     "text": "",
     "Sequence": "ModifyData(Valuable,Player,DragonVeinJadePendant,1);\nContinue();",
     "Description": "獲得貴重品:龍脈靈玉墜",
     "links": [4240]
-  },
-  {
-    "entryID": 4175,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場 ",
-    "links": []
-  },
-  {
-    "entryID": 4175,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場 ",
-    "links": [4257]
-  },
-  {
-    "entryID": 4301,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\")",
-    "Description": "任務更新",
-    "links": []
-  },
-  {
-    "entryID": 4302,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "Script": "SetQuestEntryState(\"CF40\", 9, \"success\")",
-    "Description": "任務更新",
-    "links": []
   },
   {
     "entryID": 4303,
@@ -2935,14 +2869,6 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "[panel=1]「[em7]熟悉的女声[/em7]，如今沉于石下，毁了。泪还我，舟魂稍复，吾可徐徐补之。补成之后，吾便能归去来处。非今日能去，亦非羽化飞升。」",
     "links": [4232]
-  },
-  {
-    "entryID": 4298,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(Valuable,Player,DragonVeinJadePendant,1);\nContinue();",
-    "Description": "獲得貴重品:龍脈靈玉墜",
-    "links": [4240]
   },
   {
     "entryID": 4305,
