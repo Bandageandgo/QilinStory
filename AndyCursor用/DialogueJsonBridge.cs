@@ -34,11 +34,24 @@ using System.Text;
 ///
 /// 翻譯：JSON 節點可帶選填欄位 zh_TW / zh_CN / en，匯入時寫入同名多語欄位
 ///  （zh-TW / zh-CN / en，Localization 型別）；JSON 沒帶時不會清掉資料庫既有翻譯。
+///
+/// 節點標題（title）：匯出時把節點的 Title 欄位寫成選填欄位 "title"（空的不寫）；
+///   匯入時 JSON 有帶 title 才寫入，沒帶不會清掉 Unity 既有標題。
+///
+/// 自動排版：匯入時新建的節點會自動排進畫布——整段新對話依 START 起的層級由上往下排；
+///   既有對話新增的節點排在「連到它的節點」下方，位置被占走就往右挪，不會全部疊在原點。
 /// </summary>
 public class DialogueJsonBridge : EditorWindow
 {
     private const string JSON_ENTRY_ID_FIELD = "JsonEntryID";
     private const string JSON_SOURCE_FIELD = "JsonSource";
+
+    // 自動排版用：節點大小與間距（對齊 Dialogue Editor 預設節點尺寸）
+    private const float NODE_WIDTH = 160f;
+    private const float NODE_HEIGHT = 30f;
+    private const float NODE_H_SPACING = 200f;
+    private const float NODE_V_SPACING = 80f;
+    private const float CANVAS_MARGIN = 20f;
 
     private const string PREF_ROOT = "DialogueJsonBridge.RootPath";
     private const string PREF_EXPORT = "DialogueJsonBridge.ExportPath";
@@ -73,6 +86,7 @@ public class DialogueJsonBridge : EditorWindow
     {
         public int entryID;
         public string actorID = "";
+        public string title = "";
         public string text = "";
         public string Sequence = "";
         public string Conditions = "";
@@ -158,6 +172,7 @@ public class DialogueJsonBridge : EditorWindow
             "• 對話名 = 相對於根資料夾的路徑（去副檔名）。找不到同名（或 JsonSource 印記相符）的對話就建立新對話。\n" +
             "• 舊扁平檔（把 / 寫成 _ 的檔名）仍能對到原對話，不必改名。\n" +
             "• 已存在的對話：更新欄位、新增節點、移除 JSON 已刪的節點、依 JSON 重建連線。\n" +
+            "• 新建的節點會自動排進畫布（新對話整段分層排；既有對話的新節點排在上游節點下方）。\n" +
             "• 有差異才會列出摘要讓你確認，套用後可 Ctrl+Z 復原；整個資料夾同步時內容一致的檔案自動略過。",
             MessageType.Info);
 
@@ -477,6 +492,7 @@ public class DialogueJsonBridge : EditorWindow
         // START 連到 JSON 陣列的第一個節點（不管它的 entryID 從 0 還是 1 起跳）
         ConnectEntries(startEntry, entryMap[jsonEntries[0].entryID]);
         RebuildLinks(conversation, jsonEntries, entryMap);
+        AutoLayoutConversation(conversation);
 
         EditorUtility.SetDirty(database);
         Debug.Log($"✓ 已建立對話「{title}」（ID {conversationID}，{jsonEntries.Count} 個節點）");
@@ -612,6 +628,9 @@ public class DialogueJsonBridge : EditorWindow
         RebuildEntryLinks(startEntry, new List<int> { jsonEntries[0].entryID }, dbByJsonId, conversation.id);
         RebuildLinks(conversation, jsonEntries, dbByJsonId);
 
+        // 5. 新增的節點排進畫布（連線建好之後才知道它們的上游在哪）
+        AutoLayoutNewEntries(conversation, jsonEntries, dbByJsonId, toAdd);
+
         // 對話補上來源印記（= 這次用來對應的檔案路徑鍵）
         Field.SetValue(conversation.fields, JSON_SOURCE_FIELD, key);
 
@@ -632,6 +651,10 @@ public class DialogueJsonBridge : EditorWindow
         entry.Sequence = ProcessSequence(je.Sequence);
         entry.conditionsString = Norm(je.Conditions);
         entry.userScript = Norm(je.Script);
+
+        // 節點標題：JSON 有帶才寫，沒帶不清掉 Unity 既有標題
+        if (!string.IsNullOrEmpty(je.title))
+            Field.SetValue(entry.fields, "Title", Norm(je.title));
 
         if (!string.IsNullOrEmpty(je.Description))
             Field.SetValue(entry.fields, "Description", Norm(je.Description));
@@ -661,6 +684,7 @@ public class DialogueJsonBridge : EditorWindow
         if (Norm(entry.conditionsString) != Norm(je.Conditions)) return true;
         if (Norm(entry.userScript) != Norm(je.Script)) return true;
         if (Norm(Field.LookupValue(entry.fields, "Description")) != Norm(je.Description)) return true;
+        if (!string.IsNullOrEmpty(je.title) && Norm(Field.LookupValue(entry.fields, "Title")) != Norm(je.title)) return true;
         if (!string.IsNullOrEmpty(je.zh_TW) && Norm(Field.LookupValue(entry.fields, "zh-TW")) != Norm(je.zh_TW)) return true;
         if (!string.IsNullOrEmpty(je.zh_CN) && Norm(Field.LookupValue(entry.fields, "zh-CN")) != Norm(je.zh_CN)) return true;
         if (!string.IsNullOrEmpty(je.en) && Norm(Field.LookupValue(entry.fields, "en")) != Norm(je.en)) return true;
@@ -672,7 +696,7 @@ public class DialogueJsonBridge : EditorWindow
         if (Norm(entry.DialogueText) != Norm(je.text))
             Debug.Log($"  ~ [{conv.Title}] Entry {entry.id} 文本:\n    舊: {Preview(entry.DialogueText)}\n    新: {Preview(je.text)}");
         else
-            Debug.Log($"  ~ [{conv.Title}] Entry {entry.id} 欄位更新（Sequence/Conditions/Script/Description/翻譯/說話者）");
+            Debug.Log($"  ~ [{conv.Title}] Entry {entry.id} 欄位更新（Sequence/Conditions/Script/Description/title/翻譯/說話者）");
     }
 
     private bool LinksDiffer(Conversation conversation, List<JsonEntry> jsonEntries, Dictionary<int, DialogueEntry> dbByJsonId)
@@ -724,6 +748,116 @@ public class DialogueJsonBridge : EditorWindow
                                           destination.conversationID, destination.id));
     }
 
+    // ── 自動排版 ──
+
+    /// <summary>
+    /// 整段對話重排：從 START 沿連線做 BFS 分層，同層由左到右、層與層由上往下；
+    /// 連不到的節點放在最底層。只在新建對話時用（既有對話不動使用者排好的位置）。
+    /// </summary>
+    private void AutoLayoutConversation(Conversation conversation)
+    {
+        var byId = conversation.dialogueEntries.ToDictionary(e => e.id);
+        var depth = new Dictionary<int, int>();
+        var queue = new Queue<DialogueEntry>();
+
+        var start = conversation.GetFirstDialogueEntry();
+        if (start == null) return;
+        depth[start.id] = 0;
+        queue.Enqueue(start);
+        while (queue.Count > 0)
+        {
+            var e = queue.Dequeue();
+            foreach (var link in e.outgoingLinks)
+            {
+                if (link.destinationConversationID != conversation.id) continue;
+                if (depth.ContainsKey(link.destinationDialogueID)) continue;
+                if (!byId.TryGetValue(link.destinationDialogueID, out var target)) continue;
+                depth[target.id] = depth[e.id] + 1;
+                queue.Enqueue(target);
+            }
+        }
+
+        int maxDepth = depth.Count > 0 ? depth.Values.Max() : 0;
+        foreach (var e in conversation.dialogueEntries)
+            if (!depth.ContainsKey(e.id)) depth[e.id] = maxDepth + 1;
+
+        // 同層保留建立順序（= JSON 順序），各層置中對齊最寬的一層
+        var layers = conversation.dialogueEntries.GroupBy(e => depth[e.id]).OrderBy(g => g.Key).ToList();
+        int widest = layers.Max(g => g.Count());
+        float totalWidth = widest * NODE_H_SPACING;
+        foreach (var layer in layers)
+        {
+            var list = layer.ToList();
+            float offset = (totalWidth - list.Count * NODE_H_SPACING) / 2f;
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i].canvasRect = new Rect(
+                    CANVAS_MARGIN + offset + i * NODE_H_SPACING,
+                    CANVAS_MARGIN + layer.Key * NODE_V_SPACING,
+                    NODE_WIDTH, NODE_HEIGHT);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 既有對話新增節點的排版：放在第一個連到它的節點正下方，該位置被占就往右挪；
+    /// 沒有任何上游的放到整張畫布最底下。依 JSON 順序處理，新節點串在一起時會由上往下接著排。
+    /// </summary>
+    private void AutoLayoutNewEntries(Conversation conversation, List<JsonEntry> jsonEntries,
+                                      Dictionary<int, DialogueEntry> dbByJsonId, List<JsonEntry> added)
+    {
+        if (added == null || added.Count == 0) return;
+
+        var pending = new HashSet<DialogueEntry>(
+            added.Where(a => dbByJsonId.ContainsKey(a.entryID)).Select(a => dbByJsonId[a.entryID]));
+
+        foreach (var je in jsonEntries)
+        {
+            if (!dbByJsonId.TryGetValue(je.entryID, out var entry) || !pending.Contains(entry)) continue;
+
+            // 上游 = JSON 裡 links 含這個 entryID、且已經有位置（非待排）的節點
+            var parent = jsonEntries
+                .Where(p => p.links != null && p.links.Contains(je.entryID))
+                .Select(p => dbByJsonId.TryGetValue(p.entryID, out var pe) ? pe : null)
+                .FirstOrDefault(pe => pe != null && !pending.Contains(pe));
+            if (parent == null && jsonEntries.Count > 0 && jsonEntries[0].entryID == je.entryID)
+                parent = conversation.GetFirstDialogueEntry();   // 第一個節點的上游是 START
+
+            Rect rect;
+            if (parent != null)
+            {
+                rect = new Rect(parent.canvasRect.x, parent.canvasRect.y + NODE_V_SPACING, NODE_WIDTH, NODE_HEIGHT);
+            }
+            else
+            {
+                float bottom = conversation.dialogueEntries
+                    .Where(e => !pending.Contains(e))
+                    .Select(e => e.canvasRect.y)
+                    .DefaultIfEmpty(CANVAS_MARGIN).Max();
+                rect = new Rect(CANVAS_MARGIN, bottom + NODE_V_SPACING, NODE_WIDTH, NODE_HEIGHT);
+            }
+
+            // 位置被占就往右挪，最多挪 200 格以防萬一
+            for (int guard = 0; guard < 200 && IsSpotTaken(conversation, entry, pending, rect); guard++)
+                rect.x += NODE_H_SPACING;
+
+            entry.canvasRect = rect;
+            pending.Remove(entry);
+        }
+    }
+
+    /// <summary>rect 是否與畫布上任何已定位的節點重疊（待排的新節點還沒位置，不算）。</summary>
+    private static bool IsSpotTaken(Conversation conversation, DialogueEntry self, HashSet<DialogueEntry> pending, Rect rect)
+    {
+        foreach (var e in conversation.dialogueEntries)
+        {
+            if (e == self || pending.Contains(e)) continue;
+            if (Mathf.Abs(e.canvasRect.x - rect.x) < NODE_H_SPACING * 0.9f &&
+                Mathf.Abs(e.canvasRect.y - rect.y) < NODE_V_SPACING * 0.9f) return true;
+        }
+        return false;
+    }
+
     // ── Sequence 處理 ──
     private string ProcessSequence(string input)
     {
@@ -767,6 +901,7 @@ public class DialogueJsonBridge : EditorWindow
             "把對話現況倒回 JSON：\n" +
             "• 給 AI 讀取 Unity 目前的實際內容（例如曾在 Unity 內手動改過文字時）。\n" +
             "• 替沒有印記的舊對話重建基準檔（之後的修改都以匯出檔為底）。\n" +
+            "• 節點的 Title 會寫成選填欄位 \"title\"（空的不寫）。\n" +
             "• 對話名含「/」會寫進對應子資料夾；若同資料夾還有舊扁平檔（/ 寫成 _）會提醒你刪除。",
             MessageType.Info);
 
@@ -915,6 +1050,7 @@ public class DialogueJsonBridge : EditorWindow
             sb.Append("  {\n");
             sb.Append($"    \"entryID\": {entryToJsonId[e.id]},\n");
             sb.Append($"    \"actorID\": {JsonStr(GetActorExportName(e.ActorID))},\n");
+            AppendIfNotEmpty(sb, "title", Field.LookupValue(e.fields, "Title"));
             sb.Append($"    \"text\": {JsonStr(e.DialogueText)},\n");
             sb.Append($"    \"Sequence\": {JsonStr(e.Sequence)},\n");
 

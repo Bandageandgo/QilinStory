@@ -1,0 +1,668 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "2",
+    "text": "[panel=6]＊（演武場的兵器架空了幾格。有人把自己的東西收走了，沒說一聲。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "2",
+    "text": "[panel=6]＊（他坐在石墩上，腳邊一罈酒，沒開。那柄門板靠在旁邊。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC2",
+    "text": "「來得正好。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "2",
+    "text": "[panel=6]＊（他把那罈酒踢過來，你接住。他自己沒有再拿第二罈。）＊",
+    "Sequence": "",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC2",
+    "text": "「今年的餉，還是發不出來。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC2",
+    "text": "「這府撐不了多久了。你也看得出來。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      7,
+      11,
+      15
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC2",
+    "text": "「五原那條路，通了。你聽說了吧。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「聽說了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC2",
+    "text": "「通了就好。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "2",
+    "text": "[panel=6]＊（他說完就沒有再說。他看著場中央，那裡什麼都沒有。）＊",
+    "Sequence": "",
+    "links": [
+      19,
+      22
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC2",
+    "text": "「那老頭，還在絞他的水吧。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「大概。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC2",
+    "text": "「嗯。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "2",
+    "text": "[panel=6]＊（他點了一下頭，像是那個「大概」就夠了。）＊",
+    "Sequence": "",
+    "links": [
+      19,
+      22
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC2",
+    "text": "「『到了雲中，我是誰？』」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "2",
+    "text": "[panel=6]＊（那老頭的話。他學得不像，可是一個字都沒錯。）＊",
+    "Sequence": "",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC2",
+    "text": "「那老頭問的。我一直記著。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有說他想出答案了沒有。）＊",
+    "Sequence": "",
+    "links": [
+      19,
+      22
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC2",
+    "text": "「褚幫主那扇門，我去敲過一次。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「……什麼時候？」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "links": [
+      21
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC2",
+    "text": "「五原回來那陣子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      211
+    ]
+  },
+  {
+    "entryID": 211,
+    "actorID": "2",
+    "text": "[panel=6]＊（敲了之後怎麼樣，他沒說。他把腳邊那罈酒又往你這邊推了推。）＊",
+    "Sequence": "",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接條件分支（是否播 §2-附一）",
+    "links": [
+      23,
+      25
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "2",
+    "text": "[panel=6]＊（他站起來，順手把你從石墩上拉起來。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      24
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "2",
+    "text": "[panel=6]＊（跟五原那幾次一樣的手勁。只是這一次，他看著你。）＊",
+    "Sequence": "",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接條件分支（是否播 §2-附二）",
+    "links": [
+      26,
+      30
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC2",
+    "text": "「那個跪著的，你還記得吧。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「記得。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC2",
+    "text": "「我答應了他，所以砍了。往後我答應的事，還是會做。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      29
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "2",
+    "text": "[panel=6]＊（他說得很平常，像在講今天要騎多遠。）＊",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC2",
+    "text": "「等這府散了，這個『信』字我就不用了。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「……那用什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC2",
+    "text": "「呂布。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「哪個布？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC2",
+    "text": "「布就布，還有哪個布。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      35
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "2",
+    "text": "[panel=6]＊（他站起來，把門板扛上肩。一隻手。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      36
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC2",
+    "text": "「五原沒有江。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC2",
+    "text": "「所以我走的時候，也不算渡。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      38
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "2",
+    "text": "[panel=6]＊（然後他回過頭來，臉上是那個你看過幾百次的笑。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      39
+    ]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC2",
+    "text": "「怎麼樣，小子。這名字，響不響？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      40,
+      41,
+      42
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "0",
+    "text": "「那個『信』字，你留給誰？」",
+    "Sequence": "",
+    "Conditions": "Variable[\"LuxianChose\"] >= 3;",
+    "Description": "選項1（信義）：只在 LuxianChose >= 3 時出現",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "0",
+    "text": "「呂布。好名字。」",
+    "Sequence": "",
+    "Description": "選項2（機略）",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "0",
+    "text": "「……師兄保重。」",
+    "Sequence": "",
+    "Description": "選項3（通達）",
+    "links": [
+      56
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「那個『信』字。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,0.2);",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「你留給誰？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      45,
+      48
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "2",
+    "text": "[panel=6]＊（笑停了。他看了你很久。）＊",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "Conditions": "IsFavorabilityLevelPass(\"MC2\", 4) == true;",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "2",
+    "text": "[panel=6]＊（然後他抬起下巴，往堂上那塊匾的方向點了一下。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      461
+    ]
+  },
+  {
+    "entryID": 461,
+    "actorID": "MC2",
+    "text": "「留在這。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      462
+    ]
+  },
+  {
+    "entryID": 462,
+    "actorID": "MC2",
+    "text": "「等這座府再立起來，我回來拿。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      463
+    ]
+  },
+  {
+    "entryID": 463,
+    "actorID": "2",
+    "text": "[panel=6]＊（他扛著刀往門口走。走到門邊補了一句，沒有回頭。）＊",
+    "Sequence": "",
+    "links": [
+      464
+    ]
+  },
+  {
+    "entryID": 464,
+    "actorID": "MC2",
+    "text": "「小子，替我看著。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "2",
+    "text": "[panel=6]＊（人走了。你手上那罈酒還是沒開。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 48,
+    "actorID": "2",
+    "text": "[panel=6]＊（笑停了。他看了你一會，沒有很久。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      481
+    ]
+  },
+  {
+    "entryID": 481,
+    "actorID": "MC2",
+    "text": "「你？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      482
+    ]
+  },
+  {
+    "entryID": 482,
+    "actorID": "MC2",
+    "text": "「跟你信哥喝過幾罈酒，就問這個。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      483
+    ]
+  },
+  {
+    "entryID": 483,
+    "actorID": "2",
+    "text": "[panel=6]＊（他笑了一聲，扛著刀走了。門口他沒有停。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "2",
+    "text": "[panel=6]＊（你手上那罈酒還是沒開。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「呂布。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      51
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「好名字。」",
+    "Sequence": "SetPortrait(MC1,pic=6);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
+    "links": [
+      52
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "2",
+    "text": "[panel=6]＊（他大笑起來，笑得場邊的兵器架都在響。）＊",
+    "Sequence": "SetPortrait(MC2,pic=5);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC2",
+    "text": "「是吧！」",
+    "Sequence": "SetPortrait(MC2,pic=5);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC2",
+    "text": "「賈師父說我像英布。像就像——布這個字，老子拿了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      541
+    ]
+  },
+  {
+    "entryID": 541,
+    "actorID": "MC2",
+    "text": "「英布後來封了王。項羽呢？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有等你答。扛著刀，出了門。）＊",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
+    "links": [
+      551
+    ]
+  },
+  {
+    "entryID": 551,
+    "actorID": "2",
+    "text": "[panel=6]＊（你手上那罈酒還是沒開。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「……師兄保重。」",
+    "Sequence": "SetPortrait(MC1,pic=13);ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
+    "links": [
+      57
+    ]
+  },
+  {
+    "entryID": 57,
+    "actorID": "2",
+    "text": "[panel=6]＊（他愣了一下。）＊",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC2",
+    "text": "「師兄？」",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "links": [
+      59
+    ]
+  },
+  {
+    "entryID": 59,
+    "actorID": "2",
+    "text": "[panel=6]＊（他笑了一聲，很短。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC2",
+    "text": "「行。你也保重。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": "2",
+    "text": "[panel=6]＊（他扛著刀走了。你沒有看他往哪邊走。）＊",
+    "Sequence": "",
+    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": "2",
+    "text": "[panel=6]＊（你手上那罈酒還是沒開。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

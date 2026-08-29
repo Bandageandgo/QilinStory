@@ -1,0 +1,215 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "2",
+    "text": "[panel=6]＊（兵器架空了。門口堆著幾個捆好的包袱，馬拴在那裡，鞍已經上好了。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "2",
+    "text": "[panel=6]＊（他扛著門板站在馬邊，沒有回頭看府裡。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC2",
+    "text": "「五原沒有江。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC2",
+    "text": "「所以我走，也不算渡。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "2",
+    "text": "[panel=6]＊（他上馬。）＊",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "2",
+    "text": "[panel=6]＊（院子那頭有人追出來，喊了一聲：）＊",
+    "Sequence": "",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "0",
+    "text": "[panel=3]「信哥——！」",
+    "Sequence": "",
+    "Description": "畫外音：追出來的人，不給立繪、不給名字",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有回頭。馬已經出了門。）＊",
+    "Sequence": "",
+    "links": [
+      10,
+      14,
+      18
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "2",
+    "text": "[panel=6]＊（往後那個名字你聽過很多次，一次比一次響。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "2",
+    "text": "[panel=6]＊（跟著那個名字來的事，有的你聽得下去，有的你聽不下去。）＊",
+    "Sequence": "",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "2",
+    "text": "[panel=6]＊（只是堂上那塊匾一直沒摘。你也一直沒摘。）＊",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "2",
+    "text": "[panel=6]＊（往後那個名字你聽過很多次，一次比一次響。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "2",
+    "text": "[panel=6]＊（後來人家在前頭加了兩個字。再後來，連姓都不必說，講「布」就知道是誰。）＊",
+    "Sequence": "",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "2",
+    "text": "[panel=6]＊（你再沒有聽人叫過他呂信。連你自己也沒有。）＊",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "2",
+    "text": "[panel=6]＊（後來他去了哪裡，你是聽別人講的。）＊",
+    "Sequence": "",
+    "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "2",
+    "text": "[panel=6]＊（那個名字傳到你耳朵裡的時候，你想了一會，才對上是誰。）＊",
+    "Sequence": "",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);DisableDialogueBG()@1;EnableEventBG(＿＿,FullScreen)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場節點：切全螢幕結局圖（圖檔ID待作者定）",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "2",
+    "text": "[panel=6]＊（後來的事，你多半是聽來的。）＊",
+    "Sequence": "",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "2",
+    "text": "[panel=6]＊（人中呂布，馬中赤兔——武人能得的最高評價，他都得了。連他的對手也不能不認那四個字：天下無雙。）＊",
+    "Sequence": "",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "2",
+    "text": "[panel=6]＊（而他的背信棄義、反覆無常，人們只當是他天性如此。）＊",
+    "Sequence": "",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "2",
+    "text": "[panel=6]＊（他自己也沒有再提過英豪府。）＊",
+    "Sequence": "",
+    "links": [
+      35,
+      36
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "2",
+    "text": "[panel=6]＊（只有你知道那個『信』字放在哪裡。他說過，要回來拿。）＊",
+    "Sequence": "DisableEventBG(FullScreen);ShowEnding(＿＿)@1;",
+    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
+    "Description": "結局節點（正）：ShowEnding 編號待作者定",
+    "links": []
+  },
+  {
+    "entryID": 36,
+    "actorID": "2",
+    "text": "[panel=6]＊（那些年你聽過很多遍。到後來，你也不再替他說話了。）＊",
+    "Sequence": "DisableEventBG(FullScreen);ShowEnding(＿＿)@1;",
+    "Description": "結局節點（反）：ShowEnding 編號待作者定",
+    "links": []
+  }
+]

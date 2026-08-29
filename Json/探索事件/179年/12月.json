@@ -1390,7 +1390,7 @@
     "entryID": 2267,
     "actorID": "MC2",
     "text": "「總之，你通過了，這寶物給你當入門慶賀吧。\n等遴選結束，你就回[em2]英豪府報到[/em2]吧。」",
-    "Sequence": "DisableAllCharacterExpression();\nModifyData(Valuable,Player,DaKeDing,1);",
+    "Sequence": "DisableAllCharacterExpression();\nModifyData(Valuable,Player,DaKeDing,1);\nModifyData(FavorabilityExp,MC2,50);",
     "Script": "SetQuestState(\"CF28\", \"success\");\nSetQuestEntryState(\"C1M1\", 4, \"success\");",
     "Description": "獲得貴重品／變數更新",
     "zh_TW": "「總之，你通過了，這寶物給你當入門慶賀吧。\n等遴選結束，你就回[em2]英豪府報到[/em2]吧。」",

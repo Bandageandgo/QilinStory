@@ -1,0 +1,1007 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "2",
+    "text": "[panel=6]＊（書房的燈還亮著。你在門外站了一會，沒有進去。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "2",
+    "text": "[panel=6]＊（白天在演武場，他扛著刀從你身邊走過，忽然停下來。）＊",
+    "Sequence": "",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "2",
+    "text": "[panel=6]＊（「喂。你讀過書吧。」）＊",
+    "Sequence": "",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "2",
+    "text": "[panel=6]＊（「讀過一點。就熟太史公那篇《遊俠列傳》，跟話本。」你說。）＊",
+    "Sequence": "",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "2",
+    "text": "[panel=6]＊（「英布，是什麼樣的人？」）＊",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "2",
+    "text": "[panel=6]＊（他問得像在問今天吃什麼。問完沒等你，扛著刀走了三步，又回頭看了一眼。）＊",
+    "Sequence": "",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,KnowledgeCheck,6);",
+    "Description": "自動學識檢定觸發點：難度6",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [
+      9,
+      12
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "2",
+    "text": "[panel=6]＊（你當時答了：黥布。項王帳下最能打的一個。破秦、入關，後來封了王。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "2",
+    "text": "[panel=6]＊（他「哦」了一聲，就走了。）＊",
+    "Sequence": "",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "2",
+    "text": "[panel=6]＊（那名字像在哪本話本邊上見過，底下的事對不上。你說所知不多。他「哦」了一聲，就走了。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "2",
+    "text": "[panel=6]＊（那兩個字跟了你一整天。）＊",
+    "Sequence": "",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "2",
+    "text": "[panel=6]＊（你敲了門。）＊",
+    "Sequence": "",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "2",
+    "text": "[panel=6]＊（書房裡那股味道還是老樣子。賈詡沒有抬頭——案上攤著紙，右手捏一把小刀，一下一下裁著邊。）＊",
+    "Sequence": "",
+    "links": [
+      21
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "「師父，弟子想請教一個人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC4",
+    "text": "「說。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      23
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC1",
+    "text": "「項王帳下那個英布，是什麼樣的人？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      24
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "2",
+    "text": "[panel=6]＊（他手上那把小刀停了。停得很短——短到你以為自己看錯了。）＊",
+    "Sequence": "SetPortrait(MC4,pic=4);",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC4",
+    "text": "「你是替誰問的。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,6);",
+    "Description": "自動洞悉檢定觸發點：難度6",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [
+      28,
+      29
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "2",
+    "text": "[panel=6]＊（那不是問句。他連尾音都沒有揚。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "空內容緩衝節點：洞悉失敗無旁白，直接接「不必答」",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC4",
+    "text": "「不必答。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "2",
+    "text": "[panel=6]＊（他把手上小刀擱下，擦了擦手，然後才轉過來看你。這是他今天第一次正眼看你。）＊",
+    "Sequence": "",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC4",
+    "text": "「英布，六縣人。臉上有黥。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC4",
+    "text": "「隨項梁起兵，歸項羽，為楚軍最能打的一個。破秦、坑降、入關，哪一樁少得了他。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC4",
+    "text": "「後來項羽勢弱，漢使來說，他就走了。封九江王，再封淮南王。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      35
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC4",
+    "text": "「最後謀反，兵敗，被殺。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      36
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC1",
+    "text": "「……他換過邊。不只一次。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC4",
+    "text": "「每一次都換得很準。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      38
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "2",
+    "text": "[panel=6]＊（他說「很準」這兩個字的時候，語氣跟他平常算帳一模一樣。）＊",
+    "Sequence": "",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「師父……有人拿英布比過誰嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有回答這個問題。他回答的是另一個。）＊",
+    "Sequence": "",
+    "links": [
+      42
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC4",
+    "text": "「世人論猛將，一開口便是項羽。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC4",
+    "text": "「書上寫：羽之神勇，千古無二。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC4",
+    "text": "「他的難，不在能打。在沒敗過，也從來沒有人比得上他。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      45
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC4",
+    "text": "「英布也能打，一樣的驍勇絕倫。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC4",
+    "text": "「英布更懂得在亂世裡，替自己找位置。這年頭當英布，輕鬆。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "2",
+    "text": "[panel=6]＊（他說完就不再理你。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "2",
+    "text": "[panel=6]＊（你出了書房。演武場那頭，石墩上還坐著一個人。）＊",
+    "Sequence": "",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場節點：書房 → 演武場（夜）",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "2",
+    "text": "[panel=6]＊（石墩上坐著一個人。兩罈酒，開了一罈。）＊",
+    "Sequence": "",
+    "links": [
+      51
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC2",
+    "text": "「來得正好。坐。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      52
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "2",
+    "text": "[panel=6]＊（你坐下。他倒酒，倒得很滿，滿到碗沿。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "2",
+    "text": "[panel=6]＊（你還沒開口，他先講起了項羽——垓下、二十八騎、力拔山兮。講了三遍。）＊",
+    "Sequence": "",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "2",
+    "text": "[panel=6]＊（每一遍講的重點都不一樣，只有結尾那一幕沒變：烏江邊上有一條船，項羽沒有上。）＊",
+    "Sequence": "",
+    "links": [
+      55
+    ]
+  },
+  {
+    "entryID": 55,
+    "actorID": "2",
+    "text": "[panel=6]＊（第三遍講完，碗空了。他沒有再倒。）＊",
+    "Sequence": "",
+    "links": [
+      56
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「信哥。你問的那個人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      57
+    ]
+  },
+  {
+    "entryID": 57,
+    "actorID": "2",
+    "text": "[panel=6]＊（他「嗯」了一聲，沒有轉頭。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      58
+    ]
+  },
+  {
+    "entryID": 58,
+    "actorID": "2",
+    "text": "[panel=6]＊（他也沒有問你查到了什麼。他就那樣坐著，等。）＊",
+    "Sequence": "",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,12);",
+    "Description": "自動洞悉檢定觸發點：難度12",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [
+      62,
+      66
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有問你查到什麼——[em2]因為他不需要問。[/em2]）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "links": [
+      63
+    ]
+  },
+  {
+    "entryID": 63,
+    "actorID": "2",
+    "text": "[panel=6]＊（一個什麼都不知道的人會追問；他沒有。他只是在等你開口，而且等得很穩，穩得像早就知道你要說什麼。）＊",
+    "Sequence": "",
+    "links": [
+      64
+    ]
+  },
+  {
+    "entryID": 64,
+    "actorID": "2",
+    "text": "[panel=6]＊（他要的不是答案。他是要有人給他[em2]另一個[/em2]答案。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "links": [
+      70,
+      80,
+      90
+    ]
+  },
+  {
+    "entryID": 66,
+    "actorID": "2",
+    "text": "[panel=6]＊（他就是在等你說。至於他心裡裝著什麼，你沒看出來。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "links": [
+      70,
+      85,
+      90
+    ]
+  },
+  {
+    "entryID": 70,
+    "actorID": "0",
+    "text": "「他是項王帳下的名將。但他換過邊、不只一次，最後謀反被殺。」",
+    "Sequence": "",
+    "Description": "選項1：說實話（推正，LuxianChose +1）",
+    "links": [
+      71
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "0",
+    "text": "「他是項羽麾下最能打的一個。破秦入關，後來封了王。」",
+    "Sequence": "",
+    "Description": "選項2A：挑好聽的（洞悉成功進來，走合謀版）",
+    "links": [
+      100
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "0",
+    "text": "「他是項羽麾下最能打的一個。破秦入關，後來封了王。」",
+    "Sequence": "",
+    "Description": "選項2B：挑好聽的（洞悉未過進來，走未看穿版）",
+    "links": [
+      120
+    ]
+  },
+  {
+    "entryID": 90,
+    "actorID": "0",
+    "text": "「信哥，你問這個做什麼？」",
+    "Sequence": "",
+    "Description": "選項3：反問（不推，變數不動）",
+    "links": [
+      140
+    ]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「他是項王帳下的名將，驍勇絕倫。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      72
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC1",
+    "text": "「但他換過邊，不只一次。最後謀反，兵敗被殺。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      73
+    ]
+  },
+  {
+    "entryID": 73,
+    "actorID": "2",
+    "text": "[panel=6]＊（場邊很安靜。他把碗端起來，慢慢喝完，然後放下。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      74
+    ]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC2",
+    "text": "「哈。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      75
+    ]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC2",
+    "text": "「那不就是個牆頭草。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      76
+    ]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC2",
+    "text": "「這種人，能打有什麼用。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      78
+    ]
+  },
+  {
+    "entryID": 78,
+    "actorID": "MC2",
+    "text": "「霸王當年寧可自刎，也沒渡那條江。[em2]那才叫人。[/em2]」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      79
+    ]
+  },
+  {
+    "entryID": 79,
+    "actorID": "2",
+    "text": "[panel=6]＊（他說得很大聲，聲音在空場子裡撞了一圈回來。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      791
+    ]
+  },
+  {
+    "entryID": 791,
+    "actorID": "2",
+    "text": "[panel=6]＊（然後他站起來，把剩下那罈酒往你懷裡一塞。）＊",
+    "Sequence": "",
+    "links": [
+      792
+    ]
+  },
+  {
+    "entryID": 792,
+    "actorID": "MC2",
+    "text": "「這罈你拿去。我今天喝夠了。」",
+    "Sequence": "SetPortrait(MC2,pic=1);ModifyData(FavorabilityExp,MC2,-30);",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;",
+    "links": [
+      793
+    ]
+  },
+  {
+    "entryID": 793,
+    "actorID": "2",
+    "text": "[panel=6]＊（他走了。那罈酒還有大半。）＊",
+    "Sequence": "",
+    "links": [
+      794
+    ]
+  },
+  {
+    "entryID": 794,
+    "actorID": "2",
+    "text": "[panel=6]＊（往後半個月，他沒有再找你喝過酒。你們照常見面、照常說話——只是沒有酒。）＊",
+    "Sequence": "",
+    "links": [
+      160
+    ]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC1",
+    "text": "「他是項羽麾下最能打的一個。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      101
+    ]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「破秦、入關，哪一樁都少不了他。後來封了王。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      102
+    ]
+  },
+  {
+    "entryID": 102,
+    "actorID": "2",
+    "text": "[panel=6]＊（你把後面那半段留在了肚子裡。）＊",
+    "Sequence": "",
+    "links": [
+      103
+    ]
+  },
+  {
+    "entryID": 103,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有立刻說話。過了一息，你聽見他呼了一口氣——[em2]那口氣比他喝酒的聲音還輕，可是你聽見了。[/em2]）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      104
+    ]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC2",
+    "text": "「……哦。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      105
+    ]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC2",
+    "text": "「那也是條漢子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);ModifyData(FavorabilityExp,MC2,30);",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;",
+    "links": [
+      106
+    ]
+  },
+  {
+    "entryID": 106,
+    "actorID": "2",
+    "text": "[panel=6]＊（他重新把碗滿上，這一晚後來喝得特別暢快。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      107
+    ]
+  },
+  {
+    "entryID": 107,
+    "actorID": "2",
+    "text": "[panel=6]＊（可是你知道他知道。）＊",
+    "Sequence": "",
+    "links": [
+      108
+    ]
+  },
+  {
+    "entryID": 108,
+    "actorID": "2",
+    "text": "[panel=6]＊（他知道英布後來怎麼了——那種事，一個活在亂世、拿刀吃飯的人不會不知道。）＊",
+    "Sequence": "",
+    "links": [
+      109
+    ]
+  },
+  {
+    "entryID": 109,
+    "actorID": "2",
+    "text": "[panel=6]＊（他問你，是想聽見有人把前半段講完就停下。[em2]而你停下了。[/em2]）＊",
+    "Sequence": "",
+    "links": [
+      110
+    ]
+  },
+  {
+    "entryID": 110,
+    "actorID": "2",
+    "text": "[panel=6]＊（你們兩個都知道，你們兩個都沒有說。那晚的酒因此喝得特別暢快。）＊",
+    "Sequence": "",
+    "links": [
+      150
+    ]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC1",
+    "text": "「他是項羽麾下最能打的一個。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      121
+    ]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC1",
+    "text": "「破秦、入關，哪一樁都少不了他。後來封了王。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 122,
+    "actorID": "2",
+    "text": "[panel=6]＊（你把後面那半段留在了肚子裡。）＊",
+    "Sequence": "",
+    "links": [
+      123
+    ]
+  },
+  {
+    "entryID": 123,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有立刻說話。過了一息，你聽見他呼了一口氣——[em2]那口氣比他喝酒的聲音還輕，可是你聽見了。[/em2]）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      124
+    ]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC2",
+    "text": "「……哦。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      125
+    ]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC2",
+    "text": "「那也是條漢子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);ModifyData(FavorabilityExp,MC2,30);",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;",
+    "links": [
+      126
+    ]
+  },
+  {
+    "entryID": 126,
+    "actorID": "2",
+    "text": "[panel=6]＊（他重新把碗滿上，這一晚後來喝得特別暢快。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      155
+    ]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC1",
+    "text": "「信哥，你問這個做什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "links": [
+      141
+    ]
+  },
+  {
+    "entryID": 141,
+    "actorID": "2",
+    "text": "[panel=6]＊（他轉過頭來看你。看了很久。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      142
+    ]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC2",
+    "text": "「說了隨口問問。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      143
+    ]
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC1",
+    "text": "「隨口問一個四百年前的人？」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [
+      144
+    ]
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC2",
+    "text": "「怎麼，隨口不行？」",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "links": [
+      145
+    ]
+  },
+  {
+    "entryID": 145,
+    "actorID": "2",
+    "text": "[panel=6]＊（他把碗裡的酒一口灌完，往地上一頓。）＊",
+    "Sequence": "",
+    "links": [
+      146
+    ]
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC2",
+    "text": "「喝酒喝酒。今晚不談死人。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      147
+    ]
+  },
+  {
+    "entryID": 147,
+    "actorID": "2",
+    "text": "[panel=6]＊（那件事就這樣過去了。他往後再沒提過那兩個字。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      148
+    ]
+  },
+  {
+    "entryID": 148,
+    "actorID": "2",
+    "text": "[panel=6]＊（你也沒有。）＊",
+    "Sequence": "",
+    "links": [
+      165
+    ]
+  },
+  {
+    "entryID": 150,
+    "actorID": "2",
+    "text": "[panel=6]＊（後來你想過很多次：那天如果把後半段講完，會怎麼樣。）＊",
+    "Sequence": "",
+    "Description": "收尾 4-A：挑好聽的＋洞悉成功（合謀）",
+    "links": [
+      151
+    ]
+  },
+  {
+    "entryID": 151,
+    "actorID": "2",
+    "text": "[panel=6]＊（想不出來。你只知道那晚的酒是他這輩子喝得最痛快的幾次之一，而那是你給的。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 155,
+    "actorID": "2",
+    "text": "[panel=6]＊（那晚他喝得很暢快，講了半宿的霸王。）＊",
+    "Sequence": "",
+    "Description": "收尾 4-B：挑好聽的，洞悉未過",
+    "links": [
+      156
+    ]
+  },
+  {
+    "entryID": 156,
+    "actorID": "2",
+    "text": "[panel=6]＊（你一直以為自己替他擋掉了什麼。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 160,
+    "actorID": "2",
+    "text": "[panel=6]＊（那罈酒你放了很久，一直沒開。）＊",
+    "Sequence": "",
+    "Description": "收尾 4-C：說實話",
+    "links": [
+      161
+    ]
+  },
+  {
+    "entryID": 161,
+    "actorID": "2",
+    "text": "[panel=6]＊（半個月後他又來找你喝酒了，一句話都沒提。霸王他照講——只是講到烏江那裡，他跳過去了。）＊",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 165,
+    "actorID": "2",
+    "text": "[panel=6]＊（那兩個字他再沒提過。）＊",
+    "Sequence": "",
+    "Description": "收尾 4-D：反問",
+    "links": [
+      166
+    ]
+  },
+  {
+    "entryID": 166,
+    "actorID": "2",
+    "text": "[panel=6]＊（只是偶爾夜裡經過演武場，你會看見他一個人坐在那個石墩上，什麼也沒做。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]

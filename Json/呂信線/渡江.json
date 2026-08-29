@@ -1,0 +1,1101 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "2",
+    "text": "[panel=6]＊（前廳今天很擠。赤龍幫的旗子插在門外，來了十幾個人，個個腰上有傢伙。）＊",
+    "Sequence": "",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "2",
+    "text": "[panel=6]＊（上座那個白髮老頭袒著胸膛，一隻腳踩在凳子上，正在跟賈詡談事。桌上攤著帳。）＊",
+    "Sequence": "",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC10",
+    "text": "「……這幾條老子都認了。錢照給，不囉嗦。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC4",
+    "text": "「幫主爽快。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "2",
+    "text": "[panel=6]＊（帳收起來了。賈詡起身，作了個送客的手勢。）＊",
+    "Sequence": "",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "2",
+    "text": "[panel=6]＊（那老頭沒動。他往院子那邊看了一眼。呂信正扛著那柄門板從演武場走出來，滿頭大汗。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC10",
+    "text": "「那柄刀，幾斤？」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC2",
+    "text": "[panel=1]「沒秤過。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "2",
+    "text": "[panel=6]＊（老頭看著他把刀從肩上卸下來。一隻手。）＊",
+    "Sequence": "",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC10",
+    "text": "「哈。扛得動這東西的，老子那三百人裡挑不出三個。」",
+    "Sequence": "SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "2",
+    "text": "[panel=6]＊（他轉回頭，對著賈詡。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC10",
+    "text": "「這小子，借老子使使。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC4",
+    "text": "[panel=2]「幫主說笑了。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC10",
+    "text": "「老子不說笑。你開個價。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「……欸？」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信走進來了。他把刀往地上一戳，看著那個老頭。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC2",
+    "text": "[panel=1]「褚幫主，你這是在買人？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC10",
+    "text": "「哈哈哈！好！老子就喜歡這種不怕死的！」",
+    "Sequence": "SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
+    "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC10",
+    "text": "「不是買。老子在請。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC10,pic=1);",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "2",
+    "text": "[panel=6]＊（他伸出三根手指。）＊",
+    "Sequence": "",
+    "links": [
+      21
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC10",
+    "text": "「一、雁門城西那片地，連鋪子帶宅子，過到你名下。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC10",
+    "text": "「二、老子手底下三百人，你點名要誰就帶誰走。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      23
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC10",
+    "text": "「三、」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      24
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "2",
+    "text": "[panel=6]＊（他把那三根手指收成拳頭。）＊",
+    "Sequence": "",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC10",
+    "text": "「老子這條命賭一把大的。你要是肯來，賭贏了，你就是開國的那一批。」",
+    "Sequence": "SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC10",
+    "text": "「劉邦當年也不過是個亭長。老子為何不能成皇？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC10,pic=1);",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "2",
+    "text": "[panel=6]＊（前廳裡沒有人說話。賈詡在旁邊喝茶，一句都沒有接。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "2",
+    "text": "[panel=6]＊（三根手指。三百人，城西一片地。府裡那本帳你見過，今年連三萬六的窟窿都還填不上。）＊",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "links": [
+      29
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信沒有立刻回答。）＊",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC10",
+    "text": "「先別答。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      31
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC10",
+    "text": "「那刀，使一趟老子看看。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      32
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信看了他一眼，把刀從地上拔起來，走到前廳中間。桌椅被幾個赤龍幫的人往牆邊拖。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      33
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "2",
+    "text": "[panel=6]＊（老頭的眼睛轉過來，落在你身上。）＊",
+    "Sequence": "",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC10",
+    "text": "「你。陪他走一趟。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      35,
+      36
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "0",
+    "text": "[em2][武藝檢定][/em2]「來。」",
+    "Sequence": "",
+    "Description": "選項1：武藝檢定（下場陪他走一趟）",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "0",
+    "text": "（站著看）",
+    "Sequence": "",
+    "Description": "選項2：不下場",
+    "links": [
+      45
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,MartialArtsCheck,12);",
+    "Description": "選項1的空對話擲骰節點：武藝檢定 難度12",
+    "links": [
+      38
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「來。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      39,
+      42
+    ]
+  },
+  {
+    "entryID": 39,
+    "actorID": "2",
+    "text": "[panel=6]＊（你接住了第一刀，也接住了第二刀。第三刀他沒有收力，你飛出去撞在門框上。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Conditions": "IsPassDice() == true;",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC10",
+    "text": "「哈哈哈！好！兩個都好！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信把刀收了。收得比出刀快。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "2",
+    "text": "[panel=6]＊（一刀。你的刀飛了，人在地上。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Conditions": "IsPassDice() == false;",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC10",
+    "text": "「哈。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC10,pic=1);",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信把你拉起來，沒說話。他把刀收了。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "2",
+    "text": "[panel=6]＊（你沒有動。呂信自己走了一趟——三刀，刀刀帶風，把牆邊那幾個赤龍幫的人逼得往後縮。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      451
+    ]
+  },
+  {
+    "entryID": 451,
+    "actorID": "MC10",
+    "text": "「哈哈哈！好刀！」",
+    "Sequence": "SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信把刀收了，走回來，站在你旁邊。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC10",
+    "text": "「怎麼樣，小子。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信沒有立刻回答。）＊",
+    "Sequence": "",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,10);",
+    "Description": "自動洞悉檢定觸發點：難度10",
+    "links": [
+      50
+    ]
+  },
+  {
+    "entryID": 50,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [
+      51,
+      56
+    ]
+  },
+  {
+    "entryID": 51,
+    "actorID": "2",
+    "text": "[panel=6]＊（三息。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "links": [
+      52
+    ]
+  },
+  {
+    "entryID": 52,
+    "actorID": "2",
+    "text": "[panel=6]＊（他聽完半句話就出門殺人的時候，沒有三息。他一眼掃過去就決定出不出手的時候，也沒有。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "links": [
+      53
+    ]
+  },
+  {
+    "entryID": 53,
+    "actorID": "2",
+    "text": "[panel=6]＊（這三息裡，他的眼睛動了。從那老頭的手，到院子，到堂上那塊「英豪府」的匾，再回到那老頭的手。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "links": [
+      54
+    ]
+  },
+  {
+    "entryID": 54,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);Continue();",
+    "Description": "空內容緩衝節點，關閉表情特效",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 56,
+    "actorID": "2",
+    "text": "[panel=6]＊（他頓了一下，然後就答了。前廳裡連茶碗的聲音都沒有。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "links": [
+      60
+    ]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC2",
+    "text": "[panel=1]「褚幫主。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      61
+    ]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC2",
+    "text": "[panel=1]「你這三樣，我一樣都要不起。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      62
+    ]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC10",
+    "text": "「哦？」",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "links": [
+      63
+    ]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC2",
+    "text": "[panel=1]「地我守不住，人我養不活，至於那第三樣——」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      64
+    ]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC2",
+    "text": "[panel=1]「你賭你的。我這人不賭。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      65
+    ]
+  },
+  {
+    "entryID": 65,
+    "actorID": "2",
+    "text": "[panel=6]＊（褚人飛盯著他看了一會，然後大笑起來，笑得整個前廳都在響。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
+    "links": [
+      66
+    ]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC10",
+    "text": "「哈哈哈哈！好！有種！」",
+    "Sequence": "SetPortrait(MC10,pic=5);",
+    "links": [
+      67
+    ]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC10",
+    "text": "「老子最恨人跟我講價，講價的都是狗。你不講價，你直接不要——」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC10,pic=1);",
+    "links": [
+      68
+    ]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC10",
+    "text": "「痛快。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      69
+    ]
+  },
+  {
+    "entryID": 69,
+    "actorID": "2",
+    "text": "[panel=6]＊（他站起來，拍了拍衣襬，往門口走。走到門邊，他忽然回過頭。）＊",
+    "Sequence": "",
+    "links": [
+      70
+    ]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC10",
+    "text": "「小子。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      71
+    ]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC10",
+    "text": "「老子這扇門，不關。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "links": [
+      72
+    ]
+  },
+  {
+    "entryID": 72,
+    "actorID": "2",
+    "text": "[panel=6]＊（人走了。旗子撤了。前廳一下子空得很。）＊",
+    "Sequence": "",
+    "links": [
+      73
+    ]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC4",
+    "text": "[panel=2]「呂信。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      74
+    ]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC2",
+    "text": "[panel=1]「師父。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      75
+    ]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC4",
+    "text": "[panel=2]「今年的餉，還是發不出來。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "links": [
+      76
+    ]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC2",
+    "text": "[panel=1]「知道。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      77
+    ]
+  },
+  {
+    "entryID": 77,
+    "actorID": "2",
+    "text": "[panel=6]＊（賈詡點了個頭，收起帳本走了。從頭到尾，他一句挽留的話都沒有說。）＊",
+    "Sequence": "",
+    "links": [
+      80
+    ]
+  },
+  {
+    "entryID": 80,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場節點：入夜（同一景，只淡出淡入）",
+    "links": [
+      81
+    ]
+  },
+  {
+    "entryID": 81,
+    "actorID": "2",
+    "text": "[panel=6]＊（那天夜裡前廳沒點燈。你進去的時候，上座有人。）＊",
+    "Sequence": "",
+    "links": [
+      82
+    ]
+  },
+  {
+    "entryID": 82,
+    "actorID": "2",
+    "text": "[panel=6]＊（呂信坐在白天那老頭坐的凳子上，一隻腳踩在凳沿，跟那老頭一樣。腳邊兩罈酒。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      83
+    ]
+  },
+  {
+    "entryID": 83,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有提白天的事。他講了很多別的——雁門的酒比雲中的烈、城西那片地他小時候路過過、赤龍幫那三百人裡有幾個他認得。）＊",
+    "Sequence": "",
+    "links": [
+      84
+    ]
+  },
+  {
+    "entryID": 84,
+    "actorID": "2",
+    "text": "[panel=6]＊（講到後來，他不講了。腳也放下來了。）＊",
+    "Sequence": "",
+    "links": [
+      85
+    ]
+  },
+  {
+    "entryID": 85,
+    "actorID": "2",
+    "text": "[panel=6]＊（第三罈開了一半的時候，他忽然問。）＊",
+    "Sequence": "",
+    "links": [
+      86
+    ]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC2",
+    "text": "[panel=1]「喂。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      87
+    ]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC2",
+    "text": "[panel=1]「霸王要是渡了那條江。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      88
+    ]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC2",
+    "text": "[panel=1]「他還是霸王嗎？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      89
+    ]
+  },
+  {
+    "entryID": 89,
+    "actorID": "2",
+    "text": "[panel=6]＊（他問完就沒有再看你。他看著堂上那塊匾，黑的，看不清字。）＊",
+    "Sequence": "",
+    "links": [
+      90,
+      91,
+      92
+    ]
+  },
+  {
+    "entryID": 90,
+    "actorID": "0",
+    "text": "「是。他還是他。」",
+    "Sequence": "",
+    "Description": "選項1（正）：LuxianChose +1",
+    "links": [
+      100
+    ]
+  },
+  {
+    "entryID": 91,
+    "actorID": "0",
+    "text": "「不是了。渡了就不是了。」",
+    "Sequence": "",
+    "Description": "選項2（反）：LuxianChose −2",
+    "links": [
+      110
+    ]
+  },
+  {
+    "entryID": 92,
+    "actorID": "0",
+    "text": "「霸王沒渡。所以沒人知道。」",
+    "Sequence": "",
+    "Description": "選項3（不推）：LuxianChose 不動",
+    "links": [
+      120
+    ]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC1",
+    "text": "「是。他還是他。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      101
+    ]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「人渡不渡江，跟他是誰沒有關係。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      102
+    ]
+  },
+  {
+    "entryID": 102,
+    "actorID": "2",
+    "text": "[panel=6]＊（他轉過頭來看你，看了很久。）＊",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "links": [
+      103
+    ]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC2",
+    "text": "[panel=1]「……你這說法，我沒聽過。」",
+    "Sequence": "SetPortrait(MC2,pic=4);",
+    "links": [
+      104
+    ]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC1",
+    "text": "「話本裡是沒有。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [
+      105
+    ]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC2",
+    "text": "[panel=1]「哈。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      106
+    ]
+  },
+  {
+    "entryID": 106,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有說信不信。他把碗倒滿，這回沒有立刻喝。）＊",
+    "Sequence": "ModifyData(FavorabilityExp,MC2,-10);",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;",
+    "links": [
+      130
+    ]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC1",
+    "text": "「不是了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      111
+    ]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "「渡了，就不是了。要嘛不渡，要嘛渡了就別回頭。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      112
+    ]
+  },
+  {
+    "entryID": 112,
+    "actorID": "2",
+    "text": "[panel=6]＊（他沒有反駁。他把碗裡的酒喝完，倒滿，又喝完。）＊",
+    "Sequence": "",
+    "links": [
+      113
+    ]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC2",
+    "text": "[panel=1]「……是啊。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      114
+    ]
+  },
+  {
+    "entryID": 114,
+    "actorID": "2",
+    "text": "[panel=6]＊（然後他笑了一聲，聲音不大。）＊",
+    "Sequence": "",
+    "links": [
+      115
+    ]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC2",
+    "text": "[panel=1]「所以他才是霸王，我們才在這裡喝酒。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);ModifyData(FavorabilityExp,MC2,20);",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;",
+    "links": [
+      130
+    ]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC1",
+    "text": "「霸王沒渡。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      121
+    ]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC1",
+    "text": "「所以沒人知道。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "links": [
+      122
+    ]
+  },
+  {
+    "entryID": 122,
+    "actorID": "2",
+    "text": "[panel=6]＊（很長的一陣安靜。）＊",
+    "Sequence": "",
+    "links": [
+      123
+    ]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC2",
+    "text": "[panel=1]「……」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      124
+    ]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC2",
+    "text": "[panel=1]「你這小子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      125
+    ]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC2",
+    "text": "[panel=1]「講話越來越像賈師父了。」",
+    "Sequence": "SetPortrait(MC2,pic=3);",
+    "links": [
+      126
+    ]
+  },
+  {
+    "entryID": 126,
+    "actorID": "2",
+    "text": "[panel=6]＊（他說完就仰頭把酒灌完。）＊",
+    "Sequence": "",
+    "links": [
+      130
+    ]
+  },
+  {
+    "entryID": 130,
+    "actorID": "2",
+    "text": "[panel=6]＊（他站起來，伸了個懶腰，那個懶腰伸得比平常久。）＊",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      131
+    ]
+  },
+  {
+    "entryID": 131,
+    "actorID": "MC2",
+    "text": "[panel=1]「行了，喝多了淨說胡話。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      132
+    ]
+  },
+  {
+    "entryID": 132,
+    "actorID": "MC2",
+    "text": "[panel=1]「這事別跟人講，尤其別跟子羽講——那傢伙會當真。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "links": [
+      133
+    ]
+  },
+  {
+    "entryID": 133,
+    "actorID": "MC1",
+    "text": "「信哥。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "links": [
+      134
+    ]
+  },
+  {
+    "entryID": 134,
+    "actorID": "MC2",
+    "text": "[panel=1]「嗯？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "links": [
+      135
+    ]
+  },
+  {
+    "entryID": 135,
+    "actorID": "2",
+    "text": "[panel=6]＊（你張了嘴。又閉上。）＊",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "links": [
+      136
+    ]
+  },
+  {
+    "entryID": 136,
+    "actorID": "MC1",
+    "text": "「……沒事。酒錢我出。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "links": [
+      137
+    ]
+  },
+  {
+    "entryID": 137,
+    "actorID": "MC2",
+    "text": "[panel=1]「哈！你哪來的錢。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "links": [
+      138
+    ]
+  },
+  {
+    "entryID": 138,
+    "actorID": "2",
+    "text": "[panel=6]＊（他笑著走了。空罈子留在上座那張凳子邊，一共三個。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      140
+    ]
+  },
+  {
+    "entryID": 140,
+    "actorID": "2",
+    "text": "[panel=6]＊（他拒絕得那麼漂亮，全前廳的人都聽見了。）＊",
+    "Sequence": "",
+    "links": [
+      141
+    ]
+  },
+  {
+    "entryID": 141,
+    "actorID": "2",
+    "text": "[panel=6]＊（那天夜裡那句話，他沒有再提過。）＊",
+    "Sequence": "",
+    "links": [
+      142
+    ]
+  },
+  {
+    "entryID": 142,
+    "actorID": "2",
+    "text": "[panel=6]＊（往後很長一段日子，你們照常喝酒、照常打鬧、照常在演武場上滾成一團。）＊",
+    "Sequence": "",
+    "links": [
+      143
+    ]
+  },
+  {
+    "entryID": 143,
+    "actorID": "2",
+    "text": "[panel=6]＊（只是每次講到霸王，他都會在烏江那裡停半息，然後跳過去講別的。）＊",
+    "Sequence": "",
+    "links": []
+  }
+]
