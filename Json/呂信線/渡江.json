@@ -86,23 +86,14 @@
     "text": "「哈。扛得動這東西的，老子那三百人裡挑不出三個。」",
     "Sequence": "SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
     "links": [
-      11
-    ]
-  },
-  {
-    "entryID": 11,
-    "actorID": "2",
-    "text": "[panel=6]＊（他轉回頭，對著賈詡。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "links": [
       12
     ]
   },
   {
     "entryID": 12,
     "actorID": "MC10",
-    "text": "「這小子，借老子使使。」",
-    "Sequence": "SetPortrait(MC10,pic=1);",
+    "text": "「[em7]轉回頭，對著賈詡[/em7]，這小子，借老子使使。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC10,pic=1);",
     "links": [
       13
     ]
@@ -167,22 +158,13 @@
     "text": "「不是買。老子在請。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC10,pic=1);",
     "links": [
-      20
-    ]
-  },
-  {
-    "entryID": 20,
-    "actorID": "2",
-    "text": "[panel=6]＊（他伸出三根手指。）＊",
-    "Sequence": "",
-    "links": [
       21
     ]
   },
   {
     "entryID": 21,
     "actorID": "MC10",
-    "text": "「一、雁門城西那片地，連鋪子帶宅子，過到你名下。」",
+    "text": "「[em7]伸出三根手指[/em7]，一、雁門城西那片地，連鋪子帶宅子，過到你名下。」",
     "Sequence": "SetPortrait(MC10,pic=1);",
     "links": [
       22
@@ -203,22 +185,13 @@
     "text": "「三、」",
     "Sequence": "SetPortrait(MC10,pic=1);",
     "links": [
-      24
-    ]
-  },
-  {
-    "entryID": 24,
-    "actorID": "2",
-    "text": "[panel=6]＊（他把那三根手指收成拳頭。）＊",
-    "Sequence": "",
-    "links": [
       25
     ]
   },
   {
     "entryID": 25,
     "actorID": "MC10",
-    "text": "「老子這條命賭一把大的。你要是肯來，賭贏了，你就是開國的那一批。」",
+    "text": "「[em7]把那三根手指收成拳頭[/em7]，老子這條命賭一把大的。你要是肯來，賭贏了，你就是開國的那一批。」",
     "Sequence": "SetPortrait(MC10,pic=5);EnableCharacterExpression(1,MC10,Proud);",
     "links": [
       26
@@ -594,22 +567,13 @@
     "text": "「痛快。」",
     "Sequence": "SetPortrait(MC10,pic=1);",
     "links": [
-      69
-    ]
-  },
-  {
-    "entryID": 69,
-    "actorID": "2",
-    "text": "[panel=6]＊（他站起來，拍了拍衣襬，往門口走。走到門邊，他忽然回過頭。）＊",
-    "Sequence": "",
-    "links": [
       70
     ]
   },
   {
     "entryID": 70,
     "actorID": "MC10",
-    "text": "「小子。」",
+    "text": "「[em7]站起來，拍了拍衣襬，往門口走。走到門邊，忽然回過頭[/em7]，小子。」",
     "Sequence": "SetPortrait(MC10,pic=1);",
     "links": [
       71
@@ -645,7 +609,7 @@
   {
     "entryID": 74,
     "actorID": "MC2",
-    "text": "[panel=1]「師父。」",
+    "text": "[panel=1]「先生。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       75
@@ -862,7 +826,7 @@
     "Sequence": "ModifyData(FavorabilityExp,MC2,-10);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;",
     "links": [
-      130
+      131
     ]
   },
   {
@@ -880,22 +844,13 @@
     "text": "「渡了，就不是了。要嘛不渡，要嘛渡了就別回頭。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
-      112
-    ]
-  },
-  {
-    "entryID": 112,
-    "actorID": "2",
-    "text": "[panel=6]＊（他沒有反駁。他把碗裡的酒喝完，倒滿，又喝完。）＊",
-    "Sequence": "",
-    "links": [
       113
     ]
   },
   {
     "entryID": 113,
     "actorID": "MC2",
-    "text": "[panel=1]「……是啊。」",
+    "text": "[panel=1]「[em7]沒有反駁，把碗裡的酒喝完，倒滿，又喝完[/em7]，……是啊。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       114
@@ -917,7 +872,7 @@
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);ModifyData(FavorabilityExp,MC2,20);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;",
     "links": [
-      130
+      131
     ]
   },
   {
@@ -968,7 +923,7 @@
   {
     "entryID": 125,
     "actorID": "MC2",
-    "text": "[panel=1]「講話越來越像賈師父了。」",
+    "text": "[panel=1]「講話越來越像賈先生了。」",
     "Sequence": "SetPortrait(MC2,pic=3);",
     "links": [
       126
@@ -980,23 +935,14 @@
     "text": "[panel=6]＊（他說完就仰頭把酒灌完。）＊",
     "Sequence": "",
     "links": [
-      130
-    ]
-  },
-  {
-    "entryID": 130,
-    "actorID": "2",
-    "text": "[panel=6]＊（他站起來，伸了個懶腰，那個懶腰伸得比平常久。）＊",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
-    "links": [
       131
     ]
   },
   {
     "entryID": 131,
     "actorID": "MC2",
-    "text": "[panel=1]「行了，喝多了淨說胡話。」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "text": "[panel=1]「[em7]站起來，伸了個懶腰，那個懶腰伸得比平常久[/em7]，行了，喝多了淨說胡話。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
       132
     ]

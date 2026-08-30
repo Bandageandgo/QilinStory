@@ -133,7 +133,7 @@
   {
     "entryID": 21,
     "actorID": "MC1",
-    "text": "「師父，弟子想請教一個人。」",
+    "text": "「先生，弟子想請教一個人。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       22
@@ -301,7 +301,7 @@
   {
     "entryID": 40,
     "actorID": "MC1",
-    "text": "「師父……有人拿英布比過誰嗎？」",
+    "text": "「先生……有人拿英布比過誰嗎？」",
     "Sequence": "SetPortrait(MC1,pic=14);",
     "links": [
       41
@@ -494,7 +494,7 @@
   {
     "entryID": 62,
     "actorID": "2",
-    "text": "[panel=6]＊（他沒有問你查到什麼——[em2]因為他不需要問。[/em2]）＊",
+    "text": "[panel=6]＊（他沒有問你查到什麼。碗端在手裡，一口都沒喝。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == true;",
     "links": [
@@ -524,7 +524,7 @@
   {
     "entryID": 66,
     "actorID": "2",
-    "text": "[panel=6]＊（他就是在等你說。至於他心裡裝著什麼，你沒看出來。）＊",
+    "text": "[panel=6]＊（他沒有追問，只是端著碗等你開口。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
     "links": [
@@ -752,22 +752,13 @@
     "text": "[panel=6]＊（他重新把碗滿上，這一晚後來喝得特別暢快。）＊",
     "Sequence": "DisableCharacterExpression(1);",
     "links": [
-      107
-    ]
-  },
-  {
-    "entryID": 107,
-    "actorID": "2",
-    "text": "[panel=6]＊（可是你知道他知道。）＊",
-    "Sequence": "",
-    "links": [
       108
     ]
   },
   {
     "entryID": 108,
     "actorID": "2",
-    "text": "[panel=6]＊（他知道英布後來怎麼了——那種事，一個活在亂世、拿刀吃飯的人不會不知道。）＊",
+    "text": "[panel=6]＊（他沒有問英布後來怎麼了。那後半段他一個字沒提，也沒給你提的空隙。）＊",
     "Sequence": "",
     "links": [
       109
@@ -897,22 +888,13 @@
     "text": "「怎麼，隨口不行？」",
     "Sequence": "SetPortrait(MC2,pic=2);",
     "links": [
-      145
-    ]
-  },
-  {
-    "entryID": 145,
-    "actorID": "2",
-    "text": "[panel=6]＊（他把碗裡的酒一口灌完，往地上一頓。）＊",
-    "Sequence": "",
-    "links": [
       146
     ]
   },
   {
     "entryID": 146,
     "actorID": "MC2",
-    "text": "「喝酒喝酒。今晚不談死人。」",
+    "text": "「[em7]把碗裡的酒一口灌完，往地上一頓[/em7]，喝酒喝酒。今晚不談死人。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
       147

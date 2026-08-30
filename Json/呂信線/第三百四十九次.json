@@ -56,7 +56,7 @@
   {
     "entryID": 7,
     "actorID": "MC1",
-    "text": "「羽師兄啊。他今天不在——一早就讓徐師父叫走了，說是要到城外一趟。」",
+    "text": "「羽兄啊。他今天不在——一早就讓徐師父叫走了，說是要到城外一趟。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       8
@@ -149,23 +149,14 @@
     "text": "「信哥，你連這個都記著？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);",
     "links": [
-      18
-    ]
-  },
-  {
-    "entryID": 18,
-    "actorID": "2",
-    "text": "[panel=6]＊（他愣了半息。就半息。）＊",
-    "Sequence": "SetPortrait(MC2,pic=4);",
-    "links": [
       19
     ]
   },
   {
     "entryID": 19,
     "actorID": "MC2",
-    "text": "「順口說的。誰會記那種東西。」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "text": "「[em7]愣了半息。就半息[/em7]，順口說的。誰會記那種東西。」",
+    "Sequence": "SetPortrait(MC2,pic=4);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
       20
     ]
@@ -230,22 +221,13 @@
     "text": "「刀都拿出來了，總不能白拿。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
     "links": [
-      27
-    ]
-  },
-  {
-    "entryID": 27,
-    "actorID": "2",
-    "text": "[panel=6]＊（他把那柄門板往肩上一扛，走進場中央，站定。）＊",
-    "Sequence": "",
-    "links": [
       28
     ]
   },
   {
     "entryID": 28,
     "actorID": "MC2",
-    "text": "「放心，我不用刃。」",
+    "text": "「[em7]把那柄門板往肩上一扛，走進場中央，站定[/em7]，放心，我不用刃。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       29
@@ -303,7 +285,7 @@
   {
     "entryID": 34,
     "actorID": "0",
-    "text": "「信哥，我不是羽師兄。你找錯人了。」",
+    "text": "「信哥，我不是羽兄。你找錯人了。」",
     "Sequence": "",
     "Description": "選項3：我不是他（不打）",
     "links": [
@@ -378,15 +360,6 @@
     ]
   },
   {
-    "entryID": 461,
-    "actorID": "2",
-    "text": "[panel=6]＊（他笑得很大聲。可是他笑完就把刀收了，收得比出刀還快。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      49
-    ]
-  },
-  {
     "entryID": 47,
     "actorID": "2",
     "text": "[panel=6]＊（三招。）＊",
@@ -424,10 +397,19 @@
     ]
   },
   {
+    "entryID": 461,
+    "actorID": "2",
+    "text": "[panel=6]＊（他笑得很大聲。可是他笑完就把刀收了，收得比出刀還快。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "links": [
+      49
+    ]
+  },
+  {
     "entryID": 49,
     "actorID": "MC2",
     "text": "「行了，起來吧。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       3000
     ]
@@ -453,7 +435,7 @@
   {
     "entryID": 52,
     "actorID": "2",
-    "text": "[panel=6]＊（你心裡算的是別的：他讓你三招，那三招他不會動；他扛的是門板，轉身慢；而日頭在西邊，他的位置正好背光……）＊",
+    "text": "[panel=6]＊（他讓你三招，那三招他不會動。大刀扛在肩上，轉身慢。日頭在西邊，他站的位置正好背光。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
     "links": [
       53
@@ -665,7 +647,7 @@
   {
     "entryID": 70,
     "actorID": "MC1",
-    "text": "「信哥，我不是羽師兄。」",
+    "text": "「信哥，我不是羽兄。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       71
@@ -764,7 +746,7 @@
   {
     "entryID": 2003,
     "actorID": "MC1",
-    "text": "「三百四十八次——你跟羽師兄，是誰贏得多？」",
+    "text": "「三百四十八次——你跟羽兄，是誰贏得多？」",
     "Sequence": "SetPortrait(MC1,pic=14);",
     "links": [
       2004
@@ -872,7 +854,7 @@
   {
     "entryID": 2020,
     "actorID": "0",
-    "text": "「就算羽師兄哪天不打了，我還在。」",
+    "text": "「就算羽兄哪天不打了，我還在。」",
     "Sequence": "",
     "Description": "選項1（正）：LuxianChose +1、好感 0",
     "links": [
@@ -911,7 +893,7 @@
   {
     "entryID": 2022,
     "actorID": "MC1",
-    "text": "「就算羽師兄哪天不打了，我還在。」",
+    "text": "「就算羽兄哪天不打了，我還在。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       2023
@@ -1042,23 +1024,14 @@
     "text": "「哈，也對。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
-      2055
-    ]
-  },
-  {
-    "entryID": 2055,
-    "actorID": "2",
-    "text": "[panel=6]＊（他仰頭把碗裡剩的灌下去，然後把碗倒過來，一滴都沒有。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "links": [
       2056
     ]
   },
   {
     "entryID": 2056,
     "actorID": "MC2",
-    "text": "「就是這個滋味。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
+    "text": "「[em7]仰頭把碗裡剩的灌下去，然後把碗倒過來，一滴都沒有[/em7]，就是這個滋味。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       2057
     ]
@@ -1228,7 +1201,7 @@
   {
     "entryID": 3003,
     "actorID": "MC1",
-    "text": "「三百四十八次——你跟羽師兄，是誰贏得多？」",
+    "text": "「三百四十八次——你跟羽兄，是誰贏得多？」",
     "Sequence": "SetPortrait(MC1,pic=14);",
     "links": [
       3004
@@ -1336,7 +1309,7 @@
   {
     "entryID": 3020,
     "actorID": "0",
-    "text": "「就算羽師兄哪天不打了，我還在。」",
+    "text": "「就算羽兄哪天不打了，我還在。」",
     "Sequence": "",
     "Description": "選項1（正）：LuxianChose +1、好感 0",
     "links": [
@@ -1375,7 +1348,7 @@
   {
     "entryID": 3022,
     "actorID": "MC1",
-    "text": "「就算羽師兄哪天不打了，我還在。」",
+    "text": "「就算羽兄哪天不打了，我還在。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       3023
@@ -1506,23 +1479,14 @@
     "text": "「哈，也對。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
-      3055
-    ]
-  },
-  {
-    "entryID": 3055,
-    "actorID": "2",
-    "text": "[panel=6]＊（他仰頭把碗裡剩的灌下去，然後把碗倒過來，一滴都沒有。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "links": [
       3056
     ]
   },
   {
     "entryID": 3056,
     "actorID": "MC2",
-    "text": "「就是這個滋味。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
+    "text": "「[em7]仰頭把碗裡剩的灌下去，然後把碗倒過來，一滴都沒有[/em7]，就是這個滋味。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       3057
     ]
@@ -1692,7 +1656,7 @@
   {
     "entryID": 4003,
     "actorID": "MC1",
-    "text": "「三百四十八次——你跟羽師兄，是誰贏得多？」",
+    "text": "「三百四十八次——你跟羽兄，是誰贏得多？」",
     "Sequence": "SetPortrait(MC1,pic=14);",
     "links": [
       4004
@@ -1800,7 +1764,7 @@
   {
     "entryID": 4020,
     "actorID": "0",
-    "text": "「就算羽師兄哪天不打了，我還在。」",
+    "text": "「就算羽兄哪天不打了，我還在。」",
     "Sequence": "",
     "Description": "選項1（正）：LuxianChose +1、好感 0",
     "links": [
@@ -1839,7 +1803,7 @@
   {
     "entryID": 4022,
     "actorID": "MC1",
-    "text": "「就算羽師兄哪天不打了，我還在。」",
+    "text": "「就算羽兄哪天不打了，我還在。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       4023
@@ -1970,23 +1934,14 @@
     "text": "「哈，也對。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
-      4055
-    ]
-  },
-  {
-    "entryID": 4055,
-    "actorID": "2",
-    "text": "[panel=6]＊（他仰頭把碗裡剩的灌下去，然後把碗倒過來，一滴都沒有。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "links": [
       4056
     ]
   },
   {
     "entryID": 4056,
     "actorID": "MC2",
-    "text": "「就是這個滋味。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
+    "text": "「[em7]仰頭把碗裡剩的灌下去，然後把碗倒過來，一滴都沒有[/em7]，就是這個滋味。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       4057
     ]

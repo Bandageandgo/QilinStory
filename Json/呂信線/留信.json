@@ -268,17 +268,8 @@
   {
     "entryID": 28,
     "actorID": "MC2",
-    "text": "「我答應了他，所以砍了。往後我答應的事，還是會做。」",
+    "text": "「我答應了他，所以砍了。往後我答應的事，還是會做。[em7]說得很平常，像在講今天要騎多遠[/em7]」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      29
-    ]
-  },
-  {
-    "entryID": 29,
-    "actorID": "2",
-    "text": "[panel=6]＊（他說得很平常，像在講今天要騎多遠。）＊",
-    "Sequence": "",
     "links": [
       30
     ]
@@ -325,23 +316,14 @@
     "text": "「布就布，還有哪個布。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
-      35
-    ]
-  },
-  {
-    "entryID": 35,
-    "actorID": "2",
-    "text": "[panel=6]＊（他站起來，把門板扛上肩。一隻手。）＊",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
-    "links": [
       36
     ]
   },
   {
     "entryID": 36,
     "actorID": "MC2",
-    "text": "「五原沒有江。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
+    "text": "「[em7]站起來，把門板扛上肩。一隻手[/em7]，五原沒有江。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       37
     ]
@@ -459,22 +441,13 @@
     "text": "「等這座府再立起來，我回來拿。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
-      463
-    ]
-  },
-  {
-    "entryID": 463,
-    "actorID": "2",
-    "text": "[panel=6]＊（他扛著刀往門口走。走到門邊補了一句，沒有回頭。）＊",
-    "Sequence": "",
-    "links": [
       464
     ]
   },
   {
     "entryID": 464,
     "actorID": "MC2",
-    "text": "「小子，替我看著。」",
+    "text": "「[em7]扛著刀往門口走。走到門邊補了一句，沒有回頭[/em7]，小子，替我看著。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [
@@ -547,23 +520,14 @@
     "text": "「好名字。」",
     "Sequence": "SetPortrait(MC1,pic=6);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
     "links": [
-      52
-    ]
-  },
-  {
-    "entryID": 52,
-    "actorID": "2",
-    "text": "[panel=6]＊（他大笑起來，笑得場邊的兵器架都在響。）＊",
-    "Sequence": "SetPortrait(MC2,pic=5);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
       53
     ]
   },
   {
     "entryID": 53,
     "actorID": "MC2",
-    "text": "「是吧！」",
-    "Sequence": "SetPortrait(MC2,pic=5);",
+    "text": "「[em7]大笑起來，笑得場邊的兵器架都在響[/em7]，是吧！」",
+    "Sequence": "SetPortrait(MC2,pic=5);EnableCharacterExpression(1,MC2,Proud);",
     "links": [
       54
     ]
@@ -571,7 +535,7 @@
   {
     "entryID": 54,
     "actorID": "MC2",
-    "text": "「賈師父說我像英布。像就像——布這個字，老子拿了。」",
+    "text": "「賈先生說我像英布。像就像——布這個字，老子拿了。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       541
@@ -609,32 +573,14 @@
     "text": "「……師兄保重。」",
     "Sequence": "SetPortrait(MC1,pic=13);ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
     "links": [
-      57
-    ]
-  },
-  {
-    "entryID": 57,
-    "actorID": "2",
-    "text": "[panel=6]＊（他愣了一下。）＊",
-    "Sequence": "SetPortrait(MC2,pic=4);",
-    "links": [
       58
     ]
   },
   {
     "entryID": 58,
     "actorID": "MC2",
-    "text": "「師兄？」",
+    "text": "「[em7]愣了一下[/em7]，師兄？」",
     "Sequence": "SetPortrait(MC2,pic=4);",
-    "links": [
-      59
-    ]
-  },
-  {
-    "entryID": 59,
-    "actorID": "2",
-    "text": "[panel=6]＊（他笑了一聲，很短。）＊",
-    "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       60
     ]
@@ -642,7 +588,7 @@
   {
     "entryID": 60,
     "actorID": "MC2",
-    "text": "「行。你也保重。」",
+    "text": "「[em7]笑了一聲，很短[/em7]，行。你也保重。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       61

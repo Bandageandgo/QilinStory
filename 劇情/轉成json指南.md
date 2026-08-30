@@ -91,6 +91,19 @@
 ### 3. Sequence 指令生成 (核心規則依據 `給AI看的指南/立繪指令轉換規則.md`)
 
 -   **始終包含 `Sequence` 欄位**: 每個 JSON 物件都必須有 `Sequence` 欄位，即使為空 `""`。
+-   **⚠ 一個節點只有一個 `Sequence` 欄位。Markdown 裡 `Sequence` 一律寫在它所屬那句台詞的「下面」（2026-08-30 作者裁示）。**
+    ```
+    **呂信:** 「台詞甲」
+    **Sequence <甲這一格要做的事>;**
+
+    **呂信:** 「台詞乙」
+    **Sequence <乙這一格要做的事>;**
+    ```
+    -   **不要把下一句的 `Sequence` 寫在它上面**——那會變成兩行 `Sequence` 連著，看起來像一個節點掛了兩條，實際上是兩個節點各一條，讀的人得猜。2026-08-30 已把全案 29 處歸位。
+    -   同一格要做好幾件事，就寫在**同一條** `Sequence` 裡用 `;` 隔開，不要拆成兩行。
+    -   **兩個例外**，這兩種本來就是「沒有台詞的獨立節點」，維持連續兩行：
+        1.  `BeginDiceRoll`／`BeginFight` 的四段包裝（`Begin…` 一行、`Continue();` 一行）。
+        2.  `EnableCharacterExpression` 的關閉指令：`DisableCharacterExpression` 屬於**下一格**，所以要寫在下一句台詞的下面，不是接在啟用那行後面（會開了立刻關）。
 -   **指令組成**: 主要包含 `SetPortrait` (換立繪), `EnableCharacterExpression` (啟用表情), `DisableCharacterExpression` (停用表情), 以及可能的擲骰 `BeginDiceRoll`、戰鬥 `BeginFight` 和 `ModifyData`。**好感度**用 `ModifyData(FavorabilityExp,角色ID,數值);`（例如 `ModifyData(FavorabilityExp,MC22,10);`），**禁止**寫 `AddAffection(...)`。**物品一律是貴重品**：`ModifyData(Valuable,Player,ValuablesID,數值);`（例如 `ModifyData(Valuable,Player,DragonHorn,1);`）。目前沒有一般道具，**禁止** `Inventory,AddItem` 與 `AddItem(...)`。
 
 #### 3.1 `SetPortrait` (換立繪)
@@ -101,7 +114,7 @@
     *   例如：`甄筠` `[似笑非笑，語氣輕鬆]` -> `SetPortrait(MC9,pic=1);`（一般，配合表情特效表達語氣，見 3.2）
     *   例如：`甄筠` `[搖頭拒絕／不屑]` -> `SetPortrait(MC9,pic=3);`（閉眼無奈）
 
-> **⛔ 沒有立繪的角色，不寫 `SetPortrait`／`EnableCharacterExpression`（已定，2026-08-27 作者確認）。** 有立繪的只有 `給AI看的指南/立繪指令轉換規則.md` §2 總表登記的角色（`MC1`–`MC24` 再加**茶博士 `role105`**，有立繪不等於 `MC` 開頭）；`role127`、`NPC33`、`NPC_Thug`、`Monster` 這類代號**不會有立繪切換**，替他們寫這兩個指令是空轉。他們說話那格 `Sequence` 只寫別的事，沒有就留 `""`。
+> **⛔ 沒有立繪的角色，不寫 `SetPortrait`／`EnableCharacterExpression`（已定，2026-08-27 作者確認）。** 有立繪的只有 `給AI看的指南/立繪指令轉換規則.md` §2 總表登記的角色——`MC1`–`MC24`，加上 `role` 系七人：**茶博士 `role105`、卞喜 `role125`、李大山 `role128`、河童三兄弟 `role120`／`role121`／`role122`、廖淳 `role127`**（各自張數見該檔 §4.5；有立繪不等於 `MC` 開頭）。`NPC33`、`NPC_Thug`、`Monster` 這類代號**不會有立繪切換**，替他們寫這兩個指令是空轉。他們說話那格 `Sequence` 只寫別的事，沒有就留 `""`。（2026-08-29 更正：本段原本把 `role127` 列在無立繪那一邊，與立繪規則 §4.5 打架。）
 
 #### 3.2 `EnableCharacterExpression` (啟用表情特效)
 -   **觸發條件**: 如果對話情境需要額外的表情特效，在 `SetPortrait` 後緊跟 `EnableCharacterExpression`。
@@ -182,9 +195,9 @@
     BeginDiceRoll(Auto,InsightCheck,12);
     ```
     應遵循以下兩步驟結構：
-    1.  **檢定觸發節點**: 創建一個節點，其 `actorID` 通常為 `"MC0"` (或代表系統的ID)，`text` 欄位為**空字串 `""`**。`Sequence` 欄位**不能只寫** `BeginDiceRoll(Auto,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」使用完整包裝：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,FeatID,難度);`。此節點必須包含 `Description` 說明其為檢定觸發點。
+    1.  **檢定觸發節點**: 創建一個節點，其 `actorID` 為 `"0"`（⚠ 舊版寫 `"MC0"`，那個 ID 不存在，2026-08-29 全檔改正），`text` 欄位為**空字串 `""`**。`Sequence` 欄位**不能只寫** `BeginDiceRoll(Auto,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md`「擲骰節點的 Sequence 固定寫法」使用完整包裝：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,FeatID,難度);`。此節點必須包含 `Description` 說明其為檢定觸發點。
         -   `links`: 此節點的 `links` 應指向緊隨其後的「空內容緩衝節點」。
-    2.  **空內容緩衝節點**: 緊隨「檢定觸發節點」之後，必須插入一個**新的節點**（擲骰節點與成功／失敗分支之間**固定隔這一個節點**，`Conditions` 不可掛在這裡）。此節點的 `actorID` 為 `"MC0"`，`text` 為**空字串 `""`**；因為沒有對話可讓玩家點擊推進，`Sequence` **開頭必須為 `Continue();`**（否則擲骰結束後畫面會卡住、無法繼續），若無其他指令則 `Sequence` 僅為 `"Continue();"`。此節點必須包含 `Description` 說明其用途。
+    2.  **空內容緩衝節點**: 緊隨「檢定觸發節點」之後，必須插入一個**新的節點**（擲骰節點與成功／失敗分支之間**固定隔這一個節點**，`Conditions` 不可掛在這裡）。此節點的 `actorID` 為 `"0"`，`text` 為**空字串 `""`**；因為沒有對話可讓玩家點擊推進，`Sequence` **開頭必須為 `Continue();`**（否則擲骰結束後畫面會卡住、無法繼續），若無其他指令則 `Sequence` 僅為 `"Continue();"`。此節點必須包含 `Description` 說明其用途。
         -   `links`: 此「空內容緩衝節點」的 `links` 才指向檢定成功和失敗的實際劇情分支節點（或教學提示等）。
 -   `FeatID` 參考 `給AI看的指南/擲骰指令轉換規則.md` 中的「常用檢定項目ID對照」。
 -   檢定成功後，在描述成功的旁白節點或下一個合適節點的 `Sequence` 中加入獎勵指令 `ModifyData(AbilityExp/FeatExp,Player,獎勵用ID,數值);`。**通用標準為 +10**；**口才檢定成功為 +25**（見 §4.2.1）。
@@ -275,11 +288,11 @@
 
 #### 4.3.1 單場戰鬥（四個節點）
 
-1.  **戰鬥觸發節點**: `actorID` 為 `"MC0"`（或 `0`），`text` 為 `""`。`Sequence` 必須寫滿四段：
+1.  **戰鬥觸發節點**: `actorID` 為 `"0"`（或 `0`），`text` 為 `""`。`Sequence` 必須寫滿四段：
     `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`
     -   `Description`: 例如 `"戰鬥觸發節點：藍焰巨蛇"`。
     -   `links`: **只指向**緊隨其後的緩衝節點（不要在這裡分叉勝／敗）。
-2.  **緩衝節點**: `actorID` `"MC0"`，`text` `""`，`Sequence` **只有** `"Continue();"`。
+2.  **緩衝節點**: `actorID` `"0"`，`text` `""`，`Sequence` **只有** `"Continue();"`。
     -   `Description`: 例如 `"戰鬥緩衝節點"`。
     -   `links`: 指向勝利與失敗兩個分支的第一個 `entryID`。
 3.  **勝利分支第一個節點**: `"Conditions": "IsPassFight() == true;"`。Markdown 的 `**(戰鬥勝利)**` 對應此節點。Sequence **不必**再寫 `Continue();`。
@@ -289,7 +302,7 @@
 ```json
 {
   "entryID": 201,
-  "actorID": "MC0",
+  "actorID": "0",
   "text": "",
   "Sequence": "SetContinueMode(false);BeginFight(Combat,77);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
   "Description": "戰鬥觸發節點：藍焰巨蛇",
@@ -299,7 +312,7 @@
 ```json
 {
   "entryID": 202,
-  "actorID": "MC0",
+  "actorID": "0",
   "text": "",
   "Sequence": "Continue();",
   "Description": "戰鬥緩衝節點",
@@ -363,7 +376,7 @@
 
 -   Markdown 中的表格、大部分列表、標題、分隔線、任務提示 `[系統提示]`、獲得物品 `△獲得...△` 等，若不直接構成對話或帶有特殊指令的事件節點，則在生成對話JSON時**通常被忽略**或另外處理。
 -   **演出描述與音效提示**: 類似「**演出**：跑進村口(茶攤)」或「`[音效：特大聲的咕嚕——！]`」的行，這些主要用於場景或氛圍指導，**不應**為其創建獨立的 `entryID` 和對話節點。它們的內容通常不會直接作為 `text` 顯示。
--   **旁白**: `旁白: [panel=6]＊...＊` 或單獨的 `[panel=6]＊...＊` 行，轉換為 `actorID: 2` (或其他旁白ID) 的節點，`text` 包含 `[panel=6]` 和星號內的內容。
+-   **旁白**: `旁白: [panel=6]＊...＊` 或單獨的 `[panel=6]＊...＊` 行，轉換為 `actorID: 2` 的節點，`text` 包含 `[panel=6]` 和星號內的內容。**`2` 與 `role2` 都是旁白，Unity 端是同一個**（`role2` 是 Unity 裡自取的名字）；`Json/` 兩者並存（`role2` 1 145 處、`2` 461 處），**新稿寫 `2` 即可，回讀時看到 `role2` 不算錯**（作者 2026-08-29）。
 -   **`[即時訊息區]` 和 `[系統提示]` 的處理**: 這類內容，**不應**為其創建獨立的對話節點。如果需要在遊戲中顯示這些信息，其內容應整合到緊鄰的旁白節點的 `text` 中（例如，作為旁白的一部分，或在旁白文字後另起一行），或由遊戲UI通過非對話方式（如彈出提示、日誌更新等）專門處理，以避免打斷對話流。
 -   **玩家選項的特殊處理 (`給AI看的指南/立繪指令轉換規則.md` 5.1節)**:
     -   選項節點的 `text` 應為格式化後的選項文字。若不涉及檢定，則為 `「原本的選項文字」`。若涉及檢定，則為 `[em2][XX檢定][/em2]「原本的選項文字」`。例如，原始 Markdown 選項為 `[魅力 難度5]` `[嘗試英雄式站姿，眺望遠方立繪]`：「區區三百文，何足掛齒！」，則選項節點的 `text` 變為 `[em2][魅力檢定][/em2]「區區三百文，何足掛齒！」`。
@@ -377,7 +390,7 @@
 -   **目的**：此節點主要作為一個遊戲邏輯的「鉤子 (hook)」，其 `Sequence` 欄位預期後續會被人力或特定工具填入觸發遊戲內任務系統的具體指令。
 -   **JSON 結構建議**：
     -   `entryID`: (Number) 唯一的節點 ID，按順序遞增。
-    -   `actorID`: (String/Number) 通常建議使用代表「系統」或「旁白」的 ID，例如 `"MC0"`。
+    -   `actorID`: (String/Number) 通常建議使用代表「系統」或「旁白」的 ID，例如 `"0"`。
     -   `text`: (String) 可以直接使用 Markdown 中的任務/線索描述文字，例如 `"觸發主線任務：初出茅廬"`。這有助於理解該節點的用途。
     -   `Sequence`: (String) 初始可以為空字串 `""`，或一個註解式的佔位符，例如 `"// TODO: Add TaskTriggerCommand for '任務名稱' here"`。**此欄位是預留給後續添加實際遊戲指令用的。**
     -   `Description`: (String) 必須添加，用於描述此節點的任務觸發功能，例如 "任務觸發節點：初出茅廬"。
@@ -391,7 +404,7 @@
     ```json
     {
         "entryID": 200, // 假設的 ID
-        "actorID": "MC0",
+        "actorID": "0",
         "text": "觸發主線任務：拜訪村長",
         "Sequence": "// TODO: Add TaskTriggerCommand for '拜訪村長' here",
         "Description": "任務觸發節點：拜訪村長",
@@ -399,6 +412,21 @@
     }
     ```
 -   **與其他節點的關係**：如果這類觸發標記緊跟在某個角色的對話之後，那麼該角色對話節點的 `links` 就應該指向這個新創建的任務觸發節點。然後，這個任務觸發節點的 `links` 再指向真正的下一個對話或流程。如果該標記獨立存在，則它按正常流程插入。
+
+## ⚠ 轉檔前必掃：`[/em7]` 後面一定要有標點（2026-08-29 新增）
+
+**掃全檔每一個 `[/em7]`，後面沒有標點就補一個。** 逗號「，」、冒號「：」、破折號「——」、刪節號「……」都可以；`[/em7]` 落在句尾則不必。
+
+- ✅ `「[em7]搖搖頭，苦笑一聲[/em7]，那筆銀子……」`
+- ❌ `「[em7]搖搖頭，苦笑一聲[/em7]那筆銀子……」`（畫面上會黏在一起）
+
+**⚠ 這是全案最常漏、而且已經復發過至少四輪的一條**（`給AI看的指南/文本創作指南.md` 版本記錄 V1.58／V1.80 各清過一批：`[/em7]` 後直接接字 61 筆／13 檔、半形空白 28 筆／3 檔、標點誤寫在標籤內 30 筆、半形標點 14 節點／5 檔）。
+
+**為什麼會復發：** 規則寫在 `文本創作指南.md` §2.2（742 行巨檔的中段），而寫對白時查的是 `武俠文風創作指南.md`；**創作稿裡的既有範例本身就有一半沒帶標點**，照著模仿就會學錯。2026-08-29 實測：**`Json/` 幾乎 100% 合規，創作稿 442 處裡 137 處漏掉**——因為漏的都在轉檔時才補上，**沒有回頭修創作稿**，於是錯的範本永久留在稿裡。
+
+**所以這一條的把關點就在轉檔這一步。** 規則全文見 `給AI看的指南/文本創作指南.md` §2.2 與 `武俠文風創作指南.md` 7.1a。
+
+---
 
 ## 注意事項
 
@@ -490,7 +518,7 @@
   },
   {
     "entryID": 102,
-    "actorID": "MC0",
+    "actorID": "0",
     "text": "[panel=6]＊（此時，一個選項出現了。）＊",
     "Sequence": "DisableCharacterExpression(1);",
     "links": [104, 107]
@@ -505,7 +533,7 @@
   },
   {
     "entryID": 105,
-    "actorID": "MC0",
+    "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,CharismaCheck,5);",
     "links": [106],
