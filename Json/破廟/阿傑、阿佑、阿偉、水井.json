@@ -176,7 +176,7 @@
     "entryID": 3228,
     "actorID": "MC1",
     "text": "「別只說我了，大哥你呢，你——」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);\nDisableCharacterExpression(1);",
     "zh_TW": "「別只說我了，大哥你呢，你——」",
     "zh_CN": "「别只说我了，大哥你呢，你——」",
     "links": [3229]
@@ -343,7 +343,7 @@
     "entryID": 3246,
     "actorID": "MC1",
     "text": "「哪裡哪裡，運氣好而已。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「哪裡哪裡，運氣好而已。」",
     "zh_CN": "「哪里哪里，运气好而已。」",
     "links": [3247]
@@ -361,7 +361,7 @@
     "entryID": 3248,
     "actorID": "MC1",
     "text": "「有酒有肉？那必須去啊！宗緯大哥，一言為定！」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「有酒有肉？那必須去啊！宗緯大哥，一言為定！」",
     "zh_CN": "「有酒有肉？那必须去啊！宗纬大哥，一言为定！」",
     "links": [3250]
@@ -1776,7 +1776,7 @@
     "entryID": 3760,
     "actorID": "MC1",
     "text": "「哈哈，好說好說！這江湖行走，靠的不光是拳腳，更得靠腦子！只要看破了其中的[em2]玄機[/em2]，哪怕是只蒼蠅飛過，我也能知道公母！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「哈哈，好說好說！這江湖行走，靠的不光是拳腳，更得靠腦子！只要看破了其中的[em2]玄機[/em2]，哪怕是只蒼蠅飛過，我也能知道公母！」",
     "zh_CN": "「哈哈，好说好说！这江湖行走，靠的不光是拳脚，更得靠脑子！只要看破了其中的[em2]玄机[/em2]，哪怕是只苍蝇飞过，我也能知道公母！」",
     "links": [3761]

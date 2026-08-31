@@ -4,7 +4,7 @@
     "actorID": "MC1",
     "title": "開場",
     "text": "「好重的血味……這裡就是最深處了嗎？連呼吸都變得困難了。」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "Description": "開場",
     "zh_CN": "「好重的血味……这里就是最深处了吗？连呼吸都变得困难了。」",
     "links": [2]
@@ -171,7 +171,7 @@
     "entryID": 25,
     "actorID": "role127",
     "text": "「好劍！！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「好剑！！」",
     "links": [26]
   },
@@ -301,7 +301,7 @@
     "entryID": 45,
     "actorID": "role2",
     "text": "[panel=6]＊（你的視線被血色與黑霧吞沒。外界的聲音漸漸遠去，四下聲息俱杳，天地似乎都停了。此刻，一股邪火自胸口竄起，燒得你神智漸失——你只想撲上去，把眼前那妖物生吞了！）＊",
-    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(BloodStain_1,Play);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(0);\nPlayOrStopParticle(BloodStain_1,Play);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "Description": "共同旁白①。⚠ 待作者確認：原本是 SetPortrait(MC1,pic=16)，追蹤檔改為受傷的 pic=11，請看畫面是否正確。",
     "zh_CN": "[panel=6]＊（你的视线被血色与黑雾吞没。外界的声音渐渐远去，四下声息俱杳，天地似乎都停了。此刻，一股邪火自胸口窜起，烧得你神智渐失——你只想扑上去，把眼前那妖物生吞了！）＊",
     "links": [48]
@@ -404,7 +404,7 @@
     "entryID": 65,
     "actorID": "MC1",
     "text": "「妳……沒想到笑起來挺好看的…」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「你……没想到笑起来挺好看的…」",
     "links": [66]
   },
@@ -593,7 +593,7 @@
     "entryID": 88,
     "actorID": "MC1",
     "text": "「賈先生……我們在祭壇根本沒見到卞喜，反而遇到一頭半人半虎的怪物。那到底是什麼東西？」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Question);\nDisableCharacterExpression(1);",
     "zh_CN": "「贾先生……我们在祭坛根本没见到卞喜，反而遇到一头半人半虎的怪物。那到底是什么东西？」",
     "links": [89]
   },
@@ -633,7 +633,7 @@
     "entryID": 93,
     "actorID": "MC1",
     "text": "「那你是不是……早就摸清了那裡有什麼？你早就知道，那裡頭根本不是尋人那麼簡單，對吧？」",
-    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「那你是不是……早就摸清了那里有什么？你早就知道，那里头根本不是寻人那么简单，对吧？」",
     "links": [94]
   },
@@ -1090,7 +1090,7 @@
     "entryID": 4245,
     "actorID": "MC1",
     "text": "「[em7]幾乎聽不見自己的聲音[/em7]……幫我。」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "Script": "Variable[\"＿＿1\"] = true;",
     "Description": "⚠ 待作者填：變數名 ＿＿1（玩家開過口，醒來四條夢用它分流）。AI 不得自創變數，名字要先在 Unity 變數表建好。",
     "zh_CN": "「[em7]几乎听不见自己的声音[/em7]……帮我。」",
@@ -1157,7 +1157,7 @@
     "entryID": 4253,
     "actorID": "role2",
     "text": "[panel=6]＊（她的聲音聽起來很遠。你正看著她。你在想她身上有多少。）＊",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "[panel=6]＊（她的声音听起来很远。你正看着她。你在想她身上有多少。）＊",
     "links": [4254]
   },
@@ -1281,7 +1281,7 @@
     "entryID": 4268,
     "actorID": "role2",
     "text": "[panel=6]＊（然後你把劍插進地裡，整個人跪了下去。）＊",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "[panel=6]＊（然后你把剑插进地里，整个人跪了下去。）＊",
     "links": [4269]
   },
@@ -1346,7 +1346,7 @@
     "entryID": 4276,
     "actorID": "role2",
     "text": "[panel=6]＊（你死咬著牙關，憑著最後一絲清明死死將那股邪勁壓在心底。你沒有開口。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "[panel=6]＊（你死咬着牙关，凭着最后一丝清明死死将那股邪劲压在心底。你没有开口。）＊",
     "links": [4277]
   },
@@ -1455,7 +1455,7 @@
     "entryID": 4289,
     "actorID": "role2",
     "text": "[panel=6]＊（你沒有開口。你去搆那把劍。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "[panel=6]＊（你没有开口。你去够那把剑。）＊",
     "links": [4290]
   },
@@ -1513,7 +1513,7 @@
     "entryID": 4296,
     "actorID": "role2",
     "text": "[panel=6]＊（你也站不住了。劍先落地，然後是你。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "[panel=6]＊（你也站不住了。剑先落地，然后是你。）＊",
     "links": [4297]
   },
@@ -1539,7 +1539,7 @@
     "entryID": 4299,
     "actorID": "role2",
     "text": "[panel=6]＊（你的劍脫手了。你聽見自己的膝蓋撞在石板上，聲音很遠。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "[panel=6]＊（你的剑脱手了。你听见自己的膝盖撞在石板上，声音很远。）＊",
     "links": [4300]
   },

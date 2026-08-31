@@ -21,7 +21,7 @@
     "entryID": 3,
     "actorID": "MC1",
     "text": "「實不相瞞，我與表妹此行，正是為了那英豪府的俠客遴選。」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「實不相瞞，我與表妹此行，正是為了那英豪府的俠客遴選。」",
     "zh_CN": "「实不相瞒，我与表妹此行，正是为了那英豪府的侠客遴选。」",
     "links": [4]
@@ -39,7 +39,7 @@
     "entryID": 5,
     "actorID": "MC1",
     "text": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「哦？魚躍龍門？聽聞英豪府遴選俠士，廣納天下英才，不知是何等盛事？」",
     "zh_CN": "「哦？鱼跃龙门？听闻英豪府遴选侠士，广纳天下英才，不知是何等盛事？」",
     "links": [6]
@@ -75,7 +75,7 @@
     "entryID": 9,
     "actorID": "MC1",
     "text": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其來歷也定然不凡吧？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其來歷也定然不凡吧？」",
     "zh_CN": "「所言甚是！那[em2]英豪府[/em2]既有如此吸引力，想必其来历也定然不凡吧？」",
     "links": [10]
@@ -93,7 +93,7 @@
     "entryID": 11,
     "actorID": "MC1",
     "text": "「原來如此！想不到英豪府竟有這般輝煌的過去與濟世救民的重任！道長此番前往，定是為繼承先賢遺志，在遴選中一展抱負，為天下太平出力了！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「原來如此！想不到英豪府竟有這般輝煌的過去與濟世救民的重任！道長此番前往，定是為繼承先賢遺志，在遴選中一展抱負，為天下太平出力了！」",
     "zh_CN": "「原来如此！想不到英豪府竟有这般辉煌的过去与济世救民的重任！道长此番前往，定是为继承先贤遗志，在遴选中一展抱负，为天下太平出力了！」",
     "links": [12]
@@ -188,7 +188,7 @@
     "entryID": 23,
     "actorID": "MC1",
     "text": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
     "zh_CN": "「道长…道长所言极是！富贵险中求！若真有此等机缘，岂能错过！好！我答应你！今晚我们便去那林中一探究竟！」",
@@ -237,7 +237,7 @@
     "entryID": 28,
     "actorID": "MC1",
     "text": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「小妹妹，妳怎麼一個人在這裡？是不是有人欺負妳？」",
     "zh_CN": "「小妹妹，你怎么一个人在这里？是不是有人欺负你？」",
     "links": [29]
@@ -280,7 +280,7 @@
     "entryID": 33,
     "actorID": "MC1",
     "text": "「不哭不哭，眼淚是珍珠，本少俠在此，定護妳周全。妳若有何委屈，儘管說與我聽。」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「不哭不哭，眼淚是珍珠，本少俠在此，定護妳周全。妳若有何委屈，儘管說與我聽。」",
     "zh_CN": "「不哭不哭，眼泪是珍珠，本少侠在此，定护你周全。你若有何委屈，尽管说与我听。」",
     "links": [34, 39]
@@ -299,7 +299,7 @@
     "entryID": 35,
     "actorID": "MC1",
     "text": "「這是…？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「這是…？」",
     "zh_CN": "「这是…？」",
     "links": [36]
@@ -478,7 +478,7 @@
     "actorID": "MC1",
     "title": "給阿婆河神的眼淚",
     "text": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「阿婆，此物名為『河神的眼淚』，是我們從一位小妹妹那裡得來的。她看起來非常害怕河邊…」",
     "zh_CN": "「阿婆，此物名为『河神的眼泪』，是我们从一位小妹妹那里得来的。她看起来非常害怕河边…」",
     "links": [56]
@@ -537,7 +537,7 @@
     "entryID": 61,
     "actorID": "MC1",
     "text": "「多謝阿婆厚贈。但您說的[em2]吃人[/em2]…究竟是何意？[em2]小花[/em2]她…」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「多謝阿婆厚贈。但您說的[em2]吃人[/em2]…究竟是何意？[em2]小花[/em2]她…」",
     "zh_CN": "「多谢阿婆厚赠。但您说的[em2]吃人[/em2]…究竟是何意？[em2]小花[/em2]她…」",
     "links": [62]
@@ -629,7 +629,7 @@
     "entryID": 72,
     "actorID": "MC1",
     "text": "[em2][耗時一個時辰][/em2]「道長身手不凡，不如切磋一下？點到為止。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "Conditions": "Variable[\"MyTime\"] < 6;",
     "zh_TW": "[em2][耗時一個時辰][/em2]「道長身手不凡，不如切磋一下？點到為止。」",
     "zh_CN": "[em2][耗时一个时辰][/em2]「道长身手不凡，不如切磋一下？点到为止。」",
@@ -776,7 +776,7 @@
     "entryID": 188,
     "actorID": "MC1",
     "text": "「哈哈，道長說得頭頭是道！不過…真要有寶貝，你自個兒去取便是，何必找我這個萍水相逢的人？這話說出來，怕是連三歲孩童都不信吧！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);\nModifyData(AbilityExp,Player,Charisma,10);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);\nModifyData(AbilityExp,Player,Charisma,10);",
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「哈哈，道長說得頭頭是道！不過…真要有寶貝，你自個兒去取便是，何必找我這個萍水相逢的人？這話說出來，怕是連三歲孩童都不信吧！」",
     "zh_CN": "「哈哈，道长说得头头是道！不过…真要有宝贝，你自个儿去取便是，何必找我这个萍水相逢的人？这话说出来，怕是连三岁孩童都不信吧！」",

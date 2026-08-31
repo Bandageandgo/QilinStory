@@ -664,7 +664,7 @@
     "entryID": 3393,
     "actorID": "MC1",
     "text": "「咦？這是……？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「咦？這是……？」",
     "zh_CN": "「咦？这是……？」",
     "links": [3394]
@@ -682,7 +682,7 @@
     "entryID": 3395,
     "actorID": "MC1",
     "text": "「嘿嘿，不管了，既是有緣得見，那就先由本少俠代為保管吧。說不定日後能湊成一對呢！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);\nModifyData(Valuable,Player,Upperjade,1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);\nModifyData(Valuable,Player,Upperjade,1);",
     "Description": "獲得殘缺的上半圓玉珮",
     "zh_TW": "「嘿嘿，不管了，既是有緣得見，那就先由本少俠代為保管吧。說不定日後能湊成一對呢！」",
     "zh_CN": "「嘿嘿，不管了，既是有缘得见，那就先由本少侠代为保管吧。说不定日后能凑成一对呢！」",

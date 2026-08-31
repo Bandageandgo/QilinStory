@@ -21,7 +21,7 @@
     "entryID": 3,
     "actorID": "MC1",
     "text": "「這……這不是趙王洞那頭——」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Shock);",
     "zh_TW": "「這……這不是趙王洞那頭——」",
     "zh_CN": "「这……这不是赵王洞那头——」",
     "links": [4]
@@ -84,7 +84,7 @@
     "entryID": 10,
     "actorID": "MC1",
     "text": "「牠……吃了人？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Shock);",
     "zh_TW": "「牠……吃了人？」",
     "zh_CN": "「它……吃了人？」",
     "links": [11]
@@ -120,7 +120,7 @@
     "entryID": 14,
     "actorID": "MC1",
     "text": "「先生的意思是……牠本來是個人？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「先生的意思是……牠本來是個人？」",
     "zh_CN": "「先生的意思是……它本来是个人？」",
     "links": [15]
@@ -165,7 +165,7 @@
     "entryID": 19,
     "actorID": "MC1",
     "text": "「這樣的大學問，先生怎麼不自己去請教？」",
-    "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「這樣的大學問，先生怎麼不自己去請教？」",
     "zh_CN": "「这样的大学问，先生怎么不自己去请教？」",
     "links": [20]
@@ -426,7 +426,7 @@
     "entryID": 48,
     "actorID": "MC1",
     "text": "「先生不問了？」",
-    "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「先生不問了？」",
     "zh_CN": "「先生不问了？」",
     "links": [49]

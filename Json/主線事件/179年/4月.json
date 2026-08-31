@@ -13,7 +13,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「嘖，這小村的日子雖安逸，卻也無聊得緊…」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nAudioControl(Play Music,BGM_19);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nAudioControl(Play Music,BGM_19);",
     "zh_TW": "「嘖，這小村的日子雖安逸，卻也無聊得緊…」",
     "zh_CN": "「啧，这小村的日子虽安逸，却也无聊得紧…」",
     "links": [3]
@@ -22,7 +22,7 @@
     "entryID": 3,
     "actorID": "MC1",
     "text": "「哎呀！我想起來了！雍仔道長！古墓！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Shock);",
     "zh_TW": "「哎呀！我想起來了！雍仔道長！古墓！」",
     "zh_CN": "「哎呀！我想起来了！雍仔道长！古墓！」",
     "links": [15]
@@ -40,7 +40,7 @@
     "entryID": 5,
     "actorID": "MC1",
     "text": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「靈犀妳想到哪裡去了！我輩江湖兒女，豈會做那雞鳴狗盜之徒？」",
     "zh_CN": "「灵犀你想到哪里去了！我辈江湖儿女，岂会做那鸡鸣狗盗之徒？」",
     "links": [17]
@@ -206,7 +206,7 @@
     "entryID": 2053,
     "actorID": "MC1",
     "text": "「還夠用吧？有床睡、有飯吃，比睡野地強多了。」",
-    "Sequence": "DisableCharacterExpression(1)\n;SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1)\n;SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「还够用吧？有床睡、有饭吃，比睡野地强多了。」",
     "links": [2150]
   },
@@ -222,7 +222,7 @@
     "entryID": 2055,
     "actorID": "MC1",
     "text": "「那不然呢？去跟大公雞再鬥三回合？」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「那不然呢？去跟大公鸡再斗三回合？」",
     "links": [2056]
   },
@@ -371,7 +371,7 @@
     "entryID": 2074,
     "actorID": "MC1",
     "text": "「茶博士，小犀年紀小，說話直了些。托您過手的貨，她記帳比誰都清楚，您就讓她試一試嘛。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「茶博士，小犀年纪小，说话直了些。托您过手的货，她记帐比谁都清楚，您就让她试一试嘛。」",
     "links": [2075, 2076]
   },
@@ -388,7 +388,7 @@
     "entryID": 2076,
     "actorID": "MC1",
     "text": "「茶博士，小犀她……呃……」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「茶博士，小犀她……呃……」",
     "links": [2077]
@@ -405,7 +405,7 @@
     "entryID": 2078,
     "actorID": "MC1",
     "text": "「九一分帳，說定了便一銅錢不少。茶博士的貨，小犀絕不短您分文。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「九一分帐，说定了便一铜钱不少。茶博士的货，小犀绝不短您分文。」",
     "links": [2079]
   },
@@ -421,7 +421,7 @@
     "entryID": 2080,
     "actorID": "MC1",
     "text": "「先試一試嘛，賣不出再收回，茶博士您又不損什麼。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「先试一试嘛，卖不出再收回，茶博士您又不损什么。」",
     "links": [2081]
   },
@@ -589,7 +589,7 @@
     "entryID": 2101,
     "actorID": "MC1",
     "text": "「……所以我是掌櫃，還是腳夫？」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「……所以我是掌柜，还是脚夫？」",
     "links": [2102]
   },
@@ -678,7 +678,7 @@
     "entryID": 2151,
     "actorID": "MC1",
     "text": "「……我還當是自己躺糊塗了。縣衙不是說一個月就通車？」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「……我還當是自己躺糊塗了。縣衙不是說一個月就通車？」",
     "zh_CN": "「……我还当是自己躺糊涂了。县衙不是说一个月就通车？」",
     "links": [2152]

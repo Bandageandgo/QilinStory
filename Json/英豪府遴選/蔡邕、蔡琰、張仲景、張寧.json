@@ -12,7 +12,7 @@
     "entryID": 43,
     "actorID": "MC1",
     "text": "「大叔？！你怎麼會在這裡？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「大叔？！你怎么会在这里？」",
     "links": [44]
   },
@@ -52,7 +52,7 @@
     "entryID": 48,
     "actorID": "MC1",
     "text": "「張寧姑娘？你怎麼也在這？」",
-    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「张宁姑娘？你怎么也在这？」",
     "links": [49]
   },
@@ -133,7 +133,7 @@
     "entryID": 58,
     "actorID": "MC1",
     "text": "「大叔你別亂開玩笑！當時情況危急，我只是路見不平拔刀相助而已！」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「大叔你别乱开玩笑！当时情况危急，我只是路见不平拔刀相助而已！」",
     "links": [59]
   },
@@ -149,7 +149,7 @@
     "entryID": 60,
     "actorID": "MC1",
     "text": "「不過，真是讓人訝異，她、她是大叔你的女兒？！」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "zh_CN": "「不过，真是让人讶异，她、她是大叔你的女儿？！」",
     "links": [61]
   },
@@ -266,7 +266,7 @@
     "entryID": 74,
     "actorID": "MC1",
     "text": "「當時情況緊急，我也沒想那麼多，總不能見死不救吧。」",
-    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「当时情况紧急，我也没想那么多，总不能见死不救吧。」",
     "links": [83]
   },
@@ -314,7 +314,7 @@
     "entryID": 80,
     "actorID": "MC1",
     "text": "「呃……算是吧。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「呃……算是吧。」",
     "links": [83]
   },

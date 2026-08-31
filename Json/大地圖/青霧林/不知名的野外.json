@@ -11,7 +11,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「這……這就沒了？日記裡說的『跳下懸崖』，該不會真要我跳下去吧？這要是摔下去，豈不是成了肉餅？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「这……这就没了？日记里说的『跳下悬崖』，该不会真要我跳下去吧？这要是摔下去，岂不是成了肉饼？」",
     "links": [3]
   },
@@ -71,7 +71,7 @@
     "entryID": 10,
     "actorID": "MC1",
     "text": "「唉唉……？動、動了？！」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "Script": "SetQuestState(\"CF09\", \"active\");",
     "Description": "接取任務",
     "zh_CN": "「唉唉……？动、动了？！」",
@@ -90,7 +90,7 @@
     "entryID": 12,
     "actorID": "MC1",
     "text": "「不過嘛，終究還是死物！在本大俠精妙絕倫的武功面前，還不是得乖乖躺下！哈哈！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「不过嘛，终究还是死物！在本大侠精妙绝伦的武功面前，还不是得乖乖躺下！哈哈！」",
     "links": [13]
   },
@@ -98,7 +98,7 @@
     "entryID": 13,
     "actorID": "MC1",
     "text": "「啊！我的寶貝！這下全被打爛了！嗚嗚嗚……我的機關術……我的寶貝樁子……帶不走了……血本無歸啊！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「啊！我的宝贝！这下全被打烂了！呜呜呜……我的机关术……我的宝贝桩子……带不走了……血本无归啊！」",
     "links": [14]
   },
@@ -114,7 +114,7 @@
     "entryID": 15,
     "actorID": "MC1",
     "text": "「嗯？這是什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「嗯？这是什么？」",
     "links": [16]
   },
@@ -240,7 +240,7 @@
     "entryID": 32,
     "actorID": "MC1",
     "text": "「不過……這深山老林的，誰會在這立碑呢？這土包看起來……倒像是有些年頭了。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「不过……这深山老林的，谁会在这立碑呢？这土包看起来……倒像是有些年头了。」",
     "links": [33, 34]
   },
@@ -266,7 +266,7 @@
     "entryID": 35,
     "actorID": "MC1",
     "text": "「咳！話本裡都說了，前輩高人往往會把最重要的絕學隨身攜帶……」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「咳！话本里都说了，前辈高人往往会把最重要的绝学随身携带……」",
     "links": [2059]
   },
@@ -282,7 +282,7 @@
     "entryID": 37,
     "actorID": "MC1",
     "text": "「前輩莫怪，借過借過……」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「前辈莫怪，借过借过……」",
     "links": [38]
   },
@@ -306,7 +306,7 @@
     "entryID": 40,
     "actorID": "MC1",
     "text": "「原來前輩至死都還掛念著那兩位師兄弟……只可惜，這封信永遠也寄不出去了。」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「原来前辈至死都还挂念着那两位师兄弟……只可惜，这封信永远也寄不出去了。」",
     "links": [41]
   },
@@ -314,7 +314,7 @@
     "entryID": 41,
     "actorID": "MC1",
     "text": "「前輩，您的遺願，晚輩知曉了！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「前辈，您的遗愿，晚辈知晓了！」",
     "links": [42]
   },
@@ -366,7 +366,7 @@
     "entryID": 49,
     "actorID": "MC1",
     "text": "「咦？這不是小溪村那個送財河妖嗎？怎麼？小溪村混不下去，跑到這深山老林來躲債了？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「咦？这不是小溪村那个送财河妖吗？怎么？小溪村混不下去，跑到这深山老林来躲债了？」",
     "links": [50]
   },
@@ -390,7 +390,7 @@
     "entryID": 53,
     "actorID": "MC1",
     "text": "「哇！妖怪？！這池塘裡怎麼會有河妖？！難道是住這的前輩養的畜生？！」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「哇！妖怪？！这池塘里怎么会有河妖？！难道是住这的前辈养的畜生？！」",
     "links": [2061]
   },
@@ -522,7 +522,7 @@
     "entryID": 2061,
     "actorID": "MC1",
     "text": "「唉！要我說啊，要養也養個大鵰之類的才有派頭！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「唉！要我说啊，要养也养个大雕之类的才有派头！」",
     "links": [54]
   },

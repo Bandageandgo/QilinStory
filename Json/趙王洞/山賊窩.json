@@ -4,7 +4,7 @@
     "actorID": "MC1",
     "title": "開場(門口)",
     "text": "「勞煩通報廖頭領一聲，就說故人來訪，有要事相商。」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Meditate);",
     "Description": "開場(門口)",
     "zh_CN": "「劳烦通报廖头领一声，就说故人来访，有要事相商。」",
     "links": [2]
@@ -45,7 +45,7 @@
     "entryID": 7,
     "actorID": "MC1",
     "text": "「這茶……不對勁！」",
-    "Sequence": "PlayOrStopParticle(ScreenWhite_1,Stop);\nSetPortrait(MC1,pic=19);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "PlayOrStopParticle(ScreenWhite_1,Stop);\nSetPortrait(MC1,pic=19);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「这茶……不对劲！」",
     "links": [8]
   },
@@ -95,7 +95,7 @@
     "entryID": 13,
     "actorID": "MC1",
     "text": "「嘶……頭好痛…」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「嘶……头好痛…」",
     "links": [14]
   },
@@ -103,7 +103,7 @@
     "entryID": 14,
     "actorID": "MC1",
     "text": "「等等，雍仔？娜娜？……糟了！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「等等，雍仔？娜娜？……糟了！」",
     "links": [16]
   },
@@ -119,7 +119,7 @@
     "entryID": 17,
     "actorID": "MC1",
     "text": "「廖淳大哥！？你怎麼也被關在這裡？到底發生了什麼事？我的朋友們呢？」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「廖淳大哥！？你怎么也被关在这里？到底发生了什么事？我的朋友们呢？」",
     "links": [18]
   },
@@ -135,7 +135,7 @@
     "entryID": 19,
     "actorID": "MC1",
     "text": "「難道……那幫賊人口中說的[em2]祭品[/em2]就是……？」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「难道……那帮贼人口中说的[em2]祭品[/em2]就是……？」",
     "links": [20]
   },
@@ -183,7 +183,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「整死我？小爺我可是雲中郡太守的姪子，只怕外頭官兵這會兒正掘地三尺四處找我呢。你想清楚，是現在把我放了逃命去，還是等大軍殺進來，給卞喜當替死鬼？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「整死我？小爷我可是云中郡太守的侄子，只怕外头官兵这会儿正掘地三尺四处找我呢。你想清楚，是现在把我放了逃命去，还是等大军杀进来，给卞喜当替死鬼？」",
     "links": [26, 36]
   },
@@ -225,7 +225,7 @@
     "entryID": 32,
     "actorID": "MC1",
     "text": "「耍什麼手段，手段有我拳頭硬嗎？」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "「耍什么手段，手段有我拳头硬吗？」",
     "links": [33]
   },
@@ -242,7 +242,7 @@
     "entryID": 36,
     "actorID": "role126",
     "text": "「狗屁！太守的姪子怎麼會沒帶護衛在外頭閒逛？你小子當我傻啊？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Nervous_2);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「狗屁！太守的侄子怎么会没带护卫在外头闲逛？你小子当我傻啊？」",
     "links": [4124]
@@ -251,7 +251,7 @@
     "entryID": 39,
     "actorID": "MC1",
     "text": "「嘿嘿，來不及啦大哥，咱的花樣已經耍完了。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);\nOpenPanel(1,close);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);\nOpenPanel(1,close);",
     "zh_CN": "「嘿嘿，来不及啦大哥，咱的花样已经耍完了。」",
     "links": [46]
   },
@@ -283,7 +283,7 @@
     "entryID": 44,
     "actorID": "MC1",
     "text": "「還真被我唬住了。行咧，救人要緊！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「还真被我唬住了。行咧，救人要紧！」",
     "links": [46]
   },
@@ -346,7 +346,7 @@
     "entryID": 57,
     "actorID": "MC1",
     "text": "「哈哈，看來太平道不過如此。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「哈哈，看來太平道不過如此。」",
     "zh_CN": "「哈哈，看来太平道不过如此。」",
     "links": [58]
@@ -365,7 +365,7 @@
     "actorID": "MC1",
     "title": "便籤",
     "text": "「這是……某個教眾留下的筆記？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "Description": "點便籤",
     "zh_CN": "「这是……某个教众留下的笔记？」",
     "links": [4146]
@@ -440,7 +440,7 @@
     "entryID": 74,
     "actorID": "role127",
     "text": "[panel=2]「哼，老子早覺得蹊蹺。卞喜那廝把我關進牢裡，卻連一口飯都不叫人送來。合著你們壓根不知道我被關在這兒？」",
-    "Sequence": "SetPortrait(role127,pic=1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(role127,pic=1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "[panel=2]「哼，老子早觉得蹊跷。卞喜那厮把我关进牢里，却连一口饭都不叫人送来。合着你们压根不知道我被关在这儿？」",
     "links": [75]
   },
@@ -498,7 +498,7 @@
     "entryID": 92,
     "actorID": "MC1",
     "text": "「嘔、嘔嘔嘔——」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「呕、呕呕呕——」",
     "links": [93]
   },
@@ -514,7 +514,7 @@
     "entryID": 94,
     "actorID": "MC1",
     "text": "「……廖大哥，你這烏鴉嘴能不能先收一收，說點中聽的，噁……」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「……廖大哥，你这乌鸦嘴能不能先收一收，说点中听的，恶……」",
     "links": [95]
   },
@@ -567,7 +567,7 @@
     "entryID": 102,
     "actorID": "MC1",
     "text": "「開了！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「开了！」",
     "links": []
   },
@@ -585,7 +585,7 @@
     "entryID": 105,
     "actorID": "MC1",
     "text": "「雍仔和娜娜生死未卜，我怎麼可能退縮？走吧，廖大哥，咱們去會會那個卞喜！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「雍仔和娜娜生死未卜，我怎么可能退缩？走吧，廖大哥，咱们去会会那个卞喜！」",
     "links": [106]
   },
@@ -833,7 +833,7 @@
     "entryID": 4157,
     "actorID": "MC1",
     "text": "「廖大哥，接下來呢？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「廖大哥，接下來呢？」",
     "zh_CN": "「廖大哥，接下来呢？」",
     "links": [100]

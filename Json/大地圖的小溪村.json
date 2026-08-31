@@ -180,7 +180,7 @@
     "entryID": 56,
     "actorID": "MC1",
     "text": "「嗯？這石頭…怎麼回事？」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「嗯？這石頭…怎麼回事？」",
     "zh_CN": "「嗯？这石头…怎么回事？」",
     "links": [57]
@@ -234,7 +234,7 @@
     "entryID": 62,
     "actorID": "MC1",
     "text": "「呃啊…！」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Shock);",
     "zh_TW": "「呃啊…！」",
     "zh_CN": "「呃啊…！」",
     "links": [63]
@@ -299,7 +299,7 @@
     "entryID": 258,
     "actorID": "MC1",
     "text": "「童兄，幸不辱命，我將那百年鐵木取回來了！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「童兄，幸不辱命，我將那百年鐵木取回來了！」",
     "zh_CN": "「童兄，幸不辱命，我将那百年铁木取回来了！」",
     "links": [259]
@@ -713,7 +713,7 @@
     "entryID": 320,
     "actorID": "MC1",
     "text": "「正好，省得我麻煩。那你們就一起上吧！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "「正好，省得我麻煩。那你們就一起上吧！」",
     "zh_CN": "「正好，省得我麻烦。那你们就一起上吧！」",
     "links": [321]
@@ -834,7 +834,7 @@
     "entryID": 334,
     "actorID": "MC1",
     "text": "「哦？那你想來試試？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "「哦？那你想來試試？」",
     "zh_CN": "「哦？那你想来试试？」",
     "links": [335]

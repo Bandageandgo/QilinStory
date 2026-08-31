@@ -39,7 +39,7 @@
     "entryID": 4005,
     "actorID": "MC1",
     "text": "「等等！那當初聊到英豪府，\n妳怎麼全沒提起？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「等等！那當初聊到英豪府，\n妳怎麼全沒提起？」",
     "zh_CN": "「等等！那当初聊到英豪府，\n你怎么全没提起？」",
     "links": [4006]
@@ -322,7 +322,7 @@
     "entryID": 4036,
     "actorID": "MC1",
     "text": "「謀財……生意！？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「謀財……生意！？」",
     "zh_CN": "「谋财……生意！ ？」",
     "links": [4043]
@@ -458,7 +458,7 @@
     "entryID": 4051,
     "actorID": "role2",
     "text": "[panel=6]＊（正當你猶疑時，懷中發出異樣……）＊",
-    "Sequence": "EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "Sequence": "EnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "[panel=6]＊（正當你猶疑時，懷中發出異樣……）＊",
     "zh_CN": "[panel=6]＊（正当你犹疑时，怀中发出异样……）＊",
     "links": [4052]
@@ -504,7 +504,7 @@
     "entryID": 4056,
     "actorID": "MC1",
     "text": "「我……？你是指我一個人？」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「我……？你是指我一個人？」",
     "zh_CN": "「我……？你是指我一个人？」",
     "links": [4057]
@@ -738,7 +738,7 @@
     "entryID": 4083,
     "actorID": "MC1",
     "text": "「那妳呢？娜娜，難道也不打算加入英豪府嗎？」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「那妳呢？娜娜，難道也不打算加入英豪府嗎？」",
     "zh_CN": "「那你呢？娜娜，难道也不打算加入英豪府吗？」",
     "links": [4084]

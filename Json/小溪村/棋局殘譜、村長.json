@@ -12,7 +12,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「這棋局…佈局精妙，隱有殺伐之氣。似是古局。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「這棋局…佈局精妙，隱有殺伐之氣。似是古局。」",
     "zh_CN": "「这棋局…布局精妙，隐有杀伐之气。似是古局。」",
     "links": [3, 99]
@@ -108,7 +108,7 @@
     "entryID": 15,
     "actorID": "MC1",
     "text": "「此局變幻莫測…暫時無解。唉。」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「此局變幻莫測…暫時無解。唉。」",
     "zh_CN": "「此局变幻莫测…暂时无解。唉。」",
     "links": [70]
@@ -157,7 +157,7 @@
     "entryID": 20,
     "actorID": "MC1",
     "text": "「呃…村長慧眼。我等確有此憂慮，一文錢難倒英雄漢，也是常事…」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「呃…村長慧眼。我等確有此憂慮，一文錢難倒英雄漢，也是常事…」",
     "zh_CN": "「呃…村长慧眼。我等确有此忧虑，一文钱难倒英雄汉，也是常事…」",
     "links": [21]
@@ -184,7 +184,7 @@
     "entryID": 23,
     "actorID": "MC1",
     "text": "「村長您儘管吩咐！無論是砍柴挑水、餵雞放牛這些事，我們兄妹倆熟練得很，保證給您辦得利利索索的！有什麼活兒儘管交給我們！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「村長您儘管吩咐！無論是砍柴挑水、餵雞放牛這些事，我們兄妹倆熟練得很，保證給您辦得利利索索的！有什麼活兒儘管交給我們！」",
     "zh_CN": "「村长您尽管吩咐！无论是砍柴挑水、喂鸡放牛这些事，我们兄妹俩熟练得很，保证给您办得利利索索的！有什么活儿尽管交给我们！」",
     "links": [24]
@@ -202,7 +202,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「村長，除了方才說的營生，我們還想向您打聽這附近可有什麼去處？我倆初入江湖，總想著多見識些新奇事物，也好增廣見聞。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「村長，除了方才說的營生，我們還想向您打聽這附近可有什麼去處？我倆初入江湖，總想著多見識些新奇事物，也好增廣見聞。」",
     "zh_CN": "「村长，除了方才说的营生，我们还想向您打听这附近可有什么去处？我俩初入江湖，总想着多见识些新奇事物，也好增广见闻。」",
     "links": [26]
@@ -357,7 +357,7 @@
     "entryID": 44,
     "actorID": "MC1",
     "text": "「啊？哦，挨打的訣竅，那真是太妙了…」",
-    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「啊？哦，挨打的訣竅，那真是太妙了…」",
     "zh_CN": "「蛤？哦..挨打的诀窍，那真是太棒了…」",
     "links": [45]
@@ -449,7 +449,7 @@
     "entryID": 54,
     "actorID": "MC1",
     "text": "「村長明鑑，此棋局解法頗為精妙，晚輩也是耗費了不少心神才得以參透。看村長也是愛棋之人，想必能識其價值，不知村長願出何價交換此解法？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「村長明鑑，此棋局解法頗為精妙，晚輩也是耗費了不少心神才得以參透。看村長也是愛棋之人，想必能識其價值，不知村長願出何價交換此解法？」",
     "zh_CN": "「村长明鉴，此棋局解法颇为精妙，晚辈也是耗费了不少心神才得以参透。看村长也是爱棋之人，想必能识其价值，不知村长愿出何价交换此解法？」",
     "links": [55, 59]
@@ -709,7 +709,7 @@
     "entryID": 112,
     "actorID": "MC1",
     "text": "「嘿，看我的，第一手天元！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「嘿，看我的，第一手天元！」",
     "zh_CN": "「嘿，看我的，第一手天元！」",
     "links": [114, 115]

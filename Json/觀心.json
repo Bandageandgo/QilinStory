@@ -37,7 +37,7 @@
     "entryID": 7,
     "actorID": "MC1",
     "text": "「話本裡的大俠，下山就是行俠仗義、揚名立萬。誰寫過……還得為住宿去煩惱？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「话本里的大侠，下山就是行侠仗义、扬名立万。谁写过……还得为住宿去烦恼？」",
     "links": [10]
@@ -56,7 +56,7 @@
     "entryID": 10,
     "actorID": "MC1",
     "text": "「為錢發愁？我跟靈犀流浪這些年，哪天不是在想今天睡哪、明天吃啥。這不算什麼新鮮事。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「为钱发愁？我跟灵犀流浪这些年，哪天不是在想今天睡哪、明天吃啥。这不算什么新鲜事。」",
     "links": [11]
   },
@@ -64,7 +64,7 @@
     "entryID": 11,
     "actorID": "MC1",
     "text": "「結果馬車要等一個月，客棧一開口——三百錢，還是得照掏照湊。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「结果马车要等一个月，客栈一开口——三百钱，还是得照掏照凑。」",
     "links": [12]
   },
@@ -72,7 +72,7 @@
     "entryID": 12,
     "actorID": "MC1",
     "text": "「只要一擺個俠客的派頭，甚麼都得花錢，旁人也樂得揩你錢。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「只要一摆个侠客的派头，什么都得花钱，旁人也乐得揩你钱。」",
     "links": [14, 16, 18, 20]
   },
@@ -88,7 +88,7 @@
     "entryID": 15,
     "actorID": "MC1",
     "text": "「三百錢是掏了，床也有了。英豪府還在前頭——大俠的路，總得一步一步走，不能因為窮就退。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "zh_CN": "「三百钱是掏了，床也有了。英豪府还在前头——大侠的路，总得一步一步走，不能因为穷就退。」",
     "links": [168]
   },
@@ -120,7 +120,7 @@
     "entryID": 19,
     "actorID": "MC1",
     "text": "「三百錢是掏了，床也有了。……算了，明天的事明天再想。哈哈。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
     "zh_CN": "「三百钱是掏了，床也有了。……算了，明天的事明天再想。哈哈。」",
     "links": [168]
   },
@@ -136,7 +136,7 @@
     "entryID": 21,
     "actorID": "MC1",
     "text": "「三百錢是掏了，床也有了。……等我到了英豪府、變成大俠，這些都是小錢啦。哈哈。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "zh_CN": "「三百钱是掏了，床也有了。……等我到了英豪府、变成大侠，这些都是小钱啦。哈哈。」",
     "links": [168]
   },
@@ -202,7 +202,7 @@
     "entryID": 29,
     "actorID": "role2",
     "text": "[panel=6]＊（[em2]打魚一世蓼兒洼，不種青苗不種麻；酷吏贓官都殺盡。罷！罷！[/em2]）＊",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "[panel=6]＊（[em2]打鱼一世蓼儿洼，不种青苗不种麻；酷吏赃官都杀尽。罢！罢！[/em2]）＊",
     "links": [422]
   },
@@ -210,7 +210,7 @@
     "entryID": 32,
     "actorID": "MC1",
     "text": "「靠水吃水，風浪裡討活，不求人憐。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「靠水吃水，风浪里讨活，不求人怜。」",
     "links": [35]
   },
@@ -218,7 +218,7 @@
     "entryID": 35,
     "actorID": "MC1",
     "text": "「不靠田產、不靠門第。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「不靠田产、不靠门第。」",
     "links": [36]
   },
@@ -226,7 +226,7 @@
     "entryID": 36,
     "actorID": "MC1",
     "text": "「斬盡欺民害民的貪官惡吏。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「斩尽欺民害民的贪官恶吏。」",
     "links": [37]
   },
@@ -234,7 +234,7 @@
     "entryID": 37,
     "actorID": "MC1",
     "text": "「……」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「……」",
     "links": [39, 41, 43, 45]
   },
@@ -250,7 +250,7 @@
     "entryID": 40,
     "actorID": "MC1",
     "text": "「若朝廷縱著貪官惡吏，我等視而不見，還算什麼俠？……但這樣，會不會也算逆賊呢？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
     "Description": "獲得技能卡",
     "zh_CN": "「若朝廷纵着贪官恶吏，我等视而不见，还算什么侠？……但这样，会不会也算逆贼呢？」",
     "links": [310]
@@ -267,7 +267,7 @@
     "entryID": 42,
     "actorID": "MC1",
     "text": "「酷吏贓官害的是尋常百姓。我若有能力，豈能裝作沒看見？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
     "Description": "獲得技能卡",
     "zh_CN": "「酷吏赃官害的是寻常百姓。我若有能力，岂能装作没看见？」",
     "links": [310]
@@ -284,7 +284,7 @@
     "entryID": 44,
     "actorID": "MC1",
     "text": "「歌是好歌，事是難事。……罷了罷了，先顧好靈犀，別的以後再說。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
     "Description": "獲得技能卡",
     "zh_CN": "「歌是好歌，事是难事。……罢了罢了，先顾好灵犀，别的以后再说。」",
     "links": [310]
@@ -301,7 +301,7 @@
     "entryID": 46,
     "actorID": "MC1",
     "text": "「話本裡斬奸除惡的大俠，哪個不是名動天下？我若也走這條路……嘿嘿，說不定英豪府那邊也會高看一眼。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Proud);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Proud);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nSetContinueMode(false);\nModifyData(Skill,Player,WalkWave);\nShowHint(Skill,WalkWave);\nSetContinueMode(original)@Message(EndHintSkill);\nContinue()@Message(EndHintSkill);",
     "Description": "獲得技能卡",
     "zh_CN": "「话本里斩奸除恶的大侠，哪个不是名动天下？我若也走这条路……嘿嘿，说不定英豪府那边也会高看一眼。」",
     "links": [310]
@@ -351,7 +351,7 @@
     "entryID": 55,
     "actorID": "MC1",
     "text": "「……好險。張大叔要是晚來半步，我今天就交代在墓裡了。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「……好险。张大叔要是晚来半步，我今天就交代在墓里了。」",
     "links": [58]
   },
@@ -367,7 +367,7 @@
     "entryID": 60,
     "actorID": "MC1",
     "text": "「且張大叔明明說，旁人受了這傷，十個有九個挺不住。我怎麼覺得……身子反而比以前更輕快？反應靈了，力氣大了，連腦子好像也轉得快些。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「且张大叔明明说，旁人受了这伤，十个有九个挺不住。我怎么觉得……身子反而比以前更轻快？反应灵了，力气大了，连脑子好像也转得快些。」",
     "links": [62, 64, 66, 68]
   },
@@ -383,7 +383,7 @@
     "entryID": 63,
     "actorID": "MC1",
     "text": "「……張大叔把我拉回來，不是讓我躺在客棧發抖的。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "zh_CN": "「……张大叔把我拉回来，不是让我躺在客栈发抖的。」",
     "links": [315]
   },
@@ -399,7 +399,7 @@
     "entryID": 65,
     "actorID": "MC1",
     "text": "「……若是真能變強，也好。靈犀還在客棧等我，我得有本事護她周全。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
     "zh_CN": "「……若是真能变强，也好。灵犀还在客栈等我，我得有本事护她周全。」",
     "links": [315]
   },
@@ -415,7 +415,7 @@
     "entryID": 67,
     "actorID": "MC1",
     "text": "「……怪事。算了，就當我天生命好。人還活著，別自己嚇自己。哈哈。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
     "zh_CN": "「……怪事。算了，就当我天生命好。人还活着，别自己吓自己。哈哈。」",
     "links": [315]
   },
@@ -431,7 +431,7 @@
     "entryID": 69,
     "actorID": "MC1",
     "text": "「……管他什麼屍氣不屍氣，力氣大了、腦子轉快了，打架能多幾分便宜，就不虧。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "zh_CN": "「……管他什么尸气不尸气，力气大了、脑子转快了，打架能多几分便宜，就不亏。」",
     "links": [315]
   },
@@ -472,7 +472,7 @@
     "entryID": 74,
     "actorID": "role2",
     "text": "[panel=6]＊（[em2]深林妖氛籠鐵鎖，羅盤指處誰人信。算無遺策！誰信得？[/em2]）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "[panel=6]＊（[em2]深林妖氛笼铁锁，罗盘指处谁人信。算无遗策！谁信得？[/em2]）＊",
     "links": [426]
   },
@@ -480,7 +480,7 @@
     "entryID": 77,
     "actorID": "MC1",
     "text": "「赫連姑娘的主意，時靈時不靈。王霸之氣那套，狗頭人可不買帳。說她靠譜吧，人掛在籠子裡；說她胡扯吧，又總像知道點什麼。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「赫连姑娘的主意，时灵时不灵。王霸之气那套，狗头人可不买帐。说她靠谱吧，人挂在笼子里；说她胡扯吧，又总像知道点什么。」",
     "links": [80]
   },
@@ -488,7 +488,7 @@
     "entryID": 80,
     "actorID": "MC1",
     "text": "「可當初說後山妖氣沖天、近日宜往一行……這塊她倒沒說錯。後山確實不太對勁。或許，還真有兩下子？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,Player,Question);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「可当初说后山妖气冲天、近日宜往一行……这块她倒没说错。后山确实不太对劲。或许，还真有两下子？」",
     "links": [82, 84, 86, 88]
   },
@@ -504,7 +504,7 @@
     "entryID": 83,
     "actorID": "MC1",
     "text": "「掛在籠子裡還指揮我擺架勢……但我若轉身就走那也不用在江湖上混了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "zh_CN": "「挂在笼子里还指挥我摆架势……但我若转身就走那也不用在江湖上混了。」",
     "links": [322]
   },
@@ -520,7 +520,7 @@
     "entryID": 85,
     "actorID": "MC1",
     "text": "「嘴上逞強，人卻掛在籠子裡。後山妖氣又邪，她一個人亂闖，遲早出事。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
     "zh_CN": "「嘴上逞强，人却挂在笼子里。后山妖气又邪，她一个人乱闯，迟早出事。」",
     "links": [322]
   },
@@ -536,7 +536,7 @@
     "entryID": 87,
     "actorID": "MC1",
     "text": "「救也救了，隨她去吧。……反正閒著也是閒著，多個人也挺熱鬧的。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
     "zh_CN": "「救也救了，随她去吧。……反正闲着也是闲着，多个人也挺热闹的。」",
     "links": [322]
   },
@@ -552,7 +552,7 @@
     "entryID": 89,
     "actorID": "MC1",
     "text": "「妖氣她說中了，羅盤說不定還真有用。救都救了，說不定還能蹭點寶……嘻嘻，英雄救美，說出去也好聽。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Proud);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,Player,Proud);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "zh_CN": "「妖气她说中了，罗盘说不定还真有用。救都救了，说不定还能蹭点宝……嘻嘻，英雄救美，说出去也好听。」",
     "links": [322]
   },
@@ -600,7 +600,7 @@
     "entryID": 96,
     "actorID": "role2",
     "text": "[panel=6]＊（你盤膝靜坐，水聲在洞外轟鳴。石刻上的字句——）＊",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "[panel=6]＊（你盘膝静坐，水声在洞外轰鸣。石刻上的字句——）＊",
     "links": [324]
   },
@@ -616,7 +616,7 @@
     "entryID": 102,
     "actorID": "MC1",
     "text": "「再說他們曾助秦王掃六合，這功勞可不小；秦王偏為[em2]欲求長生[/em2]而緊追不捨……與他們何關？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「再说他们曾助秦王扫六合，这功劳可不小；秦王偏为[em2]欲求长生[/em2]而紧追不舍……与他们何关？」",
     "links": [103]
   },
@@ -624,7 +624,7 @@
     "entryID": 103,
     "actorID": "MC1",
     "text": "「族人[em2]不願為奴[/em2]，躲進大山……秦皇還那麼執著，難道跟秦皇欲求長生有關係嗎？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「族人[em2]不愿为奴[/em2]，躲进大山……秦皇还那么执着，难道跟秦皇欲求长生有关系吗？」",
     "links": [104]
   },
@@ -632,7 +632,7 @@
     "entryID": 104,
     "actorID": "MC1",
     "text": "「最後那句——[em2]守護蒼生，勿蹈秦王覆轍[/em2]……更是沒頭沒尾的」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「最后那句——[em2]守护苍生，勿蹈秦王覆辙[/em2]……更是没头没尾的」",
     "links": [106, 108, 110, 112]
   },
@@ -648,7 +648,7 @@
     "entryID": 107,
     "actorID": "MC1",
     "text": "「秦皇先壞信義，這部族若要報仇，我不覺得理虧。江湖上也是認這理。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=10);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=10);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "zh_CN": "「秦皇先坏信义，这部族若要报仇，我不觉得理亏。江湖上也是认这理。」",
     "links": [327]
   },
@@ -664,7 +664,7 @@
     "entryID": 109,
     "actorID": "MC1",
     "text": "「功勞那麼大，換來的卻是躲進深山……難怪暴秦只傳二世。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
     "zh_CN": "「功劳那么大，换来的却是躲进深山……难怪暴秦只传二世。」",
     "links": [327]
   },
@@ -680,7 +680,7 @@
     "entryID": 111,
     "actorID": "MC1",
     "text": "「換作是我，早躲進深山了。守護蒼生？……就先顧不上了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
     "zh_CN": "「换作是我，早躲进深山了。守护苍生？……就先顾不上了。」",
     "links": [327]
   },
@@ -696,7 +696,7 @@
     "entryID": 113,
     "actorID": "MC1",
     "text": "「要成大事，哪能寄人籬下？換作是我，壓根不把寶押在秦王身上。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,Player,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "zh_CN": "「要成大事，哪能寄人篱下？换作是我，压根不把宝押在秦王身上。」",
     "links": [327]
   },
@@ -746,7 +746,7 @@
     "entryID": 169,
     "actorID": "MC1",
     "text": "「話本裡的大俠，下山就是行俠仗義、揚名立萬。誰寫過……還得為住宿去煩惱？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「话本里的大侠，下山就是行侠仗义、扬名立万。谁写过……还得为住宿去烦恼？」",
     "links": [10]
   },
@@ -771,7 +771,7 @@
     "entryID": 311,
     "actorID": "MC1",
     "text": "「靠水吃水，風浪裡討活，不求人憐。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「靠水吃水，风浪里讨活，不求人怜。」",
     "links": [35]
@@ -820,7 +820,7 @@
     "entryID": 318,
     "actorID": "MC1",
     "text": "「……好險。張大叔要是晚來半步，我今天就交代在墓裡了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "zh_CN": "「……好险。张大叔要是晚来半步，我今天就交代在墓里了。」",
     "links": [58]
   },
@@ -828,7 +828,7 @@
     "entryID": 321,
     "actorID": "MC1",
     "text": "「赫連姑娘的主意，時靈時不靈。王霸之氣那套，狗頭人可不買帳。說她靠譜吧，人掛在籠子裡；說她胡扯吧，又總像知道點什麼。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「赫连姑娘的主意，时灵时不灵。王霸之气那套，狗头人可不买帐。说她靠谱吧，人挂在笼子里；说她胡扯吧，又总像知道点什么。」",
     "links": [80]
@@ -932,7 +932,7 @@
     "entryID": 339,
     "actorID": "role2",
     "text": "[panel=6]＊（[em2]恰如裸身臥荒丘，潛伏爪牙只忍受；飄蓬江海謾嗟吁。鐵門一鎖！難逃脫！[/em2]）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "[panel=6]＊（[em2]恰如裸身卧荒丘，潜伏爪牙只忍受；飘蓬江海谩嗟吁。铁门一锁！难逃脱！[/em2]）＊",
     "links": [430]
   },
@@ -940,7 +940,7 @@
     "entryID": 342,
     "actorID": "MC1",
     "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「告示上写着[em2]盐铁之利，国之大柄[/em2]，私吞者斩。这些矿工挖了一辈子，到头来连一块矿渣都换不了一顿饱饭。」",
     "links": [345]
   },
@@ -948,7 +948,7 @@
     "entryID": 345,
     "actorID": "MC1",
     "text": "「出事了，官府不查，只會把鐵門一鎖。對上面來說，這礦坑裡埋的哪是人，不過是幾斤[em2]鹽鐵之利[/em2]罷了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「出事了，官府不查，只会把铁门一锁。对上面来说，这矿坑里埋的哪是人，不过是几斤[em2]盐铁之利[/em2]罢了。」",
     "links": [349, 351, 353, 355]
   },
@@ -964,7 +964,7 @@
     "entryID": 350,
     "actorID": "MC1",
     "text": "「官府鐵門一鎖，就想把這筆爛帳埋了。但若由著他們把人當祭品填進去，這天下還有什麼俠義可言？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=10);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=10);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "zh_CN": "「官府铁门一锁，就想把这笔烂帐埋了。但若由著他们把人当祭品填进去，这天下还有什么侠义可言？」",
     "links": [403]
   },
@@ -980,7 +980,7 @@
     "entryID": 352,
     "actorID": "MC1",
     "text": "「人被逼到絕路竟至到拜一塊來路不明的神像。而李四額頭上的血…人命才是這黑鐵嶺最該看重的事情。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
     "zh_CN": "「人被逼到绝路竟至到拜一块来路不明的神像。而李四额头上的血…人命才是这黑铁岭最该看重的事情。」",
     "links": [403]
   },
@@ -996,7 +996,7 @@
     "entryID": 354,
     "actorID": "MC1",
     "text": "「上面有國之大柄壓著，下面有吃人的紅水晶等著。換作是我，也只能跟他們一樣潛伏忍受嗎？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,-0.05);",
     "zh_CN": "「上面有国之大柄压着，下面有吃人的红水晶等着。换作是我，也只能跟他们一样潜伏忍受吗？」",
     "links": [403]
   },
@@ -1012,7 +1012,7 @@
     "entryID": 356,
     "actorID": "MC1",
     "text": "「[em2]鹽鐵之利[/em2]才是根源。這所謂的妖邪，怕是有人巴不得它鬧大，好掩蓋下面見不得光的勾當。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "zh_CN": "「[em2]盐铁之利[/em2]才是根源。这所谓的妖邪，怕是有人巴不得它闹大，好掩盖下面见不得光的勾当。」",
     "links": [403]
   },
@@ -1093,7 +1093,7 @@
     "entryID": 370,
     "actorID": "MC1",
     "text": "「那股飢火勒住喉嚨，逼著我在[em2]吞噬[/em2]與[em2]被吞噬[/em2]之間選一個。[em2]此念原非吾本心[/em2]……但我記不得自己是撐住了，還是已經讓步了半寸。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「那股饥火勒住喉咙，逼着我在[em2]吞噬[/em2]与[em2]被吞噬[/em2]之间选一个。[em2]此念原非吾本心[/em2]……但我记不得自己是撑住了，还是已经让步了半寸。」",
     "links": [371]
   },
@@ -1101,7 +1101,7 @@
     "entryID": 371,
     "actorID": "MC1",
     "text": "「洞裡那個聲音說，[em2]總有一天你會心甘情願祈求吾[/em2]。……連是人是鬼都說不清，卻像是在我心底扎了根。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「洞里那个声音说，[em2]总有一天你会心甘情愿祈求吾[/em2]。……连是人是鬼都说不清，却像是在我心底扎了根。」",
     "links": [372]
   },
@@ -1109,7 +1109,7 @@
     "entryID": 372,
     "actorID": "MC1",
     "text": "「這副身子裡，[em2]誰為主[/em2]？……醒來時人在英豪府，賈詡卻留了卷竹簡。這一切，難道不是巧合？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「这副身子里，[em2]谁为主[/em2]？……醒来时人在英豪府，贾诩却留了卷竹简。这一切，难道不是巧合？」",
     "links": [374, 376, 378, 380]
   },
@@ -1222,7 +1222,7 @@
     "entryID": 387,
     "actorID": "role2",
     "text": "[panel=6]＊（[em2]手足相煎爭殘篇，執念入魔守空樹；一敗夢醒傳三才。恩怨散盡隱山林！[/em2]）＊",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "[panel=6]＊（[em2]手足相煎争残篇，执念入魔守空树；一败梦醒传三才。恩怨散尽隐山林！[/em2]）＊",
     "links": [432]
   },
@@ -1230,7 +1230,7 @@
     "entryID": 390,
     "actorID": "MC1",
     "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「为了三绝合一[em2]逼死同门[/em2]……那无字碑下的二师哥，到死只盼着来生能做个普通兄弟。」",
     "links": [393]
   },
@@ -1238,7 +1238,7 @@
     "entryID": 393,
     "actorID": "MC1",
     "text": "「大樹哥[em2]執念深種[/em2]，瘋瘋癲癲守了半輩子樹……這天下第一的武功，竟能把人折磨成這副鬼樣子。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);\nPlayOrStopParticle(Meditate_KirinDiceLight,Stop);",
     "zh_CN": "「大树哥[em2]执念深种[/em2]，疯疯癫癫守了半辈子树……这天下第一的武功，竟能把人折磨成这副鬼样子。」",
     "links": [395, 397, 399, 401]
   },
@@ -1254,7 +1254,7 @@
     "entryID": 396,
     "actorID": "MC1",
     "text": "「大師兄和三師弟壞了規矩，竟把二師哥逼上絕路。要是換成我，寧可不要這[em2]三絕合一[/em2]，也絕不幹這種[em2]逼死同門[/em2]的勾當。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "zh_CN": "「大师兄和三师弟坏了规矩，竟把二师哥逼上绝路。要是换成我，宁可不要这[em2]三绝合一[/em2]，也绝不干这种[em2]逼死同门[/em2]的勾当。」",
     "links": [410]
   },
@@ -1270,7 +1270,7 @@
     "entryID": 398,
     "actorID": "MC1",
     "text": "「無字碑下那位前輩，到死只盼來生能做個普通兄弟……整場遊戲竟沒有贏家。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);ModifyData(DnDAlignment,Player,GoodEvil,0.05);",
     "zh_CN": "「无字碑下那位前辈，到死只盼来生能做个普通兄弟……整场游戏竟没有赢家。」",
     "links": [410]
   },
@@ -1302,7 +1302,7 @@
     "entryID": 402,
     "actorID": "MC1",
     "text": "「跟人聯手鬧出人命，又為了一本拳法把自己逼成瘋子。總會有別的法子，犯不著把自己搭進去。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Idea);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "zh_CN": "「跟人联手闹出人命，又为了一本拳法把自己逼成疯子。总会有别的法子，犯不着把自己搭进去。」",
     "links": [410]
   },
@@ -1320,7 +1320,7 @@
     "entryID": 405,
     "actorID": "MC1",
     "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「告示上写着[em2]盐铁之利，国之大柄[/em2]，私吞者斩。这些矿工挖了一辈子，到头来连一块矿渣都换不了一顿饱饭。」",
     "links": [345]
@@ -1329,7 +1329,7 @@
     "entryID": 408,
     "actorID": "MC1",
     "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「为了三绝合一[em2]逼死同门[/em2]……那无字碑下的二师哥，到死只盼着来生能做个普通兄弟。」",
     "links": [393]
@@ -1338,7 +1338,7 @@
     "entryID": 409,
     "actorID": "MC1",
     "text": "「石刻說他們來自[em2]極西之地[/em2]，那便不是尋常中原人了——可極西之地是哪？我可從沒聽有人說過。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「石刻说他们来自[em2]极西之地[/em2]，那便不是寻常中原人了——可极西之地是哪？我可从没听有人说过。」",
     "links": [102]

@@ -22,7 +22,7 @@
     "entryID": 2162,
     "actorID": "MC1",
     "text": "「妳這掌櫃當上癮了是吧……」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「你这掌柜当上瘾了是吧……」",
     "links": [2163]
   },
@@ -238,7 +238,7 @@
     "entryID": 2189,
     "actorID": "MC1",
     "text": "「這麼多貨物真能賣完嗎？」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「这么多货物真能卖完吗？」",
     "links": [2190]
   },

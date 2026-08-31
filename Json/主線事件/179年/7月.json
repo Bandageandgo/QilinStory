@@ -3,7 +3,7 @@
     "entryID": 61,
     "actorID": "role2",
     "text": "[panel=6]＊（自張大叔瀟灑離去，轉眼又過月餘，你傷勢不僅痊癒，功力亦小有精進。然而，古墓中那黑血屍的身影，以及張大叔臨行前的囑託，始終縈繞在你心頭，如芒在背。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "Description": "在養成模式中時間到時自動觸發",
     "zh_TW": "[panel=6]＊（自張大叔瀟灑離去，轉眼又過月餘，你傷勢不僅痊癒，功力亦小有精進。然而，古墓中那黑血屍的身影，以及張大叔臨行前的囑託，始終縈繞在你心頭，如芒在背。）＊",
     "zh_CN": "[panel=6]＊（自张大叔潇洒离去，转眼又过月余，你伤势不仅痊愈，功力亦小有精进。然而，古墓中那黑血尸的身影，以及张大叔临行前的嘱托，始终萦绕在你心头，如芒在背。）＊",
@@ -67,7 +67,7 @@
     "entryID": 68,
     "actorID": "MC1",
     "text": "「雍仔，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Meditate);\nDisableCharacterExpression(1);",
     "zh_TW": "「雍仔，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！」",
     "zh_CN": "「雍仔，想必你也未曾忘记那古墓中的黑血尸。张大叔虽已重创之，然此獠凶焰未灭，恐其日后再生事端，荼毒生灵！」",
     "links": [212]
@@ -279,7 +279,7 @@
     "entryID": 227,
     "actorID": "MC1",
     "text": "「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」",
     "zh_CN": "「青山不改，绿水长流，他日江湖再见，定要与你痛饮三百杯，不醉不归！」",
     "links": [228]
@@ -333,7 +333,7 @@
     "entryID": 233,
     "actorID": "MC1",
     "text": "「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」",
     "zh_CN": "「嗯！你說的对！男儿志在四方！是更广阔的江湖！待我将长生经融会贯通，定要在英豪府的遴选中拔得头筹，扬名立万！」",
     "links": [234]
@@ -401,7 +401,7 @@
     "entryID": 243,
     "actorID": "MC1",
     "text": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(DnDAlignment,MC1,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(DnDAlignment,MC1,LawChaos,0.15);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
     "zh_CN": "「尸丹…听起来就很邪门…还是让道长你拿着吧，我现在只想找地方歇歇脚，顺便看看有没有吃的…」",
     "links": [244]
@@ -439,7 +439,7 @@
     "entryID": 247,
     "actorID": "MC1",
     "text": "「這屍丹聽著是邪門，但咱們辛辛苦苦打生打死才得了這麼個玩意兒，直接扔了豈不可惜？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,MC1,LawChaos,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,MC1,LawChaos,-0.15);",
     "zh_TW": "「這屍丹聽著是邪門，但咱們辛辛苦苦打生打死才得了這麼個玩意兒，直接扔了豈不可惜？」",
     "zh_CN": "「这尸丹听着是邪门，但咱们辛辛苦苦打生打死才得了这么个玩意儿，直接扔了岂不可惜？」",
     "links": [259]
@@ -468,7 +468,7 @@
     "entryID": 250,
     "actorID": "MC1",
     "text": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,0.15);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,0.15);",
     "zh_TW": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
     "zh_CN": "「雍仔，万万不可！此物乃集那黑血尸毕生怨毒邪气所化，留在世间，难保不会被歹人利用，或再生祸端！」",
     "links": [260]
@@ -507,7 +507,7 @@
     "entryID": 254,
     "actorID": "MC1",
     "text": "「此言差矣！這屍丹雖陰邪，但所謂[em2]孤陰不長，孤陽不生[/em2]，或許我正能以自身之長生經化解其戾氣，取其精華！」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,MC1,GoodEvil,-0.15);",
     "zh_TW": "「此言差矣！這屍丹雖陰邪，但所謂[em2]孤陰不長，孤陽不生[/em2]，或許我正能以自身之長生經化解其戾氣，取其精華！」",
     "zh_CN": "「此言差矣！这尸丹虽阴邪，但所谓[em2]孤阴不长，孤阳不生[/em2]，或许我正能以自身之长生经化解其戾气，取其精华！」",
     "links": [261]
@@ -565,7 +565,7 @@
     "entryID": 260,
     "actorID": "MC1",
     "text": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
     "zh_CN": "「依我看，为绝后患，不如我等立刻合力，将此邪物彻底摧毁！」",
     "links": [251]
@@ -657,7 +657,7 @@
     "entryID": 284,
     "actorID": "MC1",
     "text": "「雍仔，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「雍仔，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！」",
     "zh_CN": "「雍仔，想必你也未曾忘记那古墓中的黑血尸。张大叔虽已重创之，然此獠凶焰未灭，恐其日后再生事端，荼毒生灵！」",
     "links": [294]
@@ -666,7 +666,7 @@
     "entryID": 286,
     "actorID": "MC1",
     "text": "「探險尋寶，哪有不濕鞋的道理！張大叔已言明那妖物元氣大傷，如今你我二人聯手，又有準備，未必沒有勝算。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「探險尋寶，哪有不濕鞋的道理！張大叔已言明那妖物元氣大傷，如今你我二人聯手，又有準備，未必沒有勝算。」",
     "zh_CN": "「探险寻宝，哪有不湿鞋的道理！张大叔已言明那妖物元气大伤，如今你我二人联手，又有准备，未必没有胜算。」",
     "links": [296]
@@ -712,7 +712,7 @@
     "entryID": 298,
     "actorID": "MC1",
     "text": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
     "Conditions": "CurrentQuestState(\"CF08\") == \"success\";",
     "zh_TW": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
     "zh_CN": "「呼…又来到这鬼地方了…上次的教训还历历在目，这次可不能再大意了…」",
@@ -842,7 +842,7 @@
     "entryID": 313,
     "actorID": "MC1",
     "text": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nDisableCharacterExpression(1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nDisableCharacterExpression(1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」",
     "zh_CN": "「尸丹…听起来就很邪门…还是让道长你拿着吧，我现在只想找地方歇歇脚，顺便看看有没有吃的…」",
     "links": [314]
@@ -881,7 +881,7 @@
     "entryID": 317,
     "actorID": "MC1",
     "text": "「道長、赫連姑娘，我看這樣，此物既然奇特，不如我們先帶上，日後到了大城鎮，找個行家鑑定一番，再決定如何處置？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.15);",
     "zh_TW": "「道長、赫連姑娘，我看這樣，此物既然奇特，不如我們先帶上，日後到了大城鎮，找個行家鑑定一番，再決定如何處置？」",
     "zh_CN": "「道长、赫连姑娘，我看这样，此物既然奇特，不如我们先带上，日后到了大城镇，找个行家鉴定一番，再决定如何处置？」",
     "links": [318]
@@ -912,7 +912,7 @@
     "entryID": 320,
     "actorID": "MC1",
     "text": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,0.15);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,0.15);",
     "zh_TW": "「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」",
     "zh_CN": "「雍仔，万万不可！此物乃集那黑血尸毕生怨毒邪气所化，留在世间，难保不会被歹人利用，或再生祸端！」",
     "links": [323]
@@ -942,7 +942,7 @@
     "entryID": 323,
     "actorID": "MC1",
     "text": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」",
     "zh_CN": "「依我看，为绝后患，不如我等立刻合力，将此邪物彻底摧毁！」",
     "links": [321]
@@ -961,7 +961,7 @@
     "entryID": 325,
     "actorID": "MC1",
     "text": "「道長此言差矣。富貴險中求，赫連姑娘，這血河舍利既是至寶，想必有不凡之處吧？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
     "zh_TW": "「道長此言差矣。富貴險中求，赫連姑娘，這血河舍利既是至寶，想必有不凡之處吧？」",
     "zh_CN": "「道长此言差矣。富贵险中求，赫连姑娘，这血河舍利既是至宝，想必有不凡之处吧？」",
     "links": [330]
@@ -1124,7 +1124,7 @@
     "entryID": 352,
     "actorID": "MC1",
     "text": "「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」",
     "zh_CN": "「青山不改，绿水长流，他日江湖再见，定要与你痛饮三百杯，不醉不归！」",
     "links": [351]
@@ -1169,7 +1169,7 @@
     "entryID": 358,
     "actorID": "MC1",
     "text": "「沒錯！小犀，志氣要大！行俠仗義，豈能只看眼前幾個錢而畏畏縮縮的！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);\nDisableCharacterExpression(1);",
     "zh_TW": "「沒錯！小犀，志氣要大！行俠仗義，豈能只看眼前幾個錢而畏畏縮縮的！」",
     "zh_CN": "「没错！小犀，志气要大！行侠仗义，岂能只看眼前几个钱而畏畏缩缩的！」",
     "links": [359]
@@ -1178,7 +1178,7 @@
     "entryID": 359,
     "actorID": "MC1",
     "text": "「[em7]對蕭靈犀小聲嘀咕[/em7]…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「[em7]對蕭靈犀小聲嘀咕[/em7]…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」",
     "zh_CN": "「[em7]对萧灵犀小声嘀咕[/em7]…盘缠的事…路上我们再想想办法…总不能在新人面前丢了面子…」",
     "links": [340]
@@ -2644,7 +2644,7 @@
     "entryID": 2377,
     "actorID": "MC1",
     "text": "「這個？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「這個？」",
     "zh_CN": "「这个？」",
     "links": [2378]
@@ -2724,7 +2724,7 @@
     "entryID": 2395,
     "actorID": "MC1",
     "text": "「墓裡那一回，要不是妳出手，我早沒了。這事我一直記著。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,Player,Proud);",
     "Description": "信義提升",
     "zh_TW": "「墓裡那一回，要不是妳出手，我早沒了。這事我一直記著。」",
     "zh_CN": "「墓里那一回，要不是你出手，我早没了。这事我一直记着。」",
@@ -2734,7 +2734,7 @@
     "entryID": 2396,
     "actorID": "MC1",
     "text": "「給了妳……我倒想知道，這玩意兒到底值多少。」",
-    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);\nEnableCharacterExpression(0,Player,Proud);",
     "Description": "機略提升",
     "zh_TW": "「給了妳……我倒想知道，這玩意兒到底值多少。」",
     "zh_CN": "「给了你……我倒想知道，这玩意儿到底值多少。」",
@@ -2762,7 +2762,7 @@
     "entryID": 2399,
     "actorID": "MC1",
     "text": "「便給妳罷。妳既看著它，若我還捨不得，那可顯得太吝嗇了。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(DnDAlignment,Player,LawChaos,0.15);\nEnableCharacterExpression(0,Player,Proud);",
     "Script": "SetQuestState(\"CF05\", \"success\");\nSetQuestEntryState(\"CF05\", 3, \"success\");",
     "Description": "完成任務",
     "zh_TW": "「便給妳罷。妳既看著它，若我還捨不得，那可顯得太吝嗇了。」",
@@ -2773,7 +2773,7 @@
     "entryID": 2400,
     "actorID": "MC1",
     "text": "「這是我拼命換來的。吃不了，那也是我的。」",
-    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Proud);",
     "Description": "不給屍丹",
     "zh_TW": "「這是我拼命換來的。吃不了，那也是我的。」",
     "zh_CN": "「这是我拼命换来的。吃不了，那也是我的。」",
@@ -2838,7 +2838,7 @@
     "entryID": 2407,
     "actorID": "MC8",
     "text": "[panel=2]「[em7]被你翻身的動靜吵醒，揉著眼睛[/em7]，表哥？天還黑著呢……還是你又餓啦？」",
-    "Sequence": "SetPortrait(MC8,pic=3);\nEnableCharacterExpression(0,MC1-1,Nervous);\nAudioControl(PlaySFXOneShot,Others_Growling);",
+    "Sequence": "SetPortrait(MC8,pic=3);\nEnableCharacterExpression(0,Player,Nervous);\nAudioControl(PlaySFXOneShot,Others_Growling);",
     "zh_TW": "[panel=2]「[em7]被你翻身的動靜吵醒，揉著眼睛[/em7]，表哥？天還黑著呢……還是你又餓啦？」",
     "zh_CN": "[panel=2]「[em7]被你翻身的动静吵醒，揉着眼睛[/em7]，表哥？天还黑着呢……还是你又饿啦？」",
     "links": [2406]
@@ -2891,7 +2891,7 @@
     "entryID": 2415,
     "actorID": "MC8",
     "text": "[panel=2]「[em7]翻了個身，含糊地[/em7]……表哥？做惡夢了？」",
-    "Sequence": "SetPortrait(MC8,pic=3);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC8,pic=3);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "[panel=2]「[em7]翻了個身，含糊地[/em7]……表哥？做惡夢了？」",
     "zh_CN": "[panel=2]「[em7]翻了个身，含糊地[/em7]……表哥？做恶梦了？」",
     "links": [2414]

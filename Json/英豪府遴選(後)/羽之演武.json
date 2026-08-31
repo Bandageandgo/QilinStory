@@ -47,7 +47,7 @@
     "entryID": 4063,
     "actorID": "MC1",
     "text": "「還真的是籤王！！！」",
-    "Sequence": "SetPortrait(MC1,pic=19);\nEnableCharacterExpression(0,MC1-1,Shock);\nSetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",
+    "Sequence": "SetPortrait(MC1,pic=19);\nEnableCharacterExpression(0,Player,Shock);\nSetGameObjectShake(P0,ShakeNormal, XYAxis,1,20,0);",
     "zh_TW": "「還真的是籤王！！！」",
     "zh_CN": "「还真的是签王！！！」",
     "links": [4064]
@@ -92,7 +92,7 @@
     "entryID": 4068,
     "actorID": "MC1",
     "text": "「且慢！好像有點道理，\n卻又好像哪裡不對勁！」",
-    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「且慢！好像有點道理，\n卻又好像哪裡不對勁！」",
     "zh_CN": "「且慢！好像有点道理，\n却又好像哪里不对劲！」",
     "links": [4117]
@@ -110,7 +110,7 @@
     "entryID": 4070,
     "actorID": "MC1",
     "text": "「老大，你要不要去照一下你那張臉，\n再跟我這是說笑……」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
     "zh_TW": "「老大，你要不要去照一下你那張臉，\n再跟我這是說笑……」",
     "zh_CN": "「老大，你要不要去照一下你那张脸，\n再跟我这是说笑……」",
     "links": [4071]
@@ -185,7 +185,7 @@
     "entryID": 4078,
     "actorID": "MC1",
     "text": "「…聽聽妳自己說的還是人話嗎…」",
-    "Sequence": "EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "EnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「…聽聽妳自己說的還是人話嗎…」",
     "zh_CN": "「…听听你自己说的还是人话吗…」",
     "links": [4096]
@@ -299,7 +299,7 @@
     "entryID": 4099,
     "actorID": "MC1",
     "text": "「我怎麼還能站著，我剛那一招是……」",
-    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「我怎麼還能站著，我剛那一招是……」",
     "zh_CN": "「我怎么还能站着，我刚那一招是……」",
     "links": [4085]

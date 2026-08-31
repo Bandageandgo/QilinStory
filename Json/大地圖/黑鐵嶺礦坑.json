@@ -79,7 +79,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「咳，行走江湖，技多不壓身。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「咳，行走江湖，技多不压身。」",
     "links": [26]
   },
@@ -96,7 +96,7 @@
     "entryID": 27,
     "actorID": "MC1",
     "text": "「這鎖…機簧甚是繁複…不行，卡住了。」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「这锁…机簧甚是繁复…不行，卡住了。」",
     "links": [28]
@@ -291,7 +291,7 @@
     "entryID": 52,
     "actorID": "MC1",
     "text": "「得罪了，大山兄。你已被妖邪侵蝕太深，我只能...幫你解脫。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「得罪了，大山兄。你已被妖邪侵蚀太深，我只能...帮你解脱。」",
     "links": [53]
   },
@@ -309,7 +309,7 @@
     "entryID": 56,
     "actorID": "MC1",
     "text": "「混蛋啊！我…我可是要成為大俠的男人，豈能在這見死不救…！！」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger);",
     "zh_TW": "「混蛋啊！我…我可是要成為大俠的男人，豈能在這見死不救…！！」",
     "zh_CN": "「混蛋啊！我…我可是要成为大侠的男人，岂能在这见死不救…！！」",
     "links": [57]
@@ -344,7 +344,7 @@
     "entryID": 62,
     "actorID": "MC1",
     "text": "「咳…我竟然沒死？真是…運氣好到家了…」",
-    "Sequence": "SetPortrait(MC1,pic=16);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=16);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「咳…我竟然没死？真是…运气好到家了…」",
     "links": [64]
   },
@@ -393,7 +393,7 @@
     "entryID": 70,
     "actorID": "MC1",
     "text": "「痛苦嗎？絕望嗎？那就讓我來幫你們解脫吧…徹底的解脫。」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「痛苦吗？绝望吗？那就让我来帮你们解脱吧…彻底的解脱。」",
     "links": [71]
   },
@@ -471,7 +471,7 @@
     "entryID": 2052,
     "actorID": "MC1",
     "text": "「咳咳...這味道，娜娜，妳確定這裡真有寶貝，而不是一堆爛骨頭？」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「咳咳...這味道，娜娜，妳確定這裡真有寶貝，而不是一堆爛骨頭？」",
     "zh_CN": "「咳咳...这味道，娜娜，你确定这里真有宝贝，而不是一堆烂骨头？」",
     "links": [2053]
@@ -489,7 +489,7 @@
     "entryID": 2054,
     "actorID": "MC1",
     "text": "「行行行，聽妳的。不過我總覺得有什麼東西在盯著我們...」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「行行行，聽妳的。不過我總覺得有什麼東西在盯著我們...」",
     "zh_CN": "「行行行，听你的。不过我总觉得有什么东西在盯着我们...」",
     "links": [2055]
@@ -587,7 +587,7 @@
     "entryID": 3880,
     "actorID": "MC1",
     "text": "「[em7]擺手[/em7]，路見不平，拔刀相助，這點小事何足掛齒！不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「[em7]擺手[/em7]，路見不平，拔刀相助，這點小事何足掛齒！不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
     "zh_CN": "「[em7]摆手[/em7]，路见不平，拔刀相助，这点小事何足挂齿！不过嘛……嘿嘿，若是日后有人问起，要好好说故事啊！对了，快些回去吧，李老伯还在家里等着你们呢。」",
     "links": [3878]

@@ -12,7 +12,7 @@
     "entryID": 66,
     "actorID": "MC1",
     "text": "「唉…練也練完了，接下來幹嘛呢？這小村子就這麼點大，都逛膩了。難道真要這樣無聊到一個月後？」",
-    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「唉…練也練完了，接下來幹嘛呢？這小村子就這麼點大，都逛膩了。難道真要這樣無聊到一個月後？」",
     "zh_CN": "「唉…练也练完了，接下来干嘛呢？这小村子就这么点大，感觉都逛腻了。难道真要这样无聊到一个月后？」",
     "links": [67]
@@ -30,7 +30,7 @@
     "entryID": 68,
     "actorID": "MC1",
     "text": "「哦，妳的意思是…？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「哦，妳的意思是…？」",
     "zh_CN": "「哦，你的意思是…？」",
     "links": [69]
@@ -57,7 +57,7 @@
     "entryID": 71,
     "actorID": "MC1",
     "text": "「有道理！坐而言不如起而行！我這就去[em2]探險[/em2]一番，看看能碰上什麼新鮮事！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「有道理！坐而言不如起而行！我這就去[em2]探險[/em2]一番，看看能碰上什麼新鮮事！」",
     "zh_CN": "「有道理！坐而言不如起而行！我这就去[em2]探险[/em2]一番，看看能碰上什么新鲜事！」",
     "links": [72]
@@ -84,7 +84,7 @@
     "entryID": 74,
     "actorID": "MC1",
     "text": "「啊——客棧的日子就是舒坦，無拘無束，真想就這麼躺到馬車來的那一天…」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「啊——客棧的日子就是舒坦，無拘無束，真想就這麼躺到馬車來的那一天…」",
     "zh_CN": "「啊——客栈的日子就是舒坦，无拘无束，真想就这么躺到马车来的那一天…」",
     "links": [75]
@@ -102,7 +102,7 @@
     "entryID": 76,
     "actorID": "MC1",
     "text": "「靈犀啊，表哥我這是在養精蓄銳，一張一弛，文武之道嘛！再說了，高手過招，意在神馳，我這是在打坐參悟呢！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「靈犀啊，表哥我這是在養精蓄銳，一張一弛，文武之道嘛！再說了，高手過招，意在神馳，我這是在打坐參悟呢！」",
     "zh_CN": "「灵犀啊，表哥我这是在养精蓄锐，劳逸结合！再说了，高手过招，意在神驰，我这是在冥想中提升境界呢！」",
     "links": [77]
@@ -156,7 +156,7 @@
     "entryID": 82,
     "actorID": "MC1",
     "text": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「唉，好吧好吧，聽妳的便是，今日就先練練我這虎虎生風的『伏虎拳』！」",
     "zh_CN": "「唉，好吧好吧，听你的便是，今日就先练练我这虎虎生风的『伏虎拳』！」",
     "links": [2051]
@@ -184,7 +184,7 @@
     "entryID": 85,
     "actorID": "MC1",
     "text": "「呼…這番活動下來，確實覺得身子骨都輕快了不少！看來日後還得勤加練習才是！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「呼…這番活動下來，確實覺得身子骨都輕快了不少！看來日後還得勤加練習才是！」",
     "zh_CN": "「呼…这番活动下来，确实觉得身子骨都轻快了不少！看来日后还得勤加练习才是！」",
     "links": [86]
@@ -212,7 +212,7 @@
     "entryID": 88,
     "actorID": "MC1",
     "text": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做個靠腦子吃飯的儒俠…」",
-    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「不行了…不行了…這比跟人吵架還累…看來我還是適合做個靠腦子吃飯的儒俠…」",
     "zh_CN": "「不行了…不行了…这比跟人吵架还累…看来我还是适合做个靠脑子吃饭的儒侠…」",
     "links": [89]

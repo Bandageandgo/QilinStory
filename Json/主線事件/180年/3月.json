@@ -14,7 +14,7 @@
     "entryID": 61,
     "actorID": "MC1",
     "text": "「……還沒有，但我也沒其它選擇了吧？否則你也不必繼續留著我。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……還沒有，但我也沒其它選擇了吧？否則你也不必繼續留著我。」",
     "zh_CN": "「……还没有，但我也没其它选择了吧？否则你也不必继续留着我。」",
     "links": [62]
@@ -23,7 +23,7 @@
     "entryID": 62,
     "actorID": "MC1",
     "text": "「只是我好歹也是拜師的，師者不該先替學徒解惑，竹簡出自何處？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=18);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「只是我好歹也是拜師的，師者不該先替學徒解惑，竹簡出自何處？」",
     "zh_CN": "「只是我好歹也是拜师的，师者不该先替学徒解惑，竹简出自何处？」",
     "links": [63]
@@ -95,7 +95,7 @@
     "entryID": 70,
     "actorID": "MC1",
     "text": "「……好吧。瞞了先生這麼久，是弟子不是。」",
-    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……好吧。瞞了先生這麼久，是弟子不是。」",
     "zh_CN": "「……好吧。瞒了先生这么久，是弟子不是。」",
     "links": [71]
@@ -104,7 +104,7 @@
     "entryID": 71,
     "actorID": "MC1",
     "text": "「自故鄉大火後流落江湖，弟子反覆夢見并州淪陷、城牆上戰死……逼真得不像尋常惡夢。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「自故鄉大火後流落江湖，弟子反覆夢見并州淪陷、城牆上戰死……逼真得不像尋常惡夢。」",
     "zh_CN": "「自故乡大火后流落江湖，弟子反复梦见并州沦陷、城墙上战死……逼真得不像寻常恶梦。」",
     "links": [72]
@@ -113,7 +113,7 @@
     "entryID": 72,
     "actorID": "MC1",
     "text": "「娘親留下的麒麟骰每每異動，夢便更甚。弟子不知這預兆何意，只覺坐立難安。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「娘親留下的麒麟骰每每異動，夢便更甚。弟子不知這預兆何意，只覺坐立難安。」",
     "zh_CN": "「娘亲留下的麒麟骰每每异动，梦便更甚。弟子不知这预兆何意，只觉坐立难安。」",
     "links": [73]
@@ -140,7 +140,7 @@
     "entryID": 75,
     "actorID": "MC1",
     "text": "「我也沒想過會太順利。反正骰子指引，必有其意，答案遲早自會浮現。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「我也沒想過會太順利。反正骰子指引，必有其意，答案遲早自會浮現。」",
     "zh_CN": "「我也没想过会太顺利。反正骰子指引，必有其意，答案迟早自会浮现。」",
     "links": [76]
@@ -192,7 +192,7 @@
     "entryID": 81,
     "actorID": "MC1",
     "text": "「紅色……紅色……這不全是虧空嗎！？」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "zh_TW": "「紅色……紅色……這不全是虧空嗎！？」",
     "zh_CN": "「红色……红色……这不全是亏空吗！？」",
     "links": [82]
@@ -282,7 +282,7 @@
     "entryID": 91,
     "actorID": "MC1",
     "text": "「話雖如此，既然入了英豪府，我定當盡一份力！」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,0.05);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,0.05);",
     "Description": "信義提升",
     "zh_TW": "「話雖如此，既然入了英豪府，我定當盡一份力！」",
     "zh_CN": "「话虽如此，既然入了英豪府，我定当尽一份力！」",
@@ -372,7 +372,7 @@
     "entryID": 101,
     "actorID": "MC1",
     "text": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);\nModifyData(AbilityMaxLevel,Player,Politics,5);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);\nModifyData(AbilityMaxLevel,Player,Politics,5);",
     "zh_TW": "「嗯，所以我才說不能不管。不過妳的眼睛倒利。」",
     "zh_CN": "「嗯，所以我才说不能不管。不过你的眼睛倒利。」",
     "links": [109]
@@ -390,7 +390,7 @@
     "entryID": 103,
     "actorID": "MC1",
     "text": "「也罷。船到橋頭自然直，天塌下來當被蓋。算籌撥一撥，日子總能過下去的。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.05);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,LawChaos,-0.05);",
     "Description": "通達提升",
     "zh_TW": "「也罷。船到橋頭自然直，天塌下來當被蓋。算籌撥一撥，日子總能過下去的。」",
     "zh_CN": "「也罢。船到桥头自然直，天塌下来当被盖。算筹拨一拨，日子总能过下去的。」",
@@ -427,7 +427,7 @@
     "entryID": 107,
     "actorID": "MC1",
     "text": "「嗯…填平虧空若能引來三家金主，英豪府根基穩了，對我也不是壞事。這并州的門道，正好順便摸清楚。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);ModifyData(DnDAlignment,Player,GoodEvil,-0.05);",
     "Description": "機略提升",
     "zh_TW": "「嗯…填平虧空若能引來三家金主，英豪府根基穩了，對我也不是壞事。這并州的門道，正好順便摸清楚。」",
     "zh_CN": "「嗯…填平亏空若能引来三家金主，英豪府根基稳了，对我也不是坏事。这并州的门道，正好顺便摸清楚。」",
@@ -455,7 +455,7 @@
     "entryID": 110,
     "actorID": "MC1",
     "text": "「三萬六千……這數目，可不是擺攤賣藝湊得出來的。」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「三萬六千……這數目，可不是擺攤賣藝湊得出來的。」",
     "zh_CN": "「三万六千……这数目，可不是摆摊卖艺凑得出来的。」",
     "links": [111]
@@ -482,7 +482,7 @@
     "entryID": 113,
     "actorID": "MC1",
     "text": "「先生的意思是……要談出資，得先把英豪府的裡子面子都撐起來？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「先生的意思是……要談出資，得先把英豪府的裡子面子都撐起來？」",
     "zh_CN": "「先生的意思是……要谈出资，得先把英豪府的里子面子都撑起来？」",
     "links": [114]
@@ -509,7 +509,7 @@
     "entryID": 116,
     "actorID": "MC1",
     "text": "「……行，這差事我接下了。我倒要看看這并州的門道，究竟有多深。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……行，這差事我接下了。我倒要看看這并州的門道，究竟有多深。」",
     "zh_CN": "「……行，这差事我接下了。我倒要看看这并州的门道，究竟有多深。」",
     "links": [117]
@@ -759,7 +759,7 @@
     "entryID": 145,
     "actorID": "MC1",
     "text": "「……記下來了。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……記下來了。」",
     "zh_CN": "「……记下来了。」",
     "links": [146]
@@ -813,7 +813,7 @@
     "entryID": 151,
     "actorID": "MC1",
     "text": "「并州山頭雜、雲中是肥肉；雁門得讓他認得這套規矩，鄴城……銀子他們不缺，得找破口才鑽得進去，朔方……暫且擱著。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「并州山頭雜、雲中是肥肉；雁門得讓他認得這套規矩，鄴城……銀子他們不缺，得找破口才鑽得進去，朔方……暫且擱著。」",
     "zh_CN": "「并州山头杂、云中是肥肉；雁门得让他认得这套规矩，邺城……银子他们不缺，得找破口才钻得进去，朔方……暂且搁着。」",
     "links": [152]
@@ -840,7 +840,7 @@
     "entryID": 154,
     "actorID": "MC1",
     "text": "「……說真的。我還以為你在雲中就只會拉我去挖寶、惹麻煩。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……說真的。我還以為你在雲中就只會拉我去挖寶、惹麻煩。」",
     "zh_CN": "「……说真的。我还以为你在云中就只会拉我去挖宝、惹麻烦。」",
     "links": [155]

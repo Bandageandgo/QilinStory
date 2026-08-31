@@ -304,7 +304,7 @@
     "entryID": 33,
     "actorID": "role2",
     "text": "[panel=6]＊（沒有人接你的話。褚人飛看著門，甄筠看著自己的袖口，黑狼王看著你，笑。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "[panel=6]＊（沒有人接你的話。褚人飛看著門，甄筠看著自己的袖口，黑狼王看著你，笑。）＊",
     "zh_CN": "[panel=6]＊（没有人接你的话。褚人飞看着门，甄筠看着自己的袖口，黑狼王看着你，笑。）＊",
     "links": [34]
@@ -2915,7 +2915,7 @@
     "entryID": 316,
     "actorID": "MC1",
     "text": "「……先生，這是——」",
-    "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「……先生，這是——」",
     "zh_CN": "「……先生，这是——」",
     "links": [317]

@@ -14,7 +14,7 @@
     "entryID": 428,
     "actorID": "role2",
     "text": "[panel=6]＊（剛一說溜嘴，\n一道魁武身影迅速出現在你面前，隨即──）＊",
-    "Sequence": "SetPortrait(MC1,pic=19);\nAudioControl(PlaySFXOneShot,Notice);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=19);\nAudioControl(PlaySFXOneShot,Notice);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "[panel=6]＊（剛一說溜嘴，\n一道魁武身影迅速出現在你面前，隨即──）＊",
     "zh_CN": "[panel=6]＊（刚一说溜嘴，\n一道魁武身影迅速出现在你面前，随即──）＊",
     "links": [531]
@@ -335,7 +335,7 @@
     "entryID": 496,
     "actorID": "MC1",
     "text": "「嗚！這什麼怪力？\n只是擦到一點，全身都麻了……」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「嗚！這什麼怪力？\n只是擦到一點，全身都麻了……」",
     "zh_CN": "「呜！这什么怪力？\n只是擦到一点，全身都麻了……」",
     "links": [497]
@@ -390,7 +390,7 @@
     "entryID": 502,
     "actorID": "MC1",
     "text": "「……多……多謝出手相救……」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「……多……多謝出手相救……」",
     "zh_CN": "「……多……多谢出手相救……」",
     "links": [543]
@@ -575,7 +575,7 @@
     "entryID": 524,
     "actorID": "MC1",
     "text": "「前輩過獎了，\n晚輩只是認為機會難得，不可放過。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「前輩過獎了，\n晚輩只是認為機會難得，不可放過。」",
     "zh_CN": "「前辈过奖了，\n晚辈只是认为机会难得，不可放过。」",
     "links": [523]
@@ -699,7 +699,7 @@
     "entryID": 542,
     "actorID": "MC1",
     "text": "「等等…！怎又是我！」",
-    "Sequence": "SetPortrait(MC1,pic=19);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=19);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「等等…！怎又是我！」",
     "zh_CN": "「等等…！怎又是我！」",
     "links": [525]
@@ -913,7 +913,7 @@
     "entryID": 4045,
     "actorID": "MC1",
     "text": "「[em2]不以一眚掩大德[/em2]……出自《左傳》：不該因為一次的過失，就抹殺了一個人的品德與實力。看來，老兄雖然行事霸道，但心中仍有大義的準繩。」",
-    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);\nEnableCharacterExpression(0,MC1-1,Proud);\nSetPortrait(MC1,pic=1);\nSetPortrait(MC3,pic=1);",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);\nEnableCharacterExpression(0,Player,Proud);\nSetPortrait(MC1,pic=1);\nSetPortrait(MC3,pic=1);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "「[em2]不以一眚掩大德[/em2]……出自《左傳》：不該因為一次的過失，就抹殺了一個人的品德與實力。看來，老兄雖然行事霸道，但心中仍有大義的準繩。」",
     "zh_CN": "「[em2]不以一眚掩大德[/em2]……出自《左传》：不该因为一次的过失，就抹杀了一个人的品德与实力。看来，老兄虽然行事霸道，但心中仍有大义的准绳。」",
@@ -1174,7 +1174,7 @@
     "entryID": 4079,
     "actorID": "MC1",
     "text": "「這……確實與傳聞中有些出入。難道是因為遴選極為嚴苛？所以成員不多？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「這……確實與傳聞中有些出入。難道是因為遴選極為嚴苛？所以成員不多？」",
     "zh_CN": "「这……确实与传闻中有些出入。难道是因为遴选极为严苛？所以成员不多？」",
     "links": [4080]

@@ -120,7 +120,7 @@
     "entryID": 15,
     "actorID": "MC1",
     "text": "「……欸？」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "links": [
       16
     ]
@@ -219,7 +219,7 @@
     "entryID": 28,
     "actorID": "2",
     "text": "[panel=6]＊（三根手指。三百人，城西一片地。府裡那本帳你見過，今年連三萬六的窟窿都還填不上。）＊",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Nervous_2);",
     "links": [
       29
     ]
@@ -323,7 +323,7 @@
     "entryID": 39,
     "actorID": "2",
     "text": "[panel=6]＊（你接住了第一刀，也接住了第二刀。第三刀他沒有收力，你飛出去撞在門框上。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "Conditions": "IsPassDice() == true;",
     "links": [
       40
@@ -351,7 +351,7 @@
     "entryID": 42,
     "actorID": "2",
     "text": "[panel=6]＊（一刀。你的刀飛了，人在地上。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "Conditions": "IsPassDice() == false;",
     "links": [
       43
@@ -464,7 +464,7 @@
     "entryID": 53,
     "actorID": "2",
     "text": "[panel=6]＊（這三息裡，他的眼睛動了。從那老頭的手，到院子，到堂上那塊「英豪府」的匾，再回到那老頭的手。）＊",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "links": [
       54
     ]

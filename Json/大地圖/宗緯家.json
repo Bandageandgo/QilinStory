@@ -54,7 +54,7 @@
     "entryID": 7,
     "actorID": "MC1",
     "text": "「這腳印……前腳掌寬大，爪痕深深嵌入泥土，不像人的，也不像野獸……倒像是某種……用兩條腿走路的狗？」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「这脚印……前脚掌宽大，爪痕深深嵌入泥土，不像人的，也不像野兽……倒像是某种……用两条腿走路的狗？」",
     "links": [8]
   },
@@ -139,7 +139,7 @@
     "entryID": 26,
     "actorID": "MC1",
     "text": "「慢著！這裡怎會有剛烤好的肉……這情況也太不對勁了啊。」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「慢着！这里怎会有刚烤好的肉……这情况也太不对劲了啊。」",
     "links": [32]
   },
@@ -181,7 +181,7 @@
     "entryID": 37,
     "actorID": "MC1",
     "text": "「等等！那隻狗頭人……不是之前在破廟想搶劫我的那個嗎？！他們怎麼混在一起了？！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「等等！那只狗头人……不是之前在破庙想抢劫我的那个吗？！他们怎么混在一起了？！」",
     "links": [38]
   },
@@ -279,7 +279,7 @@
     "entryID": 51,
     "actorID": "MC1",
     "text": "「嘖嘖嘖，志氣忒短！跟著獵戶大哥只能吃烤肉，跟著本少俠混，那是吃香的喝辣的，還能名震江湖！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「啧啧啧，志气忒短！跟着猎户大哥只能吃烤肉，跟着本少侠混，那是吃香的喝辣的，还能名震江湖！」",
     "links": [52, 53]
   },
@@ -414,7 +414,7 @@
     "entryID": 68,
     "actorID": "MC1",
     "text": "「這裡跟世外桃源似的，能有啥危險？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「这里跟世外桃源似的，能有啥危险？」",
     "links": [2089]
   },
@@ -430,7 +430,7 @@
     "entryID": 70,
     "actorID": "MC1",
     "text": "「水沖不走，還反被吸進去？這瀑布後面……難道別有洞天？」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「水冲不走，还反被吸进去？这瀑布后面……难道别有洞天？」",
     "links": [2091]
   },
@@ -488,7 +488,7 @@
     "entryID": 77,
     "actorID": "MC1",
     "text": "「看招！開山裂石掌——！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger_2);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger_2);",
     "zh_CN": "「看招！开山裂石掌——！」",
     "links": [78, 80]
   },
@@ -505,7 +505,7 @@
     "entryID": 79,
     "actorID": "MC1",
     "text": "「這是……一隻鞋？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);\nModifyData(Valuable,Player,HealerSandals,1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);\nModifyData(Valuable,Player,HealerSandals,1);",
     "Description": "獲得醫者草鞋",
     "zh_CN": "「这是……一只鞋？」",
     "links": [2093]
@@ -523,7 +523,7 @@
     "entryID": 81,
     "actorID": "MC1",
     "text": "「哎喲！痛痛痛！這樹是鐵做的嗎？！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「哎哟！痛痛痛！这树是铁做的吗？！」",
     "links": [2092]
   },
@@ -547,7 +547,7 @@
     "entryID": 84,
     "actorID": "MC1",
     "text": "「[em2]逆流而上者死，順流而下者生。一躍千仞，心誠者生……[/em2]」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「[em2]逆流而上者死，顺流而下者生。一跃千仞，心诚者生……[/em2]」",
     "links": [2096]
   },
@@ -555,7 +555,7 @@
     "entryID": 85,
     "actorID": "MC1",
     "text": "「順流而下…？莫非是！？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「顺流而下…？莫非是！？」",
     "links": [2095]
   },
@@ -613,7 +613,7 @@
     "entryID": 92,
     "actorID": "MC1",
     "text": "「乖乖……這姐姐長得真彪悍！這身甲冑，這副筋骨……嘖嘖，要是活著，怕是一拳能打死我。」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「乖乖……这姐姐长得真彪悍！这身甲胄，这副筋骨……啧啧，要是活着，怕是一拳能打死我。」",
     "links": [93]
   },
@@ -1008,7 +1008,7 @@
     "entryID": 2091,
     "actorID": "MC1",
     "text": "「怪事必有妖，有妖必有寶！大哥，你這是在暗示我那裡有寶貝啊！」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「怪事必有妖，有妖必有宝！大哥，你这是在暗示我那里有宝贝啊！」",
     "links": [71]
   },
@@ -1053,7 +1053,7 @@
     "entryID": 2096,
     "actorID": "MC1",
     "text": "「這什麼亂七八糟的？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「这什么乱七八糟的？」",
     "links": [85]
   },

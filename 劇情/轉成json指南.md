@@ -121,7 +121,7 @@
 -   **規則**: 參考 `給AI看的指南/立繪指令轉換規則.md` 中的「情緒描述與表情名稱對照表」（§5.2），根據上下文和描述文字選擇合適的角色版本ID與表情名稱。**不要從立繪檔名拆表情名稱**——立繪與表情特效是兩套資源。
 -   **格式**: `EnableCharacterExpression(位置,角色版本ID,表情名稱);`
     -   `位置`: `角色ID`為 `MC1` 時，位置固定為 `0`。其他角色作為當前發言者時，位置必須對應 `[panel=N]`（例如甄筠 `[panel=1]` → 位置 `1`；蕭靈犀開口時 `[panel=2]` → 位置 `2`）。NPC 說話者 panel **只用 1～3**：換人時在 1 ↔ 2 輪替（先 1、再 2 或取代 2、再回到 1）；同一人連說維持原位。**蕭靈犀自己開口永遠用 2**（即使她先開口也不標 1），但 **2 號位不是整場鎖給她**——下一個換人的 NPC 該站 2 就把她換掉。**只有三人同場、1 和 2 都不能讓時才上 3，不要用 4**。詳見 `給AI看的指南/文本創作指南.md` 2.1 節。
-    -   `角色版本ID`: 用於區分角色不同時期或服裝的ID，例如 `MC1-1`, `MC8`, `MC9`。
+    -   `角色版本ID`: **主角固定用 `Player`**（2026-08-31 作者裁示，舊寫法 `MC1-1` 已全案汰換）；其餘角色直接用其 `actorID`，例如 `MC8`、`MC9`。注意這一格與同句 `SetPortrait` 的第一參數不同（主角換立繪仍是 `MC1`）。
     -   `表情名稱`: **只能是這 13 個之一**（已定，2026-08-27 作者提供對照表）：`Anger`（紅色生氣）、`Anger_2`（黃色圓圈生氣）、`Anger_3`（白色怒吼）、`Nervous`（一滴汗）、`Nervous_2`（滿頭大汗）、`Pain`（紫色痛苦）、`Proud`（閃星星自豪）、`Shock`（打雷震驚）、`Surprise`（不規則驚嘆號）、`Surprise_2`（圓形驚嘆號）、`Meditate`（點點點）、`Idea`（燈泡）、`Question`（圓形問號）。
         **⛔ 這 13 個以外都不存在**，引擎掛不出特效：`Happy`、`Angry`、`Talk`、`Sad`、`Shy`、`Cry`、`Laugh`、`Sigh`、`Mindpain`、`Forbearance`、`Hopeful`、`Confused`、`Provocative`… 這類名字多半是**立繪檔名**或自創，不是特效 ID。**大小寫要一致**（`proud` ✗ → `Proud` ✓），**也不可以填數字**（數字只屬於 `SetPortrait` 的 `pic=`）。錯名怎麼改，查 `給AI看的指南/立繪指令轉換規則.md` §5.1.1a 對照表。
         平淡、沒有明顯情緒的句子，**正解是整條 `EnableCharacterExpression` 不要寫**，不要硬塞一個特效。
@@ -137,7 +137,7 @@
 
 #### 3.4 指令合併
 -   同一個節點的多個指令用分號 `;` 連接。
-    *   例如: `SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);`
+    *   例如: `SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);`
     *   包含狀態恢復的下一個節點: `DisableCharacterExpression(0);SetPortrait(MC1,pic=NewPicForThisLine);` (注意：根據`給AI看的指南/立繪指令轉換規則.md`，每行都會重新`SetPortrait`，所以不一定會恢復到`pic=1`，而是該行對應的新立繪。)
 -   **`BeginDiceRoll`／`BeginFight` 不得與立繪／表情寫在同一條 Sequence。** 擲骰與戰鬥必須各自獨立空對話節點（見 §4、§4.3）。
 
@@ -506,7 +506,7 @@
     "entryID": 100,
     "actorID": "MC1",
     "text": "「這...這個嘛...」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "links": [101]
   },
   {
@@ -543,7 +543,7 @@
     "entryID": 106,
     "actorID": "MC1",
     "text": "「區區三百文，何足掛齒！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Anger_2);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Anger_2);",
     "links": [110, 111]
   },
   {

@@ -26,7 +26,7 @@
 **▶ 有娜娜同行**
 
 **燕不凡:**`#298`　「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」
-- Sequence: `SetPortrait(MC1,pic=11); EnableCharacterExpression(0,MC1-1,Nervous_2);`
+- Sequence: `SetPortrait(MC1,pic=11); EnableCharacterExpression(0,Player,Nervous_2);`
 - Conditions: `CurrentQuestState("CF08") == "success"`
 
 **雍仔:**`#299`　[panel=2]「兄弟放心！上次是貧道大意了，這次定不會再犯同樣的錯誤！」
@@ -127,7 +127,7 @@
 **▶ 分支 A：交給雍仔（信義）**
 
 **燕不凡:**`#313`　「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」
-- Sequence: `SetPortrait(MC1,pic=3); DisableCharacterExpression(1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,MC1-1,Meditate);`
+- Sequence: `SetPortrait(MC1,pic=3); DisableCharacterExpression(1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,Player,Meditate);`
 
 **燕不凡:**`#314`　「且聽說書先生說的武林話本，也沒聽過哪個大俠吃屍丹的，唉，怎不是留下個甚麼千年靈芝之類的，這玩意兒黑不溜秋的，看著就倒胃口…」
 - Sequence: `SetPortrait(MC1,pic=3);`
@@ -145,7 +145,7 @@
 **▶ 分支 B：留著找行家鑑定（通達）**
 
 **燕不凡:**`#317`　「道長、赫連姑娘，我看這樣，此物既然奇特，不如我們先帶上，日後到了大城鎮，找個行家鑑定一番，再決定如何處置？」
-- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,MC1-1,Meditate); ModifyData(DnDAlignment,Player,LawChaos,-0.15);`
+- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,Player,Meditate); ModifyData(DnDAlignment,Player,LawChaos,-0.15);`
 
 **雍仔:**`#318`　[panel=3]「嗯…此法倒也穩妥。」
 - Sequence: `DisableCharacterExpression(0);`
@@ -161,10 +161,10 @@
 **▶ 分支 C：合力銷毀（仁心）**
 
 **燕不凡:**`#320`　「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」
-- Sequence: `SetPortrait(MC1,pic=2); EnableCharacterExpression(0,MC1-1,Meditate); ModifyData(DnDAlignment,Player,GoodEvil,0.15);`
+- Sequence: `SetPortrait(MC1,pic=2); EnableCharacterExpression(0,Player,Meditate); ModifyData(DnDAlignment,Player,GoodEvil,0.15);`
 
 **燕不凡:**`#323`　「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」
-- Sequence: `SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);`
+- Sequence: `SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Meditate);`
 
 **雍仔:**`#321`　[panel=3]「兄弟此言，深合天道！是貧道著相了。此等邪物，確不該留存於世！」
 - Sequence: `DisableCharacterExpression(0); ModifyData(FavorabilityExp,MC20,20);`
@@ -182,7 +182,7 @@
 **▶ 分支 D：自己收著（機略）**
 
 **燕不凡:**`#325`　「道長此言差矣。富貴險中求，赫連姑娘，這血河舍利既是至寶，想必有不凡之處吧？」
-- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,MC1-1,Meditate); ModifyData(DnDAlignment,Player,GoodEvil,-0.15);`
+- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,Player,Meditate); ModifyData(DnDAlignment,Player,GoodEvil,-0.15);`
 
 **赫連娜娜:**`#330`　[panel=1]「那是自然！此等寶物當然需要物盡其用！」
 - Sequence: `SetPortrait(MC22,pic=1); ModifyData(FavorabilityExp,MC22,20); EnableCharacterExpression(1,MC20,Proud);`
@@ -218,7 +218,7 @@
 **雍仔:**`#342`　[panel=1]「天下無不散的筵席，貧道也該繼續我的雲遊之路，前往那[em2]雲中英豪府[/em2]見識一番了。」
 
 **燕不凡:**`#352`　「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」
-- Sequence: `SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);`
 
 **赫連娜娜:**`#351`　[panel=2]「英豪府？好名子啊！我爹的筆記裡說了，英雄豪傑聚集的地方，往往也藏著秘密和寶藏！說不定下一個尋寶的線索就在那裡等著我們呢！」
 - Sequence: `EnableCharacterExpression(2,MC22,Idea); DisableCharacterExpression(0); SetPortrait(MC22,pic=1);`
@@ -235,10 +235,10 @@
 - Sequence: `EnableCharacterExpression(1,MC22,Idea)@0.5; SetPortrait(MC22,pic=5);`
 
 **燕不凡:**`#358`　「沒錯！小犀，志氣要大！行俠仗義，豈能只看眼前幾個錢而畏畏縮縮的！」
-- Sequence: `SetPortrait(MC1,pic=1); EnableCharacterExpression(0,MC1-1,Proud); DisableCharacterExpression(1);`
+- Sequence: `SetPortrait(MC1,pic=1); EnableCharacterExpression(0,Player,Proud); DisableCharacterExpression(1);`
 
 **燕不凡:**`#359`　「[em7]對蕭靈犀小聲嘀咕[/em7]…盤纏的事…路上我們再想想辦法…總不能在新人面前丟了面子…」
-- Sequence: `SetPortrait(MC1,pic=11); DisableCharacterExpression(0); EnableCharacterExpression(0,MC1-1,Meditate);`
+- Sequence: `SetPortrait(MC1,pic=11); DisableCharacterExpression(0); EnableCharacterExpression(0,Player,Meditate);`
 
 **蕭靈犀:**`#340`　「我只希望到時候別又餓肚子了。」
 - Sequence: `SetPortrait(MC8,pic=6);DisableCharacterExpression(0);`
@@ -365,7 +365,7 @@
 **▶ 分支 A：交給雍仔（信義）**
 
 **燕不凡:**`#243`　「屍丹…聽起來就很邪門…還是讓道長你拿著吧，我現在只想找地方歇歇腳，順便看看有沒有吃的…」
-- Sequence: `SetPortrait(MC1,pic=3); ModifyData(DnDAlignment,MC1,LawChaos,0.15); EnableCharacterExpression(0,MC1-1,Meditate);`
+- Sequence: `SetPortrait(MC1,pic=3); ModifyData(DnDAlignment,MC1,LawChaos,0.15); EnableCharacterExpression(0,Player,Meditate);`
 
 **燕不凡:**`#244`　「且聽說書先生說的武林話本，也沒聽過哪個大俠吃屍丹的，唉，怎不是留下個甚麼千年靈芝之類的，這玩意兒黑不溜秋的，看著就倒胃口…」
 - Sequence: `SetPortrait(MC1,pic=3);`
@@ -379,7 +379,7 @@
 **▶ 分支 B：留著找行家鑑定（通達）**
 
 **燕不凡:**`#247`　「這屍丹聽著是邪門，但咱們辛辛苦苦打生打死才得了這麼個玩意兒，直接扔了豈不可惜？」
-- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,MC1-1,Meditate); ModifyData(DnDAlignment,MC1,LawChaos,-0.15);`
+- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,Player,Meditate); ModifyData(DnDAlignment,MC1,LawChaos,-0.15);`
 
 **燕不凡:**`#259`　「萬一能賣個好價錢呢？盤纏啊盤纏，行走江湖什麼都要錢，不如這樣，我們找個大城鎮，尋個見多識廣的行家鑑定鑑定？」
 - Sequence: `SetPortrait(MC1,pic=17);`
@@ -393,10 +393,10 @@
 **▶ 分支 C：合力銷毀（仁心）**
 
 **燕不凡:**`#250`　「雍仔，萬萬不可！此物乃集那黑血屍畢生怨毒邪氣所化，留在世間，難保不會被歹人利用，或再生禍端！」
-- Sequence: `SetPortrait(MC1,pic=2); EnableCharacterExpression(0,MC1-1,Meditate); ModifyData(DnDAlignment,MC1,GoodEvil,0.15);`
+- Sequence: `SetPortrait(MC1,pic=2); EnableCharacterExpression(0,Player,Meditate); ModifyData(DnDAlignment,MC1,GoodEvil,0.15);`
 
 **燕不凡:**`#260`　「依我看，為絕後患，不如我等立刻合力，將此邪物徹底摧毀！」
-- Sequence: `SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Meditate);`
+- Sequence: `SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Meditate);`
 
 **雍仔:**`#251`　「兄弟此言，深合天道！是貧道著相了。此等邪物，確不該留存於世。好！就依兄弟之見，我等這便設法將其銷毀！」
 - Sequence: `DisableCharacterExpression(0); ModifyData(FavorabilityExp,MC20,20);`
@@ -410,7 +410,7 @@
 **▶ 分支 D：自己收著（機略）**
 
 **燕不凡:**`#254`　「此言差矣！這屍丹雖陰邪，但所謂[em2]孤陰不長，孤陽不生[/em2]，或許我正能以自身之長生經化解其戾氣，取其精華！」
-- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,MC1-1,Meditate); ModifyData(DnDAlignment,MC1,GoodEvil,-0.15);`
+- Sequence: `SetPortrait(MC1,pic=12); EnableCharacterExpression(0,Player,Meditate); ModifyData(DnDAlignment,MC1,GoodEvil,-0.15);`
 
 **燕不凡:**`#261`　「雍仔，你我九死一生得此奇物，豈能因其『陰氣頗重』便束之高閣？不如…讓我來試試看？若真有不妥，再由你處置不遲！」
 - Sequence: `SetPortrait(MC1,pic=1);`
@@ -442,7 +442,7 @@
 **雍仔:**`#262`　「天下無不散的筵席，貧道也該繼續我的雲遊之路，前往那[em2]雲中英豪府[/em2]見識一番了。」
 
 **燕不凡:**`#227`　「青山不改，綠水長流，他日江湖再見，定要與你痛飲三百杯，不醉不歸！」
-- Sequence: `SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);`
 
 **蕭靈犀:**`#228`　「你這一串江湖話，和前幾天我們聽說書先生說的話本根本一模一樣…再說了希望到時候你有錢請客！」
 - Sequence: `DisableCharacterExpression(0);SetPortrait(MC8,pic=6);`
@@ -459,7 +459,7 @@
 - Sequence: `SetPortrait(MC8,pic=5);EnableCharacterExpression(1,MC8,Meditate);`
 
 **燕不凡:**`#233`　「嗯！妳說的對！男兒志在四方！是更廣闊的江湖！待我將長生經融會貫通，定要在英豪府的遴選中拔得頭籌，揚名立萬！」
-- Sequence: `DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `DisableCharacterExpression(1);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);`
 
 **蕭靈犀:**`#234`　「我只希望到時候別又餓肚子了。」
 - Sequence: `SetPortrait(MC8,pic=9);`
@@ -588,7 +588,7 @@
 **旁白:**`#2394`　[panel=6]＊（懷裡熱了一下。你伸手去按，按到的不是骰子，是旁邊那顆從黑血屍身上得來的屍丹。）＊
 
 **燕不凡:**`#2377`　「這個？」
-- Sequence: `SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);`
+- Sequence: `SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);`
 
 **饕餮:**`#2378`　「你留著也吃不了。」
 - Sequence: `DisableCharacterExpression(0);`
@@ -601,13 +601,13 @@
 **▶ 分支 A**
 
 **燕不凡:**`#2395`　「墓裡那一回，要不是妳出手，我早沒了。這事我一直記著。」
-- Sequence: `SetPortrait(MC1,pic=1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `SetPortrait(MC1,pic=1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,Player,Proud);`
 - 註記：信義提升
 
 **▶ 分支 B**
 
 **燕不凡:**`#2396`　「給了妳……我倒想知道，這玩意兒到底值多少。」
-- Sequence: `SetPortrait(MC1,pic=18); ModifyData(DnDAlignment,Player,GoodEvil,-0.15); EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `SetPortrait(MC1,pic=18); ModifyData(DnDAlignment,Player,GoodEvil,-0.15); EnableCharacterExpression(0,Player,Proud);`
 - 註記：機略提升
 
 **◆ 合流**
@@ -623,7 +623,7 @@
 **▶ 分支 甲：給**
 
 **燕不凡:**`#2399`　「便給妳罷。妳既看著它，若我還捨不得，那可顯得太吝嗇了。」
-- Sequence: `SetPortrait(MC1,pic=1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `SetPortrait(MC1,pic=1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,Player,Proud);`
 - Script: `SetQuestState("CF05", "success"); SetQuestEntryState("CF05", 3, "success")`（原檔分兩行）
 - 註記：完成任務
 
@@ -651,7 +651,7 @@
 - 註記：超級大漢人
 
 **蕭靈犀:**`#2407`　[panel=2]「[em7]被你翻身的動靜吵醒，揉著眼睛[/em7]，表哥？天還黑著呢……還是你又餓啦？」
-- Sequence: `SetPortrait(MC8,pic=3); EnableCharacterExpression(0,MC1-1,Nervous); AudioControl(PlaySFXOneShot,Others_Growling);`
+- Sequence: `SetPortrait(MC8,pic=3); EnableCharacterExpression(0,Player,Nervous); AudioControl(PlaySFXOneShot,Others_Growling);`
 
 **燕不凡:**`#2406`　「……沒有。快睡罷。」
 - Sequence: `DisableCharacterExpression(0); SetPortrait(MC1,pic=8);`
@@ -660,7 +660,7 @@
 **▶ 分支 乙：不給**
 
 **燕不凡:**`#2400`　「這是我拼命換來的。吃不了，那也是我的。」
-- Sequence: `SetPortrait(MC1,pic=18); EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `SetPortrait(MC1,pic=18); EnableCharacterExpression(0,Player,Proud);`
 - 註記：不給屍丹
 
 **旁白:**`#2409`　[panel=6]＊（她看了你一會兒，把目光挪開了。不是動怒——倒像是把一件本就沒興趣的東西，隨手放回了原處。）＊
@@ -677,7 +677,7 @@
 - Sequence: `AudioControl(StopMusic); AudioControl(PlayMusic,Others_Carriage); EnableEventBG(CarriageWithPeople,FullScreen);`
 
 **蕭靈犀:**`#2415`　[panel=2]「[em7]翻了個身，含糊地[/em7]……表哥？做惡夢了？」
-- Sequence: `SetPortrait(MC8,pic=3); EnableCharacterExpression(0,MC1-1,Nervous);`
+- Sequence: `SetPortrait(MC8,pic=3); EnableCharacterExpression(0,Player,Nervous);`
 
 **燕不凡:**`#2414`　「……沒有。快睡罷。」
 - Sequence: `DisableCharacterExpression(0); SetPortrait(MC1,pic=8);`
@@ -757,7 +757,7 @@
 - Sequence: `SetPortrait(MC1,pic=1); Continue();`
 
 **旁白:**`#61`　[panel=6]＊（自張大叔瀟灑離去，轉眼又過月餘，你傷勢不僅痊癒，功力亦小有精進。然而，古墓中那黑血屍的身影，以及張大叔臨行前的囑託，始終縈繞在你心頭，如芒在背。）＊
-- Sequence: `SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);`
+- Sequence: `SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);`
 - 註記：在養成模式中時間到時自動觸發
 
 **燕不凡:**`#62`　「嗯，張大叔言道，那妖物雖已元氣大傷，但放任不管，終非俠義所為。如今我傷勢已癒，長生經亦初窺門徑…咳，該去了結這樁恩怨，以慰蒼生…」
@@ -781,7 +781,7 @@
 - Sequence: `EnableCharacterExpression(1,MC20,Question);`
 
 **燕不凡:**`#68`　「雍仔，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！」
-- Sequence: `SetPortrait(MC1,pic=13); EnableCharacterExpression(0,MC1-1,Meditate); DisableCharacterExpression(1);`
+- Sequence: `SetPortrait(MC1,pic=13); EnableCharacterExpression(0,Player,Meditate); DisableCharacterExpression(1);`
 
 **燕不凡:**`#212`　「我意欲…再探龍潭虎穴，將此妖物徹底正法！以絕後患！你…以為如何？」
 - Sequence: `DisableCharacterExpression(0); SetPortrait(MC1,pic=8);`
@@ -878,7 +878,7 @@
 - Sequence: `SetPortrait(MC20,pic=1);`
 
 **燕不凡:**`#284`　「雍仔，想必你也未曾忘記那古墓中的黑血屍。張大叔雖已重創之，然此獠兇焰未滅，恐其日後再生事端，荼毒生靈！」
-- Sequence: `SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);`
+- Sequence: `SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Question);`
 
 **燕不凡:**`#294`　「我意欲…再探龍潭虎穴，將此妖物徹底正法！以絕後患！你…以為如何？」
 
@@ -889,7 +889,7 @@
 - Sequence: `DisableCharacterExpression(0);SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Nervous_2);`
 
 **燕不凡:**`#286`　「探險尋寶，哪有不濕鞋的道理！張大叔已言明那妖物元氣大傷，如今你我二人聯手，又有準備，未必沒有勝算。」
-- Sequence: `DisableCharacterExpression(1); SetPortrait(MC1,pic=1); EnableCharacterExpression(0,MC1-1,Proud);`
+- Sequence: `DisableCharacterExpression(1); SetPortrait(MC1,pic=1); EnableCharacterExpression(0,Player,Proud);`
 
 **雍仔:**`#296`　「好吧！氣氛都烘托到這了，不去也不行了，我們這就走吧！」
 - Sequence: `DisableCharacterExpression(0); ModifyData(FavorabilityExp,MC20,50); ModifyData(IsInTeam,MC20,true); ModifyData(IsAbleToJoinTeam,MC20,true); ModifyData(Rest);`

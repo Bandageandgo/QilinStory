@@ -344,7 +344,7 @@
     "entryID": 2501,
     "actorID": "role102",
     "text": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]，\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
-    "Sequence": "EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「[em7]盈盈一笑，向主角行了個萬福禮[/em7]，\n小女子無以為報，便送小哥……一句吉言吧！\n祝小哥往後行走江湖，桃花朵朵開，卻片葉不沾身～」",
     "zh_CN": "「[em7]盈盈一笑，向主角行了个万福礼[/em7]，\n小女子无以为报，便送小哥……一句吉言吧！\n祝小哥往后行走江湖，桃花朵朵开，却片叶不沾身～」",
     "links": [2502]
@@ -640,7 +640,7 @@
     "entryID": 2541,
     "actorID": "MC1",
     "text": "「……雖然聽起來卑鄙了點，但好像……有點道理？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……雖然聽起來卑鄙了點，但好像……有點道理？」",
     "zh_CN": "「……虽然听起来卑鄙了点，但好像……有点道理？」",
     "links": [2542]
@@ -724,7 +724,7 @@
     "entryID": 2550,
     "actorID": "MC1",
     "text": "「……啊？吉、吉言？就這？」",
-    "Sequence": "SetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「……啊？吉、吉言？就這？」",
     "zh_CN": "「……啊？吉、吉言？就这？」",
     "links": [2551]
@@ -742,7 +742,7 @@
     "entryID": 2552,
     "actorID": "MC1",
     "text": "「這……高手啊！用幾句漂亮話，不用花一分錢，就換走了我的幫忙，還讓我沒法對她生氣……」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nDisableCharacterExpression(0);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「這……高手啊！用幾句漂亮話，不用花一分錢，就換走了我的幫忙，還讓我沒法對她生氣……」",
     "zh_CN": "「这……高手啊！用几句漂亮话，不用花一分钱，就换走了我的帮忙，还让我没法对她生气……」",
     "links": [2553]
@@ -785,7 +785,7 @@
     "entryID": 2557,
     "actorID": "MC1",
     "text": "「這酒的名字，就叫……與妳天長地久！不知姐姐願不願意嘗一口？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「這酒的名字，就叫……與妳天長地久！不知姐姐願不願意嘗一口？」",
     "zh_CN": "「这酒的名字，就叫……与你天长地久！不知姐姐愿不愿意尝一口？」",
     "links": [2475, 2524]
@@ -812,7 +812,7 @@
     "entryID": 2560,
     "actorID": "MC1",
     "text": "「嘿，來碰一個！都在酒裡了！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「嘿，來碰一個！都在酒裡了！」",
     "zh_CN": "「嘿，来碰一个！都在酒里了！」",
     "links": [2561, 2563]

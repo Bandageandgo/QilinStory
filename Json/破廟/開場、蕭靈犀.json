@@ -39,7 +39,7 @@
     "entryID": 3517,
     "actorID": "MC1",
     "text": "「兩位大哥，咱們走了這麼久，敢問……現在離雲中還有多遠啊？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「兩位大哥，咱們走了這麼久，敢問……現在離雲中還有多遠啊？」",
     "zh_CN": "「两位大哥，咱们走了这么久，敢问……现在离云中还有多远啊？」",
     "links": [3524]
@@ -82,7 +82,7 @@
     "entryID": 3522,
     "actorID": "MC1",
     "text": "「唔啊啊～～\n壞了，聽著雨聲就這樣睡了過去……」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous);\nMapLock(AbandonedTemple, unlock);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);\nMapLock(AbandonedTemple, unlock);",
     "Description": "解鎖破廟",
     "zh_TW": "「唔啊啊～～\n壞了，聽著雨聲就這樣睡了過去……」",
     "zh_CN": "「唔啊啊～～\n坏了，听着雨声就这样睡了过去……」",
@@ -352,7 +352,7 @@
     "entryID": 3552,
     "actorID": "MC1",
     "text": "「你們在這要做什麼？！」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「你們在這要做什麼？！」",
     "zh_CN": "「你们在这要做什么？！」",
     "links": [3553]
@@ -449,7 +449,7 @@
     "entryID": 3563,
     "actorID": "MC1",
     "text": "「比起這個，咱們不是坐車嗎？怎麼會在破廟裡？」",
-    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Question);\nDisableCharacterExpression(1);",
     "zh_TW": "「比起這個，咱們不是坐車嗎？怎麼會在破廟裡？」",
     "zh_CN": "「比起这个，咱们不是坐车吗？怎么会在破庙里？」",
     "links": [3564]
@@ -539,7 +539,7 @@
     "entryID": 3574,
     "actorID": "MC1",
     "text": "「…………」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「…………」",
     "zh_CN": "「…………」",
     "links": [3544]
@@ -557,7 +557,7 @@
     "entryID": 3576,
     "actorID": "MC1",
     "text": "「小犀，他們說給錢就放人。」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「小犀，他們說給錢就放人。」",
     "zh_CN": "「小犀，他们说给钱就放人。」",
     "links": [3578]
@@ -593,7 +593,7 @@
     "entryID": 3580,
     "actorID": "MC1",
     "text": "「姑且先問問哦，那你們是需要多少錢才能放我們走？」",
-    "Sequence": "SetPortrait(MC1,pic=9);\nDisableCharacterExpression(2);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=9);\nDisableCharacterExpression(2);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「姑且先問問哦，那你們是需要多少錢才能放我們走？」",
     "zh_CN": "「姑且先问问哦，那你们是需要多少钱才能放我们走？」",
     "links": [3586]
@@ -621,7 +621,7 @@
     "entryID": 3583,
     "actorID": "MC1",
     "text": "「不過你一個人跑出來淋雨做什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Question);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);\nDisableCharacterExpression(1);",
     "zh_TW": "「不過你一個人跑出來淋雨做什麼？」",
     "zh_CN": "「不过你一个人跑出来淋雨做什么？」",
     "links": [3568]
@@ -703,7 +703,7 @@
     "entryID": 3592,
     "actorID": "MC1",
     "text": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Idea);\nDisableCharacterExpression(1);",
     "zh_TW": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
     "zh_CN": "「好汉们，今日你们能从我这拿到五百钱，明日呢？拦路营生，终究不是长久之计。我这正好有个稳妥的委托，既能让各位赚得正当钱财，又能免去刀口舔血的风险。好汉们不妨考虑一下？」",
     "links": [3594, 3603]
@@ -712,7 +712,7 @@
     "entryID": 3593,
     "actorID": "MC1",
     "text": "「而我所求的是一個承諾——在我日後的旅途中，當我需要援助之時，各位需無條件出手助我三次。」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「而我所求的是一個承諾——在我日後的旅途中，當我需要援助之時，各位需無條件出手助我三次。」",
     "zh_CN": "「而我所求的是一个承诺——在我日后的旅途中，当我需要援助之时，各位需无条件出手助我三次。」",
     "links": [3595]
@@ -759,7 +759,7 @@
     "entryID": 3598,
     "actorID": "MC1",
     "text": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Idea);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Idea);\nDisableCharacterExpression(1);",
     "zh_TW": "「好漢們，今日你們能從我這拿到五百錢，明日呢？攔路營生，終究不是長久之計。我這正好有個穩妥的委託，既能讓各位賺得正當錢財，又能免去刀口舔血的風險。好漢們不妨考慮一下？」",
     "zh_CN": "「好汉们，今日你们能从我这拿到五百钱，明日呢？拦路营生，终究不是长久之计。我这正好有个稳妥的委托，既能让各位赚得正当钱财，又能免去刀口舔血的风险。好汉们不妨考虑一下？」",
     "links": [3599]
@@ -768,7 +768,7 @@
     "entryID": 3599,
     "actorID": "MC1",
     "text": "「而我所求的是一個承諾——在我日後的旅途中，當我需要援助之時，各位需無條件出手助我三次。」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「而我所求的是一個承諾——在我日後的旅途中，當我需要援助之時，各位需無條件出手助我三次。」",
     "zh_CN": "「而我所求的是一个承诺——在我日后的旅途中，当我需要援助之时，各位需无条件出手助我三次。」",
     "links": [3600]
@@ -1027,7 +1027,7 @@
     "entryID": 3627,
     "actorID": "MC1",
     "text": "「疑！？...身上的錢好像不夠...」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Nervous_2);",
     "Conditions": "IsCoinPass(500)  == false;",
     "zh_TW": "「疑！？...身上的錢好像不夠...」",
     "zh_CN": "「疑！？...身上的钱好像不够...」",

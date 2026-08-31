@@ -17,7 +17,7 @@
     "entryID": 3,
     "actorID": "MC1",
     "text": "「信哥？你在這做什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "links": [4]
   },
   {
@@ -108,7 +108,7 @@
     "entryID": 16,
     "actorID": "MC1",
     "text": "「三百四十八——」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "links": [17]
   },
   {
@@ -164,7 +164,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「欸——！？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "links": [26]
   },
   {
@@ -268,7 +268,7 @@
     "entryID": 45,
     "actorID": "role2",
     "text": "[panel=6]＊（第六招你飛出去了，撞在兵器架上，架子倒了一半。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "links": [46]
   },
   {
@@ -290,7 +290,7 @@
     "entryID": 471,
     "actorID": "role2",
     "text": "[panel=6]＊（第一招你格開了，第二招你的刀飛了，第三招你在地上。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "links": [48]
   },
   {
@@ -339,7 +339,7 @@
     "entryID": 52,
     "actorID": "role2",
     "text": "[panel=6]＊（他讓你三招，那三招他不會動。大刀扛在肩上，轉身慢。日頭在西邊，他站的位置正好背光。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "links": [53]
   },
   {
@@ -405,7 +405,7 @@
     "entryID": 61,
     "actorID": "MC1",
     "text": "「三招用完了。信哥，接下來可以認真了。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "links": [62]
   },
   {
@@ -469,7 +469,7 @@
     "entryID": 66,
     "actorID": "role2",
     "text": "[panel=6]＊（你踢沙——風是往你這邊吹的。）＊",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Nervous_2);",
     "links": [67]
   },
   {
@@ -863,7 +863,7 @@
     "entryID": 2066,
     "actorID": "role2",
     "text": "[panel=6]＊（那個數字他說得很順。跟呂信一樣順。）＊",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "links": [2067]
   },
   {
@@ -1218,7 +1218,7 @@
     "entryID": 3066,
     "actorID": "role2",
     "text": "[panel=6]＊（那個數字他說得很順。跟呂信一樣順。）＊",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "links": [3067]
   },
   {
@@ -1573,7 +1573,7 @@
     "entryID": 4066,
     "actorID": "role2",
     "text": "[panel=6]＊（那個數字他說得很順。跟呂信一樣順。）＊",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "links": [4067]
   },
   {

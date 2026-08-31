@@ -13,7 +13,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「這調調……不會吧？\n蒼天啊，我方才可沒求過這個。」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「這調調……不會吧？\n蒼天啊，我方才可沒求過這個。」",
     "zh_CN": "「这调调……不会吧？\n苍天啊，我方才可没求过这个。」",
     "links": [3]
@@ -85,7 +85,7 @@
     "entryID": 10,
     "actorID": "MC1",
     "text": "「……好吧，妳有何計？」",
-    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=10);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……好吧，妳有何計？」",
     "zh_CN": "「……好吧，你有何计？」",
     "links": [11]
@@ -146,7 +146,7 @@
     "entryID": 17,
     "actorID": "role2",
     "text": "[panel=6]＊（你正學著高人的姿態，不料腳下一滑，身形一個踉蹌，險些跌倒。方才那股氣勢，登時洩得乾乾淨淨。）＊",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "[panel=6]＊（你正學著高人的姿態，不料腳下一滑，身形一個踉蹌，險些跌倒。方才那股氣勢，登時洩得乾乾淨淨。）＊",
     "zh_CN": "[panel=6]＊（你正学着高人的姿态，不料脚下一滑，身形一个踉跄，险些跌倒。方才那股气势，登时泄得干干净净。）＊",
@@ -188,7 +188,7 @@
     "entryID": 22,
     "actorID": "MC1",
     "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);",
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "zh_CN": "「尔等土鸡瓦狗，哪个是能做主的？上前答话！」",
@@ -216,7 +216,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「咳！爾等……土雞瓦狗……哪個……呃……」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
     "Conditions": "IsPassDice()  == false;",
     "zh_TW": "「咳！爾等……土雞瓦狗……哪個……呃……」",
     "zh_CN": "「咳！尔等……土鸡瓦狗……哪个……呃……」",
@@ -316,7 +316,7 @@
     "entryID": 37,
     "actorID": "MC1",
     "text": "「此劍，可取爾等性命。這，便是我身上最值錢的物事。」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「此劍，可取爾等性命。這，便是我身上最值錢的物事。」",
     "zh_CN": "「此剑，可取尔等性命。这，便是我身上最值钱的物事。」",
     "links": [38, 39]
@@ -352,7 +352,7 @@
     "entryID": 41,
     "actorID": "MC1",
     "text": "「[em7]掏出一枚銅錢[/em7]，此物，可換爾等活路。」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「[em7]掏出一枚銅錢[/em7]，此物，可換爾等活路。」",
     "zh_CN": "「[em7]掏出一枚铜钱[/em7]，此物，可换尔等活路。」",
     "links": [42, 43]
@@ -388,7 +388,7 @@
     "entryID": 45,
     "actorID": "MC1",
     "text": "「[em7]遙指天際[/em7]，天上日月，皆為我所有。爾等，還不退下？」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「[em7]遙指天際[/em7]，天上日月，皆為我所有。爾等，還不退下？」",
     "zh_CN": "「[em7]遥指天际[/em7]，天上日月，皆为我所有。尔等，还不退下？」",
     "links": [46, 47]
@@ -480,7 +480,7 @@
     "entryID": 57,
     "actorID": "MC1",
     "text": "「好了好了。姑娘，如今可肯說說，妳究竟為何而來？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「好了好了。姑娘，如今可肯說說，妳究竟為何而來？」",
     "zh_CN": "「好了好了。姑娘，如今可肯说说，你究竟为何而来？」",
     "links": [58]
@@ -604,7 +604,7 @@
     "entryID": 71,
     "actorID": "MC1",
     "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);",
     "Conditions": "IsPassDice()  == true;",
     "zh_TW": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "zh_CN": "「尔等土鸡瓦狗，哪个是能做主的？上前答话！」",
@@ -694,7 +694,7 @@
     "entryID": 729,
     "actorID": "MC1",
     "text": "「嘗到厲害了吧。」",
-    "Sequence": "SetPortrait(MC1,pic=5);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「嘗到厲害了吧。」",
     "zh_CN": "「尝到厉害了吧。」",
     "links": [811]
@@ -730,7 +730,7 @@
     "entryID": 733,
     "actorID": "MC1",
     "text": "「什麼！？怎麼會……」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「什麼！？怎麼會……」",
     "zh_CN": "「什么！？怎么会……」",
     "links": [731]
@@ -789,7 +789,7 @@
     "entryID": 740,
     "actorID": "MC1",
     "text": "「喂……？」",
-    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「喂……？」",
     "zh_CN": "「喂……？」",
     "links": [2067]
@@ -826,7 +826,7 @@
     "entryID": 744,
     "actorID": "MC1",
     "text": "「英雄救不成美，那美人救英雄也成！\n我這身子眼下虛得很……」",
-    "Sequence": "SetPortrait(MC1,pic=15);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=15);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「英雄救不成美，那美人救英雄也成！\n我這身子眼下虛得很……」",
     "zh_CN": "「英雄救不成美，那美人救英雄也成！\n我这身子眼下虚得很……」",
     "links": [761]
@@ -899,7 +899,7 @@
     "entryID": 752,
     "actorID": "MC1",
     "text": "「喔喔……我體內湧出無窮真力……啊……\n我要脫胎換骨了，十倍百倍，哈沒哈沒……哈──！」",
-    "Sequence": "SetContinueMode(false);\nAudioControl(PlaySFXOneShot,Notice);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Proud);\nSetContinueMode(original)@1.5;\nModifyData(Skill,MC1,StrongAndSturdy);\nShowHint(Skill,StrongAndSturdy);",
+    "Sequence": "SetContinueMode(false);\nAudioControl(PlaySFXOneShot,Notice);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Proud);\nSetContinueMode(original)@1.5;\nModifyData(Skill,MC1,StrongAndSturdy);\nShowHint(Skill,StrongAndSturdy);",
     "Description": "獲得身強體壯",
     "zh_TW": "「喔喔……我體內湧出無窮真力……啊……\n我要脫胎換骨了，十倍百倍，哈沒哈沒……哈──！」",
     "zh_CN": "「喔喔……我体内涌出无穷真力……啊……\n我要脱胎换骨了，十倍百倍，哈没哈没……哈──！」",
@@ -909,7 +909,7 @@
     "entryID": 753,
     "actorID": "MC1",
     "text": "「呃啊！我體內有一股熊熊烈火……\n……它在發出怒吼啊啊啊……」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nSetContinueMode(false);\nEnableCharacterExpression(0,MC1-1,Nervous_2);\nSetGameObjectShake(P0,ShakeNormal,XAxis,1,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nSetContinueMode(false);\nEnableCharacterExpression(0,Player,Nervous_2);\nSetGameObjectShake(P0,ShakeNormal,XAxis,1,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);",
     "zh_TW": "「呃啊！我體內有一股熊熊烈火……\n……它在發出怒吼啊啊啊……」",
     "zh_CN": "「呃啊！我体内有一股熊熊烈火……\n……它在发出怒吼啊啊啊……」",
     "links": [754]
@@ -964,7 +964,7 @@
     "entryID": 760,
     "actorID": "MC1",
     "text": "「咦？突然這般好心……教我怎麼好意思。」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「咦？突然這般好心……教我怎麼好意思。」",
     "zh_CN": "「咦？突然这般好心……教我怎么好意思。」",
     "links": [790]
@@ -1000,7 +1000,7 @@
     "entryID": 764,
     "actorID": "MC1",
     "text": "「妳都潑完了才說……\n是誰傳的謠，說郎中個個慈眉善目？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「妳都潑完了才說……\n是誰傳的謠，說郎中個個慈眉善目？」",
     "zh_CN": "「你都泼完了才说……\n是谁传的谣，说郎中个个慈眉善目？」",
     "links": [746]
@@ -1092,7 +1092,7 @@
     "entryID": 778,
     "actorID": "MC1",
     "text": "「唔呃……就算我說錯了話，也不至於此吧……」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「唔呃……就算我說錯了話，也不至於此吧……」",
     "zh_CN": "「唔呃……就算我说错了话，也不至于此吧……」",
     "links": [779]
@@ -1111,7 +1111,7 @@
     "entryID": 780,
     "actorID": "MC1",
     "text": "「我說我說，手下留情！\n此骰名喚麒麟骰，是我娘留下的，說是能保平安。」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Nervous_2);",
     "zh_TW": "「我說我說，手下留情！\n此骰名喚麒麟骰，是我娘留下的，說是能保平安。」",
     "zh_CN": "「我说我说，手下留情！\n此骰名唤麒麟骰，是我娘留下的，说是能保平安。」",
     "links": [781]
@@ -1388,7 +1388,7 @@
     "entryID": 2054,
     "actorID": "MC1",
     "text": "「好了好了。姑娘，如今可肯說說，妳究竟為何而來？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「好了好了。姑娘，如今可肯說說，妳究竟為何而來？」",
     "zh_CN": "「好了好了。姑娘，如今可肯说说，你究竟为何而来？」",
     "links": [2055]

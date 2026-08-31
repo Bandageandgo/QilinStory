@@ -381,7 +381,7 @@
     "entryID": 4140,
     "actorID": "MC1",
     "text": "「當真？多謝幫主！有赤龍幫這筆錢撐著，英豪府這道坎可就……」",
-    "Sequence": "SetPortrait(MC1,pic=17);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=17);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「當真？多謝幫主！有赤龍幫這筆錢撐著，英豪府這道坎可就……」",
     "zh_CN": "「当真？多谢帮主！有赤龙帮这笔钱撑着，英豪府这道坎可就……」",
     "links": [4141]
@@ -399,7 +399,7 @@
     "entryID": 4142,
     "actorID": "MC1",
     "text": "「……幫主的意思是，還有下文？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「……幫主的意思是，還有下文？」",
     "zh_CN": "「……帮主的意思是，还有下文？」",
     "links": [4143]
@@ -417,7 +417,7 @@
     "entryID": 4144,
     "actorID": "MC1",
     "text": "「原來是要先過幫主這一關。那…幫主想怎麼個瞧法？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「原來是要先過幫主這一關。那…幫主想怎麼個瞧法？」",
     "zh_CN": "「原来是要先过帮主这一关。那…帮主想怎么个瞧法？」",
     "links": [4145]
@@ -435,7 +435,7 @@
     "entryID": 4146,
     "actorID": "MC1",
     "text": "「好！江湖兒女，這才對味。擂台上，在下奉陪到底。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「好！江湖兒女，這才對味。擂台上，在下奉陪到底。」",
     "zh_CN": "「好！江湖儿女，这才对味。擂台上，在下奉陪到底。」",
     "links": [4149]
@@ -482,7 +482,7 @@
     "entryID": 4151,
     "actorID": "MC1",
     "text": "「……幫主說得明白。既收赤龍幫的情，便不會再去別家伸手。」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……幫主說得明白。既收赤龍幫的情，便不會再去別家伸手。」",
     "zh_CN": "「……帮主说得明白。既收赤龙帮的情，便不会再去别家伸手。」",
     "links": [4152]
@@ -547,7 +547,7 @@
     "entryID": 4159,
     "actorID": "MC1",
     "text": "「噓，小聲點。別一臉沒見過世面的樣子。」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「噓，小聲點。別一臉沒見過世面的樣子。」",
     "zh_CN": "「嘘，小声点。别一脸没见过世面的样子。」",
     "links": [4160]
@@ -638,7 +638,7 @@
     "entryID": 4169,
     "actorID": "MC1",
     "text": "「東邊赤龍、北邊黑狼，都盯著雲中。最遠的甄家此刻若肯與英豪府結盟而入局——這筆買賣，算的不只是銀子。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「東邊赤龍、北邊黑狼，都盯著雲中。最遠的甄家此刻若肯與英豪府結盟而入局——這筆買賣，算的不只是銀子。」",
     "zh_CN": "「东边赤龙、北边黑狼，都盯着云中。最远的甄家此刻若肯与英豪府结盟而入局——这笔买卖，算的不只是银子。」",
     "links": [4170, 4171]
@@ -703,7 +703,7 @@
     "entryID": 4176,
     "actorID": "MC1",
     "text": "「家主這是……連要什麼都不清楚的意思？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「家主這是……連要什麼都不清楚的意思？」",
     "zh_CN": "「家主这是……连要什么都不清楚的意思？」",
     "links": [4177]
@@ -798,7 +798,7 @@
     "entryID": 4187,
     "actorID": "MC1",
     "text": "「家主既提到那批估不出價的貨，可知源頭從何而起？家主既然打聽到這一步，想必也摸過些底細。」",
-    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「家主既提到那批估不出價的貨，可知源頭從何而起？家主既然打聽到這一步，想必也摸過些底細。」",
     "zh_CN": "「家主既提到那批估不出价的货，可知源头从何而起？家主既然打听到这一步，想必也摸过些底细。」",
     "links": [4188, 4191]
@@ -844,7 +844,7 @@
     "entryID": 4193,
     "actorID": "MC1",
     "text": "「家主人脈廣、商路多，這事，怎麼不派自己人去查？」",
-    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「家主人脈廣、商路多，這事，怎麼不派自己人去查？」",
     "zh_CN": "「家主人脉广、商路多，这事，怎么不派自己人去查？」",
     "links": [4194, 4197]
@@ -890,7 +890,7 @@
     "entryID": 4199,
     "actorID": "MC1",
     "text": "「家主圖的，恐怕不只是那幾件估不出價的貨吧？」",
-    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "Continue();DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「家主圖的，恐怕不只是那幾件估不出價的貨吧？」",
     "zh_CN": "「家主图的，恐怕不只是那几件估不出价的货吧？」",
     "links": [4200, 4202]
@@ -919,7 +919,7 @@
     "entryID": 4203,
     "actorID": "MC1",
     "text": "「這[em2]水濂洞[/em2]，聽名字倒有些意思，是何來頭？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「這[em2]水濂洞[/em2]，聽名字倒有些意思，是何來頭？」",
     "zh_CN": "「这[em2]水濂洞[/em2]，听名字倒有些意思，是何来头？」",
     "links": [4204]
@@ -937,7 +937,7 @@
     "entryID": 4205,
     "actorID": "MC1",
     "text": "「那河神，究竟是何方神聖？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「那河神，究竟是何方神聖？」",
     "zh_CN": "「那河神，究竟是何方神圣？」",
     "links": [4206]

@@ -12,7 +12,7 @@
     "entryID": 17,
     "actorID": "MC1",
     "text": "「你也來了？不打算下場露一手？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「你也来了？不打算下场露一手？」",
     "links": [18]
   },
@@ -28,7 +28,7 @@
     "entryID": 19,
     "actorID": "MC1",
     "text": "「看熱鬧也行。還是你是專程來替我助陣的吧？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「看热闹也行。还是你是专程来替我助阵的吧？」",
     "links": [20]
   },
@@ -67,7 +67,7 @@
     "entryID": 24,
     "actorID": "MC1",
     "text": "「『師直為壯，曲為老』——出師有名，氣就壯；理虧了，氣先衰。城濮之戰狐偃勸晉文公退避三舍，不也是先占這個道理？」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Knowledge,20);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);\nModifyData(FeatExp,Player,Knowledge,20);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「『师直为壮，曲为老』——出师有名，气就壮；理亏了，气先衰。城濮之战狐偃劝晋文公退避三舍，不也是先占这个道理？」",
     "links": [25]
@@ -93,7 +93,7 @@
     "entryID": 27,
     "actorID": "MC1",
     "text": "「那個……春秋裡好像寫過，打要……打得正？師什麼為壯來著……」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「那个……春秋里好像写过，打要……打得正？师什么为壮来着……」",
     "links": [28]
@@ -199,7 +199,7 @@
     "entryID": 40,
     "actorID": "MC1",
     "text": "「成！這一場我會贏。信哥那頓酒，我記下了。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「成！这一场我会赢。信哥那顿酒，我记下了。」",
     "links": [41]
   },
@@ -256,7 +256,7 @@
     "entryID": 47,
     "actorID": "MC1",
     "text": "「成。銀子、臉面、英豪府——不管怎樣，這一場我得贏。」",
-    "Sequence": "SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=18);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「成。银子、脸面、英豪府——不管怎样，这一场我得赢。」",
     "links": [48]
   },
@@ -272,7 +272,7 @@
     "entryID": 50,
     "actorID": "MC1",
     "text": "「成。場上見真章。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「成。场上见真章。」",
     "links": [380]
   },
@@ -297,7 +297,7 @@
     "entryID": 53,
     "actorID": "MC1",
     "text": "「但你特地帶藥來，難道……是在擔心我？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC6,pic=4);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC6,pic=4);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「但你特地带药来，难道……是在担心我？」",
     "links": [54]
   },
@@ -313,7 +313,7 @@
     "entryID": 55,
     "actorID": "MC1",
     "text": "「那……你怎麼也來了？」",
-    "Sequence": "SetPortrait(MC1,pic=10);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=10);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「那……你怎么也来了？」",
     "links": [56]
   },
@@ -352,7 +352,7 @@
     "entryID": 60,
     "actorID": "MC1",
     "text": "「嗯。當然不是特地為我準備的。」",
-    "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Flirting,20);",
+    "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,Player,Meditate);\nModifyData(FeatExp,Player,Flirting,20);",
     "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「嗯。当然不是特地为我准备的。」",
     "links": [390]
@@ -377,7 +377,7 @@
     "entryID": 63,
     "actorID": "MC1",
     "text": "「那……多謝大夫帶藥。」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「那……多谢大夫带药。」",
     "links": [64]
@@ -418,7 +418,7 @@
     "entryID": 68,
     "actorID": "MC1",
     "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "Conditions": "CurrentQuestEntryState(\"CF38\", 4) == \"unassigned\";",
     "zh_CN": "「咦！？你也来了？我还以为你对这种事没兴趣呢。」",
     "links": [69]
@@ -435,7 +435,7 @@
     "entryID": 70,
     "actorID": "MC1",
     "text": "「有用？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「有用？」",
     "links": [71]
   },
@@ -451,7 +451,7 @@
     "entryID": 72,
     "actorID": "MC1",
     "text": "「你連看個比武，都能看出這些？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「你连看个比武，都能看出这些？」",
     "links": [73]
   },
@@ -490,7 +490,7 @@
     "entryID": 77,
     "actorID": "MC1",
     "text": "「掩其不意……所以得先摸清對方虛實，再談出手？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Strategy,20);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Meditate);\nModifyData(FeatExp,Player,Strategy,20);",
     "Conditions": "IsPassDice()  == true;",
     "zh_CN": "「掩其不意……所以得先摸清对方虚实，再谈出手？」",
     "links": [78]
@@ -516,7 +516,7 @@
     "entryID": 84,
     "actorID": "MC1",
     "text": "「掩其不意……就是，呃，趁人不備？偷偷摸摸打？」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice()  == false;",
     "zh_CN": "「掩其不意……就是，呃，趁人不备？偷偷摸摸打？」",
     "links": [85]
@@ -557,7 +557,7 @@
     "entryID": 89,
     "actorID": "MC1",
     "text": "「哈哈，那你坐穩了，瞧我的。」",
-    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,MC1-1,Proud);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);\nDisableCharacterExpression(1);",
     "zh_CN": "「哈哈，那你坐稳了，瞧我的。」",
     "links": [90]
   },
@@ -581,7 +581,7 @@
     "entryID": 92,
     "actorID": "MC1",
     "text": "「掩其不意……？」",
-    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「掩其不意……？」",
     "links": [93]
   },
@@ -605,7 +605,7 @@
     "entryID": 95,
     "actorID": "MC1",
     "text": "「原來你是把這武道大會當沙場在推演了。你還是老樣子，想得遠。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「原来你是把这武道大会当沙场在推演了。你还是老样子，想得远。」",
     "links": [96]
   },
@@ -638,7 +638,7 @@
     "entryID": 102,
     "actorID": "MC1",
     "text": "「那就…寫作是[em2]天下武道大會[/em2]好了，對了妳怎麼會在這？」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「那就…写作是[em2]天下武道大会[/em2]好了，对了你怎么会在这？」",
     "links": [394]
   },
@@ -793,7 +793,7 @@
     "entryID": 124,
     "actorID": "MC1",
     "text": "「閣下出手倒挺大方。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Idea);",
     "zh_CN": "「阁下出手倒挺大方。」",
     "links": [125]
   },
@@ -825,7 +825,7 @@
     "entryID": 129,
     "actorID": "MC1",
     "text": "「……[em2]已諾必誠，不愛其軀，赴士之阨困！[/em2]」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「……[em2]已诺必诚，不爱其躯，赴士之阨困！[/em2]」",
     "links": [130]
   },
@@ -849,7 +849,7 @@
     "entryID": 132,
     "actorID": "MC1",
     "text": "「大丈夫既提三尺劍，就該救人於厄、振人不贍——這樣的俠，我輩豈能落於人後！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「大丈夫既提三尺剑，就该救人于厄、振人不赡——这样的侠，我辈岂能落于人后！」",
     "links": [133]
   },
@@ -881,7 +881,7 @@
     "entryID": 136,
     "actorID": "MC1",
     "text": "「……」",
-    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「……」",
     "links": [137]
   },
@@ -1029,7 +1029,7 @@
     "entryID": 387,
     "actorID": "MC1",
     "text": "「……我會注意的。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「……我会注意的。」",
     "links": [53]
   },
@@ -1094,7 +1094,7 @@
     "entryID": 396,
     "actorID": "MC1",
     "text": "「……下來一定細說。」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「……下来一定细说。」",
     "links": [393]
   },
@@ -1152,7 +1152,7 @@
     "entryID": 404,
     "actorID": "MC1",
     "text": "「你也要打？」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「你也要打？」",
     "links": [405]
   },
@@ -1200,7 +1200,7 @@
     "entryID": 410,
     "actorID": "MC1",
     "text": "「……人這麼多，先摸清場子再說。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「……人这么多，先摸清场子再说。」",
     "links": [411]
   },
@@ -1399,7 +1399,7 @@
     "entryID": 437,
     "actorID": "MC1",
     "text": "「并州臥虎藏龍，可今日這方擂台——我[var=PlayerLastName]某站定了！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「并州卧虎藏龙，可今日这方擂台——我[var=PlayerLastName]某站定了！」",
     "links": [439, 440]
   },
@@ -1530,7 +1530,7 @@
     "entryID": 458,
     "actorID": "MC1",
     "text": "「并州父老們——首戰剛贏，這第二陣更有看頭！塞外劍快，[var=PlayerLastName]某更快——娜娜姑娘，請！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「并州父老们——首战刚赢，这第二阵更有看头！塞外剑快，[var=PlayerLastName]某更快——娜娜姑娘，请！」",
     "links": [459, 461]
   },
@@ -1630,7 +1630,7 @@
     "entryID": 474,
     "actorID": "MC1",
     "text": "「……靈犀？你、你怎麼也上這擂台了？」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「……灵犀？你、你怎么也上这擂台了？」",
     "links": [475]
   },
@@ -1646,7 +1646,7 @@
     "entryID": 476,
     "actorID": "MC1",
     "text": "「你連拳都沒正經揮過幾下，這擂台上刀劍無眼，我怎麼可能讓你——」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "zh_CN": "「你连拳都没正经挥过几下，这擂台上刀剑无眼，我怎么可能让你——」",
     "links": [477]
   },
@@ -1662,7 +1662,7 @@
     "entryID": 478,
     "actorID": "MC1",
     "text": "「高人？什麼高人？你什麼時候背著我去——」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「高人？什么高人？你什么时候背着我去——」",
     "links": [479]
   },
@@ -1678,7 +1678,7 @@
     "entryID": 480,
     "actorID": "MC1",
     "text": "「你背後藏的又是什麼？」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「你背后藏的又是什么？」",
     "links": [481]
   },
@@ -1694,7 +1694,7 @@
     "entryID": 482,
     "actorID": "MC1",
     "text": "「……你這丫頭，又跟我賣關子。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「……你这丫头，又跟我卖关子。」",
     "links": [483]
   },
@@ -1741,7 +1741,7 @@
     "entryID": 489,
     "actorID": "MC1",
     "text": "「并州父老們！大丈夫出門，不建功名誓不還鄉！連勝在前，這第三陣——就由我天王老子給拿下了！」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「并州父老们！大丈夫出门，不建功名誓不还乡！连胜在前，这第三阵——就由我天王老子给拿下了！」",
     "links": [490, 492]
   },
@@ -1791,7 +1791,7 @@
     "entryID": 497,
     "actorID": "MC1",
     "text": "「嚇得不輕。你這丫頭……這路雙劍，臂展不夠長根本施展不開——你拜的是哪路猿猴？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「吓得不轻。你这丫头……这路双剑，臂展不够长根本施展不开——你拜的是哪路猿猴？」",
     "links": [498]
   },
@@ -1849,7 +1849,7 @@
     "entryID": 506,
     "actorID": "MC1",
     "text": "「卞喜。拿活人餵鼎、連自家弟兄都設計陷害的畜生，也有臉站在光天化日下。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "「卞喜。拿活人喂鼎、连自家弟兄都设计陷害的畜生，也有脸站在光天化日下。」",
     "links": [507]
   },
@@ -1865,7 +1865,7 @@
     "entryID": 508,
     "actorID": "MC1",
     "text": "「你把廖大哥下毒鎖進地牢、把弟兄一個個送上祭壇，這也算替兄弟掙命？」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);\nDisableCharacterExpression(1);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);\nDisableCharacterExpression(1);",
     "zh_CN": "「你把廖大哥下毒锁进地牢、把弟兄一个个送上祭坛，这也算替兄弟挣命？」",
     "links": [509]
   },
@@ -1881,7 +1881,7 @@
     "entryID": 510,
     "actorID": "MC1",
     "text": "「放馬過來。這回，換我來收你。」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "「放马过来。这回，换我来收你。」",
     "links": [512]
   },
@@ -1920,7 +1920,7 @@
     "entryID": 516,
     "actorID": "MC1",
     "text": "「三連勝？不夠！這第四陣，我要讓并州鄉親看看——什麼叫替天行道！」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「三连胜？不够！这第四阵，我要让并州乡亲看看——什么叫替天行道！」",
     "links": [517, 519]
   },
@@ -2012,7 +2012,7 @@
     "entryID": 532,
     "actorID": "MC1",
     "text": "「咦！這不是少年賽嗎？猛將兄，你還算少年？」",
-    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Surprise);\nDisableCharacterExpression(0);",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Surprise);\nDisableCharacterExpression(0);",
     "zh_CN": "「咦！这不是少年赛吗？猛将兄，你还算少年？」",
     "links": [533]
   },
@@ -2028,7 +2028,7 @@
     "entryID": 534,
     "actorID": "MC1",
     "text": "「……行，請。」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「……行，请。」",
     "links": [536]
   },
@@ -2067,7 +2067,7 @@
     "entryID": 540,
     "actorID": "MC1",
     "text": "「猛將兄！遴選鏖戰百餘合不分勝負——今日并州父老都在，這回，可得分個高下！」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「猛将兄！遴选鏖战百余合不分胜负——今日并州父老都在，这回，可得分个高下！」",
     "links": [541, 542]
   },
@@ -2167,7 +2167,7 @@
     "entryID": 556,
     "actorID": "MC1",
     "text": "「童兄也來趕這場熱鬧。」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「童兄也来赶这场热闹。」",
     "links": [557]
   },
@@ -2214,7 +2214,7 @@
     "entryID": 568,
     "actorID": "MC1",
     "text": "「童兄！小溪村一別，今日再會——這一槍，請教了！」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「童兄！小溪村一别，今日再会——这一枪，请教了！」",
     "links": [739, 740]
   },
@@ -2304,7 +2304,7 @@
     "entryID": 586,
     "actorID": "MC1",
     "text": "「廖大哥說的是。只是擂台在前、差事在身——得罪了。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「廖大哥说的是。只是擂台在前、差事在身——得罪了。」",
     "links": [587]
   },
@@ -2351,7 +2351,7 @@
     "entryID": 593,
     "actorID": "MC1",
     "text": "「廖大哥！趙王洞那一役，咱們是過命交情——今日台上，各盡全力！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「廖大哥！赵王洞那一役，咱们是过命交情——今日台上，各尽全力！」",
     "links": [747, 742]
   },
@@ -2489,7 +2489,7 @@
     "entryID": 620,
     "actorID": "MC1",
     "text": "「飛燕！你我一諾為憑——今日這壓軸之戰，就拿真本事——褚兄弟，請！」",
-    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「飞燕！你我一诺为凭——今日这压轴之战，就拿真本事——褚兄弟，请！」",
     "links": [764, 759]
   },
@@ -2572,7 +2572,7 @@
     "entryID": 634,
     "actorID": "MC1",
     "text": "「比武相爭，勝負本就一線之隔。褚兄弟不必多想。」",
-    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「比武相争，胜负本就一线之隔。褚兄弟不必多想。」",
     "links": [635]
   },
@@ -2663,7 +2663,7 @@
     "entryID": 645,
     "actorID": "MC1",
     "text": "「果然瞞不過，呵……」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「果然瞒不过，呵……」",
     "links": [646]
   },
@@ -2752,7 +2752,7 @@
     "entryID": 656,
     "actorID": "MC1",
     "text": "「幫主言重了。我只知道，連自己都騙的人，這條路走不長遠。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「帮主言重了。我只知道，连自己都骗的人，这条路走不长远。」",
     "links": [657]
   },
@@ -2971,7 +2971,7 @@
     "entryID": 714,
     "actorID": "MC1",
     "text": "「吾乃…[em2]天王老子[/em2]！」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「吾乃…[em2]天王老子[/em2]！」",
     "links": [470]
   },
@@ -3264,7 +3264,7 @@
     "entryID": 752,
     "actorID": "MC1",
     "text": "「廖…大哥？！你這年紀……看來也沒大我多少啊。」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「廖…大哥？！你这年纪……看来也没大我多少啊。」",
     "links": [750]
   },
@@ -3532,7 +3532,7 @@
     "entryID": 789,
     "actorID": "MC1",
     "text": "「我想仗劍走遍天下，除盡不平——教這世道，記住我的名字。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「我想仗剑走遍天下，除尽不平——教这世道，记住我的名字。」",
     "links": [790]
   },
@@ -3540,7 +3540,7 @@
     "entryID": 790,
     "actorID": "MC1",
     "text": "「說來，那褚燕的志向倒似和我相同……也不知算不算英雄所見略同。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「说来，那褚燕的志向倒似和我相同……也不知算不算英雄所见略同。」",
     "links": [791]
   },
@@ -3590,7 +3590,7 @@
     "entryID": 796,
     "actorID": "MC1",
     "text": "「赤龍幫那注——成了。褚人飛當場拍板，獨押咱英豪府。」",
-    "Sequence": "SetPortrait(MC1,pic=18);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=18);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「赤龙帮那注——成了。褚人飞当场拍板，独押咱英豪府。」",
     "links": [797]
   },
@@ -3632,7 +3632,7 @@
     "entryID": 802,
     "actorID": "MC1",
     "text": "「褚人飛要我讓那一場，我沒讓。冠軍拿了——銀子，也飛了。」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「褚人飞要我让那一场，我没让。冠军拿了——银子，也飞了。」",
     "links": [803]
   },
@@ -3682,7 +3682,7 @@
     "entryID": 808,
     "actorID": "MC1",
     "text": "「[em7]一把端起酒碗，朗聲大笑[/em7]，急什麼！正事哪有酒要緊——今日痛快，這碗我先乾為敬，喝完再說！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「[em7]一把端起酒碗，朗声大笑[/em7]，急什么！正事哪有酒要紧——今日痛快，这碗我先干为敬，喝完再说！」",
     "links": [809]
   },
@@ -3817,7 +3817,7 @@
     "entryID": 825,
     "actorID": "MC1",
     "text": "「[em7]撐著桌角，舌頭發沉[/em7]，信哥……這罈……算你、算你贏……」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=15);EnableCharacterExpression(0,Player,Nervous_2);",
     "zh_CN": "「[em7]撑着桌角，舌头发沉[/em7]，信哥……这坛……算你、算你赢……」",
     "links": [826]
   },
@@ -3858,7 +3858,7 @@
     "entryID": 830,
     "actorID": "MC1",
     "text": "「[em7]捂著胸口猛咳[/em7]，……咳咳……這酒……夠烈！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「[em7]捂着胸口猛咳[/em7]，……咳咳……这酒……够烈！」",
     "links": [831]
   },

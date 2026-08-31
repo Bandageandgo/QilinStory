@@ -31,7 +31,7 @@
     "entryID": 817,
     "actorID": "MC1",
     "text": "「喂、喂！雍仔，你沒事吧？」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「喂、喂！雍仔，你沒事吧？」",
     "zh_CN": "「喂、喂！雍仔，你没事吧？」",
     "links": [818]
@@ -76,7 +76,7 @@
     "entryID": 822,
     "actorID": "MC1",
     "text": "「看來我們闖進不得了的地方了。」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「看來我們闖進不得了的地方了。」",
     "zh_CN": "「看来我们闯进不得了的地方了。」",
     "links": [826]

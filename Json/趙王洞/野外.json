@@ -11,7 +11,7 @@
     "entryID": 2,
     "actorID": "MC1",
     "text": "「哈啾！好冷的水！當真寒氣徹骨，簡直像掉進了冰窖。廖大哥，你沒事吧？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「哈啾！好冷的水！当真寒气彻骨，简直像掉进了冰窖。廖大哥，你没事吧？」",
     "links": [3]
   },
@@ -99,7 +99,7 @@
     "entryID": 13,
     "actorID": "MC1",
     "text": "「娜娜！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「娜娜！」",
     "links": [14]
   },
@@ -187,7 +187,7 @@
     "entryID": 24,
     "actorID": "MC1",
     "text": "「這種喪盡天良的人，留著也是禍害！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「这种丧尽天良的人，留着也是祸害！」",
     "links": [26]
   },
@@ -195,7 +195,7 @@
     "entryID": 25,
     "actorID": "MC1",
     "text": "「算了，首惡是卞喜，他們不過是些聽命辦事的小嘍囉。滾吧！別再讓我看到你們做傷天害理的事！」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「算了，首恶是卞喜，他们不过是些听命办事的小喽啰。滚吧！别再让我看到你们做伤天害理的事！」",
     "links": [27]
   },
@@ -220,7 +220,7 @@
     "actorID": "MC1",
     "title": "救完娜娜",
     "text": "「娜娜，妳沒受傷吧？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Nervous);",
     "Description": "救完娜娜",
     "zh_CN": "「娜娜，你没受伤吧？」",
     "links": [29]
@@ -237,7 +237,7 @@
     "entryID": 30,
     "actorID": "MC1",
     "text": "「這正是我要說的。我們一路殺過來，只看到了妳，並沒有看到雍仔的下落。妳被抓的時候，有看到他嗎？」",
-    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(2);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(2);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「这正是我要说的。我们一路杀过来，只看到了你，并没有看到雍仔的下落。你被抓的时候，有看到他吗？」",
     "links": [31]
   },

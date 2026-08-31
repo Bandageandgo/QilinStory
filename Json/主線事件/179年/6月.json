@@ -32,7 +32,7 @@
     "entryID": 2054,
     "actorID": "MC1",
     "text": "「哎呀，這不是[em2]赫連大師[/em2]嗎？妳的天機盤沒算到我差點就回不來了嗎？還是說，這也在妳的計算中？」",
-    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「哎呀，這不是[em2]赫連大師[/em2]嗎？妳的天機盤沒算到我差點就回不來了嗎？還是說，這也在妳的計算中？」",
     "zh_CN": "「哎呀，这不是[em2]赫连大师[/em2]吗？你的天机盘没算到我差点就回不来了吗？还是说，这也在你的计算中？」",
     "links": [2055]
@@ -193,7 +193,7 @@
     "entryID": 2072,
     "actorID": "MC8",
     "text": "[panel=2]「哇…表哥，她的臉比猴子屁股還紅！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);\nSetPortrait(MC8,pic=4);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);\nSetPortrait(MC8,pic=4);",
     "zh_TW": "[panel=2]「哇…表哥，她的臉比猴子屁股還紅！」",
     "zh_CN": "[panel=2]「哇…表哥，她的脸比猴子屁股还红！」",
     "links": [2078]
@@ -229,7 +229,7 @@
     "entryID": 2076,
     "actorID": "MC1",
     "text": "「好了，說正事吧。妳費了這麼大功夫，究竟是為了什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「好了，說正事吧。妳費了這麼大功夫，究竟是為了什麼？」",
     "zh_CN": "「好了，说正事吧。你费了这么大功夫，究竟是为了什么？」",
     "links": [2077]
@@ -356,7 +356,7 @@
     "entryID": 2090,
     "actorID": "MC1",
     "text": "「[em7]愜意地躺回床上，翹起二郎腿[/em7]，\n嗯！一會兒叫小二送壺好茶上來。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「[em7]愜意地躺回床上，翹起二郎腿[/em7]，\n嗯！一會兒叫小二送壺好茶上來。」",
     "zh_CN": "「[em7]惬意地躺回床上，翘起二郎腿[/em7]，\n嗯！一会儿叫小二送壶好茶上来。」",
     "links": [2087]
@@ -365,7 +365,7 @@
     "entryID": 2091,
     "actorID": "MC1",
     "text": "「咳咳！靈犀，妳懂什麼？這叫厚積薄發！我只是在參悟張大叔留下的醫理，順便思考未來的江湖大計……」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「咳咳！灵犀，你懂什么？这叫厚积薄发！我只是在参悟张大叔留下的医理，顺便思考未来的江湖大计……」",
     "links": [2092]
   },
@@ -397,7 +397,7 @@
     "entryID": 2095,
     "actorID": "MC1",
     "text": "「哈哈，那還用說！只要我一出馬自然是滿載而歸！妳就在這乖乖地等我的好消息吧！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nDisableCharacterExpression(1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「哈哈，那还用说！只要我一出马自然是满载而归！你就在这乖乖地等我的好消息吧！」",
     "links": [2097]
   },

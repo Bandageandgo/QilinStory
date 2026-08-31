@@ -139,7 +139,7 @@
     "entryID": 121,
     "actorID": "MC1",
     "text": "[panel=0]「且慢！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "[panel=0]「且慢！」",
     "zh_CN": "[panel=0]「且慢！」",
     "links": [123]
@@ -184,7 +184,7 @@
     "entryID": 126,
     "actorID": "MC1",
     "text": "「[em7]上前一步，按住賭桌邊緣[/em7]，褚幫主，慢著。剛才說的可是[em2]贏過你[/em2]，可沒說一定要在這張賭桌上贏你吧？」",
-    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「[em7]上前一步，按住賭桌邊緣[/em7]，褚幫主，慢著。剛才說的可是[em2]贏過你[/em2]，可沒說一定要在這張賭桌上贏你吧？」",
     "zh_CN": "「[em7]上前一步，按住赌桌边缘[/em7]，褚帮主，慢着。刚才说的可是[em2]赢过你[/em2]，可没说一定要在这张赌桌上赢你吧？」",
     "links": [127]
@@ -202,7 +202,7 @@
     "entryID": 128,
     "actorID": "MC1",
     "text": "「聽聞幫主一生好武、好酒、好賭。既然是挑戰幫主，那無論是[em2]拳腳兵刃、千杯不醉，還是這骰子牌九[/em2]，只要能在一項上勝過幫主，便算是贏了，對吧？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「聽聞幫主一生好武、好酒、好賭。既然是挑戰幫主，那無論是[em2]拳腳兵刃、千杯不醉，還是這骰子牌九[/em2]，只要能在一項上勝過幫主，便算是贏了，對吧？」",
     "zh_CN": "「听闻帮主一生好武、好酒、好赌。既然是挑战帮主，那无论是[em2]拳脚兵刃、千杯不醉，还是这骰子牌九[/em2]，只要能在一项上胜过帮主，便算是赢了，对吧？」",
     "links": [129]
@@ -1614,7 +1614,7 @@
     "entryID": 4137,
     "actorID": "MC1",
     "text": "「這個至高的榮譽，我接下了！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nDisableCharacterExpression(2);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=13);\nDisableCharacterExpression(2);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「這個至高的榮譽，我接下了！」",
     "zh_CN": "「这个至高的荣誉，我接下了！」",
     "links": [4086]

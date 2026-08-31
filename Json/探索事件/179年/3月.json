@@ -13,7 +13,7 @@
     "entryID": 66,
     "actorID": "MC1",
     "text": "「童大哥，今日怎麼不練槍了？看你眉頭深鎖，莫非是遇上什麼難事？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「童大哥，今日怎麼不練槍了？看你眉頭深鎖，莫非是遇上什麼難事？」",
     "zh_CN": "「童大哥，今日怎么不练枪了？看你眉头深锁，莫非是遇上什么难事？」",
     "links": [67]
@@ -83,7 +83,7 @@
     "entryID": 74,
     "actorID": "MC1",
     "text": "「童兄莫急，我輩江湖中人，講究的就是一個[em2]義氣[/em2]！區區險地，何足掛齒！我願為你走一趟，取來那鐵木！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「童兄莫急，我輩江湖中人，講究的就是一個[em2]義氣[/em2]！區區險地，何足掛齒！我願為你走一趟，取來那鐵木！」",
     "zh_CN": "「童兄莫急，我辈江湖中人，讲究的就是一个[em2]义气[/em2]！区区险地，何足挂齿！我愿为你走一趟，取来那铁木！」",
     "links": [75]
@@ -166,7 +166,7 @@
     "entryID": 84,
     "actorID": "MC1",
     "text": "「靈犀，稍安勿躁。所謂神龍見首不見尾，真正的高人都是如此，美人自然也不例外。說不定這位老闆娘正在考驗我們的誠意呢！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「靈犀，稍安勿躁。所謂神龍見首不見尾，真正的高人都是如此，美人自然也不例外。說不定這位老闆娘正在考驗我們的誠意呢！」",
     "zh_CN": "「灵犀，稍安勿躁。所谓神龙见首不见尾，真正的高人都是如此，美人自然也不例外。说不定这位老板娘正在考验我们的诚意呢！」",
     "links": [85]
@@ -220,7 +220,7 @@
     "entryID": 90,
     "actorID": "MC1",
     "text": "「小二哥請留步，方才聽聞貴店老闆娘有一道名菜『佳人笑』，不知是何等佳餚？又要如何才能有幸品嚐？還有那所謂的『眼緣』，可否指點一二？」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「小二哥請留步，方才聽聞貴店老闆娘有一道名菜『佳人笑』，不知是何等佳餚？又要如何才能有幸品嚐？還有那所謂的『眼緣』，可否指點一二？」",
     "zh_CN": "「小二哥请留步，方才听闻贵店老板娘有一道名菜『佳人笑』，不知是何等佳肴？又要如何才能有幸品尝？还有那所谓的『眼缘』，可否指点一二？」",
     "links": [91]
@@ -300,7 +300,7 @@
     "entryID": 99,
     "actorID": "MC1",
     "text": "「英雄好漢…原來如此！多謝小二哥提點！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「英雄好漢…原來如此！多謝小二哥提點！」",
     "zh_CN": "「英雄好汉…原来如此！多谢小二哥提点！」",
     "links": [100]
@@ -318,7 +318,7 @@
     "entryID": 101,
     "actorID": "MC1",
     "text": "「這樣啊…那好吧，不為難小二哥了。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「這樣啊…那好吧，不為難小二哥了。」",
     "zh_CN": "「这样啊…那好吧，不为难小二哥了。」",
     "links": [108]
@@ -346,7 +346,7 @@
     "entryID": 104,
     "actorID": "MC1",
     "text": "「[em2]英雄好漢[/em2]…原來如此！多謝小二哥提點！」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Surprise_2);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Surprise_2);",
     "zh_TW": "「[em2]英雄好漢[/em2]…原來如此！多謝小二哥提點！」",
     "zh_CN": "「[em2]英雄好汉[/em2]…原来如此！多谢小二哥提点！」",
     "links": [105]

@@ -220,7 +220,7 @@
     "entryID": 28,
     "actorID": "MC1",
     "text": "「兩邊都給我讓開。我進洞辦事，不站任何一邊。」",
-    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger_3);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger_3);",
     "zh_CN": "「两边都给我让开。我进洞办事，不站任何一边。」",
     "links": [29, 32]
   },
@@ -513,7 +513,7 @@
     "entryID": 89,
     "actorID": "MC1",
     "text": "「上頭這幅，筆觸新、顏料也新，是近幾十年補上去的。底下那層被泥灰蓋住，筆法完全不是同一路。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(FeatExp,Player,Knowledge,20);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(FeatExp,Player,Knowledge,20);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「上头这幅，笔触新、颜料也新，是近几十年补上去的。底下那层被泥灰盖住，笔法完全不是同一路。」",
     "links": [90]
@@ -570,7 +570,7 @@
     "entryID": 99,
     "actorID": "MC1",
     "text": "「上頭是後人補的，這點錯不了。底下才是舊的——可泥灰太厚，細節看不清。」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「上头是后人补的，这点错不了。底下才是旧的——可泥灰太厚，细节看不清。」",
     "links": [100]
@@ -613,7 +613,7 @@
     "entryID": 104,
     "actorID": "MC1",
     "text": "「兩幅疊在一起，筆法新舊分不出來……看不出個所以然。」",
-    "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「两幅叠在一起，笔法新旧分不出来……看不出个所以然。」",
     "links": [105]
@@ -656,7 +656,7 @@
     "entryID": 109,
     "actorID": "MC1",
     "text": "「管它畫的是什麼，先鑿開再說！」",
-    "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "「管它画的是什么，先凿开再说！」",
     "links": [110, 4152]
   },
@@ -773,7 +773,7 @@
     "entryID": 124,
     "actorID": "MC1",
     "text": "「現在打。再拖，這裡就沒活人了。」",
-    "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,MC1-1,Anger);\nModifyData(DnDAlignment,Player,GoodEvil,0.05);\nModifyData(FavorabilityExp,MC20,10);",
+    "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);\nModifyData(DnDAlignment,Player,GoodEvil,0.05);\nModifyData(FavorabilityExp,MC20,10);",
     "Script": "SetQuestEntryState(\"CF40\", 7, \"success\");",
     "Description": "任務更新、信義提升、雍仔好感度提升",
     "zh_CN": "「现在打。再拖，这里就没活人了。」",
@@ -783,7 +783,7 @@
     "entryID": 125,
     "actorID": "MC1",
     "text": "「讓他們先消耗。我們再動手。」",
-    "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nModifyData(FeatExp,Player,Realpolitik,50);",
+    "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,-0.05);\nModifyData(FeatExp,Player,Realpolitik,50);",
     "Description": "機略提升,厚黑經驗",
     "zh_CN": "「让他们先消耗。我们再动手。」",
     "links": [126]
@@ -819,7 +819,7 @@
     "entryID": 129,
     "actorID": "MC1",
     "text": "「就是現在！」",
-    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,MC1-1,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "「就是现在！」",
     "links": [130]
   },
@@ -1071,7 +1071,7 @@
     "entryID": 214,
     "actorID": "MC1",
     "text": "「家主請看，這蛟龍角通體幽藍，寒裡帶火，天下罕見，尋常匠人便是想仿都仿不出來——但凡識貨的行家看了，誰不多看兩眼？家主走南闖北，難道沒有識貨的門路？」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「家主请看，这蛟龙角通体幽蓝，寒里带火，天下罕见，寻常匠人便是想仿都仿不出来——但凡识货的行家看了，谁不多看两眼？家主走南闯北，难道没有识货的门路？」",
     "links": [215]
@@ -1089,7 +1089,7 @@
     "entryID": 216,
     "actorID": "MC1",
     "text": "「這、這蛟龍角乃是藍焰巨蛇精華所化，尋常人可求不來……」",
-    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「这、这蛟龙角乃是蓝焰巨蛇精华所化，寻常人可求不来……」",
     "links": [217]
@@ -1148,7 +1148,7 @@
     "entryID": 223,
     "actorID": "MC1",
     "text": "「……家主說得明白。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「……家主说得明白。」",
     "links": [224]
   },
@@ -1214,7 +1214,7 @@
     "entryID": 233,
     "actorID": "MC1",
     "text": "「見著了。不是神，是個困在洞裡的殊方之人。眼淚還了她——她暫時走不成，石像還在。我勸家主，往後別急著打那洞的主意。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「见着了。不是神，是个困在洞里的殊方之人。眼泪还了她——她暂时走不成，石像还在。我劝家主，往后别急着打那洞的主意。」",
     "links": [234]
   },
@@ -1280,7 +1280,7 @@
     "entryID": 242,
     "actorID": "MC1",
     "text": "「這一趟，倒更像是尋常的除妖差事，沒有話本裡那些牽腸掛肚的難處，反倒輕鬆。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「这一趟，倒更像是寻常的除妖差事，没有话本里那些牵肠挂肚的难处，反倒轻松。」",
     "links": [243]
   },
@@ -1296,7 +1296,7 @@
     "entryID": 244,
     "actorID": "MC1",
     "text": "「怎麼想？該還的還了。她一時半會兒走不了，石像還在——可這世道，總不能什麼都拿良心去換。」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「怎么想？该还的还了。她一时半会儿走不了，石像还在——可这世道，总不能什么都拿良心去换。」",
     "links": [245]
   },
@@ -1312,7 +1312,7 @@
     "entryID": 246,
     "actorID": "MC1",
     "text": "「折騰了半天，這筆總算談成了。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「折腾了半天，这笔总算谈成了。」",
     "links": [247]
   },
@@ -1578,7 +1578,7 @@
     "entryID": 4138,
     "actorID": "MC1",
     "text": "「……『其山有異獸，形似猿猴而通人語，力能撼嶽，後為天兵所鎮，鎮於偏石之側』。這位子旁邊還刻著這種東西？」",
-    "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Knowledge,10);",
+    "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);ModifyData(FeatExp,Player,Knowledge,10);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「……『其山有异兽，形似猿猴而通人语，力能撼岳，后为天兵所镇，镇于偏石之侧』。这位子旁边还刻着这种东西？」",
     "links": [4139]
@@ -1987,7 +1987,7 @@
     "entryID": 4196,
     "actorID": "MC1",
     "text": "「這圓洞不是雕來擺樣子的——內壁磨得極光，還留著一圈嵌了許多年的舊痕。原本有東西在這裡待過很久，後來被取走了。」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Insight,10);",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);ModifyData(FeatExp,Player,Insight,10);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「这圆洞不是雕来摆样子的——内壁磨得极光，还留着一圈嵌了许多年的旧痕。原本有东西在这里待过很久，后来被取走了。」",
     "links": [4197]
@@ -2028,7 +2028,7 @@
     "entryID": 4201,
     "actorID": "MC1",
     "text": "「古籍裡記過：神像持物，物在則靈，物失則枯。持劍是鎮煞，捧珠是聚靈——這尊空著手還留著圓窩，等的就是一件被取走的靈物。」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);ModifyData(FeatExp,Player,Knowledge,10);",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);ModifyData(FeatExp,Player,Knowledge,10);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「古籍里记过：神像持物，物在则灵，物失则枯。持剑是镇煞，捧珠是聚灵——这尊空着手还留着圆窝，等的就是一件被取走的灵物。」",
     "links": [4202]
@@ -2053,7 +2053,7 @@
     "entryID": 4204,
     "actorID": "MC1",
     "text": "「圓窩裡供過東西，神像等的是一件被取走的靈物。——兩條對上了。」",
-    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「圆窝里供过东西，神像等的是一件被取走的灵物。——两条对上了。」",
     "links": [4205]
   },
@@ -2113,7 +2113,7 @@
     "entryID": 4211,
     "actorID": "MC1",
     "text": "「東西若是從這圓窩裡掉出去的……外頭就是瀑布、溪。再遠，也不會遠過山腳的小溪村。我們早拿著一顆觸手還熱的石頭——」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Idea);\nModifyData(AbilityExp,Player,Intelligence,20);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Idea);\nModifyData(AbilityExp,Player,Intelligence,20);",
     "zh_CN": "「东西若是从这圆窝里掉出去的……外头就是瀑布、溪。再远，也不会远过山脚的小溪村。我们早拿着一颗触手还热的石头——」",
     "links": [4212]
   },
@@ -2129,7 +2129,7 @@
     "entryID": 4213,
     "actorID": "MC1",
     "text": "「供著靈物……什麼樣的靈物，會讓一整座石像空著手等？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「供着灵物……什么样的灵物，会让一整座石像空着手等？」",
     "links": [4214]
@@ -2162,7 +2162,7 @@
     "entryID": 4217,
     "actorID": "MC1",
     "text": "「……嵌進去試試。」",
-    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「……嵌进去试试。」",
     "links": [4218, 4219]
   },
@@ -2196,7 +2196,7 @@
     "entryID": 4221,
     "actorID": "MC1",
     "text": "「這是……哪裡？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Surprise);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「这是……哪里？」",
     "links": [4222]
   },
@@ -2220,7 +2220,7 @@
     "entryID": 4224,
     "actorID": "MC1",
     "text": "「妳……就是河神？這是什麼地方，我又怎麼會到這裡？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「你……就是河神？这是什么地方，我又怎么会到这里？」",
     "links": [4225]
   },
@@ -2236,7 +2236,7 @@
     "entryID": 4226,
     "actorID": "MC1",
     "text": "「……原來溪村那個夢，也是妳？」",
-    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「……原来溪村那个梦，也是你？」",
     "links": [4227]
   },
@@ -2260,7 +2260,7 @@
     "entryID": 4229,
     "actorID": "MC1",
     "text": "「舟？這荒山裡……哪來的船？」",
-    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「舟？这荒山里……哪来的船？」",
     "links": [4230]
   },
@@ -2391,7 +2391,7 @@
     "entryID": 4255,
     "actorID": "MC1",
     "text": "「……她？」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_CN": "「……她？」",
     "links": [4256]
   },
@@ -2441,7 +2441,7 @@
     "entryID": 4262,
     "actorID": "MC1",
     "text": "「[em7]沒去攔懷裡那股熱[/em7]……由它去。」",
-    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "Description": "選項1：讓她喝",
     "zh_CN": "「[em7]没去拦怀里那股热[/em7]……由它去。」",
     "links": [4252]
@@ -2450,7 +2450,7 @@
     "entryID": 4263,
     "actorID": "MC1",
     "text": "「[em7]一手按住懷裡，把那股熱壓了下去[/em7]……我走了。」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "Description": "選項2：回去（不讓她喝，活淚留手）",
     "zh_CN": "「[em7]一手按住怀里，把那股热压了下去[/em7]……我走了。」",
     "links": [4264]
@@ -2529,7 +2529,7 @@
     "entryID": 4278,
     "actorID": "MC1",
     "text": "「[em7]把石頭放在案上[/em7]，家主請看。水濂洞中洞有一幅古畫，畫著一艘從天上墜下來的怪舟，舟腹正中嵌的，就是這一顆。村裡人喚它『河神的眼淚』。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「[em7]把石头放在案上[/em7]，家主请看。水濂洞中洞有一幅古画，画着一艘从天上坠下来的怪舟，舟腹正中嵌的，就是这一颗。村里人唤它『河神的眼泪』。」",
     "links": [4279]
   },
@@ -2545,7 +2545,7 @@
     "entryID": 4280,
     "actorID": "MC1",
     "text": "「家主走南闖北，可曾見過會發熱的石頭？這不是河灘上撿的——是那艘舟的心。舟沒了，心還跳著。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「家主走南闯北，可曾见过会发热的石头？这不是河滩上捡的——是那艘舟的心。舟没了，心还跳着。」",
     "links": [4281]
   },
@@ -2595,7 +2595,7 @@
     "entryID": 4286,
     "actorID": "MC1",
     "text": "「[em2][厚黑檢定][/em2]涼，是因為它離了那艘舟。家主要的是奇貨，不是暖手的爐子。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "zh_CN": "「[em2][厚黑检定][/em2]凉，是因为它离了那艘舟。家主要的是奇货，不是暖手的炉子。」",
     "links": [4287]
   },
@@ -2834,7 +2834,7 @@
     "entryID": 4317,
     "actorID": "MC1",
     "text": "「這滴眼淚，本就是妳的東西。我不能拿它換好處。妳想回家，我幫妳。」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,0.2);\nModifyData(Valuable,Player,Rivertear,-1);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Meditate);\nModifyData(DnDAlignment,Player,GoodEvil,0.2);\nModifyData(Valuable,Player,Rivertear,-1);",
     "Description": "仁心增加，失去河神的眼淚",
     "zh_CN": "「这滴眼泪，本就是你的东西。我不能拿它换好处。你想回家，我帮你。」",
     "links": [4237]
@@ -2843,7 +2843,7 @@
     "entryID": 4318,
     "actorID": "MC1",
     "text": "「這滴眼淚，我還不能還。」",
-    "Sequence": "SetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,MC1-1,Pain);\nModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
+    "Sequence": "SetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,Player,Pain);\nModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
     "Description": "機略增加",
     "zh_CN": "「这滴眼泪，我还不能还。」",
     "links": [4251]
@@ -2935,7 +2935,7 @@
     "entryID": 4329,
     "actorID": "MC1",
     "text": "「[em7]只好笑了笑[/em7]……家主。」",
-    "Sequence": "SetPortrait(MC1,pic=15);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=15);\nEnableCharacterExpression(0,Player,Proud);",
     "Conditions": "IsPassDice() == true;",
     "zh_CN": "「[em7]只好笑了笑[/em7]……家主。」",
     "links": [4330]

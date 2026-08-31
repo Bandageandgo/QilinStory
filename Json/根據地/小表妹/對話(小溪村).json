@@ -12,7 +12,7 @@
     "entryID": 190,
     "actorID": "MC1",
     "text": "「靈犀，妳在嘀嘀咕咕地說什麼呢？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「灵犀，你在嘀嘀咕咕地说什么呢？」",
     "links": [191]
   },
@@ -36,7 +36,7 @@
     "entryID": 193,
     "actorID": "MC1",
     "text": "「……為何要透過靈犀？」",
-    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「……为何要透过灵犀？」",
     "links": [194]
   },
@@ -687,7 +687,7 @@
     "entryID": 284,
     "actorID": "MC1",
     "text": "「所以這是你開的店？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「所以这是你开的店？」",
     "links": [302]
   },
@@ -703,7 +703,7 @@
     "entryID": 291,
     "actorID": "MC8",
     "text": "「[em7]瞇眼打量你說道[/em7]：表哥，你可別想動什麼歪腦筋喔！」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=6);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,MC1-1,Idea);\nEnableCharacterExpression(1,MC8,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=6);\nSetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Idea);\nEnableCharacterExpression(1,MC8,Meditate);",
     "zh_CN": "「[em7]眯眼打量你说道[/em7]：表哥，你可别想动什么歪脑筋喔！」",
     "links": [296]
   },
@@ -745,7 +745,7 @@
     "entryID": 300,
     "actorID": "MC1",
     "text": "「這到底是怎麼一回事啊，靈犀？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「这到底是怎么一回事啊，灵犀？」",
     "links": [301]
   },

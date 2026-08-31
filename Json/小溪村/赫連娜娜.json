@@ -40,7 +40,7 @@
     "entryID": 5,
     "actorID": "MC1",
     "text": "「方才聽聞姑娘所言，似乎對何事而擔憂？」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「方才聽聞姑娘所言，似乎對何事而擔憂？」",
     "zh_CN": "「方才听闻姑娘所言，似乎对何事而担忧？」",
     "links": [2055]
@@ -58,7 +58,7 @@
     "entryID": 7,
     "actorID": "MC1",
     "text": "「誒，什麼有緣人？我只是想問…」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「誒，什麼有緣人？我只是想問…」",
     "zh_CN": "「诶，什么有缘人？我只是想问…」",
     "links": [8]
@@ -76,7 +76,7 @@
     "entryID": 9,
     "actorID": "MC1",
     "text": "「誒！這就玄了！！」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Idea);",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「誒！這就玄了！！」",
     "zh_CN": "「诶！这就玄了！！」",
     "links": [23]
@@ -140,7 +140,7 @@
     "entryID": 16,
     "actorID": "MC1",
     "text": "「多謝大師厚賜。此物果然一看就非凡物！」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「多謝大師厚賜。此物果然一看就非凡物！」",
     "zh_CN": "「多谢大师厚赐。此物果然一看就非凡物！」",
     "links": [17]

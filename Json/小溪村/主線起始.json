@@ -12,7 +12,7 @@
     "actorID": "MC1",
     "title": " 觸發：主角一行人首次抵達小溪村",
     "text": "「呵，此地民風淳樸，必有高人隱……」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「呵，此地民風淳樸，必有高人隱……」",
     "zh_CN": "「呵，此地民风淳朴，必有高人隐……」",
     "links": [56]
@@ -21,7 +21,7 @@
     "entryID": 56,
     "actorID": "MC1",
     "text": "「[咕嚕——！]」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);\nAudioControl(PlaySFXOneShot,Others_Growling);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,Player,Nervous);\nAudioControl(PlaySFXOneShot,Others_Growling);",
     "zh_TW": "「[咕嚕——！]」",
     "zh_CN": "「[咕噜——！]」",
     "links": [57]
@@ -30,7 +30,7 @@
     "entryID": 57,
     "actorID": "MC1",
     "text": "「……」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=7);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
     "links": [58]
@@ -75,7 +75,7 @@
     "entryID": 62,
     "actorID": "MC1",
     "text": "「唉唉，[em2]靈犀[/em2]，行走江湖，禮數為先，故事中的高手常都貌不驚人…」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Pain);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
     "zh_TW": "「唉唉，[em2]靈犀[/em2]，行走江湖，禮數為先，故事中的高手常都貌不驚人…」",
     "zh_CN": "「唉唉，[em2]灵犀[/em2]，行走江湖，礼数为先，故事中的高手常都貌不惊人…」",
     "links": [63]
@@ -129,7 +129,7 @@
     "entryID": 68,
     "actorID": "MC1",
     "text": "「一個月？這可如何是好！如此一來，[em2]雲中[/em2]的[em2]英豪府[/em2]俠客遴選，豈不就趕不上了？」",
-    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「一個月？這可如何是好！如此一來，[em2]雲中[/em2]的[em2]英豪府[/em2]俠客遴選，豈不就趕不上了？」",
     "zh_CN": "「一个月？这可如何是好！如此一来，[em2]云中[/em2]的[em2]英豪府[/em2]侠客遴选，岂不就赶不上了？」",
     "links": [115]
@@ -226,7 +226,7 @@
     "entryID": 79,
     "actorID": "MC1",
     "text": "「茶博士，一個月三百錢…我們初來乍到，盤纏短缺，不知此地有何營生可做，還望指點一二。」",
-    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Question);",
+    "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「茶博士，一個月三百錢…我們初來乍到，盤纏短缺，不知此地有何營生可做，還望指點一二。」",
     "zh_CN": "「茶博士，一个月三百钱…我们初来乍到，盘缠短缺，不知此地有何营生可做，还望指点一二。」",
     "links": [80, 81]
@@ -262,7 +262,7 @@
     "entryID": 83,
     "actorID": "MC1",
     "text": "「三百錢？小事一樁！茶博士，先來壺貴店最好的茶！我與表妹也好歇歇腳。」",
-    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「三百錢？小事一樁！茶博士，先來壺貴店最好的茶！我與表妹也好歇歇腳。」",
     "zh_CN": "「三百钱？小事一桩！茶博士，先来壶贵店最好的茶！我与表妹也好歇歇脚。」",
     "links": [84, 87]
@@ -309,7 +309,7 @@
     "entryID": 88,
     "actorID": "MC1",
     "text": "「呃…這個…」",
-    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,MC1-1,Nervous);",
+    "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「呃…這個…」",
     "zh_CN": "「呃…这个…」",
     "links": [89]
@@ -372,7 +372,7 @@
     "entryID": 95,
     "actorID": "MC1",
     "text": "「嗯，既然茶博士推薦，我們便去看看。安頓下來也是要緊事。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「嗯，既然茶博士推薦，我們便去看看。安頓下來也是要緊事。」",
     "zh_CN": "「嗯，既然茶博士推荐，我们便去看看。安顿下来也是要紧事。」",
     "links": [96]
@@ -381,7 +381,7 @@
     "entryID": 96,
     "actorID": "MC1",
     "text": "「美人老闆娘？還外號一枝花？哼，我輩江湖兒女，豈會為女色所動…不過…」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,MC1-1,Proud);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=1);EnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「美人老闆娘？還外號一枝花？哼，我輩江湖兒女，豈會為女色所動…不過…」",
     "zh_CN": "「美人老板娘？还外号一枝花？哼，我辈江湖儿女，岂会为女色所动…不过…」",
     "links": [104]
@@ -408,7 +408,7 @@
     "entryID": 99,
     "actorID": "MC1",
     "text": "「我何時動過歪心思…我只是覺得，大丈夫行于世，當…呃…先解決食宿！」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,MC1-1,Nervous_2);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous_2);",
     "zh_TW": "「我何時動過歪心思…我只是覺得，大丈夫行于世，當…呃…先解決食宿！」",
     "zh_CN": "「我何时动过歪心思…我只是觉得，大丈夫行于世，当…呃…先解决食宿！」",
     "links": [100]
@@ -435,7 +435,7 @@
     "entryID": 102,
     "actorID": "MC1",
     "text": "「唉，英雄氣短…不對，是兄妹情長…」",
-    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,MC1-1,Meditate);",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「唉，英雄氣短…不對，是兄妹情長…」",
     "zh_CN": "「唉，英雄气短…不对，是兄妹情长…」",
     "links": [103]
