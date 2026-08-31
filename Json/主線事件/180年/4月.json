@@ -1,25 +1,21 @@
 [
   {
     "entryID": 1,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（門還沒推開，那股味道就先出來了。比你上次聞到的重。）＊",
     "Sequence": "EnableDialogueBG(StudyRoom);",
     "zh_TW": "[panel=6]＊（門還沒推開，那股味道就先出來了。比你上次聞到的重。）＊",
     "zh_CN": "[panel=6]＊（门还没推开，那股味道就先出来了。比你上次闻到的重。）＊",
-    "links": [
-      2
-    ]
+    "links": [2]
   },
   {
     "entryID": 2,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（案上鋪了一層油布。布上那東西比人長，四肢還在，皮已經翻開，一邊釘著一邊攤著。你認得那身花紋。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（案上鋪了一層油布。布上那東西比人長，四肢還在，皮已經翻開，一邊釘著一邊攤著。你認得那身花紋。）＊",
     "zh_CN": "[panel=6]＊（案上铺了一层油布。布上那东西比人长，四肢还在，皮已经翻开，一边钉着一边摊着。你认得那身花纹。）＊",
-    "links": [
-      3
-    ]
+    "links": [3]
   },
   {
     "entryID": 3,
@@ -28,9 +24,7 @@
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
     "zh_TW": "「這……這不是趙王洞那頭——」",
     "zh_CN": "「这……这不是赵王洞那头——」",
-    "links": [
-      4
-    ]
+    "links": [4]
   },
   {
     "entryID": 4,
@@ -39,9 +33,7 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=1]「[em7]沒有抬頭，手上那把小刀也沒有停[/em7]，徐兄運回來的。放了一個月，總算輪到它。」",
     "zh_CN": "[panel=1]「[em7]没有抬头，手上那把小刀也没有停[/em7]，徐兄运回来的。放了一个月，总算轮到它。」",
-    "links": [
-      5
-    ]
+    "links": [5]
   },
   {
     "entryID": 5,
@@ -50,9 +42,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「先生剖它做什麼？」",
     "zh_CN": "「先生剖它做什么？」",
-    "links": [
-      6
-    ]
+    "links": [6]
   },
   {
     "entryID": 6,
@@ -61,9 +51,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「你當日問賈某，那是什麼東西。賈某答了——殷商的邪祭，煉出來的廢物。」",
     "zh_CN": "[panel=1]「你当日问贾某，那是什么东西。贾某答了——殷商的邪祭，炼出来的废物。」",
-    "links": [
-      7
-    ]
+    "links": [7]
   },
   {
     "entryID": 7,
@@ -72,31 +60,25 @@
     "Sequence": "SetPortrait(MC4,pic=3);",
     "zh_TW": "[panel=1]「煉。拿什麼煉的？」",
     "zh_CN": "[panel=1]「炼。拿什么炼的？」",
-    "links": [
-      8
-    ]
+    "links": [8]
   },
   {
     "entryID": 8,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把小刀換到左手，右手探進那東西胸口，摸了一陣，挑出一樣東西，在布上擦了兩下。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "[panel=6]＊（他把小刀換到左手，右手探進那東西胸口，摸了一陣，挑出一樣東西，在布上擦了兩下。）＊",
     "zh_CN": "[panel=6]＊（他把小刀换到左手，右手探进那东西胸口，摸了一阵，挑出一样东西，在布上擦了两下。）＊",
-    "links": [
-      9
-    ]
+    "links": [9]
   },
   {
     "entryID": 9,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（燈下看得很清楚。那是一顆牙。人的牙。）＊",
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=6]＊（燈下看得很清楚。那是一顆牙。人的牙。）＊",
     "zh_CN": "[panel=6]＊（灯下看得很清楚。那是一颗牙。人的牙。）＊",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 10,
@@ -105,9 +87,7 @@
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,MC1-1,Shock);",
     "zh_TW": "「牠……吃了人？」",
     "zh_CN": "「它……吃了人？」",
-    "links": [
-      11
-    ]
+    "links": [11]
   },
   {
     "entryID": 11,
@@ -116,20 +96,16 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC4,pic=3);",
     "zh_TW": "[panel=1]「吃下去的東西不會長根。」",
     "zh_CN": "[panel=1]「吃下去的东西不会长根。」",
-    "links": [
-      12
-    ]
+    "links": [12]
   },
   {
     "entryID": 12,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把那顆牙翻過來，讓你看根部。那裡連著一小截白的，還埋在肉裡，像是從裡頭生出來的。）＊",
     "Sequence": "SetPortrait(MC1,pic=9);",
     "zh_TW": "[panel=6]＊（他把那顆牙翻過來，讓你看根部。那裡連著一小截白的，還埋在肉裡，像是從裡頭生出來的。）＊",
     "zh_CN": "[panel=6]＊（他把那颗牙翻过来，让你看根部。那里连着一小截白的，还埋在肉里，像是从里头生出来的。）＊",
-    "links": [
-      13
-    ]
+    "links": [13]
   },
   {
     "entryID": 13,
@@ -138,9 +114,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「它長在心口。根還連著。[em2]這東西身上，有一個人在往外長。[/em2]」",
     "zh_CN": "[panel=1]「它长在心口。根还连着。[em2]这东西身上，有一个人在往外长。[/em2]」",
-    "links": [
-      14
-    ]
+    "links": [14]
   },
   {
     "entryID": 14,
@@ -149,9 +123,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,MC1-1,Meditate);",
     "zh_TW": "「先生的意思是……牠本來是個人？」",
     "zh_CN": "「先生的意思是……它本来是个人？」",
-    "links": [
-      15
-    ]
+    "links": [15]
   },
   {
     "entryID": 15,
@@ -160,9 +132,7 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=1]「賈某不知道。知道了，就不必剖了。」",
     "zh_CN": "[panel=1]「贾某不知道。知道了，就不必剖了。」",
-    "links": [
-      16
-    ]
+    "links": [16]
   },
   {
     "entryID": 16,
@@ -171,9 +141,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「一具剖不出道理。書上也沒有——[em2]古學到這裡就斷了[/em2]。」",
     "zh_CN": "[panel=1]「一具剖不出道理。书上也没有——[em2]古学到这里就断了[/em2]。」",
-    "links": [
-      17
-    ]
+    "links": [17]
   },
   {
     "entryID": 17,
@@ -182,9 +150,7 @@
     "Sequence": "SetPortrait(MC4,pic=3);",
     "zh_TW": "[panel=1]「所以，要借別人的眼睛。」",
     "zh_CN": "[panel=1]「所以，要借别人的眼睛。」",
-    "links": [
-      18
-    ]
+    "links": [18]
   },
   {
     "entryID": 18,
@@ -193,9 +159,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「城外竹林，住著一位蔡邕蔡先生。他的學問，海內知名——經史之外，[em2]異邦的雜書怪錄，他也收[/em2]。」",
     "zh_CN": "[panel=1]「城外竹林，住着一位蔡邕蔡先生。他的学问，海内知名——经史之外，[em2]异邦的杂书怪录，他也收[/em2]。」",
-    "links": [
-      19
-    ]
+    "links": [19]
   },
   {
     "entryID": 19,
@@ -204,9 +168,7 @@
     "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「這樣的大學問，先生怎麼不自己去請教？」",
     "zh_CN": "「这样的大学问，先生怎么不自己去请教？」",
-    "links": [
-      20
-    ]
+    "links": [20]
   },
   {
     "entryID": 20,
@@ -215,9 +177,7 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC4,pic=3);",
     "zh_TW": "[panel=1]「[em7]把那顆牙收進袖子[/em7]，賈某什麼名聲，雲中街上隨便一問便有——嗜錢如命，屋裡剖屍。」",
     "zh_CN": "[panel=1]「[em7]把那颗牙收进袖子[/em7]，贾某什么名声，云中街上随便一问便有——嗜钱如命，屋里剖尸。」",
-    "links": [
-      21
-    ]
+    "links": [21]
   },
   {
     "entryID": 21,
@@ -226,9 +186,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「蔡先生那樣愛書的人，把書借給賈某？[em2]他寧可把書埋了。[/em2]」",
     "zh_CN": "[panel=1]「蔡先生那样爱书的人，把书借给贾某？[em2]他宁可把书埋了。[/em2]」",
-    "links": [
-      22
-    ]
+    "links": [22]
   },
   {
     "entryID": 22,
@@ -237,9 +195,7 @@
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=1]「你去。問他那些異邦怪錄裡，可有寫[em2]妖物由人而成[/em2]的卷子。原卷、抄本，都成。」",
     "zh_CN": "[panel=1]「你去。问他那些异邦怪录里，可有写[em2]妖物由人而成[/em2]的卷子。原卷、抄本，都成。」",
-    "links": [
-      23
-    ]
+    "links": [23]
   },
   {
     "entryID": 23,
@@ -248,20 +204,16 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「弟子這就去。要跟蔡先生怎麼說？」",
     "zh_CN": "「弟子这就去。要跟蔡先生怎么说？」",
-    "links": [
-      24
-    ]
+    "links": [24]
   },
   {
     "entryID": 24,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他重新拿起小刀，不再看你。）＊",
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=6]＊（他重新拿起小刀，不再看你。）＊",
     "zh_CN": "[panel=6]＊（他重新拿起小刀，不再看你。）＊",
-    "links": [
-      25
-    ]
+    "links": [25]
   },
   {
     "entryID": 25,
@@ -270,20 +222,15 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「[em2]你自己拿主意便是。[/em2]」",
     "zh_CN": "[panel=1]「[em2]你自己拿主意便是。[/em2]」",
-    "links": [
-      26
-    ]
+    "links": [26]
   },
   {
     "entryID": 26,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "",
     "Description": "⚑ 任務觸發節點（待作者填 Script）：開任務、entry 1 轉 active。Script 應寫 SetQuestState(\"任務ID\", \"active\"); SetQuestEntryState(\"任務ID\", 1, \"active\"); ｜entry 1 Description 建議：「先生要蔡邕那卷異邦殘卷。怎麼開口，他沒說。」",
-    "links": [
-      27
-    ]
+    "links": [27]
   },
   {
     "entryID": 27,
@@ -291,20 +238,16 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Forest)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場一：英豪府・書房 → 竹林（StudyRoom → Forest）",
-    "links": [
-      28
-    ]
+    "links": [28]
   },
   {
     "entryID": 28,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（竹子把日頭篩得很碎。屋前空地上蹲著一個小丫頭，一堆木頭零件散在腳邊。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（竹子把日頭篩得很碎。屋前空地上蹲著一個小丫頭，一堆木頭零件散在腳邊。）＊",
     "zh_CN": "[panel=6]＊（竹子把日头筛得很碎。屋前空地上蹲着一个小丫头，一堆木头零件散在脚边。）＊",
-    "links": [
-      29
-    ]
+    "links": [29]
   },
   {
     "entryID": 29,
@@ -313,9 +256,7 @@
     "Sequence": "SetPortrait(MC23,pic=1);",
     "zh_TW": "[panel=2]「[em7]頭也沒抬，還在跟那個榫頭較勁[/em7]，找我爹的？在裡頭——門開著，自己進去。」",
     "zh_CN": "[panel=2]「[em7]头也没抬，还在跟那个榫头较劲[/em7]，找我爹的？在里头——门开着，自己进去。」",
-    "links": [
-      30
-    ]
+    "links": [30]
   },
   {
     "entryID": 30,
@@ -323,20 +264,16 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(StudyRoom)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場二：竹林 → 蔡宅・書齋（Forest → StudyRoom）",
-    "links": [
-      31
-    ]
+    "links": [31]
   },
   {
     "entryID": 31,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（屋裡比外頭暗。案上攤著一片竹簡，蔡邕手裡拿著一把書刀，正在刮字。聽見腳步，他抬起頭。）＊",
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=6]＊（屋裡比外頭暗。案上攤著一片竹簡，蔡邕手裡拿著一把書刀，正在刮字。聽見腳步，他抬起頭。）＊",
     "zh_CN": "[panel=6]＊（屋里比外头暗。案上摊着一片竹简，蔡邕手里拿着一把书刀，正在刮字。听见脚步，他抬起头。）＊",
-    "links": [
-      32
-    ]
+    "links": [32]
   },
   {
     "entryID": 32,
@@ -345,9 +282,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「晚輩冒昧登門。想向先生借一卷書。」",
     "zh_CN": "「晚辈冒昧登门。想向先生借一卷书。」",
-    "links": [
-      33
-    ]
+    "links": [33]
   },
   {
     "entryID": 33,
@@ -356,9 +291,7 @@
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「哦？我這裡書多，你要哪一卷？」",
     "zh_CN": "[panel=1]「哦？我这里书多，你要哪一卷？」",
-    "links": [
-      34
-    ]
+    "links": [34]
   },
   {
     "entryID": 34,
@@ -367,20 +300,16 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「聽聞先生收得有異邦的志怪雜錄。晚輩要尋的那一卷——寫的是[em2]妖物如何由人而成[/em2]。」",
     "zh_CN": "「听闻先生收得有异邦的志怪杂录。晚辈要寻的那一卷——写的是[em2]妖物如何由人而成[/em2]。」",
-    "links": [
-      35
-    ]
+    "links": [35]
   },
   {
     "entryID": 35,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他手上那把書刀沒有放下，也沒有落回竹簡上。）＊",
     "Sequence": "SetPortrait(MC24,pic=4);",
     "zh_TW": "[panel=6]＊（他手上那把書刀沒有放下，也沒有落回竹簡上。）＊",
     "zh_CN": "[panel=6]＊（他手上那把书刀没有放下，也没有落回竹简上。）＊",
-    "links": [
-      36
-    ]
+    "links": [36]
   },
   {
     "entryID": 36,
@@ -389,9 +318,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「……有這麼一卷。」",
     "zh_CN": "[panel=1]「……有这么一卷。」",
-    "links": [
-      37
-    ]
+    "links": [37]
   },
   {
     "entryID": 37,
@@ -400,34 +327,27 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「小兄弟，書可以借。[em2]只是總得讓我知道，借去做什麼。[/em2]」",
     "zh_CN": "[panel=1]「小兄弟，书可以借。[em2]只是总得让我知道，借去做什么。[/em2]」",
-    "links": [
-      38,
-      39
-    ]
+    "links": [38, 39]
   },
   {
     "entryID": 38,
     "actorID": "0",
     "text": "「英豪府在剖一頭妖。先生想對照那卷書上的說法。」",
     "Sequence": "",
+    "Description": "選項1：說實話",
     "zh_TW": "「英豪府在剖一頭妖。先生想對照那卷書上的說法。」",
     "zh_CN": "「英豪府在剖一头妖。先生想对照那卷书上的说法。」",
-    "Description": "選項1：說實話",
-    "links": [
-      40
-    ]
+    "links": [40]
   },
   {
     "entryID": 39,
     "actorID": "0",
     "text": "「晚輩不便說。還請先生成全。」",
     "Sequence": "",
+    "Description": "選項2：不說",
     "zh_TW": "「晚輩不便說。還請先生成全。」",
     "zh_CN": "「晚辈不便说。还请先生成全。」",
-    "Description": "選項2：不說",
-    "links": [
-      42
-    ]
+    "links": [42]
   },
   {
     "entryID": 40,
@@ -436,9 +356,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「英豪府在剖一頭妖。先生想對照那卷書上的說法。」",
     "zh_CN": "「英豪府在剖一头妖。先生想对照那卷书上的说法。」",
-    "links": [
-      41
-    ]
+    "links": [41]
   },
   {
     "entryID": 41,
@@ -447,9 +365,7 @@
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「原來如此。這是正經事，該借。」",
     "zh_CN": "[panel=1]「原来如此。这是正经事，该借。」",
-    "links": [
-      58
-    ]
+    "links": [58]
   },
   {
     "entryID": 42,
@@ -458,21 +374,16 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「晚輩不便說。還請先生成全。」",
     "zh_CN": "「晚辈不便说。还请先生成全。」",
-    "links": [
-      43
-    ]
+    "links": [43]
   },
   {
     "entryID": 43,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（蔡邕看著你，沒有立刻答話。竹葉的影子在他臉上動了兩回。）＊",
     "Sequence": "SetPortrait(MC24,pic=4);",
     "zh_TW": "[panel=6]＊（蔡邕看著你，沒有立刻答話。竹葉的影子在他臉上動了兩回。）＊",
     "zh_CN": "[panel=6]＊（蔡邕看着你，没有立刻答话。竹叶的影子在他脸上动了两回。）＊",
-    "links": [
-      44,
-      52
-    ]
+    "links": [44, 52]
   },
   {
     "entryID": 44,
@@ -482,9 +393,7 @@
     "Conditions": "IsFavorabilityLevelPass(\"MC24\", 2) == true;",
     "zh_TW": "[panel=1]「不便說。」",
     "zh_CN": "[panel=1]「不便说。」",
-    "links": [
-      45
-    ]
+    "links": [45]
   },
   {
     "entryID": 45,
@@ -493,20 +402,16 @@
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「……罷了。」",
     "zh_CN": "[panel=1]「……罢了。」",
-    "links": [
-      46
-    ]
+    "links": [46]
   },
   {
     "entryID": 46,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把書刀擱下，起身走到最裡邊那排架子，抽出一卷。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（他把書刀擱下，起身走到最裡邊那排架子，抽出一卷。）＊",
     "zh_CN": "[panel=6]＊（他把书刀搁下，起身走到最里边那排架子，抽出一卷。）＊",
-    "links": [
-      47
-    ]
+    "links": [47]
   },
   {
     "entryID": 47,
@@ -515,9 +420,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「[em7]用布包好，遞過來[/em7]，紙脆，別讓風吹。抄完就送回來。」",
     "zh_CN": "[panel=1]「[em7]用布包好，递过来[/em7]，纸脆，别让风吹。抄完就送回来。」",
-    "links": [
-      48
-    ]
+    "links": [48]
   },
   {
     "entryID": 48,
@@ -526,9 +429,7 @@
     "Sequence": "SetPortrait(MC1,pic=14);\nEnableCharacterExpression(0,MC1-1,Question);",
     "zh_TW": "「先生不問了？」",
     "zh_CN": "「先生不问了？」",
-    "links": [
-      49
-    ]
+    "links": [49]
   },
   {
     "entryID": 49,
@@ -537,9 +438,7 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「問了你也不說。」",
     "zh_CN": "[panel=1]「问了你也不说。」",
-    "links": [
-      50
-    ]
+    "links": [50]
   },
   {
     "entryID": 50,
@@ -548,20 +447,15 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「你這人如何，我自己看得見。[em2]書我借你，不是借給你那句理由。[/em2]」",
     "zh_CN": "[panel=1]「你这人如何，我自己看得见。[em2]书我借你，不是借给你那句理由。[/em2]」",
-    "links": [
-      51
-    ]
+    "links": [51]
   },
   {
     "entryID": 51,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "",
     "Description": "⚑ 任務節點（待作者填 Script）：entry 2 轉 success。Script 應寫 SetQuestEntryState(\"任務ID\", 2, \"success\"); ｜entry 2 Description 建議：「你一個字也沒說。蔡先生說，書借你，不是借給你那句理由。」",
-    "links": [
-      64
-    ]
+    "links": [64]
   },
   {
     "entryID": 52,
@@ -570,9 +464,7 @@
     "Sequence": "SetPortrait(MC24,pic=3);",
     "zh_TW": "[panel=1]「不便說。」",
     "zh_CN": "[panel=1]「不便说。」",
-    "links": [
-      53
-    ]
+    "links": [53]
   },
   {
     "entryID": 53,
@@ -581,20 +473,16 @@
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「小兄弟，我這人有個毛病：東西可以給，話得說明白。」",
     "zh_CN": "[panel=1]「小兄弟，我这人有个毛病：东西可以给，话得说明白。」",
-    "links": [
-      54
-    ]
+    "links": [54]
   },
   {
     "entryID": 54,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把書刀擱回案上，順手把攤開的竹簡一片一片理齊，沒有再看你。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（他把書刀擱回案上，順手把攤開的竹簡一片一片理齊，沒有再看你。）＊",
     "zh_CN": "[panel=6]＊（他把书刀搁回案上，顺手把摊开的竹简一片一片理齐，没有再看你。）＊",
-    "links": [
-      55
-    ]
+    "links": [55]
   },
   {
     "entryID": 55,
@@ -603,20 +491,16 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「……英豪府在剖一頭妖。先生想對照那卷書上的說法。」",
     "zh_CN": "「……英豪府在剖一头妖。先生想对照那卷书上的说法。」",
-    "links": [
-      56
-    ]
+    "links": [56]
   },
   {
     "entryID": 56,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他理竹簡的手停了。過了一會，才轉回來。）＊",
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=6]＊（他理竹簡的手停了。過了一會，才轉回來。）＊",
     "zh_CN": "[panel=6]＊（他理竹简的手停了。过了一会，才转回来。）＊",
-    "links": [
-      57
-    ]
+    "links": [57]
   },
   {
     "entryID": 57,
@@ -625,20 +509,16 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「這就對了。」",
     "zh_CN": "[panel=1]「这就对了。」",
-    "links": [
-      58
-    ]
+    "links": [58]
   },
   {
     "entryID": 58,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他起身走到最裡邊那排架子，抽出一卷，用布包好，遞給你。）＊",
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=6]＊（他起身走到最裡邊那排架子，抽出一卷，用布包好，遞給你。）＊",
     "zh_CN": "[panel=6]＊（他起身走到最里边那排架子，抽出一卷，用布包好，递给你。）＊",
-    "links": [
-      59
-    ]
+    "links": [59]
   },
   {
     "entryID": 59,
@@ -647,9 +527,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「紙脆，別讓風吹。抄完就送回來，不急。」",
     "zh_CN": "[panel=1]「纸脆，别让风吹。抄完就送回来，不急。」",
-    "links": [
-      60
-    ]
+    "links": [60]
   },
   {
     "entryID": 60,
@@ -658,9 +536,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「多謝先生。」",
     "zh_CN": "「多谢先生。」",
-    "links": [
-      61
-    ]
+    "links": [61]
   },
   {
     "entryID": 61,
@@ -669,9 +545,7 @@
     "Sequence": "SetPortrait(MC24,pic=3);",
     "zh_TW": "[panel=1]「剖出什麼，也說一聲。」",
     "zh_CN": "[panel=1]「剖出什么，也说一声。」",
-    "links": [
-      62
-    ]
+    "links": [62]
   },
   {
     "entryID": 62,
@@ -680,20 +554,15 @@
     "Sequence": "SetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「這種事，我也想了很久了。」",
     "zh_CN": "[panel=1]「这种事，我也想了很久了。」",
-    "links": [
-      63
-    ]
+    "links": [63]
   },
   {
     "entryID": 63,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "",
     "Description": "⚑ 任務節點（待作者填 Script）：entry 1 轉 success。Script 應寫 SetQuestEntryState(\"任務ID\", 1, \"success\"); ｜entry 1 Description 建議：「你照實說了。蔡先生要你剖出什麼也說一聲——他說，這種事他也想了很久。」",
-    "links": [
-      64
-    ]
+    "links": [64]
   },
   {
     "entryID": 64,
@@ -701,20 +570,16 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場三：蔡宅・書齋 → 英豪府・書房。⚠ 兩邊都是 StudyRoom，圖不變，只做淡出淡入；場所轉換靠下一格旁白交代",
-    "links": [
-      65
-    ]
+    "links": [65]
   },
   {
     "entryID": 65,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（案上的油布收了。那東西不在了，味道還在。他把兩卷書並排攤開——一卷是竹的，一卷是紙的。）＊",
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=6]＊（案上的油布收了。那東西不在了，味道還在。他把兩卷書並排攤開——一卷是竹的，一卷是紙的。）＊",
     "zh_CN": "[panel=6]＊（案上的油布收了。那东西不在了，味道还在。他把两卷书并排摊开——一卷是竹的，一卷是纸的。）＊",
-    "links": [
-      66
-    ]
+    "links": [66]
   },
   {
     "entryID": 66,
@@ -723,9 +588,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「坐。這一段你聽著。」",
     "zh_CN": "[panel=1]「坐。这一段你听着。」",
-    "links": [
-      67
-    ]
+    "links": [67]
   },
   {
     "entryID": 67,
@@ -734,9 +597,7 @@
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=1]「賈某這一卷，後頭磨掉了幾個字，十幾年認不出來。」",
     "zh_CN": "[panel=1]「贾某这一卷，后头磨掉了几个字，十几年认不出来。」",
-    "links": [
-      68
-    ]
+    "links": [68]
   },
   {
     "entryID": 68,
@@ -745,9 +606,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「他那一卷寫『顯化』——[em2]顯者，自內而外也。[/em2]」",
     "zh_CN": "[panel=1]「他那一卷写『显化』——[em2]显者，自内而外也。[/em2]」",
-    "links": [
-      69
-    ]
+    "links": [69]
   },
   {
     "entryID": 69,
@@ -756,20 +615,16 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「賈某這卷寫『煉』，他那卷寫『顯』。[em2]一件事，兩支筆。[/em2]」",
     "zh_CN": "[panel=1]「贾某这卷写『炼』，他那卷写『显』。[em2]一件事，两支笔。[/em2]」",
-    "links": [
-      70
-    ]
+    "links": [70]
   },
   {
     "entryID": 70,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把手指按在竹簡那一行的末尾，那裡的字只剩幾道刻痕。）＊",
     "Sequence": "SetPortrait(MC4,pic=3);",
     "zh_TW": "[panel=6]＊（他把手指按在竹簡那一行的末尾，那裡的字只剩幾道刻痕。）＊",
     "zh_CN": "[panel=6]＊（他把手指按在竹简那一行的末尾，那里的字只剩几道刻痕。）＊",
-    "links": [
-      71
-    ]
+    "links": [71]
   },
   {
     "entryID": 71,
@@ -778,9 +633,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「『然貪念若熾，必反噬其主』——[em2]後頭那四個字，賈某今日才敢認。[/em2]」",
     "zh_CN": "[panel=1]「『然贪念若炽，必反噬其主』——[em2]后头那四个字，贾某今日才敢认。[/em2]」",
-    "links": [
-      72
-    ]
+    "links": [72]
   },
   {
     "entryID": 72,
@@ -789,9 +642,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「是什麼？」",
     "zh_CN": "「是什么？」",
-    "links": [
-      73
-    ]
+    "links": [73]
   },
   {
     "entryID": 73,
@@ -800,31 +651,25 @@
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=1]「[em2]主亦如之。[/em2]」",
     "zh_CN": "[panel=1]「[em2]主亦如之。[/em2]」",
-    "links": [
-      74
-    ]
+    "links": [74]
   },
   {
     "entryID": 74,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你沒有說話。他也沒有。）＊",
     "Sequence": "SetPortrait(MC1,pic=9);",
     "zh_TW": "[panel=6]＊（你沒有說話。他也沒有。）＊",
     "zh_CN": "[panel=6]＊（你没有说话。他也没有。）＊",
-    "links": [
-      75
-    ]
+    "links": [75]
   },
   {
     "entryID": 75,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（那顆牙擱在案角，燈照著。你懷裡那個東西，今天一整天都很安靜。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（那顆牙擱在案角，燈照著。你懷裡那個東西，今天一整天都很安靜。）＊",
     "zh_CN": "[panel=6]＊（那颗牙搁在案角，灯照着。你怀里那个东西，今天一整天都很安静。）＊",
-    "links": [
-      76
-    ]
+    "links": [76]
   },
   {
     "entryID": 76,
@@ -833,21 +678,16 @@
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=1]「回去歇著。」",
     "zh_CN": "[panel=1]「回去歇着。」",
-    "links": [
-      77
-    ]
+    "links": [77]
   },
   {
     "entryID": 77,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把兩卷書捲起來，收進案下。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（他把兩卷書捲起來，收進案下。）＊",
     "zh_CN": "[panel=6]＊（他把两卷书卷起来，收进案下。）＊",
-    "links": [
-      78,
-      84
-    ]
+    "links": [78, 84]
   },
   {
     "entryID": 78,
@@ -855,12 +695,10 @@
     "text": "[panel=1]「[em7]手上收書的動作沒有停[/em7]，蔡先生問你借去做什麼，你怎麼答的。」",
     "Sequence": "SetPortrait(MC4,pic=4);",
     "Conditions": "CurrentQuestEntryState(\"＿＿\", 1) == \"success\";",
+    "Description": "⚑⚑ 分流節點・待作者填任務 ID：Conditions 目前是 CurrentQuestEntryState(\"＿＿\", 1) == \"success\"，＿＿ 沒填就永遠不成立，兩條路都會走 6-B（沒說），而且遊戲不會報錯。這一條是「說了實話」那條的入口（entry 1 success）；另一條 6-B 是 else，不掛條件。",
     "zh_TW": "[panel=1]「[em7]手上收書的動作沒有停[/em7]，蔡先生問你借去做什麼，你怎麼答的。」",
     "zh_CN": "[panel=1]「[em7]手上收书的动作没有停[/em7]，蔡先生问你借去做什么，你怎么答的。」",
-    "links": [
-      79
-    ],
-    "Description": "⚑⚑ 分流節點・待作者填任務 ID：Conditions 目前是 CurrentQuestEntryState(\"＿＿\", 1) == \"success\"，＿＿ 沒填就永遠不成立，兩條路都會走 6-B（沒說），而且遊戲不會報錯。這一條是「說了實話」那條的入口（entry 1 success）；另一條 6-B 是 else，不掛條件。"
+    "links": [79]
   },
   {
     "entryID": 79,
@@ -869,20 +707,16 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「弟子照實說了。」",
     "zh_CN": "「弟子照实说了。」",
-    "links": [
-      80
-    ]
+    "links": [80]
   },
   {
     "entryID": 80,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他「嗯」了一聲，把書收好，沒有再看你。）＊",
     "Sequence": "SetPortrait(MC4,pic=3);",
     "zh_TW": "[panel=6]＊（他「嗯」了一聲，把書收好，沒有再看你。）＊",
     "zh_CN": "[panel=6]＊（他「嗯」了一声，把书收好，没有再看你。）＊",
-    "links": [
-      81
-    ]
+    "links": [81]
   },
   {
     "entryID": 81,
@@ -891,20 +725,15 @@
     "Sequence": "ModifyData(FavorabilityExp,MC4,＿);",
     "zh_TW": "[panel=1]「知道了。」",
     "zh_CN": "[panel=1]「知道了。」",
-    "links": [
-      82
-    ]
+    "links": [82]
   },
   {
     "entryID": 82,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "",
     "Description": "⚑ 任務節點（待作者填 Script）：entry 3 轉 success、任務轉 success。Script 應寫 SetQuestEntryState(\"任務ID\", 3, \"success\"); SetQuestState(\"任務ID\", \"success\"); ｜entry 3 Description 建議：「兩卷並排攤在案上。他認出了磨掉的那四個字。」",
-    "links": [
-      83
-    ]
+    "links": [83]
   },
   {
     "entryID": 83,
@@ -921,9 +750,7 @@
     "Sequence": "SetPortrait(MC4,pic=4);",
     "zh_TW": "[panel=1]「[em7]手上收書的動作沒有停[/em7]，蔡先生問你借去做什麼，你怎麼答的。」",
     "zh_CN": "[panel=1]「[em7]手上收书的动作没有停[/em7]，蔡先生问你借去做什么，你怎么答的。」",
-    "links": [
-      85
-    ]
+    "links": [85]
   },
   {
     "entryID": 85,
@@ -932,20 +759,16 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「弟子說不便說。他就給了。」",
     "zh_CN": "「弟子说不便说。他就给了。」",
-    "links": [
-      86
-    ]
+    "links": [86]
   },
   {
     "entryID": 86,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把書收好，這時才轉過來看你一眼。）＊",
     "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=6]＊（他把書收好，這時才轉過來看你一眼。）＊",
     "zh_CN": "[panel=6]＊（他把书收好，这时才转过来看你一眼。）＊",
-    "links": [
-      87
-    ]
+    "links": [87]
   },
   {
     "entryID": 87,
@@ -954,9 +777,7 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「他肯給你，是他看得起你。」",
     "zh_CN": "[panel=1]「他肯给你，是他看得起你。」",
-    "links": [
-      88
-    ]
+    "links": [88]
   },
   {
     "entryID": 88,
@@ -965,20 +786,15 @@
     "Sequence": "ModifyData(FavorabilityExp,MC4,＿);\nModifyData(Coin,Player,＿);",
     "zh_TW": "[panel=1]「[em7]語氣跟他平常算帳一模一樣[/em7]，你替賈某省了一句話。這一趟，記你一份。」",
     "zh_CN": "[panel=1]「[em7]语气跟他平常算账一模一样[/em7]，你替贾某省了一句话。这一趟，记你一份。」",
-    "links": [
-      89
-    ]
+    "links": [89]
   },
   {
     "entryID": 89,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Script": "",
     "Description": "⚑ 任務節點（待作者填 Script）：entry 3 轉 success、任務轉 success。Script 應寫 SetQuestEntryState(\"任務ID\", 3, \"success\"); SetQuestState(\"任務ID\", \"success\");",
-    "links": [
-      90
-    ]
+    "links": [90]
   },
   {
     "entryID": 90,
@@ -990,14 +806,12 @@
   },
   {
     "entryID": 91,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（門沒敲，直接推開。）＊",
     "Sequence": "EnableDialogueBG(Home);",
     "zh_TW": "[panel=6]＊（門沒敲，直接推開。）＊",
     "zh_CN": "[panel=6]＊（门没敲，直接推开。）＊",
-    "links": [
-      92
-    ]
+    "links": [92]
   },
   {
     "entryID": 92,
@@ -1006,9 +820,7 @@
     "Sequence": "SetPortrait(MC22,pic=5);\nAudioControl(PlayMusic,BGM_30);",
     "zh_TW": "[panel=1]「大俠！大俠你看——」",
     "zh_CN": "[panel=1]「大侠！大侠你看——」",
-    "links": [
-      93
-    ]
+    "links": [93]
   },
   {
     "entryID": 93,
@@ -1017,9 +829,7 @@
     "Sequence": "SetPortrait(MC8,pic=2);",
     "zh_TW": "[panel=2]「娜娜姊姊，表哥在算帳，妳小聲點啦。」",
     "zh_CN": "[panel=2]「娜娜姐姐，表哥在算账，你小声点啦。」",
-    "links": [
-      94
-    ]
+    "links": [94]
   },
   {
     "entryID": 94,
@@ -1028,20 +838,16 @@
     "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「算帳算帳，這府裡就剩算帳這一件事了。小犀，妳也來看。[em7]把一張紙拍在你帳冊上[/em7]」",
     "zh_CN": "[panel=1]「算账算账，这府里就剩算账这一件事了。小犀，你也来看。[em7]把一张纸拍在你账册上[/em7]」",
-    "links": [
-      95
-    ]
+    "links": [95]
   },
   {
     "entryID": 95,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（紙已經黃了，邊上毛毛的，像是從哪本東西上硬撕下來的。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（紙已經黃了，邊上毛毛的，像是從哪本東西上硬撕下來的。）＊",
     "zh_CN": "[panel=6]＊（纸已经黄了，边上毛毛的，像是从哪本东西上硬撕下来的。）＊",
-    "links": [
-      96
-    ]
+    "links": [96]
   },
   {
     "entryID": 96,
@@ -1050,9 +856,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「這是什麼？」",
     "zh_CN": "「这是什么？」",
-    "links": [
-      97
-    ]
+    "links": [97]
   },
   {
     "entryID": 97,
@@ -1061,9 +865,7 @@
     "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「雲中市集上一個收舊紙的，一擔子舊簡帛，論斤賣。本姑娘蹲在那兒翻了半個時辰——你猜翻著什麼？」",
     "zh_CN": "[panel=1]「云中市集上一个收旧纸的，一担子旧简帛，论斤卖。本姑娘蹲在那儿翻了半个时辰——你猜翻着什么？」",
-    "links": [
-      98
-    ]
+    "links": [98]
   },
   {
     "entryID": 98,
@@ -1072,9 +874,7 @@
     "Sequence": "SetPortrait(MC8,pic=1);",
     "zh_TW": "[panel=2]「[em7]湊過去[/em7]，……字寫得好端正。」",
     "zh_CN": "[panel=2]「[em7]凑过去[/em7]，……字写得好端正。」",
-    "links": [
-      99
-    ]
+    "links": [99]
   },
   {
     "entryID": 99,
@@ -1083,9 +883,7 @@
     "Sequence": "SetPortrait(MC22,pic=8);",
     "zh_TW": "[panel=1]「不是端正不端正的事。你們看這個『我』字。」",
     "zh_CN": "[panel=1]「不是端正不端正的事。你们看这个『我』字。」",
-    "links": [
-      100
-    ]
+    "links": [100]
   },
   {
     "entryID": 100,
@@ -1094,9 +892,7 @@
     "Sequence": "SetPortrait(MC22,pic=9);",
     "zh_TW": "[panel=1]「[em7]接過去，只看了一眼，手就停住了[/em7]，這字……」",
     "zh_CN": "[panel=1]「[em7]接过去，只看了一眼，手就停住了[/em7]，这字……」",
-    "links": [
-      101
-    ]
+    "links": [101]
   },
   {
     "entryID": 101,
@@ -1105,9 +901,7 @@
     "Sequence": "SetPortrait(MC22,pic=8);",
     "zh_TW": "[panel=1]「大俠，這是我爹的筆。他寫『我』字，最後一勾總往上翹——小時候本姑娘描過一百遍。」",
     "zh_CN": "[panel=1]「大侠，这是我爹的笔。他写『我』字，最后一勾总往上翘——小时候本姑娘描过一百遍。」",
-    "links": [
-      102
-    ]
+    "links": [102]
   },
   {
     "entryID": 102,
@@ -1116,9 +910,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「妳爹？他來過這種地方？」",
     "zh_CN": "「你爹？他来过这种地方？」",
-    "links": [
-      103
-    ]
+    "links": [103]
   },
   {
     "entryID": 103,
@@ -1127,9 +919,7 @@
     "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「我爹去過的地方，比你聽過的還多！」",
     "zh_CN": "[panel=1]「我爹去过的地方，比你听过的还多！」",
-    "links": [
-      104
-    ]
+    "links": [104]
   },
   {
     "entryID": 104,
@@ -1138,9 +928,7 @@
     "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「[em7]把紙湊近了讀，讀到一半笑出來[/em7]，角婆的老故事。阿娘拿這個嚇小孩的——不睡覺，角婆來抓。我爹居然當真寫下來，真是的。」",
     "zh_CN": "[panel=1]「[em7]把纸凑近了读，读到一半笑出来[/em7]，角婆的老故事。阿娘拿这个吓小孩的——不睡觉，角婆来抓。我爹居然当真写下来，真是的。」",
-    "links": [
-      105
-    ]
+    "links": [105]
   },
   {
     "entryID": 105,
@@ -1149,9 +937,7 @@
     "Sequence": "SetPortrait(MC22,pic=1);",
     "zh_TW": "[panel=1]「[em7]把紙摺好，塞進懷裡最裡層[/em7]，這一頁本姑娘收了。往後見著這樣的紙，都得先給我。」",
     "zh_CN": "[panel=1]「[em7]把纸折好，塞进怀里最里层[/em7]，这一页本姑娘收了。往后见着这样的纸，都得先给我。」",
-    "links": [
-      106
-    ]
+    "links": [106]
   },
   {
     "entryID": 106,
@@ -1160,9 +946,7 @@
     "Sequence": "SetPortrait(MC8,pic=14);",
     "zh_TW": "[panel=2]「娜娜姊姊，那個收舊紙的，還有沒有別的？」",
     "zh_CN": "[panel=2]「娜娜姐姐，那个收旧纸的，还有没有别的？」",
-    "links": [
-      107
-    ]
+    "links": [107]
   },
   {
     "entryID": 107,
@@ -1171,9 +955,7 @@
     "Sequence": "SetPortrait(MC22,pic=3);",
     "zh_TW": "[panel=1]「沒了。我把他一擔子全翻遍了，就這一張。他說是從北邊收來的，哪個北邊，他也說不上。」",
     "zh_CN": "[panel=1]「没了。我把他一担子全翻遍了，就这一张。他说是从北边收来的，哪个北边，他也说不上。」",
-    "links": [
-      108
-    ]
+    "links": [108]
   },
   {
     "entryID": 108,
@@ -1182,9 +964,7 @@
     "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「[em7]很快又抬起頭[/em7]，不打緊。一張能翻著，就有第二張。大俠，往後你出門，見著這樣的紙——」",
     "zh_CN": "[panel=1]「[em7]很快又抬起头[/em7]，不打紧。一张能翻着，就有第二张。大侠，往后你出门，见着这样的纸——」",
-    "links": [
-      109
-    ]
+    "links": [109]
   },
   {
     "entryID": 109,
@@ -1193,9 +973,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「先給妳。聽見了。」",
     "zh_CN": "「先给你。听见了。」",
-    "links": [
-      110
-    ]
+    "links": [110]
   },
   {
     "entryID": 110,
@@ -1205,20 +983,16 @@
     "Script": "SetQuestState(\"CF45\", \"active\");\nSetQuestEntryState(\"CF45\", 1, \"success\");\nSetQuestEntryState(\"CF45\", 2, \"success\");",
     "zh_TW": "[panel=1]「算你上道。」",
     "zh_CN": "[panel=1]「算你上道。」",
-    "links": [
-      111
-    ]
+    "links": [111]
   },
   {
     "entryID": 111,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（她走了。門也沒關。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（她走了。門也沒關。）＊",
     "zh_CN": "[panel=6]＊（她走了。门也没关。）＊",
-    "links": [
-      112
-    ]
+    "links": [112]
   },
   {
     "entryID": 112,
@@ -1227,9 +1001,7 @@
     "Sequence": "SetPortrait(MC8,pic=14);",
     "zh_TW": "[panel=2]「[em7]去關門，關到一半停下來[/em7]，表哥。娜娜姊姊剛才笑的時候，是不是有一下沒笑？」",
     "zh_CN": "[panel=2]「[em7]去关门，关到一半停下来[/em7]，表哥。娜娜姐姐刚才笑的时候，是不是有一下没笑？」",
-    "links": [
-      113
-    ]
+    "links": [113]
   },
   {
     "entryID": 113,
@@ -1238,9 +1010,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「……去把門關上。」",
     "zh_CN": "「……去把门关上。」",
-    "links": [
-      114
-    ]
+    "links": [114]
   },
   {
     "entryID": 114,

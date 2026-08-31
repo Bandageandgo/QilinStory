@@ -1,210 +1,164 @@
 [
   {
     "entryID": 1,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（呂信一腳踏上長凳，衝著櫃檯揚了揚手。）＊",
     "Sequence": "",
-    "links": [
-      2
-    ]
+    "links": [2]
   },
   {
     "entryID": 2,
     "actorID": "MC2",
     "text": "[panel=1]「掌櫃的，把你們最好的酒都拿來吧。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      3
-    ]
+    "links": [3]
   },
   {
     "entryID": 3,
     "actorID": "MC1",
     "text": "「信哥，這兒的酒很貴的！？」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Surprise);",
-    "links": [
-      4
-    ]
+    "links": [4]
   },
   {
     "entryID": 4,
     "actorID": "MC2",
     "text": "[panel=1]「擔心什麼，這不是剛拿到報酬嗎。你就放大膽喝，這頓信哥擔了。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      5
-    ]
+    "links": [5]
   },
   {
     "entryID": 5,
     "actorID": "MC1",
     "text": "「信哥好氣魄，那我就不客氣了。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 10,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（酒還沒滿上，隔壁桌先傳來抽噎聲。一名老農坐在那兒，身旁的女兒把臉埋進袖子裡。）＊",
     "Sequence": "",
-    "links": [
-      11
-    ]
+    "links": [11]
   },
   {
     "entryID": 11,
     "actorID": "MC2",
     "text": "[panel=1]「還沒喝，便有人助興了……好了好了，別哭了，兩位何故如此哭哭啼啼的？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      12
-    ]
+    "links": [12]
   },
   {
     "entryID": 12,
-    "actorID": "role_Farmer",
+    "actorID": "0",
     "text": "[panel=2]「啊！對不住，攪了二位壯士的酒興，只是……」",
     "Sequence": "",
-    "links": [
-      13
-    ]
+    "links": [13]
   },
   {
     "entryID": 13,
     "actorID": "MC2",
     "text": "[panel=1]「別只是了，一看就知道有故事的。是什麼事，但說無妨。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      14
-    ]
+    "links": [14]
   },
   {
     "entryID": 14,
-    "actorID": "role_Farmer",
+    "actorID": "0",
     "text": "[panel=2]「事情是這樣的……」",
     "Sequence": "",
-    "links": [
-      15
-    ]
+    "links": [15]
   },
   {
     "entryID": 15,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（故事並不複雜，不外乎就是土匪看上良家女子，脅迫霸佔的老生常談。老農說得斷斷續續，中間停下來喝了兩口水。）＊",
     "Sequence": "",
-    "links": [
-      16
-    ]
+    "links": [16]
   },
   {
     "entryID": 16,
     "actorID": "MC2",
     "text": "[panel=1]「[em7]忽然打斷[/em7]，等等。你們爺倆，離了這村，有處去麼？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      17
-    ]
+    "links": [17]
   },
   {
     "entryID": 17,
-    "actorID": "role_Farmer",
+    "actorID": "0",
     "text": "[panel=2]「啊？……有、有個遠房的表親，在東邊……可、可是壯士，這跟……」",
     "Sequence": "",
-    "links": [
-      18
-    ]
+    "links": [18]
   },
   {
     "entryID": 18,
     "actorID": "MC2",
     "text": "[panel=1]「夠了。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      19
-    ]
+    "links": [19]
   },
   {
     "entryID": 19,
     "actorID": "MC1",
     "text": "「欺人太甚。信哥，我看這事……」",
     "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Anger);",
-    "links": [
-      20
-    ]
+    "links": [20]
   },
   {
     "entryID": 20,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你轉過頭，長凳上已經沒人了。桌上的酒碗還冒著熱氣，刀不見了。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "links": [
-      30
-    ]
+    "links": [30]
   },
   {
     "entryID": 30,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（不出多久，呂信回來了，手裡多了一個布袋。他把布袋往桌上一擱，發出沉悶的一聲。）＊",
     "Sequence": "",
-    "links": [
-      31
-    ]
+    "links": [31]
   },
   {
     "entryID": 31,
     "actorID": "MC1",
     "text": "「信哥你這是跑去哪了？」",
     "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,MC1-1,Question);",
-    "links": [
-      32
-    ]
+    "links": [32]
   },
   {
     "entryID": 32,
     "actorID": "MC2",
     "text": "[panel=1]「沒去哪。兩位看一下，認不認得這位仁兄。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
-    "links": [
-      33
-    ]
+    "links": [33]
   },
   {
     "entryID": 33,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（呂信揭開布袋，赫然是顆人頭。鄰桌的碗筷掉了一地，掌櫃背過身去。）＊",
     "Sequence": "",
-    "links": [
-      34
-    ]
+    "links": [34]
   },
   {
     "entryID": 34,
-    "actorID": "role_Farmer",
+    "actorID": "0",
     "text": "[panel=2]「啊！是他！就是那個逼我女兒的清風寨賊人！多謝壯士！壯士仁義啊！」",
     "Sequence": "",
-    "links": [
-      35
-    ]
+    "links": [35]
   },
   {
     "entryID": 35,
     "actorID": "MC2",
     "text": "[panel=1]「不必說那些陳詞了。這些錢你們拿去，快快另找個地方安生吧。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      36
-    ]
+    "links": [36]
   },
   {
     "entryID": 36,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（呂信解下錢袋放在老農手裡。父女連聲拜謝了許久，才扶著彼此離開。布袋又被他隨手繫上了。）＊",
     "Sequence": "",
-    "links": [
-      37
-    ]
+    "links": [37]
   },
   {
     "entryID": 37,
@@ -212,9 +166,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,10);",
     "Description": "自動洞悉檢定觸發點：難度10（背景檢定）",
-    "links": [
-      38
-    ]
+    "links": [38]
   },
   {
     "entryID": 38,
@@ -222,66 +174,51 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "空內容緩衝節點，用於連接檢定結果",
-    "links": [
-      39,
-      43
-    ]
+    "links": [39, 43]
   },
   {
     "entryID": 39,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你沒去看那顆人頭。你看的是他——刀已經擦過了，錢袋是連著繫繩一起解下來的，解得很順，像不是第一次解。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == true;",
-    "links": [
-      40
-    ]
+    "links": [40]
   },
   {
     "entryID": 40,
     "actorID": "MC1",
     "text": "「信哥，你是先算好他們走得掉，才動的手。」",
     "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
-    "links": [
-      41
-    ]
+    "links": [41]
   },
   {
     "entryID": 41,
     "actorID": "MC2",
     "text": "[panel=1]「[em7]頓了一下[/em7]，……哈！大家都說我空有武力、少思慮——我怎會想那麼多。」",
     "Sequence": "SetPortrait(MC2,pic=4);EnableCharacterExpression(1,MC2,Surprise);",
-    "links": [
-      42
-    ]
+    "links": [42]
   },
   {
     "entryID": 42,
     "actorID": "MC2",
     "text": "[panel=1]「別多想。人殺了，錢給了，人走了——就這三件事能辦成就行。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
-    "links": [
-      421
-    ]
+    "links": [421]
   },
   {
     "entryID": 421,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把話收得很快，快得像怕人接下去。）＊",
     "Sequence": "",
-    "links": [
-      50
-    ]
+    "links": [50]
   },
   {
     "entryID": 43,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你看了半天，只看見一把擦乾淨的刀，和一個解開的錢袋。至於他是怎麼想的，你看不出來。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
-    "links": [
-      50
-    ]
+    "links": [50]
   },
   {
     "entryID": 50,
@@ -289,11 +226,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "選項樞紐（空內容緩衝節點）。⚠ 選項 51／53 在 Unity 端請勾「只播一次」，選過即從選單消失",
-    "links": [
-      51,
-      53,
-      55
-    ]
+    "links": [51, 53, 55]
   },
   {
     "entryID": 51,
@@ -301,27 +234,21 @@
     "text": "「信哥，你這一刀下去，他們總算能安生了。」",
     "Sequence": "",
     "Description": "選項A：問資訊，不改價值觀，問完回樞紐",
-    "links": [
-      52
-    ]
+    "links": [52]
   },
   {
     "entryID": 52,
     "actorID": "MC1",
     "text": "「信哥這一刀，替他們了了大事。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [
-      521
-    ]
+    "links": [521]
   },
   {
     "entryID": 521,
     "actorID": "MC2",
     "text": "[panel=1]「能做的謹此罷了，剩下的得看他們自己。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      50
-    ]
+    "links": [50]
   },
   {
     "entryID": 53,
@@ -329,36 +256,28 @@
     "text": "「東邊那個表親，他們走不走得成？你給的那些錢夠不夠用？」",
     "Sequence": "",
     "Description": "選項B：問資訊，不改價值觀，問完回樞紐",
-    "links": [
-      54
-    ]
+    "links": [54]
   },
   {
     "entryID": 54,
     "actorID": "MC1",
     "text": "「他們往後要去哪？盤纏夠不夠到下一個城？」",
     "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,MC1-1,Meditate);",
-    "links": [
-      541
-    ]
+    "links": [541]
   },
   {
     "entryID": 541,
     "actorID": "MC2",
     "text": "[panel=1]「[em7]往門口看了一眼[/em7]，……夠。我掂過。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=3);",
-    "links": [
-      542
-    ]
+    "links": [542]
   },
   {
     "entryID": 542,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他說完就低頭喝酒，沒再看那個方向。）＊",
     "Sequence": "",
-    "links": [
-      50
-    ]
+    "links": [50]
   },
   {
     "entryID": 55,
@@ -366,100 +285,77 @@
     "text": "「這事了了。信哥，還喝嗎？」",
     "Sequence": "",
     "Description": "選項C：推進對話",
-    "links": [
-      56
-    ]
+    "links": [56]
   },
   {
     "entryID": 56,
     "actorID": "MC1",
     "text": "「信哥你動作還真快……我還沒聽完，你人就出發了。」",
     "Sequence": "SetPortrait(MC1,pic=6);",
-    "links": [
-      57
-    ]
+    "links": [57]
   },
   {
     "entryID": 57,
     "actorID": "MC2",
     "text": "[panel=1]「還磨什麼。我這人最受不了等了。這種事聽到重點，便足矣。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      58
-    ]
+    "links": [58]
   },
   {
     "entryID": 58,
     "actorID": "MC2",
     "text": "[panel=1]「好了，沒人叨擾了，我們喝吧。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      60
-    ]
+    "links": [60]
   },
   {
     "entryID": 60,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（畫面淡出淡入。酒喝了將近一個時辰，罈子換了三回。你趴在桌上，呂信卻沒有半點要走的意思。）＊",
     "Sequence": "",
-    "links": [
-      61
-    ]
+    "links": [61]
   },
   {
     "entryID": 61,
     "actorID": "MC1",
     "text": "「唔呃……信哥，我們該走了吧……」",
     "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "links": [
-      62
-    ]
+    "links": [62]
   },
   {
     "entryID": 62,
     "actorID": "MC2",
     "text": "[panel=1]「還早，再喝一會。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
-    "links": [
-      63
-    ]
+    "links": [63]
   },
   {
     "entryID": 63,
     "actorID": "MC1",
     "text": "「可是……先不說我喝不下了，光是剛剛我們就遇到——」",
     "Sequence": "SetPortrait(MC1,pic=15);",
-    "links": [
-      64
-    ]
+    "links": [64]
   },
   {
     "entryID": 64,
     "actorID": "MC1",
     "text": "「六個乞丐、三個借錢周轉、四個賣身葬父。每一個……你眼都不眨就給錢。」",
     "Sequence": "SetPortrait(MC1,pic=6);",
-    "links": [
-      65
-    ]
+    "links": [65]
   },
   {
     "entryID": 65,
     "actorID": "MC1",
     "text": "「你都沒聽到，旁邊客人都說你是散財義士了。」",
     "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,MC1-1,Meditate);",
-    "links": [
-      66
-    ]
+    "links": [66]
   },
   {
     "entryID": 66,
     "actorID": "MC2",
     "text": "[panel=1]「哈，這叫法還挺有意思的。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      67,
-      70
-    ]
+    "links": [67, 70]
   },
   {
     "entryID": 67,
@@ -467,9 +363,7 @@
     "text": "「信哥，你這樣散，委託而來的報酬真的可以嗎？」",
     "Sequence": "",
     "Description": "選項1（機略）：記 LawChaos 負",
-    "links": [
-      68
-    ]
+    "links": [68]
   },
   {
     "entryID": 70,
@@ -477,135 +371,105 @@
     "text": "「再散，明天你就是第七個。」",
     "Sequence": "",
     "Description": "選項2（通達）：記 GoodEvil 負",
-    "links": [
-      71
-    ]
+    "links": [71]
   },
   {
     "entryID": 68,
     "actorID": "MC1",
     "text": "「信哥，你這一晚扔出去的，怕是把這趟差事的錢都散完了。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
-    "links": [
-      681
-    ]
+    "links": [681]
   },
   {
     "entryID": 681,
     "actorID": "MC2",
     "text": "[panel=1]「[em7]碗停在半空[/em7]，夠什麼夠。三萬六。我這幾串錢，填得了嗎？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      682
-    ]
+    "links": [682]
   },
   {
     "entryID": 682,
     "actorID": "MC1",
     "text": "「……填不了。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [
-      683
-    ]
+    "links": [683]
   },
   {
     "entryID": 683,
     "actorID": "MC2",
     "text": "[panel=1]「填不了的，就別跟我算。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      684
-    ]
+    "links": [684]
   },
   {
     "entryID": 684,
     "actorID": "MC2",
     "text": "[panel=1]「錢這東西，今日沒了，明日再賺就有。人沒了，明日拿什麼賺。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Meditate);",
-    "links": [
-      685
-    ]
+    "links": [685]
   },
   {
     "entryID": 685,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把碗裡剩的一口灌下去，話題就到此為止了。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      80
-    ]
+    "links": [80]
   },
   {
     "entryID": 71,
     "actorID": "MC1",
     "text": "「照這個散法，明天信哥自己就是第七個乞丐。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
-    "links": [
-      72
-    ]
+    "links": [72]
   },
   {
     "entryID": 72,
     "actorID": "MC2",
     "text": "[panel=1]「哈哈哈！那也威風。天下第一的乞丐，還是天下第一。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      73
-    ]
+    "links": [73]
   },
   {
     "entryID": 73,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他笑得很大聲，笑完又給門邊那個縮著的老丐扔了一串。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      80
-    ]
+    "links": [80]
   },
   {
     "entryID": 80,
-    "actorID": "role_ZhaiZhu",
+    "actorID": "0",
     "text": "[panel=2]「哪個混帳是呂信！給老子滾出來！」",
     "Sequence": "",
-    "links": [
-      81
-    ]
+    "links": [81]
   },
   {
     "entryID": 81,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（外頭來了大隊人馬，火把把窗紙照得通紅。客人一哄而散，掌櫃鑽進了櫃檯底下。）＊",
     "Sequence": "",
-    "links": [
-      82
-    ]
+    "links": [82]
   },
   {
     "entryID": 82,
     "actorID": "MC1",
     "text": "「怎麼回事？這些人是……」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,MC1-1,Shock);",
-    "links": [
-      83
-    ]
+    "links": [83]
   },
   {
     "entryID": 83,
     "actorID": "MC2",
     "text": "[panel=1]「應該是剛殺的土匪同夥吧。聚集得還真慢，我去去就回。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
-    "links": [
-      84
-    ]
+    "links": [84]
   },
   {
     "entryID": 84,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你按著桌沿站起來。三罈酒還在你身上晃。）＊",
     "Sequence": "",
-    "links": [
-      85
-    ]
+    "links": [85]
   },
   {
     "entryID": 85,
@@ -613,9 +477,7 @@
     "text": "[em2][酒量檢定][/em2]「信哥，我跟你去。」",
     "Sequence": "",
     "Description": "選項：酒量檢定 難度10",
-    "links": [
-      86
-    ]
+    "links": [86]
   },
   {
     "entryID": 86,
@@ -623,119 +485,92 @@
     "text": "",
     "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,AlcoholToleranceCheck,10);",
     "Description": "空對話擲骰節點：酒量檢定 難度10",
-    "links": [
-      87
-    ]
+    "links": [87]
   },
   {
     "entryID": 87,
     "actorID": "MC1",
     "text": "「三罈酒算什麼。外頭那些人，我也出。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [
-      88,
-      110
-    ]
+    "links": [88, 110]
   },
   {
     "entryID": 88,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你深吸了一口氣，把那股上湧的熱勁壓回肚子裡。門外的火把還是晃的，但地是穩的。）＊",
     "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,10);",
     "Conditions": "IsPassDice() == true;",
-    "links": [
-      89
-    ]
+    "links": [89]
   },
   {
     "entryID": 89,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（畫面淡出淡入，場景到客棧門外。呂信已經站在火把裡，回頭看見你跟出來。）＊",
     "Sequence": "",
-    "links": [
-      90
-    ]
+    "links": [90]
   },
   {
     "entryID": 90,
     "actorID": "MC2",
     "text": "[panel=1]「哈！三罈下肚還走得出來——好小子。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      91
-    ]
+    "links": [91]
   },
   {
     "entryID": 91,
     "actorID": "MC2",
     "text": "[panel=1]「有種。站過來。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);ModifyData(FavorabilityExp,MC2,25);",
-    "links": [
-      92
-    ]
+    "links": [92]
   },
   {
     "entryID": 92,
     "actorID": "MC2",
     "text": "[panel=1]「呂信在此，有何指教啊。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      93
-    ]
+    "links": [93]
   },
   {
     "entryID": 93,
-    "actorID": "role_ZhaiZhu",
+    "actorID": "0",
     "text": "[panel=2]「就是你？殺我清風寨兄弟，還在牆下留名，有種啊你。」",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      94
-    ]
+    "links": [94]
   },
   {
     "entryID": 94,
     "actorID": "MC2",
     "text": "[panel=1]「還行。要不這樣寫，怎麼叫你們一夥自投羅網呢。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      95
-    ]
+    "links": [95]
   },
   {
     "entryID": 95,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你聽懂了那句話的意思——牆上那個名字，從一開始就不是留給死人看的。）＊",
     "Sequence": "",
-    "links": [
-      96
-    ]
+    "links": [96]
   },
   {
     "entryID": 96,
-    "actorID": "role_ZhaiZhu",
+    "actorID": "0",
     "text": "[panel=2]「還敢囂張！今日我全寨百人已把這裡團團包圍，看你還能往哪逃！」",
     "Sequence": "",
-    "links": [
-      97
-    ]
+    "links": [97]
   },
   {
     "entryID": 97,
     "actorID": "MC2",
     "text": "[panel=1]「包圍我？說錯了吧，應該是——」",
     "Sequence": "SetPortrait(MC2,pic=2);",
-    "links": [
-      98
-    ]
+    "links": [98]
   },
   {
     "entryID": 98,
     "actorID": "MC2",
     "text": "[panel=1]「——我包圍了你們！」",
     "Sequence": "SetPortrait(MC2,pic=2);EnableCharacterExpression(1,MC2,Anger_2);",
-    "links": [
-      99
-    ]
+    "links": [99]
   },
   {
     "entryID": 99,
@@ -743,9 +578,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);BeginFight(Combat,78);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
     "Description": "戰鬥觸發節點：清風寨嘍囉（⚠ 場次 ID 待作者填，不可沿用其他場次數字）",
-    "links": [
-      100
-    ]
+    "links": [100]
   },
   {
     "entryID": 100,
@@ -753,157 +586,122 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [
-      101,
-      105
-    ]
+    "links": [101, 105]
   },
   {
     "entryID": 101,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（畫面淡出淡入。街上橫七豎八，火把掉了一地，還在燒。）＊",
     "Sequence": "DisableCharacterExpression(1);",
     "Conditions": "IsPassFight() == true;",
-    "links": [
-      102
-    ]
+    "links": [102]
   },
   {
     "entryID": 102,
     "actorID": "MC2",
     "text": "[panel=1]「真無趣，這樣也配叫百人了。」",
     "Sequence": "SetPortrait(MC2,pic=3);",
-    "links": [
-      103
-    ]
+    "links": [103]
   },
   {
     "entryID": 103,
     "actorID": "MC2",
     "text": "[panel=1]「你看。話講一百遍，不如刀出一次。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      104
-    ]
+    "links": [104]
   },
   {
     "entryID": 104,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他把刀往地上一甩，甩掉那層血，收了。整套動作沒有停頓。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      120
-    ]
+    "links": [120]
   },
   {
     "entryID": 105,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你被人從側面撞開，撞在門框上。再抬頭時，呂信已經橫在你前面，把整條街擋住了。）＊",
     "Sequence": "DisableCharacterExpression(1);",
     "Conditions": "IsPassFight() == false;",
-    "links": [
-      106
-    ]
+    "links": [106]
   },
   {
     "entryID": 106,
     "actorID": "MC2",
     "text": "[panel=1]「躲我身後。」",
     "Sequence": "SetPortrait(MC2,pic=2);",
-    "links": [
-      107
-    ]
+    "links": [107]
   },
   {
     "entryID": 107,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（畫面淡出淡入。等你站起來，街上已經沒有人站著了。他連刀都沒換手。）＊",
     "Sequence": "",
-    "links": [
-      108
-    ]
+    "links": [108]
   },
   {
     "entryID": 108,
     "actorID": "MC2",
     "text": "[panel=1]「看見沒有？拳頭夠大，話就不必說第二遍。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      109
-    ]
+    "links": [109]
   },
   {
     "entryID": 109,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他說這話的時候是笑著的，笑得很痛快。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      120
-    ]
+    "links": [120]
   },
   {
     "entryID": 110,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（你站得太急，整間客棧朝右邊斜了一下。刀是拔出來了，就是不太確定拔的是哪一把。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
-    "links": [
-      111
-    ]
+    "links": [111]
   },
   {
     "entryID": 111,
     "actorID": "MC2",
     "text": "[panel=1]「喂，站都站不穩，還跟什麼？」",
     "Sequence": "SetPortrait(MC2,pic=4);",
-    "links": [
-      112
-    ]
+    "links": [112]
   },
   {
     "entryID": 112,
     "actorID": "MC2",
     "text": "[panel=1]「坐著。這點貨色，你信哥一個人夠。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      113
-    ]
+    "links": [113]
   },
   {
     "entryID": 113,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（他一把按你回長凳，自己跨出門去。你想跟，腳下一步都邁不出去。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      114
-    ]
+    "links": [114]
   },
   {
     "entryID": 114,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（門外有人罵他牆下留名。他應了一聲，接著是刀，不是話。）＊",
     "Sequence": "",
-    "links": [
-      115
-    ]
+    "links": [115]
   },
   {
     "entryID": 115,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（很快沒聲了。他回來時連刀都沒換手。）＊",
     "Sequence": "",
-    "links": [
-      116
-    ]
+    "links": [116]
   },
   {
     "entryID": 116,
     "actorID": "MC2",
     "text": "[panel=1]「看見沒有？這種事，一個人就夠。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "links": [
-      117
-    ]
+    "links": [117]
   },
   {
     "entryID": 117,
@@ -911,67 +709,53 @@
     "text": "",
     "Sequence": "DisableCharacterExpression(1);Continue();",
     "Description": "空內容緩衝節點，關閉表情特效",
-    "links": [
-      120
-    ]
+    "links": [120]
   },
   {
     "entryID": 120,
     "actorID": "MC1",
     "text": "「信哥剛一直不走，莫非是為一勞永逸，免得這些賊寇追殺那父女？」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "links": [
-      121
-    ]
+    "links": [121]
   },
   {
     "entryID": 121,
     "actorID": "MC2",
     "text": "[panel=1]「簡單的事就是要一次解決到位。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      122
-    ]
+    "links": [122]
   },
   {
     "entryID": 122,
     "actorID": "MC1",
     "text": "「可是……現在有個急需解決的小問題。酒錢，你還夠嗎？」",
     "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,MC1-1,Nervous);",
-    "links": [
-      123
-    ]
+    "links": [123]
   },
   {
     "entryID": 123,
     "actorID": "MC2",
     "text": "[panel=1]「[em7]摸了摸腰間，那裡空空的[/em7]，這個嘛……要不一起打雜吧。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=4);EnableCharacterExpression(1,MC2,Nervous);",
-    "links": [
-      124
-    ]
+    "links": [124]
   },
   {
     "entryID": 124,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（就這樣，你們一起在客棧後院刷了半宿的碗，償還超支的酒錢。掌櫃全程沒敢多說一句話。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "links": [
-      125
-    ]
+    "links": [125]
   },
   {
     "entryID": 125,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（要說粗枝大葉，不是；要說思慮周密，也不對。對這個信哥，你實難給個定論。）＊",
     "Sequence": "",
-    "links": [
-      126
-    ]
+    "links": [126]
   },
   {
     "entryID": 126,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（碗刷完的時候天快亮了。他一路哼著霸王的曲子回府，跑調，哼得很大聲。）＊",
     "Sequence": "",
     "links": []

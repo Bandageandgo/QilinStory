@@ -5,10 +5,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "11 月下旬入口：先判有沒有結算過（順序不可倒：先補播、再判生死）",
-    "links": [
-      2,
-      3
-    ]
+    "links": [2, 3]
   },
   {
     "entryID": 2,
@@ -25,10 +22,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "未結算（else）→ 判 C2M1 entry 1／2",
-    "links": [
-      4,
-      5
-    ]
+    "links": [4, 5]
   },
   {
     "entryID": 4,
@@ -37,10 +31,7 @@
     "Sequence": "Continue();",
     "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"success\";",
     "Description": "分流：赤龍幫已出資",
-    "links": [
-      6,
-      7
-    ]
+    "links": [6, 7]
   },
   {
     "entryID": 5,
@@ -48,20 +39,17 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "分流：赤龍幫未出資（else）",
-    "links": [
-      8,
-      9
-    ]
+    "links": [8, 9]
   },
   {
     "entryID": 6,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
     "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=14);",
     "Conditions": "CurrentQuestEntryState(\"C2M1\", 2) == \"success\";",
+    "Description": "交接點：兩家都出資 → 補播對話「主線事件/180年/舌戰三家」（Unity 端接跨對話連線；背景不關）",
     "zh_TW": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
     "zh_CN": "[panel=6]＊（十一月下旬。院里那棵枣树早光了，廊下结着霜。正厅的案上摊着两卷账，徐荣一卷一卷点过去，点得很慢；小犀跪坐在案边，一把算筹拨一下、记一笔，已经拨了大半个时辰。）＊",
-    "Description": "交接點：兩家都出資 → 補播對話「主線事件/180年/舌戰三家」（Unity 端接跨對話連線；背景不關）",
     "links": []
   },
   {
@@ -70,9 +58,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "分流：只有赤龍幫（else）",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 8,
@@ -81,9 +67,7 @@
     "Sequence": "Continue();",
     "Conditions": "CurrentQuestEntryState(\"C2M1\", 2) == \"success\";",
     "Description": "分流：只有甄家",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 9,
@@ -95,12 +79,12 @@
   },
   {
     "entryID": 10,
-    "actorID": "2",
+    "actorID": "role2",
     "text": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著一卷帳，徐榮一行一行點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
     "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=14);",
+    "Description": "交接點：只有一家出資 → 補播對話「主線事件/180年/填補赤字結算」（Unity 端接跨對話連線；背景不關）",
     "zh_TW": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著一卷帳，徐榮一行一行點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
     "zh_CN": "[panel=6]＊（十一月下旬。院里那棵枣树早光了，廊下结着霜。正厅的案上摊着一卷账，徐荣一行一行点过去，点得很慢；小犀跪坐在案边，一把算筹拨一下、记一笔，已经拨了大半个时辰。）＊",
-    "Description": "交接點：只有一家出資 → 補播對話「主線事件/180年/填補赤字結算」（Unity 端接跨對話連線；背景不關）",
     "links": []
   }
 ]
