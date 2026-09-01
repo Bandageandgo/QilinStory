@@ -104,7 +104,7 @@
     "entryID": 675,
     "actorID": "role2",
     "text": "",
-    "Sequence": "AudioControl(PlaySFXOneShot,Bird);\nSetPortrait(MC1,pic=1);\nContinue();",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Bird);\nSetPortrait(MC1,pic=1);\nContinue();",
     "Conditions": "CurrentQuestState(\"CF30\") == \"unassigned\";",
     "links": [676]
   },
@@ -121,7 +121,7 @@
     "entryID": 677,
     "actorID": "role2",
     "text": "",
-    "Sequence": "AudioControl(PlaySFXOneShot,Bird);\nSetPortrait(MC1,pic=1);\nContinue();",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Bird);\nSetPortrait(MC1,pic=1);\nContinue();",
     "Conditions": "CurrentQuestEntryState(\"CF30\", 2) == \"success\" and (CurrentQuestEntryState(\"CF30\", 3) == \"success\");",
     "links": [693, 678]
   },

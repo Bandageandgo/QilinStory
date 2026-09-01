@@ -1321,7 +1321,7 @@
     "entryID": 2052,
     "actorID": "0",
     "text": "",
-    "Sequence": "LoadLevel(XiaoxiVillageTomb,XiaoxiVillageTomb_TombDeep);\nModifyData(Rest);\nContinue();",
+    "Sequence": "ModifyData(Rest);\nLoadLevel(XiaoxiVillageTomb,XiaoxiVillageTomb_TombDeep);\nContinue();",
     "links": []
   },
   {
@@ -1570,7 +1570,7 @@
     "entryID": 2228,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlaySFXOneShot,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場,切換音樂",
     "links": [2259]
   },
@@ -2176,7 +2176,7 @@
     "actorID": "role2",
     "title": "回憶模式",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nAudioControl(PlaySFXOneShot,Others_Carriage);\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableEventBG(CarriageWithPeople,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場,切換音樂",
     "links": [2292]
   },
@@ -2364,7 +2364,7 @@
     "entryID": 2341,
     "actorID": "role2",
     "text": "",
-    "Sequence": "LoadLevel(AbandonedTemple,AbandonedTemple);\nModifyData(ChancePoint,2);\nMapLock(Command_XiaoxiVillageInn, lock);\nDisableEventBG(FullScreen);\nDisableDialogueBG();\nContinue();",
+    "Sequence": "ModifyData(ChancePoint,2);\nMapLock(Command_XiaoxiVillageInn, lock);\nDisableEventBG(FullScreen);\nDisableDialogueBG();\nLoadLevel(AbandonedTemple,AbandonedTemple);\nContinue();",
     "Description": "轉到破廟、獲得機會點、關閉根據地",
     "links": []
   },
@@ -2810,7 +2810,7 @@
     "entryID": 2404,
     "actorID": "role2",
     "text": "[panel=6]＊（天尚未亮，伸手往懷中一摸，珠子已不知去向，惟餘那顆骰子，冰涼抵著肋骨。）＊",
-    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nEnableEventBG(CarriageWithPeople,FullScreen);",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlaySFXOneShot,Others_Carriage);\nEnableEventBG(CarriageWithPeople,FullScreen);",
     "zh_TW": "[panel=6]＊（天尚未亮，伸手往懷中一摸，珠子已不知去向，惟餘那顆骰子，冰涼抵著肋骨。）＊",
     "zh_CN": "[panel=6]＊（天尚未亮，伸手往怀中一摸，珠子已不知去向，惟余那颗骰子，冰凉抵着肋骨。）＊",
     "links": [2405]
@@ -2873,7 +2873,7 @@
     "entryID": 2412,
     "actorID": "role2",
     "text": "[panel=6]＊（你醒過來，天還沒亮。珠子還在懷裡，貼著骰子。）＊",
-    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,Others_Carriage);\nEnableEventBG(CarriageWithPeople,FullScreen);",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlaySFXOneShot,Others_Carriage);\nEnableEventBG(CarriageWithPeople,FullScreen);",
     "zh_TW": "[panel=6]＊（你醒過來，天還沒亮。珠子還在懷裡，貼著骰子。）＊",
     "zh_CN": "[panel=6]＊（你醒过来，天还没亮。珠子还在怀里，贴着骰子。）＊",
     "links": [2415]

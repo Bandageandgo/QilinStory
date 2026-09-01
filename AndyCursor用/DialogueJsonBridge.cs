@@ -223,6 +223,64 @@ public class DialogueJsonBridge : EditorWindow
         {
             LayoutUnplacedInDatabase();
         }
+
+        EditorGUILayout.Space(6);
+        EditorGUILayout.LabelField("舊版工具匯出時沒補印記，來回同步會多長重複節點；原本那個沒有連入、走不到。", EditorStyles.miniLabel);
+        if (GUILayout.Button("清掉沒有印記、也沒有連入的死節點（整個資料庫）", GUILayout.Height(24)))
+        {
+            RemoveUnreachableOrphans();
+        }
+    }
+
+    /// <summary>
+    /// 掃整個資料庫，刪掉「沒有 JsonEntryID 印記」且「沒有任何節點連到它」的節點。
+    /// 這些是舊版匯出不補印記造成的死副本（見 AssignJsonIds）：活的那一份帶著印記與連線，
+    /// 這一份走不到、也不在 JSON 裡。START（id 0）與任何有連入的節點都不動。
+    /// </summary>
+    private void RemoveUnreachableOrphans()
+    {
+        var victims = new Dictionary<Conversation, List<DialogueEntry>>();
+        foreach (var c in database.conversations)
+        {
+            var linked = new HashSet<int>();
+            foreach (var e in c.dialogueEntries)
+                foreach (var l in e.outgoingLinks)
+                    if (l.destinationConversationID == c.id) linked.Add(l.destinationDialogueID);
+
+            var dead = c.dialogueEntries
+                .Where(e => e.id != 0
+                            && Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD) == null
+                            && !linked.Contains(e.id))
+                .ToList();
+            if (dead.Count > 0) victims[c] = dead;
+        }
+
+        if (victims.Count == 0)
+        {
+            EditorUtility.DisplayDialog("不用清", "資料庫裡沒有「無印記又無連入」的節點。", "確定");
+            return;
+        }
+
+        int total = victims.Sum(kv => kv.Value.Count);
+        string detail = string.Join("\n", victims.Select(kv =>
+            $"• {kv.Key.Title}：Entry {string.Join("、", kv.Value.Select(e => e.id))}"));
+        if (!EditorUtility.DisplayDialog("刪掉死節點",
+            $"{victims.Count} 段對話、共 {total} 個節點沒有印記也沒有連入，要刪掉嗎？\n\n{detail}\n\n" +
+            "⚠ 刪掉前請先確認這些不是你自己排在旁邊、還沒接線的草稿。套用後可 Ctrl+Z 復原。", "刪掉", "取消"))
+        {
+            return;
+        }
+
+        Undo.RecordObject(database, "刪掉無印記死節點");
+        foreach (var kv in victims)
+            foreach (var e in kv.Value)
+            {
+                kv.Key.dialogueEntries.Remove(e);
+                Debug.Log($"  - [{kv.Key.Title}] 移除 Entry {e.id}（無印記、無連入）");
+            }
+        EditorUtility.SetDirty(database);
+        AssetDatabase.SaveAssets();
+        Debug.Log($"✓ 已刪掉 {victims.Count} 段對話共 {total} 個死節點。");
     }
 
     /// <summary>整個資料庫裡疊在原點的節點一次排好；不改任何文案欄位。</summary>
@@ -316,10 +374,12 @@ public class DialogueJsonBridge : EditorWindow
         public List<DialogueEntry> orphans;
         public List<KeyValuePair<JsonEntry, DialogueEntry>> changedPairs;
         public bool linksDiffer;
+        /// <summary>對不到印記、但靠 Unity id 認領到的節點；同步時要補印記。</summary>
+        public List<int> adopted = new List<int>();
 
         /// <summary>對話已存在且 JSON 與資料庫完全一致。沒印記的舊資料一律視為需要同步（要補印記）。</summary>
         public bool IsUpToDate =>
-            conversation != null && hasStamps &&
+            conversation != null && hasStamps && adopted.Count == 0 &&
             changedPairs.Count == 0 && toAdd.Count == 0 && toRemove.Count == 0 && !linksDiffer;
     }
 
@@ -365,6 +425,7 @@ public class DialogueJsonBridge : EditorWindow
         if (plan.changedPairs.Count > 0) parts.Add($"更新 {plan.changedPairs.Count}");
         if (plan.toAdd.Count > 0) parts.Add($"新增 {plan.toAdd.Count}");
         if (plan.toRemove.Count > 0) parts.Add($"移除 {plan.toRemove.Count}");
+        if (plan.adopted.Count > 0) parts.Add($"認領 {plan.adopted.Count}");
         if (plan.linksDiffer) parts.Add("連線有變");
         return "（" + string.Join("、", parts) + "）";
     }
@@ -385,6 +446,20 @@ public class DialogueJsonBridge : EditorWindow
             if (dup != null)
             {
                 EditorUtility.DisplayDialog("文案錯誤", $"entryID {dup.Key} 重複出現，請先修正 JSON:\n{path}", "確定");
+                return null;
+            }
+
+            // 文案硬規則：擋下來讓人先修 JSON（JSON 是唯一事實來源，工具不自己動文字）
+            var warnings = new List<string>();
+            foreach (var e in list.items) CheckEntry(warnings, e.entryID, e.text, e.Sequence);
+            if (warnings.Count > 0)
+            {
+                EditorUtility.DisplayDialog("文案錯誤",
+                    $"{Path.GetFileName(path)} 有 {warnings.Count} 處要先修：\n\n" +
+                    string.Join("\n", warnings.Take(12)) +
+                    (warnings.Count > 12 ? $"\n…另有 {warnings.Count - 12} 處，見 Console" : ""),
+                    "確定");
+                Debug.LogError($"[{path}] 文案檢查未過：\n  " + string.Join("\n  ", warnings));
                 return null;
             }
             return list.items;
@@ -561,6 +636,24 @@ public class DialogueJsonBridge : EditorWindow
             if (dupStamps.Count > 0)
                 Debug.LogWarning($"[{conversation.Title}] {dupStamps.Count} 個節點的 JsonEntryID 印記重複，這次同步不會動它們：\n  " +
                                  string.Join("\n  ", dupStamps) + "\n  請先「匯出」這段對話一次，工具會替副本改配新號，再由文案端決定去留。");
+
+            // 認領：JSON 裡對不到印記的 entryID，若剛好等於某個「沒有印記」節點的 Unity id，
+            // 那就是補印記之前匯出的那一格——直接認領它並補上印記，不要另外建新節點
+            //（另建就是「每來回一次多長一份」的來源，見 AssignJsonIds 的說明）。
+            var unstampedById = new Dictionary<int, DialogueEntry>();
+            foreach (var e in dbEntries)
+                if (Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD) == null) unstampedById[e.id] = e;
+            foreach (var je in jsonEntries)
+            {
+                if (dbByJsonId.ContainsKey(je.entryID)) continue;
+                DialogueEntry adopt;
+                if (!unstampedById.TryGetValue(je.entryID, out adopt)) continue;
+                dbByJsonId[je.entryID] = adopt;
+                plan.adopted.Add(je.entryID);
+            }
+            if (plan.adopted.Count > 0)
+                Debug.Log($"[{conversation.Title}] 認領了 {plan.adopted.Count} 個沒有印記的節點（JSON entryID = 該節點的 Unity id）：" +
+                          string.Join("、", plan.adopted) + "，同步時會補上印記。");
         }
         else
         {
@@ -623,6 +716,7 @@ public class DialogueJsonBridge : EditorWindow
             $"• 新增節點：{toAdd.Count} 個{(toAdd.Count > 0 ? $"（entryID: {string.Join(", ", toAdd.Select(x => x.entryID))}）" : "")}\n" +
             $"• 移除節點：{toRemove.Count} 個{(toRemove.Count > 0 ? $"（Entry: {string.Join(", ", toRemove.Select(x => x.id))}）" : "")}\n" +
             $"• 依 JSON 重建連線\n" +
+            (plan.adopted.Count > 0 ? $"• 認領無印記節點：{plan.adopted.Count} 個（entryID: {string.Join(", ", plan.adopted)}），補上印記\n" : "") +
             (unplaced > 0 ? $"• 疊在原點 (0,0) 的舊節點 {unplaced} 個，順便排進畫布（只改位置）\n" : "") +
             (orphans.Count > 0 ? $"\n⚠ 有 {orphans.Count} 個無印記節點（Entry: {string.Join(", ", orphans.Select(x => x.id))}）不會被更動。\n" : "") +
             (!hasStamps ? "\n（首次同步：將依順序對應並補上 JsonEntryID 印記）\n" : "") +
@@ -645,6 +739,10 @@ public class DialogueJsonBridge : EditorWindow
             foreach (var je in jsonEntries)
                 if (dbByJsonId.TryGetValue(je.entryID, out var e))
                     Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, je.entryID.ToString());
+        // 認領到的節點補印記（內容沒變就不會走 WriteEntryFields，得在這裡補）
+        foreach (int jid in plan.adopted)
+            if (dbByJsonId.TryGetValue(jid, out var e))
+                Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, jid.ToString());
 
         // 2. 新增節點
         foreach (var je in toAdd)
@@ -1117,12 +1215,14 @@ public class DialogueJsonBridge : EditorWindow
 
         // jsonID：優先用印記，否則用 DB entry.id（舊對話首次匯出會以此為準）
         var entryToJsonId = new Dictionary<int, int>();
-        foreach (var e in dbEntries)
-        {
-            var f = Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD);
-            entryToJsonId[e.id] = (f != null && int.TryParse(f.value, out int jid)) ? jid : e.id;
-        }
-        RenumberDuplicateJsonIds(conversation, dbEntries, entryToJsonId);
+        AssignJsonIds(conversation, dbEntries, entryToJsonId);
+
+        // 文案硬規則：匯出照實寫出來，但在 Console 點名，讓文案端修 JSON 再同步回來
+        var checkWarnings = new List<string>();
+        foreach (var e in dbEntries) CheckEntry(checkWarnings, entryToJsonId[e.id], e.DialogueText, e.Sequence);
+        if (checkWarnings.Count > 0)
+            Debug.LogWarning($"[{title}] 文案檢查有 {checkWarnings.Count} 處（已照實匯出，請在 JSON 修好再同步回來）：\n  " +
+                             string.Join("\n  ", checkWarnings));
 
         var sb = new StringBuilder();
         sb.Append("[\n");
@@ -1179,29 +1279,55 @@ public class DialogueJsonBridge : EditorWindow
     }
 
     /// <summary>
-    /// 印記重複時（Unity 裡複製貼上節點會連 JsonEntryID 一起複製），後出現的副本改配新號並寫回印記，
-    /// 免得匯出的 JSON 有重複 entryID 匯不回去。副本列在 Console，文案端看到新號的節點再決定去留
-    ///（JSON 裡刪掉它，下次同步就會從 Unity 移除）。先出現的那個保留原號，不保證它就是「正本」。
+    /// 決定每個節點在 JSON 裡的 entryID，並把缺的印記補寫回資料庫。
+    ///
+    /// ①**有印記的，印記說了算。** 印記自己重複時（Unity 裡複製貼上節點會連印記一起複製），
+    ///   後出現的那個配新號。
+    /// ②**沒印記的**（多半是在 Unity 裡手動加的節點）先沿用自己的 Unity id，被占走才配新號，
+    ///   **然後一定把決定的號寫回印記**。
+    ///
+    /// ⚠ ②的「寫回印記」是重點：以前只算號不寫印記，於是匯出的 JSON 有這一格、Unity 那個節點卻
+    /// 沒有印記，下次匯入時對不到任何節點，工具就再建一個新的——原節點變成沒有連入的死節點留在圖上，
+    /// **每匯出匯入來回一次就多長一份**。2026-09-01 修（水濂洞 349→358→369、武道大會 503→504 即此）。
     /// </summary>
-    private void RenumberDuplicateJsonIds(Conversation conversation, List<DialogueEntry> dbEntries, Dictionary<int, int> entryToJsonId)
+    private void AssignJsonIds(Conversation conversation, List<DialogueEntry> dbEntries, Dictionary<int, int> entryToJsonId)
     {
-        int next = entryToJsonId.Values.DefaultIfEmpty(0).Max() + 1;
-        var seen = new HashSet<int>();
-        var renamed = new List<string>();
+        var stamped = new List<DialogueEntry>();
+        var unstamped = new List<DialogueEntry>();
         foreach (var e in dbEntries)
         {
+            var f = Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD);
+            if (f != null && int.TryParse(f.value, out int jid)) { entryToJsonId[e.id] = jid; stamped.Add(e); }
+            else unstamped.Add(e);
+        }
+        // 新號要避開既有印記，也要避開沒印記節點會沿用的 Unity id
+        int next = entryToJsonId.Values.Concat(dbEntries.Select(e => e.id)).DefaultIfEmpty(0).Max() + 1;
+
+        var used = new HashSet<int>();
+        var notes = new List<string>();
+        foreach (var e in stamped)                       // ① 印記重複 → 後出現的配新號
+        {
             int jid = entryToJsonId[e.id];
-            if (seen.Add(jid)) continue;
+            if (used.Add(jid)) continue;
             int fresh = next++;
             entryToJsonId[e.id] = fresh;
-            seen.Add(fresh);
+            used.Add(fresh);
             Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, fresh.ToString());
-            renamed.Add($"Entry {e.id}：印記 {jid} 與別的節點重複 → 改為 {fresh}");
+            notes.Add($"Entry {e.id}：印記 {jid} 與別的節點重複 → 改為 {fresh}");
         }
-        if (renamed.Count == 0) return;
+        foreach (var e in unstamped)                     // ② 沒印記 → 補上
+        {
+            int jid = used.Contains(e.id) ? next++ : e.id;
+            entryToJsonId[e.id] = jid;
+            used.Add(jid);
+            Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, jid.ToString());
+            notes.Add($"Entry {e.id}：原本沒有印記 → 補上 {jid}");
+        }
+        if (notes.Count == 0) return;
         EditorUtility.SetDirty(database);
-        Debug.LogWarning($"[{conversation.Title}] {renamed.Count} 個節點的 JsonEntryID 印記重複（多半是 Unity 裡複製貼上的副本），已改配新號並寫回資料庫：\n  " +
-                         string.Join("\n  ", renamed) + "\n  請文案端檢查這些新號節點是要保留還是刪除。");
+        Debug.LogWarning($"[{conversation.Title}] 補寫了 {notes.Count} 個 JsonEntryID 印記：\n  " +
+                         string.Join("\n  ", notes) +
+                         "\n  沒有印記的節點多半是在 Unity 裡手動加的；補上之後 JSON 才對得回同一個節點。");
     }
 
     /// <summary>「小溪村後山/赫連娜娜、張寧」→「小溪村後山\赫連娜娜、張寧」（依平台分隔符）。</summary>
@@ -1262,6 +1388,29 @@ public class DialogueJsonBridge : EditorWindow
             }
         }
         return sb.Append('"').ToString();
+    }
+
+    // ── 文案硬規則檢查（匯入匯出共用）──
+
+    /// <summary>
+    /// 兩條規則，違反就記一行警告：
+    ///   ①對話開頭不得有空白——遊戲內排版會多吃一次換行。
+    ///   ②`LoadLevel(...)` 的下一句一定要是 `Continue()`——換場之後同一格剩下的指令不保證跑得到。
+    ///     寫法是讓 LoadLevel 自己占一格（`LoadLevel(X);Continue();`），轉場四段留在前一格。
+    /// </summary>
+    private static void CheckEntry(List<string> warnings, int entryID, string text, string sequence)
+    {
+        if (!string.IsNullOrEmpty(text) && char.IsWhiteSpace(text[0]))
+            warnings.Add($"#{entryID} 對話開頭有空白：「{Preview(text)}」");
+
+        var cmds = (sequence ?? "").Split(';').Select(c => c.Trim()).Where(c => c.Length > 0).ToList();
+        for (int i = 0; i < cmds.Count; i++)
+        {
+            if (!cmds[i].StartsWith("LoadLevel")) continue;
+            string next = i + 1 < cmds.Count ? cmds[i + 1] : "（沒有下一句）";
+            if (!next.StartsWith("Continue()"))
+                warnings.Add($"#{entryID} LoadLevel 後面必須接 Continue()，現在接的是「{next}」");
+        }
     }
 
     private static string Preview(string s)

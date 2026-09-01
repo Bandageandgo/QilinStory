@@ -478,8 +478,18 @@
     "entryID": 70,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(1,close)@1;DisableDialogueBG()@1;LoadLevel(＿＿)@1;",
-    "Description": "轉場節點：關掉背景圖、載入五原障箱庭地圖（⚠ 關卡 ID 待作者定）",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(1,close)@1;DisableDialogueBG()@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場節點：關掉背景圖",
+    "links": [
+      3120
+    ]
+  },
+  {
+    "entryID": 3120,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(＿＿);Continue();",
+    "Description": "載入五原障箱庭地圖（⚠ 關卡 ID 待作者定）",
     "links": []
   },
   {

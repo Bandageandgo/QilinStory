@@ -676,7 +676,7 @@
     "entryID": 694,
     "actorID": "role4",
     "text": "「吼──！」",
-    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Roar);\nSetPortrait(MC1,pic=2);",
+    "Sequence": "SetContinueMode(false);\nSetGameObjectShake(P1,ShakeNormal,YAxis,0.5,5,0)->Message(EndFade);\nSetContinueMode(original)@Message(EndFade);\nAudioControl(PlaySFXOneShot,Others_Roar);\nSetPortrait(MC1,pic=2);",
     "zh_TW": "「吼──！」",
     "zh_CN": "「吼──！」",
     "links": [810]
@@ -762,7 +762,7 @@
     "entryID": 737,
     "actorID": "role2",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Clinic)@1;\nAudioControl(PauseLowerMusic)@1;\nAudioControl(PlaySFXOneShot,Fire)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Clinic)@1;\nAudioControl(PauseLowerMusic)@1;\nAudioControl(PlaySFXOneShot,Others_Fire)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "開始換場景、關閉場景音樂",
     "links": [738]
   },
@@ -835,7 +835,7 @@
     "entryID": 745,
     "actorID": "role2",
     "text": "[panel=6]＊（張寧提起了滾燙的藥壺……）＊",
-    "Sequence": "AudioControl(PlaySFXOneShot,Fire);",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Fire);",
     "zh_TW": "[panel=6]＊（張寧提起了滾燙的藥壺……）＊",
     "zh_CN": "[panel=6]＊（张宁提起了滚烫的药壶……）＊",
     "links": [780]
@@ -899,7 +899,7 @@
     "entryID": 752,
     "actorID": "MC1",
     "text": "「喔喔……我體內湧出無窮真力……啊……\n我要脫胎換骨了，十倍百倍，哈沒哈沒……哈──！」",
-    "Sequence": "SetContinueMode(false);\nAudioControl(PlaySFXOneShot,Notice);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Proud);\nSetContinueMode(original)@1.5;\nModifyData(Skill,MC1,StrongAndSturdy);\nShowHint(Skill,StrongAndSturdy);",
+    "Sequence": "SetContinueMode(false);\nAudioControl(PlaySFXOneShot,Others_Notice);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Proud);\nSetContinueMode(original)@1.5;\nModifyData(Skill,MC1,StrongAndSturdy);\nShowHint(Skill,StrongAndSturdy);",
     "Description": "獲得身強體壯",
     "zh_TW": "「喔喔……我體內湧出無窮真力……啊……\n我要脫胎換骨了，十倍百倍，哈沒哈沒……哈──！」",
     "zh_CN": "「喔喔……我体内涌出无穷真力……啊……\n我要脱胎换骨了，十倍百倍，哈没哈没……哈──！」",

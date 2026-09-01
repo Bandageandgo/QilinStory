@@ -1027,7 +1027,7 @@
     "entryID": 4237,
     "actorID": "0",
     "text": "",
-    "Sequence": "LoadLevel(Command_HallOfHeroes);\nSetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1);\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nContinue()@Message(EndVideo);",
+    "Sequence": "SetContinueMode(false);\nAudioControl(StopMusic);\nPlayOrStopParticle(Smoke_Dust,Stop);\nPlayFeelFeedback(FadeInOut,1,3,1,#000000,1);\nOpenPanel(1,close)@1;\nDisableEventBG(FullScreen)@4;\nPlayVideo(DemoEnd)@4;\nSetContinueMode(original)@Message(EndVideo);\nLoadLevel(Command_HallOfHeroes)@Message(EndVideo);\nContinue()@Message(EndVideo);",
     "Description": "播放影片,關閉音樂、轉移到英豪府根據地",
     "links": [4236]
   },

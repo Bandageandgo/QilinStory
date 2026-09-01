@@ -998,7 +998,7 @@
     "entryID": 202,
     "actorID": "MC9",
     "text": "[panel=1]「喲，回來得比筠預想的快。看樣子——是有收穫了？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);",
     "zh_CN": "[panel=1]「哟，回来得比筠预想的快。看样子——是有收获了？」",
     "links": [4274, 4275, 4276, 4277]
   },
@@ -1007,6 +1007,7 @@
     "actorID": "MC9",
     "text": "[panel=1]「……鐵不像鐵，石不像石。筠最吃這一套——估得出價的，叫貨；估不出價的，才叫奇貨。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Idea);",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Rivertear\")  == true",
     "zh_CN": "[panel=1]「……铁不像铁，石不像石。筠最吃这一套——估得出价的，叫货；估不出价的，才叫奇货。」",
     "links": [207]
   },
@@ -1014,7 +1015,7 @@
     "entryID": 207,
     "actorID": "MC1",
     "text": "「那便交給家主。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=8);\nModifyData(Valuable,Player,Rivertear,-1);",
     "zh_CN": "「那便交给家主。」",
     "links": [208]
   },
@@ -1023,7 +1024,6 @@
     "actorID": "MC9",
     "text": "[panel=1]「行。這筆本錢，筠出了。雲中往後，也算有甄家一份。」",
     "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "Description": "賣淚成交（活淚／凡石共用）。⚠ 作者：「投資成立」任務狀態掛此",
     "zh_CN": "[panel=1]「行。这笔本钱，筠出了。云中往后，也算有甄家一份。」",
     "links": [4291]
   },
@@ -1038,9 +1038,9 @@
   {
     "entryID": 210,
     "actorID": "MC9",
-    "text": "[panel=1]「……一支角？公子莫不是找錯了方向？筠要的可不是什麼奇珍異獸的邊角料。」",
+    "text": "「……一支角。野獸身上截下來的東西，鄴城市上一車一車地拉——」",
     "Sequence": "SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Question);",
-    "zh_CN": "[panel=1]「……一支角？公子莫不是找错了方向？筠要的可不是什么奇珍异兽的边角料。」",
+    "zh_CN": "「……一支角。野兽身上截下来的东西，邺城市上一车一车地拉——」",
     "links": [211]
   },
   {
@@ -1070,18 +1070,18 @@
   {
     "entryID": 214,
     "actorID": "MC1",
-    "text": "「家主請看，這蛟龍角通體幽藍，寒裡帶火，天下罕見，尋常匠人便是想仿都仿不出來——但凡識貨的行家看了，誰不多看兩眼？家主走南闖北，難道沒有識貨的門路？」",
+    "text": "「家主請看這色。幽藍，寒裡帶火，尋常匠人仿不出——甄家的門路，還怕沒有識貨的人？」",
     "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
     "Conditions": "IsPassDice() == true;",
-    "zh_CN": "「家主请看，这蛟龙角通体幽蓝，寒里带火，天下罕见，寻常匠人便是想仿都仿不出来——但凡识货的行家看了，谁不多看两眼？家主走南闯北，难道没有识货的门路？」",
+    "zh_CN": "「家主请看这色。幽蓝，寒里带火，寻常匠人仿不出——甄家的门路，还怕没有识货的人？」",
     "links": [215]
   },
   {
     "entryID": 215,
     "actorID": "MC9",
     "text": "[panel=1]「……公子這張嘴，倒是比帶回來的東西更值錢。罷了，看在你這番說辭的份上，這筆本錢，筠出了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Description": "成交",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Proud);\nModifyData(FeatExp,Player,Persuasion,25);\nModifyData(Valuable,MC1,DragonHorn,-1);",
+    "Description": "成交，失去蛟龍角",
     "zh_CN": "[panel=1]「……公子这张嘴，倒是比带回来的东西更值钱。罢了，看在你这番说辞的份上，这笔本钱，筠出了。」",
     "links": [380]
   },
@@ -1109,15 +1109,6 @@
     "Sequence": "",
     "zh_CN": "[panel=1]「说辞稀松。人跑了这一趟，还空手而回，倒不像做生意的样子。",
     "links": [4327]
-  },
-  {
-    "entryID": 219,
-    "actorID": "MC9",
-    "text": "[panel=1]「罷了，沒有功勞也有苦勞，雲中英豪府這筆本錢，筠出了。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "Description": "交蛟龍角・口才失敗仍成交。⚠ 作者：「投資成立」任務狀態掛此",
-    "zh_CN": "[panel=1]「罢了，没有功劳也有苦劳，云中英豪府这笔本钱，筠出了。」",
-    "links": []
   },
   {
     "entryID": 220,
@@ -1172,7 +1163,7 @@
     "entryID": 227,
     "actorID": "MC9",
     "text": "[panel=1]「話說回來，公子這一趟，可有摸清那所謂『河神』的底細？這東西，總不會是憑空掉出來的吧？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Question);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=1);",
     "zh_CN": "[panel=1]「话说回来，公子这一趟，可有摸清那所谓『河神』的底细？这东西，总不会是凭空掉出来的吧？」",
     "links": [228, 229]
   },
@@ -1248,7 +1239,7 @@
     "text": "[panel=2]「表哥……這一趟，你心裡是怎麼想的？」",
     "Sequence": "SetPortrait(MC8,pic=1);",
     "zh_CN": "[panel=2]「表哥……这一趟，你心里是怎么想的？」",
-    "links": [239, 240, 241]
+    "links": [239, 240, 4345, 241]
   },
   {
     "entryID": 239,
@@ -1330,7 +1321,7 @@
     "text": "[panel=6]＊（無論這一趟你做出了選擇，這段經歷都已悄悄埋進了你的江湖路。）＊",
     "Sequence": "DisableCharacterExpression(2);",
     "zh_CN": "[panel=6]＊（无论这一趟你做出了选择，这段经历都已悄悄埋进了你的江湖路。）＊",
-    "links": [381]
+    "links": [405]
   },
   {
     "entryID": 4103,
@@ -1785,8 +1776,8 @@
     "entryID": 4166,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@4;\nContinue()@4;",
-    "Description": "巨蛇出來的演出",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);\nSetContinueMode(false);\nSetContinueMode(original)@4;\nContinue()@4;",
+    "Description": "巨蛇出來的演出，移除閒雜人等立繪",
     "links": [118]
   },
   {
@@ -1867,11 +1858,11 @@
   {
     "entryID": 4179,
     "actorID": "MC1",
-    "text": "「走吧。回去交差。」",
+    "text": "「回去交差。」",
     "Sequence": "",
     "Conditions": "IsValuablesObtained(\"Player\", \"DragonHorn\") == true;",
     "Description": "選項1：返回出口交差",
-    "zh_CN": "「走吧。回去交差。」",
+    "zh_CN": "「回去交差。」",
     "links": [4181]
   },
   {
@@ -2499,21 +2490,21 @@
   {
     "entryID": 4275,
     "actorID": "MC1",
-    "text": "[em2][口才檢定][/em2]「家主，這趟帶回的東西，天下只此一顆。」",
+    "text": "[em2][口才檢定][/em2]「這次帶回一顆奇石，天下只此一顆。」",
     "Sequence": "",
     "Conditions": "CurrentQuestEntryState(\"CF40\", 6) == \"success\" and (IsValuablesObtained(\"Player\", \"Rivertear\") == true);",
     "Description": "選項2：拿河神的眼淚交差（活淚；須看過真畫）",
-    "zh_CN": "[em2][口才检定][/em2]「家主，这趟带回的东西，天下只此一颗。」",
+    "zh_CN": "[em2][口才检定][/em2]「这次带回一颗奇石，天下只此一颗。」",
     "links": [4278]
   },
   {
     "entryID": 4276,
     "actorID": "MC1",
-    "text": "[em2][口才檢定][/em2]「家主，這趟帶回的東西，天下只此一顆。」",
+    "text": "[em2][口才檢定][/em2]「天下只此一顆的奇石。」",
     "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) == \"success\" and (IsValuablesObtained(\"Player\", \"FadedTearstone\") == true);",
+    "Conditions": "IsValuablesObtained(\"Player\", \"FadedTearstone\")  == true",
     "Description": "選項2：拿河神的眼淚交差（褪色的河神眼淚；須看過真畫）",
-    "zh_CN": "[em2][口才检定][/em2]「家主，这趟带回的东西，天下只此一颗。」",
+    "zh_CN": "[em2][口才检定][/em2]「天下只此一颗的奇石。」",
     "links": [4278]
   },
   {
@@ -2528,26 +2519,18 @@
   {
     "entryID": 4278,
     "actorID": "MC1",
-    "text": "「[em7]把石頭放在案上[/em7]，家主請看。水濂洞中洞有一幅古畫，畫著一艘從天上墜下來的怪舟，舟腹正中嵌的，就是這一顆。村裡人喚它『河神的眼淚』。」",
+    "text": "「[em7]把石頭放在案上[/em7]，水濂洞的中洞裡有一幅古畫，畫著一艘從天上墜下來的怪舟。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
-    "zh_CN": "「[em7]把石头放在案上[/em7]，家主请看。水濂洞中洞有一幅古画，画着一艘从天上坠下来的怪舟，舟腹正中嵌的，就是这一颗。村里人唤它『河神的眼泪』。」",
-    "links": [4279]
+    "zh_CN": "「[em7]把石头放在案上[/em7]，水濂洞的中洞里有一幅古画，画着一艘从天上坠下来的怪舟。」",
+    "links": [390]
   },
   {
     "entryID": 4279,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]目光落在石頭上，沒伸手[/em7]，畫是畫，石是石。公子這故事，說得倒像親眼見過。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Question);",
-    "zh_CN": "[panel=1]「[em7]目光落在石头上，没伸手[/em7]，画是画，石是石。公子这故事，说得倒像亲眼见过。」",
-    "links": [4280]
-  },
-  {
-    "entryID": 4280,
-    "actorID": "MC1",
-    "text": "「家主走南闖北，可曾見過會發熱的石頭？這不是河灘上撿的——是那艘舟的心。舟沒了，心還跳著。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
-    "zh_CN": "「家主走南闯北，可曾见过会发热的石头？这不是河滩上捡的——是那艘舟的心。舟没了，心还跳着。」",
-    "links": [4281]
+    "text": "「[em7]目光落在石頭上，沒伸手[/em7]，畫是畫，石是石；筠買貨，買的是憑據，不是話本。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);",
+    "zh_CN": "「[em7]目光落在石头上，没伸手[/em7]，画是画，石是石；筠买货，买的是凭据，不是话本。」",
+    "links": [4336]
   },
   {
     "entryID": 4281,
@@ -2563,41 +2546,35 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "口才檢定後的空緩衝節點",
-    "links": [4283, 4284, 4288]
+    "links": [4283, 4337]
   },
   {
     "entryID": 4283,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);ModifyData(Valuable,Player,Rivertear,-1);Continue();",
-    "Conditions": "IsPassDice() == true and (IsValuablesObtained(\"Player\", \"Rivertear\") == true);",
-    "Description": "口才成功・活淚：甄筠收下",
-    "links": [206]
-  },
-  {
-    "entryID": 4284,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "IsPassDice() == true and (IsValuablesObtained(\"Player\", \"FadedTearstone\") == true);",
-    "Description": "口才成功・褪色的河神眼淚：再過厚黑（條件同 #4276）",
-    "links": [4285]
+    "actorID": "MC1",
+    "text": "「家主走南闖北，該摸過的貨不少——這一顆，請家主親手掂掂。」",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);",
+    "Conditions": "IsPassDice()  == true",
+    "Description": "口才成功",
+    "zh_TW": "「家主走南闖北，該摸過的貨不少——這一顆，請家主親手掂掂。」",
+    "zh_CN": "「家主走南闯北，该摸过的货不少——这一颗，请家主亲手掂掂。」",
+    "links": [206, 4285]
   },
   {
     "entryID": 4285,
     "actorID": "MC9",
-    "text": "[panel=1]「[em7]拈起石頭，在掌心掂了掂[/em7]……涼的。公子說它是舟的心，怎麼摸著像塊河灘石？」",
+    "text": "[panel=1]「[em7]拈起石頭，在掌心掂了掂[/em7]公子說它是舟的心，怎麼摸著像塊普通的石頭？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "zh_CN": "[panel=1]「[em7]拈起石头，在掌心掂了掂[/em7]……凉的。公子说它是舟的心，怎么摸着像块河滩石？」",
+    "Conditions": "IsValuablesObtained(\"Player\", \"FadedTearstone\")  == true",
+    "zh_CN": "[panel=1]「[em7]拈起石头，在掌心掂了掂[/em7]公子说它是舟的心，怎么摸着像块普通的石头？」",
     "links": [4286]
   },
   {
     "entryID": 4286,
     "actorID": "MC1",
-    "text": "「[em2][厚黑檢定][/em2]涼，是因為它離了那艘舟。家主要的是奇貨，不是暖手的爐子。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
-    "zh_CN": "「[em2][厚黑检定][/em2]凉，是因为它离了那艘舟。家主要的是奇货，不是暖手的炉子。」",
-    "links": [4287]
+    "text": "「現在看起來普通，是因為它離了那艘舟。在下頭一回見它，也當是塊河邊的石頭，險些一腳踢進水裡。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=18);",
+    "zh_CN": "「现在看起来普通，是因为它离了那艘舟。在下头一回见它，也当是块河边的石头，险些一脚踢进水里。」",
+    "links": [4339]
   },
   {
     "entryID": 4287,
@@ -2608,57 +2585,40 @@
     "links": [4289]
   },
   {
-    "entryID": 4288,
-    "actorID": "MC9",
-    "text": "[panel=1]「[em7]把石頭推回來[/em7]，故事，筠聽了。貨，筠不收。公子另拿別的來——或者，這筆就算了。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "賣淚檢定失敗（口才或厚黑）：退回交角／拒絕",
-    "zh_CN": "[panel=1]「[em7]把石头推回来[/em7]，故事，筠听了。货，筠不收。公子另拿别的来——或者，这笔就算了。」",
-    "links": [4274, 4277]
-  },
-  {
     "entryID": 4289,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
     "Description": "厚黑檢定後的空緩衝節點",
-    "links": [4290, 4288]
+    "links": [4290, 4342]
   },
   {
     "entryID": 4290,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "ModifyData(FeatExp,Player,Realpolitik,10);ModifyData(Valuable,Player,FadedTearstone,-1);Continue();",
+    "actorID": "MC9",
+    "text": "「[em7]把石頭攏進掌心，這回沒再放下[/em7]，識貨的人……公子這頂帽子，扣得筠摘不下來。」",
+    "Sequence": "ModifyData(FeatExp,Player,Realpolitik,20);\nModifyData(Valuable,Player,FadedTearstone,-1);",
     "Conditions": "IsPassDice() == true;",
     "Description": "厚黑成功：甄筠收下褪色的河神眼淚",
-    "links": [206]
+    "zh_TW": "「[em7]把石頭攏進掌心，這回沒再放下[/em7]，識貨的人……公子這頂帽子，扣得筠摘不下來。」",
+    "zh_CN": "「[em7]把石头拢进掌心，这回没再放下[/em7]，识货的人……公子这顶帽子，扣得筠摘不下来。」",
+    "links": [4340]
   },
   {
     "entryID": 4291,
     "actorID": "MC9",
     "text": "[panel=1]「[em7]從案下取出一串錢，推到你面前[/em7]，這是另算的。兩千錢——買公子這雙認貨的眼。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);ModifyData(Coin,2000);",
-    "Description": "賣淚額外獎勵：2,000 錢（角自留）",
+    "Sequence": "SetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Proud);\nModifyData(Coin,2000);",
+    "Description": "賣淚額外獎勵：2,000 錢",
     "zh_CN": "[panel=1]「[em7]从案下取出一串钱，推到你面前[/em7]，这是另算的。两千钱——买公子这双认货的眼。」",
-    "links": [220]
+    "links": [4338]
   },
   {
     "entryID": 4292,
     "actorID": "MC9",
     "text": "[panel=1]「……跑了一趟，空著手回來，倒說得乾脆。也罷，筠不強買，也不強賣。門在那邊，公子好走。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC9,pic=3);EnableCharacterExpression(1,MC9,Meditate);",
-    "Description": "拒絕合作。⚠ 作者：「填補赤字」途徑二任務失敗掛此",
     "zh_CN": "[panel=1]「……跑了一趟，空着手回来，倒说得干脆。也罢，筠不强买，也不强卖。门在那边，公子好走。」",
     "links": [4293]
-  },
-  {
-    "entryID": 4293,
-    "actorID": "role2",
-    "text": "[panel=6]＊（她沒有再問。案上的茶還是熱的；你們出門的時候，她已經低頭看起帳來。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（她没有再问。案上的茶还是热的；你们出门的时候，她已经低头看起账来。）＊",
-    "links": []
   },
   {
     "entryID": 4298,
@@ -2724,8 +2684,8 @@
     "entryID": 4308,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nOpenPanel(1,close)@1;\nDisableDialogueBG()@1;\nEnableDialogueBG(Home)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場：離開甄府，回英豪府根據地",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1,close);\nDisableDialogueBG();\nEnableDialogueBG(Home);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "Description": "轉場：離開甄府",
     "links": [237]
   },
   {
@@ -2739,28 +2699,17 @@
     "links": []
   },
   {
-    "entryID": 350,
-    "actorID": "MC22",
-    "text": "[panel=1]「有意思。好好的畫蓋起來，多半是不想讓人看見底下的東西！」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
-    "Script": "SetQuestEntryState(\"CF40\", 6, \"active\")",
-    "Description": "觸發任務",
-    "zh_TW": "[panel=1]「有意思。好好的畫蓋起來，多半是不想讓人看見底下的東西！」",
-    "zh_CN": "[panel=1]「有意思。好好的画盖起来，多半是不想让人看见底下的东西！」",
-    "links": [4156]
-  },
-  {
     "entryID": 4310,
     "actorID": "MC20",
-    "text": " [panel=1]「上天有好生之德！還愣著做甚麼？當然是救人要緊！」",
+    "text": "[panel=1]「上天有好生之德！還愣著做甚麼？當然是救人要緊！」",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Nervous_2);",
-    "zh_CN": " [panel=1]「上天有好生之德！還愣著做甚麼？當然是救人要緊！」",
+    "zh_CN": "[panel=1]「上天有好生之德！還愣著做甚麼？當然是救人要緊！」",
     "links": [4311]
   },
   {
     "entryID": 4311,
     "actorID": "MC22",
-    "text": " [panel=3]「等等！大俠別莽撞——先看清楚再說！」",
+    "text": "[panel=3]「等等！大俠別莽撞——先看清楚再說！」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=2);\nEnableCharacterExpression(3,MC22,Idea);",
     "zh_CN": "[panel=3]「等等！大侠别莽撞——先看清楚再说！」",
     "links": [354]
@@ -2768,17 +2717,10 @@
   {
     "entryID": 4312,
     "actorID": "MC8",
-    "text": " [panel=2]「表、表哥！那東西噴起火來了，人要給燒死了——咱們現在怎麼辦？」",
+    "text": "[panel=2]「表、表哥！那東西噴起火來了，人要給燒死了——咱們現在怎麼辦？」",
     "Sequence": "SetPortrait(MC8,pic=14);\nEnableCharacterExpression(2,MC8,Shock);",
     "zh_CN": "[panel=2]「表、表哥！那东西喷起火来了，人要给烧死了——咱们现在怎么办？」",
     "links": [4310]
-  },
-  {
-    "entryID": 354,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableCharacterExpression(3);\nContinue();",
-    "links": [122, 123]
   },
   {
     "entryID": 4313,
@@ -2788,15 +2730,6 @@
     "Script": "SetQuestEntryState(\"CF40\", 3, \"success\");",
     "Description": "轉場",
     "links": []
-  },
-  {
-    "entryID": 356,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF41\", 2) == \"unassigned\";",
-    "Description": "失敗可以重複嘗試",
-    "links": [4136, 4137]
   },
   {
     "entryID": 4314,
@@ -2960,8 +2893,8 @@
     "entryID": 4332,
     "actorID": "MC9",
     "text": "[panel=1]「行。這筆本錢，筠出了。雲中往後，也算有甄家一份。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);",
-    "Description": "成交",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);\nModifyData(Valuable,MC1,DragonHorn,-1);",
+    "Description": "成交，失去蛟龍角",
     "zh_CN": "[panel=1]「行。这笔本钱，筠出了。云中往后，也算有甄家一份。」",
     "links": [379]
   },
@@ -2978,8 +2911,29 @@
     "actorID": "MC9",
     "text": "「貨，筠不收。另拿別的來——或者，這筆就算了。」",
     "Sequence": "SetPortrait(MC9,pic=2);",
+    "Description": "回到選單",
     "zh_CN": "「货，筠不收。另拿别的来——或者，这笔就算了。」",
-    "links": []
+    "links": [4275, 4276, 4277]
+  },
+  {
+    "entryID": 350,
+    "actorID": "MC22",
+    "text": "[panel=1]「有意思。好好的畫蓋起來，多半是不想讓人看見底下的東西！」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
+    "Script": "SetQuestEntryState(\"CF40\", 6, \"active\")",
+    "Description": "觸發任務",
+    "zh_TW": "[panel=1]「有意思。好好的畫蓋起來，多半是不想讓人看見底下的東西！」",
+    "zh_CN": "[panel=1]「有意思。好好的画盖起来，多半是不想让人看见底下的东西！」",
+    "links": [4156]
+  },
+  {
+    "entryID": 356,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF41\", 2) == \"unassigned\";",
+    "Description": "失敗可以重複嘗試",
+    "links": [4136, 4137]
   },
   {
     "entryID": 379,
@@ -3000,10 +2954,161 @@
     "links": [220]
   },
   {
-    "entryID": 381,
+    "entryID": 4335,
+    "actorID": "MC1",
+    "title": "測試主角長大立繪切換-青年武將",
+    "text": "「登登登，登大人囉老鐵。」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(CustomPortrait, Player, false, MC1-Set3);\nModifyData(Valuable,Player,Rivertear,5);\nModifyData(Valuable,MC1,FadedTearstone,5);\nModifyData(Valuable,MC1,DragonHorn,5);",
+    "Script": "SetQuestState(\"CF41\", \"active\");\nSetQuestState(\"CF43\", \"active\")",
+    "Description": "測試主角長大立繪切換-青年武將",
+    "zh_CN": "「登登登，登大人囉老鐵。」",
+    "links": []
+  },
+  {
+    "entryID": 4336,
+    "actorID": "MC9",
+    "text": "「公子說它出自那艘舟——拿什麼作準？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC9,pic=1);",
+    "zh_CN": "「公子说它出自那艘舟——拿什么作准？」",
+    "links": [4281]
+  },
+  {
+    "entryID": 4337,
+    "actorID": "MC1",
+    "text": "「這、這……村裡人世世代代都這麼傳，畫還在洞裡擺著。憑據……在下一時也拿不出來。」",
+    "Sequence": "",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "口才失敗",
+    "zh_TW": "「這、這……村裡人世世代代都這麼傳，畫還在洞裡擺著。憑據……在下一時也拿不出來。」",
+    "zh_CN": "「这、这……村里人世世代代都这么传，画还在洞里摆着。凭据……在下一时也拿不出来。」",
+    "links": [4343]
+  },
+  {
+    "entryID": 4338,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestState(\"CF40\", \"success\");\nSetQuestEntryState(\"C2M1\", 2, \"success\");",
+    "Description": "任務完成、任務更新",
+    "links": [220]
+  },
+  {
+    "entryID": 4339,
+    "actorID": "MC1",
+    "text": "「偏偏叫在下撞見了那幅畫，才認出它的來歷——寶物埋得住，卻瞞不過識貨的人。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=18);",
+    "zh_CN": "「偏偏叫在下撞见了那幅画，才认出它的来历——宝物埋得住，却瞒不过识货的人。」",
+    "links": [4287]
+  },
+  {
+    "entryID": 4340,
+    "actorID": "MC9",
+    "text": "「也罷。帽子筠戴了，這一注，筠也押了。」",
+    "Sequence": "",
+    "zh_TW": "「也罷。帽子筠戴了，這一注，筠也押了。」",
+    "zh_CN": "「也罢。帽子筠戴了，这一注，筠也押了。」",
+    "links": [4341]
+  },
+  {
+    "entryID": 4341,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestState(\"CF40\", \"success\");\nSetQuestEntryState(\"C2M1\", 2, \"success\");",
+    "Description": "任務完成、任務更新",
+    "links": [220]
+  },
+  {
+    "entryID": 4342,
+    "actorID": "MC9",
+    "text": "[panel=1]「[em7]把石頭推回案心，指尖在上頭點了兩下[/em7]，識貨的人？公子這話，是要筠拿甄家的銀子，替公子的眼力作保。」",
+    "Sequence": "ModifyData(FavorabilityExp,MC9,-20);",
+    "Conditions": "IsPassDice()  == false",
+    "Description": "厚黑失敗：逐客",
+    "zh_TW": "[panel=1]「[em7]把石頭推回案心，指尖在上頭點了兩下[/em7]，識貨的人？公子這話，是要筠拿甄家的銀子，替公子的眼力作保。」",
+    "zh_CN": "[panel=1]「[em7]把石头推回案心，指尖在上头点了两下[/em7]，识货的人？公子这话，是要筠拿甄家的银子，替公子的眼力作保。」",
+    "links": [4343]
+  },
+  {
+    "entryID": 4343,
+    "actorID": "MC9",
+    "text": "[panel=1]「石頭公子收好。筠今日還有幾筆帳要對——不送。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「石頭公子收好。筠今日還有幾筆帳要對——不送。」",
+    "zh_CN": "[panel=1]「石头公子收好。筠今日还有几笔帐要对——不送。」",
+    "links": [4293]
+  },
+  {
+    "entryID": 4344,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestState(\"CF40\", \"failure\");\nSetQuestEntryState(\"C2M1\", 2, \"failure\");",
+    "Description": "任務失敗、任務更新(分支失敗)",
+    "links": [4308]
+  },
+  {
+    "entryID": 4293,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她沒有再問。案上的茶還是熱的；你們出門的時候，她已經低頭看起帳來。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她没有再问。案上的茶还是热的；你们出门的时候，她已经低头看起账来。）＊",
+    "links": [4344]
+  },
+  {
+    "entryID": 4345,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestState(\"CF40\") == \"failure\"",
+    "Description": "結算分支：沒拿到投資",
+    "links": [4346]
+  },
+  {
+    "entryID": 4346,
+    "actorID": "MC1",
+    "text": "「別提了。這一趟白跑，甄家那扇門，往後也不必再敲。」",
+    "Sequence": "SetPortrait(MC1,pic=16);EnableCharacterExpression(0,Player,Pain);",
+    "zh_CN": "「别提了。这一趟白跑，甄家那扇门，往后也不必再敲。」",
+    "links": [4347]
+  },
+  {
+    "entryID": 4347,
+    "actorID": "MC8",
+    "text": "[panel=2]「那位甄家家主的眼睛太尖，表哥想在她跟前討點便宜，怕是難囉。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=3);",
+    "zh_CN": "[panel=2]「那位甄家家主的眼睛太尖，表哥想在她跟前讨点便宜，怕是难啰。」",
+    "links": [248]
+  },
+  {
+    "entryID": 354,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(3);\nContinue();",
+    "links": [122, 123]
+  },
+  {
+    "entryID": 388,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "",
+    "links": []
+  },
+  {
+    "entryID": 390,
+    "actorID": "MC1",
+    "text": "「舟腹正中嵌著的，就是這一顆。村裡人喚它『河神的眼淚』。」",
+    "Sequence": "",
+    "zh_TW": "「舟腹正中嵌著的，就是這一顆。村裡人喚它『河神的眼淚』。」",
+    "zh_CN": "「舟腹正中嵌着的，就是这一颗。村里人唤它『河神的眼泪』。」",
+    "links": [4279]
+  },
+  {
+    "entryID": 405,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nLoadLevel(Command_HallOfHeroes);\nContinue();",
+    "Description": "回英豪府根據地",
     "links": []
   }
 ]

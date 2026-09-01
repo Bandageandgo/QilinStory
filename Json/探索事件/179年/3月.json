@@ -156,7 +156,7 @@
     "entryID": 83,
     "actorID": "MC8",
     "text": "「表哥，我們在這客棧也住了好幾天了，怎麼一次都沒見到那位[em2]一枝花老闆娘[/em2]啊？茶博士把她誇得跟天仙似的，該不會是吹牛的吧？」",
-    "Sequence": "EnableDialogueBG(Lnn);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Question);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,Others_Talking);\nAudioControl(PlayMusic,BGM_19);",
+    "Sequence": "EnableDialogueBG(Lnn);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Question);\nAudioControl(PauseLowerMusic);\nAudioControl(PlaySFXOneShot,Others_Talking);\nAudioControl(PlayMusic,BGM_19);",
     "Description": "播放音樂",
     "zh_TW": "「表哥，我們在這客棧也住了好幾天了，怎麼一次都沒見到那位[em2]一枝花老闆娘[/em2]啊？茶博士把她誇得跟天仙似的，該不會是吹牛的吧？」",
     "zh_CN": "「表哥，我们在这客栈也住了好几天了，怎么一次都没见到那位[em2]一枝花老板娘[/em2]啊？茶博士把她夸得跟天仙似的，该不会是吹牛的吧？」",

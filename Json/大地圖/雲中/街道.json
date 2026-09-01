@@ -216,7 +216,7 @@
     "actorID": "role2",
     "title": "講台",
     "text": "[panel=6]＊（廣場中央設有一個木製的演講台，平時供文人雅士或江湖說書人在此高談闊論。此刻台上空無一人。）＊",
-    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,Others_Talking);",
+    "Sequence": "AudioControl(PauseLowerMusic);\nAudioControl(PlaySFXOneShot,Others_Talking);",
     "Description": "可以點擊3次、人聲音效",
     "zh_CN": "[panel=6]＊（广场中央设有一个木制的演讲台，平时供文人雅士或江湖说书人在此高谈阔论。此刻台上空无一人。）＊",
     "links": [31]
@@ -772,9 +772,9 @@
     "entryID": 114,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nModifyData(GameDate,179,8,Late)@1;\nLoadLevel(Command_YunzhongInn)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nModifyData(GameDate,179,8,Late)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉到根據地、時間前進",
-    "links": [4147]
+    "links": [4163]
   },
   {
     "entryID": 116,
@@ -1484,5 +1484,13 @@
     "Sequence": "ModifyData(Command,Training_SkillCard,Unlock);\nExecutePanelBaseManager(Command,Enter);\nShowNoviceTeaching(Command_Training_SkillCard);\nContinue();",
     "Description": "解鎖技能突破功能、教學",
     "links": []
+  },
+  {
+    "entryID": 4163,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "LoadLevel(Command_YunzhongInn);\nContinue();",
+    "Description": "轉到根據地",
+    "links": [4147]
   }
 ]

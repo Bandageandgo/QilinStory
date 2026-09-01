@@ -2870,15 +2870,16 @@
     "entryID": 699,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "移出地圖、地圖鎖起來",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "地圖鎖起來",
     "links": [417]
   },
   {
     "entryID": 700,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Sequence": "DisableDialogueBG();\nLoadLevel(Command_HallOfHeroes);\nContinue();",
+    "Description": "移出地圖",
     "links": []
   },
   {
@@ -3397,15 +3398,16 @@
     "entryID": 769,
     "actorID": "0",
     "text": "",
-    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "移出地圖、地圖鎖起來",
+    "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "地圖鎖起來",
     "links": [768]
   },
   {
     "entryID": 770,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nContinue();",
+    "Sequence": "DisableDialogueBG();\nLoadLevel(Command_HallOfHeroes);\nContinue();",
+    "Description": "回到根據地",
     "links": []
   },
   {
@@ -3906,9 +3908,9 @@
     "entryID": 836,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nLoadLevel(Command_HallOfHeroes)@1;\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "移出地圖、地圖鎖起來",
-    "links": []
+    "Sequence": "SetContinueMode(false);\nDisableEventBG(FullScreen)@1;\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Home)@1;\nMapLock(JinYangArena, lock);\nDisableDialogueBG()@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "地圖鎖起來",
+    "links": [4106]
   },
   {
     "entryID": 837,
@@ -4117,5 +4119,13 @@
     "Description": "第六戰：未習得 RightTimeLv2_Combat 時的替代收場",
     "zh_CN": "「[em7]收枪抱拳[/em7]，好个点到为止——这一枪，你收得比出得还漂亮。这一场，是你赢了。」",
     "links": [576]
+  },
+  {
+    "entryID": 4106,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "LoadLevel(Command_HallOfHeroes);\nContinue();",
+    "Description": "回到根據地",
+    "links": []
   }
 ]
