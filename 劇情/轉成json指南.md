@@ -174,7 +174,8 @@
 -   **固定寫法，四段不多不少**（獨立空節點：`actorID "0"`、`text ""`；不得摻台詞、立繪、擲骰、戰鬥）：
     `SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景指令］@1;SetContinueMode(original)@2.5;Continue()@2.5;`
     -   ①禁止點擊 ②淡黑 0.5 秒後淡回（共 2.5 秒，參數照抄）③要換的東西全掛 `@1`（畫面全黑那一刻）④恢復點擊 `@2.5`（**`original`，不寫 `true`**）⑤`Continue()@2.5`。
-    -   例如換景：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);EnableDialogueBG(Forest)@1;SetContinueMode(original)@2.5;Continue()@2.5;`
+    -   例如換景：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);EnableDialogueBG(Forest)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;`
+    -   ⚠ **立繪面板要在 `@1` 槽收掉**（2026-09-02 作者提出）：`SetPortrait` 開的面板不會自己關，不收就會把上一段的立繪留在新景裡。**這一段用過哪幾個 `[panel]` 就一個一個 `OpenPanel(位置, close)@1`**（主角是 `0`；旁白 `[panel=6]` 是對話框、不必關；沒有「一次全關」的指令，多關無害）。**不要在轉場前另開一格關**——那樣立繪會在畫面還亮著時當場消失。詳見 `給AI看的指南/畫面指令轉換規則.md` §2.7。
     -   只淡黑：`SetContinueMode(false);PlayFeelFeedback(FadeOut,1,#000000,1);SetContinueMode(original)@1;Continue()@1;`；從黑淡入：`SetContinueMode(false);PlayFeelFeedback(FadeIn,1,#000000,1);Continue()@1;`。
 -   Markdown：轉場獨立一行 `**Sequence SetContinueMode(false);PlayFeelFeedback(...);...;Continue()@2.5;**`，上面沒有台詞，轉 JSON 自成一格。
 
@@ -506,6 +507,7 @@
 -   **戰鬥節點固定寫法（必守）**：一場戰鬥**固定四個對話節點**——①完整包裝 `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`（注意：`BeginFight` 在第二段，等的是 **`EndFight`**）；②獨立緩衝，`Sequence` 僅 `Continue();`；③勝利 `"Conditions": "IsPassFight() == true;"`；④失敗 `"Conditions": "IsPassFight() == false;"`。`IsPassFight()` **禁止**寫進 `Sequence`。禁止 `BeginCombat(...)`。詳見 `給AI看的指南/戰鬥指令轉換規則.md`，本指南 §4.3 已同步此規則。
 -   **養成任務對話背景圖（必守）**：`Json/主線事件/`、`Json/探索事件/` 的每段對話，第一格 `Sequence` 開頭 `EnableDialogueBG(ID);`，每條結尾補獨立空格 `DisableDialogueBG();Continue();`（`actorID "0"`、`text ""`）。漏關＝回養成介面看不到 UI。詳見 `給AI看的指南/畫面指令轉換規則.md` §1，本指南 §3.7。
 -   **轉場固定寫法（必守）**：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景@1］;SetContinueMode(original)@2.5;Continue()@2.5;`，獨立空格、四段不多不少、換景一律掛 `@1`、恢復點擊一律 `original`。裸寫 `EnableDialogueBG`／`PlayFeelFeedback` 不包四段都是錯。詳見 `給AI看的指南/畫面指令轉換規則.md` §2，本指南 §3.8。
+-   **轉場要收立繪面板（必守，2026-09-02 新增）**：換景／跳時間／換人上場的轉場，`@1` 槽要補 `OpenPanel(位置, close)@1`，這一段用過的位置一個一個關（主角 `0`、NPC 用他的 `[panel=N]`）。漏關＝上一段的立繪留在新景裡，肉眼可見。詳見 `給AI看的指南/畫面指令轉換規則.md` §2.7。
 -   **畫面特效有開就有關（必守）**：每個 `PlayOrStopParticle(X,Play)` 往下必須找得到 `PlayOrStopParticle(X,Stop)` 或 `StopAllParticle()`，預設放下一格開頭。詳見 `給AI看的指南/畫面指令轉換規則.md` §3，本指南 §3.9。
 -   **只有特定類型的節點才應包含Description欄位**，包括檢定、擲骰、戰鬥、任務、選項等功能性節點。普通對話節點不應包含Description欄位。
 -   **對話文本統一性**: 確保所有對話文本的引號「」處理一致。根據1.1節規則，標準角色對話應包含引號。

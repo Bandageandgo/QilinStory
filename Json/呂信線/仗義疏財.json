@@ -3,7 +3,8 @@
     "entryID": 1,
     "actorID": "role2",
     "text": "[panel=6]＊（呂信一腳踏上長凳，衝著櫃檯揚了揚手。）＊",
-    "Sequence": "",
+    "Sequence": "AudioControl(PauseLowerMusic);AudioControl(PlayMusic,BGM_19);AudioControl(PlaySFXOneShot,Others_Talking);",
+    "zh_CN": "[panel=6]＊（吕信一脚踏上长凳，冲着柜台扬了扬手。）＊",
     "links": [2]
   },
   {
@@ -11,6 +12,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「掌櫃的，把你們最好的酒都拿來吧。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「掌柜的，把你们最好的酒都拿来吧。」",
     "links": [3]
   },
   {
@@ -18,6 +20,7 @@
     "actorID": "MC1",
     "text": "「信哥，這兒的酒很貴的！？」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
+    "zh_CN": "「信哥，这儿的酒很贵的！？」",
     "links": [4]
   },
   {
@@ -25,6 +28,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「擔心什麼，這不是剛拿到報酬嗎。你就放大膽喝，這頓信哥擔了。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「担心什么，这不是刚拿到报酬吗。你就放大胆喝，这顿信哥担了。」",
     "links": [5]
   },
   {
@@ -32,13 +36,15 @@
     "actorID": "MC1",
     "text": "「信哥好氣魄，那我就不客氣了。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);",
+    "zh_CN": "「信哥好气魄，那我就不客气了。」",
     "links": [10]
   },
   {
     "entryID": 10,
     "actorID": "role2",
     "text": "[panel=6]＊（酒還沒滿上，隔壁桌先傳來抽噎聲。一名老農坐在那兒，身旁的女兒把臉埋進袖子裡。）＊",
-    "Sequence": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_23);",
+    "zh_CN": "[panel=6]＊（酒还没满上，隔壁桌先传来抽噎声。一名老农坐在那儿，身旁的女儿把脸埋进袖子里。）＊",
     "links": [11]
   },
   {
@@ -46,13 +52,15 @@
     "actorID": "MC2",
     "text": "[panel=1]「還沒喝，便有人助興了……好了好了，別哭了，兩位何故如此哭哭啼啼的？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「还没喝，便有人助兴了……好了好了，别哭了，两位何故如此哭哭啼啼的？」",
     "links": [12]
   },
   {
     "entryID": 12,
-    "actorID": "0",
+    "actorID": "role_Farmer",
     "text": "[panel=2]「啊！對不住，攪了二位壯士的酒興，只是……」",
     "Sequence": "",
+    "zh_CN": "[panel=2]「啊！对不住，搅了二位壮士的酒兴，只是……」",
     "links": [13]
   },
   {
@@ -60,13 +68,15 @@
     "actorID": "MC2",
     "text": "[panel=1]「別只是了，一看就知道有故事的。是什麼事，但說無妨。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「别只是了，一看就知道有故事的。是什么事，但说无妨。」",
     "links": [14]
   },
   {
     "entryID": 14,
-    "actorID": "0",
+    "actorID": "role_Farmer",
     "text": "[panel=2]「事情是這樣的……」",
     "Sequence": "",
+    "zh_CN": "[panel=2]「事情是这样的……」",
     "links": [15]
   },
   {
@@ -74,6 +84,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（故事並不複雜，不外乎就是土匪看上良家女子，脅迫霸佔的老生常談。老農說得斷斷續續，中間停下來喝了兩口水。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（故事并不复杂，不外乎就是土匪看上良家女子，胁迫霸占的老生常谈。老农说得断断续续，中间停下来喝了两口水。）＊",
     "links": [16]
   },
   {
@@ -81,13 +92,15 @@
     "actorID": "MC2",
     "text": "[panel=1]「[em7]忽然打斷[/em7]，等等。你們爺倆，離了這村，有處去麼？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「[em7]忽然打断[/em7]，等等。你们爷俩，离了这村，有处去么？」",
     "links": [17]
   },
   {
     "entryID": 17,
-    "actorID": "0",
+    "actorID": "role_Farmer",
     "text": "[panel=2]「啊？……有、有個遠房的表親，在東邊……可、可是壯士，這跟……」",
     "Sequence": "",
+    "zh_CN": "[panel=2]「啊？……有、有个远房的表亲，在东边……可、可是壮士，这跟……」",
     "links": [18]
   },
   {
@@ -95,6 +108,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「夠了。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「够了。」",
     "links": [19]
   },
   {
@@ -102,6 +116,7 @@
     "actorID": "MC1",
     "text": "「欺人太甚。信哥，我看這事……」",
     "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Anger);",
+    "zh_CN": "「欺人太甚。信哥，我看这事……」",
     "links": [20]
   },
   {
@@ -109,6 +124,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你轉過頭，長凳上已經沒人了。桌上的酒碗還冒著熱氣，刀不見了。）＊",
     "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=6]＊（你转过头，长凳上已经没人了。桌上的酒碗还冒着热气，刀不见了。）＊",
     "links": [30]
   },
   {
@@ -116,6 +132,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（不出多久，呂信回來了，手裡多了一個布袋。他把布袋往桌上一擱，發出沉悶的一聲。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（不出多久，吕信回来了，手里多了一个布袋。他把布袋往桌上一搁，发出沉闷的一声。）＊",
     "links": [31]
   },
   {
@@ -123,6 +140,7 @@
     "actorID": "MC1",
     "text": "「信哥你這是跑去哪了？」",
     "Sequence": "SetPortrait(MC1,pic=14);EnableCharacterExpression(0,Player,Question);",
+    "zh_CN": "「信哥你这是跑去哪了？」",
     "links": [32]
   },
   {
@@ -130,20 +148,23 @@
     "actorID": "MC2",
     "text": "[panel=1]「沒去哪。兩位看一下，認不認得這位仁兄。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「没去哪。两位看一下，认不认得这位仁兄。」",
     "links": [33]
   },
   {
     "entryID": 33,
     "actorID": "role2",
     "text": "[panel=6]＊（呂信揭開布袋，赫然是顆人頭。鄰桌的碗筷掉了一地，掌櫃背過身去。）＊",
-    "Sequence": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_38);",
+    "zh_CN": "[panel=6]＊（吕信揭开布袋，赫然是颗人头。邻桌的碗筷掉了一地，掌柜背过身去。）＊",
     "links": [34]
   },
   {
     "entryID": 34,
-    "actorID": "0",
+    "actorID": "role_Farmer",
     "text": "[panel=2]「啊！是他！就是那個逼我女兒的清風寨賊人！多謝壯士！壯士仁義啊！」",
     "Sequence": "",
+    "zh_CN": "[panel=2]「啊！是他！就是那个逼我女儿的清风寨贼人！多谢壮士！壮士仁义啊！」",
     "links": [35]
   },
   {
@@ -151,6 +172,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「不必說那些陳詞了。這些錢你們拿去，快快另找個地方安生吧。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「不必说那些陈词了。这些钱你们拿去，快快另找个地方安生吧。」",
     "links": [36]
   },
   {
@@ -158,6 +180,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（呂信解下錢袋放在老農手裡。父女連聲拜謝了許久，才扶著彼此離開。布袋又被他隨手繫上了。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（吕信解下钱袋放在老农手里。父女连声拜谢了许久，才扶着彼此离开。布袋又被他随手系上了。）＊",
     "links": [37]
   },
   {
@@ -182,6 +205,7 @@
     "text": "[panel=6]＊（你沒去看那顆人頭。你看的是他——刀已經擦過了，錢袋是連著繫繩一起解下來的，解得很順，像不是第一次解。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == true;",
+    "zh_CN": "[panel=6]＊（你没去看那颗人头。你看的是他——刀已经擦过了，钱袋是连着系绳一起解下来的，解得很顺，像不是第一次解。）＊",
     "links": [40]
   },
   {
@@ -189,6 +213,7 @@
     "actorID": "MC1",
     "text": "「信哥，你是先算好他們走得掉，才動的手。」",
     "Sequence": "SetPortrait(MC1,pic=12);ModifyData(FeatExp,Player,Insight,10);",
+    "zh_CN": "「信哥，你是先算好他们走得掉，才动的手。」",
     "links": [41]
   },
   {
@@ -196,6 +221,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「[em7]頓了一下[/em7]，……哈！大家都說我空有武力、少思慮——我怎會想那麼多。」",
     "Sequence": "SetPortrait(MC2,pic=4);EnableCharacterExpression(1,MC2,Surprise);",
+    "zh_CN": "[panel=1]「[em7]顿了一下[/em7]，……哈！大家都说我空有武力、少思虑——我怎会想那么多。」",
     "links": [42]
   },
   {
@@ -203,6 +229,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「別多想。人殺了，錢給了，人走了——就這三件事能辦成就行。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「别多想。人杀了，钱给了，人走了——就这三件事能办成就行。」",
     "links": [421]
   },
   {
@@ -210,6 +237,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他把話收得很快，快得像怕人接下去。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（他把话收得很快，快得像怕人接下去。）＊",
     "links": [50]
   },
   {
@@ -218,6 +246,7 @@
     "text": "[panel=6]＊（你看了半天，只看見一把擦乾淨的刀，和一個解開的錢袋。至於他是怎麼想的，你看不出來。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
+    "zh_CN": "[panel=6]＊（你看了半天，只看见一把擦干净的刀，和一个解开的钱袋。至于他是怎么想的，你看不出来。）＊",
     "links": [50]
   },
   {
@@ -225,7 +254,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Description": "選項樞紐（空內容緩衝節點）。⚠ 選項 51／53 在 Unity 端請勾「只播一次」，選過即從選單消失",
+    "Description": "選項樞紐（空內容緩衝節點）。選項 51／53 問完回樞紐、可重複點；出口是選項 55",
     "links": [51, 53, 55]
   },
   {
@@ -234,6 +263,7 @@
     "text": "「信哥，你這一刀下去，他們總算能安生了。」",
     "Sequence": "",
     "Description": "選項A：問資訊，不改價值觀，問完回樞紐",
+    "zh_CN": "「信哥，你这一刀下去，他们总算能安生了。」",
     "links": [52]
   },
   {
@@ -241,6 +271,7 @@
     "actorID": "MC1",
     "text": "「信哥這一刀，替他們了了大事。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「信哥这一刀，替他们了了大事。」",
     "links": [521]
   },
   {
@@ -248,6 +279,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「能做的謹此罷了，剩下的得看他們自己。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「能做的谨此罢了，剩下的得看他们自己。」",
     "links": [50]
   },
   {
@@ -256,6 +288,7 @@
     "text": "「東邊那個表親，他們走不走得成？你給的那些錢夠不夠用？」",
     "Sequence": "",
     "Description": "選項B：問資訊，不改價值觀，問完回樞紐",
+    "zh_CN": "「东边那个表亲，他们走不走得成？你给的那些钱够不够用？」",
     "links": [54]
   },
   {
@@ -263,6 +296,7 @@
     "actorID": "MC1",
     "text": "「他們往後要去哪？盤纏夠不夠到下一個城？」",
     "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
+    "zh_CN": "「他们往后要去哪？盘缠够不够到下一个城？」",
     "links": [541]
   },
   {
@@ -270,6 +304,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「[em7]往門口看了一眼[/em7]，……夠。我掂過。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=3);",
+    "zh_CN": "[panel=1]「[em7]往门口看了一眼[/em7]，……够。我掂过。」",
     "links": [542]
   },
   {
@@ -277,6 +312,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他說完就低頭喝酒，沒再看那個方向。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（他说完就低头喝酒，没再看那个方向。）＊",
     "links": [50]
   },
   {
@@ -285,6 +321,7 @@
     "text": "「這事了了。信哥，還喝嗎？」",
     "Sequence": "",
     "Description": "選項C：推進對話",
+    "zh_CN": "「这事了了。信哥，还喝吗？」",
     "links": [56]
   },
   {
@@ -292,6 +329,7 @@
     "actorID": "MC1",
     "text": "「信哥你動作還真快……我還沒聽完，你人就出發了。」",
     "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_CN": "「信哥你动作还真快……我还没听完，你人就出发了。」",
     "links": [57]
   },
   {
@@ -299,6 +337,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「還磨什麼。我這人最受不了等了。這種事聽到重點，便足矣。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「还磨什么。我这人最受不了等了。这种事听到重点，便足矣。」",
     "links": [58]
   },
   {
@@ -306,13 +345,23 @@
     "actorID": "MC2",
     "text": "[panel=1]「好了，沒人叨擾了，我們喝吧。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「好了，没人叨扰了，我们喝吧。」",
+    "links": [581]
+  },
+  {
+    "entryID": 581,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;AudioControl(PlayMusic,BGM_19)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場：酒過一個時辰",
     "links": [60]
   },
   {
     "entryID": 60,
     "actorID": "role2",
-    "text": "[panel=6]＊（畫面淡出淡入。酒喝了將近一個時辰，罈子換了三回。你趴在桌上，呂信卻沒有半點要走的意思。）＊",
+    "text": "[panel=6]＊（酒喝了將近一個時辰，罈子換了三回。你趴在桌上，呂信卻沒有半點要走的意思。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（酒喝了将近一个时辰，坛子换了三回。你趴在桌上，吕信却没有半点要走的意思。）＊",
     "links": [61]
   },
   {
@@ -320,6 +369,7 @@
     "actorID": "MC1",
     "text": "「唔呃……信哥，我們該走了吧……」",
     "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,Player,Nervous);",
+    "zh_CN": "「唔呃……信哥，我们该走了吧……」",
     "links": [62]
   },
   {
@@ -327,6 +377,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「還早，再喝一會。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「还早，再喝一会。」",
     "links": [63]
   },
   {
@@ -334,6 +385,7 @@
     "actorID": "MC1",
     "text": "「可是……先不說我喝不下了，光是剛剛我們就遇到——」",
     "Sequence": "SetPortrait(MC1,pic=15);",
+    "zh_CN": "「可是……先不说我喝不下了，光是刚刚我们就遇到——」",
     "links": [64]
   },
   {
@@ -341,6 +393,7 @@
     "actorID": "MC1",
     "text": "「六個乞丐、三個借錢周轉、四個賣身葬父。每一個……你眼都不眨就給錢。」",
     "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_CN": "「六个乞丐、三个借钱周转、四个卖身葬父。每一个……你眼都不眨就给钱。」",
     "links": [65]
   },
   {
@@ -348,6 +401,7 @@
     "actorID": "MC1",
     "text": "「你都沒聽到，旁邊客人都說你是散財義士了。」",
     "Sequence": "SetPortrait(MC1,pic=6);EnableCharacterExpression(0,Player,Meditate);",
+    "zh_CN": "「你都没听到，旁边客人都说你是散财义士了。」",
     "links": [66]
   },
   {
@@ -355,6 +409,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「哈，這叫法還挺有意思的。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「哈，这叫法还挺有意思的。」",
     "links": [67, 70]
   },
   {
@@ -363,6 +418,7 @@
     "text": "「信哥，你這樣散，委託而來的報酬真的可以嗎？」",
     "Sequence": "",
     "Description": "選項1（機略）：記 LawChaos 負",
+    "zh_CN": "「信哥，你这样散，委托而来的报酬真的可以吗？」",
     "links": [68]
   },
   {
@@ -371,6 +427,7 @@
     "text": "「再散，明天你就是第七個。」",
     "Sequence": "",
     "Description": "選項2（通達）：記 GoodEvil 負",
+    "zh_CN": "「再散，明天你就是第七个。」",
     "links": [71]
   },
   {
@@ -378,6 +435,7 @@
     "actorID": "MC1",
     "text": "「信哥，你這一晚扔出去的，怕是把這趟差事的錢都散完了。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
+    "zh_CN": "「信哥，你这一晚扔出去的，怕是把这趟差事的钱都散完了。」",
     "links": [681]
   },
   {
@@ -385,6 +443,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「[em7]碗停在半空[/em7]，夠什麼夠。三萬六。我這幾串錢，填得了嗎？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「[em7]碗停在半空[/em7]，够什么够。三万六。我这几串钱，填得了吗？」",
     "links": [682]
   },
   {
@@ -392,6 +451,7 @@
     "actorID": "MC1",
     "text": "「……填不了。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「……填不了。」",
     "links": [683]
   },
   {
@@ -399,6 +459,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「填不了的，就別跟我算。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「填不了的，就别跟我算。」",
     "links": [684]
   },
   {
@@ -406,6 +467,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「錢這東西，今日沒了，明日再賺就有。人沒了，明日拿什麼賺。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Meditate);",
+    "zh_CN": "[panel=1]「钱这东西，今日没了，明日再赚就有。人没了，明日拿什么赚。」",
     "links": [685]
   },
   {
@@ -413,6 +475,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他把碗裡剩的一口灌下去，話題就到此為止了。）＊",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（他把碗里剩的一口灌下去，话题就到此为止了。）＊",
     "links": [80]
   },
   {
@@ -420,6 +483,7 @@
     "actorID": "MC1",
     "text": "「照這個散法，明天信哥自己就是第七個乞丐。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
+    "zh_CN": "「照这个散法，明天信哥自己就是第七个乞丐。」",
     "links": [72]
   },
   {
@@ -427,6 +491,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「哈哈哈！那也威風。天下第一的乞丐，還是天下第一。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「哈哈哈！那也威风。天下第一的乞丐，还是天下第一。」",
     "links": [73]
   },
   {
@@ -434,20 +499,23 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他笑得很大聲，笑完又給門邊那個縮著的老丐扔了一串。）＊",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（他笑得很大声，笑完又给门边那个缩着的老丐扔了一串。）＊",
     "links": [80]
   },
   {
     "entryID": 80,
-    "actorID": "0",
+    "actorID": "role_ZhaiZhu",
     "text": "[panel=2]「哪個混帳是呂信！給老子滾出來！」",
-    "Sequence": "",
+    "Sequence": "AudioControl(PlayMusic,BGM_28);",
+    "zh_CN": "[panel=2]「哪个混账是吕信！给老子滚出来！」",
     "links": [81]
   },
   {
     "entryID": 81,
     "actorID": "role2",
     "text": "[panel=6]＊（外頭來了大隊人馬，火把把窗紙照得通紅。客人一哄而散，掌櫃鑽進了櫃檯底下。）＊",
-    "Sequence": "",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Fire);",
+    "zh_CN": "[panel=6]＊（外头来了大队人马，火把把窗纸照得通红。客人一哄而散，掌柜钻进了柜台底下。）＊",
     "links": [82]
   },
   {
@@ -455,6 +523,7 @@
     "actorID": "MC1",
     "text": "「怎麼回事？這些人是……」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
+    "zh_CN": "「怎么回事？这些人是……」",
     "links": [83]
   },
   {
@@ -462,6 +531,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「應該是剛殺的土匪同夥吧。聚集得還真慢，我去去就回。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「应该是刚杀的土匪同伙吧。聚集得还真慢，我去去就回。」",
     "links": [84]
   },
   {
@@ -469,6 +539,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你按著桌沿站起來。三罈酒還在你身上晃。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（你按着桌沿站起来。三坛酒还在你身上晃。）＊",
     "links": [85]
   },
   {
@@ -477,6 +548,7 @@
     "text": "[em2][酒量檢定][/em2]「信哥，我跟你去。」",
     "Sequence": "",
     "Description": "選項：酒量檢定 難度10",
+    "zh_CN": "[em2][酒量检定][/em2]「信哥，我跟你去。」",
     "links": [86]
   },
   {
@@ -492,6 +564,7 @@
     "actorID": "MC1",
     "text": "「三罈酒算什麼。外頭那些人，我也出。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「三坛酒算什么。外头那些人，我也出。」",
     "links": [88, 110]
   },
   {
@@ -500,13 +573,23 @@
     "text": "[panel=6]＊（你深吸了一口氣，把那股上湧的熱勁壓回肚子裡。門外的火把還是晃的，但地是穩的。）＊",
     "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_CN": "[panel=6]＊（你深吸了一口气，把那股上涌的热劲压回肚子里。门外的火把还是晃的，但地是稳的。）＊",
+    "links": [881]
+  },
+  {
+    "entryID": 881,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場：客棧內→客棧門外",
     "links": [89]
   },
   {
     "entryID": 89,
     "actorID": "role2",
-    "text": "[panel=6]＊（畫面淡出淡入，場景到客棧門外。呂信已經站在火把裡，回頭看見你跟出來。）＊",
+    "text": "[panel=6]＊（客棧門外，呂信已經站在火把裡，回頭看見你跟出來。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（客栈门外，吕信已经站在火把里，回头看见你跟出来。）＊",
     "links": [90]
   },
   {
@@ -514,6 +597,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「哈！三罈下肚還走得出來——好小子。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「哈！三坛下肚还走得出来——好小子。」",
     "links": [91]
   },
   {
@@ -521,6 +605,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「有種。站過來。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);ModifyData(FavorabilityExp,MC2,25);",
+    "zh_CN": "[panel=1]「有种。站过来。」",
     "links": [92]
   },
   {
@@ -528,13 +613,15 @@
     "actorID": "MC2",
     "text": "[panel=1]「呂信在此，有何指教啊。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「吕信在此，有何指教啊。」",
     "links": [93]
   },
   {
     "entryID": 93,
-    "actorID": "0",
+    "actorID": "role_ZhaiZhu",
     "text": "[panel=2]「就是你？殺我清風寨兄弟，還在牆下留名，有種啊你。」",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=2]「就是你？杀我清风寨兄弟，还在墙下留名，有种啊你。」",
     "links": [94]
   },
   {
@@ -542,6 +629,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「還行。要不這樣寫，怎麼叫你們一夥自投羅網呢。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「还行。要不这样写，怎么叫你们一伙自投罗网呢。」",
     "links": [95]
   },
   {
@@ -549,13 +637,15 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你聽懂了那句話的意思——牆上那個名字，從一開始就不是留給死人看的。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（你听懂了那句话的意思——墙上那个名字，从一开始就不是留给死人看的。）＊",
     "links": [96]
   },
   {
     "entryID": 96,
-    "actorID": "0",
+    "actorID": "role_ZhaiZhu",
     "text": "[panel=2]「還敢囂張！今日我全寨百人已把這裡團團包圍，看你還能往哪逃！」",
     "Sequence": "",
+    "zh_CN": "[panel=2]「还敢嚣张！今日我全寨百人已把这里团团包围，看你还能往哪逃！」",
     "links": [97]
   },
   {
@@ -563,6 +653,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「包圍我？說錯了吧，應該是——」",
     "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_CN": "[panel=1]「包围我？说错了吧，应该是——」",
     "links": [98]
   },
   {
@@ -570,6 +661,15 @@
     "actorID": "MC2",
     "text": "[panel=1]「——我包圍了你們！」",
     "Sequence": "SetPortrait(MC2,pic=2);EnableCharacterExpression(1,MC2,Anger_2);",
+    "zh_CN": "[panel=1]「——我包围了你们！」",
+    "links": [981]
+  },
+  {
+    "entryID": 981,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);Continue();",
+    "Description": "空內容緩衝節點，關閉表情特效",
     "links": [99]
   },
   {
@@ -577,7 +677,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);BeginFight(Combat,78);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-    "Description": "戰鬥觸發節點：清風寨嘍囉（⚠ 場次 ID 待作者填，不可沿用其他場次數字）",
+    "Description": "戰鬥觸發節點：清風寨嘍囉（場次 78）",
     "links": [100]
   },
   {
@@ -586,14 +686,23 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [101, 105]
+    "links": [1001, 105]
+  },
+  {
+    "entryID": 1001,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場：戰鬥結束",
+    "Conditions": "IsPassFight() == true;",
+    "links": [101]
   },
   {
     "entryID": 101,
     "actorID": "role2",
-    "text": "[panel=6]＊（畫面淡出淡入。街上橫七豎八，火把掉了一地，還在燒。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
-    "Conditions": "IsPassFight() == true;",
+    "text": "[panel=6]＊（街上橫七豎八，火把掉了一地，還在燒。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（街上横七竖八，火把掉了一地，还在烧。）＊",
     "links": [102]
   },
   {
@@ -601,6 +710,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「真無趣，這樣也配叫百人了。」",
     "Sequence": "SetPortrait(MC2,pic=3);",
+    "zh_CN": "[panel=1]「真无趣，这样也配叫百人了。」",
     "links": [103]
   },
   {
@@ -608,6 +718,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「你看。話講一百遍，不如刀出一次。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「你看。话讲一百遍，不如刀出一次。」",
     "links": [104]
   },
   {
@@ -615,14 +726,16 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他把刀往地上一甩，甩掉那層血，收了。整套動作沒有停頓。）＊",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（他把刀往地上一甩，甩掉那层血，收了。整套动作没有停顿。）＊",
     "links": [120]
   },
   {
     "entryID": 105,
     "actorID": "role2",
     "text": "[panel=6]＊（你被人從側面撞開，撞在門框上。再抬頭時，呂信已經橫在你前面，把整條街擋住了。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
+    "Sequence": "",
     "Conditions": "IsPassFight() == false;",
+    "zh_CN": "[panel=6]＊（你被人从侧面撞开，撞在门框上。再抬头时，吕信已经横在你前面，把整条街挡住了。）＊",
     "links": [106]
   },
   {
@@ -630,13 +743,23 @@
     "actorID": "MC2",
     "text": "[panel=1]「躲我身後。」",
     "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_CN": "[panel=1]「躲我身后。」",
+    "links": [1061]
+  },
+  {
+    "entryID": 1061,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場：呂信獨自清街",
     "links": [107]
   },
   {
     "entryID": 107,
     "actorID": "role2",
-    "text": "[panel=6]＊（畫面淡出淡入。等你站起來，街上已經沒有人站著了。他連刀都沒換手。）＊",
+    "text": "[panel=6]＊（等你站起來，街上已經沒有人站著了。他連刀都沒換手。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（等你站起来，街上已经没有人站着了。他连刀都没换手。）＊",
     "links": [108]
   },
   {
@@ -644,6 +767,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「看見沒有？拳頭夠大，話就不必說第二遍。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「看见没有？拳头够大，话就不必说第二遍。」",
     "links": [109]
   },
   {
@@ -651,6 +775,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他說這話的時候是笑著的，笑得很痛快。）＊",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（他说这话的时候是笑着的，笑得很痛快。）＊",
     "links": [120]
   },
   {
@@ -659,6 +784,7 @@
     "text": "[panel=6]＊（你站得太急，整間客棧朝右邊斜了一下。刀是拔出來了，就是不太確定拔的是哪一把。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
+    "zh_CN": "[panel=6]＊（你站得太急，整间客栈朝右边斜了一下。刀是拔出来了，就是不太确定拔的是哪一把。）＊",
     "links": [111]
   },
   {
@@ -666,6 +792,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「喂，站都站不穩，還跟什麼？」",
     "Sequence": "SetPortrait(MC2,pic=4);",
+    "zh_CN": "[panel=1]「喂，站都站不稳，还跟什么？」",
     "links": [112]
   },
   {
@@ -673,6 +800,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「坐著。這點貨色，你信哥一個人夠。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「坐着。这点货色，你信哥一个人够。」",
     "links": [113]
   },
   {
@@ -680,6 +808,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（他一把按你回長凳，自己跨出門去。你想跟，腳下一步都邁不出去。）＊",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（他一把按你回长凳，自己跨出门去。你想跟，脚下一步都迈不出去。）＊",
     "links": [114]
   },
   {
@@ -687,6 +816,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（門外有人罵他牆下留名。他應了一聲，接著是刀，不是話。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（门外有人骂他墙下留名。他应了一声，接着是刀，不是话。）＊",
     "links": [115]
   },
   {
@@ -694,6 +824,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（很快沒聲了。他回來時連刀都沒換手。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（很快没声了。他回来时连刀都没换手。）＊",
     "links": [116]
   },
   {
@@ -701,6 +832,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「看見沒有？這種事，一個人就夠。」",
     "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_CN": "[panel=1]「看见没有？这种事，一个人就够。」",
     "links": [117]
   },
   {
@@ -715,7 +847,8 @@
     "entryID": 120,
     "actorID": "MC1",
     "text": "「信哥剛一直不走，莫非是為一勞永逸，免得這些賊寇追殺那父女？」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Sequence": "SetPortrait(MC1,pic=12);AudioControl(PlayMusic,BGM_19);",
+    "zh_CN": "「信哥刚一直不走，莫非是为一劳永逸，免得这些贼寇追杀那父女？」",
     "links": [121]
   },
   {
@@ -723,6 +856,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「簡單的事就是要一次解決到位。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_CN": "[panel=1]「简单的事就是要一次解决到位。」",
     "links": [122]
   },
   {
@@ -730,6 +864,7 @@
     "actorID": "MC1",
     "text": "「可是……現在有個急需解決的小問題。酒錢，你還夠嗎？」",
     "Sequence": "SetPortrait(MC1,pic=13);EnableCharacterExpression(0,Player,Nervous);",
+    "zh_CN": "「可是……现在有个急需解决的小问题。酒钱，你还够吗？」",
     "links": [123]
   },
   {
@@ -737,6 +872,7 @@
     "actorID": "MC2",
     "text": "[panel=1]「[em7]摸了摸腰間，那裡空空的[/em7]，這個嘛……要不一起打雜吧。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=4);EnableCharacterExpression(1,MC2,Nervous);",
+    "zh_CN": "[panel=1]「[em7]摸了摸腰间，那里空空的[/em7]，这个嘛……要不一起打杂吧。」",
     "links": [124]
   },
   {
@@ -744,6 +880,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（就這樣，你們一起在客棧後院刷了半宿的碗，償還超支的酒錢。掌櫃全程沒敢多說一句話。）＊",
     "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（就这样，你们一起在客栈后院刷了半宿的碗，偿还超支的酒钱。掌柜全程没敢多说一句话。）＊",
     "links": [125]
   },
   {
@@ -751,6 +888,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（要說粗枝大葉，不是；要說思慮周密，也不對。對這個信哥，你實難給個定論。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（要说粗枝大叶，不是；要说思虑周密，也不对。对这个信哥，你实难给个定论。）＊",
     "links": [126]
   },
   {
@@ -758,6 +896,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（碗刷完的時候天快亮了。他一路哼著霸王的曲子回府，跑調，哼得很大聲。）＊",
     "Sequence": "",
+    "zh_CN": "[panel=6]＊（碗刷完的时候天快亮了。他一路哼着霸王的曲子回府，跑调，哼得很大声。）＊",
     "links": []
   }
 ]

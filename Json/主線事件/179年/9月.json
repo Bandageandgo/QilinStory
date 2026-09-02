@@ -43,7 +43,7 @@
     "entryID": 3912,
     "actorID": "MC1",
     "text": "「哦？我看這老人家言之鑿鑿，不似全是瘋話。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_CN": "「哦？我看这老人家言之凿凿，不似全是疯话。」",
     "links": [3913]
   },
@@ -51,7 +51,7 @@
     "entryID": 3913,
     "actorID": "role28",
     "text": "「這瘋老頭叫李四，自從兒子媳婦失蹤後就神智不清了。不過嘛…空穴來風，未必無因。最近道上確實有傳聞，說三十里外的黑鐵嶺礦坑鬧鬼鬧得兇，似有妖邪作祟。」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "「这疯老头叫李四，自从儿子媳妇失踪后就神智不清了。不过嘛…空穴来风，未必无因。最近道上确实有传闻，说三十里外的黑铁岭矿坑闹鬼闹得凶，似有妖邪作祟。」",
     "links": [3914]
   },
@@ -59,7 +59,7 @@
     "entryID": 3914,
     "actorID": "MC22",
     "text": "[panel=2]「妖邪作祟？那可太好了！本姑娘走南闖北，最識得這個——越是這種生人勿近的地方，越有可能藏著沒被發現的寶貝！」",
-    "Sequence": "SetPortrait(MC22,pic=5)\n;EnableCharacterExpression(2,MC22,Idea);",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(2,MC22,Idea);",
     "zh_TW": "[panel=2]「妖邪作祟？那可太好了！本姑娘走南闖北，最識得這個——越是這種生人勿近的地方，越有可能藏著沒被發現的寶貝！」",
     "zh_CN": "[panel=2]「妖邪作祟？那可太好了！本姑娘走南闯北，最识得这个——越是这种生人勿近的地方，越有可能藏着没被发现的宝贝！」",
     "links": [3915]
@@ -93,7 +93,7 @@
     "entryID": 3918,
     "actorID": "MC1",
     "text": "「喂、喂！別推我啊...我去就是了！」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=11);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_CN": "「喂、喂！别推我啊...我去就是了！」",
     "links": [3923]
   },
@@ -109,7 +109,7 @@
     "entryID": 3920,
     "actorID": "role2",
     "text": "[panel=6]＊（發現：黑鐵嶺礦坑。）＊",
-    "Sequence": "MapLock(BlackIronRidgeMine, unlock)",
+    "Sequence": "MapLock(BlackIronRidgeMine, unlock);",
     "Description": "解鎖黑鐵礦坑",
     "zh_TW": "[panel=6]＊（發現：黑鐵嶺礦坑。）＊",
     "zh_CN": "[panel=6]＊（发现：黑铁岭矿坑。）＊",
@@ -138,7 +138,7 @@
     "entryID": 3923,
     "actorID": "role2",
     "text": "[panel=6]＊（娜娜不由分說地推著你往前走，你只得被她拽著離開廣場；才走沒幾步，後頭便響起少年郎高聲的聲音——）",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（娜娜不由分說地推著你往前走，你只得被她拽著離開廣場；才走沒幾步，後頭便響起少年郎高聲的聲音——）",
     "zh_CN": "[panel=6]＊（娜娜不由分说地推着你往前走，你只得被她拽着离开广场；才走没几步，后头便响起少年郎高声的声音——）",
     "links": [3919]
