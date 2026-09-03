@@ -3,102 +3,39 @@
     "entryID": 1,
     "actorID": "role2",
     "title": "噴火道路盡頭寶箱《遊方雜記・卷三》",
-    "text": "[panel=6]＊（道路的盡頭，一口木匣。沒有鎖。裡頭一卷紙，捲得很緊，繩結是舊的。）＊",
-    "Sequence": "ModifyData(Valuable,MC22,WanderingNotesPage2,1);",
-    "Description": "噴火道路盡頭寶箱《遊方雜記・卷三》WanderingNotesPage2",
-    "zh_CN": "[panel=6]＊（道路的尽头，一口木匣。没有锁。里头一卷纸，卷得很紧，绳结是旧的。）＊",
+    "text": "[panel=6]＊（道路的盡頭擱著一口木匣，沒有上鎖。裡頭一卷紙捲得很緊，捆著的繩結已經舊了。）＊",
+    "Sequence": "ModifyData(Valuable,Player,WanderingNotesPage2,1);",
+    "Description": "互動點：取得《遊方雜記・卷三》WanderingNotesPage2。先發給主角，便籤才開得出來；#4 再轉給娜娜",
+    "zh_CN": "[panel=6]＊（道路的尽头搁着一口木匣，没有上锁。里头一卷纸卷得很紧，捆着的绳结已经旧了。）＊",
     "links": [2]
   },
   {
     "entryID": 2,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage2);",
-    "Description": "貴重品便籤",
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠，這是我爹的字，錯不了——他走到哪寫到哪，寫完就擱在原地，卷二裡不是寫了，他日還要再來這谷裡一趟。你先看看，看完本姑娘再說。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「大侠，这是我爹的字，错不了——他走到哪写到哪，写完就搁在原地，卷二里不是写了，他日还要再来这谷里一趟。你先看看，看完本姑娘再说。」",
     "links": [3]
   },
   {
     "entryID": 3,
-    "actorID": "MC22",
-    "text": "[panel=1]「[em7]一頁一頁翻，翻到末尾停住[/em7]，他過不去的地方，咱們過去。」",
-    "Sequence": "SetPortrait(MC22,pic=8);",
-    "zh_CN": "[panel=1]「[em7]一页一页翻，翻到末尾停住[/em7]，他过不去的地方，咱们过去。」",
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage2);",
+    "Description": "貴重品便籤",
     "links": [4]
   },
   {
     "entryID": 4,
-    "actorID": "MC1",
-    "text": "「門後幾重機關？」",
-    "Sequence": "SetPortrait(MC1,pic=14);",
-    "zh_CN": "「门后几重机关？」",
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]低頭看了一眼腰間的天機盤[/em7]，看完了？他寫他的天機盤在這谷裡轉得發狂，本姑娘的打從進谷起就沒動過一下——這是怎麼回事，本姑娘一時也說不上來。卷子先收著，往後見著這樣的卷子，還是老規矩，先給本姑娘。」",
+    "Sequence": "SetPortrait(MC22,pic=14);\nModifyData(Valuable,Player,WanderingNotesPage2,-1);\nModifyData(Valuable,MC22,WanderingNotesPage2,1);",
+    "Description": "卷子轉到娜娜身上",
+    "zh_CN": "[panel=1]「[em7]低头看了一眼腰间的天机盘[/em7]，看完了？他写他的天机盘在这谷里转得发狂，本姑娘的打从进谷起就没动过一下——这是怎么回事，本姑娘一时也说不上来。卷子先收着，往后见着这样的卷子，还是老规矩，先给本姑娘。」",
     "links": [5]
   },
   {
     "entryID": 5,
-    "actorID": "MC22",
-    "text": "[panel=1]「五重。他過了兩重——第三重傷了左臂，退出去，就躺在這裡，七天。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_CN": "[panel=1]「五重。他过了两重——第三重伤了左臂，退出去，就躺在这里，七天。」",
-    "links": [6]
-  },
-  {
-    "entryID": 6,
-    "actorID": "MC22",
-    "text": "[panel=1]「[em7]低頭看了一眼腰間那面盤[/em7]，他寫，盤在這谷裡轉得發狂——到第七日，忽然靜了。」",
-    "Sequence": "SetPortrait(MC22,pic=8);",
-    "zh_CN": "[panel=1]「[em7]低头看了一眼腰间那面盘[/em7]，他写，盘在这谷里转得发狂——到第七日，忽然静了。」",
-    "links": [7]
-  },
-  {
-    "entryID": 7,
-    "actorID": "MC1",
-    "text": "「妳這一路呢？」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_CN": "「你这一路呢？」",
-    "links": [8]
-  },
-  {
-    "entryID": 8,
-    "actorID": "MC22",
-    "text": "[panel=1]「一下也沒動。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_CN": "[panel=1]「一下也没动。」",
-    "links": [9]
-  },
-  {
-    "entryID": 9,
-    "actorID": "MC1",
-    "text": "「末尾寫什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=14);",
-    "zh_CN": "「末尾写什么？」",
-    "links": [10]
-  },
-  {
-    "entryID": 10,
-    "actorID": "MC22",
-    "text": "[panel=1]「一個字。」",
-    "Sequence": "SetPortrait(MC22,pic=14);",
-    "zh_CN": "[panel=1]「一个字。」",
-    "links": [11]
-  },
-  {
-    "entryID": 11,
-    "actorID": "MC22",
-    "text": "[panel=1]「『北。』」",
-    "Sequence": "SetPortrait(MC22,pic=8);",
-    "zh_CN": "[panel=1]「『北。』」",
-    "links": [12]
-  },
-  {
-    "entryID": 12,
-    "actorID": "role2",
-    "text": "[panel=6]＊（她把卷末那片空白摸了一遍。收進懷裡。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（她把卷末那片空白摸了一遍。收进怀里。）＊",
-    "links": [13]
-  },
-  {
-    "entryID": 13,
     "actorID": "0",
     "text": "",
     "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
