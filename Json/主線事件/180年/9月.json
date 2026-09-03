@@ -400,19 +400,19 @@
   {
     "entryID": 29,
     "actorID": "MC5",
-    "text": "[panel=2]「你給我站住！為何這剛入帳的資金，轉眼就少了三成？」",
+    "text": "[panel=2]「你給我站住！為何這剛入帳的銀錢，轉眼就少了三成？」",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC8,pic=14);\nSetPortrait(MC5,pic=2);",
-    "zh_TW": "[panel=2]「你給我站住！為何這剛入帳的資金，轉眼就少了三成？」",
-    "zh_CN": "[panel=2]「你给我站住！为何这刚入账的资金，转眼就少了三成？」",
+    "zh_TW": "[panel=2]「你給我站住！為何這剛入帳的銀錢，轉眼就少了三成？」",
+    "zh_CN": "[panel=2]「你给我站住！为何这刚入账的银钱，转眼就少了三成？」",
     "links": [30]
   },
   {
     "entryID": 30,
     "actorID": "MC5",
-    "text": "[panel=2]「還有，前些日子那樁委託的報酬，又上哪兒去了？」",
+    "text": "[panel=2]「還有，前些日子那樁委託的酬金，又上哪兒去了？」",
     "Sequence": "SetPortrait(MC5,pic=2);",
-    "zh_TW": "[panel=2]「還有，前些日子那樁委託的報酬，又上哪兒去了？」",
-    "zh_CN": "[panel=2]「还有，前些日子那桩委托的报酬，又上哪儿去了？」",
+    "zh_TW": "[panel=2]「還有，前些日子那樁委託的酬金，又上哪兒去了？」",
+    "zh_CN": "[panel=2]「还有，前些日子那桩委托的酬金，又上哪儿去了？」",
     "links": [31]
   },
   {
@@ -445,10 +445,10 @@
   {
     "entryID": 34,
     "actorID": "MC1",
-    "text": "「……唉。我看啊，明年的大會，又是這齣戲碼重演……嗚，我這大半年的辛苦，到底是為了什麼……」",
+    "text": "「……唉。我看啊，明年的大會，怕是照樣再來一遍……嗚，我這大半年的辛苦，到底是為了什麼……」",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "zh_TW": "「……唉。我看啊，明年的大會，又是這齣戲碼重演……嗚，我這大半年的辛苦，到底是為了什麼……」",
-    "zh_CN": "「……唉。我看啊，明年的大会，又是这出戏码重演……呜，我这大半年的辛苦，到底是为了什么……」",
+    "zh_TW": "「……唉。我看啊，明年的大會，怕是照樣再來一遍……嗚，我這大半年的辛苦，到底是為了什麼……」",
+    "zh_CN": "「……唉。我看啊，明年的大会，怕是照样再来一遍……呜，我这大半年的辛苦，到底是为了什么……」",
     "links": [35]
   },
   {
@@ -529,10 +529,10 @@
   {
     "entryID": 4356,
     "actorID": "MC9",
-    "text": "[panel=2]「[var=PlayerLastName]公子。筠聽說，公子近來的買賣做得很大。」",
+    "text": "[panel=4]「[var=PlayerLastName]公子。筠聽說，公子近來的買賣做得很大。」",
     "Sequence": "SetPortrait(MC9,pic=1);",
-    "zh_TW": "[panel=2]「[var=PlayerLastName]公子。筠聽說，公子近來的買賣做得很大。」",
-    "zh_CN": "[panel=2]「[var=PlayerLastName]公子。筠听说，公子近来的买卖做得很大。」",
+    "zh_TW": "[panel=4]「[var=PlayerLastName]公子。筠聽說，公子近來的買賣做得很大。」",
+    "zh_CN": "[panel=4]「[var=PlayerLastName]公子。筠听说，公子近来的买卖做得很大。」",
     "links": [4357]
   },
   {
@@ -603,11 +603,11 @@
   {
     "entryID": 4364,
     "actorID": "MC9",
-    "text": "[panel=2]「筠的話，公子當日聽得清楚——一桌菜兩家分，筠最厭。」",
+    "text": "[panel=4]「筠的話，公子當日聽得清楚——一桌菜兩家分，筠最厭。」",
     "Sequence": "SetPortrait(MC9,pic=2);\nModifyData(FavorabilityExp,MC9,-100);",
     "Description": "甄筠好感 −100",
-    "zh_TW": "[panel=2]「筠的話，公子當日聽得清楚——一桌菜兩家分，筠最厭。」",
-    "zh_CN": "[panel=2]「筠的话，公子当日听得清楚——一桌菜两家分，筠最厌。」",
+    "zh_TW": "[panel=4]「筠的話，公子當日聽得清楚——一桌菜兩家分，筠最厭。」",
+    "zh_CN": "[panel=4]「筠的话，公子当日听得清楚——一桌菜两家分，筠最厌。」",
     "links": [4365]
   },
   {
@@ -623,7 +623,8 @@
     "entryID": 4366,
     "actorID": "role2",
     "text": "[panel=6]＊（褚人飛的手在案上敲了一下，只一下。沒有人接話。賈詡的茶碗還端在手上。你走到廳中間。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC4,pic=3);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC4,pic=3);\nOpenPanel(2, close);\nOpenPanel(5, close);",
+    "Description": "清掉英豪府其它人的立繪",
     "zh_TW": "[panel=6]＊（褚人飛的手在案上敲了一下，只一下。沒有人接話。賈詡的茶碗還端在手上。你走到廳中間。）＊",
     "zh_CN": "[panel=6]＊（褚人飞的手在案上敲了一下，只一下。没有人接话。贾诩的茶碗还端在手上。你走到厅中间。）＊",
     "links": [763]
@@ -676,10 +677,10 @@
   {
     "entryID": 4372,
     "actorID": "MC9",
-    "text": "[panel=2]「呵。公子講并州的局，講得跟說書的一樣好聽。可筠不是來聽書的——筠的錢在你府裡，這件事跟山頭沒關係。」",
+    "text": "[panel=4]「呵。公子講并州的局，講得跟說書的一樣好聽。可筠不是來聽書的——筠的錢在你府裡，這件事跟山頭沒關係。」",
     "Sequence": "SetPortrait(MC9,pic=4);",
-    "zh_TW": "[panel=2]「呵。公子講并州的局，講得跟說書的一樣好聽。可筠不是來聽書的——筠的錢在你府裡，這件事跟山頭沒關係。」",
-    "zh_CN": "[panel=2]「呵。公子讲并州的局，讲得跟说书的一样好听。可筠不是来听书的——筠的钱在你府里，这件事跟山头没关系。」",
+    "zh_TW": "[panel=4]「呵。公子講并州的局，講得跟說書的一樣好聽。可筠不是來聽書的——筠的錢在你府裡，這件事跟山頭沒關係。」",
+    "zh_CN": "[panel=4]「呵。公子讲并州的局，讲得跟说书的一样好听。可筠不是来听书的——筠的钱在你府里，这件事跟山头没关系。」",
     "links": [4368, 4369]
   },
   {
@@ -847,10 +848,10 @@
   {
     "entryID": 45,
     "actorID": "MC9",
-    "text": "[panel=2]「[em7]站了起來[/em7]，退一步？」",
+    "text": "[panel=4]「[em7]站了起來[/em7]，退一步？」",
     "Sequence": "SetPortrait(MC9,pic=2);",
-    "zh_TW": "[panel=2]「[em7]站了起來[/em7]，退一步？」",
-    "zh_CN": "[panel=2]「[em7]站了起来[/em7]，退一步？」",
+    "zh_TW": "[panel=4]「[em7]站了起來[/em7]，退一步？」",
+    "zh_CN": "[panel=4]「[em7]站了起来[/em7]，退一步？」",
     "links": [46]
   },
   {
@@ -930,10 +931,10 @@
   {
     "entryID": 54,
     "actorID": "MC9",
-    "text": "[panel=2]「筠也不要一角。筠要的，是別人拿不到。」",
+    "text": "[panel=4]「筠也不要一角。筠要的，是別人拿不到。」",
     "Sequence": "SetPortrait(MC9,pic=1);",
-    "zh_TW": "[panel=2]「筠也不要一角。筠要的，是別人拿不到。」",
-    "zh_CN": "[panel=2]「筠也不要一角。筠要的，是别人拿不到。」",
+    "zh_TW": "[panel=4]「筠也不要一角。筠要的，是別人拿不到。」",
+    "zh_CN": "[panel=4]「筠也不要一角。筠要的，是别人拿不到。」",
     "links": [55]
   },
   {
@@ -1040,19 +1041,19 @@
   {
     "entryID": 66,
     "actorID": "MC9",
-    "text": "[panel=2]「[em7]舉著的扇子往下落了半寸，又停住[/em7]，筠今日，是來問罪的。」",
+    "text": "[panel=4]「[em7]舉著的扇子往下落了半寸，又停住[/em7]，筠今日，是來問罪的。」",
     "Sequence": "SetPortrait(MC9,pic=2);",
-    "zh_TW": "[panel=2]「[em7]舉著的扇子往下落了半寸，又停住[/em7]，筠今日，是來問罪的。」",
-    "zh_CN": "[panel=2]「[em7]举着的扇子往下落了半寸，又停住[/em7]，筠今日，是来问罪的。」",
+    "zh_TW": "[panel=4]「[em7]舉著的扇子往下落了半寸，又停住[/em7]，筠今日，是來問罪的。」",
+    "zh_CN": "[panel=4]「[em7]举着的扇子往下落了半寸，又停住[/em7]，筠今日，是来问罪的。」",
     "links": [67]
   },
   {
     "entryID": 67,
     "actorID": "MC9",
-    "text": "[panel=2]「……只是問罪也分先後。公子這筆帳，筠回頭再算——這兩位今日打算從雲中拿走什麼，筠得先看清楚。」",
+    "text": "[panel=4]「……只是問罪也分先後。公子這筆帳，筠回頭再算——這兩位今日打算從雲中拿走什麼，筠得先看清楚。」",
     "Sequence": "SetPortrait(MC9,pic=1);",
-    "zh_TW": "[panel=2]「……只是問罪也分先後。公子這筆帳，筠回頭再算——這兩位今日打算從雲中拿走什麼，筠得先看清楚。」",
-    "zh_CN": "[panel=2]「……只是问罪也分先后。公子这笔账，筠回头再算——这两位今日打算从云中拿走什么，筠得先看清楚。」",
+    "zh_TW": "[panel=4]「……只是問罪也分先後。公子這筆帳，筠回頭再算——這兩位今日打算從雲中拿走什麼，筠得先看清楚。」",
+    "zh_CN": "[panel=4]「……只是问罪也分先后。公子这笔账，筠回头再算——这两位今日打算从云中拿走什么，筠得先看清楚。」",
     "links": [42, 39]
   },
   {
@@ -1647,8 +1648,7 @@
     "entryID": 143,
     "actorID": "MC9",
     "text": "「[em7]把扇子舉了起來。她沒搖，只是舉著[/em7]，褚幫主要人，筠不要人。」",
-    "Sequence": "SetPortrait(MC9,pic=1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_38);",
-    "Description": "換音樂",
+    "Sequence": "SetPortrait(MC9,pic=1);",
     "zh_TW": "「[em7]把扇子舉了起來。她沒搖，只是舉著[/em7]，褚幫主要人，筠不要人。」",
     "zh_CN": "「[em7]把扇子举了起来。她没摇，只是举着[/em7]，褚帮主要人，筠不要人。」",
     "links": [144]
@@ -2724,10 +2724,10 @@
   {
     "entryID": 281,
     "actorID": "MC10",
-    "text": "[panel=1]「可這一局擺在誰家的案上？小子，你還不夠格！」",
+    "text": "[panel=1]「可這一局擺在誰家的案上？小子，你壓不住這張案！」",
     "Sequence": "SetPortrait(MC10,pic=2);",
-    "zh_TW": "[panel=1]「可這一局擺在誰家的案上？小子，你還不夠格！」",
-    "zh_CN": "[panel=1]「可这一局摆在谁家的案上？小子，你还不够格！」",
+    "zh_TW": "[panel=1]「可這一局擺在誰家的案上？小子，你壓不住這張案！」",
+    "zh_CN": "[panel=1]「可这一局摆在谁家的案上？小子，你压不住这张案！」",
     "links": [282]
   },
   {
@@ -2816,7 +2816,7 @@
     "entryID": 291,
     "actorID": "role2",
     "text": "[panel=6]＊（案後的人這時才站起來。從三家進門到現在，他一直坐著。）＊",
-    "Sequence": "SetPortrait(MC4,pic=1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_47);",
+    "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_TW": "[panel=6]＊（案後的人這時才站起來。從三家進門到現在，他一直坐著。）＊",
     "zh_CN": "[panel=6]＊（案后的人这时才站起来。从三家进门到现在，他一直坐着。）＊",
     "links": [292]
@@ -2914,10 +2914,10 @@
   {
     "entryID": 302,
     "actorID": "MC9",
-    "text": "[panel=2]「筠出的錢，筠自己看著。三位——往後見面，還是買賣。」",
+    "text": "[panel=4]「筠出的錢，筠自己看著。三位——往後見面，還是買賣。」",
     "Sequence": "SetPortrait(MC9,pic=1);",
-    "zh_TW": "[panel=2]「筠出的錢，筠自己看著。三位——往後見面，還是買賣。」",
-    "zh_CN": "[panel=2]「筠出的钱，筠自己看着。三位——往后见面，还是买卖。」",
+    "zh_TW": "[panel=4]「筠出的錢，筠自己看著。三位——往後見面，還是買賣。」",
+    "zh_CN": "[panel=4]「筠出的钱，筠自己看着。三位——往后见面，还是买卖。」",
     "links": [303]
   },
   {
@@ -2942,7 +2942,7 @@
     "entryID": 305,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1,close)@1;\nOpenPanel(2,close)@1;\nOpenPanel(3,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1,close)@1;\nOpenPanel(2,close)@1;\nOpenPanel(3,close)@1;\nOpenPanel(4,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場：三家走了，收掉三人立繪（不換景，所以不插 EnableDialogueBG）",
     "links": [306]
   },
@@ -2958,10 +2958,10 @@
   {
     "entryID": 307,
     "actorID": "MC2",
-    "text": "[panel=1]「三家的錢一起收。嘿。師弟，你這膽子比我還大。」",
+    "text": "[panel=1]「三家的錢一起收。嘿。小子，你這膽子比我還大。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「三家的錢一起收。嘿。師弟，你這膽子比我還大。」",
-    "zh_CN": "[panel=1]「三家的钱一起收。嘿。师弟，你这胆子比我还大。」",
+    "zh_TW": "[panel=1]「三家的錢一起收。嘿。小子，你這膽子比我還大。」",
+    "zh_CN": "[panel=1]「三家的钱一起收。嘿。小子，你这胆子比我还大。」",
     "links": [308]
   },
   {
@@ -2985,10 +2985,10 @@
   {
     "entryID": 310,
     "actorID": "MC4",
-    "text": "[panel=1]「[em7]把茶碗放下。從頭到尾，他沒有站起來過[/em7]，三萬六千的窟窿，你這一趟，竟填出將近三倍有餘。」",
+    "text": "[panel=1]「[em7]把茶碗放下。從頭到尾，他沒有站起來過[/em7]，三萬六千的窟窿，你這一趟，竟填出將近三倍來。」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_TW": "[panel=1]「[em7]把茶碗放下。從頭到尾，他沒有站起來過[/em7]，三萬六千的窟窿，你這一趟，竟填出將近三倍有餘。」",
-    "zh_CN": "[panel=1]「[em7]把茶碗放下。从头到尾，他没有站起来过[/em7]，三万六千的窟窿，你这一趟，竟填出将近三倍有余。」",
+    "zh_TW": "[panel=1]「[em7]把茶碗放下。從頭到尾，他沒有站起來過[/em7]，三萬六千的窟窿，你這一趟，竟填出將近三倍來。」",
+    "zh_CN": "[panel=1]「[em7]把茶碗放下。从头到尾，他没有站起来过[/em7]，三万六千的窟窿，你这一趟，竟填出将近三倍来。」",
     "links": [311]
   },
   {
@@ -3139,11 +3139,11 @@
   {
     "entryID": 328,
     "actorID": "MC9",
-    "text": "[panel=2]「[em7]沒有再看你，輿簾在她身後放了下來[/em7]，筠倦了。這筆帳，改日筠派人來收。」",
+    "text": "[panel=4]「[em7]沒有再看你，輿簾在她身後放了下來[/em7]，筠倦了。這筆帳，改日筠派人來收。」",
     "Sequence": "SetPortrait(MC9,pic=3);",
     "Description": "離席・甄家",
-    "zh_TW": "[panel=2]「[em7]沒有再看你，輿簾在她身後放了下來[/em7]，筠倦了。這筆帳，改日筠派人來收。」",
-    "zh_CN": "[panel=2]「[em7]没有再看你，舆帘在她身后放了下来[/em7]，筠倦了。这笔账，改日筠派人来收。」",
+    "zh_TW": "[panel=4]「[em7]沒有再看你，輿簾在她身後放了下來[/em7]，筠倦了。這筆帳，改日筠派人來收。」",
+    "zh_CN": "[panel=4]「[em7]没有再看你，舆帘在她身后放了下来[/em7]，筠倦了。这笔账，改日筠派人来收。」",
     "links": [330]
   },
   {
@@ -3202,10 +3202,10 @@
   {
     "entryID": 4384,
     "actorID": "MC1",
-    "text": "(看向郭嘉。)",
+    "text": "（看向郭嘉。）",
     "Sequence": "",
-    "zh_TW": "(看向郭嘉。)",
-    "zh_CN": "(看向郭嘉。)",
+    "zh_TW": "（看向郭嘉。）",
+    "zh_CN": "（看向郭嘉。）",
     "links": [4385]
   },
   {

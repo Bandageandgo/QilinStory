@@ -1,0 +1,101 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "title": "枯骨堆中發現並取得《卷四》",
+    "text": "[panel=6]＊（墓道最底下那一層，骨頭堆到牆邊。有幾具是分開擺的，一具一具排成排——跟旁邊那一堆不一樣。排頭那具的肋骨底下壓著一卷東西，紙的。）＊",
+    "Sequence": "ModifyData(Valuable,MC22,WanderingNotesPage3,1);",
+    "Description": "互動點：枯骨堆中發現並取得《卷四》WanderingNotesPage3",
+    "zh_CN": "[panel=6]＊（墓道最底下那一层，骨头堆到墙边。有几具是分开摆的，一具一具排成排——跟旁边那一堆不一样。排头那具的肋骨底下压着一卷东西，纸的。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage3);",
+    "Description": "貴重品便籤",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]卷子翻開了，卻沒有往下讀。她先把那一排骨頭看了一遍[/em7]，……大俠，我爹在這底下驗了百餘具骨頭。一個人，三個月。」",
+    "Sequence": "SetPortrait(MC22,pic=9);",
+    "zh_CN": "[panel=1]「[em7]卷子翻开了，却没有往下读。她先把那一排骨头看了一遍[/em7]，……大侠，我爹在这底下验了百余具骨头。一个人，三个月。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「他驗出什麼了？」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "zh_CN": "「他验出什么了？」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC22",
+    "text": "[panel=1]「孔、齒、指節。他寫，那些手腳是活著的時候做下的。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「孔、齿、指节。他写，那些手脚是活着的时候做下的。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]往下念，聲音低下去[/em7]，『牠在等什麼。等的不是我。』」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "zh_CN": "[panel=1]「[em7]往下念，声音低下去[/em7]，『它在等什么。等的不是我。』」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「他是做學問的人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「他是做学问的人。」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]手指壓在那一行上[/em7]，做學問的人，不寫『不敢近』。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「[em7]手指压在那一行上[/em7]，做学问的人，不写『不敢近』。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]想起什麼，把卷翻到末尾[/em7]，末了還有四個字——『此考別論』。別論在哪一卷，他沒寫。」",
+    "Sequence": "SetPortrait(MC22,pic=14);",
+    "zh_CN": "[panel=1]「[em7]想起什么，把卷翻到末尾[/em7]，末了还有四个字——『此考别论』。别论在哪一卷，他没写。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「那就找。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「那就找。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]卷子往懷裡一塞[/em7]，本姑娘還用你說。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「[em7]卷子往怀里一塞[/em7]，本姑娘还用你说。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 2, \"success\");",
+    "Description": "尾格：收立繪面板；任務更新",
+    "links": []
+  }
+]

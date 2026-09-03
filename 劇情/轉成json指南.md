@@ -158,7 +158,7 @@
 -   **Markdown**：獲得當句旁白標 `**【獲得貴重品：中文名】**`，同一句 `Sequence` 寫上列指令（可與 `DisableCharacterExpression` 合併）。
 -   **禁止**：`ModifyData(Inventory,AddItem,...)`、`AddItem(...)`。沒有「一般道具」這條路徑，眼淚、信物、遺物等也一律用 `Valuable`。
 -   **特殊標籤**（CSV 另一欄，無數量參數）：`ModifyData(Valuable,MC1,SwordProficiency);` —— 不是「獲得物品」，不要拿來發蛟龍角。
--   可與立繪／表情寫在同一條 `Sequence`。開啟貴重品便籤用 `ShowValuableMemo(ValuablesID);`，與獲得指令分開。
+-   可與立繪／表情寫在同一條 `Sequence`。**開啟貴重品便籤**用 `ShowValuableMemo(ValuablesID);`，與獲得指令分開，且**必須排在該件貴重品已到手之後**（沒持有就開不出來）；要攔住推進、逼玩家讀完再走的寫法（`SetContinueMode(false);` ＋ `@Message(EndMemo)`）見 `給AI看的指南/貴重品指令轉換規則.md`〈開啟貴重品便籤〉。
 
 #### 3.7 對話背景圖（養成任務首格開、尾格關）
 -   詳細規則與 ID 表見 `給AI看的指南/畫面指令轉換規則.md` §1。適用 `Json/主線事件/`、`Json/探索事件/` 的主線／支線任務對話；箱庭對話平常不開。

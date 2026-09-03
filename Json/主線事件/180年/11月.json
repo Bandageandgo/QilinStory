@@ -2,9 +2,10 @@
   {
     "entryID": 1,
     "actorID": "0",
+    "title": "赤字結算(前)",
     "text": "",
-    "Sequence": "Continue();",
-    "Description": "11 月下旬入口：先判有沒有結算過（順序不可倒：先補播、再判生死）",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);\nContinue();",
+    "Description": "赤字結算(前)",
     "links": [2, 3]
   },
   {
@@ -12,79 +13,3235 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "CurrentQuestState(\"C2M1\") == \"success\";",
-    "Description": "已結算過 → 跳過補播，接對話「張仲景・饕餮骰揭露」〈前置：藏書庫〉（Unity 端接跨對話連線）",
-    "links": []
+    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"success\";",
+    "Description": "分流：赤龍幫已出資",
+    "links": [4, 5]
   },
   {
     "entryID": 3,
     "actorID": "0",
     "text": "",
-    "Sequence": "Continue();",
-    "Description": "未結算（else）→ 判 C2M1 entry 1／2",
-    "links": [4, 5]
+    "Sequence": "AudioControl(PlayMusic,BGM_23);\nContinue();",
+    "Description": "分流：赤龍幫未出資（else），音樂",
+    "links": [6, 7]
   },
   {
     "entryID": 4,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"success\";",
-    "Description": "分流：赤龍幫已出資",
-    "links": [6, 7]
+    "actorID": "role2",
+    "text": "[panel=6]＊（十一月下旬。院裡的棗樹落了一地，沒人掃。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
+    "Sequence": "SetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=14);",
+    "Conditions": "CurrentQuestEntryState(\"C2M1\", 2) == \"success\";",
+    "Description": "交接點：兩家都出資",
+    "zh_TW": "[panel=6]＊（十一下旬。院裡的棗樹落了一地，沒人掃。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
+    "zh_CN": "[panel=6]＊（十一下旬。院里的枣树落了一地，没人扫。正厅的案上摊着两卷账，徐荣一卷一卷点过去，点得很慢；小犀跪坐在案边，一把算筹拨一下、记一笔，已经拨了大半个时辰。）＊",
+    "links": [4351]
   },
   {
     "entryID": 5,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Description": "分流：赤龍幫未出資（else）",
-    "links": [8, 9]
+    "Description": "分流：只有赤龍幫（else）",
+    "links": [8]
   },
   {
     "entryID": 6,
-    "actorID": "role2",
-    "text": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
-    "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=14);",
-    "Conditions": "CurrentQuestEntryState(\"C2M1\", 2) == \"success\";",
-    "Description": "交接點：兩家都出資 → 補播「主線事件/180年/9月.json」#4351（雙投版結算場，2026-09-02 併檔後的新位置；Unity 端接跨對話連線；背景不關）",
-    "zh_TW": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
-    "zh_CN": "[panel=6]＊（十一月下旬。院里那棵枣树早光了，廊下结着霜。正厅的案上摊着两卷账，徐荣一卷一卷点过去，点得很慢；小犀跪坐在案边，一把算筹拨一下、记一笔，已经拨了大半个时辰。）＊",
-    "links": []
-  },
-  {
-    "entryID": 7,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "分流：只有赤龍幫（else）",
-    "links": [10]
-  },
-  {
-    "entryID": 8,
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
     "Conditions": "CurrentQuestEntryState(\"C2M1\", 2) == \"success\";",
     "Description": "分流：只有甄家",
+    "links": [8]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "＊（十一月三十，霜還沒化。差役來封門，一張封條壓著一張。英豪府那塊匾是最後抬下來的，抬下來也沒人要，就靠在階前的牆邊。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "＊（十一月三十，霜還沒化。差役來封門，一張封條壓著一張。英豪府那塊匾是最後抬下來的，抬下來也沒人要，就靠在階前的牆邊。）＊",
+    "zh_CN": "＊（十一月三十，霜还没化。差役来封门，一张封条压着一张。英豪府那块匾是最后抬下来的，抬下来也没人要，就靠在阶前的墙边。）＊",
     "links": [10]
   },
   {
-    "entryID": 9,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "entry 1、2 都沒 success（else）→ 接對話「雲中/乞丐結局」（ShowEnding(Ending_1)）；當天不播饕餮骰揭露",
-    "links": []
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去…）＊",
+    "Sequence": "SetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=14);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "交接點：只有一家出資",
+    "zh_TW": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著兩卷帳，徐榮一卷一卷點過去…）＊",
+    "zh_CN": "[panel=6]＊（十一月下旬。院里那棵枣树早光了，廊下结着霜。正厅的案上摊着两卷帐，徐荣一卷一卷点过去…）＊",
+    "links": [4336]
   },
   {
     "entryID": 10,
-    "actorID": "role2",
-    "text": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著一卷帳，徐榮一行一行點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
-    "Sequence": "EnableDialogueBG(HallOfHeroes);\nSetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=14);",
-    "Description": "交接點：只有一家出資 → 補播「主線事件/180年/9月.json」#4336（獨資版結算場，2026-09-02 併檔後的新位置；Unity 端接跨對話連線；背景不關）",
-    "zh_TW": "[panel=6]＊（十一月下旬。院裡那棵棗樹早光了，廊下結著霜。正廳的案上攤著一卷帳，徐榮一行一行點過去，點得很慢；小犀跪坐在案邊，一把算籌撥一下、記一筆，已經撥了大半個時辰。）＊",
-    "zh_CN": "[panel=6]＊（十一月下旬。院里那棵枣树早光了，廊下结着霜。正厅的案上摊着一卷账，徐荣一行一行点过去，点得很慢；小犀跪坐在案边，一把算筹拨一下、记一笔，已经拨了大半个时辰。）＊",
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nShowEnding(Ending_1);\nContinue();",
+    "Description": "尾格：關背景，失敗結局",
     "links": []
+  },
+  {
+    "entryID": 4336,
+    "actorID": "MC8",
+    "text": "[panel=2]「……三萬六千。表哥！三萬六千！湊齊啦！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Surprise);\nDisableCharacterExpression(2)@1;",
+    "zh_TW": "[panel=2]「……三萬六千。表哥！三萬六千！湊齊啦！」",
+    "zh_CN": "[panel=2]「……三万六千。表哥！三万六千！凑齐啦！」",
+    "links": [4337]
+  },
+  {
+    "entryID": 4337,
+    "actorID": "MC2",
+    "text": "[panel=1]「[em7]從柱子邊站起來，手裡那罈酒還沒開[/em7]，湊齊了？那還等什麼——徐師父，今晚這頓，府裡出。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「[em7]從柱子邊站起來，手裡那罈酒還沒開[/em7]，湊齊了？那還等什麼——徐師父，今晚這頓，府裡出。」",
+    "zh_CN": "[panel=1]「[em7]从柱子边站起来，手里那坛酒还没开[/em7]，凑齐了？那还等什么——徐师父，今晚这顿，府里出。」",
+    "links": [4338]
+  },
+  {
+    "entryID": 4338,
+    "actorID": "MC5",
+    "text": "[panel=2]「[em7]把那捲帳從頭捲到尾，捲完才抬頭[/em7]……你倒是記得快。」",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=2]「[em7]把那捲帳從頭捲到尾，捲完才抬頭[/em7]……你倒是記得快。」",
+    "zh_CN": "[panel=2]「[em7]把那卷账从头卷到尾，卷完才抬头[/em7]……你倒是记得快。」",
+    "links": [4339]
+  },
+  {
+    "entryID": 4339,
+    "actorID": "MC4",
+    "text": "[panel=1]「[em7]那隻冒了半天煙的茶碗，這時才端起來喝了一口[/em7]，三萬六千，一文不差。做得漂亮——如此一來，本府根基穩固，往後可高枕無憂了。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「[em7]那隻冒了半天煙的茶碗，這時才端起來喝了一口[/em7]，三萬六千，一文不差。做得漂亮——如此一來，本府根基穩固，往後可高枕無憂了。」",
+    "zh_CN": "[panel=1]「[em7]那只冒了半天烟的茶碗，这时才端起来喝了一口[/em7]，三万六千，一文不差。做得漂亮——如此一来，本府根基稳固，往后可高枕无忧了。」",
+    "links": [4340]
+  },
+  {
+    "entryID": 4340,
+    "actorID": "MC1",
+    "text": "「呼……忙了大半年，總算不必再為這些帳目發愁了吧。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「呼……忙了大半年，總算不必再為這些帳目發愁了吧。」",
+    "zh_CN": "「呼……忙了大半年，总算不必再为这些账目发愁了吧。」",
+    "links": [4341]
+  },
+  {
+    "entryID": 4341,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "分流：（赤龍幫）／（甄家）決定是誰出的資",
+    "links": [4342, 4347]
+  },
+  {
+    "entryID": 4342,
+    "actorID": "MC5",
+    "text": "[panel=2]「雁門的話，我一併帶到。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"C2M1\", 1) == \"success\";",
+    "zh_TW": "[panel=2]「雁門的話，我一併帶到。」",
+    "zh_CN": "[panel=2]「雁门的话，我一并带到。」",
+    "links": [4343]
+  },
+  {
+    "entryID": 4343,
+    "actorID": "MC5",
+    "text": "[panel=2]「褚幫主說，赤龍幫的旗立在雲中——往後這地界只認這一面。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「褚幫主說，赤龍幫的旗立在雲中——往後這地界只認這一面。」",
+    "zh_CN": "[panel=2]「褚帮主说，赤龙帮的旗立在云中——往后这地界只认这一面。」",
+    "links": [4344]
+  },
+  {
+    "entryID": 4344,
+    "actorID": "MC5",
+    "text": "[panel=2]「他要的不是利錢。是這句話。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「他要的不是利錢。是這句話。」",
+    "zh_CN": "[panel=2]「他要的不是利钱。是这句话。」",
+    "links": [4345]
+  },
+  {
+    "entryID": 4345,
+    "actorID": "MC2",
+    "text": "[panel=1]「那老頭倒乾脆。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「那老頭倒乾脆。」",
+    "zh_CN": "[panel=1]「那老头倒干脆。」",
+    "links": [4346]
+  },
+  {
+    "entryID": 4346,
+    "actorID": "MC7",
+    "text": "[panel=3]「乾脆的人，翻臉也乾脆。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「乾脆的人，翻臉也乾脆。」",
+    "zh_CN": "[panel=3]「干脆的人，翻脸也干脆。」",
+    "links": [17]
+  },
+  {
+    "entryID": 4347,
+    "actorID": "MC5",
+    "text": "[panel=2]「鄴城也捎了話。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「鄴城也捎了話。」",
+    "zh_CN": "[panel=2]「邺城也捎了话。」",
+    "links": [4348]
+  },
+  {
+    "entryID": 4348,
+    "actorID": "MC5",
+    "text": "[panel=2]「甄家主說，錢是投在雲中這條路上的。路走得通，她的錢就不動。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「甄家主說，錢是投在雲中這條路上的。路走得通，她的錢就不動。」",
+    "zh_CN": "[panel=2]「甄家主说，钱是投在云中这条路上的。路走得通，她的钱就不动。」",
+    "links": [4349]
+  },
+  {
+    "entryID": 4349,
+    "actorID": "MC5",
+    "text": "[panel=2]「哪天走不通了——她第一個抽手。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「哪天走不通了——她第一個抽手。」",
+    "zh_CN": "[panel=2]「哪天走不通了——她第一个抽手。」",
+    "links": [4350]
+  },
+  {
+    "entryID": 4350,
+    "actorID": "MC2",
+    "text": "[panel=1]「這叫投錢？這叫寄放。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「這叫投錢？這叫寄放。」",
+    "zh_CN": "[panel=1]「这叫投钱？这叫寄放。」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC7",
+    "text": "[panel=3]「她算得比你清楚。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「她算得比你清楚。」",
+    "zh_CN": "[panel=3]「她算得比你清楚。」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "role2",
+    "text": "[panel=6]＊（廳裡靜了一下。徐榮把帳捲起來，捲好了，卻沒有放下。）＊",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=6]＊（廳裡靜了一下。徐榮把帳捲起來，捲好了，卻沒有放下。）＊",
+    "zh_CN": "[panel=6]＊（厅里静了一下。徐荣把账卷起来，卷好了，却没有放下。）＊",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC7",
+    "text": "[panel=3]「一家的錢，一家的話。雲中這塊地，從今天起只有一個名字。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「一家的錢，一家的話。雲中這塊地，從今天起只有一個名字。」",
+    "zh_CN": "[panel=3]「一家的钱，一家的话。云中这块地，从今天起只有一个名字。」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC2",
+    "text": "[panel=1]「那不是好事？至少乾淨。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「那不是好事？至少乾淨。」",
+    "zh_CN": "[panel=1]「那不是好事？至少干净。」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC7",
+    "text": "[panel=3]「東邊雁門，南邊鄴城，北邊朔方。今年只來了一個。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「東邊雁門，南邊鄴城，北邊朔方。今年只來了一個。」",
+    "zh_CN": "[panel=3]「东边雁门，南边邺城，北边朔方。今年只来了一个。」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC7",
+    "text": "[panel=3]「乾淨的東西，人人都想拿。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「乾淨的東西，人人都想拿。」",
+    "zh_CN": "[panel=3]「干净的东西，人人都想拿。」",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人接下去。徐榮把那捲帳收進袖裡，收得比方才慢。）＊",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=6]＊（沒有人接下去。徐榮把那捲帳收進袖裡，收得比方才慢。）＊",
+    "zh_CN": "[panel=6]＊（没有人接下去。徐荣把那卷账收进袖里，收得比方才慢。）＊",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC4",
+    "text": "[panel=1]「[em7]從案下取出一串錢，推到你面前。串得整整齊齊，像早就備著[/em7]，一千錢。拿著。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「[em7]從案下取出一串錢，推到你面前。串得整整齊齊，像早就備著[/em7]，一千錢。拿著。」",
+    "zh_CN": "[panel=1]「[em7]从案下取出一串钱，推到你面前。串得整整齐齐，像早就备着[/em7]，一千钱。拿着。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC1",
+    "text": "「……先生，這是——」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「……先生，這是——」",
+    "zh_CN": "「……先生，这是——」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC4",
+    "text": "[panel=1]「賈某不白用人。這一趟是你去談的，帳自然算你一份。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「賈某不白用人。這一趟是你去談的，帳自然算你一份。」",
+    "zh_CN": "[panel=1]「贾某不白用人。这一趟是你去谈的，账自然算你一份。」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC4",
+    "text": "[panel=1]「往後也照這個算——你替本府拿回多少，本府就分你多少。誰替賈某辦事，賈某就給誰。」",
+    "Sequence": "SetPortrait(MC4,pic=1);\nModifyData(Coin,Player,1000);",
+    "zh_TW": "[panel=1]「往後也照這個算——你替本府拿回多少，本府就分你多少。誰替賈某辦事，賈某就給誰。」",
+    "zh_CN": "[panel=1]「往后也照这个算——你替本府拿回多少，本府就分你多少。谁替贾某办事，贾某就给谁。」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "role2",
+    "text": "[panel=6]＊（徐榮在旁邊看著那串錢，沒有說話。）＊",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=6]＊（徐榮在旁邊看著那串錢，沒有說話。）＊",
+    "zh_CN": "[panel=6]＊（徐荣在旁边看着那串钱，没有说话。）＊",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]伸手要接，手到一半停住，回頭看了你一眼，才把錢串收進懷裡[/em7]，一千錢……」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「[em7]伸手要接，手到一半停住，回頭看了你一眼，才把錢串收進懷裡[/em7]，一千錢……」",
+    "zh_CN": "[panel=2]「[em7]伸手要接，手到一半停住，回头看了你一眼，才把钱串收进怀里[/em7]，一千钱……」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC5",
+    "text": "[panel=2]「你給我站住！為何這剛入帳的銀錢，轉眼就少了三成？」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC8,pic=14);\nSetPortrait(MC5,pic=2);",
+    "zh_TW": "[panel=2]「你給我站住！為何這剛入帳的銀錢，轉眼就少了三成？」",
+    "zh_CN": "[panel=2]「你给我站住！为何这刚入账的银钱，转眼就少了三成？」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC5",
+    "text": "[panel=2]「還有，前些日子那樁委託的酬金，又上哪兒去了？」",
+    "Sequence": "SetPortrait(MC5,pic=2);",
+    "zh_TW": "[panel=2]「還有，前些日子那樁委託的酬金，又上哪兒去了？」",
+    "zh_CN": "[panel=2]「还有，前些日子那桩委托的酬金，又上哪儿去了？」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC4",
+    "text": "[panel=1]「……啊，賈某險些忘了，早先答應要走一趟冀州，此刻再不動身可就遲了。告辭。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「……啊，賈某險些忘了，早先答應要走一趟冀州，此刻再不動身可就遲了。告辭。」",
+    "zh_CN": "[panel=1]「……啊，贾某险些忘了，早先答应要走一趟冀州，此刻再不动身可就迟了。告辞。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC5",
+    "text": "[panel=2]「慢著！賈詡！你這混帳——給我站住──！」",
+    "Sequence": "SetPortrait(MC5,pic=2);",
+    "zh_TW": "[panel=2]「慢著！賈詡！你這混帳——給我站住──！」",
+    "zh_CN": "[panel=2]「慢着！贾诩！你这混账——给我站住──！」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡的袖子從徐榮手裡滑出去，人已經到了門口。他走得不快，可是誰也沒攔住。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（賈詡的袖子從徐榮手裡滑出去，人已經到了門口。他走得不快，可是誰也沒攔住。）＊",
+    "zh_CN": "[panel=6]＊（贾诩的袖子从徐荣手里滑出去，人已经到了门口。他走得不快，可是谁也没拦住。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「……唉。我看啊，明年的大會，怕是照樣再來一遍……嗚，我這大半年的辛苦，到底是為了什麼……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「……唉。我看啊，明年的大會，怕是照樣再來一遍……嗚，我這大半年的辛苦，到底是為了什麼……」",
+    "zh_CN": "「……唉。我看啊，明年的大会，怕是照样再来一遍……呜，我这大半年的辛苦，到底是为了什么……」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC3",
+    "text": "[panel=1]「…………」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=1]「…………」",
+    "zh_CN": "[panel=1]「…………」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC2",
+    "text": "[panel=3]「[em7]拍了拍你的肩[/em7]，別看了。那三成，追不回來的——我試過。」",
+    "Sequence": "SetPortrait(MC2,pic=3);\nModifyData(FavorabilityExp,MC4,50);",
+    "Script": "SetQuestState(\"C2M1\", \"success\");",
+    "Description": "任務更新：「填補赤字」總任務 C2M1 → success",
+    "zh_TW": "[panel=3]「[em7]拍了拍你的肩[/em7]，別看了。那三成，追不回來的——我試過。」",
+    "zh_CN": "[panel=3]「[em7]拍了拍你的肩[/em7]，别看了。那三成，追不回来的——我试过。」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "Description": "尾格：關表情與背景",
+    "links": []
+  },
+  {
+    "entryID": 4351,
+    "actorID": "role2",
+    "title": "舌戰三家",
+    "text": "[panel=6]＊（首先進門的是褚人飛。他一個人來的，身後沒跟半個弟兄，兩隻手空著——那對鐵膽沒帶在身上。進了門他不急著坐，先把整間廳掃了一圈，看的不是你。）＊",
+    "Sequence": "SetPortrait(MC10,pic=1);\nAudioControl(PlayMusic,BGM_28);",
+    "Description": "舌戰三家，音樂",
+    "zh_TW": "[panel=6]＊（首先進門的是褚人飛。他一個人來的，身後沒跟半個弟兄，兩隻手空著——那對鐵膽沒帶在身上。進了門他不急著坐，先把整間廳掃了一圈，看的不是你。）＊",
+    "zh_CN": "[panel=6]＊（首先进门的是褚人飞。他一个人来的，身后没跟半个弟兄，两只手空着——那对铁胆没带在身上。进了门他不急着坐，先把整间厅扫了一圈，看的不是你。）＊",
+    "links": [4352]
+  },
+  {
+    "entryID": 4352,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他後頭跟著一頂肩輿，在階下停住。輿槓放下，人退到牆邊。簾子從裡頭掀開，沒人扶。甄筠下了輿，先看了褚人飛一眼，才把目光移開。）＊",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "[panel=6]＊（他後頭跟著一頂肩輿，在階下停住。輿槓放下，人退到牆邊。簾子從裡頭掀開，沒人扶。甄筠下了輿，先看了褚人飛一眼，才把目光移開。）＊",
+    "zh_CN": "[panel=6]＊（他后头跟着一顶肩舆，在阶下停住。舆杠放下，人退到墙边。帘子从里头掀开，没人扶。甄筠下了舆，先看了褚人飞一眼，才把目光移开。）＊",
+    "links": [4353]
+  },
+  {
+    "entryID": 4353,
+    "actorID": "role2",
+    "text": "[panel=6]＊（最後那個沒走門。他從院牆翻進來，落地沒有聲音——一身塞外的皮袍，年紀跟你差不了幾歲。朔方黑狼氏族的那位族長，你先前只在赫連娜娜嘴裡聽過這個名字。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（最後那個沒走門。他從院牆翻進來，落地沒有聲音——一身塞外的皮袍，年紀跟你差不了幾歲。朔方黑狼氏族的那位族長，你先前只在赫連娜娜嘴裡聽過這個名字。）＊",
+    "zh_CN": "[panel=6]＊（最后那个没走门。他从院墙翻进来，落地没有声音——一身塞外的皮袍，年纪跟你差不了几岁。朔方黑狼氏族的那位族长，你先前只在赫连娜娜嘴里听过这个名字。）＊",
+    "links": [4354]
+  },
+  {
+    "entryID": 4354,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一個走門，一個坐輿，一個翻牆。三個人到齊了，沒有一個是同路來的。廳裡一時沒有人說話。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（一個走門，一個坐輿，一個翻牆。三個人到齊了，沒有一個是同路來的。廳裡一時沒有人說話。）＊",
+    "zh_CN": "[panel=6]＊（一个走门，一个坐舆，一个翻墙。三个人到齐了，没有一个是同路来的。厅里一时没有人说话。）＊",
+    "links": [4355]
+  },
+  {
+    "entryID": 4355,
+    "actorID": "MC10",
+    "text": "[panel=1]「小子。老子今天不是來喝酒的。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「小子。老子今天不是來喝酒的。」",
+    "zh_CN": "[panel=1]「小子。老子今天不是来喝酒的。」",
+    "links": [4356]
+  },
+  {
+    "entryID": 4356,
+    "actorID": "MC9",
+    "text": "[panel=4]「[var=PlayerLastName]公子。筠聽說，公子近來的買賣做得很大。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "[panel=4]「[var=PlayerLastName]公子。筠聽說，公子近來的買賣做得很大。」",
+    "zh_CN": "[panel=4]「[var=PlayerLastName]公子。筠听说，公子近来的买卖做得很大。」",
+    "links": [4357]
+  },
+  {
+    "entryID": 4357,
+    "actorID": "MC11",
+    "text": "[panel=3]「[em7]逕自往廳裡一坐，把腳翹到案上[/em7]，哼哈哈——本王來遲了？瞧這架勢，好戲才剛開鑼。」",
+    "Sequence": "SetPortrait(MC11,pic=1);\nSetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=3]「[em7]逕自往廳裡一坐，把腳翹到案上[/em7]，哼哈哈——本王來遲了？瞧這架勢，好戲才剛開鑼。」",
+    "zh_CN": "[panel=3]「[em7]径自往厅里一坐，把脚翘到案上[/em7]，哼哈哈——本王来迟了？瞧这架势，好戏才刚开锣。」",
+    "links": [4358]
+  },
+  {
+    "entryID": 4358,
+    "actorID": "MC2",
+    "text": "[panel=5]「[em7]手已經在刀上[/em7]，三個。要不要我請他們出去？」",
+    "Sequence": "SetPortrait(MC2,pic=2);\nEnableCharacterExpression(5,MC2,Anger);",
+    "zh_TW": "[panel=5]「[em7]手已經在刀上[/em7]，三個。要不要我請他們出去？」",
+    "zh_CN": "[panel=5]「[em7]手已经在刀上[/em7]，三个。要不要我请他们出去？」",
+    "links": [4359]
+  },
+  {
+    "entryID": 4359,
+    "actorID": "MC5",
+    "text": "[panel=2]「你請一個出去，另外兩個明天帶三百人回來。」",
+    "Sequence": "DisableCharacterExpression(5);\nSetPortrait(MC5,pic=2);",
+    "zh_TW": "[panel=2]「你請一個出去，另外兩個明天帶三百人回來。」",
+    "zh_CN": "[panel=2]「你请一个出去，另外两个明天带三百人回来。」",
+    "links": [4360]
+  },
+  {
+    "entryID": 4360,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……」",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Nervous);",
+    "zh_TW": "[panel=2]「表哥……」",
+    "zh_CN": "[panel=2]「表哥……」",
+    "links": [4361]
+  },
+  {
+    "entryID": 4361,
+    "actorID": "role2",
+    "text": "[panel=6]＊（呂信「嘖」了一聲，手還按在刀上，人沒動。小犀往你身後挪了半步，把帳冊抱緊；郭嘉靠在柱子上，從進廳到現在沒換過姿勢。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC2,pic=3);\nSetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=6]＊（呂信「嘖」了一聲，手還按在刀上，人沒動。小犀往你身後挪了半步，把帳冊抱緊；郭嘉靠在柱子上，從進廳到現在沒換過姿勢。）＊",
+    "zh_CN": "[panel=6]＊（吕信「啧」了一声，手还按在刀上，人没动。小犀往你身后挪了半步，把账册抱紧；郭嘉靠在柱子上，从进厅到现在没换过姿势。）＊",
+    "links": [4362]
+  },
+  {
+    "entryID": 4362,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三個人。一個站著，一個坐著，一個翹著腳。誰也不先開口。）＊",
+    "Sequence": "OpenPanel(2, close);\nOpenPanel(3, close);\nOpenPanel(4, close);\nOpenPanel(5, close);",
+    "Description": "清掉其它的人的立繪",
+    "zh_TW": "[panel=6]＊（三個人。一個站著，一個坐著，一個翹著腳。誰也不先開口。）＊",
+    "zh_CN": "[panel=6]＊（三个人。一个站着，一个坐着，一个翘着脚。谁也不先开口。）＊",
+    "links": [4363]
+  },
+  {
+    "entryID": 4363,
+    "actorID": "MC10",
+    "text": "[panel=1]「老子只問一句。雁門那注，老子押的是個『獨』字。鄴城這位家主押的，聽說也是。」",
+    "Sequence": "SetPortrait(MC10,pic=2);\nModifyData(FavorabilityExp,MC10,-100);",
+    "Description": "褚人飛好感 −100",
+    "zh_TW": "[panel=1]「老子只問一句。雁門那注，老子押的是個『獨』字。鄴城這位家主押的，聽說也是。」",
+    "zh_CN": "[panel=1]「老子只问一句。雁门那注，老子押的是个『独』字。邺城这位家主押的，听说也是。」",
+    "links": [4364]
+  },
+  {
+    "entryID": 4364,
+    "actorID": "MC9",
+    "text": "[panel=4]「筠的話，公子當日聽得清楚——一桌菜兩家分，筠最厭。」",
+    "Sequence": "SetPortrait(MC9,pic=2);\nModifyData(FavorabilityExp,MC9,-100);",
+    "Description": "甄筠好感 −100",
+    "zh_TW": "[panel=4]「筠的話，公子當日聽得清楚——一桌菜兩家分，筠最厭。」",
+    "zh_CN": "[panel=4]「筠的话，公子当日听得清楚——一桌菜两家分，筠最厌。」",
+    "links": [4365]
+  },
+  {
+    "entryID": 4365,
+    "actorID": "MC11",
+    "text": "[panel=3]「兩家都厭，兩家都押了。本王聽著都替你們心疼。」",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "[panel=3]「兩家都厭，兩家都押了。本王聽著都替你們心疼。」",
+    "zh_CN": "[panel=3]「两家都厌，两家都押了。本王听着都替你们心疼。」",
+    "links": [4366]
+  },
+  {
+    "entryID": 4366,
+    "actorID": "role2",
+    "text": "[panel=6]＊（褚人飛的手在案上敲了一下，只一下。沒有人接話。賈詡的茶碗還端在手上。你走到廳中間。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC4,pic=3);\nOpenPanel(2, close);\nOpenPanel(5, close);",
+    "Description": "清掉英豪府其它人的立繪",
+    "zh_TW": "[panel=6]＊（褚人飛的手在案上敲了一下，只一下。沒有人接話。賈詡的茶碗還端在手上。你走到廳中間。）＊",
+    "zh_CN": "[panel=6]＊（褚人飞的手在案上敲了一下，只一下。没有人接话。贾诩的茶碗还端在手上。你走到厅中间。）＊",
+    "links": [763]
+  },
+  {
+    "entryID": 4367,
+    "actorID": "MC1",
+    "text": "「三位先聽我說一句并州的局。」",
+    "Sequence": "",
+    "zh_TW": "「三位先聽我說一句并州的局。」",
+    "zh_CN": "「三位先听我说一句并州的局。」",
+    "links": [4370]
+  },
+  {
+    "entryID": 4368,
+    "actorID": "MC1",
+    "text": "「三位先看一眼英豪府的帳。」",
+    "Sequence": "",
+    "zh_TW": "「三位先看一眼英豪府的帳。」",
+    "zh_CN": "「三位先看一眼英豪府的账。」",
+    "links": [4373]
+  },
+  {
+    "entryID": 4369,
+    "actorID": "MC1",
+    "text": "「三位先算一算，英豪府倒了，誰划算。」",
+    "Sequence": "",
+    "zh_TW": "「三位先算一算，英豪府倒了，誰划算。」",
+    "zh_CN": "「三位先算一算，英豪府倒了，谁划算。」",
+    "links": [4377]
+  },
+  {
+    "entryID": 4370,
+    "actorID": "MC1",
+    "text": "「并州三面山頭，雁門、鄴城、朔方，誰也吞不下誰。雲中夾在中間，英豪府不收過路錢、不收保護錢。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「并州三面山頭，雁門、鄴城、朔方，誰也吞不下誰。雲中夾在中間，英豪府不收過路錢、不收保護錢。」",
+    "zh_CN": "「并州三面山头，雁门、邺城、朔方，谁也吞不下谁。云中夹在中间，英豪府不收过路钱、不收保护钱。」",
+    "links": [4371]
+  },
+  {
+    "entryID": 4371,
+    "actorID": "MC1",
+    "text": "「這塊地能太平，靠的就是這面招牌。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「這塊地能太平，靠的就是這面招牌。」",
+    "zh_CN": "「这块地能太平，靠的就是这面招牌。」",
+    "links": [4372]
+  },
+  {
+    "entryID": 4372,
+    "actorID": "MC9",
+    "text": "[panel=4]「呵。公子講并州的局，講得跟說書的一樣好聽。可筠不是來聽書的——筠的錢在你府裡，這件事跟山頭沒關係。」",
+    "Sequence": "SetPortrait(MC9,pic=4);",
+    "zh_TW": "[panel=4]「呵。公子講并州的局，講得跟說書的一樣好聽。可筠不是來聽書的——筠的錢在你府裡，這件事跟山頭沒關係。」",
+    "zh_CN": "[panel=4]「呵。公子讲并州的局，讲得跟说书的一样好听。可筠不是来听书的——筠的钱在你府里，这件事跟山头没关系。」",
+    "links": [4368, 4369]
+  },
+  {
+    "entryID": 4373,
+    "actorID": "MC1",
+    "text": "「兩家的錢，一文沒少，全在帳上。小犀——」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「兩家的錢，一文沒少，全在帳上。小犀——」",
+    "zh_CN": "「两家的钱，一文没少，全在账上。小犀——」",
+    "links": [4374]
+  },
+  {
+    "entryID": 4374,
+    "actorID": "MC8",
+    "text": "[panel=2]「在、在這裡！每一筆小犀都記了……」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "[panel=2]「在、在這裡！每一筆小犀都記了……」",
+    "zh_CN": "[panel=2]「在、在这里！每一笔小犀都记了……」",
+    "links": [4375]
+  },
+  {
+    "entryID": 4375,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]一巴掌拍在案上，案上的碗全跳了一下[/em7]，一文沒少？老子押注，從來不問錢少沒少，老子問的是人。」",
+    "Sequence": "SetPortrait(MC10,pic=2);\nEnableCharacterExpression(1,MC10,Anger);",
+    "zh_TW": "[panel=1]「[em7]一巴掌拍在案上，案上的碗全跳了一下[/em7]，一文沒少？老子押注，從來不問錢少沒少，老子問的是人。」",
+    "zh_CN": "[panel=1]「[em7]一巴掌拍在案上，案上的碗全跳了一下[/em7]，一文没少？老子押注，从来不问钱少没少，老子问的是人。」",
+    "links": [4376]
+  },
+  {
+    "entryID": 4376,
+    "actorID": "MC10",
+    "text": "[panel=1]「雁門那一晚你當著老子的面應了什麼——雲中，認老子這一家。轉頭你就去了鄴城，同一句話又說了一遍。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC10,pic=2);",
+    "zh_TW": "[panel=1]「雁門那一晚你當著老子的面應了什麼——雲中，認老子這一家。轉頭你就去了鄴城，同一句話又說了一遍。」",
+    "zh_CN": "[panel=1]「雁门那一晚你当着老子的面应了什么——云中，认老子这一家。转头你就去了邺城，同一句话又说了一遍。」",
+    "links": [4367, 4369]
+  },
+  {
+    "entryID": 4377,
+    "actorID": "MC1",
+    "text": "「英豪府倒了，雲中就沒人鎮著。三位誰先伸手，另外兩位就跟誰動手——這筆帳，三位比我會算。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「英豪府倒了，雲中就沒人鎮著。三位誰先伸手，另外兩位就跟誰動手——這筆帳，三位比我會算。」",
+    "zh_CN": "「英豪府倒了，云中就没人镇着。三位谁先伸手，另外两位就跟谁动手——这笔账，三位比我会算。」",
+    "links": [4378]
+  },
+  {
+    "entryID": 4378,
+    "actorID": "MC11",
+    "text": "[panel=3]「哼哈哈！說得好啊——所以呢？本王不伸手，你就替本王伸了？」",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "[panel=3]「哼哈哈！說得好啊——所以呢？本王不伸手，你就替本王伸了？」",
+    "zh_CN": "[panel=3]「哼哈哈！说得好啊——所以呢？本王不伸手，你就替本王伸了？」",
+    "links": [4379]
+  },
+  {
+    "entryID": 4379,
+    "actorID": "MC11",
+    "text": "[panel=3]「小子，你這是拿三家的刀架自己脖子，還當自己是在講道理。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "[panel=3]「小子，你這是拿三家的刀架自己脖子，還當自己是在講道理。」",
+    "zh_CN": "[panel=3]「小子，你这是拿三家的刀架自己脖子，还当自己是在讲道理。」",
+    "links": [4367, 4384]
+  },
+  {
+    "entryID": 4380,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人接你的話。褚人飛看著門，甄筠看著自己的袖口，黑狼王看著你，笑。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Nervous);",
+    "zh_TW": "[panel=6]＊（沒有人接你的話。褚人飛看著門，甄筠看著自己的袖口，黑狼王看著你，笑。）＊",
+    "zh_CN": "[panel=6]＊（没有人接你的话。褚人飞看着门，甄筠看着自己的袖口，黑狼王看着你，笑。）＊",
+    "links": [4381]
+  },
+  {
+    "entryID": 4381,
+    "actorID": "MC7",
+    "text": "[panel=1]「[em7]往前低聲說道[/em7]，你講的是英豪府為什麼該活。他們聽的是自己為什麼該讓。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=1]「[em7]往前低聲說道[/em7]，你講的是英豪府為什麼該活。他們聽的是自己為什麼該讓。」",
+    "zh_CN": "[panel=1]「[em7]往前低声说道[/em7]，你讲的是英豪府为什么该活。他们听的是自己为什么该让。」",
+    "links": [4382]
+  },
+  {
+    "entryID": 4382,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他說完就退回柱子邊了。褚人飛瞥了他一眼。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他說完就退回柱子邊了。褚人飛瞥了他一眼。）＊",
+    "zh_CN": "[panel=6]＊（他说完就退回柱子边了。褚人飞瞥了他一眼。）＊",
+    "links": [4383]
+  },
+  {
+    "entryID": 4383,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三家的人各據一邊。你看著這三個人——）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（三家的人各據一邊。你看著這三個人——）＊",
+    "zh_CN": "[panel=6]＊（三家的人各据一边。你看着这三个人——）＊",
+    "links": [38, 39]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「雲中歸赤龍。」",
+    "Sequence": "",
+    "zh_TW": "「雲中歸赤龍。」",
+    "zh_CN": "「云中归赤龙。」",
+    "links": [43]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「三家各退一步，雲中三分。」",
+    "Sequence": "",
+    "zh_TW": "「三家各退一步，雲中三分。」",
+    "zh_CN": "「三家各退一步，云中三分。」",
+    "links": [52]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「三位誰都吞不下讓另外一家獨占雲中。所以誰都得留下。」",
+    "Sequence": "",
+    "zh_TW": "「三位誰都吞不下讓另外一家獨占雲中。所以誰都得留下。」",
+    "zh_CN": "「三位谁都吞不下让另外一家独占云中。所以谁都得留下。」",
+    "links": [61]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「三位防的不是我。」",
+    "Sequence": "",
+    "zh_TW": "「三位防的不是我。」",
+    "zh_CN": "「三位防的不是我。」",
+    "links": [64]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「六國合縱，靠的是有個秦。」",
+    "Sequence": "",
+    "zh_TW": "「六國合縱，靠的是有個秦。」",
+    "zh_CN": "「六国合纵，靠的是有个秦。」",
+    "links": [68]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「三位裡頭，褚幫主的人最多、勢力最強。我們要與赤龍幫結盟，另外兩家——退一步。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「三位裡頭，褚幫主的人最多、勢力最強。我們要與赤龍幫結盟，另外兩家——退一步。」",
+    "zh_CN": "「三位里头，褚帮主的人最多、势力最强。我们要与赤龙帮结盟，另外两家——退一步。」",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]笑了[/em7]，這話中聽。」",
+    "Sequence": "SetPortrait(MC10,pic=5);",
+    "zh_TW": "[panel=1]「[em7]笑了[/em7]，這話中聽。」",
+    "zh_CN": "[panel=1]「[em7]笑了[/em7]，这话中听。」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC9",
+    "text": "[panel=4]「[em7]站了起來[/em7]，退一步？」",
+    "Sequence": "SetPortrait(MC9,pic=2);",
+    "zh_TW": "[panel=4]「[em7]站了起來[/em7]，退一步？」",
+    "zh_CN": "[panel=4]「[em7]站了起来[/em7]，退一步？」",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC11",
+    "text": "[panel=3]「[em7]腳從案上放了下來[/em7]，小子，你替他說話——是要本王今天就走，還是要本王明天帶人來？」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "zh_TW": "[panel=3]「[em7]腳從案上放了下來[/em7]，小子，你替他說話——是要本王今天就走，還是要本王明天帶人來？」",
+    "zh_CN": "[panel=3]「[em7]脚从案上放了下来[/em7]，小子，你替他说话——是要本王今天就走，还是要本王明天带人来？」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一個在笑，兩個站著。你把話收回來的時候，忽然覺得這個場面在哪裡見過——不是在雲中，是在竹簡上。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "[panel=6]＊（一個在笑，兩個站著。你把話收回來的時候，忽然覺得這個場面在哪裡見過——不是在雲中，是在竹簡上。）＊",
+    "zh_CN": "[panel=6]＊（一个在笑，两个站着。你把话收回来的时候，忽然觉得这个场面在哪里见过——不是在云中，是在竹简上。）＊",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,KnowledgeCheck,12);",
+    "Description": "學識檢定擲骰節點（難度 12，手動）",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [50, 51]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role2",
+    "text": "[panel=6]＊（想起來了。藏書庫那卷戰國的簡——六國肯坐到一處，靠的是西邊有個秦。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);\nSetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（想起來了。藏書庫那卷戰國的簡——六國肯坐到一處，靠的是西邊有個秦。）＊",
+    "zh_CN": "[panel=6]＊（想起来了。藏书库那卷战国的简——六国肯坐到一处，靠的是西边有个秦。）＊",
+    "links": [40, 39]
+  },
+  {
+    "entryID": 51,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那卷簡上寫了什麼，你想不起來。眼前只有三張臉，一張在笑，兩張沒有。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（那卷簡上寫了什麼，你想不起來。眼前只有三張臉，一張在笑，兩張沒有。）＊",
+    "zh_CN": "[panel=6]＊（那卷简上写了什么，你想不起来。眼前只有三张脸，一张在笑，两张没有。）＊",
+    "links": [39, 38]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC1",
+    "text": "「三家各退一步，雲中三分——誰也不吃虧。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「三家各退一步，雲中三分——誰也不吃虧。」",
+    "zh_CN": "「三家各退一步，云中三分——谁也不吃亏。」",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC10",
+    "text": "[panel=1]「三分？老子押一注，你分老子三分之一？小子，老子要的是雲中，不是雲中的一角。」",
+    "Sequence": "SetPortrait(MC10,pic=4);",
+    "zh_TW": "[panel=1]「三分？老子押一注，你分老子三分之一？小子，老子要的是雲中，不是雲中的一角。」",
+    "zh_CN": "[panel=1]「三分？老子押一注，你分老子三分之一？小子，老子要的是云中，不是云中的一角。」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC9",
+    "text": "[panel=4]「筠也不要一角。筠要的，是別人拿不到。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "[panel=4]「筠也不要一角。筠要的，是別人拿不到。」",
+    "zh_CN": "[panel=4]「筠也不要一角。筠要的，是别人拿不到。」",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "role2",
+    "text": "[panel=6]＊（黑狼王笑出聲來。褚人飛跟甄筠都沒有笑，也都沒有看他——可他們也沒有看你。你多看了一眼。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "[panel=6]＊（黑狼王笑出聲來。褚人飛跟甄筠都沒有笑，也都沒有看他——可他們也沒有看你。你多看了一眼。）＊",
+    "zh_CN": "[panel=6]＊（黑狼王笑出声来。褚人飞跟甄筠都没有笑，也都没有看他——可他们也没有看你。你多看了一眼。）＊",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,10);",
+    "Description": "洞悉檢定擲骰節點（難度 10，手動）",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [58, 60]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role2",
+    "text": "[panel=6]＊（褚人飛看的是那頂肩輿，甄筠看的是黑狼王的靴子，黑狼王看的是門。三個人的話都衝著你，眼睛卻都在防彼此。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（褚人飛看的是那頂肩輿，甄筠看的是黑狼王的靴子，黑狼王看的是門。三個人的話都衝著你，眼睛卻都在防彼此。）＊",
+    "zh_CN": "[panel=6]＊（褚人飞看的是那顶肩舆，甄筠看的是黑狼王的靴子，黑狼王看的是门。三个人的话都冲着你，眼睛却都在防彼此。）＊",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三家挑同一天上門，進門的時候還互相盯著——那就不只是來問罪的。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nSetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=6]＊（三家挑同一天上門，進門的時候還互相盯著——那就不只是來問罪的。）＊",
+    "zh_CN": "[panel=6]＊（三家挑同一天上门，进门的时候还互相盯着——那就不只是来问罪的。）＊",
+    "links": [41, 40]
+  },
+  {
+    "entryID": 60,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三個人的眼睛都沒閒著，一會兒往這邊，一會兒往那邊。你只看見他們在看，看不出他們在看什麼。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（三個人的眼睛都沒閒著，一會兒往這邊，一會兒往那邊。你只看見他們在看，看不出他們在看什麼。）＊",
+    "zh_CN": "[panel=6]＊（三个人的眼睛都没闲着，一会儿往这边，一会儿往那边。你只看见他们在看，看不出他们在看什么。）＊",
+    "links": [38, 39]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「三位誰都吞不下讓另外一家獨占雲中。褚幫主不肯讓給甄家，甄家主不肯讓給赤龍，黑狼大王——兩邊都不肯讓給他。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「三位誰都吞不下讓另外一家獨占雲中。褚幫主不肯讓給甄家，甄家主不肯讓給赤龍，黑狼大王——兩邊都不肯讓給他。」",
+    "zh_CN": "「三位谁都吞不下让另外一家独占云中。褚帮主不肯让给甄家，甄家主不肯让给赤龙，黑狼大王——两边都不肯让给他。」",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC1",
+    "text": "「所以今日這一局，三位誰都得留下。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「所以今日這一局，三位誰都得留下。」",
+    "zh_CN": "「所以今日这一局，三位谁都得留下。」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC11",
+    "text": "[panel=3]「哼哈哈——這小子自己看明白了。本王還等著看他哭呢。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "[panel=3]「哼哈哈——這小子自己看明白了。本王還等著看他哭呢。」",
+    "zh_CN": "[panel=3]「哼哈哈——这小子自己看明白了。本王还等着看他哭呢。」",
+    "links": [71]
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "text": "「三位今日上門，表面上是興師問罪。可從進門到現在——」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「三位今日上門，表面上是興師問罪。可從進門到現在——」",
+    "zh_CN": "「三位今日上门，表面上是兴师问罪。可从进门到现在——」",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "MC1",
+    "text": "「真要問罪，三位不會挑同一天到，更不會互相盯著進門——三位是來看另外兩家拿到了什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「真要問罪，三位不會挑同一天到，更不會互相盯著進門——三位是來看另外兩家拿到了什麼。」",
+    "zh_CN": "「真要问罪，三位不会挑同一天到，更不会互相盯着进门——三位是来看另外两家拿到了什么。」",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC9",
+    "text": "[panel=4]「[em7]舉著的扇子往下落了半寸，又停住[/em7]，筠今日，是來問罪的。」",
+    "Sequence": "SetPortrait(MC9,pic=2);",
+    "zh_TW": "[panel=4]「[em7]舉著的扇子往下落了半寸，又停住[/em7]，筠今日，是來問罪的。」",
+    "zh_CN": "[panel=4]「[em7]举着的扇子往下落了半寸，又停住[/em7]，筠今日，是来问罪的。」",
+    "links": [67]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC9",
+    "text": "[panel=4]「……只是問罪也分先後。公子這筆帳，筠回頭再算——這兩位今日打算從雲中拿走什麼，筠得先看清楚。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "[panel=4]「……只是問罪也分先後。公子這筆帳，筠回頭再算——這兩位今日打算從雲中拿走什麼，筠得先看清楚。」",
+    "zh_CN": "[panel=4]「……只是问罪也分先后。公子这笔账，筠回头再算——这两位今日打算从云中拿走什么，筠得先看清楚。」",
+    "links": [42, 39]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC1",
+    "text": "「六國合縱，靠的是西邊有個秦，而六國無一能單獨抗秦。但今日這一局，並沒有秦。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「六國合縱，靠的是西邊有個秦，而六國無一能單獨抗秦。但今日這一局，並沒有秦。」",
+    "zh_CN": "「六国合纵，靠的是西边有个秦，而六国无一能单独抗秦。但今日这一局，并没有秦。」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC1",
+    "text": "「雁門的人多、鄴城的錢重、朔方的馬快——三家各恃其一，強弱相當。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「雁門的人多、鄴城的錢重、朔方的馬快——三家各恃其一，強弱相當。」",
+    "zh_CN": "「雁门的人多、邺城的钱重、朔方的马快——三家各恃其一，强弱相当。」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC1",
+    "text": "「所以這些年，雲中誰也沒拿走。靠的是誰先伸手，誰就先讓另外兩位撿了便宜。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「所以這些年，雲中誰也沒拿走。靠的是誰先伸手，誰就先讓另外兩位撿了便宜。」",
+    "zh_CN": "「所以这些年，云中谁也没拿走。靠的是谁先伸手，谁就先让另外两位捡了便宜。」",
+    "links": [74]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「今日也一樣。三位誰先起身走出這道門，剩下兩位就當著他的面把雲中分了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「今日也一樣。三位誰先起身走出這道門，剩下兩位就當著他的面把雲中分了。」",
+    "zh_CN": "「今日也一样。三位谁先起身走出这道门，剩下两位就当着他的面把云中分了。」",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC10",
+    "text": "[panel=1]「六國、秦。老子沒讀過書，那些個名堂，老子不懂。」",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "zh_TW": "[panel=1]「六國、秦。老子沒讀過書，那些個名堂，老子不懂。」",
+    "zh_CN": "[panel=1]「六国、秦。老子没读过书，那些个名堂，老子不懂。」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC10",
+    "text": "[panel=1]「賭桌上的道理老子倒懂——三家的注一般大，誰先推出去，誰就先讓另外兩家瞧見自己手裡剩多少。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「賭桌上的道理老子倒懂——三家的注一般大，誰先推出去，誰就先讓另外兩家瞧見自己手裡剩多少。」",
+    "zh_CN": "[panel=1]「赌桌上的道理老子倒懂——三家的注一般大，谁先推出去，谁就先让另外两家瞧见自己手里剩多少。」",
+    "links": [41, 42]
+  },
+  {
+    "entryID": 74,
+    "actorID": "role2",
+    "text": "[panel=6]＊（廳裡靜了一下。褚人飛的手離開了案面，甄筠坐回去，黑狼王把腳又翹回案上——這回翹得慢了些。案角那隻茶碗，停在半空。）＊",
+    "Sequence": "SetPortrait(MC4,pic=4);",
+    "zh_TW": "[panel=6]＊（廳裡靜了一下。褚人飛的手離開了案面，甄筠坐回去，黑狼王把腳又翹回案上——這回翹得慢了些。案角那隻茶碗，停在半空。）＊",
+    "zh_CN": "[panel=6]＊（厅里静了一下。褚人飞的手离开了案面，甄筠坐回去，黑狼王把脚又翘回案上——这回翘得慢了些。案角那只茶碗，停在半空。）＊",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你回頭看了一眼。茶碗還停在半空，賈詡臉上卻有一絲不易察覺的微笑——你一看見，他就把碗送到嘴邊，喝了一口。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);\nModifyData(FavorabilityExp,MC4,50);",
+    "Description": "賈詡好感 +50",
+    "zh_TW": "[panel=6]＊（你回頭看了一眼。茶碗還停在半空，賈詡臉上卻有一絲不易察覺的微笑——你一看見，他就把碗送到嘴邊，喝了一口。）＊",
+    "zh_CN": "[panel=6]＊（你回头看了一眼。茶碗还停在半空，贾诩脸上却有一丝不易察觉的微笑——你一看见，他就把碗送到嘴边，喝了一口。）＊",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]還站著。從進廳到現在，一直沒坐[/em7]，說下去。留在這一局裡，老子有什麼好處。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「[em7]還站著。從進廳到現在，一直沒坐[/em7]，說下去。留在這一局裡，老子有什麼好處。」",
+    "zh_CN": "[panel=1]「[em7]还站着。从进厅到现在，一直没坐[/em7]，说下去。留在这一局里，老子有什么好处。」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,10);",
+    "Description": "自動洞悉檢定觸發點（難度 10）",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [80, 79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雁門到雲中，快馬一天；朔方到雲中，半天。他今天一個人來——走出這道門，他就得拿一天，去追人家半天的路。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "zh_TW": "[panel=6]＊（雁門到雲中，快馬一天；朔方到雲中，半天。他今天一個人來——走出這道門，他就得拿一天，去追人家半天的路。）＊",
+    "zh_CN": "[panel=6]＊（雁门到云中，快马一天；朔方到云中，半天。他今天一个人来——走出这道门，他就得拿一天，去追人家半天的路。）＊",
+    "links": [83, 84]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他等著。你看不出他在等的是哪一句。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（他等著。你看不出他在等的是哪一句。）＊",
+    "zh_CN": "[panel=6]＊（他等着。你看不出他在等的是哪一句。）＊",
+    "links": [84, 82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "「幫主，英豪府接的是誅怪的差事，不是分地盤的。」",
+    "Sequence": "",
+    "Description": "選項1：俠（不擲骰，必被打槍，褚人飛好感 −20）。",
+    "zh_TW": "「幫主，英豪府接的是誅怪的差事，不是分地盤的。」",
+    "zh_CN": "「帮主，英豪府接的是诛怪的差事，不是分地盘的。」",
+    "links": [85]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "[em2][政治檢定][/em2]「三家都在，甄家和黑狼就誰也不敢往雲中放人。這塊地上能養人的，只剩赤龍幫。」",
+    "Sequence": "",
+    "Description": "選項2：政治檢定（難度 12）",
+    "zh_TW": "[em2][政治檢定][/em2]「三家都在，甄家和黑狼就誰也不敢往雲中放人。這塊地上能養人的，只剩赤龍幫。」",
+    "zh_CN": "[em2][政治检定][/em2]「三家都在，甄家和黑狼就谁也不敢往云中放人。这块地上能养人的，只剩赤龙帮。」",
+    "links": [90]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「幫主獨占雲中，要多少人手防另外兩家？三家一起，幫主一個人都不必多派。」",
+    "Sequence": "",
+    "Description": "選項3：口才檢定（難度 14）",
+    "zh_TW": "[em2][口才檢定][/em2]「幫主獨占雲中，要多少人手防另外兩家？三家一起，幫主一個人都不必多派。」",
+    "zh_CN": "[em2][口才检定][/em2]「帮主独占云中，要多少人手防另外两家？三家一起，帮主一个人都不必多派。」",
+    "links": [99]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC1",
+    "text": "「幫主，英豪府接的是誅怪的差事，不是分地盤的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「幫主，英豪府接的是誅怪的差事，不是分地盤的。」",
+    "zh_CN": "「帮主，英豪府接的是诛怪的差事，不是分地盘的。」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "「雲中這些年太平，靠的就是不倚靠哪方的勢力。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「雲中這些年太平，靠的就是不倚靠哪方的勢力。」",
+    "zh_CN": "「云中这些年太平，靠的就是不倚靠哪方的势力。」",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]笑了一聲，笑得很短[/em7]，不倚靠哪方的勢力？」",
+    "Sequence": "SetPortrait(MC10,pic=2);\nModifyData(FavorabilityExp,MC10,-20);",
+    "Description": "褚人飛好感 −20",
+    "zh_TW": "[panel=1]「[em7]笑了一聲，笑得很短[/em7]，不倚靠哪方的勢力？」",
+    "zh_CN": "[panel=1]「[em7]笑了一声，笑得很短[/em7]，不倚靠哪方的势力？」",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC10",
+    "text": "[panel=1]「那雁門那一晚，你應老子的是什麼。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "[panel=1]「那雁門那一晚，你應老子的是什麼。」",
+    "zh_CN": "[panel=1]「那雁门那一晚，你应老子的是什么。」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC10",
+    "text": "[panel=1]「收錢的時候不提這句，收完了才提——小子，這種話老子聽過太多回了。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "[panel=1]「收錢的時候不提這句，收完了才提——小子，這種話老子聽過太多回了。」",
+    "zh_CN": "[panel=1]「收钱的时候不提这句，收完了才提——小子，这种话老子听过太多回了。」",
+    "links": [767, 768]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC1",
+    "text": "「三家都在局裡，甄家和黑狼就誰也不敢往雲中放人——放了，另外兩家立刻聯手。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「三家都在局裡，甄家和黑狼就誰也不敢往雲中放人——放了，另外兩家立刻聯手。」",
+    "zh_CN": "「三家都在局里，甄家和黑狼就谁也不敢往云中放人——放了，另外两家立刻联手。」",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC1",
+    "text": "「這塊地上有能力養人的，只剩赤龍幫。英豪府誅怪的差事，往後用的就是幫主的人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「這塊地上有能力養人的，只剩赤龍幫。英豪府誅怪的差事，往後用的就是幫主的人。」",
+    "zh_CN": "「这块地上有能力养人的，只剩赤龙帮。英豪府诛怪的差事，往后用的就是帮主的人。」",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PoliticsCheck,12);",
+    "Description": "政治檢定擲骰節點（難度 12，手動）",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [94, 95]
+  },
+  {
+    "entryID": 94,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]沒有坐下，可也不再往門邊挪[/em7]，養人。你小子倒知道老子缺什麼。」",
+    "Sequence": "ModifyData(AbilityExp,Player,Politics,10);\nSetPortrait(MC10,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「[em7]沒有坐下，可也不再往門邊挪[/em7]，養人。你小子倒知道老子缺什麼。」",
+    "zh_CN": "[panel=1]「[em7]没有坐下，可也不再往门边挪[/em7]，养人。你小子倒知道老子缺什么。」",
+    "links": [108]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]沒有坐下，反倒往門邊挪了半步[/em7]，養人？老子的人，用得著你英豪府養？」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「[em7]沒有坐下，反倒往門邊挪了半步[/em7]，養人？老子的人，用得著你英豪府養？」",
+    "zh_CN": "[panel=1]「[em7]没有坐下，反倒往门边挪了半步[/em7]，养人？老子的人，用得着你英豪府养？」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC10",
+    "text": "[panel=1]「小子，你這是把老子當要飯的。」",
+    "Sequence": "SetPortrait(MC10,pic=2);\nEnableCharacterExpression(1,MC10,Anger);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "[panel=1]「小子，你這是把老子當要飯的。」",
+    "zh_CN": "[panel=1]「小子，你这是把老子当要饭的。」",
+    "links": [767, 768]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC1",
+    "text": "「幫主獨占雲中，東邊要防甄家的商隊，北邊要防黑狼的馬——雁門的人得分一半過來。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「幫主獨占雲中，東邊要防甄家的商隊，北邊要防黑狼的馬——雁門的人得分一半過來。」",
+    "zh_CN": "「帮主独占云中，东边要防甄家的商队，北边要防黑狼的马——雁门的人得分一半过来。」",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC1",
+    "text": "「三家一起，幫主一個人都不必多派：另外兩家替幫主盯著彼此。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「三家一起，幫主一個人都不必多派：另外兩家替幫主盯著彼此。」",
+    "zh_CN": "「三家一起，帮主一个人都不必多派：另外两家替帮主盯着彼此。」",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,14);",
+    "Description": "口才檢定擲骰節點（難度 14，手動）",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [103, 105]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]閉了一下眼。再睜開的時候，人還站著[/em7]……分一半。老子最恨人跟我算帳。」",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);\nSetPortrait(MC10,pic=3);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「[em7]閉了一下眼。再睜開的時候，人還站著[/em7]……分一半。老子最恨人跟我算帳。」",
+    "zh_CN": "[panel=1]「[em7]闭了一下眼。再睁开的时候，人还站着[/em7]……分一半。老子最恨人跟我算账。」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC10",
+    "text": "[panel=1]「但你這帳…準的老子沒話可說。」",
+    "Sequence": "SetPortrait(MC10,pic=4);\nEnableCharacterExpression(1,MC10,Surprise);",
+    "Description": "檢定成功->下一階段",
+    "zh_TW": "[panel=1]「但你這帳…準的老子沒話可說。」",
+    "zh_CN": "[panel=1]「但你这账…准的老子没话可说。」",
+    "links": [769]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC10",
+    "text": "[panel=1]「老子的人往哪擺，輪得到你算？」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "[panel=1]「老子的人往哪擺，輪得到你算？」",
+    "zh_CN": "[panel=1]「老子的人往哪摆，轮得到你算？」",
+    "links": [767, 768]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC10",
+    "text": "[panel=1]「養人也好，分一半也好——都是你說的。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「養人也好，分一半也好——都是你說的。」",
+    "zh_CN": "[panel=1]「养人也好，分一半也好——都是你说的。」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC10",
+    "text": "[panel=1]「老子憑什麼信你？雁門那一晚，你也是這麼說的。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "[panel=1]「老子憑什麼信你？雁門那一晚，你也是這麼說的。」",
+    "zh_CN": "[panel=1]「老子凭什么信你？雁门那一晚，你也是这么说的。」",
+    "links": [769]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]「這一局裡沒有一個人信得過我。幫主要的不是我可靠。」",
+    "Sequence": "",
+    "Description": "選項1：厚黑檢定（難度 12）",
+    "zh_TW": "[em2][厚黑檢定][/em2]「這一局裡沒有一個人信得過我。幫主要的不是我可靠。」",
+    "zh_CN": "[em2][厚黑检定][/em2]「这一局里没有一个人信得过我。帮主要的不是我可靠。」",
+    "links": [114]
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「幫主要走，儘管走。明天雲中先插上誰的旗，幫主回到雁門就知道。」",
+    "Sequence": "",
+    "Description": "選項2：威嚇檢定（難度 14）",
+    "zh_TW": "[em2][威嚇檢定][/em2]「幫主要走，儘管走。明天雲中先插上誰的旗，幫主回到雁門就知道。」",
+    "zh_CN": "[em2][威吓检定][/em2]「帮主要走，尽管走。明天云中先插上谁的旗，帮主回到雁门就知道。」",
+    "links": [124]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2]「幫主今天沒帶人。雁門到雲中一天，朔方的馬半天。」",
+    "Sequence": "",
+    "Description": "選項3：謀略檢定（難度 12）",
+    "zh_TW": "[em2][謀略檢定][/em2]「幫主今天沒帶人。雁門到雲中一天，朔方的馬半天。」",
+    "zh_CN": "[em2][谋略检定][/em2]「帮主今天没带人。雁门到云中一天，朔方的马半天。」",
+    "links": [133]
+  },
+  {
+    "entryID": 114,
+    "actorID": "MC1",
+    "text": "「幫主信不過我，那正好。這一局裡沒有一個人信得過我——三位才會互相盯著。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「幫主信不過我，那正好。這一局裡沒有一個人信得過我——三位才會互相盯著。」",
+    "zh_CN": "「帮主信不过我，那正好。这一局里没有一个人信得过我——三位才会互相盯着。」",
+    "links": [115]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC1",
+    "text": "「幫主要的不是我可靠，是另外兩家動不了手。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「幫主要的不是我可靠，是另外兩家動不了手。」",
+    "zh_CN": "「帮主要的不是我可靠，是另外两家动不了手。」",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,12);",
+    "Description": "厚黑檢定（難度 12）",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [118, 120]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]看了你很久，然後坐下了。椅子被他坐得響了一聲[/em7]，……你這話倒老實。」",
+    "Sequence": "ModifyData(FeatExp,Player,Realpolitik,10);\nSetPortrait(MC10,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「[em7]看了你很久，然後坐下了。椅子被他坐得響了一聲[/em7]，……你這話倒老實。」",
+    "zh_CN": "[panel=1]「[em7]看了你很久，然后坐下了。椅子被他坐得响了一声[/em7]，……你这话倒老实。」",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC10",
+    "text": "[panel=1]「行。老子不信你。老子信這一局。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「行。老子不信你。老子信這一局。」",
+    "zh_CN": "[panel=1]「行。老子不信你。老子信这一局。」",
+    "links": [113, 112]
+  },
+  {
+    "entryID": 120,
+    "actorID": "MC10",
+    "text": "[panel=1]「靠三家互相盯著？小子，那是你在賭。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=1]「靠三家互相盯著？小子，那是你在賭。」",
+    "zh_CN": "[panel=1]「靠三家互相盯着？小子，那是你在赌。」",
+    "links": [121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC10",
+    "text": "[panel=1]「老子自己押注可以，替你賭不行。」",
+    "Sequence": "SetPortrait(MC10,pic=3);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "[panel=1]「老子自己押注可以，替你賭不行。」",
+    "zh_CN": "[panel=1]「老子自己押注可以，替你赌不行。」",
+    "links": [767, 771]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC1",
+    "text": "「幫主要走，儘管走。明天雲中先插上誰的旗，幫主回到雁門就知道了。」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "「幫主要走，儘管走。明天雲中先插上誰的旗，幫主回到雁門就知道了。」",
+    "zh_CN": "「帮主要走，尽管走。明天云中先插上谁的旗，帮主回到雁门就知道了。」",
+    "links": [125]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC1",
+    "text": "「那時候要再拿回來，就得從別人手裡搶。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「那時候要再拿回來，就得從別人手裡搶。」",
+    "zh_CN": "「那时候要再拿回来，就得从别人手里抢。」",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,14);",
+    "Description": "威嚇檢定擲骰節點（難度 14，手動）",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [128, 130]
+  },
+  {
+    "entryID": 128,
+    "actorID": "role2",
+    "text": "[panel=6]＊（廳裡靜了。甄筠沒有出聲，黑狼王也沒有。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（廳裡靜了。甄筠沒有出聲，黑狼王也沒有。）＊",
+    "zh_CN": "[panel=6]＊（厅里静了。甄筠没有出声，黑狼王也没有。）＊",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "MC10",
+    "text": "[panel=1]「……小子。你這張嘴，比老子的鐵膽還硬。」",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,10);\nSetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「……小子。你這張嘴，比老子的鐵膽還硬。」",
+    "zh_CN": "[panel=1]「……小子。你这张嘴，比老子的铁胆还硬。」",
+    "links": [113, 111]
+  },
+  {
+    "entryID": 130,
+    "actorID": "MC10",
+    "text": "[panel=1]「拿雲中嚇老子？老子在雁門立旗的時候，這塊地還沒人要。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "檢定失敗、破局變數+1",
+    "zh_TW": "[panel=1]「拿雲中嚇老子？老子在雁門立旗的時候，這塊地還沒人要。」",
+    "zh_CN": "[panel=1]「拿云中吓老子？老子在雁门立旗的时候，这块地还没人要。」",
+    "links": [767, 771]
+  },
+  {
+    "entryID": 133,
+    "actorID": "MC1",
+    "text": "「幫主今天沒帶人來。雁門到雲中一天，朔方的馬半天。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「幫主今天沒帶人來。雁門到雲中一天，朔方的馬半天。」",
+    "zh_CN": "「帮主今天没带人来。雁门到云中一天，朔方的马半天。」",
+    "links": [134]
+  },
+  {
+    "entryID": 134,
+    "actorID": "MC1",
+    "text": "「幫主要是現在走出這扇門——明天雲中先到的，是誰的人？」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「幫主要是現在走出這扇門——明天雲中先到的，是誰的人？」",
+    "zh_CN": "「帮主要是现在走出这扇门——明天云中先到的，是谁的人？」",
+    "links": [135]
+  },
+  {
+    "entryID": 135,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,StrategyCheck,12);",
+    "Description": "謀略檢定擲骰節點（難度 12，手動）",
+    "links": [136]
+  },
+  {
+    "entryID": 136,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [137, 139]
+  },
+  {
+    "entryID": 137,
+    "actorID": "role2",
+    "text": "[panel=6]＊（黑狼王笑了一聲。褚人飛沒有看他。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（黑狼王笑了一聲。褚人飛沒有看他。）＊",
+    "zh_CN": "[panel=6]＊（黑狼王笑了一声。褚人飞没有看他。）＊",
+    "links": [138]
+  },
+  {
+    "entryID": 138,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]終於坐下了[/em7]……」",
+    "Sequence": "ModifyData(FeatExp,Player,Strategy,10);\nSetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「[em7]終於坐下了[/em7]……」",
+    "zh_CN": "[panel=1]「[em7]终于坐下了[/em7]……」",
+    "links": [770]
+  },
+  {
+    "entryID": 139,
+    "actorID": "MC10",
+    "text": "[panel=1]「拿黑狼嚇老子？老子在雁門立旗的時候，他還在草原上放羊。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "檢定失敗、破局變數+1",
+    "zh_TW": "[panel=1]「拿黑狼嚇老子？老子在雁門立旗的時候，他還在草原上放羊。」",
+    "zh_CN": "[panel=1]「拿黑狼吓老子？老子在雁门立旗的时候，他还在草原上放羊。」",
+    "links": [767, 771]
+  },
+  {
+    "entryID": 142,
+    "actorID": "role2",
+    "text": "[panel=6]＊（呂信的手一直搭在刀鞘上。褚人飛坐下的時候，那隻手滑下去了一寸——只有一寸。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=6]＊（呂信的手一直搭在刀鞘上。褚人飛坐下的時候，那隻手滑下去了一寸——只有一寸。）＊",
+    "zh_CN": "[panel=6]＊（吕信的手一直搭在刀鞘上。褚人飞坐下的时候，那只手滑下去了一寸——只有一寸。）＊",
+    "links": [143]
+  },
+  {
+    "entryID": 143,
+    "actorID": "MC9",
+    "text": "「[em7]把扇子舉了起來。她沒搖，只是舉著[/em7]，褚幫主要人，筠不要人。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「[em7]把扇子舉了起來。她沒搖，只是舉著[/em7]，褚幫主要人，筠不要人。」",
+    "zh_CN": "「[em7]把扇子举了起来。她没摇，只是举着[/em7]，褚帮主要人，筠不要人。」",
+    "links": [144]
+  },
+  {
+    "entryID": 144,
+    "actorID": "MC9",
+    "text": "「筠的錢在公子府裡——公子說，三家同在一局，筠這筆錢怎麼算？」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「筠的錢在公子府裡——公子說，三家同在一局，筠這筆錢怎麼算？」",
+    "zh_CN": "「筠的钱在公子府里——公子说，三家同在一局，筠这笔钱怎么算？」",
+    "links": [145]
+  },
+  {
+    "entryID": 145,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,12);",
+    "Description": "自動洞悉檢定觸發點（難度 12）",
+    "links": [146]
+  },
+  {
+    "entryID": 146,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [148, 147]
+  },
+  {
+    "entryID": 147,
+    "actorID": "role2",
+    "text": "[panel=6]＊（扇子擋的不是臉，是眼睛。她掃褚人飛一下、也很快地掃過黑狼王。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,20);",
+    "zh_TW": "[panel=6]＊（扇子擋的不是臉，是眼睛。她掃褚人飛一下、也很快地掃過黑狼王。）＊",
+    "zh_CN": "[panel=6]＊（扇子挡的不是脸，是眼睛。她扫褚人飞一下、也很快地扫过黑狼王。）＊",
+    "links": [151, 152]
+  },
+  {
+    "entryID": 148,
+    "actorID": "role2",
+    "text": "[panel=6]＊（露在外面的那半張臉，看不出什麼。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（露在外面的那半張臉，看不出什麼。）＊",
+    "zh_CN": "[panel=6]＊（露在外面的那半张脸，看不出什么。）＊",
+    "links": [150, 152]
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC1",
+    "text": "「家主，這件事是我瞞了兩家。錯在我。」",
+    "Sequence": "",
+    "Description": "選項1：俠（不擲骰，必被打槍，甄筠好感 −20）",
+    "zh_TW": "「家主，這件事是我瞞了兩家。錯在我。」",
+    "zh_CN": "「家主，这件事是我瞒了两家。错在我。」",
+    "links": [153]
+  },
+  {
+    "entryID": 151,
+    "actorID": "MC1",
+    "text": "[em2][經濟檢定][/em2]「雲中的商路有赤龍鎮著、黑狼不搶，貨走得通。家主的錢，投在一個三家都不敢動的地方。」",
+    "Sequence": "",
+    "Description": "選項2：經濟檢定（難度 12）",
+    "zh_TW": "[em2][經濟檢定][/em2]「雲中的商路有赤龍鎮著、黑狼不搶，貨走得通。家主的錢，投在一個三家都不敢動的地方。」",
+    "zh_CN": "[em2][经济检定][/em2]「云中的商路有赤龙镇着、黑狼不抢，货走得通。家主的钱，投在一个三家都不敢动的地方。」",
+    "links": [157]
+  },
+  {
+    "entryID": 152,
+    "actorID": "MC1",
+    "text": "[em2][學識檢定][/em2]「三家掛帳，等於互相作保。甄家出的錢，反而最穩。」",
+    "Sequence": "",
+    "Description": "選項3：學識檢定（難度 14）",
+    "zh_TW": "[em2][學識檢定][/em2]「三家掛帳，等於互相作保。甄家出的錢，反而最穩。」",
+    "zh_CN": "[em2][学识检定][/em2]「三家挂账，等于互相作保。甄家出的钱，反而最稳。」",
+    "links": [167]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "「家主，這件事是我瞞了兩家。錯在我。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「家主，這件事是我瞞了兩家。錯在我。」",
+    "zh_CN": "「家主，这件事是我瞒了两家。错在我。」",
+    "links": [154]
+  },
+  {
+    "entryID": 154,
+    "actorID": "MC9",
+    "text": "「[em7]扇子沒有動[/em7]，錯在公子。」",
+    "Sequence": "SetPortrait(MC9,pic=3);\nModifyData(FavorabilityExp,MC9,-20);",
+    "Description": "甄筠好感 −20",
+    "zh_TW": "「[em7]扇子沒有動[/em7]，錯在公子。」",
+    "zh_CN": "「[em7]扇子没有动[/em7]，错在公子。」",
+    "links": [155]
+  },
+  {
+    "entryID": 155,
+    "actorID": "MC9",
+    "text": "「筠是來收帳的，不是來聽公子認錯的。認了錯，錢就回得來嗎？」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "zh_TW": "「筠是來收帳的，不是來聽公子認錯的。認了錯，錢就回得來嗎？」",
+    "zh_CN": "「筠是来收账的，不是来听公子认错的。认了错，钱就回得来吗？」",
+    "links": [156]
+  },
+  {
+    "entryID": 156,
+    "actorID": "MC9",
+    "text": "「公子要是真過意不去，這就把甄家那一筆送回鄴城。筠今日便走。」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "zh_TW": "「公子要是真過意不去，這就把甄家那一筆送回鄴城。筠今日便走。」",
+    "zh_CN": "「公子要是真过意不去，这就把甄家那一笔送回邺城。筠今日便走。」",
+    "links": [147]
+  },
+  {
+    "entryID": 157,
+    "actorID": "MC1",
+    "text": "「甄家的貨要往北走，走的是雲中。雲中有赤龍幫鎮著，山賊不敢劫；有黑狼在局裡，草原的馬不敢搶。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「甄家的貨要往北走，走的是雲中。雲中有赤龍幫鎮著，山賊不敢劫；有黑狼在局裡，草原的馬不敢搶。」",
+    "zh_CN": "「甄家的货要往北走，走的是云中。云中有赤龙帮镇着，山贼不敢劫；有黑狼在局里，草原的马不敢抢。」",
+    "links": [158]
+  },
+  {
+    "entryID": 158,
+    "actorID": "MC1",
+    "text": "「家主的錢投在這裡，投的不是英豪府——是一條三家都不敢動的路。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「家主的錢投在這裡，投的不是英豪府——是一條三家都不敢動的路。」",
+    "zh_CN": "「家主的钱投在这里，投的不是英豪府——是一条三家都不敢动的路。」",
+    "links": [159]
+  },
+  {
+    "entryID": 159,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,12);",
+    "Description": "經濟檢定擲骰節點（難度 12，手動）",
+    "links": [160]
+  },
+  {
+    "entryID": 160,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [161, 163]
+  },
+  {
+    "entryID": 161,
+    "actorID": "MC9",
+    "text": "「[em7]扇子往下落了半寸，沒有放下[/em7]，商路。筠買的是門路，不是地盤。」",
+    "Sequence": "ModifyData(FeatExp,Player,EconomicDevelopment,20);\nSetPortrait(MC9,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]扇子往下落了半寸，沒有放下[/em7]，商路。筠買的是門路，不是地盤。」",
+    "zh_CN": "「[em7]扇子往下落了半寸，没有放下[/em7]，商路。筠买的是门路，不是地盘。」",
+    "links": [162]
+  },
+  {
+    "entryID": 162,
+    "actorID": "MC9",
+    "text": "「這話，筠記下了。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「這話，筠記下了。」",
+    "zh_CN": "「这话，筠记下了。」",
+    "links": [177]
+  },
+  {
+    "entryID": 163,
+    "actorID": "MC9",
+    "text": "「路？路上有兩隻虎，公子叫筠把錢放在虎口裡。」",
+    "Sequence": "SetPortrait(MC9,pic=4);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「路？路上有兩隻虎，公子叫筠把錢放在虎口裡。」",
+    "zh_CN": "「路？路上有两只虎，公子叫筠把钱放在虎口里。」",
+    "links": [164]
+  },
+  {
+    "entryID": 164,
+    "actorID": "MC9",
+    "text": "「筠的帳房，比公子精。」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「筠的帳房，比公子精。」",
+    "zh_CN": "「筠的账房，比公子精。」",
+    "links": [772, 773]
+  },
+  {
+    "entryID": 167,
+    "actorID": "MC1",
+    "text": "「戰國之時，諸侯合縱，各出質子。三家的錢同壓在英豪府上，就是三家的質子。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「戰國之時，諸侯合縱，各出質子。三家的錢同壓在英豪府上，就是三家的質子。」",
+    "zh_CN": "「战国之时，诸侯合纵，各出质子。三家的钱同压在英豪府上，就是三家的质子。」",
+    "links": [168]
+  },
+  {
+    "entryID": 168,
+    "actorID": "MC1",
+    "text": "「誰先動，誰先賠。家主這筆，反而是三家裡最穩的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「誰先動，誰先賠。家主這筆，反而是三家裡最穩的。」",
+    "zh_CN": "「谁先动，谁先赔。家主这笔，反而是三家里最稳的。」",
+    "links": [169]
+  },
+  {
+    "entryID": 169,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,KnowledgeCheck,14);",
+    "Description": "學識檢定擲骰節點（難度 14，手動）",
+    "links": [170]
+  },
+  {
+    "entryID": 170,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [171, 173]
+  },
+  {
+    "entryID": 171,
+    "actorID": "MC9",
+    "text": "「[em7]扇柄在掌心敲了一下[/em7]，質子。公子讀過書。」",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,20);\nSetPortrait(MC9,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]扇柄在掌心敲了一下[/em7]，質子。公子讀過書。」",
+    "zh_CN": "「[em7]扇柄在掌心敲了一下[/em7]，质子。公子读过书。」",
+    "links": [172]
+  },
+  {
+    "entryID": 172,
+    "actorID": "MC9",
+    "text": "「筠喜歡跟讀過書的人對帳，一筆是一筆。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「筠喜歡跟讀過書的人對帳，一筆是一筆。」",
+    "zh_CN": "「筠喜欢跟读过书的人对账，一笔是一笔。」",
+    "links": [177]
+  },
+  {
+    "entryID": 173,
+    "actorID": "MC9",
+    "text": "「六國合縱，秦還是把六國一個一個吃了。」",
+    "Sequence": "SetPortrait(MC9,pic=4);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「六國合縱，秦還是把六國一個一個吃了。」",
+    "zh_CN": "「六国合纵，秦还是把六国一个一个吃了。」",
+    "links": [174]
+  },
+  {
+    "entryID": 174,
+    "actorID": "MC9",
+    "text": "「公子引的這個例，筠聽著不吉利。」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「公子引的這個例，筠聽著不吉利。」",
+    "zh_CN": "「公子引的这个例，筠听着不吉利。」",
+    "links": [772, 773]
+  },
+  {
+    "entryID": 177,
+    "actorID": "MC9",
+    "text": "「一條路也好，質子也好——筠都聽得懂。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「一條路也好，質子也好——筠都聽得懂。」",
+    "zh_CN": "「一条路也好，质子也好——筠都听得懂。」",
+    "links": [178]
+  },
+  {
+    "entryID": 178,
+    "actorID": "MC9",
+    "text": "「可公子拿什麼擔保？公子上一回擔保過的東西，如今三家都在這裡看著。」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "zh_TW": "「可公子拿什麼擔保？公子上一回擔保過的東西，如今三家都在這裡看著。」",
+    "zh_CN": "「可公子拿什么担保？公子上一回担保过的东西，如今三家都在这里看着。」",
+    "links": [179]
+  },
+  {
+    "entryID": 179,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=8);\nContinue();",
+    "Description": "選項樞紐",
+    "links": [180, 181, 182]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「今日就替家主盯著那兩家。」",
+    "Sequence": "",
+    "Description": "選項1：口才檢定（難度 14）",
+    "zh_TW": "[em2][口才檢定][/em2]「今日就替家主盯著那兩家。」",
+    "zh_CN": "[em2][口才检定][/em2]「今日就替家主盯着那两家。」",
+    "links": [183]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]「我要是再瞞誰，另外兩家先收拾我，輪不到家主動手。」",
+    "Sequence": "",
+    "Description": "選項2：厚黑檢定（難度 12）",
+    "zh_TW": "[em2][厚黑檢定][/em2]「我要是再瞞誰，另外兩家先收拾我，輪不到家主動手。」",
+    "zh_CN": "[em2][厚黑检定][/em2]「我要是再瞒谁，另外两家先收拾我，轮不到家主动手。」",
+    "links": [192]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC1",
+    "text": "[em2][智力檢定][/em2]「我把那筆掂完給家主聽。」",
+    "Sequence": "",
+    "Description": "選項3：智力檢定（難度 13）",
+    "zh_TW": "[em2][智力檢定][/em2]「我把那筆掂完給家主聽。」",
+    "zh_CN": "[em2][智力检定][/em2]「我把那笔掂完给家主听。」",
+    "links": [202]
+  },
+  {
+    "entryID": 183,
+    "actorID": "MC1",
+    "text": "「家主上回買的是我這張嘴。這張嘴瞞得過兩家，也就盯得住兩家。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「家主上回買的是我這張嘴。這張嘴瞞得過兩家，也就盯得住兩家。」",
+    "zh_CN": "「家主上回买的是我这张嘴。这张嘴瞒得过两家，也就盯得住两家。」",
+    "links": [184]
+  },
+  {
+    "entryID": 184,
+    "actorID": "MC1",
+    "text": "「家主買的東西一分沒少。少的是我的名聲——那是我自己的帳。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「家主買的東西一分沒少。少的是我的名聲——那是我自己的帳。」",
+    "zh_CN": "「家主买的东西一分没少。少的是我的名声——那是我自己的账。」",
+    "links": [185]
+  },
+  {
+    "entryID": 185,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,14);",
+    "Description": "口才檢定擲骰節點（難度 14，手動）",
+    "links": [186]
+  },
+  {
+    "entryID": 186,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [187, 189]
+  },
+  {
+    "entryID": 187,
+    "actorID": "MC9",
+    "text": "「[em7]扇子放下了[/em7]……公子連自己都拿出來賣。」",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);\nSetPortrait(MC9,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]扇子放下了[/em7]……公子連自己都拿出來賣。」",
+    "zh_CN": "「[em7]扇子放下了[/em7]……公子连自己都拿出来卖。」",
+    "links": [188]
+  },
+  {
+    "entryID": 188,
+    "actorID": "MC9",
+    "text": "「罷了。筠買的本來就是這個。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「罷了。筠買的本來就是這個。」",
+    "zh_CN": "「罢了。筠买的本来就是这个。」",
+    "links": [211]
+  },
+  {
+    "entryID": 189,
+    "actorID": "MC9",
+    "text": "「一張騙過人的嘴，公子還當本錢，賣第二回？」",
+    "Sequence": "SetPortrait(MC9,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「一張騙過人的嘴，公子還當本錢，賣第二回？」",
+    "zh_CN": "「一张骗过人的嘴，公子还当本钱，卖第二回？」",
+    "links": [772, 774]
+  },
+  {
+    "entryID": 192,
+    "actorID": "MC1",
+    "text": "「擔保不在我身上。三家的錢同在一本帳上——那一本帳，就是三隻手互相扣著。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「擔保不在我身上。三家的錢同在一本帳上——那一本帳，就是三隻手互相扣著。」",
+    "zh_CN": "「担保不在我身上。三家的钱同在一本账上——那一本账，就是三只手互相扣着。」",
+    "links": [193]
+  },
+  {
+    "entryID": 193,
+    "actorID": "MC1",
+    "text": "「我這隻手要是再動，另外兩隻先斷我的。輪不到家主。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「我這隻手要是再動，另外兩隻先斷我的。輪不到家主。」",
+    "zh_CN": "「我这只手要是再动，另外两只先断我的。轮不到家主。」",
+    "links": [194]
+  },
+  {
+    "entryID": 194,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,12);",
+    "Description": "厚黑檢定擲骰節點（難度 12，手動）",
+    "links": [195]
+  },
+  {
+    "entryID": 195,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [196, 198]
+  },
+  {
+    "entryID": 196,
+    "actorID": "MC9",
+    "text": "「[em7]扇子放下了[/em7]……公子把自己押進帳裡了。」",
+    "Sequence": "ModifyData(FeatExp,Player,Realpolitik,10);\nSetPortrait(MC9,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]扇子放下了[/em7]……公子把自己押進帳裡了。」",
+    "zh_CN": "「[em7]扇子放下了[/em7]……公子把自己押进账里了。」",
+    "links": [197]
+  },
+  {
+    "entryID": 197,
+    "actorID": "MC9",
+    "text": "「這樣說，筠聽得懂。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「這樣說，筠聽得懂。」",
+    "zh_CN": "「这样说，筠听得懂。」",
+    "links": [211]
+  },
+  {
+    "entryID": 198,
+    "actorID": "MC9",
+    "text": "「公子拿別人的手當自己的擔保？」",
+    "Sequence": "SetPortrait(MC9,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「公子拿別人的手當自己的擔保？」",
+    "zh_CN": "「公子拿别人的手当自己的担保？」",
+    "links": [199]
+  },
+  {
+    "entryID": 199,
+    "actorID": "MC9",
+    "text": "「那筠買的是別人的手，不是公子的。」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「那筠買的是別人的手，不是公子的。」",
+    "zh_CN": "「那筠买的是别人的手，不是公子的。」",
+    "links": [772, 774]
+  },
+  {
+    "entryID": 202,
+    "actorID": "MC1",
+    "text": "「家主舉扇子的時候，看的是褚幫主，又看了大王。家主掂的不是我。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「家主舉扇子的時候，看的是褚幫主，又看了大王。家主掂的不是我。」",
+    "zh_CN": "「家主举扇子的时候，看的是褚帮主，又看了大王。家主掂的不是我。」",
+    "links": [203]
+  },
+  {
+    "entryID": 203,
+    "actorID": "MC1",
+    "text": "「赤龍要人、黑狼要門，兩家在雲中互相盯著，誰也騰不出手做買賣。買賣，就只剩甄家能做。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「赤龍要人、黑狼要門，兩家在雲中互相盯著，誰也騰不出手做買賣。買賣，就只剩甄家能做。」",
+    "zh_CN": "「赤龙要人、黑狼要门，两家在云中互相盯着，谁也腾不出手做买卖。买卖，就只剩甄家能做。」",
+    "links": [204]
+  },
+  {
+    "entryID": 204,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntelligenceCheck,13);",
+    "Description": "智力檢定擲骰節點（難度 13，手動）",
+    "links": [205]
+  },
+  {
+    "entryID": 205,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點",
+    "links": [206, 208]
+  },
+  {
+    "entryID": 206,
+    "actorID": "MC9",
+    "text": "「[em7]看了你一眼，那一眼跟方才掃褚人飛的一樣快。然後扇子放下了[/em7]……公子看得見筠在掂誰。」",
+    "Sequence": "ModifyData(AbilityExp,Player,Intelligence,10);\nSetPortrait(MC9,pic=1);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]看了你一眼，那一眼跟方才掃褚人飛的一樣快。然後扇子放下了[/em7]……公子看得見筠在掂誰。」",
+    "zh_CN": "「[em7]看了你一眼，那一眼跟方才扫褚人飞的一样快。然后扇子放下了[/em7]……公子看得见筠在掂谁。」",
+    "links": [207]
+  },
+  {
+    "entryID": 207,
+    "actorID": "MC9",
+    "text": "「那筠這一趟，就不必再問了。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "「那筠這一趟，就不必再問了。」",
+    "zh_CN": "「那筠这一趟，就不必再问了。」",
+    "links": [211]
+  },
+  {
+    "entryID": 208,
+    "actorID": "MC9",
+    "text": "「公子替筠算帳？筠的帳，從不假手外人。」",
+    "Sequence": "SetPortrait(MC9,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「公子替筠算帳？筠的帳，從不假手外人。」",
+    "zh_CN": "「公子替筠算账？筠的账，从不假手外人。」",
+    "links": [772, 774]
+  },
+  {
+    "entryID": 211,
+    "actorID": "role2",
+    "text": "[panel=6]＊（徐榮的手一直在袖子裡。等甄筠把扇子放下，那隻手才鬆開——袖口上留著一道捏出來的摺。）＊",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=6]＊（徐榮的手一直在袖子裡。等甄筠把扇子放下，那隻手才鬆開——袖口上留著一道捏出來的摺。）＊",
+    "zh_CN": "[panel=6]＊（徐荣的手一直在袖子里。等甄筠把扇子放下，那只手才松开——袖口上留着一道捏出来的折。）＊",
+    "links": [212]
+  },
+  {
+    "entryID": 212,
+    "actorID": "MC11",
+    "text": "「哼哈哈。兩位都坐穩了，就剩本王。小子，本王跟他們不一樣——本王不要人，也不缺錢。」",
+    "Sequence": "SetPortrait(MC11,pic=1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_14);",
+    "Description": "換音樂",
+    "zh_TW": "「哼哈哈。兩位都坐穩了，就剩本王。小子，本王跟他們不一樣——本王不要人，也不缺錢。」",
+    "zh_CN": "「哼哈哈。两位都坐稳了，就剩本王。小子，本王跟他们不一样——本王不要人，也不缺钱。」",
+    "links": [213]
+  },
+  {
+    "entryID": 213,
+    "actorID": "MC11",
+    "text": "「本王倒想聽聽，你打算拿什麼留本王。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "「本王倒想聽聽，你打算拿什麼留本王。」",
+    "zh_CN": "「本王倒想听听，你打算拿什么留本王。」",
+    "links": [214]
+  },
+  {
+    "entryID": 214,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,12);",
+    "Description": "自動洞悉檢定觸發點（難度 12）",
+    "links": [215]
+  },
+  {
+    "entryID": 215,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [217, 216]
+  },
+  {
+    "entryID": 216,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他挑的椅子離褚人飛最遠，也離甄筠最遠。那雙靴子從進廳到現在，沒踏進三個人圍出來的那圈地——他坐在這裡，可他還沒進門。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "Description": "洞悉成功",
+    "zh_TW": "[panel=6]＊（他挑的椅子離褚人飛最遠，也離甄筠最遠。那雙靴子從進廳到現在，沒踏進三個人圍出來的那圈地——他坐在這裡，可他還沒進門。）＊",
+    "zh_CN": "[panel=6]＊（他挑的椅子离褚人飞最远，也离甄筠最远。那双靴子从进厅到现在，没踏进三个人围出来的那圈地——他坐在这里，可他还没进门。）＊",
+    "links": [220, 221]
+  },
+  {
+    "entryID": 217,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他翹著腳，笑著看你。他坐在哪一張椅子上，你沒有留意。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "洞悉失敗",
+    "zh_TW": "[panel=6]＊（他翹著腳，笑著看你。他坐在哪一張椅子上，你沒有留意。）＊",
+    "zh_CN": "[panel=6]＊（他翘着脚，笑着看你。他坐在哪一张椅子上，你没有留意。）＊",
+    "links": [219, 220]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC1",
+    "text": "「大王，我不瞞了。三家的話，我今日一次講明白。」",
+    "Sequence": "",
+    "Description": "選項1：俠",
+    "zh_TW": "「大王，我不瞞了。三家的話，我今日一次講明白。」",
+    "zh_CN": "「大王，我不瞒了。三家的话，我今日一次讲明白。」",
+    "links": [222]
+  },
+  {
+    "entryID": 220,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2]「大王偷聽兩家，是怕自己被排在外頭。入了夥，這扇門就開。」",
+    "Sequence": "",
+    "Description": "選項2：厚黑檢定（難度 12）",
+    "zh_TW": "[em2][厚黑檢定][/em2]「大王偷聽兩家，是怕自己被排在外頭。入了夥，這扇門就開。」",
+    "zh_CN": "[em2][厚黑检定][/em2]「大王偷听两家，是怕自己被排在外头。入了伙，这扇门就开。」",
+    "links": [226]
+  },
+  {
+    "entryID": 221,
+    "actorID": "MC1",
+    "text": "[em2][智力檢定][/em2]「今天這件事是大王透出去的。可兩家頭一件事，不會是打英豪府。」",
+    "Sequence": "",
+    "Description": "選項3：智力檢定（難度 14）",
+    "zh_TW": "[em2][智力檢定][/em2]「今天這件事是大王透出去的。可兩家頭一件事，不會是打英豪府。」",
+    "zh_CN": "[em2][智力检定][/em2]「今天这件事是大王透出去的。可两家头一件事，不会是打英豪府。」",
+    "links": [234]
+  },
+  {
+    "entryID": 222,
+    "actorID": "MC1",
+    "text": "「大王，我不瞞了。三家的話，我今日一次講明白。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「大王，我不瞞了。三家的話，我今日一次講明白。」",
+    "zh_CN": "「大王，我不瞒了。三家的话，我今日一次讲明白。」",
+    "links": [223]
+  },
+  {
+    "entryID": 223,
+    "actorID": "MC11",
+    "text": "「哼哈哈！講明白？」",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "「哼哈哈！講明白？」",
+    "zh_CN": "「哼哈哈！讲明白？」",
+    "links": [224]
+  },
+  {
+    "entryID": 224,
+    "actorID": "MC11",
+    "text": "「小子，你要真想講明白，剛才就不會站在這兒跟他們兩個算了半天的帳。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "「小子，你要真想講明白，剛才就不會站在這兒跟他們兩個算了半天的帳。」",
+    "zh_CN": "「小子，你要真想讲明白，刚才就不会站在这儿跟他们两个算了半天的账。」",
+    "links": [225]
+  },
+  {
+    "entryID": 225,
+    "actorID": "MC11",
+    "text": "「本王最煩的就是騙了人還要講良心的。你騙就騙了，挺著。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "zh_TW": "「本王最煩的就是騙了人還要講良心的。你騙就騙了，挺著。」",
+    "zh_CN": "「本王最烦的就是骗了人还要讲良心的。你骗就骗了，挺着。」",
+    "links": [216]
+  },
+  {
+    "entryID": 226,
+    "actorID": "MC1",
+    "text": "「大王在雁門、鄴城都放了耳目——放耳目的人，是怕自己被排在外頭。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「大王在雁門、鄴城都放了耳目——放耳目的人，是怕自己被排在外頭。」",
+    "zh_CN": "「大王在雁门、邺城都放了耳目——放耳目的人，是怕自己被排在外头。」",
+    "links": [227]
+  },
+  {
+    "entryID": 227,
+    "actorID": "MC1",
+    "text": "「今日這一局，大王入了夥，往後并州的事就有大王一份；不入夥，大王永遠是那個翻牆進來聽消息的人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「今日這一局，大王入了夥，往後并州的事就有大王一份；不入夥，大王永遠是那個翻牆進來聽消息的人。」",
+    "zh_CN": "「今日这一局，大王入了伙，往后并州的事就有大王一份；不入伙，大王永远是那个翻墙进来听消息的人。」",
+    "links": [228]
+  },
+  {
+    "entryID": 228,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,12);",
+    "Description": "厚黑檢定擲骰節點（難度 12，手動）",
+    "links": [229]
+  },
+  {
+    "entryID": 229,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [230, 231]
+  },
+  {
+    "entryID": 230,
+    "actorID": "MC11",
+    "text": "「[em7]笑聲收了一半[/em7]……小子，你比他們兩個壞。本王喜歡。」",
+    "Sequence": "SetPortrait(MC11,pic=3);\nModifyData(FeatExp,Player,Realpolitik,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]笑聲收了一半[/em7]……小子，你比他們兩個壞。本王喜歡。」",
+    "zh_CN": "「[em7]笑声收了一半[/em7]……小子，你比他们两个坏。本王喜欢。」",
+    "links": [243]
+  },
+  {
+    "entryID": 231,
+    "actorID": "MC11",
+    "text": "「[em7]腳還在案上，沒有動[/em7]，門？本王要進中原，靠的是馬，不是你這扇破門。」",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「[em7]腳還在案上，沒有動[/em7]，門？本王要進中原，靠的是馬，不是你這扇破門。」",
+    "zh_CN": "「[em7]脚还在案上，没有动[/em7]，门？本王要进中原，靠的是马，不是你这扇破门。」",
+    "links": [775, 216]
+  },
+  {
+    "entryID": 234,
+    "actorID": "MC1",
+    "text": "「兩家今日會一起到，是大王把話遞出去的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「兩家今日會一起到，是大王把話遞出去的。」",
+    "zh_CN": "「两家今日会一起到，是大王把话递出去的。」",
+    "links": [235]
+  },
+  {
+    "entryID": 235,
+    "actorID": "MC1",
+    "text": "「可大王想過沒有——真翻了臉，兩家頭一件事不是打英豪府，是打那個遞話的人。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「可大王想過沒有——真翻了臉，兩家頭一件事不是打英豪府，是打那個遞話的人。」",
+    "zh_CN": "「可大王想过没有——真翻了脸，两家头一件事不是打英豪府，是打那个递话的人。」",
+    "links": [236]
+  },
+  {
+    "entryID": 236,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntelligenceCheck,14);",
+    "Description": "智力檢定擲骰節點（難度 14，手動）",
+    "links": [237]
+  },
+  {
+    "entryID": 237,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [238, 240]
+  },
+  {
+    "entryID": 238,
+    "actorID": "role2",
+    "text": "[panel=6]＊（褚人飛跟甄筠同時看了他一眼。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（褚人飛跟甄筠同時看了他一眼。）＊",
+    "zh_CN": "[panel=6]＊（褚人飞跟甄筠同时看了他一眼。）＊",
+    "links": [239]
+  },
+  {
+    "entryID": 239,
+    "actorID": "MC11",
+    "text": "「[em7]笑到一半收住[/em7]，哼哈哈……哼。這話難聽。」",
+    "Sequence": "SetPortrait(MC11,pic=3);\nModifyData(AbilityExp,Player,Intelligence,10);",
+    "zh_TW": "「[em7]笑到一半收住[/em7]，哼哈哈……哼。這話難聽。」",
+    "zh_CN": "「[em7]笑到一半收住[/em7]，哼哈哈……哼。这话难听。」",
+    "links": [243]
+  },
+  {
+    "entryID": 240,
+    "actorID": "MC11",
+    "text": "「兩路夾擊？他們兩個先得談得攏——小子，你太看得起中原人了。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「兩路夾擊？他們兩個先得談得攏——小子，你太看得起中原人了。」",
+    "zh_CN": "「两路夹击？他们两个先得谈得拢——小子，你太看得起中原人了。」",
+    "links": [775, 216]
+  },
+  {
+    "entryID": 243,
+    "actorID": "MC11",
+    "text": "「說得好。可本王還有一問。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "「說得好。可本王還有一問。」",
+    "zh_CN": "「说得好。可本王还有一问。」",
+    "links": [244]
+  },
+  {
+    "entryID": 244,
+    "actorID": "MC11",
+    "text": "「你騙得了雁門，騙得了鄴城——本王憑什麼以為你騙不了朔方？」",
+    "Sequence": "SetPortrait(MC11,pic=4);",
+    "zh_TW": "「你騙得了雁門，騙得了鄴城——本王憑什麼以為你騙不了朔方？」",
+    "zh_CN": "「你骗得了雁门，骗得了邺城——本王凭什么以为你骗不了朔方？」",
+    "links": [245]
+  },
+  {
+    "entryID": 245,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=8);\nContinue();",
+    "Description": "選項樞紐",
+    "links": [246, 247, 248]
+  },
+  {
+    "entryID": 246,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「大王說對了。我騙得了朔方——可騙一次，我就把這張桌子拆了。」",
+    "Sequence": "",
+    "Description": "選項1：口才檢定（難度 14）",
+    "zh_TW": "[em2][口才檢定][/em2]「大王說對了。我騙得了朔方——可騙一次，我就把這張桌子拆了。」",
+    "zh_CN": "[em2][口才检定][/em2]「大王说对了。我骗得了朔方——可骗一次，我就把这张桌子拆了。」",
+    "links": [249]
+  },
+  {
+    "entryID": 247,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2]「大王不必信我。大王只要看住那兩位；那兩位也正看住大王。」",
+    "Sequence": "",
+    "Description": "選項2：謀略檢定（難度 12）",
+    "zh_TW": "[em2][謀略檢定][/em2]「大王不必信我。大王只要看住那兩位；那兩位也正看住大王。」",
+    "zh_CN": "[em2][谋略检定][/em2]「大王不必信我。大王只要看住那两位；那两位也正看住大王。」",
+    "links": [258]
+  },
+  {
+    "entryID": 248,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「大王坐在這裡，可大王還沒進門。」",
+    "Sequence": "",
+    "Description": "選項3：威嚇檢定（難度 12）",
+    "zh_TW": "[em2][威嚇檢定][/em2]「大王坐在這裡，可大王還沒進門。」",
+    "zh_CN": "[em2][威吓检定][/em2]「大王坐在这里，可大王还没进门。」",
+    "links": [266]
+  },
+  {
+    "entryID": 249,
+    "actorID": "MC1",
+    "text": "「大王說對了。我騙得了朔方。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「大王說對了。我騙得了朔方。」",
+    "zh_CN": "「大王说对了。我骗得了朔方。」",
+    "links": [250]
+  },
+  {
+    "entryID": 250,
+    "actorID": "MC1",
+    "text": "「可騙一次，這一局就散了。我這一年掙來的東西，全在這一局上——大王要的門，也在。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「可騙一次，這一局就散了。我這一年掙來的東西，全在這一局上——大王要的門，也在。」",
+    "zh_CN": "「可骗一次，这一局就散了。我这一年挣来的东西，全在这一局上——大王要的门，也在。」",
+    "links": [251]
+  },
+  {
+    "entryID": 251,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,14);",
+    "Description": "口才檢定擲骰節點（難度 14，手動）",
+    "links": [252]
+  },
+  {
+    "entryID": 252,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [253, 255]
+  },
+  {
+    "entryID": 253,
+    "actorID": "MC11",
+    "text": "「[em7]把腳從案上放了下來[/em7]，哼哈哈——你怕的不是本王，是你自己那點家當。」",
+    "Sequence": "SetPortrait(MC11,pic=1);\nModifyData(FeatExp,Player,Persuasion,25);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]把腳從案上放了下來[/em7]，哼哈哈——你怕的不是本王，是你自己那點家當。」",
+    "zh_CN": "「[em7]把脚从案上放了下来[/em7]，哼哈哈——你怕的不是本王，是你自己那点家当。」",
+    "links": [254]
+  },
+  {
+    "entryID": 254,
+    "actorID": "MC11",
+    "text": "「行。這種怕，本王信得過。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "「行。這種怕，本王信得過。」",
+    "zh_CN": "「行。这种怕，本王信得过。」",
+    "links": [275]
+  },
+  {
+    "entryID": 255,
+    "actorID": "MC11",
+    "text": "「你那點家當，本王一把火就燒得起。小子，這不叫擔保。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「你那點家當，本王一把火就燒得起。小子，這不叫擔保。」",
+    "zh_CN": "「你那点家当，本王一把火就烧得起。小子，这不叫担保。」",
+    "links": [775, 245]
+  },
+  {
+    "entryID": 258,
+    "actorID": "MC1",
+    "text": "「大王不必信我。大王只要看住那兩位。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「大王不必信我。大王只要看住那兩位。」",
+    "zh_CN": "「大王不必信我。大王只要看住那两位。」",
+    "links": [259]
+  },
+  {
+    "entryID": 259,
+    "actorID": "MC1",
+    "text": "「而那兩位，也正看住大王。三雙眼睛互相盯著，誰都不必信誰。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「而那兩位，也正看住大王。三雙眼睛互相盯著，誰都不必信誰。」",
+    "zh_CN": "「而那两位，也正看住大王。三双眼睛互相盯着，谁都不必信谁。」",
+    "links": [260]
+  },
+  {
+    "entryID": 260,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,StrategyCheck,12);",
+    "Description": "謀略檢定擲骰節點（難度 12，手動）",
+    "links": [261]
+  },
+  {
+    "entryID": 261,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [262, 263]
+  },
+  {
+    "entryID": 262,
+    "actorID": "MC11",
+    "text": "「[em7]笑到一半收住，把腳放下來[/em7]，哼哈哈……哼。行。本王就坐著。」",
+    "Sequence": "SetPortrait(MC11,pic=3);\nModifyData(FeatExp,Player,Strategy,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「[em7]笑到一半收住，把腳放下來[/em7]，哼哈哈……哼。行。本王就坐著。」",
+    "zh_CN": "「[em7]笑到一半收住，把脚放下来[/em7]，哼哈哈……哼。行。本王就坐着。」",
+    "links": [275]
+  },
+  {
+    "entryID": 263,
+    "actorID": "MC11",
+    "text": "「互相盯著？那本王還不如自己一個人盯。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「互相盯著？那本王還不如自己一個人盯。」",
+    "zh_CN": "「互相盯着？那本王还不如自己一个人盯。」",
+    "links": [775, 245]
+  },
+  {
+    "entryID": 266,
+    "actorID": "MC1",
+    "text": "「大王坐在這裡，可大王那雙靴子，一步都沒踏進來。」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "「大王坐在這裡，可大王那雙靴子，一步都沒踏進來。」",
+    "zh_CN": "「大王坐在这里，可大王那双靴子，一步都没踏进来。」",
+    "links": [267]
+  },
+  {
+    "entryID": 267,
+    "actorID": "MC1",
+    "text": "「大王不坐進來，這扇門就一直在外頭。我把牆砌高——大王再翻，翻的就是三家的牆。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「大王不坐進來，這扇門就一直在外頭。我把牆砌高——大王再翻，翻的就是三家的牆。」",
+    "zh_CN": "「大王不坐进来，这扇门就一直在外头。我把墙砌高——大王再翻，翻的就是三家的墙。」",
+    "links": [268]
+  },
+  {
+    "entryID": 268,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
+    "Description": "威嚇檢定擲骰節點（難度 12，手動）",
+    "links": [269]
+  },
+  {
+    "entryID": 269,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [270, 272]
+  },
+  {
+    "entryID": 270,
+    "actorID": "role2",
+    "text": "[panel=6]＊（廳裡靜了。褚人飛哼了一聲，像是在笑。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（廳裡靜了。褚人飛哼了一聲，像是在笑。）＊",
+    "zh_CN": "[panel=6]＊（厅里静了。褚人飞哼了一声，像是在笑。）＊",
+    "links": [271]
+  },
+  {
+    "entryID": 271,
+    "actorID": "MC11",
+    "text": "「[em7]把腳放下來，站起身走到門邊——又走回來，坐下[/em7]……好小子。本王就走一趟門。」",
+    "Sequence": "SetPortrait(MC11,pic=3);\nModifyData(FeatExp,Player,Intimidation,10);",
+    "zh_TW": "「[em7]把腳放下來，站起身走到門邊——又走回來，坐下[/em7]……好小子。本王就走一趟門。」",
+    "zh_CN": "「[em7]把脚放下来，站起身走到门边——又走回来，坐下[/em7]……好小子。本王就走一趟门。」",
+    "links": [275]
+  },
+  {
+    "entryID": 272,
+    "actorID": "MC11",
+    "text": "「砌牆？哼哈哈！小子，草原上沒有牆。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "Conditions": "IsPassDice() == false;",
+    "Script": "Variable[\"BreakAlliance\"] = Variable[\"BreakAlliance\"] + 1;",
+    "Description": "破局變數+1",
+    "zh_TW": "「砌牆？哼哈哈！小子，草原上沒有牆。」",
+    "zh_CN": "「砌墙？哼哈哈！小子，草原上没有墙。」",
+    "links": [775, 245]
+  },
+  {
+    "entryID": 275,
+    "actorID": "role2",
+    "text": "[panel=6]＊（子羽站在門邊，位置從三家進門到現在沒有換過。黑狼王坐下了，他的眼睛還在門外。）＊",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=6]＊（子羽站在門邊，位置從三家進門到現在沒有換過。黑狼王坐下了，他的眼睛還在門外。）＊",
+    "zh_CN": "[panel=6]＊（子羽站在门边，位置从三家进门到现在没有换过。黑狼王坐下了，他的眼睛还在门外。）＊",
+    "links": [276]
+  },
+  {
+    "entryID": 276,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三個人都坐著。一個坐得很重，一個扇子擱在膝上，一個腳放在地上。誰也沒有說話，都在等你。）＊",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=6]＊（三個人都坐著。一個坐得很重，一個扇子擱在膝上，一個腳放在地上。誰也沒有說話，都在等你。）＊",
+    "zh_CN": "[panel=6]＊（三个人都坐着。一个坐得很重，一个扇子搁在膝上，一个脚放在地上。谁也没有说话，都在等你。）＊",
+    "links": [277]
+  },
+  {
+    "entryID": 277,
+    "actorID": "MC1",
+    "text": "「三家的錢，都在英豪府一本帳上。誰想翻臉——先掂量另外兩家會不會先收拾他。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「三家的錢，都在英豪府一本帳上。誰想翻臉——先掂量另外兩家會不會先收拾他。」",
+    "zh_CN": "「三家的钱，都在英豪府一本账上。谁想翻脸——先掂量另外两家会不会先收拾他。」",
+    "links": [278]
+  },
+  {
+    "entryID": 278,
+    "actorID": "MC1",
+    "text": "「不是誰信誰。是誰都輸不起。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「不是誰信誰。是誰都輸不起。」",
+    "zh_CN": "「不是谁信谁。是谁都输不起。」",
+    "links": [279]
+  },
+  {
+    "entryID": 279,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人接話。褚人飛看的是甄筠，甄筠看的是黑狼王，黑狼王看的是門。）＊",
+    "Sequence": "AudioControl(StopMusic);",
+    "Description": "停止音樂",
+    "zh_TW": "[panel=6]＊（沒有人接話。褚人飛看的是甄筠，甄筠看的是黑狼王，黑狼王看的是門。）＊",
+    "zh_CN": "[panel=6]＊（没有人接话。褚人飞看的是甄筠，甄筠看的是黑狼王，黑狼王看的是门。）＊",
+    "links": [280]
+  },
+  {
+    "entryID": 280,
+    "actorID": "MC10",
+    "text": "[panel=1]「話是好話。」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "zh_TW": "[panel=1]「話是好話。」",
+    "zh_CN": "[panel=1]「话是好话。」",
+    "links": [281]
+  },
+  {
+    "entryID": 281,
+    "actorID": "MC10",
+    "text": "[panel=1]「可這一局擺在誰家的案上？小子，你壓不住這張案！」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "zh_TW": "[panel=1]「可這一局擺在誰家的案上？小子，你壓不住這張案！」",
+    "zh_CN": "[panel=1]「可这一局摆在谁家的案上？小子，你压不住这张案！」",
+    "links": [282]
+  },
+  {
+    "entryID": 282,
+    "actorID": "role2",
+    "text": "[panel=6]＊（徐榮把那兩卷帳從案上拿起來，走到廳中間，在三個人面前攤開。）＊",
+    "Sequence": "SetPortrait(MC5,pic=1);\nAudioControl(PlayMusic,BGM_32);",
+    "Description": "音樂",
+    "zh_TW": "[panel=6]＊（徐榮把那兩卷帳從案上拿起來，走到廳中間，在三個人面前攤開。）＊",
+    "zh_CN": "[panel=6]＊（徐荣把那两卷账从案上拿起来，走到厅中间，在三个人面前摊开。）＊",
+    "links": [283]
+  },
+  {
+    "entryID": 283,
+    "actorID": "MC5",
+    "text": "[panel=1]「雁門一筆，鄴城一筆，朔方一筆。往後記在同一頁上。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「雁門一筆，鄴城一筆，朔方一筆。往後記在同一頁上。」",
+    "zh_CN": "[panel=1]「雁门一笔，邺城一笔，朔方一笔。往后记在同一页上。」",
+    "links": [284]
+  },
+  {
+    "entryID": 284,
+    "actorID": "MC5",
+    "text": "[panel=1]「三位要看，隨時來。這是英豪府的帳，也是三位的帳。」",
+    "Sequence": "SetPortrait(MC5,pic=1);\nSetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=1]「三位要看，隨時來。這是英豪府的帳，也是三位的帳。」",
+    "zh_CN": "[panel=1]「三位要看，随时来。这是英豪府的账，也是三位的账。」",
+    "links": [285]
+  },
+  {
+    "entryID": 285,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]跪坐回案邊，把一把算籌攤開[/em7]，小犀記。每一筆都寫日子、寫經手的人。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「[em7]跪坐回案邊，把一把算籌攤開[/em7]，小犀記。每一筆都寫日子、寫經手的人。」",
+    "zh_CN": "[panel=2]「[em7]跪坐回案边，把一把算筹摊开[/em7]，小犀记。每一笔都写日子、写经手的人。」",
+    "links": [286]
+  },
+  {
+    "entryID": 286,
+    "actorID": "MC8",
+    "text": "[panel=2]「三位派人來對，小犀陪著對到底！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Proud);",
+    "zh_TW": "[panel=2]「三位派人來對，小犀陪著對到底！」",
+    "zh_CN": "[panel=2]「三位派人来对，小犀陪着对到底！」",
+    "links": [287]
+  },
+  {
+    "entryID": 287,
+    "actorID": "role2",
+    "text": "[panel=6]＊（呂信從柱子邊走過來，站到徐榮旁邊。他的手離開了刀。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC2,pic=1);\nSetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=6]＊（呂信從柱子邊走過來，站到徐榮旁邊。他的手離開了刀。）＊",
+    "zh_CN": "[panel=6]＊（吕信从柱子边走过来，站到徐荣旁边。他的手离开了刀。）＊",
+    "links": [288]
+  },
+  {
+    "entryID": 288,
+    "actorID": "role2",
+    "text": "[panel=6]＊（子羽跟著站到另一邊。從三家進門到現在，他一句話也沒說過——這時候也沒有。廳裡那三雙眼睛，都在這兩個人身上停了一下。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（子羽跟著站到另一邊。從三家進門到現在，他一句話也沒說過——這時候也沒有。廳裡那三雙眼睛，都在這兩個人身上停了一下。）＊",
+    "zh_CN": "[panel=6]＊（子羽跟着站到另一边。从三家进门到现在，他一句话也没说过——这时候也没有。厅里那三双眼睛，都在这两个人身上停了一下。）＊",
+    "links": [289]
+  },
+  {
+    "entryID": 289,
+    "actorID": "MC5",
+    "text": "[panel=1]「三位地界上出了東西，喊一聲，這兩個去。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「三位地界上出了東西，喊一聲，這兩個去。」",
+    "zh_CN": "[panel=1]「三位地界上出了东西，喊一声，这两个去。」",
+    "links": [290]
+  },
+  {
+    "entryID": 290,
+    "actorID": "MC7",
+    "text": "[panel=3]「[em7]沒有離開柱子[/em7]，三位養的人再多，沒有一個是幹這一行的。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「[em7]沒有離開柱子[/em7]，三位養的人再多，沒有一個是幹這一行的。」",
+    "zh_CN": "[panel=3]「[em7]没有离开柱子[/em7]，三位养的人再多，没有一个是干这一行的。」",
+    "links": [291]
+  },
+  {
+    "entryID": 291,
+    "actorID": "role2",
+    "text": "[panel=6]＊（案後的人這時才站起來。從三家進門到現在，他一直坐著。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=6]＊（案後的人這時才站起來。從三家進門到現在，他一直坐著。）＊",
+    "zh_CN": "[panel=6]＊（案后的人这时才站起来。从三家进门到现在，他一直坐着。）＊",
+    "links": [292]
+  },
+  {
+    "entryID": 292,
+    "actorID": "MC4",
+    "text": "[panel=1]「[em7]把手籠進袖子裡[/em7]，三位光臨，賈某坐了半日未起，失禮。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「[em7]把手籠進袖子裡[/em7]，三位光臨，賈某坐了半日未起，失禮。」",
+    "zh_CN": "[panel=1]「[em7]把手笼进袖子里[/em7]，三位光临，贾某坐了半日未起，失礼。」",
+    "links": [293]
+  },
+  {
+    "entryID": 293,
+    "actorID": "MC4",
+    "text": "[panel=1]「賈某有幾句話，三位聽完再走。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「賈某有幾句話，三位聽完再走。」",
+    "zh_CN": "[panel=1]「贾某有几句话，三位听完再走。」",
+    "links": [294]
+  },
+  {
+    "entryID": 294,
+    "actorID": "MC4",
+    "text": "[panel=1]「英豪府不取過路之資，不收護送之財，往後亦然。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「英豪府不取過路之資，不收護送之財，往後亦然。」",
+    "zh_CN": "[panel=1]「英豪府不取过路之资，不收护送之财，往后亦然。」",
+    "links": [295]
+  },
+  {
+    "entryID": 295,
+    "actorID": "MC4",
+    "text": "[panel=1]「雲中這塊地，英豪府守，卻不為三位之中任何一位守。誰來都是客，誰也做不成主。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「雲中這塊地，英豪府守，卻不為三位之中任何一位守。誰來都是客，誰也做不成主。」",
+    "zh_CN": "[panel=1]「云中这块地，英豪府守，却不为三位之中任何一位守。谁来都是客，谁也做不成主。」",
+    "links": [296]
+  },
+  {
+    "entryID": 296,
+    "actorID": "MC4",
+    "text": "[panel=1]「三方共處，勝於三方相攻。這一節賈某不必贅言，三位心裡都有數。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「三方共處，勝於三方相攻。這一節賈某不必贅言，三位心裡都有數。」",
+    "zh_CN": "[panel=1]「三方共处，胜于三方相攻。这一节贾某不必赘言，三位心里都有数。」",
+    "links": [297]
+  },
+  {
+    "entryID": 297,
+    "actorID": "MC4",
+    "text": "[panel=1]「賈某只有一句後話。日後三位之中，若有哪一位要獨吞雲中——」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「賈某只有一句後話。日後三位之中，若有哪一位要獨吞雲中——」",
+    "zh_CN": "[panel=1]「贾某只有一句后话。日后三位之中，若有哪一位要独吞云中——」",
+    "links": [298]
+  },
+  {
+    "entryID": 298,
+    "actorID": "MC4",
+    "text": "[panel=1]「英豪府便站到另外兩位那一邊。不問是非，不問交情，只問誰先動手。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「英豪府便站到另外兩位那一邊。不問是非，不問交情，只問誰先動手。」",
+    "zh_CN": "[panel=1]「英豪府便站到另外两位那一边。不问是非，不问交情，只问谁先动手。」",
+    "links": [299]
+  },
+  {
+    "entryID": 299,
+    "actorID": "MC4",
+    "text": "[panel=1]「三位手裡的分量，原本相當。添上英豪府這一份，先動的那一位，就不再相當了。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「三位手裡的分量，原本相當。添上英豪府這一份，先動的那一位，就不再相當了。」",
+    "zh_CN": "[panel=1]「三位手里的分量，原本相当。添上英豪府这一份，先动的那一位，就不再相当了。」",
+    "links": [300]
+  },
+  {
+    "entryID": 300,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他說完就坐回去了。那隻茶碗還在案上，涼了。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=6]＊（他說完就坐回去了。那隻茶碗還在案上，涼了。）＊",
+    "zh_CN": "[panel=6]＊（他说完就坐回去了。那只茶碗还在案上，凉了。）＊",
+    "links": [301]
+  },
+  {
+    "entryID": 301,
+    "actorID": "MC10",
+    "text": "[panel=1]「哈。行。老子這注，押三家的桌子。」",
+    "Sequence": "SetPortrait(MC10,pic=5);",
+    "zh_TW": "[panel=1]「哈。行。老子這注，押三家的桌子。」",
+    "zh_CN": "[panel=1]「哈。行。老子这注，押三家的桌子。」",
+    "links": [302]
+  },
+  {
+    "entryID": 302,
+    "actorID": "MC9",
+    "text": "[panel=4]「筠出的錢，筠自己看著。三位——往後見面，還是買賣。」",
+    "Sequence": "SetPortrait(MC9,pic=1);",
+    "zh_TW": "[panel=4]「筠出的錢，筠自己看著。三位——往後見面，還是買賣。」",
+    "zh_CN": "[panel=4]「筠出的钱，筠自己看着。三位——往后见面，还是买卖。」",
+    "links": [303]
+  },
+  {
+    "entryID": 303,
+    "actorID": "MC11",
+    "text": "[panel=3]「哼哈哈！好！這才叫買賣！本王那一份，三日內送到——比他們兩家都足。」",
+    "Sequence": "SetPortrait(MC11,pic=1);",
+    "zh_TW": "[panel=3]「哼哈哈！好！這才叫買賣！本王那一份，三日內送到——比他們兩家都足。」",
+    "zh_CN": "[panel=3]「哼哈哈！好！这才叫买卖！本王那一份，三日内送到——比他们两家都足。」",
+    "links": [304]
+  },
+  {
+    "entryID": 304,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三個人先後出門。褚人飛走得最慢，走到門口回頭看了你一眼，沒說什麼。門關上以後，廳裡沒有人動。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（三個人先後出門。褚人飛走得最慢，走到門口回頭看了你一眼，沒說什麼。門關上以後，廳裡沒有人動。）＊",
+    "zh_CN": "[panel=6]＊（三个人先后出门。褚人飞走得最慢，走到门口回头看了你一眼，没说什么。门关上以后，厅里没有人动。）＊",
+    "links": [305]
+  },
+  {
+    "entryID": 305,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1,close)@1;\nOpenPanel(2,close)@1;\nOpenPanel(3,close)@1;\nOpenPanel(4,close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場：三家走了，收掉三人立繪（不換景，所以不插 EnableDialogueBG）",
+    "links": [306]
+  },
+  {
+    "entryID": 306,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]把帳冊放下來。她的手指印在封皮上，白的[/em7]，表哥……三家都留下了。小犀怎麼一點都不高興呢。」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "[panel=2]「[em7]把帳冊放下來。她的手指印在封皮上，白的[/em7]，表哥……三家都留下了。小犀怎麼一點都不高興呢。」",
+    "zh_CN": "[panel=2]「[em7]把账册放下来。她的手指印在封皮上，白的[/em7]，表哥……三家都留下了。小犀怎么一点都不高兴呢。」",
+    "links": [307]
+  },
+  {
+    "entryID": 307,
+    "actorID": "MC2",
+    "text": "[panel=1]「三家的錢一起收。嘿。小子，你這膽子比我還大。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「三家的錢一起收。嘿。小子，你這膽子比我還大。」",
+    "zh_CN": "[panel=1]「三家的钱一起收。嘿。小子，你这胆子比我还大。」",
+    "links": [308]
+  },
+  {
+    "entryID": 308,
+    "actorID": "MC5",
+    "text": "[panel=3]「[em7]把那兩卷帳收起來，收得很慢[/em7]，這不是膽子。這是三家都盯上我們了。」",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=3]「[em7]把那兩卷帳收起來，收得很慢[/em7]，這不是膽子。這是三家都盯上我們了。」",
+    "zh_CN": "[panel=3]「[em7]把那两卷账收起来，收得很慢[/em7]，这不是胆子。这是三家都盯上我们了。」",
+    "links": [309]
+  },
+  {
+    "entryID": 309,
+    "actorID": "MC3",
+    "text": "[panel=1]「…………」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=1]「…………」",
+    "zh_CN": "[panel=1]「…………」",
+    "links": [310]
+  },
+  {
+    "entryID": 310,
+    "actorID": "MC4",
+    "text": "[panel=1]「[em7]把茶碗放下。從頭到尾，他沒有站起來過[/em7]，三萬六千的窟窿，你這一趟，竟填出將近三倍來。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「[em7]把茶碗放下。從頭到尾，他沒有站起來過[/em7]，三萬六千的窟窿，你這一趟，竟填出將近三倍來。」",
+    "zh_CN": "[panel=1]「[em7]把茶碗放下。从头到尾，他没有站起来过[/em7]，三万六千的窟窿，你这一趟，竟填出将近三倍来。」",
+    "links": [311]
+  },
+  {
+    "entryID": 311,
+    "actorID": "MC1",
+    "text": "「先生，這事——」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「先生，這事——」",
+    "zh_CN": "「先生，这事——」",
+    "links": [312]
+  },
+  {
+    "entryID": 312,
+    "actorID": "MC4",
+    "text": "[panel=1]「不必說了。賈某只問一句——這三份錢，收得，安穩嗎？」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「不必說了。賈某只問一句——這三份錢，收得，安穩嗎？」",
+    "zh_CN": "[panel=1]「不必说了。贾某只问一句——这三份钱，收得，安稳吗？」",
+    "links": [313]
+  },
+  {
+    "entryID": 313,
+    "actorID": "MC4",
+    "text": "[panel=1]「鬼谷之學，講的便是縱橫捭闔。三方各懷鬼胎，卻誰也不敢先破局——這局面，倒也算是有點意思。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「鬼谷之學，講的便是縱橫捭闔。三方各懷鬼胎，卻誰也不敢先破局——這局面，倒也算是有點意思。」",
+    "zh_CN": "[panel=1]「鬼谷之学，讲的便是纵横捭阖。三方各怀鬼胎，却谁也不敢先破局——这局面，倒也算是有点意思。」",
+    "links": [314]
+  },
+  {
+    "entryID": 314,
+    "actorID": "MC4",
+    "text": "[panel=1]「只是醜話賈某說在前頭：這是把三隻餓虎，同時拴在了英豪府門口。餵得好，虎為你所用；餵不好，那便是三虎分食。」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「只是醜話賈某說在前頭：這是把三隻餓虎，同時拴在了英豪府門口。餵得好，虎為你所用；餵不好，那便是三虎分食。」",
+    "zh_CN": "[panel=1]「只是丑话贾某说在前头：这是把三只饿虎，同时拴在了英豪府门口。喂得好，虎为你所用；喂不好，那便是三虎分食。」",
+    "links": [315]
+  },
+  {
+    "entryID": 315,
+    "actorID": "MC4",
+    "text": "[panel=1]「[em7]從案下取出一串錢，推到你面前。串得整整齊齊，像早就備著[/em7]，五千錢。拿著。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「[em7]從案下取出一串錢，推到你面前。串得整整齊齊，像早就備著[/em7]，五千錢。拿著。」",
+    "zh_CN": "[panel=1]「[em7]从案下取出一串钱，推到你面前。串得整整齐齐，像早就备着[/em7]，五千钱。拿着。」",
+    "links": [316]
+  },
+  {
+    "entryID": 316,
+    "actorID": "MC1",
+    "text": "「……先生，這是——」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「……先生，這是——」",
+    "zh_CN": "「……先生，这是——」",
+    "links": [317]
+  },
+  {
+    "entryID": 317,
+    "actorID": "MC4",
+    "text": "[panel=1]「賈某不白用人。這一趟是你去談的、你去講的，帳自然算你一份。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「賈某不白用人。這一趟是你去談的、你去講的，帳自然算你一份。」",
+    "zh_CN": "[panel=1]「贾某不白用人。这一趟是你去谈的、你去讲的，账自然算你一份。」",
+    "links": [318]
+  },
+  {
+    "entryID": 318,
+    "actorID": "MC4",
+    "text": "[panel=1]「往後也照這個算——你替本府拿回多少，本府就分你多少。誰替賈某辦事，賈某就給誰。」",
+    "Sequence": "SetPortrait(MC4,pic=1);\nModifyData(Coin,Player,5000);",
+    "zh_TW": "[panel=1]「往後也照這個算——你替本府拿回多少，本府就分你多少。誰替賈某辦事，賈某就給誰。」",
+    "zh_CN": "[panel=1]「往后也照这个算——你替本府拿回多少，本府就分你多少。谁替贾某办事，贾某就给谁。」",
+    "links": [319]
+  },
+  {
+    "entryID": 319,
+    "actorID": "role2",
+    "text": "[panel=6]＊（徐榮在旁邊看著那串錢，沒有說話。）＊",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=6]＊（徐榮在旁邊看著那串錢，沒有說話。）＊",
+    "zh_CN": "[panel=6]＊（徐荣在旁边看着那串钱，没有说话。）＊",
+    "links": [320]
+  },
+  {
+    "entryID": 320,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]伸手要接，手到一半停住，回頭看了你一眼，才把錢串收進懷裡[/em7]，五、五千錢……」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「[em7]伸手要接，手到一半停住，回頭看了你一眼，才把錢串收進懷裡[/em7]，五、五千錢……」",
+    "zh_CN": "[panel=2]「[em7]伸手要接，手到一半停住，回头看了你一眼，才把钱串收进怀里[/em7]，五、五千钱……」",
+    "links": [322]
+  },
+  {
+    "entryID": 322,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡端起茶碗，喝了一口，又把碗放回案上。那碗茶從三家進門起就沒有再換過。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=6]＊（賈詡端起茶碗，喝了一口，又把碗放回案上。那碗茶從三家進門起就沒有再換過。）＊",
+    "zh_CN": "[panel=6]＊（贾诩端起茶碗，喝了一口，又把碗放回案上。那碗茶从三家进门起就没有再换过。）＊",
+    "links": [323]
+  },
+  {
+    "entryID": 323,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [324]
+  },
+  {
+    "entryID": 324,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三日後，朔方的錢到了。二十匹馬馱進雲中，一路上誰都看得見——黑狼王要的從來不只是那張椅子。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（三日後，朔方的錢到了。二十匹馬馱進雲中，一路上誰都看得見——黑狼王要的從來不只是那張椅子。）＊",
+    "zh_CN": "[panel=6]＊（三日后，朔方的钱到了。二十匹马驮进云中，一路上谁都看得见——黑狼王要的从来不只是那张椅子。）＊",
+    "links": [325]
+  },
+  {
+    "entryID": 325,
+    "actorID": "role2",
+    "text": "[panel=6]＊（小犀把三筆進項並排記在同一頁上，算了兩遍，才敢把總數寫下來：十萬有餘。英豪府開府以來，帳上從沒有過這麼多錢。）＊",
+    "Sequence": "ModifyData(FavorabilityExp,MC4,50);",
+    "Script": "SetQuestState(\"C2M1\", \"success\");\nSetQuestEntryState(\"C2M1\", 3, \"success\");",
+    "Description": "任務完成、賈詡好感 +50（全場第二處）",
+    "zh_TW": "[panel=6]＊（小犀把三筆進項並排記在同一頁上，算了兩遍，才敢把總數寫下來：十萬有餘。英豪府開府以來，帳上從沒有過這麼多錢。）＊",
+    "zh_CN": "[panel=6]＊（小犀把三笔进项并排记在同一页上，算了两遍，才敢把总数写下来：十万有余。英豪府开府以来，账上从没有过这么多钱。）＊",
+    "links": [326]
+  },
+  {
+    "entryID": 326,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "Description": "尾格",
+    "links": []
+  },
+  {
+    "entryID": 327,
+    "actorID": "MC10",
+    "text": "[panel=1]「[em7]起身就往外走，沒關門[/em7]，老子聽夠了。」",
+    "Sequence": "SetPortrait(MC10,pic=2);",
+    "Description": "離席・赤籠BreakAlliance>4",
+    "zh_TW": "[panel=1]「[em7]起身就往外走，沒關門[/em7]，老子聽夠了。」",
+    "zh_CN": "[panel=1]「[em7]起身就往外走，没关门[/em7]，老子听够了。」",
+    "links": [330]
+  },
+  {
+    "entryID": 328,
+    "actorID": "MC9",
+    "text": "[panel=4]「[em7]沒有再看你，輿簾在她身後放了下來[/em7]，筠倦了。這筆帳，改日筠派人來收。」",
+    "Sequence": "SetPortrait(MC9,pic=3);",
+    "Description": "離席・甄家",
+    "zh_TW": "[panel=4]「[em7]沒有再看你，輿簾在她身後放了下來[/em7]，筠倦了。這筆帳，改日筠派人來收。」",
+    "zh_CN": "[panel=4]「[em7]没有再看你，舆帘在她身后放了下来[/em7]，筠倦了。这笔账，改日筠派人来收。」",
+    "links": [330]
+  },
+  {
+    "entryID": 329,
+    "actorID": "MC11",
+    "text": "[panel=3]「[em7]從進來的那面牆翻出去[/em7]，哼哈哈——小子，本王替你把話帶到雁門、鄴城。不用謝。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "Description": "離席・黑狼",
+    "zh_TW": "[panel=3]「[em7]從進來的那面牆翻出去[/em7]，哼哈哈——小子，本王替你把話帶到雁門、鄴城。不用謝。」",
+    "zh_CN": "[panel=3]「[em7]从进来的那面墙翻出去[/em7]，哼哈哈——小子，本王替你把话带到雁门、邺城。不用谢。」",
+    "links": [330]
+  },
+  {
+    "entryID": 330,
+    "actorID": "role2",
+    "text": "[panel=6]＊（呂信往前踏了一步，徐榮的手按在他肩上，沒有放開。賈詡把茶碗放下，站起來，走了——他沒有看你。）＊",
+    "Sequence": "SetPortrait(MC2,pic=2);\nSetPortrait(MC5,pic=2);\nSetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=6]＊（呂信往前踏了一步，徐榮的手按在他肩上，沒有放開。賈詡把茶碗放下，站起來，走了——他沒有看你。）＊",
+    "zh_CN": "[panel=6]＊（吕信往前踏了一步，徐荣的手按在他肩上，没有放开。贾诩把茶碗放下，站起来，走了——他没有看你。）＊",
+    "links": [331]
+  },
+  {
+    "entryID": 331,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一家走了，另外兩家沒有留。半個月裡，雁門的人來收了一趟，鄴城的人來收了一趟；朔方沒有來——朔方的馬在雲中城外跑了三天，誰也沒攔。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（一家走了，另外兩家沒有留。半個月裡，雁門的人來收了一趟，鄴城的人來收了一趟；朔方沒有來——朔方的馬在雲中城外跑了三天，誰也沒攔。）＊",
+    "zh_CN": "[panel=6]＊（一家走了，另外两家没有留。半个月里，雁门的人来收了一趟，邺城的人来收了一趟；朔方没有来——朔方的马在云中城外跑了三天，谁也没拦。）＊",
+    "links": [332]
+  },
+  {
+    "entryID": 332,
+    "actorID": "role2",
+    "text": "[panel=6]＊（并州三家，往後沒有一家再跟英豪府做買賣。徐榮把能典的都典了，也只夠遣散府裡的雜役；開春那天，門是開著的，屋裡沒有人。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（并州三家，往後沒有一家再跟英豪府做買賣。徐榮把能典的都典了，也只夠遣散府裡的雜役；開春那天，門是開著的，屋裡沒有人。）＊",
+    "zh_CN": "[panel=6]＊（并州三家，往后没有一家再跟英豪府做买卖。徐荣把能典的都典了，也只够遣散府里的杂役；开春那天，门是开着的，屋里没有人。）＊",
+    "links": [333]
+  },
+  {
+    "entryID": 333,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableDialogueBG()@1;\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "Description": "BD：三家談崩",
+    "links": [766]
+  },
+  {
+    "entryID": 763,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "選單",
+    "links": [4367, 4368, 4369]
+  },
+  {
+    "entryID": 4384,
+    "actorID": "MC1",
+    "text": "（看向郭嘉。）",
+    "Sequence": "",
+    "zh_TW": "（看向郭嘉。）",
+    "zh_CN": "（看向郭嘉。）",
+    "links": [4385]
+  },
+  {
+    "entryID": 4385,
+    "actorID": "MC1",
+    "text": "「這……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「這……」",
+    "zh_CN": "「这……」",
+    "links": [4380]
+  },
+  {
+    "entryID": 766,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);\nContinue();",
+    "Description": " ShowEnding(Ending_1)。",
+    "links": []
+  },
+  {
+    "entryID": 767,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "Conditions": "Variable[\"BreakAlliance\"] > 4;",
+    "Description": "離席・赤籠BreakAlliance>4",
+    "links": [327]
+  },
+  {
+    "entryID": 768,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "Description": "檢定失敗返回選單",
+    "links": [79]
+  },
+  {
+    "entryID": 769,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nContinue();",
+    "Description": "檢定成功->下一階段",
+    "links": [111, 112]
+  },
+  {
+    "entryID": 770,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(1, close);\nContinue();",
+    "Description": "檢定成功->下一階段",
+    "links": [142]
+  },
+  {
+    "entryID": 771,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "檢定失敗返回選單",
+    "links": [769]
+  },
+  {
+    "entryID": 772,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"BreakAlliance\"] > 5;",
+    "Description": "離席・甄家BreakAlliance>5",
+    "links": [328]
+  },
+  {
+    "entryID": 773,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "檢定失敗返回選單",
+    "links": [151, 152]
+  },
+  {
+    "entryID": 774,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "檢定失敗返回選單",
+    "links": [179]
+  },
+  {
+    "entryID": 775,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"BreakAlliance\"] > 6;",
+    "Description": "離席・黑狼BreakAlliance>6",
+    "links": [329]
   }
 ]
