@@ -12,9 +12,17 @@
   {
     "entryID": 2,
     "actorID": "MC22",
-    "text": "[panel=1]「大俠，這是我爹的字，錯不了——他走到哪寫到哪，寫完就擱在原地，卷二裡不是寫了，他日還要再來這谷裡一趟。你先看看，看完本姑娘再說。」",
+    "text": "[panel=1]「大俠，這是我爹的字，錯不了——他走到哪寫到哪，寫完就擱在原地。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_CN": "[panel=1]「大侠，这是我爹的字，错不了——他走到哪写到哪，写完就搁在原地，卷二里不是写了，他日还要再来这谷里一趟。你先看看，看完本姑娘再说。」",
+    "zh_CN": "[panel=1]「大侠，这是我爹的字，错不了——他走到哪写到哪，写完就搁在原地。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「卷二裡不是寫了，他日還要再來這谷裡一趟。你先看看，看完本姑娘再說。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「卷二里不是写了，他日还要再来这谷里一趟。你先看看，看完本姑娘再说。」",
     "links": [3]
   },
   {
@@ -28,10 +36,18 @@
   {
     "entryID": 4,
     "actorID": "MC22",
-    "text": "[panel=1]「[em7]低頭看了一眼腰間的天機盤[/em7]，看完了？他寫他的天機盤在這谷裡轉得發狂，本姑娘的打從進谷起就沒動過一下——這是怎麼回事，本姑娘一時也說不上來。卷子先收著，往後見著這樣的卷子，還是老規矩，先給本姑娘。」",
-    "Sequence": "SetPortrait(MC22,pic=14);\nModifyData(Valuable,Player,WanderingNotesPage2,-1);\nModifyData(Valuable,MC22,WanderingNotesPage2,1);",
+    "text": "[panel=1]「[em7]低頭看了一眼天機盤[/em7]，看完了？他寫他的天機盤在這谷裡轉得發狂，本姑娘的打從進谷起就沒動過一下。」",
+    "Sequence": "SetPortrait(MC22,pic=14);",
+    "zh_CN": "[panel=1]「[em7]低头看了一眼天机盘[/em7]，看完了？他写他的天机盘在这谷里转得发狂，本姑娘的打从进谷起就没动过一下。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "[panel=1]「這是怎麼回事，本姑娘一時也說不上來。卷子先收著——往後見著這樣的卷子，還是老規矩，先給本姑娘。」",
+    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(Valuable,Player,WanderingNotesPage2,-1);\nModifyData(Valuable,MC22,WanderingNotesPage2,1);",
     "Description": "卷子轉到娜娜身上",
-    "zh_CN": "[panel=1]「[em7]低头看了一眼腰间的天机盘[/em7]，看完了？他写他的天机盘在这谷里转得发狂，本姑娘的打从进谷起就没动过一下——这是怎么回事，本姑娘一时也说不上来。卷子先收着，往后见着这样的卷子，还是老规矩，先给本姑娘。」",
+    "zh_CN": "[panel=1]「这是怎么回事，本姑娘一时也说不上来。卷子先收着——往后见着这样的卷子，还是老规矩，先给本姑娘。」",
     "links": [5]
   },
   {

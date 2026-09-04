@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-"""文風節奏檢查：抓碎句與縮寫名詞。
+"""文風節奏檢查：抓碎句、縮寫名詞與超長台詞。
 用法：python 給AI看的指南/文風節奏檢查.py <檔或資料夾>...   （.md 創作稿、.json 對話檔都吃）
       --hook-post／--hook-stop 是給 .claude/settings.json 的 hook 用的，從 stdin 讀 JSON。
-規矩出處：武俠文風創作指南 第四節旁白卡第 4 條、娜娜卡〈節奏〉、乙類〈不縮名詞〉、自檢 4a。
+規矩出處：武俠文風創作指南 第四節旁白卡第 4 條、娜娜卡〈節奏〉、乙類〈不縮名詞〉、自檢 4a；
+台詞長度上限見 文本創作指南 2.1b（2026-09-04 作者定：可見字數 50 內、紅線 60）。
 """
 import sys, os, re, json, statistics as st
 
@@ -12,6 +13,15 @@ ACTOR = {'MC1': '你', 'MC2': '呂信', 'MC3': '子羽', 'MC4': '賈詡', 'MC5':
 EXEMPT = ('子羽', '郭嘉', '狗頭人', 'Kobold')          # 話少或語言能力特例：碎句不計
 COMPOUND_BEFORE = '天機羅棋地命算磨石托圓一幾整半銅玉這那面'
 COMPOUND_AFTER = '纏算問查點腿起子踞根桓龍旋繞'
+LIMIT_WARN, LIMIT_HARD = 50, 60   # 台詞可見字數：過 50 要拆格、60 是紅線（文本創作指南 2.1b，2026-09-04 作者定）
+
+
+def visible_len(t):
+    """可見字數：[panel]/[em2]/[em7]/[var] 標籤本身不算；em7 中間的動作字有顯示、要算；
+    [var=…] 會代入姓名，以 2 字估。引號與標點都算。旁白（panel=6）不歸這條管。"""
+    t = re.sub(r'\[var=[^\]]*\]', '〇〇', t)
+    t = re.sub(r'\[/?em\d\]|\[panel=\d+\]|\[PANEL=\d+\]', '', t)
+    return len(t.strip())
 
 
 def strip_tags(t):
@@ -77,11 +87,14 @@ def lines_from_md(p):
 
 def check(p):
     gen = lines_from_json(p) if p.endswith('.json') else lines_from_md(p)
-    per = {}; frags = []; nouns = []; flagged = []
+    per = {}; frags = []; nouns = []; flagged = []; longs = []
     em_lines = 0; talk_lines = 0; em_consec = []; prev_em = None
     for spk, eid, t in gen:
         if spk != '旁白':
             talk_lines += 1
+            vl = visible_len(t)
+            if vl > LIMIT_WARN:
+                longs.append((spk, eid, vl))
             if '[em7]' in t:
                 em_lines += 1
                 if prev_em == spk:
@@ -119,15 +132,19 @@ def check(p):
         print('-- 縮寫／隱喻名詞（「那本帳」若是真帳本可留）：')
         for spk, eid, h in nouns:
             print('   %s %s 「%s」' % (spk, eid, h))
+    if longs:
+        print('-- 台詞超長（可見字數過 %d 要拆格、%d 是紅線；標籤不計）：' % (LIMIT_WARN, LIMIT_HARD))
+        for spk, eid, vl in longs:
+            print('   %s %s %d 字%s' % (spk, eid, vl, '  ⚠ 紅線' if vl > LIMIT_HARD else ''))
     allowed = max(1, talk_lines // 10)
     em_bad = em_lines > allowed or bool(em_consec)
     if talk_lines:
         print('-- em7：%d／%d 格台詞（每十格至多一個，上限 %d）%s' % (em_lines, talk_lines, allowed, '  ⚠ 太多' if em_lines > allowed else ''))
     if em_consec:
         print('-- 同一人連續兩格都掛 em7：' + '、'.join('%s %s' % x for x in em_consec))
-    if not frags and not nouns and not em_bad:
+    if not frags and not nouns and not em_bad and not longs:
         print('-- 乾淨。')
-    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'nouns': len(nouns), 'em7_bad': em_bad}
+    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs)}
 
 
 def walk(paths):
@@ -175,7 +192,7 @@ def run_quiet(paths):
 def summary(results):
     lines = []
     for r in results:
-        if r['flagged'] or r['frags'] or r['nouns'] or r.get('em7_bad'):
+        if r['flagged'] or r['frags'] or r['nouns'] or r.get('em7_bad') or r.get('longs'):
             bits = []
             if r['flagged']:
                 bits.append('太碎：' + '、'.join(r['flagged']))
@@ -185,6 +202,8 @@ def summary(results):
                 bits.append('縮寫名詞 %d' % r['nouns'])
             if r.get('em7_bad'):
                 bits.append('em7 過量或連掛')
+            if r.get('longs'):
+                bits.append('台詞超長 %d' % r['longs'])
             lines.append('%s ⇒ %s' % (rel_of(r['file']), '；'.join(bits)))
     return lines
 

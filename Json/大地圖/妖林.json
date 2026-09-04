@@ -28,10 +28,18 @@
   {
     "entryID": 4,
     "actorID": "MC22",
-    "text": "[panel=1]「看完了？我爹在這底下待了三個月，一具一具驗過來，本姑娘小時候只當他是出門尋寶去了。[em7]把卷子捲起來收進懷裡[/em7]，末了那幾行他寫得慢，墨都換了幾回——一個人在這種地方，慢也是應該的。」",
-    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(Valuable,Player,WanderingNotesPage3,-1);\nModifyData(Valuable,MC22,WanderingNotesPage3,1);",
+    "text": "[panel=1]「看完了？我爹在這底下待了三個月，一具一具驗過來，本姑娘小時候只當他是出門尋寶去了。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「看完了？我爹在这底下待了三个月，一具一具验过来，本姑娘小时候只当他是出门寻宝去了。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]把卷子捲起來收進懷裡[/em7]，末了那幾行他寫得慢，墨都換了幾回——一個人在這種地方，慢也是應該的。」",
+    "Sequence": "SetPortrait(MC22,pic=3);\nModifyData(Valuable,Player,WanderingNotesPage3,-1);\nModifyData(Valuable,MC22,WanderingNotesPage3,1);",
     "Description": "卷子轉到娜娜身上",
-    "zh_CN": "[panel=1]「看完了？我爹在这底下待了三个月，一具一具验过来，本姑娘小时候只当他是出门寻宝去了。[em7]把卷子卷起来收进怀里[/em7]，末了那几行他写得慢，墨都换了几回——一个人在这种地方，慢也是应该的。」",
+    "zh_CN": "[panel=1]「[em7]把卷子卷起来收进怀里[/em7]，末了那几行他写得慢，墨都换了几回——一个人在这种地方，慢也是应该的。」",
     "links": [5]
   },
   {
