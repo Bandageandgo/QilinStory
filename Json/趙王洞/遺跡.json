@@ -1909,15 +1909,15 @@
     "Sequence": "",
     "Description": "第一格只表態，她預設不答。選項不加 Sequence。",
     "zh_CN": "「这东西……留在我身上，会出事吗？」",
-    "links": [4402]
+    "links": [4344]
   },
   {
     "entryID": 4402,
     "actorID": "MC1",
-    "text": "「這東西……留在我身上，會出事嗎？妳直說。」",
+    "text": "「這東西還在我身上。妳倒是給句話。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「这东西……留在我身上，会出事吗？你直说。」",
-    "links": [4344]
+    "zh_CN": "「这东西还在我身上。你倒是给句话。」",
+    "links": [4346, 4349]
   },
   {
     "entryID": 4343,
@@ -1925,14 +1925,6 @@
     "text": "「這種東西，我拿著才安穩。」",
     "Sequence": "",
     "zh_CN": "「这种东西，我拿着才安稳。」",
-    "links": [4403]
-  },
-  {
-    "entryID": 4403,
-    "actorID": "MC1",
-    "text": "「這種東西，我拿著才安穩。給別人，我不放心。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_CN": "「这种东西，我拿着才安稳。给别人，我不放心。」",
     "links": [4344]
   },
   {
@@ -1949,7 +1941,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "擲骰緩衝節點",
-    "links": [4346, 4349]
+    "links": [4402]
   },
   {
     "entryID": 4346,
