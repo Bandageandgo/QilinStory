@@ -2,10 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
-    "title": "枯骨堆中發現並取得《卷四》",
+    "title": "枯骨堆中發現並取得《卷三》",
     "text": "[panel=6]＊（墓道最底下那一層，骨頭堆到牆邊。有幾具是分開擺的，一具一具排成排——跟旁邊那一堆不一樣。排頭那具的肋骨底下壓著一卷東西，紙的。）＊",
     "Sequence": "ModifyData(Valuable,Player,WanderingNotesPage3,1);",
-    "Description": "互動點：枯骨堆中取得《異聞錄・化妖考》WanderingNotesPage3。先發給主角，便籤才開得出來；#4 再轉給娜娜",
+    "Description": "互動點：枯骨堆中取得WanderingNotesPage3。先發給主角，便籤才開得出來；#4 再轉給娜娜",
     "zh_CN": "[panel=6]＊（墓道最底下那一层，骨头堆到墙边。有几具是分开摆的，一具一具排成排——跟旁边那一堆不一样。排头那具的肋骨底下压着一卷东西，纸的。）＊",
     "links": [2]
   },
@@ -23,6 +23,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage3);",
     "Description": "貴重品便籤",
+    "zh_CN": "[panel=1]「[em7]卷子翻开了，却没有往下读。她先把那一排骨头看了一遍[/em7]，……大侠，我爹在这底下验了百余具骨头。一个人，三个月。」",
     "links": [4]
   },
   {
@@ -34,6 +35,16 @@
     "links": [6]
   },
   {
+    "entryID": 5,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 2, \"success\");",
+    "Description": "尾格：收立繪面板；任務更新",
+    "zh_CN": "[panel=1]「孔、齿、指节。他写，那些手脚是活着的时候做下的。」",
+    "links": []
+  },
+  {
     "entryID": 6,
     "actorID": "MC22",
     "text": "[panel=1]「[em7]把卷子捲起來收進懷裡[/em7]，末了那幾行他寫得慢，墨都換了幾回——一個人在這種地方，慢也是應該的。」",
@@ -41,14 +52,5 @@
     "Description": "卷子轉到娜娜身上",
     "zh_CN": "[panel=1]「[em7]把卷子卷起来收进怀里[/em7]，末了那几行他写得慢，墨都换了几回——一个人在这种地方，慢也是应该的。」",
     "links": [5]
-  },
-  {
-    "entryID": 5,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF45\", 2, \"success\");",
-    "Description": "尾格：收立繪面板；任務更新",
-    "links": []
   }
 ]

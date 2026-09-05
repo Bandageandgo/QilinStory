@@ -241,8 +241,17 @@
   {
     "entryID": 222,
     "actorID": "MC1",
-    "text": "「我的老天爺啊…腿肚子還在轉筋…總算是…贏了…咕…不行，打完架怎麼更餓了…」",
+    "text": "「總算是…贏了…」",
     "Sequence": "",
+    "zh_TW": "「總算是…贏了…」",
+    "zh_CN": "「总算是…赢了…」",
+    "links": [2417]
+  },
+  {
+    "entryID": 2417,
+    "actorID": "MC1",
+    "text": "「我的老天爺啊…腿肚子還在轉筋…總算是…贏了…咕…不行，打完架怎麼更餓了…」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
     "zh_TW": "「我的老天爺啊…腿肚子還在轉筋…總算是…贏了…咕…不行，打完架怎麼更餓了…」",
     "zh_CN": "「我的老天爷啊…腿肚子还在转筋…总算是…赢了…咕…不行，打完架怎么更饿了…」",
     "links": [241]
@@ -711,9 +720,18 @@
   {
     "entryID": 298,
     "actorID": "MC1",
-    "text": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
+    "text": "「又來到這鬼地方了……」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
     "Conditions": "CurrentQuestState(\"CF08\") == \"success\";",
+    "zh_TW": "「又來到這鬼地方了……」",
+    "zh_CN": "「又来到这鬼地方了……」",
+    "links": [2416]
+  },
+  {
+    "entryID": 2416,
+    "actorID": "MC1",
+    "text": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
     "zh_TW": "「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」",
     "zh_CN": "「呼…又来到这鬼地方了…上次的教训还历历在目，这次可不能再大意了…」",
     "links": [299]

@@ -5,7 +5,7 @@
     "title": "噴火道路盡頭寶箱《遊方雜記・卷三》",
     "text": "[panel=6]＊（道路的盡頭擱著一口木匣，沒有上鎖。裡頭一卷紙捲得很緊，捆著的繩結已經舊了。）＊",
     "Sequence": "ModifyData(Valuable,Player,WanderingNotesPage2,1);",
-    "Description": "互動點：取得《遊方雜記・卷三》WanderingNotesPage2。先發給主角，便籤才開得出來；#4 再轉給娜娜",
+    "Description": "互動點：取得《遊方雜記・卷二》WanderingNotesPage2。先發給主角，便籤才開得出來；#4 再轉給娜娜",
     "zh_CN": "[panel=6]＊（道路的尽头搁着一口木匣，没有上锁。里头一卷纸卷得很紧，捆着的绳结已经旧了。）＊",
     "links": [2]
   },
@@ -18,19 +18,12 @@
     "links": [7]
   },
   {
-    "entryID": 7,
-    "actorID": "MC22",
-    "text": "[panel=1]「卷二裡不是寫了，他日還要再來這谷裡一趟。你先看看，看完本姑娘再說。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_CN": "[panel=1]「卷二里不是写了，他日还要再来这谷里一趟。你先看看，看完本姑娘再说。」",
-    "links": [3]
-  },
-  {
     "entryID": 3,
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage2);",
     "Description": "貴重品便籤",
+    "zh_CN": "[panel=1]「[em7]一页一页翻，翻到末尾停住[/em7]，他过不去的地方，咱们过去。」",
     "links": [4]
   },
   {
@@ -42,6 +35,24 @@
     "links": [6]
   },
   {
+    "entryID": 5,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 1, \"success\");",
+    "Description": "尾格：收立繪面板；任務更新",
+    "zh_CN": "[panel=1]「五重。他过了两重——第三重伤了左臂，退出去，就躺在这里，七天。」",
+    "links": []
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「卷中有提到，他日還要再來這谷裡一趟。你先看看，看完本姑娘再說。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「卷中有提到，他日还要再来这谷里一趟。你先看看，看完本姑娘再说。」",
+    "links": [3]
+  },
+  {
     "entryID": 6,
     "actorID": "MC22",
     "text": "[panel=1]「這是怎麼回事，本姑娘一時也說不上來。卷子先收著——往後見著這樣的卷子，還是老規矩，先給本姑娘。」",
@@ -49,14 +60,5 @@
     "Description": "卷子轉到娜娜身上",
     "zh_CN": "[panel=1]「这是怎么回事，本姑娘一时也说不上来。卷子先收着——往后见着这样的卷子，还是老规矩，先给本姑娘。」",
     "links": [5]
-  },
-  {
-    "entryID": 5,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
-    "Script": "SetQuestEntryState(\"CF45\", 1, \"success\");",
-    "Description": "尾格：收立繪面板；任務更新",
-    "links": []
   }
 ]

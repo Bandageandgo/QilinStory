@@ -417,9 +417,17 @@
   {
     "entryID": 68,
     "actorID": "MC1",
-    "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
+    "text": "「咦！？你也來了？」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "Conditions": "CurrentQuestEntryState(\"CF38\", 4) == \"unassigned\";",
+    "zh_CN": "「咦！？你也来了？」",
+    "links": [4107]
+  },
+  {
+    "entryID": 4107,
+    "actorID": "MC1",
+    "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
     "zh_CN": "「咦！？你也来了？我还以为你对这种事没兴趣呢。」",
     "links": [69]
   },
@@ -580,9 +588,9 @@
   {
     "entryID": 92,
     "actorID": "MC1",
-    "text": "「掩其不意……？」",
+    "text": "「掩其不意……？意思是，趁人沒防著的時候動手？」",
     "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Meditate);",
-    "zh_CN": "「掩其不意……？」",
+    "zh_CN": "「掩其不意……？意思是，趁人沒防著的時候動手？」",
     "links": [93]
   },
   {
@@ -4019,6 +4027,15 @@
     "Sequence": "SetPortrait(MC1,pic=3);",
     "zh_TW": "「來一包吧，正好餓了。」",
     "zh_CN": "「来一包吧，正好饿了。」",
+    "links": [4108]
+  },
+  {
+    "entryID": 4108,
+    "actorID": "MC1",
+    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
     "links": [4095, 4094]
   },
   {

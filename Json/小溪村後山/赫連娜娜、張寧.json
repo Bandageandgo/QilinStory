@@ -870,10 +870,10 @@
   {
     "entryID": 749,
     "actorID": "MC1",
-    "text": "「可否別把這般嚇人的事，說得如此輕描淡寫！我喝一口便是。」",
+    "text": "「別說得這般輕描淡寫！」",
     "Sequence": "",
-    "zh_TW": "「可否別把這般嚇人的事，說得如此輕描淡寫！我喝一口便是。」",
-    "zh_CN": "「可否别把这般吓人的事，说得如此轻描淡写！我喝一口便是。」",
+    "zh_TW": "「別說得這般輕描淡寫！」",
+    "zh_CN": "「别说得这般轻描淡写！」",
     "links": [766]
   },
   {
@@ -1008,16 +1008,16 @@
   {
     "entryID": 765,
     "actorID": "MC1",
-    "text": "「吉人自有天相，我這一身修為在，還怕區區一碗藥湯？喝給妳看！」",
+    "text": "「吉人自有天相，我這一身修為在，還怕區區一碗藥湯？妳且看好，我喝給妳看！」",
     "Sequence": "",
-    "zh_CN": "「吉人自有天相，我这一身修为在，还怕区区一碗药汤？喝给你看！」",
+    "zh_CN": "「吉人自有天相，我这一身修为在，还怕区区一碗药汤？你且看好，我喝给你看！」",
     "links": [767, 768]
   },
   {
     "entryID": 766,
     "actorID": "MC1",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "text": "「可否別把這般嚇人的事，說得如此輕描淡寫！我喝一口便是。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
     "Description": "轉場",
     "links": [751]
   },

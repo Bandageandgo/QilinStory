@@ -324,13 +324,31 @@
     "Sequence": "SetContinueMode(false);\nShowMemory(M_004);\nSetContinueMode(original)@Message(EndMemory);\nContinue()@Message(EndMemory);",
     "zh_TW": "「請告知『返真草』所在，我即刻便去！」",
     "zh_CN": "「请告知『返真草』所在，我即刻便去！」",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "MC1",
+    "text": "「請告知『返真草』所在，我即刻便去！耽擱不得。」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_TW": "「請告知『返真草』所在，我即刻便去！耽擱不得。」",
+    "zh_CN": "「请告知『返真草』所在，我即刻便去！耽搁不得。」",
     "links": [173]
   },
   {
     "entryID": 171,
     "actorID": "MC1",
-    "text": "「此事聽來兇險，老闆娘可否容我思量一番？」",
+    "text": "「容我思量一番？」",
     "Sequence": "",
+    "zh_TW": "「容我思量一番？」",
+    "zh_CN": "「容我思量一番？」",
+    "links": [2070]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "MC1",
+    "text": "「此事聽來兇險，老闆娘可否容我思量一番？」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
     "zh_TW": "「此事聽來兇險，老闆娘可否容我思量一番？」",
     "zh_CN": "「此事听来凶险，老板娘可否容我思量一番？」",
     "links": [183]
@@ -338,8 +356,17 @@
   {
     "entryID": 172,
     "actorID": "MC1",
-    "text": "「顯露真容？老闆娘現在的模樣，已是傾國傾城，何必多此一舉？」",
+    "text": "「何必多此一舉？」",
     "Sequence": "",
+    "zh_TW": "「何必多此一舉？」",
+    "zh_CN": "「何必多此一举？」",
+    "links": [2071]
+  },
+  {
+    "entryID": 2071,
+    "actorID": "MC1",
+    "text": "「顯露真容？老闆娘現在的模樣，已是傾國傾城，何必多此一舉？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
     "zh_TW": "「顯露真容？老闆娘現在的模樣，已是傾國傾城，何必多此一舉？」",
     "zh_CN": "「显露真容？老板娘现在的模样，已是倾国倾城，何必多此一举？」",
     "links": [183]

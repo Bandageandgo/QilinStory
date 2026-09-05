@@ -219,9 +219,9 @@
   {
     "entryID": 28,
     "actorID": "MC1",
-    "text": "「兩邊都給我讓開。我進洞辦事，不站任何一邊。」",
+    "text": "「兩邊都給我讓開。我進洞辦事，不站任何一邊——誰擋道，就從誰身上過。」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger_3);",
-    "zh_CN": "「两边都给我让开。我进洞办事，不站任何一边。」",
+    "zh_CN": "「两边都给我让开。我进洞办事，不站任何一边——谁挡道，就从谁身上过。」",
     "links": [29, 32]
   },
   {
@@ -772,11 +772,11 @@
   {
     "entryID": 124,
     "actorID": "MC1",
-    "text": "「現在打。再拖，這裡就沒活人了。」",
+    "text": "「現在打。再拖，這裡就沒活人了。剩下的，打完再說。」",
     "Sequence": "DisableCharacterExpression(3);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);\nModifyData(DnDAlignment,Player,GoodEvil,0.05);\nModifyData(FavorabilityExp,MC20,10);",
     "Script": "SetQuestEntryState(\"CF40\", 7, \"success\");",
     "Description": "任務更新、信義提升、雍仔好感度提升",
-    "zh_CN": "「现在打。再拖，这里就没活人了。」",
+    "zh_CN": "「现在打。再拖，这里就没活人了。剩下的，打完再说。」",
     "links": [4171]
   },
   {
@@ -2514,6 +2514,14 @@
     "Sequence": "",
     "Description": "選項3：拒絕合作",
     "zh_CN": "「家主，这笔买卖，在下不做了。」",
+    "links": [4348]
+  },
+  {
+    "entryID": 4348,
+    "actorID": "MC1",
+    "text": "「家主，這筆買賣，在下不做了。水濂洞那一趟……就當在下白跑。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「家主，这笔买卖，在下不做了。水濂洞那一趟……就当在下白跑。」",
     "links": [4292]
   },
   {
@@ -2775,10 +2783,10 @@
   {
     "entryID": 4318,
     "actorID": "MC1",
-    "text": "「這滴眼淚，我還不能還。」",
+    "text": "「這滴眼淚，我還不能還。不是不還——是現在還不能。」",
     "Sequence": "SetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,Player,Pain);\nModifyData(DnDAlignment,Player,GoodEvil,-0.1);",
     "Description": "機略增加",
-    "zh_CN": "「这滴眼泪，我还不能还。」",
+    "zh_CN": "「这滴眼泪，我还不能还。不是不还——是现在还不能。」",
     "links": [4251]
   },
   {

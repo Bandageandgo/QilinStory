@@ -428,11 +428,20 @@
   {
     "entryID": 160,
     "actorID": "MC1",
-    "text": "[em2][遊民][/em2]「指點一條明路讓我們今晚有睡覺的地方…」",
+    "text": "[em2][遊民][/em2]「指點一條明路吧…」",
     "Sequence": "SetPortrait(MC1,pic=19);",
     "Conditions": "Variable[\"FishCount\"] == 4 and (Variable[\"DogHouse\"] == false) and (IsBackGroundFit(\"Player\", \"Beggar\")  == true);",
-    "zh_TW": "[em2][遊民][/em2]「指點一條明路讓我們今晚有睡覺的地方…」",
-    "zh_CN": "[em2][游民][/em2]「指点一条明路让我们今晚有睡觉的地方…」",
+    "zh_TW": "[em2][遊民][/em2]「指點一條明路吧…」",
+    "zh_CN": "[em2][游民][/em2]「指点一条明路吧…」",
+    "links": [2090]
+  },
+  {
+    "entryID": 2090,
+    "actorID": "MC1",
+    "text": "「指點一條明路讓我們今晚有睡覺的地方…」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「指點一條明路讓我們今晚有睡覺的地方…」",
+    "zh_CN": "「指点一条明路让我们今晚有睡觉的地方…」",
     "links": [2052]
   },
   {
@@ -532,6 +541,15 @@
     "Sequence": "",
     "zh_TW": "「都辦完啦，可以去客棧囉。」",
     "zh_CN": "「都办完啦，可以去客栈啰。」",
+    "links": [2091]
+  },
+  {
+    "entryID": 2091,
+    "actorID": "MC1",
+    "text": "「都辦完啦，可以去客棧囉。今晚總算能睡張床了。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「都辦完啦，可以去客棧囉。今晚總算能睡張床了。」",
+    "zh_CN": "「都办完啦，可以去客栈啰。今晚总算能睡张床了。」",
     "links": [2073]
   },
   {
