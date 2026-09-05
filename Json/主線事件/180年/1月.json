@@ -1,0 +1,277 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（鼓聲從街那頭過來。先是鼓，然後是火把，然後才是那些臉——蒙著熊皮，四隻金眼，玄衣朱裳，一路打過去。跟在後頭的全是孩子，喊得比大人還響。）＊",
+    "Sequence": "EnableDialogueBG(Yunzhong);",
+    "zh_CN": "[panel=6]＊（鼓声从街那头过来。先是鼓，然后是火把，然后才是那些脸——蒙着熊皮，四只金眼，玄衣朱裳，一路打过去。跟在后头的全是孩子，喊得比大人还响。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "[panel=2]「今天符賣得比藥好，三錢一張，賣了四十一張。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「今天符卖得比药好，三钱一张，卖了四十一张。」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「難得這麼熱鬧，算籌先擱著吧。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_CN": "「难得这么热闹，算筹先搁着吧。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，越熱鬧越要看啊。哪個攤子賣得動、哪個守了一天沒開張，小犀心裡都記著呢。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「表哥，越热闹越要看啊。哪个摊子卖得动、哪个守了一天没开张，小犀心里都记着呢。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（隊伍過去了，街上留下一地火把的灰。有個攤子沒收——賣符的老者還蹲在那兒，符攤在膝上，一張沒賣掉。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（队伍过去了，街上留下一地火把的灰。有个摊子没收——卖符的老者还蹲在那儿，符摊在膝上，一张没卖掉。）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role84",
+    "text": "[panel=1]「小哥留步——你是不是打過黑鐵嶺那個？去年秋上，礦坑裡那件事。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「小哥留步——你是不是打过黑铁岭那个？去年秋上，矿坑里那件事。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「你聽誰說的？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「你听谁说的？」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他沒有答你，站起來把手裡那張符舉過頭頂。街上有幾個人回頭，小犀的算籌停在半空。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（他没有答你，站起来把手里那张符举过头顶。街上有几个人回头，小犀的算筹停在半空。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role84",
+    "text": "[panel=1]「各位鄉親！這位小哥打過黑鐵嶺裡頭那個東西——」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「各位乡亲！这位小哥打过黑铁岭里头那个东西——」",
+    "links": [10, 11, 12]
+  },
+  {
+    "entryID": 10,
+    "actorID": "0",
+    "text": "「這話我可沒答應過。」",
+    "Sequence": "",
+    "Description": "選項1：拆穿（信義）",
+    "zh_CN": "「这话我可没答应过。」",
+    "links": [13]
+  },
+  {
+    "entryID": 11,
+    "actorID": "0",
+    "text": "「別拿死人招攬。」",
+    "Sequence": "",
+    "Description": "選項2：勸阻（仁心）",
+    "zh_CN": "「别拿死人招揽。」",
+    "links": [16]
+  },
+  {
+    "entryID": 12,
+    "actorID": "0",
+    "text": "（站著，讓他喊完）",
+    "Sequence": "",
+    "Description": "選項3：不吭聲（機略）。本選項不接發言格，直接進旁白",
+    "zh_CN": "（站着，让他喊完）",
+    "links": [20]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「老丈，我沒替你保過什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,0.2);",
+    "zh_CN": "「老丈，我没替你保过什么。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role84",
+    "text": "[panel=1]「……小哥，老漢也就是討口飯吃。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「……小哥，老汉也就是讨口饭吃。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他把符收回懷裡，沒有再喊了。看熱鬧的人散得比聚起來還快，攤上那疊符原封不動。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（他把符收回怀里，没有再喊了。看热闹的人散得比聚起来还快，摊上那叠符原封不动。）＊",
+    "links": [23]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「礦坑裡死過人。老丈，你別拿死人的事招攬生意。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,GoodEvil,0.2);",
+    "zh_CN": "「矿坑里死过人。老丈，你别拿死人的事招揽生意。」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "role84",
+    "text": "[panel=1]「那我喊什麼？一天沒開張，我總得喊點什麼。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「那我喊什么？一天没开张，我总得喊点什么。」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「喊你的符，別喊我。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「喊你的符，别喊我。」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他把手裡那張符捲了又捲，點了兩下頭。攤子照樣沒收，只是不再喊了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（他把手里那张符卷了又卷，点了两下头。摊子照样没收，只是不再喊了。）＊",
+    "links": [23]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你站著沒有出聲。賣符的又喊了三聲，一聲比一聲響，攤上的符很快就見了底。）＊",
+    "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
+    "zh_CN": "[panel=6]＊（你站着没有出声。卖符的又喊了三声，一声比一声响，摊上的符很快就见了底。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role84",
+    "text": "[panel=1]「[em7]往你手裡塞了一張[/em7]，留著吧，圖個吉利。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「[em7]往你手里塞了一张[/em7]，留着吧，图个吉利。」",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你收下了那張符。回頭的時候，小犀的算籌還停在半空。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你收下了那张符。回头的时候，小犀的算筹还停在半空。）＊",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;EnableDialogueBG(Lnn)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場：城中大街 → 雲中客棧。黑幕中收掉主角(0)、賣符老者(1)、小犀(2)三個立繪面板並換背景圖",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（堂裡擺了一張矮案，案上兩副碗筷、一盤醃肉、一小壺酒。祭祖的日子，家家都擺；小犀把那兩副碗擺正了，隔一會兒又擺一次。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（堂里摆了一张矮案，案上两副碗筷、一盘腌肉、一小壶酒。祭祖的日子，家家都摆；小犀把那两副碗摆正了，隔一会儿又摆一次。）＊",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC8",
+    "text": "[panel=2]「……表哥，該寫木主了。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「……表哥，该写木主了。」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「寫誰的名字？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「写谁的名字？」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC8",
+    "text": "[panel=2]「……木主早就沒了，那時候連塊木頭都沒帶出來。」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_CN": "[panel=2]「……木主早就没了，那时候连块木头都没带出来。」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「擺著就是了，今年擺兩副，明年還擺兩副。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「摆着就是了，今年摆两副，明年还摆两副。」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]起身去拿第三副碗[/em7]，……那我多擺一副。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_CN": "[panel=2]「[em7]起身去拿第三副碗[/em7]，……那我多摆一副。」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「多的那副給誰？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「多的那副给谁？」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC8",
+    "text": "[panel=2]「村子裡的。」",
+    "Sequence": "SetPortrait(MC8,pic=3);ModifyData(FavorabilityExp,MC8,10);",
+    "zh_CN": "[panel=2]「村子里的。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role2",
+    "text": "[panel=6]＊（第三副碗擺在案子最外邊，離那兩副有一段距離。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（第三副碗摆在案子最外边，离那两副有一段距离。）＊",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（外頭的鼓聲到很晚才停。案上那三副碗擺到天亮，酒一直沒有動。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（外头的鼓声到很晚才停。案上那三副碗摆到天亮，酒一直没有动。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();DisableDialogueBG();Continue();",
+    "Description": "尾格：關立繪表情與對話背景圖（養成任務對話必備）",
+    "links": []
+  }
+]
