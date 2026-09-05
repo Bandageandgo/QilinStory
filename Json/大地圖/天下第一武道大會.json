@@ -424,14 +424,6 @@
     "links": [4107]
   },
   {
-    "entryID": 4107,
-    "actorID": "MC1",
-    "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_CN": "「咦！？你也来了？我还以为你对这种事没兴趣呢。」",
-    "links": [69]
-  },
-  {
     "entryID": 69,
     "actorID": "MC7",
     "text": "「……興趣？沒有。但有用。」",
@@ -4030,15 +4022,6 @@
     "links": [4108]
   },
   {
-    "entryID": 4108,
-    "actorID": "MC1",
-    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
-    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
-    "links": [4095, 4094]
-  },
-  {
     "entryID": 4093,
     "actorID": "MC1",
     "text": "離開",
@@ -4144,5 +4127,22 @@
     "Sequence": "LoadLevel(Command_HallOfHeroes);\nContinue();",
     "Description": "回到根據地",
     "links": []
+  },
+  {
+    "entryID": 4107,
+    "actorID": "MC1",
+    "text": "「咦！？你也來了？我還以為你對這種事沒興趣呢。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_CN": "「咦！？你也来了？我还以为你对这种事没兴趣呢。」",
+    "links": [69]
+  },
+  {
+    "entryID": 4108,
+    "actorID": "MC1",
+    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
+    "links": [4095, 4094]
   }
 ]

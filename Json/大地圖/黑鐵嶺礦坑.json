@@ -749,15 +749,6 @@
     "links": [3991]
   },
   {
-    "entryID": 3991,
-    "actorID": "MC1",
-    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
-    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
-    "links": [3901, 3900]
-  },
-  {
     "entryID": 3898,
     "actorID": "MC1",
     "text": "離開",
@@ -774,15 +765,6 @@
     "zh_TW": "「啊，竟然沒帶錢出來！？」",
     "zh_CN": "「啊，竟然没带钱出来！？」",
     "links": [3992]
-  },
-  {
-    "entryID": 3992,
-    "actorID": "MC1",
-    "text": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
-    "Sequence": "SetPortrait(MC1,pic=11);",
-    "zh_TW": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
-    "zh_CN": "「啊，竟然没带钱出来！？这、这下糗了……」",
-    "links": [3902]
   },
   {
     "entryID": 3901,
@@ -1496,5 +1478,23 @@
     "Sequence": "DisableEventBG(FullScreen);\nContinue();",
     "Description": "關閉事件圖",
     "links": [3866]
+  },
+  {
+    "entryID": 3991,
+    "actorID": "MC1",
+    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
+    "links": [3901, 3900]
+  },
+  {
+    "entryID": 3992,
+    "actorID": "MC1",
+    "text": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
+    "zh_CN": "「啊，竟然没带钱出来！？这、这下糗了……」",
+    "links": [3902]
   }
 ]

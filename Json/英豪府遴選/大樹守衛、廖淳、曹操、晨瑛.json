@@ -100,14 +100,6 @@
     "links": [4235]
   },
   {
-    "entryID": 4235,
-    "actorID": "MC1",
-    "text": "「這不是……大樹哥嗎？你不守你的大樹，怎麼也跑來遴選了？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_CN": "「这不是……大树哥吗？你不守你的大树，怎么也跑来遴选了？」",
-    "links": [41]
-  },
-  {
     "entryID": 41,
     "actorID": "role133",
     "text": "「哼！是你！別以為上次在雲中是你佔了上風，那分明是風向不對，加上我的老驢打噴嚏！今日在這，吾定要堂堂正正地擊敗你，讓你見識見識吾的真本事！」",
@@ -437,14 +429,6 @@
     "links": [4236]
   },
   {
-    "entryID": 4236,
-    "actorID": "MC1",
-    "text": "「廖兄？沒想到會在這裡遇見你。破廟一別，近來可好？太平道的人怎麼也對這英豪府的遴選感興趣了？」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_CN": "「廖兄？没想到会在这里遇见你。破庙一别，近来可好？太平道的人怎么也对这英豪府的遴选感兴趣了？」",
-    "links": [4219]
-  },
-  {
     "entryID": 4219,
     "actorID": "role127",
     "text": "「原來是兄弟啊！非也非也，我等並非來參加遴選，只是像這等英雄雲集的盛會，我們太平道自然也要來走動走動、結交些朋友不是？」",
@@ -580,5 +564,21 @@
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nEnableEventBG(TreeGuardianLeave,FullScreen)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "事件圖",
     "links": [4202]
+  },
+  {
+    "entryID": 4235,
+    "actorID": "MC1",
+    "text": "「這不是……大樹哥嗎？你不守你的大樹，怎麼也跑來遴選了？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_CN": "「这不是……大树哥吗？你不守你的大树，怎么也跑来遴选了？」",
+    "links": [41]
+  },
+  {
+    "entryID": 4236,
+    "actorID": "MC1",
+    "text": "「廖兄？沒想到會在這裡遇見你。破廟一別，近來可好？太平道的人怎麼也對這英豪府的遴選感興趣了？」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「廖兄？没想到会在这里遇见你。破庙一别，近来可好？太平道的人怎么也对这英豪府的遴选感兴趣了？」",
+    "links": [4219]
   }
 ]

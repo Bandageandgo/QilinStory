@@ -1228,15 +1228,6 @@
     "links": [4164]
   },
   {
-    "entryID": 4164,
-    "actorID": "MC1",
-    "text": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
-    "Sequence": "SetPortrait(MC1,pic=11);",
-    "zh_TW": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
-    "zh_CN": "「啊，竟然没带钱出来！？这、这下糗了……」",
-    "links": [4136]
-  },
-  {
     "entryID": 4135,
     "actorID": "role2",
     "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
@@ -1501,5 +1492,14 @@
     "Sequence": "LoadLevel(Command_YunzhongInn);\nContinue();",
     "Description": "轉到根據地",
     "links": [4147]
+  },
+  {
+    "entryID": 4164,
+    "actorID": "MC1",
+    "text": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
+    "zh_CN": "「啊，竟然没带钱出来！？这、这下糗了……」",
+    "links": [4136]
   }
 ]

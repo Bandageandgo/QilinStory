@@ -1912,14 +1912,6 @@
     "links": [4344]
   },
   {
-    "entryID": 4402,
-    "actorID": "MC1",
-    "text": "「這東西還在我身上。妳倒是給句話。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「这东西还在我身上。你倒是给句话。」",
-    "links": [4346, 4349]
-  },
-  {
     "entryID": 4343,
     "actorID": "MC1",
     "text": "「這種東西，我拿著才安穩。」",
@@ -1990,14 +1982,6 @@
     "links": [4404]
   },
   {
-    "entryID": 4404,
-    "actorID": "MC1",
-    "text": "「拿去吧。這東西擱在我身上，我也睡不安穩——放妳那兒，總比放我這兒強。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_CN": "「拿去吧。这东西搁在我身上，我也睡不安稳——放你那儿，总比放我这儿强。」",
-    "links": [4352]
-  },
-  {
     "entryID": 4351,
     "actorID": "MC1",
     "text": "「……不。這個我自己留著。」",
@@ -2005,14 +1989,6 @@
     "Description": "第二格：不給。不給沒有懲罰，也不會再問第二次。",
     "zh_CN": "「……不。这个我自己留着。」",
     "links": [4405]
-  },
-  {
-    "entryID": 4405,
-    "actorID": "MC1",
-    "text": "「……不。這個我自己留著。留著做什麼，我自己清楚。」",
-    "Sequence": "SetPortrait(MC1,pic=18);",
-    "zh_CN": "「……不。这个我自己留着。留着做什么，我自己清楚。」",
-    "links": [4358]
   },
   {
     "entryID": 4352,
@@ -2428,5 +2404,29 @@
     "Sequence": "PlayOrStopParticle(DarkCloud,Play);\nAudioControl(PlaySFX,Others_Roar);",
     "zh_CN": "[panel=6]＊（它站起来了。）＊",
     "links": []
+  },
+  {
+    "entryID": 4402,
+    "actorID": "MC1",
+    "text": "「這東西還在我身上。妳倒是給句話。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「这东西还在我身上。你倒是给句话。」",
+    "links": [4346, 4349]
+  },
+  {
+    "entryID": 4404,
+    "actorID": "MC1",
+    "text": "「拿去吧。這東西擱在我身上，我也睡不安穩——放妳那兒，總比放我這兒強。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「拿去吧。这东西搁在我身上，我也睡不安稳——放你那儿，总比放我这儿强。」",
+    "links": [4352]
+  },
+  {
+    "entryID": 4405,
+    "actorID": "MC1",
+    "text": "「……不。這個我自己留著。留著做什麼，我自己清楚。」",
+    "Sequence": "SetPortrait(MC1,pic=18);",
+    "zh_CN": "「……不。这个我自己留着。留着做什么，我自己清楚。」",
+    "links": [4358]
   }
 ]

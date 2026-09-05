@@ -2517,14 +2517,6 @@
     "links": [4348]
   },
   {
-    "entryID": 4348,
-    "actorID": "MC1",
-    "text": "「家主，這筆買賣，在下不做了。水濂洞那一趟……就當在下白跑。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_CN": "「家主，这笔买卖，在下不做了。水濂洞那一趟……就当在下白跑。」",
-    "links": [4292]
-  },
-  {
     "entryID": 4278,
     "actorID": "MC1",
     "text": "「[em7]把石頭放在案上[/em7]，水濂洞的中洞裡有一幅古畫，畫著一艘從天上墜下來的怪舟。」",
@@ -3118,5 +3110,13 @@
     "Sequence": "DisableDialogueBG();\nLoadLevel(Command_HallOfHeroes);\nContinue();",
     "Description": "回英豪府根據地",
     "links": []
+  },
+  {
+    "entryID": 4348,
+    "actorID": "MC1",
+    "text": "「家主，這筆買賣，在下不做了。水濂洞那一趟……就當在下白跑。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「家主，这笔买卖，在下不做了。水濂洞那一趟……就当在下白跑。」",
+    "links": [4292]
   }
 ]

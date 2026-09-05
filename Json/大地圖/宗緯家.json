@@ -237,14 +237,6 @@
     "links": [4236]
   },
   {
-    "entryID": 4236,
-    "actorID": "MC1",
-    "text": "「喂，你這傢伙，好好的強人不做，幹嘛非得賴著宗緯大哥？這裡除了烤肉還有什麼好處？」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「喂，你这家伙，好好的强人不做，干嘛非得赖着宗纬大哥？这里除了烤肉还有什么好处？」",
-    "links": [45]
-  },
-  {
     "entryID": 45,
     "actorID": "role106",
     "text": "「肉！香！還有……不被打！」",
@@ -1265,5 +1257,13 @@
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeIn,1,#000000,1);\nContinue()@1;",
     "Description": "淡入",
     "links": [4233]
+  },
+  {
+    "entryID": 4236,
+    "actorID": "MC1",
+    "text": "「喂，你這傢伙，好好的強人不做，幹嘛非得賴著宗緯大哥？這裡除了烤肉還有什麼好處？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「喂，你这家伙，好好的强人不做，干嘛非得赖着宗纬大哥？这里除了烤肉还有什么好处？」",
+    "links": [45]
   }
 ]
