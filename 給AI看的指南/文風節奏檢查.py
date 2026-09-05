@@ -10,7 +10,7 @@ import sys, os, re, json, statistics as st
 ACTOR = {'MC1': '你', 'MC2': '呂信', 'MC3': '子羽', 'MC4': '賈詡', 'MC5': '徐榮', 'MC6': '張寧', 'MC7': '郭嘉',
          'MC8': '蕭靈犀', 'MC9': '甄筠', 'MC10': '褚人飛', 'MC12': '董卓', 'MC13': '張仲景',
          'MC20': '雍仔', 'MC22': '赫連娜娜', 'MC23': '蔡琰', 'MC24': '蔡邕', 'role2': '旁白', '2': '旁白', '0': '(空)'}
-EXEMPT = ('子羽', '郭嘉', '狗頭人', 'Kobold')          # 話少或語言能力特例：碎句不計
+EXEMPT = ('郭嘉', '狗頭人', 'Kobold')          # 話少或語言能力特例：碎句不計（子羽 2026-09-05 作者裁示移出：他話少是格少，開口是整句）
 COMPOUND_BEFORE = '天機羅棋地命算磨石托圓一幾整半銅玉這那面'
 COMPOUND_AFTER = '纏算問查點腿起子踞根桓龍旋繞'
 LIMIT_WARN, LIMIT_HARD = 50, 60   # 台詞可見字數：過 50 要拆格、60 是紅線（文本創作指南 2.1b，2026-09-04 作者定）
@@ -87,7 +87,7 @@ def lines_from_md(p):
 
 def check(p):
     gen = lines_from_json(p) if p.endswith('.json') else lines_from_md(p)
-    per = {}; frags = []; nouns = []; flagged = []; longs = []
+    per = {}; frags = []; nouns = []; flagged = []; longs = []; tails = []
     em_lines = 0; talk_lines = 0; em_consec = []; prev_em = None
     for spk, eid, t in gen:
         if spk != '旁白':
@@ -110,6 +110,14 @@ def check(p):
                 d['frag'] += 1
                 if not any(x in spk for x in EXEMPT):
                     frags.append((spk, eid, body + end))
+            elif end in ('', '。') and re.search(r'[，、；：]', body):
+                # 逗號後短尾（2026-09-05 作者裁示）：「船備好，我過河」「這一趟，我去」——逗號後只掛兩三個字的「人＋動作」，
+                # 是動作前停頓，算碎句，要用「就／便」連成一氣。否定的決斷可以停（「我不下」「我不回來」），含否定字就不抓；
+                # 「站久了，腳會麻」「他看的不是河，是對岸」「臨水而絜，去宿垢」不是人在動作，不抓。
+                tail = re.split(r'[，、；：]', body)[-1]
+                if (1 < len(tail) <= 3 and re.match(r'^(我|你|他|她|咱|我們|你們|他們)', tail)
+                        and not re.search(r'[不沒別莫未無非]', tail) and not any(x in spk for x in EXEMPT)):
+                    tails.append((spk, eid, body + end))
         for h in noun_hits(t):
             nouns.append((spk, eid, h))
     print('=' * 8, p)
@@ -128,6 +136,10 @@ def check(p):
         print('-- 碎句（五字以下、句號收尾；驚呼、問句不算）：')
         for spk, eid, s in frags:
             print('   %s %s 「%s」' % (spk, eid, s))
+    if tails:
+        print('-- 逗號後短尾（動作前停頓：兩三字的肯定動作要用「就／便」連成一氣，如「船備好我就過河」）：')
+        for spk, eid, s in tails:
+            print('   %s %s 「%s」' % (spk, eid, s))
     if nouns:
         print('-- 縮寫／隱喻名詞（「那本帳」若是真帳本可留）：')
         for spk, eid, h in nouns:
@@ -142,9 +154,9 @@ def check(p):
         print('-- em7：%d／%d 格台詞（每十格至多一個，上限 %d）%s' % (em_lines, talk_lines, allowed, '  ⚠ 太多' if em_lines > allowed else ''))
     if em_consec:
         print('-- 同一人連續兩格都掛 em7：' + '、'.join('%s %s' % x for x in em_consec))
-    if not frags and not nouns and not em_bad and not longs:
+    if not frags and not tails and not nouns and not em_bad and not longs:
         print('-- 乾淨。')
-    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs)}
+    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs)}
 
 
 def walk(paths):
@@ -192,12 +204,14 @@ def run_quiet(paths):
 def summary(results):
     lines = []
     for r in results:
-        if r['flagged'] or r['frags'] or r['nouns'] or r.get('em7_bad') or r.get('longs'):
+        if r['flagged'] or r['frags'] or r.get('tails') or r['nouns'] or r.get('em7_bad') or r.get('longs'):
             bits = []
             if r['flagged']:
                 bits.append('太碎：' + '、'.join(r['flagged']))
             if r['frags']:
                 bits.append('碎句 %d' % r['frags'])
+            if r.get('tails'):
+                bits.append('逗號後短尾 %d' % r['tails'])
             if r['nouns']:
                 bits.append('縮寫名詞 %d' % r['nouns'])
             if r.get('em7_bad'):
