@@ -1,0 +1,51 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（火塘用石頭壓著，鍋埋了半截在鹽裡。鹽殼上刻著一個記號——一個圓，裡頭幾道分格，是天機盤的樣子。記號旁邊壓著一卷紙。）＊",
+    "Sequence": "ModifyData(Valuable,Player,WanderingNotesPage7,1);",
+    "zh_CN": "[panel=6]＊（火塘用石头压着，锅埋了半截在盐里。盐壳上刻着一个记号——一个圆，里头几道分格，是天机盘的样子。记号旁边压着一卷纸。）＊",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "[panel=1]「這……是寫給我的。你也看吧——裡頭的事，你都知道了。」",
+    "Sequence": "SetPortrait(MC22,pic=9);",
+    "zh_CN": "[panel=1]「这……是写给我的。你也看吧——里头的事，你都知道了。」",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage7);",
+    "Description": "貴重品便籤（甲式攔截，讀完才推得動）",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]把卷子捲好，收進懷裡[/em7]，……他知道我會來。這一路我追得這麼慢，他倒是早就算準了。」",
+    "Sequence": "SetPortrait(MC22,pic=3);\nModifyData(Valuable,Player,WanderingNotesPage7,-1);\nModifyData(Valuable,MC22,WanderingNotesPage7,1);",
+    "zh_CN": "[panel=1]「[em7]把卷子卷好，收进怀里[/em7]，……他知道我会来。这一路我追得这么慢，他倒是早就算准了。」",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 4, \"success\");",
+    "Description": "尾格：收立繪面板；收 CF45 entry 4（白鹵澤・末卷）",
+    "links": []
+  }
+]

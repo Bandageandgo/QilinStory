@@ -8,7 +8,9 @@
     "Description": "娜娜事件(8)/180年4月主線",
     "zh_TW": "[panel=6]＊（帳冊攤在案上，同一欄你算了三遍，天色都暗了。對面小犀的算籌早撥完了，正等著你。）＊",
     "zh_CN": "[panel=6]＊（账册摊在案上，同一栏你算了三遍，天色都暗了。对面小犀的算筹早拨完了，正等着你。）＊",
-    "links": [92]
+    "links": [
+      92
+    ]
   },
   {
     "entryID": 92,
@@ -17,7 +19,9 @@
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);\nAudioControl(PlayMusic,BGM_30);",
     "zh_TW": "[panel=1]「大俠！大俠你看——」",
     "zh_CN": "[panel=1]「大侠！大侠你看——」",
-    "links": [93]
+    "links": [
+      93
+    ]
   },
   {
     "entryID": 93,
@@ -26,7 +30,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=2);\nEnableCharacterExpression(2,MC8,Anger);",
     "zh_TW": "[panel=2]「娜娜姊姊，表哥在算帳，妳小聲點啦。」",
     "zh_CN": "[panel=2]「娜娜姐姐，表哥在算账，你小声点啦。」",
-    "links": [94]
+    "links": [
+      94
+    ]
   },
   {
     "entryID": 94,
@@ -35,7 +41,9 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=13);",
     "zh_TW": "[panel=1]「算帳算帳，這府裡就剩算帳這一件事了。小犀，妳也來看。」",
     "zh_CN": "[panel=1]「算账算账，这府里就剩算账这一件事了。小犀，你也来看。」",
-    "links": [95]
+    "links": [
+      95
+    ]
   },
   {
     "entryID": 95,
@@ -44,7 +52,9 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（一卷舊書，紙黃了，捲得很緊——捆繩的結是新打的，打得很急。）＊",
     "zh_CN": "[panel=6]＊（一卷旧书，纸黄了，卷得很紧——捆绳的结是新打的，打得很急。）＊",
-    "links": [96]
+    "links": [
+      96
+    ]
   },
   {
     "entryID": 96,
@@ -53,7 +63,9 @@
     "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Question);",
     "zh_TW": "「這是什麼？」",
     "zh_CN": "「这是什么？」",
-    "links": [97]
+    "links": [
+      97
+    ]
   },
   {
     "entryID": 97,
@@ -62,7 +74,9 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「雲中市集上一個收舊簡的，一擔子論斤賣。本姑娘蹲在那兒翻了半個時辰——一擔子木頭裡，就這一卷是紙的。」",
     "zh_CN": "[panel=1]「云中市集上一个收旧简的，一担子论斤卖。本姑娘蹲在那儿翻了半个时辰——一担子木头里，就这一卷是纸的。」",
-    "links": [126]
+    "links": [
+      126
+    ]
   },
   {
     "entryID": 98,
@@ -71,7 +85,9 @@
     "Sequence": "SetPortrait(MC8,pic=1);",
     "zh_TW": "[panel=2]「字寫得好端正。」",
     "zh_CN": "[panel=2]「字写得好端正。」",
-    "links": [99]
+    "links": [
+      99
+    ]
   },
   {
     "entryID": 99,
@@ -80,7 +96,9 @@
     "Sequence": "SetPortrait(MC22,pic=8);",
     "zh_TW": "[panel=1]「不是端正不端正的事。你們看這個『我』字。」",
     "zh_CN": "[panel=1]「不是端正不端正的事。你们看这个『我』字。」",
-    "links": [101]
+    "links": [
+      101
+    ]
   },
   {
     "entryID": 101,
@@ -89,7 +107,9 @@
     "Sequence": "SetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Surprise);",
     "zh_TW": "[panel=1]「大俠，這是我爹的筆。他寫『我』字，最後一勾總往上翹——小時候本姑娘描過一百遍。」",
     "zh_CN": "[panel=1]「大侠，这是我爹的笔。他写『我』字，最后一勾总往上翘——小时候本姑娘描过一百遍。」",
-    "links": [102]
+    "links": [
+      102
+    ]
   },
   {
     "entryID": 102,
@@ -98,7 +118,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=6);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「……妳從市集一路跑回來的？」",
     "zh_CN": "「……你从市集一路跑回来的？」",
-    "links": [103]
+    "links": [
+      103
+    ]
   },
   {
     "entryID": 103,
@@ -107,16 +129,20 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);",
     "zh_TW": "[panel=1]「[em7]眼睛沒離開卷子，手指往下挪了一行[/em7]，我爹去過的地方，可是比你聽過的還多。」",
     "zh_CN": "[panel=1]「[em7]眼睛没离开卷子，手指往下挪了一行[/em7]，我爹去过的地方，可是比你听过的还多。」",
-    "links": [104]
+    "links": [
+      104
+    ]
   },
   {
     "entryID": 104,
     "actorID": "MC22",
-    "text": "[panel=1]「[em7]指著中間那一段[/em7]，他連角婆都寫進去了。阿娘拿這個嚇小孩的——不睡覺，角婆來抓。我爹居然當真寫下來，真是的。」",
+    "text": "[panel=1]「[em7]指著中間那一段[/em7]，他連角婆都寫進去了。阿母拿這個嚇小孩的——不睡覺，角婆來抓。我爹居然當真寫下來，真是的。」",
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
-    "zh_TW": "[panel=1]「[em7]指著中間那一段[/em7]，他連角婆都寫進去了。阿娘拿這個嚇小孩的——不睡覺，角婆來抓。我爹居然當真寫下來，真是的。」",
-    "zh_CN": "[panel=1]「[em7]指着中间那一段[/em7]，他连角婆都写进去了。阿娘拿这个吓小孩的——不睡觉，角婆来抓。我爹居然当真写下来，真是的。」",
-    "links": [129]
+    "zh_TW": "[panel=1]「[em7]指著中間那一段[/em7]，他連角婆都寫進去了。阿母拿這個嚇小孩的——不睡覺，角婆來抓。我爹居然當真寫下來，真是的。」",
+    "zh_CN": "[panel=1]「[em7]指着中间那一段[/em7]，他连角婆都写进去了。阿母拿这个吓小孩的——不睡觉，角婆来抓。我爹居然当真写下来，真是的。」",
+    "links": [
+      129
+    ]
   },
   {
     "entryID": 106,
@@ -125,7 +151,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=14);\nEnableCharacterExpression(2,MC8,Question);",
     "zh_TW": "[panel=2]「上頭寫著『卷一』。那別的卷呢？」",
     "zh_CN": "[panel=2]「上头写着『卷一』。那别的卷呢？」",
-    "links": [107]
+    "links": [
+      107
+    ]
   },
   {
     "entryID": 107,
@@ -134,7 +162,9 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=3);\nEnableCharacterExpression(1,MC22,Pain);",
     "zh_TW": "[panel=1]「散了。我爹走一路寫一路，寫完就擱在原地——擱著擱著，就進了人家的舊紙擔子。這一卷能翻出來，是撞上的。」",
     "zh_CN": "[panel=1]「散了。我爹走一路写一路，写完就搁在原地——搁着搁着，就进了人家的旧纸担子。这一卷能翻出来，是撞上的。」",
-    "links": [108]
+    "links": [
+      108
+    ]
   },
   {
     "entryID": 108,
@@ -143,7 +173,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
     "zh_TW": "[panel=1]「[em7]很快又抬起頭[/em7]，不打緊。撞上一回，就撞得上第二回。」",
     "zh_CN": "[panel=1]「[em7]很快又抬起头[/em7]，不打紧。撞上一回，就撞得上第二回。」",
-    "links": [134]
+    "links": [
+      134
+    ]
   },
   {
     "entryID": 109,
@@ -152,7 +184,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「我知道，先給妳。知道啦。」",
     "zh_CN": "「我知道，先给你。知道啦。」",
-    "links": [111]
+    "links": [
+      111
+    ]
   },
   {
     "entryID": 110,
@@ -161,7 +195,9 @@
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
     "zh_TW": "[panel=1]「大俠，往後你出門，見著這樣的卷子——」",
     "zh_CN": "[panel=1]「大侠，往后你出门，见着这样的卷子——」",
-    "links": [109]
+    "links": [
+      109
+    ]
   },
   {
     "entryID": 111,
@@ -170,7 +206,9 @@
     "Sequence": "DisableCharacterExpression(0);\nOpenPanel(1, close);",
     "zh_TW": "[panel=6]＊（她把卷子捲好，小心翼翼地塞進懷裡，人跟著就走了。案上那本帳冊仍攤著，那一欄依舊空著。）＊",
     "zh_CN": "[panel=6]＊（她把卷子卷好，小心翼翼地塞进怀里，人跟着就走了。案上那本账册仍摊着，那一栏依旧空着。）＊",
-    "links": [114]
+    "links": [
+      114
+    ]
   },
   {
     "entryID": 114,
@@ -187,7 +225,9 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage1);",
     "Description": "開卷二便籤",
-    "links": [98]
+    "links": [
+      98
+    ]
   },
   {
     "entryID": 126,
@@ -196,7 +236,9 @@
     "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(Valuable,Player,WanderingNotesPage1,1);",
     "zh_TW": "[panel=1]「[em7]把一卷書拍在你帳冊上[/em7]，你自己看。」",
     "zh_CN": "[panel=1]「[em7]把一卷书拍在你帐册上[/em7]，你自己看。」",
-    "links": [125]
+    "links": [
+      125
+    ]
   },
   {
     "entryID": 129,
@@ -205,7 +247,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=1);\nEnableCharacterExpression(2,MC8,Question);",
     "zh_TW": "[panel=2]「[em7]手指在卷子上從頭找到尾[/em7]，……娜娜姊姊，這上頭一個地名都沒有。要怎麼找啊？」",
     "zh_CN": "[panel=2]「[em7]手指在卷子上从头找到尾[/em7]，……娜娜姐姐，这上头一个地名都没有。要怎么找啊？」",
-    "links": [130]
+    "links": [
+      130
+    ]
   },
   {
     "entryID": 130,
@@ -214,7 +258,9 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
     "zh_TW": "[panel=1]「他從來不寫地名，寫的是天機盤的走法。[em7]拍了拍腰間[/em7]，那盤，他留給本姑娘了——照著走，就找得到。」",
     "zh_CN": "[panel=1]「他从来不写地名，写的是天机盘的走法。[em7]拍了拍腰间[/em7]，那盘，他留给本姑娘了——照着走，就找得到。」",
-    "links": [131]
+    "links": [
+      131
+    ]
   },
   {
     "entryID": 131,
@@ -223,7 +269,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=14);\nEnableCharacterExpression(2,MC8,Nervous);",
     "zh_TW": "[panel=2]「[em7]扳著指頭[/em7]，……娜娜姊姊，那是晉陽。表哥，一天到晉陽，兩處還一東一西——來回五六天跑不掉。這個月的帳還沒平。」",
     "zh_CN": "[panel=2]「[em7]扳着指头[/em7]，……娜娜姐姐，那是晋阳。表哥，一天到晋阳，两处还一东一西——来回五六天跑不掉。这个月的帐还没平。」",
-    "links": [132]
+    "links": [
+      132
+    ]
   },
   {
     "entryID": 132,
@@ -232,7 +280,9 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Meditate);",
     "zh_TW": "[panel=1]「[em7]沒有看小犀，只看著你[/em7]，那片林子夜裡有哭聲，從地底下出來，林人都繞著走。這種事，總得有人去看一眼。」",
     "zh_CN": "[panel=1]「[em7]没有看小犀，只看着你[/em7]，那片林子夜里有哭声，从地底下出来，林人都绕着走。这种事，总得有人去看一眼。」",
-    "links": [133]
+    "links": [
+      133
+    ]
   },
   {
     "entryID": 133,
@@ -241,7 +291,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=5);",
     "zh_TW": "[panel=1]「東邊那個谷，本姑娘早聽人提過。說山裡有道門，誰也開不了——推不動，撬不開，連個鎖眼都摸不著。本姑娘一直當那是唬人的。」",
     "zh_CN": "[panel=1]「东边那个谷，本姑娘早听人提过。说山里有道门，谁也开不了——推不动，撬不开，连个锁眼都摸不着。本姑娘一直当那是唬人的。」",
-    "links": [4068]
+    "links": [
+      4068
+    ]
   },
   {
     "entryID": 134,
@@ -250,7 +302,9 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「呼，果然路子還是在外頭啊，說不定找著寶貝，府裡這筆虧空就填上了呢。」",
     "zh_CN": "「呼，果然路子还是在外头啊，说不定找着宝贝，府里这笔亏空就填上了呢。」",
-    "links": [4069]
+    "links": [
+      4069
+    ]
   },
   {
     "entryID": 4068,
@@ -259,7 +313,9 @@
     "Sequence": "SetPortrait(MC22,pic=11);\nEnableCharacterExpression(1,MC22,Idea);",
     "zh_TW": "[panel=1]「[em7]手指在那兩行之間來回點，說得比剛才快[/em7]，原來我爹在那道門外頭蹲過。門後有東西——小犀，妳那本帳，說不定就在門後頭擱著。」",
     "zh_CN": "[panel=1]「[em7]手指在那两行之间来回点，说得比刚才快[/em7]，原来我爹在那道门外头蹲过。门后有东西——小犀，你那本帐，说不定就在门后头搁着。」",
-    "links": [106]
+    "links": [
+      106
+    ]
   },
   {
     "entryID": 4069,
@@ -268,7 +324,9 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);",
     "zh_TW": "[panel=1]「總之，大俠，那兩處都在晉陽那一帶——得空就去瞧瞧。」",
     "zh_CN": "[panel=1]「总之，大侠，那两处都在晋阳那一带——得空就去瞧瞧。」",
-    "links": [4066]
+    "links": [
+      4066
+    ]
   },
   {
     "entryID": 4066,
@@ -278,6 +336,8 @@
     "Description": "解鎖幽冥禁地＋妖林；卷一從主角身上收回、轉到娜娜身上（WanderingNotesPage1）",
     "zh_TW": "[panel=6]＊（發現：幽冥禁地、妖林。）＊",
     "zh_CN": "[panel=6]＊（发现：幽冥禁地、妖林。）＊",
-    "links": [110]
+    "links": [
+      110
+    ]
   }
 ]
