@@ -157,7 +157,7 @@
     -   `數值`：獲得數量（或該貴重品系統要求的數值）。
 -   **Markdown**：獲得當句旁白標 `**【獲得貴重品：中文名】**`，同一句 `Sequence` 寫上列指令（可與 `DisableCharacterExpression` 合併）。
 -   **禁止**：`ModifyData(Inventory,AddItem,...)`、`AddItem(...)`。沒有「一般道具」這條路徑，眼淚、信物、遺物等也一律用 `Valuable`。
--   **特殊標籤**（CSV 另一欄，無數量參數）：`ModifyData(Valuable,MC1,SwordProficiency);` —— 不是「獲得物品」，不要拿來發蛟龍角。
+-   **特殊標籤**（CSV 另一欄，無數量參數）：`ModifyData(Valuable,Player,SwordProficiency);` —— 不是「獲得物品」，不要拿來發蛟龍角。（⚠ CSV 原範例的持有者寫 `MC1`，**本專案一律寫 `Player`**——2026-09-07 作者確認 `MC1` 與 `Player` 不是同一個 key，混用會讓扣除靜默失敗。）
 -   可與立繪／表情寫在同一條 `Sequence`。**開啟貴重品便籤**用 `ShowValuableMemo(ValuablesID);`，與獲得指令分開，且**必須排在該件貴重品已到手之後**（沒持有就開不出來）；要攔住推進、逼玩家讀完再走的寫法（`SetContinueMode(false);` ＋ `@Message(EndMemo)`）見 `給AI看的指南/貴重品指令轉換規則.md`〈開啟貴重品便籤〉。
 
 #### 3.7 對話背景圖（養成任務首格開、尾格關）

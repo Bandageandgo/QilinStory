@@ -1080,7 +1080,7 @@
     "entryID": 215,
     "actorID": "MC9",
     "text": "[panel=1]「……公子這張嘴，倒是比帶回來的東西更值錢。罷了，看在你這番說辭的份上，這筆本錢，筠出了。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Proud);\nModifyData(FeatExp,Player,Persuasion,25);\nModifyData(Valuable,MC1,DragonHorn,-1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC9,pic=1);\nEnableCharacterExpression(1,MC9,Proud);\nModifyData(FeatExp,Player,Persuasion,25);\nModifyData(Valuable,Player,DragonHorn,-1);",
     "Description": "成交，失去蛟龍角",
     "zh_CN": "[panel=1]「……公子这张嘴，倒是比带回来的东西更值钱。罢了，看在你这番说辞的份上，这笔本钱，筠出了。」",
     "links": [380]
@@ -2893,7 +2893,7 @@
     "entryID": 4332,
     "actorID": "MC9",
     "text": "[panel=1]「行。這筆本錢，筠出了。雲中往後，也算有甄家一份。」",
-    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);\nModifyData(Valuable,MC1,DragonHorn,-1);",
+    "Sequence": "SetPortrait(MC9,pic=1);EnableCharacterExpression(1,MC9,Proud);\nModifyData(Valuable,Player,DragonHorn,-1);",
     "Description": "成交，失去蛟龍角",
     "zh_CN": "[panel=1]「行。这笔本钱，筠出了。云中往后，也算有甄家一份。」",
     "links": [379]
@@ -2958,7 +2958,7 @@
     "actorID": "MC1",
     "title": "測試主角長大立繪切換-青年武將",
     "text": "「登登登，登大人囉老鐵。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(CustomPortrait, Player, false, MC1-Set3);\nModifyData(Valuable,Player,Rivertear,5);\nModifyData(Valuable,MC1,FadedTearstone,5);\nModifyData(Valuable,MC1,DragonHorn,5);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nModifyData(CustomPortrait, Player, false, MC1-Set3);\nModifyData(Valuable,Player,Rivertear,5);\nModifyData(Valuable,Player,FadedTearstone,5);\nModifyData(Valuable,Player,DragonHorn,5);",
     "Script": "SetQuestState(\"CF41\", \"active\");\nSetQuestState(\"CF43\", \"active\")",
     "Description": "測試主角長大立繪切換-青年武將",
     "zh_CN": "「登登登，登大人囉老鐵。」",

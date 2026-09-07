@@ -233,7 +233,7 @@
     "entryID": 126,
     "actorID": "MC22",
     "text": "[panel=1]「[em7]把一卷書拍在你帳冊上[/em7]，你自己看。」",
-    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(Valuable,Player,WanderingNotesPage1,1);",
+    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(Valuable,MC22,WanderingNotesPage1,1);",
     "zh_TW": "[panel=1]「[em7]把一卷書拍在你帳冊上[/em7]，你自己看。」",
     "zh_CN": "[panel=1]「[em7]把一卷书拍在你帐册上[/em7]，你自己看。」",
     "links": [
@@ -332,8 +332,8 @@
     "entryID": 4066,
     "actorID": "role2",
     "text": "[panel=6]＊（發現：幽冥禁地、妖林。）＊",
-    "Sequence": "MapLock(NetherForbiddenGrounds, unlock);\nMapLock(DemonForest, unlock);\nModifyData(Valuable,Player,WanderingNotesPage1,-1);\nModifyData(Valuable,MC22,WanderingNotesPage1,1);",
-    "Description": "解鎖幽冥禁地＋妖林；卷一從主角身上收回、轉到娜娜身上（WanderingNotesPage1）",
+    "Sequence": "MapLock(NetherForbiddenGrounds, unlock);\nMapLock(DemonForest, unlock);",
+    "Description": "解鎖幽冥禁地＋妖林（卷一自 #126 起就在娜娜名下，2026-09-07 取消轉手）",
     "zh_TW": "[panel=6]＊（發現：幽冥禁地、妖林。）＊",
     "zh_CN": "[panel=6]＊（发现：幽冥禁地、妖林。）＊",
     "links": [
