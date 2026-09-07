@@ -2,10 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
-    "title": "噴火道路盡頭寶箱《遊方雜記・卷三》",
+    "title": "噴火道路盡頭寶箱《遊方雜記・卷二》",
     "text": "[panel=6]＊（道路的盡頭擱著一口木匣，沒有上鎖。裡頭一卷紙捲得很緊，捆著的繩結已經舊了。）＊",
-    "Sequence": "ModifyData(Valuable,Player,WanderingNotesPage2,1);",
-    "Description": "互動點：取得《遊方雜記・卷二》WanderingNotesPage2。先發給主角，便籤才開得出來；#4 再轉給娜娜",
+    "Sequence": "ModifyData(Valuable,MC22,WanderingNotesPage2,1);",
+    "Description": "互動點：取得《遊方雜記・卷二》WanderingNotesPage2",
     "zh_CN": "[panel=6]＊（道路的尽头搁着一口木匣，没有上锁。里头一卷纸卷得很紧，捆着的绳结已经旧了。）＊",
     "links": [2]
   },
@@ -56,8 +56,7 @@
     "entryID": 6,
     "actorID": "MC22",
     "text": "[panel=1]「這是怎麼回事，本姑娘一時也說不上來。卷子先收著——往後見著這樣的卷子，還是老規矩，先給本姑娘。」",
-    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(Valuable,Player,WanderingNotesPage2,-1);\nModifyData(Valuable,MC22,WanderingNotesPage2,1);",
-    "Description": "卷子轉到娜娜身上",
+    "Sequence": "SetPortrait(MC22,pic=1);",
     "zh_CN": "[panel=1]「这是怎么回事，本姑娘一时也说不上来。卷子先收着——往后见着这样的卷子，还是老规矩，先给本姑娘。」",
     "links": [5]
   }

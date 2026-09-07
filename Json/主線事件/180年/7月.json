@@ -4,6 +4,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（七月七日，家家把書和衣裳搬出來曬。曬過的書不生蟲，曬過的衣裳能穿到明年——一年就這一日，日頭最烈。）＊",
     "Sequence": "EnableDialogueBG(Home);",
+    "zh_TW": "[panel=6]＊（七月七日，家家把書和衣裳搬出來曬。曬過的書不生蟲，曬過的衣裳能穿到明年——一年就這一日，日頭最烈。）＊",
     "zh_CN": "[panel=6]＊（七月七日，家家把书和衣裳搬出来晒。晒过的书不生虫，晒过的衣裳能穿到明年——一年就这一日，日头最烈。）＊",
     "links": [2]
   },
@@ -12,6 +13,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（英豪府的院子裡也攤了一地。竹簡一卷一卷排開，衣裳搭滿兩根長竿，你搬了一上午，手上全是灰。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（英豪府的院子裡也攤了一地。竹簡一卷一卷排開，衣裳搭滿兩根長竿，你搬了一上午，手上全是灰。）＊",
     "zh_CN": "[panel=6]＊（英豪府的院子里也摊了一地。竹简一卷一卷排开，衣裳搭满两根长竿，你搬了一上午，手上全是灰。）＊",
     "links": [3]
   },
@@ -20,6 +22,7 @@
     "actorID": "MC8",
     "text": "[panel=2]「表哥，那一箱別放陰處——曬不到，等於白搬。」",
     "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「表哥，那一箱別放陰處——曬不到，等於白搬。」",
     "zh_CN": "[panel=2]「表哥，那一箱别放阴处——晒不到，等于白搬。」",
     "links": [4]
   },
@@ -28,6 +31,7 @@
     "actorID": "MC1",
     "text": "「都搬了一上午了，妳現在才說。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「都搬了一上午了，妳現在才說。」",
     "zh_CN": "「都搬了一上午了，你现在才说。」",
     "links": [5]
   },
@@ -35,7 +39,8 @@
     "entryID": 5,
     "actorID": "MC8",
     "text": "[panel=2]「我說過三回了，是你自己沒聽。」",
-    "Sequence": "SetPortrait(MC8,pic=9);",
+    "Sequence": "SetPortrait(MC8,pic=9);EnableCharacterExpression(2,MC8,Anger);",
+    "zh_TW": "[panel=2]「我說過三回了，是你自己沒聽。」",
     "zh_CN": "[panel=2]「我说过三回了，是你自己没听。」",
     "links": [6]
   },
@@ -43,7 +48,8 @@
     "entryID": 6,
     "actorID": "role2",
     "text": "[panel=6]＊（日頭偏西，書和衣裳一卷一件收回屋裡。收完最後一竿，天已經擦黑。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（日頭偏西，書和衣裳一卷一件收回屋裡。收完最後一竿，天已經擦黑。）＊",
     "zh_CN": "[panel=6]＊（日头偏西，书和衣裳一卷一件收回屋里。收完最后一竿，天已经擦黑。）＊",
     "links": [7]
   },
@@ -52,6 +58,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（入了夜是女子的事：對著月亮穿七孔的針，穿得過去的，往後一雙手就巧。天上那兩顆隔水相望的星，說是一年只見這一面。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（入了夜是女子的事：對著月亮穿七孔的針，穿得過去的，往後一雙手就巧。天上那兩顆隔水相望的星，說是一年只見這一面。）＊",
     "zh_CN": "[panel=6]＊（入了夜是女子的事：对着月亮穿七孔的针，穿得过去的，往后一双手就巧。天上那两颗隔水相望的星，说是一年只见这一面。）＊",
     "links": [8]
   },
@@ -60,6 +67,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（案上她已經把針線擺出來了，線頭捻好，就等月亮再高一點。今晚府裡沒有差事。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（案上她已經把針線擺出來了，線頭捻好，就等月亮再高一點。今晚府裡沒有差事。）＊",
     "zh_CN": "[panel=6]＊（案上她已经把针线摆出来了，线头捻好，就等月亮再高一点。今晚府里没有差事。）＊",
     "links": [9]
   },
@@ -68,6 +76,7 @@
     "actorID": "MC8",
     "text": "[panel=2]「[em7]舉著針對月亮[/em7]，表哥，你來得正好——這線我捻了三回都穿不過去。」",
     "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「[em7]舉著針對月亮[/em7]，表哥，你來得正好——這線我捻了三回都穿不過去。」",
     "zh_CN": "[panel=2]「[em7]举着针对月亮[/em7]，表哥，你来得正好——这线我捻了三回都穿不过去。」",
     "links": [10]
   },
@@ -76,6 +85,7 @@
     "actorID": "MC1",
     "text": "「城裡今晚都在乞巧，妳一個人在這兒穿？」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「城裡今晚都在乞巧，妳一個人在這兒穿？」",
     "zh_CN": "「城里今晚都在乞巧，你一个人在这儿穿？」",
     "links": [11]
   },
@@ -84,14 +94,16 @@
     "actorID": "MC8",
     "text": "[panel=2]「府裡今晚沒別人。娜娜姊姊爬她的屋頂去了，張姑娘一早就出門了。」",
     "Sequence": "SetPortrait(MC8,pic=1);",
-    "zh_CN": "[panel=2]「府里今晚没别人。娜娜姊姊爬她的屋顶去了，张姑娘一早就出门了。」",
+    "zh_TW": "[panel=2]「府裡今晚沒別人。娜娜姊姊爬她的屋頂去了，張姑娘一早就出門了。」",
+    "zh_CN": "[panel=2]「府里今晚没别人。娜娜姐姐爬她的屋顶去了，张姑娘一早就出门了。」",
     "links": [12]
   },
   {
     "entryID": 12,
     "actorID": "MC8",
     "text": "[panel=2]「……你要是有事就去罷，我自己穿得完。」",
-    "Sequence": "SetPortrait(MC8,pic=14);",
+    "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_TW": "[panel=2]「……你要是有事就去罷，我自己穿得完。」",
     "zh_CN": "[panel=2]「……你要是有事就去罢，我自己穿得完。」",
     "links": [13, 14, 15]
   },
@@ -101,6 +113,7 @@
     "text": "（坐下來，把線接過去）",
     "Sequence": "",
     "Description": "選項1：留下陪小犀。走位選單、主角不開口，依通則豁免不接發言格",
+    "zh_TW": "（坐下來，把線接過去）",
     "zh_CN": "（坐下来，把线接过去）",
     "links": [16]
   },
@@ -110,6 +123,7 @@
     "text": "（往馬廄那頭走——她八成又爬上去了）",
     "Sequence": "",
     "Description": "選項2：去找娜娜。走位選單，依通則豁免",
+    "zh_TW": "（往馬廄那頭走——她八成又爬上去了）",
     "zh_CN": "（往马厩那头走——她八成又爬上去了）",
     "links": [35]
   },
@@ -119,6 +133,7 @@
     "text": "（往流離區走——她今晚多半不在府裡）",
     "Sequence": "",
     "Description": "選項3：去找張寧。走位選單，依通則豁免",
+    "zh_TW": "（往流離區走——她今晚多半不在府裡）",
     "zh_CN": "（往流离区走——她今晚多半不在府里）",
     "links": [68]
   },
@@ -126,7 +141,7 @@
     "entryID": 16,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);DisableCharacterExpression(2)@1;OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
     "Description": "轉場：留下陪小犀。同景不換背景圖，只跳時間（天擦黑 → 入夜）；黑幕中收 0／1／2 三個面板",
     "links": [17]
   },
@@ -135,6 +150,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你在案的另一頭坐下。她把線遞過來，自己拿了第二根針。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC8,100);",
+    "zh_TW": "[panel=6]＊（你在案的另一頭坐下。她把線遞過來，自己拿了第二根針。）＊",
     "zh_CN": "[panel=6]＊（你在案的另一头坐下。她把线递过来，自己拿了第二根针。）＊",
     "links": [18]
   },
@@ -143,6 +159,7 @@
     "actorID": "MC8",
     "text": "[panel=2]「說好了，各穿各的。你要是先穿過去，不許笑我。」",
     "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「說好了，各穿各的。你要是先穿過去，不許笑我。」",
     "zh_CN": "[panel=2]「说好了，各穿各的。你要是先穿过去，不许笑我。」",
     "links": [19]
   },
@@ -151,6 +168,7 @@
     "actorID": "MC1",
     "text": "「不笑妳——這七孔的針，比刀難拿多了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「不笑妳——這七孔的針，比刀難拿多了。」",
     "zh_CN": "「不笑你——这七孔的针，比刀难拿多了。」",
     "links": [20, 21]
   },
@@ -160,6 +178,7 @@
     "text": "[em2][巧手檢定][/em2]「這一針我來。」",
     "Sequence": "",
     "Description": "小犀場選項1：巧手檢定",
+    "zh_TW": "[em2][巧手檢定][/em2]「這一針我來。」",
     "zh_CN": "[em2][巧手检定][/em2]「这一针我来。」",
     "links": [22]
   },
@@ -169,6 +188,7 @@
     "text": "（不搶她的針，替她把線再捻細一點）",
     "Sequence": "",
     "Description": "小犀場選項2：不擲骰，括號動作依通則豁免",
+    "zh_TW": "（不搶她的針，替她把線再捻細一點）",
     "zh_CN": "（不抢她的针，替她把线再捻细一点）",
     "links": [32]
   },
@@ -186,6 +206,7 @@
     "text": "「這一針我來——妳把線舉穩了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
     "Description": "擲骰後的過渡發言格，成功／失敗共用",
+    "zh_TW": "「這一針我來——妳把線舉穩了。」",
     "zh_CN": "「这一针我来——你把线举稳了。」",
     "links": [24, 28]
   },
@@ -195,6 +216,7 @@
     "text": "[panel=6]＊（線頭從第三個孔裡鑽了出來。你把針舉起來給她看的時候，線還在晃。）＊",
     "Sequence": "ModifyData(FeatExp,Player,SleightOfHand,10);ModifyData(FavorabilityExp,MC8,20);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（線頭從第三個孔裡鑽了出來。你把針舉起來給她看的時候，線還在晃。）＊",
     "zh_CN": "[panel=6]＊（线头从第三个孔里钻了出来。你把针举起来给她看的时候，线还在晃。）＊",
     "links": [25]
   },
@@ -202,7 +224,8 @@
     "entryID": 25,
     "actorID": "MC8",
     "text": "[panel=2]「……不算！那是月亮剛好轉過來。」",
-    "Sequence": "SetPortrait(MC8,pic=14);",
+    "Sequence": "SetPortrait(MC8,pic=14);EnableCharacterExpression(2,MC8,Anger);",
+    "zh_TW": "[panel=2]「……不算！那是月亮剛好轉過來。」",
     "zh_CN": "[panel=2]「……不算！那是月亮刚好转过来。」",
     "links": [26]
   },
@@ -210,7 +233,8 @@
     "entryID": 26,
     "actorID": "MC8",
     "text": "[panel=2]「再來一根，這回我先。」",
-    "Sequence": "SetPortrait(MC8,pic=1);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「再來一根，這回我先。」",
     "zh_CN": "[panel=2]「再来一根，这回我先。」",
     "links": [27]
   },
@@ -219,6 +243,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她自己那根穿到第四回才過去。過去之後她沒有說話，笑了很久。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她自己那根穿到第四回才過去。過去之後她沒有說話，笑了很久。）＊",
     "zh_CN": "[panel=6]＊（她自己那根穿到第四回才过去。过去之后她没有说话，笑了很久。）＊",
     "links": [102]
   },
@@ -228,6 +253,7 @@
     "text": "[panel=6]＊（線頭在第二個孔前面就散了。你捻了兩回，捻不回原來那麼細。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（線頭在第二個孔前面就散了。你捻了兩回，捻不回原來那麼細。）＊",
     "zh_CN": "[panel=6]＊（线头在第二个孔前面就散了。你捻了两回，捻不回原来那么细。）＊",
     "links": [29]
   },
@@ -235,7 +261,8 @@
     "entryID": 29,
     "actorID": "MC8",
     "text": "[panel=2]「表哥，你這雙手是砍柴的。」",
-    "Sequence": "SetPortrait(MC8,pic=9);",
+    "Sequence": "SetPortrait(MC8,pic=9);EnableCharacterExpression(2,MC8,Meditate);",
+    "zh_TW": "[panel=2]「表哥，你這雙手是砍柴的。」",
     "zh_CN": "[panel=2]「表哥，你这双手是砍柴的。」",
     "links": [30]
   },
@@ -243,7 +270,8 @@
     "entryID": 30,
     "actorID": "MC8",
     "text": "[panel=2]「……你坐著別動，我一步一步教你。」",
-    "Sequence": "SetPortrait(MC8,pic=1);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「……你坐著別動，我一步一步教你。」",
     "zh_CN": "[panel=2]「……你坐着别动，我一步一步教你。」",
     "links": [31]
   },
@@ -252,6 +280,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（教到後半夜，那一根還是沒有過去。兩個人的線頭都毛了。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（教到後半夜，那一根還是沒有過去。兩個人的線頭都毛了。）＊",
     "zh_CN": "[panel=6]＊（教到后半夜，那一根还是没有过去。两个人的线头都毛了。）＊",
     "links": [102]
   },
@@ -260,6 +289,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你把線頭在指間捻細，遞回去。她接過去，一次就穿過了。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（你把線頭在指間捻細，遞回去。她接過去，一次就穿過了。）＊",
     "zh_CN": "[panel=6]＊（你把线头在指间捻细，递回去。她接过去，一次就穿过了。）＊",
     "links": [33]
   },
@@ -267,7 +297,8 @@
     "entryID": 33,
     "actorID": "MC8",
     "text": "[panel=2]「……表哥，你是不是早就會？」",
-    "Sequence": "SetPortrait(MC8,pic=9);",
+    "Sequence": "SetPortrait(MC8,pic=9);EnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「……表哥，你是不是早就會？」",
     "zh_CN": "[panel=2]「……表哥，你是不是早就会？」",
     "links": [34]
   },
@@ -275,7 +306,8 @@
     "entryID": 34,
     "actorID": "MC1",
     "text": "「我只會捻線，穿過去的是妳。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=1);",
+    "zh_TW": "「我只會捻線，穿過去的是妳。」",
     "zh_CN": "「我只会捻线，穿过去的是你。」",
     "links": [102]
   },
@@ -283,7 +315,7 @@
     "entryID": 35,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;EnableDialogueBG(HorseFarm)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);DisableCharacterExpression(2)@1;OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;EnableDialogueBG(HorseFarm)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
     "Description": "轉場：府裡 → 馬房頂，換景兼入夜（Home → HorseFarm）",
     "links": [36]
   },
@@ -292,6 +324,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她果然坐在馬廄頂上，膝上攤著那面尋寶羅盤。你把梯子搬過去的時候，她連頭都沒有回。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她果然坐在馬廄頂上，膝上攤著那面尋寶羅盤。你把梯子搬過去的時候，她連頭都沒有回。）＊",
     "zh_CN": "[panel=6]＊（她果然坐在马厩顶上，膝上摊着那面寻宝罗盘。你把梯子搬过去的时候，她连头都没有回。）＊",
     "links": [37]
   },
@@ -300,6 +333,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「坐吧，往這邊挪半尺——別擋著北邊那顆。」",
     "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「坐吧，往這邊挪半尺——別擋著北邊那顆。」",
     "zh_CN": "[panel=1]「坐吧，往这边挪半尺——别挡着北边那颗。」",
     "links": [38]
   },
@@ -307,7 +341,8 @@
     "entryID": 38,
     "actorID": "MC1",
     "text": "「北邊有什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「北邊有什麼？」",
     "zh_CN": "「北边有什么？」",
     "links": [39]
   },
@@ -315,7 +350,8 @@
     "entryID": 39,
     "actorID": "MC22",
     "text": "[panel=1]「[em7]伸手往北邊一指[/em7]，就那顆不動的。整晚只有它不動，別的星都繞著它走——認得它，你在哪兒都不會走丟。」",
-    "Sequence": "SetPortrait(MC22,pic=8);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);EnableCharacterExpression(1,MC22,Meditate);",
+    "zh_TW": "[panel=1]「[em7]伸手往北邊一指[/em7]，就那顆不動的。整晚只有它不動，別的星都繞著它走——認得它，你在哪兒都不會走丟。」",
     "zh_CN": "[panel=1]「[em7]伸手往北边一指[/em7]，就那颗不动的。整晚只有它不动，别的星都绕着它走——认得它，你在哪儿都不会走丢。」",
     "links": [40]
   },
@@ -323,7 +359,8 @@
     "entryID": 40,
     "actorID": "MC22",
     "text": "[panel=1]「東邊那兩顆，隔著天河對看的，你們漢人說是一年才見一面的夫婦。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「東邊那兩顆，隔著天河對看的，你們漢人說是一年才見一面的夫婦。」",
     "zh_CN": "[panel=1]「东边那两颗，隔着天河对看的，你们汉人说是一年才见一面的夫妇。」",
     "links": [41]
   },
@@ -332,6 +369,7 @@
     "actorID": "MC1",
     "text": "「妳們不這麼說？」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「妳們不這麼說？」",
     "zh_CN": "「你们不这么说？」",
     "links": [42]
   },
@@ -340,6 +378,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「我們那邊講的是別的。那條白的，我們不當它是河，當它是路。」",
     "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_TW": "[panel=1]「我們那邊講的是別的。那條白的，我們不當它是河，當它是路。」",
     "zh_CN": "[panel=1]「我们那边讲的是别的。那条白的，我们不当它是河，当它是路。」",
     "links": [43]
   },
@@ -347,7 +386,8 @@
     "entryID": 43,
     "actorID": "MC1",
     "text": "「天上還有路可走？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「天上還有路可走？」",
     "zh_CN": "「天上还有路可走？」",
     "links": [44]
   },
@@ -355,7 +395,8 @@
     "entryID": 44,
     "actorID": "MC22",
     "text": "[panel=1]「兩個人走那條路。一個往東趕羊，一個往西趕馬，走滿一年，就在這一夜錯身。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「兩個人走那條路。一個往東趕羊，一個往西趕馬，走滿一年，就在這一夜錯身。」",
     "zh_CN": "[panel=1]「两个人走那条路。一个往东赶羊，一个往西赶马，走满一年，就在这一夜错身。」",
     "links": [45]
   },
@@ -364,6 +405,7 @@
     "actorID": "MC1",
     "text": "「就這樣？連話都不說？」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「就這樣？連話都不說？」",
     "zh_CN": "「就这样？连话都不说？」",
     "links": [46]
   },
@@ -372,6 +414,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「說什麼？走了一年的人，馬瘦幾分、羊多幾隻，看一眼就知道了——人還在走，那就夠了。」",
     "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「說什麼？走了一年的人，馬瘦幾分、羊多幾隻，看一眼就知道了——人還在走，那就夠了。」",
     "zh_CN": "[panel=1]「说什么？走了一年的人，马瘦几分、羊多几只，看一眼就知道了——人还在走，那就够了。」",
     "links": [47]
   },
@@ -379,7 +422,8 @@
     "entryID": 47,
     "actorID": "MC22",
     "text": "[panel=1]「我爹說，路要有人走過才算路。走的人斷了，路就沒了。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
+    "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(1,MC22,Pain);",
+    "zh_TW": "[panel=1]「我爹說，路要有人走過才算路。走的人斷了，路就沒了。」",
     "zh_CN": "[panel=1]「我爹说，路要有人走过才算路。走的人断了，路就没了。」",
     "links": [48]
   },
@@ -387,7 +431,8 @@
     "entryID": 48,
     "actorID": "MC22",
     "text": "[panel=1]「所以本姑娘只記住怎麼走路。星認得，路就認得。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「所以本姑娘只記住怎麼走路。星認得，路就認得。」",
     "zh_CN": "[panel=1]「所以本姑娘只记住怎么走路。星认得，路就认得。」",
     "links": [49, 50]
   },
@@ -397,6 +442,7 @@
     "text": "[em2][調情檢定][/em2]「星我認不得。認得妳，也不會走丟。」",
     "Sequence": "",
     "Description": "娜娜場選項1：調情檢定",
+    "zh_TW": "[em2][調情檢定][/em2]「星我認不得。認得妳，也不會走丟。」",
     "zh_CN": "[em2][调情检定][/em2]「星我认不得。认得你，也不会走丢。」",
     "links": [51]
   },
@@ -406,6 +452,7 @@
     "text": "（什麼都不說，陪她看完）",
     "Sequence": "",
     "Description": "娜娜場選項2：不擲骰，括號動作依通則豁免",
+    "zh_TW": "（什麼都不說，陪她看完）",
     "zh_CN": "（什么都不说，陪她看完）",
     "links": [67]
   },
@@ -423,6 +470,7 @@
     "text": "「星我認不得，可是妳走到哪裡我都認得出來——這樣也不算走丟。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
     "Description": "擲骰後的過渡發言格，成功／失敗共用",
+    "zh_TW": "「星我認不得，可是妳走到哪裡我都認得出來——這樣也不算走丟。」",
     "zh_CN": "「星我认不得，可是你走到哪里我都认得出来——这样也不算走丢。」",
     "links": [53, 64]
   },
@@ -430,8 +478,9 @@
     "entryID": 53,
     "actorID": "MC22",
     "text": "[panel=1]「……大俠，這句話是哪本話本上抄來的？」",
-    "Sequence": "SetPortrait(MC22,pic=7);ModifyData(FeatExp,Player,Flirting,10);ModifyData(FavorabilityExp,MC22,10);",
+    "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22,Nervous);ModifyData(FeatExp,Player,Flirting,10);ModifyData(FavorabilityExp,MC22,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「……大俠，這句話是哪本話本上抄來的？」",
     "zh_CN": "[panel=1]「……大侠，这句话是哪本话本上抄来的？」",
     "links": [54]
   },
@@ -439,7 +488,8 @@
     "entryID": 54,
     "actorID": "MC22",
     "text": "[panel=1]「抄得倒還算過得去。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);",
+    "zh_TW": "[panel=1]「抄得倒還算過得去。」",
     "zh_CN": "[panel=1]「抄得倒还算过得去。」",
     "links": [55]
   },
@@ -448,6 +498,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她沒有再說話。屋頂上很久沒有聲音，只有底下馬在動。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她沒有再說話。屋頂上很久沒有聲音，只有底下馬在動。）＊",
     "zh_CN": "[panel=6]＊（她没有再说话。屋顶上很久没有声音，只有底下马在动。）＊",
     "links": [56, 57]
   },
@@ -457,6 +508,7 @@
     "text": "（就這麼坐到她把星看完）",
     "Sequence": "",
     "Description": "娜娜場・成功後選項1：留下",
+    "zh_TW": "（就這麼坐到她把星看完）",
     "zh_CN": "（就这么坐到她把星看完）",
     "links": [58]
   },
@@ -466,6 +518,7 @@
     "text": "（時候不早了，下屋頂）",
     "Sequence": "",
     "Description": "娜娜場・成功後選項2：走",
+    "zh_TW": "（時候不早了，下屋頂）",
     "zh_CN": "（时候不早了，下屋顶）",
     "links": [63]
   },
@@ -474,6 +527,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她一顆一顆指下去，指到後半夜，話越說越慢，你也沒有走。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC22,100);",
+    "zh_TW": "[panel=6]＊（她一顆一顆指下去，指到後半夜，話越說越慢，你也沒有走。）＊",
     "zh_CN": "[panel=6]＊（她一颗一颗指下去，指到后半夜，话越说越慢，你也没有走。）＊",
     "links": [59]
   },
@@ -482,6 +536,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「……大俠，你其實一顆都沒記住吧。」",
     "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_TW": "[panel=1]「……大俠，你其實一顆都沒記住吧。」",
     "zh_CN": "[panel=1]「……大侠，你其实一颗都没记住吧。」",
     "links": [60]
   },
@@ -490,6 +545,7 @@
     "actorID": "MC1",
     "text": "「記住一顆了，不動的那顆。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「記住一顆了，不動的那顆。」",
     "zh_CN": "「记住一颗了，不动的那颗。」",
     "links": [61]
   },
@@ -497,7 +553,8 @@
     "entryID": 61,
     "actorID": "MC22",
     "text": "[panel=1]「那就夠了——認得那一顆，往後本姑娘走到哪兒，你都找得著。」",
-    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Sequence": "SetPortrait(MC22,pic=7);EnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "[panel=1]「那就夠了——認得那一顆，往後本姑娘走到哪兒，你都找得著。」",
     "zh_CN": "[panel=1]「那就够了——认得那一颗，往后本姑娘走到哪儿，你都找得着。」",
     "links": [62]
   },
@@ -505,7 +562,8 @@
     "entryID": 62,
     "actorID": "role2",
     "text": "[panel=6]＊（下屋頂的時候她走前面。梯子她扶著，扶到你踩穩才鬆手。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（下屋頂的時候她走前面。梯子她扶著，扶到你踩穩才鬆手。）＊",
     "zh_CN": "[panel=6]＊（下屋顶的时候她走前面。梯子她扶着，扶到你踩稳才松手。）＊",
     "links": [100]
   },
@@ -514,6 +572,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你說時候不早了。她「喔」了一聲，眼睛沒離開北邊那顆。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（你說時候不早了。她「喔」了一聲，眼睛沒離開北邊那顆。）＊",
     "zh_CN": "[panel=6]＊（你说时候不早了。她「喔」了一声，眼睛没离开北边那颗。）＊",
     "links": [100]
   },
@@ -521,8 +580,9 @@
     "entryID": 64,
     "actorID": "MC22",
     "text": "[panel=1]「認得我？大俠，你方才連北邊有什麼都要問我。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Anger_2);",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「認得我？大俠，你方才連北邊有什麼都要問我。」",
     "zh_CN": "[panel=1]「认得我？大侠，你方才连北边有什么都要问我。」",
     "links": [65]
   },
@@ -530,7 +590,8 @@
     "entryID": 65,
     "actorID": "MC22",
     "text": "[panel=1]「給我坐好——今晚本姑娘把二十八宿一顆一顆教到你認得為止。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "[panel=1]「給我坐好——今晚本姑娘把二十八宿一顆一顆教到你認得為止。」",
     "zh_CN": "[panel=1]「给我坐好——今晚本姑娘把二十八宿一颗一颗教到你认得为止。」",
     "links": [66]
   },
@@ -538,7 +599,8 @@
     "entryID": 66,
     "actorID": "role2",
     "text": "[panel=6]＊（她抓著你的袖子不放，真的一顆一顆教下去。教到下半夜，你連想找個藉口下屋頂的空隙都沒有。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（她抓著你的袖子不放，真的一顆一顆教下去。教到下半夜，你連想找個藉口下屋頂的空隙都沒有。）＊",
     "zh_CN": "[panel=6]＊（她抓着你的袖子不放，真的一颗一颗教下去。教到下半夜，你连想找个借口下屋顶的空隙都没有。）＊",
     "links": [100]
   },
@@ -547,6 +609,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你一句話也沒說。她指一顆，你看一顆，指到後來她也就不說了。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC22,10);",
+    "zh_TW": "[panel=6]＊（你一句話也沒說。她指一顆，你看一顆，指到後來她也就不說了。）＊",
     "zh_CN": "[panel=6]＊（你一句话也没说。她指一颗，你看一颗，指到后来她也就不说了。）＊",
     "links": [100]
   },
@@ -554,7 +617,7 @@
     "entryID": 68,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;EnableDialogueBG(Heding)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);DisableCharacterExpression(2)@1;OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;EnableDialogueBG(Heding)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
     "Description": "轉場：府裡 → 流離區，換景兼入夜（Home → Heding）",
     "links": [69]
   },
@@ -563,6 +626,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（府裡熱鬧，她不在。你在流離區那排棚子後頭找到她——蹲著，正給一個孩子換手上的布。腳邊一隻藥碗，煎好的藥還冒著氣。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（府裡熱鬧，她不在。你在流離區那排棚子後頭找到她——蹲著，正給一個孩子換手上的布。腳邊一隻藥碗，煎好的藥還冒著氣。）＊",
     "zh_CN": "[panel=6]＊（府里热闹，她不在。你在流离区那排棚子后头找到她——蹲着，正给一个孩子换手上的布。脚边一只药碗，煎好的药还冒着气。）＊",
     "links": [70]
   },
@@ -571,6 +635,7 @@
     "actorID": "MC6",
     "text": "[panel=1]「拿著，別捏皺了。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「拿著，別捏皺了。」",
     "zh_CN": "[panel=1]「拿着，别捏皱了。」",
     "links": [71]
   },
@@ -579,6 +644,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（那孩子的手包到一半，抖了一下。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（那孩子的手包到一半，抖了一下。）＊",
     "zh_CN": "[panel=6]＊（那孩子的手包到一半，抖了一下。）＊",
     "links": [72]
   },
@@ -587,6 +653,7 @@
     "actorID": "MC6",
     "text": "[panel=1]「不許哭，哭了就得再包一次。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「不許哭，哭了就得再包一次。」",
     "zh_CN": "[panel=1]「不许哭，哭了就得再包一次。」",
     "links": [73]
   },
@@ -595,6 +662,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（一個換完換下一個。你遞布、她上藥，到後來她連手都不必伸，你就把布遞到她手邊了。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（一個換完換下一個。你遞布、她上藥，到後來她連手都不必伸，你就把布遞到她手邊了。）＊",
     "zh_CN": "[panel=6]＊（一个换完换下一个。你递布、她上药，到后来她连手都不必伸，你就把布递到她手边了。）＊",
     "links": [74]
   },
@@ -603,6 +671,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她袖子捲到肘上。你看見她自己手腕上也有痕跡，一條一條，新的舊的都有。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她袖子捲到肘上。你看見她自己手腕上也有痕跡，一條一條，新的舊的都有。）＊",
     "zh_CN": "[panel=6]＊（她袖子卷到肘上。你看见她自己手腕上也有痕迹，一条一条，新的旧的都有。）＊",
     "links": [75]
   },
@@ -611,6 +680,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（最後一個換完，藥還剩小半碗。她把袖子放下來，在原地坐了下來。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（最後一個換完，藥還剩小半碗。她把袖子放下來，在原地坐了下來。）＊",
     "zh_CN": "[panel=6]＊（最后一个换完，药还剩小半碗。她把袖子放下来，在原地坐了下来。）＊",
     "links": [76]
   },
@@ -619,6 +689,7 @@
     "actorID": "MC1",
     "text": "「城裡今晚都在乞巧。張姑娘不去看看？」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「城裡今晚都在乞巧。張姑娘不去看看？」",
     "zh_CN": "「城里今晚都在乞巧。张姑娘不去看看？」",
     "links": [77]
   },
@@ -626,7 +697,8 @@
     "entryID": 77,
     "actorID": "MC6",
     "text": "[panel=1]「穿針求巧？求得來的話，我這雙手就不用練到今天。」",
-    "Sequence": "SetPortrait(MC6,pic=3);",
+    "Sequence": "SetPortrait(MC6,pic=3);EnableCharacterExpression(1,MC6,Meditate);",
+    "zh_TW": "[panel=1]「穿針求巧？求得來的話，我這雙手就不用練到今天。」",
     "zh_CN": "[panel=1]「穿针求巧？求得来的话，我这双手就不用练到今天。」",
     "links": [78, 79]
   },
@@ -636,6 +708,7 @@
     "text": "[em2][調情檢定][/em2]「滿城的姑娘今晚都在求一雙巧手。張姑娘不必求。」",
     "Sequence": "",
     "Description": "張寧場選項1：調情檢定",
+    "zh_TW": "[em2][調情檢定][/em2]「滿城的姑娘今晚都在求一雙巧手。張姑娘不必求。」",
     "zh_CN": "[em2][调情检定][/em2]「满城的姑娘今晚都在求一双巧手。张姑娘不必求。」",
     "links": [80]
   },
@@ -645,6 +718,7 @@
     "text": "（不接話，把剩下的布收進藥箱）",
     "Sequence": "",
     "Description": "張寧場選項2：不擲骰，括號動作依通則豁免",
+    "zh_TW": "（不接話，把剩下的布收進藥箱）",
     "zh_CN": "（不接话，把剩下的布收进药箱）",
     "links": [99]
   },
@@ -660,8 +734,9 @@
     "entryID": 81,
     "actorID": "MC1",
     "text": "「滿城的姑娘今晚都在穿針求一雙巧手。張姑娘這雙手，不必求。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=1);",
     "Description": "擲骰後的過渡發言格，成功／失敗共用",
+    "zh_TW": "「滿城的姑娘今晚都在穿針求一雙巧手。張姑娘這雙手，不必求。」",
     "zh_CN": "「满城的姑娘今晚都在穿针求一双巧手。张姑娘这双手，不必求。」",
     "links": [82, 95]
   },
@@ -671,6 +746,7 @@
     "text": "[panel=6]＊（她把手裡那碗剩藥擱下了，擱得很輕，擱完也沒有抬頭。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（她把手裡那碗剩藥擱下了，擱得很輕，擱完也沒有抬頭。）＊",
     "zh_CN": "[panel=6]＊（她把手里那碗剩药搁下了，搁得很轻，搁完也没有抬头。）＊",
     "links": [83]
   },
@@ -678,7 +754,8 @@
     "entryID": 83,
     "actorID": "MC6",
     "text": "[panel=1]「……這話你留著跟別人講。」",
-    "Sequence": "SetPortrait(MC6,pic=4);ModifyData(FeatExp,Player,Flirting,10);ModifyData(FavorabilityExp,MC6,10);",
+    "Sequence": "SetPortrait(MC6,pic=4);EnableCharacterExpression(1,MC6,Nervous);ModifyData(FeatExp,Player,Flirting,10);ModifyData(FavorabilityExp,MC6,10);",
+    "zh_TW": "[panel=1]「……這話你留著跟別人講。」",
     "zh_CN": "[panel=1]「……这话你留着跟别人讲。」",
     "links": [84]
   },
@@ -686,7 +763,8 @@
     "entryID": 84,
     "actorID": "role2",
     "text": "[panel=6]＊（她說完就去收藥箱。收得比平常慢。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（她說完就去收藥箱。收得比平常慢。）＊",
     "zh_CN": "[panel=6]＊（她说完就去收药箱。收得比平常慢。）＊",
     "links": [85, 86]
   },
@@ -696,6 +774,7 @@
     "text": "（把剩下的布全捲完再走）",
     "Sequence": "",
     "Description": "張寧場・成功後選項1：留下",
+    "zh_TW": "（把剩下的布全捲完再走）",
     "zh_CN": "（把剩下的布全卷完再走）",
     "links": [87]
   },
@@ -705,6 +784,7 @@
     "text": "（時候不早了，回府）",
     "Sequence": "",
     "Description": "張寧場・成功後選項2：走",
+    "zh_TW": "（時候不早了，回府）",
     "zh_CN": "（时候不早了，回府）",
     "links": [92]
   },
@@ -713,6 +793,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你沒有走，她也沒有趕你，只把藥箱推過來一點，讓你有地方坐。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC6,100);",
+    "zh_TW": "[panel=6]＊（你沒有走，她也沒有趕你，只把藥箱推過來一點，讓你有地方坐。）＊",
     "zh_CN": "[panel=6]＊（你没有走，她也没有赶你，只把药箱推过来一点，让你有地方坐。）＊",
     "links": [88]
   },
@@ -721,6 +802,7 @@
     "actorID": "MC6",
     "text": "[panel=1]「……今日就到這裡，明日還要再來一趟。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「……今日就到這裡，明日還要再來一趟。」",
     "zh_CN": "[panel=1]「……今日就到这里，明日还要再来一趟。」",
     "links": [89]
   },
@@ -729,6 +811,7 @@
     "actorID": "MC1",
     "text": "「明日我陪妳來。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「明日我陪妳來。」",
     "zh_CN": "「明日我陪你来。」",
     "links": [90]
   },
@@ -737,6 +820,7 @@
     "actorID": "MC6",
     "text": "[panel=1]「隨你，別擋著我的路就行。」",
     "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=1]「隨你，別擋著我的路就行。」",
     "zh_CN": "[panel=1]「随你，别挡着我的路就行。」",
     "links": [91]
   },
@@ -745,6 +829,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她把剩下那半碗藥仰頭喝了，喝得很快。喝完把碗擱回藥箱，蓋上。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她把剩下那半碗藥仰頭喝了，喝得很快。喝完把碗擱回藥箱，蓋上。）＊",
     "zh_CN": "[panel=6]＊（她把剩下那半碗药仰头喝了，喝得很快。喝完把碗搁回药箱，盖上。）＊",
     "links": [100]
   },
@@ -753,6 +838,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你說府裡還有事。她沒問是什麼事，「嗯」了一聲，手上沒停。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（你說府裡還有事。她沒問是什麼事，「嗯」了一聲，手上沒停。）＊",
     "zh_CN": "[panel=6]＊（你说府里还有事。她没问是什么事，「嗯」了一声，手上没停。）＊",
     "links": [93]
   },
@@ -760,7 +846,8 @@
     "entryID": 93,
     "actorID": "MC6",
     "text": "[panel=1]「去吧——反正你今晚也不是為了藥來的。」",
-    "Sequence": "SetPortrait(MC6,pic=3);",
+    "Sequence": "SetPortrait(MC6,pic=3);EnableCharacterExpression(1,MC6,Meditate);",
+    "zh_TW": "[panel=1]「去吧——反正你今晚也不是為了藥來的。」",
     "zh_CN": "[panel=1]「去吧——反正你今晚也不是为了药来的。」",
     "links": [94]
   },
@@ -768,7 +855,8 @@
     "entryID": 94,
     "actorID": "role2",
     "text": "[panel=6]＊（你走出兩步回頭，她把那卷布捲得比剛才緊。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（你走出兩步回頭，她把那卷布捲得比剛才緊。）＊",
     "zh_CN": "[panel=6]＊（你走出两步回头，她把那卷布卷得比刚才紧。）＊",
     "links": [100]
   },
@@ -778,6 +866,7 @@
     "text": "[panel=6]＊（那碗剩藥在她手裡翻了一下，半碗全潑在你腳面上。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（那碗剩藥在她手裡翻了一下，半碗全潑在你腳面上。）＊",
     "zh_CN": "[panel=6]＊（那碗剩药在她手里翻了一下，半碗全泼在你脚面上。）＊",
     "links": [96]
   },
@@ -785,7 +874,8 @@
     "entryID": 96,
     "actorID": "MC6",
     "text": "[panel=1]「對不住，藥碗滑手了。」",
-    "Sequence": "SetPortrait(MC6,pic=4);",
+    "Sequence": "SetPortrait(MC6,pic=4);EnableCharacterExpression(1,MC6,Anger_2);",
+    "zh_TW": "[panel=1]「對不住，藥碗滑手了。」",
     "zh_CN": "[panel=1]「对不住，药碗滑手了。」",
     "links": [97]
   },
@@ -793,7 +883,8 @@
     "entryID": 97,
     "actorID": "MC6",
     "text": "[panel=1]「[em7]把空碗塞進你手裡[/em7]，明日那幾個還要用。去打水，藥得重煎。」",
-    "Sequence": "SetPortrait(MC6,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「[em7]把空碗塞進你手裡[/em7]，明日那幾個還要用。去打水，藥得重煎。」",
     "zh_CN": "[panel=1]「[em7]把空碗塞进你手里[/em7]，明日那几个还要用。去打水，药得重煎。」",
     "links": [98]
   },
@@ -802,6 +893,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（打水、生火、守著那鍋藥慢慢滾。守到能起鍋，天邊已經有點白了。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（打水、生火、守著那鍋藥慢慢滾。守到能起鍋，天邊已經有點白了。）＊",
     "zh_CN": "[panel=6]＊（打水、生火、守着那锅药慢慢滚。守到能起锅，天边已经有点白了。）＊",
     "links": [100]
   },
@@ -809,7 +901,8 @@
     "entryID": 99,
     "actorID": "role2",
     "text": "[panel=6]＊（你沒有接話，把剩下的布一卷一卷收進藥箱，碗也涮了。她沒攔你，也沒有道謝。）＊",
-    "Sequence": "ModifyData(FavorabilityExp,MC6,10);",
+    "Sequence": "DisableCharacterExpression(1);ModifyData(FavorabilityExp,MC6,10);",
+    "zh_TW": "[panel=6]＊（你沒有接話，把剩下的布一卷一卷收進藥箱，碗也涮了。她沒攔你，也沒有道謝。）＊",
     "zh_CN": "[panel=6]＊（你没有接话，把剩下的布一卷一卷收进药箱，碗也涮了。她没拦你，也没有道谢。）＊",
     "links": [100]
   },
@@ -826,6 +919,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（回府的時候院子那張案還在。針還擺著，線也還在，一根都沒有人穿過去。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（回府的時候院子那張案還在。針還擺著，線也還在，一根都沒有人穿過去。）＊",
     "zh_CN": "[panel=6]＊（回府的时候院子那张案还在。针还摆着，线也还在，一根都没有人穿过去。）＊",
     "links": [103]
   },
@@ -834,6 +928,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（案上那副針線收了。第二天早上你看見她把穿過的那根針別在袖口，別了一整天。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（案上那副針線收了。第二天早上你看見她把穿過的那根針別在袖口，別了一整天。）＊",
     "zh_CN": "[panel=6]＊（案上那副针线收了。第二天早上你看见她把穿过的那根针别在袖口，别了一整天。）＊",
     "links": [103]
   },

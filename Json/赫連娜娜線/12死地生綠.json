@@ -2,22 +2,19 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "娜娜事件(2)死地生綠",
     "text": "[panel=6]＊（桌上攤著三卷書，一字排開，都是她爹的字。她坐在案前，眼睛底下一圈青。）＊",
     "Sequence": "EnableDialogueBG(Home);\nAudioControl(PlayMusic,BGM_25);",
     "zh_CN": "[panel=6]＊（桌上摊着三卷书，一字排开，都是她爹的字。她坐在案前，眼睛底下一圈青。）＊",
-    "links": [
-      2
-    ]
+    "links": [2]
   },
   {
     "entryID": 2,
     "actorID": "MC22",
-    "text": "[panel=1]「大俠，你來得正好。這三卷，本姑娘拆開讀了十來遍——昨夜把它們排在一起讀，是頭一遍。」",
+    "text": "[panel=1]「大俠，你來得正好。這三卷，我拆開讀了十來遍——昨夜靈機一動，把三卷排在一起讀，這才發現……」",
     "Sequence": "SetPortrait(MC22,pic=8);",
-    "zh_CN": "[panel=1]「大侠，你来得正好。这三卷，本姑娘拆开读了十来遍——昨夜把它们排在一起读，是头一遍。」",
-    "links": [
-      3
-    ]
+    "zh_CN": "[panel=1]「大侠，你来得正好。这三卷，我拆开读了十来遍——昨夜灵机一动，把三卷排在一起读，这才发现……」",
+    "links": [3]
   },
   {
     "entryID": 3,
@@ -25,19 +22,15 @@
     "text": "「排在一起，讀出什麼了？」",
     "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「排在一起，读出什么了？」",
-    "links": [
-      4
-    ]
+    "links": [4]
   },
   {
     "entryID": 4,
     "actorID": "MC22",
     "text": "[panel=1]「讀出一件事——我爹不是在尋寶。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Idea);",
     "zh_CN": "[panel=1]「读出一件事——我爹不是在寻宝。」",
-    "links": [
-      5
-    ]
+    "links": [5]
   },
   {
     "entryID": 5,
@@ -45,59 +38,47 @@
     "text": "[panel=1]「東谷那道門，他繞了三日；妖林底下，他一個人待了三個月——尋寶的人不這麼幹。」",
     "Sequence": "",
     "zh_CN": "[panel=1]「东谷那道门，他绕了三日；妖林底下，他一个人待了三个月——寻宝的人不这么干。」",
-    "links": [
-      6
-    ]
+    "links": [6]
   },
   {
     "entryID": 6,
     "actorID": "MC22",
     "text": "[panel=1]「他在查一件事，從塞外一路查到晉陽，查了不知道多少年。」",
-    "Sequence": "",
+    "Sequence": "SetPortrait(MC22,pic=2);",
     "zh_CN": "[panel=1]「他在查一件事，从塞外一路查到晋阳，查了不知道多少年。」",
-    "links": [
-      7
-    ]
+    "links": [7]
   },
   {
     "entryID": 7,
     "actorID": "MC22",
     "text": "[panel=1]「[em7]把卷一推到你面前[/em7]，角婆那老話，是我阿母那一部傳下來的，我從小當它是嚇小孩的。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Meditate);",
     "zh_CN": "[panel=1]「[em7]把卷一推到你面前[/em7]，角婆那老话，是我阿母那一部传下来的，我从小当它是吓小孩的。」",
-    "links": [
-      8
-    ]
+    "links": [8]
   },
   {
     "entryID": 8,
     "actorID": "MC22",
     "text": "[panel=1]「他不當它是玩笑——哪一年、哪一帳、誰家生的孩子帶角，一條一條記下來，整整考據了半卷。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
+    "Sequence": "SetPortrait(MC22,pic=4);",
     "zh_CN": "[panel=1]「他不当它是玩笑——哪一年、哪一帐、谁家生的孩子带角，一条一条记下来，整整考据了半卷。」",
-    "links": [
-      9
-    ]
+    "links": [9]
   },
   {
     "entryID": 9,
     "actorID": "MC1",
     "text": "「……那他到底在找什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(1);",
     "zh_CN": "「……那他到底在找什么？」",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 10,
     "actorID": "MC22",
     "text": "[panel=1]「我不知道。他寫他去了哪、看見什麼，就是不寫他為什麼要查這個。」",
-    "Sequence": "SetPortrait(MC22,pic=14);",
+    "Sequence": "SetPortrait(MC22,pic=8);",
     "zh_CN": "[panel=1]「我不知道。他写他去了哪、看见什么，就是不写他为什么要查这个。」",
-    "links": [
-      38
-    ]
+    "links": [38]
   },
   {
     "entryID": 38,
@@ -105,49 +86,39 @@
     "text": "[panel=1]「…這幾卷讀下來，我忽然發現，我對我爹一無所知。」",
     "Sequence": "SetPortrait(MC22,pic=3);",
     "zh_CN": "[panel=1]「…这几卷读下来，我忽然发现，我对我爹一无所知。」",
-    "links": [
-      11
-    ]
+    "links": [11]
   },
   {
     "entryID": 11,
     "actorID": "role2",
     "text": "[panel=6]＊（屋裡靜了下來。午後的光從窗格斜進來，落在攤開的那三卷上，紙面泛黃，字跡發淡。她伸手把中間那卷的邊角壓平，壓了兩回，才抬起頭來。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_CN": "[panel=6]＊（屋里静了下来。午后的光从窗格斜进来，落在摊开的那三卷上，纸面泛黄，字迹发淡。她伸手把中间那卷的边角压平，压了两回，才抬起头来。）＊",
-    "links": [
-      12
-    ]
+    "links": [12]
   },
   {
     "entryID": 12,
     "actorID": "MC22",
-    "text": "[panel=1]「[var=PlayerFirstName]，我爹不是雲遊去了——他失蹤了。生不見人，死不見屍。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
-    "zh_CN": "[panel=1]「[var=PlayerFirstName]，我爹不是云游去了——他失踪了。生不见人，死不见尸。」",
-    "links": [
-      13
-    ]
+    "text": "[panel=1]「[var=PlayerFirstName]，我爹不是雲遊去了——他失蹤了！」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]，我爹不是云游去了——他失踪了！」",
+    "links": [13]
   },
   {
     "entryID": 13,
     "actorID": "MC22",
-    "text": "[panel=1]「他走的那年，我才到他腰帶那兒——他還說等我長到他肩膀，就帶我出關。」",
-    "Sequence": "",
-    "zh_CN": "[panel=1]「他走的那年，我才到他腰带那儿——他还说等我长到他肩膀，就带我出关。」",
-    "links": [
-      39
-    ]
+    "text": "[panel=1]「他走的那年，我才到他腰帶那兒——他還說等我長到他肩膀，就要告訴我，我為什麼……算了，這個現在不重要。」",
+    "Sequence": "DisableCharacterExpression(1);\nEnableCharacterExpression(1,MC22,Nervous);",
+    "zh_CN": "[panel=1]「他走的那年，我才到他腰带那儿——他还说等我长到他肩膀，就要告诉我，我为什么……算了，这个现在不重要。」",
+    "links": [39]
   },
   {
     "entryID": 39,
     "actorID": "MC22",
     "text": "[panel=1]「這些年我翻過的每一處遺跡、每一座古城，進去頭一件事，都是先找有沒有他的字。」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_CN": "[panel=1]「这些年我翻过的每一处遗迹、每一座古城，进去头一件事，都是先找有没有他的字。」",
-    "links": [
-      14
-    ]
+    "links": [14]
   },
   {
     "entryID": 14,
@@ -155,10 +126,7 @@
     "text": "[panel=1]「他的腳印到哪，我就跟到哪——跟著跟著，總有一天能撞見他。」",
     "Sequence": "",
     "zh_CN": "[panel=1]「他的脚印到哪，我就跟到哪——跟着跟着，总有一天能撞见他。」",
-    "links": [
-      16,
-      17
-    ]
+    "links": [16, 17]
   },
   {
     "entryID": 16,
@@ -167,9 +135,7 @@
     "Sequence": "",
     "Description": "選項二",
     "zh_CN": "「那就一起找——找到为止。」",
-    "links": [
-      23
-    ]
+    "links": [23]
   },
   {
     "entryID": 17,
@@ -178,9 +144,7 @@
     "Sequence": "",
     "Description": "選項三：不開口選項，依轉成json指南豁免，不接發言格",
     "zh_CN": "（不说话，把案上的三卷书替她拢好。）",
-    "links": [
-      25
-    ]
+    "links": [25]
   },
   {
     "entryID": 23,
@@ -189,9 +153,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "Description": "選項二的發言格",
     "zh_CN": "「那就一起找吧——你爹的脚印到哪，我就陪你走到哪，找到为止。」",
-    "links": [
-      24
-    ]
+    "links": [24]
   },
   {
     "entryID": 24,
@@ -199,9 +161,7 @@
     "text": "[panel=1]「……誰要你陪了——話說出去，可收不回來了。」",
     "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,20);",
     "zh_CN": "[panel=1]「……谁要你陪了——话说出去，可收不回来了。」",
-    "links": [
-      27
-    ]
+    "links": [27]
   },
   {
     "entryID": 25,
@@ -209,30 +169,23 @@
     "text": "[panel=6]＊（你沒說話，把案上的三卷書替她攏好，推回她手邊。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你没说话，把案上的三卷书替她拢好，推回她手边。）＊",
-    "links": [
-      26
-    ]
+    "links": [26]
   },
   {
     "entryID": 26,
     "actorID": "MC22",
     "text": "[panel=1]「……你這人，不說話的時候倒像樣。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,20);",
+    "Sequence": "SetPortrait(MC22,pic=5);\nModifyData(FavorabilityExp,MC22,20);",
     "zh_CN": "[panel=1]「……你这人，不说话的时候倒像样。」",
-    "links": [
-      27
-    ]
+    "links": [27]
   },
   {
     "entryID": 27,
     "actorID": "MC22",
     "text": "[panel=1]「好了，說正事。卷二末尾只有一個『北』字——北邊那麼大，可他自己教過我找法。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=8);",
-    "Description": "兩條選項與調情線在此匯流。好感度已改掛在各回應格（#24／#26／#20）",
     "zh_CN": "[panel=1]「好了，说正事。卷二末尾只有一个『北』字——北边那么大，可他自己教过我找法。」",
-    "links": [
-      28
-    ]
+    "links": [28]
   },
   {
     "entryID": 28,
@@ -240,9 +193,7 @@
     "text": "[panel=1]「他找妖林，靠的是草木不合時令。東西不對，地方就不對——要找他去的北邊，就找北邊不對的地方。」",
     "Sequence": "",
     "zh_CN": "[panel=1]「他找妖林，靠的是草木不合时令。东西不对，地方就不对——要找他去的北边，就找北边不对的地方。」",
-    "links": [
-      29
-    ]
+    "links": [29]
   },
   {
     "entryID": 29,
@@ -250,9 +201,7 @@
     "text": "[panel=1]「我問了三天——出塞往北有一片死澤，白花花的，寸草不生。趕駝的說，這幾年，澤裡見得著綠。」",
     "Sequence": "SetPortrait(MC22,pic=1);",
     "zh_CN": "[panel=1]「我问了三天——出塞往北有一片死泽，白花花的，寸草不生。赶驼的说，这几年，泽里见得着绿。」",
-    "links": [
-      30
-    ]
+    "links": [30]
   },
   {
     "entryID": 30,
@@ -260,9 +209,7 @@
     "text": "[panel=1]「死地生綠，不合時令——就是那裡。」",
     "Sequence": "SetPortrait(MC22,pic=8);",
     "zh_CN": "[panel=1]「死地生绿，不合时令——就是那里。」",
-    "links": [
-      31
-    ]
+    "links": [47]
   },
   {
     "entryID": 31,
@@ -270,31 +217,23 @@
     "text": "[panel=6]＊（她把三卷書一卷一卷捲好，收進懷裡，站了起來。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（她把三卷书一卷一卷卷好，收进怀里，站了起来。）＊",
-    "links": [
-      32
-    ]
+    "links": [32]
   },
   {
     "entryID": 32,
     "actorID": "MC22",
-    "text": "[panel=1]「白鹵澤——這一趟沒有寶，也不是替天行道，是我家的事。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_CN": "[panel=1]「白卤泽——这一趟没有宝，也不是替天行道，是我家的事。」",
-    "links": [
-      33
-    ]
+    "text": "[panel=1]「白鹵澤——這一趟沒有寶物，也不是行俠仗義，更跟當大俠那套一點也不相干。純粹是我家的事。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「白卤泽——这一趟没有宝物，也不是行侠仗义，更跟当大侠那套一点也不相干。纯粹是我家的事。」",
+    "links": [33]
   },
   {
     "entryID": 33,
     "actorID": "MC22",
     "text": "[panel=1]「[var=PlayerFirstName]——你還來嗎？」",
-    "Sequence": "",
+    "Sequence": "SetPortrait(MC22,pic=4);",
     "zh_CN": "[panel=1]「[var=PlayerFirstName]——你还来吗？」",
-    "links": [
-      15,
-      40,
-      41
-    ]
+    "links": [15, 40, 41]
   },
   {
     "entryID": 15,
@@ -303,9 +242,7 @@
     "Sequence": "",
     "Description": "選項一：調情檢定（難度 8）。2026-09-06 由告白段移到收尾",
     "zh_CN": "[em2][调情检定][/em2]「听你喊名字，倒比大侠中听。」",
-    "links": [
-      18
-    ]
+    "links": [18]
   },
   {
     "entryID": 18,
@@ -313,45 +250,36 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,8);",
     "Description": "調情檢定 難度8",
-    "links": [
-      19
-    ]
+    "links": [19]
   },
   {
     "entryID": 19,
     "actorID": "MC1",
-    "text": "「聽妳喊名字，倒比大俠中聽——往後就這麼喊吧，不必見外。」",
+    "text": "「聽妳喊名字，倒比大俠中聽——往後就這麼喊吧，不必見外。再說，妳拉我出去那幾趟，哪一趟跟當大俠有關過。」",
     "Sequence": "SetPortrait(MC1,pic=15);",
     "Description": "發言格＝擲骰後的過渡格",
-    "zh_CN": "「听你喊名字，倒比大侠中听——往后就这么喊吧，不必见外。」",
-    "links": [
-      20,
-      21
-    ]
+    "zh_CN": "「听你喊名字，倒比大侠中听——往后就这么喊吧，不必见外。再说，你拉我出去那几趟，哪一趟跟当大侠有关过。」",
+    "links": [20, 21]
   },
   {
     "entryID": 20,
     "actorID": "MC22",
     "text": "[panel=1]「你、你在亂說什麼——誰要你覺得中聽了。」",
     "Sequence": "SetPortrait(MC22,pic=7);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FeatExp,Player,Flirting,10);\nModifyData(FavorabilityExp,MC22,30);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "調情成功",
     "zh_CN": "[panel=1]「你、你在乱说什么——谁要你觉得中听了。」",
-    "links": [
-      22
-    ]
+    "links": [22]
   },
   {
     "entryID": 21,
     "actorID": "MC22",
     "text": "[panel=1]「想得美——還是大俠喊著順口。」",
-    "Sequence": "SetPortrait(MC22,pic=2);",
-    "Conditions": "IsPassDice()  == false;",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Conditions": "IsPassDice() == false;",
     "Description": "調情失敗",
     "zh_CN": "[panel=1]「想得美——还是大侠喊着顺口。」",
-    "links": [
-      46
-    ]
+    "links": [46]
   },
   {
     "entryID": 22,
@@ -359,9 +287,7 @@
     "text": "[panel=1]「那…你要是喜歡我這麼喊，那我…往後就這麼喊你了。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=7);",
     "zh_CN": "[panel=1]「那…你要是喜欢我这么喊，那我…往后就这么喊你了。」",
-    "links": [
-      46
-    ]
+    "links": [46]
   },
   {
     "entryID": 40,
@@ -370,20 +296,16 @@
     "Sequence": "",
     "Description": "選項二",
     "zh_CN": "「收拾收拾吧。」",
-    "links": [
-      34
-    ]
+    "links": [34]
   },
   {
     "entryID": 34,
     "actorID": "MC1",
     "text": "「收拾收拾吧——路遠，得備足水糧。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "Description": "選項二的發言格",
     "zh_CN": "「收拾收拾吧——路远，得备足水粮。」",
-    "links": [
-      46
-    ],
-    "Description": "選項二的發言格"
+    "links": [46]
   },
   {
     "entryID": 41,
@@ -392,9 +314,7 @@
     "Sequence": "",
     "Description": "選項三：老朋友式的推託，不加好感度",
     "zh_CN": "「你不是说一个人也走得？」",
-    "links": [
-      42
-    ]
+    "links": [42]
   },
   {
     "entryID": 42,
@@ -403,19 +323,15 @@
     "Sequence": "SetPortrait(MC1,pic=5);",
     "Description": "選項三的發言格",
     "zh_CN": "「你方才不是说，三日的沙，一个人也走得？」",
-    "links": [
-      43
-    ]
+    "links": [43]
   },
   {
     "entryID": 43,
     "actorID": "MC22",
     "text": "[panel=1]「哎呀大俠——本姑娘一個弱女子，出了塞連個照應都沒有，你忍心？」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
+    "Sequence": "SetPortrait(MC22,pic=10);",
     "zh_CN": "[panel=1]「哎呀大侠——本姑娘一个弱女子，出了塞连个照应都没有，你忍心？」",
-    "links": [
-      44
-    ]
+    "links": [44]
   },
   {
     "entryID": 44,
@@ -423,9 +339,7 @@
     "text": "「……行了行了，別演了。妳這招用幾年了。」",
     "Sequence": "SetPortrait(MC1,pic=3);",
     "zh_CN": "「……行了行了，别演了。你这招用几年了。」",
-    "links": [
-      45
-    ]
+    "links": [45]
   },
   {
     "entryID": 45,
@@ -433,42 +347,34 @@
     "text": "[panel=1]「[em7]立刻收了那副可憐相[/em7]，管用就成——大俠這兩個字，本姑娘還使得動。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_CN": "[panel=1]「[em7]立刻收了那副可怜相[/em7]，管用就成——大侠这两个字，本姑娘还使得动。」",
-    "links": [
-      46
-    ]
+    "links": [46]
   },
   {
     "entryID": 46,
     "actorID": "MC22",
     "text": "[panel=1]「……那個，[var=PlayerFirstName]，總之這回的事，本姑娘…不，我記著——謝了。」",
-    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Sequence": "SetPortrait(MC22,pic=11);\nSetPortrait(MC1,pic=1);",
     "Description": "四條線共用的道謝格（作者 2026-09-06 加）",
     "zh_CN": "[panel=1]「……那个，[var=PlayerFirstName]，总之这回的事，本姑娘…不，我记着——谢了。」",
-    "links": [
-      35
-    ]
+    "links": [35]
   },
   {
     "entryID": 35,
     "actorID": "MC22",
-    "text": "[panel=1]「……明日一早，馬廄見。」",
+    "text": "[panel=1]「[em7]說完就轉身，走了兩步才停下[/em7]，……明日一早，馬廄見。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
     "Description": "解鎖白鹵澤",
-    "zh_CN": "[panel=1]「……明日一早，马厩见。」",
-    "links": [
-      36
-    ]
+    "zh_CN": "[panel=1]「[em7]说完就转身，走了两步才停下[/em7]，……明日一早，马厩见。」",
+    "links": [36]
   },
   {
     "entryID": 36,
     "actorID": "role2",
     "text": "[panel=6]＊（發現：白鹵澤。）＊",
     "Sequence": "MapLock(WhiteSaltMarsh, unlock);\nOpenPanel(1, close);",
+    "Description": "解鎖白鹵澤＋發現提示（體例照 08第一頁.json #4066）",
     "zh_CN": "[panel=6]＊（发现：白卤泽。）＊",
-    "links": [
-      37
-    ],
-    "Description": "解鎖白鹵澤＋發現提示（體例照 08第一頁.json #4066）"
+    "links": [37]
   },
   {
     "entryID": 37,
@@ -476,7 +382,15 @@
     "text": "",
     "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
     "Script": "SetQuestEntryState(\"CF45\", 3, \"active\");",
-    "Description": "尾格：收立繪面板與背景；開 CF45 entry 3（白鹵澤這一段；entry 3 在白鹵澤那場收 success）",
+    "Description": "尾格：收立繪面板與背景；觸發 CF45 entry 3（查出白鹵澤在哪 → 出發；entry 3 由 `大地圖/白鹵澤.json` #5 收 success）",
     "links": []
+  },
+  {
+    "entryID": 47,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18);\nContinue();",
+    "Description": "轉換音樂",
+    "links": [31]
   }
 ]
