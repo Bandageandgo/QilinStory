@@ -182,10 +182,10 @@
   {
     "entryID": 25,
     "actorID": "MC1",
-    "text": "「整死我？小爺我可是雲中郡太守的姪子，只怕外頭官兵這會兒正掘地三尺四處找我呢。你想清楚，是現在把我放了逃命去，還是等大軍殺進來，給卞喜當替死鬼？」",
+    "text": "「整死我？小爺我可是雲中郡太守的姪子，只怕外頭官兵這會兒正掘地三尺四處找我呢。」",
     "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
-    "zh_CN": "「整死我？小爷我可是云中郡太守的侄子，只怕外头官兵这会儿正掘地三尺四处找我呢。你想清楚，是现在把我放了逃命去，还是等大军杀进来，给卞喜当替死鬼？」",
-    "links": [26, 36]
+    "zh_CN": "「整死我？小爷我可是云中郡太守的侄子，只怕外头官兵这会儿正掘地三尺四处找我呢。」",
+    "links": [4166]
   },
   {
     "entryID": 26,
@@ -902,5 +902,13 @@
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,64);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥",
     "links": [4156]
+  },
+  {
+    "entryID": 4166,
+    "actorID": "MC1",
+    "text": "「你想清楚，是現在把我放了逃命去，還是等大軍殺進來，給卞喜當替死鬼？」",
+    "Sequence": "",
+    "zh_CN": "「你想清楚，是现在把我放了逃命去，还是等大军杀进来，给卞喜当替死鬼？」",
+    "links": [26, 36]
   }
 ]

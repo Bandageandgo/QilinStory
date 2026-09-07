@@ -20,11 +20,11 @@
   {
     "entryID": 67,
     "actorID": "MC8",
-    "text": "「就知道你會這麼說。誰說待在村裡就沒事做了？茶博士不是說這村子臥虎藏龍嗎？村長也說後山林子很古怪，那位童淵大哥不也是在村裡遇到的嗎？」",
+    "text": "「就知道你會這麼說。誰說待在村裡就沒事做了？茶博士不是說這村子臥虎藏龍嗎？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=6);EnableCharacterExpression(1,MC8,Meditate);",
-    "zh_TW": "「就知道你會這麼說。誰說待在村裡就沒事做了？茶博士不是說這村子臥虎藏龍嗎？村長也說後山林子很古怪，那位童淵大哥不也是在村裡遇到的嗎？」",
-    "zh_CN": "「就知道你会这么说。谁说待在村里就没事做了？茶博士不是说这村子卧虎藏龙吗？村长也说后山林子很古怪，那位童渊大哥不也是在村里遇到的吗？」",
-    "links": [68]
+    "zh_TW": "「就知道你會這麼說。誰說待在村裡就沒事做了？茶博士不是說這村子臥虎藏龍嗎？」",
+    "zh_CN": "「就知道你会这么说。谁说待在村里就没事做了？茶博士不是说这村子卧虎藏龙吗？」",
+    "links": [2055]
   },
   {
     "entryID": 68,
@@ -313,5 +313,14 @@
     "Sequence": "ModifyData(Command,Explore,Unlock);\nExecutePanelBaseManager(Command,Enter);\nShowNoviceTeaching(Command_Explore);\nContinue();",
     "Description": "解鎖探索、跳出探索的教學",
     "links": []
+  },
+  {
+    "entryID": 2055,
+    "actorID": "MC8",
+    "text": "「村長也說後山林子很古怪，那位童淵大哥不也是在村裡遇到的嗎？」",
+    "Sequence": "",
+    "zh_TW": "「村長也說後山林子很古怪，那位童淵大哥不也是在村裡遇到的嗎？」",
+    "zh_CN": "「村长也说后山林子很古怪，那位童渊大哥不也是在村里遇到的吗？」",
+    "links": [68]
   }
 ]

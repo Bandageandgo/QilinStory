@@ -366,10 +366,10 @@
   {
     "entryID": 60,
     "actorID": "MC1",
-    "text": "「且張大叔明明說，旁人受了這傷，十個有九個挺不住。我怎麼覺得……身子反而比以前更輕快？反應靈了，力氣大了，連腦子好像也轉得快些。」",
+    "text": "「且張大叔明明說，旁人受了這傷，十個有九個挺不住。我怎麼覺得……身子反而比以前更輕快？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Question);",
-    "zh_CN": "「且张大叔明明说，旁人受了这伤，十个有九个挺不住。我怎么觉得……身子反而比以前更轻快？反应灵了，力气大了，连脑子好像也转得快些。」",
-    "links": [62, 64, 66, 68]
+    "zh_CN": "「且张大叔明明说，旁人受了这伤，十个有九个挺不住。我怎么觉得……身子反而比以前更轻快？」",
+    "links": [443]
   },
   {
     "entryID": 62,
@@ -1596,5 +1596,13 @@
     "text": "",
     "Sequence": "AudioControl(StopMusic);\nDisableDialogueBG();\nContinue();",
     "links": []
+  },
+  {
+    "entryID": 443,
+    "actorID": "MC1",
+    "text": "「反應靈了，力氣大了，連腦子好像也轉得快些。」",
+    "Sequence": "",
+    "zh_CN": "「反应灵了，力气大了，连脑子好像也转得快些。」",
+    "links": [62, 64, 66, 68]
   }
 ]

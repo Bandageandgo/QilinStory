@@ -972,10 +972,10 @@
   {
     "entryID": 153,
     "actorID": "MC22",
-    "text": "[panel=2]「[em7]一腳踩上座面掂了掂，又跳下來[/em7]，位子還真小。羅盤沒轉、不鑲金、連暗格都懶得做——大俠，這座位子沒名堂，不是咱們要找的東西。」",
+    "text": "[panel=2]「[em7]一腳踩上座面掂了掂，又跳下來[/em7]，位子還真小。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Idea);",
-    "zh_CN": "[panel=2]「[em7]一脚踩上座面掂了掂，又跳下来[/em7]，位子还真小。罗盘没转、不镶金、连暗格都懒得做——大侠，这座位子没名堂，不是咱们要找的东西。」",
-    "links": [154]
+    "zh_CN": "[panel=2]「[em7]一脚踩上座面掂了掂，又跳下来[/em7]，位子还真小。」",
+    "links": [4350]
   },
   {
     "entryID": 154,
@@ -1902,11 +1902,11 @@
   {
     "entryID": 4185,
     "actorID": "MC8",
-    "text": "[panel=2]「表哥你看！中洞那幅被泥灰蓋住的畫——舟肚子正中嵌著一顆淚滴模樣的亮石頭。再看這尊石像，兩隻手捧著的圓洞，空空的，位置跟畫裡那顆石頭一模一樣！」",
+    "text": "[panel=2]「表哥你看！中洞那幅被泥灰蓋住的畫——舟肚子正中嵌著一顆淚滴模樣的亮石頭。」",
     "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise);",
     "Conditions": "CurrentQuestEntryState(\"CF40\", 6) == \"success\";",
-    "zh_CN": "[panel=2]「表哥你看！中洞那幅被泥灰盖住的画——舟肚子正中嵌着一颗泪滴模样的亮石头。再看这尊石像，两只手捧着的圆洞，空空的，位置跟画里那颗石头一模一样！」",
-    "links": [4186]
+    "zh_CN": "[panel=2]「表哥你看！中洞那幅被泥灰盖住的画——舟肚子正中嵌着一颗泪滴模样的亮石头。」",
+    "links": [4349]
   },
   {
     "entryID": 4186,
@@ -2128,10 +2128,10 @@
   {
     "entryID": 4214,
     "actorID": "MC22",
-    "text": "[panel=1]「等等——點醒本姑娘了！東西掉了能跑多遠？外頭就是溪，小溪村那顆溫熱石頭，村民不就管它叫『河神的眼淚』？大俠，嵌回去試試！」",
+    "text": "[panel=1]「等等——點醒本姑娘了！東西掉了能跑多遠？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Idea);",
-    "zh_CN": "[panel=1]「等等——点醒本姑娘了！东西掉了能跑多远？外头就是溪，小溪村那颗温热石头，村民不就管它叫『河神的眼泪』？大侠，嵌回去试试！」",
-    "links": [4215]
+    "zh_CN": "[panel=1]「等等——点醒本姑娘了！东西掉了能跑多远？」",
+    "links": [4351]
   },
   {
     "entryID": 4215,
@@ -3118,5 +3118,30 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_CN": "「家主，这笔买卖，在下不做了。水濂洞那一趟……就当在下白跑。」",
     "links": [4292]
+  },
+  {
+    "entryID": 4349,
+    "actorID": "MC8",
+    "text": "[panel=2]「再看這尊石像，兩隻手捧著的圓洞，空空的，位置跟畫裡那顆石頭一模一樣！」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 6) == \"success\";",
+    "zh_CN": "[panel=2]「再看这尊石像，两只手捧着的圆洞，空空的，位置跟画里那颗石头一模一样！」",
+    "links": [4186]
+  },
+  {
+    "entryID": 4350,
+    "actorID": "MC22",
+    "text": "[panel=2]「羅盤沒轉、不鑲金、連暗格都懶得做——大俠，這座位子沒名堂，不是咱們要找的東西。」",
+    "Sequence": "",
+    "zh_CN": "[panel=2]「罗盘没转、不镶金、连暗格都懒得做——大侠，这座位子没名堂，不是咱们要找的东西。」",
+    "links": [154]
+  },
+  {
+    "entryID": 4351,
+    "actorID": "MC22",
+    "text": "[panel=1]「外頭就是溪，小溪村那顆溫熱石頭，村民不就管它叫『河神的眼淚』？大俠，嵌回去試試！」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「外头就是溪，小溪村那颗温热石头，村民不就管它叫『河神的眼泪』？大侠，嵌回去试试！」",
+    "links": [4215]
   }
 ]

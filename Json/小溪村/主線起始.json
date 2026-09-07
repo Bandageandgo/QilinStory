@@ -335,11 +335,11 @@
   {
     "entryID": 91,
     "actorID": "role105",
-    "text": "「看兩位小英雄也是初出茅廬，人生地不熟。這樣吧，我給你們指條明路[em2]有間客棧[/em2]老闆娘[em2]一枝花[/em2]可是我們這十里八鄉有名的美人，為人又熱情好客。」",
+    "text": "「看兩位小英雄也是初出茅廬，人生地不熟。」",
     "Sequence": "SetPortrait(role105,pic=2)",
-    "zh_TW": "「看兩位小英雄也是初出茅廬，人生地不熟。這樣吧，我給你們指條明路[em2]有間客棧[/em2]老闆娘[em2]一枝花[/em2]可是我們這十里八鄉有名的美人，為人又熱情好客。」",
-    "zh_CN": "「看两位小英雄也是初出茅庐，人生地不熟。这样吧，我给你们指条明路[em2]有间客栈[/em2]老板娘[em2]一枝花[/em2]可是我们这十里八乡有名的美人，为人又热情好客。」",
-    "links": [92]
+    "zh_TW": "「看兩位小英雄也是初出茅廬，人生地不熟。」",
+    "zh_CN": "「看两位小英雄也是初出茅庐，人生地不熟。」",
+    "links": [2057]
   },
   {
     "entryID": 92,
@@ -653,5 +653,14 @@
     "Sequence": "SetContinueMode(false);\nModifyData(AddNewCharacter,MC8);\nModifyData(IsAbleToJoinTeam,MC8,flase);\nShowHint(Character,MC8);\nSetContinueMode(original)@Message(EndHintCharacter);",
     "Description": "獲得角色情報",
     "links": [59]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "role105",
+    "text": "「這樣吧，我給你們指條明路[em2]有間客棧[/em2]老闆娘[em2]一枝花[/em2]可是我們這十里八鄉有名的美人，為人又熱情好客。」",
+    "Sequence": "",
+    "zh_TW": "「這樣吧，我給你們指條明路[em2]有間客棧[/em2]老闆娘[em2]一枝花[/em2]可是我們這十里八鄉有名的美人，為人又熱情好客。」",
+    "zh_CN": "「这样吧，我给你们指条明路[em2]有间客栈[/em2]老板娘[em2]一枝花[/em2]可是我们这十里八乡有名的美人，为人又热情好客。」",
+    "links": [92]
   }
 ]

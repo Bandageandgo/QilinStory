@@ -244,10 +244,10 @@
   {
     "entryID": 31,
     "actorID": "MC22",
-    "text": "[panel=2]「我們中計之後，本姑娘索性裝昏到底，趁他們鬆懈溜了出來——誰知道剛摸到這岔路，又撞上巡邏的，被逮個正著。途中聽他們在說：[em2]那個胖子一身精氣旺得很，是絕佳的祭品[/em2]——八成說的就是雍仔！」",
+    "text": "[panel=2]「我們中計之後，本姑娘索性裝昏到底，趁他們鬆懈溜了出來——誰知道剛摸到這岔路，又撞上巡邏的，被逮個正著。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=2);\nEnableCharacterExpression(2,MC22,Idea);",
-    "zh_CN": "[panel=2]「我们中计之后，本姑娘索性装昏到底，趁他们松懈溜了出来——谁知道刚摸到这岔路，又撞上巡逻的，被逮个正着。途中听他们在说：[em2]那个胖子一身精气旺得很，是绝佳的祭品[/em2]——八成说的就是雍仔！」",
-    "links": [32]
+    "zh_CN": "[panel=2]「我们中计之后，本姑娘索性装昏到底，趁他们松懈溜了出来——谁知道刚摸到这岔路，又撞上巡逻的，被逮个正着。」",
+    "links": [3774]
   },
   {
     "entryID": 32,
@@ -360,5 +360,13 @@
     "text": "",
     "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);\nContinue();",
     "links": []
+  },
+  {
+    "entryID": 3774,
+    "actorID": "MC22",
+    "text": "[panel=2]「途中聽他們在說：[em2]那個胖子一身精氣旺得很，是絕佳的祭品[/em2]——八成說的就是雍仔！」",
+    "Sequence": "",
+    "zh_CN": "[panel=2]「途中听他们在说：[em2]那个胖子一身精气旺得很，是绝佳的祭品[/em2]——八成说的就是雍仔！」",
+    "links": [32]
   }
 ]

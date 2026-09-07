@@ -121,11 +121,11 @@
   {
     "entryID": 14,
     "actorID": "MC22",
-    "text": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
+    "text": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=8);",
-    "zh_TW": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
-    "zh_CN": "「在下与你萍水相逢，本不该泄露天机。但助应劫之人顺应天命，亦是修行。此石便赠予你，分文不取，只盼你能把握时机，斩妖除魔，夺得造化！」",
-    "links": [15]
+    "zh_TW": "「在下與你萍水相逢，本不該洩露天機。但助應劫之人順應天命，亦是修行。」",
+    "zh_CN": "「在下与你萍水相逢，本不该泄露天机。但助应劫之人顺应天命，亦是修行。」",
+    "links": [2056]
   },
   {
     "entryID": 15,
@@ -246,5 +246,14 @@
     "Sequence": "SetContinueMode(false);\nModifyData(AddNewCharacter,MC22);\nModifyData(IsAbleToJoinTeam,MC22,flase);\nShowHint(Character,MC22);\nSetContinueMode(original)@Message(EndHintCharacter);",
     "Description": "獲得角色情報",
     "links": [6]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC22",
+    "text": "「此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
+    "Sequence": "",
+    "zh_TW": "「此石便贈予你，分文不取，只盼你能把握時機，斬妖除魔，奪得造化！」",
+    "zh_CN": "「此石便赠予你，分文不取，只盼你能把握时机，斩妖除魔，夺得造化！」",
+    "links": [15]
   }
 ]
