@@ -1,0 +1,316 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（夜深了，馬廄裡只剩馬嚼草料的聲音。她背對著你蹲在水槽邊，一頭黑髮放下來，濕的，貼在背上；頭巾疊好了，搭在欄上。）＊",
+    "Sequence": "EnableDialogueBG(HorseFarm);",
+    "Description": "入口。背景用馬廄（作者 2026-09-08 定）",
+    "zh_CN": "[panel=6]＊（夜深了，马厩里只剩马嚼草料的声音。她背对着你蹲在水槽边，一头黑发放下来，湿的，贴在背上；头巾叠好了，搭在栏上。）＊",
+    "links": [
+      2
+    ]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role2",
+    "text": "[panel=6]＊（濕髮貼著頭皮，髮間露出兩個小小的尖，一左一右。門口漏進來的月光底下，看得清楚。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（湿发贴着头皮，发间露出两个小小的尖，一左一右。门口漏进来的月光底下，看得清楚。）＊",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]回頭，手先往頭上去，摸了個空[/em7]，……白鹵澤那鹽，馬刷了三回，我也洗了三回，還在——不洗乾淨睡不著。」",
+    "Sequence": "SetPortrait(MC22,pic=9);",
+    "zh_CN": "[panel=1]「[em7]回头，手先往头上去，摸了个空[/em7]，……白卤泽那盐，马刷了三回，我也洗了三回，还在——不洗干净睡不着。」",
+    "links": [
+      4
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC22",
+    "text": "[panel=1]「[var=PlayerFirstName]，看見了就看見了。我本來也沒打算瞞你一輩子。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]，看见了就看见了。我本来也没打算瞒你一辈子。」",
+    "links": [
+      5
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC22",
+    "text": "[panel=1]「角婆的老話你聽過了——部裡隔幾代出一個，這一代，是我。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「角婆的老话你听过了——部里隔几代出一个，这一代，是我。」",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "[panel=1]「……怎麼，嚇著了？你倒是說句話。」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "zh_CN": "[panel=1]「……怎么，吓着了？你倒是说句话。」",
+    "links": [
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "[em2][調情檢定][/em2]「妳永遠嚇不著我。」",
+    "Sequence": "",
+    "Description": "選項一：調情檢定（難度 8）。作者 2026-09-08 定向：先真心話、後撩",
+    "zh_CN": "[em2][调情检定][/em2]「你永远吓不着我。」",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「……比我想的小。」",
+    "Sequence": "",
+    "Description": "選項二：損，燕不凡式的錯話",
+    "zh_CN": "「……比我想的小。」",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "（不說話，把欄上的頭巾拿下來，遞給她。）",
+    "Sequence": "",
+    "Description": "選項三：不開口選項，依轉成json指南豁免，不接發言格",
+    "zh_CN": "（不说话，把栏上的头巾拿下来，递给她。）",
+    "links": [
+      23
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,8);",
+    "Description": "調情檢定 難度8",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「妳永遠嚇不著我。故鄉燒了以後，就剩我跟小犀兩個，一路走到這兒。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Description": "發言格＝擲骰後的過渡格之一。真心話，不用調情臉 pic=15",
+    "zh_CN": "「你永远吓不着我。故乡烧了以后，就剩我跟小犀两个，一路走到这儿。」",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「兩個小孩子在外頭流浪，又添上我這頭白髮，跟常人不一樣——一路上看的臉色，也不少。」",
+    "Sequence": "",
+    "zh_CN": "「两个小孩子在外头流浪，又添上我这头白发，跟常人不一样——一路上看的脸色，也不少。」",
+    "links": [
+      13
+    ]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC22",
+    "text": "[panel=1]「……白髮再白，也是人的頭髮。我這個不一樣——夜裡摸到它，我有時候會想，我到底算不算人。」",
+    "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_CN": "[panel=1]「……白发再白，也是人的头发。我这个不一样——夜里摸到它，我有时候会想，我到底算不算人。」",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC22",
+    "text": "[panel=1]「在部裡，人家看我是漢人的孩子；到了漢地，又成了胡女。兩邊都不算數，還頂著這個——你說我算什麼？」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「在部里，人家看我是汉人的孩子；到了汉地，又成了胡女。两边都不算数，还顶着这个——你说我算什么？」",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「妳算什麼——跟我一樣，沒地方回的人。這東西長在妳頭上，跟我的白髮一樣，生下來就有，不是妳我挑的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「你算什么——跟我一样，没地方回的人。这东西长在你头上，跟我的白发一样，生下来就有，不是你我挑的。」",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「妳要遮，我替妳遮著；不遮，我就這麼看著妳。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "Description": "撩只有這一句；成敗分支接在後面",
+    "zh_CN": "「你要遮，我替你遮着；不遮，我就这么看着你。」",
+    "links": [
+      17,
+      19
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC22",
+    "text": "[panel=1]「你、你替我遮什麼——誰要你看了！」",
+    "Sequence": "SetPortrait(MC22,pic=7);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FeatExp,Player,Flirting,10);\nModifyData(FavorabilityExp,MC22,30);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "調情成功",
+    "zh_CN": "[panel=1]「你、你替我遮什么——谁要你看了！」",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC22",
+    "text": "[panel=1]「……看就看吧，長這麼大，頭一回有人這麼看我。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=7);",
+    "zh_CN": "[panel=1]「……看就看吧，长这么大，头一回有人这么看我。」",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC22",
+    "text": "[panel=1]「……遮不遮，我自己會拿主意。你前頭那句我記著了——沒地方回的人。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "調情失敗：收下真心話那句，不接「看著妳」；不加不扣",
+    "zh_CN": "[panel=1]「……遮不遮，我自己会拿主意。你前头那句我记着了——没地方回的人。」",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「……比我想的小多了——角婆的老話講得那麼嚇人，我還當有牛角那麼大。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "Description": "選項二的發言格",
+    "zh_CN": "「……比我想的小多了——角婆的老话讲得那么吓人，我还当有牛角那么大。」",
+    "links": [
+      21
+    ]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC22",
+    "text": "[panel=1]「你、你什麼意思！什麼叫比你想的小！」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_CN": "[panel=1]「你、你什么意思！什么叫比你想的小！」",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC22",
+    "text": "[panel=1]「……我從小就怕人看見這個。你倒好，頭一句就嫌小。」",
+    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
+    "zh_CN": "[panel=1]「……我从小就怕人看见这个。你倒好，头一句就嫌小。」",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把欄上的頭巾拿下來，遞過去。她看了一眼，接了，卻沒往頭上戴，又搭回欄上。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你把栏上的头巾拿下来，递过去。她看了一眼，接了，却没往头上戴，又搭回栏上。）＊",
+    "links": [
+      24
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC22",
+    "text": "[panel=1]「……遞什麼遞，看都看了。你不問？」",
+    "Sequence": "SetPortrait(MC22,pic=7);",
+    "zh_CN": "[panel=1]「……递什么递，看都看了。你不问？」",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC1",
+    "text": "「有什麼好問的。妳要是想說，自己會說。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「有什么好问的。你要是想说，自己会说。」",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC22",
+    "text": "[panel=1]「……你不問也好，問了我也不知道怎麼答。」",
+    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(FavorabilityExp,MC22,30);",
+    "zh_CN": "[panel=1]「……你不问也好，问了我也不知道怎么答。」",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC22",
+    "text": "[panel=1]「頭髮還沒乾，我再坐一會兒。你要是不嫌棄——乾草還有半邊，坐這兒陪我。」",
+    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Description": "三條路匯流",
+    "zh_CN": "[panel=1]「头发还没干，我再坐一会儿。你要是不嫌弃——干草还有半边，坐这儿陪我。」",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「坐就坐，反正回屋也睡不著。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「坐就坐，反正回屋也睡不着。」",
+    "links": [
+      29
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你在乾草另一頭坐下。夜風從門口進來，把欄上的頭巾掀起一角，又落回去，她沒去拿。）＊",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_CN": "[panel=6]＊（你在干草另一头坐下。夜风从门口进来，把栏上的头巾掀起一角，又落回去，她没去拿。）＊",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 4, \"success\");",
+    "Description": "尾格：收立繪面板與背景；收 CF45 entry 4（作者 2026-09-08 定：這場完成＝entry 4 success；entry 4 原給白鹵澤末卷，09-07 併進 entry 3 後空出）",
+    "links": []
+  }
+]
