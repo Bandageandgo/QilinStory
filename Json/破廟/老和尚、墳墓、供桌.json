@@ -302,7 +302,7 @@
     "actorID": "role108",
     "text": "「……」",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
     "links": [3347]
@@ -323,7 +323,7 @@
     "actorID": "role108",
     "text": "「……嗡阿吽。」",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "「……嗡阿吽。」",
     "zh_CN": "「……嗡阿吽。」",
     "links": [3354]
@@ -391,7 +391,7 @@
     "actorID": "MC1",
     "text": "「怪了，這石碑看起來像是不久前插上去的一樣，連打磨也沒有，怪扎人的，啊……！」",
     "Sequence": "SetPortrait(MC1,pic=4);\nModifyData(FeatExp,Player,Knowledge,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「怪了，這石碑看起來像是不久前插上去的一樣，連打磨也沒有，怪扎人的，啊……！」",
     "zh_CN": "「怪了，这石碑看起来像是不久前插上去的一样，连打磨也没有，怪扎人的，啊……！」",
     "links": [3377]
@@ -401,7 +401,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你琢磨許久，卻仍沒能從中看出什麼端倪。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你琢磨許久，卻仍沒能從中看出什麼端倪。）＊",
     "zh_CN": "[panel=6]＊（你琢磨许久，却仍没能从中看出什么端倪。）＊",
     "links": [3365]
@@ -429,7 +429,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（身上沒有工具能幫忙……得想想辦法。）＊",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Irondig\")  == false;",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Irondig\") == false;",
     "zh_TW": "[panel=6]＊（身上沒有工具能幫忙……得想想辦法。）＊",
     "zh_CN": "[panel=6]＊（身上没有工具能帮忙……得想想办法。）＊",
     "links": []
@@ -439,7 +439,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你抄起方才所拿的鐵鏟，小心翼翼地挖開這意外鬆軟的墳頭土，不消半刻——）＊",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Irondig\")  == true;",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Irondig\") == true;",
     "zh_TW": "[panel=6]＊（你抄起方才所拿的鐵鏟，小心翼翼地挖開這意外鬆軟的墳頭土，不消半刻——）＊",
     "zh_CN": "[panel=6]＊（你抄起方才所拿的铁铲，小心翼翼地挖开这意外松软的坟头土，不消半刻——）＊",
     "links": [3368]
@@ -477,7 +477,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（吸一口氣，以勁破之，嘗試幾回，總算是找著訣竅……）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（吸一口氣，以勁破之，嘗試幾回，總算是找著訣竅……）＊",
     "zh_CN": "[panel=6]＊（吸一口气，以劲破之，尝试几回，总算是找着诀窍……）＊",
     "links": [3368]
@@ -487,7 +487,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（嘗試許久仍不得要領，你只得狼狽放棄。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（嘗試許久仍不得要領，你只得狼狽放棄。）＊",
     "zh_CN": "[panel=6]＊（尝试许久仍不得要领，你只得狼狈放弃。）＊",
     "links": [3373]
@@ -526,7 +526,7 @@
     "actorID": "MC1",
     "text": "「這兒的土摸起來也不大對勁，和旁邊相比鬆動許多……此地偏僻，誰會閒來無事到這兒翻土？」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「這兒的土摸起來也不大對勁，和旁邊相比鬆動許多……此地偏僻，誰會閒來無事到這兒翻土？」",
     "zh_CN": "「这儿的土摸起来也不大对劲，和旁边相比松动许多……此地偏僻，谁会闲来无事到这儿翻土？」",
     "links": [3364]

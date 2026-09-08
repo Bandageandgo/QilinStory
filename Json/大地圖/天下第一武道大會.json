@@ -353,7 +353,7 @@
     "actorID": "MC1",
     "text": "「嗯。當然不是特地為我準備的。」",
     "Sequence": "SetPortrait(MC1,pic=15);EnableCharacterExpression(0,Player,Meditate);\nModifyData(FeatExp,Player,Flirting,20);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「嗯。当然不是特地为我准备的。」",
     "links": [390]
   },
@@ -378,7 +378,7 @@
     "actorID": "MC1",
     "text": "「那……多謝大夫帶藥。」",
     "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「那……多谢大夫带药。」",
     "links": [64]
   },
@@ -491,7 +491,7 @@
     "actorID": "MC1",
     "text": "「掩其不意……所以得先摸清對方虛實，再談出手？」",
     "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Meditate);\nModifyData(FeatExp,Player,Strategy,20);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「掩其不意……所以得先摸清对方虚实，再谈出手？」",
     "links": [78]
   },
@@ -517,7 +517,7 @@
     "actorID": "MC1",
     "text": "「掩其不意……就是，呃，趁人不備？偷偷摸摸打？」",
     "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「掩其不意……就是，呃，趁人不备？偷偷摸摸打？」",
     "links": [85]
   },
@@ -710,7 +710,7 @@
     "actorID": "MC23",
     "text": "「太史公？爹爹書房裡是有……你講得頭頭是道，下來要是接不上，我可要笑你！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「太史公？爹爹书房里是有……你讲得头头是道，下来要是接不上，我可要笑你！」",
     "links": [396]
   },
@@ -727,7 +727,7 @@
     "actorID": "MC23",
     "text": "「哇——你也讀過太史公！爹爹總說列傳最重『其人其事』，與你說的正好接上！那等你下來，咱們一起補！」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);\nModifyData(FeatExp,Player,Knowledge,20);\nModifyData(FavorabilityExp,MC23,50);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "增加好感",
     "zh_CN": "「哇——你也读过太史公！爹爹总说列传最重『其人其事』，与你说的正好接上！那等你下来，咱们一起补！」",
     "links": [114]
@@ -1408,7 +1408,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好此起彼落！）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（台下叫好此起彼落！）＊",
     "links": [704]
   },
@@ -1417,7 +1417,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [704]
   },
@@ -1539,7 +1539,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好此起彼落！）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（台下叫好此起彼落！）＊",
     "links": [709]
   },
@@ -1548,7 +1548,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [709]
   },
@@ -1750,7 +1750,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（全场轰然炸开，喝采如雷——声势压人。）＊",
     "links": [715]
   },
@@ -1759,7 +1759,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [715]
   },
@@ -1929,7 +1929,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（全場轟然炸開，喝采如雷——聲勢壓人。）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（全场轰然炸开，喝采如雷——声势压人。）＊",
     "links": [720]
   },
@@ -1938,7 +1938,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [720]
   },
@@ -2076,7 +2076,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好四起——這話直爽、不玩虛的，正合并州漢子的胃口；連對面那持斧大漢都咧嘴頷了頷首。）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（台下叫好四起——这话直爽、不玩虚的，正合并州汉子的胃口；连对面那持斧大汉都咧嘴颔了颔首。）＊",
     "links": [726]
   },
@@ -2085,7 +2085,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [726]
   },
@@ -2450,7 +2450,7 @@
     "actorID": "MC1",
     "text": "「是、是。」",
     "Sequence": "SetPortrait(MC1,pic=19);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「是、是。」",
     "links": [765]
   },
@@ -2910,7 +2910,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [443]
   },
   {
@@ -2918,7 +2918,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [416]
   },
   {
@@ -2949,7 +2949,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [464]
   },
   {
@@ -2957,7 +2957,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [416]
   },
   {
@@ -2996,7 +2996,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [495]
   },
   {
@@ -3004,7 +3004,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [416]
   },
   {
@@ -3035,7 +3035,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [522]
   },
   {
@@ -3043,7 +3043,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [416]
   },
   {
@@ -3082,7 +3082,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [546]
   },
   {
@@ -3090,7 +3090,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [416]
   },
   {
@@ -3121,7 +3121,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [574]
   },
   {
@@ -3129,7 +3129,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [416]
   },
@@ -3146,7 +3146,7 @@
     "actorID": "role73",
     "text": "「[var=PlayerLastName]兄弟，你的『百鳥朝鳳』已臻精通，形神俱足。」",
     "Sequence": "PlayOrStopParticle(Punch_Single_ScreenWhite,Stop);",
-    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\")  == true;",
+    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\") == true;",
     "zh_TW": "「[var=PlayerLastName]兄弟，你的『百鳥朝鳳』已臻精通，形神俱足。」",
     "zh_CN": "「[var=PlayerLastName]兄弟，你的『百鸟朝凤』已臻精通，形神俱足。」",
     "links": [4110]
@@ -3166,7 +3166,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（全場轟然炸開，喝采如雷——老對手再聚擂台，這份豪氣把氣氛推到頂，聲勢先壓人三分。）＊",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（全场轰然炸开，喝采如雷——老对手再聚擂台，这份豪气把气氛推到顶，声势先压人三分。）＊",
     "links": [731]
   },
@@ -3175,7 +3175,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [731]
   },
@@ -3184,7 +3184,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [743]
   },
@@ -3208,7 +3208,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [599]
   },
   {
@@ -3216,7 +3216,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [416]
   },
@@ -3225,7 +3225,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下靜了一瞬，繼而爆出敬重叫好——這話不煽不酸，正合并州邊境漢子們的胃口。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,50);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（台下静了一瞬，继而爆出敬重叫好——这话不煽不酸，正合并州边境汉子们的胃口。）＊",
     "links": [743]
   },
@@ -3312,7 +3312,7 @@
     "actorID": "MC1",
     "text": "「是是是。」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「是是是。」",
     "links": [616]
   },
@@ -3321,7 +3321,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（底下稀稀落落，夾了幾聲嗤笑。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（底下稀稀落落，夹了几声嗤笑。）＊",
     "links": [760]
   },
@@ -3345,7 +3345,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [626]
   },
   {
@@ -3353,7 +3353,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [767]
   },
@@ -3362,7 +3362,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（台下叫好聲浪滾滾，連赤龍幫眾都被這股豪氣感染，忍不住跟著喝采起來。）＊",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,100);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（台下叫好声浪滚滚，连赤龙帮众都被这股豪气感染，忍不住跟着喝采起来。）＊",
     "links": [760]
   },
@@ -3716,7 +3716,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（烈酒入喉，你面不改色，反而笑得愈發狂放。這份氣魄與酒量，讓在場眾人皆是眼前一亮。）＊",
     "Sequence": "ModifyData(FeatExp,Player,AlcoholTolerance,100);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（烈酒入喉，你面不改色，反而笑得愈发狂放。这份气魄与酒量，让在场众人皆是眼前一亮。）＊",
     "links": [813]
   },
@@ -3780,7 +3780,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（一罈走完，你眼神依舊清亮。反倒是旁邊——郭嘉的舌頭，已經開始打結了。）＊",
     "Sequence": "DisableCharacterExpression(1);ModifyData(FeatExp,Player,AlcoholTolerance,100);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（一坛走完，你眼神依旧清亮。反倒是旁边——郭嘉的舌头，已经开始打结了。）＊",
     "links": [821]
   },
@@ -3813,7 +3813,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這罈老酒後勁極猛，半罈下肚，天旋地轉——你和郭嘉幾乎同時軟倒在桌沿。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（这坛老酒后劲极猛，半坛下肚，天旋地转——你和郭嘉几乎同时软倒在桌沿。）＊",
     "links": [825]
   },
@@ -3854,7 +3854,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（烈酒入喉如刀割，你猛地嗆咳起來，咳得眼淚都快出來了，方才那豪氣干雲的架勢頓時破了功。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（烈酒入喉如刀割，你猛地呛咳起来，咳得眼泪都快出来了，方才那豪气干云的架势顿时破了功。）＊",
     "links": [830]
   },
@@ -4037,7 +4037,7 @@
     "actorID": "MC1",
     "text": "「啊，竟然沒帶錢出來！？」",
     "Sequence": "SetPortrait(MC1,pic=19);",
-    "Conditions": "IsCoinPass(100)  == false;",
+    "Conditions": "IsCoinPass(100) == false;",
     "zh_TW": "「啊，竟然沒帶錢出來！？」",
     "zh_CN": "「啊，竟然没带钱出来！？」",
     "links": [4100]
@@ -4047,7 +4047,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "Sequence": "ModifyData(Coin,-100);",
-    "Conditions": "IsCoinPass(100)  == true;",
+    "Conditions": "IsCoinPass(100) == true;",
     "zh_TW": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "zh_CN": "[panel=6]＊（你掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
     "links": [4098]
@@ -4160,7 +4160,7 @@
     "actorID": "role73",
     "text": "「今日我便將此槍最後一式——一槍出，百鳥齊發，橫掃當場的訣竅傳於你。」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\")  == true;",
+    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\") == true;",
     "zh_TW": "「今日我便將此槍最後一式——一槍出，百鳥齊發，橫掃當場的訣竅傳於你。」",
     "zh_CN": "「今日我便将此枪最后一式——一枪出，百鸟齐发，横扫当场的诀窍传于你。」",
     "links": [4111]
@@ -4170,7 +4170,7 @@
     "actorID": "role73",
     "text": "「日後須勤修不輟，莫辜負了這套絕學！」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\")  == true;",
+    "Conditions": "IsSkillObtained(\"Player\", \"RightTimeLv2_Combat\") == true;",
     "zh_TW": "「日後須勤修不輟，莫辜負了這套絕學！」",
     "zh_CN": "「日后须勤修不辍，莫辜负了这套绝学！」",
     "links": [738]

@@ -968,7 +968,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「關於這龜涎石的功效…」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"MC1\", \"MedicalExpertise\", 1)  == true;",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"MedicalExpertise\", 1) == true;",
     "zh_TW": "[em2][隱藏選項][/em2]「關於這龜涎石的功效…」",
     "zh_CN": "[em2][隐藏选项][/em2]「关于这龟涎石的功效…」",
     "links": [225]
@@ -1005,7 +1005,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「關於這謝儀的部分…」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1)  == true;",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1) == true;",
     "zh_TW": "[em2][隱藏選項][/em2]「關於這謝儀的部分…」",
     "zh_CN": "[em2][隐藏选项][/em2]「关于这谢仪的部分…」",
     "links": [228]
@@ -1165,7 +1165,7 @@
     "actorID": "role2",
     "text": "[panel=6][em3][背景：世家子弟][/em3]（你一眼認出此乃上品。雖陰氣沉重，但其隱有靈氣，倒也確實是難得之物。）",
     "Sequence": "ModifyData(Valuable,Player,GuixianStone,1);",
-    "Conditions": "IsBackGroundFit(\"Player\", \"Noble\")  == true;",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Noble\") == true;",
     "Script": "SetQuestState(\"C0F2\", \"success\");\nSetQuestEntryState(\"C0F1\", 1, \"success\");\nSetQuestEntryState(\"C0F1\", 2, \"active\");",
     "Description": "任務成功",
     "zh_TW": "[panel=6][em3][背景：世家子弟][/em3]（你一眼認出此乃上品。雖陰氣沉重，但其隱有靈氣，倒也確實是難得之物。）",

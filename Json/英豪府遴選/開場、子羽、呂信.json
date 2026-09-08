@@ -354,7 +354,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（就見那人收掌，雙眼閉上，\n面紅耳赤，宛若仙家，顯然是說到心坎裡了。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（就見那人收掌，雙眼閉上，\n面紅耳赤，宛若仙家，顯然是說到心坎裡了。）＊",
     "zh_CN": "[panel=6]＊（就见那人收掌，双眼闭上，\n面红耳赤，宛若仙家，显然是说到心坎里了。）＊",
     "links": [499]
@@ -473,7 +473,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你闖入其中，\n霎時兩方比鬥，變成了三方混戰……）＊",
     "Sequence": "SetPortrait(MC1,pic=13);",
-    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80)  == true;",
+    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80) == true;",
     "zh_TW": "[panel=6]＊（你闖入其中，\n霎時兩方比鬥，變成了三方混戰……）＊",
     "zh_CN": "[panel=6]＊（你闯入其中，\n霎时两方比斗，变成了三方混战……）＊",
     "links": [3977]
@@ -611,7 +611,7 @@
     "actorID": "MC1",
     "text": "「這種找死的話，還是想想就好了。」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80)  == false;",
+    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80) == false;",
     "zh_TW": "「這種找死的話，還是想想就好了。」",
     "zh_CN": "「这种找死的话，还是想想就好了。」",
     "links": [476]
@@ -652,7 +652,7 @@
     "actorID": "role27",
     "text": "「…………」",
     "Sequence": "SetPortrait(MC3,pic=3);\nShowInstantMessage(Exp_FeatExp,Player,Persuasion,20);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "獲得專長經驗",
     "zh_TW": "「…………」",
     "zh_CN": "「…………」",
@@ -663,7 +663,7 @@
     "actorID": "role27",
     "text": "「無端逢迎，不是小人，就是奸逆。」",
     "Sequence": "SetPortrait(MC3,pic=2);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「無端逢迎，不是小人，就是奸逆。」",
     "zh_CN": "「无端逢迎，不是小人，就是奸逆。」",
     "links": [540]
@@ -726,7 +726,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [514]
   },
@@ -735,7 +735,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [512]
   },
@@ -914,7 +914,7 @@
     "actorID": "MC1",
     "text": "「呃……不以一什麼掩大德？你這話是什麼意思？是說我們品德不好嗎？」",
     "Sequence": "SetPortrait(MC1,pic=4);\nSetPortrait(MC3,pic=5);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「呃……不以一什麼掩大德？你這話是什麼意思？是說我們品德不好嗎？」",
     "zh_CN": "「呃……不以一什么掩大德？你这话是什么意思？是说我们品德不好吗？」",
     "links": [4048]
@@ -1033,7 +1033,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]：說到喝酒，本姑娘這裡正好有壇好東西！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "Conditions": "IsValuablesObtained(\"Player\", \"FireWine\")  == true;",
+    "Conditions": "IsValuablesObtained(\"Player\", \"FireWine\") == true;",
     "Description": "有火酒",
     "zh_TW": "[panel=2]「[em7]趕緊掏出一個酒囊，得意地晃了晃，道[/em7]：說到喝酒，本姑娘這裡正好有壇好東西！」",
     "zh_CN": "[panel=2]「[em7]赶紧掏出一个酒囊，得意地晃了晃，道[/em7]：说到喝酒，本姑娘这里正好有坛好东西！」",

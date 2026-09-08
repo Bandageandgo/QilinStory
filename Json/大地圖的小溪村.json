@@ -66,7 +66,7 @@
     "actorID": "role73",
     "text": "「錢不夠啊，小兄弟。等你湊夠了再來吧。闖蕩江湖，沒錢寸步難行，這也是修行的一環。」",
     "Sequence": "DisableCharacterExpression(1);",
-    "Conditions": "IsCoinPass(150)  == false;",
+    "Conditions": "IsCoinPass(150) == false;",
     "zh_TW": "「錢不夠啊，小兄弟。等你湊夠了再來吧。闖蕩江湖，沒錢寸步難行，這也是修行的一環。」",
     "zh_CN": "「钱不够啊，小兄弟。等你凑够了再来吧。闯荡江湖，没钱寸步难行，这也是修行的一环。」",
     "links": []
@@ -76,7 +76,7 @@
     "actorID": "MC8",
     "text": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
     "Sequence": "DisableCharacterExpression(1);\nModifyData(Coin,-150);\nSetPortrait(MC8,pic=3);",
-    "Conditions": "IsCoinPass(150)  == true;",
+    "Conditions": "IsCoinPass(150) == true;",
     "zh_TW": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
     "zh_CN": "「呜…一百五十钱…表哥，你可一定要学到东西啊！」",
     "links": [16]
@@ -96,7 +96,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（經過童淵餵招，你摸清了自己架勢上的破綻。武藝和武力提升了許多。）＊",
     "Sequence": "ModifyData(FeatExp,Player,MartialArts,50);\nModifyData(AbilityExp,Player,Strength,50);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Script": "Variable[\"Role73DialogCount\"] = 1;",
     "zh_TW": "[panel=6]＊（經過童淵餵招，你摸清了自己架勢上的破綻。武藝和武力提升了許多。）＊",
     "zh_CN": "[panel=6]＊（经过童渊喂招，你摸清了自己架势上的破绽。武艺和武力提升了许多。）＊",
@@ -107,7 +107,7 @@
     "actorID": "role73",
     "text": "「你的技巧已有雛形，但力量卻跟不上。槍是剛猛的兵器，沒有足夠的氣力，再精妙的招式也只是花架子。看來得從根本上錘鍊你。」",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "「你的技巧已有雛形，但力量卻跟不上。槍是剛猛的兵器，沒有足夠的氣力，再精妙的招式也只是花架子。看來得從根本上錘鍊你。」",
     "zh_CN": "「你的技巧已有雏形，但力量却跟不上。枪是刚猛的兵器，没有足够的气力，再精妙的招式也只是花架子。看来得从根本上锤炼你。」",
     "links": [25]
@@ -466,7 +466,7 @@
     "actorID": "MC8",
     "text": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
     "Sequence": "DisableCharacterExpression(1);\nModifyData(Coin,-150);\nSetPortrait(MC8,pic=3);",
-    "Conditions": "IsCoinPass(150)  == true;",
+    "Conditions": "IsCoinPass(150) == true;",
     "zh_TW": "「嗚…一百五十錢…表哥，你可一定要學到東西啊！」",
     "zh_CN": "「呜…一百五十钱…表哥，你可一定要学到东西啊！」",
     "links": [285]
@@ -540,7 +540,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "勝利",
     "links": [300, 301, 302]
   },
@@ -549,7 +549,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "失敗",
     "links": [303, 305, 306]
   },
@@ -731,7 +731,7 @@
     "actorID": "role120",
     "text": "[panel=1]「英雄饒命！我們兄弟倆徹底服了！我們再也不敢找您麻煩了！」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role120,pic=1);\nModifyData(Coin,150);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "獎勵",
     "zh_TW": "[panel=1]「英雄饒命！我們兄弟倆徹底服了！我們再也不敢找您麻煩了！」",
     "zh_CN": "[panel=1]「英雄饶命！我们兄弟俩彻底服了！我们再也不敢找您麻烦了！」",
@@ -760,7 +760,7 @@
     "actorID": "role121",
     "text": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role121,pic=3);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
     "zh_CN": "[panel=1]「大哥，我们走。看来这小子也不过如此。」",
     "links": [327]
@@ -852,7 +852,7 @@
     "actorID": "role122",
     "text": "「可惡…我竟然會輸給你這種…」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role122,pic=3);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "「可惡…我竟然會輸給你這種…」",
     "zh_CN": "「可恶…我竟然会输给你这种…」",
     "links": [337]
@@ -927,7 +927,7 @@
     "actorID": "role122",
     "text": "「我還以為有多大本事，原來是個銀樣鑞槍頭！光有蠻力是沒用的。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(role122,pic=4);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "「我還以為有多大本事，原來是個銀樣鑞槍頭！光有蠻力是沒用的。」",
     "zh_CN": "「我还以为有多大本事，原来是个银样镴枪头！光有蛮力是没用的。」",
     "links": [346]
@@ -1011,7 +1011,7 @@
     "actorID": "role120",
     "text": "「嗚…好漢饒命！是小的有眼不識泰山！這些亮晶晶的寶貝都孝敬給您，只求好漢饒我一命！」",
     "Sequence": "SetPortrait(role120,pic=1);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "「嗚…好漢饒命！是小的有眼不識泰山！這些亮晶晶的寶貝都孝敬給您，只求好漢饒我一命！」",
     "zh_CN": "「呜…好汉饶命！是小的有眼不识泰山！这些亮晶晶的宝贝都孝敬给您，只求好汉饶我一命！」",
     "links": [358]
@@ -1068,7 +1068,7 @@
     "actorID": "role120",
     "text": "「哼，就這點三腳貓功夫，也敢學人來這條河釣魚？真是笑掉本大爺的大牙！」",
     "Sequence": "SetPortrait(role120,pic=1);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "「哼，就這點三腳貓功夫，也敢學人來這條河釣魚？真是笑掉本大爺的大牙！」",
     "zh_CN": "「哼，就这点三脚猫功夫，也敢学人来这条河钓鱼？真是笑掉本大爷的大牙！」",
     "links": [364]

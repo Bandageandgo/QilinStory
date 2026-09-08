@@ -221,7 +221,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（本已元氣大傷的黑血屍漸漸不支，在你與雍仔的聯手攻擊下，終於發出一聲不甘的哀嚎，最終化為一灘黑水，只留下一枚閃爍着奇異光芒的黑色珠子。）＊",
     "Sequence": "ModifyData(Valuable,Player,BlackSkull,1);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "獲得無名人頭骨",
     "zh_TW": "[panel=6]＊（本已元氣大傷的黑血屍漸漸不支，在你與雍仔的聯手攻擊下，終於發出一聲不甘的哀嚎，最終化為一灘黑水，只留下一枚閃爍着奇異光芒的黑色珠子。）＊",
     "zh_CN": "[panel=6]＊（本已元气大伤的黑血尸渐渐不支，在你与雍仔的联手攻击下，终于发出一声不甘的哀嚎，最终化为一滩黑水，只留下一枚闪烁着奇异光芒的黑色珠子。）＊",
@@ -376,7 +376,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [269]
   },
   {

@@ -288,7 +288,7 @@
     "actorID": "role106",
     "text": "「頓頓……有肉？真的？」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「顿顿……有肉？真的？」",
     "links": [56, 57, 58]
   },
@@ -297,7 +297,7 @@
     "actorID": "role106",
     "text": "「你……瘦。沒肉。騙子！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「你……瘦。没肉。骗子！」",
     "links": [54]
   },
@@ -331,7 +331,7 @@
     "actorID": "MC1",
     "text": "[em2][信義][/em2]「[給他三百錢]」",
     "Sequence": "",
-    "Conditions": "IsCoinPass(300)  == true;",
+    "Conditions": "IsCoinPass(300) == true;",
     "zh_CN": "[em2][信义][/em2]「[给他三百钱]」",
     "links": [55]
   },
@@ -363,7 +363,7 @@
     "actorID": "MC1",
     "text": "「這叫『放長線釣大魚』，懂嗎？現在少吃一口肉，將來還你一整頭豬！」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「这叫『放长线钓大鱼』，懂吗？现在少吃一口肉，将来还你一整头猪！」",
     "links": [62]
   },
@@ -380,7 +380,7 @@
     "actorID": "role106",
     "text": "「不！騙子！沒錢……不給！」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「不！骗子！没钱……不给！」",
     "links": [64]
   },
@@ -497,7 +497,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（「砰！」的一聲悶響，大樹劇烈搖晃，落葉紛飛。緊接著，「啪嗒」一聲，一個東西掉在了你面前。）＊",
     "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（「砰！」的一声闷响，大树剧烈摇晃，落叶纷飞。紧接着，「啪嗒」一声，一个东西掉在了你面前。）＊",
     "links": [79]
   },
@@ -515,7 +515,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（「砰！」你一掌打在樹幹上，大樹紋絲不動，反倒是你的手腕傳來一陣劇痛。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（「砰！」你一掌打在树干上，大树纹丝不动，反倒是你的手腕传来一阵剧痛。）＊",
     "links": [81]
   },
@@ -836,7 +836,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [2112]
   },
   {
@@ -844,7 +844,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [2075]
   },
   {
@@ -906,7 +906,7 @@
     "actorID": "MC1",
     "text": "「不過我需要個信物，比如你身上那個亮閃閃的鍋子？」",
     "Sequence": "ModifyData(Coin,-300);\nSetPortrait(MC1,pic=17);",
-    "Conditions": "IsCoinPass(300)  == true;",
+    "Conditions": "IsCoinPass(300) == true;",
     "Description": "減少300錢",
     "zh_CN": "「不过我需要个信物，比如你身上那个亮闪闪的锅子？」",
     "links": [2077]
@@ -916,7 +916,7 @@
     "actorID": "MC1",
     "text": "「啊，沒帶錢在身上。」",
     "Sequence": "SetPortrait(MC1,pic=7);",
-    "Conditions": "IsCoinPass(300)  ~= true;",
+    "Conditions": "IsCoinPass(300) ~= true;",
     "zh_CN": "「啊，没带钱在身上。」",
     "links": [2082]
   },
@@ -944,7 +944,7 @@
     "actorID": "MC1",
     "text": "「…說話好流利…」",
     "Sequence": "SetPortrait(MC1,pic=4);",
-    "Conditions": "IsCoinPass(300)  ~= true;",
+    "Conditions": "IsCoinPass(300) ~= true;",
     "zh_CN": "「…说话好流利…」",
     "links": []
   },
@@ -1119,7 +1119,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「專注於圖形。」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true;",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1) ~= true;",
     "zh_CN": "[em2][隐藏选项][/em2]「专注于图形。」",
     "links": [98]
   },
@@ -1128,7 +1128,7 @@
     "actorID": "MC1",
     "text": "「試著破解其中奧妙。」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  == true;",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1) == true;",
     "zh_CN": "「试着破解其中奥妙。」",
     "links": [101]
   },
@@ -1137,7 +1137,7 @@
     "actorID": "MC1",
     "text": "離開",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"MC1\", \"Knowledge\", 1)  == true;",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"Knowledge\", 1) == true;",
     "zh_CN": "离开",
     "links": []
   },
@@ -1229,7 +1229,7 @@
     "actorID": "MC1",
     "text": "離開",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1)  ~= true;",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"Knowledge\", 1) ~= true;",
     "zh_CN": "离开",
     "links": []
   },

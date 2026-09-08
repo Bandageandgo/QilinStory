@@ -140,7 +140,7 @@
     "actorID": "MC22",
     "text": "「沒錯沒錯，搞不好這裡有寶物呢！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "「沒錯沒錯，搞不好這裡有寶物呢！」",
     "zh_CN": "「没错没错，搞不好这里有宝物呢！」",
     "links": []
@@ -256,7 +256,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayOrStopParticle(Sword_Single_ScreenRed,Play);\nAudioControl(PlaySFXOneShot,Others_Sword_Single_ScreenRed);\nSetContinueMode(original)@2;\nModifyData(FeatExp,Player,Insight,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "links": [3538]
   },
   {
@@ -291,7 +291,7 @@
     "actorID": "role107",
     "text": "「嘎呼！！」",
     "Sequence": "ControlStage(TriggerEvent,1,狗頭人出現);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「嘎呼！！」",
     "zh_CN": "「嘎呼！！」",
     "links": [3546]
@@ -398,7 +398,7 @@
     "actorID": "role123",
     "text": "「嘎、嘎嗚嗚……小的！跑！小子，厲害！」",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "「嘎、嘎嗚嗚……小的！跑！小子，厲害！」",
     "zh_CN": "「嘎、嘎呜呜……小的！跑！小子，厉害！」",
     "links": [3558]
@@ -612,7 +612,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「不過，你這麼能睡，果然是個狠角色！」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=1]「不過，你這麼能睡，果然是個狠角色！」",
     "zh_CN": "[panel=1]「不过，你这么能睡，果然是个狠角色！」",
     "links": [3639]
@@ -622,7 +622,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "Sequence": "SetPortrait(MC22,pic=9);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "zh_CN": "[panel=1]「妈呀，怎这里也有狗头人！？」",
     "links": [3550]
@@ -632,7 +632,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "Sequence": "SetPortrait(MC22,pic=9);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=1]「媽呀，怎這裡也有狗頭人！？」",
     "zh_CN": "[panel=1]「妈呀，怎这里也有狗头人！？」",
     "links": [3550]
@@ -651,7 +651,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「等等！」",
     "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Idea);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=1]「等等！」",
     "zh_CN": "[panel=1]「等等！」",
     "links": [3589]
@@ -713,7 +713,7 @@
     "actorID": "role123",
     "text": "「咳、咳、你且說看看，但話說在前頭，可別想唬騙我們！」",
     "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10)",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「咳、咳、你且說看看，但話說在前頭，可別想唬騙我們！」",
     "zh_CN": "「咳、咳、你且说看看，但话说在前头，可别想唬骗我们！」",
     "links": [3593]
@@ -741,7 +741,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「我有一個你們無法拒絕的提議。」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1)  == true;",
+    "Conditions": "IsFeatLevelPass(\"MC1\", \"EconomicDevelopment\", 1) == true;",
     "zh_TW": "[em2][隱藏選項][/em2]「我有一個你們無法拒絕的提議。」",
     "zh_CN": "[em2][隐藏选项][/em2]「我有一个你们无法拒绝的提议。」",
     "links": [3598]
@@ -796,7 +796,7 @@
     "actorID": "role123",
     "text": "「胡說八道！一聽就是鬼扯！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「胡说八道！一听就是鬼扯！」",
     "links": [3604]
@@ -897,7 +897,7 @@
     "actorID": "MC1",
     "text": "「君子一言既出駟馬難追！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Conditions": "IsCoinPass(500)  == true;",
+    "Conditions": "IsCoinPass(500) == true;",
     "zh_TW": "「君子一言既出駟馬難追！」",
     "zh_CN": "「君子一言既出驷马难追！」",
     "links": [3625]
@@ -907,7 +907,7 @@
     "actorID": "MC1",
     "text": "「君子一言，快、快馬難追！」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "Conditions": "IsCoinPass(500)  == false;",
+    "Conditions": "IsCoinPass(500) == false;",
     "zh_TW": "「君子一言，快、快馬難追！」",
     "zh_CN": "「君子一言，快、快马难追！」",
     "links": [3627]
@@ -1009,7 +1009,7 @@
     "actorID": "MC1",
     "text": "「疑！？...身上的錢好像不夠...」",
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Nervous_2);",
-    "Conditions": "IsCoinPass(500)  == false;",
+    "Conditions": "IsCoinPass(500) == false;",
     "zh_TW": "「疑！？...身上的錢好像不夠...」",
     "zh_CN": "「疑！？...身上的钱好像不够...」",
     "links": [3628]
@@ -1019,7 +1019,7 @@
     "actorID": "role123",
     "text": "「這小子滿嘴胡說八道！一聽就是鬼扯！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「這小子滿嘴胡說八道！一聽就是鬼扯！」",
     "zh_CN": "「这小子满嘴胡说八道！一听就是鬼扯！」",
     "links": [3629]
@@ -1081,7 +1081,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "ShowEnding(Ending_1);\nControlStage(SetCamera,PublicAct,null);\nContinue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "BD",
     "links": []
   },

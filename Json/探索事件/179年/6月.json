@@ -403,7 +403,7 @@
     "actorID": "role118",
     "text": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
     "Sequence": "ModifyData(FeatExp,Player,Flirting,100);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=2]「（聞言，她渾身一震，霎時間淚如泉湧。她沒有再說什麼，只是緊緊地、緊緊地握住了你的手。）」",
     "zh_CN": "[panel=2]「（闻言，她浑身一震，霎时间泪如泉涌。她没有再说什么，只是紧紧地、紧紧地握住了你的手。）」",
     "links": [180]
@@ -467,7 +467,7 @@
     "actorID": "role118",
     "text": "「你是個好人，但不行……我們的差距不是有辦法可以解決的，你還年輕，走吧……」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「你是個好人，但不行……我們的差距不是有辦法可以解決的，你還年輕，走吧……」",
     "zh_CN": "「你是个好人，但不行……我们的差距不是有办法可以解决的，你还年轻，走吧……」",
     "links": [187]
@@ -649,7 +649,7 @@
     "actorID": "role 119",
     "text": "「唉，罷了罷了，男兒本就該志在四方，你走吧。」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「唉，罷了罷了，男兒本就該志在四方，你走吧。」",
     "zh_CN": "「唉，罢了罢了，男儿本就该志在四方，你走吧。」",
     "links": [2066]
@@ -659,7 +659,7 @@
     "actorID": "role 119",
     "text": "「哼，留不住你的心，我也要留住你的人！」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「哼，留不住你的心，我也要留住你的人！」",
     "zh_CN": "「哼，留不住你的心，我也要留住你的人！」",
     "links": [2065]

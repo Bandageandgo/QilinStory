@@ -38,7 +38,7 @@
     "actorID": "MC1",
     "text": "「話本裡的大俠，下山就是行俠仗義、揚名立萬。誰寫過……還得為住宿去煩惱？」",
     "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「话本里的大侠，下山就是行侠仗义、扬名立万。谁写过……还得为住宿去烦恼？」",
     "links": [10]
   },
@@ -47,7 +47,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [169]
@@ -772,7 +772,7 @@
     "actorID": "MC1",
     "text": "「靠水吃水，風浪裡討活，不求人憐。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「靠水吃水，风浪里讨活，不求人怜。」",
     "links": [35]
   },
@@ -829,7 +829,7 @@
     "actorID": "MC1",
     "text": "「赫連姑娘的主意，時靈時不靈。王霸之氣那套，狗頭人可不買帳。說她靠譜吧，人掛在籠子裡；說她胡扯吧，又總像知道點什麼。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「赫连姑娘的主意，时灵时不灵。王霸之气那套，狗头人可不买帐。说她靠谱吧，人挂在笼子里；说她胡扯吧，又总像知道点什么。」",
     "links": [80]
   },
@@ -1182,7 +1182,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "AudioControl(PlayMusic,BGM_7);\nContinue();",
-    "Conditions": "CurrentQuestEntryState(\"CF37\", 6) == \"unassigned\" and (IsSkillObtained(\"Player\", \"SanCaiUnity\")  == true);",
+    "Conditions": "CurrentQuestEntryState(\"CF37\", 6) == \"unassigned\" and (IsSkillObtained(\"Player\", \"SanCaiUnity\") == true);",
     "Description": "觀心觸發：完成英豪府遴選大樹守衛大澈大悟",
     "links": [383]
   },
@@ -1321,7 +1321,7 @@
     "actorID": "MC1",
     "text": "「告示上寫著[em2]鹽鐵之利，國之大柄[/em2]，私吞者斬。這些礦工挖了一輩子，到頭來連一塊礦渣都換不了一頓飽飯。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「告示上写着[em2]盐铁之利，国之大柄[/em2]，私吞者斩。这些矿工挖了一辈子，到头来连一块矿渣都换不了一顿饱饭。」",
     "links": [345]
   },
@@ -1330,7 +1330,7 @@
     "actorID": "MC1",
     "text": "「為了三絕合一[em2]逼死同門[/em2]……那無字碑下的二師哥，到死只盼著來生能做個普通兄弟。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「为了三绝合一[em2]逼死同门[/em2]……那无字碑下的二师哥，到死只盼着来生能做个普通兄弟。」",
     "links": [393]
   },
@@ -1339,7 +1339,7 @@
     "actorID": "MC1",
     "text": "「石刻說他們來自[em2]極西之地[/em2]，那便不是尋常中原人了——可極西之地是哪？我可從沒聽有人說過。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「石刻说他们来自[em2]极西之地[/em2]，那便不是寻常中原人了——可极西之地是哪？我可从没听有人说过。」",
     "links": [102]
   },
@@ -1358,7 +1358,7 @@
     "actorID": "MC1",
     "text": "「戰後倒在地上，滿腦子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，還是這天地萬物……竟都成了我想一口吞下的微塵。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「战后倒在地上，满脑子只剩[em2]吞噬[/em2]。那一瞬，不管是妖物、同伴，还是这天地万物……竟都成了我想一口吞下的微尘。」",
     "links": [370]
   },
@@ -1525,7 +1525,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [32]
@@ -1535,7 +1535,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [55]
@@ -1545,7 +1545,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [77]
@@ -1555,7 +1555,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [101]
@@ -1565,7 +1565,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [342]
@@ -1575,7 +1575,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [390]
@@ -1585,7 +1585,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（骰子在掌心跳了跳，像是有回音應了你的念頭。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);\nPlayOrStopParticle(Meditate_KirinDiceLight,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "骰子閃光特效",
     "zh_CN": "[panel=6]＊（骰子在掌心跳了跳，像是有回音应了你的念头。）＊",
     "links": [367]

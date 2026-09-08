@@ -147,7 +147,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4182, 4183]
   },
   {
@@ -155,7 +155,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4182, 4183]
   },
   {
@@ -171,7 +171,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsSkillObtained(\"Player\", \"ScorchingGoldPalm\")  == true;",
+    "Conditions": "IsSkillObtained(\"Player\", \"ScorchingGoldPalm\") == true;",
     "Description": "有灼金掌",
     "links": [31]
   },

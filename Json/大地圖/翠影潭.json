@@ -28,7 +28,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你湊近了些看清楚——鉤上果然一絲餌料都沒有，鉤尖甚至微微反著光，像是特意讓人看見的。方才那股感覺，不是你多心。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,50);\nEnableEventBG(OldManFishing);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "事件圖",
     "zh_CN": "[panel=6]＊（你凑近了些看清楚——钩上果然一丝饵料都没有，钩尖甚至微微反着光，像是特意让人看见的。方才那股感觉，不是你多心。）＊",
     "links": [6]
@@ -38,7 +38,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你想再看仔細些，卻始終瞧不出個所以然，那點說不上來的不對勁，也就這麼淡去了。）＊",
     "Sequence": "EnableEventBG(OldManFishing);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "Description": "事件圖",
     "zh_CN": "[panel=6]＊（你想再看仔细些，却始终瞧不出个所以然，那点说不上来的不对劲，也就这么淡去了。）＊",
     "links": [6]
@@ -293,7 +293,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你順著刻痕的角度望去，那方向如今什麼也沒有。這些年來泥沙不知搬移過多少回，那道痕當年所指的地方，恐怕早就不是眼前這片礫石灘了。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,50);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（你顺着刻痕的角度望去，那方向如今什么也没有。这些年来泥沙不知搬移过多少回，那道痕当年所指的地方，恐怕早就不是眼前这片砾石滩了。）＊",
     "links": [40]
   },
@@ -302,7 +302,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你順著刻痕望去，水面下影影綽綽，看不真切，只覺得那裡似乎……有東西在發光…？）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（你顺着刻痕望去，水面下影影绰绰，看不真切，只觉得那里似乎……有东西在发光…？）＊",
     "links": [40]
   },
@@ -417,7 +417,7 @@
     "actorID": "MC1",
     "text": "「一個身高九尺，虎背熊腰、膂力驚人，一口大刀掄起來罡風陣陣，弓馬更是了得，箭無虛發，江湖人都說他那身騎射，不輸當年的飛將軍李廣！」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「一个身高九尺，虎背熊腰、膂力惊人，一口大刀抡起来罡风阵阵，弓马更是了得，箭无虚发，江湖人都说他那身骑射，不输当年的飞将军李广！」",
     "links": [2067]
   },
@@ -481,7 +481,7 @@
     "actorID": "role139",
     "text": "「……嘴皮子倒是利索。行，這回就當沒聽見，你重新說一次。」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「……嘴皮子倒是利索。行，这回就当没听见，你重新说一次。」",
     "links": [43, 44, 45]
   },
@@ -490,7 +490,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（老者不再答話，重新拿起釣竿，將視線投回水面，任你說什麼，都像是說給石頭聽。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "Script": "SetQuestState(\"CF39\", \"failure\");",
     "Description": "任務失敗",
     "zh_CN": "[panel=6]＊（老者不再答话，重新拿起钓竿，将视线投回水面，任你说什么，都像是说给石头听。）＊",
@@ -704,7 +704,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（幾番交手，你這才真切感覺到，御劍在自己手上，終於不再只是幾個招式的堆疊。老者收勢而立，眼底閃過一絲極淡的訝異。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_CN": "[panel=6]＊（几番交手，你这才真切感觉到，御剑在自己手上，终于不再只是几个招式的堆叠。老者收势而立，眼底闪过一丝极淡的讶异。）＊",
     "links": [105]
   },
@@ -836,7 +836,7 @@
     "actorID": "role139",
     "text": "「還嫩了點，自己再去琢磨吧。」",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_CN": "「还嫩了点，自己再去琢磨吧。」",
     "links": []
   },
@@ -914,7 +914,7 @@
     "actorID": "MC1",
     "text": "「呂信、子羽兩位——一個力能扛鼎，一刀劈下去，連城牆都能生生劈出個窟窿；一個弓馬絕倫，箭一放出去，三里外照樣取人首級，眼睛都不必眨一下！」",
     "Sequence": "SetPortrait(MC1,pic=5);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「吕信、子羽两位——一个力能扛鼎，一刀劈下去，连城墙都能生生劈出个窟窿；一个弓马绝伦，箭一放出去，三里外照样取人首级，眼睛都不必眨一下！」",
     "links": [2061]
   },

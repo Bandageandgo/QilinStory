@@ -210,7 +210,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（三百錢的房租確實不是個小數目，這位[em2]茶博士[/em2]的表情看不出什麼端倪，這似乎就是此地的行情價了。）＊",
     "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（三百錢的房租確實不是個小數目，這位[em2]茶博士[/em2]的表情看不出什麼端倪，這似乎就是此地的行情價了。）＊",
     "zh_CN": "[panel=6]＊（三百钱的房租确实不是个小数目，这位[em2]茶博士[/em2]的表情看不出什么端倪，这似乎就是此地的行情价了。）＊",
     "links": [75, 76]
@@ -618,7 +618,7 @@
     "actorID": "role2",
     "text": "[panel=6][em3][背景：江湖遊俠][/em3]（這位茶博士那副理所當然的口吻，與江湖中那些專門設局宰客的黑店伎倆如出一轍。這聽起來像是在用價格試探外鄉人的反應。）",
     "Sequence": "",
-    "Conditions": "IsBackGroundFit(\"Player\", \"HumbleHero\")  == true;",
+    "Conditions": "IsBackGroundFit(\"Player\", \"HumbleHero\") == true;",
     "zh_TW": "[panel=6][em3][背景：江湖遊俠][/em3]（這位茶博士那副理所當然的口吻，與江湖中那些專門設局宰客的黑店伎倆如出一轍。這聽起來像是在用價格試探外鄉人的反應。）",
     "zh_CN": "[panel=6][em3][背景：江湖游侠][/em3]（这位茶博士那副理所当然的口吻，与江湖中那些专门设局宰客的黑店伎俩如出一辙。这听起来像是在用价格试探外乡人的反应。）",
     "links": [2055]

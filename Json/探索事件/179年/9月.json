@@ -78,7 +78,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你被猴群賞了傳聞中的奧義猴子百烈拳，立時倒地昏迷不醒……）＊",
     "Sequence": "SetPortrait(MC1,pic=16);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "[panel=6]＊（你被猴群賞了傳聞中的奧義猴子百烈拳，立時倒地昏迷不醒……）＊",
     "zh_CN": "[panel=6]＊（你被猴群赏了传闻中的奥义猴子百烈拳，立时倒地昏迷不醒……）＊",
     "links": [3898]
@@ -115,7 +115,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
     "zh_CN": "[panel=6]＊（猴群被你打得落荒而逃……）＊",
     "links": [2060]
@@ -228,7 +228,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "成功",
     "links": [3894]
   },
@@ -237,7 +237,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "Description": "失敗",
     "links": [2059]
   },

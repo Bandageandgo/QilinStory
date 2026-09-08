@@ -46,7 +46,7 @@
     "actorID": "MC1",
     "text": "[em7]［江湖遊俠］[/em7]「……得罪權貴，只得流亡他鄉。」",
     "Sequence": "",
-    "Conditions": "IsBackGroundFit(\"Player\", \"HumbleHero\")  == true;",
+    "Conditions": "IsBackGroundFit(\"Player\", \"HumbleHero\") == true;",
     "zh_TW": "[em7]［江湖遊俠］[/em7]「……得罪權貴，只得流亡他鄉。」",
     "zh_CN": "[em7]［江湖游侠］[/em7]「……得罪权贵，只得流亡他乡。」",
     "links": [3981]
@@ -56,7 +56,7 @@
     "actorID": "MC1",
     "text": "[em7]［街頭混混］[/em7]「鄉下那多無聊，換個地方玩玩！」",
     "Sequence": "",
-    "Conditions": "IsBackGroundFit(\"Player\", \"Charlatan\")  == true;",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Charlatan\") == true;",
     "zh_TW": "[em7]［街頭混混］[/em7]「鄉下那多無聊，換個地方玩玩！」",
     "zh_CN": "[em7]［街头混混］[/em7]「乡下那多无聊，换个地方玩玩！」",
     "links": [3982]
@@ -66,7 +66,7 @@
     "actorID": "MC1",
     "text": "[em7]［流民］[/em7]「故鄉流民太多了，得另闢他途啊！」",
     "Sequence": "",
-    "Conditions": "IsBackGroundFit(\"Player\", \"Beggar\")  == true;",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Beggar\") == true;",
     "zh_TW": "[em7]［流民］[/em7]「故鄉流民太多了，得另闢他途啊！」",
     "zh_CN": "[em7]［流民］[/em7]「故乡流民太多了，得另辟他途啊！」",
     "links": [3983]
@@ -103,7 +103,7 @@
     "actorID": "MC1",
     "text": "[em7]［世家子弟］[/em7]「晉陽更有機會一展長才。」",
     "Sequence": "",
-    "Conditions": "IsBackGroundFit(\"Player\", \"Noble\")  == true;",
+    "Conditions": "IsBackGroundFit(\"Player\", \"Noble\") == true;",
     "zh_TW": "[em7]［世家子弟］[/em7]「晉陽更有機會一展長才。」",
     "zh_CN": "[em7]［世家子弟］[/em7]「晋阳更有机会一展长才。」",
     "links": [3984]
@@ -113,7 +113,7 @@
     "actorID": "MC1",
     "text": "[em7]［遊牧民族］[/em7]「都是中原，何處不都一樣麼。」",
     "Sequence": "",
-    "Conditions": "IsCultureFit(\"Player \", \"Outlander\")  == true;",
+    "Conditions": "IsCultureFit(\"Player \", \"Outlander\") == true;",
     "zh_TW": "[em7]［遊牧民族］[/em7]「都是中原，何處不都一樣麼。」",
     "zh_CN": "[em7]［游牧民族］[/em7]「都是中原，何处不都一样么。」",
     "links": [3985]
@@ -325,7 +325,7 @@
     "actorID": "role97",
     "text": "「好箭法！這準頭，這力道，嘖嘖嘖！老弟，你這手藝不去當獵戶真是可惜了！連我都差點輸給你！」",
     "Sequence": "",
-    "Conditions": "IsPassMiniGameRating(\"A\")  == true;",
+    "Conditions": "IsPassMiniGameRating(\"A\") == true;",
     "Description": "小遊戲評價高於A",
     "zh_TW": "「好箭法！這準頭，這力道，嘖嘖嘖！老弟，你這手藝不去當獵戶真是可惜了！連我都差點輸給你！」",
     "zh_CN": "「好箭法！这准头，这力道，啧啧啧！老弟，你这手艺不去当猎户真是可惜了！连我都差点输给你！」",
@@ -391,7 +391,7 @@
     "actorID": "role97",
     "text": "「嗯，馬馬虎虎。雖然準頭差了點火候，但手挺穩，是個可造之材。」",
     "Sequence": "",
-    "Conditions": "IsPassMiniGameRating(\"A\")  == false;",
+    "Conditions": "IsPassMiniGameRating(\"A\") == false;",
     "Description": "小遊戲評價低於A",
     "zh_TW": "「嗯，馬馬虎虎。雖然準頭差了點火候，但手挺穩，是個可造之材。」",
     "zh_CN": "「嗯，马马虎虎。虽然准头差了点火候，但手挺稳，是个可造之材。」",
@@ -439,7 +439,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（霏雨綿綿，你發現這座石井早已乾涸，裡頭滿是汙泥、枯枝與動物屍骨……）＊",
     "Sequence": "",
-    "Conditions": "Variable[\"MyTime_Temple\"] < 3 and (IsValuablesObtained(\"Player\", \"Oddlist\")  == false);",
+    "Conditions": "Variable[\"MyTime_Temple\"] < 3 and (IsValuablesObtained(\"Player\", \"Oddlist\") == false);",
     "zh_TW": "[panel=6]＊（霏雨綿綿，你發現這座石井早已乾涸，裡頭滿是汙泥、枯枝與動物屍骨……）＊",
     "zh_CN": "[panel=6]＊（霏雨绵绵，你发现这座石井早已干涸，里头满是污泥、枯枝与动物尸骨……）＊",
     "links": [3280, 3281]
@@ -458,7 +458,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "成功發現",
     "links": [3278]
   },
@@ -467,7 +467,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "Description": "失敗發現",
     "links": [3260]
   },
@@ -529,7 +529,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你將枯枝當作魚叉，猶如獵魚般將其戳入皮革包袱之中，隨後將其抵在井牆邊，緩慢拉起包袱。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你將枯枝當作魚叉，猶如獵魚般將其戳入皮革包袱之中，隨後將其抵在井牆邊，緩慢拉起包袱。）＊",
     "zh_CN": "[panel=6]＊（你将枯枝当作鱼叉，犹如猎鱼般将其戳入皮革包袱之中，随后将其抵在井墙边，缓慢拉起包袱。）＊",
     "links": [3272]
@@ -539,7 +539,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你奮力一勾，怎料枯枝半途斷開，你因力道過猛向後一撞——）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你奮力一勾，怎料枯枝半途斷開，你因力道過猛向後一撞——）＊",
     "zh_CN": "[panel=6]＊（你奋力一勾，怎料枯枝半途断开，你因力道过猛向后一撞——）＊",
     "links": [3268]
@@ -566,7 +566,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你在附近找到近乎半毀的水桶，以打水的方式巧妙地將皮質包袱撈起。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你在附近找到近乎半毀的水桶，以打水的方式巧妙地將皮質包袱撈起。）＊",
     "zh_CN": "[panel=6]＊（你在附近找到近乎半毁的水桶，以打水的方式巧妙地将皮质包袱捞起。）＊",
     "links": [3272]
@@ -576,7 +576,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你本想用水桶輔助，將包袱打包上來，然而事與願違，你手一滑，楞楞看著包袱於再次掉落井中。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你本想用水桶輔助，將包袱打包上來，然而事與願違，你手一滑，楞楞看著包袱於再次掉落井中。）＊",
     "zh_CN": "[panel=6]＊（你本想用水桶辅助，将包袱打包上来，然而事与愿违，你手一滑，楞楞看着包袱于再次掉落井中。）＊",
     "links": []
@@ -653,7 +653,7 @@
     "actorID": "MC1",
     "text": "離開",
     "Sequence": "",
-    "Conditions": "Variable[\"MyTime_Temple\"] < 3 and (IsValuablesObtained(\"Player\", \"Oddlist\")  == false);",
+    "Conditions": "Variable[\"MyTime_Temple\"] < 3 and (IsValuablesObtained(\"Player\", \"Oddlist\") == false);",
     "zh_TW": "離開",
     "zh_CN": "离开",
     "links": []
@@ -711,7 +711,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「這位大哥，我看你印堂發黑，神色慌張，怕是遇上了什麼劫難了吧？」",
     "Sequence": "SetPortrait(MC22,pic=3);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「這位大哥，我看你印堂發黑，神色慌張，怕是遇上了什麼劫難了吧？」",
     "zh_CN": "[panel=2]「这位大哥，我看你印堂发黑，神色慌张，怕是遇上了什么劫难了吧？」",
     "links": [3579]
@@ -748,7 +748,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「唉，你也別猶豫了！本大仙剛才不是說你命犯小人嗎？」",
     "Sequence": "SetPortrait(MC22,pic=1);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「唉，你也別猶豫了！本大仙剛才不是說你命犯小人嗎？」",
     "zh_CN": "[panel=2]「唉，你也别犹豫了！本大仙刚才不是说你命犯小人吗？」",
     "links": [3998]
@@ -758,7 +758,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「嘖嘖嘖，我看你，印堂發黑，烏雲蓋頂，這可是大凶之兆啊！輕則送命，重則…，唉，可惜、可惜啊…」",
     "Sequence": "SetPortrait(MC22,pic=8);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「嘖嘖嘖，我看你，印堂發黑，烏雲蓋頂，這可是大凶之兆啊！輕則送命，重則…，唉，可惜、可惜啊…」",
     "zh_CN": "[panel=2]「啧啧啧，我看你，印堂发黑，乌云盖顶，这可是大凶之兆啊！轻则送命，重则…，唉，可惜、可惜啊…」",
     "links": [3580]
@@ -768,7 +768,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「咳咳，本大仙掐指一算，你這命裡正犯著小人，且這小人就在你身邊！若不早點說出來破財消災，怕是有血光之災哦！」",
     "Sequence": "SetPortrait(MC22,pic=2);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「咳咳，本大仙掐指一算，你這命裡正犯著小人，且這小人就在你身邊！若不早點說出來破財消災，怕是有血光之災哦！」",
     "zh_CN": "[panel=2]「咳咳，本大仙掐指一算，你这命里正犯著小人，且这小人就在你身边！若不早点说出来破财消灾，怕是有血光之灾哦！」",
     "links": [3585]
@@ -778,7 +778,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「哎呀！大男人做事怎麼這麼婆婆媽媽的！既然遇上了我赫連娜娜，也算是咱們有緣！」",
     "Sequence": "SetPortrait(MC22,pic=3);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「哎呀！大男人做事怎麼這麼婆婆媽媽的！既然遇上了我赫連娜娜，也算是咱們有緣！」",
     "zh_CN": "[panel=2]「哎呀！大男人做事怎么这么婆婆妈妈的！既然遇上了我赫连娜娜，也算是咱们有缘！」",
     "links": [3581]
@@ -806,7 +806,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「造反？這可是殺頭的大罪啊！那這可全都都對上了！」",
     "Sequence": "SetPortrait(MC22,pic=13);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「造反？這可是殺頭的大罪啊！那這可全都都對上了！」",
     "zh_CN": "[panel=2]「造反？这可是杀头的大罪啊！那这可全都都对上了！」",
     "links": [3588]
@@ -843,7 +843,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「這哪是招兵買馬？這分明是[em2]活人祭[/em2]啊！」",
     "Sequence": "SetPortrait(MC22,pic=13);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「這哪是招兵買馬？這分明是[em2]活人祭[/em2]啊！」",
     "zh_CN": "[panel=2]「这哪是招兵买马？这分明是[em2]活人祭[/em2]啊！」",
     "links": [4005]
@@ -880,7 +880,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「哼，這種小人，本大仙見得多了！放心吧，有這位貴人在，保你平平安安！」",
     "Sequence": "SetPortrait(MC22,pic=1);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「哼，這種小人，本大仙見得多了！放心吧，有這位貴人在，保你平平安安！」",
     "zh_CN": "[panel=2]「哼，这种小人，本大仙见得多了！放心吧，有这位贵人在，保你平平安安！」",
     "links": [3596]
@@ -1117,7 +1117,7 @@
     "actorID": "MC1",
     "text": "「這這分明是[em2]活人祭[/em2]啊！\n我在書上看過，有些邪道妖人修煉邪法，專門要吃那細皮嫩肉的生人……」",
     "Sequence": "SetPortrait(MC1,pic=19);\nModifyData(FeatExp,Player,Knowledge,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「這這分明是[em2]活人祭[/em2]啊！\n我在書上看過，有些邪道妖人修煉邪法，專門要吃那細皮嫩肉的生人……」",
     "zh_CN": "「这这分明是[em2]活人祭[/em2]啊！\n我在书上看过，有些邪道妖人修炼邪法，专门要吃那细皮嫩肉的生人……」",
     "links": [3615]
@@ -1127,7 +1127,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這幾個詞聽得你一頭霧水。實在參不透其中的玄機。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（這幾個詞聽得你一頭霧水。實在參不透其中的玄機。）＊",
     "zh_CN": "[panel=6]＊（这几个词听得你一头雾水。实在参不透其中的玄机。）＊",
     "links": [3616]
@@ -1477,7 +1477,7 @@
     "actorID": "MC1",
     "text": "「傑大哥，你可識得此物？」",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"Oddlist\")  == true;",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Oddlist\") == true;",
     "Description": "判斷有無名冊",
     "zh_TW": "「傑大哥，你可識得此物？」",
     "zh_CN": "「杰大哥，你可识得此物？」",
@@ -2004,7 +2004,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（雖覺得有些蹊蹺，卻又找不出破綻。或許這世上，真有這等天上掉餡餅的好事？）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（雖覺得有些蹊蹺，卻又找不出破綻。或許這世上，真有這等天上掉餡餅的好事？）＊",
     "zh_CN": "[panel=6]＊（虽觉得有些蹊跷，却又找不出破绽。或许这世上，真有这等天上掉馅饼的好事？）＊",
     "links": [3792]
@@ -2245,7 +2245,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [3830]
   },
@@ -2254,7 +2254,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [3865]
   },
@@ -2379,7 +2379,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [3881]
   },
@@ -2388,7 +2388,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [3845]
   },
@@ -2747,7 +2747,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（只見一名身穿黃色布衣的漢子大步走進破廟。他雖然戴著一隻凶狠的黑色眼罩，手持一把厚背大砍刀。）＊",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（只見一名身穿黃色布衣的漢子大步走進破廟。他雖然戴著一隻凶狠的黑色眼罩，手持一把厚背大砍刀。）＊",
     "zh_CN": "[panel=6]＊（只见一名身穿黄色布衣的汉子大步走进破庙。他虽然戴着一只凶狠的黑色眼罩，手持一把厚背大砍刀。）＊",
     "links": [3891]
@@ -3583,7 +3583,7 @@
     "actorID": "MC22",
     "text": "[panel=2]「我在我爹的筆記上看過，有些邪道妖人修煉邪法，專門要吃那細皮嫩肉的生人……嘖嘖嘖，看來你們這趟不是去享福，是去上供的！」",
     "Sequence": "",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=2]「我在我爹的筆記上看過，有些邪道妖人修煉邪法，專門要吃那細皮嫩肉的生人……嘖嘖嘖，看來你們這趟不是去享福，是去上供的！」",
     "zh_CN": "[panel=2]「我在我爹的笔记上看过，有些邪道妖人修炼邪法，专门要吃那细皮嫩肉的生人……啧啧啧，看来你们这趟不是去享福，是去上供的！」",
     "links": [3592]

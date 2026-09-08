@@ -110,7 +110,7 @@
     "actorID": "MC19",
     "text": "[panel=1]「……小滑頭。三七便三七。」",
     "Sequence": "DisableCharacterExpression(2);ModifyData(FeatExp,Player,EconomicDevelopment,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=1]「……小滑头。三七便三七。」",
     "links": [2176]
   },
@@ -119,7 +119,7 @@
     "actorID": "MC8",
     "text": "[panel=2]「那、那二八分也好……小犀一定幫您賣得妥妥的！」",
     "Sequence": "SetPortrait(MC8,pic=13);EnableCharacterExpression(2,MC8,Meditate);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=2]「那、那二八分也好……小犀一定帮您卖得妥妥的！」",
     "links": [2175]
   },

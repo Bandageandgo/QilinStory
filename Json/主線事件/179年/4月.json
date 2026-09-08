@@ -380,7 +380,7 @@
     "actorID": "role105",
     "text": "[panel=1]「……成，就讓妳試試。」",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=1]「……成，就让你试试。」",
     "links": [2082]
   },
@@ -389,7 +389,7 @@
     "actorID": "MC1",
     "text": "「茶博士，小犀她……呃……」",
     "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「茶博士，小犀她……呃……」",
     "links": [2077]
   },

@@ -229,7 +229,7 @@
     "actorID": "role13",
     "text": "「[em7]被你的氣勢嚇退半步[/em7]，呃…這…好漢息怒！咱們也是混口飯吃…不如這樣，兩位去賭坊見見幫主？」",
     "Sequence": "SetPortrait(MC1,pic=2);ModifyData(FeatExp,Player,Intimidation,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「[em7]被你的气势吓退半步[/em7]，呃…这…好汉息怒！咱们也是混口饭吃…不如这样，两位去赌坊见见帮主？」",
     "links": [3915]
   },
@@ -238,7 +238,7 @@
     "actorID": "role13",
     "text": "「[em7]不屑地冷笑[/em7]，喲？還想動手？兄弟們，上！教教這小子規矩！」",
     "Sequence": "SetPortrait(MC1,pic=2);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「[em7]不屑地冷笑[/em7]，哟？还想动手？兄弟们，上！教教这小子规矩！」",
     "links": [3663]
   },
@@ -294,7 +294,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [2064]
   },
@@ -362,7 +362,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [3678]
   },
@@ -605,7 +605,7 @@
     "actorID": "role13",
     "text": "「咱們幫主說了，只要能在賭桌上贏過他，這債一筆勾銷，還送寶貝！」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「咱们帮主说了，只要能在赌桌上赢过他，这债一笔勾销，还送宝贝！」",
     "links": [3673]
   },

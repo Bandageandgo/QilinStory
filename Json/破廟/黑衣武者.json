@@ -142,7 +142,7 @@
     "actorID": "MC1",
     "text": "[em2]［醫術］[/em2]「莫要放棄，我能救你！」",
     "Sequence": "",
-    "Conditions": "IsFeatLevelPass(\"Player\", \"MedicalExpertise\", 2)  == true;",
+    "Conditions": "IsFeatLevelPass(\"Player\", \"MedicalExpertise\", 2) == true;",
     "zh_TW": "[em2]［醫術］[/em2]「莫要放棄，我能救你！」",
     "zh_CN": "[em2]［医术］[/em2]「莫要放弃，我能救你！」",
     "links": [3323]
@@ -159,7 +159,7 @@
     "actorID": "role100",
     "text": "「你？小兄弟，莫要開玩笑了……」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「你？小兄弟，莫要開玩笑了……」",
     "zh_CN": "「你？小兄弟，莫要开玩笑了……」",
     "links": [3351]
@@ -520,7 +520,7 @@
     "actorID": "MC1",
     "text": "「我把你說的曼陀羅花帶來了。」",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"DaturaMetel\")  == true;",
+    "Conditions": "IsValuablesObtained(\"Player\", \"DaturaMetel\") == true;",
     "Description": "交出曼陀羅\n須檢測是否有蔓陀蘿",
     "zh_TW": "「我把你說的曼陀羅花帶來了。」",
     "zh_CN": "「我把你说的曼陀罗花带来了。」",
@@ -614,7 +614,7 @@
     "actorID": "role100",
     "text": "「想辦法？小兄弟，你能有甚麼辦法……？」",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「想辦法？小兄弟，你能有甚麼辦法……？」",
     "zh_CN": "「想办法？小兄弟，你能有什么办法……？」",
     "links": [3333]
@@ -710,7 +710,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（此人傷口由上至下，上窄下寬，又在靠近胸腹之處收刀，豁開一處大口。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Insight,10);SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（此人傷口由上至下，上窄下寬，又在靠近胸腹之處收刀，豁開一處大口。）＊",
     "zh_CN": "[panel=6]＊（此人伤口由上至下，上窄下宽，又在靠近胸腹之处收刀，豁开一处大口。）＊",
     "links": [3313]
@@ -796,7 +796,7 @@
     "actorID": "MC22",
     "text": "「……」",
     "Sequence": "SetPortrait(MC22,pic=13);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "「……」",
     "zh_CN": "「……」",
     "links": [3393]

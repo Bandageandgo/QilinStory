@@ -31,7 +31,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「哇！這就是雲中！真是有意思—！」",
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Surprise_2);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "[panel=1]「哇！這就是雲中！真是有意思—！」",
     "zh_CN": "[panel=1]「哇！这就是云中！真是有意思—！」",
     "links": [6]
@@ -108,7 +108,7 @@
     "actorID": "MC22",
     "text": "「雲中這地兒龍蛇混雜，我先去探探路搞不好能打聽到隱藏的寶藏消息哩！那大俠、小犀妹妹，咱們等會就直接客棧見啦！」",
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
-    "Conditions": "IsInTeam(\"MC22\")  == true;",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
     "zh_TW": "「雲中這地兒龍蛇混雜，我先去探探路搞不好能打聽到隱藏的寶藏消息哩！那大俠、小犀妹妹，咱們等會就直接客棧見啦！」",
     "zh_CN": "「云中这地儿龙蛇混杂，我先去探探路搞不好能打听到隐藏的宝藏消息哩！那大侠、小犀妹妹，咱们等会就直接客栈见啦！」",
     "links": [17]
@@ -259,7 +259,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你口若懸河，引經據典，將江湖見聞說得生動有趣，引來台下陣陣喝采。）＊",
     "Sequence": "",
-    "Conditions": "IsPassMiniGameRating(\"A\")  == true;",
+    "Conditions": "IsPassMiniGameRating(\"A\") == true;",
     "zh_CN": "[panel=6]＊（你口若悬河，引经据典，将江湖见闻说得生动有趣，引来台下阵阵喝采。）＊",
     "links": [36]
   },
@@ -276,7 +276,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你一上台，看見底下那些抱劍打量、神色各異的江湖人，頓時結巴起來，說得前言不搭後語，沒幾句眾人便各自散去，只剩尷尬的風聲。）＊",
     "Sequence": "",
-    "Conditions": "IsPassMiniGameRating(\"A\")  == false;",
+    "Conditions": "IsPassMiniGameRating(\"A\") == false;",
     "zh_CN": "[panel=6]＊（你一上台，看见底下那些抱剑打量、神色各异的江湖人，顿时结巴起来，说得前言不搭后语，没几句众人便各自散去，只剩尴尬的风声。）＊",
     "links": [38]
   },
@@ -796,7 +796,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [62, 61, 63, 65, 64, 66, 67]
   },
@@ -805,7 +805,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [71]
   },
@@ -937,7 +937,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你帶著歷經千辛萬苦尋得的寒鐵，再次來到了蒲元的隱密工坊。工坊內依舊爐火通紅，但這次卻不見蔡邕父女的身影，只有蒲元一人正光著膀子在打鐵。）＊",
     "Sequence": "",
-    "Conditions": "IsValuablesObtained(\"Player\", \"ColdIronOre\")  == true and (CurrentQuestState(\"CF17\") == \"active\");",
+    "Conditions": "IsValuablesObtained(\"Player\", \"ColdIronOre\") == true and (CurrentQuestState(\"CF17\") == \"active\");",
     "Description": "必須要有寒鐵",
     "zh_TW": "[panel=6]＊（你帶著歷經千辛萬苦尋得的寒鐵，再次來到了蒲元的隱密工坊。工坊內依舊爐火通紅，但這次卻不見蔡邕父女的身影，只有蒲元一人正光著膀子在打鐵。）＊",
     "zh_CN": "[panel=6]＊（你带着历经千辛万苦寻得的寒铁，再次来到了蒲元的隐密工坊。工坊内依旧炉火通红，但这次却不见蔡邕父女的身影，只有蒲元一人正光着膀子在打铁。）＊",
@@ -1223,7 +1223,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "Sequence": "ModifyData(Coin,-100);",
-    "Conditions": "IsCoinPass(100)  == true;",
+    "Conditions": "IsCoinPass(100) == true;",
     "zh_TW": "[panel=6]＊（你掏出銅板遞給阿婆，接過熱騰騰的栗子。阿婆收下錢，臉上的笑容沒有絲毫變化，彷彿剛才的交易從未發生過。）＊",
     "zh_CN": "[panel=6]＊（你掏出铜板递给阿婆，接过热腾腾的栗子。阿婆收下钱，脸上的笑容没有丝毫变化，仿佛刚才的交易从未发生过。）＊",
     "links": [53]

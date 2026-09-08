@@ -149,7 +149,7 @@
     "actorID": "MC1",
     "text": "[em2][隱藏選項][/em2]「施展剛學會的四神拳『收』式，轟開暗牆。」",
     "Sequence": "",
-    "Conditions": "IsSkillObtained(\"Player\", \"FourPunch\")  == true;",
+    "Conditions": "IsSkillObtained(\"Player\", \"FourPunch\") == true;",
     "zh_CN": "[em2][隐藏选项][/em2]「施展刚学会的四神拳『收』式，轰开暗墙。」",
     "links": [20]
   },
@@ -197,7 +197,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你運起全身功力，一掌轟出！只聽「轟隆」一聲，牆壁破開一個大洞。）＊",
     "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);\nPlayOrStopParticle(BrokenWall_Right,Play);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（你运起全身功力，一掌轰出！只听「轰隆」一声，墙壁破开一个大洞。）＊",
     "links": [2070]
   },
@@ -206,7 +206,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你一掌打在牆上，牆壁紋絲不動，你的手掌卻紅腫了一大片。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "[panel=6]＊（你一掌打在墙上，墙壁纹丝不动，你的手掌却红肿了一大片。）＊",
     "links": [29]
   },
@@ -407,7 +407,7 @@
     "actorID": "MC1",
     "text": "「呼……好險好險。雖這妖怪皮糙肉厚，但正好拿來試試我的拳頭！」",
     "Sequence": "SetPortrait(MC1,pic=3);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_CN": "「呼……好险好险。虽这妖怪皮糙肉厚，但正好拿来试试我的拳头！」",
     "links": [56]
   },
@@ -425,7 +425,7 @@
     "actorID": "MC1",
     "text": "「這魚……太兇了！風緊，扯呼！」",
     "Sequence": "SetPortrait(MC1,pic=16);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_CN": "「这鱼……太凶了！风紧，扯呼！」",
     "links": []
   },
@@ -479,7 +479,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [11]
   },
   {
@@ -487,7 +487,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [17]
   },
   {
@@ -546,7 +546,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [55]
   },
   {
@@ -554,7 +554,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [57]
   },
   {

@@ -906,7 +906,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [4164]
   },
@@ -915,7 +915,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [4159]
   },
@@ -1496,7 +1496,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Script": "Variable[\"＿＿3\"] = true;",
     "Description": "戰鬥成功。⚠ 待作者填：變數名 ＿＿3（二次拒絕打贏了）。醒來時 IsPassFight() 已失效，夢 B-1／B-2 一定要靠變數分流。",
     "links": [4295]
@@ -1531,7 +1531,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [4299]
   },
@@ -1940,7 +1940,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她看了你一眼。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "魅力檢定成功",
     "zh_CN": "[panel=6]＊（她看了你一眼。）＊",
     "links": [4347]
@@ -1967,7 +1967,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（她還是沒有答。目光仍落在你懷裡那處，一動不動。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "Description": "魅力檢定失敗",
     "zh_CN": "[panel=6]＊（她还是没有答。目光仍落在你怀里那处，一动不动。）＊",
     "links": [4350, 4351]

@@ -93,7 +93,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（兩名山賊稍稍退後，山賊頭目上前一步，準備單獨與你較量。）＊",
     "zh_CN": "[panel=6]＊（两名山贼稍稍退后，山贼头目上前一步，准备单独与你较量。）＊",
     "links": [245]
@@ -122,7 +122,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
     "Sequence": "ModifyData(AbilityExp,Player,Strength,50);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "[panel=6]＊（你一番拳腳，將這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
     "zh_CN": "[panel=6]＊（你一番拳脚，将这伙山贼打得落花流水，抱头鼠窜而去。）＊",
     "links": [212]
@@ -287,7 +287,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你被這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "這裡需要清除掉殘留的對話立繪",
     "zh_TW": "[panel=6]＊（你被這夥山賊打得落花流水，抱頭鼠竄而去。）＊",
     "zh_CN": "[panel=6]＊（你被这伙山贼打得落花流水，抱头鼠窜而去。）＊",
@@ -307,7 +307,7 @@
     "actorID": "role86",
     "text": "[panel=4]「他馬的，你算老幾啊！兄弟們！給我上！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=4]「他馬的，你算老幾啊！兄弟們！給我上！」",
     "zh_CN": "[panel=4]「他马的，你算老几啊！兄弟们！给我上！」",
     "links": [243]

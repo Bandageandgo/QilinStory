@@ -33,7 +33,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，只敢放狠話，灰溜溜逃走了……）＊",
     "Sequence": "ModifyData(FeatExp,Player,Intimidation,20);\nModifyData(LifeExp,50);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，只敢放狠話，灰溜溜逃走了……）＊",
     "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，只敢放狠话，灰溜溜逃走了……）＊",
     "links": []
@@ -43,7 +43,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你的態度著實很橫，\n於是對方便決定讓你橫著躺出去……）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你的態度著實很橫，\n於是對方便決定讓你橫著躺出去……）＊",
     "zh_CN": "[panel=6]＊（你的态度着实很横，\n于是对方便决定让你横着躺出去……）＊",
     "links": [2069]
@@ -53,7 +53,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（讚美之語，誰不愛聽呢。\n對方不只放行，還給禮物，英雄兩字真好用……）＊",
     "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);\nModifyData(Coin,50);\nModifyData(LifeExp,50);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（讚美之語，誰不愛聽呢。\n對方不只放行，還給禮物，英雄兩字真好用……）＊",
     "zh_CN": "[panel=6]＊（赞美之语，谁不爱听呢。\n对方不只放行，还给礼物，英雄两字真好用……）＊",
     "links": []
@@ -63,7 +63,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你是當對方英雄，可對方未必當你是英雄。\n結果就是一拳送你，免費變小丑……）＊",
     "Sequence": "",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你是當對方英雄，可對方未必當你是英雄。\n結果就是一拳送你，免費變小丑……）＊",
     "zh_CN": "[panel=6]＊（你是当对方英雄，可对方未必当你是英雄。\n结果就是一拳送你，免费变小丑……）＊",
     "links": [2069]
@@ -131,7 +131,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，灰溜溜逃走了……）＊",
     "links": []
@@ -141,7 +141,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "Sequence": "ModifyData(Coin,-500);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "zh_CN": "[panel=6]＊（在你身上的钱被掠夺了不少后，\n对方便放你离去……）＊",
     "links": []
@@ -159,7 +159,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "[panel=6]＊（都說惡煞，十個有九個孬。\n對方見勢不對，灰溜溜逃走了……）＊",
     "zh_CN": "[panel=6]＊（都说恶煞，十个有九个孬。\n对方见势不对，灰溜溜逃走了……）＊",
     "links": []
@@ -169,7 +169,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "Sequence": "ModifyData(Coin,-500);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "[panel=6]＊（在你身上的錢被掠奪了不少後，\n對方便放你離去……）＊",
     "zh_CN": "[panel=6]＊（在你身上的钱被掠夺了不少后，\n对方便放你离去……）＊",
     "links": []

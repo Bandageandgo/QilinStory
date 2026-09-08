@@ -189,7 +189,7 @@
     "actorID": "MC1",
     "text": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Surprise_2);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「道長…道長所言極是！富貴險中求！若真有此等機緣，豈能錯過！好！我答應你！今晚我們便去那林中一探究竟！」",
     "zh_CN": "「道长…道长所言极是！富贵险中求！若真有此等机缘，岂能错过！好！我答应你！今晚我们便去那林中一探究竟！」",
     "links": [24]
@@ -420,7 +420,7 @@
     "title": "給阿婆石頭",
     "text": "「阿婆，這塊石頭是路邊撿的，看起來油光水滑，還挺沉，您瞧瞧？」",
     "Sequence": "SetPortrait(MC1,pic=8);",
-    "Conditions": "IsValuablesObtained(\"Player\", \"\")  == true;",
+    "Conditions": "IsValuablesObtained(\"Player\", \"\") == true;",
     "zh_TW": "「阿婆，這塊石頭是路邊撿的，看起來油光水滑，還挺沉，您瞧瞧？」",
     "zh_CN": "「阿婆，这块石头是路边捡的，看起来油光水滑，还挺沉，您瞧瞧？」",
     "links": [50]
@@ -678,7 +678,7 @@
     "actorID": "MC20",
     "text": "「厲害！厲害！兄弟好身手！胖爺我服了！」",
     "Sequence": "DisableCharacterExpression(0);ModifyData(AbilityExp,Player,Strength,20);",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "「厲害！厲害！兄弟好身手！胖爺我服了！」",
     "zh_CN": "「厉害！厉害！兄弟好身手！胖爷我服了！」",
     "links": []
@@ -688,7 +688,7 @@
     "actorID": "MC20",
     "text": "「嘿嘿，承讓承讓！兄弟也不賴，差點火候！」",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "「嘿嘿，承讓承讓！兄弟也不賴，差點火候！」",
     "zh_CN": "「嘿嘿，承让承让！兄弟也不赖，差点火候！」",
     "links": []
@@ -713,7 +713,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [102]
   },
   {
@@ -721,7 +721,7 @@
     "actorID": "MC1",
     "text": "戰鬥失敗",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "zh_TW": "戰鬥失敗",
     "zh_CN": "战斗失败",
     "links": [103]
@@ -777,7 +777,7 @@
     "actorID": "MC1",
     "text": "「哈哈，道長說得頭頭是道！不過…真要有寶貝，你自個兒去取便是，何必找我這個萍水相逢的人？這話說出來，怕是連三歲孩童都不信吧！」",
     "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Proud);\nModifyData(AbilityExp,Player,Charisma,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「哈哈，道長說得頭頭是道！不過…真要有寶貝，你自個兒去取便是，何必找我這個萍水相逢的人？這話說出來，怕是連三歲孩童都不信吧！」",
     "zh_CN": "「哈哈，道长说得头头是道！不过…真要有宝贝，你自个儿去取便是，何必找我这个萍水相逢的人？这话说出来，怕是连三岁孩童都不信吧！」",
     "links": [189]

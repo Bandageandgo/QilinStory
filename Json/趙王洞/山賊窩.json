@@ -192,7 +192,7 @@
     "actorID": "role126",
     "text": "「太、太守的姪子？！您您您快離開吧……大爺饒命，我、我也要溜了！」",
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_CN": "「太、太守的侄子？！您您您快离开吧……大爷饶命，我、我也要溜了！」",
     "links": [43]
   },
@@ -243,7 +243,7 @@
     "actorID": "role126",
     "text": "「狗屁！太守的姪子怎麼會沒帶護衛在外頭閒逛？你小子當我傻啊？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous_2);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_CN": "「狗屁！太守的侄子怎么会没带护卫在外头闲逛？你小子当我傻啊？」",
     "links": [4124]
   },
@@ -636,7 +636,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [41]
   },
@@ -645,7 +645,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [42]
   },
@@ -735,7 +735,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [57]
   },
@@ -744,7 +744,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [4139]
   },
@@ -809,7 +809,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [4157]
   },
@@ -818,7 +818,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [4152]
   },

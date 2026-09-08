@@ -130,7 +130,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（褚人飛話剛說完，就直接搖起骰子來，骰盅落桌，發出沉悶的聲響。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（褚人飛話剛說完，就直接搖起骰子來，骰盅落桌，發出沉悶的聲響。）＊",
     "zh_CN": "[panel=6]＊（褚人飞话刚说完，就直接摇起骰子来，骰盅落桌，发出沉闷的声响。）＊",
     "links": [121]
@@ -265,7 +265,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [3984]
   },
@@ -274,7 +274,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [3981]
   },
@@ -378,7 +378,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（這九醞春對你來說太過刺激，你第一碗下肚便覺得酒氣直衝腦門，忍不住咳了幾聲。褚人飛見狀，目光中透著幾分輕蔑。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（這九醞春對你來說太過刺激，你第一碗下肚便覺得酒氣直衝腦門，忍不住咳了幾聲。褚人飛見狀，目光中透著幾分輕蔑。）＊",
     "zh_CN": "[panel=6]＊（这九酝春对你来说太过刺激，你第一碗下肚便觉得酒气直冲脑门，忍不住咳了几声。褚人飞见状，目光中透着几分轻蔑。）＊",
     "links": [3994]
@@ -448,7 +448,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "zh_CN": "[panel=6]＊（你连喝几碗，酒气直冲脑门，已经有些站不稳了。褚人飞则越喝越精神，仿佛这点酒对他来说只是白开水。）＊",
     "links": [4002]
@@ -510,7 +510,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你連喝幾碗，酒氣直衝腦門，已經有些站不穩了。褚人飛則越喝越精神，彷彿這點酒對他來說只是白開水。）＊",
     "zh_CN": "[panel=6]＊（你连喝几碗，酒气直冲脑门，已经有些站不稳了。褚人飞则越喝越精神，仿佛这点酒对他来说只是白开水。）＊",
     "links": [4009]
@@ -572,7 +572,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "zh_CN": "[panel=6]＊（你终于支撑不住，眼前一黑，醉倒在赌桌上。褚人飞见状，发出震耳欲聋的嘲笑声。）＊",
     "links": [4016]
@@ -652,7 +652,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "zh_CN": "[panel=6]＊（你终于支撑不住，眼前一黑，醉倒在赌桌上。褚人飞见状，发出震耳欲聋的嘲笑声。）＊",
     "links": [4025]
@@ -714,7 +714,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你終於支撐不住，眼前一黑，醉倒在賭桌上。褚人飛見狀，發出震耳欲聾的嘲笑聲。）＊",
     "zh_CN": "[panel=6]＊（你终于支撑不住，眼前一黑，醉倒在赌桌上。褚人飞见状，发出震耳欲聋的嘲笑声。）＊",
     "links": [4033]
@@ -768,7 +768,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你試圖干預賭局，但褚人飛畢竟是賭道老手，手法老辣。骰盅揭開——一二三，小！）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你試圖干預賭局，但褚人飛畢竟是賭道老手，手法老辣。骰盅揭開——一二三，小！）＊",
     "zh_CN": "[panel=6]＊（你试图干预赌局，但褚人飞毕竟是赌道老手，手法老辣。骰盅揭开——一二三，小！）＊",
     "links": [4043]
@@ -833,7 +833,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
     "links": [4052]
   },
@@ -842,7 +842,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [4050]
   },
@@ -1001,7 +1001,7 @@
     "actorID": "MC1",
     "text": "「[em7]突然靠近她，在她耳邊低語[/em7]，不過，比起雲中雙俠，我更喜歡……」",
     "Sequence": "SetPortrait(MC1,pic=17);\nSetPortrait(MC22,pic=9);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「[em7]突然靠近她，在她耳邊低語[/em7]，不過，比起雲中雙俠，我更喜歡……」",
     "zh_CN": "「[em7]突然靠近她，在她耳边低语[/em7]，不过，比起云中双侠，我更喜欢……」",
     "links": [4069]
@@ -1758,7 +1758,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4161]
   },
   {
@@ -1766,7 +1766,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4162]
   },
   {
@@ -1864,7 +1864,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4173]
   },
   {
@@ -1872,7 +1872,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4174]
   },
   {
@@ -1942,7 +1942,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4181]
   },
   {
@@ -1950,7 +1950,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4182]
   },
   {
@@ -2011,7 +2011,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4191]
   },
   {
@@ -2019,7 +2019,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4190]
   },
   {
@@ -2089,7 +2089,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4199]
   },
   {
@@ -2097,7 +2097,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4200]
   },
   {
@@ -2158,7 +2158,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [4208]
   },
   {
@@ -2166,7 +2166,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [4209]
   },
   {
@@ -2269,7 +2269,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（此局變幻莫測，你苦思冥想...）＊",
     "Sequence": "",
-    "Conditions": "IsPassMiniGameRating(\"A\")  == false;",
+    "Conditions": "IsPassMiniGameRating(\"A\") == false;",
     "Description": "小遊戲評價低於A",
     "zh_TW": "[panel=6]＊（此局變幻莫測，你苦思冥想...）＊",
     "zh_CN": "[panel=6]＊（此局变幻莫测，你苦思冥想...）＊",
@@ -2280,7 +2280,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（此局變幻莫測，你苦思冥想後你對此棋局的解法已瞭然於胸）＊",
     "Sequence": "",
-    "Conditions": "IsPassMiniGameRating(\"A\")  == true;",
+    "Conditions": "IsPassMiniGameRating(\"A\") == true;",
     "Description": "小遊戲評價高於A",
     "zh_TW": "[panel=6]＊（此局變幻莫測，你苦思冥想後你對此棋局的解法已瞭然於胸）＊",
     "zh_CN": "[panel=6]＊（此局变幻莫测，你苦思冥想后你对此棋局的解法已了然于胸）＊",

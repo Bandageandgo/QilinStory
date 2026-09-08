@@ -128,7 +128,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你步伐穩健，氣度沉凝，竟真有幾分宗師氣派。那幾個狗頭人被你這股氣勢所懾，面面相覷，不敢妄動。）＊",
     "Sequence": "ModifyData(AbilityExp,Player,Charisma,100);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你步伐穩健，氣度沉凝，竟真有幾分宗師氣派。那幾個狗頭人被你這股氣勢所懾，面面相覷，不敢妄動。）＊",
     "zh_CN": "[panel=6]＊（你步伐稳健，气度沉凝，竟真有几分宗师气派。那几个狗头人被你这股气势所慑，面面相觑，不敢妄动。）＊",
     "links": [16]
@@ -147,7 +147,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你正學著高人的姿態，不料腳下一滑，身形一個踉蹌，險些跌倒。方才那股氣勢，登時洩得乾乾淨淨。）＊",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你正學著高人的姿態，不料腳下一滑，身形一個踉蹌，險些跌倒。方才那股氣勢，登時洩得乾乾淨淨。）＊",
     "zh_CN": "[panel=6]＊（你正学着高人的姿态，不料脚下一滑，身形一个踉跄，险些跌倒。方才那股气势，登时泄得干干净净。）＊",
     "links": [18]
@@ -189,7 +189,7 @@
     "actorID": "MC1",
     "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "zh_CN": "「尔等土鸡瓦狗，哪个是能做主的？上前答话！」",
     "links": [23]
@@ -217,7 +217,7 @@
     "actorID": "MC1",
     "text": "「咳！爾等……土雞瓦狗……哪個……呃……」",
     "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "「咳！爾等……土雞瓦狗……哪個……呃……」",
     "zh_CN": "「咳！尔等……土鸡瓦狗……哪个……呃……」",
     "links": [26]
@@ -326,7 +326,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你話裡透出凜冽殺氣，劍刃寒光一閃。狗頭人對視一眼，怪叫著丟下傢伙，頭也不回竄進林子裡。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Intimidation,100);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你話裡透出凜冽殺氣，劍刃寒光一閃。狗頭人對視一眼，怪叫著丟下傢伙，頭也不回竄進林子裡。）＊",
     "zh_CN": "[panel=6]＊（你话里透出凛冽杀气，剑刃寒光一闪。狗头人对视一眼，怪叫着丢下家伙，头也不回窜进林子里。）＊",
     "links": [54]
@@ -336,7 +336,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你話說得狠，氣勢卻差著一截。狗頭人不退反進，尖叫著舉起了木棒石斧。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你話說得狠，氣勢卻差著一截。狗頭人不退反進，尖叫著舉起了木棒石斧。）＊",
     "zh_CN": "[panel=6]＊（你话说得狠，气势却差着一截。狗头人不退反进，尖叫着举起了木棒石斧。）＊",
     "links": [51]
@@ -362,7 +362,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（銅錢在日頭下閃著微光。這等愚頑之物，最禁不起亮晶晶的東西。牠們猶豫片刻，丟下傢伙，互相推搡著撲了上去。）＊",
     "Sequence": "ModifyData(FeatExp,Player,Persuasion,30);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（銅錢在日頭下閃著微光。這等愚頑之物，最禁不起亮晶晶的東西。牠們猶豫片刻，丟下傢伙，互相推搡著撲了上去。）＊",
     "zh_CN": "[panel=6]＊（铜钱在日头下闪着微光。这等愚顽之物，最禁不起亮晶晶的东西。它们犹豫片刻，丢下家伙，互相推搡着扑了上去。）＊",
     "links": [54]
@@ -372,7 +372,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（狗頭人看看你手裡那枚銅錢，又看看籠中的獵物、你身上的行囊，似是覺得這筆買賣不划算。錢也要、人也要──牠們咆哮著舉起了傢伙。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（狗頭人看看你手裡那枚銅錢，又看看籠中的獵物、你身上的行囊，似是覺得這筆買賣不划算。錢也要、人也要──牠們咆哮著舉起了傢伙。）＊",
     "zh_CN": "[panel=6]＊（狗头人看看你手里那枚铜钱，又看看笼中的猎物、你身上的行囊，似是觉得这笔买卖不划算。钱也要、人也要──它们咆哮着举起了家伙。）＊",
     "links": [51]
@@ -398,7 +398,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你聲音不大，卻不容置疑。狗頭人順著你的手指望向日頭，刺得牠們發出敬畏的尖叫。三個一齊丟下傢伙，匍匐在地，抖個不停。）＊",
     "Sequence": "ModifyData(AbilityExp,Player,Intelligence,100);\nDisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（你聲音不大，卻不容置疑。狗頭人順著你的手指望向日頭，刺得牠們發出敬畏的尖叫。三個一齊丟下傢伙，匍匐在地，抖個不停。）＊",
     "zh_CN": "[panel=6]＊（你声音不大，却不容置疑。狗头人顺着你的手指望向日头，刺得它们发出敬畏的尖叫。三个一齐丢下家伙，匍匐在地，抖个不停。）＊",
     "links": [54]
@@ -408,7 +408,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你聲音雖響，卻無懾人之威。狗頭人順著你的手指望向日頭，又回頭看你，像是明白過來自己教人耍了。牠們怒吼一聲，舉起了傢伙。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（你聲音雖響，卻無懾人之威。狗頭人順著你的手指望向日頭，又回頭看你，像是明白過來自己教人耍了。牠們怒吼一聲，舉起了傢伙。）＊",
     "zh_CN": "[panel=6]＊（你声音虽响，却无慑人之威。狗头人顺着你的手指望向日头，又回头看你，像是明白过来自己教人耍了。它们怒吼一声，举起了家伙。）＊",
     "links": [51]
@@ -563,7 +563,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "zh_CN": "[panel=6]＊（你三下五除二，便将这几个狗头人打得落花流水。）＊",
     "links": [54]
@@ -573,7 +573,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "ShowEnding(Ending_1);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "失敗結局",
     "links": []
   },
@@ -605,7 +605,7 @@
     "actorID": "MC1",
     "text": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "zh_TW": "「爾等土雞瓦狗，哪個是能做主的？上前答話！」",
     "zh_CN": "「尔等土鸡瓦狗，哪个是能做主的？上前答话！」",
     "links": [72]
@@ -640,7 +640,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "zh_TW": "[panel=6]＊（你三下五除二，便將這幾個狗頭人打得落花流水。）＊",
     "zh_CN": "[panel=6]＊（你三下五除二，便将这几个狗头人打得落花流水。）＊",
     "links": [54]
@@ -650,7 +650,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "ShowEnding(Ending_1);",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "Description": "失敗結局",
     "links": []
   },
@@ -1027,7 +1027,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Conditions": "IsPassDice()  == true;",
+    "Conditions": "IsPassDice() == true;",
     "Description": "轉場",
     "links": [752]
   },
@@ -1036,7 +1036,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Conditions": "IsPassDice()  == false;",
+    "Conditions": "IsPassDice() == false;",
     "Description": "轉場",
     "links": [753]
   },
@@ -1245,7 +1245,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == true;",
+    "Conditions": "IsPassFight() == true;",
     "links": [734]
   },
   {
@@ -1253,7 +1253,7 @@
     "actorID": "MC1",
     "text": "",
     "Sequence": "Continue();",
-    "Conditions": "IsPassFight()  == false;",
+    "Conditions": "IsPassFight() == false;",
     "links": [736]
   },
   {
