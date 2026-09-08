@@ -2,8 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "節日:端午",
     "text": "[panel=6]＊（惡月惡日，市集反倒最熱鬧。賣五彩絲的、賣蘭草的、蹲在地上用麻繩捆蟾蜍的，一條街都是。）＊",
-    "Sequence": "EnableDialogueBG(Yunzhong);",
+    "Sequence": "EnableDialogueBG(Yunzhong);\nAudioControl(PlayMusic,BGM_16);",
+    "zh_TW": "[panel=6]＊（惡月惡日，市集反倒最熱鬧。賣五彩絲的、賣蘭草的、蹲在地上用麻繩捆蟾蜍的，一條街都是。）＊",
     "zh_CN": "[panel=6]＊（恶月恶日，市集反倒最热闹。卖五彩丝的、卖兰草的、蹲在地上用麻绳捆蟾蜍的，一条街都是。）＊",
     "links": [2]
   },
@@ -12,6 +14,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你手裡捏著張寧開的單子。上頭七味藥，她說今日採的才算數，過了今日就不是這個藥性。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（你手裡捏著張寧開的單子。上頭七味藥，她說今日採的才算數，過了今日就不是這個藥性。）＊",
     "zh_CN": "[panel=6]＊（你手里捏着张宁开的单子。上头七味药，她说今日采的才算数，过了今日就不是这个药性。）＊",
     "links": [3]
   },
@@ -20,6 +23,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（有人從人堆裡鑽出來，懷裡抱著一大把蘭草，草葉高過了她的下巴。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（有人從人堆裡鑽出來，懷裡抱著一大把蘭草，草葉高過了她的下巴。）＊",
     "zh_CN": "[panel=6]＊（有人从人堆里钻出来，怀里抱着一大把兰草，草叶高过了她的下巴。）＊",
     "links": [4]
   },
@@ -28,6 +32,7 @@
     "actorID": "MC23",
     "text": "[panel=1]「是你！」",
     "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "[panel=1]「是你！」",
     "zh_CN": "[panel=1]「是你！」",
     "links": [5]
   },
@@ -36,6 +41,7 @@
     "actorID": "MC1",
     "text": "「……琰姑娘，怎麼是妳？」",
     "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「……琰姑娘，怎麼是妳？」",
     "zh_CN": "「……琰姑娘，怎么是你？」",
     "links": [6]
   },
@@ -44,6 +50,7 @@
     "actorID": "MC23",
     "text": "[panel=1]「我爹說今日的蘭最好，拉我進城買，買完還要我背書。」",
     "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "[panel=1]「我爹說今日的蘭最好，拉我進城買，買完還要我背書。」",
     "zh_CN": "[panel=1]「我爹说今日的兰最好，拉我进城买，买完还要我背书。」",
     "links": [7]
   },
@@ -52,6 +59,7 @@
     "actorID": "MC23",
     "text": "[panel=1]「你手上那張是藥單？我家今日也要抓幾味。」",
     "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_TW": "[panel=1]「你手上那張是藥單？我家今日也要抓幾味。」",
     "zh_CN": "[panel=1]「你手上那张是药单？我家今日也要抓几味。」",
     "links": [8]
   },
@@ -60,15 +68,17 @@
     "actorID": "role2",
     "text": "[panel=6]＊（人群讓開一條縫。蔡邕手裡沒拿東西，衣袖是乾淨的——這一條街上就他一個人沒有沾藥味。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（人群讓開一條縫。蔡邕手裡沒拿東西，衣袖是乾淨的——這一條街上就他一個人沒有沾藥味。）＊",
     "zh_CN": "[panel=6]＊（人群让开一条缝。蔡邕手里没拿东西，衣袖是干净的——这一条街上就他一个人没有沾药味。）＊",
     "links": [9]
   },
   {
     "entryID": 9,
     "actorID": "MC24",
-    "text": "[panel=2]「你是英豪府的。手上那張單子，是張家那丫頭寫的吧？」",
+    "text": "[panel=1]「你是英豪府的。手上那張單子，是張家那丫頭寫的吧？」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「你是英豪府的。手上那张单子，是张家那丫头写的吧？」",
+    "zh_TW": "[panel=1]「你是英豪府的。手上那張單子，是張家那丫頭寫的吧？」",
+    "zh_CN": "[panel=1]「你是英豪府的。手上那张单子，是张家那丫头写的吧？」",
     "links": [10]
   },
   {
@@ -76,31 +86,35 @@
     "actorID": "MC1",
     "text": "「先生認得她的字？」",
     "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「先生認得她的字？」",
     "zh_CN": "「先生认得她的字？」",
     "links": [11]
   },
   {
     "entryID": 11,
     "actorID": "MC24",
-    "text": "[panel=2]「寫這張單子的人，筆下急，收筆卻一筆不苟。這樣的字，這城裡不多。」",
+    "text": "[panel=1]「寫這張單子的人，筆下急，收筆卻一筆不苟。這樣的字，這城裡不多。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「写这张单子的人，笔下急，收笔却一笔不苟。这样的字，这城里不多。」",
+    "zh_TW": "[panel=1]「寫這張單子的人，筆下急，收筆卻一筆不苟。這樣的字，這城裡不多。」",
+    "zh_CN": "[panel=1]「写这张单子的人，笔下急，收笔却一笔不苟。这样的字，这城里不多。」",
     "links": [12]
   },
   {
     "entryID": 12,
     "actorID": "MC24",
-    "text": "[panel=2]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩絲繫臂，辟兵及鬼，令人不病溫。」",
+    "text": "[panel=1]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩絲繫臂，辟兵及鬼，令人不病溫。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩丝系臂，辟兵及鬼，令人不病温。」",
-    "links": [13, 14, 15]
+    "zh_TW": "[panel=1]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩絲繫臂，辟兵及鬼，令人不病溫。」",
+    "zh_CN": "[panel=1]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩丝系臂，辟兵及鬼，令人不病温。」",
+    "links": [13, 14]
   },
   {
     "entryID": 13,
     "actorID": "MC1",
     "text": "[em2][學識檢定][/em2]「這繫的不只是辟兵。」",
     "Sequence": "",
-    "Description": "選項1：學識檢定（接蔡邕的話往下講）",
+    "Description": "選項1：學識檢定",
+    "zh_TW": "[em2][學識檢定][/em2]「這繫的不只是辟兵。」",
     "zh_CN": "[em2][学识检定][/em2]「这系的不只是辟兵。」",
     "links": [16]
   },
@@ -110,24 +124,16 @@
     "text": "「圖個吉利，好看。」",
     "Sequence": "",
     "Description": "選項2：不接話（無檢定）",
+    "zh_TW": "「圖個吉利，好看。」",
     "zh_CN": "「图个吉利，好看。」",
     "links": [28]
-  },
-  {
-    "entryID": 15,
-    "actorID": "MC1",
-    "text": "「府裡發的，我就繫了。」",
-    "Sequence": "",
-    "Description": "選項3：不接話（無檢定）",
-    "zh_CN": "「府里发的，我就系了。」",
-    "links": [29]
   },
   {
     "entryID": 16,
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,8);",
-    "Description": "選項1的空對話擲骰節點：學識檢定（Manual／KnowledgeCheck／難度 8）",
+    "Description": "學識檢定（Manual／KnowledgeCheck／難度 8）",
     "links": [17]
   },
   {
@@ -135,7 +141,7 @@
     "actorID": "MC1",
     "text": "「這繫的不只是辟兵——先生，容我說兩句。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Description": "擲骰後的過渡發言格（選項1的完整發言），成功／失敗共用",
+    "zh_TW": "「這繫的不只是辟兵——先生，容我說兩句。」",
     "zh_CN": "「这系的不只是辟兵——先生，容我说两句。」",
     "links": [18, 23]
   },
@@ -145,6 +151,7 @@
     "text": "「《月令》說仲夏日長至，陰陽爭，死生分。」",
     "Sequence": "SetPortrait(MC1,pic=1);ModifyData(FeatExp,Player,Knowledge,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「《月令》說仲夏日長至，陰陽爭，死生分。」",
     "zh_CN": "「《月令》说仲夏日长至，阴阳争，死生分。」",
     "links": [19]
   },
@@ -153,6 +160,7 @@
     "actorID": "MC1",
     "text": "「陰陽相爭，人最容易出事。所以這個月要齊戒掩身，不宜躁動。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「陰陽相爭，人最容易出事。所以這個月要齊戒掩身，不宜躁動。」",
     "zh_CN": "「阴阳相争，人最容易出事。所以这个月要齐戒掩身，不宜躁动。」",
     "links": [20]
   },
@@ -161,6 +169,7 @@
     "actorID": "MC1",
     "text": "「難怪張姑娘說今日採的才算數，過了今日就不是這個藥性。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「難怪張姑娘說今日採的才算數，過了今日就不是這個藥性。」",
     "zh_CN": "「难怪张姑娘说今日采的才算数，过了今日就不是这个药性。」",
     "links": [21]
   },
@@ -169,15 +178,17 @@
     "actorID": "MC1",
     "text": "「繫絲、沐蘭、採藥，說穿了是同一樁——這一個月，人得把自己保住。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「繫絲、沐蘭、採藥，說穿了是同一樁——這一個月，人得把自己保住。」",
     "zh_CN": "「系丝、沐兰、采药，说穿了是同一桩——这一个月，人得把自己保住。」",
     "links": [22]
   },
   {
     "entryID": 22,
     "actorID": "MC24",
-    "text": "[panel=2]「……英豪府裡，也有讀過《禮》的。」",
-    "Sequence": "SetPortrait(MC24,pic=4);ModifyData(FavorabilityExp,MC24,20);ModifyData(FavorabilityExp,MC23,20);",
-    "zh_CN": "[panel=2]「……英豪府里，也有读过《礼》的。」",
+    "text": "[panel=1]「……英豪府裡，也有讀過《禮》的。」",
+    "Sequence": "SetPortrait(MC24,pic=4);\nModifyData(FavorabilityExp,MC24,20);\nModifyData(FavorabilityExp,MC23,20);",
+    "zh_TW": "[panel=1]「……英豪府裡，也有讀過《禮》的。」",
+    "zh_CN": "[panel=1]「……英豪府里，也有读过《礼》的。」",
     "links": [37]
   },
   {
@@ -186,41 +197,17 @@
     "text": "[panel=6]＊（那句話你確實在哪裡讀過。可是話已經出口，底下那半截就是不肯來。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（那句話你確實在哪裡讀過。可是話已經出口，底下那半截就是不肯來。）＊",
     "zh_CN": "[panel=6]＊（那句话你确实在哪里读过。可是话已经出口，底下那半截就是不肯来。）＊",
     "links": [24]
   },
   {
     "entryID": 24,
     "actorID": "MC24",
-    "text": "[panel=2]「說不上來就不必說。話沒想清楚，別急著出口。」",
+    "text": "[panel=1]「說不上來就不必說。話沒想清楚，別急著出口。」",
     "Sequence": "SetPortrait(MC24,pic=3);",
-    "zh_CN": "[panel=2]「说不上来就不必说。话没想清楚，别急着出口。」",
-    "links": [25]
-  },
-  {
-    "entryID": 25,
-    "actorID": "MC23",
-    "text": "[panel=1]「爹——人家才剛來，你就這樣。」",
-    "Sequence": "SetPortrait(MC23,pic=2);",
-    "zh_CN": "[panel=1]「爹——人家才刚来，你就这样。」",
-    "links": [26, 27]
-  },
-  {
-    "entryID": 26,
-    "actorID": "MC1",
-    "text": "「圖個吉利，好看。」",
-    "Sequence": "",
-    "Description": "檢定失敗後重選・選項1（此選單不再給檢定，免得重骰刷過）",
-    "zh_CN": "「图个吉利，好看。」",
-    "links": [28]
-  },
-  {
-    "entryID": 27,
-    "actorID": "MC1",
-    "text": "「府裡發的，我就繫了。」",
-    "Sequence": "",
-    "Description": "檢定失敗後重選・選項2（此選單不再給檢定）",
-    "zh_CN": "「府里发的，我就系了。」",
+    "zh_TW": "[panel=1]「說不上來就不必說。話沒想清楚，別急著出口。」",
+    "zh_CN": "[panel=1]「说不上来就不必说。话没想清楚，别急着出口。」",
     "links": [29]
   },
   {
@@ -228,7 +215,7 @@
     "actorID": "MC1",
     "text": "「圖個吉利罷，街上人人都繫，紅紅綠綠的也好看。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Description": "選項2的主角發言格（第一題選單與失敗後重選共用）",
+    "zh_TW": "「圖個吉利罷，街上人人都繫，紅紅綠綠的也好看。」",
     "zh_CN": "「图个吉利罢，街上人人都系，红红绿绿的也好看。」",
     "links": [30]
   },
@@ -237,16 +224,17 @@
     "actorID": "MC1",
     "text": "「府裡發下來我就繫上了，先生問起來，我還真沒想過為什麼。」",
     "Sequence": "SetPortrait(MC1,pic=9);",
-    "Description": "選項3的主角發言格（第一題選單與失敗後重選共用）",
+    "zh_TW": "「府裡發下來我就繫上了，先生問起來，我還真沒想過為什麼。」",
     "zh_CN": "「府里发下来我就系上了，先生问起来，我还真没想过为什么。」",
     "links": [30]
   },
   {
     "entryID": 30,
     "actorID": "MC24",
-    "text": "[panel=2]「腕上繫著辟兵的東西，卻不知道自己在辟什麼。」",
+    "text": "[panel=1]「腕上繫著辟兵的東西，卻不知道自己在辟什麼。」",
     "Sequence": "SetPortrait(MC24,pic=3);",
-    "zh_CN": "[panel=2]「腕上系着辟兵的东西，却不知道自己在辟什么。」",
+    "zh_TW": "[panel=1]「腕上繫著辟兵的東西，卻不知道自己在辟什麼。」",
+    "zh_CN": "[panel=1]「腕上系着辟兵的东西，却不知道自己在辟什么。」",
     "links": [31]
   },
   {
@@ -254,15 +242,17 @@
     "actorID": "MC23",
     "text": "[panel=1]「爹——人家才剛來，你就這樣。」",
     "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_TW": "[panel=1]「爹——人家才剛來，你就這樣。」",
     "zh_CN": "[panel=1]「爹——人家才刚来，你就这样。」",
     "links": [32]
   },
   {
     "entryID": 32,
     "actorID": "MC24",
-    "text": "[panel=2]「《月令》有言：仲夏日長至，陰陽爭，死生分。」",
+    "text": "[panel=1]「《月令》有言：仲夏日長至，陰陽爭，死生分。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「《月令》有言：仲夏日长至，阴阳争，死生分。」",
+    "zh_TW": "[panel=1]「《月令》有言：仲夏日長至，陰陽爭，死生分。」",
+    "zh_CN": "[panel=1]「《月令》有言：仲夏日长至，阴阳争，死生分。」",
     "links": [33]
   },
   {
@@ -270,39 +260,44 @@
     "actorID": "MC23",
     "text": "[panel=1]「……爹又要講《月令》了。」",
     "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "[panel=1]「……爹又要講《月令》了。」",
     "zh_CN": "[panel=1]「……爹又要讲《月令》了。」",
     "links": [34]
   },
   {
     "entryID": 34,
     "actorID": "MC24",
-    "text": "[panel=2]「陰陽相爭，人最容易出事。所以這個月要齊戒掩身，不宜躁動。」",
+    "text": "[panel=1]「陰陽相爭，人最容易出事。所以這個月要齊戒掩身，不宜躁動。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「阴阳相争，人最容易出事。所以这个月要齐戒掩身，不宜躁动。」",
+    "zh_TW": "[panel=1]「陰陽相爭，人最容易出事。所以這個月要齊戒掩身，不宜躁動。」",
+    "zh_CN": "[panel=1]「阴阳相争，人最容易出事。所以这个月要齐戒掩身，不宜躁动。」",
     "links": [35]
   },
   {
     "entryID": 35,
     "actorID": "MC24",
-    "text": "[panel=2]「你那張單子寫明今日採的才算數，寫的人是懂這個道理的。」",
+    "text": "[panel=1]「你那張單子寫明今日採的才算數，寫的人是懂這個道理的。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「你那张单子写明今日采的才算数，写的人是懂这个道理的。」",
+    "zh_TW": "[panel=1]「你那張單子寫明今日採的才算數，寫的人是懂這個道理的。」",
+    "zh_CN": "[panel=1]「你那张单子写明今日采的才算数，写的人是懂这个道理的。」",
     "links": [36]
   },
   {
     "entryID": 36,
     "actorID": "MC24",
-    "text": "[panel=2]「先王作時令，不是要人怕這個月，是要人在該小心的時候小心。」",
+    "text": "[panel=1]「先王作時令，不是要人怕這個月，是要人在該小心的時候小心。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「先王作时令，不是要人怕这个月，是要人在该小心的时候小心。」",
+    "zh_TW": "[panel=1]「先王作時令，不是要人怕這個月，是要人在該小心的時候小心。」",
+    "zh_CN": "[panel=1]「先王作时令，不是要人怕这个月，是要人在该小心的时候小心。」",
     "links": [37]
   },
   {
     "entryID": 37,
     "actorID": "MC24",
-    "text": "[panel=2]「五月五日還有一樁。戰國的田文生在這一日，他父親田嬰不肯養。」",
+    "text": "[panel=1]「五月五日還有一樁。戰國的田文生在這一日，他父親田嬰不肯養。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「五月五日还有一桩。战国的田文生在这一日，他父亲田婴不肯养。」",
+    "zh_TW": "[panel=1]「五月五日還有一樁。戰國的田文生在這一日，他父親田嬰不肯養。」",
+    "zh_CN": "[panel=1]「五月五日还有一桩。战国的田文生在这一日，他父亲田婴不肯养。」",
     "links": [38]
   },
   {
@@ -310,15 +305,17 @@
     "actorID": "MC23",
     "text": "[panel=1]「[em7]低頭看著蘭草，像在自言自語[/em7]，……五月子者，長與戶齊，將不利其父母……」",
     "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "[panel=1]「[em7]低頭看著蘭草，像在自言自語[/em7]，……五月子者，長與戶齊，將不利其父母……」",
     "zh_CN": "[panel=1]「[em7]低头看着兰草，像在自言自语[/em7]，……五月子者，长与户齐，将不利其父母……」",
     "links": [39]
   },
   {
     "entryID": 39,
     "actorID": "MC24",
-    "text": "[panel=2]「琰兒，妳在背什麼？」",
+    "text": "[panel=1]「琰兒，妳在背什麼？」",
     "Sequence": "SetPortrait(MC24,pic=2);",
-    "zh_CN": "[panel=2]「琰儿，你在背什么？」",
+    "zh_TW": "[panel=1]「琰兒，妳在背什麼？」",
+    "zh_CN": "[panel=1]「琰儿，你在背什么？」",
     "links": [40]
   },
   {
@@ -326,6 +323,7 @@
     "actorID": "MC23",
     "text": "[panel=1]「[em7]把蘭草抱高一點擋住臉[/em7]，我背我自己的書。」",
     "Sequence": "SetPortrait(MC23,pic=1);",
+    "zh_TW": "[panel=1]「[em7]把蘭草抱高一點擋住臉[/em7]，我背我自己的書。」",
     "zh_CN": "[panel=1]「[em7]把兰草抱高一点挡住脸[/em7]，我背我自己的书。」",
     "links": [41, 42, 43]
   },
@@ -334,7 +332,8 @@
     "actorID": "MC1",
     "text": "「五月生的孩子，長到與門一般高，就要妨父母。」",
     "Sequence": "",
-    "Description": "第二題選項1：接蔡琰餵的那句（正解）",
+    "Description": "（正解）",
+    "zh_TW": "「五月生的孩子，長到與門一般高，就要妨父母。」",
     "zh_CN": "「五月生的孩子，长到与门一般高，就要妨父母。」",
     "links": [44]
   },
@@ -343,7 +342,7 @@
     "actorID": "MC1",
     "text": "「庶出，不受待見。」",
     "Sequence": "",
-    "Description": "第二題選項2：猜",
+    "zh_TW": "「庶出，不受待見。」",
     "zh_CN": "「庶出，不受待见。」",
     "links": [47]
   },
@@ -352,7 +351,7 @@
     "actorID": "MC1",
     "text": "「家窮，養不起。」",
     "Sequence": "",
-    "Description": "第二題選項3：猜",
+    "zh_TW": "「家窮，養不起。」",
     "zh_CN": "「家穷，养不起。」",
     "links": [48]
   },
@@ -361,24 +360,26 @@
     "actorID": "MC1",
     "text": "「五月生的孩子，長到與門一般高，就要妨父母——是這麼說的吧？」",
     "Sequence": "SetPortrait(MC1,pic=9);",
-    "Description": "第二題選項1的主角發言格（照著蔡琰餵的話唸，尾巴自己沒底）",
+    "zh_TW": "「五月生的孩子，長到與門一般高，就要妨父母——是這麼說的吧？」",
     "zh_CN": "「五月生的孩子，长到与门一般高，就要妨父母——是这么说的吧？」",
     "links": [45]
   },
   {
     "entryID": 45,
     "actorID": "MC24",
-    "text": "[panel=2]「……那句話不是你的。」",
-    "Sequence": "SetPortrait(MC24,pic=3);ModifyData(FavorabilityExp,MC24,20);ModifyData(FavorabilityExp,MC23,20);",
-    "zh_CN": "[panel=2]「……那句话不是你的。」",
+    "text": "[panel=1]「……」",
+    "Sequence": "SetPortrait(MC24,pic=3);\nModifyData(FavorabilityExp,MC23,20);",
+    "zh_TW": "[panel=1]「……」",
+    "zh_CN": "[panel=1]「……」",
     "links": [46]
   },
   {
     "entryID": 46,
     "actorID": "MC23",
-    "text": "[panel=1]「話是他說的，怎麼就不是他的。」",
-    "Sequence": "SetPortrait(MC23,pic=1);",
-    "zh_CN": "[panel=1]「话是他说的，怎么就不是他的。」",
+    "text": "[panel=1]「嘻嘻~」",
+    "Sequence": "SetPortrait(MC23,pic=3);\nModifyData(FavorabilityExp,MC24,40);",
+    "zh_TW": "[panel=1]「嘻嘻~」",
+    "zh_CN": "[panel=1]「嘻嘻~」",
     "links": [51]
   },
   {
@@ -386,7 +387,7 @@
     "actorID": "MC1",
     "text": "「我猜是庶出的孩子，做父親的不待見，索性就不認了。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Description": "第二題選項2的主角發言格",
+    "zh_TW": "「我猜是庶出的孩子，做父親的不待見，索性就不認了。」",
     "zh_CN": "「我猜是庶出的孩子，做父亲的不待见，索性就不认了。」",
     "links": [49]
   },
@@ -395,48 +396,53 @@
     "actorID": "MC1",
     "text": "「戰國那時候兵荒馬亂的，八成是家裡窮，養不起這麼多口。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Description": "第二題選項3的主角發言格",
+    "zh_TW": "「戰國那時候兵荒馬亂的，八成是家裡窮，養不起這麼多口。」",
     "zh_CN": "「战国那时候兵荒马乱的，八成是家里穷，养不起这么多口。」",
     "links": [49]
   },
   {
     "entryID": 49,
     "actorID": "MC24",
-    "text": "[panel=2]「不是養不起，也不是不受待見。田嬰是齊國的相，門下養著上百口人。」",
+    "text": "[panel=1]「不是養不起，也不是不受待見。田嬰是齊國的相，門下養著上百口人。」",
     "Sequence": "SetPortrait(MC24,pic=3);",
-    "zh_CN": "[panel=2]「不是养不起，也不是不受待见。田婴是齐国的相，门下养着上百口人。」",
+    "zh_TW": "[panel=1]「不是養不起，也不是不受待見。田嬰是齊國的相，門下養著上百口人。」",
+    "zh_CN": "[panel=1]「不是养不起，也不是不受待见。田婴是齐国的相，门下养着上百口人。」",
     "links": [50]
   },
   {
     "entryID": 50,
     "actorID": "MC24",
-    "text": "[panel=2]「他怕的是這孩子長高。就這麼一件事，怕了三十年。」",
+    "text": "[panel=1]「他怕的是這孩子長高。就這麼一件事，怕了三十年。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「他怕的是这孩子长高。就这么一件事，怕了三十年。」",
+    "zh_TW": "[panel=1]「他怕的是這孩子長高。就這麼一件事，怕了三十年。」",
+    "zh_CN": "[panel=1]「他怕的是这孩子长高。就这么一件事，怕了三十年。」",
     "links": [51]
   },
   {
     "entryID": 51,
     "actorID": "MC24",
-    "text": "[panel=2]「那孩子長大了，問他父親一句話：人是受命於天，還是受命於戶？」",
+    "text": "[panel=1]「那孩子長大了，問他父親一句話：人是受命於天，還是受命於戶？」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「那孩子长大了，问他父亲一句话：人是受命于天，还是受命于户？」",
+    "zh_TW": "[panel=1]「那孩子長大了，問他父親一句話：人是受命於天，還是受命於戶？」",
+    "zh_CN": "[panel=1]「那孩子长大了，问他父亲一句话：人是受命于天，还是受命于户？」",
     "links": [52]
   },
   {
     "entryID": 52,
     "actorID": "MC24",
-    "text": "[panel=2]「若受命於天，君憂什麼；若受命於戶，把門加高就是了，誰還能到得了。」",
+    "text": "[panel=1]「若受命於天，君憂什麼；若受命於戶，把門加高就是了，誰還能到得了。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「若受命于天，君忧什么；若受命于户，把门加高就是了，谁还能到得了。」",
+    "zh_TW": "[panel=1]「若受命於天，君憂什麼；若受命於戶，把門加高就是了，誰還能到得了。」",
+    "zh_CN": "[panel=1]「若受命于天，君忧什么；若受命于户，把门加高就是了，谁还能到得了。」",
     "links": [53]
   },
   {
     "entryID": 53,
     "actorID": "MC24",
-    "text": "[panel=2]「田嬰答不上來，那孩子後來就叫孟嘗君。」",
+    "text": "[panel=1]「田嬰答不上來，那孩子後來就叫孟嘗君。」",
     "Sequence": "SetPortrait(MC24,pic=4);",
-    "zh_CN": "[panel=2]「田婴答不上来，那孩子后来就叫孟尝君。」",
+    "zh_TW": "[panel=1]「田嬰答不上來，那孩子後來就叫孟嘗君。」",
+    "zh_CN": "[panel=1]「田婴答不上来，那孩子后来就叫孟尝君。」",
     "links": [54]
   },
   {
@@ -444,47 +450,53 @@
     "actorID": "role2",
     "text": "[panel=6]＊（藥攤那頭有人在殺價，殺得很慢，一文一文地磨。磨完了才轉過身來。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（藥攤那頭有人在殺價，殺得很慢，一文一文地磨。磨完了才轉過身來。）＊",
     "zh_CN": "[panel=6]＊（药摊那头有人在杀价，杀得很慢，一文一文地磨。磨完了才转过身来。）＊",
     "links": [55]
   },
   {
     "entryID": 55,
     "actorID": "MC4",
-    "text": "[panel=3]「蔡公，久違了。」",
+    "text": "[panel=2]「蔡公，久違了。」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_CN": "[panel=3]「蔡公，久违了。」",
+    "zh_TW": "[panel=2]「蔡公，久違了。」",
+    "zh_CN": "[panel=2]「蔡公，久违了。」",
     "links": [56]
   },
   {
     "entryID": 56,
     "actorID": "MC24",
-    "text": "[panel=2]「賈先生也來買蘭？」",
+    "text": "[panel=1]「賈先生也來買蘭？」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「贾先生也来买兰？」",
+    "zh_TW": "[panel=1]「賈先生也來買蘭？」",
+    "zh_CN": "[panel=1]「贾先生也来买兰？」",
     "links": [57]
   },
   {
     "entryID": 57,
     "actorID": "MC4",
-    "text": "[panel=3]「賈某是來買藥的。府裡人多，病起來費錢。」",
+    "text": "[panel=2]「賈某是來買藥的。府裡人多，病起來費錢。」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_CN": "[panel=3]「贾某是来买药的。府里人多，病起来费钱。」",
+    "zh_TW": "[panel=2]「賈某是來買藥的。府裡人多，病起來費錢。」",
+    "zh_CN": "[panel=2]「贾某是来买药的。府里人多，病起来费钱。」",
     "links": [58]
   },
   {
     "entryID": 58,
     "actorID": "MC24",
-    "text": "[panel=2]「聽說貴府誅怪。怪還沒誅著，人先病了。」",
+    "text": "[panel=1]「聽說貴府誅怪。怪還沒誅著，人先病了。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「听说贵府诛怪。怪还没诛着，人先病了。」",
+    "zh_TW": "[panel=1]「聽說貴府誅怪。怪還沒誅著，人先病了。」",
+    "zh_CN": "[panel=1]「听说贵府诛怪。怪还没诛着，人先病了。」",
     "links": [59]
   },
   {
     "entryID": 59,
     "actorID": "MC4",
-    "text": "[panel=3]「蔡公修的是史。史上寫的那些怪，也不見誰誅得完。」",
+    "text": "[panel=2]「蔡公修的是史。史上寫的那些怪，也不見誰誅得完。」",
     "Sequence": "SetPortrait(MC4,pic=5);",
-    "zh_CN": "[panel=3]「蔡公修的是史。史上写的那些怪，也不见谁诛得完。」",
+    "zh_TW": "[panel=2]「蔡公修的是史。史上寫的那些怪，也不見誰誅得完。」",
+    "zh_CN": "[panel=2]「蔡公修的是史。史上写的那些怪，也不见谁诛得完。」",
     "links": [60]
   },
   {
@@ -492,15 +504,17 @@
     "actorID": "role2",
     "text": "[panel=6]＊（兩個人都笑了一下，笑完誰也沒有再往下說。琰兒在旁邊看得眼睛發亮。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（兩個人都笑了一下，笑完誰也沒有再往下說。琰兒在旁邊看得眼睛發亮。）＊",
     "zh_CN": "[panel=6]＊（两个人都笑了一下，笑完谁也没有再往下说。琰儿在旁边看得眼睛发亮。）＊",
     "links": [61]
   },
   {
     "entryID": 61,
     "actorID": "MC24",
-    "text": "[panel=2]「說起病——你站著重心偏在左腳，右肩垂著，是舊傷還是習慣？」",
+    "text": "[panel=1]「說起病——你站著重心偏在左腳，右肩垂著，是舊傷還是習慣？」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「说起病——你站着重心偏在左脚，右肩垂着，是旧伤还是习惯？」",
+    "zh_TW": "[panel=1]「說起病——你站著重心偏在左腳，右肩垂著，是舊傷還是習慣？」",
+    "zh_CN": "[panel=1]「说起病——你站着重心偏在左脚，右肩垂着，是旧伤还是习惯？」",
     "links": [62]
   },
   {
@@ -508,15 +522,17 @@
     "actorID": "MC1",
     "text": "「……先生連這個也看？」",
     "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「……先生連這個也看？」",
     "zh_CN": "「……先生连这个也看？」",
     "links": [63]
   },
   {
     "entryID": 63,
     "actorID": "MC24",
-    "text": "[panel=2]「我是不會武的。可是誰身上少了一塊，我看得出來。」",
+    "text": "[panel=1]「我是不會武的。可是誰身上少了一塊，我看得出來。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「我是不会武的。可是谁身上少了一块，我看得出来。」",
+    "zh_TW": "[panel=1]「我是不會武的。可是誰身上少了一塊，我看得出來。」",
+    "zh_CN": "[panel=1]「我是不会武的。可是谁身上少了一块，我看得出来。」",
     "links": [64, 65, 66]
   },
   {
@@ -524,7 +540,8 @@
     "actorID": "MC1",
     "text": "「舊傷。去年在後山，讓東西撞過一下。」",
     "Sequence": "",
-    "Description": "第三題選項1：實話（正解）",
+    "Description": "（正解）",
+    "zh_TW": "「舊傷。去年在後山，讓東西撞過一下。」",
     "zh_CN": "「旧伤。去年在后山，让东西撞过一下。」",
     "links": [67]
   },
@@ -533,7 +550,7 @@
     "actorID": "MC1",
     "text": "「習慣而已。」",
     "Sequence": "",
-    "Description": "第三題選項2：充胖子",
+    "zh_TW": "「習慣而已。」",
     "zh_CN": "「习惯而已。」",
     "links": [75]
   },
@@ -542,7 +559,7 @@
     "actorID": "MC1",
     "text": "「先生看錯了。」",
     "Sequence": "",
-    "Description": "第三題選項3：否認",
+    "zh_TW": "「先生看錯了。」",
     "zh_CN": "「先生看错了。」",
     "links": [76]
   },
@@ -551,24 +568,26 @@
     "actorID": "MC1",
     "text": "「是舊傷——去年在後山讓那東西撞過一下，養好之後肩就這樣了。」",
     "Sequence": "SetPortrait(MC1,pic=11);",
-    "Description": "第三題選項1的主角發言格（「那東西」不指名，後山那場細節本場不碰）",
+    "zh_TW": "「是舊傷——去年在後山讓那東西撞過一下，養好之後肩就這樣了。」",
     "zh_CN": "「是旧伤——去年在后山让那东西撞过一下，养好之后肩就这样了。」",
     "links": [68]
   },
   {
     "entryID": 68,
     "actorID": "MC24",
-    "text": "[panel=2]「傷過就是傷過，那沒什麼。壞在你為了躲那一塊，整個人都偏過去了——這樣練下去，左邊遲早也要壞。」",
-    "Sequence": "SetPortrait(MC24,pic=1);ModifyData(FavorabilityExp,MC24,20);ModifyData(FavorabilityExp,MC23,20);",
-    "zh_CN": "[panel=2]「伤过就是伤过，那没什么。坏在你为了躲那一块，整个人都偏过去了——这样练下去，左边迟早也要坏。」",
+    "text": "[panel=1]「壞在你為了躲那一塊，整個人都偏過去了——這樣練下去，左邊遲早也要壞。」",
+    "Sequence": "SetPortrait(MC24,pic=1);\nModifyData(FavorabilityExp,MC24,20);\nModifyData(FavorabilityExp,MC23,20);",
+    "zh_TW": "[panel=1]「壞在你為了躲那一塊，整個人都偏過去了——這樣練下去，左邊遲早也要壞。」",
+    "zh_CN": "[panel=1]「坏在你为了躲那一块，整个人都偏过去了——这样练下去，左边迟早也要坏。」",
     "links": [69]
   },
   {
     "entryID": 69,
     "actorID": "MC24",
-    "text": "[panel=2]「教你的人沒說過？」",
+    "text": "[panel=1]「教你的人沒說過？」",
     "Sequence": "SetPortrait(MC24,pic=4);",
-    "zh_CN": "[panel=2]「教你的人没说过？」",
+    "zh_TW": "[panel=1]「教你的人沒說過？」",
+    "zh_CN": "[panel=1]「教你的人没说过？」",
     "links": [70]
   },
   {
@@ -576,38 +595,43 @@
     "actorID": "MC1",
     "text": "「徐師父天天叫我改站姿，我以為他嫌我懶。」",
     "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「徐師父天天叫我改站姿，我以為他嫌我懶。」",
     "zh_CN": "「徐师父天天叫我改站姿，我以为他嫌我懒。」",
     "links": [71]
   },
   {
     "entryID": 71,
     "actorID": "MC24",
-    "text": "[panel=2]「現在聽懂了，也還不算晚。」",
+    "text": "[panel=1]「現在聽懂了，也還不算晚。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「现在听懂了，也还不算晚。」",
+    "zh_TW": "[panel=1]「現在聽懂了，也還不算晚。」",
+    "zh_CN": "[panel=1]「现在听懂了，也还不算晚。」",
     "links": [72]
   },
   {
     "entryID": 72,
     "actorID": "MC24",
-    "text": "[panel=2]「這不是藥治得了的。古人有導引之法，屈伸俯仰，把偏掉的那一邊拉回來。」",
+    "text": "[panel=1]「這不是藥治得了的。古人有導引之法，屈伸俯仰，把偏掉的那一邊拉回來。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「这不是药治得了的。古人有导引之法，屈伸俯仰，把偏掉的那一边拉回来。」",
+    "zh_TW": "[panel=1]「這不是藥治得了的。古人有導引之法，屈伸俯仰，把偏掉的那一邊拉回來。」",
+    "zh_CN": "[panel=1]「这不是药治得了的。古人有导引之法，屈伸俯仰，把偏掉的那一边拉回来。」",
     "links": [73]
   },
   {
     "entryID": 73,
     "actorID": "MC24",
-    "text": "[panel=2]「《呂氏》有一句：流水不腐，戶樞不蠹，動也。你身上那一塊，就是不動壞的。」",
+    "text": "[panel=1]「《呂氏》有一句：流水不腐，戶樞不蠹，動也。你身上那一塊，就是不動壞的。」",
     "Sequence": "SetPortrait(MC24,pic=1);",
-    "zh_CN": "[panel=2]「《吕氏》有一句：流水不腐，户枢不蠹，动也。你身上那一块，就是不动坏的。」",
+    "zh_TW": "[panel=1]「《呂氏》有一句：流水不腐，戶樞不蠹，動也。你身上那一塊，就是不動壞的。」",
+    "zh_CN": "[panel=1]「《吕氏》有一句：流水不腐，户枢不蠹，动也。你身上那一块，就是不动坏的。」",
     "links": [74]
   },
   {
     "entryID": 74,
     "actorID": "MC23",
     "text": "[panel=1]「[em7]把寫好的竹簡塞進你手裡[/em7]，我記下來了，你回去照著做，別再偏著練。」",
-    "Sequence": "SetPortrait(MC23,pic=1);ModifyData(FeatExp,Player,MedicalExpertise,50);",
+    "Sequence": "SetPortrait(MC23,pic=1);\nModifyData(FeatExp,Player,MedicalExpertise,100);",
+    "zh_TW": "[panel=1]「[em7]把寫好的竹簡塞進你手裡[/em7]，我記下來了，你回去照著做，別再偏著練。」",
     "zh_CN": "[panel=1]「[em7]把写好的竹简塞进你手里[/em7]，我记下来了，你回去照着做，别再偏着练。」",
     "links": [79]
   },
@@ -616,7 +640,7 @@
     "actorID": "MC1",
     "text": "「習慣而已，扛東西扛久了，總有一邊出力多些。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Description": "第三題選項2的主角發言格",
+    "zh_TW": "「習慣而已，扛東西扛久了，總有一邊出力多些。」",
     "zh_CN": "「习惯而已，扛东西扛久了，总有一边出力多些。」",
     "links": [77]
   },
@@ -625,16 +649,17 @@
     "actorID": "MC1",
     "text": "「先生大約看錯了，我兩邊一樣使得動。」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "Description": "第三題選項3的主角發言格",
+    "zh_TW": "「先生大約看錯了，我兩邊一樣使得動。」",
     "zh_CN": "「先生大约看错了，我两边一样使得动。」",
     "links": [77]
   },
   {
     "entryID": 77,
     "actorID": "MC24",
-    "text": "[panel=2]「罷了——看得見的都不肯認，看不見的更別指望。」",
+    "text": "[panel=1]「罷了——看得見的都不肯認，看不見的更別指望。」",
     "Sequence": "SetPortrait(MC24,pic=3);",
-    "zh_CN": "[panel=2]「罢了——看得见的都不肯认，看不见的更别指望。」",
+    "zh_TW": "[panel=1]「罷了——看得見的都不肯認，看不見的更別指望。」",
+    "zh_CN": "[panel=1]「罢了——看得见的都不肯认，看不见的更别指望。」",
     "links": [78]
   },
   {
@@ -642,6 +667,7 @@
     "actorID": "MC23",
     "text": "[panel=1]「爹！你又這樣！人家話都還沒說完呢！」",
     "Sequence": "SetPortrait(MC23,pic=2);",
+    "zh_TW": "[panel=1]「爹！你又這樣！人家話都還沒說完呢！」",
     "zh_CN": "[panel=1]「爹！你又这样！人家话都还没说完呢！」",
     "links": [79]
   },
@@ -649,40 +675,36 @@
     "entryID": 79,
     "actorID": "role2",
     "text": "[panel=6]＊（蔡邕先走了，琰兒沒有立刻跟上——她又從懷裡摸出一冊竹簡，蹲在地上寫了幾個字，寫完才抱著蘭草追出去。）＊",
-    "Sequence": "",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=6]＊（蔡邕先走了，琰兒沒有立刻跟上——她又從懷裡摸出一冊竹簡，蹲在地上寫了幾個字，寫完才抱著蘭草追出去。）＊",
     "zh_CN": "[panel=6]＊（蔡邕先走了，琰儿没有立刻跟上——她又从怀里摸出一册竹简，蹲在地上写了几个字，写完才抱着兰草追出去。）＊",
     "links": [80]
   },
   {
     "entryID": 80,
     "actorID": "MC4",
-    "text": "[panel=3]「那位蔡公，看人是準的。」",
+    "text": "[panel=2]「那位蔡公，眼光可真毒啊。」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_CN": "[panel=3]「那位蔡公，看人是准的。」",
+    "zh_TW": "[panel=2]「那位蔡公，眼光可真毒啊。」",
+    "zh_CN": "[panel=2]「那位蔡公，眼光可真毒啊。」",
     "links": [81]
   },
   {
     "entryID": 81,
     "actorID": "MC4",
-    "text": "[panel=3]「單子上的藥還沒買齊吧？去吧，過了今日就不是這個藥性——張寧說的。」",
+    "text": "[panel=2]「罷了，單子上的藥還沒買齊吧？去吧，過了今日就不是這個藥性——張寧說的。」",
     "Sequence": "SetPortrait(MC4,pic=5);",
-    "zh_CN": "[panel=3]「单子上的药还没买齐吧？去吧，过了今日就不是这个药性——张宁说的。」",
+    "zh_TW": "[panel=2]「罷了，單子上的藥還沒買齊吧？去吧，過了今日就不是這個藥性——張寧說的。」",
+    "zh_CN": "[panel=2]「罢了，单子上的药还没买齐吧？去吧，过了今日就不是这个药性——张宁说的。」",
     "links": [82]
   },
   {
     "entryID": 82,
     "actorID": "role2",
-    "text": "[panel=6]＊（一條街的蘭草味，濃得像有人把整座山搬進了城裡。賣絲的還在喊，捆蟾蜍的還蹲在原地——惡月惡日，誰也不像在怕。）＊",
+    "text": "[panel=6]＊（一條街都是蘭草味，聞久了鼻子發鈍。賣絲的還在喊，捆蟾蜍的還蹲在原地——惡月惡日，攤子一個也沒收。你手裡那張單子，還有大半沒買。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（一条街的兰草味，浓得像有人把整座山搬进了城里。卖丝的还在喊，捆蟾蜍的还蹲在原地——恶月恶日，谁也不像在怕。）＊",
-    "links": [83]
-  },
-  {
-    "entryID": 83,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你手裡那張單子，還有大半沒買。日頭正毒，市集要散還早。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你手里那张单子，还有大半没买。日头正毒，市集要散还早。）＊",
+    "zh_TW": "[panel=6]＊（一條街都是蘭草味，聞久了鼻子發鈍。賣絲的還在喊，捆蟾蜍的還蹲在原地——惡月惡日，攤子一個也沒收。你手裡那張單子，還有大半沒買。）＊",
+    "zh_CN": "[panel=6]＊（一条街都是兰草味，闻久了鼻子发钝。卖丝的还在喊，捆蟾蜍的还蹲在原地——恶月恶日，摊子一个也没收。你手里那张单子，还有大半没买。）＊",
     "links": [84]
   },
   {
