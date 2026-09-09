@@ -1,0 +1,216 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "title": "100錢",
+    "text": "[panel=6]＊（出了府門，一股糖炒栗子的甜香迎面撲來。門口那棵樹底下支著一口鐵鍋，阿婆在鍋邊翻炒，火光把她的臉照得通紅。）＊",
+    "Sequence": "EnableDialogueBG(Yunzhong);\nAudioControl(PlayMusic,BGM_30);",
+    "Description": "180年4月上旬",
+    "zh_CN": "[panel=6]＊（出了府门，一股糖炒栗子的甜香迎面扑来。门口那棵树底下支着一口铁锅，阿婆在锅边翻炒，火光把她的脸照得通红。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……她怎麼又在這兒？前天明明還在市集那頭呢。」",
+    "Sequence": "SetPortrait(MC8,pic=14);",
+    "zh_CN": "[panel=2]「表哥……她怎么又在这儿？前天明明还在市集那头呢。」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role5",
+    "text": "「糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_CN": "「糖炒栗子，一包一百钱。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你往腰間一摸。錢袋不在——今早換衣裳，擱在屋裡了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你往腰间一摸。钱袋不在——今早换衣裳，搁在屋里了。）＊",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「……錢袋落在屋裡了。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_CN": "「……钱袋落在屋里了。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC22",
+    "text": "[panel=1]「一百錢而已，阿婆，兩包栗子。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「一百钱而已，阿婆，两包栗子。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她把錢數到阿婆手裡。阿婆收了錢，眼睛在你和她中間停了一下，笑容還是那個笑容。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她把钱数到阿婆手里。阿婆收了钱，眼睛在你和她中间停了一下，笑容还是那个笑容。）＊",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role5",
+    "text": "「[em7]笑容不變重複道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_CN": "「[em7]笑容不变重复道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC22",
+    "text": "[panel=1]「拿去拿去，小犀也一包——別用那種看敗家子的眼神看我，草原上哪有人為這點事算帳的。」",
+    "Sequence": "SetPortrait(MC22,pic=1);\nEnableCharacterExpression(1,MC22,Proud);\nModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_CN": "[panel=1]「拿去拿去，小犀也一包——别用那种看败家子的眼神看我，草原上哪有人为这点事算账的。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC8",
+    "text": "[panel=2]「一百錢也是錢！小犀記下了——表哥欠娜娜姊姊一百錢，栗子一包。」",
+    "Sequence": "SetPortrait(MC8,pic=6);\nDisableCharacterExpression(1);",
+    "Script": "SetQuestEntryState(\"CF18\", 5, \"success\");",
+    "Description": "CF18 entry 5：表哥欠娜娜一百錢（entry 1–4 已分別在礦坑／街道／遴選／武道大會）",
+    "zh_CN": "[panel=2]「一百钱也是钱！小犀记下了——表哥欠娜娜姐姐一百钱，栗子一包。」",
+    "links": [11, 13, 19]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「這錢我還妳，明日就還。」",
+    "Sequence": "",
+    "Description": "選項1：明日還錢",
+    "zh_CN": "「这钱我还你，明日就还。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「這錢我明日就還妳——一百錢，一個子兒都也不會少的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Description": "選項1的發言格",
+    "zh_CN": "「这钱我明日就还你——一百钱，一个子儿都也不会少的。」",
+    "links": [15]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「那就記著吧——欠妳一包栗子。」",
+    "Sequence": "",
+    "Description": "選項2：欠一包栗子",
+    "zh_CN": "「那就记着吧——欠你一包栗子。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「一包栗子而已，連本帶利，回頭一次清。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "Description": "選項2的發言格",
+    "zh_CN": "「一包栗子而已，连本带利，回头一次清。」",
+    "links": [17]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC22",
+    "text": "[panel=1]「還什麼還——大俠下回請回來就是。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nModifyData(FavorabilityExp,MC22,20);",
+    "Description": "選項1：好感 +20",
+    "zh_CN": "[panel=1]「还什么还——大侠下回请回来就是。」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC8",
+    "text": "[panel=2]「那小犀先記著，表哥可別想賴帳。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_CN": "[panel=2]「那小犀先记着，表哥可别想赖账。」",
+    "links": [23]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC22",
+    "text": "[panel=1]「連本帶利？好，本姑娘記著——哪天沒了盤纏，就找大俠討這一包。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nModifyData(FavorabilityExp,MC22,20);",
+    "Description": "選項2：好感 +20",
+    "zh_CN": "[panel=1]「连本带利？好，本姑娘记着——哪天没了盘缠，就找大侠讨这一包。」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC8",
+    "text": "[panel=2]「嘻嘻，表哥又再說大話了。」",
+    "Sequence": "SetPortrait(MC8,pic=9);",
+    "zh_CN": "[panel=2]「嘻嘻，表哥又再说大话了。」",
+    "links": [23]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "（不說話，剝了一顆栗子遞給她。）",
+    "Sequence": "",
+    "Description": "選項3：不開口選項，依轉成json指南豁免，不接發言格",
+    "zh_CN": "（不说话，剥了一颗栗子递给她。）",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你沒說話，剝了一顆栗子，遞到她面前。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你没说话，剥了一颗栗子，递到她面前。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC22",
+    "text": "[panel=1]「……本姑娘自己會剝。」",
+    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,20);",
+    "Description": "選項3：好感 +20",
+    "zh_CN": "[panel=1]「……本姑娘自己会剥。」",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC8",
+    "text": "[panel=2]「娜娜姊姊，妳嘴上說不要，手倒是接得快。」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_CN": "[panel=2]「娜娜姐姐，你嘴上说不要，手倒是接得快。」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "role5",
+    "text": "「糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "Description": "三條路匯流",
+    "zh_CN": "「糖炒栗子，一包一百钱。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們往府裡走。走到門檻回頭，鍋還在翻，阿婆還在笑，笑容還是那一個。）＊",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_CN": "[panel=6]＊（你们往府里走。走到门槛回头，锅还在翻，阿婆还在笑，笑容还是那一个。）＊",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "Description": "尾格：收立繪面板與背景",
+    "links": []
+  }
+]

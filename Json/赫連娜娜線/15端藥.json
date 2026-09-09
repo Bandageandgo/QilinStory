@@ -1,0 +1,267 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "title": "端藥",
+    "text": "[panel=6]＊（你靠在榻上，肩頭的傷剛換過藥，布還是新的。張寧坐在案邊，把藥一包一包分開，一句話也沒有。）＊",
+    "Sequence": "EnableDialogueBG(Clinic);\nAudioControl(PlayMusic,BGM_31);",
+    "Description": "180年七月下旬",
+    "zh_CN": "[panel=6]＊（你靠在榻上，肩头的伤刚换过药，布还是新的。张宁坐在案边，把药一包一包分开，一句话也没有。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC6",
+    "text": "[panel=2]「藥三日一換，動作大了裂開，我不管。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_CN": "[panel=2]「药三日一换，动作大了裂开，我不管。」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC6",
+    "text": "[panel=2]「在那底下逞英雄，回來躺三天——你這種傻子，我一年見七八個。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_CN": "[panel=2]「在那底下逞英雄，回来躺三天——你这种傻子，我一年见七八个。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「這回不是逞英雄，是躲不開。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_CN": "「这回不是逞英雄，是躲不开。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC6",
+    "text": "[panel=2]「躲不開就別衝那麼前頭。少廢話，把藥喝了。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_CN": "[panel=2]「躲不开就别冲那么前头。少废话，把药喝了。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（門被撞開，赫連娜娜端著一碗東西進來，湯汁晃出來，燙得她直換手。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（门被撞开，赫连娜娜端着一碗东西进来，汤汁晃出来，烫得她直换手。）＊",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠——本姑娘親手熬的羊湯！還費了我一番工夫呢，趕緊趁熱喝！」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「大侠——本姑娘亲手熬的羊汤！还费了我一番工夫呢，赶紧趁热喝！」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC6",
+    "text": "[panel=2]「傷口剛合，你給他灌油湯？想讓他發熱，直說。」",
+    "Sequence": "SetPortrait(MC6,pic=2);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_38);",
+    "zh_CN": "[panel=2]「伤口刚合，你给他灌油汤？想让他发热，直说。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC22",
+    "text": "[panel=1]「你們漢人的藥苦得能把人苦死，喝了三天，臉還是白的。」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_CN": "[panel=1]「你们汉人的药苦得能把人苦死，喝了三天，脸还是白的。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC6",
+    "text": "[panel=2]「白是失血，不是藥。再說了羊湯治不了失血，只能治嘴饞。」",
+    "Sequence": "SetPortrait(MC6,pic=4);",
+    "zh_CN": "[panel=2]「白是失血，不是药。再说了羊汤治不了失血，只能治嘴馋。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩碗東西擱到你面前，一碗黑的，一碗白的，冒著一樣的熱氣。她們兩個都看著你。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=6]＊（两碗东西搁到你面前，一碗黑的，一碗白的，冒着一样的热气。她们两个都看着你。）＊",
+    "links": [12, 14, 16]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「先喝藥。」",
+    "Sequence": "",
+    "Description": "選項1：先喝藥",
+    "zh_CN": "「先喝药。」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「先喝藥——湯擱著，涼了我再熱。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「先喝药——汤搁着，凉了我再热。」",
+    "links": [17]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「先喝湯。」",
+    "Sequence": "",
+    "Description": "選項2：先喝湯",
+    "zh_CN": "「先喝汤。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「先喝湯——藥苦，得有東西墊著。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「先喝汤——药苦，得有东西垫着。」",
+    "links": [19]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "（兩碗一起端起來。）",
+    "Sequence": "",
+    "Description": "選項3：不開口選項，依轉成json指南豁免，不接發言格",
+    "zh_CN": "（两碗一起端起来。）",
+    "links": [22]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC6",
+    "text": "[panel=2]「算你還有點腦子。」",
+    "Sequence": "SetPortrait(MC6,pic=1);\nModifyData(FavorabilityExp,MC6,20);\nModifyData(FavorabilityExp,MC22,-20);",
+    "Description": "選項1：張寧 +20、娜娜 −20",
+    "zh_CN": "[panel=2]「算你还有点脑子。」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]把湯往案上一擱[/em7]，……涼了可別怪本姑娘。」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_CN": "[panel=1]「[em7]把汤往案上一搁[/em7]，……凉了可别怪本姑娘。」",
+    "links": [32]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC22",
+    "text": "[panel=1]「這才對——大俠到底是有見識的。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nModifyData(FavorabilityExp,MC22,20);\nModifyData(FavorabilityExp,MC6,-20);",
+    "Description": "選項2：娜娜 +20、張寧 −20",
+    "zh_CN": "[panel=1]「这才对——大侠到底是有见识的。」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC6",
+    "text": "[panel=2]「[em2]適寒溫，服一升。服已須臾，啜熱稀粥一升餘，以助藥力[/em2]；藥要溫服，服了再啜熱粥助藥力。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_CN": "[panel=2]「[em2]适寒温，服一升。服已须臾，啜热稀粥一升余，以助药力[/em2]；药要温服，服了再啜热粥助药力。」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC6",
+    "text": "[panel=2]「你倒好先灌一碗油，藥力走不到傷處——我才不在乎哩，反正傷是你的！」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_CN": "[panel=2]「你倒好先灌一碗油，药力走不到伤处——我才不在乎哩，反正伤是你的！」",
+    "links": [32]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你左手端藥，右手端湯，一口黑的、一口白的，誰也沒落下。）＊",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_CN": "[panel=6]＊（你左手端药，右手端汤，一口黑的、一口白的，谁也没落下。）＊",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC6",
+    "text": "[panel=2]「……你倒是會做人。藥三日一換，到時自己來拿。」",
+    "Sequence": "SetPortrait(MC6,pic=1);\nModifyData(FavorabilityExp,MC22,10);\nModifyData(FavorabilityExp,MC6,10);\nSetPortrait(MC1,pic=16);",
+    "Description": "選項3：兩邊各 +10",
+    "zh_CN": "[panel=2]「……你倒是会做人。药三日一换，到时自己来拿。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC22",
+    "text": "[panel=1]「這就叫兩全其美！大俠，往後就這麼辦。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「这就叫两全其美！大侠，往后就这么办。」",
+    "links": [32]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC6",
+    "text": "[panel=2]「七月七日你提早走，我當府裡有事——該是跑去找她了。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "Conditions": "Variable[\"CrossOverLover\"] == 2",
+    "zh_CN": "[panel=2]「七月七日你提早走，我当府里有事——该是跑去找她了。」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧提起藥箱出去了。門一關，屋裡只剩羊湯的味道。）＊",
+    "Sequence": "OpenPanel(2, close);",
+    "zh_CN": "[panel=6]＊（张宁提起药箱出去了。门一关，屋里只剩羊汤的味道。）＊",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC22",
+    "text": "[panel=1]「……她的藥，真有那麼靈？」",
+    "Sequence": "SetPortrait(MC22,pic=14);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_18);",
+    "zh_CN": "[panel=1]「……她的药，真有那么灵？」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「靈是靈，就是苦。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "「灵是灵，就是苦。」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC22",
+    "text": "[panel=2]「那明兒本姑娘熬碗甜的——藥歸她，甜的歸我。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nSetPortrait(MC1,pic=4);\nSetPanel(MC22, 2, immediate);",
+    "zh_CN": "[panel=2]「那明儿本姑娘熬碗甜的——药归她，甜的归我。」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（湯碗見了底，窗外天色暗下來，她笑嘻嘻地看著你，還沒有走的意思。）＊",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nOpenPanel(2, close);\nModifyData(FavorabilityExp,MC22,20);",
+    "zh_CN": "[panel=6]＊（汤碗见了底，窗外天色暗下来，她笑嘻嘻地看着你，还没有走的意思。）＊",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "Description": "尾格：收立繪面板與背景",
+    "links": []
+  },
+  {
+    "entryID": 32,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "判斷CrossOverLover變數是否大於2",
+    "links": [25, 26]
+  }
+]

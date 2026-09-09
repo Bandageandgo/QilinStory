@@ -1,0 +1,533 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（趙王洞那一個月躺出來的腿，走到流離區已經發虛。張寧的藥箱在你背上，比看起來重得多，她走在前頭，一步也沒有回頭。）＊",
+    "Sequence": "EnableDialogueBG(Heding);\nSetPortrait(MC1,pic=14);\nAudioControl(PlayMusic,BGM_19);",
+    "zh_CN": "[panel=6]＊（赵王洞那一个月躺出来的腿，走到流离区已经发虚。张宁的药箱在你背上，比看起来重得多，她走在前头，一步也没有回头。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role2",
+    "text": "[panel=6]＊（破屋裡躺著一個漢子，胸口到脖頸爬著幾道黑線。他妻子守在鋪邊，看見你們進門，先看的不是你們的臉，是張寧手裡那個藥箱。）＊",
+    "Sequence": "EnableDialogueBG(Clinic);",
+    "zh_CN": "[panel=6]＊（破屋里躺着一个汉子，胸口到脖颈爬着几道黑线。他妻子守在铺边，看见你们进门，先看的不是你们的脸，是张宁手里那个药箱。）＊",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC6",
+    "text": "[panel=2]「黑鐵嶺回來的？」",
+    "Sequence": "SetPortrait(MC6,pic=1);\nSetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=2]「黑铁岭回来的？」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role70",
+    "text": "[panel=1]「封坑前一天逃回來的。回來就倒了，請過三個大夫，都說是鬼在作祟，沒得治。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「封坑前一天逃回来的。回来就倒了，请过三个大夫，都说是鬼在作祟，没得治。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC6",
+    "text": "[panel=2]「不是鬼。這叫屍厥——躺著像死了，脈卻還在。他這個是邪氣走到心口，撐到今天沒斷氣，是命硬。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_CN": "[panel=2]「不是鬼。这叫尸厥——躺着像死了，脉却还在。他这个是邪气走到心口，撑到今天没断气，是命硬。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC6",
+    "text": "[panel=2]「脈還在跳，只是亂得很。日落之前把藥灌下去的話人就能活；要是過了時辰，我就沒法子了。」",
+    "Sequence": "",
+    "zh_CN": "[panel=2]「脉还在跳，只是乱得很。日落之前把药灌下去的话人就能活；要是过了时辰，我就没法子了。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她從藥箱底層拿出一只小罈，倒出來的東西是黑的，稠得掛碗。那股味你在小溪村後山聞過一回，就是她放藥煙驅屍鬼的那一天。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她从药箱底层拿出一只小坛，倒出来的东西是黑的，稠得挂碗。那股味你在小溪村后山闻过一回，就是她放药烟驱尸鬼的那一天。）＊",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role70",
+    "text": "[panel=1]「這是什麼？」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「这是什么？」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC6",
+    "text": "[panel=2]「藥，妳男人這條命就在這一碗裡。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_CN": "[panel=2]「药，你男人这条命就在这一碗里。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role70",
+    "text": "[panel=1]「這味兒……這是毒！大夥說的果然沒錯，妳真敢拿毒給人喝！」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「这味儿……这是毒！大伙说的果然没错，你真敢拿毒给人喝！」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "role2",
+    "text": "[panel=6]＊（門外聽見爭吵，人慢慢圍了過來，你一句我一句往裡遞——用毒的，大夫早說沒治了。說歸說，沒有一個人往屋裡踏一步。）＊",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_38);",
+    "zh_CN": "[panel=6]＊（门外听见争吵，人慢慢围了过来，你一句我一句往里递——用毒的，大夫早说没治了。说归说，没有一个人往屋里踏一步。）＊",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC6",
+    "text": "[panel=2]「不喝就死。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_CN": "[panel=2]「不喝就死。」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那婦人把身子橫在鋪前，眼睛盯著那碗藥，像盯著一條蛇。張寧端著碗站在鋪邊，兩個人就這麼僵著，誰也不肯先退。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那妇人把身子横在铺前，眼睛盯着那碗药，像盯着一条蛇。张宁端着碗站在铺边，两个人就这么僵着，谁也不肯先退。）＊",
+    "links": [14, 16, 18]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「這碗我先喝。」",
+    "Sequence": "",
+    "Description": "選項1：信義（LawChaos +0.2）。三條匯合，結果強制",
+    "zh_CN": "「这碗我先喝。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「我先喝一口，你們看著。她的藥要是有毒，先毒死我。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,0.2);",
+    "zh_CN": "「我先喝一口，你们看着。她的药要是有毒，先毒死我。」",
+    "links": [20]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「人快沒氣了。」",
+    "Sequence": "",
+    "Description": "選項2：仁心（GoodEvil +0.2）。三條匯合，結果強制",
+    "zh_CN": "「人快没气了。」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「他快沒氣了，妳讓開——我先喝，喝完換他。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,GoodEvil,0.2);",
+    "zh_CN": "「他快没气了，你让开——我先喝，喝完换他。」",
+    "links": [20]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「別吵了。」",
+    "Sequence": "",
+    "Description": "選項3：通達（LawChaos −0.2）。三條匯合，結果強制",
+    "zh_CN": "「别吵了。」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「別吵了——我喝，喝完他喝，這樣總行了吧。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
+    "zh_CN": "「别吵了——我喝，喝完他喝，这样总行了吧。」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把碗從她手裡接過來仰頭喝了半碗，苦得舌根發麻，一路燒到胃裡。）＊",
+    "Sequence": "",
+    "Description": "三條在此匯合。那一口強制發生",
+    "zh_CN": "[panel=6]＊（你把碗从她手里接过来仰头喝了半碗，苦得舌根发麻，一路烧到胃里。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC6",
+    "text": "[panel=1]「放下！那份量是照他配的——」",
+    "Sequence": "SetPanel(MC6, 1, immediate);\nSetPortrait(MC6,pic=4);\nEnableCharacterExpression(1,MC6,Shock)@0.5;",
+    "zh_CN": "[panel=1]「放下！那份量是照他配的——」",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「你們看，我好好的，剩下這半碗給他。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);",
+    "zh_CN": "「你们看，我好好的，剩下这半碗给他。」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧把碗從你手裡奪回去，補上你喝掉的那半碗——）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（张宁把碗从你手里夺回去，补上你喝掉的那半碗——）＊",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那婦人看看你，又看看床上的人，到底讓開了。藥灌下去，那漢子嗆了兩聲，胸口的黑線像退潮一樣往下縮了半寸。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那妇人看看你，又看看床上的人，到底让开了。药灌下去，那汉子呛了两声，胸口的黑线像退潮一样往下缩了半寸。）＊",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那婦人跪下來就要磕頭，張寧一把把她拽起來，什麼也沒說，只把藥箱扣上，扣得很重。）＊",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_CN": "[panel=6]＊（那妇人跪下来就要磕头，张宁一把把她拽起来，什么也没说，只把药箱扣上，扣得很重。）＊",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC6",
+    "text": "[panel=1]「走，快跟我回藥房。這藥上身快，你撐不住的。」",
+    "Sequence": "SetPortrait(MC6,pic=4);",
+    "zh_CN": "[panel=1]「走，快跟我回药房。这药上身快，你撑不住的。」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「我沒事，我還走得——」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "「我没事，我还走得——」",
+    "links": [67]
+  },
+  {
+    "entryID": 28,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1) ;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [66]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你睜開眼的時候人已經在房裡，燈點著，冷汗把衣領浸透，手指頭一根一根涼上來。）＊",
+    "Sequence": "SetPortrait(MC1,pic=16);",
+    "zh_CN": "[panel=6]＊（你睁开眼的时候人已经在房里，灯点着，冷汗把衣领浸透，手指头一根一根凉上来。）＊",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC6",
+    "text": "[panel=1]「把胃裡的東西全吐出來一滴都不許留，吐完了喝這個，一口一口地喝，不然喝急了我就灌回去。」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_CN": "[panel=1]「把胃里的东西全吐出来一滴都不许留，吐完了喝这个，一口一口地喝，不然喝急了我就灌回去。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她一手扣著你的腕子數脈，一手往你嘴裡灌溫水，灌一碗，等一等，再灌一碗。她一句話也沒有多說，燈芯燒短了一截，她也沒有去剪。）＊",
+    "Sequence": "OpenPanel(1,close);",
+    "zh_CN": "[panel=6]＊（她一手扣着你的腕子数脉，一手往你嘴里灌温水，灌一碗，等一等，再灌一碗。她一句话也没有多说，灯芯烧短了一截，她也没有去剪。）＊",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那一夜她沒有坐下過。你醒醒睡睡，每一次睜眼，她那兩根指頭都還搭在你腕上。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那一夜她没有坐下过。你醒醒睡睡，每一次睁眼，她那两根指头都还搭在你腕上。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Clinic_Home);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場：夜 → 天亮。同景 Clinic_Home",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "role2",
+    "text": "[panel=6]＊（天亮的時候窗紙白了一層，桌上擱著一碗涼透的水。她坐在桌邊，背對著你。）＊",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "zh_CN": "[panel=6]＊（天亮的时候窗纸白了一层，桌上搁着一碗凉透的水。她坐在桌边，背对着你。）＊",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,MedicalExpertiseCheck,10);",
+    "Description": "自動醫術檢定觸發點：難度 10",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "空內容緩衝節點，用於連接檢定結果",
+    "links": [38, 39]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role2",
+    "text": "[panel=6]＊（舌根還留著昨夜那碗的苦，苦底下還壓著一味，那才是壓住邪氣的東西——那個味道你從來沒有嘗過，也想不起在哪一本書上見過。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,MedicalExpertise,10);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_CN": "[panel=6]＊（舌根还留着昨夜那碗的苦，苦底下还压着一味，那才是压住邪气的东西——那个味道你从来没有尝过，也想不起在哪一本书上见过。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（舌根還留著昨夜那碗的苦，除了苦，你什麼也分不出來。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "zh_CN": "[panel=6]＊（舌根还留着昨夜那碗的苦，除了苦，你什么也分不出来。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC6",
+    "text": "[panel=1]「[em7]沒有回頭，不像在問[/em7]，你知道那碗是什麼。」",
+    "Sequence": "SetPortrait(MC6,pic=1);SetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=1]「[em7]没有回头，不像在问[/em7]，你知道那碗是什么。」",
+    "links": [41, 47, 53]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「我相信妳。」",
+    "Sequence": "",
+    "Description": "選項1：妳配的（無檢定）",
+    "zh_CN": "「我相信妳。」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC1",
+    "text": "「藥是妳配的，我要擔心什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「药是妳配的，我要担心什么。」",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她沒有接話，桌上那碗水她端起來，又放回去，水面晃了兩晃才平下來。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她没有接话，桌上那碗水她端起来，又放回去，水面晃了两晃才平下来。）＊",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC6",
+    "text": "[panel=1]「份量是照他配的，到他身上是藥，而到你身上就是毒，你連這個都不懂就敢往嘴裡倒。」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_CN": "[panel=1]「份量是照他配的，到他身上是药，而到你身上就是毒，你连这个都不懂就敢往嘴里倒。」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「妳說過，多一點少一點，都能要人命。妳配的，份量不會錯。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「你说过，多一点少一点，都能要人命。你配的，份量不会错。」",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC6",
+    "text": "[panel=1]「錯的是你。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_CN": "[panel=1]「错的是你。」",
+    "links": [59]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「總不能見死不救。」",
+    "Sequence": "",
+    "Description": "選項2：總不能見死不救（無檢定）",
+    "zh_CN": "「总不能见死不救。」",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「總不能見死不救，人躺在那兒，我站著看？」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「总不能见死不救，人躺在那儿，我站着看？」",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC6",
+    "text": "[panel=1]「那一屋子人裡快死的是他不是你，你倒好，替他把毒先喝了。」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_CN": "[panel=1]「那一屋子人里快死的是他不是你，你倒好，替他把毒先喝了。」",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC6",
+    "text": "[panel=1]「份量是照他配的，到他身上是藥，而到你身上就是毒，你連這個都不懂就敢往嘴裡倒。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「份量是照他配的，到他身上是药，而到你身上就是毒，你连这个都不懂就敢往嘴里倒。」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「可他活了，不是嗎。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「可他活了，不是吗。」",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC6",
+    "text": "[panel=1]「他活了，你差一點沒活，這算哪一門的救人？」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_CN": "[panel=1]「他活了，你差一点没活，这算哪一门的救人？」",
+    "links": [59]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「我沒想那麼多。」",
+    "Sequence": "",
+    "Description": "選項3：我沒想那麼多（無檢定）",
+    "zh_CN": "「我没想那么多。」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「我沒想那麼多，碗在她手上，我就接過來了。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_CN": "「我没想那么多，碗在她手上，我就接过来了。」",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC6",
+    "text": "[panel=1]「我知道你沒想，你這輩子有哪一次是想過的。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_CN": "[panel=1]「我知道你没想，你这辈子有哪一次是想过的。」",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC6",
+    "text": "[panel=1]「份量是照他配的，到他身上是藥，而到你身上就是毒，你連這個都不懂就敢往嘴裡倒。」",
+    "Sequence": "",
+    "zh_CN": "[panel=1]「份量是照他配的，到他身上是药，而到你身上就是毒，你连这个都不懂就敢往嘴里倒。」",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「知道了，下回我先問過妳再喝。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_CN": "「知道了，下回我先问过你再喝。」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC6",
+    "text": "[panel=1]「下回？你還想有下回。」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_CN": "[panel=1]「下回？你还想有下回。」",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC6",
+    "text": "[panel=1]「[em7]起身走回榻邊，把你蹬開的被子拉上來，蓋到肩頭，手很輕[/em7]，下次再敢碰我的藥碗，我就真的下毒。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "Description": "三條在此匯合",
+    "zh_CN": "[panel=1]「[em7]起身走回榻边，把你蹬开的被子拉上来，盖到肩头，手很轻[/em7]，下次再敢碰我的药碗，我就真的下毒。」",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「好，好，不碰。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「好，好，不碰。」",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你笑了，她沒有笑，端起那碗涼水便走開，打開藥箱最底層，捧出一盆巴掌大的草來，擱到窗邊有光的地方。）＊",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);",
+    "zh_CN": "[panel=6]＊（你笑了，她没有笑，端起那碗凉水便走开，打开药箱最底层，捧出一盆巴掌大的草来，搁到窗边有光的地方。）＊",
+    "links": [68]
+  },
+  {
+    "entryID": 63,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nModifyData(FavorabilityExp,MC6,100);\nContinue();",
+    "Description": "尾格：收立繪表情與對話背景圖。好感度提升",
+    "links": []
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC1",
+    "title": "那一碗",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "180年5月上旬開啟，需要好感度Lv2",
+    "links": [1]
+  },
+  {
+    "entryID": 68,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那盆草送過來一縷淡香。她還站在窗邊，背對著你，手指搭在盆沿上，看著那一點綠，你也就慢慢睡著了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_CN": "[panel=6]＊（那盆草送过来一缕淡香。她还站在窗边，背对着你，手指搭在盆沿上，看着那一点绿，你也就慢慢睡着了。）＊",
+    "links": [63]
+  },
+  {
+    "entryID": 66,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "EnableDialogueBG(Home_Night);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_31);\nContinue();",
+    "Description": "換背景、音樂",
+    "links": [30]
+  },
+  {
+    "entryID": 67,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nAudioControl(PlaySFX,Others_BodyFall);\nOpenPanel(0, close);\nOpenPanel(1, close);\nOpenPanel(2,close);\nContinue();",
+    "Description": "音效和去除立繪",
+    "links": [28]
+  }
+]
