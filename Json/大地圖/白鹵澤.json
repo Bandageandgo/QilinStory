@@ -2,9 +2,9 @@
   {
     "entryID": 1,
     "actorID": "role2",
-    "text": "[panel=6]＊（火塘用石頭壓著，鍋埋了半截在鹽裡。鹽殼上刻著一個記號——一個圓，裡頭幾道分格，是天機盤的樣子。記號旁邊壓著一卷紙。）＊",
+    "text": "[panel=6]＊（一頂帳子塌了半邊，火塘用石頭壓著，鍋埋了半截在鹽裡。鹽殼上刻著一個記號——一個圓，裡頭幾道分格，是天機盤的樣子。記號旁邊壓著一卷紙。）＊",
     "Sequence": "ModifyData(Valuable,MC22,WanderingNotesPage7,1);",
-    "zh_CN": "[panel=6]＊（火塘用石头压着，锅埋了半截在盐里。盐壳上刻着一个记号——一个圆，里头几道分格，是天机盘的样子。记号旁边压着一卷纸。）＊",
+    "zh_CN": "[panel=6]＊（一顶帐子塌了半边，火塘用石头压着，锅埋了半截在盐里。盐壳上刻着一个记号——一个圆，里头几道分格，是天机盘的样子。记号旁边压着一卷纸。）＊",
     "links": [
       2
     ]
@@ -12,9 +12,9 @@
   {
     "entryID": 2,
     "actorID": "MC22",
-    "text": "[panel=1]「這……是寫給我的。你也看吧——裡頭的事，你都知道了。」",
+    "text": "[panel=1]「這……是寫給我的。你也看吧——走到這裡，沒有什麼是你不能看的。」",
     "Sequence": "SetPortrait(MC22,pic=9);",
-    "zh_CN": "[panel=1]「这……是写给我的。你也看吧——里头的事，你都知道了。」",
+    "zh_CN": "[panel=1]「这……是写给我的。你也看吧——走到这里，没有什么是你不能看的。」",
     "links": [
       3
     ]
@@ -36,6 +36,27 @@
     "Sequence": "SetPortrait(MC22,pic=3);",
     "zh_CN": "[panel=1]「[em7]把卷子卷好，收进怀里[/em7]，……他知道我会来。这一路我追得这么慢，他倒是早就算准了。」",
     "links": [
+      19
+    ]
+  },
+  {
+    "entryID": 19,
+    "actorID": "role2",
+    "text": "[panel=6]＊（風忽然變了向，北邊的天沉下來，一道黃牆從澤沿那頭壓過來，鹽殼被刮得嘩嘩地響。）＊",
+    "Sequence": "",
+    "Description": "風沙起（風沙演出與移動指令作者處理）",
+    "zh_CN": "[panel=6]＊（风忽然变了向，北边的天沉下来，一道黄墙从泽沿那头压过来，盐壳被刮得哗哗地响。）＊",
+    "links": [
+      20
+    ]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC22",
+    "text": "[panel=1]「風沙——別站著！崖下有個洞，跑！」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "zh_CN": "[panel=1]「风沙——别站着！崖下有个洞，跑！」",
+    "links": [
       5
     ]
   },
@@ -46,6 +67,432 @@
     "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
     "Script": "SetQuestEntryState(\"CF45\", 3, \"success\");",
     "Description": "尾格：收立繪面板；收 CF45 entry 3（白鹵澤・末卷；entry 3 由〈死地生綠〉開 active）",
+    "links": []
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（白得晃眼，四面都是白，鹽殼一直鋪到天邊，風從北邊來，把地面刮得發亮。腳下踩一步，殼就碎一聲。）＊",
+    "Sequence": "",
+    "Description": "互動點：入口（進圖後觸發，作者掛）",
+    "zh_CN": "[panel=6]＊（白得晃眼，四面都是白，盐壳一直铺到天边，风从北边来，把地面刮得发亮。脚下踩一步，壳就碎一声。）＊",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「就是這裡了，趕駝的說這幾年澤裡見得著綠，我還當他喝多了——你看地上。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「就是这里了，赶驼的说这几年泽里见得着绿，我还当他喝多了——你看地上。」",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（腳邊的鹽殼裂了一塊，翻起來的那一面底下壓著幾莖草，綠的，貼著地長。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（脚边的盐壳裂了一块，翻起来的那一面底下压着几茎草，绿的，贴着地长。）＊",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC22",
+    "text": "[panel=1]「趕駝的沒說錯，死地裡真長得出草。草只長在這一道上——它從那頭來，往北去，一路都是。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「赶驼的没说错，死地里真长得出草。草只长在这一道上——它从那头来，往北去，一路都是。」",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role2",
+    "text": "[panel=6]＊（順著她指的方向看過去，鹽殼上有一道淺淺的溝，蜿蜒著往北，溝底一線綠。除了它，四面沒有一樣東西能認。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（顺着她指的方向看过去，盐壳上有一道浅浅的沟，蜿蜒着往北，沟底一线绿。除了它，四面没有一样东西能认。）＊",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC22",
+    "text": "[panel=1]「這就是路了，跟著它走，別的什麼都別信——風大，話少說，跟緊我。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「这就是路了，跟着它走，别的什么都别信——风大，话少说，跟紧我。」",
+    "links": [
+      12
+    ]
+  },
+  {
+    "entryID": 12,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "尾格：收立繪面板",
+    "links": []
+  },
+  {
+    "entryID": 13,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那東西橫在痕的中段，半透，比屋還大。你伸手推了一下，紋絲不動；繞著走了半圈，裡頭是空的。）＊",
+    "Sequence": "",
+    "Description": "互動點：殼（點擊觸發，作者掛）",
+    "zh_CN": "[panel=6]＊（那东西横在痕的中段，半透，比屋还大。你伸手推了一下，纹丝不动；绕着走了半圈，里头是空的。）＊",
+    "links": [
+      14
+    ]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC22",
+    "text": "[panel=1]「……像蛇蛻下來的皮。可哪來這麼大的蛇——比帳子還大，比屋還大。」",
+    "Sequence": "SetPortrait(MC22,pic=9);",
+    "zh_CN": "[panel=1]「……像蛇蜕下来的皮。可哪来这么大的蛇——比帐子还大，比屋还大。」",
+    "links": [
+      15
+    ]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=6]＊（殼邊的鹽殼上有幾道刻痕，風磨掉了大半，剩三個字還看得出。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（壳边的盐壳上有几道刻痕，风磨掉了大半，剩三个字还看得出。）＊",
+    "links": [
+      16
+    ]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]手指順著刻痕描過去[/em7]，『非死物』——是我爹的手。他在這裡蹲過，蹲了不知道多久。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「[em7]手指顺着刻痕描过去[/em7]，『非死物』——是我爹的手。他在这里蹲过，蹲了不知道多久。」",
+    "links": [
+      17
+    ]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC22",
+    "text": "[panel=1]「非死物……他只留了三個字。走吧，痕還沒到頭，他的營該在前頭。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「非死物……他只留了三个字。走吧，痕还没到头，他的营该在前头。」",
+    "links": [
+      18
+    ]
+  },
+  {
+    "entryID": 18,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "尾格：收立繪面板",
+    "links": []
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "[panel=6]＊（洞不深，風沙在洞口外頭一層一層地過，白天暗得像傍晚。她背對著你坐下，一頭黑髮散著——頭巾早在跑的時候被風捲走了。）＊",
+    "Sequence": "",
+    "Description": "互動點：洞窟（範圍觸發，作者掛；風沙之後）",
+    "zh_CN": "[panel=6]＊（洞不深，风沙在洞口外头一层一层地过，白天暗得像傍晚。她背对着你坐下，一头黑发散着——头巾早在跑的时候被风卷走了。）＊",
+    "links": [
+      22
+    ]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（髮間兩個小小的尖，一左一右。洞口漏進來的光底下，看得清楚。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（发间两个小小的尖，一左一右。洞口漏进来的光底下，看得清楚。）＊",
+    "links": [
+      23
+    ]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]手往頭上摸，摸了個空[/em7]，……罷了，看見了就看見了。我本來也沒打算瞞你一輩子。」",
+    "Sequence": "SetPortrait(MC22,pic=9);",
+    "zh_CN": "[panel=1]「[em7]手往头上摸，摸了个空[/em7]，……罢了，看见了就看见了。我本来也没打算瞒你一辈子。」",
+    "links": [
+      24
+    ]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC22",
+    "text": "[panel=1]「[var=PlayerFirstName]，有件事我一直沒跟你說。不是不想說——是我自己也不知道該從哪一句說起。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]，有件事我一直没跟你说。不是不想说——是我自己也不知道该从哪一句说起。」",
+    "links": [
+      25
+    ]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC22",
+    "text": "[panel=1]「他家幾代人追的那樣東西，我阿母只說是個厲害的敵人，沒說是什麼。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「他家几代人追的那样东西，我阿母只说是个厉害的敌人，没说是什么。」",
+    "links": [
+      26
+    ]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC22",
+    "text": "[panel=1]「今天那一卷才說明白——它在這裡，在我頭上。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「今天那一卷才说明白——它在这里，在我头上。」",
+    "links": [
+      27
+    ]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC22",
+    "text": "[panel=1]「部裡隔幾代就出一個這樣的孩子，老人講起來像講笑話，我從小也當笑話聽。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「部里隔几代就出一个这样的孩子，老人讲起来像讲笑话，我从小也当笑话听。」",
+    "links": [
+      28
+    ]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC22",
+    "text": "[panel=1]「到了漢地才知道要藏——這裡的人見了這個，先想到的是妖。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「到了汉地才知道要藏——这里的人见了这个，先想到的是妖。」",
+    "links": [
+      29
+    ]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC22",
+    "text": "[panel=1]「他不是為了寶貝走的。他是為了我頭上這個走的——走了十年，走到這裡，把話留下，人卻不讓我找。」",
+    "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_CN": "[panel=1]「他不是为了宝贝走的。他是为了我头上这个走的——走了十年，走到这里，把话留下，人却不让我找。」",
+    "links": [
+      30
+    ]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC22",
+    "text": "[panel=1]「……我說完了，你要說什麼就說吧。這洞裡沒有旁人，風也不會傳話。」",
+    "Sequence": "SetPortrait(MC22,pic=13);",
+    "zh_CN": "[panel=1]「……我说完了，你要说什么就说吧。这洞里没有旁人，风也不会传话。」",
+    "links": [
+      31,
+      32,
+      33
+    ]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC1",
+    "text": "「那他找到法子了嗎？」",
+    "Sequence": "",
+    "Description": "選項一：問法子",
+    "zh_CN": "「那他找到法子了吗？」",
+    "links": [
+      34
+    ]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「……比我想的小。」",
+    "Sequence": "",
+    "Description": "選項二：損，燕不凡式的錯話（自 13 頭巾移來）",
+    "zh_CN": "「……比我想的小。」",
+    "links": [
+      39
+    ]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "（不說話，把外袍脫下來，遞給她。）",
+    "Sequence": "",
+    "Description": "選項三：不開口選項，依轉成json指南豁免，不接發言格",
+    "zh_CN": "（不说话，把外袍脱下来，递给她。）",
+    "links": [
+      42
+    ]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「那他找到法子了嗎？走了十年，總該找到點什麼。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「那他找到法子了吗？走了十年，总该找到点什么。」",
+    "links": [
+      35
+    ]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC22",
+    "text": "[panel=1]「找到了一句話。他說到了那一步，訣沒有用，要不要，得我自己決定。」",
+    "Sequence": "SetPortrait(MC22,pic=14);",
+    "zh_CN": "[panel=1]「找到了一句话。他说到了那一步，诀没有用，要不要，得我自己决定。」",
+    "links": [
+      36
+    ]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC22",
+    "text": "[panel=1]「走了十年，找回來一句『你自己決定』。」",
+    "Sequence": "SetPortrait(MC22,pic=14);",
+    "zh_CN": "[panel=1]「走了十年，找回来一句『你自己决定』。」",
+    "links": [
+      37
+    ]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC22",
+    "text": "[panel=1]「……不過他寫了三層給我，最後這一層留給我自己。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「……不过他写了三层给我，最后这一层留给我自己。」",
+    "links": [
+      38
+    ]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC22",
+    "text": "[panel=1]「我阿母說得對，他是替我找路——路找到頭，最後一步他不替我走。」",
+    "Sequence": "SetPortrait(MC22,pic=8);\nModifyData(FavorabilityExp,MC22,20);",
+    "Description": "選項一收尾：好感 +20（建議值，待作者定）",
+    "zh_CN": "[panel=1]「我阿母说得对，他是替我找路——路找到头，最后一步他不替我走。」",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「……比我想的小多了。角婆的老話講得那麼嚇人，我還當有牛角那麼大。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「……比我想的小多了。角婆的老话讲得那么吓人，我还当有牛角那么大。」",
+    "links": [
+      40
+    ]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC22",
+    "text": "[panel=1]「你、你什麼意思！什麼叫比你想的小！」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_CN": "[panel=1]「你、你什么意思！什么叫比你想的小！」",
+    "links": [
+      41
+    ]
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC22",
+    "text": "[panel=1]「……我從小就怕人看見這個。你倒好，頭一句就嫌小。」",
+    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,20);",
+    "Description": "選項二收尾：好感 +20（建議值，待作者定）",
+    "zh_CN": "[panel=1]「……我从小就怕人看见这个。你倒好，头一句就嫌小。」",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 42,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把外袍脫下來遞過去。她看了一眼，接了，卻沒往頭上蓋，搭在膝上。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你把外袍脱下来递过去。她看了一眼，接了，却没往头上盖，搭在膝上。）＊",
+    "links": [
+      43
+    ]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC22",
+    "text": "[panel=1]「……遞什麼遞，看都看了。你不問？」",
+    "Sequence": "SetPortrait(MC22,pic=7);",
+    "zh_CN": "[panel=1]「……递什么递，看都看了。你不问？」",
+    "links": [
+      44
+    ]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「有什麼好問的。妳要是想說，自己會說。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「有什么好问的。你要是想说，自己会说。」",
+    "links": [
+      45
+    ]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC22",
+    "text": "[panel=1]「……你不問也好，問了我也不知道怎麼答。」",
+    "Sequence": "SetPortrait(MC22,pic=1);\nModifyData(FavorabilityExp,MC22,20);",
+    "Description": "選項三收尾：好感 +20（建議值，待作者定）",
+    "zh_CN": "[panel=1]「……你不问也好，问了我也不知道怎么答。」",
+    "links": [
+      46
+    ]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC22",
+    "text": "[panel=1]「風還沒停，再坐一會兒。你要是不嫌棄——這邊地上乾，坐過來些。」",
+    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Description": "三條路匯流",
+    "zh_CN": "[panel=1]「风还没停，再坐一会儿。你要是不嫌弃——这边地上干，坐过来些。」",
+    "links": [
+      47
+    ]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「坐就坐，反正外頭也走不了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「坐就坐，反正外头也走不了。」",
+    "links": [
+      48
+    ]
+  },
+  {
+    "entryID": 48,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你在她旁邊坐下。洞口的風沙一陣一陣地過，她沒有再去摸頭上。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你在她旁边坐下。洞口的风沙一阵一阵地过，她没有再去摸头上。）＊",
+    "links": [
+      49
+    ]
+  },
+  {
+    "entryID": 49,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "尾格：收立繪面板（洞窟場不收 entry；entry 3 已在 #5 收）",
     "links": []
   }
 ]
