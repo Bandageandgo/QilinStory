@@ -2,10 +2,10 @@
   {
     "entryID": 16,
     "actorID": "MC3",
-    "text": "「……新秀賽。哄鬧而已。」",
+    "text": "「新秀賽而已，哄鬧一場。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=3);",
     "Conditions": "CurrentQuestEntryState(\"CF38\", 2) == \"unassigned\";",
-    "zh_CN": "「……新秀赛。哄闹而已。」",
+    "zh_CN": "「新秀赛而已，哄闹一场。」",
     "links": [17]
   },
   {
@@ -19,9 +19,9 @@
   {
     "entryID": 18,
     "actorID": "MC3",
-    "text": "「羽已經打過了。對羽而言，這一場不過是看熱鬧。」",
+    "text": "「我已經打過了，這一場我只是看熱鬧。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_CN": "「羽已经打过了。对羽而言，这一场不过是看热闹。」",
+    "zh_CN": "「我已经打过了，这一场我只是看热闹。」",
     "links": [19]
   },
   {
@@ -75,9 +75,9 @@
   {
     "entryID": 25,
     "actorID": "MC3",
-    "text": "「……嗯。」",
+    "text": "「這一句，你讀對了。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=1);",
-    "zh_CN": "「……嗯。」",
+    "zh_CN": "「这一句，你读对了。」",
     "links": [26]
   },
   {
@@ -96,21 +96,13 @@
     "Sequence": "SetPortrait(MC1,pic=7);EnableCharacterExpression(0,Player,Nervous);",
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「那个……春秋里好像写过，打要……打得正？师什么为壮来着……」",
-    "links": [28]
-  },
-  {
-    "entryID": 28,
-    "actorID": "MC3",
-    "text": "「……。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=5);",
-    "zh_CN": "「……。」",
     "links": [29]
   },
   {
     "entryID": 29,
     "actorID": "role2",
     "text": "[panel=6]＊（他連眼皮都懶得抬，只當沒聽見。空氣靜了一息。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=5);",
     "zh_CN": "[panel=6]＊（他连眼皮都懒得抬，只当没听见。空气静了一息。）＊",
     "links": [378]
   },
@@ -133,9 +125,9 @@
   {
     "entryID": 32,
     "actorID": "MC3",
-    "text": "「……新秀賽。哄鬧而已。」",
+    "text": "「新秀賽而已，哄鬧一場。」",
     "Sequence": "",
-    "zh_CN": "「……新秀赛。哄闹而已。」",
+    "zh_CN": "「新秀赛而已，哄闹一场。」",
     "links": []
   },
   {
@@ -2646,9 +2638,9 @@
   {
     "entryID": 643,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]眉頭一皺，欲言又止[/em7]……」",
+    "text": "[panel=2]「[em7]眉頭一皺[/em7]，你那一跤──」",
     "Sequence": "",
-    "zh_CN": "[panel=2]「[em7]眉头一皱，欲言又止[/em7]……」",
+    "zh_CN": "[panel=2]「[em7]眉头一皱[/em7]，你那一跤──」",
     "links": [644]
   },
   {
@@ -2827,9 +2819,9 @@
   {
     "entryID": 665,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]難得地頷首[/em7]，嗯。」",
+    "text": "[panel=2]「[em7]難得地頷首[/em7]，七場都堂堂正正，這一勝我認。」",
     "Sequence": "",
-    "zh_CN": "[panel=2]「[em7]难得地颔首[/em7]，嗯。」",
+    "zh_CN": "[panel=2]「[em7]难得地颔首[/em7]，七场都堂堂正正，这一胜我认。」",
     "links": [666]
   },
   {
@@ -3437,9 +3429,9 @@
   {
     "entryID": 776,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]一口喝光面前的酒[/em7]，名震天下……那也要看，這身武藝是否用在大義上。」",
+    "text": "[panel=2]「[em7]一口喝光面前的酒[/em7]，殺得越多，才越明白這話有多輕。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC3,pic=1);",
-    "zh_CN": "[panel=2]「[em7]一口喝光面前的酒[/em7]，名震天下……那也要看，这身武艺是否用在大义上。」",
+    "zh_CN": "[panel=2]「[em7]一口喝光面前的酒[/em7]，杀得越多，才越明白这话有多轻。」",
     "links": [777]
   },
   {
@@ -3453,9 +3445,9 @@
   {
     "entryID": 778,
     "actorID": "MC3",
-    "text": "[panel=2]「……」",
+    "text": "[panel=2]「你逍遙你的，我不攔。」",
     "Sequence": "SetPortrait(MC3,pic=3);",
-    "zh_CN": "[panel=2]「……」",
+    "zh_CN": "[panel=2]「你逍遥你的，我不拦。」",
     "links": [780]
   },
   {
@@ -3625,10 +3617,10 @@
   {
     "entryID": 800,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]沉默片刻，緩緩舉起酒碗[/em7]，……擂台上那一讓，我本想說你兩句。可你擔下的，是全府的難處——這碗，我敬你。」",
+    "text": "[panel=2]「[em7]舉起酒碗[/em7]，擂台上那一讓，我本想說你兩句。你擔下的是全府的難處，這碗我敬你。」",
     "Sequence": "SetPortrait(MC3,pic=1);\nModifyData(FavorabilityExp,MC3,30);",
     "Description": "好感度提升",
-    "zh_CN": "[panel=2]「[em7]沉默片刻，缓缓举起酒碗[/em7]，……擂台上那一让，我本想说你两句。可你担下的，是全府的难处——这碗，我敬你。」",
+    "zh_CN": "[panel=2]「[em7]举起酒碗[/em7]，擂台上那一让，我本想说你两句。你担下的是全府的难处，这碗我敬你。」",
     "links": [834]
   },
   {
@@ -3675,10 +3667,10 @@
   {
     "entryID": 807,
     "actorID": "MC3",
-    "text": "[panel=2]「錢是死物。你今日守住的東西，比那筆銀子貴重得多。」",
+    "text": "[panel=2]「銀子的事，府裡自有辦法。你今日沒有讓，這一點我記著。」",
     "Sequence": "SetPortrait(MC3,pic=1);\nModifyData(FavorabilityExp,MC3,100);",
     "Description": "好感度提升",
-    "zh_CN": "[panel=2]「钱是死物。你今日守住的东西，比那笔银子贵重得多。」",
+    "zh_CN": "[panel=2]「银子的事，府里自有办法。你今日没有让，这一点我记着。」",
     "links": [834]
   },
   {
@@ -3731,10 +3723,10 @@
   {
     "entryID": 814,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]舉起酒碗，微微點頭[/em7]，…氣勢不凡。這杯，我陪你。」",
+    "text": "[panel=2]「[em7]舉起酒碗[/em7]，這一杯我陪你。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC3,pic=1);\nModifyData(FavorabilityExp,MC3,30);",
     "Description": "好感度提升",
-    "zh_CN": "[panel=2]「[em7]举起酒碗，微微点头[/em7]，…气势不凡。这杯，我陪你。」",
+    "zh_CN": "[panel=2]「[em7]举起酒碗[/em7]，这一杯我陪你。」",
     "links": [815]
   },
   {
@@ -3795,9 +3787,9 @@
   {
     "entryID": 822,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]伸手扶住搖搖欲墜的郭嘉，自己卻早也滿臉通紅[/em7]，……奉孝兄，你醉了。」",
+    "text": "[panel=2]「[em7]伸手扶住搖搖欲墜的郭嘉[/em7]，奉孝兄，你醉了。」",
     "Sequence": "DisableCharacterExpression(3);SetPortrait(MC3,pic=3);",
-    "zh_CN": "[panel=2]「[em7]伸手扶住摇摇欲坠的郭嘉，自己却早也满脸通红[/em7]，……奉孝兄，你醉了。」",
+    "zh_CN": "[panel=2]「[em7]伸手扶住摇摇欲坠的郭嘉[/em7]，奉孝兄，你醉了。」",
     "links": [823]
   },
   {
@@ -3836,9 +3828,9 @@
   {
     "entryID": 827,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]默默把兩人的酒碗挪遠，替你們換上茶水[/em7]，……都少喝些。」",
+    "text": "[panel=2]「[em7]把兩人的酒碗挪遠，換上茶水[/em7]，酒到這裡為止。」",
     "Sequence": "SetPortrait(MC3,pic=3);",
-    "zh_CN": "[panel=2]「[em7]默默把两人的酒碗挪远，替你们换上茶水[/em7]，……都少喝些。」",
+    "zh_CN": "[panel=2]「[em7]把两人的酒碗挪远，换上茶水[/em7]，酒到这里为止。」",
     "links": [828]
   },
   {
@@ -3877,9 +3869,9 @@
   {
     "entryID": 832,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]無奈地遞上一杯茶水[/em7]，……逞強無益。先喝口茶緩緩。」",
+    "text": "[panel=2]「[em7]遞上一杯茶[/em7]，這杯是茶，喝了再說話。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC3,pic=3);",
-    "zh_CN": "[panel=2]「[em7]无奈地递上一杯茶水[/em7]，……逞强无益。先喝口茶缓缓。」",
+    "zh_CN": "[panel=2]「[em7]递上一杯茶[/em7]，这杯是茶，喝了再说话。」",
     "links": [833]
   },
   {
@@ -3932,9 +3924,9 @@
   {
     "entryID": 840,
     "actorID": "MC3",
-    "text": "[panel=2]「…喝酒吧。」",
+    "text": "[panel=2]「不說了，喝酒罷。」",
     "Sequence": "SetPortrait(MC3,pic=3);\nEnableCharacterExpression(2,MC3,Meditate);",
-    "zh_CN": "[panel=2]「…喝酒吧。」",
+    "zh_CN": "[panel=2]「不说了，喝酒罢。」",
     "links": [841]
   },
   {

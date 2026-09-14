@@ -50,10 +50,13 @@ def sentences(t):
 def noun_hits(t):
     raw = re.sub(r'\[/?em\d\]|\[panel=\d\]', '', t)
     hits = []
-    for m in re.finditer(r'[這那]面盤|[這那]盤', raw):
-        before = raw[:m.start()]
-        if not ('天機盤' in before or '羅盤' in before):
-            hits.append(m.group())
+    # 專名不縮成末一字（乙類〈不縮名詞〉2026-09-12 改通則）：新專名進文本時在這裡加一列
+    PROPER = {'盤': ('天機盤', '羅盤'), '訣': ('斬心訣',), '篇': ('養煞篇',)}
+    for tail, fulls in PROPER.items():
+        for m in re.finditer(r'[這那該]面?' + tail, raw):
+            before = raw[:m.start()]
+            if not any(f in before for f in fulls):
+                hits.append(m.group())
     hits += re.findall(r'(?<![一兩三四五六七八九十幾這那半])[這那]面(?=[，。！？」；、]|$)', raw)
     hits += [m.group() for m in re.finditer(r'(?<![' + COMPOUND_BEFORE + r'])盤(?![' + COMPOUND_AFTER + r'])', raw)]
     hits += re.findall(r'那把秤|那把尺|[這那]本帳(?!冊)', raw)
@@ -65,6 +68,9 @@ def lines_from_json(p):
         t = n.get('text', '')
         if not t.strip():
             continue
+        # 選單句本來就該比底下那格發言短（轉成json指南 §4.2 通則），不算碎句 2026-09-12
+        if str(n.get('Description', '')).startswith('選項'):
+            continue
         spk = ACTOR.get(n.get('actorID'), n.get('actorID'))
         if 'panel=6' in t.lower():
             spk = '旁白'
@@ -75,12 +81,18 @@ MD_LINE = re.compile(r'^\*\*([^*]+?)(?:\s*\(MC\d+\))?:\*\*\s*：?\s*(?:`#(\d+)`\
 
 
 def lines_from_md(p):
-    for i, line in enumerate(open(p, encoding='utf-8'), 1):
+    raw = open(p, encoding='utf-8').read().splitlines()
+    for i, line in enumerate(raw, 1):
         m = MD_LINE.match(line.strip())
         if not m:
             continue
         spk, eid, t = m.group(1).strip(), m.group(2), m.group(3)
         if not t.strip() or spk in ('Sequence', 'Script'):
+            continue
+        # 回讀稿的選單句底下就是「- 註記：選項N：…」，選項本來就該短，不算碎句 2026-09-12
+        # （只認「選項N：」，不可連「選項N收尾」那種收束格的註記一起吃掉）
+        if any(re.match(r'- 註記：選項[一二三四五六七八九十\d]+[：:]', raw[j].strip())
+               for j in range(i, min(i + 3, len(raw)))):
             continue
         yield spk, ('#%s' % eid if eid else 'L%d' % i), t
 

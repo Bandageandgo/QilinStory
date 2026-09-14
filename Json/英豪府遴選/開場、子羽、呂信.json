@@ -31,10 +31,10 @@
   {
     "entryID": 430,
     "actorID": "role27",
-    "text": "「朱雀？\n你小子是把我當傻子耍嗎！」",
+    "text": "「朱雀？\n這話哄得了旁人，哄不了我。」",
     "Sequence": "SetPortrait(MC1,pic=7);\nSetPortrait(MC3,pic=2);\nEnableCharacterExpression(1,MC3,Anger);",
-    "zh_TW": "「朱雀？\n你小子是把我當傻子耍嗎！」",
-    "zh_CN": "「朱雀？\n你小子是把我当傻子耍吗！」",
+    "zh_TW": "「朱雀？\n這話哄得了旁人，哄不了我。」",
+    "zh_CN": "「朱雀？\n这话哄得了旁人，哄不了我。」",
     "links": [489]
   },
   {
@@ -343,17 +343,18 @@
   {
     "entryID": 497,
     "actorID": "role27",
-    "text": "「哦？竟能馬上避開要害，果然有點能耐。」",
+    "text": "「竟能避開要害，有點能耐。」",
     "Sequence": "SetPortrait(MC3,pic=2);",
-    "zh_TW": "「哦？竟能馬上避開要害，果然有點能耐。」",
-    "zh_CN": "「哦？竟能马上避开要害，果然有点能耐。」",
+    "zh_TW": "「竟能避開要害，有點能耐。」",
+    "zh_CN": "「竟能避开要害，有点能耐。」",
     "links": [539]
   },
   {
     "entryID": 498,
     "actorID": "role2",
     "text": "[panel=6]＊（就見那人收掌，雙眼閉上，\n面紅耳赤，宛若仙家，顯然是說到心坎裡了。）＊",
-    "Sequence": "",
+    "Sequence": "SetPortrait(MC3,pic=3);\nShowInstantMessage(Exp_FeatExp,Player,Persuasion,20);",
+    "Description": "獲得專長經驗",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（就見那人收掌，雙眼閉上，\n面紅耳赤，宛若仙家，顯然是說到心坎裡了。）＊",
     "zh_CN": "[panel=6]＊（就见那人收掌，双眼闭上，\n面红耳赤，宛若仙家，显然是说到心坎里了。）＊",
@@ -416,10 +417,10 @@
   {
     "entryID": 507,
     "actorID": "MC3",
-    "text": "「玩？那敢玩命乎──！」",
+    "text": "「要玩，就拿命來玩。」",
     "Sequence": "SetPortrait(MC3,pic=2);\nSetContinueMode(false);\nPlayOrStopParticle(Punch_Multiple_ScreenWhite,Play);\nSetContinueMode(original)@1;",
-    "zh_TW": "「玩？那敢玩命乎──！」",
-    "zh_CN": "「玩？那敢玩命乎──！」",
+    "zh_TW": "「要玩，就拿命來玩。」",
+    "zh_CN": "「要玩，就拿命来玩。」",
     "links": [483]
   },
   {
@@ -518,10 +519,10 @@
   {
     "entryID": 518,
     "actorID": "MC3",
-    "text": "[panel=2]「羽願受責罰，\n你罰吧，師父。」",
+    "text": "[panel=2]「羽願受責罰，\n你罰罷，師父。」",
     "Sequence": "SetPortrait(MC3,pic=3);\nDisableCharacterExpression(1);",
-    "zh_TW": "[panel=2]「羽願受責罰，\n你罰吧，師父。」",
-    "zh_CN": "[panel=2]「羽愿受责罚，\n你罚吧，师父。」",
+    "zh_TW": "[panel=2]「羽願受責罰，\n你罰罷，師父。」",
+    "zh_CN": "[panel=2]「羽愿受责罚，\n你罚罢，师父。」",
     "links": [519]
   },
   {
@@ -648,17 +649,6 @@
     "links": [4093]
   },
   {
-    "entryID": 535,
-    "actorID": "role27",
-    "text": "「…………」",
-    "Sequence": "SetPortrait(MC3,pic=3);\nShowInstantMessage(Exp_FeatExp,Player,Persuasion,20);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "獲得專長經驗",
-    "zh_TW": "「…………」",
-    "zh_CN": "「…………」",
-    "links": [498]
-  },
-  {
     "entryID": 536,
     "actorID": "role27",
     "text": "「無端逢迎，不是小人，就是奸逆。」",
@@ -758,10 +748,10 @@
   {
     "entryID": 3982,
     "actorID": "MC3",
-    "text": "[panel=2]「羽願受責罰，\n你罰吧，師父。」",
+    "text": "[panel=2]「羽願受責罰，\n你罰罷，師父。」",
     "Sequence": "SetPortrait(MC3,pic=3);\nDisableCharacterExpression(1);",
-    "zh_TW": "[panel=2]「羽願受責罰，\n你罰吧，師父。」",
-    "zh_CN": "[panel=2]「羽愿受责罚，\n你罚吧，师父。」",
+    "zh_TW": "[panel=2]「羽願受責罰，\n你罰罷，師父。」",
+    "zh_CN": "[panel=2]「羽愿受责罚，\n你罚罢，师父。」",
     "links": [3983]
   },
   {
@@ -843,10 +833,10 @@
   {
     "entryID": 4038,
     "actorID": "MC3",
-    "text": "「[em7]頭也不抬，單手翻閱著一卷破舊的竹簡說道[/em7]：我沒留情。是你自己命大，躲過了要害。」",
+    "text": "「[em7]頭也不抬，翻著手裡那卷竹簡[/em7]，我沒留情，是你自己命大，躲過了要害。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_TW": "「[em7]頭也不抬，單手翻閱著一卷破舊的竹簡說道[/em7]：我沒留情。是你自己命大，躲過了要害。」",
-    "zh_CN": "「[em7]头也不抬，单手翻阅着一卷破旧的竹简说道[/em7]：我没留情。是你自己命大，躲过了要害。」",
+    "zh_TW": "「[em7]頭也不抬，翻著手裡那卷竹簡[/em7]，我沒留情，是你自己命大，躲過了要害。」",
+    "zh_CN": "「[em7]头也不抬，翻着手里那卷竹简[/em7]，我没留情，是你自己命大，躲过了要害。」",
     "links": [4039]
   },
   {
@@ -861,10 +851,10 @@
   {
     "entryID": 4040,
     "actorID": "MC3",
-    "text": "「哼。只有無能的懦夫，才會對手無寸鐵的婦孺拔刀。既然你身上帶著武器，她們惹的禍，自然該由你來接。」",
+    "text": "「對手無寸鐵的婦孺拔刀，是懦夫。你身上帶著兵器，她們惹的禍，該由你來接。」",
     "Sequence": "SetPortrait(MC3,pic=2);",
-    "zh_TW": "「哼。只有無能的懦夫，才會對手無寸鐵的婦孺拔刀。既然你身上帶著武器，她們惹的禍，自然該由你來接。」",
-    "zh_CN": "「哼。只有无能的懦夫，才会对手无寸铁的妇孺拔刀。既然你身上带着武器，她们惹的祸，自然该由你来接。」",
+    "zh_TW": "「對手無寸鐵的婦孺拔刀，是懦夫。你身上帶著兵器，她們惹的禍，該由你來接。」",
+    "zh_CN": "「对手无寸铁的妇孺拔刀，是懦夫。你身上带着兵器，她们惹的祸，该由你来接。」",
     "links": [4041]
   },
   {
@@ -922,31 +912,31 @@
   {
     "entryID": 4047,
     "actorID": "MC3",
-    "text": "「……哼。既然讀過書，就別像個莽夫一樣只會送死。活著通過遴選再說吧。」",
+    "text": "「既然讀過書，就別像莽夫一樣只會送死。活著通過遴選再說。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC3,pic=3);\nModifyData(FavorabilityExp,MC3,20);",
     "Description": "好感度提升",
-    "zh_TW": "「……哼。既然讀過書，就別像個莽夫一樣只會送死。活著通過遴選再說吧。」",
-    "zh_CN": "「……哼。既然读过书，就别像个莽夫一样只会送死。活着通过遴选再说吧。」",
+    "zh_TW": "「既然讀過書，就別像莽夫一樣只會送死。活著通過遴選再說。」",
+    "zh_CN": "「既然读过书，就别像莽夫一样只会送死。活着通过遴选再说。」",
     "links": [4049]
   },
   {
     "entryID": 4048,
     "actorID": "MC3",
-    "text": "「……」",
+    "text": "「英豪府不是遊山玩水的地方。」",
     "Sequence": "SetPortrait(MC3,pic=3);",
-    "zh_TW": "「……」",
-    "zh_CN": "「……」",
+    "zh_TW": "「英豪府不是遊山玩水的地方。」",
+    "zh_CN": "「英豪府不是游山玩水的地方。」",
     "links": [4049]
   },
   {
     "entryID": 4049,
     "actorID": "MC3",
-    "text": "「英豪府不是讓你們遊山玩水的地方。想在這裡活命，就收起你們的輕浮做派。若是沒有真本事……還是趁早離開吧。」",
+    "text": "「想在這裡活命，先收起輕浮的做派；沒有真本事，趁早離開。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
     "Script": "SetQuestEntryState(\"C1M1\", 3, \"success\");",
     "Description": "任務更新",
-    "zh_TW": "「英豪府不是讓你們遊山玩水的地方。想在這裡活命，就收起你們的輕浮做派。若是沒有真本事……還是趁早離開吧。」",
-    "zh_CN": "「英豪府不是让你们游山玩水的地方。想在这里活命，就收起你们的轻浮做派。若是没有真本事……还是趁早离开吧。」",
+    "zh_TW": "「想在這裡活命，先收起輕浮的做派；沒有真本事，趁早離開。」",
+    "zh_CN": "「想在这里活命，先收起轻浮的做派；没有真本事，趁早离开。」",
     "links": []
   },
   {
@@ -1294,7 +1284,7 @@
     "Sequence": "SetPortrait(MC1,pic=17);",
     "zh_TW": "「閣下誤會了，剛才還未說完。在下要說殘屋藏乾坤，譬如閣下萬人敵。」",
     "zh_CN": "「阁下误会了，刚才还未说完。在下要说残屋藏乾坤，譬如阁下万人敌。」",
-    "links": [535, 536]
+    "links": [498, 536]
   },
   {
     "entryID": 4095,

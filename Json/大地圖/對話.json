@@ -9,5 +9,107 @@
     "zh_TW": "「到雲中的路現不通，還是等馬車來再去吧。」",
     "zh_CN": "「到云中的路现不通，还是等马车来再去吧。」",
     "links": []
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠，其他人就留在這兒吧——前面那片澤，接下來就我們兩個進去。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "Description": "白鹵澤出發（大地圖，進圖前觸發；她只對主角說，其餘隊員留下）",
+    "zh_CN": "[panel=1]「大侠，其他人就留在这儿吧——前面那片泽，接下来就我们两个进去。」",
+    "links": [
+      3
+    ]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC22",
+    "text": "[panel=1]「那片澤沒有路、沒有人家，一腳踏進去就回不了頭，要走到底才出得來——你準備好了嗎？」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「那片泽没有路、没有人家，一脚踏进去就回不了头，要走到底才出得来——你准备好了吗？」",
+    "links": [
+      4,
+      5
+    ]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「好了。」",
+    "Sequence": "",
+    "Description": "選項一：好了（進圖）",
+    "zh_CN": "「好了。」",
+    "links": [
+      6
+    ]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC1",
+    "text": "「再等等。」",
+    "Sequence": "",
+    "Description": "選項二：再等等（不進圖）",
+    "zh_CN": "「再等等。」",
+    "links": [
+      9
+    ]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「好了——妳帶路，我跟著就是。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「好了——你带路，我跟着就是。」",
+    "links": [
+      7
+    ]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「走吧，這一趟沒有寶，也不是替天行道——是我家的事。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「走吧，这一趟没有宝，也不是替天行道——是我家的事。」",
+    "links": [
+      8
+    ]
+  },
+  {
+    "entryID": 8,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "尾格：收立繪面板；其餘隊員離隊（指令作者填）",
+    "zh_CN": "",
+    "links": []
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC1",
+    "text": "「再等等——我還有些東西要備。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「再等等——我还有些东西要备。」",
+    "links": [
+      10
+    ]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC22",
+    "text": "[panel=1]「……行，你要備什麼快去備。本姑娘在這兒等著——別讓我曬上一整天。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "zh_CN": "[panel=1]「……行，你要备什么快去备。本姑娘在这儿等着——别让我晒上一整天。」",
+    "links": [
+      11
+    ]
+  },
+  {
+    "entryID": 11,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "尾格：收立繪面板、中止對話（不進圖；重新觸發的指令作者填）",
+    "zh_CN": "",
+    "links": []
   }
 ]
