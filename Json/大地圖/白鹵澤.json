@@ -298,7 +298,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「那斬心訣我自己練了這些年，但怎麼練到第二層就上不去了——而他已了無音訊。」",
     "Sequence": "SetPortrait(MC22,pic=3);",
-    "zh_CN": "[panel=1]「那斩心诀我自己练了这些年，但怎么练到第二层就上不去了——而他已了无音訊。」",
+    "zh_CN": "[panel=1]「那斩心诀我自己练了这些年，但怎么练到第二层就上不去了——而他已了无音讯。」",
     "links": [39]
   },
   {
@@ -840,7 +840,7 @@
     "text": "[panel=1]「……嗯？你們倆這神色不大對啊——莫非道爺不在，錯過了什麼好戲？罷了罷了，回去回去！」",
     "Sequence": "SetPortrait(MC20,pic=2);\nDisableCharacterExpression(1);",
     "zh_CN": "[panel=1]「……嗯？你们俩这神色不大对啊——莫非道爷不在，错过了什么好戏？罢了罢了，回去回去！」",
-    "links": []
+    "links": [117]
   },
   {
     "entryID": 111,
@@ -849,5 +849,32 @@
     "Sequence": "ModifyData(FavorabilityExp,MC22,10);\nContinue();",
     "Description": "好感度提升",
     "links": [68]
+  },
+  {
+    "entryID": 117,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 3, \"success\");",
+    "Description": "尾格：收立繪面板；收 CF45 entry 3（2026-09-15 由 大地圖/對話.json #8 移來，雍仔收尾之後才算走完白鹵澤）",
+    "links": []
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC22",
+    "title": "出口",
+    "text": "[panel=1]「大俠？都到這兒了，這會兒回頭——這一趟可就白跑了。」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "Description": "互動點：入口（任務未完成時想離開白鹵澤）。開啟條件（該對話）：CF45, 3 is active，即 CurrentQuestEntryState(\"CF45\", 3) == \"active\";——由地城設計人員在 Unity 手動設定，本對話節點不掛 Conditions",
+    "zh_CN": "[panel=1]「大侠？都到这儿了，这会儿回头——这一趟可就白跑了。」",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "尾格：收立繪面板（把玩家推回澤內的移動指令由地城設計人員處理）",
+    "links": []
   }
 ]
