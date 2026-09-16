@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""文風節奏檢查：抓碎句、縮寫名詞與超長台詞。
+"""文風節奏檢查：抓碎句、縮寫名詞、超長台詞，並報 em7 與表情特效的用量。
 用法：python 給AI看的指南/文風節奏檢查.py <檔或資料夾>...   （.md 創作稿、.json 對話檔都吃）
       --hook-post／--hook-stop 是給 .claude/settings.json 的 hook 用的，從 stdin 讀 JSON。
 規矩出處：武俠文風創作指南 第四節旁白卡第 4 條、娜娜卡〈節奏〉、乙類〈不縮名詞〉、自檢 4a；
-台詞長度上限見 文本創作指南 2.1b（2026-09-04 作者定：可見字數 50 內、紅線 60）。
+台詞長度上限見 文本創作指南 2.1b（2026-09-04 作者定：可見字數 50 內、紅線 60）；
+表情特效不得零、偏低要補見 文本創作指南 2.3（2026-09-16 作者指正；作者舊稿基準每百格立繪 32 個）。
 """
 import sys, os, re, json, statistics as st
 
@@ -13,6 +14,7 @@ ACTOR = {'MC1': '你', 'MC2': '呂信', 'MC3': '子羽', 'MC4': '賈詡', 'MC5':
 EXEMPT = ('郭嘉', '狗頭人', 'Kobold')          # 話少或語言能力特例：碎句不計（子羽 2026-09-05 作者裁示移出：他話少是格少，開口是整句）
 COMPOUND_BEFORE = '天機羅棋地命算磨石托圓一幾整半銅玉這那面'
 COMPOUND_AFTER = '纏算問查點腿起子踞根桓龍旋繞'
+EXPR_MIN_PORTRAITS, EXPR_LOW_PER_100 = 8, 10   # 立繪不到 8 格的小段不評；每百格立繪的表情少於 10 個算偏低（文本創作指南 2.3）
 LIMIT_WARN, LIMIT_HARD = 50, 60   # 台詞可見字數：過 50 要拆格、60 是紅線（文本創作指南 2.1b，2026-09-04 作者定）
 
 
@@ -97,6 +99,15 @@ def lines_from_md(p):
         yield spk, ('#%s' % eid if eid else 'L%d' % i), t
 
 
+def expr_stats(p):
+    """回 (立繪格數, 表情特效格數)：.md 數 Sequence 行、.json 數節點。"""
+    if p.endswith('.json'):
+        seqs = [n.get('Sequence') or '' for n in json.load(open(p, encoding='utf-8'))]
+    else:
+        seqs = [l for l in open(p, encoding='utf-8').read().splitlines() if 'Sequence' in l]
+    return (sum('SetPortrait(' in s for s in seqs), sum('EnableCharacterExpression(' in s for s in seqs))
+
+
 def check(p):
     gen = lines_from_json(p) if p.endswith('.json') else lines_from_md(p)
     per = {}; frags = []; nouns = []; flagged = []; longs = []; tails = []
@@ -166,9 +177,14 @@ def check(p):
         print('-- em7：%d／%d 格台詞（每十格至多一個，上限 %d）%s' % (em_lines, talk_lines, allowed, '  ⚠ 太多' if em_lines > allowed else ''))
     if em_consec:
         print('-- 同一人連續兩格都掛 em7：' + '、'.join('%s %s' % x for x in em_consec))
-    if not frags and not tails and not nouns and not em_bad and not longs:
+    sp, ex = expr_stats(p)
+    expr_low = sp >= EXPR_MIN_PORTRAITS and (ex == 0 or 100 * ex < EXPR_LOW_PER_100 * sp)
+    if sp:
+        print('-- 表情特效：%d／%d 格立繪（作者舊稿每百格 32 個；零＝漏了、低於 %d 要回頭補，文本創作指南 2.3）%s'
+              % (ex, sp, EXPR_LOW_PER_100, '  ⚠ 零表情' if (expr_low and ex == 0) else ('  ⚠ 偏低' if expr_low else '')))
+    if not frags and not tails and not nouns and not em_bad and not longs and not expr_low:
         print('-- 乾淨。')
-    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs)}
+    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs), 'expr_low': expr_low}
 
 
 def walk(paths):
@@ -216,7 +232,7 @@ def run_quiet(paths):
 def summary(results):
     lines = []
     for r in results:
-        if r['flagged'] or r['frags'] or r.get('tails') or r['nouns'] or r.get('em7_bad') or r.get('longs'):
+        if r['flagged'] or r['frags'] or r.get('tails') or r['nouns'] or r.get('em7_bad') or r.get('longs') or r.get('expr_low'):
             bits = []
             if r['flagged']:
                 bits.append('太碎：' + '、'.join(r['flagged']))
@@ -230,6 +246,8 @@ def summary(results):
                 bits.append('em7 過量或連掛')
             if r.get('longs'):
                 bits.append('台詞超長 %d' % r['longs'])
+            if r.get('expr_low'):
+                bits.append('表情特效零或偏低')
             lines.append('%s ⇒ %s' % (rel_of(r['file']), '；'.join(bits)))
     return lines
 
