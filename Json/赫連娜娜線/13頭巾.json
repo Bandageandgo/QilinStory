@@ -2,74 +2,67 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "頭巾",
     "text": "[panel=6]＊（雲中的市集，晌午。布攤一張挨著一張，麻的、葛的、染過色的，一匹一匹立在架上。）＊",
-    "Sequence": "EnableDialogueBG(Yunzhong);",
-    "Description": "入口。背景圖首格開，尾格關",
+    "Sequence": "EnableDialogueBG(Yunzhong);\nAudioControl(PlaySFX,Others_Talking);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "必須要完成CF45,3 ，娜娜好感度超過3Lv",
+    "zh_TW": "[panel=6]＊（雲中的市集，晌午。布攤一張挨著一張，麻的、葛的、染過色的，一匹一匹立在架上。）＊",
     "zh_CN": "[panel=6]＊（云中的市集，晌午。布摊一张挨着一张，麻的、葛的、染过色的，一匹一匹立在架上。）＊",
-    "links": [
-      2
-    ]
+    "links": [2]
   },
   {
     "entryID": 2,
     "actorID": "role2",
     "text": "[panel=6]＊（她在同一攤前站了半天了。頭上那塊灰布是府裡借的，短了半尺，鬢角壓不住，她隔一會兒就伸手按一下。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她在同一攤前站了半天了。頭上那塊灰布是府裡借的，短了半尺，鬢角壓不住，她隔一會兒就伸手按一下。）＊",
     "zh_CN": "[panel=6]＊（她在同一摊前站了半天了。头上那块灰布是府里借的，短了半尺，鬢角压不住，她隔一会儿就伸手按一下。）＊",
-    "links": [
-      3
-    ]
+    "links": [3]
   },
   {
     "entryID": 3,
     "actorID": "MC22",
     "text": "[panel=1]「這塊太薄，風一吹就掀。這塊花得像要去嫁人——你們漢地的布，怎麼沒一塊是能戴出門的。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Nervous_2);\nAudioControl(StopSFX);",
+    "zh_TW": "[panel=1]「這塊太薄，風一吹就掀。這塊花得像要去嫁人——你們漢地的布，怎麼沒一塊是能戴出門的。」",
     "zh_CN": "[panel=1]「这块太薄，风一吹就掀。这块花得像要去嫁人——你们汉地的布，怎么没一块是能戴出门的。」",
-    "links": [
-      4
-    ]
+    "links": [4]
   },
   {
     "entryID": 4,
     "actorID": "MC1",
     "text": "「妳原來那塊，是什麼樣的？」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「妳原來那塊，是什麼樣的？」",
     "zh_CN": "「你原来那块，是什么样的？」",
-    "links": [
-      5
-    ]
+    "links": [5]
   },
   {
     "entryID": 5,
     "actorID": "MC22",
     "text": "[panel=1]「粗麻，靛青的，我阿母縫過一道邊。戴了七年——結果在白鹵澤給弄丟了……」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=3);\nEnableCharacterExpression(1,MC22,Pain);",
+    "zh_TW": "[panel=1]「粗麻，靛青的，我阿母縫過一道邊。戴了七年——結果在白鹵澤給弄丟了……」",
     "zh_CN": "[panel=1]「粗麻，靛青的，我阿母缝过一道边。戴了七年——结果在白卤泽给弄丢了……」",
-    "links": [
-      6
-    ]
+    "links": [6]
   },
   {
     "entryID": 6,
-    "actorID": "role2",
-    "text": "[panel=6]「姑娘是胡人吧？胡女包頭，什麼布不是包，挑什麼挑。」",
-    "Sequence": "",
-    "zh_CN": "[panel=6]「姑娘是胡人吧？胡女包头，什么布不是包，挑什么挑。」",
-    "links": [
-      7
-    ]
+    "actorID": "role15",
+    "text": "[panel=1]「姑娘是胡人吧？我這幾匹都是好貨，可姑娘要的不過是塊遮頭的，隨便扯一塊也就夠了。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPanel(MC22, 2, immediate);",
+    "zh_TW": "[panel=1]「姑娘是胡人吧？我這幾匹都是好貨，可姑娘要的不過是塊遮頭的，隨便扯一塊也就夠了。」",
+    "zh_CN": "[panel=1]「姑娘是胡人吧？我这几匹都是好货，可姑娘要的不过是块遮头的，随便扯一块也就够了。」",
+    "links": [7]
   },
   {
     "entryID": 7,
     "actorID": "role2",
     "text": "[panel=6]＊（她把手上那塊放回架上，指頭在邊沿壓了壓，沒回嘴。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她把手上那塊放回架上，指頭在邊沿壓了壓，沒回嘴。）＊",
     "zh_CN": "[panel=6]＊（她把手上那块放回架上，指头在边沿压了压，没回嘴。）＊",
-    "links": [
-      8,
-      9
-    ]
+    "links": [8, 9]
   },
   {
     "entryID": 8,
@@ -77,10 +70,9 @@
     "text": "[em2][威嚇檢定][/em2]「你再說一遍。」",
     "Sequence": "",
     "Description": "選項一：威嚇檢定（難度 8）→ 過了再接經濟檢定",
+    "zh_TW": "[em2][威嚇檢定][/em2]「你再說一遍。」",
     "zh_CN": "[em2][威吓检定][/em2]「你再说一遍。」",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 9,
@@ -88,10 +80,9 @@
     "text": "（不作聲。）",
     "Sequence": "",
     "Description": "選項二：不作聲（不開口選項）",
+    "zh_TW": "（不作聲。）",
     "zh_CN": "（不作声。）",
-    "links": [
-      20
-    ]
+    "links": [20]
   },
   {
     "entryID": 10,
@@ -99,342 +90,214 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,8);",
     "Description": "威嚇檢定擲骰節點（難度 8）",
-    "zh_CN": "",
-    "links": [
-      11
-    ]
+    "links": [11]
   },
   {
     "entryID": 11,
     "actorID": "MC1",
     "text": "「你再說一遍——方才那句話，是衝著誰說的？」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger);",
     "Description": "發言格＝擲骰後的過渡格",
+    "zh_TW": "「你再說一遍——方才那句話，是衝著誰說的？」",
     "zh_CN": "「你再说一遍——方才那句话，是冲着谁说的？」",
-    "links": [
-      12,
-      19
-    ]
+    "links": [12, 19]
   },
   {
     "entryID": 12,
     "actorID": "role2",
     "text": "[panel=6]＊（那人往後縮了半寸，手在布上抹了兩下，話沒接上。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Intimidation,10);\nModifyData(FavorabilityExp,MC22,10);",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,10);\nModifyData(FavorabilityExp,MC22,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（那人往後縮了半寸，手在布上抹了兩下，話沒接上。）＊",
     "zh_CN": "[panel=6]＊（那人往后缩了半寸，手在布上抹了两下，话没接上。）＊",
-    "links": [
-      13
-    ]
+    "links": [13]
   },
   {
     "entryID": 13,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,8);",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,EconomicDevelopmentCheck,8);",
     "Description": "經濟檢定擲骰節點（難度 8）",
-    "zh_CN": "",
-    "links": [
-      14
-    ]
+    "zh_CN": "[panel=1]「……白发再白，也是人的头发。我这个不一样——夜里摸到它，我有时候会想，我到底算不算人。」",
+    "links": [14]
   },
   {
     "entryID": 14,
     "actorID": "MC1",
     "text": "「這麻布起毛，經緯也歪。這種貨在雲中賣幾個錢，我剛巧知道。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Anger);",
     "Description": "發言格＝第二關的過渡格",
+    "zh_TW": "「這麻布起毛，經緯也歪。這種貨在雲中賣幾個錢，我剛巧知道。」",
     "zh_CN": "「这麻布起毛，经纬也歪。这种货在云中卖几个钱，我刚巧知道。」",
-    "links": [
-      15,
-      18
-    ]
+    "links": [15, 18]
   },
   {
     "entryID": 15,
     "actorID": "role2",
     "text": "[panel=6]＊（他臉上那副笑換了一張。價錢從嘴裡滾出來，一路砍到一半，還說是給姑娘算便宜的。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,EconomicDevelopment,10);\nModifyData(FavorabilityExp,MC22,10);",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10);\nModifyData(FavorabilityExp,MC22,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（他臉上那副笑換了一張。價錢從嘴裡滾出來，一路砍到一半，還說是給姑娘算便宜的。）＊",
     "zh_CN": "[panel=6]＊（他脸上那副笑换了一张。价钱从嘴里滚出来，一路砍到一半，还说是给姑娘算便宜的。）＊",
-    "links": [
-      16
-    ]
+    "links": [16]
   },
   {
     "entryID": 16,
     "actorID": "MC1",
     "text": "「不必了——隔壁也有一樣的貨。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「不必了——隔壁也有一樣的貨。」",
     "zh_CN": "「不必了——隔壁也有一样的货。」",
-    "links": [
-      17
-    ]
+    "links": [17]
   },
   {
     "entryID": 17,
     "actorID": "MC22",
-    "text": "[panel=1]「……你這人，記起仇來也挺難看的。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,10);",
-    "zh_CN": "[panel=1]「……你这人，记起仇来也挺难看的。」",
-    "links": [
-      21
-    ]
+    "text": "[panel=1]「……沒想到你還有這一面。不過我倒是喜歡。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);\nModifyData(FavorabilityExp,MC22,10);",
+    "zh_TW": "[panel=1]「……沒想到你還有這一面。不過我倒是喜歡。」",
+    "zh_CN": "[panel=1]「……没想到你还有这一面。不过我倒是喜欢。」",
+    "links": [21]
   },
   {
     "entryID": 18,
     "actorID": "role2",
     "text": "[panel=6]＊（他不慌，張口報了個價，說這是雲中的行情，愛買不買。你一時接不上話。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（他不慌，張口報了個價，說這是雲中的行情，愛買不買。你一時接不上話。）＊",
     "zh_CN": "[panel=6]＊（他不慌，张口报了个价，说这是云中的行情，爱买不买。你一时接不上话。）＊",
-    "links": [
-      21
-    ]
+    "links": [21]
   },
   {
     "entryID": 19,
     "actorID": "role2",
     "text": "[panel=6]＊（那人半點沒縮，反倒把嗓門提得更高，轉頭招呼起別的客人。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（那人半點沒縮，反倒把嗓門提得更高，轉頭招呼起別的客人。）＊",
     "zh_CN": "[panel=6]＊（那人半点没缩，反倒把嗓门提得更高，转头招呼起别的客人。）＊",
-    "links": [
-      21
-    ]
+    "links": [21]
   },
   {
     "entryID": 20,
     "actorID": "role2",
-    "text": "[panel=6]＊（你一句話也沒說。她也沒等你說，把手在衣襬上抹了抹。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你一句话也没说。她也没等你说，把手在衣摆上抹了抹。）＊",
-    "links": [
-      21
-    ]
+    "text": "[panel=6]＊（你沒有開口。她低頭理了理鬢角，把壓不住的那幾綹頭髮塞回布底下。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（你沒有開口。她低頭理了理鬢角，把壓不住的那幾綹頭髮塞回布底下。）＊",
+    "zh_CN": "[panel=6]＊（你没有开口。她低头理了理鬓角，把压不住的那几绺头发塞回布底下。）＊",
+    "links": [21]
   },
   {
     "entryID": 21,
     "actorID": "MC22",
     "text": "[panel=1]「……走吧，這攤沒有我要的。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=3);",
+    "zh_TW": "[panel=1]「……走吧，這攤沒有我要的。」",
     "zh_CN": "[panel=1]「……走吧，这摊没有我要的。」",
-    "links": [
-      22
-    ]
+    "links": [22]
   },
   {
     "entryID": 22,
     "actorID": "role2",
     "text": "[panel=6]＊（往前走過兩攤。這家布堆得少，老闆蹲在後頭打盹，沒抬頭看人。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（往前走過兩攤。這家布堆得少，老闆蹲在後頭打盹，沒抬頭看人。）＊",
     "zh_CN": "[panel=6]＊（往前走过两摊。这家布堆得少，老板蹲在后头打盹，没抬头看人。）＊",
-    "links": [
-      23,
-      24,
-      25,
-      26,
-      27
-    ]
-  },
-  {
-    "entryID": 23,
-    "actorID": "MC1",
-    "text": "「這塊靛青的。」",
-    "Sequence": "",
-    "Description": "選項一：挑靛青的",
-    "zh_CN": "「这块靛青的。」",
-    "links": [
-      28
-    ]
-  },
-  {
-    "entryID": 24,
-    "actorID": "MC1",
-    "text": "「那塊紅的。」",
-    "Sequence": "",
-    "Description": "選項二：挑紅的",
-    "zh_CN": "「那块红的。」",
-    "links": [
-      30
-    ]
-  },
-  {
-    "entryID": 25,
-    "actorID": "MC1",
-    "text": "（不說話，把布買下來，遞到她手上。）",
-    "Sequence": "",
-    "Description": "選項三：不說話買下來遞給她（不開口選項）",
-    "zh_CN": "（不说话，把布买下来，递到她手上。）",
-    "links": [
-      33
-    ]
+    "links": [28]
   },
   {
     "entryID": 26,
     "actorID": "MC1",
     "text": "[em2][調情檢定][/em2]「邊上那道線，我來縫。」",
     "Sequence": "",
-    "Description": "選項四：調情檢定（難度 8）",
+    "Description": "調情檢定（難度 14）",
+    "zh_TW": "[em2][調情檢定][/em2]「邊上那道線，我來縫。」",
     "zh_CN": "[em2][调情检定][/em2]「边上那道线，我来缝。」",
-    "links": [
-      36
-    ]
+    "links": [36]
   },
   {
     "entryID": 27,
     "actorID": "MC1",
-    "text": "「隨便哪塊都行，反正是拿來遮的。」",
+    "text": "「照樣子再縫一道不就得了。」",
     "Sequence": "",
-    "Description": "選項五：「隨便哪塊都行」（扣好感）",
-    "zh_CN": "「随便哪块都行，反正是拿来遮的。」",
-    "links": [
-      43
-    ]
+    "Description": "（扣好感）",
+    "zh_TW": "「照樣子再縫一道不就得了。」",
+    "zh_CN": "「照样子再缝一道不就得了。」",
+    "links": [43]
   },
   {
     "entryID": 28,
     "actorID": "MC1",
-    "text": "「就這塊靛青的吧——粗麻，邊上還能再縫一道，跟妳說的七年那塊是不是一個樣。」",
+    "text": "「就這塊靛青的吧——粗麻，邊上還能再縫一道，就跟妳原來那塊一模一樣！」",
     "Sequence": "SetPortrait(MC1,pic=1);",
-    "zh_CN": "「就这块靛青的吧——粗麻，边上还能再缝一道，跟你说的七年那块是不是一个样。」",
-    "links": [
-      29
-    ]
+    "zh_TW": "「就這塊靛青的吧——粗麻，邊上還能再縫一道，就跟妳原來那塊一模一樣！」",
+    "zh_CN": "「就这块靛青的吧——粗麻，边上还能再缝一道，就跟你原来那块一模一样！」",
+    "links": [29]
   },
   {
     "entryID": 29,
     "actorID": "MC22",
-    "text": "[panel=1]「……你倒記得——那就這塊吧。錢我自己付，我可不想再欠你什麼。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
-    "zh_CN": "[panel=1]「……你倒记得——那就这块吧。钱我自己付，我可不想再欠你什么。」",
-    "links": [
-      45
-    ]
-  },
-  {
-    "entryID": 30,
-    "actorID": "MC1",
-    "text": "「挑那塊紅的吧——要人看就讓人看個夠，總比由著人挑妳該戴什麼。」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_CN": "「挑那块红的吧——要人看就让人看个够，总比由着人挑你该戴什么。」",
-    "links": [
-      31
-    ]
-  },
-  {
-    "entryID": 31,
-    "actorID": "MC22",
-    "text": "[panel=1]「紅的？走在雲中街上，人人都得回頭看我一眼。」",
-    "Sequence": "SetPortrait(MC22,pic=2);",
-    "zh_CN": "[panel=1]「红的？走在云中街上，人人都得回头看我一眼。」",
-    "links": [
-      32
-    ]
-  },
-  {
-    "entryID": 32,
-    "actorID": "MC22",
-    "text": "[panel=1]「……不過草原上的婦人就愛這個色。行，紅的就紅的。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
-    "zh_CN": "[panel=1]「……不过草原上的妇人就爱这个色。行，红的就红的。」",
-    "links": [
-      45
-    ]
-  },
-  {
-    "entryID": 33,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你沒接話，把那塊靛青的抽下來，錢擱在攤上，回身遞到她手裡。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你没接话，把那块靛青的抽下来，钱搁在摊上，回身递到她手里。）＊",
-    "links": [
-      34
-    ]
-  },
-  {
-    "entryID": 34,
-    "actorID": "MC22",
-    "text": "[panel=1]「……誰要你替我買了。」",
-    "Sequence": "SetPortrait(MC22,pic=7);",
-    "zh_CN": "[panel=1]「……谁要你替我买了。」",
-    "links": [
-      35
-    ]
-  },
-  {
-    "entryID": 35,
-    "actorID": "MC22",
-    "text": "[panel=1]「[em7]把布抖開，比了比長短[/em7]，……本姑娘收下了。往後這筆帳我記著。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
-    "zh_CN": "[panel=1]「[em7]把布抖开，比了比长短[/em7]，……本姑娘收下了。往后这笔帳我记着。」",
-    "links": [
-      45
-    ]
+    "text": "[panel=1]「你記性倒好。那就這塊吧——只是這塊，沒有阿母縫的那道邊……」",
+    "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_TW": "[panel=1]「你記性倒好。那就這塊吧——只是這塊，沒有阿母縫的那道邊……」",
+    "zh_CN": "[panel=1]「你记性倒好。那就这块吧——只是这块，没有阿母缝的那道边……」",
+    "links": [26, 27]
   },
   {
     "entryID": 36,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,8);",
-    "Description": "調情檢定擲骰節點（難度 8）",
-    "zh_CN": "",
-    "links": [
-      37
-    ]
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,14);",
+    "Description": "調情檢定擲骰節點（難度 14）",
+    "links": [37]
   },
   {
     "entryID": 37,
     "actorID": "MC1",
     "text": "「這塊邊還沒縫。妳那塊是妳阿母縫的——這塊我縫。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=15);",
     "Description": "發言格＝擲骰後的過渡格",
+    "zh_TW": "「這塊邊還沒縫。妳那塊是妳阿母縫的——這塊我縫。」",
     "zh_CN": "「这块边还没缝。你那块是你阿母缝的——这块我缝。」",
-    "links": [
-      38
-    ]
+    "links": [38]
   },
   {
     "entryID": 38,
     "actorID": "MC22",
     "text": "[panel=1]「你會縫？拿劍的手縫布，縫出來怕是像條蜈蚣。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
+    "zh_TW": "[panel=1]「你會縫？拿劍的手縫布，縫出來怕是像條蜈蚣。」",
     "zh_CN": "[panel=1]「你会缝？拿剑的手缝布，缝出来怕是像条蜈蚣。」",
-    "links": [
-      39
-    ]
+    "links": [39]
   },
   {
     "entryID": 39,
     "actorID": "MC1",
     "text": "「方才妳說，那攤沒有妳要的。那妳要的是什麼樣——說出來我就去找。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "「方才妳說，那攤沒有妳要的。那妳要的是什麼樣——說出來我就去找。」",
     "zh_CN": "「方才你说，那摊没有你要的。那你要的是什么样——说出来我就去找。」",
-    "links": [
-      40,
-      42
-    ]
+    "links": [40, 42]
   },
   {
     "entryID": 40,
     "actorID": "role2",
     "text": "[panel=6]＊（她張了張嘴，沒接上。半晌，才把那塊布往你懷裡一塞。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Flirting,10);\nModifyData(FavorabilityExp,MC22,30);",
+    "Sequence": "ModifyData(FeatExp,Player,Flirting,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（她張了張嘴，沒接上。半晌，才把那塊布往你懷裡一塞。）＊",
     "zh_CN": "[panel=6]＊（她张了张嘴，没接上。半晌，才把那块布往你怀里一塞。）＊",
-    "links": [
-      41
-    ]
+    "links": [41]
   },
   {
     "entryID": 41,
     "actorID": "MC22",
     "text": "[panel=1]「……縫壞了算你的。針線我有，明兒拿給你。」",
-    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Sequence": "SetPortrait(MC22,pic=7);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FavorabilityExp,MC22,30);",
+    "zh_TW": "[panel=1]「……縫壞了算你的。針線我有，明兒拿給你。」",
     "zh_CN": "[panel=1]「……缝坏了算你的。针线我有，明儿拿给你。」",
-    "links": [
-      45
-    ]
+    "links": [45]
   },
   {
     "entryID": 42,
@@ -442,184 +305,162 @@
     "text": "[panel=1]「行了行了，我自己有針。你那雙手還是留著拿劍吧。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「行了行了，我自己有針。你那雙手還是留著拿劍吧。」",
     "zh_CN": "[panel=1]「行了行了，我自己有针。你那双手还是留着拿剑吧。」",
-    "links": [
-      45
-    ]
+    "links": [45]
   },
   {
     "entryID": 43,
     "actorID": "MC1",
-    "text": "「隨便哪塊都行吧。反正是拿來遮的，又不是給人看的。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「随便哪块都行吧。反正是拿来遮的，又不是给人看的。」",
-    "links": [
-      44
-    ]
+    "text": "「照樣子再縫一道不就得了——針腳一樣，看著也沒差。」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "「照樣子再縫一道不就得了——針腳一樣，看著也沒差。」",
+    "zh_CN": "「照样子再缝一道不就得了——针脚一样，看着也没差。」",
+    "links": [44]
   },
   {
     "entryID": 44,
     "actorID": "MC22",
-    "text": "[panel=1]「……是啊，拿來遮的。」",
+    "text": "[panel=1]「……不必了，我自己縫。」",
     "Sequence": "SetPortrait(MC22,pic=3);\nModifyData(FavorabilityExp,MC22,-20);",
-    "zh_CN": "[panel=1]「……是啊，拿来遮的。」",
-    "links": [
-      45
-    ]
+    "zh_TW": "[panel=1]「……不必了，我自己縫。」",
+    "zh_CN": "[panel=1]「……不必了，我自己缝。」",
+    "links": [45]
   },
   {
     "entryID": 45,
     "actorID": "MC22",
     "text": "[panel=1]「[em7]把布疊好，塞進懷裡[/em7]，……回府再說吧，這東西得先洗一遍——新布硬得很。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=1);\nAudioControl(StopMusic);",
+    "zh_TW": "[panel=1]「[em7]把布疊好，塞進懷裡[/em7]，……回府再說吧，這東西得先洗一遍——新布硬得很。」",
     "zh_CN": "[panel=1]「[em7]把布叠好，塞进怀里[/em7]，……回府再说吧，这东西得先洗一遍——新布硬得很。」",
-    "links": [
-      46
-    ]
+    "links": [46]
   },
   {
     "entryID": 46,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nEnableDialogueBG(HorseFarm)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場：雲中市集 → 英豪府馬廄（夜）",
-    "zh_CN": "",
-    "links": [
-      47
-    ]
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nEnableDialogueBG(Home_Night)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場：雲中市集 → Home（夜）",
+    "links": [47]
   },
   {
     "entryID": 47,
     "actorID": "role2",
-    "text": "[panel=6]＊（夜裡的馬廄，只剩馬嚼草料的聲音。那塊布洗過了，攤在她膝上，還是濕的。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（夜里的马厩，只剩马嚼草料的声音。那块布洗过了，摊在她膝上，还是湿的。）＊",
-    "links": [
-      48
-    ]
+    "text": "[panel=6]＊（回到府裡，她抱著那塊布一溜煙就跑了。等再看見她，外頭已經入夜，那塊布洗過了，還濕著，就捧在她手上。）＊",
+    "Sequence": "AudioControl(PlayMusic,BGM_18);",
+    "zh_TW": "[panel=6]＊（回到府裡，她抱著那塊布一溜煙就跑了。等再看見她，外頭已經入夜，那塊布洗過了，還濕著，就捧在她手上。）＊",
+    "zh_CN": "[panel=6]＊（回到府里，她抱着那块布一溜烟就跑了。等再看见她，外头已经入夜，那块布洗过了，还湿着，就捧在她手上。）＊",
+    "links": [48]
   },
   {
     "entryID": 48,
     "actorID": "MC22",
-    "text": "[panel=1]「[var=PlayerFirstName]，過來坐下。我教你一個包法——草原上的包法，一塊布能頂半件衣裳。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_CN": "[panel=1]「[var=PlayerFirstName]，过来坐下。我教你一个包法——草原上的包法，一块布能顶半件衣裳。」",
-    "links": [
-      49
-    ]
+    "text": "[panel=1]「[var=PlayerFirstName]，坐好別動。我教你一個包法——草原上的包法，一塊布能頂半件衣裳。」",
+    "Sequence": "SetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "[panel=1]「[var=PlayerFirstName]，坐好別動。我教你一個包法——草原上的包法，一塊布能頂半件衣裳。」",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]，坐好别动。我教你一个包法——草原上的包法，一块布能顶半件衣裳。」",
+    "links": [49]
   },
   {
     "entryID": 49,
     "actorID": "MC1",
     "text": "「教我？這東西我又不戴。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「教我？這東西我又不戴。」",
     "zh_CN": "「教我？这东西我又不戴。」",
-    "links": [
-      50
-    ]
+    "links": [50]
   },
   {
     "entryID": 50,
     "actorID": "MC22",
     "text": "[panel=1]「往後你要陪我往北邊走，就得戴。你這一頭白髮，在草原上比在漢地還打眼。」",
-    "Sequence": "SetPortrait(MC22,pic=8);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_TW": "[panel=1]「往後你要陪我往北邊走，就得戴。你這一頭白髮，在草原上比在漢地還打眼。」",
     "zh_CN": "[panel=1]「往后你要陪我往北边走，就得戴。你这一头白发，在草原上比在汉地还打眼。」",
-    "links": [
-      51
-    ]
+    "links": [51]
   },
   {
     "entryID": 51,
     "actorID": "role2",
     "text": "[panel=6]＊（她繞到你身後，兩手一拉一折，濕布沿著額角壓下來。她的手指是冰的。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（她繞到你身後，兩手一拉一折，濕布沿著額角壓下來。她的手指是冰的。）＊",
     "zh_CN": "[panel=6]＊（她绕到你身后，两手一拉一折，湿布沿着额角压下来。她的手指是冰的。）＊",
-    "links": [
-      52
-    ]
+    "links": [52]
   },
   {
     "entryID": 52,
     "actorID": "MC22",
     "text": "[panel=1]「小時候我嫌它勒得慌。我阿母說，勒著才知道自己是誰家的。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "SetPortrait(MC22,pic=17);",
+    "zh_TW": "[panel=1]「小時候我嫌它勒得慌。我阿母說，勒著才知道自己是誰家的。」",
     "zh_CN": "[panel=1]「小时候我嫌它勒得慌。我阿母说，勒着才知道自己是谁家的。」",
-    "links": [
-      53
-    ]
+    "links": [53]
   },
   {
     "entryID": 53,
     "actorID": "MC22",
     "text": "[panel=1]「你這頭髮，生下來就是白的？」",
-    "Sequence": "SetPortrait(MC22,pic=8);",
+    "Sequence": "SetPortrait(MC22,pic=25);\nEnableCharacterExpression(1,MC22,Question);",
+    "zh_TW": "[panel=1]「你這頭髮，生下來就是白的？」",
     "zh_CN": "[panel=1]「你这头发，生下来就是白的？」",
-    "links": [
-      54
-    ]
+    "links": [54]
   },
   {
     "entryID": 54,
     "actorID": "MC1",
-    "text": "「生下來就是白的。村子燒的那年我還小，一路往東走，走到哪兒都有人回頭。」",
-    "Sequence": "SetPortrait(MC1,pic=3);",
-    "zh_CN": "「生下来就是白的。村子烧的那年我还小，一路往东走，走到哪儿都有人回头。」",
-    "links": [
-      55
-    ]
+    "text": "「生下來就是白的。村子燒的那年我還小，一路流浪過來，走到哪兒都有人回頭。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Pain);",
+    "zh_TW": "「生下來就是白的。村子燒的那年我還小，一路流浪過來，走到哪兒都有人回頭。」",
+    "zh_CN": "「生下来就是白的。村子烧的那年我还小，一路流浪过来，走到哪儿都有人回头。」",
+    "links": [55]
   },
   {
     "entryID": 55,
     "actorID": "MC1",
-    "text": "「兩個孩子在路上，又頂著這麼一頭白——人家的臉色，我看得比飯還多。」",
-    "Sequence": "SetPortrait(MC1,pic=3);",
-    "zh_CN": "「两个孩子在路上，又顶着这么一头白——人家的脸色，我看得比饭还多。」",
-    "links": [
-      56
-    ]
+    "text": "「兩個孩子在路上，又頂著這麼一頭白——討得到的多半是白眼，不是飯。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=3);",
+    "zh_TW": "「兩個孩子在路上，又頂著這麼一頭白——討得到的多半是白眼，不是飯。」",
+    "zh_CN": "「两个孩子在路上，又顶着这么一头白——讨得到的多半是白眼，不是饭。」",
+    "links": [56]
   },
   {
     "entryID": 56,
     "actorID": "role2",
     "text": "[panel=6]＊（她手上的動作停了一下，又接著折下去。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她手上的動作停了一下，又接著折下去。）＊",
     "zh_CN": "[panel=6]＊（她手上的动作停了一下，又接着折下去。）＊",
-    "links": [
-      57
-    ]
+    "links": [57]
   },
   {
     "entryID": 57,
     "actorID": "MC22",
-    "text": "[panel=1]「我在部裡，人家說我是漢人生的女兒。到了漢地，人家說我是胡女。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
-    "zh_CN": "[panel=1]「我在部里，人家说我是汉人生的女儿。到了汉地，人家说我是胡女。」",
-    "links": [
-      58
-    ]
+    "text": "[panel=1]「在部裡沒人怕我頭上這個，可也沒人真把我當尋常孩子。到了漢地更省事，見了就當妖。」",
+    "Sequence": "SetPortrait(MC22,pic=19);",
+    "zh_TW": "[panel=1]「在部裡沒人怕我頭上這個，可也沒人真把我當尋常孩子。到了漢地更省事，見了就當妖。」",
+    "zh_CN": "[panel=1]「在部里没人怕我头上这个，可也没人真把我当寻常孩子。到了汉地更省事，见了就当妖。」",
+    "links": [58]
   },
   {
     "entryID": 58,
     "actorID": "MC22",
-    "text": "[panel=1]「兩邊都不算數，我有時候倒真會想——我到底算不算個人。這話我沒跟誰說過。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
-    "zh_CN": "[panel=1]「两边都不算数，我有时候倒真会想——我到底算不算个人。这话我没跟谁说过。」",
-    "links": [
-      59,
-      60,
-      61
-    ]
+    "text": "[panel=1]「兩邊都沒把我當個尋常人，我有時候倒真會想——我到底算不算個人。這話我沒跟誰說過。」",
+    "Sequence": "SetPortrait(MC22,pic=20);",
+    "zh_TW": "[panel=1]「兩邊都沒把我當個尋常人，我有時候倒真會想——我到底算不算個人。這話我沒跟誰說過。」",
+    "zh_CN": "[panel=1]「两边都没把我当个寻常人，我有时候倒真会想——我到底算不算个人。这话我没跟谁说过。」",
+    "links": [59, 60]
   },
   {
     "entryID": 59,
     "actorID": "MC1",
     "text": "[em2][調情檢定][/em2]「那就別遮了。」",
     "Sequence": "",
-    "Description": "選項一：調情檢定（難度 8）",
+    "Description": "選項一：調情檢定（難度 12）",
+    "zh_TW": "[em2][調情檢定][/em2]「那就別遮了。」",
     "zh_CN": "[em2][调情检定][/em2]「那就别遮了。」",
-    "links": [
-      62
-    ]
+    "links": [62]
   },
   {
     "entryID": 60,
@@ -627,176 +468,128 @@
     "text": "「跟我一樣，沒地方回的人。」",
     "Sequence": "",
     "Description": "選項二：跟我一樣，沒地方回的人",
+    "zh_TW": "「跟我一樣，沒地方回的人。」",
     "zh_CN": "「跟我一样，没地方回的人。」",
-    "links": [
-      67
-    ]
-  },
-  {
-    "entryID": 61,
-    "actorID": "MC1",
-    "text": "（不說話，把頭上那塊布解下來，還到她手上。）",
-    "Sequence": "",
-    "Description": "選項三：不說話把布還她（不開口選項）",
-    "zh_CN": "（不说话，把头上那块布解下来，还到她手上。）",
-    "links": [
-      69
-    ]
+    "links": [67]
   },
   {
     "entryID": 62,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,8);",
-    "Description": "調情檢定擲骰節點（難度 8）",
-    "zh_CN": "",
-    "links": [
-      63
-    ]
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,FlirtingCheck,12);",
+    "Description": "調情檢定擲骰節點（難度 12）",
+    "links": [63]
   },
   {
     "entryID": 63,
     "actorID": "MC1",
-    "text": "「那就別遮了——妳就這麼坐著，我就這麼看著，看夠了也就沒什麼好遮的。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "text": "「那就別遮了——我瞧著好看，遮了才可惜。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=15);",
     "Description": "發言格＝擲骰後的過渡格",
-    "zh_CN": "「那就别遮了——你就这么坐着，我就这么看着，看够了也就没什么好遮的。」",
-    "links": [
-      64,
-      66
-    ]
+    "zh_TW": "「那就別遮了——我瞧著好看，遮了才可惜。」",
+    "zh_CN": "「那就别遮了——我瞧着好看，遮了才可惜。」",
+    "links": [64, 66]
   },
   {
     "entryID": 64,
     "actorID": "MC22",
     "text": "[panel=1]「……你這人，話說得倒輕巧。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FeatExp,Player,Flirting,10);\nModifyData(FavorabilityExp,MC22,30);",
+    "Sequence": "SetPortrait(MC22,pic=26);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FeatExp,Player,Flirting,10);",
     "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=1]「……你這人，話說得倒輕巧。」",
     "zh_CN": "[panel=1]「……你这人，话说得倒轻巧。」",
-    "links": [
-      65
-    ]
+    "links": [65]
   },
   {
     "entryID": 65,
     "actorID": "MC22",
     "text": "[panel=1]「那你就看著——看到哪天你不看了，我再包回去。」",
-    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=22);\nModifyData(FavorabilityExp,MC22,30);",
+    "zh_TW": "[panel=1]「那你就看著——看到哪天你不看了，我再包回去。」",
     "zh_CN": "[panel=1]「那你就看着——看到哪天你不看了，我再包回去。」",
-    "links": [
-      71
-    ]
+    "links": [71]
   },
   {
     "entryID": 66,
     "actorID": "MC22",
     "text": "[panel=1]「說得倒容易——你走在我旁邊，捱眼色的又不只我一個。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Sequence": "SetPortrait(MC22,pic=20);\nEnableCharacterExpression(1,MC22,Meditate);",
     "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=1]「說得倒容易——你走在我旁邊，捱眼色的又不只我一個。」",
     "zh_CN": "[panel=1]「说得倒容易——你走在我旁边，捱眼色的又不只我一个。」",
-    "links": [
-      71
-    ]
+    "links": [71]
   },
   {
     "entryID": 67,
     "actorID": "MC1",
     "text": "「跟我一樣——沒地方回的人。算不算人我不知道，反正這條路上不只妳一個。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);",
+    "zh_TW": "「跟我一樣——沒地方回的人。算不算人我不知道，反正這條路上不只妳一個。」",
     "zh_CN": "「跟我一样——没地方回的人。算不算人我不知道，反正这条路上不只你一个。」",
-    "links": [
-      68
-    ]
+    "links": [68]
   },
   {
     "entryID": 68,
     "actorID": "MC22",
     "text": "[panel=1]「……原來你也沒地方回。那咱們倆湊一塊，算個什麼？」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
+    "Sequence": "SetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FavorabilityExp,MC22,30);",
+    "zh_TW": "[panel=1]「……原來你也沒地方回。那咱們倆湊一塊，算個什麼？」",
     "zh_CN": "[panel=1]「……原来你也没地方回。那咱们俩凑一块，算个什么？」",
-    "links": [
-      71
-    ]
-  },
-  {
-    "entryID": 69,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你把頭上那塊布解下來，折了兩折，還到她手裡。她低頭看著那塊布，沒說話。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你把头上那块布解下来，折了两折，还到她手里。她低头看着那块布，没说话。）＊",
-    "links": [
-      70
-    ]
-  },
-  {
-    "entryID": 70,
-    "actorID": "MC22",
-    "text": "[panel=1]「……教都教了，你倒還我。也好——這塊還是我戴著像樣。」",
-    "Sequence": "SetPortrait(MC22,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
-    "zh_CN": "[panel=1]「……教都教了，你倒还我。也好——这块还是我戴着像样。」",
-    "links": [
-      71
-    ]
+    "links": [71]
   },
   {
     "entryID": 71,
     "actorID": "role2",
     "text": "[panel=6]＊（她抬手要往頭上按——手抬到一半，停住了。那塊借來的灰布早就取下來了。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（她抬手要往頭上按——手抬到一半，停住了。那塊借來的灰布早就取下來了。）＊",
     "zh_CN": "[panel=6]＊（她抬手要往头上按——手抬到一半，停住了。那块借来的灰布早就取下来了。）＊",
-    "links": [
-      72
-    ]
+    "links": [72]
   },
   {
     "entryID": 72,
     "actorID": "MC22",
     "text": "[panel=1]「……習慣了，從小按到大。」",
-    "Sequence": "SetPortrait(MC22,pic=3);",
+    "Sequence": "SetPortrait(MC22,pic=17);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_TW": "[panel=1]「……習慣了，從小按到大。」",
     "zh_CN": "[panel=1]「……习惯了，从小按到大。」",
-    "links": [
-      73
-    ]
+    "links": [73]
   },
   {
     "entryID": 73,
     "actorID": "MC22",
     "text": "[panel=1]「往後大概是不用按了。至少在你跟前不用。」",
-    "Sequence": "SetPortrait(MC22,pic=7);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=17);",
+    "zh_TW": "[panel=1]「往後大概是不用按了。至少在你跟前不用。」",
     "zh_CN": "[panel=1]「往后大概是不用按了。至少在你跟前不用。」",
-    "links": [
-      74
-    ]
+    "links": [74]
   },
   {
     "entryID": 74,
     "actorID": "role2",
     "text": "[panel=6]＊（她拍掉膝上的草屑，站起身，走到門邊又停住。）＊",
     "Sequence": "",
+    "zh_TW": "[panel=6]＊（她拍掉膝上的草屑，站起身，走到門邊又停住。）＊",
     "zh_CN": "[panel=6]＊（她拍掉膝上的草屑，站起身，走到门边又停住。）＊",
-    "links": [
-      75
-    ]
+    "links": [75]
   },
   {
     "entryID": 75,
     "actorID": "MC22",
     "text": "[panel=1]「明日再教你一回——看你自己包不包得住。」",
-    "Sequence": "SetPortrait(MC22,pic=1);",
+    "Sequence": "SetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Idea);",
+    "zh_TW": "[panel=1]「明日再教你一回——看你自己包不包得住。」",
     "zh_CN": "[panel=1]「明日再教你一回——看你自己包不包得住。」",
-    "links": [
-      76
-    ]
+    "links": [76]
   },
   {
     "entryID": 76,
     "actorID": "role2",
-    "text": "[panel=6]＊（門在身後合上。馬廄裡只剩馬嚼草料的聲音，和地上那一小攤水漬。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（门在身后合上。马厩里只剩马嚼草料的声音，和地上那一小摊水渍。）＊",
-    "links": [
-      77
-    ]
+    "text": "[panel=6]＊（門在身後合上，屋裡靜了下來。她方才坐的地方，地上留著一小攤水漬。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nOpenPanel(0, close);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=6]＊（門在身後合上，屋裡靜了下來。她方才坐的地方，地上留著一小攤水漬。）＊",
+    "zh_CN": "[panel=6]＊（门在身后合上，屋里静了下来。地上那一小摊水渍还没干。）＊",
+    "links": [77]
   },
   {
     "entryID": 77,
@@ -804,7 +597,6 @@
     "text": "",
     "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
     "Description": "尾格：收立繪面板與背景；任務狀態作者填",
-    "zh_CN": "",
     "links": []
   }
 ]
