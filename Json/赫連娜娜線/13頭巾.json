@@ -125,7 +125,7 @@
     "entryID": 14,
     "actorID": "MC1",
     "text": "「這麻布起毛，經緯也歪。這種貨在雲中賣幾個錢，我剛巧知道。」",
-    "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Anger);",
+    "Sequence": "SetPortrait(MC1,pic=10);",
     "Description": "發言格＝第二關的過渡格",
     "zh_TW": "「這麻布起毛，經緯也歪。這種貨在雲中賣幾個錢，我剛巧知道。」",
     "zh_CN": "「这麻布起毛，经纬也歪。这种货在云中卖几个钱，我刚巧知道。」",
@@ -135,7 +135,7 @@
     "entryID": 15,
     "actorID": "role2",
     "text": "[panel=6]＊（他臉上那副笑換了一張。價錢從嘴裡滾出來，一路砍到一半，還說是給姑娘算便宜的。）＊",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10);\nModifyData(FavorabilityExp,MC22,10);",
+    "Sequence": "ModifyData(FeatExp,Player,EconomicDevelopment,10);\nModifyData(FavorabilityExp,MC22,10);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=6]＊（他臉上那副笑換了一張。價錢從嘴裡滾出來，一路砍到一半，還說是給姑娘算便宜的。）＊",
     "zh_CN": "[panel=6]＊（他脸上那副笑换了一张。价钱从嘴里滚出来，一路砍到一半，还说是给姑娘算便宜的。）＊",
@@ -163,7 +163,7 @@
     "entryID": 18,
     "actorID": "role2",
     "text": "[panel=6]＊（他不慌，張口報了個價，說這是雲中的行情，愛買不買。你一時接不上話。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
+    "Sequence": "",
     "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=6]＊（他不慌，張口報了個價，說這是雲中的行情，愛買不買。你一時接不上話。）＊",
     "zh_CN": "[panel=6]＊（他不慌，张口报了个价，说这是云中的行情，爱买不买。你一时接不上话。）＊",
@@ -221,7 +221,6 @@
     "actorID": "MC1",
     "text": "「照樣子再縫一道不就得了。」",
     "Sequence": "",
-    "Description": "（扣好感）",
     "zh_TW": "「照樣子再縫一道不就得了。」",
     "zh_CN": "「照样子再缝一道不就得了。」",
     "links": [43]
@@ -322,7 +321,7 @@
     "entryID": 44,
     "actorID": "MC22",
     "text": "[panel=1]「……不必了，我自己縫。」",
-    "Sequence": "SetPortrait(MC22,pic=3);\nModifyData(FavorabilityExp,MC22,-20);",
+    "Sequence": "SetPortrait(MC22,pic=3);",
     "zh_TW": "[panel=1]「……不必了，我自己縫。」",
     "zh_CN": "[panel=1]「……不必了，我自己缝。」",
     "links": [45]
@@ -567,10 +566,10 @@
   {
     "entryID": 74,
     "actorID": "role2",
-    "text": "[panel=6]＊（她拍掉膝上的草屑，站起身，走到門邊又停住。）＊",
+    "text": "[panel=6]＊（她站起身，理了理衣襬，走到門邊又停住。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（她拍掉膝上的草屑，站起身，走到門邊又停住。）＊",
-    "zh_CN": "[panel=6]＊（她拍掉膝上的草屑，站起身，走到门边又停住。）＊",
+    "zh_TW": "[panel=6]＊（她站起身，理了理衣襬，走到門邊又停住。）＊",
+    "zh_CN": "[panel=6]＊（她站起身，理了理衣摆，走到门边又停住。）＊",
     "links": [75]
   },
   {
@@ -596,7 +595,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
-    "Description": "尾格：收立繪面板與背景；任務狀態作者填",
+    "Description": "尾格：收立繪面板與背景；",
     "links": []
   }
 ]
