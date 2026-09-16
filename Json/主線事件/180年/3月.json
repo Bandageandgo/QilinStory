@@ -458,13 +458,22 @@
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「三萬六千……這數目，可不是擺攤賣藝湊得出來的。」",
     "zh_CN": "「三万六千……这数目，可不是摆摊卖艺凑得出来的。」",
+    "links": [170]
+  },
+  {
+    "entryID": 170,
+    "actorID": "MC4",
+    "text": "[panel=1]「三萬六千錢，在洛陽連個關內侯的零頭都不夠。你們在這兒愁一年的數，西邸那些人一頓飯就花掉了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Proud);",
+    "zh_TW": "[panel=1]「三萬六千錢，在洛陽連個關內侯的零頭都不夠。你們在這兒愁一年的數，西邸那些人一頓飯就花掉了。」",
+    "zh_CN": "[panel=1]「三万六千钱，在洛阳连个关内侯的零头都不够。你们在这儿愁一年的数，西邸那些人一顿饭就花掉了。」",
     "links": [111]
   },
   {
     "entryID": 111,
     "actorID": "MC4",
     "text": "[panel=1]「所以得找肯掏錢的主。并州境內，鄴城甄家財雄勢大，雁門赤龍幫——這兩家，一直想把手伸得更遠，雲中就是他們的角逐之地。」",
-    "Sequence": "DisableCharacterExpression(0);",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "[panel=1]「所以得找肯掏錢的主。并州境內，鄴城甄家財雄勢大，雁門赤龍幫——這兩家，一直想把手伸得更遠，雲中就是他們的角逐之地。」",
     "zh_CN": "[panel=1]「所以得找肯掏钱的主。并州境内，邺城甄家财雄势大，雁门赤龙帮——这两家，一直想把手伸得更远，云中就是他们的角逐之地。」",
     "links": [112]

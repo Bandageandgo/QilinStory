@@ -87,6 +87,15 @@
     "Sequence": "OpenPanel(2, close);\nSetPortrait(MC1,pic=3);\nSetPortrait(MC4,pic=1);",
     "zh_TW": "「呵呵，誠如他所言，正統傳承已沒，\n賈某不過是個竊名之徒，本府更無朝廷支持。」",
     "zh_CN": "「呵呵，诚如他所言，正统传承已没，\n贾某不过是个窃名之徒，本府更无朝廷支持。」",
+    "links": [4234]
+  },
+  {
+    "entryID": 4234,
+    "actorID": "MC4",
+    "text": "[panel=1]「不過話說回來，如今洛陽西邸明碼標價，三公一千萬、九卿五百萬。本府這塊招牌一文沒花，倒也算撿了個便宜。」",
+    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Proud);",
+    "zh_TW": "[panel=1]「不過話說回來，如今洛陽西邸明碼標價，三公一千萬、九卿五百萬。本府這塊招牌一文沒花，倒也算撿了個便宜。」",
+    "zh_CN": "[panel=1]「不过话说回来，如今洛阳西邸明码标价，三公一千万、九卿五百万。本府这块招牌一文没花，倒也算捡了个便宜。」",
     "links": [548]
   },
   {
@@ -149,7 +158,7 @@
     "entryID": 548,
     "actorID": "MC4",
     "text": "「但名非名，實虛實。\n是否繼續參加，諸位有智，自行判斷吧。」",
-    "Sequence": "SetPortrait(MC4,pic=3);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC4,pic=3);",
     "zh_TW": "「但名非名，實虛實。\n是否繼續參加，諸位有智，自行判斷吧。」",
     "zh_CN": "「但名非名，实虚实。\n是否继续参加，诸位有智，自行判断吧。」",
     "links": [542]
