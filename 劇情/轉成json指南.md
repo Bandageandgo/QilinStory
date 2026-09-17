@@ -54,17 +54,57 @@
         -   `or`／`not` 同理。**這是全案體例，不是 Lua 文法問題**——`Json/` 現有 59 條串接條件，Unity 條件編輯器產出的那 56 條全長這樣，照抄它就對了。
     -   **⚠ 字串常量一定要帶引號**：`CurrentQuestState("C0F2") == "success";` ✅／`CurrentQuestState("C0F2") == success` ❌。沒引號在 Lua 是「未定義的變數」＝`nil`，永遠不相等，那條分支同樣永遠不成立。只有 `true`／`false`／`nil` 與數字不加引號。
 -   `links` (Array<Number>): 指向下一個或多個可能的對話節點的 `entryID` 列表。如果是對話終點，則為空陣列 `[]`。
--   `Description` (String, 僅用於特定節點): 此欄位僅用於標註特殊功能節點，不應用於普通對話。只有以下情況需要添加此欄位：
-    1. 自動檢定節點 (例如："自動洞悉檢定觸發點")
-    2. 手動擲骰節點 (例如："魅力檢定擲骰節點")
-    3. 戰鬥觸發節點／戰鬥緩衝節點 (例如："戰鬥觸發節點：藍焰巨蛇"、"戰鬥緩衝節點")
-    4. 任務觸發節點 (例如："任務『初出茅廬』觸發點")
-    5. 物品交互節點 (例如："給予黃金魚的對話分支")
-    6. 選項節點 (例如："選擇使用魅力的選項")
-    7. 空內容緩衝節點 (例如："空內容緩衝節點，用於連接檢定結果")
-    8. **好感度節點（2026-09-15 作者裁示新增）**：`Sequence` 裡有 `ModifyData(FavorabilityExp,…)` 的格子，**一律**加 `Description`，寫成「`<角色>好感 +N`」／「`<角色>好感 −N`」（例如："娜娜好感 +20"、"呂信好感 −30"）；同一格加了兩個人就用頓號並列（"蔡邕好感 +20、蔡琰好感 +20"）；同一格還兼任務／檢定獎勵的，一併寫進去（"巧手檢定成功：專長經驗 +10、小犀好感 +20"）。**為什麼加在哪一句可以接在冒號後面補一句**，作者回頭在 Unity 對話圖上一眼就看得到這格是加分點。**既有 JSON 不回頭補**（2026-09-15 作者裁示：全案 166 格好感裡 40 格沒註記，那些不用管）；**之後新寫、新加的好感格一律要有。**
+-   `Description` (String, 選填): **節點功能標籤**——給作者在 Unity 對話圖上一眼看出這格「做了什麼」。**只准寫下面詞表裡的詞，多項用頓號「、」並列，不寫任何解釋**（2026-09-17 作者裁示）。
+    > ⚠ **這欄以前被當成註解欄用，寫成了「那是你想活」＝趙王洞以後解禁的句子（饕餮.md 第六節）」這種說明文，趙王洞遺跡饕餮段最亂，全案 2051 條裡 348 條是這種。作者裁示：**已完成並匯入的一律不回頭改**，本條只管之後新寫、新加的節點。
     
-    所有一般對話、旁白、角色反應等普通節點都不應包含Description欄位。
+    **怎麼寫：** 看這格的 `Sequence`／`Script`／`Conditions`／結構，逐項對詞表翻成標籤，順序照指令順序。**好感、經驗帶角色名或項目名，不帶數字**（數字在指令裡，改了也不用同步）。詞表裡沒有的功能，先問作者、不要自己造詞。
+    
+    **哪些格要寫：** 有詞表項目的格才寫。一般對話、旁白、角色反應、只換立繪的格**不寫這欄**（整個欄位不出現）。
+    
+    **詞表（2026-09-17 作者定，之後有多的再補）：**
+    
+    | 這格有什麼 | `Description` 寫 |
+    | :--- | :--- |
+    | `SetQuestState`／`SetQuestEntryState(…, "active")` 開任務、開 entry | 觸發任務：〈任務名〉 |
+    | 任務 entry 進度、狀態變更（不是開也不是完成） | 任務更新 |
+    | `…"success"` 整案完成 | 完成任務：〈任務名〉 |
+    | `…"failure"` | 任務失敗：〈任務名〉 |
+    | `Script` 改變數、旗標、計數 | 變數更新 |
+    | `ModifyData(FavorabilityExp,MC22,+N)` | 娜娜好感度提升（**帶角色名，不帶數字**） |
+    | `ModifyData(FavorabilityExp,MC22,−N)` | 娜娜好感度下降 |
+    | `ModifyData(AbilityExp,Player,Strength,±N)` 五維 | 武力經驗增加／武力經驗減少（屬性中文名見 `給AI看的指南/擲骰指令轉換規則.md`〈常用檢定項目ID對照〉） |
+    | `ModifyData(FeatExp,Player,Insight,±N)` 專長 | 洞悉經驗增加／洞悉經驗減少（同上表） |
+    | `ModifyData(AbilityMaxLevel,…)` 五維上限 | 超級大漢人 |
+    | `ModifyData(DnDAlignment,Player,LawChaos,+N)` | 信義提升（暫定，依舊檔統計：LawChaos 正＝信義、負＝通達；GoodEvil 正＝仁心、負＝機略） |
+    | `…LawChaos,−N` | 通達提升 |
+    | `…GoodEvil,+N` | 仁心提升 |
+    | `…GoodEvil,−N` | 機略提升 |
+    | `ModifyData(Coin,Player,±N)` | 給錢／扣錢 |
+    | `ModifyData(Valuable,Player,X,+1／−1)` | 獲得〈貴重品名〉／失去〈貴重品名〉 |
+    | `ShowValuableMemo` | 開啟便籤 |
+    | `ModifyData(Skill,…)` | 獲得技能卡 |
+    | `ModifyData(ChancePoint,…)` | 獲得機會點 |
+    | `ModifyData(AddNewCharacter／IsInTeam／IsAbleToJoinTeam,…)`、`ControlStage` | 加入隊伍／離隊／場上人物更換 |
+    | 選項節點（§4.2） | 選項1／選項2／選項3…（照順序，**不寫選項內容**） |
+    | 擲骰格 `BeginDiceRoll(…,XCheck,N)` | 〈名〉檢定（例：威嚇檢定；難度不寫） |
+    | 擲骰後的空緩衝格 | 擲骰緩衝節點 |
+    | `Conditions: IsPassDice() == true／false` 分支首格 | 檢定成功／檢定失敗 |
+    | `BeginFight` | 進入戰鬥：〈對手〉 |
+    | 戰鬥緩衝格 | 戰鬥緩衝節點 |
+    | `IsPassFight() == true／false` 分支首格 | 戰鬥成功／戰鬥失敗 |
+    | `AudioControl(PlayMusic,…)` 這段第一次放 | 播放音樂 |
+    | `StopMusic`＋`PlayMusic` 換曲 | 切換音樂 |
+    | `AudioControl(StopMusic)` | 關閉音樂 |
+    | 四段轉場（`PlayFeelFeedback(FadeInOut…)` 包） | 轉場 |
+    | `EnableEventBG`／`DisableEventBG` | 事件圖／關閉事件圖 |
+    | `EnableDialogueBG`／`DisableDialogueBG` | 開啟背景／關閉背景 |
+    | `OpenPanel(N, close)` 收立繪面板 | 收立繪 |
+    | `ShowEnding` | 結局 |
+    | `Shop`／`MapLock`／`ShowHint`／`ShowNoviceTeaching`／`BeginMiniGame`／`LoadLevel` | 開啟商店／地圖鎖定／提示／教學／小遊戲／切換場景 |
+    
+    例：`Sequence` 是 `AudioControl(StopMusic);AudioControl(PlayMusic,BGM_16);ModifyData(AbilityMaxLevel,…)×5` → `"切換音樂、超級大漢人"`；`ModifyData(FeatExp,Player,Intimidation,10);ModifyData(FavorabilityExp,MC22,10);` → `"威嚇經驗增加、娜娜好感度提升"`。
+    
+    **不准寫進這欄的：** 台詞內容摘要（「事後報告：她吃了」）、為什麼這樣寫、設定出處（`饕餮.md 第六節`）、紅線（「不得改成一個人」）、給作者的問題、好感／經驗的數值、選項的文字。**這些放創作稿的 `> ⚠` 引用區塊**，回讀稿的 `- 註記：` 照抄 `Description` 原文即可。
 
 ## Markdown 轉換規則
 
@@ -148,7 +188,7 @@
     -   數值可為負：`ModifyData(FavorabilityExp,MC20,-5);`（雍仔好感經驗 -5）
 -   **禁止**: `AddAffection(MC22,5)` 不是引擎指令，轉換時不可原樣寫入 `Sequence`。
 -   可與立繪／表情寫在同一條 `Sequence`（放在 `SetPortrait`／`EnableCharacterExpression` 之後）。
--   **有好感指令的格子一律加 `Description`**（"娜娜好感 +20"），寫法見 §1 `Description` 第 8 條（2026-09-15 作者裁示）。
+-   **有好感指令的格子一律加 `Description`**：「娜娜好感度提升」／「娜娜好感度下降」——帶角色名、不帶數字（2026-09-17 作者定），詞表見 §1 `Description`。
 
 #### 3.6 `ModifyData` 貴重品
 -   **目前沒有一般道具**。劇情裡給玩家的東西一律是貴重品，詳細規則見 `給AI看的指南/貴重品指令轉換規則.md`。
@@ -269,12 +309,12 @@
             > ⚠ **別跟這兩種真的該寫 `0` 的節點搞混**：〈提示選擇節點〉（上面第 1 項，且建議省略）與〈空對話擲骰節點〉（下面第 4 項）——那兩種沒有台詞、不是玩家講的話。
         -   `text`: 包含該選項的文字。若選項不涉及檢定，則為 `「原本的選項文字」`。若選項涉及檢定，則格式為 `[em2][XX檢定][/em2]「原本的選項文字」`，例如 `[em2][魅力檢定][/em2]「區區三百文，何足掛齒！」`。
         -   `Sequence`: 通常為空字串 `""`。
-        -   `Description`: 應包含描述此選項用途的文字，例如："選項1：魅力檢定"。
+        -   `Description`: 只寫「選項1」「選項2」…（§1 詞表；不寫選項內容、不寫檢定名）。
         -   `links`: **指向一個緊隨其後的、專用於觸發該選項檢定的「空對話擲骰節點」**。**如果該選項無檢定，則直接指向該選項的「主角發言節點」**——不是直接指向對方的回應或旁白（見本節開頭 ⚠⚠ 通則）。
     4.  **空對話擲骰節點 (手動擲骰觸發)**: **緊隨在帶檢定的『選項節點』之後**，必須插入一個特殊的「空對話」JSON節點。此節點的 `text` 欄位為空字串 (`""`)，其 `Sequence` 欄位**不能只寫** `BeginDiceRoll(Manual,FeatID,難度);`，必須依 `給AI看的指南/擲骰指令轉換規則.md` 使用完整包裝：`SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,FeatID,難度);`。
         -   `actorID`: 通常為 `0` 或 `-1` (系統執行)。
         -   `text`: `""` (空字串)。
-        -   `Description`: 應包含描述此節點用途的文字，例如："選項1的空對話擲骰節點"。
+        -   `Description`: 寫檢定名，例如「魅力檢定」（§1 詞表）。
         -   `links`: 指向**角色實際執行該選項動作/發言的節點**。
     5.  **角色行動/發言節點（通用）**: 此節點代表玩家選擇選項、擲骰之後，角色（如 `MC1`）實際說出對應的話或執行動作——**成功／失敗共用同一句發言**。
         -   `text`: 包含原始 Markdown 中角色在該選項下的完整發言。
@@ -334,7 +374,7 @@
 
 1.  **戰鬥觸發節點**: `actorID` 為 `"0"`（或 `0`），`text` 為 `""`。`Sequence` 必須寫滿四段：
     `SetContinueMode(false);BeginFight(Combat,場次ID);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);`
-    -   `Description`: 例如 `"戰鬥觸發節點：藍焰巨蛇"`。
+    -   `Description`: 例如 `"進入戰鬥：藍焰巨蛇"`。
     -   `links`: **只指向**緊隨其後的緩衝節點（不要在這裡分叉勝／敗）。
 2.  **緩衝節點**: `actorID` `"0"`，`text` `""`，`Sequence` **只有** `"Continue();"`。
     -   `Description`: 例如 `"戰鬥緩衝節點"`。
@@ -349,7 +389,7 @@
   "actorID": "0",
   "text": "",
   "Sequence": "SetContinueMode(false);BeginFight(Combat,77);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-  "Description": "戰鬥觸發節點：藍焰巨蛇",
+  "Description": "進入戰鬥：藍焰巨蛇",
   "links": [202]
 }
 ```
@@ -437,7 +477,7 @@
     -   `actorID`: (String/Number) 通常建議使用代表「系統」或「旁白」的 ID，例如 `"0"`。
     -   `text`: (String) 可以直接使用 Markdown 中的任務/線索描述文字，例如 `"觸發主線任務：初出茅廬"`。這有助於理解該節點的用途。
     -   `Sequence`: (String) 初始可以為空字串 `""`，或一個註解式的佔位符，例如 `"// TODO: Add TaskTriggerCommand for '任務名稱' here"`。**此欄位是預留給後續添加實際遊戲指令用的。**
-    -   `Description`: (String) 必須添加，用於描述此節點的任務觸發功能，例如 "任務觸發節點：初出茅廬"。
+    -   `Description`: (String) 必須添加，寫「觸發任務：初出茅廬」（§1 詞表）。
     -   `links`: (Array<Number>) 指向下一個常規對話節點或事件節點的 `entryID`。如果觸發任務後沒有立即的後續對話（例如，任務觸發後直接結束當前互動分支），則 `links` 可以為空陣列 `[]`。
 
 -   **範例**：
@@ -451,7 +491,7 @@
         "actorID": "0",
         "text": "觸發主線任務：拜訪村長",
         "Sequence": "// TODO: Add TaskTriggerCommand for '拜訪村長' here",
-        "Description": "任務觸發節點：拜訪村長",
+        "Description": "觸發任務：拜訪村長",
         "links": [201]  // 指向離開茶攤後的下一個對話或事件
     }
     ```
@@ -556,7 +596,7 @@
 -   **轉場固定寫法（必守）**：`SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);［換景@1］;SetContinueMode(original)@2.5;Continue()@2.5;`，獨立空格、四段不多不少、換景一律掛 `@1`、恢復點擊一律 `original`。裸寫 `EnableDialogueBG`／`PlayFeelFeedback` 不包四段都是錯。詳見 `給AI看的指南/畫面指令轉換規則.md` §2，本指南 §3.8。
 -   **轉場要收立繪面板（必守，2026-09-02 新增）**：換景／跳時間／換人上場的轉場，`@1` 槽要補 `OpenPanel(位置, close)@1`，這一段用過的位置一個一個關（主角 `0`、NPC 用他的 `[panel=N]`）。漏關＝上一段的立繪留在新景裡，肉眼可見。詳見 `給AI看的指南/畫面指令轉換規則.md` §2.7。
 -   **畫面特效有開就有關（必守）**：每個 `PlayOrStopParticle(X,Play)` 往下必須找得到 `PlayOrStopParticle(X,Stop)` 或 `StopAllParticle()`，預設放下一格開頭。詳見 `給AI看的指南/畫面指令轉換規則.md` §3，本指南 §3.9。
--   **只有特定類型的節點才應包含Description欄位**，包括檢定、擲骰、戰鬥、任務、選項、**好感度**等功能性節點。普通對話節點不應包含Description欄位。
+-   **`Description` 只寫 §1 詞表裡的功能標籤**（任務更新、變數更新、娜娜好感度提升、威嚇檢定、進入戰鬥、轉場……），頓號並列，不寫解釋。有詞表項目的格才寫，普通對話節點不寫這欄。
 -   **對話文本統一性**: 確保所有對話文本的引號「」處理一致。根據1.1節規則，標準角色對話應包含引號。
 
 ## 範例 (片段示意，非完整劇情)
@@ -601,7 +641,7 @@
     "text": "[em2][魅力檢定][/em2]「區區三百文！」",
     "Sequence": "",
     "links": [105],
-    "Description": "選項1：魅力檢定（短版選單句＝完整發言的前半句）"
+    "Description": "選項1"
   },
   {
     "entryID": 105,
@@ -609,7 +649,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,CharismaCheck,5);",
     "links": [106],
-    "Description": "選項1的空對話擲骰節點"
+    "Description": "魅力檢定"
   },
   {
     "entryID": 106,
@@ -640,7 +680,7 @@
     "text": "「再想想辦法。」",
     "Sequence": "",
     "links": [108],
-    "Description": "選項2：無檢定（短版選單句，選完仍要接主角發言節點）"
+    "Description": "選項2"
   },
   {
     "entryID": 108,
