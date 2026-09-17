@@ -31,6 +31,14 @@ using System.Text;
 ///
 /// 匯出：把對話現況倒回 JSON（給 AI 讀取 Unity 目前內容、或替舊對話重建基準檔）。
 ///   對話名含「/」時寫進對應子資料夾；若同資料夾還留著舊扁平檔會在完成視窗提醒。
+///   挑對話用「搜尋框＋依資料夾分組的勾選樹」：對話名的「/」就是資料夾，
+///   「大地圖/對話」「大地圖/白鹵澤」都收在「大地圖」底下，和磁碟上的 Json/ 一致。
+///   每段對話旁邊會標出它和磁碟上那份 JSON 是否一致（● 不同、○ 磁碟還沒有這份檔）；
+///   匯出完成時若還有「不同但沒勾」的對話，完成視窗會點名，免得漏匯。
+///
+/// 匯入確認視窗：除了「幾處不同」，會逐格列出 entryID 與變動的欄位（#12 文字、#40 Sequence…），
+///   方便對回 JSON 查問題；同步整個根資料夾時每檔各問一次（套用／略過此檔／全部停止），
+///   內容一致的檔案自動略過不問。
 ///
 /// 翻譯：JSON 節點可帶選填欄位 zh_TW / zh_CN / en，匯入時寫入同名多語欄位
 ///  （zh-TW / zh-CN / en，Localization 型別）；JSON 沒帶時不會清掉資料庫既有翻譯。
@@ -38,8 +46,10 @@ using System.Text;
 /// 節點標題（title）：匯出時把節點的 Title 欄位寫成選填欄位 "title"（空的不寫）；
 ///   匯入時 JSON 有帶 title 才寫入，沒帶不會清掉 Unity 既有標題。
 ///
-/// 自動排版：匯入時新建的節點會自動排進畫布——整段新對話依 START 起的層級由上往下排；
-///   既有對話新增的節點排在「連到它的節點」下方，位置被占走就往右挪，不會全部疊在原點。
+/// 自動排版：匯入時新建的節點會自動排進畫布——整段新對話：主線一直線（每格第一條連線接下去的格子
+///   排在正下方）、第二條起的連線往右開一欄、匯合的格子排在最長那條分支下面；
+///   既有對話預設一格都不動，只把新增的節點排在「連到它的節點」下方，位置被占走就往右挪；
+///   匯入頁勾「同步時整段重排畫布」才會把既有對話整段重排（只改座標，可 Ctrl+Z）。
 ///   舊版工具建的節點全疊在原點 (0,0)：同步時會連同這些一起排；也可用匯入頁的
 ///   「把疊在原點的節點排進畫布」一次處理整個資料庫（只改位置、不碰文案）。
 /// </summary>
@@ -66,10 +76,20 @@ public class DialogueJsonBridge : EditorWindow
 
     // 匯入
     private string importFilePath = "";
+    // 同步既有對話時整段重排畫布（只改座標）。預設關：已完成的對話一格都不動，要重排得自己勾起來再匯入。
+    private bool relayoutOnSync = false;
 
-    // 匯出
-    private int exportConversationIndex = 0;
+    // 匯出：搜尋、勾選、資料夾展開狀態
     private string exportFolderPath = "";
+    private string exportSearch = "";
+    private readonly HashSet<int> exportSelected = new HashSet<int>();
+    private readonly Dictionary<string, bool> exportFoldouts = new Dictionary<string, bool>();
+
+    // 匯出：每段對話與磁碟上那份 JSON 的比對結果（conv.id → 狀態）；null = 還沒比對過
+    private enum DiskState { Same, Differs, NoFile, Unreadable }
+    private Dictionary<int, DiskState> diskStates;
+    private Dictionary<int, string> diskDetails = new Dictionary<int, string>();
+    private string diskStatesFolder;
 
     private Vector2 scrollPos;
 
@@ -175,7 +195,8 @@ public class DialogueJsonBridge : EditorWindow
             "• 舊扁平檔（把 / 寫成 _ 的檔名）仍能對到原對話，不必改名。\n" +
             "• 已存在的對話：更新欄位、新增節點、移除 JSON 已刪的節點、依 JSON 重建連線。\n" +
             "• 新建的節點會自動排進畫布（新對話整段分層排；既有對話的新節點排在上游節點下方）。\n" +
-            "• 有差異才會列出摘要讓你確認，套用後可 Ctrl+Z 復原；整個資料夾同步時內容一致的檔案自動略過。",
+            "• 有差異才會列出摘要讓你確認（逐格列出 entryID 與變動的欄位），套用後可 Ctrl+Z 復原。\n" +
+            "• 同步整個根資料夾：每檔各問一次「套用／略過此檔／全部停止」，內容一致的檔案自動略過不問。",
             MessageType.Info);
 
         EditorGUILayout.Space(4);
@@ -200,20 +221,27 @@ public class DialogueJsonBridge : EditorWindow
                 EditorGUILayout.LabelField("（檔案不在根資料夾內，只用檔名當對話名；有子層的對話請先設定根資料夾）", EditorStyles.miniLabel);
         }
 
+        relayoutOnSync = EditorGUILayout.ToggleLeft(
+            "同步既有對話時整段重排畫布（只改座標、可 Ctrl+Z；預設關，已完成的對話一格都不動）", relayoutOnSync);
+        EditorGUILayout.LabelField("新建的對話一律用新排法：主線一直線、分支往右開、匯合格排在最長分支下面。", EditorStyles.miniLabel);
+        EditorGUILayout.Space(4);
+
         GUI.enabled = !string.IsNullOrEmpty(importFilePath);
         if (GUILayout.Button("同步此檔", GUILayout.Height(28)))
         {
             ImportFile(importFilePath);
             AssetDatabase.SaveAssets();
+            InvalidateDiskStates();
         }
         GUI.enabled = true;
 
         EditorGUILayout.Space(10);
 
         GUI.enabled = !string.IsNullOrEmpty(jsonRootPath);
-        if (GUILayout.Button("同步整個根資料夾（含子資料夾，有差異才確認）", GUILayout.Height(28)))
+        if (GUILayout.Button("全部匯入：同步整個根資料夾（含子資料夾；每檔可套用或略過，內容一致的不問）", GUILayout.Height(28)))
         {
             ImportFolder(jsonRootPath);
+            InvalidateDiskStates();
         }
         GUI.enabled = true;
 
@@ -317,12 +345,18 @@ public class DialogueJsonBridge : EditorWindow
         }
 
         var files = Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories).OrderBy(f => f).ToList();
-        int done = 0, skipped = 0, unchanged = 0;
-        foreach (var file in files)
+        var applied = new List<string>();
+        var skipped = new List<string>();
+        var failed = new List<string>();
+        int unchanged = 0;
+        bool stopped = false;
+
+        for (int i = 0; i < files.Count; i++)
         {
+            string file = files[i];
             // 先靜默比對：內容一致的檔案直接略過，不用逐檔確認
             var plan = BuildSyncPlan(file);
-            if (plan == null) { skipped++; continue; }
+            if (plan == null) { failed.Add(Path.GetFileName(file)); continue; }
             if (plan.IsUpToDate)
             {
                 unchanged++;
@@ -330,19 +364,35 @@ public class DialogueJsonBridge : EditorWindow
                 continue;
             }
 
+            // 每檔只問這一次：這裡列出完整摘要（含 entryID），套用時不再跳第二個視窗
             int choice = EditorUtility.DisplayDialogComplex(
-                "同步檔案",
-                $"要同步「{plan.key}」嗎？\n{file}\n\n{DescribePlan(plan)}",
-                "同步", "全部取消", "略過此檔");
-            if (choice == 1) break;           // 取消
-            if (choice == 2) { skipped++; continue; }
+                $"同步檔案（{i + 1}/{files.Count}）",
+                $"{BuildSyncSummary(plan)}\n\n檔案：{file}",
+                "套用", "全部停止", "略過此檔");
+            if (choice == 1) { stopped = true; break; }
+            if (choice == 2) { skipped.Add(plan.key); continue; }
 
-            if (ApplySyncPlan(plan)) done++;
-            else skipped++;
+            if (ApplySyncPlan(plan, confirmed: true)) applied.Add(plan.key);
+            else failed.Add(plan.key);
         }
         AssetDatabase.SaveAssets();
-        EditorUtility.DisplayDialog("完成",
-            $"已同步 {done} 檔，略過 {skipped} 檔。\n另有 {unchanged} 檔內容一致，已自動略過。", "確定");
+
+        string msg = $"已套用 {applied.Count} 檔，略過 {skipped.Count} 檔，另有 {unchanged} 檔內容一致自動略過。" +
+                     (stopped ? "\n（中途按了「全部停止」，後面的檔案沒看。）" : "");
+        if (applied.Count > 0) msg += "\n\n已套用：\n" + ListLines(applied, 15);
+        if (skipped.Count > 0) msg += "\n\n略過：\n" + ListLines(skipped, 15);
+        if (failed.Count > 0) msg += "\n\n⚠ 無法同步（見 Console）：\n" + ListLines(failed, 10);
+        Debug.Log($"全部匯入完成：套用 {applied.Count}、略過 {skipped.Count}、一致 {unchanged}、失敗 {failed.Count}。");
+        EditorUtility.DisplayDialog("全部匯入完成", msg, "確定");
+    }
+
+    /// <summary>「• a\n• b\n…另有 N 項」；視窗塞不下的部分請看 Console。</summary>
+    private static string ListLines(IEnumerable<string> items, int max)
+    {
+        var list = items.ToList();
+        string s = string.Join("\n", list.Take(max).Select(x => "• " + x));
+        if (list.Count > max) s += $"\n…另有 {list.Count - max} 項，見 Console";
+        return s;
     }
 
     /// <returns>是否有實際套用變更</returns>
@@ -353,9 +403,10 @@ public class DialogueJsonBridge : EditorWindow
         if (plan.IsUpToDate)
         {
             Debug.Log($"「{plan.conversation.Title}」與 {plan.key}.json 一致，無需同步。");
+            EditorUtility.DisplayDialog("無需同步", $"「{plan.conversation.Title}」與 {plan.key}.json 內容一致。", "確定");
             return false;
         }
-        return ApplySyncPlan(plan);
+        return ApplySyncPlan(plan, confirmed: false);
     }
 
     // ── 同步計畫：先分析差異（不動資料庫），再決定要不要問使用者 ──
@@ -373,7 +424,11 @@ public class DialogueJsonBridge : EditorWindow
         public List<DialogueEntry> toRemove;
         public List<DialogueEntry> orphans;
         public List<KeyValuePair<JsonEntry, DialogueEntry>> changedPairs;
-        public bool linksDiffer;
+        /// <summary>每個變動節點的 entryID → 變動的欄位名（文字、Sequence、說話者…），給確認視窗列出來對照。</summary>
+        public Dictionary<int, List<string>> changedFields = new Dictionary<int, List<string>>();
+        /// <summary>連線有變的節點 entryID。</summary>
+        public List<int> linkChanged = new List<int>();
+        public bool linksDiffer => linkChanged.Count > 0;
         /// <summary>對不到印記、但靠 Unity id 認領到的節點；同步時要補印記。</summary>
         public List<int> adopted = new List<int>();
 
@@ -408,26 +463,99 @@ public class DialogueJsonBridge : EditorWindow
         return AnalyzeUpdate(plan) ? plan : null;
     }
 
-    /// <summary>依計畫套用（新建或更新）；內部會跳確認視窗。</summary>
-    private bool ApplySyncPlan(SyncPlan plan)
+    /// <summary>依計畫套用（新建或更新）。confirmed=false 時內部會先跳確認視窗；true 表示呼叫端已經問過了。</summary>
+    private bool ApplySyncPlan(SyncPlan plan, bool confirmed)
     {
         if (plan.conversation == null)
-            return CreateConversationFromJson(plan.key, plan.jsonEntries);
-        return UpdateConversationFromJson(plan);
+            return CreateConversationFromJson(plan.key, plan.jsonEntries, confirmed);
+        return UpdateConversationFromJson(plan, confirmed);
     }
 
-    /// <summary>資料夾同步的逐檔確認視窗用：一行說明這檔會做什麼。</summary>
-    private static string DescribePlan(SyncPlan plan)
+    /// <summary>
+    /// 確認視窗用的完整摘要：新對話／首次同步／更新，更新時逐格列出 entryID 與變動的欄位，
+    /// 新增、移除、認領、連線有變的節點也都點名，方便回 JSON 對照。
+    /// 視窗塞不下的部分截斷，全文在 Console。
+    /// </summary>
+    private string BuildSyncSummary(SyncPlan plan)
     {
-        if (plan.conversation == null) return $"（新對話，{plan.jsonEntries.Count} 個節點）";
-        if (!plan.hasStamps) return "（首次同步：補 JsonEntryID 印記）";
-        var parts = new List<string>();
-        if (plan.changedPairs.Count > 0) parts.Add($"更新 {plan.changedPairs.Count}");
-        if (plan.toAdd.Count > 0) parts.Add($"新增 {plan.toAdd.Count}");
-        if (plan.toRemove.Count > 0) parts.Add($"移除 {plan.toRemove.Count}");
-        if (plan.adopted.Count > 0) parts.Add($"認領 {plan.adopted.Count}");
-        if (plan.linksDiffer) parts.Add("連線有變");
-        return "（" + string.Join("、", parts) + "）";
+        if (plan.conversation == null)
+        {
+            return $"新對話：{plan.key}\n（資料庫沒有這段對話，將建立 {plan.jsonEntries.Count} 個節點）" +
+                   (plan.key.Contains("/") ? "" : "\n\n⚠ 對話名取自檔名；若這段對話應該在某個子層底下，請先設定文案根資料夾並把檔案放進對應子資料夾。");
+        }
+
+        var conversation = plan.conversation;
+        var sb = new StringBuilder();
+        sb.Append($"對話：{conversation.Title}\n檔案：{plan.key}.json\n");
+
+        if (!plan.hasStamps)
+            sb.Append("\n（首次同步：依順序對應並補上 JsonEntryID 印記）\n");
+
+        // 內容更新：逐格列 entryID＋欄位
+        sb.Append($"\n• 內容更新：{plan.changedPairs.Count} 個節點");
+        if (plan.changedPairs.Count > 0)
+        {
+            const int max = 20;
+            int shown = 0;
+            foreach (var pair in plan.changedPairs)
+            {
+                if (shown++ >= max) { sb.Append($"\n    …另有 {plan.changedPairs.Count - max} 格，見 Console"); break; }
+                int jid = pair.Key.entryID;
+                string fields = plan.changedFields.TryGetValue(jid, out var names) ? string.Join("、", names) : "？";
+                sb.Append($"\n    #{jid}（{fields}）");
+            }
+        }
+
+        sb.Append($"\n• 新增節點：{plan.toAdd.Count} 個");
+        if (plan.toAdd.Count > 0) sb.Append($"\n    {IdList(plan.toAdd.Select(x => x.entryID), 30)}");
+
+        sb.Append($"\n• 移除節點：{plan.toRemove.Count} 個");
+        if (plan.toRemove.Count > 0)
+            sb.Append($"\n    {IdList(plan.toRemove.Select(x => StampOf(x)), 30)}（括號內是 Unity Entry id）");
+
+        if (plan.adopted.Count > 0)
+            sb.Append($"\n• 認領無印記節點：{plan.adopted.Count} 個，補上印記\n    {IdList(plan.adopted, 30)}");
+
+        if (plan.linksDiffer)
+            sb.Append($"\n• 連線有變：{plan.linkChanged.Count} 個節點\n    {IdList(plan.linkChanged, 30)}");
+        else
+            sb.Append("\n• 連線：無變動（仍會依 JSON 重建一次）");
+
+        int unplaced = conversation.dialogueEntries.Count(IsUnplaced);
+        if (relayoutOnSync)
+            sb.Append("\n• 整段重排畫布（已勾「同步時整段重排」；只改座標，主線一直線、分支往右開）");
+        else if (unplaced > 0)
+            sb.Append($"\n• 疊在原點 (0,0) 的舊節點 {unplaced} 個，順便排進畫布（只改位置）");
+
+        if (plan.orphans.Count > 0)
+            sb.Append($"\n\n⚠ 有 {plan.orphans.Count} 個無印記節點不會被更動（Unity Entry: {string.Join(", ", plan.orphans.Take(30).Select(x => x.id))}{(plan.orphans.Count > 30 ? "…" : "")}）");
+
+        sb.Append("\n\n套用後可 Ctrl+Z 復原。");
+        return sb.ToString();
+    }
+
+    /// <summary>「#12、#40、#77…」；超過 max 個就截斷。</summary>
+    private static string IdList(IEnumerable<int> ids, int max)
+    {
+        var list = ids.ToList();
+        string s = string.Join("、", list.Take(max).Select(i => "#" + i));
+        if (list.Count > max) s += $"…另有 {list.Count - max} 個";
+        return s;
+    }
+
+    private static string IdList(IEnumerable<string> ids, int max)
+    {
+        var list = ids.ToList();
+        string s = string.Join("、", list.Take(max));
+        if (list.Count > max) s += $"…另有 {list.Count - max} 個";
+        return s;
+    }
+
+    /// <summary>移除清單用：「#印記(Entry id)」，沒印記就只有 Entry id。</summary>
+    private static string StampOf(DialogueEntry e)
+    {
+        var f = Field.Lookup(e.fields, JSON_ENTRY_ID_FIELD);
+        return f != null && !string.IsNullOrEmpty(f.value) ? $"#{f.value}({e.id})" : $"Entry {e.id}";
     }
 
     private List<JsonEntry> ParseJson(string path)
@@ -559,9 +687,9 @@ public class DialogueJsonBridge : EditorWindow
     }
 
     // ── 建立新對話 ──
-    private bool CreateConversationFromJson(string title, List<JsonEntry> jsonEntries)
+    private bool CreateConversationFromJson(string title, List<JsonEntry> jsonEntries, bool confirmed)
     {
-        if (!EditorUtility.DisplayDialog(
+        if (!confirmed && !EditorUtility.DisplayDialog(
             "建立新對話",
             $"資料庫中沒有「{title}」，將建立新對話（{jsonEntries.Count} 個節點）。" +
             (title.Contains("/") ? "" : "\n\n（對話名取自檔名；若這段對話應該在某個子層底下，請取消、設定文案根資料夾並把檔案放進對應子資料夾。）"),
@@ -679,11 +807,19 @@ public class DialogueJsonBridge : EditorWindow
         var orphans = dbEntries.Where(e => !dbByJsonId.ContainsValue(e)).ToList();
 
         var changedPairs = new List<KeyValuePair<JsonEntry, DialogueEntry>>();
+        var diffLog = new StringBuilder();
         foreach (var je in jsonEntries)
         {
-            if (dbByJsonId.TryGetValue(je.entryID, out var entry) && EntryDiffers(entry, je))
-                changedPairs.Add(new KeyValuePair<JsonEntry, DialogueEntry>(je, entry));
+            if (!dbByJsonId.TryGetValue(je.entryID, out var entry)) continue;
+            var diffs = FieldDiffs(entry, je);
+            if (diffs.Count == 0) continue;
+            changedPairs.Add(new KeyValuePair<JsonEntry, DialogueEntry>(je, entry));
+            plan.changedFields[je.entryID] = diffs.Select(d => d.name).ToList();
+            // 確認視窗只放得下欄位名；舊值／新值全文印在 Console，點開就能逐字比對（只印訊息，不改資料）
+            diffLog.Append($"\nJSON #{je.entryID}（Unity Entry {entry.id}）\n{DescribeDiff(diffs)}");
         }
+        if (changedPairs.Count > 0)
+            Debug.Log($"[{conversation.Title}] {changedPairs.Count} 格有變更（JSON 與 Unity 逐欄比對）：{diffLog}");
 
         plan.hasStamps = hasStamps;
         plan.dbByJsonId = dbByJsonId;
@@ -692,12 +828,14 @@ public class DialogueJsonBridge : EditorWindow
         plan.orphans = orphans;
         plan.changedPairs = changedPairs;
         // 欄位都沒變時連線仍可能有變；有變才算需要同步
-        plan.linksDiffer = LinksDiffer(conversation, jsonEntries, dbByJsonId);
+        plan.linkChanged = LinkDiffIds(conversation, jsonEntries, dbByJsonId);
+        if (plan.linkChanged.Count > 0)
+            Debug.Log($"[{conversation.Title}] 連線有變的節點：{IdList(plan.linkChanged, 50)}");
         return true;
     }
 
-    /// <summary>列出摘要讓使用者確認，確認後套用 plan。</summary>
-    private bool UpdateConversationFromJson(SyncPlan plan)
+    /// <summary>列出摘要讓使用者確認（confirmed=true 表示呼叫端已問過），確認後套用 plan。</summary>
+    private bool UpdateConversationFromJson(SyncPlan plan, bool confirmed)
     {
         var conversation = plan.conversation;
         string key = plan.key;
@@ -706,23 +844,9 @@ public class DialogueJsonBridge : EditorWindow
         var dbByJsonId = plan.dbByJsonId;
         var toAdd = plan.toAdd;
         var toRemove = plan.toRemove;
-        var orphans = plan.orphans;
         var changedPairs = plan.changedPairs;
 
-        int unplaced = conversation.dialogueEntries.Count(IsUnplaced);
-        string summary =
-            $"對話：{conversation.Title}\n檔案：{key}.json\n\n" +
-            $"• 內容更新：{changedPairs.Count} 個節點\n" +
-            $"• 新增節點：{toAdd.Count} 個{(toAdd.Count > 0 ? $"（entryID: {string.Join(", ", toAdd.Select(x => x.entryID))}）" : "")}\n" +
-            $"• 移除節點：{toRemove.Count} 個{(toRemove.Count > 0 ? $"（Entry: {string.Join(", ", toRemove.Select(x => x.id))}）" : "")}\n" +
-            $"• 依 JSON 重建連線\n" +
-            (plan.adopted.Count > 0 ? $"• 認領無印記節點：{plan.adopted.Count} 個（entryID: {string.Join(", ", plan.adopted)}），補上印記\n" : "") +
-            (unplaced > 0 ? $"• 疊在原點 (0,0) 的舊節點 {unplaced} 個，順便排進畫布（只改位置）\n" : "") +
-            (orphans.Count > 0 ? $"\n⚠ 有 {orphans.Count} 個無印記節點（Entry: {string.Join(", ", orphans.Select(x => x.id))}）不會被更動。\n" : "") +
-            (!hasStamps ? "\n（首次同步：將依順序對應並補上 JsonEntryID 印記）\n" : "") +
-            "\n套用後可 Ctrl+Z 復原。";
-
-        if (!EditorUtility.DisplayDialog("確認同步", summary, "套用", "取消")) return false;
+        if (!confirmed && !EditorUtility.DisplayDialog("確認同步", BuildSyncSummary(plan), "套用", "取消")) return false;
 
         Undo.RecordObject(database, "同步對話：" + conversation.Title);
 
@@ -769,11 +893,20 @@ public class DialogueJsonBridge : EditorWindow
         RebuildEntryLinks(startEntry, new List<int> { jsonEntries[0].entryID }, dbByJsonId, conversation.id);
         RebuildLinks(conversation, jsonEntries, dbByJsonId);
 
-        // 5. 排版：這次新增的節點，加上舊版工具留在原點 (0,0) 的既有節點，一起排進畫布
-        //    （連線建好之後才知道它們的上游在哪）
-        var added = toAdd.Where(a => dbByJsonId.ContainsKey(a.entryID)).Select(a => dbByJsonId[a.entryID]);
-        int relaid = LayoutUnplacedEntries(conversation, added) - toAdd.Count;
-        if (relaid > 0) Debug.Log($"  ↳ 另有 {relaid} 個原本疊在原點的舊節點一併排進畫布。");
+        // 5. 排版（連線建好之後才知道上游在哪）
+        //    預設：只排這次新增的節點與舊版工具留在原點 (0,0) 的節點，使用者排過的一格都不動。
+        //    勾了「同步時整段重排」才整段重排（只改座標）。
+        if (relayoutOnSync)
+        {
+            AutoLayoutConversation(conversation);
+            Debug.Log($"  ↳ 依「同步時整段重排」把「{conversation.Title}」整段重排畫布（只改座標）。");
+        }
+        else
+        {
+            var added = toAdd.Where(a => dbByJsonId.ContainsKey(a.entryID)).Select(a => dbByJsonId[a.entryID]);
+            int relaid = LayoutUnplacedEntries(conversation, added) - toAdd.Count;
+            if (relaid > 0) Debug.Log($"  ↳ 另有 {relaid} 個原本疊在原點的舊節點一併排進畫布。");
+        }
 
         // 對話補上來源印記（= 這次用來對應的檔案路徑鍵）
         Field.SetValue(conversation.fields, JSON_SOURCE_FIELD, key);
@@ -819,20 +952,64 @@ public class DialogueJsonBridge : EditorWindow
         Field.SetValue(entry.fields, fieldTitle, Norm(value), FieldType.Localization);
     }
 
-    // ── 差異判斷 ──
+    // ── 差異判斷：規則只寫在 FieldDiffs 一處（文字、說話者、Sequence、Conditions、Script、Description；
+    //    title／zh_TW／zh_CN／en 只在 JSON 有帶時才比，沒帶不算不同、匯入也不會清掉）──
     private bool EntryDiffers(DialogueEntry entry, JsonEntry je)
     {
-        if (Norm(entry.DialogueText) != Norm(je.text)) return true;
-        if (TryResolveActorID(je.actorID, out int actorID) && actorID != entry.ActorID) return true;
-        if (Norm(entry.Sequence) != Norm(ProcessSequence(je.Sequence))) return true;
-        if (Norm(entry.conditionsString) != Norm(je.Conditions)) return true;
-        if (Norm(entry.userScript) != Norm(je.Script)) return true;
-        if (Norm(Field.LookupValue(entry.fields, "Description")) != Norm(je.Description)) return true;
-        if (!string.IsNullOrEmpty(je.title) && Norm(Field.LookupValue(entry.fields, "Title")) != Norm(je.title)) return true;
-        if (!string.IsNullOrEmpty(je.zh_TW) && Norm(Field.LookupValue(entry.fields, "zh-TW")) != Norm(je.zh_TW)) return true;
-        if (!string.IsNullOrEmpty(je.zh_CN) && Norm(Field.LookupValue(entry.fields, "zh-CN")) != Norm(je.zh_CN)) return true;
-        if (!string.IsNullOrEmpty(je.en) && Norm(Field.LookupValue(entry.fields, "en")) != Norm(je.en)) return true;
-        return false;
+        return FieldDiffs(entry, je).Count > 0;
+    }
+
+    // ── 逐欄差異：確認視窗列欄位名，Console 印舊值／新值 ──
+    private class FieldDiff
+    {
+        public string name;   // 文字、說話者、Sequence…
+        public string unity;  // Unity 現值（顯示用）
+        public string json;   // JSON 值（顯示用）
+    }
+
+    private List<FieldDiff> FieldDiffs(DialogueEntry entry, JsonEntry je)
+    {
+        var diffs = new List<FieldDiff>();
+        void Cmp(string name, string db, string js)
+        {
+            if (Norm(db) != Norm(js))
+                diffs.Add(new FieldDiff { name = name, unity = Visible(db), json = Visible(js) });
+        }
+
+        Cmp("文字", entry.DialogueText, je.text);
+        if (TryResolveActorID(je.actorID, out int actorID) && actorID != entry.ActorID)
+        {
+            string key = (je.actorID ?? "").Trim();
+            int sameName = database.actors.Count(a => a.Name == key);
+            diffs.Add(new FieldDiff
+            {
+                name = "說話者",
+                unity = $"id {entry.ActorID}（{GetActorExportName(entry.ActorID)}）",
+                json = $"'{je.actorID}' → 查到 id {actorID}；資料庫裡叫「{key}」的角色共 {sameName} 個",
+            });
+        }
+        Cmp("Sequence", entry.Sequence, ProcessSequence(je.Sequence));
+        Cmp("Conditions", entry.conditionsString, je.Conditions);
+        Cmp("Script", entry.userScript, je.Script);
+        Cmp("Description", Field.LookupValue(entry.fields, "Description"), je.Description);
+        if (!string.IsNullOrEmpty(je.title)) Cmp("title", Field.LookupValue(entry.fields, "Title"), je.title);
+        if (!string.IsNullOrEmpty(je.zh_TW)) Cmp("zh_TW", Field.LookupValue(entry.fields, "zh-TW"), je.zh_TW);
+        if (!string.IsNullOrEmpty(je.zh_CN)) Cmp("zh_CN", Field.LookupValue(entry.fields, "zh-CN"), je.zh_CN);
+        if (!string.IsNullOrEmpty(je.en)) Cmp("en", Field.LookupValue(entry.fields, "en"), je.en);
+        return diffs;
+    }
+
+    private static string DescribeDiff(List<FieldDiff> diffs)
+    {
+        if (diffs.Count == 0) return "  （逐欄找不到差異）";
+        return string.Join("\n", diffs.Select(d => $"  · {d.name}\n      Unity：{d.unity}\n      JSON ：{d.json}"));
+    }
+
+    /// <summary>把看不見的控制字元標出來，診斷用。</summary>
+    private static string Visible(string s)
+    {
+        if (s == null) return "(null)";
+        return "「" + s.Replace("\r", "⟨CR⟩").Replace("\n", "⟨LF⟩").Replace("\t", "⟨TAB⟩") + "」";
     }
 
     private void LogEntryChange(Conversation conv, DialogueEntry entry, JsonEntry je)
@@ -843,8 +1020,10 @@ public class DialogueJsonBridge : EditorWindow
             Debug.Log($"  ~ [{conv.Title}] Entry {entry.id} 欄位更新（Sequence/Conditions/Script/Description/title/翻譯/說話者）");
     }
 
-    private bool LinksDiffer(Conversation conversation, List<JsonEntry> jsonEntries, Dictionary<int, DialogueEntry> dbByJsonId)
+    /// <summary>連線與 JSON 不同的節點 entryID（空清單 = 連線全部一致）。</summary>
+    private List<int> LinkDiffIds(Conversation conversation, List<JsonEntry> jsonEntries, Dictionary<int, DialogueEntry> dbByJsonId)
     {
+        var changed = new List<int>();
         var entryToJsonId = dbByJsonId.ToDictionary(kv => kv.Value.id, kv => kv.Key);
         foreach (var je in jsonEntries)
         {
@@ -853,9 +1032,9 @@ public class DialogueJsonBridge : EditorWindow
                 .Where(l => l.destinationConversationID == conversation.id && entryToJsonId.ContainsKey(l.destinationDialogueID))
                 .Select(l => entryToJsonId[l.destinationDialogueID]).OrderBy(x => x).ToList();
             var target = (je.links ?? new List<int>()).OrderBy(x => x).ToList();
-            if (!current.SequenceEqual(target)) return true;
+            if (!current.SequenceEqual(target)) changed.Add(je.entryID);
         }
-        return false;
+        return changed;
     }
 
     // ── 連線 ──
@@ -901,52 +1080,106 @@ public class DialogueJsonBridge : EditorWindow
     }
 
     /// <summary>
-    /// 整段對話重排：從 START 沿連線做 BFS 分層，同層由左到右、層與層由上往下；
-    /// 連不到的節點放在最底層。用在新建對話、以及整段節點全疊在原點的舊對話
-    ///（有節點是使用者排過的對話不走這條，改用 LayoutUnplacedEntries 只補沒位置的）。
+    /// 整段對話重排（新建對話、整段疊在原點的舊對話、以及勾了「同步時整段重排」的既有對話）：
+    ///   · 主線一直線：每格「第一條連線」接下去的格子排在同一欄正下方，第二條起的連線各自往右開一欄，
+    ///     每條分支保留自己子樹的寬度，鄰近的分支不會交錯。
+    ///   · 高度用「從 START 算起的最長路徑」，分支匯合的格子會排在最長那條分支的下面，箭頭不往上跑。
+    ///   · 往回指的連線（迴圈）不參與定位。
+    ///   · 沒有任何連入的格子是另一個入口（箱庭對話常由遊戲直接跳進某一格），各自成一塊往下排、往右並列，
+    ///     不會全堆在最底下一列（五原障 378 格只有 3 個入口，主體掛在 #40、#100 下面）。
+    /// 只改座標，不動任何文案欄位。既有對話預設不走這條（見 relayoutOnSync）。
     /// </summary>
     private void AutoLayoutConversation(Conversation conversation)
     {
         var byId = conversation.dialogueEntries.ToDictionary(e => e.id);
-        var depth = new Dictionary<int, int>();
-        var queue = new Queue<DialogueEntry>();
-
         var start = conversation.GetFirstDialogueEntry();
         if (start == null) return;
-        depth[start.id] = 0;
-        queue.Enqueue(start);
-        while (queue.Count > 0)
+
+        // 1. DFS：往前的連線（去掉迴圈邊與跨對話）、第一次走到的格子歸誰（DFS 樹）、完成順序
+        var forward = new Dictionary<int, List<int>>();
+        var tree = new Dictionary<int, List<int>>();
+        var state = new Dictionary<int, int>();          // 0 未訪、1 進行中、2 完成
+        var finish = new List<int>();                    // 完成順序：子先於父
+        void Dfs(DialogueEntry e)
         {
-            var e = queue.Dequeue();
+            state[e.id] = 1;
+            var next = new List<int>();
+            var kids = new List<int>();
             foreach (var link in e.outgoingLinks)
             {
                 if (link.destinationConversationID != conversation.id) continue;
-                if (depth.ContainsKey(link.destinationDialogueID)) continue;
-                if (!byId.TryGetValue(link.destinationDialogueID, out var target)) continue;
-                depth[target.id] = depth[e.id] + 1;
-                queue.Enqueue(target);
+                if (!byId.TryGetValue(link.destinationDialogueID, out var t)) continue;
+                state.TryGetValue(t.id, out int s);
+                if (s == 1) continue;                    // 往回指：不參與定位
+                if (next.Contains(t.id)) continue;
+                next.Add(t.id);
+                if (s == 0) { kids.Add(t.id); Dfs(t); }
             }
+            forward[e.id] = next;
+            tree[e.id] = kids;
+            state[e.id] = 2;
+            finish.Add(e.id);
+        }
+        // 根：START 之外，沒有任何連入的格子也是入口（箱庭對話常由遊戲直接跳進某一格），
+        //     各自成一塊往下排、往右並列；最後只剩迴圈裡互相連的格子，也各挑一格當根。
+        var hasIncoming = new HashSet<int>();
+        foreach (var e in conversation.dialogueEntries)
+            foreach (var link in e.outgoingLinks)
+                if (link.destinationConversationID == conversation.id) hasIncoming.Add(link.destinationDialogueID);
+        var roots = new List<int> { start.id };
+        Dfs(start);
+        foreach (var e in conversation.dialogueEntries)
+            if (!state.ContainsKey(e.id) && !hasIncoming.Contains(e.id)) { roots.Add(e.id); Dfs(e); }
+        foreach (var e in conversation.dialogueEntries)
+            if (!state.ContainsKey(e.id)) { roots.Add(e.id); Dfs(e); }
+
+        // 2. 深度 = 從各自的根算起的最長路徑（完成順序反過來就是拓樸序，跨根的邊也成立）
+        var depth = new Dictionary<int, int>();
+        foreach (int r in roots) depth[r] = 0;
+        for (int i = finish.Count - 1; i >= 0; i--)
+        {
+            int id = finish[i];
+            if (!depth.TryGetValue(id, out int d)) continue;
+            foreach (int c in forward[id])
+                if (!depth.TryGetValue(c, out int cd) || cd < d + 1) depth[c] = d + 1;
         }
 
-        int maxDepth = depth.Count > 0 ? depth.Values.Max() : 0;
-        foreach (var e in conversation.dialogueEntries)
-            if (!depth.ContainsKey(e.id)) depth[e.id] = maxDepth + 1;
-
-        // 同層保留建立順序（= JSON 順序），各層置中對齊最寬的一層
-        var layers = conversation.dialogueEntries.GroupBy(e => depth[e.id]).OrderBy(g => g.Key).ToList();
-        int widest = layers.Max(g => g.Count());
-        float totalWidth = widest * NODE_H_SPACING;
-        foreach (var layer in layers)
+        // 3. 欄：每格的子樹寬度 = 各子樹寬度相加（至少 1）；第一個孩子接在同一欄，之後的孩子各往右挪前面子樹的寬度
+        var width = new Dictionary<int, int>();
+        foreach (int id in finish)
+            width[id] = Mathf.Max(1, tree[id].Sum(c => width[c]));
+        var column = new Dictionary<int, int>();
+        void Assign(int id, int col)
         {
-            var list = layer.ToList();
-            float offset = (totalWidth - list.Count * NODE_H_SPACING) / 2f;
-            for (int i = 0; i < list.Count; i++)
+            column[id] = col;
+            foreach (int c in tree[id])
             {
-                list[i].canvasRect = new Rect(
-                    CANVAS_MARGIN + offset + i * NODE_H_SPACING,
-                    CANVAS_MARGIN + layer.Key * NODE_V_SPACING,
-                    NODE_WIDTH, NODE_HEIGHT);
+                Assign(c, col);
+                col += width[c];
             }
+        }
+        int nextCol = 0;
+        foreach (int r in roots)
+        {
+            Assign(r, nextCol);
+            nextCol += width[r];
+        }
+
+        // 4. 保險：理論上每格都有座標了；萬一漏了就放最底下一列
+        int maxDepth = depth.Values.Max();
+        foreach (var e in conversation.dialogueEntries)
+        {
+            if (depth.ContainsKey(e.id) && column.ContainsKey(e.id)) continue;
+            depth[e.id] = maxDepth + 1;
+            column[e.id] = nextCol++;
+        }
+
+        foreach (var e in conversation.dialogueEntries)
+        {
+            e.canvasRect = new Rect(
+                CANVAS_MARGIN + column[e.id] * NODE_H_SPACING,
+                CANVAS_MARGIN + depth[e.id] * NODE_V_SPACING,
+                NODE_WIDTH, NODE_HEIGHT);
         }
     }
 
@@ -1080,25 +1313,36 @@ public class DialogueJsonBridge : EditorWindow
             "把對話現況倒回 JSON：\n" +
             "• 給 AI 讀取 Unity 目前的實際內容（例如曾在 Unity 內手動改過文字時）。\n" +
             "• 替沒有印記的舊對話重建基準檔（之後的修改都以匯出檔為底）。\n" +
-            "• 節點的 Title 會寫成選填欄位 \"title\"（空的不寫）。\n" +
-            "• 對話名含「/」會寫進對應子資料夾；若同資料夾還有舊扁平檔（/ 寫成 _）會提醒你刪除。",
+            "• 對話名的「/」= 資料夾：清單依資料夾分組，「大地圖/對話」「大地圖/白鹵澤」都收在「大地圖」底下，和磁碟上的 Json/ 一致。\n" +
+            "• ● = 這段對話和磁碟上的 JSON 不同（還沒匯出）；○ = 磁碟上還沒有這份檔。匯出完成時會點名「不同但沒勾」的對話。\n" +
+            "• 節點的 Title 會寫成選填欄位 \"title\"（空的不寫）；同資料夾若還有舊扁平檔（/ 寫成 _）會提醒你刪除。",
             MessageType.Info);
 
         EditorGUILayout.Space(4);
 
-        var convTitles = database.conversations.Select(c => $"[{c.id}] {c.Title}").ToArray();
-        if (convTitles.Length == 0)
+        if (database.conversations.Count == 0)
         {
             EditorGUILayout.HelpBox("此資料庫沒有任何對話", MessageType.Warning);
             return;
         }
-        exportConversationIndex = Mathf.Clamp(exportConversationIndex, 0, convTitles.Length - 1);
-        exportConversationIndex = EditorGUILayout.Popup("對話:", exportConversationIndex, convTitles);
 
         // 沒填輸出資料夾時預設用文案根資料夾
         if (string.IsNullOrEmpty(exportFolderPath) && !string.IsNullOrEmpty(jsonRootPath))
             exportFolderPath = jsonRootPath;
 
+        DrawExportFolderField();
+        EnsureDiskStates();
+
+        EditorGUILayout.Space(6);
+        DrawExportToolbar();
+        EditorGUILayout.Space(4);
+        DrawExportTree();
+        EditorGUILayout.Space(8);
+        DrawExportButtons();
+    }
+
+    private void DrawExportFolderField()
+    {
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.LabelField("輸出資料夾:", GUILayout.Width(80));
         string newExport = EditorGUILayout.TextField(exportFolderPath);
@@ -1114,36 +1358,345 @@ public class DialogueJsonBridge : EditorWindow
             exportFolderPath = newExport;
             EditorPrefs.SetString(PREF_EXPORT, exportFolderPath);
         }
+    }
 
-        GUI.enabled = !string.IsNullOrEmpty(exportFolderPath);
-        if (GUILayout.Button("匯出選取的對話", GUILayout.Height(28)))
+    // ── 匯出：搜尋、批次勾選、狀態列 ──
+
+    private void DrawExportToolbar()
+    {
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("搜尋:", GUILayout.Width(40));
+        exportSearch = EditorGUILayout.TextField(exportSearch);
+        if (GUILayout.Button("清除", GUILayout.Width(45))) { exportSearch = ""; GUI.FocusControl(null); }
+        EditorGUILayout.EndHorizontal();
+        EditorGUILayout.LabelField("關鍵字用空白隔開、要全部命中（打「主線 9月」即可）；也可直接打對話 ID。搜尋時資料夾全部展開。", EditorStyles.miniLabel);
+
+        var visible = FilteredConversations().ToList();
+        int dirtyAll = database.conversations.Count(c => IsDirty(c.id));
+        int dirtyUnselected = database.conversations.Count(c => IsDirty(c.id) && !exportSelected.Contains(c.id));
+
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button($"全選符合的（{visible.Count}）"))
+            foreach (var c in visible) exportSelected.Add(c.id);
+        if (GUILayout.Button("全部清除")) exportSelected.Clear();
+        GUI.enabled = dirtyAll > 0;
+        if (GUILayout.Button($"勾選有變動的（{dirtyAll}）"))
+            foreach (var c in database.conversations) if (IsDirty(c.id)) exportSelected.Add(c.id);
+        GUI.enabled = true;
+        if (GUILayout.Button("重新比對磁碟", GUILayout.Width(95))) RefreshDiskStates();
+        EditorGUILayout.EndHorizontal();
+
+        string status;
+        if (diskStates == null || diskStates.Count == 0) status = "（輸出資料夾不存在，無法和磁碟上的 JSON 比對）";
+        else if (dirtyAll == 0) status = "✓ 所有對話都和磁碟上的 JSON 一致";
+        else status = $"● {dirtyAll} 段對話和磁碟上的 JSON 不同（含磁碟還沒有檔的），其中 {dirtyUnselected} 段還沒勾。";
+        var style = new GUIStyle(EditorStyles.miniLabel);
+        if (dirtyUnselected > 0) style.normal.textColor = DirtyColor;
+        EditorGUILayout.LabelField(status, style);
+    }
+
+    /// <summary>搜尋：關鍵字用空白隔開、全部要命中對話名（不分大小寫），或剛好等於對話 ID。</summary>
+    private IEnumerable<Conversation> FilteredConversations()
+    {
+        var keywords = (exportSearch ?? "").Split(new[] { ' ', '　' }, System.StringSplitOptions.RemoveEmptyEntries);
+        foreach (var c in database.conversations)
         {
-            var conv = database.conversations[exportConversationIndex];
-            var legacy = new List<string>();
-            try
-            {
-                string path = ExportConversation(conv, exportFolderPath, legacy);
-                if (path != null)
-                    EditorUtility.DisplayDialog("匯出完成", path + LegacyNote(legacy), "確定");
-            }
-            catch (System.Exception ex)
-            {
-                Debug.LogException(ex);
-                EditorUtility.DisplayDialog("匯出失敗", $"「{conv.Title}」\n{ex.GetType().Name}: {ex.Message}", "確定");
-            }
+            if (keywords.Length == 0) { yield return c; continue; }
+            string title = c.Title ?? "";
+            string id = c.id.ToString();
+            if (keywords.All(k => title.IndexOf(k, System.StringComparison.OrdinalIgnoreCase) >= 0 || id == k))
+                yield return c;
         }
+    }
+
+    // ── 匯出：依資料夾分組的勾選樹（對話名的「/」= 一層資料夾）──
+
+    private class ExportNode
+    {
+        public string name;                                         // 這一層的名字（顯示用）
+        public string path;                                         // 從根到這層的完整路徑（記展開狀態用）
+        public List<ExportNode> folders = new List<ExportNode>();
+        public List<Conversation> convs = new List<Conversation>();
+        public IEnumerable<Conversation> AllConvs => convs.Concat(folders.SelectMany(f => f.AllConvs));
+    }
+
+    private ExportNode BuildExportTree(IEnumerable<Conversation> conversations)
+    {
+        var root = new ExportNode { name = "", path = "" };
+        foreach (var c in conversations)
+        {
+            var segs = (c.Title ?? "").Split('/');
+            var node = root;
+            for (int i = 0; i < segs.Length - 1; i++)
+            {
+                string seg = segs[i];
+                var child = node.folders.FirstOrDefault(f => f.name == seg);
+                if (child == null)
+                {
+                    child = new ExportNode { name = seg, path = node.path.Length == 0 ? seg : node.path + "/" + seg };
+                    node.folders.Add(child);
+                }
+                node = child;
+            }
+            node.convs.Add(c);
+        }
+        SortTree(root);
+        return root;
+    }
+
+    /// <summary>資料夾與對話都照檔案總管的自然排序（01、02…10）。</summary>
+    private static void SortTree(ExportNode node)
+    {
+        node.folders.Sort((a, b) => EditorUtility.NaturalCompare(a.name, b.name));
+        node.convs.Sort((a, b) => EditorUtility.NaturalCompare(a.Title ?? "", b.Title ?? ""));
+        foreach (var f in node.folders) SortTree(f);
+    }
+
+    private void DrawExportTree()
+    {
+        var visible = FilteredConversations().ToList();
+        if (visible.Count == 0)
+        {
+            EditorGUILayout.HelpBox("沒有符合的對話", MessageType.None);
+            return;
+        }
+        var root = BuildExportTree(visible);
+        bool searching = !string.IsNullOrWhiteSpace(exportSearch);
+        foreach (var f in root.folders) DrawFolder(f, 0, searching);
+        if (root.convs.Count > 0)
+        {
+            // 對話名沒有「/」的放最下面，自成一組
+            var flat = new ExportNode { name = "（根層：對話名沒有「/」）", path = "root", convs = root.convs };
+            DrawFolder(flat, 0, searching);
+        }
+    }
+
+    private void DrawFolder(ExportNode node, int depth, bool forceOpen)
+    {
+        var all = node.AllConvs.ToList();
+        int selected = all.Count(c => exportSelected.Contains(c.id));
+        int dirty = all.Count(c => IsDirty(c.id));
+
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.Space(depth * 16);
+        bool open = forceOpen || (exportFoldouts.TryGetValue(node.path, out bool remembered) && remembered);
+        string label = $"{node.name}   （勾 {selected} / {all.Count}{(dirty > 0 ? $"，● {dirty}" : "")}）";
+        bool newOpen = EditorGUILayout.Foldout(open, label, true);
+        if (!forceOpen && newOpen != open) exportFoldouts[node.path] = newOpen;
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("整組勾選", EditorStyles.miniButtonLeft, GUILayout.Width(64)))
+            foreach (var c in all) exportSelected.Add(c.id);
+        if (GUILayout.Button("整組取消", EditorStyles.miniButtonRight, GUILayout.Width(64)))
+            foreach (var c in all) exportSelected.Remove(c.id);
+        EditorGUILayout.EndHorizontal();
+
+        if (!newOpen) return;
+        foreach (var f in node.folders) DrawFolder(f, depth + 1, forceOpen);
+        foreach (var c in node.convs) DrawConversationRow(c, depth + 1);
+    }
+
+    private void DrawConversationRow(Conversation c, int depth)
+    {
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.Space(depth * 16 + 4);
+        bool was = exportSelected.Contains(c.id);
+        bool now = EditorGUILayout.Toggle(was, GUILayout.Width(18));
+        if (now != was)
+        {
+            if (now) exportSelected.Add(c.id);
+            else exportSelected.Remove(c.id);
+        }
+
+        string title = c.Title ?? "";
+        string leaf = title.Contains("/") ? title.Substring(title.LastIndexOf('/') + 1) : title;
+        EditorGUILayout.LabelField($"[{c.id}] {leaf}");
+        DrawDiskMarker(c.id);
+        EditorGUILayout.EndHorizontal();
+    }
+
+    private static readonly Color DirtyColor = new Color(0.95f, 0.55f, 0.1f);
+
+    /// <summary>對話旁的磁碟狀態標記；滑鼠停在上面會列出是哪幾格不同。</summary>
+    private void DrawDiskMarker(int convId)
+    {
+        if (diskStates == null || !diskStates.TryGetValue(convId, out var state) || state == DiskState.Same) return;
+        diskDetails.TryGetValue(convId, out string detail);
+        string mark;
+        Color color;
+        switch (state)
+        {
+            case DiskState.Differs: mark = "● 與磁碟不同"; color = DirtyColor; break;
+            case DiskState.NoFile: mark = "○ 磁碟還沒有"; color = Color.gray; break;
+            default: mark = "✕ 讀不了"; color = new Color(0.9f, 0.25f, 0.25f); break;
+        }
+        var style = new GUIStyle(EditorStyles.miniLabel);
+        style.normal.textColor = color;
+        EditorGUILayout.LabelField(new GUIContent(mark, detail ?? ""), style, GUILayout.Width(92));
+    }
+
+    private void DrawExportButtons()
+    {
+        var selected = database.conversations.Where(c => exportSelected.Contains(c.id)).ToList();
+        bool canExport = !string.IsNullOrEmpty(exportFolderPath);
+
+        GUI.enabled = canExport && selected.Count > 0;
+        if (GUILayout.Button($"匯出勾選的 {selected.Count} 段對話", GUILayout.Height(28)))
+        {
+            bool go = selected.Count == 1 || EditorUtility.DisplayDialog("匯出勾選的對話",
+                $"將 {selected.Count} 段對話匯出到:\n{exportFolderPath}\n\n{ListLines(selected.Select(c => c.Title), 20)}\n\n同名檔案會被覆蓋。",
+                "匯出", "取消");
+            if (go) ExportConversations(selected, exportFolderPath, "匯出勾選的對話");
+        }
+        GUI.enabled = canExport;
         if (GUILayout.Button("匯出全部對話", GUILayout.Height(24)))
         {
             if (EditorUtility.DisplayDialog("匯出全部",
                 $"將 {database.conversations.Count} 段對話全部匯出到:\n{exportFolderPath}\n\n同名檔案會被覆蓋。", "匯出", "取消"))
             {
-                ExportAll(exportFolderPath);
+                ExportConversations(database.conversations.ToList(), exportFolderPath, "匯出全部對話");
             }
         }
         GUI.enabled = true;
     }
 
-    private void ExportAll(string folder)
+    // ── 匯出：與磁碟上的 JSON 比對（只讀不寫）──
+
+    private bool IsDirty(int convId)
+    {
+        return diskStates != null && diskStates.TryGetValue(convId, out var s) && (s == DiskState.Differs || s == DiskState.NoFile);
+    }
+
+    /// <summary>匯入或匯出過後呼叫：下次畫匯出頁時重新比對。</summary>
+    private void InvalidateDiskStates()
+    {
+        diskStates = null;
+    }
+
+    private void EnsureDiskStates()
+    {
+        if (diskStates != null && diskStatesFolder == exportFolderPath) return;
+        RefreshDiskStates();
+    }
+
+    /// <summary>整個資料庫逐段和輸出資料夾裡的 JSON 比一遍（約百段對話，一瞬間）；資料夾不存在就全部沒狀態。</summary>
+    private void RefreshDiskStates()
+    {
+        diskStates = new Dictionary<int, DiskState>();
+        diskDetails = new Dictionary<int, string>();
+        diskStatesFolder = exportFolderPath;
+        if (string.IsNullOrEmpty(exportFolderPath) || !Directory.Exists(exportFolderPath)) return;
+
+        foreach (var conv in database.conversations)
+        {
+            try
+            {
+                diskStates[conv.id] = CompareWithDisk(conv, exportFolderPath, out string detail);
+                diskDetails[conv.id] = detail;
+            }
+            catch (System.Exception ex)
+            {
+                diskStates[conv.id] = DiskState.Unreadable;
+                diskDetails[conv.id] = ex.Message;
+            }
+        }
+    }
+
+    /// <summary>
+    /// 這段對話「現在匯出會寫出什麼」和磁碟上那份 JSON 比：以 entryID 對應、逐格比欄位與連線，
+    /// 不比節點排列順序、不比 JSON 排版，所以 AI 在 IDE 重排格式不會被當成不同。
+    /// 不寫任何東西、不補印記（印記用試算的）。
+    /// </summary>
+    private DiskState CompareWithDisk(Conversation conv, string folder, out string detail)
+    {
+        detail = "";
+        string title = conv.Title ?? "";
+        if (string.IsNullOrWhiteSpace(title))
+        {
+            detail = "對話沒有標題，匯出時會被略過";
+            return DiskState.Unreadable;
+        }
+
+        string path = Path.Combine(folder, TitleToRelativePath(title) + ".json");
+        if (!File.Exists(path))
+        {
+            detail = "磁碟上還沒有這份 JSON：\n" + path;
+            return DiskState.NoFile;
+        }
+
+        var dbEntries = conv.dialogueEntries.Where(e => e.id != 0).ToList();
+        var entryToJsonId = new Dictionary<int, int>();
+        AssignJsonIds(conv, dbEntries, entryToJsonId, write: false);
+        string exportText = BuildExportText(conv, dbEntries, entryToJsonId, quiet: true);
+
+        List<JsonEntry> unity, disk;
+        try
+        {
+            unity = JsonUtility.FromJson<JsonEntryList>("{\"items\":" + exportText + "}")?.items;
+            disk = JsonUtility.FromJson<JsonEntryList>("{\"items\":" + File.ReadAllText(path) + "}")?.items;
+        }
+        catch (System.Exception ex)
+        {
+            detail = "磁碟上的 JSON 讀不了：" + ex.Message;
+            return DiskState.Unreadable;
+        }
+        if (unity == null || disk == null)
+        {
+            detail = "磁碟上的 JSON 讀不了（格式不符）";
+            return DiskState.Unreadable;
+        }
+
+        var diffs = EntryListDiffs(unity, disk);
+        if (diffs.Count == 0) return DiskState.Same;
+        detail = $"{diffs.Count} 處不同：\n" + string.Join("\n", diffs.Take(15)) + (diffs.Count > 15 ? $"\n…另有 {diffs.Count - 15} 處" : "");
+        return DiskState.Differs;
+    }
+
+    /// <summary>兩份節點清單的差異（以 entryID 對應，不看順序）；每一處一行「#id 欄位」。比對規則對齊 EntryDiffers。</summary>
+    private List<string> EntryListDiffs(List<JsonEntry> unity, List<JsonEntry> disk)
+    {
+        var diffs = new List<string>();
+        var diskById = new Dictionary<int, JsonEntry>();
+        foreach (var e in disk) if (!diskById.ContainsKey(e.entryID)) diskById[e.entryID] = e;
+        var unityIds = new HashSet<int>(unity.Select(e => e.entryID));
+
+        foreach (var u in unity)
+        {
+            if (!diskById.TryGetValue(u.entryID, out var d))
+            {
+                diffs.Add($"#{u.entryID} 磁碟沒有這格（Unity 多出來的）");
+                continue;
+            }
+            var fields = new List<string>();
+            if (!SameActor(u.actorID, d.actorID)) fields.Add("說話者");
+            if (Norm(u.title) != Norm(d.title)) fields.Add("title");
+            if (Norm(u.text) != Norm(d.text)) fields.Add("文字");
+            if (Norm(u.Sequence) != Norm(ProcessSequence(d.Sequence))) fields.Add("Sequence");
+            if (Norm(u.Conditions) != Norm(d.Conditions)) fields.Add("Conditions");
+            if (Norm(u.Script) != Norm(d.Script)) fields.Add("Script");
+            if (Norm(u.Description) != Norm(d.Description)) fields.Add("Description");
+            if (Norm(u.zh_TW) != Norm(d.zh_TW)) fields.Add("zh_TW");
+            if (Norm(u.zh_CN) != Norm(d.zh_CN)) fields.Add("zh_CN");
+            if (Norm(u.en) != Norm(d.en)) fields.Add("en");
+            var ul = (u.links ?? new List<int>()).OrderBy(x => x);
+            var dl = (d.links ?? new List<int>()).OrderBy(x => x);
+            if (!ul.SequenceEqual(dl)) fields.Add("連線");
+            if (fields.Count > 0) diffs.Add($"#{u.entryID} {string.Join("、", fields)}");
+        }
+        foreach (var d in disk)
+            if (!unityIds.Contains(d.entryID)) diffs.Add($"#{d.entryID} Unity 沒有這格（磁碟多出來的）");
+        return diffs;
+    }
+
+    /// <summary>說話者：兩邊都能對到資料庫角色就比 id，否則比字串（「role119」與數字 id 這種寫法差異不算不同）。</summary>
+    private bool SameActor(string a, string b)
+    {
+        if (TryResolveActorID(a, out int ia) && TryResolveActorID(b, out int ib)) return ia == ib;
+        return (a ?? "").Trim() == (b ?? "").Trim();
+    }
+
+    // ── 匯出：批次執行 ──
+
+    private void ExportConversations(List<Conversation> conversations, string folder, string jobName)
     {
         if (!Directory.Exists(folder))
         {
@@ -1154,17 +1707,17 @@ public class DialogueJsonBridge : EditorWindow
         int n = 0;
         var failed = new List<string>();
         var legacy = new List<string>();
-        var conversations = database.conversations.ToList();
+        var exportedIds = new HashSet<int>();
 
         // 每段各自 try/catch：一段出錯不能讓整批中斷（之前任何一段丟例外就整個沒反應）
         for (int i = 0; i < conversations.Count; i++)
         {
             var conv = conversations[i];
             string title = conv.Title ?? $"(ID {conv.id})";
-            EditorUtility.DisplayProgressBar("匯出全部對話", $"{i + 1}/{conversations.Count}  {title}", (float)i / conversations.Count);
+            EditorUtility.DisplayProgressBar(jobName, $"{i + 1}/{conversations.Count}  {title}", (float)i / conversations.Count);
             try
             {
-                if (ExportConversation(conv, folder, legacy) != null) n++;
+                if (ExportConversation(conv, folder, legacy) != null) { n++; exportedIds.Add(conv.id); }
                 else failed.Add($"{title}：略過（見 Console）");
             }
             catch (System.Exception ex)
@@ -1174,15 +1727,29 @@ public class DialogueJsonBridge : EditorWindow
             }
         }
         EditorUtility.ClearProgressBar();
+        AssetDatabase.SaveAssets();
+
+        // 匯出完重新比對；有變動但這次沒匯的，點名提醒
+        if (folder == exportFolderPath) RefreshDiskStates();
+        var missed = folder == exportFolderPath
+            ? database.conversations.Where(c => !exportedIds.Contains(c.id) && IsDirty(c.id)).ToList()
+            : new List<Conversation>();
 
         string msg = $"共匯出 {n} / {conversations.Count} 檔到:\n{folder}";
         if (failed.Count > 0)
         {
-            msg += $"\n\n⚠ 失敗 {failed.Count} 檔：\n" + string.Join("\n", failed.Take(10).Select(f => "• " + f));
-            if (failed.Count > 10) msg += $"\n…另有 {failed.Count - 10} 檔，詳見 Console。";
+            msg += $"\n\n⚠ 失敗 {failed.Count} 檔：\n" + ListLines(failed, 10);
+        }
+        if (missed.Count > 0)
+        {
+            msg += $"\n\n● 另有 {missed.Count} 段對話和磁碟上的 JSON 不同，這次沒匯出：\n" +
+                   ListLines(missed.Select(c => c.Title + (diskStates[c.id] == DiskState.NoFile ? "（磁碟還沒有檔）" : "")), 12) +
+                   "\n（清單上有 ● 標記；要一起匯的話按「勾選有變動的」。）";
+            Debug.LogWarning($"{jobName}：有變動但沒匯出的對話 {missed.Count} 段：\n  " +
+                             string.Join("\n  ", missed.Select(c => $"{c.Title}\n    {diskDetails[c.id].Replace("\n", "\n    ")}")));
         }
         msg += LegacyNote(legacy);
-        Debug.Log($"匯出全部完成：成功 {n}，失敗 {failed.Count}。");
+        Debug.Log($"{jobName}完成：成功 {n}，失敗 {failed.Count}，有變動未匯 {missed.Count}。");
         EditorUtility.DisplayDialog("匯出完成", msg, "確定");
     }
 
@@ -1213,16 +1780,49 @@ public class DialogueJsonBridge : EditorWindow
 
         var dbEntries = conversation.dialogueEntries.Where(e => e.id != 0).ToList();
 
-        // jsonID：優先用印記，否則用 DB entry.id（舊對話首次匯出會以此為準）
+        // jsonID：優先用印記，否則用 DB entry.id（舊對話首次匯出會以此為準）；缺的印記這時寫回資料庫
         var entryToJsonId = new Dictionary<int, int>();
-        AssignJsonIds(conversation, dbEntries, entryToJsonId);
+        AssignJsonIds(conversation, dbEntries, entryToJsonId, write: true);
+
+        string text = BuildExportText(conversation, dbEntries, entryToJsonId, quiet: false);
+
+        // 對話名的「/」= 子資料夾；每一層各自清掉檔名不允許的字元
+        string path = Path.Combine(folder, TitleToRelativePath(title) + ".json");
+        Directory.CreateDirectory(Path.GetDirectoryName(path));
+        File.WriteAllText(path, text, new UTF8Encoding(false));
+        Debug.Log($"✓ 已匯出「{title}」→ {path}（{dbEntries.Count} 個節點）");
+
+        // 舊版工具把整個標題當檔名、「/」被換成「_」；若那個檔還在就提醒（不主動刪）
+        if (title.Contains("/"))
+        {
+            string legacyPath = Path.Combine(folder, SanitizeSegment(title) + ".json");
+            if (File.Exists(legacyPath))
+            {
+                Debug.LogWarning($"[{title}] 舊扁平檔仍在：{legacyPath}\n  新內容已寫到 {path}，請手動刪除舊檔以免兩份重複。");
+                legacyFound?.Add(legacyPath);
+            }
+        }
+        return path;
+    }
+
+    /// <summary>
+    /// 把對話組成 JSON 文字（格式與從前完全相同，舊檔不會因此多出差異）。
+    /// quiet=true 給磁碟比對用：不印文案檢查與跨對話連線的警告。
+    /// </summary>
+    private string BuildExportText(Conversation conversation, List<DialogueEntry> dbEntries,
+                                   Dictionary<int, int> entryToJsonId, bool quiet)
+    {
+        string title = conversation.Title ?? "";
 
         // 文案硬規則：匯出照實寫出來，但在 Console 點名，讓文案端修 JSON 再同步回來
-        var checkWarnings = new List<string>();
-        foreach (var e in dbEntries) CheckEntry(checkWarnings, entryToJsonId[e.id], e.DialogueText, e.Sequence);
-        if (checkWarnings.Count > 0)
-            Debug.LogWarning($"[{title}] 文案檢查有 {checkWarnings.Count} 處（已照實匯出，請在 JSON 修好再同步回來）：\n  " +
-                             string.Join("\n  ", checkWarnings));
+        if (!quiet)
+        {
+            var checkWarnings = new List<string>();
+            foreach (var e in dbEntries) CheckEntry(checkWarnings, entryToJsonId[e.id], e.DialogueText, e.Sequence);
+            if (checkWarnings.Count > 0)
+                Debug.LogWarning($"[{title}] 文案檢查有 {checkWarnings.Count} 處（已照實匯出，請在 JSON 修好再同步回來）：\n  " +
+                                 string.Join("\n  ", checkWarnings));
+        }
 
         var sb = new StringBuilder();
         sb.Append("[\n");
@@ -1248,7 +1848,8 @@ public class DialogueJsonBridge : EditorWindow
             {
                 if (link.destinationConversationID != conversation.id)
                 {
-                    Debug.LogWarning($"[{title}] Entry {e.id} 有跨對話連線（→ Conv {link.destinationConversationID}），未寫入 JSON。");
+                    if (!quiet)
+                        Debug.LogWarning($"[{title}] Entry {e.id} 有跨對話連線（→ Conv {link.destinationConversationID}），未寫入 JSON。");
                     continue;
                 }
                 if (entryToJsonId.TryGetValue(link.destinationDialogueID, out int jid)) links.Add(jid);
@@ -1258,28 +1859,11 @@ public class DialogueJsonBridge : EditorWindow
             sb.Append(i < dbEntries.Count - 1 ? "  },\n" : "  }\n");
         }
         sb.Append("]\n");
-
-        // 對話名的「/」= 子資料夾；每一層各自清掉檔名不允許的字元
-        string path = Path.Combine(folder, TitleToRelativePath(title) + ".json");
-        Directory.CreateDirectory(Path.GetDirectoryName(path));
-        File.WriteAllText(path, sb.ToString(), new UTF8Encoding(false));
-        Debug.Log($"✓ 已匯出「{title}」→ {path}（{dbEntries.Count} 個節點）");
-
-        // 舊版工具把整個標題當檔名、「/」被換成「_」；若那個檔還在就提醒（不主動刪）
-        if (title.Contains("/"))
-        {
-            string legacyPath = Path.Combine(folder, SanitizeSegment(title) + ".json");
-            if (File.Exists(legacyPath))
-            {
-                Debug.LogWarning($"[{title}] 舊扁平檔仍在：{legacyPath}\n  新內容已寫到 {path}，請手動刪除舊檔以免兩份重複。");
-                legacyFound?.Add(legacyPath);
-            }
-        }
-        return path;
+        return sb.ToString();
     }
 
     /// <summary>
-    /// 決定每個節點在 JSON 裡的 entryID，並把缺的印記補寫回資料庫。
+    /// 決定每個節點在 JSON 裡的 entryID，並（write=true 時）把缺的印記補寫回資料庫。
     ///
     /// ①**有印記的，印記說了算。** 印記自己重複時（Unity 裡複製貼上節點會連印記一起複製），
     ///   後出現的那個配新號。
@@ -1289,8 +1873,10 @@ public class DialogueJsonBridge : EditorWindow
     /// ⚠ ②的「寫回印記」是重點：以前只算號不寫印記，於是匯出的 JSON 有這一格、Unity 那個節點卻
     /// 沒有印記，下次匯入時對不到任何節點，工具就再建一個新的——原節點變成沒有連入的死節點留在圖上，
     /// **每匯出匯入來回一次就多長一份**。2026-09-01 修（水濂洞 349→358→369、武道大會 503→504 即此）。
+    ///
+    /// write=false 只試算不寫（磁碟比對用），算出來的號和真正匯出時一模一樣。
     /// </summary>
-    private void AssignJsonIds(Conversation conversation, List<DialogueEntry> dbEntries, Dictionary<int, int> entryToJsonId)
+    private void AssignJsonIds(Conversation conversation, List<DialogueEntry> dbEntries, Dictionary<int, int> entryToJsonId, bool write)
     {
         var stamped = new List<DialogueEntry>();
         var unstamped = new List<DialogueEntry>();
@@ -1312,7 +1898,7 @@ public class DialogueJsonBridge : EditorWindow
             int fresh = next++;
             entryToJsonId[e.id] = fresh;
             used.Add(fresh);
-            Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, fresh.ToString());
+            if (write) Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, fresh.ToString());
             notes.Add($"Entry {e.id}：印記 {jid} 與別的節點重複 → 改為 {fresh}");
         }
         foreach (var e in unstamped)                     // ② 沒印記 → 補上
@@ -1320,10 +1906,10 @@ public class DialogueJsonBridge : EditorWindow
             int jid = used.Contains(e.id) ? next++ : e.id;
             entryToJsonId[e.id] = jid;
             used.Add(jid);
-            Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, jid.ToString());
+            if (write) Field.SetValue(e.fields, JSON_ENTRY_ID_FIELD, jid.ToString());
             notes.Add($"Entry {e.id}：原本沒有印記 → 補上 {jid}");
         }
-        if (notes.Count == 0) return;
+        if (notes.Count == 0 || !write) return;
         EditorUtility.SetDirty(database);
         Debug.LogWarning($"[{conversation.Title}] 補寫了 {notes.Count} 個 JsonEntryID 印記：\n  " +
                          string.Join("\n  ", notes) +

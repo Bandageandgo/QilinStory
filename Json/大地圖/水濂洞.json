@@ -551,14 +551,6 @@
     "links": [94]
   },
   {
-    "entryID": 94,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "Description": "自動洞悉檢定後的空緩衝節點",
-    "links": [4157, 99]
-  },
-  {
     "entryID": 97,
     "actorID": "MC22",
     "text": "「[em7]吹了聲口哨[/em7]——哦，藏起來的秘密！這才是探險尋寶嘛，大俠，快快快，裡頭還不定藏著什麼呢！」",
@@ -658,14 +650,13 @@
     "text": "「管它畫的是什麼，先鑿開再說！」",
     "Sequence": "DisableCharacterExpression(4);SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);",
     "zh_CN": "「管它画的是什么，先凿开再说！」",
-    "links": [110, 4152]
+    "links": [4352, 4152]
   },
   {
     "entryID": 110,
     "actorID": "role2",
     "text": "[panel=6]＊（泥灰簌簌剝落。底下那幅古畫重見天日：一艘怪舟從天上墜進山谷，舟腹正中嵌著一顆淚滴模樣的亮石頭。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80) == true;",
     "zh_CN": "[panel=6]＊（泥灰簌簌剥落。底下那幅古画重见天日：一艘怪舟从天上坠进山谷，舟腹正中嵌着一颗泪滴模样的亮石头。）＊",
     "links": [4153]
   },
@@ -837,16 +828,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點：藍焰巨蛇",
-    "links": [132, 142]
-  },
-  {
-    "entryID": 132,
-    "actorID": "role2",
-    "text": "[panel=6]＊（巨蛇發出一聲淒厲長嘶，龐大的身軀轟然倒下，幽藍鱗片一片片剝落，化作點點藍光消散在水面上。石坪上只剩焦痕、刀、和沒來得及逃開的人。）＊",
-    "Sequence": "DisableCharacterExpression(0);DisableCharacterExpression(3);",
-    "Conditions": "IsPassFight() == true;",
-    "zh_CN": "[panel=6]＊（巨蛇发出一声凄厉长嘶，庞大的身躯轰然倒下，幽蓝鳞片一片片剥落，化作点点蓝光消散在水面上。石坪上只剩焦痕、刀、和没来得及逃开的人。）＊",
-    "links": [133]
+    "links": [4355, 418]
   },
   {
     "entryID": 133,
@@ -894,7 +876,6 @@
     "actorID": "role2",
     "text": "[panel=6]＊（藍火鋪天蓋地捲來。你只聽見靈犀喊了一聲表哥，隨即什麼都聽不見了。）＊",
     "Sequence": "",
-    "Conditions": "IsPassFight() == false;",
     "zh_CN": "[panel=6]＊（蓝火铺天盖地卷来。你只听见灵犀喊了一声表哥，随即什么都听不见了。）＊",
     "links": [143]
   },
@@ -1702,7 +1683,6 @@
     "actorID": "role2",
     "text": "[panel=6]＊（泥灰簌簌剝落。底下那幅古畫重見天日：一艘怪舟從天上墜進山谷，舟腹正中嵌著一顆淚滴模樣的亮石頭。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice() == true;",
     "zh_CN": "[panel=6]＊（泥灰簌簌剥落。底下那幅古画重见天日：一艘怪舟从天上坠进山谷，舟腹正中嵌着一颗泪滴模样的亮石头。）＊",
     "links": [4160]
   },
@@ -3143,5 +3123,51 @@
     "Sequence": "",
     "zh_CN": "[panel=1]「外头就是溪，小溪村那颗温热石头，村民不就管它叫『河神的眼泪』？大侠，嵌回去试试！」",
     "links": [4215]
+  },
+  {
+    "entryID": 4352,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,BHuaChange);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "Conditions": "IsAbilityLevelPass(\"Player\", \"Strength\", 80) == true;",
+    "Description": "切換壁畫演出",
+    "links": [110]
+  },
+  {
+    "entryID": 4353,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nSetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nControlStage(TriggerEvent,Arena,BHuaChange);\nSetContinueMode(original)@1.5;\nContinue()@1.5;",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "切換壁畫演出",
+    "links": [4157]
+  },
+  {
+    "entryID": 4355,
+    "actorID": "role2",
+    "text": "[panel=6]＊（巨蛇發出一聲淒厲長嘶，龐大的身軀轟然倒下，幽藍鱗片一片片剝落，化作點點藍光消散在水面上。石坪上只剩焦痕、刀、和沒來得及逃開的人。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(3);\nSetContinueMode(false);\nControlStage(TriggerEvent,Arena,BossDead);\nSetContinueMode(original)@2;\nContinue()@2;",
+    "Conditions": "IsPassFight() == true;",
+    "Description": "戰鬥勝利移除巨蛇 ",
+    "zh_TW": "[panel=6]＊（巨蛇發出一聲淒厲長嘶，龐大的身軀轟然倒下，幽藍鱗片一片片剝落，化作點點藍光消散在水面上。石坪上只剩焦痕、刀、和沒來得及逃開的人。）＊",
+    "zh_CN": "[panel=6]＊（巨蛇发出一声凄厉长嘶，庞大的身躯轰然倒下，幽蓝鳞片一片片剥落，化作点点蓝光消散在水面上。石坪上只剩焦痕、刀、和没来得及逃开的人。）＊",
+    "links": [133]
+  },
+  {
+    "entryID": 418,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(3);\nSetContinueMode(false);\nControlStage(TriggerEvent,Arena,BossAttack02);\nSetContinueMode(original)@2;\nContinue()@2;",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗攻擊玩家演出",
+    "links": [142]
+  },
+  {
+    "entryID": 94,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "自動洞悉檢定後的空緩衝節點",
+    "links": [4353, 99]
   }
 ]
