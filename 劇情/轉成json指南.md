@@ -479,7 +479,7 @@ IsBackGroundFit("Player", "Noble") == true;
 | 背景 | 世家子弟 | `Noble` |
 | 背景 | 街頭混混 | `Charlatan` |
 | 背景 | 遊牧民族 | `Outlander` |
-| 背景 | 遊民 | （既有兩處 `[背景：遊民]` 的節點都沒掛 `Conditions`，ID 待作者補） |
+| 背景 | 流民 | `Beggar`（`破廟/阿傑…` `#3216` 在用；`[背景：遊民]` 那兩處大概也是它，但都沒掛 `Conditions`，待作者確認） |
 
 文化 ID 是作者 2026-09-18 給的三個；表上沒有的值**不得自創**，先問。⚠ `破廟/阿傑、阿佑、阿偉、水井.json` `#3221` 是舊寫法（`IsCultureFit("Player ", "Outlander")` 拿背景 ID 當文化、標籤用 `[em7]［遊牧民族］`），**留著不動**，不要照抄。
 
