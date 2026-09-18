@@ -98,7 +98,7 @@
     | 四段轉場（`PlayFeelFeedback(FadeInOut…)` 包） | 轉場 |
     | `EnableEventBG`／`DisableEventBG` | 事件圖／關閉事件圖 |
     | `EnableDialogueBG`／`DisableDialogueBG` | 開啟背景／關閉背景 |
-    | `OpenPanel(N, close)` 收立繪面板 | 收立繪 |
+    | `OpenPanel(N, close)`／`DisableAllCharacterExpression()` 收立繪面板 | 清除立繪（作者用詞，重陽 `#4448`） |
     | `ShowEnding` | 結局 |
     | `Shop`／`MapLock`／`ShowHint`／`ShowNoviceTeaching`／`BeginMiniGame`／`LoadLevel` | 開啟商店／地圖鎖定／提示／教學／小遊戲／切換場景 |
     
