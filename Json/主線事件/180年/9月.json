@@ -3299,5 +3299,579 @@
     "zh_TW": "[panel=1]「做得漂亮——如此一來，本府根基穩固，往後可高枕無憂了。」",
     "zh_CN": "[panel=1]「做得漂亮——如此一来，本府根基稳固，往后可高枕无忧了。」",
     "links": [4340]
+  },
+  {
+    "entryID": 778,
+    "actorID": "MC1",
+    "title": "START",
+    "text": "開始對話",
+    "Sequence": "",
+    "links": [4388]
+  },
+  {
+    "entryID": 4388,
+    "actorID": "role2",
+    "title": "重陽",
+    "text": "[panel=6]＊（九月九，城裡的人一早就往高處走。山道上一路都是紅的——茱萸囊掛在腰上，掛在襟前，小孩掛在髮上。）＊",
+    "Sequence": "EnableDialogueBG(MountainForest);\nAudioControl(PlayMusic,BGM_16);\nAudioControl(PlaySFX,Others_Talking);",
+    "Description": "開啟背景、播放音樂",
+    "zh_TW": "[panel=6]＊（九月九，城裡的人一早就往高處走。山道上一路都是紅的——茱萸囊掛在腰上，掛在襟前，小孩掛在髮上。）＊",
+    "zh_CN": "[panel=6]＊（九月九，城里的人一早就往高处走。山道上一路都是红的——茱萸囊挂在腰上，挂在襟前，小孩挂在发上。）＊",
+    "links": [4389]
+  },
+  {
+    "entryID": 4389,
+    "actorID": "role2",
+    "text": "[panel=6]＊（府裡的人也上來了。蓬餌一包，菊花酒一壺，都擱在崖邊那塊平石上；壺是剛溫過的，摸上去還燙手。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（府裡的人也上來了。蓬餌一包，菊花酒一壺，都擱在崖邊那塊平石上；壺是剛溫過的，摸上去還燙手。）＊",
+    "zh_CN": "[panel=6]＊（府里的人也上来了。蓬饵一包，菊花酒一壶，都搁在崖边那块平石上；壶是刚温过的，摸上去还烫手。）＊",
+    "links": [4390]
+  },
+  {
+    "entryID": 4390,
+    "actorID": "MC5",
+    "text": "[panel=1]「酒就擱在這兒。第一杯，誰想喝？」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「酒就擱在這兒。第一杯，誰想喝？」",
+    "zh_CN": "[panel=1]「酒就搁在这儿。第一杯，谁想喝？」",
+    "links": [4391]
+  },
+  {
+    "entryID": 4391,
+    "actorID": "role2",
+    "text": "[panel=6]＊（崖邊往北看，山下的路一直伸到看不見的地方。呂信走到那裡站了一會兒，沒有回頭。）＊",
+    "Sequence": "AudioControl(StopSFX);\nAudioControl(PlaySFX,Others_GrassInWind);",
+    "zh_TW": "[panel=6]＊（崖邊往北看，山下的路一直伸到看不見的地方。呂信走到那裡站了一會兒，沒有回頭。）＊",
+    "zh_CN": "[panel=6]＊（崖边往北看，山下的路一直伸到看不见的地方。吕信走到那里站了一会儿，没有回头。）＊",
+    "links": [4392]
+  },
+  {
+    "entryID": 4392,
+    "actorID": "MC2",
+    "text": "[panel=2]「三年前這城裡出去一萬騎，就是往那個方向。」",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_23);\nSetPortrait(MC2,pic=1);",
+    "Description": "切換音樂",
+    "zh_TW": "[panel=2]「三年前這城裡出去一萬騎，就是往那個方向。」",
+    "zh_CN": "[panel=2]「三年前这城里出去一万骑，就是往那个方向。」",
+    "links": [4393]
+  },
+  {
+    "entryID": 4393,
+    "actorID": "MC2",
+    "text": "[panel=2]「那年我還在五原，隔著道看他們過去，從日頭偏西看到天黑，沒看完。」",
+    "Sequence": "SetPortrait(MC2,pic=3);",
+    "zh_TW": "[panel=2]「那年我還在五原，隔著道看他們過去，從日頭偏西看到天黑，沒看完。」",
+    "zh_CN": "[panel=2]「那年我还在五原，隔着道看他们过去，从日头偏西看到天黑，没看完。」",
+    "links": [4394]
+  },
+  {
+    "entryID": 4394,
+    "actorID": "MC2",
+    "text": "[panel=2]「都是挑出來的好馬，四歲五歲口，腱子一條傷也沒有。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]「都是挑出來的好馬，四歲五歲口，腱子一條傷也沒有。」",
+    "zh_CN": "[panel=2]「都是挑出来的好马，四岁五岁口，腱子一条伤也没有。」",
+    "links": [4395]
+  },
+  {
+    "entryID": 4395,
+    "actorID": "MC5",
+    "text": "[panel=1]「馬是好馬，人是好漢。那樣的兵，十年也練不出一支。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「馬是好馬，人是好漢。那樣的兵，十年也練不出一支。」",
+    "zh_CN": "[panel=1]「马是好马，人是好汉。那样的兵，十年也练不出一支。」",
+    "links": [4396]
+  },
+  {
+    "entryID": 4396,
+    "actorID": "MC7",
+    "text": "[panel=2]「三路分兵，各走各的，說好二千里外會師——這種仗，贏了才叫僥倖。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]「三路分兵，各走各的，說好二千里外會師——這種仗，贏了才叫僥倖。」",
+    "zh_CN": "[panel=2]「三路分兵，各走各的，说好二千里外会师——这种仗，赢了才叫侥幸。」",
+    "links": [4397]
+  },
+  {
+    "entryID": 4397,
+    "actorID": "MC7",
+    "text": "[panel=2]「他們敗在出兵那天，不在交手那天。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]「他們敗在出兵那天，不在交手那天。」",
+    "zh_CN": "[panel=2]「他们败在出兵那天，不在交手那天。」",
+    "links": [4398]
+  },
+  {
+    "entryID": 4398,
+    "actorID": "MC3",
+    "text": "[panel=1]「安得猛士兮守四方。就是他們去了，所以今日這城還在。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=1]「安得猛士兮守四方。就是他們去了，所以今日這城還在。」",
+    "zh_CN": "[panel=1]「安得猛士兮守四方。就是他们去了，所以今日这城还在。」",
+    "links": [4399]
+  },
+  {
+    "entryID": 4399,
+    "actorID": "MC2",
+    "text": "[panel=2]「說得好。一萬騎出塞，鮮卑三年不敢近城！老子要是趕上了，也在裡頭。」",
+    "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(2,MC2,Proud);",
+    "zh_TW": "[panel=2]「說得好。一萬騎出塞，鮮卑三年不敢近城！老子要是趕上了，也在裡頭。」",
+    "zh_CN": "[panel=2]「说得好。一万骑出塞，鲜卑三年不敢近城！老子要是赶上了，也在里头。」",
+    "links": [4400]
+  },
+  {
+    "entryID": 4400,
+    "actorID": "MC7",
+    "text": "[panel=1]「城還在，只是沒了管事的人。雁門關歸了赤龍幫，城裡的錢歸了甄家，塞外那些人也敢進來分。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=1]「城還在，只是沒了管事的人。雁門關歸了赤龍幫，城裡的錢歸了甄家，塞外那些人也敢進來分。」",
+    "zh_CN": "[panel=1]「城还在，只是没了管事的人。雁门关归了赤龙帮，城里的钱归了甄家，塞外那些人也敢进来分。」",
+    "links": [4401]
+  },
+  {
+    "entryID": 4401,
+    "actorID": "MC7",
+    "text": "[panel=1]「趕上了，你這會兒就是那條路上的一截骨頭，名頭還是別人的。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=1]「趕上了，你這會兒就是那條路上的一截骨頭，名頭還是別人的。」",
+    "zh_CN": "[panel=1]「赶上了，你这会儿就是那条路上的一截骨头，名头还是别人的。」",
+    "links": [4402]
+  },
+  {
+    "entryID": 4402,
+    "actorID": "MC2",
+    "text": "[panel=2]「郭嘉！」",
+    "Sequence": "SetPortrait(MC2,pic=2);\nEnableCharacterExpression(2,MC2,Anger);",
+    "zh_TW": "[panel=2]「郭嘉！」",
+    "zh_CN": "[panel=2]「郭嘉！」",
+    "links": [4403]
+  },
+  {
+    "entryID": 4403,
+    "actorID": "MC20",
+    "text": "[panel=1]「哎哎哎——各位稍安！重九登高，原是為了避災，道爺這裡有現成的法子。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Proud);",
+    "zh_TW": "[panel=1]「哎哎哎——各位稍安！重九登高，原是為了避災，道爺這裡有現成的法子。」",
+    "zh_CN": "[panel=1]「哎哎哎——各位稍安！重九登高，原是为了避灾，道爷这里有现成的法子。」",
+    "links": [4404]
+  },
+  {
+    "entryID": 4404,
+    "actorID": "MC20",
+    "text": "[panel=1]「前年洛陽宮裡掉下一團黑氣，十來丈長，說是像條龍——道爺掐指一算……」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);",
+    "zh_TW": "[panel=1]「前年洛陽宮裡掉下一團黑氣，十來丈長，說是像條龍——道爺掐指一算……」",
+    "zh_CN": "[panel=1]「前年洛阳宫里掉下一团黑气，十来丈长，说是像条龙——道爷掐指一算……」",
+    "links": [4405]
+  },
+  {
+    "entryID": 4405,
+    "actorID": "MC5",
+    "text": "[panel=2]「算出什麼？」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「算出什麼？」",
+    "zh_CN": "[panel=2]「算出什么？」",
+    "links": [4406]
+  },
+  {
+    "entryID": 4406,
+    "actorID": "MC20",
+    "text": "[panel=1]「天子御廚燒糊了鍋。」",
+    "Sequence": "SetPortrait(MC20,pic=2);",
+    "zh_TW": "[panel=1]「天子御廚燒糊了鍋。」",
+    "zh_CN": "[panel=1]「天子御厨烧糊了锅。」",
+    "links": [4407]
+  },
+  {
+    "entryID": 4407,
+    "actorID": "MC2",
+    "text": "[panel=2]「……」",
+    "Sequence": "SetPortrait(MC2,pic=5);",
+    "zh_TW": "[panel=2]「……」",
+    "zh_CN": "[panel=2]「……」",
+    "links": [4408]
+  },
+  {
+    "entryID": 4408,
+    "actorID": "MC5",
+    "text": "[panel=1]「說夠了。避災的法子，為師只會一種——誰的道理對，拳頭上見。」",
+    "Sequence": "SetPortrait(MC5,pic=1);\nAudioControl(StopSFX);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_14);",
+    "Description": "切換音樂",
+    "zh_TW": "[panel=1]「說夠了。避災的法子，為師只會一種——誰的道理對，拳頭上見。」",
+    "zh_CN": "[panel=1]「说够了。避灾的法子，为师只会一种——谁的道理对，拳头上见。」",
+    "links": [4409]
+  },
+  {
+    "entryID": 4409,
+    "actorID": "MC5",
+    "text": "[panel=1]「先抽籤定對手。點到即止，不見血。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「先抽籤定對手。點到即止，不見血。」",
+    "zh_CN": "[panel=1]「先抽签定对手。点到即止，不见血。」",
+    "links": [4410]
+  },
+  {
+    "entryID": 4410,
+    "actorID": "role2",
+    "text": "[panel=6]＊（茱萸的枝子折成四段，長短不一，握在徐榮手裡。你抽到的那一段最短。）＊",
+    "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
+    "zh_TW": "[panel=6]＊（茱萸的枝子折成四段，長短不一，握在徐榮手裡。你抽到的那一段最短。）＊",
+    "zh_CN": "[panel=6]＊（茱萸的枝子折成四段，长短不一，握在徐荣手里。你抽到的那一段最短。）＊",
+    "links": [4411]
+  },
+  {
+    "entryID": 4411,
+    "actorID": "MC7",
+    "text": "[panel=1]「我這段跟你一樣長。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=1]「我這段跟你一樣長。」",
+    "zh_CN": "[panel=1]「我这段跟你一样长。」",
+    "links": [4412]
+  },
+  {
+    "entryID": 4412,
+    "actorID": "MC1",
+    "text": "「那就是我跟你這一場了。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「那就是我跟你這一場了。」",
+    "zh_CN": "「那就是我跟你这一场了。」",
+    "links": [4413]
+  },
+  {
+    "entryID": 4413,
+    "actorID": "MC7",
+    "text": "[panel=1]「那我認輸。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=1]「那我認輸。」",
+    "zh_CN": "[panel=1]「那我认输。」",
+    "links": [4414]
+  },
+  {
+    "entryID": 4414,
+    "actorID": "MC1",
+    "text": "「這還沒開打呢。」",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「這還沒開打呢。」",
+    "zh_CN": "「这还没开打呢。」",
+    "links": [4415]
+  },
+  {
+    "entryID": 4415,
+    "actorID": "MC7",
+    "text": "[panel=1]「你好意思嗎？我可是軍師，再說打了也是這個結果。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC7,pic=5);",
+    "zh_TW": "[panel=1]「你好意思嗎？我可是軍師，再說打了也是這個結果。」",
+    "zh_CN": "[panel=1]「你好意思吗？我可是军师，再说打了也是这个结果。」",
+    "links": [4416]
+  },
+  {
+    "entryID": 4416,
+    "actorID": "MC7",
+    "text": "[panel=1]「你贏了，去打下一場吧。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=1]「你贏了，去打下一場吧。」",
+    "zh_CN": "[panel=1]「你赢了，去打下一场吧。」",
+    "links": [4417]
+  },
+  {
+    "entryID": 4417,
+    "actorID": "MC1",
+    "text": "「真沒意思。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「真沒意思。」",
+    "zh_CN": "「真没意思。」",
+    "links": [4418]
+  },
+  {
+    "entryID": 4418,
+    "actorID": "role2",
+    "text": "[panel=6]＊（場子中間空出一塊。呂信兩手垂著，肩背卻整個沉了下去；子羽站得筆直，呼吸一次比一次長。山上沒有人說話。）＊",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=6]＊（場子中間空出一塊。呂信兩手垂著，肩背卻整個沉了下去；子羽站得筆直，呼吸一次比一次長。山上沒有人說話。）＊",
+    "zh_CN": "[panel=6]＊（场子中间空出一块。吕信两手垂着，肩背却整个沉了下去；子羽站得笔直，呼吸一次比一次长。山上没有人说话。）＊",
+    "links": [4419]
+  },
+  {
+    "entryID": 4419,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩人都沒有喊。子羽貼身而入，掌鋒切向呂信脅下；呂信連退都懶得退，迎著那一掌撞了上去——肩頭實實在在撞在一起，一聲悶響，兩人各退半步。）＊",
+    "Sequence": "AudioControl(PlaySFX,Others_Punch_Single_Normal_1);",
+    "zh_TW": "[panel=6]＊（兩人都沒有喊。子羽貼身而入，掌鋒切向呂信脅下；呂信連退都懶得退，迎著那一掌撞了上去——肩頭實實在在撞在一起，一聲悶響，兩人各退半步。）＊",
+    "zh_CN": "[panel=6]＊（两人都没有喊。子羽贴身而入，掌锋切向吕信胁下；吕信连退都懒得退，迎着那一掌撞了上去——肩头实实在在撞在一起，一声闷响，两人各退半步。）＊",
+    "links": [4420]
+  },
+  {
+    "entryID": 4420,
+    "actorID": "role2",
+    "text": "[panel=6]＊（半步還沒站穩，子羽的左手已經到了。那一下快得看不清，指尖擦著呂信的喉頭掠過去，山上有人倒抽了一口氣。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（半步還沒站穩，子羽的左手已經到了。那一下快得看不清，指尖擦著呂信的喉頭掠過去，山上有人倒抽了一口氣。）＊",
+    "zh_CN": "[panel=6]＊（半步还没站稳，子羽的左手已经到了。那一下快得看不清，指尖擦着吕信的喉头掠过去，山上有人倒抽了一口气。）＊",
+    "links": [4421]
+  },
+  {
+    "entryID": 4421,
+    "actorID": "role2",
+    "text": "[panel=6]＊（呂信的手比他更快。左腕被五指反扣住的那一瞬，人已經給抄住了腰——腳下一絆，肩上一壓，子羽連掙的工夫都沒有，整個人被掄了半圈砸進草裡，塵土炸開一圈。）＊",
+    "Sequence": "AudioControl(PlaySFX,Others_BodyFall);",
+    "zh_TW": "[panel=6]＊（呂信的手比他更快。左腕被五指反扣住的那一瞬，人已經給抄住了腰——腳下一絆，肩上一壓，子羽連掙的工夫都沒有，整個人被掄了半圈砸進草裡，塵土炸開一圈。）＊",
+    "zh_CN": "[panel=6]＊（吕信的手比他更快。左腕被五指反扣住的那一瞬，人已经给抄住了腰——脚下一绊，肩上一压，子羽连挣的工夫都没有，整个人被抡了半圈砸进草里，尘土炸开一圈。）＊",
+    "links": [4422]
+  },
+  {
+    "entryID": 4422,
+    "actorID": "MC2",
+    "text": "[panel=1]「痛快！這一下我要是慢半拍，躺著的就是老子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「痛快！這一下我要是慢半拍，躺著的就是老子。」",
+    "zh_CN": "[panel=1]「痛快！这一下我要是慢半拍，躺着的就是老子。」",
+    "links": [4423]
+  },
+  {
+    "entryID": 4423,
+    "actorID": "MC3",
+    "text": "[panel=2]「塞外的角抵……算你厲害。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=2]「塞外的角抵……算你厲害。」",
+    "zh_CN": "[panel=2]「塞外的角抵……算你厉害。」",
+    "links": [4424]
+  },
+  {
+    "entryID": 4424,
+    "actorID": "MC5",
+    "text": "[panel=1]「點到了，呂信勝。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「點到了，呂信勝。」",
+    "zh_CN": "[panel=1]「点到了，吕信胜。」",
+    "links": [4425]
+  },
+  {
+    "entryID": 4425,
+    "actorID": "MC2",
+    "text": "[panel=1]「下面一位。」",
+    "Sequence": "SetPortrait(MC2,pic=1);\nOpenPanel(2, close);\nEnableCharacterExpression(1,MC2,Proud);",
+    "zh_TW": "[panel=1]「下面一位。」",
+    "zh_CN": "[panel=1]「下面一位。」",
+    "links": [4426]
+  },
+  {
+    "entryID": 4426,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,78);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥：呂信",
+    "links": [4427]
+  },
+  {
+    "entryID": 4427,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [4428, 4430]
+  },
+  {
+    "entryID": 4428,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他退了半步，站住了，然後笑得整座山都聽得見。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Conditions": "IsPassFight() == true;",
+    "Description": "戰鬥成功",
+    "zh_TW": "[panel=6]＊（他退了半步，站住了，然後笑得整座山都聽得見。）＊",
+    "zh_CN": "[panel=6]＊（他退了半步，站住了，然后笑得整座山都听得见。）＊",
+    "links": [4429]
+  },
+  {
+    "entryID": 4429,
+    "actorID": "MC2",
+    "text": "[panel=1]「好小子，半年前你連我一戟都接不住。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「好小子，半年前你連我一戟都接不住。」",
+    "zh_CN": "[panel=1]「好小子，半年前你连我一戟都接不住。」",
+    "links": [4432]
+  },
+  {
+    "entryID": 4430,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你坐在地上，一時站不起來。他伸手過來，你抓住了。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Pain);",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "zh_TW": "[panel=6]＊（你坐在地上，一時站不起來。他伸手過來，你抓住了。）＊",
+    "zh_CN": "[panel=6]＊（你坐在地上，一时站不起来。他伸手过来，你抓住了。）＊",
+    "links": [4431]
+  },
+  {
+    "entryID": 4431,
+    "actorID": "MC2",
+    "text": "[panel=1]「這回比上回久。上回三招，這回七招。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「這回比上回久。上回三招，這回七招。」",
+    "zh_CN": "[panel=1]「这回比上回久。上回三招，这回七招。」",
+    "links": [4432]
+  },
+  {
+    "entryID": 4432,
+    "actorID": "role2",
+    "text": "[panel=6]＊（徐榮站起來，把袖口一道一道紮緊，走到場子中間。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（徐榮站起來，把袖口一道一道紮緊，走到場子中間。）＊",
+    "zh_CN": "[panel=6]＊（徐荣站起来，把袖口一道一道扎紧，走到场子中间。）＊",
+    "links": [4433]
+  },
+  {
+    "entryID": 4433,
+    "actorID": "MC5",
+    "text": "[panel=1]「小子，你也上來。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「小子，你也上來。」",
+    "zh_CN": "[panel=1]「小子，你也上来。」",
+    "links": [4434]
+  },
+  {
+    "entryID": 4434,
+    "actorID": "MC1",
+    "text": "「師父？」",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
+    "zh_TW": "「師父？」",
+    "zh_CN": "「师父？」",
+    "links": [4435]
+  },
+  {
+    "entryID": 4435,
+    "actorID": "MC5",
+    "text": "[panel=1]「贏了的更該打，輸了的也更該打。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「贏了的更該打，輸了的也更該打。」",
+    "zh_CN": "[panel=1]「赢了的更该打，输了的也更该打。」",
+    "links": [4436]
+  },
+  {
+    "entryID": 4436,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,86);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥：徐榮",
+    "links": [4437]
+  },
+  {
+    "entryID": 4437,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [4438, 4440]
+  },
+  {
+    "entryID": 4438,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他的腳在你收招之後才動。動了一步，就停住了。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassFight() == true;",
+    "Description": "戰鬥成功",
+    "zh_TW": "[panel=6]＊（他的腳在你收招之後才動。動了一步，就停住了。）＊",
+    "zh_CN": "[panel=6]＊（他的脚在你收招之后才动。动了一步，就停住了。）＊",
+    "links": [4439]
+  },
+  {
+    "entryID": 4439,
+    "actorID": "MC5",
+    "text": "[panel=1]「[em7]把袖口鬆開[/em7]，打的不錯啊，小子。」",
+    "Sequence": "SetPortrait(MC5,pic=4);\nModifyData(FavorabilityExp,MC5,20);",
+    "zh_TW": "[panel=1]「[em7]把袖口鬆開[/em7]，打的不錯啊，小子。」",
+    "zh_CN": "[panel=1]「[em7]把袖口松开[/em7]，打的不错啊，小子。」",
+    "links": [4442]
+  },
+  {
+    "entryID": 4440,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你摔在草上，望著天。茱萸的紅從眼角邊上晃過去。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "zh_TW": "[panel=6]＊（你摔在草上，望著天。茱萸的紅從眼角邊上晃過去。）＊",
+    "zh_CN": "[panel=6]＊（你摔在草上，望着天。茱萸的红从眼角边上晃过去。）＊",
+    "links": [4441]
+  },
+  {
+    "entryID": 4441,
+    "actorID": "MC5",
+    "text": "[panel=1]「起來。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「起來。」",
+    "zh_CN": "[panel=1]「起来。」",
+    "links": [4442]
+  },
+  {
+    "entryID": 4442,
+    "actorID": "role2",
+    "text": "[panel=6]＊（酒壺還在石頭上，還是溫的。徐榮把它拿起來，遞出去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（酒壺還在石頭上，還是溫的。徐榮把它拿起來，遞出去。）＊",
+    "zh_CN": "[panel=6]＊（酒壶还在石头上，还是温的。徐荣把它拿起来，递出去。）＊",
+    "links": [4443]
+  },
+  {
+    "entryID": 4443,
+    "actorID": "MC2",
+    "text": "[panel=1]「好傢伙，菊花酒。這玩意兒喝了能長命百歲。」",
+    "Sequence": "SetPortrait(MC2,pic=5);",
+    "zh_TW": "[panel=1]「好傢伙，菊花酒。這玩意兒喝了能長命百歲。」",
+    "zh_CN": "[panel=1]「好家伙，菊花酒。这玩意儿喝了能长命百岁。」",
+    "links": [4444]
+  },
+  {
+    "entryID": 4444,
+    "actorID": "MC7",
+    "text": "[panel=2]「那我多喝兩杯。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]「那我多喝兩杯。」",
+    "zh_CN": "[panel=2]「那我多喝两杯。」",
+    "links": [4445]
+  },
+  {
+    "entryID": 4445,
+    "actorID": "role2",
+    "text": "[panel=6]＊（酒在幾隻手裡傳了一圈，最後又回到石頭上，壺已經空了大半。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（酒在幾隻手裡傳了一圈，最後又回到石頭上，壺已經空了大半。）＊",
+    "zh_CN": "[panel=6]＊（酒在几只手里传了一圈，最后又回到石头上，壶已经空了大半。）＊",
+    "links": [4446]
+  },
+  {
+    "entryID": 4446,
+    "actorID": "MC5",
+    "text": "[panel=1]「收拾收拾，下山。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「收拾收拾，下山。」",
+    "zh_CN": "[panel=1]「收拾收拾，下山。」",
+    "links": [4447]
+  },
+  {
+    "entryID": 4447,
+    "actorID": "MC20",
+    "text": "[panel=2]「幸虧今日道爺沒下場——不然那籤抽到誰，誰這會兒還躺在草裡呢。」",
+    "Sequence": "SetPortrait(MC20,pic=1);\nEnableCharacterExpression(2,MC20,Proud);",
+    "zh_TW": "[panel=2]「幸虧今日道爺沒下場——不然那籤抽到誰，誰這會兒還躺在草裡呢。」",
+    "zh_CN": "[panel=2]「幸亏今日道爷没下场——不然那签抽到谁，谁这会儿还躺在草里呢。」",
+    "links": [4448]
+  },
+  {
+    "entryID": 4448,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一行人順著山道往下走，茱萸一路掛到城門口。日頭偏西映得滿山通紅，走到半山你回頭看了一眼。那塊平石上只剩下空了的酒壺，風把菊花的味道一路送下山來。）＊",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nOpenPanel(2, close);",
+    "Description": "清除立繪",
+    "zh_TW": "[panel=6]＊（一行人順著山道往下走，茱萸一路掛到城門口。日頭偏西映得滿山通紅，走到半山你回頭看了一眼。那塊平石上只剩下空了的酒壺，風把菊花的味道一路送下山來。）＊",
+    "zh_CN": "[panel=6]＊（一行人顺着山道往下走，茱萸一路挂到城门口。日头偏西映得满山通红，走到半山你回头看了一眼。那块平石上只剩下空了的酒壶，风把菊花的味道一路送下山来。）＊",
+    "links": [4449]
+  },
+  {
+    "entryID": 4449,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "DisableDialogueBG();\nAudioControl(StopMusic);\nModifyData(FavorabilityExp,MC5,20);\nModifyData(FavorabilityExp,MC2,20);\nModifyData(FavorabilityExp,MC3,20);\nModifyData(FavorabilityExp,MC7,20);\nModifyData(FavorabilityExp,MC20,20);\nContinue();",
+    "Description": "關閉背景、關閉音樂、徐榮好感度提升、呂信好感度提升、子羽好感度提升、郭嘉好感度提升、雍仔好感度提升",
+    "links": []
   }
 ]

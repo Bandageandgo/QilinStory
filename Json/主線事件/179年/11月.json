@@ -1,0 +1,117 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "title": "北境起煙",
+    "text": "[panel=6]＊（北邊起了煙。城外屯田的人趕著牛車往城裡走，車上堆著還沒曬乾的粟，趕在閉門之前進來——今天城門酉時就關，比平常早了一個時辰。最後幾輛車擠在門洞裡，守門的在催。）＊",
+    "Sequence": "EnableDialogueBG(Yunzhong);AudioControl(PlayMusic,BGM_23);AudioControl(PlaySFX,Others_HeavyColdWind);",
+    "Description": "時代事件・北邊起煙：入口。史源＝《後漢書・靈帝紀》光和二年冬鮮卑寇幽、并二州。",
+    "zh_CN": "[panel=6]＊（北边起了烟。城外屯田的人赶着牛车往城里走，车上堆着还没晒干的粟，赶在闭门之前进来——今天城门酉时就关，比平常早了一个时辰。最后几辆车挤在门洞里，守门的在催。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，米價又漲了。糧行的人說鮮卑年年這時候來，來了就走——可米價漲上去，就再也不下來了。」",
+    "Sequence": "SetPortrait(MC8,pic=2);EnableCharacterExpression(2,MC8,Anger);",
+    "zh_CN": "[panel=2]「表哥，米价又涨了。粮行的人说鲜卑年年这时候来，来了就走——可米价涨上去，就再也不下来了。」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC8",
+    "text": "[panel=2]「……娜娜姐姐，我不是說妳。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC8,pic=3);",
+    "zh_CN": "[panel=2]「……娜娜姐姐，我不是说你。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC22",
+    "text": "[panel=1]「說我做什麼，我又不是他們。」",
+    "Sequence": "SetPortrait(MC22,pic=11);",
+    "zh_CN": "[panel=1]「说我做什么，我又不是他们。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC22",
+    "text": "[panel=1]「來了就走？那是他們沒有進來過。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「来了就走？那是他们没有进来过。」",
+    "links": [16, 6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC1",
+    "text": "「妳見過他們進來？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
+    "zh_CN": "「你见过他们进来？」",
+    "links": [7]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC22",
+    "text": "[panel=1]「那不叫來了就走，那叫收割。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「那不叫来了就走，那叫收割。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（城牆上的火把一支一支點起來。城門在你眼前合上，門閂落下去的聲音隔著半條街都聽得見。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Fire);",
+    "zh_CN": "[panel=6]＊（城墙上的火把一支一支点起来。城门在你眼前合上，门闩落下去的声音隔着半条街都听得见。）＊",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC1",
+    "text": "「不知道城牆上還缺不缺人手？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「不知道城墙上还缺不缺人手？」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你連弓都沒有摸過。進來吧，門關了，今晚誰也出不去，誰也進不來。」",
+    "Sequence": "SetPortrait(MC8,pic=3);EnableCharacterExpression(2,MC8,Nervous);",
+    "zh_CN": "[panel=2]「表哥，你连弓都没有摸过。进来吧，门关了，今晚谁也出不去，谁也进不来。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你又站了一會兒才進去。那一晚北邊的煙一直沒有散，客棧裡沒有一個人提起它。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_CN": "[panel=6]＊（你又站了一会儿才进去。那一晚北边的烟一直没有散，客栈里没有一个人提起它。）＊",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();AudioControl(StopSFX);DisableDialogueBG();Continue();",
+    "Description": "尾格：關立繪表情、關循環風聲、關對話背景圖",
+    "links": []
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「本姑娘見過他們走了以後的樣子。一個部落，早上人還在，晚上就只剩下帳篷的樁子。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「本姑娘见过他们走了以后的样子。一个部落，早上人还在，晚上就只剩下帐篷的桩子。」",
+    "links": [8]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC1",
+    "text": "「[em3][文化：鮮卑][/em3]他們年年這時候來，不是挑日子。草枯了，牲口撐不到開春，南邊有糧——他們不是來打仗的，是來過冬的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsCultureFit(\"Player\", \"Xianbei\")  == true",
+    "zh_CN": "「[em3][文化：鲜卑][/em3]他们年年这时候来，不是挑日子。草枯了，牲口撑不到开春，南边有粮——他们不是来打仗的，是来过冬的。」",
+    "links": [9]
+  }
+]

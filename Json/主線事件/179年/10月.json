@@ -333,5 +333,137 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_CN": "[panel=6]＊（她撕下点蛙簿空白页折成小帐册，拉着你出门。）＊",
     "links": [2192]
+  },
+  {
+    "entryID": 2202,
+    "actorID": "role2",
+    "title": "馬市",
+    "text": "[panel=6]＊（那幾日城裡的皮貨鋪關了一半，馬市上一匹馬的價錢兩天漲了三回。人人都在講同一件事，講的人比買馬的人多。）＊",
+    "Sequence": "EnableDialogueBG(Yunzhong);AudioControl(PlayMusic,BGM_16);AudioControl(PlaySFX,Others_Talking);",
+    "Description": "時代事件・馬市：入口。史源＝《後漢書・南匈奴列傳》光和二年張脩擅斬南單于呼徵、更立羌渠",
+    "zh_CN": "[panel=6]＊（那几日城里的皮货铺关了一半，马市上一匹马的价钱两天涨了三回。人人都在讲同一件事，讲的人比买马的人多。）＊",
+    "links": [2203]
+  },
+  {
+    "entryID": 2203,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，這匹早上還是四千錢，這會兒馬販子開口就是六千。」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Shock);",
+    "zh_CN": "[panel=2]「表哥，这匹早上还是四千钱，这会儿马贩子开口就是六千。」",
+    "links": [2204]
+  },
+  {
+    "entryID": 2204,
+    "actorID": "MC22",
+    "text": "[panel=1]「這價錢不是馬販子漲的，是塞外漲的。大俠，你們還沒聽說？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=4);",
+    "zh_CN": "[panel=1]「这价钱不是马贩子涨的，是塞外涨的。大侠，你们还没听说？」",
+    "links": [2205]
+  },
+  {
+    "entryID": 2205,
+    "actorID": "MC1",
+    "text": "「聽說什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=9);EnableCharacterExpression(0,Player,Question);",
+    "zh_CN": "「听说什么？」",
+    "links": [2206]
+  },
+  {
+    "entryID": 2206,
+    "actorID": "MC22",
+    "text": "[panel=1]「去年老單于死了，兒子呼徵接的位子。今年秋上，管這一片的使匈奴中郎將張脩，跟新單于合不來——」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「去年老单于死了，儿子呼征接的位子。今年秋上，管这一片的使匈奴中郎将张脩，跟新单于合不来——」",
+    "links": [2207]
+  },
+  {
+    "entryID": 2207,
+    "actorID": "MC22",
+    "text": "[panel=1]「合不來也就罷了，他把人給斬了！沒稟朝廷，自己就斬了一個單于，另外立了右賢王羌渠。」",
+    "Sequence": "SetPortrait(MC22,pic=2);EnableCharacterExpression(1,MC22,Idea);AudioControl(StopMusic);AudioControl(PlayMusic,BGM_28);",
+    "Description": "換曲點：BGM_16 → BGM_28（風雨欲來），一路壓到收尾不切回",
+    "zh_CN": "[panel=1]「合不来也就罢了，他把人给斩了！没禀朝廷，自己就斩了一个单于，另外立了右贤王羌渠。」",
+    "links": [2208]
+  },
+  {
+    "entryID": 2208,
+    "actorID": "MC22",
+    "text": "[panel=1]「如今張脩讓檻車押回洛陽交廷尉問罪。可單于已經是新的了——草原上服不服這個羌渠，誰也說不準。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「如今张脩让槛车押回洛阳交廷尉问罪。可单于已经是新的了——草原上服不服这个羌渠，谁也说不准。」",
+    "links": [2209]
+  },
+  {
+    "entryID": 2209,
+    "actorID": "MC1",
+    "text": "「單于換了人，跟雲中的馬價有什麼相干？」",
+    "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
+    "zh_CN": "「单于换了人，跟云中的马价有什么相干？」",
+    "links": [2210]
+  },
+  {
+    "entryID": 2210,
+    "actorID": "MC22",
+    "text": "[panel=1]「相干大了，大俠。本姑娘從小在草原上聽的規矩是這樣的——」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「相干大了，大侠。本姑娘从小在草原上听的规矩是这样的——」",
+    "links": [2211]
+  },
+  {
+    "entryID": 2211,
+    "actorID": "MC22",
+    "text": "[panel=1]「單于死在自己人手上，草原亂三個月；死在漢人手上，要亂三年。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「单于死在自己人手上，草原乱三个月；死在汉人手上，要乱三年。」",
+    "links": [2212]
+  },
+  {
+    "entryID": 2212,
+    "actorID": "MC22",
+    "text": "[panel=1]「一亂起來，馬就不往南邊賣了。馬販子比誰都精，今日不漲價，明日就沒得漲了。」",
+    "Sequence": "SetPortrait(MC22,pic=3);",
+    "zh_CN": "[panel=1]「一乱起来，马就不往南边卖了。马贩子比谁都精，今日不涨价，明日就没得涨了。」",
+    "links": [2213]
+  },
+  {
+    "entryID": 2213,
+    "actorID": "role2",
+    "text": "[panel=6]＊（馬市那頭有人吵了起來，是兩個漢人在爭一匹瘸腿的老馬。旁邊幾個穿皮袍的沒有插嘴，只是把自己的馬牽得離人群遠了一些。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Discuss_1);",
+    "zh_CN": "[panel=6]＊（马市那头有人吵了起来，是两个汉人在争一匹瘸腿的老马。旁边几个穿皮袍的没有插嘴，只是把自己的马牵得离人群远了一些。）＊",
+    "links": [2214]
+  },
+  {
+    "entryID": 2214,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]把算籌收回袖子裡[/em7]，那皮貨我們先別進。娜娜姊姊說要亂三年，三年後再買，便宜。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Idea);ModifyData(LifeExp,30);",
+    "Description": "生活經驗 +30",
+    "zh_CN": "[panel=2]「[em7]把算筹收回袖子里[/em7]，那皮货我们先别进。娜娜姊姊说要乱三年，三年后再买，便宜。」",
+    "links": [2215]
+  },
+  {
+    "entryID": 2215,
+    "actorID": "MC22",
+    "text": "[panel=1]「小犀，妳這筆帳算得比草原上的老人還狠。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=9);",
+    "zh_CN": "[panel=1]「小犀，你这笔账算得比草原上的老人还狠。」",
+    "links": [2216]
+  },
+  {
+    "entryID": 2216,
+    "actorID": "role2",
+    "text": "[panel=6]＊（回客棧的路上，小犀走一路數一路。你聽見她把「三年」兩個字念了好幾遍，像在記一個往後才用得著的價錢。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（回客栈的路上，小犀走一路数一路。你听见她把「三年」两个字念了好几遍，像在记一个往后才用得着的价钱。）＊",
+    "links": [2217]
+  },
+  {
+    "entryID": 2217,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();AudioControl(StopSFX);DisableDialogueBG();Continue();",
+    "Description": "尾格：關立繪表情、關循環音效、關對話背景圖",
+    "links": []
   }
 ]
