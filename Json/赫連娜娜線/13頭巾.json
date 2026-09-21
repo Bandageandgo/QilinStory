@@ -356,7 +356,7 @@
     "entryID": 48,
     "actorID": "MC22",
     "text": "[panel=1]「[var=PlayerFirstName]，坐好別動。我教你一個包法——草原上的包法，一塊布能頂半件衣裳。」",
-    "Sequence": "SetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Proud);",
+    "Sequence": "SetPortrait(MC22-2,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
     "zh_TW": "[panel=1]「[var=PlayerFirstName]，坐好別動。我教你一個包法——草原上的包法，一塊布能頂半件衣裳。」",
     "zh_CN": "[panel=1]「[var=PlayerFirstName]，坐好别动。我教你一个包法——草原上的包法，一块布能顶半件衣裳。」",
     "links": [49]
@@ -374,7 +374,7 @@
     "entryID": 50,
     "actorID": "MC22",
     "text": "[panel=1]「往後你要陪我往北邊走，就得戴。你這一頭白髮，在草原上比在漢地還打眼。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22-2,pic=5);\nEnableCharacterExpression(1,MC22,Meditate);",
     "zh_TW": "[panel=1]「往後你要陪我往北邊走，就得戴。你這一頭白髮，在草原上比在漢地還打眼。」",
     "zh_CN": "[panel=1]「往后你要陪我往北边走，就得戴。你这一头白发，在草原上比在汉地还打眼。」",
     "links": [51]
@@ -392,7 +392,7 @@
     "entryID": 52,
     "actorID": "MC22",
     "text": "[panel=1]「小時候我嫌它勒得慌。我阿母說，勒著才知道自己是誰家的。」",
-    "Sequence": "SetPortrait(MC22,pic=17);",
+    "Sequence": "SetPortrait(MC22-2,pic=1);",
     "zh_TW": "[panel=1]「小時候我嫌它勒得慌。我阿母說，勒著才知道自己是誰家的。」",
     "zh_CN": "[panel=1]「小时候我嫌它勒得慌。我阿母说，勒着才知道自己是谁家的。」",
     "links": [53]
@@ -401,7 +401,7 @@
     "entryID": 53,
     "actorID": "MC22",
     "text": "[panel=1]「你這頭髮，生下來就是白的？」",
-    "Sequence": "SetPortrait(MC22,pic=25);\nEnableCharacterExpression(1,MC22,Question);",
+    "Sequence": "SetPortrait(MC22-2,pic=6);\nEnableCharacterExpression(1,MC22,Question);",
     "zh_TW": "[panel=1]「你這頭髮，生下來就是白的？」",
     "zh_CN": "[panel=1]「你这头发，生下来就是白的？」",
     "links": [54]
@@ -437,7 +437,7 @@
     "entryID": 57,
     "actorID": "MC22",
     "text": "[panel=1]「在部裡沒人怕我頭上這個，可也沒人真把我當尋常孩子。到了漢地更省事，見了就當妖。」",
-    "Sequence": "SetPortrait(MC22,pic=19);",
+    "Sequence": "SetPortrait(MC22-2,pic=3);",
     "zh_TW": "[panel=1]「在部裡沒人怕我頭上這個，可也沒人真把我當尋常孩子。到了漢地更省事，見了就當妖。」",
     "zh_CN": "[panel=1]「在部里没人怕我头上这个，可也没人真把我当寻常孩子。到了汉地更省事，见了就当妖。」",
     "links": [58]
@@ -446,7 +446,7 @@
     "entryID": 58,
     "actorID": "MC22",
     "text": "[panel=1]「兩邊都沒把我當個尋常人，我有時候倒真會想——我到底算不算個人。這話我沒跟誰說過。」",
-    "Sequence": "SetPortrait(MC22,pic=20);",
+    "Sequence": "SetPortrait(MC22-2,pic=4);",
     "zh_TW": "[panel=1]「兩邊都沒把我當個尋常人，我有時候倒真會想——我到底算不算個人。這話我沒跟誰說過。」",
     "zh_CN": "[panel=1]「两边都没把我当个寻常人，我有时候倒真会想——我到底算不算个人。这话我没跟谁说过。」",
     "links": [59, 60]
@@ -493,7 +493,7 @@
     "entryID": 64,
     "actorID": "MC22",
     "text": "[panel=1]「……你這人，話說得倒輕巧。」",
-    "Sequence": "SetPortrait(MC22,pic=26);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FeatExp,Player,Flirting,10);",
+    "Sequence": "SetPortrait(MC22-2,pic=9);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FeatExp,Player,Flirting,10);",
     "Conditions": "IsPassDice() == true;",
     "zh_TW": "[panel=1]「……你這人，話說得倒輕巧。」",
     "zh_CN": "[panel=1]「……你这人，话说得倒轻巧。」",
@@ -503,7 +503,7 @@
     "entryID": 65,
     "actorID": "MC22",
     "text": "[panel=1]「那你就看著——看到哪天你不看了，我再包回去。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=22);\nModifyData(FavorabilityExp,MC22,30);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=7);\nModifyData(FavorabilityExp,MC22,30);",
     "zh_TW": "[panel=1]「那你就看著——看到哪天你不看了，我再包回去。」",
     "zh_CN": "[panel=1]「那你就看着——看到哪天你不看了，我再包回去。」",
     "links": [71]
@@ -512,7 +512,7 @@
     "entryID": 66,
     "actorID": "MC22",
     "text": "[panel=1]「說得倒容易——你走在我旁邊，捱眼色的又不只我一個。」",
-    "Sequence": "SetPortrait(MC22,pic=20);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "Sequence": "SetPortrait(MC22-2,pic=4);\nEnableCharacterExpression(1,MC22,Meditate);",
     "Conditions": "IsPassDice() == false;",
     "zh_TW": "[panel=1]「說得倒容易——你走在我旁邊，捱眼色的又不只我一個。」",
     "zh_CN": "[panel=1]「说得倒容易——你走在我旁边，捱眼色的又不只我一个。」",
@@ -531,7 +531,7 @@
     "entryID": 68,
     "actorID": "MC22",
     "text": "[panel=1]「……原來你也沒地方回。那咱們倆湊一塊，算個什麼？」",
-    "Sequence": "SetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FavorabilityExp,MC22,30);",
+    "Sequence": "SetPortrait(MC22-2,pic=5);\nEnableCharacterExpression(1,MC22,Nervous);\nModifyData(FavorabilityExp,MC22,30);",
     "zh_TW": "[panel=1]「……原來你也沒地方回。那咱們倆湊一塊，算個什麼？」",
     "zh_CN": "[panel=1]「……原来你也没地方回。那咱们俩凑一块，算个什么？」",
     "links": [71]
@@ -549,7 +549,7 @@
     "entryID": 72,
     "actorID": "MC22",
     "text": "[panel=1]「……習慣了，從小按到大。」",
-    "Sequence": "SetPortrait(MC22,pic=17);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "Sequence": "SetPortrait(MC22-2,pic=1);\nEnableCharacterExpression(1,MC22,Meditate);",
     "zh_TW": "[panel=1]「……習慣了，從小按到大。」",
     "zh_CN": "[panel=1]「……习惯了，从小按到大。」",
     "links": [73]
@@ -558,7 +558,7 @@
     "entryID": 73,
     "actorID": "MC22",
     "text": "[panel=1]「往後大概是不用按了。至少在你跟前不用。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=17);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=1);",
     "zh_TW": "[panel=1]「往後大概是不用按了。至少在你跟前不用。」",
     "zh_CN": "[panel=1]「往后大概是不用按了。至少在你跟前不用。」",
     "links": [74]
@@ -576,7 +576,7 @@
     "entryID": 75,
     "actorID": "MC22",
     "text": "[panel=1]「明日再教你一回——看你自己包不包得住。」",
-    "Sequence": "SetPortrait(MC22,pic=21);\nEnableCharacterExpression(1,MC22,Idea);",
+    "Sequence": "SetPortrait(MC22-2,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
     "zh_TW": "[panel=1]「明日再教你一回——看你自己包不包得住。」",
     "zh_CN": "[panel=1]「明日再教你一回——看你自己包不包得住。」",
     "links": [76]
