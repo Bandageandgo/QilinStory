@@ -30,7 +30,7 @@
     -   `MC20`: 雍仔
     -   `MC21`: 饕餮
     -   `MC22`: 赫連娜娜
-    -   `MC22-2`: 赫連娜娜**露角版**立繪 actor（沒戴帽子；`SetPortrait(MC22-2,pic=1–11)`，對照見立繪規則 4.4.2；與 `MC22,pic=17–27` 兩套並存，怎麼收作者另交 agent）
+    -   `MC22-2`: 赫連娜娜**露角版**立繪 actor（沒戴帽子；`SetPortrait(MC22-2,pic=1–11)`，對照見立繪規則 4.4.2。**2026-09-21 起這是唯一寫法**，舊的 `MC22,pic=17–27` 已全案換掉。**只用在 `SetPortrait`**；表情特效第二參數、好感、說話者 `actorID` 一律仍寫 `MC22`）
     -   `MC23`: 蔡琰（蔡文姬）
     -   `MC24`: 蔡邕
     -   `role105`: 茶博士
@@ -85,6 +85,7 @@
     | `ShowValuableMemo` | 開啟便籤 |
     | `ModifyData(Skill,…)` | 獲得技能卡 |
     | `ModifyData(ChancePoint,…)` | 獲得機會點 |
+    | `ModifyData(GameDate,年,月,Early|Late)` | 時間前進（§3.10；舊檔的「推進日期」不再用） |
     | `ModifyData(AddNewCharacter／IsInTeam／IsAbleToJoinTeam,…)`、`ControlStage` | 加入隊伍／離隊／場上人物更換 |
     | 選項節點（§4.2） | 選項1／選項2／選項3…（照順序，**不寫選項內容**） |
     | 擲骰格 `BeginDiceRoll(…,XCheck,N)` | 〈名〉檢定（例：威嚇檢定；難度不寫） |
@@ -243,6 +244,13 @@
 -   **關**：**下一格** `Sequence` 開頭 `PlayOrStopParticle(同ID,Stop);`（比照 `DisableCharacterExpression`）；特效需跨數句時延到該結束的那格關，**不得不關**。清場用 `StopAllParticle();`（轉場格 `SetContinueMode(false);` 之後，或尾格 `DisableDialogueBG();StopAllParticle();Continue();`）。
 -   既有 JSON 有些打擊特效沒關，**轉新稿時不要照抄**。ID 不在表上的不得使用。
 
+#### 3.10 `ModifyData(GameDate,年,月,Early|Late)` 時間前進（2026-09-21 作者以〈年關〉定樁）
+-   **寫法**：`ModifyData(GameDate,181,2,Early);`——年、月、旬（`Early` 上旬／`Late` 下旬；全案只見這兩個值，別自創 `Mid`）。把遊戲日曆直接撥到那一天。
+-   **放哪裡**：
+    -   **事件結尾要跳月**：掛在**尾格**（`actorID "0"`、`text ""`），與關背景、關音樂同一格，放最前面。定樁：`主線事件/181年/1月.json` `#141` `ModifyData(GameDate,181,2,Early);DisableAllCharacterExpression();AudioControl(StopMusic);DisableDialogueBG();…`（年關過完直接進 181 年 2 月上旬）。
+    -   **對話中途跳時間**（「一夜過去」「翌日」）：夾在轉場四段的 `@1` 槽（`ModifyData(GameDate,179,8,Late)@1`），見 `給AI看的指南/畫面指令轉換規則.md` §2。
+-   **⚠ 日期是作者定的**：跳到哪一年哪一月哪一旬牽動整個養成日曆，AI 轉檔**不得自行加**這條；創作稿裡作者沒寫就不寫，要問就在檔頭留 `＿＿`。
+-   `Description` 寫「時間前進」（§1 詞表；舊檔另有「推進日期」，新寫一律用「時間前進」）。
 ### 4. 擲骰相關指令 (依據 `給AI看的指南/擲骰指令轉換規則.md`)
 
 #### 4.1 系統擲骰 (自動檢定)
