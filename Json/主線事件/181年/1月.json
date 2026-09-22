@@ -2,6 +2,7 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "年關(上)",
     "text": "[panel=6]＊（年關前幾日，府裡上上下下都在除舊佈新，各忙各的一份。小犀拿著一張單子，說今年誰缺什麼都得寫上去，拉著你從演武場開始走。）＊",
     "Sequence": "EnableDialogueBG(TrainingGround);AudioControl(PlayMusic,BGM_16);",
     "Description": "開啟背景、播放音樂",
@@ -21,28 +22,28 @@
   {
     "entryID": 3,
     "actorID": "MC8",
-    "text": "[panel=2]「我一個一個問，誰要什麼就記一筆——問漏了，年關那天可沒地方添。師父，你先說要什麼？」",
+    "text": "[panel=2]「徐師父，年關要到了，我得把每個人缺的都記下來。你有什麼要的嗎？」",
     "Sequence": "SetPortrait(MC8,pic=1);",
-    "zh_TW": "[panel=2]「我一個一個問，誰要什麼就記一筆——問漏了，年關那天可沒地方添。師父，你先說要什麼？」",
-    "zh_CN": "[panel=2]「我一个一个问，谁要什么就记一笔——问漏了，年关那天可没地方添。师父，你先说要什么？」",
+    "zh_TW": "[panel=2]「徐師父，年關要到了，我得把每個人缺的都記下來。你有什麼要的嗎？」",
+    "zh_CN": "[panel=2]「徐师父，年关要到了，我得把每个人缺的都记下来。你有什么要的吗？」",
     "links": [4]
   },
   {
     "entryID": 4,
     "actorID": "MC5",
-    "text": "[panel=1]「[em7]手指在空格上敲了敲[/em7]，長矛二十桿，皮甲十副，刀——有幾把算幾把。」",
+    "text": "[panel=1]「[em7]手指在空格上敲了敲[/em7]，長矛二十桿，皮甲十副，刀有幾把算幾把。」",
     "Sequence": "SetPortrait(MC5,pic=1);",
-    "zh_TW": "[panel=1]「[em7]手指在空格上敲了敲[/em7]，長矛二十桿，皮甲十副，刀——有幾把算幾把。」",
-    "zh_CN": "[panel=1]「[em7]手指在空格上敲了敲[/em7]，长矛二十杆，皮甲十副，刀——有几把算几把。」",
+    "zh_TW": "[panel=1]「[em7]手指在空格上敲了敲[/em7]，長矛二十桿，皮甲十副，刀有幾把算幾把。」",
+    "zh_CN": "[panel=1]「[em7]手指在空格上敲了敲[/em7]，长矛二十杆，皮甲十副，刀有几把算几把。」",
     "links": [5]
   },
   {
     "entryID": 5,
     "actorID": "MC5",
-    "text": "[panel=1]「架子空了三格，年關前補不上，開春就更補不上。」",
-    "Sequence": "SetPortrait(MC5,pic=1);",
-    "zh_TW": "[panel=1]「架子空了三格，年關前補不上，開春就更補不上。」",
-    "zh_CN": "[panel=1]「架子空了三格，年关前补不上，开春就更补不上。」",
+    "text": "[panel=1]「兵器架上缺的就是這些，得趕在開春前補上。」",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=1]「兵器架上缺的就是這些，得趕在開春前補上。」",
+    "zh_CN": "[panel=1]「兵器架上缺的就是这些，得赶在开春前补上。」",
     "links": [6]
   },
   {
@@ -57,28 +58,28 @@
   {
     "entryID": 7,
     "actorID": "MC5",
-    "text": "[panel=1]「年關過完，開春第一件事就是出門辦差。為師要的年貨，是他們出門的時候手裡有東西。」",
+    "text": "[panel=1]「年關過完，開春第一件事就是出門辦差。我要的年貨，就是他們出門的時候手裡有東西。」",
     "Sequence": "DisableCharacterExpression(2);SetPortrait(MC5,pic=1);",
-    "zh_TW": "[panel=1]「年關過完，開春第一件事就是出門辦差。為師要的年貨，是他們出門的時候手裡有東西。」",
-    "zh_CN": "[panel=1]「年关过完，开春第一件事就是出门办差。为师要的年货，是他们出门的时候手里有东西。」",
+    "zh_TW": "[panel=1]「年關過完，開春第一件事就是出門辦差。我要的年貨，就是他們出門的時候手裡有東西。」",
+    "zh_CN": "[panel=1]「年关过完，开春第一件事就是出门办差。我要的年货，就是他们出门的时候手里有东西。」",
     "links": [8]
   },
   {
     "entryID": 8,
     "actorID": "role2",
-    "text": "[panel=6]＊（小犀在單子上寫了三行，寫完自己看了一遍，把「刀」那一行後面的數目擦掉，改成「有幾把算幾把」。）＊",
+    "text": "[panel=6]＊（小犀在單子上寫了幾行，寫完後自己看了一遍，[em2]然後她把刀的數目擦掉，改成有幾把算幾把[/em2]。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（小犀在單子上寫了三行，寫完自己看了一遍，把「刀」那一行後面的數目擦掉，改成「有幾把算幾把」。）＊",
-    "zh_CN": "[panel=6]＊（小犀在单子上写了三行，写完自己看了一遍，把「刀」那一行后面的数目擦掉，改成「有几把算几把」。）＊",
+    "zh_TW": "[panel=6]＊（小犀在單子上寫了幾行，寫完後自己看了一遍，[em2]然後她把刀的數目擦掉，改成有幾把算幾把[/em2]。）＊",
+    "zh_CN": "[panel=6]＊（小犀在单子上写了几行，写完后自己看了一遍，[em2]然后她把刀的数目擦掉，改成有几把算几把[/em2]。）＊",
     "links": [9]
   },
   {
     "entryID": 9,
     "actorID": "MC8",
-    "text": "[panel=2]「那你呢？你要什麼？」",
+    "text": "[panel=2]「[em7]轉頭問旁邊的子羽[/em7]，那你呢？你要什麼？」",
     "Sequence": "SetPortrait(MC8,pic=1);",
-    "zh_TW": "[panel=2]「那你呢？你要什麼？」",
-    "zh_CN": "[panel=2]「那你呢？你要什么？」",
+    "zh_TW": "[panel=2]「[em7]轉頭問旁邊的子羽[/em7]，那你呢？你要什麼？」",
+    "zh_CN": "[panel=2]「[em7]转头问旁边的子羽[/em7]，那你呢？你要什么？」",
     "links": [10]
   },
   {
@@ -93,10 +94,10 @@
   {
     "entryID": 11,
     "actorID": "MC8",
-    "text": "[panel=2]「那我在單子上寫『磨石一塊』。你這塊都磨凹了。」",
+    "text": "[panel=2]「那我在單子上寫[em2]磨石一塊[/em2]。你看你這塊都磨凹了。」",
     "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Idea);",
-    "zh_TW": "[panel=2]「那我在單子上寫『磨石一塊』。你這塊都磨凹了。」",
-    "zh_CN": "[panel=2]「那我在单子上写『磨石一块』。你这块都磨凹了。」",
+    "zh_TW": "[panel=2]「那我在單子上寫[em2]磨石一塊[/em2]。你看你這塊都磨凹了。」",
+    "zh_CN": "[panel=2]「那我在单子上写[em2]磨石一块[/em2]。你看你这块都磨凹了。」",
     "links": [12]
   },
   {
@@ -106,15 +107,6 @@
     "Sequence": "DisableCharacterExpression(2);SetPortrait(MC3,pic=3);",
     "zh_TW": "[panel=3]「…………」",
     "zh_CN": "[panel=3]「…………」",
-    "links": [13]
-  },
-  {
-    "entryID": 13,
-    "actorID": "MC5",
-    "text": "[panel=1]「磨石也記在為師那一行底下。他不要，架子要。」",
-    "Sequence": "SetPortrait(MC5,pic=1);",
-    "zh_TW": "[panel=1]「磨石也記在為師那一行底下。他不要，架子要。」",
-    "zh_CN": "[panel=1]「磨石也记在为师那一行底下。他不要，架子要。」",
     "links": [14]
   },
   {
@@ -137,65 +129,64 @@
   {
     "entryID": 16,
     "actorID": "role2",
-    "text": "[panel=6]＊（藥房裡一排小布包排在案上，一模一樣，張寧正在包最後幾個。藥味比平日淡，不是治病的那種。）＊",
+    "text": "[panel=6]＊（藥房的案上排著一列小布包，一個挨著一個。張寧背對著門，正在紮最後一個。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（藥房裡一排小布包排在案上，一模一樣，張寧正在包最後幾個。藥味比平日淡，不是治病的那種。）＊",
-    "zh_CN": "[panel=6]＊（药房里一排小布包排在案上，一模一样，张宁正在包最后几个。药味比平日淡，不是治病的那种。）＊",
+    "zh_TW": "[panel=6]＊（藥房的案上排著一列小布包，一個挨著一個。張寧背對著門，正在紮最後一個。）＊",
+    "zh_CN": "[panel=6]＊（药房的案上排着一列小布包，一个挨着一个。张宁背对着门，正在扎最后一个。）＊",
     "links": [17]
   },
   {
     "entryID": 17,
-    "actorID": "MC6",
-    "text": "[panel=1]「別寫我。我這份在這裡——每人一包，年關那晚喝多了，第二天早上喝。」",
-    "Sequence": "SetPortrait(MC6,pic=1);",
-    "zh_TW": "[panel=1]「別寫我。我這份在這裡——每人一包，年關那晚喝多了，第二天早上喝。」",
-    "zh_CN": "[panel=1]「别写我。我这份在这里——每人一包，年关那晚喝多了，第二天早上喝。」",
+    "actorID": "MC8",
+    "text": "[panel=2]「張姑娘，這是給誰的？」",
+    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「張姑娘，這是給誰的？」",
+    "zh_CN": "[panel=2]「张姑娘，这是给谁的？」",
     "links": [18]
   },
   {
     "entryID": 18,
-    "actorID": "MC8",
-    "text": "[panel=2]「張姑娘，妳這是先把大家的宿醉算進去了？」",
-    "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
-    "zh_TW": "[panel=2]「張姑娘，妳這是先把大家的宿醉算進去了？」",
-    "zh_CN": "[panel=2]「张姑娘，你这是先把大家的宿醉算进去了？」",
+    "actorID": "MC6",
+    "text": "[panel=1]「年關喝完，第二天用來解宿醉的。他們那幾個，沒有一個會少喝。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「年關喝完，第二天用來解宿醉的。他們那幾個，沒有一個會少喝。」",
+    "zh_CN": "[panel=1]「年关喝完，第二天用来解宿醉的。他们那几个，没有一个会少喝。」",
     "links": [19]
   },
   {
     "entryID": 19,
-    "actorID": "MC6",
-    "text": "[panel=1]「年禮我不會挑，藥我會配。你們這群人，我看得出來那一晚沒有一個會少喝。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC6,pic=3);ModifyData(FavorabilityExp,MC6,20);",
-    "Description": "張寧好感度提升",
-    "zh_TW": "[panel=1]「年禮我不會挑，藥我會配。你們這群人，我看得出來那一晚沒有一個會少喝。」",
-    "zh_CN": "[panel=1]「年礼我不会挑，药我会配。你们这群人，我看得出来那一晚没有一个会少喝。」",
+    "actorID": "MC8",
+    "text": "[panel=2]「張姑娘，我來記大夥缺的年貨，妳缺什麼？我給妳記上。」",
+    "Sequence": "SetPortrait(MC8,pic=1);",
+    "zh_TW": "[panel=2]「張姑娘，我來記大夥缺的年貨，妳缺什麼？我給妳記上。」",
+    "zh_CN": "[panel=2]「张姑娘，我来记大伙缺的年货，你缺什么？我给你记上。」",
     "links": [20]
   },
   {
     "entryID": 20,
-    "actorID": "MC1",
-    "text": "「張姑娘，妳自己那一包呢？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「張姑娘，妳自己那一包呢？」",
-    "zh_CN": "「张姑娘，你自己那一包呢？」",
+    "actorID": "MC6",
+    "text": "[panel=1]「我不需要。倒是這些，妳幫我記一筆，每人一包，可別漏了。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=1]「我不需要。倒是這些，妳幫我記一筆，每人一包，可別漏了。」",
+    "zh_CN": "[panel=1]「我不需要。倒是这些，你帮我记一笔，每人一包，可别漏了。」",
     "links": [21]
   },
   {
     "entryID": 21,
     "actorID": "MC6",
-    "text": "[panel=1]「我不喝這個，喝多了明日誰給你們熬藥？」",
-    "Sequence": "SetPortrait(MC6,pic=4);",
-    "zh_TW": "[panel=1]「我不喝這個，喝多了明日誰給你們熬藥？」",
-    "zh_CN": "[panel=1]「我不喝这个，喝多了明日谁给你们熬药？」",
+    "text": "[panel=1]「好了好了，我還要處理病人的事情，最近可忙呢。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「好了好了，我還要處理病人的事情，最近可忙呢。」",
+    "zh_CN": "[panel=1]「好了好了，我还要处理病人的事情，最近可忙呢。」",
     "links": [22]
   },
   {
     "entryID": 22,
     "actorID": "role2",
-    "text": "[panel=6]＊（小犀在單子上寫了一行，寫完把單子側過去不讓你看。你只看見「張寧」兩個字底下畫了一道線。）＊",
+    "text": "[panel=6]＊（小犀在單子上寫了一行，寫完把單子側過去不讓你看。你只看見張寧名字底下畫了一道線。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（小犀在單子上寫了一行，寫完把單子側過去不讓你看。你只看見「張寧」兩個字底下畫了一道線。）＊",
-    "zh_CN": "[panel=6]＊（小犀在单子上写了一行，写完把单子侧过去不让你看。你只看见「张宁」两个字底下画了一道线。）＊",
+    "zh_TW": "[panel=6]＊（小犀在單子上寫了一行，寫完把單子側過去不讓你看。你只看見張寧名字底下畫了一道線。）＊",
+    "zh_CN": "[panel=6]＊（小犀在单子上写了一行，写完把单子侧过去不让你看。你只看见张宁名字底下画了一道线。）＊",
     "links": [23]
   },
   {
@@ -218,10 +209,10 @@
   {
     "entryID": 25,
     "actorID": "MC2",
-    "text": "[panel=1]「小犀！酒不許記——那是老子自己掏的錢，你那單子上一筆都別寫。」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Anger);",
-    "zh_TW": "[panel=1]「小犀！酒不許記——那是老子自己掏的錢，你那單子上一筆都別寫。」",
-    "zh_CN": "[panel=1]「小犀！酒不许记——那是老子自己掏的钱，你那单子上一笔都别写。」",
+    "text": "[panel=1]「小犀！酒不許記，那是我自己掏的錢，你可別在單子上亂寫。」",
+    "Sequence": "SetPortrait(MC2,pic=3);EnableCharacterExpression(1,MC2,Idea);",
+    "zh_TW": "[panel=1]「小犀！酒不許記，那是我自己掏的錢，你可別在單子上亂寫。」",
+    "zh_CN": "[panel=1]「小犀！酒不许记，那是我自己掏的钱，你可别在单子上乱写。」",
     "links": [26]
   },
   {
@@ -245,28 +236,28 @@
   {
     "entryID": 28,
     "actorID": "role2",
-    "text": "[panel=6]＊（他把兩罈酒往階上一放，罈子碰罈子，響了一聲。小犀在單子上寫了「酒」，後面沒有寫數目。）＊",
+    "text": "[panel=6]＊（他把兩罈酒往階上一放，罈子碰罈子，響了一聲。小犀低頭寫了一筆，寫完後抬頭數了數階上的罈子，數到一半就不數了。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（他把兩罈酒往階上一放，罈子碰罈子，響了一聲。小犀在單子上寫了「酒」，後面沒有寫數目。）＊",
-    "zh_CN": "[panel=6]＊（他把两坛酒往阶上一放，坛子碰坛子，响了一声。小犀在单子上写了「酒」，后面没有写数目。）＊",
+    "zh_TW": "[panel=6]＊（他把兩罈酒往階上一放，罈子碰罈子，響了一聲。小犀低頭寫了一筆，寫完後抬頭數了數階上的罈子，數到一半就不數了。）＊",
+    "zh_CN": "[panel=6]＊（他把两坛酒往阶上一放，坛子碰坛子，响了一声。小犀低头写了一笔，写完后抬头数了数阶上的坛子，数到一半就不数了。）＊",
     "links": [29]
   },
   {
     "entryID": 29,
     "actorID": "role2",
-    "text": "[panel=6]＊（酒罈旁邊的廊下坐著郭嘉，一卷書攤在膝上沒有翻，手邊的酒是冷的——呂信搬進來的那些他一罈也沒碰。小犀走過去，把單子舉到他面前。）＊",
+    "text": "[panel=6]＊（酒罈旁邊的廊下坐著郭嘉，一卷書攤在膝上沒有翻，手邊的酒是冷的。呂信搬進來的那些，他一罈也沒碰。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（酒罈旁邊的廊下坐著郭嘉，一卷書攤在膝上沒有翻，手邊的酒是冷的——呂信搬進來的那些他一罈也沒碰。小犀走過去，把單子舉到他面前。）＊",
-    "zh_CN": "[panel=6]＊（酒坛旁边的廊下坐着郭嘉，一卷书摊在膝上没有翻，手边的酒是冷的——吕信搬进来的那些他一坛也没碰。小犀走过去，把单子举到他面前。）＊",
+    "zh_TW": "[panel=6]＊（酒罈旁邊的廊下坐著郭嘉，一卷書攤在膝上沒有翻，手邊的酒是冷的。呂信搬進來的那些，他一罈也沒碰。）＊",
+    "zh_CN": "[panel=6]＊（酒坛旁边的廊下坐着郭嘉，一卷书摊在膝上没有翻，手边的酒是冷的。吕信搬进来的那些，他一坛也没碰。）＊",
     "links": [30]
   },
   {
     "entryID": 30,
     "actorID": "MC8",
-    "text": "[panel=2]「你的年貨呢？每個人都要寫。」",
+    "text": "[panel=2]「[em7]走過去把單子舉到他面前[/em7]，你的年貨呢？每個人都要寫。」",
     "Sequence": "SetPortrait(MC8,pic=1);",
-    "zh_TW": "[panel=2]「你的年貨呢？每個人都要寫。」",
-    "zh_CN": "[panel=2]「你的年货呢？每个人都要写。」",
+    "zh_TW": "[panel=2]「[em7]走過去把單子舉到他面前[/em7]，你的年貨呢？每個人都要寫。」",
+    "zh_CN": "[panel=2]「[em7]走过去把单子举到他面前[/em7]，你的年货呢？每个人都要写。」",
     "links": [31]
   },
   {
@@ -290,10 +281,10 @@
   {
     "entryID": 33,
     "actorID": "MC7",
-    "text": "[panel=1]「……溫的也行。」",
-    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC7,pic=1);",
-    "zh_TW": "[panel=1]「……溫的也行。」",
-    "zh_CN": "[panel=1]「……温的也行。」",
+    "text": "[panel=1]「……溫的可以嗎。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC7,pic=3);",
+    "zh_TW": "[panel=1]「……溫的可以嗎。」",
+    "zh_CN": "[panel=1]「……温的可以吗。」",
     "links": [34]
   },
   {
@@ -307,19 +298,19 @@
   {
     "entryID": 35,
     "actorID": "role2",
-    "text": "[panel=6]＊（藏書庫裡賈詡正把一本帳冊合上、封了泥——年關前府裡的帳到這裡就不再動了。案角另外堆著幾卷斷簡，繩子鬆著，看樣子是今日才翻過。他頭也沒抬，先開了口。）＊",
+    "text": "[panel=6]＊（藏書庫裡賈詡正把一本帳冊合上、封了泥。年關前府裡的帳，到這裡就不再動了。案角另外堆著幾卷斷簡，繩子鬆著，看樣子是今日才翻過。他頭也沒抬，先開了口。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（藏書庫裡賈詡正把一本帳冊合上、封了泥——年關前府裡的帳到這裡就不再動了。案角另外堆著幾卷斷簡，繩子鬆著，看樣子是今日才翻過。他頭也沒抬，先開了口。）＊",
-    "zh_CN": "[panel=6]＊（藏书库里贾诩正把一本帐册合上、封了泥——年关前府里的帐到这里就不再动了。案角另外堆着几卷断简，绳子松着，看样子是今日才翻过。他头也没抬，先开了口。）＊",
+    "zh_TW": "[panel=6]＊（藏書庫裡賈詡正把一本帳冊合上、封了泥。年關前府裡的帳，到這裡就不再動了。案角另外堆著幾卷斷簡，繩子鬆著，看樣子是今日才翻過。他頭也沒抬，先開了口。）＊",
+    "zh_CN": "[panel=6]＊（藏书库里贾诩正把一本帐册合上、封了泥。年关前府里的帐，到这里就不再动了。案角另外堆着几卷断简，绳子松着，看样子是今日才翻过。他头也没抬，先开了口。）＊",
     "links": [36]
   },
   {
     "entryID": 36,
     "actorID": "MC4",
-    "text": "[panel=1]「小犀，酒錢記在呂信名下，燈油記在府裡——不，燈油也記他名下。他要點一整夜，就讓他點。」",
+    "text": "[panel=1]「小犀，酒錢記在呂信名下，燈油記在府裡。不，燈油也記他名下。他要點一整夜，就讓他點。」",
     "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Meditate);",
-    "zh_TW": "[panel=1]「小犀，酒錢記在呂信名下，燈油記在府裡——不，燈油也記他名下。他要點一整夜，就讓他點。」",
-    "zh_CN": "[panel=1]「小犀，酒钱记在吕信名下，灯油记在府里——不，灯油也记他名下。他要点一整夜，就让他点。」",
+    "zh_TW": "[panel=1]「小犀，酒錢記在呂信名下，燈油記在府裡。不，燈油也記他名下。他要點一整夜，就讓他點。」",
+    "zh_CN": "[panel=1]「小犀，酒钱记在吕信名下，灯油记在府里。不，灯油也记他名下。他要点一整夜，就让他点。」",
     "links": [37]
   },
   {
@@ -334,10 +325,10 @@
   {
     "entryID": 38,
     "actorID": "MC4",
-    "text": "[panel=1]「[em7]往案角那幾卷斷簡一指[/em7]，錢——不是府裡的錢，是賈某自己能動的錢。」",
+    "text": "[panel=1]「[em7]往案角那幾卷斷簡一指[/em7]，錢，不是府裡的錢，是賈某自己能動的錢。」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_TW": "[panel=1]「[em7]往案角那幾卷斷簡一指[/em7]，錢——不是府裡的錢，是賈某自己能動的錢。」",
-    "zh_CN": "[panel=1]「[em7]往案角那几卷断简一指[/em7]，钱——不是府里的钱，是贾某自己能动的钱。」",
+    "zh_TW": "[panel=1]「[em7]往案角那幾卷斷簡一指[/em7]，錢，不是府裡的錢，是賈某自己能動的錢。」",
+    "zh_CN": "[panel=1]「[em7]往案角那几卷断简一指[/em7]，钱，不是府里的钱，是贾某自己能动的钱。」",
     "links": [39]
   },
   {
@@ -361,19 +352,19 @@
   {
     "entryID": 41,
     "actorID": "MC4",
-    "text": "[panel=1]「有多少要多少。妳先寫個『錢』字，數目賈某明年再填。」",
+    "text": "[panel=1]「有多少要多少。妳先寫個[em2]錢[/em2]字，數目賈某明年再填。」",
     "Sequence": "SetPortrait(MC4,pic=3);EnableCharacterExpression(1,MC4,Meditate);",
-    "zh_TW": "[panel=1]「有多少要多少。妳先寫個『錢』字，數目賈某明年再填。」",
-    "zh_CN": "[panel=1]「有多少要多少。你先写个『钱』字，数目贾某明年再填。」",
+    "zh_TW": "[panel=1]「有多少要多少。妳先寫個[em2]錢[/em2]字，數目賈某明年再填。」",
+    "zh_CN": "[panel=1]「有多少要多少。你先写个[em2]钱[/em2]字，数目贾某明年再填。」",
     "links": [42]
   },
   {
     "entryID": 42,
     "actorID": "role2",
-    "text": "[panel=6]＊（小犀在單子上寫了「賈先生」，後面寫了一個「錢」字，字後頭留了很長一段空白。）＊",
+    "text": "[panel=6]＊（小犀在單子上寫了賈先生三個字，後面只添了一個[em2]錢[/em2]，再後頭留了很長一段空白。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_TW": "[panel=6]＊（小犀在單子上寫了「賈先生」，後面寫了一個「錢」字，字後頭留了很長一段空白。）＊",
-    "zh_CN": "[panel=6]＊（小犀在单子上写了「贾先生」，后面写了一个「钱」字，字后头留了很长一段空白。）＊",
+    "zh_TW": "[panel=6]＊（小犀在單子上寫了賈先生三個字，後面只添了一個[em2]錢[/em2]，再後頭留了很長一段空白。）＊",
+    "zh_CN": "[panel=6]＊（小犀在单子上写了贾先生三个字，后面只添了一个[em2]钱[/em2]，再后头留了很长一段空白。）＊",
     "links": [43]
   },
   {
@@ -399,7 +390,7 @@
     "text": "[panel=2]「娜娜姊姊，馬呢？去年這時候，這一排欄子站得滿滿的。」",
     "Sequence": "SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
     "zh_TW": "[panel=2]「娜娜姊姊，馬呢？去年這時候，這一排欄子站得滿滿的。」",
-    "zh_CN": "[panel=2]「娜娜姐姐，马呢？去年这时候，这一排栏子站得满满的。」",
+    "zh_CN": "[panel=2]「娜娜姊姊，马呢？去年这时候，这一排栏子站得满满的。」",
     "links": [46]
   },
   {
@@ -414,10 +405,10 @@
   {
     "entryID": 47,
     "actorID": "MC22",
-    "text": "[panel=1]「詔書一到，有錢有勢的先把馬全買了囤起來，等官府來收，再開價——本姑娘聽說，一匹開到二百萬錢。」",
+    "text": "[panel=1]「詔書一到，有錢有勢的先把馬全買了囤起來，等官府來收，再開價。本姑娘聽說，一匹開到二百萬錢。」",
     "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_TW": "[panel=1]「詔書一到，有錢有勢的先把馬全買了囤起來，等官府來收，再開價——本姑娘聽說，一匹開到二百萬錢。」",
-    "zh_CN": "[panel=1]「诏书一到，有钱有势的先把马全买了囤起来，等官府来收，再开价——本姑娘听说，一匹开到二百万钱。」",
+    "zh_TW": "[panel=1]「詔書一到，有錢有勢的先把馬全買了囤起來，等官府來收，再開價。本姑娘聽說，一匹開到二百萬錢。」",
+    "zh_CN": "[panel=1]「诏书一到，有钱有势的先把马全买了囤起来，等官府来收，再开价。本姑娘听说，一匹开到二百万钱。」",
     "links": [48]
   },
   {
@@ -432,10 +423,10 @@
   {
     "entryID": 49,
     "actorID": "MC22",
-    "text": "[panel=1]「六千是馬的價錢，二百萬是官府的價錢。馬還是那匹馬。」",
+    "text": "[panel=1]「馬還是那匹馬，只是中間多轉了一手。六千買進去，二百萬賣出來。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC22,pic=1);",
-    "zh_TW": "[panel=1]「六千是馬的價錢，二百萬是官府的價錢。馬還是那匹馬。」",
-    "zh_CN": "[panel=1]「六千是马的价钱，二百万是官府的价钱。马还是那匹马。」",
+    "zh_TW": "[panel=1]「馬還是那匹馬，只是中間多轉了一手。六千買進去，二百萬賣出來。」",
+    "zh_CN": "[panel=1]「马还是那匹马，只是中间多转了一手。六千买进去，二百万卖出来。」",
     "links": [50]
   },
   {
@@ -450,56 +441,55 @@
   {
     "entryID": 51,
     "actorID": "MC8",
-    "text": "[panel=2]「前年我就是在這兒說的，草原亂上三年，三年過了再買才便宜。」",
+    "text": "[panel=2]「草原亂上三年，三年過了再買才便宜。這是我前年寫的。」",
     "Sequence": "SetPortrait(MC8,pic=3);",
-    "zh_TW": "[panel=2]「前年我就是在這兒說的，草原亂上三年，三年過了再買才便宜。」",
-    "zh_CN": "[panel=2]「前年我就是在这儿说的，草原乱上三年，三年过了再买才便宜。」",
+    "zh_TW": "[panel=2]「草原亂上三年，三年過了再買才便宜。這是我前年寫的。」",
+    "zh_CN": "[panel=2]「草原乱上三年，三年过了再买才便宜。这是我前年写的。」",
     "links": [52]
   },
   {
     "entryID": 52,
     "actorID": "MC22",
-    "text": "[panel=1]「妳那筆算得對，小犀。塞外確實還在亂——只是這回把價錢推上去的，不在塞外。」",
-    "Sequence": "SetPortrait(MC22,pic=1);EnableCharacterExpression(1,MC22,Meditate);ModifyData(FavorabilityExp,MC22,20);",
-    "Description": "娜娜好感度提升",
-    "zh_TW": "[panel=1]「妳那筆算得對，小犀。塞外確實還在亂——只是這回把價錢推上去的，不在塞外。」",
-    "zh_CN": "[panel=1]「你那笔算得对，小犀。塞外确实还在乱——只是这回把价钱推上去的，不在塞外。」",
+    "text": "[panel=1]「妳沒說錯，小犀。塞外確實還在亂，只是這回把價錢推上去的，不在塞外。」",
+    "Sequence": "SetPortrait(MC22,pic=1);EnableCharacterExpression(1,MC22,Meditate);",
+    "zh_TW": "[panel=1]「妳沒說錯，小犀。塞外確實還在亂，只是這回把價錢推上去的，不在塞外。」",
+    "zh_CN": "[panel=1]「你没说错，小犀。塞外确实还在乱，只是这回把价钱推上去的，不在塞外。」",
     "links": [53]
   },
   {
     "entryID": 53,
     "actorID": "MC8",
-    "text": "[panel=2]「那我往後算帳，得先算洛陽要什麼。」",
+    "text": "[panel=2]「那往後光看草原就不夠了，還得看洛陽。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=1);",
-    "zh_TW": "[panel=2]「那我往後算帳，得先算洛陽要什麼。」",
-    "zh_CN": "[panel=2]「那我往后算帐，得先算洛阳要什么。」",
+    "zh_TW": "[panel=2]「那往後光看草原就不夠了，還得看洛陽。」",
+    "zh_CN": "[panel=2]「那往后光看草原就不够了，还得看洛阳。」",
     "links": [54]
   },
   {
     "entryID": 54,
     "actorID": "MC1",
-    "text": "「洛陽要什麼，誰算得到？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「洛陽要什麼，誰算得到？」",
-    "zh_CN": "「洛阳要什么，谁算得到？」",
+    "text": "「洛陽要什麼，誰料得到？」",
+    "Sequence": "SetPortrait(MC1,pic=6);",
+    "zh_TW": "「洛陽要什麼，誰料得到？」",
+    "zh_CN": "「洛阳要什么，谁料得到？」",
     "links": [55]
   },
   {
     "entryID": 55,
     "actorID": "MC8",
-    "text": "[panel=2]「[em7]把單子收進袖子裡[/em7]，算不到，就當它什麼都要。這樣往後就不會錯了。」",
+    "text": "[panel=2]「[em7]把單子收進袖子裡[/em7]，料不到，就當它什麼都要。這樣往後就不會錯了。」",
     "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Idea);",
-    "zh_TW": "[panel=2]「[em7]把單子收進袖子裡[/em7]，算不到，就當它什麼都要。這樣往後就不會錯了。」",
-    "zh_CN": "[panel=2]「[em7]把单子收进袖子里[/em7]，算不到，就当它什么都要。这样往后就不会错了。」",
+    "zh_TW": "[panel=2]「[em7]把單子收進袖子裡[/em7]，料不到，就當它什麼都要。這樣往後就不會錯了。」",
+    "zh_CN": "[panel=2]「[em7]把单子收进袖子里[/em7]，料不到，就当它什么都要。这样往后就不会错了。」",
     "links": [56]
   },
   {
     "entryID": 56,
     "actorID": "MC22",
-    "text": "[panel=1]「大俠，你這表妹往後不得了。走吧，本姑娘只要一樣——酒，府裡那位已經替我備好了。」",
+    "text": "[panel=1]「大俠，你這表妹往後不得了。走吧，本姑娘什麼都不缺，[em2]過節只要人越多，越吵越好[/em2]。」",
     "Sequence": "DisableCharacterExpression(2);SetPortrait(MC22,pic=5);",
-    "zh_TW": "[panel=1]「大俠，你這表妹往後不得了。走吧，本姑娘只要一樣——酒，府裡那位已經替我備好了。」",
-    "zh_CN": "[panel=1]「大侠，你这表妹往后不得了。走吧，本姑娘只要一样——酒，府里那位已经替我备好了。」",
+    "zh_TW": "[panel=1]「大俠，你這表妹往後不得了。走吧，本姑娘什麼都不缺，[em2]過節只要人越多，越吵越好[/em2]。」",
+    "zh_CN": "[panel=1]「大侠，你这表妹往后不得了。走吧，本姑娘什么都不缺，[em2]过节只要人越多，越吵越好[/em2]。」",
     "links": [57]
   },
   {
@@ -554,7 +544,7 @@
     "entryID": 62,
     "actorID": "MC8",
     "text": "[panel=2]「哪有這種書……真有，也輪不到你吧。我去問蔡先生，看他怎麼說。」",
-    "Sequence": "SetPortrait(MC8,pic=5);ModifyData(Valuable,Player,TheBookOfSongs,1);",
+    "Sequence": "SetPortrait(MC8,pic=6);ModifyData(Valuable,Player,TheBookOfSongs,1);",
     "Description": "獲得詩經",
     "zh_TW": "[panel=2]「哪有這種書……真有，也輪不到你吧。我去問蔡先生，看他怎麼說。」",
     "zh_CN": "[panel=2]「哪有这种书……真有，也轮不到你吧。我去问蔡先生，看他怎么说。」",
@@ -573,7 +563,7 @@
     "entryID": 64,
     "actorID": "MC8",
     "text": "[panel=2]「表哥，你這一串條件，鐵匠聽了要收你三份工錢。……罷了，我去問蒲元師傅。」",
-    "Sequence": "SetPortrait(MC8,pic=5);ModifyData(Valuable,Player,SilverSerpentRing,1);",
+    "Sequence": "SetPortrait(MC8,pic=6);ModifyData(Valuable,Player,SilverSerpentRing,1);",
     "Description": "獲得銀蛇戒",
     "zh_TW": "[panel=2]「表哥，你這一串條件，鐵匠聽了要收你三份工錢。……罷了，我去問蒲元師傅。」",
     "zh_CN": "[panel=2]「表哥，你这一串条件，铁匠听了要收你三份工钱。……罢了，我去问蒲元师傅。」",
@@ -583,7 +573,7 @@
     "entryID": 65,
     "actorID": "MC1",
     "text": "「我的劃掉。剩下的錢，每人再添一樣，記在我頭上。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=5);",
     "zh_TW": "「我的劃掉。剩下的錢，每人再添一樣，記在我頭上。」",
     "zh_CN": "「我的划掉。剩下的钱，每人再添一样，记在我头上。」",
     "links": [66]
@@ -592,7 +582,7 @@
     "entryID": 66,
     "actorID": "MC8",
     "text": "[panel=2]「記在你頭上？表哥，你身上有幾個錢我最清楚。……罷了，寫。」",
-    "Sequence": "SetPortrait(MC8,pic=5);ModifyData(FavorabilityExp,MC2,20);ModifyData(FavorabilityExp,MC3,20);ModifyData(FavorabilityExp,MC4,20);ModifyData(FavorabilityExp,MC5,20);ModifyData(FavorabilityExp,MC6,20);ModifyData(FavorabilityExp,MC7,20);ModifyData(FavorabilityExp,MC8,20);ModifyData(FavorabilityExp,MC22,20);",
+    "Sequence": "SetPortrait(MC8,pic=6);ModifyData(FavorabilityExp,MC2,20);ModifyData(FavorabilityExp,MC3,20);ModifyData(FavorabilityExp,MC4,20);ModifyData(FavorabilityExp,MC5,20);ModifyData(FavorabilityExp,MC6,20);ModifyData(FavorabilityExp,MC7,20);ModifyData(FavorabilityExp,MC8,20);ModifyData(FavorabilityExp,MC22,20);",
     "Description": "全員好感度提升",
     "zh_TW": "[panel=2]「記在你頭上？表哥，你身上有幾個錢我最清楚。……罷了，寫。」",
     "zh_CN": "[panel=2]「记在你头上？表哥，你身上有几个钱我最清楚。……罢了，写。」",
@@ -629,28 +619,28 @@
     "entryID": 70,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableAllCharacterExpression();AudioControl(StopMusic);DisableDialogueBG();Continue();",
-    "Description": "關閉音樂、清除立繪、關閉背景",
-    "links": []
+    "Sequence": "ModifyData(FavorabilityExp,MC6,20);ModifyData(FavorabilityExp,MC22,20);DisableAllCharacterExpression();AudioControl(StopMusic);DisableDialogueBG();Continue();",
+    "Description": "張寧好感度提升、娜娜好感度提升",
+    "links": [144]
   },
   {
     "entryID": 71,
     "actorID": "role2",
-    "text": "[panel=6]＊（正堂裡的案全拼到了一起，拼成一張長的。燈一盞不少，酒一罈一罈溫著，人也到齊了——只有小犀還在廊下撥算籌，一年的帳要在今晚撥完，撥完她才肯過來。）＊",
-    "Sequence": "EnableDialogueBG(HallOfHeroes);AudioControl(PlayMusic,BGM_48);AudioControl(PlaySFX,Others_Talking);",
+    "title": "年關(下)",
+    "text": "[panel=6]＊（正堂裡的案全拼到了一起，拼成一張長的。燈一盞不少，酒一罈一罈溫著，人也到齊了，只有小犀還在廊下撥算籌，一年的帳要在今晚撥完，撥完她才肯過來。）＊",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);\nAudioControl(PlayMusic,BGM_48);\nAudioControl(PlaySFX,Others_Talking);",
     "Description": "開啟背景、播放音樂",
-    "zh_TW": "[panel=6]＊（正堂裡的案全拼到了一起，拼成一張長的。燈一盞不少，酒一罈一罈溫著，人也到齊了——只有小犀還在廊下撥算籌，一年的帳要在今晚撥完，撥完她才肯過來。）＊",
-    "zh_CN": "[panel=6]＊（正堂里的案全拼到了一起，拼成一张长的。灯一盏不少，酒一坛一坛温着，人也到齐了——只有小犀还在廊下拨算筹，一年的帐要在今晚拨完，拨完她才肯过来。）＊",
-    "links": [72]
+    "zh_TW": "[panel=6]＊（正堂裡的案全拼到了一起，拼成一張長的。燈一盞不少，酒一罈一罈溫著，人也到齊了，只有小犀還在廊下撥算籌，一年的帳要在今晚撥完，撥完她才肯過來。）＊",
+    "zh_CN": "[panel=6]＊（正堂里的案全拼到了一起，拼成一张长的。灯一盏不少，酒一坛一坛温着，人也到齐了，只有小犀还在廊下拨算筹，一年的帐要在今晚拨完，拨完她才肯过来。）＊",
+    "links": [145]
   },
   {
     "entryID": 72,
     "actorID": "MC2",
-    "text": "[panel=1]「都坐下！老子今晚立個規矩——一人說一樁今年聽來的奇事，最奇的，這罈好酒歸他；說不出的罰三碗。」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Anger_3);AudioControl(StopMusic);AudioControl(PlayMusic,BGM_19);",
-    "Description": "切換音樂",
-    "zh_TW": "[panel=1]「都坐下！老子今晚立個規矩——一人說一樁今年聽來的奇事，最奇的，這罈好酒歸他；說不出的罰三碗。」",
-    "zh_CN": "[panel=1]「都坐下！老子今晚立个规矩——一人说一桩今年听来的奇事，最奇的，这坛好酒归他；说不出的罚三碗。」",
+    "text": "[panel=1]「都坐下！老子今晚立個規矩，一人說一樁今年聽來的奇事，最奇的，這罈好酒歸他；說不出的罰三碗。」",
+    "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Anger_3);",
+    "zh_TW": "[panel=1]「都坐下！老子今晚立個規矩，一人說一樁今年聽來的奇事，最奇的，這罈好酒歸他；說不出的罰三碗。」",
+    "zh_CN": "[panel=1]「都坐下！老子今晚立个规矩，一人说一桩今年听来的奇事，最奇的，这坛好酒归他；说不出的罚三碗。」",
     "links": [73]
   },
   {
@@ -665,10 +655,10 @@
   {
     "entryID": 74,
     "actorID": "MC2",
-    "text": "[panel=1]「老子先問你們一句——南陽城裡殺豬的，一年能賺幾個錢？」",
+    "text": "[panel=1]「老子先問你們一句，南陽城裡殺豬的，一年能賺幾個錢？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「老子先問你們一句——南陽城裡殺豬的，一年能賺幾個錢？」",
-    "zh_CN": "[panel=1]「老子先问你们一句——南阳城里杀猪的，一年能赚几个钱？」",
+    "zh_TW": "[panel=1]「老子先問你們一句，南陽城裡殺豬的，一年能賺幾個錢？」",
+    "zh_CN": "[panel=1]「老子先问你们一句，南阳城里杀猪的，一年能赚几个钱？」",
     "links": [75]
   },
   {
@@ -683,10 +673,10 @@
   {
     "entryID": 76,
     "actorID": "MC2",
-    "text": "[panel=1]「老子也這麼想。這樁事老子聽了三回才肯信——頭一回在酒肆，我當那人喝多了；第二回是販馬的講的。」",
+    "text": "[panel=1]「老子也這麼想。這樁事老子聽了三回才肯信。頭一回在酒肆，我當那人喝多了；第二回是販馬的講的。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「老子也這麼想。這樁事老子聽了三回才肯信——頭一回在酒肆，我當那人喝多了；第二回是販馬的講的。」",
-    "zh_CN": "[panel=1]「老子也这么想。这桩事老子听了三回才肯信——头一回在酒肆，我当那人喝多了；第二回是贩马的讲的。」",
+    "zh_TW": "[panel=1]「老子也這麼想。這樁事老子聽了三回才肯信。頭一回在酒肆，我當那人喝多了；第二回是販馬的講的。」",
+    "zh_CN": "[panel=1]「老子也这么想。这桩事老子听了三回才肯信。头一回在酒肆，我当那人喝多了；第二回是贩马的讲的。」",
     "links": [77]
   },
   {
@@ -728,10 +718,10 @@
   {
     "entryID": 81,
     "actorID": "MC2",
-    "text": "[panel=1]「今年臘月，就是那樣一雙手的閨女，坐上了皇后的位子。南陽人，屠家的。」",
+    "text": "[panel=1]「今年臘月，南陽一個屠戶的閨女，坐上了皇后的位子。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「今年臘月，就是那樣一雙手的閨女，坐上了皇后的位子。南陽人，屠家的。」",
-    "zh_CN": "[panel=1]「今年腊月，就是那样一双手的闺女，坐上了皇后的位子。南阳人，屠家的。」",
+    "zh_TW": "[panel=1]「今年臘月，南陽一個屠戶的閨女，坐上了皇后的位子。」",
+    "zh_CN": "[panel=1]「今年腊月，南阳一个屠户的闺女，坐上了皇后的位子。」",
     "links": [82]
   },
   {
@@ -747,8 +737,7 @@
     "entryID": 83,
     "actorID": "MC2",
     "text": "[panel=1]「殺豬的閨女都能當皇后！咱們五原邊地出來的，憑什麼不能在洛陽掛一塊匾？來，這一碗老子先乾！」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Anger_3);ModifyData(FavorabilityExp,MC2,20);",
-    "Description": "呂信好感度提升",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Anger_3);",
     "zh_TW": "[panel=1]「殺豬的閨女都能當皇后！咱們五原邊地出來的，憑什麼不能在洛陽掛一塊匾？來，這一碗老子先乾！」",
     "zh_CN": "[panel=1]「杀猪的闺女都能当皇后！咱们五原边地出来的，凭什么不能在洛阳挂一块匾？来，这一碗老子先干！」",
     "links": [84]
@@ -783,19 +772,19 @@
   {
     "entryID": 87,
     "actorID": "role2",
-    "text": "[panel=6]＊（沒有人接這句。酒傳了一輪，傳到張寧面前，她沒有端。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（沒有人接這句。酒傳了一輪，傳到張寧面前，她沒有端。）＊",
-    "zh_CN": "[panel=6]＊（没有人接这句。酒传了一轮，传到张宁面前，她没有端。）＊",
+    "text": "[panel=6]＊（堂裡跟著鬧起來，有人叫好，有人只是笑。酒傳了一輪，傳到張寧面前，她面容平靜待眾人安靜下來後娓娓道來。）＊",
+    "Sequence": ";OpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(3, close);",
+    "zh_TW": "[panel=6]＊（堂裡跟著鬧起來，有人叫好，有人只是笑。酒傳了一輪，傳到張寧面前，她面容平靜待眾人安靜下來後娓娓道來。）＊",
+    "zh_CN": "[panel=6]＊（堂里跟着闹起来，有人叫好，有人只是笑。酒传了一轮，传到张宁面前，她面容平静待众人安静下来后娓娓道来。）＊",
     "links": [88]
   },
   {
     "entryID": 88,
     "actorID": "MC6",
-    "text": "[panel=3]「上月有個從洛陽回來的藥商，在我這兒抓藥。抓完了不走，坐在那兒笑。」",
+    "text": "[panel=1]「上月有個從洛陽回來的藥商，在我這兒抓藥。抓完了不走，坐在那兒笑。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
-    "zh_TW": "[panel=3]「上月有個從洛陽回來的藥商，在我這兒抓藥。抓完了不走，坐在那兒笑。」",
-    "zh_CN": "[panel=3]「上月有个从洛阳回来的药商，在我这儿抓药。抓完了不走，坐在那儿笑。」",
+    "zh_TW": "[panel=1]「上月有個從洛陽回來的藥商，在我這兒抓藥。抓完了不走，坐在那兒笑。」",
+    "zh_CN": "[panel=1]「上月有个从洛阳回来的药商，在我这儿抓药。抓完了不走，坐在那儿笑。」",
     "links": [89]
   },
   {
@@ -810,80 +799,80 @@
   {
     "entryID": 90,
     "actorID": "MC6",
-    "text": "[panel=3]「他說洛陽宮裡新開了一處市集。宮女一人守一攤，賣布的、賣脂粉的、賣酒食的，喊價還價，吆喝得跟街上一樣。」",
+    "text": "[panel=1]「他說洛陽宮裡新開了一處市集。宮女一人守一攤，賣布的、賣脂粉的、賣酒食的，喊價還價，吆喝得跟街上一樣。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
-    "zh_TW": "[panel=3]「他說洛陽宮裡新開了一處市集。宮女一人守一攤，賣布的、賣脂粉的、賣酒食的，喊價還價，吆喝得跟街上一樣。」",
-    "zh_CN": "[panel=3]「他说洛阳宫里新开了一处市集。宫女一人守一摊，卖布的、卖脂粉的、卖酒食的，喊价还价，吆喝得跟街上一样。」",
+    "zh_TW": "[panel=1]「他說洛陽宮裡新開了一處市集。宮女一人守一攤，賣布的、賣脂粉的、賣酒食的，喊價還價，吆喝得跟街上一樣。」",
+    "zh_CN": "[panel=1]「他说洛阳宫里新开了一处市集。宫女一人守一摊，卖布的、卖脂粉的、卖酒食的，喊价还价，吆喝得跟街上一样。」",
     "links": [91]
   },
   {
     "entryID": 91,
     "actorID": "MC2",
-    "text": "[panel=1]「宮裡開市集？誰去逛啊？」",
+    "text": "[panel=2]「宮裡開市集？誰去逛啊？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「宮裡開市集？誰去逛啊？」",
-    "zh_CN": "[panel=1]「宫里开市集？谁去逛啊？」",
+    "zh_TW": "[panel=2]「宮裡開市集？誰去逛啊？」",
+    "zh_CN": "[panel=2]「宫里开市集？谁去逛啊？」",
     "links": [92]
   },
   {
     "entryID": 92,
     "actorID": "MC6",
-    "text": "[panel=3]「有一個人，穿著商人的衣裳，一攤一攤問價，問完了還嫌貴。」",
+    "text": "[panel=1]「有一個人，穿著商人的衣裳，一攤一攤問價，問完了還嫌貴。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
-    "zh_TW": "[panel=3]「有一個人，穿著商人的衣裳，一攤一攤問價，問完了還嫌貴。」",
-    "zh_CN": "[panel=3]「有一个人，穿着商人的衣裳，一摊一摊问价，问完了还嫌贵。」",
+    "zh_TW": "[panel=1]「有一個人，穿著商人的衣裳，一攤一攤問價，問完了還嫌貴。」",
+    "zh_CN": "[panel=1]「有一个人，穿着商人的衣裳，一摊一摊问价，问完了还嫌贵。」",
     "links": [93]
   },
   {
     "entryID": 93,
     "actorID": "MC6",
-    "text": "[panel=3]「[em7]說到這裡停了一下[/em7]，那個人是天子。」",
+    "text": "[panel=1]「[em7]說到這裡停了一下[/em7]，那個人是天子。」",
     "Sequence": "SetPortrait(MC6,pic=3);",
-    "zh_TW": "[panel=3]「[em7]說到這裡停了一下[/em7]，那個人是天子。」",
-    "zh_CN": "[panel=3]「[em7]说到这里停了一下[/em7]，那个人是天子。」",
+    "zh_TW": "[panel=1]「[em7]說到這裡停了一下[/em7]，那個人是天子。」",
+    "zh_CN": "[panel=1]「[em7]说到这里停了一下[/em7]，那个人是天子。」",
     "links": [94]
   },
   {
     "entryID": 94,
     "actorID": "MC6",
-    "text": "[panel=3]「貨是宮裡的，錢也是宮裡的。拿宮裡的錢買宮裡的貨，逛完了擺酒——這叫買賣。」",
+    "text": "[panel=1]「那藥商講到這裡，笑得直拍大腿。他說他活了四十年，頭一回見天子，是隔著一個攤子。」",
     "Sequence": "SetPortrait(MC6,pic=3);",
-    "zh_TW": "[panel=3]「貨是宮裡的，錢也是宮裡的。拿宮裡的錢買宮裡的貨，逛完了擺酒——這叫買賣。」",
-    "zh_CN": "[panel=3]「货是宫里的，钱也是宫里的。拿宫里的钱买宫里的货，逛完了摆酒——这叫买卖。」",
+    "zh_TW": "[panel=1]「那藥商講到這裡，笑得直拍大腿。他說他活了四十年，頭一回見天子，是隔著一個攤子。」",
+    "zh_CN": "[panel=1]「那药商讲到这里，笑得直拍大腿。他说他活了四十年，头一回见天子，是隔着一个摊子。」",
     "links": [95]
   },
   {
     "entryID": 95,
     "actorID": "MC8",
-    "text": "[panel=2]「那不叫買賣，那叫把錢從左邊口袋放進右邊口袋。」",
+    "text": "[panel=2]「賠不了的生意，那根本不叫買賣。那叫把錢從左邊口袋放進右邊口袋。」",
     "Sequence": "SetPortrait(MC8,pic=6);",
-    "zh_TW": "[panel=2]「那不叫買賣，那叫把錢從左邊口袋放進右邊口袋。」",
-    "zh_CN": "[panel=2]「那不叫买卖，那叫把钱从左边口袋放进右边口袋。」",
+    "zh_TW": "[panel=2]「賠不了的生意，那根本不叫買賣。那叫把錢從左邊口袋放進右邊口袋。」",
+    "zh_CN": "[panel=2]「赔不了的生意，那根本不叫买卖。那叫把钱从左边口袋放进右边口袋。」",
     "links": [96]
   },
   {
     "entryID": 96,
     "actorID": "role2",
-    "text": "[panel=6]＊（堂裡嘖嘖了一片，有人搖頭，有人笑。娜娜把碗往案上一擱。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（堂裡嘖嘖了一片，有人搖頭，有人笑。娜娜把碗往案上一擱。）＊",
-    "zh_CN": "[panel=6]＊（堂里啧啧了一片，有人摇头，有人笑。娜娜把碗往案上一搁。）＊",
+    "text": "[panel=6]＊（張寧自己先忍不住笑了出來。堂裡嘖嘖聲此起彼落，呂信一口酒差點噴出來，郭嘉難得坐直了身子，連徐榮都等她講完才把碗端起來。）＊",
+    "Sequence": ";OpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(3, close);",
+    "zh_TW": "[panel=6]＊（張寧自己先忍不住笑了出來。堂裡嘖嘖聲此起彼落，呂信一口酒差點噴出來，郭嘉難得坐直了身子，連徐榮都等她講完才把碗端起來。）＊",
+    "zh_CN": "[panel=6]＊（张宁自己先忍不住笑了出来。堂里啧啧声此起彼落，吕信一口酒差点喷出来，郭嘉难得坐直了身子，连徐荣都等她讲完才把碗端起来。）＊",
     "links": [97]
   },
   {
     "entryID": 97,
     "actorID": "MC22",
-    "text": "[panel=3]「張姑娘說的那個是穿商人衣裳的——本姑娘這兒也有穿衣裳的，穿的還是官服。」",
-    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(3,MC22,Proud);",
-    "zh_TW": "[panel=3]「張姑娘說的那個是穿商人衣裳的——本姑娘這兒也有穿衣裳的，穿的還是官服。」",
-    "zh_CN": "[panel=3]「张姑娘说的那个是穿商人衣裳的——本姑娘这儿也有穿衣裳的，穿的还是官服。」",
+    "text": "[panel=1]「[em7]突然把碗往案上一擱[/em7]，張姑娘說的那個是穿商人衣裳的。本姑娘這兒也有穿衣裳的，穿的還是官服。」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Proud);",
+    "zh_TW": "[panel=1]「[em7]突然把碗往案上一擱[/em7]，張姑娘說的那個是穿商人衣裳的。本姑娘這兒也有穿衣裳的，穿的還是官服。」",
+    "zh_CN": "[panel=1]「[em7]突然把碗往案上一搁[/em7]，张姑娘说的那个是穿商人衣裳的。本姑娘这儿也有穿衣裳的，穿的还是官服。」",
     "links": [98]
   },
   {
     "entryID": 98,
     "actorID": "MC1",
     "text": "「誰？」",
-    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC1,pic=9);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=9);",
     "zh_TW": "「誰？」",
     "zh_CN": "「谁？」",
     "links": [99]
@@ -891,46 +880,37 @@
   {
     "entryID": 99,
     "actorID": "MC22",
-    "text": "[panel=3]「西園裡那幾位。一日三餐有人伺候，出門還得有人牽著。」",
+    "text": "[panel=1]「這一樁也在宮裡，洛陽人這陣子都在傳。宮裡西邊那個園子，住著幾位，一日三餐有人伺候，出門還得有人牽著。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_TW": "[panel=3]「西園裡那幾位。一日三餐有人伺候，出門還得有人牽著。」",
-    "zh_CN": "[panel=3]「西园里那几位。一日三餐有人伺候，出门还得有人牵着。」",
+    "zh_TW": "[panel=1]「這一樁也在宮裡，洛陽人這陣子都在傳。宮裡西邊那個園子，住著幾位，一日三餐有人伺候，出門還得有人牽著。」",
+    "zh_CN": "[panel=1]「这一桩也在宫里，洛阳人这阵子都在传。宫里西边那个园子，住着几位，一日三餐有人伺候，出门还得有人牵着。」",
     "links": [100]
   },
   {
     "entryID": 100,
     "actorID": "MC2",
-    "text": "[panel=1]「有人牽？當官的還要人牽？」",
+    "text": "[panel=2]「有人牽？當官的還要人牽？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「有人牽？當官的還要人牽？」",
-    "zh_CN": "[panel=1]「有人牵？当官的还要人牵？」",
+    "zh_TW": "[panel=2]「有人牽？當官的還要人牽？」",
+    "zh_CN": "[panel=2]「有人牵？当官的还要人牵？」",
     "links": [101]
   },
   {
     "entryID": 101,
     "actorID": "MC22",
-    "text": "[panel=3]「四條腿的那幾位，不牽走丟了怎麼辦。」",
+    "text": "[panel=1]「四條腿的那幾位，不牽走丟了怎麼辦。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_TW": "[panel=3]「四條腿的那幾位，不牽走丟了怎麼辦。」",
-    "zh_CN": "[panel=3]「四条腿的那几位，不牵走丢了怎么办。」",
-    "links": [102]
-  },
-  {
-    "entryID": 102,
-    "actorID": "role2",
-    "text": "[panel=6]＊（堂裡愣了一拍，才笑開。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（堂裡愣了一拍，才笑開。）＊",
-    "zh_CN": "[panel=6]＊（堂里愣了一拍，才笑开。）＊",
+    "zh_TW": "[panel=1]「四條腿的那幾位，不牽走丟了怎麼辦。」",
+    "zh_CN": "[panel=1]「四条腿的那几位，不牵走丢了怎么办。」",
     "links": [103]
   },
   {
     "entryID": 103,
     "actorID": "MC22",
-    "text": "[panel=3]「這幾條穿戴齊整，走起路來昂首闊步，比守門的還神氣。」",
+    "text": "[panel=1]「這幾條穿戴齊整，走起路來昂首闊步，比守門的還神氣。」",
     "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_TW": "[panel=3]「這幾條穿戴齊整，走起路來昂首闊步，比守門的還神氣。」",
-    "zh_CN": "[panel=3]「这几条穿戴齐整，走起路来昂首阔步，比守门的还神气。」",
+    "zh_TW": "[panel=1]「這幾條穿戴齊整，走起路來昂首闊步，比守門的還神氣。」",
+    "zh_CN": "[panel=1]「这几条穿戴齐整，走起路来昂首阔步，比守门的还神气。」",
     "links": [104]
   },
   {
@@ -945,188 +925,179 @@
   {
     "entryID": 105,
     "actorID": "MC22",
-    "text": "[panel=3]「進賢冠，綬帶——文官那一身，一樣不缺。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_TW": "[panel=3]「進賢冠，綬帶——文官那一身，一樣不缺。」",
-    "zh_CN": "[panel=3]「进贤冠，绶带——文官那一身，一样不缺。」",
+    "text": "[panel=1]「進賢冠，綬帶，文官那一身，一樣不缺。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「進賢冠，綬帶，文官那一身，一樣不缺。」",
+    "zh_CN": "[panel=1]「进贤冠，绶带，文官那一身，一样不缺。」",
     "links": [106]
   },
   {
     "entryID": 106,
     "actorID": "MC22",
-    "text": "[panel=3]「草原上的狗是看羊的，你們漢人的狗是做官的。這一碗本姑娘敬那幾條狗。」",
-    "Sequence": "SetPortrait(MC22,pic=5);",
-    "zh_TW": "[panel=3]「草原上的狗是看羊的，你們漢人的狗是做官的。這一碗本姑娘敬那幾條狗。」",
-    "zh_CN": "[panel=3]「草原上的狗是看羊的，你们汉人的狗是做官的。这一碗本姑娘敬那几条狗。」",
+    "text": "[panel=1]「草原上的狗是看羊的，你們漢人的狗是做官的。這一碗本姑娘敬那幾條狗。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_TW": "[panel=1]「草原上的狗是看羊的，你們漢人的狗是做官的。這一碗本姑娘敬那幾條狗。」",
+    "zh_CN": "[panel=1]「草原上的狗是看羊的，你们汉人的狗是做官的。这一碗本姑娘敬那几条狗。」",
     "links": [107]
   },
   {
     "entryID": 107,
     "actorID": "MC2",
-    "text": "[panel=1]「哈！三年前西邸賣官，三公一千萬；如今狗戴進賢冠，一文不收——這帽子是越賣越便宜了！」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Anger_2);",
-    "zh_TW": "[panel=1]「哈！三年前西邸賣官，三公一千萬；如今狗戴進賢冠，一文不收——這帽子是越賣越便宜了！」",
-    "zh_CN": "[panel=1]「哈！三年前西邸卖官，三公一千万；如今狗戴进贤冠，一文不收——这帽子是越卖越便宜了！」",
-    "links": [108]
-  },
-  {
-    "entryID": 108,
-    "actorID": "MC8",
-    "text": "[panel=2]「那狗的帽子，是誰付的錢？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=1);",
-    "zh_TW": "[panel=2]「那狗的帽子，是誰付的錢？」",
-    "zh_CN": "[panel=2]「那狗的帽子，是谁付的钱？」",
+    "text": "[panel=2]「哈！三年前西園賣官，三公一千萬；如今狗戴進賢冠，一文不收。這帽子是越賣越便宜了！」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]「哈！三年前西園賣官，三公一千萬；如今狗戴進賢冠，一文不收。這帽子是越賣越便宜了！」",
+    "zh_CN": "[panel=2]「哈！三年前西园卖官，三公一千万；如今狗戴进贤冠，一文不收。这帽子是越卖越便宜了！」",
     "links": [109]
   },
   {
     "entryID": 109,
     "actorID": "role2",
-    "text": "[panel=6]＊（堂裡靜了一下，然後笑開了。沒有人答她，她也沒有再問，把算籌往袖子裡一塞，端起了碗。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（堂裡靜了一下，然後笑開了。沒有人答她，她也沒有再問，把算籌往袖子裡一塞，端起了碗。）＊",
-    "zh_CN": "[panel=6]＊（堂里静了一下，然后笑开了。没有人答她，她也没有再问，把算筹往袖子里一塞，端起了碗。）＊",
+    "text": "[panel=6]＊（笑聲一下子漲上來，蓋過了堂外的風，滿堂的碗一起舉了起來。呂信一連敬了三回那幾條狗，敬到自己也忘了在敬什麼；郭嘉笑得嗆了一口，連徐榮都跟著舉了碗。）＊",
+    "Sequence": ";OpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(3, close);",
+    "zh_TW": "[panel=6]＊（笑聲一下子漲上來，蓋過了堂外的風，滿堂的碗一起舉了起來。呂信一連敬了三回那幾條狗，敬到自己也忘了在敬什麼；郭嘉笑得嗆了一口，連徐榮都跟著舉了碗。）＊",
+    "zh_CN": "[panel=6]＊（笑声一下子涨上来，盖过了堂外的风，满堂的碗一起举了起来。吕信一连敬了三回那几条狗，敬到自己也忘了在敬什么；郭嘉笑得呛了一口，连徐荣都跟着举了碗。）＊",
     "links": [110]
   },
   {
     "entryID": 110,
     "actorID": "MC1",
-    "text": "「娜娜，妳們那邊過年，是什麼樣子？」",
+    "text": "「這一樁當真奇了！後面的人難贏了。」",
     "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「娜娜，妳們那邊過年，是什麼樣子？」",
-    "zh_CN": "「娜娜，你们那边过年，是什么样子？」",
+    "zh_TW": "「這一樁當真奇了！後面的人難贏了。」",
+    "zh_CN": "「这一桩当真奇了！后面的人难赢了。」",
     "links": [111]
   },
   {
     "entryID": 111,
     "actorID": "MC22",
-    "text": "[panel=3]「……我們那邊，本姑娘不記得了。今年就照你們的過，明年再說明年的。呂信，你那一罈別藏，倒過來！」",
-    "Sequence": "SetPortrait(MC22,pic=3);EnableCharacterExpression(3,MC22,Meditate);",
-    "zh_TW": "[panel=3]「……我們那邊，本姑娘不記得了。今年就照你們的過，明年再說明年的。呂信，你那一罈別藏，倒過來！」",
-    "zh_CN": "[panel=3]「……我们那边，本姑娘不记得了。今年就照你们的过，明年再说明年的。吕信，你那一坛别藏，倒过来！」",
+    "text": "[panel=1]「本姑娘也這麼覺得。呂信，你那一罈別藏，倒過來！」",
+    "Sequence": "SetPortrait(MC22,pic=5);EnableCharacterExpression(1,MC22,Anger_3);",
+    "zh_TW": "[panel=1]「本姑娘也這麼覺得。呂信，你那一罈別藏，倒過來！」",
+    "zh_CN": "[panel=1]「本姑娘也这么觉得。吕信，你那一坛别藏，倒过来！」",
     "links": [112]
   },
   {
     "entryID": 112,
     "actorID": "MC2",
-    "text": "[panel=1]「先生，輪到你了。說不出來，三碗。」",
-    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「先生，輪到你了。說不出來，三碗。」",
-    "zh_CN": "[panel=1]「先生，轮到你了。说不出来，三碗。」",
+    "text": "[panel=2]「先生，輪到你了。說不出來，三碗。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]「先生，輪到你了。說不出來，三碗。」",
+    "zh_CN": "[panel=2]「先生，轮到你了。说不出来，三碗。」",
     "links": [113]
   },
   {
     "entryID": 113,
     "actorID": "MC4",
-    "text": "[panel=3]「洛陽的奇事，諸位說得夠多了。賈某說本府的一樁——」",
+    "text": "[panel=1]「洛陽的奇事，諸位說得夠多了。賈某說本府的一樁……」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_TW": "[panel=3]「洛陽的奇事，諸位說得夠多了。賈某說本府的一樁——」",
-    "zh_CN": "[panel=3]「洛阳的奇事，诸位说得够多了。贾某说本府的一桩——」",
+    "zh_TW": "[panel=1]「洛陽的奇事，諸位說得夠多了。賈某說本府的一樁……」",
+    "zh_CN": "[panel=1]「洛阳的奇事，诸位说得够多了。贾某说本府的一桩……」",
     "links": [114]
   },
   {
     "entryID": 114,
     "actorID": "MC4",
-    "text": "[panel=3]「一年到頭，三萬六千，一文不差。這一樁，天下第一奇！」",
-    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(3,MC4,Surprise_2);",
-    "zh_TW": "[panel=3]「一年到頭，三萬六千，一文不差。這一樁，天下第一奇！」",
-    "zh_CN": "[panel=3]「一年到头，三万六千，一文不差。这一桩，天下第一奇！」",
+    "text": "[panel=1]「一年到頭，三萬六千，一文不差。這一樁，天下第一奇！」",
+    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Surprise_2);",
+    "zh_TW": "[panel=1]「一年到頭，三萬六千，一文不差。這一樁，天下第一奇！」",
+    "zh_CN": "[panel=1]「一年到头，三万六千，一文不差。这一桩，天下第一奇！」",
     "links": [115]
   },
   {
     "entryID": 115,
     "actorID": "MC5",
-    "text": "[panel=2]「奇在哪兒？那帳本來就是你在管的。」",
-    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC5,pic=1);",
-    "zh_TW": "[panel=2]「奇在哪兒？那帳本來就是你在管的。」",
-    "zh_CN": "[panel=2]「奇在哪儿？那帐本来就是你在管的。」",
+    "text": "[panel=3]「奇在哪兒？那帳本來就是你在管的。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=3]「奇在哪兒？那帳本來就是你在管的。」",
+    "zh_CN": "[panel=3]「奇在哪儿？那帐本来就是你在管的。」",
     "links": [116]
   },
   {
     "entryID": 116,
     "actorID": "MC4",
-    "text": "[panel=3]「奇就奇在帳是賈某管的，居然還平得了。」",
+    "text": "[panel=1]「奇就奇在帳是賈某管的，居然還平得了。」",
     "Sequence": "SetPortrait(MC4,pic=3);",
-    "zh_TW": "[panel=3]「奇就奇在帳是賈某管的，居然還平得了。」",
-    "zh_CN": "[panel=3]「奇就奇在帐是贾某管的，居然还平得了。」",
+    "zh_TW": "[panel=1]「奇就奇在帳是賈某管的，居然還平得了。」",
+    "zh_CN": "[panel=1]「奇就奇在帐是贾某管的，居然还平得了。」",
     "links": [117]
   },
   {
     "entryID": 117,
     "actorID": "MC5",
-    "text": "[panel=2]「……你倒是說得出口。」",
+    "text": "[panel=3]「……你倒是說得出口。」",
     "Sequence": "SetPortrait(MC5,pic=5);",
-    "zh_TW": "[panel=2]「……你倒是說得出口。」",
-    "zh_CN": "[panel=2]「……你倒是说得出口。」",
+    "zh_TW": "[panel=3]「……你倒是說得出口。」",
+    "zh_CN": "[panel=3]「……你倒是说得出口。」",
     "links": [118]
   },
   {
     "entryID": 118,
     "actorID": "MC7",
-    "text": "[panel=3]「兩位老大哥一喝酒就論起帳來，這叫人怎麼盡興？」",
-    "Sequence": "SetPortrait(MC7,pic=1);",
-    "zh_TW": "[panel=3]「兩位老大哥一喝酒就論起帳來，這叫人怎麼盡興？」",
-    "zh_CN": "[panel=3]「两位老大哥一喝酒就论起帐来，这叫人怎么尽兴？」",
+    "text": "[panel=1]「兩位老大哥一喝酒就論起帳來，這叫人怎麼盡興？」",
+    "Sequence": "SetPortrait(MC7,pic=1);OpenPanel(3, close);",
+    "zh_TW": "[panel=1]「兩位老大哥一喝酒就論起帳來，這叫人怎麼盡興？」",
+    "zh_CN": "[panel=1]「两位老大哥一喝酒就论起帐来，这叫人怎么尽兴？」",
     "links": [119]
   },
   {
     "entryID": 119,
     "actorID": "MC7",
-    "text": "[panel=3]「我說一樁。城南賭坊裡有個人，押了一整年，一次也沒贏。」",
+    "text": "[panel=1]「我說一樁。城南賭坊裡有個人，押了一整年，一次也沒贏。」",
     "Sequence": "SetPortrait(MC7,pic=1);",
-    "zh_TW": "[panel=3]「我說一樁。城南賭坊裡有個人，押了一整年，一次也沒贏。」",
-    "zh_CN": "[panel=3]「我说一桩。城南赌坊里有个人，押了一整年，一次也没赢。」",
+    "zh_TW": "[panel=1]「我說一樁。城南賭坊裡有個人，押了一整年，一次也沒贏。」",
+    "zh_CN": "[panel=1]「我说一桩。城南赌坊里有个人，押了一整年，一次也没赢。」",
     "links": [120]
   },
   {
     "entryID": 120,
     "actorID": "MC2",
-    "text": "[panel=1]「那還押？」",
+    "text": "[panel=2]「那還押？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「那還押？」",
-    "zh_CN": "[panel=1]「那还押？」",
+    "zh_TW": "[panel=2]「那還押？」",
+    "zh_CN": "[panel=2]「那还押？」",
     "links": [121]
   },
   {
     "entryID": 121,
     "actorID": "MC7",
-    "text": "[panel=3]「他到今天還在押。」",
+    "text": "[panel=1]「他到今天還在押。」",
     "Sequence": "SetPortrait(MC7,pic=1);",
-    "zh_TW": "[panel=3]「他到今天還在押。」",
-    "zh_CN": "[panel=3]「他到今天还在押。」",
+    "zh_TW": "[panel=1]「他到今天還在押。」",
+    "zh_CN": "[panel=1]「他到今天还在押。」",
     "links": [122]
   },
   {
     "entryID": 122,
     "actorID": "MC7",
-    "text": "[panel=3]「[em7]晃了晃手裡那碗酒[/em7]，那人是我。」",
+    "text": "[panel=1]「[em7]晃了晃手裡那碗酒[/em7]，那人是我。」",
     "Sequence": "SetPortrait(MC7,pic=3);",
-    "zh_TW": "[panel=3]「[em7]晃了晃手裡那碗酒[/em7]，那人是我。」",
-    "zh_CN": "[panel=3]「[em7]晃了晃手里那碗酒[/em7]，那人是我。」",
+    "zh_TW": "[panel=1]「[em7]晃了晃手裡那碗酒[/em7]，那人是我。」",
+    "zh_CN": "[panel=1]「[em7]晃了晃手里那碗酒[/em7]，那人是我。」",
     "links": [123]
   },
   {
     "entryID": 123,
     "actorID": "MC2",
-    "text": "[panel=1]「哈哈哈！輸了一年還敢拿出來說嘴——來，這一碗賞你的！」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
-    "zh_TW": "[panel=1]「哈哈哈！輸了一年還敢拿出來說嘴——來，這一碗賞你的！」",
-    "zh_CN": "[panel=1]「哈哈哈！输了一年还敢拿出来说嘴——来，这一碗赏你的！」",
+    "text": "[panel=2]「哈哈哈！輸了一年還敢拿出來說嘴。來，這一碗賞你的！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(2,MC2,Proud);",
+    "zh_TW": "[panel=2]「哈哈哈！輸了一年還敢拿出來說嘴。來，這一碗賞你的！」",
+    "zh_CN": "[panel=2]「哈哈哈！输了一年还敢拿出来说嘴。来，这一碗赏你的！」",
     "links": [124]
   },
   {
     "entryID": 124,
     "actorID": "MC2",
-    "text": "[panel=1]「徐師父，輪到你了。說不出來，三碗。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「徐師父，輪到你了。說不出來，三碗。」",
-    "zh_CN": "[panel=1]「徐师父，轮到你了。说不出来，三碗。」",
+    "text": "[panel=2]「徐師父，輪到你了。說不出來，三碗。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=2]「徐師父，輪到你了。說不出來，三碗。」",
+    "zh_CN": "[panel=2]「徐师父，轮到你了。说不出来，三碗。」",
     "links": [125]
   },
   {
     "entryID": 125,
     "actorID": "role2",
     "text": "[panel=6]＊（徐榮把碗接過去，一句話也沒說，仰頭就喝。三碗喝完，他才坐下。）＊",
-    "Sequence": "",
+    "Sequence": ";OpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(3, close);",
     "zh_TW": "[panel=6]＊（徐榮把碗接過去，一句話也沒說，仰頭就喝。三碗喝完，他才坐下。）＊",
     "zh_CN": "[panel=6]＊（徐荣把碗接过去，一句话也没说，仰头就喝。三碗喝完，他才坐下。）＊",
     "links": [126]
@@ -1143,44 +1114,44 @@
   {
     "entryID": 127,
     "actorID": "MC2",
-    "text": "[panel=1]「子羽，輪到你了。說不出來，三碗。」",
+    "text": "[panel=2]「子羽，輪到你了。說不出來，三碗。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「子羽，輪到你了。說不出來，三碗。」",
-    "zh_CN": "[panel=1]「子羽，轮到你了。说不出来，三碗。」",
+    "zh_TW": "[panel=2]「子羽，輪到你了。說不出來，三碗。」",
+    "zh_CN": "[panel=2]「子羽，轮到你了。说不出来，三碗。」",
     "links": [128]
   },
   {
     "entryID": 128,
     "actorID": "MC3",
-    "text": "[panel=2]「今年八月，城裡棺材鋪丟了東西，府裡接了這樁委託，我追了三天。」",
+    "text": "[panel=1]「今年八月，城裡棺材鋪丟了東西，府裡接了這樁委託，我追了三天。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_TW": "[panel=2]「今年八月，城裡棺材鋪丟了東西，府裡接了這樁委託，我追了三天。」",
-    "zh_CN": "[panel=2]「今年八月，城里棺材铺丢了东西，府里接了这桩委托，我追了三天。」",
+    "zh_TW": "[panel=1]「今年八月，城裡棺材鋪丟了東西，府裡接了這樁委託，我追了三天。」",
+    "zh_CN": "[panel=1]「今年八月，城里棺材铺丢了东西，府里接了这桩委托，我追了三天。」",
     "links": [129]
   },
   {
     "entryID": 129,
     "actorID": "MC2",
-    "text": "[panel=1]「什麼賊值得追三天？」",
+    "text": "[panel=2]「什麼賊值得追三天？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「什麼賊值得追三天？」",
-    "zh_CN": "[panel=1]「什么贼值得追三天？」",
+    "zh_TW": "[panel=2]「什麼賊值得追三天？」",
+    "zh_CN": "[panel=2]「什么贼值得追三天？」",
     "links": [130]
   },
   {
     "entryID": 130,
     "actorID": "MC3",
-    "text": "[panel=2]「是個老人——偷的是四塊棺材板，剛好夠釘一口。」",
+    "text": "[panel=1]「是個老人，偷的是四塊棺材板，剛好夠釘一口。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
-    "zh_TW": "[panel=2]「是個老人——偷的是四塊棺材板，剛好夠釘一口。」",
-    "zh_CN": "[panel=2]「是个老人——偷的是四块棺材板，刚好够钉一口。」",
+    "zh_TW": "[panel=1]「是個老人，偷的是四塊棺材板，剛好夠釘一口。」",
+    "zh_CN": "[panel=1]「是个老人，偷的是四块棺材板，刚好够钉一口。」",
     "links": [131]
   },
   {
     "entryID": 131,
     "actorID": "MC1",
     "text": "「他偷棺材板做什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC1,pic=9);\nAudioControl(StopSFX);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_42);",
     "zh_TW": "「他偷棺材板做什麼？」",
     "zh_CN": "「他偷棺材板做什么？」",
     "links": [132]
@@ -1188,66 +1159,64 @@
   {
     "entryID": 132,
     "actorID": "MC3",
-    "text": "[panel=2]「他兒子三年前從軍往北去了，沒回來。他說要去把人接回家，走到哪兒就在哪兒埋。」",
+    "text": "[panel=1]「他兒子三年前從軍往北去了，沒回來。他說要去把人接回家，走到哪兒就在哪兒埋。」",
     "Sequence": "SetPortrait(MC3,pic=3);",
-    "zh_TW": "[panel=2]「他兒子三年前從軍往北去了，沒回來。他說要去把人接回家，走到哪兒就在哪兒埋。」",
-    "zh_CN": "[panel=2]「他儿子三年前从军往北去了，没回来。他说要去把人接回家，走到哪儿就在哪儿埋。」",
+    "zh_TW": "[panel=1]「他兒子三年前從軍往北去了，沒回來。他說要去把人接回家，走到哪兒就在哪兒埋。」",
+    "zh_CN": "[panel=1]「他儿子三年前从军往北去了，没回来。他说要去把人接回家，走到哪儿就在哪儿埋。」",
     "links": [133]
   },
   {
     "entryID": 133,
     "actorID": "MC2",
-    "text": "[panel=1]「……那你怎麼結的案？」",
+    "text": "[panel=2]「……那你怎麼結的案？」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「……那你怎麼結的案？」",
-    "zh_CN": "[panel=1]「……那你怎么结的案？」",
+    "zh_TW": "[panel=2]「……那你怎麼結的案？」",
+    "zh_CN": "[panel=2]「……那你怎么结的案？」",
     "links": [134]
   },
   {
     "entryID": 134,
     "actorID": "MC3",
-    "text": "[panel=2]「[em7]端起碗[/em7]，我說沒追上。板子的錢，我自己還給棺材鋪了。」",
-    "Sequence": "SetPortrait(MC3,pic=1);ModifyData(FavorabilityExp,MC3,20);",
-    "Description": "子羽好感度提升",
-    "zh_TW": "[panel=2]「[em7]端起碗[/em7]，我說沒追上。板子的錢，我自己還給棺材鋪了。」",
-    "zh_CN": "[panel=2]「[em7]端起碗[/em7]，我说没追上。板子的钱，我自己还给棺材铺了。」",
+    "text": "[panel=1]「我說沒追上。板子的錢，我自己還給棺材鋪了。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=1]「我說沒追上。板子的錢，我自己還給棺材鋪了。」",
+    "zh_CN": "[panel=1]「我说没追上。板子的钱，我自己还给棺材铺了。」",
     "links": [135]
   },
   {
     "entryID": 135,
     "actorID": "role2",
-    "text": "[panel=6]＊（堂裡又靜了一下。這一回靜得比方才久。）＊",
+    "text": "[panel=6]＊（突然滿堂安靜了下來。呂信的碗停在半空，娜娜也不吵了，徐榮從碗沿上抬起眼睛看著子羽。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（堂裡又靜了一下。這一回靜得比方才久。）＊",
-    "zh_CN": "[panel=6]＊（堂里又静了一下。这一回静得比方才久。）＊",
+    "zh_TW": "[panel=6]＊（突然滿堂安靜了下來。呂信的碗停在半空，娜娜也不吵了，徐榮從碗沿上抬起眼睛看著子羽。）＊",
+    "zh_CN": "[panel=6]＊（突然满堂安静了下来。吕信的碗停在半空，娜娜也不吵了，徐荣从碗沿上抬起眼睛看着子羽。）＊",
     "links": [136]
   },
   {
     "entryID": 136,
     "actorID": "MC2",
-    "text": "[panel=1]「[em7]一掌拍在案上[/em7]，好啊！這才是今年最奇的一樁——撒謊還倒貼，堂堂子羽！酒歸他，都滿上！」",
-    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Surprise_2);",
-    "zh_TW": "[panel=1]「[em7]一掌拍在案上[/em7]，好啊！這才是今年最奇的一樁——撒謊還倒貼，堂堂子羽！酒歸他，都滿上！」",
-    "zh_CN": "[panel=1]「[em7]一掌拍在案上[/em7]，好啊！这才是今年最奇的一桩——撒谎还倒贴，堂堂子羽！酒归他，都满上！」",
+    "text": "[panel=2]「[em7]一掌拍在案上[/em7]，好啊！這才是今年最奇的一樁。撒謊還倒貼，堂堂子羽！酒歸他，都滿上！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(2,MC2,Surprise_2);",
+    "zh_TW": "[panel=2]「[em7]一掌拍在案上[/em7]，好啊！這才是今年最奇的一樁。撒謊還倒貼，堂堂子羽！酒歸他，都滿上！」",
+    "zh_CN": "[panel=2]「[em7]一掌拍在案上[/em7]，好啊！这才是今年最奇的一桩。撒谎还倒贴，堂堂子羽！酒归他，都满上！」",
     "links": [137]
   },
   {
     "entryID": 137,
     "actorID": "role2",
-    "text": "[panel=6]＊（後來沒有人再說奇事了。娜娜跟呂信比誰喝得快，郭嘉趴在案上不動，小犀把一把算籌墊到他頭底下。）＊",
-    "Sequence": "DisableCharacterExpression(1);AudioControl(StopSFX);AudioControl(StopMusic);AudioControl(PlayMusic,BGM_42);",
-    "Description": "切換音樂、關閉音效",
-    "zh_TW": "[panel=6]＊（後來沒有人再說奇事了。娜娜跟呂信比誰喝得快，郭嘉趴在案上不動，小犀把一把算籌墊到他頭底下。）＊",
-    "zh_CN": "[panel=6]＊（后来没有人再说奇事了。娜娜跟吕信比谁喝得快，郭嘉趴在案上不动，小犀把一把算筹垫到他头底下。）＊",
+    "text": "[panel=6]＊（後來沒有人再說奇事了。呂信跟娜娜比誰喝得快，郭嘉那碗終究沒喝完，人趴在案上不動，小犀把一把算籌墊到他頭底下。）＊",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nOpenPanel(2, close);\nOpenPanel(3, close);\nDisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（後來沒有人再說奇事了。呂信跟娜娜比誰喝得快，郭嘉那碗終究沒喝完，人趴在案上不動，小犀把一把算籌墊到他頭底下。）＊",
+    "zh_CN": "[panel=6]＊（后来没有人再说奇事了。吕信跟娜娜比谁喝得快，郭嘉那碗终究没喝完，人趴在案上不动，小犀把一把算筹垫到他头底下。）＊",
     "links": [138]
   },
   {
     "entryID": 138,
     "actorID": "role2",
-    "text": "[panel=6]＊（子羽贏來的那一罈始終沒開。外頭的天由黑轉青，遠處雞叫了第一聲，他才拍開罈口的泥，替還醒著的人一個一個斟滿。年關就算過完了——明年的帳、明年的馬、明年的奇事，都要等這一覺睡醒了再說。）＊",
+    "text": "[panel=6]＊（子羽贏來的那一罈始終沒開。外頭的天由黑轉青，遠處雞叫了第一聲，他才拍開罈口的泥，替還醒著的人一個一個斟滿。年關就算過完了，明年的事等這一覺睡醒了再說。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（子羽贏來的那一罈始終沒開。外頭的天由黑轉青，遠處雞叫了第一聲，他才拍開罈口的泥，替還醒著的人一個一個斟滿。年關就算過完了——明年的帳、明年的馬、明年的奇事，都要等這一覺睡醒了再說。）＊",
-    "zh_CN": "[panel=6]＊（子羽赢来的那一坛始终没开。外头的天由黑转青，远处鸡叫了第一声，他才拍开坛口的泥，替还醒着的人一个一个斟满。年关就算过完了——明年的帐、明年的马、明年的奇事，都要等这一觉睡醒了再说。）＊",
+    "zh_TW": "[panel=6]＊（子羽贏來的那一罈始終沒開。外頭的天由黑轉青，遠處雞叫了第一聲，他才拍開罈口的泥，替還醒著的人一個一個斟滿。年關就算過完了，明年的事等這一覺睡醒了再說。）＊",
+    "zh_CN": "[panel=6]＊（子羽赢来的那一坛始终没开。外头的天由黑转青，远处鸡叫了第一声，他才拍开坛口的泥，替还醒着的人一个一个斟满。年关就算过完了，明年的事等这一觉睡醒了再说。）＊",
     "links": [139]
   },
   {
@@ -1262,19 +1231,35 @@
   {
     "entryID": 140,
     "actorID": "role2",
-    "text": "[panel=6]＊（長案上不知什麼時候多了一排小布包，一模一樣，一人一包——年關前張寧備下的那些，一包也不少。她什麼時候擺上去的，沒有人看見。）＊",
-    "Sequence": "ModifyData(AbilityExp,MC2,Strength,5);ModifyData(AbilityExp,MC2,Intelligence,5);ModifyData(AbilityExp,MC2,Leadership,5);ModifyData(AbilityExp,MC2,Politics,5);ModifyData(AbilityExp,MC2,Charisma,5);ModifyData(AbilityExp,MC3,Strength,5);ModifyData(AbilityExp,MC3,Intelligence,5);ModifyData(AbilityExp,MC3,Leadership,5);ModifyData(AbilityExp,MC3,Politics,5);ModifyData(AbilityExp,MC3,Charisma,5);ModifyData(AbilityExp,MC22,Strength,5);ModifyData(AbilityExp,MC22,Intelligence,5);ModifyData(AbilityExp,MC22,Leadership,5);ModifyData(AbilityExp,MC22,Politics,5);ModifyData(AbilityExp,MC22,Charisma,5);ModifyData(AbilityExp,MC6,Strength,5);ModifyData(AbilityExp,MC6,Intelligence,5);ModifyData(AbilityExp,MC6,Leadership,5);ModifyData(AbilityExp,MC6,Politics,5);ModifyData(AbilityExp,MC6,Charisma,5);ModifyData(AbilityMaxLevel,Player,Strength,2);ModifyData(AbilityMaxLevel,Player,Intelligence,2);ModifyData(AbilityMaxLevel,Player,Leadership,2);ModifyData(AbilityMaxLevel,Player,Politics,2);ModifyData(AbilityMaxLevel,Player,Charisma,2);Continue();",
-    "Description": "五維經驗增加、超級大漢人",
-    "zh_TW": "[panel=6]＊（長案上不知什麼時候多了一排小布包，一模一樣，一人一包——年關前張寧備下的那些，一包也不少。她什麼時候擺上去的，沒有人看見。）＊",
-    "zh_CN": "[panel=6]＊（长案上不知什么时候多了一排小布包，一模一样，一人一包——年关前张宁备下的那些，一包也不少。她什么时候摆上去的，没有人看见。）＊",
+    "text": "[panel=6]＊（長案上不知什麼時候多了一排小布包，一模一樣，一人一包。年關前張寧備下的那些，一包也不少。她什麼時候擺上去的，沒有人看見。）＊",
+    "Sequence": "ModifyData(FavorabilityExp,MC2,20);ModifyData(FavorabilityExp,MC3,20);ModifyData(AbilityExp,MC2,Strength,5);ModifyData(AbilityExp,MC2,Intelligence,5);ModifyData(AbilityExp,MC2,Leadership,5);ModifyData(AbilityExp,MC2,Politics,5);ModifyData(AbilityExp,MC2,Charisma,5);ModifyData(AbilityExp,MC3,Strength,5);ModifyData(AbilityExp,MC3,Intelligence,5);ModifyData(AbilityExp,MC3,Leadership,5);ModifyData(AbilityExp,MC3,Politics,5);ModifyData(AbilityExp,MC3,Charisma,5);ModifyData(AbilityExp,MC22,Strength,5);ModifyData(AbilityExp,MC22,Intelligence,5);ModifyData(AbilityExp,MC22,Leadership,5);ModifyData(AbilityExp,MC22,Politics,5);ModifyData(AbilityExp,MC22,Charisma,5);ModifyData(AbilityExp,MC6,Strength,5);ModifyData(AbilityExp,MC6,Intelligence,5);ModifyData(AbilityExp,MC6,Leadership,5);ModifyData(AbilityExp,MC6,Politics,5);ModifyData(AbilityExp,MC6,Charisma,5);ModifyData(AbilityMaxLevel,Player,Strength,2);ModifyData(AbilityMaxLevel,Player,Intelligence,2);ModifyData(AbilityMaxLevel,Player,Leadership,2);ModifyData(AbilityMaxLevel,Player,Politics,2);ModifyData(AbilityMaxLevel,Player,Charisma,2);Continue();",
+    "Description": "呂信好感度提升、子羽好感度提升、五維經驗增加、超級大漢人",
+    "zh_TW": "[panel=6]＊（長案上不知什麼時候多了一排小布包，一模一樣，一人一包。年關前張寧備下的那些，一包也不少。她什麼時候擺上去的，沒有人看見。）＊",
+    "zh_CN": "[panel=6]＊（长案上不知什么时候多了一排小布包，一模一样，一人一包。年关前张宁备下的那些，一包也不少。她什么时候摆上去的，没有人看见。）＊",
     "links": [141]
   },
   {
     "entryID": 141,
     "actorID": "0",
     "text": "",
-    "Sequence": "ModifyData(GameDate,181,2,Early);\nDisableAllCharacterExpression();\nAudioControl(StopMusic);\nDisableDialogueBG();\nContinue();",
+    "Sequence": "ModifyData(GameDate,181,2,Early); DisableAllCharacterExpression(); AudioControl(StopMusic); DisableDialogueBG(); Continue();",
     "Description": "關閉音樂、清除立繪、關閉背景、時間前進",
     "links": []
+  },
+  {
+    "entryID": 144,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [71]
+  },
+  {
+    "entryID": 145,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nEnableDialogueBG(Lnn);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、開啟背景",
+    "links": [72]
   }
 ]

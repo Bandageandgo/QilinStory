@@ -1,0 +1,1188 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這一天，徐榮在演武場上驗收你跟呂信的武藝。）＊",
+    "Sequence": "EnableDialogueBG(TrainingGround);AudioControl(PlayMusic,BGM_14);SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=6]＊（這一天，徐榮在演武場上驗收你跟呂信的武藝。）＊",
+    "zh_CN": "[panel=6]＊（这一天，徐荣在演武场上验收你跟吕信的武艺。）＊",
+    "links": [2],
+    "Description": "開啟背景、播放音樂"
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC2",
+    "text": "[panel=2]「吃我一招——飛縱山河！」",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=2]「吃我一招——飛縱山河！」",
+    "zh_CN": "[panel=2]「吃我一招——飞纵山河！」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC5",
+    "text": "[panel=3]「好小子，有長進！」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=3]「好小子，有長進！」",
+    "zh_CN": "[panel=3]「好小子，有长进！」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「信哥這一招……連徐師父都得謹慎應招。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「信哥這一招……連徐師父都得謹慎應招。」",
+    "zh_CN": "「信哥这一招……连徐师父都得谨慎应招。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC12",
+    "text": "[panel=1]「招式是好，可惜小子用力過猛，有失精準，徒費力氣。」",
+    "Sequence": "SetPortrait(MC12,pic=1);SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=1]「招式是好，可惜小子用力過猛，有失精準，徒費力氣。」",
+    "zh_CN": "[panel=1]「招式是好，可惜小子用力过猛，有失精准，徒费力气。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC2",
+    "text": "[panel=2]「何人！竟敢在這大放厥詞！」",
+    "Sequence": "SetPortrait(MC2,pic=2);EnableCharacterExpression(2,MC2,Anger);",
+    "zh_TW": "[panel=2]「何人！竟敢在這大放厥詞！」",
+    "zh_CN": "[panel=2]「何人！竟敢在这大放厥词！」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC12",
+    "text": "[panel=1]「不識董某，小子眼界可笑。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC12,pic=1);EnableCharacterExpression(1,MC12,Anger_2);",
+    "zh_TW": "[panel=1]「不識董某，小子眼界可笑。」",
+    "zh_CN": "[panel=1]「不识董某，小子眼界可笑。」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC2",
+    "text": "[panel=2]「[em7]刀已經橫過來了[/em7]，好個狂妄老東西！今日讓你知道誰才是老子！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=2);EnableCharacterExpression(2,MC2,Anger_2);",
+    "zh_TW": "[panel=2]「[em7]刀已經橫過來了[/em7]，好個狂妄老東西！今日讓你知道誰才是老子！」",
+    "zh_CN": "[panel=2]「[em7]刀已经横过来了[/em7]，好个狂妄老东西！今日让你知道谁才是老子！」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（呂信飛縱再出。那人沒有退，也沒有拔兵刃——只抬了一掌，來勢就散了。演武場的沙被震得往外走了一圈。）＊",
+    "Sequence": "DisableCharacterExpression(2);AudioControl(PlaySFX,Others_Punch_Single_Normal_1);AudioControl(PlaySFXOneShot,Others_Rumble);SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=6]＊（呂信飛縱再出。那人沒有退，也沒有拔兵刃——只抬了一掌，來勢就散了。演武場的沙被震得往外走了一圈。）＊",
+    "zh_CN": "[panel=6]＊（吕信飞纵再出。那人没有退，也没有拔兵刃——只抬了一掌，来势就散了。演武场的沙被震得往外走了一圈。）＊",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC2",
+    "text": "[panel=2]「老東西有點本事。再來！」",
+    "Sequence": "SetPortrait(MC5,pic=2);",
+    "zh_TW": "[panel=2]「老東西有點本事。再來！」",
+    "zh_CN": "[panel=2]「老东西有点本事。再来！」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC5",
+    "text": "[panel=3]「罷手吧呂信。這一招『混元震地』，還不夠讓你明白來人深淺嗎？」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「罷手吧呂信。這一招『混元震地』，還不夠讓你明白來人深淺嗎？」",
+    "zh_CN": "[panel=3]「罢手吧吕信。这一招『混元震地』，还不够让你明白来人深浅吗？」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC2",
+    "text": "[panel=2]「混元震地……？徐師父認識這老東西？」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「混元震地……？徐師父認識這老東西？」",
+    "zh_CN": "[panel=2]「混元震地……？徐师父认识这老东西？」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC5",
+    "text": "[panel=3]「當年江湖群雄爭首，有一人憑此招力挫群雄。後來此人淡出江湖，投身軍旅，鎮守西涼。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「當年江湖群雄爭首，有一人憑此招力挫群雄。後來此人淡出江湖，投身軍旅，鎮守西涼。」",
+    "zh_CN": "[panel=3]「当年江湖群雄争首，有一人凭此招力挫群雄。后来此人淡出江湖，投身军旅，镇守西凉。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC5",
+    "text": "[panel=3]「自此邊疆無慮，羌胡膽寒——我說的沒錯吧，董卓，董校尉。」",
+    "Sequence": "SetPortrait(MC5,pic=1);EnableCharacterExpression(3,MC5,Meditate);",
+    "zh_TW": "[panel=3]「自此邊疆無慮，羌胡膽寒——我說的沒錯吧，董卓，董校尉。」",
+    "zh_CN": "[panel=3]「自此边疆无虑，羌胡胆寒——我说的没错吧，董卓，董校尉。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC2",
+    "text": "[panel=2]「……！」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC2,pic=4);",
+    "zh_TW": "[panel=2]「……！」",
+    "zh_CN": "[panel=2]「……！」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC12",
+    "text": "[panel=1]「哼。當年的遼東徐榮，今日陪豎子過招，著實令董某唏噓。」",
+    "Sequence": "SetPortrait(MC12,pic=3);SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=1]「哼。當年的遼東徐榮，今日陪豎子過招，著實令董某唏噓。」",
+    "zh_CN": "[panel=1]「哼。当年的辽东徐荣，今日陪竖子过招，着实令董某唏嘘。」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC5",
+    "text": "[panel=3]「一切都是孽緣……但今日再見，徐某一腔熱血倒又沸騰了。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「一切都是孽緣……但今日再見，徐某一腔熱血倒又沸騰了。」",
+    "zh_CN": "[panel=3]「一切都是孽缘……但今日再见，徐某一腔热血倒又沸腾了。」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC12",
+    "text": "[panel=1]「江湖一步一生江湖。壯志猶在，同為武者之幸。不過董某今日志不在你。」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「江湖一步一生江湖。壯志猶在，同為武者之幸。不過董某今日志不在你。」",
+    "zh_CN": "[panel=1]「江湖一步一生江湖。壮志犹在，同为武者之幸。不过董某今日志不在你。」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC12",
+    "text": "[panel=1]「我是來找人的。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「我是來找人的。」",
+    "zh_CN": "[panel=1]「我是来找人的。」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他的目光掃過場上每一個人，最後停在你身上，就沒有再移開。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（他的目光掃過場上每一個人，最後停在你身上，就沒有再移開。）＊",
+    "zh_CN": "[panel=6]＊（他的目光扫过场上每一个人，最后停在你身上，就没有再移开。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC12",
+    "text": "[panel=1]「你這頭白髮，還有那雙眼睛……簡直跟你娘一模一樣。」",
+    "Sequence": "AudioControl(StopMusic);AudioControl(PlayMusic,BGM_18);SetPortrait(MC12,pic=4);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
+    "zh_TW": "[panel=1]「你這頭白髮，還有那雙眼睛……簡直跟你娘一模一樣。」",
+    "zh_CN": "[panel=1]「你这头白发，还有那双眼睛……简直跟你娘一模一样。」",
+    "links": [22],
+    "Description": "切換音樂"
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「你認識我娘？！那場大火之後，我爹娘下落不明……是死是活，我都不知道……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);",
+    "zh_TW": "「你認識我娘？！那場大火之後，我爹娘下落不明……是死是活，我都不知道……」",
+    "zh_CN": "「你认识我娘？！那场大火之后，我爹娘下落不明……是死是活，我都不知道……」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC12",
+    "text": "[panel=1]「那場大火……」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「那場大火……」",
+    "zh_CN": "[panel=1]「那场大火……」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC12",
+    "text": "[panel=1]「當年董某人不在村裡。等趕回來，只見焦土。旁人都道無人生還，可董某……不信。董某總以為，你們母子或許還……」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「當年董某人不在村裡。等趕回來，只見焦土。旁人都道無人生還，可董某……不信。董某總以為，你們母子或許還……」",
+    "zh_CN": "[panel=1]「当年董某人不在村里。等赶回来，只见焦土。旁人都道无人生还，可董某……不信。董某总以为，你们母子或许还……」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]那把粗嗓低了下去，尾音有些不穩[/em7]，……還活著？還活著就好……」",
+    "Sequence": "SetPortrait(MC12,pic=5);SetPortrait(MC1,pic=4);EnableCharacterExpression(1,MC12,Pain);",
+    "zh_TW": "[panel=1]「[em7]那把粗嗓低了下去，尾音有些不穩[/em7]，……還活著？還活著就好……」",
+    "zh_CN": "[panel=1]「[em7]那把粗嗓低了下去，尾音有些不稳[/em7]，……还活着？还活着就好……」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC1",
+    "text": "「……爹？！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
+    "zh_TW": "「……爹？！」",
+    "zh_CN": "「……爹？！」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「這……我爹是個為了招待朋友，連自家唯一的耕牛都敢宰的人。最是隨心所欲的一個豪俠……怎麼會是校尉？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=4);",
+    "zh_TW": "「這……我爹是個為了招待朋友，連自家唯一的耕牛都敢宰的人。最是隨心所欲的一個豪俠……怎麼會是校尉？」",
+    "zh_CN": "「这……我爹是个为了招待朋友，连自家唯一的耕牛都敢宰的人。最是随心所欲的一个豪侠……怎么会是校尉？」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC2",
+    "text": "[panel=2]「喂喂喂，先等等。你確定沒認錯人？我說你這五大三粗的模樣……你倆這長相也差太多了吧！」",
+    "Sequence": "SetPortrait(MC2,pic=4);EnableCharacterExpression(2,MC2,Question);",
+    "zh_TW": "[panel=2]「喂喂喂，先等等。你確定沒認錯人？我說你這五大三粗的模樣……你倆這長相也差太多了吧！」",
+    "zh_CN": "[panel=2]「喂喂喂，先等等。你确定没认错人？我说你这五大三粗的模样……你俩这长相也差太多了吧！」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC12",
+    "text": "[panel=1]「閉嘴！——小子，老子找了你十來年。總算讓老子找到了。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC12,pic=2);ModifyData(FavorabilityExp,MC12,300);SetPortrait(MC8,pic=4);EnableCharacterExpression(1,MC12,Anger);",
+    "zh_TW": "[panel=1]「閉嘴！——小子，老子找了你十來年。總算讓老子找到了。」",
+    "zh_CN": "[panel=1]「闭嘴！——小子，老子找了你十来年。总算让老子找到了。」",
+    "links": [30],
+    "Description": "董卓好感度提升"
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……他、他說的是真的嗎？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Surprise);",
+    "zh_TW": "[panel=2]「表哥……他、他說的是真的嗎？」",
+    "zh_CN": "[panel=2]「表哥……他、他说的是真的吗？」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC12",
+    "text": "[panel=1]「……丫頭？是小犀？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC12,pic=4);SetPortrait(MC8,pic=5);",
+    "zh_TW": "[panel=1]「……丫頭？是小犀？」",
+    "zh_CN": "[panel=1]「……丫头？是小犀？」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC8",
+    "text": "[panel=2]「董叔……！你也還活著……！」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Surprise_2);",
+    "zh_TW": "[panel=2]「董叔……！你也還活著……！」",
+    "zh_CN": "[panel=2]「董叔……！你也还活着……！」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC12",
+    "text": "[panel=1]「好！好！你們兩個小崽子都還活著就好！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC12,pic=1);SetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=1]「好！好！你們兩個小崽子都還活著就好！」",
+    "zh_CN": "[panel=1]「好！好！你们两个小崽子都还活着就好！」",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC1",
+    "text": "「大火之後村子沒了，我就帶著小犀一路流浪。」",
+    "Sequence": "",
+    "zh_TW": "「大火之後村子沒了，我就帶著小犀一路流浪。」",
+    "zh_CN": "「大火之后村子没了，我就带着小犀一路流浪。」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC12",
+    "text": "[panel=1]「兩個半大孩子，這幾年就這樣熬過來了……」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「兩個半大孩子，這幾年就這樣熬過來了……」",
+    "zh_CN": "[panel=1]「两个半大孩子，这几年就这样熬过来了……」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC12",
+    "text": "[panel=1]「可你們怎麼會跑到這并州英豪府來？老子聽說，你還要學人家當什麼大俠？」",
+    "Sequence": "SetPortrait(MC12,pic=4);",
+    "zh_TW": "[panel=1]「可你們怎麼會跑到這并州英豪府來？老子聽說，你還要學人家當什麼大俠？」",
+    "zh_CN": "[panel=1]「可你们怎么会跑到这并州英豪府来？老子听说，你还要学人家当什么大侠？」",
+    "links": [37, 38, 39, 40]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「路見不平，拔刀相助。」",
+    "Sequence": "",
+    "zh_TW": "「路見不平，拔刀相助。」",
+    "zh_CN": "「路见不平，拔刀相助。」",
+    "links": [41],
+    "Description": "選項1"
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「不想再有人像我們一樣。」",
+    "Sequence": "",
+    "zh_TW": "「不想再有人像我們一樣。」",
+    "zh_CN": "「不想再有人像我们一样。」",
+    "links": [43],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 39,
+    "actorID": "MC1",
+    "text": "「江湖就在那裡，總得走一遭。」",
+    "Sequence": "",
+    "zh_TW": "「江湖就在那裡，總得走一遭。」",
+    "zh_CN": "「江湖就在那里，总得走一遭。」",
+    "links": [45],
+    "Description": "選項3"
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「有本事，才不會任人宰割。」",
+    "Sequence": "",
+    "zh_TW": "「有本事，才不會任人宰割。」",
+    "zh_CN": "「有本事，才不会任人宰割。」",
+    "links": [47],
+    "Description": "選項4"
+  },
+  {
+    "entryID": 41,
+    "actorID": "MC1",
+    "text": "「路見不平便拔刀相助，快意恩仇！我理當如此活著。」",
+    "Sequence": "SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,LawChaos,0.2);",
+    "zh_TW": "「路見不平便拔刀相助，快意恩仇！我理當如此活著。」",
+    "zh_CN": "「路见不平便拔刀相助，快意恩仇！我理当如此活着。」",
+    "links": [42],
+    "Description": "信義提升"
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈哈！好小子，說得好！」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「哈哈哈！好小子，說得好！」",
+    "zh_CN": "[panel=1]「哈哈哈！好小子，说得好！」",
+    "links": [49]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC1",
+    "text": "「流浪時見過太多苦難了……我不想再看到有人像我們一樣，連個安身的地方都沒有。」",
+    "Sequence": "SetPortrait(MC1,pic=12);ModifyData(DnDAlignment,Player,GoodEvil,0.2);",
+    "zh_TW": "「流浪時見過太多苦難了……我不想再看到有人像我們一樣，連個安身的地方都沒有。」",
+    "zh_CN": "「流浪时见过太多苦难了……我不想再看到有人像我们一样，连个安身的地方都没有。」",
+    "links": [44],
+    "Description": "仁心提升"
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC12",
+    "text": "[panel=1]「……但現在有爹在。你們再也不用吃那個苦了。」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「……但現在有爹在。你們再也不用吃那個苦了。」",
+    "zh_CN": "[panel=1]「……但现在有爹在。你们再也不用吃那个苦了。」",
+    "links": [49]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「江湖就在那裡。既然都出來了，不走一遭，怎麼知道是什麼風景？」",
+    "Sequence": "SetPortrait(MC1,pic=5);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
+    "zh_TW": "「江湖就在那裡。既然都出來了，不走一遭，怎麼知道是什麼風景？」",
+    "zh_CN": "「江湖就在那里。既然都出来了，不走一遭，怎么知道是什么风景？」",
+    "links": [46],
+    "Description": "通達提升"
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈哈！心胸開闊，眼界夠高！」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「哈哈哈！心胸開闊，眼界夠高！」",
+    "zh_CN": "[panel=1]「哈哈哈！心胸开阔，眼界够高！」",
+    "links": [49]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「流浪讓我明白，亂世之中，只有自己有本事、有靠山，才不會任人宰割。」",
+    "Sequence": "SetPortrait(MC1,pic=5);ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
+    "zh_TW": "「流浪讓我明白，亂世之中，只有自己有本事、有靠山，才不會任人宰割。」",
+    "zh_CN": "「流浪让我明白，乱世之中，只有自己有本事、有靠山，才不会任人宰割。」",
+    "links": [48],
+    "Description": "機略提升"
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC12",
+    "text": "[panel=1]「說得對。這才是能在邊地活下來的道理。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「說得對。這才是能在邊地活下來的道理。」",
+    "zh_CN": "[panel=1]「说得对。这才是能在边地活下来的道理。」",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]深吸了一口氣[/em7]，……你娘。她可有下落？」",
+    "Sequence": "SetPortrait(MC12,pic=3);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Pain);",
+    "zh_TW": "[panel=1]「[em7]深吸了一口氣[/em7]，……你娘。她可有下落？」",
+    "zh_CN": "[panel=1]「[em7]深吸了一口气[/em7]，……你娘。她可有下落？」",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC1",
+    "text": "「……沒有。大火之後，便再無音訊。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=12);",
+    "zh_TW": "「……沒有。大火之後，便再無音訊。」",
+    "zh_CN": "「……没有。大火之后，便再无音讯。」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「……難道說，娘她也可能沒有死？」",
+    "Sequence": "",
+    "zh_TW": "「……難道說，娘她也可能沒有死？」",
+    "zh_CN": "「……难道说，娘她也可能没有死？」",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]沉默良久[/em7]，……老子會繼續查。不管當年是誰放的火，董某定要他付出代價。」",
+    "Sequence": "SetPortrait(MC12,pic=2);EnableCharacterExpression(1,MC12,Anger_3);",
+    "zh_TW": "[panel=1]「[em7]沉默良久[/em7]，……老子會繼續查。不管當年是誰放的火，董某定要他付出代價。」",
+    "zh_CN": "[panel=1]「[em7]沉默良久[/em7]，……老子会继续查。不管当年是谁放的火，董某定要他付出代价。」",
+    "links": [53, 54, 55, 56]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「這筆血債我親自討。」",
+    "Sequence": "",
+    "zh_TW": "「這筆血債我親自討。」",
+    "zh_CN": "「这笔血债我亲自讨。」",
+    "links": [57],
+    "Description": "選項1"
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC1",
+    "text": "「人還在，比什麼都重要。」",
+    "Sequence": "",
+    "zh_TW": "「人還在，比什麼都重要。」",
+    "zh_CN": "「人还在，比什么都重要。」",
+    "links": [59],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC1",
+    "text": "「世道本就無常。」",
+    "Sequence": "",
+    "zh_TW": "「世道本就無常。」",
+    "zh_CN": "「世道本就无常。」",
+    "links": [61],
+    "Description": "選項3"
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「您現在的位子，查得出來吧？」",
+    "Sequence": "",
+    "zh_TW": "「您現在的位子，查得出來吧？」",
+    "zh_CN": "「您现在的位子，查得出来吧？」",
+    "links": [63],
+    "Description": "選項4"
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「若當年那場火真是人禍，這筆血債我身為人子，定要親自討回。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=2);ModifyData(DnDAlignment,Player,LawChaos,0.2);",
+    "zh_TW": "「若當年那場火真是人禍，這筆血債我身為人子，定要親自討回。」",
+    "zh_CN": "「若当年那场火真是人祸，这笔血债我身为人子，定要亲自讨回。」",
+    "links": [58],
+    "Description": "信義提升"
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC12",
+    "text": "[panel=1]「好！血債血償，大丈夫行事本該如此！」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「好！血債血償，大丈夫行事本該如此！」",
+    "zh_CN": "[panel=1]「好！血债血偿，大丈夫行事本该如此！」",
+    "links": [65]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC1",
+    "text": "「……過去的苦難都過去了。至少現在，我們還活著，還能重逢——這比什麼都重要。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);ModifyData(DnDAlignment,Player,GoodEvil,0.2);",
+    "zh_TW": "「……過去的苦難都過去了。至少現在，我們還活著，還能重逢——這比什麼都重要。」",
+    "zh_CN": "「……过去的苦难都过去了。至少现在，我们还活着，还能重逢——这比什么都重要。」",
+    "links": [60],
+    "Description": "仁心提升"
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC12",
+    "text": "[panel=1]「哼。你倒是看得開。但老子的帳，不能就這麼算了。」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「哼。你倒是看得開。但老子的帳，不能就這麼算了。」",
+    "zh_CN": "[panel=1]「哼。你倒是看得开。但老子的帐，不能就这么算了。」",
+    "links": [65]
+  },
+  {
+    "entryID": 61,
+    "actorID": "MC1",
+    "text": "「世道本就無常，能撿回一條命已是萬幸。如今父子得以相逢，也算老天開眼。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);ModifyData(DnDAlignment,Player,LawChaos,-0.2);",
+    "zh_TW": "「世道本就無常，能撿回一條命已是萬幸。如今父子得以相逢，也算老天開眼。」",
+    "zh_CN": "「世道本就无常，能捡回一条命已是万幸。如今父子得以相逢，也算老天开眼。」",
+    "links": [62],
+    "Description": "通達提升"
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC12",
+    "text": "[panel=1]「老天開眼？老子不信這個。人是老子自己找回來的。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「老天開眼？老子不信這個。人是老子自己找回來的。」",
+    "zh_CN": "[panel=1]「老天开眼？老子不信这个。人是老子自己找回来的。」",
+    "links": [65]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC1",
+    "text": "「既然您現在是戊己校尉，要查清當年的真相想必不難吧？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
+    "zh_TW": "「既然您現在是戊己校尉，要查清當年的真相想必不難吧？」",
+    "zh_CN": "「既然您现在是戊己校尉，要查清当年的真相想必不难吧？」",
+    "links": [64],
+    "Description": "機略提升"
+  },
+  {
+    "entryID": 64,
+    "actorID": "MC12",
+    "text": "[panel=1]「腦子轉得挺快。放心，這事包在老子身上。」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「腦子轉得挺快。放心，這事包在老子身上。」",
+    "zh_CN": "[panel=1]「脑子转得挺快。放心，这事包在老子身上。」",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡從剛才起就站在演武場邊上，一句話也沒說。這時他把兩手籠進袖子裡，往前走了半步。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=6]＊（賈詡從剛才起就站在演武場邊上，一句話也沒說。這時他把兩手籠進袖子裡，往前走了半步。）＊",
+    "zh_CN": "[panel=6]＊（贾诩从刚才起就站在演武场边上，一句话也没说。这时他把两手笼进袖子里，往前走了半步。）＊",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "MC4",
+    "text": "[panel=3]「咳。父子團圓，賈某本不該打擾。且讓賈某說一言，兩位再敘也不遲。」",
+    "Sequence": "AudioControl(StopMusic);AudioControl(PlayMusic,BGM_16);SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=3]「咳。父子團圓，賈某本不該打擾。且讓賈某說一言，兩位再敘也不遲。」",
+    "zh_CN": "[panel=3]「咳。父子团圆，贾某本不该打扰。且让贾某说一言，两位再叙也不迟。」",
+    "links": [67],
+    "Description": "切換音樂"
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC4",
+    "text": "[panel=3]「當初賈某見到令郎手中那顆麒麟骰，還有那雙像極了故人的眼睛，便知他的身分。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「當初賈某見到令郎手中那顆麒麟骰，還有那雙像極了故人的眼睛，便知他的身分。」",
+    "zh_CN": "[panel=3]「当初贾某见到令郎手中那颗麒麟骰，还有那双像极了故人的眼睛，便知他的身分。」",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "MC4",
+    "text": "[panel=3]「董校尉——令郎能入這道門，全憑他自己的本事。賈某可沒給他開後門。」",
+    "Sequence": "SetPortrait(MC4,pic=3);EnableCharacterExpression(3,MC4,Meditate);",
+    "zh_TW": "[panel=3]「董校尉——令郎能入這道門，全憑他自己的本事。賈某可沒給他開後門。」",
+    "zh_CN": "[panel=3]「董校尉——令郎能入这道门，全凭他自己的本事。贾某可没给他开后门。」",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC1",
+    "text": "「先生！你早就知道？！」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
+    "zh_TW": "「先生！你早就知道？！」",
+    "zh_CN": "「先生！你早就知道？！」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC4",
+    "text": "[panel=3]「[em7]沒有看你，話是對著董卓說的[/em7]，校尉遠道而來，先坐下說話罷。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=3]「[em7]沒有看你，話是對著董卓說的[/em7]，校尉遠道而來，先坐下說話罷。」",
+    "zh_CN": "[panel=3]「[em7]没有看你，话是对着董卓说的[/em7]，校尉远道而来，先坐下说话罢。」",
+    "links": [71]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈哈！早聞賈詡精於算計，今日一見，果然名不虛傳。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「哈哈哈！早聞賈詡精於算計，今日一見，果然名不虛傳。」",
+    "zh_CN": "[panel=1]「哈哈哈！早闻贾诩精于算计，今日一见，果然名不虚传。」",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "MC12",
+    "text": "[panel=1]「英豪府用人不問出身，只看本事，還護著老子的種——這份情，董某記下了。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「英豪府用人不問出身，只看本事，還護著老子的種——這份情，董某記下了。」",
+    "zh_CN": "[panel=1]「英豪府用人不问出身，只看本事，还护着老子的种——这份情，董某记下了。」",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC12",
+    "text": "[panel=1]「不過，這英豪府終究是個江湖草台班子。收拾收拾，跟爹回西涼——到了老子的地盤，往後就沒人能再讓你們吃苦受罪。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「不過，這英豪府終究是個江湖草台班子。收拾收拾，跟爹回西涼——到了老子的地盤，往後就沒人能再讓你們吃苦受罪。」",
+    "zh_CN": "[panel=1]「不过，这英豪府终究是个江湖草台班子。收拾收拾，跟爹回西凉——到了老子的地盘，往后就没人能再让你们吃苦受罪。」",
+    "links": [74, 75]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「爹，讓我留下。」",
+    "Sequence": "",
+    "zh_TW": "[em2][口才檢定][/em2]「爹，讓我留下。」",
+    "zh_CN": "[em2][口才检定][/em2]「爹，让我留下。」",
+    "links": [76],
+    "Description": "選項1"
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC1",
+    "text": "[em2][武藝檢定][/em2]「江湖規矩，手底下見真章。」",
+    "Sequence": "",
+    "zh_TW": "[em2][武藝檢定][/em2]「江湖規矩，手底下見真章。」",
+    "zh_CN": "[em2][武艺检定][/em2]「江湖规矩，手底下见真章。」",
+    "links": [87],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC1",
+    "text": "「爹，我立志當大俠，是因為心裡一直拿當年那個殺牛待客的豪俠當榜樣。我想靠自己的本事，在這江湖闖出名堂。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「爹，我立志當大俠，是因為心裡一直拿當年那個殺牛待客的豪俠當榜樣。我想靠自己的本事，在這江湖闖出名堂。」",
+    "zh_CN": "「爹，我立志当大侠，是因为心里一直拿当年那个杀牛待客的豪侠当榜样。我想靠自己的本事，在这江湖闯出名堂。」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "MC12",
+    "text": "[panel=1]「……老子找了你十來年。你現在告訴老子，你不跟老子走？」",
+    "Sequence": "SetPortrait(MC12,pic=2);EnableCharacterExpression(1,MC12,Anger);",
+    "zh_TW": "[panel=1]「……老子找了你十來年。你現在告訴老子，你不跟老子走？」",
+    "zh_CN": "[panel=1]「……老子找了你十来年。你现在告诉老子，你不跟老子走？」",
+    "links": [78]
+  },
+  {
+    "entryID": 78,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,PersuasionCheck,12);",
+    "Description": "口才檢定",
+    "links": [79]
+  },
+  {
+    "entryID": 79,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [80, 83]
+  },
+  {
+    "entryID": 80,
+    "actorID": "MC1",
+    "text": "「爹能當上校尉，我打心底高興。可跟您回去，就得放下我這一路掙來的東西——在旁人眼裡或許微不足道，卻是我自個掙來的。」",
+    "Sequence": "DisableCharacterExpression(1);ModifyData(FeatExp,Player,Persuasion,25);SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "「爹能當上校尉，我打心底高興。可跟您回去，就得放下我這一路掙來的東西——在旁人眼裡或許微不足道，卻是我自個掙來的。」",
+    "zh_CN": "「爹能当上校尉，我打心底高兴。可跟您回去，就得放下我这一路挣来的东西——在旁人眼里或许微不足道，却是我自个挣来的。」",
+    "links": [81],
+    "Description": "口才經驗增加"
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]緊繃的肩膀鬆了下來[/em7]，……哼。這股倔脾氣，簡直跟你娘一模一樣。」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「[em7]緊繃的肩膀鬆了下來[/em7]，……哼。這股倔脾氣，簡直跟你娘一模一樣。」",
+    "zh_CN": "[panel=1]「[em7]紧绷的肩膀松了下来[/em7]，……哼。这股倔脾气，简直跟你娘一模一样。」",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC12",
+    "text": "[panel=1]「行。路是你自己的。但路走不通的時候，別忘了還有爹在。」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「行。路是你自己的。但路走不通的時候，別忘了還有爹在。」",
+    "zh_CN": "[panel=1]「行。路是你自己的。但路走不通的时候，别忘了还有爹在。」",
+    "links": [99]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC1",
+    "text": "「我……反正我就是想留下。我一定會成功的！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "「我……反正我就是想留下。我一定會成功的！」",
+    "zh_CN": "「我……反正我就是想留下。我一定会成功的！」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "MC12",
+    "text": "[panel=1]「老子找了你十來年，就換你這麼一句胡鬧？」",
+    "Sequence": "SetPortrait(MC12,pic=2);SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「老子找了你十來年，就換你這麼一句胡鬧？」",
+    "zh_CN": "[panel=1]「老子找了你十来年，就换你这么一句胡闹？」",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC5",
+    "text": "[panel=3]「董校尉。這小子的武藝是徐某在帶的——他留在這裡，徐某擔著。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「董校尉。這小子的武藝是徐某在帶的——他留在這裡，徐某擔著。」",
+    "zh_CN": "[panel=3]「董校尉。这小子的武艺是徐某在带的——他留在这里，徐某担着。」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]看了徐榮一眼，又看了兒子一眼[/em7]，……罷了。倔驢一頭，也不知道像誰。」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「[em7]看了徐榮一眼，又看了兒子一眼[/em7]，……罷了。倔驢一頭，也不知道像誰。」",
+    "zh_CN": "[panel=1]「[em7]看了徐荣一眼，又看了儿子一眼[/em7]，……罢了。倔驴一头，也不知道像谁。」",
+    "links": [99]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC1",
+    "text": "「爹，光說沒用。您也是江湖出身，該懂拳頭比嘴皮子實在。我跟您討教幾招——撐不住，我就乖乖跟您回西涼。」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "「爹，光說沒用。您也是江湖出身，該懂拳頭比嘴皮子實在。我跟您討教幾招——撐不住，我就乖乖跟您回西涼。」",
+    "zh_CN": "「爹，光说没用。您也是江湖出身，该懂拳头比嘴皮子实在。我跟您讨教几招——撑不住，我就乖乖跟您回西凉。」",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC12",
+    "text": "[panel=1]「哦？拿拳頭跟老子講道理？有趣。敢跟老子談條件的，你還是頭一個——有什麼本事，儘管來。」",
+    "Sequence": "SetPortrait(MC12,pic=4);EnableCharacterExpression(1,MC12,Anger_2);",
+    "zh_TW": "[panel=1]「哦？拿拳頭跟老子講道理？有趣。敢跟老子談條件的，你還是頭一個——有什麼本事，儘管來。」",
+    "zh_CN": "[panel=1]「哦？拿拳头跟老子讲道理？有趣。敢跟老子谈条件的，你还是头一个——有什么本事，尽管来。」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,MartialArtsCheck,14);",
+    "Description": "武藝檢定",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [91, 94]
+  },
+  {
+    "entryID": 91,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三招。第一招你退了半步，第二招你的腳陷進沙裡，第三招你還站著。）＊",
+    "Sequence": "DisableCharacterExpression(1);AudioControl(PlaySFX,Others_Punch_Single_Normal_1);ModifyData(FeatExp,Player,MartialArts,10);SetPortrait(MC1,pic=14);",
+    "Conditions": "IsPassDice() == true;",
+    "zh_TW": "[panel=6]＊（三招。第一招你退了半步，第二招你的腳陷進沙裡，第三招你還站著。）＊",
+    "zh_CN": "[panel=6]＊（三招。第一招你退了半步，第二招你的脚陷进沙里，第三招你还站着。）＊",
+    "links": [92],
+    "Description": "武藝經驗增加"
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC1",
+    "text": "「呼……呼……我……撐過去了。」",
+    "Sequence": "",
+    "zh_TW": "「呼……呼……我……撐過去了。」",
+    "zh_CN": "「呼……呼……我……撑过去了。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]收了掌[/em7]，好小子。當真在老子手底下撐了下來——行，這是你自己掙來的。留下吧。」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「[em7]收了掌[/em7]，好小子。當真在老子手底下撐了下來——行，這是你自己掙來的。留下吧。」",
+    "zh_CN": "[panel=1]「[em7]收了掌[/em7]，好小子。当真在老子手底下撑了下来——行，这是你自己挣来的。留下吧。」",
+    "links": [99]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三招。第一招你退了半步，第二招你的刀脫了手，第三招你在地上。）＊",
+    "Sequence": "DisableCharacterExpression(1);AudioControl(PlaySFX,Others_Punch_Single_Normal_1);AudioControl(PlaySFX,Others_BodyFall);SetPortrait(MC1,pic=16);EnableCharacterExpression(0,Player,Pain);",
+    "Conditions": "IsPassDice() == false;",
+    "zh_TW": "[panel=6]＊（三招。第一招你退了半步，第二招你的刀脫了手，第三招你在地上。）＊",
+    "zh_CN": "[panel=6]＊（三招。第一招你退了半步，第二招你的刀脱了手，第三招你在地上。）＊",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「唔……差得太遠了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=16);",
+    "zh_TW": "「唔……差得太遠了。」",
+    "zh_CN": "「唔……差得太远了。」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "MC12",
+    "text": "[panel=1]「就這點道行，還敢跟老子談條件？按說你該乖乖跟老子回去才是……」",
+    "Sequence": "SetPortrait(MC12,pic=3);",
+    "zh_TW": "[panel=1]「就這點道行，還敢跟老子談條件？按說你該乖乖跟老子回去才是……」",
+    "zh_CN": "[panel=1]「就这点道行，还敢跟老子谈条件？按说你该乖乖跟老子回去才是……」",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "MC12",
+    "text": "[panel=1]「……不過罷了。你有這份跟老子叫板的膽氣，比什麼都強。想留就留下——給老子好好練。」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「……不過罷了。你有這份跟老子叫板的膽氣，比什麼都強。想留就留下——給老子好好練。」",
+    "zh_CN": "[panel=1]「……不过罢了。你有这份跟老子叫板的胆气，比什么都强。想留就留下——给老子好好练。」",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他伸手把你從沙裡拉起來。那一拉的力氣，比方才三招加起來都輕。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他伸手把你從沙裡拉起來。那一拉的力氣，比方才三招加起來都輕。）＊",
+    "zh_CN": "[panel=6]＊（他伸手把你从沙里拉起来。那一拉的力气，比方才三招加起来都轻。）＊",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC12",
+    "text": "[panel=1]「反正老子還有邊境軍務，羌胡那邊不太平，也不能帶你們去吃沙子。但——」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「反正老子還有邊境軍務，羌胡那邊不太平，也不能帶你們去吃沙子。但——」",
+    "zh_CN": "[panel=1]「反正老子还有边境军务，羌胡那边不太平，也不能带你们去吃沙子。但——」",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC12",
+    "text": "[panel=1]「拿去。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「拿去。」",
+    "zh_CN": "[panel=1]「拿去。」",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(Valuable,Player,ShootingSirius,1);Continue();",
+    "links": [102],
+    "Description": "獲得射天狼"
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC12",
+    "text": "[panel=1]「這張弓叫射天狼。老子從邊地一路打拼到今日，靠的就是它。交給你，不算虧待。」",
+    "Sequence": "SetPortrait(MC12,pic=1);EnableCharacterExpression(1,MC12,Proud);",
+    "zh_TW": "[panel=1]「這張弓叫射天狼。老子從邊地一路打拼到今日，靠的就是它。交給你，不算虧待。」",
+    "zh_CN": "[panel=1]「这张弓叫射天狼。老子从边地一路打拼到今日，靠的就是它。交给你，不算亏待。」",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「爹，這太重了……」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
+    "zh_TW": "「爹，這太重了……」",
+    "zh_CN": "「爹，这太重了……」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈！這弓老子還能左右開弓呢。你多練練，準也拉得動。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「哈哈！這弓老子還能左右開弓呢。你多練練，準也拉得動。」",
+    "zh_CN": "[panel=1]「哈哈！这弓老子还能左右开弓呢。你多练练，准也拉得动。」",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC12",
+    "text": "[panel=1]「[em7]瞥了小犀一眼[/em7]，丫頭。想吃什麼、缺什麼，儘管跟英豪府要，帳算在老子頭上。日後有機會，董叔再來看你們。」",
+    "Sequence": "SetPortrait(MC8,pic=14);",
+    "zh_TW": "[panel=1]「[em7]瞥了小犀一眼[/em7]，丫頭。想吃什麼、缺什麼，儘管跟英豪府要，帳算在老子頭上。日後有機會，董叔再來看你們。」",
+    "zh_CN": "[panel=1]「[em7]瞥了小犀一眼[/em7]，丫头。想吃什么、缺什么，尽管跟英豪府要，帐算在老子头上。日后有机会，董叔再来看你们。」",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "MC8",
+    "text": "[panel=2]「董叔……我、我想吃不完的綠豆糕……」",
+    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Nervous);",
+    "zh_TW": "[panel=2]「董叔……我、我想吃不完的綠豆糕……」",
+    "zh_CN": "[panel=2]「董叔……我、我想吃不完的绿豆糕……」",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈！行！董叔讓英豪府天天給你備著，管夠！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC8,pic=14);",
+    "zh_TW": "[panel=1]「哈哈！行！董叔讓英豪府天天給你備著，管夠！」",
+    "zh_CN": "[panel=1]「哈哈！行！董叔让英豪府天天给你备着，管够！」",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC12",
+    "text": "[panel=1]「本想多陪你們幾日。可羌胡近來蠢動，老子這趟是奉命北調，軍令催得急，實在不能久留。」",
+    "Sequence": "SetPortrait(MC12,pic=3);SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「本想多陪你們幾日。可羌胡近來蠢動，老子這趟是奉命北調，軍令催得急，實在不能久留。」",
+    "zh_CN": "[panel=1]「本想多陪你们几日。可羌胡近来蠢动，老子这趟是奉命北调，军令催得急，实在不能久留。」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC4",
+    "text": "[panel=3]「董校尉留步。令郎既是校尉骨肉，英豪府自當傾力栽培。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「董校尉留步。令郎既是校尉骨肉，英豪府自當傾力栽培。」",
+    "zh_CN": "[panel=3]「董校尉留步。令郎既是校尉骨肉，英豪府自当倾力栽培。」",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC4",
+    "text": "[panel=3]「只是操練、器械、糧秣樣樣都要花錢，校尉遠在西涼鞭長莫及，何不……略作打點？」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「只是操練、器械、糧秣樣樣都要花錢，校尉遠在西涼鞭長莫及，何不……略作打點？」",
+    "zh_CN": "[panel=3]「只是操练、器械、粮秣样样都要花钱，校尉远在西凉鞭长莫及，何不……略作打点？」",
+    "links": [111, 112]
+  },
+  {
+    "entryID": 111,
+    "actorID": "MC1",
+    "text": "「先生，這不必——」",
+    "Sequence": "",
+    "zh_TW": "「先生，這不必——」",
+    "zh_CN": "「先生，这不必——」",
+    "links": [113],
+    "Description": "選項1"
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "（不作聲。）",
+    "Sequence": "",
+    "zh_TW": "（不作聲。）",
+    "zh_CN": "（不作声。）",
+    "links": [120],
+    "Description": "選項2"
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC1",
+    "text": "「先生，這不必——爹的東西，是給我的，不是給府裡的。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「先生，這不必——爹的東西，是給我的，不是給府裡的。」",
+    "zh_CN": "「先生，这不必——爹的东西，是给我的，不是给府里的。」",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡沒有再說話。他把手籠回袖子裡。）＊",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=6]＊（賈詡沒有再說話。他把手籠回袖子裡。）＊",
+    "zh_CN": "[panel=6]＊（贾诩没有再说话。他把手笼回袖子里。）＊",
+    "links": [115]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈哈哈！——聽見沒有，先生？老子給兒子的東西，還輪不到旁人替他推。」",
+    "Sequence": "SetPortrait(MC12,pic=1);",
+    "zh_TW": "[panel=1]「哈哈哈哈！——聽見沒有，先生？老子給兒子的東西，還輪不到旁人替他推。」",
+    "zh_CN": "[panel=1]「哈哈哈哈！——听见没有，先生？老子给儿子的东西，还轮不到旁人替他推。」",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC12",
+    "text": "[panel=1]「不過話說回來，這份骨氣，老子高興。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「不過話說回來，這份骨氣，老子高興。」",
+    "zh_CN": "[panel=1]「不过话说回来，这份骨气，老子高兴。」",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "MC12",
+    "text": "[panel=1]「東西照給。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「東西照給。」",
+    "zh_CN": "[panel=1]「东西照给。」",
+    "links": [118]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC12",
+    "text": "[panel=1]「英豪府缺什麼，開張單子送去西涼大營，老子軍需裡勻得出的，儘管拿——就當是你們替董某養了這兩個孩子十來年的酬勞。」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "[panel=1]「英豪府缺什麼，開張單子送去西涼大營，老子軍需裡勻得出的，儘管拿——就當是你們替董某養了這兩個孩子十來年的酬勞。」",
+    "zh_CN": "[panel=1]「英豪府缺什么，开张单子送去西凉大营，老子军需里匀得出的，尽管拿——就当是你们替董某养了这两个孩子十来年的酬劳。」",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]把帳冊翻到最後一頁，另起了一行[/em7]，小犀記著了。這一筆……小犀單記一頁，不記在府的帳上。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「[em7]把帳冊翻到最後一頁，另起了一行[/em7]，小犀記著了。這一筆……小犀單記一頁，不記在府的帳上。」",
+    "zh_CN": "[panel=2]「[em7]把帐册翻到最后一页，另起了一行[/em7]，小犀记着了。这一笔……小犀单记一页，不记在府的帐上。」",
+    "links": [125]
+  },
+  {
+    "entryID": 120,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你沒有接話。賈詡也沒有再看你一眼。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（你沒有接話。賈詡也沒有再看你一眼。）＊",
+    "zh_CN": "[panel=6]＊（你没有接话。贾诩也没有再看你一眼。）＊",
+    "links": [121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC12",
+    "text": "[panel=1]「哈哈！繞這麼大個圈子，不就是想要好處？行！」",
+    "Sequence": "SetPortrait(MC12,pic=4);",
+    "zh_TW": "[panel=1]「哈哈！繞這麼大個圈子，不就是想要好處？行！」",
+    "zh_CN": "[panel=1]「哈哈！绕这么大个圈子，不就是想要好处？行！」",
+    "links": [122]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC12",
+    "text": "[panel=1]「英豪府缺什麼，開張單子送去西涼大營，老子軍需裡勻得出的，儘管拿——就當是你們替董某尋回孩子的酬勞。」",
+    "Sequence": "SetPortrait(MC12,pic=1);SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「英豪府缺什麼，開張單子送去西涼大營，老子軍需裡勻得出的，儘管拿——就當是你們替董某尋回孩子的酬勞。」",
+    "zh_CN": "[panel=1]「英豪府缺什么，开张单子送去西凉大营，老子军需里匀得出的，尽管拿——就当是你们替董某寻回孩子的酬劳。」",
+    "links": [123]
+  },
+  {
+    "entryID": 123,
+    "actorID": "MC4",
+    "text": "[panel=3]「校尉爽快。有西涼這座靠山，英豪府往後行事，可就順風順水了。」",
+    "Sequence": "SetPortrait(MC8,pic=3);",
+    "zh_TW": "[panel=3]「校尉爽快。有西涼這座靠山，英豪府往後行事，可就順風順水了。」",
+    "zh_CN": "[panel=3]「校尉爽快。有西凉这座靠山，英豪府往后行事，可就顺风顺水了。」",
+    "links": [124]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]把帳冊翻到最後一頁[/em7]，小犀記著了。西涼……這一筆記在府的進項裡。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「[em7]把帳冊翻到最後一頁[/em7]，小犀記著了。西涼……這一筆記在府的進項裡。」",
+    "zh_CN": "[panel=2]「[em7]把帐册翻到最后一页[/em7]，小犀记着了。西凉……这一笔记在府的进项里。」",
+    "links": [125]
+  },
+  {
+    "entryID": 125,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他大笑著轉身出了演武場。門外的日頭已經偏西，他的背影走進那片光裡——步伐比來的時候沉穩許多。）＊",
+    "Sequence": "AudioControl(StopMusic);AudioControl(PlayMusic,BGM_42);SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=6]＊（他大笑著轉身出了演武場。門外的日頭已經偏西，他的背影走進那片光裡——步伐比來的時候沉穩許多。）＊",
+    "zh_CN": "[panel=6]＊（他大笑着转身出了演武场。门外的日头已经偏西，他的背影走进那片光里——步伐比来的时候沉稳许多。）＊",
+    "links": [126],
+    "Description": "切換音樂"
+  },
+  {
+    "entryID": 126,
+    "actorID": "MC5",
+    "text": "[panel=3]「[em7]看著那個背影，沒有回頭[/em7]，混元震地……當年那個人，後來走的是軍旅。」",
+    "Sequence": "",
+    "zh_TW": "[panel=3]「[em7]看著那個背影，沒有回頭[/em7]，混元震地……當年那個人，後來走的是軍旅。」",
+    "zh_CN": "[panel=3]「[em7]看着那个背影，没有回头[/em7]，混元震地……当年那个人，后来走的是军旅。」",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人接徐榮這句話。賈詡把袖子攏了攏，往正堂去了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（沒有人接徐榮這句話。賈詡把袖子攏了攏，往正堂去了。）＊",
+    "zh_CN": "[panel=6]＊（没有人接徐荣这句话。贾诩把袖子拢了拢，往正堂去了。）＊",
+    "links": [128]
+  },
+  {
+    "entryID": 128,
+    "actorID": "MC1",
+    "text": "「……爹。你居然還活著。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「……爹。你居然還活著。」",
+    "zh_CN": "「……爹。你居然还活着。」",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0,close);OpenPanel(1,close);OpenPanel(2,close);OpenPanel(3,close);DisableAllCharacterExpression();DisableDialogueBG();Continue();",
+    "Description": "清除立繪、關閉背景",
+    "links": []
+  }
+]

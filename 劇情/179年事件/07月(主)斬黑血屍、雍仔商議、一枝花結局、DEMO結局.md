@@ -27,7 +27,7 @@
 
 **燕不凡:**`#298`　「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」
 - Sequence: `SetPortrait(MC1,pic=11); EnableCharacterExpression(0,Player,Nervous_2);`
-- Conditions: `CurrentQuestState("CF08") == "success"`
+- Conditions: `CurrentQuestState("CF08") == "success";`
 
 **燕不凡:**`#2416`（承 `#298`）　「呼…又來到這鬼地方了…上次的教訓還歷歷在目，這次可不能再大意了…」
 - Sequence: `SetPortrait(MC1,pic=11);`
@@ -36,12 +36,12 @@
 - Sequence: `DisableCharacterExpression(0);`
 
 **赫連娜娜:**`#300`　[panel=1]「別唉聲嘆氣的了！牠越兇，就說明身後的寶貝越珍貴！快點解決牠，我們好進去尋寶！」
-- Sequence: `SetPortrait(MC22,pic=5); EnableCharacterExpression(0,MC22,Proud);`
+- Sequence: `SetPortrait(MC22,pic=5); EnableCharacterExpression(1,MC22,Proud);`
 
 **◆ 合流**
 
 **旁白:**`#237`　[panel=6]＊（只見主墓室中央，那黑血屍果然還在，它身上的黑氣比之上次稀薄了不少，氣息也萎靡了許多，但眼神中的怨毒卻絲毫不減。）＊
-- Sequence: `DisableCharacterExpression(5);`
+- Sequence: `DisableCharacterExpression(1);`
 
 **黑血屍:**`#216`　「又是…你們…還敢回來送死…咳咳…」
 
@@ -54,7 +54,7 @@
 
 **赫連娜娜:**`#302`　[panel=1]「喂！醜八怪！識相的就趕緊讓開，別擋著本姑娘尋寶的路！」
 - Sequence: `SetPortrait(MC22,pic=2);`
-- Conditions: `CurrentQuestState("CF08") == "success"`
+- Conditions: `CurrentQuestState("CF08") == "success";`
 
 **◆ 合流**
 
@@ -73,7 +73,7 @@
 
 > ⚙ `#240` 敗北（無文案）
 > - Sequence: `Continue();`
-> - Conditions: `IsPassFight()  == false;`
+> - Conditions: `IsPassFight() == false;`
 
 > ⚙ `#269` 播放結局 Ending_1（對話結束）
 > - Sequence: `Continue(); ShowEnding(Ending_1);`
@@ -82,19 +82,19 @@
 
 **旁白:**`#220`　[panel=6]＊（本已元氣大傷的黑血屍漸漸不支，在你與雍仔的聯手攻擊下，終於發出一聲不甘的哀嚎，最終化為一灘黑水，只留下一枚閃爍着奇異光芒的黑色珠子。）＊
 - Sequence: `ModifyData(Valuable,Player,BlackSkull,1);`
-- Conditions: `IsPassFight()  == true`
+- Conditions: `IsPassFight() == true;`
 - 註記：獲得無名人頭骨
 
 **燕不凡:**`#221`　「呼…呼…妖…妖孽…終於…授首了！ 」
 - Sequence: `SetPortrait(MC1,pic=11);`
-- Script: `SetQuestState("CF05", "active")`
+- Script: `SetQuestState("CF05", "active");`
 - 註記：觸發靜觀其變任務
 - 分流：有娜娜 → `#303`（下方 5-1-A）；否則 → `#222`（下方 5-1-B）
 
 #### 5-1-A　有娜娜線：屍丹的四種處置
 
 **旁白:**`#303`　[panel=6]＊（你話音未落，一道身影已經從你身邊竄了過去，直奔那枚黑色珠子。）＊
-- Conditions: `CurrentQuestState("CF08") == "success"`
+- Conditions: `CurrentQuestState("CF08") == "success";`
 
 **赫連娜娜:**`#304`　[panel=1]「哇！快看！我就說有寶貝吧！這趟果然沒白來！」
 - Sequence: `SetPortrait(MC22,pic=1);`
@@ -137,7 +137,7 @@
 
 **雍仔:**`#315`　[panel=3]「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。」
 - Sequence: `DisableCharacterExpression(0); ModifyData(FavorabilityExp,MC20,20);`
-- Script: `Variable["FatFriendDie"] = false; SetQuestEntryState("CF05", 1, "active")`（原檔分兩行）
+- Script: `Variable["FatFriendDie"] = false; SetQuestEntryState("CF05", 1, "active");`
 - 註記：雍仔好感度提升、觸發任務"靜觀其變-1"、雍仔死亡變數更新
 
 **赫連娜娜:**`#316`　[panel=1]「嗚，你、你這個不識貨的呆頭鵝！把寶貝往外推！氣死我了！」
@@ -152,12 +152,12 @@
 
 **雍仔:**`#318`　[panel=3]「嗯…此法倒也穩妥。」
 - Sequence: `DisableCharacterExpression(0);`
-- Script: `SetQuestEntryState("CF05", 2, "active")`
+- Script: `SetQuestEntryState("CF05", 2, "active");`
 - 註記：觸發任務"靜觀其變-2"
 
 **赫連娜娜:**`#319`　[panel=1]「算你有點腦子！不過得由我保管！交給這道士，天曉得他會不會拿去當夜明珠賣了！」
 - Sequence: `SetPortrait(MC22,pic=1); ModifyData(FavorabilityExp,MC20,-20);`
-- Script: `Variable["NanaChose1"] = true; Variable["NanaDemon"] = Variable["NanaDemon"] + 1`（原檔分兩行）
+- Script: `Variable["NanaChose1"] = true; Variable["NanaDemon"] = Variable["NanaDemon"] + 1;`
 - 註記：娜娜變數更新
 - → 接 `#331`
 
@@ -178,7 +178,7 @@
 - 註記：降低娜娜好感度
 
 **旁白:**`#322`　[panel=6]＊（你與雍仔運起內力，費了好一番功夫，終於將那屍丹徹底化為飛灰。）＊
-- Script: `Variable["HeroDestiny"] = true; SetQuestState("CF05", "success")`（原檔分兩行）
+- Script: `Variable["HeroDestiny"] = true; SetQuestState("CF05", "success");`
 - 註記：解鎖雲龍繞日命盤、完成靜觀其變任務
 - → 接 `#331`
 
@@ -199,7 +199,7 @@
 
 **雍仔:**`#328`　「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。」
 - Sequence: `ModifyData(FavorabilityExp,MC20,-20);`
-- Script: `Variable["DarkHeroDestiny"] = true`
+- Script: `Variable["DarkHeroDestiny"] = true;`
 - 註記：雍仔好感度下降、塚虎枯骨命盤
 
 **旁白:**`#2367`　[panel=6]＊（珠子入手。懷裡麒麟骰熱了一下，像是應了你。）＊
@@ -210,7 +210,7 @@
 
 **旁白:**`#331`　[panel=6]＊（三人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊
 - Sequence: `AudioControl(PauseLowerMusic); AudioControl(PlayMusic,BGM_32); EnableDialogueBG(Farmland); ModifyData(IsInTeam,MC20,false); ModifyData(IsAbleToJoinTeam,MC20,false);`
-- Script: `SetQuestState("C0M2", "success")`
+- Script: `SetQuestState("C0M2", "success");`
 - 註記：雍仔離開隊伍、關閉地圖音樂、開啟序章結局音樂、任務更新
 
 **旁白:**`#350`　[panel=6]＊（回到小溪村後，你們總算鬆了口氣。經過一番休整，雍仔嘻皮笑臉的找到了你。）
@@ -260,7 +260,7 @@
 **▶▶ 評語一：雲龍繞日（毀掉屍丹）**
 
 **茶博士:**`#2069`　「[em3]其志如雲，不與群芳爭艷；其心如龍，唯願繞日而行。[/em3]。」
-- Conditions: `Variable["HeroDestiny"] == true`
+- Conditions: `Variable["HeroDestiny"] == true;`
 - 註記：毀掉屍丹(英雄命盤為True)
 
 **茶博士:**`#2118`　「那玩意雖然是人人想要的寶貝，但在你眼裡卻比不上一口清爽氣。能捨得下這等邪力，求一個問心無愧，這份骨氣配得上英豪府。」
@@ -274,7 +274,7 @@
 **▶▶ 評語二：塚虎踏骨（自己留著）**
 
 **茶博士:**`#2071`　「[em3]其思如淵，不與百鳥爭鳴；其行如虎，唯願踏骨而興。[/em3]。」
-- Conditions: `Variable["DarkHeroDestiny"] == true`
+- Conditions: `Variable["DarkHeroDestiny"] == true;`
 - 註記：留者屍丹(梟雄命盤=True)
 
 **茶博士:**`#2119`　「你這人，為了變強連燙手的刀刃都敢往懷裡揣。這世道，唯有抓得住力量的人才能活下去，但也得小心，別反被這股力量給吞了。」
@@ -289,7 +289,7 @@
 
 **茶博士:**`#2073`　「[em3]輕裝快馬，不繫名韁[/em3]。」
 - Sequence: `ModifyData(ChancePoint,5);`
-- Conditions: `Variable["FatFriendDie"] == false`
+- Conditions: `Variable["FatFriendDie"] == false;`
 - 註記：屍丹給了雍仔、獲得機會點
 
 **茶博士:**`#2120`　「寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」
@@ -299,7 +299,7 @@
 
 **茶博士:**`#2076`　「[em3]輕裝快馬，不繫名韁[/em3]。」
 - Sequence: `ModifyData(ChancePoint,5);`
-- Conditions: `Variable["NanaChose1"] == true`
+- Conditions: `Variable["NanaChose1"] == true;`
 - 註記：屍丹給了娜娜、獲得機會點
 - → 接 `#2120`（與評語三共用下半句）
 
@@ -310,7 +310,7 @@
 - 註記：有娜娜的結局
 
 > ⚙ `#2320` 轉場、切換音樂（切馬車全螢幕背景）
-> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); AudioControl(StopMusic); AudioControl(PlayMusic,Others_Carriage); OpenPanel(1,close)@1; DisableDialogueBG()@1; EnableEventBG(CarriageWithPeople,FullScreen)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
+> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); AudioControl(StopMusic); AudioControl(PlaySFXOneShot,Others_Carriage); OpenPanel(1,close)@1; DisableDialogueBG()@1; EnableEventBG(CarriageWithPeople,FullScreen)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
 > - 註記：轉場,切換音樂
 
 **旁白:**`#2292`　[panel=6]＊（馬車隨著山道輕輕顛簸。車廂角落坐著一名穿著浮誇、正唾沫橫飛吹著牛的市井混混，以及一名語氣陰陽怪氣的工漢。兩人正有一搭沒一搭地對聊著。）＊
@@ -378,7 +378,7 @@
 
 **雍仔:**`#245`　「兄弟果然高義！貧道定會妥善處置此物，絕不讓其為禍人間。放心，待貧道研究一番，若真有能化解其陰氣、化害為利之法，也定不會忘了兄弟你今日之功。」
 - Sequence: `ModifyData(FavorabilityExp,MC20,20);`
-- Script: `Variable["FatFriendDie"] = false; SetQuestEntryState("CF05", 1, "active")`（原檔分兩行）
+- Script: `Variable["FatFriendDie"] = false; SetQuestEntryState("CF05", 1, "active");`
 - 註記：雍仔好感度提升、觸發任務"靜觀其變-1"、雍仔死亡變數更新
 - → 接 `#258`
 
@@ -392,7 +392,7 @@
 
 **雍仔:**`#248`　「兄弟所言，倒也不失為一個法子。貧道對此物也是一知半解，若能尋得高人指點，確能更好地處置。也罷，便依兄弟之見，待日後到了繁華之地，我等再設法探尋其奧秘與價值。」
 - Sequence: `DisableCharacterExpression(0);`
-- Script: `SetQuestEntryState("CF05", 3, "active"); Variable["DarkHeroDestiny"] = true`（原檔分兩行）
+- Script: `SetQuestEntryState("CF05", 3, "active"); Variable["DarkHeroDestiny"] = true;`
 - 註記：觸發任務"靜觀其變-3"、梟雄命盤
 - → 接 `#258`
 
@@ -409,7 +409,7 @@
 - 註記：雍仔好感度提升
 
 **旁白:**`#252`　[panel=6]＊（你與雍仔運起內力，費了好一番功夫，終於將那屍丹徹底化為飛灰。）＊
-- Script: `Variable["HeroDestiny"] = true; SetQuestState("CF05", "success")`（原檔分兩行）
+- Script: `Variable["HeroDestiny"] = true; SetQuestState("CF05", "success");`
 - 註記：解鎖雲龍繞日命盤，完成靜觀其變任務
 - → 接 `#258`
 
@@ -429,7 +429,7 @@
 
 **雍仔:**`#257`　「也罷！[var=PlayerLastName]兄弟你福緣深厚，非同常人，或許真有過人之法。既然你執意如此，貧道便將此物交予你。」
 - Sequence: `ModifyData(FavorabilityExp,MC20,-20);`
-- Script: `Variable["DarkHeroDestiny"] = true`
+- Script: `Variable["DarkHeroDestiny"] = true;`
 - 註記：雍仔好感度下降、塚虎枯骨命盤
 
 **旁白:**`#2368`　[panel=6]＊（珠子入手。懷裡麒麟骰熱了一下，像是應了你。）＊
@@ -440,7 +440,7 @@
 
 **旁白:**`#258`　[panel=6]＊（二人檢查一番，確認再無其他異常，便一同離開了古墓。陽光灑在身上，驅散了墓中的陰寒，也洗去了連日的陰霾。）＊
 - Sequence: `AudioControl(PauseLowerMusic); AudioControl(PlayMusic,BGM_32); EnableDialogueBG(Farmland);`
-- Script: `SetQuestState("C0M2", "success")`
+- Script: `SetQuestState("C0M2", "success");`
 - 註記：關閉地圖音樂、開啟序章結局音樂、任務更新
 
 **雍仔:**`#226`　「[var=PlayerLastName]兄弟，如今黑血屍已除，貧道心中的一塊大石也算落地了。此番與你共歷患難，也算是一段難得的緣分。」
@@ -484,7 +484,7 @@
 **▶▶ 評語一：雲龍繞日（毀掉屍丹）**
 
 **茶博士:**`#2234`　「[em3]其志如雲，不與群芳爭艷；其心如龍，唯願繞日而行。[/em3]。」
-- Conditions: `Variable["HeroDestiny"] == true`
+- Conditions: `Variable["HeroDestiny"] == true;`
 - 註記：毀掉屍丹(英雄命盤為True)
 
 **茶博士:**`#2236`　「那玩意雖然是人人想要的寶貝，但在你眼裡卻比不上一口清爽氣。能捨得下這等邪力，求一個問心無愧，這份骨氣配得上英豪府。」
@@ -498,7 +498,7 @@
 **▶▶ 評語二：塚虎踏骨（自己留著）**
 
 **茶博士:**`#2235`　「[em3]其思如淵，不與百鳥爭鳴；其行如虎，唯願踏骨而興。[/em3]。」
-- Conditions: `Variable["DarkHeroDestiny"] == true`
+- Conditions: `Variable["DarkHeroDestiny"] == true;`
 - 註記：留者屍丹(梟雄命盤=True)
 
 **茶博士:**`#2237`　「你這人，為了變強連燙手的刀刃都敢往懷裡揣。這世道，唯有抓得住力量的人才能活下去，但也得小心，別反被這股力量給吞了。」
@@ -513,7 +513,7 @@
 
 **茶博士:**`#2061`　「[em3]輕裝快馬，不繫名韁[/em3]。寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」
 - Sequence: `ModifyData(ChancePoint,5);`
-- Conditions: `Variable["FatFriendDie"] == false`
+- Conditions: `Variable["FatFriendDie"] == false;`
 - 註記：屍丹給了雍仔、獲得機會點
 - → 接 `#265`
 
@@ -521,7 +521,7 @@
 
 **茶博士:**`#2064`　「[em3]輕裝快馬，不繫名韁[/em3]。寶物也好，累贅也罷，你一撒手就全給了旁人，落得個逍遙自在。這份隨遇而安的勁兒，我看著最順眼。江湖路長，你這份逍遙，才是真正能保命的東西。」
 - Sequence: `ModifyData(ChancePoint,5);`
-- Conditions: `Variable["NanaChose1"] == true`
+- Conditions: `Variable["NanaChose1"] == true;`
 - 註記：屍丹給了娜娜、獲得機會點
 
 **◆ 合流**
@@ -531,7 +531,7 @@
 - 註記：沒有娜娜的結局
 
 > ⚙ `#2228` 轉場、切換音樂（切馬車全螢幕背景）
-> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); AudioControl(StopMusic); AudioControl(PlayMusic,Others_Carriage); OpenPanel(1,close)@1; DisableDialogueBG()@1; EnableEventBG(CarriageWithPeople,FullScreen)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
+> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); AudioControl(StopMusic); AudioControl(PlaySFXOneShot,Others_Carriage); OpenPanel(1,close)@1; DisableDialogueBG()@1; EnableEventBG(CarriageWithPeople,FullScreen)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
 > - 註記：轉場,切換音樂
 
 **旁白:**`#2259`　[panel=6]＊（馬車隨著山道輕輕顛簸。車廂角落坐著一名穿著浮誇、正唾沫橫飛吹著牛的市井混混，以及一名語氣陰陽怪氣的工漢。兩人正有一搭沒一搭地對聊著。）＊
@@ -571,14 +571,14 @@
 
 > ⚙ `#2371` 進入夢境的轉場（關面板、停音樂、骰子特效）
 > - Sequence: `OpenPanel(1, close); OpenPanel(2, close); OpenPanel(4, close); DisableEventBG(FullScreen); AudioControl(StopMusic); SetContinueMode(false); PlayFeelFeedback(FadeOut,0.5,#000000,1); PlayOrStopParticle(Meditate,Stop)@0.5; PlayOrStopParticle(DiceTransition_Normal,Play); AudioControl(PlaySFX,Fight_TransitionIn); Continue()@2;`
-> - Conditions: `CurrentQuestEntryState("CF05", 3) == "active"`
+> - Conditions: `CurrentQuestEntryState("CF05", 3) == "active";`
 > - 註記：如果是靜觀其變3
 
 > ⚙ `#2372` 轉場續播
 > - Sequence: `SetContinueMode(original)@0.5; Continue()@0.5;`
 
 > ⚙ `#2375` 開啟冥想特效
-> - Sequence: `DisableDialogueBG(); PlayFeelFeedback(FadeOut,0.5,#000000,1); PlayOrStopParticle(Meditate,Play); Continue();`
+> - Sequence: `SetContinueMode(false); DisableDialogueBG(); PlayFeelFeedback(FadeOut,0.5,#000000,1); PlayOrStopParticle(Meditate,Play); SetContinueMode(original)@0.5; Continue()@0.5;`
 > - 註記：開啟冥想
 
 **旁白:**`#2373`　[panel=6]＊（這一沉，人已到了那片無窮大的空裡。沒有溫度，沒有光，也分不出上下。）＊
@@ -630,7 +630,7 @@
 
 **燕不凡:**`#2399`　「便給妳罷。妳既看著它，若我還捨不得，那可顯得太吝嗇了。」
 - Sequence: `SetPortrait(MC1,pic=1); ModifyData(DnDAlignment,Player,LawChaos,0.15); EnableCharacterExpression(0,Player,Proud);`
-- Script: `SetQuestState("CF05", "success"); SetQuestEntryState("CF05", 3, "success")`（原檔分兩行）
+- Script: `SetQuestState("CF05", "success"); SetQuestEntryState("CF05", 3, "success");`
 - 註記：完成任務
 
 **旁白:**`#2401`　[panel=6]＊（你探手入懷。那顆珠子已在掌心，還帶著體溫。）＊
@@ -650,7 +650,7 @@
 > - 註記：過場特效
 
 **旁白:**`#2404`　[panel=6]＊（天尚未亮，伸手往懷中一摸，珠子已不知去向，惟餘那顆骰子，冰涼抵著肋骨。）＊
-- Sequence: `AudioControl(StopMusic); AudioControl(PlayMusic,Others_Carriage); EnableEventBG(CarriageWithPeople,FullScreen);`
+- Sequence: `AudioControl(StopMusic); AudioControl(PlaySFXOneShot,Others_Carriage); EnableEventBG(CarriageWithPeople,FullScreen);`
 
 **旁白:**`#2405`　[panel=6]＊（腹中卻空得厲害。昨夜明明用過兩大碗，此時竟如三日未曾進食。）＊
 - Sequence: `ModifyData(AbilityMaxLevel,Player,Leadership,5); ModifyData(AbilityMaxLevel,Player,Strength,5); ModifyData(AbilityMaxLevel,Player,Intelligence,5); ModifyData(AbilityMaxLevel,Player,Politics,5); ModifyData(AbilityMaxLevel,Player,Charisma,5);`
@@ -667,6 +667,7 @@
 
 **燕不凡:**`#2400`　「這是我拼命換來的。吃不了，那也是我的。」
 - Sequence: `SetPortrait(MC1,pic=18); EnableCharacterExpression(0,Player,Proud);`
+- Script: `Variable["HungryDesire"] = Variable["HungryDesire"] + 1;`
 - 註記：不給屍丹
 
 **旁白:**`#2409`　[panel=6]＊（她看了你一會兒，把目光挪開了。不是動怒——倒像是把一件本就沒興趣的東西，隨手放回了原處。）＊
@@ -680,7 +681,7 @@
 > - 註記：過場特效
 
 **旁白:**`#2412`　[panel=6]＊（你醒過來，天還沒亮。珠子還在懷裡，貼著骰子。）＊
-- Sequence: `AudioControl(StopMusic); AudioControl(PlayMusic,Others_Carriage); EnableEventBG(CarriageWithPeople,FullScreen);`
+- Sequence: `AudioControl(StopMusic); AudioControl(PlaySFXOneShot,Others_Carriage); EnableEventBG(CarriageWithPeople,FullScreen);`
 
 **蕭靈犀:**`#2415`　[panel=2]「[em7]翻了個身，含糊地[/em7]……表哥？做惡夢了？」
 - Sequence: `SetPortrait(MC8,pic=3); EnableCharacterExpression(0,Player,Nervous);`
@@ -691,7 +692,7 @@
 #### 5-1-D　共通：并州客棧，說書人的第一回
 
 > ⚙ `#2349` 轉場（切客棧背景）
-> - Sequence: `PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); OpenPanel(1, close); OpenPanel(2, close); SetContinueMode(false); EnableDialogueBG(Lnn)@1; DisableEventBG(FullScreen); SetContinueMode(original)@2.5; Continue()@2.5;`
+> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); OpenPanel(1, close)@1; OpenPanel(2, close)@1; EnableDialogueBG(Lnn)@1; DisableEventBG(FullScreen)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
 > - 註記：轉場
 
 **旁白:**`#2342`　[panel=6]＊（并州某一客棧燈火昏黃。說書人將醒木往案上一拍，滿堂漸靜。）＊
@@ -754,7 +755,7 @@
 > - 註記：轉場
 
 > ⚙ `#2341` 轉到破廟、獲得機會點、關閉根據地（對話結束）
-> - Sequence: `LoadLevel(AbandonedTemple,AbandonedTemple); ModifyData(ChancePoint,2); MapLock(Command_XiaoxiVillageInn, lock); DisableEventBG(FullScreen); Continue();`
+> - Sequence: `ModifyData(ChancePoint,2); MapLock(Command_XiaoxiVillageInn, lock); DisableEventBG(FullScreen); DisableDialogueBG(); LoadLevel(AbandonedTemple,AbandonedTemple); Continue();`
 > - 註記：轉到破廟、獲得機會點、關閉根據地
 
 ### 5-2　入口 `#2050`：出發前與雍仔商議（含「不去」的放棄線）
@@ -830,7 +831,7 @@
 - 註記：雍仔好感度、加入隊伍
 
 > ⚙ `#2052` 載入古墓深處（對話結束）
-> - Sequence: `LoadLevel(XiaoxiVillageTomb,XiaoxiVillageTomb_TombDeep); ModifyData(Rest); Continue();`
+> - Sequence: `ModifyData(Rest); LoadLevel(XiaoxiVillageTomb,XiaoxiVillageTomb_TombDeep); Continue();`
 
 **▶ 分支 B：不去（放棄線）**
 
@@ -860,14 +861,14 @@
 
 **旁白:**`#371`　[panel=6]＊（序章 - 完）＊
 - Sequence: `DisableDialogueBG(); DisableCharacterExpression(0); AudioControl(PauseLowerMusic);`
-- Conditions: `CurrentQuestState("CF08") == "success"`
-- Script: `SetQuestState("C0M2", "failure")`
+- Conditions: `CurrentQuestState("CF08") == "success";`
+- Script: `SetQuestState("C0M2", "failure");`
 - 註記：有遇到娜娜,關閉音樂、任務更新
 - → 接 `#2320`（5-1-A 的車廂段）
 
 **旁白:**`#372`　[panel=6]＊（序章 - 完）＊
 - Sequence: `DisableDialogueBG(); DisableCharacterExpression(0); AudioControl(PauseLowerMusic);`
-- Script: `SetQuestState("C0M2", "failure"); SetQuestState("CF08", "failure");`（原檔分兩行）
+- Script: `SetQuestState("C0M2", "failure"); SetQuestState("CF08", "failure");`
 - 註記：沒遇到娜娜,關閉音樂、任務更新
 - → 接 `#2228`（5-1-B 的車廂段）
 
@@ -905,7 +906,7 @@
 
 **一枝花:**`#346`　「我最近好想吃酸的哦，嘻嘻！」
 - Sequence: `DisableCharacterExpression(0);`
-- Conditions: `CurrentQuestState("CF04") == "success"`
+- Conditions: `CurrentQuestState("CF04") == "success";`
 - 註記：一枝花結婚結局
 
 **茶博士:**`#347`　「小子你手腳真快，竟然能抱得美人歸！」
@@ -929,7 +930,7 @@
 #### 5-5-A　第一套（`#2322` 起）
 
 > ⚙ `#2322` 淡入轉場、關閉音樂
-> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeIn,1,#000000,1); AudioControl(StopMusic); Continue()@1.5;`
+> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeIn,1,#000000,1); AudioControl(StopMusic); Continue()@1;`
 > - 註記：淡入轉場,關閉音樂
 
 **雍仔:**`#2337`　[panel=1]「……」
@@ -940,8 +941,8 @@
 **▶ 雍仔畫符**
 
 > ⚙ `#2323` 淡出轉場（切民居背景）
-> - Sequence: `DisableEventBG(FullScreen); EnableDialogueBG(Houses); PlayFeelFeedback(FadeOut,1,#000000,1); Continue()@1;`
-> - Conditions: `Variable["FatFriendDie"] == false`
+> - Sequence: `SetContinueMode(false); DisableEventBG(FullScreen); EnableDialogueBG(Houses); PlayFeelFeedback(FadeOut,1,#000000,1); SetContinueMode(original)@1; Continue()@1;`
+> - Conditions: `Variable["FatFriendDie"] == false;`
 > - 註記：淡出轉場
 
 **旁白:**`#2316`　[panel=6]＊（某日...）＊
@@ -954,7 +955,7 @@
 **▶ 某夜對飲（另一支，末尾與上支合流於 `#2321`）**
 
 > ⚙ `#2324` 淡出轉場（切書房背景）
-> - Sequence: `DisableEventBG(FullScreen); EnableDialogueBG(StudyRoom); PlayFeelFeedback(FadeOut,1,#000000,1); Continue()@1;`
+> - Sequence: `SetContinueMode(false); DisableEventBG(FullScreen); EnableDialogueBG(StudyRoom); PlayFeelFeedback(FadeOut,1,#000000,1); SetContinueMode(original)@1; Continue()@1;`
 > - 註記：淡出轉場
 
 **旁白:**`#2317`　[panel=6]＊（某夜...）＊
@@ -971,7 +972,7 @@
 **◆ 合流**
 
 > ⚙ `#2321` 淡入轉場
-> - Sequence: `PlayOrStopParticle(Sword_Single_ScreenRed,Stop); SetContinueMode(false); PlayFeelFeedback(FadeIn,1,#000000,1); Continue()@1.5;`
+> - Sequence: `SetContinueMode(false); PlayOrStopParticle(Sword_Single_ScreenRed,Stop); PlayFeelFeedback(FadeIn,1,#000000,1); Continue()@1;`
 > - 註記：淡入轉場
 
 **燕不凡:**`#2335`　「……」
@@ -986,8 +987,8 @@
 **▶ 荒原**
 
 > ⚙ `#2309` 淡出轉場（切荒野背景）
-> - Sequence: `EnableDialogueBG(Wilderness); PlayFeelFeedback(FadeOut,1,#000000,1); Continue()@1;`
-> - Conditions: `Variable["NanaChose1"] == true`
+> - Sequence: `SetContinueMode(false); EnableDialogueBG(Wilderness); PlayFeelFeedback(FadeOut,1,#000000,1); SetContinueMode(original)@1; Continue()@1;`
+> - Conditions: `Variable["NanaChose1"] == true;`
 > - 註記：淡出轉場
 
 **旁白:**`#2318`　[panel=6]＊（周遭的溫暖瞬間冷卻...）＊
@@ -1001,7 +1002,7 @@
 **▶ 遺跡**
 
 > ⚙ `#2326` 淡出轉場（切洞窟背景）
-> - Sequence: `EnableDialogueBG(Cave); PlayFeelFeedback(FadeOut,1,#000000,1); Continue()@1;`
+> - Sequence: `SetContinueMode(false); EnableDialogueBG(Cave); PlayFeelFeedback(FadeOut,1,#000000,1); SetContinueMode(original)@1; Continue()@1;`
 > - 註記：淡出轉場
 
 **旁白:**`#2319`　[panel=6]＊（某處遺跡...）＊
@@ -1015,7 +1016,7 @@
 
 > ⚙ `#2332` 草芥轉場、播放音樂
 > - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); AudioControl(StopMusic); AudioControl(PlayMusic,BGM_18)@1; DisableDialogueBG()@1; EnableEventBG(Rhino,FullScreen)@1; OpenPanel(1,close)@1; OpenPanel(0,close)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
-> - Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true)`
+> - Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true);`
 > - 註記：草芥轉場,播放音樂
 
 > ⚙ `#2334` 一將功成轉場、播放音樂
@@ -1030,7 +1031,7 @@
 
 **role124:**`#2331`　[panel=1]＊（你頭繫黃巾，手中握著一把捲刃的柴刀，正與無數面容枯槁的農民一起衝向城牆。你只是一股巨大、瘋狂的浪潮中，最卑微的一粒微塵。你奮力嘶吼著，向著那些你曾嚮往的曾經發起決死的衝鋒。）＊
 - Sequence: `SetPortrait(MC1,pic=3); PlayOrStopParticle(Smoke_Dust,Play);`
-- Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true)`
+- Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true);`
 - 註記：主角結局-草芥
 
 **▶ 主角結局・一將功成**
@@ -1054,7 +1055,7 @@
 #### 5-5-B　第二套（`#2284` 起；比第一套少了赫連娜娜的兩幕）
 
 > ⚙ `#2284` 淡入轉場、關閉音樂
-> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeIn,1,#000000,1); AudioControl(StopMusic); Continue()@1.5;`
+> - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeIn,1,#000000,1); AudioControl(StopMusic); Continue()@1;`
 > - 註記：淡入轉場,關閉音樂
 
 **雍仔:**`#2291`　[panel=1]「……」
@@ -1065,8 +1066,8 @@
 **▶ 雍仔畫符**
 
 > ⚙ `#2287` 淡出轉場（切民居背景）
-> - Sequence: `DisableEventBG(FullScreen); EnableDialogueBG(Houses); PlayFeelFeedback(FadeOut,1,#000000,1); Continue()@1;`
-> - Conditions: `Variable["FatFriendDie"] == false`
+> - Sequence: `SetContinueMode(false); DisableEventBG(FullScreen); EnableDialogueBG(Houses); PlayFeelFeedback(FadeOut,1,#000000,1); SetContinueMode(original)@1; Continue()@1;`
+> - Conditions: `Variable["FatFriendDie"] == false;`
 > - 註記：淡出轉場
 
 **旁白:**`#2282`　[panel=6]＊（某日...）＊
@@ -1079,7 +1080,7 @@
 **▶ 某夜對飲**
 
 > ⚙ `#2288` 淡出轉場（切書房背景）
-> - Sequence: `DisableEventBG(FullScreen); EnableDialogueBG(StudyRoom); PlayFeelFeedback(FadeOut,1,#000000,1); Continue()@1;`
+> - Sequence: `SetContinueMode(false); DisableEventBG(FullScreen); EnableDialogueBG(StudyRoom); PlayFeelFeedback(FadeOut,1,#000000,1); SetContinueMode(original)@1; Continue()@1;`
 > - 註記：淡出轉場
 
 **旁白:**`#2283`　[panel=6]＊（某夜...）＊
@@ -1097,7 +1098,7 @@
 
 > ⚙ `#2285` 草芥轉場、播放音樂
 > - Sequence: `SetContinueMode(false); PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1); AudioControl(StopMusic); AudioControl(PlayMusic,BGM_18)@1; DisableDialogueBG()@1; EnableEventBG(Rhino,FullScreen)@1; OpenPanel(1,close)@1; OpenPanel(0,close)@1; SetContinueMode(original)@2.5; Continue()@2.5;`
-> - Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true)`
+> - Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true);`
 > - 註記：草芥轉場,播放音樂
 
 > ⚙ `#2289` 一將功成轉場、播放音樂
@@ -1110,7 +1111,7 @@
 
 **role124:**`#2277`　[panel=1]＊（你頭繫黃巾，手中握著一把捲刃的柴刀，正與無數面容枯槁的農民一起衝向城牆。你只是一股巨大、瘋狂的浪潮中，最卑微的一粒微塵。你奮力嘶吼著，向著那些你曾嚮往的曾經發起決死的衝鋒。）＊
 - Sequence: `SetPortrait(MC1,pic=3); PlayOrStopParticle(Smoke_Dust,Play);`
-- Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true)`
+- Conditions: `CurrentQuestState("C0F1") == "success" and (Variable["HeroDestiny"] == true);`
 - 註記：主角結局-草芥
 
 **role124:**`#2269`　[panel=1]＊（你身披重甲，坐鎮在熊熊燃燒的洛陽城頭。你身後是萬千漢軍的旌旗，你是平定黃巾的功臣，是權傾朝野的[em2]大人物[/em2]。）＊

@@ -2422,6 +2422,7 @@
     "actorID": "MC1",
     "text": "「[em7]一手按住懷裡，把那股熱壓了下去[/em7]……我走了。」",
     "Sequence": "SetPortrait(MC1,pic=12);EnableCharacterExpression(0,Player,Meditate);",
+    "Script": "Variable[\"HungryDesire\"] = Variable[\"HungryDesire\"] + 1;",
     "Description": "選項2：回去（不讓她喝，活淚留手）",
     "zh_CN": "「[em7]一手按住怀里，把那股热压了下去[/em7]……我走了。」",
     "links": [4264]
