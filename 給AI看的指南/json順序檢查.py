@@ -11,7 +11,8 @@
   3. 沒有重號、沒有斷鏈
   4. Description 只寫詞表標籤（轉成json指南 §1，2026-09-17 作者裁示）：頓號並列、每一段都要對得上詞表；
      說明文（引號、＝、待、見、§、.md、作者、裁示、30 字以上）一律是錯；沒有任何指令的格不該有 Description（選項節點例外，它照詞表要寫「選項N」）。
-1、3、4 是硬規則（有就要改）；2 只印提示——作者舊檔在條件路由格有時一層一層排，兩種都讀得順。
+  5. 選單前一格不掛表情特效（選項節點沒有 Sequence、關不掉，特效會懸在選單旁；立繪規則 7.1 1a，2026-09-23 作者裁示）
+1、3、4、5 是硬規則（有就要改）；2 只印提示——作者舊檔在條件路由格有時一層一層排，兩種都讀得順。
 Bridge 建新對話時照陣列順序發 Unity 流水號、畫布也照陣列排，陣列亂＝Unity 裡亂。
 """
 import io, json, os, re, sys
@@ -49,6 +50,25 @@ def check_descriptions(nodes):
         elif not has_cmd and not all(re.match(r'^選項[\d一二三四五六七八九十]+$', x) for x in parts):
             # 選項節點本來就沒有指令，卻要照詞表寫「選項N」標籤（轉成json指南 §1），不算錯
             bad.append('#%s 沒有任何指令卻有 Description：「%s」' % (eid, desc[:30]))
+    return bad
+
+
+def check_menu_expression(nodes):
+    """選單前一格不得掛表情特效（立繪規則 5.3／7.1 1a，2026-09-23 作者裁示）：選項節點沒有 Sequence、關不掉，特效會懸在選單旁。"""
+    by = {n['entryID']: n for n in nodes}
+    bad = []
+    for n in nodes:
+        ls = n.get('links') or []
+        if len(ls) < 2 or 'BeginDiceRoll' in (n.get('Sequence') or ''):
+            continue
+        ch = [by[l] for l in ls if l in by]
+        if any((c.get('Conditions') or '').strip() for c in ch):
+            continue
+        if sum(1 for c in ch if (c.get('text') or '').strip()) < 2:
+            continue
+        m = re.search(r'EnableCharacterExpression\(\d,[\w-]+,(\w+)\)', n.get('Sequence') or '')
+        if m:
+            bad.append('#%s 是選單前一格卻掛了 %s 特效（選項節點關不掉，會懸在選單旁；往前挪一格）' % (n.get('entryID'), m.group(1)))
     return bad
 
 
@@ -132,6 +152,7 @@ def check(p):
         if mism:
             hint = '提示：陣列順序和「照 links 走」的順序在第 %d 格分岔（陣列 #%d、照 links 該是 #%d）——選項各分支要先寫完一條再寫下一條；作者舊檔在條件路由格有時一層一層排，這條只提示不算錯' % (mism[0] + 1, mism[1], mism[2])
     bad += check_descriptions(nodes)
+    bad += check_menu_expression(nodes)
     print('========', p, '（%d 格%s）' % (len(nodes), '，尾端 %d 格視為事後補格' % (len(nodes) - body) if body < len(nodes) else ''))
     for b in bad:
         print('  ⚠', b)
