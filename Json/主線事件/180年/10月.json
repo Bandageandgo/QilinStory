@@ -2,25 +2,22 @@
   {
     "entryID": 1,
     "actorID": "role2",
-    "text": "[panel=6]＊（這一日，你如往常抽空研讀藏書，想從支離線索了解麒麟骰奧妙，但……）＊",
-    "Sequence": "EnableDialogueBG(StudyRoom);",
-    "Description": "開啟背景",
-    "zh_TW": "[panel=6]＊（這一日，你如往常抽空研讀藏書，想從支離線索了解麒麟骰奧妙，但……）＊",
-    "zh_CN": "[panel=6]＊（这一日，你如往常抽空研读藏书，想从支离线索了解麒麟骰奥妙，但……）＊",
-    "links": [
-      2
-    ]
+    "title": "饕餮骰",
+    "text": "[panel=6]＊（這一日，你又在藏書庫翻了半天，竹簡越堆越高，麒麟骰的事還是沒有頭緒。）＊",
+    "Sequence": "EnableDialogueBG(StudyRoom);\nAudioControl(PlayMusic,BGM_25);",
+    "Description": "開啟背景、放音樂",
+    "zh_TW": "[panel=6]＊（這一日，你又在藏書庫翻了半天，竹簡越堆越高，麒麟骰的事還是沒有頭緒。）＊",
+    "zh_CN": "[panel=6]＊（这一日，你又在藏书库翻了半天，竹简越堆越高，麒麟骰的事还是没有头绪。）＊",
+    "links": [2]
   },
   {
     "entryID": 2,
     "actorID": "MC1",
-    "text": "「不行，文獻太過零散，根本湊不成一塊……骰子的事，也就之前的竹簡……」",
+    "text": "「還是不行……說到骰子的，翻來翻去就那幾卷竹簡。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "「不行，文獻太過零散，根本湊不成一塊……骰子的事，也就之前的竹簡……」",
-    "zh_CN": "「不行，文献太过零散，根本凑不成一块……骰子的事，也就之前的竹简……」",
-    "links": [
-      3
-    ]
+    "zh_TW": "「還是不行……說到骰子的，翻來翻去就那幾卷竹簡。」",
+    "zh_CN": "「还是不行……说到骰子的，翻来翻去就那几卷竹简。」",
+    "links": [3]
   },
   {
     "entryID": 3,
@@ -29,9 +26,7 @@
     "Sequence": "SetPortrait(MC7,pic=1);",
     "zh_TW": "[panel=1]「看來你想調查的事，毫無進展。」",
     "zh_CN": "[panel=1]「看来你想调查的事，毫无进展。」",
-    "links": [
-      4
-    ]
+    "links": [4]
   },
   {
     "entryID": 4,
@@ -40,31 +35,25 @@
     "Sequence": "SetPortrait(MC1,pic=9);",
     "zh_TW": "「……你什麼時候來的？」",
     "zh_CN": "「……你什么时候来的？」",
-    "links": [
-      5
-    ]
+    "links": [5]
   },
   {
     "entryID": 5,
     "actorID": "MC7",
-    "text": "[panel=1]「藏書庫不專屬於你。請放心，我沒興趣窺你的調查。」",
+    "text": "[panel=1]「藏書庫不是你一個人的。你查你的，我沒興趣窺你的調查。」",
     "Sequence": "",
-    "zh_TW": "[panel=1]「藏書庫不專屬於你。請放心，我沒興趣窺你的調查。」",
-    "zh_CN": "[panel=1]「藏书库不专属于你。请放心，我没兴趣窥你的调查。」",
-    "links": [
-      6
-    ]
+    "zh_TW": "[panel=1]「藏書庫不是你一個人的。你查你的，我沒興趣窺你的調查。」",
+    "zh_CN": "[panel=1]「藏书库不是你一个人的。你查你的，我没兴趣窥你的调查。」",
+    "links": [6]
   },
   {
     "entryID": 6,
     "actorID": "MC7",
-    "text": "[panel=1]「我只想告訴你，碰上瓶頸，出外走走，或許會突發靈感。」",
+    "text": "[panel=1]「我只想告訴你，碰上困難，有時出外走走，或許會有機緣。」",
     "Sequence": "",
-    "zh_TW": "[panel=1]「我只想告訴你，碰上瓶頸，出外走走，或許會突發靈感。」",
-    "zh_CN": "[panel=1]「我只想告诉你，碰上瓶颈，出外走走，或许会突发灵感。」",
-    "links": [
-      7
-    ]
+    "zh_TW": "[panel=1]「我只想告訴你，碰上困難，有時出外走走，或許會有機緣。」",
+    "zh_CN": "[panel=1]「我只想告诉你，碰上困难，有时出外走走，或许会有机缘。」",
+    "links": [7]
   },
   {
     "entryID": 7,
@@ -73,20 +62,16 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「……有道理。那你要一起去透透氣嗎？」",
     "zh_CN": "「……有道理。那你要一起去透透气吗？」",
-    "links": [
-      8
-    ]
+    "links": [8]
   },
   {
     "entryID": 8,
     "actorID": "MC7",
-    "text": "[panel=1]「書使我冷靜，而且我有差事在身。」",
+    "text": "[panel=1]「我在這兒待得好好的，況且另有差事在身。」",
     "Sequence": "",
-    "zh_TW": "[panel=1]「書使我冷靜，而且我有差事在身。」",
-    "zh_CN": "[panel=1]「书使我冷静，而且我有差事在身。」",
-    "links": [
-      9
-    ]
+    "zh_TW": "[panel=1]「我在這兒待得好好的，況且另有差事在身。」",
+    "zh_CN": "[panel=1]「我在这儿待得好好的，况且另有差事在身。」",
+    "links": [9]
   },
   {
     "entryID": 9,
@@ -95,9 +80,7 @@
     "Sequence": "SetPortrait(MC1,pic=11);",
     "zh_TW": "「我不是那個意思……算了，不打擾你了。」",
     "zh_CN": "「我不是那个意思……算了，不打扰你了。」",
-    "links": [
-      10
-    ]
+    "links": [10]
   },
   {
     "entryID": 10,
@@ -105,56 +88,44 @@
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0,close)@1;OpenPanel(1,close)@1;EnableDialogueBG(Yunzhong)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
     "Description": "轉場、開啟背景",
-    "zh_TW": "",
-    "zh_CN": "",
-    "links": [
-      11
-    ]
+    "links": [11]
   },
   {
     "entryID": 11,
     "actorID": "role2",
-    "text": "[panel=6]＊（你漫無目的地走著，看著經過的人們，實難跟那場惡夢聯想在一起。）＊",
-    "Sequence": "AudioControl(PlayMusic,BGM_25);AudioControl(PlaySFX,Others_Talking);",
-    "Description": "播放音樂",
-    "zh_TW": "[panel=6]＊（你漫無目的地走著，看著經過的人們，實難跟那場惡夢聯想在一起。）＊",
-    "zh_CN": "[panel=6]＊（你漫无目的地走着，看着经过的人们，实难跟那场恶梦联想在一起。）＊",
-    "links": [
-      12
-    ]
+    "text": "[panel=6]＊（街上照舊熱鬧，挑擔的、叫賣的、牽孩子的。你看著看著，怎麼也難與那場惡夢對上。）＊",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_17);\nAudioControl(PlaySFX,Others_Talking);",
+    "Description": "切換音樂:張仲景主題曲",
+    "zh_TW": "[panel=6]＊（街上照舊熱鬧，挑擔的、叫賣的、牽孩子的。你看著看著，怎麼也難與那場惡夢對上。）＊",
+    "zh_CN": "[panel=6]＊（街上照旧热闹，挑担的、叫卖的、牵孩子的。你看着看着，怎么也难与那场恶梦对上。）＊",
+    "links": [12]
   },
   {
     "entryID": 12,
     "actorID": "role2",
-    "text": "[panel=6]＊（猝然，懷中震動。）＊",
+    "text": "[panel=6]＊（走到街口，懷裡的骰子忽然震了一下。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（猝然，懷中震動。）＊",
-    "zh_CN": "[panel=6]＊（猝然，怀中震动。）＊",
-    "links": [
-      13
-    ]
+    "zh_TW": "[panel=6]＊（走到街口，懷裡的骰子忽然震了一下。）＊",
+    "zh_CN": "[panel=6]＊（走到街口，怀里的骰子忽然震了一下。）＊",
+    "links": [13]
   },
   {
     "entryID": 13,
     "actorID": "MC1",
-    "text": "「麒麟骰？怎麼了！？」",
-    "Sequence": "SetPortrait(MC1,pic=4);",
-    "zh_TW": "「麒麟骰？怎麼了！？」",
-    "zh_CN": "「麒麟骰？怎么了！？」",
-    "links": [
-      14
-    ]
+    "text": "「麒麟骰？怎麼回事……」",
+    "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
+    "zh_TW": "「麒麟骰？怎麼回事……」",
+    "zh_CN": "「麒麟骰？怎么回事……」",
+    "links": [14]
   },
   {
     "entryID": 14,
     "actorID": "MC13",
-    "text": "[panel=1]「唉呀呀，真沒想會有這等事。」",
-    "Sequence": "",
-    "zh_TW": "[panel=1]「唉呀呀，真沒想會有這等事。」",
-    "zh_CN": "[panel=1]「唉呀呀，真没想会有这等事。」",
-    "links": [
-      15
-    ]
+    "text": "[panel=1]「唉呀呀，真沒想到會有這等事。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「唉呀呀，真沒想到會有這等事。」",
+    "zh_CN": "[panel=1]「唉呀呀，真没想到会有这等事。」",
+    "links": [15]
   },
   {
     "entryID": 15,
@@ -163,20 +134,16 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（那把嗓子你認得。救過你一命、教過你長生經的那個人，聲音一點沒變。）＊",
     "zh_CN": "[panel=6]＊（那把嗓子你认得。救过你一命、教过你长生经的那个人，声音一点没变。）＊",
-    "links": [
-      16
-    ]
+    "links": [16]
   },
   {
     "entryID": 16,
     "actorID": "MC1",
-    "text": "「大叔？你怎麼會在這兒。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "「大叔？你怎麼會在這兒。」",
-    "zh_CN": "「大叔？你怎么会在这儿。」",
-    "links": [
-      17
-    ]
+    "text": "「……大叔？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「……大叔？」",
+    "zh_CN": "「……大叔？」",
+    "links": [17]
   },
   {
     "entryID": 17,
@@ -185,9 +152,7 @@
     "Sequence": "SetPortrait(MC13,pic=1);",
     "zh_TW": "[panel=6]＊（他一臉微笑，跟小溪村那時一模一樣。變的是他手裡那樣東西：另一顆麒麟骰。）＊",
     "zh_CN": "[panel=6]＊（他一脸微笑，跟小溪村那时一模一样。变的是他手里那样东西：另一颗麒麟骰。）＊",
-    "links": [
-      18
-    ]
+    "links": [18]
   },
   {
     "entryID": 18,
@@ -196,21 +161,16 @@
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
     "zh_TW": "「麒麟骰！你怎麼會有……」",
     "zh_CN": "「麒麟骰！你怎么会有……」",
-    "links": [
-      19
-    ]
+    "links": [19]
   },
   {
     "entryID": 19,
     "actorID": "MC13",
-    "text": "[panel=1]「[em2]麒麟骰[/em2]？你是說[em2]饕餮骰[/em2]吧？喔！我明白了，鬼谷經是這樣記載吧。」",
-    "Sequence": "DisableCharacterExpression(0);AudioControl(StopSFX);AudioControl(StopMusic);AudioControl(PlayMusic,BGM_5);SetPortrait(MC13,pic=1);SetPortrait(MC1,pic=12);EnableCharacterExpression(1,MC13,Idea);",
-    "Description": "切換音樂、關閉音效",
-    "zh_TW": "[panel=1]「[em2]麒麟骰[/em2]？你是說[em2]饕餮骰[/em2]吧？喔！我明白了，鬼谷經是這樣記載吧。」",
-    "zh_CN": "[panel=1]「[em2]麒麟骰[/em2]？你是说[em2]饕餮骰[/em2]吧？喔！我明白了，鬼谷经是这样记载吧。」",
-    "links": [
-      20
-    ]
+    "text": "[panel=1]「[em2]麒麟骰[/em2]？你是說[em2]饕餮骰[/em2]吧？喔！我明白了，鬼谷經是這樣記的吧。」",
+    "Sequence": "DisableCharacterExpression(0);\nAudioControl(StopSFX);\nSetPortrait(MC13,pic=1);\nSetPortrait(MC1,pic=12);\nEnableCharacterExpression(1,MC13,Idea);",
+    "zh_TW": "[panel=1]「[em2]麒麟骰[/em2]？你是說[em2]饕餮骰[/em2]吧？喔！我明白了，鬼谷經是這樣記的吧。」",
+    "zh_CN": "[panel=1]「[em2]麒麟骰[/em2]？你是说[em2]饕餮骰[/em2]吧？喔！我明白了，鬼谷经是这样记的吧。」",
+    "links": [20]
   },
   {
     "entryID": 20,
@@ -219,66 +179,52 @@
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
     "zh_TW": "「饕餮骰……」",
     "zh_CN": "「饕餮骰……」",
-    "links": [
-      21
-    ]
+    "links": [21]
   },
   {
     "entryID": 21,
     "actorID": "MC13",
     "text": "[panel=1]「嗯嗯，讀的書不同，記載有落差，那也不奇怪。」",
-    "Sequence": "SetPortrait(MC13,pic=1);SetPortrait(MC1,pic=2);",
+    "Sequence": "SetPortrait(MC13,pic=1);",
     "zh_TW": "[panel=1]「嗯嗯，讀的書不同，記載有落差，那也不奇怪。」",
     "zh_CN": "[panel=1]「嗯嗯，读的书不同，记载有落差，那也不奇怪。」",
-    "links": [
-      22
-    ]
+    "links": [22]
   },
   {
     "entryID": 22,
     "actorID": "MC1",
     "text": "「……大叔，這顆你揣多久了？我在小溪村中屍毒那時候，它就在你身上？」",
-    "Sequence": "SetPortrait(MC13,pic=2);SetPortrait(MC1,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=11);",
     "zh_TW": "「……大叔，這顆你揣多久了？我在小溪村中屍毒那時候，它就在你身上？」",
     "zh_CN": "「……大叔，这颗你揣多久了？我在小溪村中尸毒那时候，它就在你身上？」",
-    "links": [
-      23
-    ]
+    "links": [23]
   },
   {
     "entryID": 23,
     "actorID": "MC13",
     "text": "[panel=1]「[em7]笑意沒變，眼神卻收了一分[/em7]，小子，大叔我是什麼人，你還不清楚？一個到處跑的郎中。」",
-    "Sequence": "SetPortrait(MC13,pic=2);EnableCharacterExpression(1,MC13,Meditate);",
+    "Sequence": "SetPortrait(MC13,pic=3);EnableCharacterExpression(1,MC13,Meditate);",
     "zh_TW": "[panel=1]「[em7]笑意沒變，眼神卻收了一分[/em7]，小子，大叔我是什麼人，你還不清楚？一個到處跑的郎中。」",
     "zh_CN": "[panel=1]「[em7]笑意没变，眼神却收了一分[/em7]，小子，大叔我是什么人，你还不清楚？一个到处跑的郎中。」",
-    "links": [
-      24
-    ]
+    "links": [24]
   },
   {
     "entryID": 24,
     "actorID": "MC13",
-    "text": "[panel=1]「至於這骰子，你得去問古人到底做了多少。」",
-    "Sequence": "SetPortrait(MC13,pic=2);",
-    "zh_TW": "[panel=1]「至於這骰子，你得去問古人到底做了多少。」",
-    "zh_CN": "[panel=1]「至于这骰子，你得去问古人到底做了多少。」",
-    "links": [
-      25
-    ]
+    "text": "[panel=1]「至於這骰子有幾顆，你問我，我也只得去問古人了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=1);",
+    "zh_TW": "[panel=1]「至於這骰子有幾顆，你問我，我也只得去問古人了。」",
+    "zh_CN": "[panel=1]「至于这骰子有几颗，你问我，我也只得去问古人了。」",
+    "links": [25]
   },
   {
     "entryID": 25,
     "actorID": "MC13",
     "text": "[panel=1]「好了，該大叔問你了。你也……見過那場夢了？物怪九黎，蒼生淪陷。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=3);EnableCharacterExpression(1,MC13,Question);",
+    "Sequence": "SetPortrait(MC13,pic=3);\nSetPortrait(MC1,pic=12);",
     "zh_TW": "[panel=1]「好了，該大叔問你了。你也……見過那場夢了？物怪九黎，蒼生淪陷。」",
     "zh_CN": "[panel=1]「好了，该大叔问你了。你也……见过那场梦了？物怪九黎，苍生沦陷。」",
-    "links": [
-      26,
-      27,
-      28
-    ]
+    "links": [26, 27, 28]
   },
   {
     "entryID": 26,
@@ -288,9 +234,7 @@
     "Description": "選項1",
     "zh_TW": "「…………」",
     "zh_CN": "「…………」",
-    "links": [
-      29
-    ]
+    "links": [29]
   },
   {
     "entryID": 27,
@@ -300,43 +244,35 @@
     "Description": "選項2",
     "zh_TW": "「你那也算回答？」",
     "zh_CN": "「你那也算回答？」",
-    "links": [
-      32
-    ]
+    "links": [32]
   },
   {
     "entryID": 28,
     "actorID": "MC1",
-    "text": "「我做過很多夢。」",
+    "text": "「夢？我夢過的可多了。」",
     "Sequence": "",
     "Description": "選項3",
-    "zh_TW": "「我做過很多夢。」",
-    "zh_CN": "「我做过很多梦。」",
-    "links": [
-      35
-    ]
+    "zh_TW": "「夢？我夢過的可多了。」",
+    "zh_CN": "「梦？我梦过的可多了。」",
+    "links": [35]
   },
   {
     "entryID": 29,
     "actorID": "MC1",
     "text": "「…………」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=12);",
     "zh_TW": "「…………」",
     "zh_CN": "「…………」",
-    "links": [
-      30
-    ]
+    "links": [30]
   },
   {
     "entryID": 30,
     "actorID": "MC13",
     "text": "[panel=1]「[em7]點了點頭[/em7]，不答也不否認。小子，這一招跟誰學的？」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=1);SetPortrait(MC1,pic=12);",
+    "Sequence": "SetPortrait(MC13,pic=1);SetPortrait(MC1,pic=12);",
     "zh_TW": "[panel=1]「[em7]點了點頭[/em7]，不答也不否認。小子，這一招跟誰學的？」",
     "zh_CN": "[panel=1]「[em7]点了点头[/em7]，不答也不否认。小子，这一招跟谁学的？」",
-    "links": [
-      31
-    ]
+    "links": [31]
   },
   {
     "entryID": 31,
@@ -345,31 +281,25 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「以你的年紀算不錯了。不過大叔猜，你還沒能使喚那顆骰子吧。」",
     "zh_CN": "[panel=1]「以你的年纪算不错了。不过大叔猜，你还没能使唤那颗骰子吧。」",
-    "links": [
-      38
-    ]
+    "links": [38]
   },
   {
     "entryID": 32,
     "actorID": "MC1",
     "text": "「你那也算回答？那這個問題，你去問莊周如何。」",
-    "Sequence": "SetPortrait(MC1,pic=2);",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=3);",
     "zh_TW": "「你那也算回答？那這個問題，你去問莊周如何。」",
     "zh_CN": "「你那也算回答？那这个问题，你去问庄周如何。」",
-    "links": [
-      33
-    ]
+    "links": [33]
   },
   {
     "entryID": 33,
     "actorID": "MC13",
     "text": "[panel=1]「嘴倒是利了，行，大叔不跟你計較。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=3);SetPortrait(MC1,pic=2);",
+    "Sequence": "SetPortrait(MC13,pic=3);SetPortrait(MC1,pic=3);",
     "zh_TW": "[panel=1]「嘴倒是利了，行，大叔不跟你計較。」",
     "zh_CN": "[panel=1]「嘴倒是利了，行，大叔不跟你计较。」",
-    "links": [
-      34
-    ]
+    "links": [34]
   },
   {
     "entryID": 34,
@@ -378,42 +308,34 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「我看你還沒能使喚那顆骰子吧。」",
     "zh_CN": "[panel=1]「我看你还没能使唤那颗骰子吧。」",
-    "links": [
-      38
-    ]
+    "links": [38]
   },
   {
     "entryID": 35,
     "actorID": "MC1",
-    "text": "「我做過很多夢。遨遊天下、富賈三千，太多太多了。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_TW": "「我做過很多夢。遨遊天下、富賈三千，太多太多了。」",
-    "zh_CN": "「我做过很多梦。遨游天下、富贾三千，太多太多了。」",
-    "links": [
-      36
-    ]
+    "text": "「夢？我夢過的可多了，昨晚還夢見自己富甲一方呢。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=5);",
+    "zh_TW": "「夢？我夢過的可多了，昨晚還夢見自己富甲一方呢。」",
+    "zh_CN": "「梦？我梦过的可多了，昨晚还梦见自己富甲一方呢。」",
+    "links": [36]
   },
   {
     "entryID": 36,
     "actorID": "MC13",
     "text": "[panel=1]「跟大叔打哈哈？你這點心思，小溪村那會兒我就看透了。」",
-    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC13,pic=4);SetPortrait(MC1,pic=18);",
+    "Sequence": "SetPortrait(MC13,pic=4);SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "[panel=1]「跟大叔打哈哈？你這點心思，小溪村那會兒我就看透了。」",
     "zh_CN": "[panel=1]「跟大叔打哈哈？你这点心思，小溪村那会儿我就看透了。」",
-    "links": [
-      37
-    ]
+    "links": [37]
   },
   {
     "entryID": 37,
     "actorID": "MC13",
-    "text": "[panel=1]「這麼多心，是使喚不了那顆骰子的。」",
-    "Sequence": "",
-    "zh_TW": "[panel=1]「這麼多心，是使喚不了那顆骰子的。」",
-    "zh_CN": "[panel=1]「这么多心，是使唤不了那颗骰子的。」",
-    "links": [
-      38
-    ]
+    "text": "[panel=1]「心這麼野，那顆骰子是不會聽你的。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=1]「心這麼野，那顆骰子是不會聽你的。」",
+    "zh_CN": "[panel=1]「心这么野，那颗骰子是不会听你的。」",
+    "links": [38]
   },
   {
     "entryID": 38,
@@ -422,120 +344,157 @@
     "Sequence": "SetPortrait(MC13,pic=1);SetPortrait(MC1,pic=1);",
     "zh_TW": "[panel=1]「既然碰上了，大叔再教你一手。」",
     "zh_CN": "[panel=1]「既然碰上了，大叔再教你一手。」",
-    "links": [
-      39
-    ]
+    "links": [39]
   },
   {
     "entryID": 39,
     "actorID": "MC13",
-    "text": "[panel=1]「不要畏懼骰子，更不要被骰子牽著走。只要你足夠強悍，[em2]骰子會回應你的意念[/em2]。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "[panel=1]「不要畏懼骰子，更不要被骰子牽著走。只要你足夠強悍，[em2]骰子會回應你的意念[/em2]。」",
-    "zh_CN": "[panel=1]「不要畏惧骰子，更不要被骰子牵着走。只要你足够强悍，[em2]骰子会回应你的意念[/em2]。」",
-    "links": [
-      40
-    ]
+    "text": "[panel=1]「小子，你一直拿它當護身符吧？它可不是保你平安的東西。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=1]「小子，你一直拿它當護身符吧？它可不是保你平安的東西。」",
+    "zh_CN": "[panel=1]「小子，你一直拿它当护身符吧？它可不是保你平安的东西。」",
+    "links": [40]
   },
   {
     "entryID": 40,
-    "actorID": "MC1",
-    "text": "「回應意念……你是說骰子能控制？」",
+    "actorID": "MC13",
+    "text": "[panel=1]「不要畏懼骰子，更不要被骰子牽著走。只要你足夠強悍，[em2]骰子會回應你的意念[/em2]。」",
     "Sequence": "",
-    "zh_TW": "「回應意念……你是說骰子能控制？」",
-    "zh_CN": "「回应意念……你是说骰子能控制？」",
-    "links": [
-      41
-    ]
+    "zh_TW": "[panel=1]「不要畏懼骰子，更不要被骰子牽著走。只要你足夠強悍，[em2]骰子會回應你的意念[/em2]。」",
+    "zh_CN": "[panel=1]「不要畏惧骰子，更不要被骰子牵着走。只要你足够强悍，[em2]骰子会回应你的意念[/em2]。」",
+    "links": [41]
   },
   {
     "entryID": 41,
+    "actorID": "MC1",
+    "text": "「回應意念……你是說，骰子聽人使喚？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「回應意念……你是說，骰子聽人使喚？」",
+    "zh_CN": "「回应意念……你是说，骰子听人使唤？」",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0,close)@1;OpenPanel(1,close)@1;DisableDialogueBG()@1;EnableEventBG(DiceGlow,FullScreen)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
     "Description": "轉場",
-    "zh_TW": "",
-    "zh_CN": "",
-    "links": [
-      42
-    ]
+    "links": [43]
   },
   {
-    "entryID": 42,
+    "entryID": 43,
     "actorID": "role2",
     "text": "[panel=6]＊（骰子亮了一下。麒麟的那一面，光是從裡頭透出來的。）＊",
     "Sequence": "",
     "zh_TW": "[panel=6]＊（骰子亮了一下。麒麟的那一面，光是從裡頭透出來的。）＊",
     "zh_CN": "[panel=6]＊（骰子亮了一下。麒麟的那一面，光是从里头透出来的。）＊",
-    "links": [
-      43
-    ]
-  },
-  {
-    "entryID": 43,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);DisableEventBG(FullScreen)@1;EnableDialogueBG(Yunzhong)@1;SetPortrait(MC13,pic=1)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場、開啟背景",
-    "zh_TW": "",
-    "zh_CN": "",
-    "links": [
-      44
-    ]
+    "links": [44]
   },
   {
     "entryID": 44,
-    "actorID": "MC13",
-    "text": "[panel=1]「大叔還得往北走一趟，就不陪你了。」",
-    "Sequence": "SetPortrait(MC13,pic=1);SetPortrait(MC1,pic=9);",
-    "zh_TW": "[panel=1]「大叔還得往北走一趟，就不陪你了。」",
-    "zh_CN": "[panel=1]「大叔还得往北走一趟，就不陪你了。」",
-    "links": [
-      45
-    ]
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1)\n;DisableEventBG(FullScreen)@1;\nEnableDialogueBG(Yunzhong)@1;\nSetPortrait(MC13,pic=1)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、開啟背景",
+    "links": [56]
   },
   {
     "entryID": 45,
-    "actorID": "MC1",
-    "text": "「北邊？大叔，你上回也說往北……你到底在找什麼？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「北邊？大叔，你上回也說往北……你到底在找什麼？」",
-    "zh_CN": "「北边？大叔，你上回也说往北……你到底在找什么？」",
-    "links": [
-      46
-    ]
+    "actorID": "MC13",
+    "text": "[panel=1]「大叔還得往北走一趟，就不陪你了。」",
+    "Sequence": "SetPortrait(MC13,pic=1);",
+    "zh_TW": "[panel=1]「大叔還得往北走一趟，就不陪你了。」",
+    "zh_CN": "[panel=1]「大叔还得往北走一趟，就不陪你了。」",
+    "links": [46]
   },
   {
     "entryID": 46,
-    "actorID": "MC13",
-    "text": "[panel=1]「[em7]擺擺手[/em7]，找個人。小子，骰子的事，別急。」",
-    "Sequence": "SetPortrait(MC13,pic=1);",
-    "zh_TW": "[panel=1]「[em7]擺擺手[/em7]，找個人。小子，骰子的事，別急。」",
-    "zh_CN": "[panel=1]「[em7]摆摆手[/em7]，找个人。小子，骰子的事，别急。」",
-    "links": [
-      47
-    ]
+    "actorID": "MC1",
+    "text": "「又是北邊？當初在小溪村你也這麼說……你到底在找什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「又是北邊？當初在小溪村你也這麼說……你到底在找什麼？」",
+    "zh_CN": "「又是北边？当初在小溪村你也这么说……你到底在找什么？」",
+    "links": [47]
   },
   {
     "entryID": 47,
-    "actorID": "role2",
-    "text": "[panel=6]＊（他走進人堆裡，幾步就看不見了。骰子在你掌心還是溫的。）＊",
-    "Sequence": "OpenPanel(1,close);SetPortrait(MC1,pic=11);AudioControl(StopMusic);",
-    "Description": "清除立繪、關閉音樂",
-    "zh_TW": "[panel=6]＊（他走進人堆裡，幾步就看不見了。骰子在你掌心還是溫的。）＊",
-    "zh_CN": "[panel=6]＊（他走进人堆里，几步就看不见了。骰子在你掌心还是温的。）＊",
-    "links": [
-      48
-    ]
+    "actorID": "MC13",
+    "text": "[panel=1]「[em7]擺擺手[/em7]，找一個地方。小子，骰子的事，別急。」",
+    "Sequence": "SetPortrait(MC13,pic=1);",
+    "zh_TW": "[panel=1]「[em7]擺擺手[/em7]，找一個地方。小子，骰子的事，別急。」",
+    "zh_CN": "[panel=1]「[em7]摆摆手[/em7]，找一个地方。小子，骰子的事，别急。」",
+    "links": [48]
   },
   {
     "entryID": 48,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他走進人堆裡，幾步就看不見了。骰子在你掌心還是溫的。）＊",
+    "Sequence": "OpenPanel(1,close);SetPortrait(MC1,pic=12);AudioControl(StopMusic);",
+    "Description": "清除立繪、關閉音樂",
+    "zh_TW": "[panel=6]＊（他走進人堆裡，幾步就看不見了。骰子在你掌心還是溫的。）＊",
+    "zh_CN": "[panel=6]＊（他走进人堆里，几步就看不见了。骰子在你掌心还是温的。）＊",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你在原地站了一會兒，人從你兩邊過去，誰也沒多看一眼。直到有人從人堆裡擠出來，手裡提著藥箱。）＊",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=6]＊（你在原地站了一會兒，人從你兩邊過去，誰也沒多看一眼。直到有人從人堆裡擠出來，手裡提著藥箱。）＊",
+    "zh_CN": "[panel=6]＊（你在原地站了一会儿，人从你两边过去，谁也没多看一眼。直到有人从人堆里挤出来，手里提着药箱。）＊",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "MC6",
+    "text": "[panel=1]「我爹往哪邊走了？」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「我爹往哪邊走了？」",
+    "zh_CN": "[panel=1]「我爹往哪边走了？」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC1",
+    "text": "「往北邊去了。他說要找一個地方。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「往北邊去了。他說要找一個地方。」",
+    "zh_CN": "「往北边去了。他说要找一个地方。」",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC6",
+    "text": "[panel=1]「連話都沒讓我說上一句。他每回都這樣，女兒倒是一年見不上兩回。」",
+    "Sequence": "SetPortrait(MC6,pic=3);EnableCharacterExpression(1,MC6,Anger);",
+    "zh_TW": "[panel=1]「連話都沒讓我說上一句。他每回都這樣，女兒倒是一年見不上兩回。」",
+    "zh_CN": "[panel=1]「连话都没让我说上一句。他每回都这样，女儿倒是一年见不上两回。」",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC6",
+    "text": "[panel=1]「……但這世上肯把命耗在替人治病的，也就這麼一個。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=1]「……但這世上肯把命耗在替人治病的，也就這麼一個。」",
+    "zh_CN": "[panel=1]「……但这世上肯把命耗在替人治病的，也就这么一个。」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
     "actorID": "0",
     "text": "",
-    "Sequence": "OpenPanel(0,close);OpenPanel(1,close);DisableAllCharacterExpression();DisableDialogueBG();Continue();",
+    "Sequence": "OpenPanel(0,close);OpenPanel(1,close);DisableAllCharacterExpression();DisableDialogueBG();ModifyData(FavorabilityExp,MC6,10);ModifyData(FavorabilityExp,MC7,10);Continue();",
     "Description": "清除立繪、關閉背景",
-    "zh_TW": "",
-    "zh_CN": "",
     "links": []
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC13",
+    "text": "[panel=1]「現在聽不懂不要緊。等你哪天不想擲也得擲了，自然就懂了。」",
+    "Sequence": "SetPortrait(MC13,pic=5);",
+    "zh_TW": "[panel=1]「現在聽不懂不要緊。等你哪天不想擲也得擲了，自然就懂了。」",
+    "zh_CN": "[panel=1]「现在听不懂不要紧。等你哪天不想掷也得掷了，自然就懂了。」",
+    "links": [45]
   }
 ]

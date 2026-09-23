@@ -3,9 +3,10 @@
     "entryID": 1,
     "actorID": "role2",
     "title": "節日:上巳",
-    "text": "[panel=6]＊（《詩》裡寫溱洧，「維士與女，伊其相謔，贈之以勺藥」。說《詩》的人講，那是鄭國三月上巳的舊俗——到兩水之上，秉蘭草，拂不祥。）＊",
+    "text": "[panel=6]＊（《詩》裡寫溱洧，[em2]維士與女，伊其相謔，贈之以勺藥[/em2]。說《詩》的人講，那是鄭國三月上巳的舊俗，到兩水之上，秉蘭草，拂不祥。）＊",
     "Sequence": "EnableDialogueBG(Grassland);",
-    "zh_CN": "[panel=6]＊（《诗》里写溱洧，「维士与女，伊其相谑，赠之以勺药」。说《诗》的人讲，那是郑国三月上巳的旧俗——到两水之上，秉兰草，拂不祥。）＊",
+    "Description": "開啟背景",
+    "zh_CN": "[panel=6]＊（《诗》里写溱洧，[em2]维士与女，伊其相谑，赠之以勺药[/em2]。说《诗》的人讲，那是郑国三月上巳的旧俗，到两水之上，秉兰草，拂不祥。）＊",
     "links": [2]
   },
   {
@@ -35,9 +36,9 @@
   {
     "entryID": 5,
     "actorID": "role2",
-    "text": "[panel=6]＊（府裡的人是一齊出來的，一路上還有說有笑。到了河邊就散了——各挑各的一段水。）＊",
+    "text": "[panel=6]＊（府裡的人是一齊出來的，一路上還有說有笑。到了河邊就散了，各挑各的一段水。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（府里的人是一齐出来的，一路上还有说有笑。到了河边就散了——各挑各的一段水。）＊",
+    "zh_CN": "[panel=6]＊（府里的人是一齐出来的，一路上还有说有笑。到了河边就散了，各挑各的一段水。）＊",
     "links": [6]
   },
   {
@@ -60,7 +61,7 @@
     "entryID": 8,
     "actorID": "MC1",
     "text": "「信哥，這水才開春。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC1,pic=3);",
     "zh_CN": "「信哥，这水才开春。」",
     "links": [9]
   },
@@ -68,7 +69,7 @@
     "entryID": 9,
     "actorID": "MC2",
     "text": "[panel=1]「嘖，一河的人都下去了，就你嫌冷。你當這是給你燒的熱湯？」",
-    "Sequence": "SetPortrait(MC2,pic=5);",
+    "Sequence": "SetPortrait(MC2,pic=1);",
     "zh_CN": "[panel=1]「啧，一河的人都下去了，就你嫌冷。你当这是给你烧的热汤？」",
     "links": [10]
   },
@@ -109,7 +110,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：第一段河 → 第二段河（一段路程）。黑幕中收掉主角(0)、呂信(1)、子羽(2)三個立繪面板；同景不換背景圖",
+    "Description": "轉場",
     "links": [15]
   },
   {
@@ -163,9 +164,9 @@
   {
     "entryID": 21,
     "actorID": "MC6",
-    "text": "[panel=2]「[em7]把藥包往石頭上一擱[/em7]，這水裡有蟲，誰洗完發癢自己來拿藥——別半夜來敲我的門。」",
+    "text": "[panel=2]「[em7]把藥包往石頭上一擱[/em7]，這水裡有蟲，誰洗完發癢自己來拿藥，別半夜來敲我的門。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
-    "zh_CN": "[panel=2]「[em7]把药包往石头上一搁[/em7]，这水里有虫，谁洗完发痒自己来拿药——别半夜来敲我的门。」",
+    "zh_CN": "[panel=2]「[em7]把药包往石头上一搁[/em7]，这水里有虫，谁洗完发痒自己来拿药，别半夜来敲我的门。」",
     "links": [22]
   },
   {
@@ -189,7 +190,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：第二段河 → 第三段河（一段路程）。黑幕中收掉主角(0)、徐榮(1)、張寧(2)三個立繪面板；同景不換背景圖",
+    "Description": "轉場",
     "links": [25]
   },
   {
@@ -244,7 +245,7 @@
     "entryID": 31,
     "actorID": "MC4",
     "text": "[panel=2]「賈某兩樣都做，並不衝突。」",
-    "Sequence": "SetPortrait(MC4,pic=5);",
+    "Sequence": "SetPortrait(MC4,pic=1);",
     "zh_CN": "[panel=2]「贾某两样都做，并不冲突。」",
     "links": [32]
   },
@@ -253,7 +254,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：第三段河 → 第四段河（一段路程）。黑幕中收掉主角(0)、郭嘉(1)、賈詡(2)三個立繪面板；同景不換背景圖",
+    "Description": "轉場",
     "links": [33]
   },
   {
@@ -267,24 +268,16 @@
   {
     "entryID": 34,
     "actorID": "MC22",
-    "text": "[panel=1]「大俠，本姑娘問你一件事——這水洗一洗，災就當真沒了？」",
+    "text": "[panel=1]「大俠，本姑娘問你一件事。這水洗一洗，災就當真沒了？」",
     "Sequence": "SetPortrait(MC22,pic=14);",
-    "zh_CN": "[panel=1]「大侠，本姑娘问你一件事——这水洗一洗，灾就当真没了？」",
+    "zh_CN": "[panel=1]「大侠，本姑娘问你一件事。这水洗一洗，灾就当真没了？」",
     "links": [79]
-  },
-  {
-    "entryID": 79,
-    "actorID": "role2",
-    "text": "[panel=6]＊（上游有人接了話，隔著半條河喊過來：「洗什麼水，聽說冀州那邊喝一碗符水就成了，還不用脫衣裳。」旁邊幾個人笑了，沒有一個回頭去看他。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（上游有人接了话，隔着半条河喊过来：「洗什么水，听说冀州那边喝一碗符水就成了，还不用脱衣裳。」旁边几个人笑了，没有一个回头去看他。）＊",
-    "links": [35]
   },
   {
     "entryID": 35,
     "actorID": "MC1",
     "text": "「……大家都這麼洗。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC1,pic=3);",
     "zh_CN": "「……大家都这么洗。」",
     "links": [36]
   },
@@ -308,7 +301,7 @@
     "entryID": 38,
     "actorID": "MC22",
     "text": "[panel=1]「五錢一枝？這草我們那兒漫山遍野。回頭本姑娘摘一捧送你，不要錢。」",
-    "Sequence": "SetPortrait(MC22,pic=2);",
+    "Sequence": "SetPortrait(MC22,pic=5);",
     "zh_CN": "[panel=1]「五钱一枝？这草我们那儿漫山遍野。回头本姑娘摘一捧送你，不要钱。」",
     "links": [39, 40, 41]
   },
@@ -317,7 +310,7 @@
     "actorID": "MC1",
     "text": "（回頭去信哥那一段，讓他把你按進水裡）",
     "Sequence": "",
-    "Description": "選項1：下水（回呂信那一段）。不開口選項，依選項通則豁免，不接主角發言格",
+    "Description": "選項1",
     "zh_CN": "（回头去信哥那一段，让他把你按进水里）",
     "links": [42]
   },
@@ -326,7 +319,7 @@
     "actorID": "MC1",
     "text": "（走到子羽站的地方，也不脫鞋）",
     "Sequence": "",
-    "Description": "選項2：上游（去子羽那一段）。不開口選項，依選項通則豁免，不接主角發言格",
+    "Description": "選項2",
     "zh_CN": "（走到子羽站的地方，也不脱鞋）",
     "links": [49]
   },
@@ -335,7 +328,7 @@
     "actorID": "MC1",
     "text": "（陪娜娜在下游這段耗著）",
     "Sequence": "",
-    "Description": "選項3：留下（留在娜娜那一段）。不開口選項，依選項通則豁免，不接主角發言格",
+    "Description": "選項3",
     "zh_CN": "（陪娜娜在下游这段耗着）",
     "links": [58]
   },
@@ -344,14 +337,15 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：第四段河 → 分支1〈下水〉。黑幕中收掉主角(0)、娜娜(1)、小犀(2)三個立繪面板",
+    "Description": "轉場",
     "links": [43]
   },
   {
     "entryID": 43,
     "actorID": "MC2",
     "text": "[panel=1]「[em7]一把揪住你後領[/em7]，早說嘛！這才像話！」",
-    "Sequence": "SetPortrait(MC2,pic=5);ModifyData(FavorabilityExp,MC2,30);",
+    "Sequence": "SetPortrait(MC2,pic=1);ModifyData(FavorabilityExp,MC2,30);",
+    "Description": "呂信好感度提升",
     "zh_CN": "[panel=1]「[em7]一把揪住你后领[/em7]，早说嘛！这才像话！」",
     "links": [44]
   },
@@ -383,7 +377,7 @@
     "entryID": 47,
     "actorID": "MC2",
     "text": "[panel=1]「折騰？我這是替你省事。晦氣這東西，自己洗是洗不掉的，得有人按著。」",
-    "Sequence": "SetPortrait(MC2,pic=5);",
+    "Sequence": "SetPortrait(MC2,pic=1);",
     "zh_CN": "[panel=1]「折腾？我这是替你省事。晦气这东西，自己洗是洗不掉的，得有人按着。」",
     "links": [48]
   },
@@ -400,7 +394,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：第四段河 → 分支2〈上游〉。黑幕中收掉主角(0)、娜娜(1)、小犀(2)三個立繪面板",
+    "Description": "轉場",
     "links": [50]
   },
   {
@@ -408,6 +402,7 @@
     "actorID": "role2",
     "text": "[panel=6]＊（你走到他旁邊站著，鞋也沒有脫。這一段水平得照得出兩個人。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC3,30);",
+    "Description": "子羽好感度提升",
     "zh_CN": "[panel=6]＊（你走到他旁边站着，鞋也没有脱。这一段水平得照得出两个人。）＊",
     "links": [51]
   },
@@ -472,7 +467,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：第四段河 → 分支3〈留下〉。黑幕中收掉主角(0)、娜娜(1)、小犀(2)三個立繪面板；同景，表示過了一會",
+    "Description": "轉場",
     "links": [59]
   },
   {
@@ -480,6 +475,7 @@
     "actorID": "MC22",
     "text": "[panel=1]「[em7]把濕手往你身上一甩[/em7]，大俠既然不下水，就替本姑娘看著鞋。」",
     "Sequence": "SetPortrait(MC22,pic=5);ModifyData(FavorabilityExp,MC22,30);",
+    "Description": "娜娜好感度提升",
     "zh_CN": "[panel=1]「[em7]把湿手往你身上一甩[/em7]，大侠既然不下水，就替本姑娘看着鞋。」",
     "links": [60]
   },
@@ -504,7 +500,7 @@
     "actorID": "MC1",
     "text": "[em2][調情檢定][/em2]「本大俠只替一個人看鞋。」",
     "Sequence": "",
-    "Description": "選項1：調情檢定",
+    "Description": "選項1",
     "zh_CN": "[em2][调情检定][/em2]「本大侠只替一个人看鞋。」",
     "links": [64]
   },
@@ -513,7 +509,7 @@
     "actorID": "MC1",
     "text": "（什麼都不說，把鞋擺正）",
     "Sequence": "",
-    "Description": "選項2：不調情。不開口選項，依選項通則豁免，不接主角發言格",
+    "Description": "選項2",
     "zh_CN": "（什么都不说，把鞋摆正）",
     "links": [73]
   },
@@ -522,16 +518,15 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,FlirtingCheck,8);",
-    "Description": "選項1的空對話擲骰節點：調情檢定（Manual／FlirtingCheck／難度 8）",
+    "Description": "調情檢定",
     "links": [65]
   },
   {
     "entryID": 65,
     "actorID": "MC1",
-    "text": "「鞋我替妳看著。不過話說在前頭——本大俠只替一個人看鞋。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "Description": "擲骰後的過渡發言格（選項1的完整發言），成功／失敗共用",
-    "zh_CN": "「鞋我替你看着。不过话说在前头——本大侠只替一个人看鞋。」",
+    "text": "「鞋我替妳看著。不過話說在前頭，本大俠只替一個人看鞋。」",
+    "Sequence": "SetPortrait(MC1,pic=15);",
+    "zh_CN": "「鞋我替你看着。不过话说在前头，本大侠只替一个人看鞋。」",
     "links": [66, 70]
   },
   {
@@ -540,6 +535,7 @@
     "text": "[panel=1]「哦？那本姑娘明年換一雙新的，大俠還認得出來？」",
     "Sequence": "SetPortrait(MC22,pic=5);ModifyData(FeatExp,Player,Flirting,10);ModifyData(FavorabilityExp,MC22,20);",
     "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、調情經驗增加、娜娜好感度提升",
     "zh_CN": "[panel=1]「哦？那本姑娘明年换一双新的，大侠还认得出来？」",
     "links": [67]
   },
@@ -571,8 +567,9 @@
     "entryID": 70,
     "actorID": "MC22",
     "text": "[panel=1]「只替一個人？大俠，這半條河的鞋都堆在岸上呢。」",
-    "Sequence": "SetPortrait(MC22,pic=2);",
+    "Sequence": "SetPortrait(MC22,pic=5);",
     "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
     "zh_CN": "[panel=1]「只替一个人？大侠，这半条河的鞋都堆在岸上呢。」",
     "links": [71]
   },
@@ -587,9 +584,9 @@
   {
     "entryID": 72,
     "actorID": "role2",
-    "text": "[panel=6]＊（等你回過神，腳邊已經多了三雙鞋。娜娜那雙不在裡頭——她自己拎著走了。）＊",
+    "text": "[panel=6]＊（等你回過神，腳邊已經多了三雙鞋。娜娜那雙不在裡頭，她自己拎著走了。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（等你回过神，脚边已经多了三双鞋。娜娜那双不在里头——她自己拎着走了。）＊",
+    "zh_CN": "[panel=6]＊（等你回过神，脚边已经多了三双鞋。娜娜那双不在里头，她自己拎着走了。）＊",
     "links": [74]
   },
   {
@@ -605,7 +602,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場：三條分支匯流 →【收尾】。時間往後跳（日頭偏西），黑幕中收掉主角(0)與 1／2 兩個面板（三條分支最後在場的人不同，一次關掉最保險）；同日不換 GameDate",
+    "Description": "轉場",
     "links": [75]
   },
   {
@@ -637,7 +634,890 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableAllCharacterExpression();DisableDialogueBG();Continue();",
-    "Description": "尾格：關立繪表情與對話背景圖（養成任務對話必備）",
+    "Description": "清除立繪、關閉背景",
+    "links": []
+  },
+  {
+    "entryID": 79,
+    "actorID": "role2",
+    "text": "[panel=6]＊（上游有人接了話，隔著半條河喊過來，說洗什麼水，聽說冀州那邊喝一碗符水就成了，還不用脫衣裳。旁邊幾個人笑了，沒有一個回頭去看他。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（上游有人接了话，隔着半条河喊过来，说洗什么水，听说冀州那边喝一碗符水就成了，还不用脱衣裳。旁边几个人笑了，没有一个回头去看他。）＊",
+    "links": [35]
+  },
+  {
+    "entryID": 80,
+    "actorID": "role2",
+    "title": "才藝評選",
+    "text": "[panel=6]＊（三月下旬，府裡剛把上巳的濕衣裳晾乾。徐榮在正堂前攔住你，手裡拿著一張蓋了印的紙。）＊",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);AudioControl(PlayMusic,BGM_19);",
+    "Description": "才藝評選、開啟背景、播放音樂",
+    "zh_TW": "[panel=6]＊（三月下旬，府裡剛把上巳的濕衣裳晾乾。徐榮在正堂前攔住你，手裡拿著一張蓋了印的紙。）＊",
+    "zh_CN": "[panel=6]＊（三月下旬，府里刚把上巳的湿衣裳晾干。徐荣在正堂前拦住你，手里拿着一张盖了印的纸。）＊",
+    "links": [81]
+  },
+  {
+    "entryID": 81,
+    "actorID": "MC5",
+    "text": "[panel=2]「小子，回正堂。賈先生召集全府的人，說開春朝廷的恩賞批下來了，要議一議怎麼拿。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「小子，回正堂。賈先生召集全府的人，說開春朝廷的恩賞批下來了，要議一議怎麼拿。」",
+    "zh_CN": "[panel=2]「小子，回正堂。贾先生召集全府的人，说开春朝廷的恩赏批下来了，要议一议怎么拿。」",
+    "links": [82]
+  },
+  {
+    "entryID": 82,
+    "actorID": "MC1",
+    "text": "「恩賞？那不是好事？師父怎麼一臉要出兵的樣子。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「恩賞？那不是好事？師父怎麼一臉要出兵的樣子。」",
+    "zh_CN": "「恩赏？那不是好事？师父怎么一脸要出兵的样子。」",
+    "links": [83]
+  },
+  {
+    "entryID": 83,
+    "actorID": "MC5",
+    "text": "[panel=2]「你進去就知道。為師先說一句：他一開口，你就別信。」",
+    "Sequence": "SetPortrait(MC5,pic=3);EnableCharacterExpression(2,MC5,Meditate);",
+    "zh_TW": "[panel=2]「你進去就知道。為師先說一句：他一開口，你就別信。」",
+    "zh_CN": "[panel=2]「你进去就知道。为师先说一句：他一开口，你就别信。」",
+    "links": [84]
+  },
+  {
+    "entryID": 84,
+    "actorID": "role2",
+    "text": "[panel=6]＊（正堂裡人已經到齊。賈詡坐在上首，難得滿面笑容，笑得每個人都往後坐了一寸。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（正堂裡人已經到齊。賈詡坐在上首，難得滿面笑容，笑得每個人都往後坐了一寸。）＊",
+    "zh_CN": "[panel=6]＊（正堂里人已经到齐。贾诩坐在上首，难得满面笑容，笑得每个人都往后坐了一寸。）＊",
+    "links": [85]
+  },
+  {
+    "entryID": 85,
+    "actorID": "MC4",
+    "text": "[panel=1]「諸位，開春大吉，本府蒸蒸日上。賈某有一提議，何不各自獻藝一番，也算犒勞這一年的辛勞？」",
+    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Meditate);",
+    "zh_TW": "[panel=1]「諸位，開春大吉，本府蒸蒸日上。賈某有一提議，何不各自獻藝一番，也算犒勞這一年的辛勞？」",
+    "zh_CN": "[panel=1]「诸位，开春大吉，本府蒸蒸日上。贾某有一提议，何不各自献艺一番，也算犒劳这一年的辛劳？」",
+    "links": [86]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC1",
+    "text": "「真的假的……你是何人？你把賈先生怎麼了？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Shock);",
+    "zh_TW": "「真的假的……你是何人？你把賈先生怎麼了？」",
+    "zh_CN": "「真的假的……你是何人？你把贾先生怎么了？」",
+    "links": [87]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC4",
+    "text": "[panel=1]「真是失禮，你當賈某無血無淚嗎？賈某也是有犒勞眾人之心的。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「真是失禮，你當賈某無血無淚嗎？賈某也是有犒勞眾人之心的。」",
+    "zh_CN": "[panel=1]「真是失礼，你当贾某无血无泪吗？贾某也是有犒劳众人之心的。」",
+    "links": [88]
+  },
+  {
+    "entryID": 88,
+    "actorID": "MC5",
+    "text": "[panel=2]「[em7]把那張紙拍在案上[/em7]，你別聽他的鬼話。朝廷這回改了法子，恩賞不按舊例發，開了題目叫各府自己遞條陳。」",
+    "Sequence": "SetPortrait(MC5,pic=2);EnableCharacterExpression(2,MC5,Anger_2);",
+    "zh_TW": "[panel=2]「[em7]把那張紙拍在案上[/em7]，你別聽他的鬼話。朝廷這回改了法子，恩賞不按舊例發，開了題目叫各府自己遞條陳。」",
+    "zh_CN": "[panel=2]「[em7]把那张纸拍在案上[/em7]，你别听他的鬼话。朝廷这回改了法子，恩赏不按旧例发，开了题目叫各府自己递条陈。」",
+    "links": [89]
+  },
+  {
+    "entryID": 89,
+    "actorID": "MC5",
+    "text": "[panel=2]「題目就四個字：各展所長。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC5,pic=2);",
+    "zh_TW": "[panel=2]「題目就四個字：各展所長。」",
+    "zh_CN": "[panel=2]「题目就四个字：各展所长。」",
+    "links": [90]
+  },
+  {
+    "entryID": 90,
+    "actorID": "MC2",
+    "text": "[panel=3]「我就知道這傢伙沒安好心。可帳不是已經填平了嗎，為何還要湊這個熱鬧？」",
+    "Sequence": "SetPortrait(MC2,pic=2);",
+    "zh_TW": "[panel=3]「我就知道這傢伙沒安好心。可帳不是已經填平了嗎，為何還要湊這個熱鬧？」",
+    "zh_CN": "[panel=3]「我就知道这家伙没安好心。可帐不是已经填平了吗，为何还要凑这个热闹？」",
+    "links": [91]
+  },
+  {
+    "entryID": 91,
+    "actorID": "MC4",
+    "text": "[panel=1]「錢自然是多多益善，你怎知哪天不會有萬一？反正你們都知道了。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「錢自然是多多益善，你怎知哪天不會有萬一？反正你們都知道了。」",
+    "zh_CN": "[panel=1]「钱自然是多多益善，你怎知哪天不会有万一？反正你们都知道了。」",
+    "links": [92]
+  },
+  {
+    "entryID": 92,
+    "actorID": "MC4",
+    "text": "[panel=1]「徐兄、呂信、子羽，連賈某在內，各自獻技，賈某擇優。至於你與郭嘉，替賈某掌掌眼。」",
+    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Meditate);",
+    "zh_TW": "[panel=1]「徐兄、呂信、子羽，連賈某在內，各自獻技，賈某擇優。至於你與郭嘉，替賈某掌掌眼。」",
+    "zh_CN": "[panel=1]「徐兄、吕信、子羽，连贾某在内，各自献技，贾某择优。至于你与郭嘉，替贾某掌掌眼。」",
+    "links": [93]
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC7",
+    "text": "[panel=2]「鬧劇不奉陪了。」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]「鬧劇不奉陪了。」",
+    "zh_CN": "[panel=2]「闹剧不奉陪了。」",
+    "links": [94]
+  },
+  {
+    "entryID": 94,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他說完就走了，走得比誰都快。堂裡剩下的人一齊看向你。）＊",
+    "Sequence": "OpenPanel(2,close);",
+    "zh_TW": "[panel=6]＊（他說完就走了，走得比誰都快。堂裡剩下的人一齊看向你。）＊",
+    "zh_CN": "[panel=6]＊（他说完就走了，走得比谁都快。堂里剩下的人一齐看向你。）＊",
+    "links": [95]
+  },
+  {
+    "entryID": 95,
+    "actorID": "MC1",
+    "text": "「可惡，被郭嘉那傢伙搶先一步溜了……」",
+    "Sequence": "SetPortrait(MC1,pic=3);EnableCharacterExpression(0,Player,Nervous_2);",
+    "zh_TW": "「可惡，被郭嘉那傢伙搶先一步溜了……」",
+    "zh_CN": "「可恶，被郭嘉那家伙抢先一步溜了……」",
+    "links": [96]
+  },
+  {
+    "entryID": 96,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;OpenPanel(3, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場",
+    "links": [97]
+  },
+  {
+    "entryID": 97,
+    "actorID": "role2",
+    "text": "[panel=6]＊（正堂清出一塊空地，你坐在評審的位子上，左手邊是張寧，右手邊是小犀，兩個人都是被你拉來的。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（正堂清出一塊空地，你坐在評審的位子上，左手邊是張寧，右手邊是小犀，兩個人都是被你拉來的。）＊",
+    "zh_CN": "[panel=6]＊（正堂清出一块空地，你坐在评审的位子上，左手边是张宁，右手边是小犀，两个人都是被你拉来的。）＊",
+    "links": [98]
+  },
+  {
+    "entryID": 98,
+    "actorID": "MC1",
+    "text": "「……如此如此、這般這般，接下來便是本府開春的才藝評選。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「……如此如此、這般這般，接下來便是本府開春的才藝評選。」",
+    "zh_CN": "「……如此如此、这般这般，接下来便是本府开春的才艺评选。」",
+    "links": [99]
+  },
+  {
+    "entryID": 99,
+    "actorID": "MC6",
+    "text": "[panel=3]「我有一個問題。為何我會在這？應該說，關我什麼事？」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=3]「我有一個問題。為何我會在這？應該說，關我什麼事？」",
+    "zh_CN": "[panel=3]「我有一个问题。为何我会在这？应该说，关我什么事？」",
+    "links": [100]
+  },
+  {
+    "entryID": 100,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，小犀晚飯還沒煮耶。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「表哥，小犀晚飯還沒煮耶。」",
+    "zh_CN": "[panel=2]「表哥，小犀晚饭还没煮耶。」",
+    "links": [101]
+  },
+  {
+    "entryID": 101,
+    "actorID": "MC1",
+    "text": "「沒法子，我一個人評，怕立場偏頗。委屈兩位當一下最無關的公正評審。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous);",
+    "zh_TW": "「沒法子，我一個人評，怕立場偏頗。委屈兩位當一下最無關的公正評審。」",
+    "zh_CN": "「没法子，我一个人评，怕立场偏颇。委屈两位当一下最无关的公正评审。」",
+    "links": [102]
+  },
+  {
+    "entryID": 102,
+    "actorID": "MC6",
+    "text": "[panel=3]「還有何好評的？就那四個蠢貨，肯定只有全部出局。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=3]「還有何好評的？就那四個蠢貨，肯定只有全部出局。」",
+    "zh_CN": "[panel=3]「还有何好评的？就那四个蠢货，肯定只有全部出局。」",
+    "links": [103]
+  },
+  {
+    "entryID": 103,
+    "actorID": "MC1",
+    "text": "「唉，我何嘗不想。總而言之，有請第一位，賈先生。」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "zh_TW": "「唉，我何嘗不想。總而言之，有請第一位，賈先生。」",
+    "zh_CN": "「唉，我何尝不想。总而言之，有请第一位，贾先生。」",
+    "links": [104]
+  },
+  {
+    "entryID": 104,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡走到空地中央，案上蓋著一塊粗布。他清了清嗓子。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（賈詡走到空地中央，案上蓋著一塊粗布。他清了清嗓子。）＊",
+    "zh_CN": "[panel=6]＊（贾诩走到空地中央，案上盖着一块粗布。他清了清嗓子。）＊",
+    "links": [105]
+  },
+  {
+    "entryID": 105,
+    "actorID": "MC4",
+    "text": "[panel=1]「諸位，賈某今日所獻之藝，乃是……」",
+    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Proud);",
+    "zh_TW": "[panel=1]「諸位，賈某今日所獻之藝，乃是……」",
+    "zh_CN": "[panel=1]「诸位，贾某今日所献之艺，乃是……」",
+    "links": [106]
+  },
+  {
+    "entryID": 106,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他掀開粗布，底下赫然是一具怪物的屍體，四肢俱全，臉朝著評審席。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（他掀開粗布，底下赫然是一具怪物的屍體，四肢俱全，臉朝著評審席。）＊",
+    "zh_CN": "[panel=6]＊（他掀开粗布，底下赫然是一具怪物的尸体，四肢俱全，脸朝着评审席。）＊",
+    "links": [107]
+  },
+  {
+    "entryID": 107,
+    "actorID": "MC6",
+    "text": "[panel=3]「出局！你可以滾了！」",
+    "Sequence": "SetPortrait(MC6,pic=2);EnableCharacterExpression(3,MC6,Anger);",
+    "zh_TW": "[panel=3]「出局！你可以滾了！」",
+    "zh_CN": "[panel=3]「出局！你可以滚了！」",
+    "links": [108]
+  },
+  {
+    "entryID": 108,
+    "actorID": "MC4",
+    "text": "[panel=1]「誒？賈某還沒……」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC4,pic=5);",
+    "zh_TW": "[panel=1]「誒？賈某還沒……」",
+    "zh_CN": "[panel=1]「诶？贾某还没……」",
+    "links": [109]
+  },
+  {
+    "entryID": 109,
+    "actorID": "MC6",
+    "text": "[panel=3]「少拿你那見不得人的癖好出來，這裡可還有小孩在。滾！」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_TW": "[panel=3]「少拿你那見不得人的癖好出來，這裡可還有小孩在。滾！」",
+    "zh_CN": "[panel=3]「少拿你那见不得人的癖好出来，这里可还有小孩在。滚！」",
+    "links": [110]
+  },
+  {
+    "entryID": 110,
+    "actorID": "MC4",
+    "text": "[panel=1]「唉，張寧誤我……」",
+    "Sequence": "SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「唉，張寧誤我……」",
+    "zh_CN": "[panel=1]「唉，张宁误我……」",
+    "links": [111]
+  },
+  {
+    "entryID": 111,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賈詡抱著粗布退下。你把他那一行劃掉，喊下一位。）＊",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=6]＊（賈詡抱著粗布退下。你把他那一行劃掉，喊下一位。）＊",
+    "zh_CN": "[panel=6]＊（贾诩抱着粗布退下。你把他那一行划掉，喊下一位。）＊",
+    "links": [112]
+  },
+  {
+    "entryID": 112,
+    "actorID": "MC1",
+    "text": "「早知如此，有請第二位，徐師父。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「早知如此，有請第二位，徐師父。」",
+    "zh_CN": "「早知如此，有请第二位，徐师父。」",
+    "links": [113]
+  },
+  {
+    "entryID": 113,
+    "actorID": "MC5",
+    "text": "[panel=1]「為師別無所長，但有一平日喜好，今日就請各位一飽口福。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「為師別無所長，但有一平日喜好，今日就請各位一飽口福。」",
+    "zh_CN": "[panel=1]「为师别无所长，但有一平日喜好，今日就请各位一饱口福。」",
+    "links": [114]
+  },
+  {
+    "entryID": 114,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他搬出一鍋東西。鍋蓋一開，黑煙從堂中央漫到堂門口，坐得最近的小犀先捂住了鼻子。）＊",
+    "Sequence": "AudioControl(PlaySFX,Others_WaterBoiling);",
+    "zh_TW": "[panel=6]＊（他搬出一鍋東西。鍋蓋一開，黑煙從堂中央漫到堂門口，坐得最近的小犀先捂住了鼻子。）＊",
+    "zh_CN": "[panel=6]＊（他搬出一锅东西。锅盖一开，黑烟从堂中央漫到堂门口，坐得最近的小犀先捂住了鼻子。）＊",
+    "links": [115]
+  },
+  {
+    "entryID": 115,
+    "actorID": "MC8",
+    "text": "[panel=2]「那個，徐叔叔，小犀無意冒犯，但這味道連小犀都吃不下。應該說，這已經不能叫菜了吧。」",
+    "Sequence": "SetPortrait(MC8,pic=6);EnableCharacterExpression(2,MC8,Pain);",
+    "zh_TW": "[panel=2]「那個，徐叔叔，小犀無意冒犯，但這味道連小犀都吃不下。應該說，這已經不能叫菜了吧。」",
+    "zh_CN": "[panel=2]「那个，徐叔叔，小犀无意冒犯，但这味道连小犀都吃不下。应该说，这已经不能叫菜了吧。」",
+    "links": [116]
+  },
+  {
+    "entryID": 116,
+    "actorID": "MC5",
+    "text": "[panel=1]「不用說了，為師明白，這道菜對眾人來說還太早了。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=1]「不用說了，為師明白，這道菜對眾人來說還太早了。」",
+    "zh_CN": "[panel=1]「不用说了，为师明白，这道菜对众人来说还太早了。」",
+    "links": [117]
+  },
+  {
+    "entryID": 117,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他把鍋蓋蓋回去，黑煙慢慢散了。堂裡有人咳了很久。）＊",
+    "Sequence": "AudioControl(StopSFX);OpenPanel(1, close);",
+    "Description": "關閉音效",
+    "zh_TW": "[panel=6]＊（他把鍋蓋蓋回去，黑煙慢慢散了。堂裡有人咳了很久。）＊",
+    "zh_CN": "[panel=6]＊（他把锅盖盖回去，黑烟慢慢散了。堂里有人咳了很久。）＊",
+    "links": [118]
+  },
+  {
+    "entryID": 118,
+    "actorID": "MC1",
+    "text": "「呼，差點就變成毒殺朝廷命官的慘事。第三位，子羽。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「呼，差點就變成毒殺朝廷命官的慘事。第三位，子羽。」",
+    "zh_CN": "「呼，差点就变成毒杀朝廷命官的惨事。第三位，子羽。」",
+    "links": [119]
+  },
+  {
+    "entryID": 119,
+    "actorID": "MC3",
+    "text": "[panel=1]「…………」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=1]「…………」",
+    "zh_CN": "[panel=1]「…………」",
+    "links": [120]
+  },
+  {
+    "entryID": 120,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他走到空地中央，不發一語，拔刀，一招一招地走。刀走完了，他收刀，還是不發一語。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他走到空地中央，不發一語，拔刀，一招一招地走。刀走完了，他收刀，還是不發一語。）＊",
+    "zh_CN": "[panel=6]＊（他走到空地中央，不发一语，拔刀，一招一招地走。刀走完了，他收刀，还是不发一语。）＊",
+    "links": [121]
+  },
+  {
+    "entryID": 121,
+    "actorID": "MC6",
+    "text": "[panel=3]「你認真的？」",
+    "Sequence": "SetPortrait(MC6,pic=4);EnableCharacterExpression(3,MC6,Question);",
+    "zh_TW": "[panel=3]「你認真的？」",
+    "zh_CN": "[panel=3]「你认真的？」",
+    "links": [122]
+  },
+  {
+    "entryID": 122,
+    "actorID": "MC3",
+    "text": "[panel=1]「…………」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC3,pic=3);",
+    "zh_TW": "[panel=1]「…………」",
+    "zh_CN": "[panel=1]「…………」",
+    "links": [123]
+  },
+  {
+    "entryID": 123,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他默默退下，你已經快沒有詞可以總結了。）＊",
+    "Sequence": "OpenPanel(1, close);",
+    "zh_TW": "[panel=6]＊（他默默退下，你已經快沒有詞可以總結了。）＊",
+    "zh_CN": "[panel=6]＊（他默默退下，你已经快没有词可以总结了。）＊",
+    "links": [124]
+  },
+  {
+    "entryID": 124,
+    "actorID": "MC1",
+    "text": "「……第四位，信哥。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「……第四位，信哥。」",
+    "zh_CN": "「……第四位，信哥。」",
+    "links": [125]
+  },
+  {
+    "entryID": 125,
+    "actorID": "MC2",
+    "text": "[panel=1]「嘿！等了老半天，總算到我了。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_TW": "[panel=1]「嘿！等了老半天，總算到我了。」",
+    "zh_CN": "[panel=1]「嘿！等了老半天，总算到我了。」",
+    "links": [126]
+  },
+  {
+    "entryID": 126,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他站在空地中央，叉著腰。過了一會兒，還是叉著腰。張寧沒有說話，小犀沒有說話，他也沒有說話。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（他站在空地中央，叉著腰。過了一會兒，還是叉著腰。張寧沒有說話，小犀沒有說話，他也沒有說話。）＊",
+    "zh_CN": "[panel=6]＊（他站在空地中央，叉着腰。过了一会儿，还是叉着腰。张宁没有说话，小犀没有说话，他也没有说话。）＊",
+    "links": [127]
+  },
+  {
+    "entryID": 127,
+    "actorID": "MC1",
+    "text": "「呃……信哥，請獻技吧。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「呃……信哥，請獻技吧。」",
+    "zh_CN": "「呃……信哥，请献技吧。」",
+    "links": [128]
+  },
+  {
+    "entryID": 128,
+    "actorID": "MC2",
+    "text": "[panel=1]「我已經開始了啊。我！無雙人才！我！絕代武藝！我！就是才藝！」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_TW": "[panel=1]「我已經開始了啊。我！無雙人才！我！絕代武藝！我！就是才藝！」",
+    "zh_CN": "[panel=1]「我已经开始了啊。我！无双人才！我！绝代武艺！我！就是才艺！」",
+    "links": [129]
+  },
+  {
+    "entryID": 129,
+    "actorID": "role2",
+    "text": "[panel=6]＊（…………………………）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（…………………………）＊",
+    "zh_CN": "[panel=6]＊（…………………………）＊",
+    "links": [130]
+  },
+  {
+    "entryID": 130,
+    "actorID": "MC8",
+    "text": "[panel=2]「那個，寧姊姊，小犀有點聽不明白，妳可以解釋給我聽嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=14);",
+    "zh_TW": "[panel=2]「那個，寧姊姊，小犀有點聽不明白，妳可以解釋給我聽嗎？」",
+    "zh_CN": "[panel=2]「那个，宁姐姐，小犀有点听不明白，你可以解释给我听吗？」",
+    "links": [131]
+  },
+  {
+    "entryID": 131,
+    "actorID": "MC6",
+    "text": "[panel=3]「小犀乖，有些事不明白，對妳的成長比較好。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=3]「小犀乖，有些事不明白，對妳的成長比較好。」",
+    "zh_CN": "[panel=3]「小犀乖，有些事不明白，对你的成长比较好。」",
+    "links": [132]
+  },
+  {
+    "entryID": 132,
+    "actorID": "MC6",
+    "text": "[panel=3]「剩下的我已經懶得說了。恕我們無能為力，你自己看著選吧。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=3]「剩下的我已經懶得說了。恕我們無能為力，你自己看著選吧。」",
+    "zh_CN": "[panel=3]「剩下的我已经懒得说了。恕我们无能为力，你自己看着选吧。」",
+    "links": [133]
+  },
+  {
+    "entryID": 133,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧牽著小犀走了。堂裡剩下你，和四道盯著你的目光。）＊",
+    "Sequence": "OpenPanel(2,close);OpenPanel(3,close);",
+    "zh_TW": "[panel=6]＊（張寧牽著小犀走了。堂裡剩下你，和四道盯著你的目光。）＊",
+    "zh_CN": "[panel=6]＊（张宁牵着小犀走了。堂里剩下你，和四道盯着你的目光。）＊",
+    "links": [134]
+  },
+  {
+    "entryID": 134,
+    "actorID": "MC1",
+    "text": "「喂！別丟我一個人啊！這般歪瓜裂棗的，是要怎麼選！」",
+    "Sequence": "SetPortrait(MC1,pic=19);EnableCharacterExpression(0,Player,Shock);",
+    "zh_TW": "「喂！別丟我一個人啊！這般歪瓜裂棗的，是要怎麼選！」",
+    "zh_CN": "「喂！别丢我一个人啊！这般歪瓜裂枣的，是要怎么选！」",
+    "links": [135]
+  },
+  {
+    "entryID": 135,
+    "actorID": "MC4",
+    "text": "[panel=1]「唉，逃得了一時，逃不了一世。你該做出選擇了。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「唉，逃得了一時，逃不了一世。你該做出選擇了。」",
+    "zh_CN": "[panel=1]「唉，逃得了一时，逃不了一世。你该做出选择了。」",
+    "links": [136]
+  },
+  {
+    "entryID": 136,
+    "actorID": "MC1",
+    "text": "「麒麟骰！這種時候……救我啊……」",
+    "Sequence": "SetPortrait(MC1,pic=19);",
+    "zh_TW": "「麒麟骰！這種時候……救我啊……」",
+    "zh_CN": "「麒麟骰！这种时候……救我啊……」",
+    "links": [137]
+  },
+  {
+    "entryID": 137,
+    "actorID": "role2",
+    "text": "[panel=6]＊（骰子毫無反應。倒是那四道目光又近了一步。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（骰子毫無反應。倒是那四道目光又近了一步。）＊",
+    "zh_CN": "[panel=6]＊（骰子毫无反应。倒是那四道目光又近了一步。）＊",
+    "links": [138, 139, 140, 141]
+  },
+  {
+    "entryID": 138,
+    "actorID": "MC1",
+    "text": "「用賈先生的。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "「用賈先生的。」",
+    "zh_CN": "「用贾先生的。」",
+    "links": [142]
+  },
+  {
+    "entryID": 139,
+    "actorID": "MC1",
+    "text": "「用徐師父那一鍋。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "「用徐師父那一鍋。」",
+    "zh_CN": "「用徐师父那一锅。」",
+    "links": [146]
+  },
+  {
+    "entryID": 140,
+    "actorID": "MC1",
+    "text": "「用子羽那一趟刀。」",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "「用子羽那一趟刀。」",
+    "zh_CN": "「用子羽那一趟刀。」",
+    "links": [150]
+  },
+  {
+    "entryID": 141,
+    "actorID": "MC1",
+    "text": "「信哥吧。」",
+    "Sequence": "",
+    "Description": "選項4",
+    "zh_TW": "「信哥吧。」",
+    "zh_CN": "「信哥吧。」",
+    "links": [154]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC1",
+    "text": "「兵法云出奇制勝，那就……用賈先生那個不可告人的癖好。」",
+    "Sequence": "SetPortrait(MC1,pic=18);",
+    "zh_TW": "「兵法云出奇制勝，那就……用賈先生那個不可告人的癖好。」",
+    "zh_CN": "「兵法云出奇制胜，那就……用贾先生那个不可告人的癖好。」",
+    "links": [143]
+  },
+  {
+    "entryID": 143,
+    "actorID": "role2",
+    "text": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "zh_CN": "[panel=6]＊（于是你们呈上所拟条陈。过了些时日，朝廷批文发还。）＊",
+    "links": [144]
+  },
+  {
+    "entryID": 144,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場",
+    "links": [145]
+  },
+  {
+    "entryID": 145,
+    "actorID": "MC1",
+    "text": "「一張白紙……？意思是無話可說了嗎……」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「一張白紙……？意思是無話可說了嗎……」",
+    "zh_CN": "「一张白纸……？意思是无话可说了吗……」",
+    "links": [158]
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC1",
+    "text": "「民以食為天……有勞徐師父的那一鍋。」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「民以食為天……有勞徐師父的那一鍋。」",
+    "zh_CN": "「民以食为天……有劳徐师父的那一锅。」",
+    "links": [147]
+  },
+  {
+    "entryID": 147,
+    "actorID": "role2",
+    "text": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "zh_CN": "[panel=6]＊（于是你们呈上所拟条陈。过了些时日，朝廷批文发还。）＊",
+    "links": [148]
+  },
+  {
+    "entryID": 148,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場",
+    "links": [149]
+  },
+  {
+    "entryID": 149,
+    "actorID": "MC1",
+    "text": "「[em2]念及初犯暫不追究，若敢再犯……[/em2]後面還附上一道血痕……」",
+    "Sequence": "SetPortrait(MC1,pic=19);EnableCharacterExpression(0,Player,Shock);",
+    "zh_TW": "「[em2]念及初犯暫不追究，若敢再犯……[/em2]後面還附上一道血痕……」",
+    "zh_CN": "「[em2]念及初犯暂不追究，若敢再犯……[/em2]后面还附上一道血痕……」",
+    "links": [158]
+  },
+  {
+    "entryID": 150,
+    "actorID": "MC1",
+    "text": "「大音希聲，大象無形……子羽那一趟刀，總不會錯。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「大音希聲，大象無形……子羽那一趟刀，總不會錯。」",
+    "zh_CN": "「大音希声，大象无形……子羽那一趟刀，总不会错。」",
+    "links": [151]
+  },
+  {
+    "entryID": 151,
+    "actorID": "role2",
+    "text": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "zh_CN": "[panel=6]＊（于是你们呈上所拟条陈。过了些时日，朝廷批文发还。）＊",
+    "links": [152]
+  },
+  {
+    "entryID": 152,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場",
+    "links": [153]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC1",
+    "text": "「[em2]窮極無聊，下次改進。[/em2]……八個字，一個字都沒浪費。」",
+    "Sequence": "SetPortrait(MC1,pic=14);",
+    "zh_TW": "「[em2]窮極無聊，下次改進。[/em2]……八個字，一個字都沒浪費。」",
+    "zh_CN": "「[em2]穷极无聊，下次改进。[/em2]……八个字，一个字都没浪费。」",
+    "links": [158]
+  },
+  {
+    "entryID": 154,
+    "actorID": "MC1",
+    "text": "「……信哥，就他了。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「……信哥，就他了。」",
+    "zh_CN": "「……信哥，就他了。」",
+    "links": [155]
+  },
+  {
+    "entryID": 155,
+    "actorID": "role2",
+    "text": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（於是你們呈上所擬條陳。過了些時日，朝廷批文發還。）＊",
+    "zh_CN": "[panel=6]＊（于是你们呈上所拟条陈。过了些时日，朝廷批文发还。）＊",
+    "links": [156]
+  },
+  {
+    "entryID": 156,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場",
+    "links": [157]
+  },
+  {
+    "entryID": 157,
+    "actorID": "MC1",
+    "text": "「[em2]癲症宜早延醫。[/em2]……這是叫我們去看大夫。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「[em2]癲症宜早延醫。[/em2]……這是叫我們去看大夫。」",
+    "zh_CN": "「[em2]癫症宜早延医。[/em2]……这是叫我们去看大夫。」",
+    "links": [158]
+  },
+  {
+    "entryID": 158,
+    "actorID": "MC4",
+    "text": "[panel=1]「唉……結果這次還是不成嗎……」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=3);",
+    "zh_TW": "[panel=1]「唉……結果這次還是不成嗎……」",
+    "zh_CN": "[panel=1]「唉……结果这次还是不成吗……」",
+    "links": [159]
+  },
+  {
+    "entryID": 159,
+    "actorID": "MC5",
+    "text": "[panel=2]「只能說，別家太強了。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=2]「只能說，別家太強了。」",
+    "zh_CN": "[panel=2]「只能说，别家太强了。」",
+    "links": [160]
+  },
+  {
+    "entryID": 160,
+    "actorID": "MC3",
+    "text": "[panel=3]「盡力了，不後悔。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=3]「盡力了，不後悔。」",
+    "zh_CN": "[panel=3]「尽力了，不后悔。」",
+    "links": [161]
+  },
+  {
+    "entryID": 161,
+    "actorID": "MC1",
+    "text": "「你們到底哪來的底氣……還要不要臉了！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);",
+    "zh_TW": "「你們到底哪來的底氣……還要不要臉了！」",
+    "zh_CN": "「你们到底哪来的底气……还要不要脸了！」",
+    "links": [162]
+  },
+  {
+    "entryID": 162,
+    "actorID": "role2",
+    "text": "[panel=6]＊（批文的最後一行寫著本季得恩賞者的名字。呂信湊過去看，看了兩遍。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（批文的最後一行寫著本季得恩賞者的名字。呂信湊過去看，看了兩遍。）＊",
+    "zh_CN": "[panel=6]＊（批文的最后一行写着本季得恩赏者的名字。吕信凑过去看，看了两遍。）＊",
+    "links": [163]
+  },
+  {
+    "entryID": 163,
+    "actorID": "MC2",
+    "text": "[panel=2]「所以這回又是誰拿到了恩賞……咦？得恩賞者，郭嘉？」",
+    "Sequence": "SetPortrait(MC2,pic=4);EnableCharacterExpression(2,MC2,Surprise);",
+    "zh_TW": "[panel=2]「所以這回又是誰拿到了恩賞……咦？得恩賞者，郭嘉？」",
+    "zh_CN": "[panel=2]「所以这回又是谁拿到了恩赏……咦？得恩赏者，郭嘉？」",
+    "links": [164]
+  },
+  {
+    "entryID": 164,
+    "actorID": "role2",
+    "text": "[panel=6]＊（眾人一驚，把那一行再三確認，確是郭嘉。他不知道什麼時候又坐回了廊下。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（眾人一驚，把那一行再三確認，確是郭嘉。他不知道什麼時候又坐回了廊下。）＊",
+    "zh_CN": "[panel=6]＊（众人一惊，把那一行再三确认，确是郭嘉。他不知道什么时候又坐回了廊下。）＊",
+    "links": [165]
+  },
+  {
+    "entryID": 165,
+    "actorID": "MC1",
+    "text": "「你是何時……」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「你是何時……」",
+    "zh_CN": "「你是何时……」",
+    "links": [166]
+  },
+  {
+    "entryID": 166,
+    "actorID": "MC7",
+    "text": "[panel=3]「在你們折騰的時候，我以個人名義遞了條陳，如此而已。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「在你們折騰的時候，我以個人名義遞了條陳，如此而已。」",
+    "zh_CN": "[panel=3]「在你们折腾的时候，我以个人名义递了条陈，如此而已。」",
+    "links": [167]
+  },
+  {
+    "entryID": 167,
+    "actorID": "MC1",
+    "text": "「所以你遞了什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「所以你遞了什麼？」",
+    "zh_CN": "「所以你递了什么？」",
+    "links": [168]
+  },
+  {
+    "entryID": 168,
+    "actorID": "MC7",
+    "text": "[panel=3]「批文那位大人的家底，以及幾條他推不掉的話。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「批文那位大人的家底，以及幾條他推不掉的話。」",
+    "zh_CN": "[panel=3]「批文那位大人的家底，以及几条他推不掉的话。」",
+    "links": [169]
+  },
+  {
+    "entryID": 169,
+    "actorID": "MC1",
+    "text": "「……以後絕對不能招惹郭嘉那傢伙。」",
+    "Sequence": "SetPortrait(MC1,pic=11);EnableCharacterExpression(0,Player,Nervous_2);",
+    "zh_TW": "「……以後絕對不能招惹郭嘉那傢伙。」",
+    "zh_CN": "「……以后绝对不能招惹郭嘉那家伙。」",
+    "links": [170]
+  },
+  {
+    "entryID": 170,
+    "actorID": "MC4",
+    "text": "[panel=1]「做得好，當初果然沒看錯人。恩賞在哪裡？賈某要好好打算。」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=1);EnableCharacterExpression(1,MC4,Idea);",
+    "zh_TW": "[panel=1]「做得好，當初果然沒看錯人。恩賞在哪裡？賈某要好好打算。」",
+    "zh_CN": "[panel=1]「做得好，当初果然没看错人。恩赏在哪里？贾某要好好打算。」",
+    "links": [171]
+  },
+  {
+    "entryID": 171,
+    "actorID": "MC2",
+    "text": "[panel=2]「喂！你別想獨吞啊！」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=2);EnableCharacterExpression(2,MC2,Anger);",
+    "zh_TW": "[panel=2]「喂！你別想獨吞啊！」",
+    "zh_CN": "[panel=2]「喂！你别想独吞啊！」",
+    "links": [172]
+  },
+  {
+    "entryID": 172,
+    "actorID": "MC5",
+    "text": "[panel=1]「混帳！那是郭嘉的東西！」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC5,pic=2);EnableCharacterExpression(1,MC5,Anger_3);",
+    "zh_TW": "[panel=1]「混帳！那是郭嘉的東西！」",
+    "zh_CN": "[panel=1]「混帐！那是郭嘉的东西！」",
+    "links": [173]
+  },
+  {
+    "entryID": 173,
+    "actorID": "MC1",
+    "text": "「你不阻止他們嗎？」",
+    "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=11);",
+    "zh_TW": "「你不阻止他們嗎？」",
+    "zh_CN": "「你不阻止他们吗？」",
+    "links": [174]
+  },
+  {
+    "entryID": 174,
+    "actorID": "MC7",
+    "text": "[panel=3]「無所謂，反正我用不上。」",
+    "Sequence": "SetPortrait(MC7,pic=1);ModifyData(Coin,1300);",
+    "Description": "給錢",
+    "zh_TW": "[panel=3]「無所謂，反正我用不上。」",
+    "zh_CN": "[panel=3]「无所谓，反正我用不上。」",
+    "links": [175]
+  },
+  {
+    "entryID": 175,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三個人在堂裡搶一張批文，搶到後來紙撕成了兩半。郭嘉在廊下把那卷書翻了一頁。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（三個人在堂裡搶一張批文，搶到後來紙撕成了兩半。郭嘉在廊下把那卷書翻了一頁。）＊",
+    "zh_CN": "[panel=6]＊（三个人在堂里抢一张批文，抢到后来纸撕成了两半。郭嘉在廊下把那卷书翻了一页。）＊",
+    "links": [176]
+  },
+  {
+    "entryID": 176,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();DisableDialogueBG();Continue();",
+    "Description": "清除立繪、關閉背景",
     "links": []
   }
 ]

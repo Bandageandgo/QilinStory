@@ -1,0 +1,543 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "title": "張角現身",
+    "text": "[panel=6]＊（六月上旬，一封信送到正堂。信是誰送來的，看你們去年秋天的帳是怎麼結的。）＊",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);AudioControl(PlayMusic,BGM_28);",
+    "Description": "張角現身，開啟背景、播放音樂",
+    "zh_TW": "[panel=6]＊（六月上旬，一封信送到正堂。信是誰送來的，看你們去年秋天的帳是怎麼結的。）＊",
+    "zh_CN": "[panel=6]＊（六月上旬，一封信送到正堂。信是谁送来的，看你们去年秋天的帐是怎么结的。）＊",
+    "links": [2, 5, 7]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三家的信一起到，赤龍幫的、甄家的、黑狼氏族的，說的是同一件事。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（三家的信一起到，赤龍幫的、甄家的、黑狼氏族的，說的是同一件事。）＊",
+    "zh_CN": "[panel=6]＊（三家的信一起到，赤龙帮的、甄家的、黑狼氏族的，说的是同一件事。）＊",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role2",
+    "text": "[panel=6]＊（雲中北邊的一處荒村鬧黑血屍，成群結隊，客商不敢走那條路了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（雲中北邊的一處荒村鬧黑血屍，成群結隊，客商不敢走那條路了。）＊",
+    "zh_CN": "[panel=6]＊（云中北边的一处荒村闹黑血尸，成群结队，客商不敢走那条路了。）＊",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "role2",
+    "text": "[panel=6]＊（三家都要英豪府去，三家都沒說要出人。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（三家都要英豪府去，三家都沒說要出人。）＊",
+    "zh_CN": "[panel=6]＊（三家都要英豪府去，三家都没说要出人。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（赤龍幫派人捎來一封信：雲中北邊的一處荒村鬧黑血屍，成群結隊，客商不敢走那條路了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（赤龍幫派人捎來一封信：雲中北邊的一處荒村鬧黑血屍，成群結隊，客商不敢走那條路了。）＊",
+    "zh_CN": "[panel=6]＊（赤龙帮派人捎来一封信：云中北边的一处荒村闹黑血尸，成群结队，客商不敢走那条路了。）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（褚幫主的意思很簡單，出了錢的人，遇上這種事總該有人去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（褚幫主的意思很簡單，出了錢的人，遇上這種事總該有人去。）＊",
+    "zh_CN": "[panel=6]＊（褚帮主的意思很简单，出了钱的人，遇上这种事总该有人去。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=6]＊（甄筠的信寫得很短：雲中北邊的一處荒村鬧黑血屍，成群結隊，客商不敢走那條路了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（甄筠的信寫得很短：雲中北邊的一處荒村鬧黑血屍，成群結隊，客商不敢走那條路了。）＊",
+    "zh_CN": "[panel=6]＊（甄筠的信写得很短：云中北边的一处荒村闹黑血尸，成群结队，客商不敢走那条路了。）＊",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她問英豪府什麼時候去，沒有問去不去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（她問英豪府什麼時候去，沒有問去不去。）＊",
+    "zh_CN": "[panel=6]＊（她问英豪府什么时候去，没有问去不去。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC5",
+    "text": "[panel=1]「賈先生五日前就動身了，說是去冀州赴會，回來的日子沒講。這樁差事，為師帶隊。」",
+    "Sequence": "SetPortrait(MC5,pic=1);",
+    "zh_TW": "[panel=1]「賈先生五日前就動身了，說是去冀州赴會，回來的日子沒講。這樁差事，為師帶隊。」",
+    "zh_CN": "[panel=1]「贾先生五日前就动身了，说是去冀州赴会，回来的日子没讲。这桩差事，为师带队。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC2",
+    "text": "[panel=2]「黑血屍？聽說前年小溪村鬧過那東西。嘿，老子早想會一會。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(2,MC2,Proud);",
+    "zh_TW": "[panel=2]「黑血屍？聽說前年小溪村鬧過那東西。嘿，老子早想會一會。」",
+    "zh_CN": "[panel=2]「黑血尸？听说前年小溪村闹过那东西。嘿，老子早想会一会。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC6",
+    "text": "[panel=3]「一隻不算什麼。信上寫的是成群，你們誰見過成群的？」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=3]「一隻不算什麼。信上寫的是成群，你們誰見過成群的？」",
+    "zh_CN": "[panel=3]「一只不算什么。信上写的是成群，你们谁见过成群的？」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人見過，徐榮也沒有再問，直接點了名：你、呂信、子羽、郭嘉，張寧帶藥箱跟著。小犀、雍仔、娜娜留府看門。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（沒有人見過，徐榮也沒有再問，直接點了名：你、呂信、子羽、郭嘉，張寧帶藥箱跟著。小犀、雍仔、娜娜留府看門。）＊",
+    "zh_CN": "[panel=6]＊（没有人见过，徐荣也没有再问，直接点了名：你、吕信、子羽、郭嘉，张宁带药箱跟着。小犀、雍仔、娜娜留府看门。）＊",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC7",
+    "text": "[panel=2]「三家都不出人，倒是一齊來催。這封信我帶著，回來有用。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=2]「三家都不出人，倒是一齊來催。這封信我帶著，回來有用。」",
+    "zh_CN": "[panel=2]「三家都不出人，倒是一齐来催。这封信我带着，回来有用。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;OpenPanel(3, close)@1;EnableDialogueBG(Wilderness)@1;AudioControl(StopMusic)@1;AudioControl(PlayMusic,BGM_14)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場、開啟背景、切換音樂",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=6]＊（村子早就沒有人住了，屋頂塌了一半。你們在村口就聞到那股味道，前年在小溪村後山聞過的那種。第一批黑血屍是從塌屋裡爬出來的，不多，七八隻。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Roar);",
+    "zh_TW": "[panel=6]＊（村子早就沒有人住了，屋頂塌了一半。你們在村口就聞到那股味道，前年在小溪村後山聞過的那種。第一批黑血屍是從塌屋裡爬出來的，不多，七八隻。）＊",
+    "zh_CN": "[panel=6]＊（村子早就没有人住了，屋顶塌了一半。你们在村口就闻到那股味道，前年在小溪村后山闻过的那种。第一批黑血尸是从塌屋里爬出来的，不多，七八只。）＊",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "MC2",
+    "text": "[panel=1]「就這幾隻？小子，看好了，老子教你什麼叫痛快。」",
+    "Sequence": "SetPortrait(MC2,pic=1);EnableCharacterExpression(1,MC2,Proud);",
+    "zh_TW": "[panel=1]「就這幾隻？小子，看好了，老子教你什麼叫痛快。」",
+    "zh_CN": "[panel=1]「就这几只？小子，看好了，老子教你什么叫痛快。」",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);BeginFight(Combat,99);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
+    "Description": "進入戰鬥",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [19, 20]
+  },
+  {
+    "entryID": 19,
+    "actorID": "role2",
+    "text": "[panel=6]＊（七八隻倒下了。呂信的戟還沒收回來，塌屋後面的坡上又爬起一排，比方才的多。殺完一批，又來一批。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "Conditions": "IsPassFight() == true;",
+    "Description": "戰鬥成功",
+    "zh_TW": "[panel=6]＊（七八隻倒下了。呂信的戟還沒收回來，塌屋後面的坡上又爬起一排，比方才的多。殺完一批，又來一批。）＊",
+    "zh_CN": "[panel=6]＊（七八只倒下了。吕信的戟还没收回来，塌屋后面的坡上又爬起一排，比方才的多。杀完一批，又来一批。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你被撞開，摔在斷牆邊，爬起來的時候呂信已經替你補上了那一隻。塌屋後面的坡上又爬起一排，比方才的多。殺完一批，又來一批。）＊",
+    "Sequence": "DisableCharacterExpression(1);AudioControl(PlaySFX,Others_BodyFall);",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "zh_TW": "[panel=6]＊（你被撞開，摔在斷牆邊，爬起來的時候呂信已經替你補上了那一隻。塌屋後面的坡上又爬起一排，比方才的多。殺完一批，又來一批。）＊",
+    "zh_CN": "[panel=6]＊（你被撞开，摔在断墙边，爬起来的时候吕信已经替你补上了那一只。塌屋后面的坡上又爬起一排，比方才的多。杀完一批，又来一批。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "role2",
+    "text": "[panel=6]＊（第二批，第三批。張寧的藥煙放了兩回，第二回只把坡上那一排逼退了三步。子羽的刀開始慢了，徐榮把他跟呂信換到中間，自己頂到最外面。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（第二批，第三批。張寧的藥煙放了兩回，第二回只把坡上那一排逼退了三步。子羽的刀開始慢了，徐榮把他跟呂信換到中間，自己頂到最外面。）＊",
+    "zh_CN": "[panel=6]＊（第二批，第三批。张宁的药烟放了两回，第二回只把坡上那一排逼退了三步。子羽的刀开始慢了，徐荣把他跟吕信换到中间，自己顶到最外面。）＊",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC6",
+    "text": "[panel=2]「[em7]把空了的藥罐扔在地上[/em7]，藥煙已經沒有了。再來一批，我就只剩金創藥了。」",
+    "Sequence": "SetPortrait(MC6,pic=2);EnableCharacterExpression(2,MC6,Nervous_2);",
+    "zh_TW": "[panel=2]「[em7]把空了的藥罐扔在地上[/em7]，藥煙已經沒有了。再來一批，我就只剩金創藥了。」",
+    "zh_CN": "[panel=2]「[em7]把空了的药罐扔在地上[/em7]，药烟已经没有了。再来一批，我就只剩金创药了。」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC7",
+    "text": "[panel=3]「這村子底下是什麼，讓它們一批一批往外爬？打光是打不完的。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC7,pic=1);",
+    "zh_TW": "[panel=3]「這村子底下是什麼，讓它們一批一批往外爬？打光是打不完的。」",
+    "zh_CN": "[panel=3]「这村子底下是什么，让它们一批一批往外爬？打光是打不完的。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC3",
+    "text": "[panel=2]「……孤掌再強，亦是難鳴。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_TW": "[panel=2]「……孤掌再強，亦是難鳴。」",
+    "zh_CN": "[panel=2]「……孤掌再强，亦是难鸣。」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC5",
+    "text": "[panel=1]「省點力氣，退到村口的斷牆，背靠牆打，能撐多久撐多久。」",
+    "Sequence": "SetPortrait(MC5,pic=2);EnableCharacterExpression(1,MC5,Anger_3);",
+    "zh_TW": "[panel=1]「省點力氣，退到村口的斷牆，背靠牆打，能撐多久撐多久。」",
+    "zh_CN": "[panel=1]「省点力气，退到村口的断墙，背靠墙打，能撑多久撑多久。」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們退到斷牆邊。坡上那一排沒有追下來，它們在等後面的。這時候地面開始震，不是黑血屍那種拖著腳的震，是很多人一起走路的震。）＊",
+    "Sequence": "DisableCharacterExpression(1);AudioControl(PlaySFX,Others_FootStep);",
+    "zh_TW": "[panel=6]＊（你們退到斷牆邊。坡上那一排沒有追下來，它們在等後面的。這時候地面開始震，不是黑血屍那種拖著腳的震，是很多人一起走路的震。）＊",
+    "zh_CN": "[panel=6]＊（你们退到断墙边。坡上那一排没有追下来，它们在等后面的。这时候地面开始震，不是黑血尸那种拖着脚的震，是很多人一起走路的震。）＊",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC2",
+    "text": "[panel=1]「等等，有人來了……還是一大群人……」",
+    "Sequence": "SetPortrait(MC2,pic=4);EnableCharacterExpression(1,MC2,Surprise);",
+    "zh_TW": "[panel=1]「等等，有人來了……還是一大群人……」",
+    "zh_CN": "[panel=1]「等等，有人来了……还是一大群人……」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role2",
+    "text": "[panel=6]＊（畫面震動煙塵，一支部隊浩浩蕩蕩圍來。這群人衣著熟悉的黃衣──）＊",
+    "Sequence": "DisableCharacterExpression(1);OpenPanel(1,close);OpenPanel(2,close);OpenPanel(3,close);",
+    "zh_TW": "[panel=6]＊（畫面震動煙塵，一支部隊浩浩蕩蕩圍來。這群人衣著熟悉的黃衣──）＊",
+    "zh_CN": "[panel=6]＊（画面震动烟尘，一支部队浩浩荡荡围来。这群人衣着熟悉的黄衣──）＊",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role59",
+    "text": "[panel=1]「英豪府的各位，久仰了。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「英豪府的各位，久仰了。」",
+    "zh_CN": "[panel=1]「英豪府的各位，久仰了。」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role141",
+    "text": "[panel=2]「哈哈，瞧你們狼狽模樣。怎麼，遇上苦戰了？」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「哈哈，瞧你們狼狽模樣。怎麼，遇上苦戰了？」",
+    "zh_CN": "[panel=2]「哈哈，瞧你们狼狈模样。怎么，遇上苦战了？」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC2",
+    "text": "[panel=3]「唉……要跟一群蠢材解釋，確實是場前所未見的苦戰。」",
+    "Sequence": "SetPortrait(MC2,pic=3);EnableCharacterExpression(3,MC2,Pain);",
+    "zh_TW": "[panel=3]「唉……要跟一群蠢材解釋，確實是場前所未見的苦戰。」",
+    "zh_CN": "[panel=3]「唉……要跟一群蠢材解释，确实是场前所未见的苦战。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC1",
+    "text": "「這是什麼情形？為何太平道會突然到此？」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC1,pic=9);",
+    "zh_TW": "「這是什麼情形？為何太平道會突然到此？」",
+    "zh_CN": "「这是什么情形？为何太平道会突然到此？」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧走到你身邊，看著那一片黃衣，沒有說話。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（張寧走到你身邊，看著那一片黃衣，沒有說話。）＊",
+    "zh_CN": "[panel=6]＊（张宁走到你身边，看着那一片黄衣，没有说话。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "role141",
+    "text": "[panel=2]「人全齊了啊……」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「人全齊了啊……」",
+    "zh_CN": "[panel=2]「人全齐了啊……」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "role141",
+    "text": "[panel=2]「但程兄，依我看，要不就此把英豪府一鍋端了，我們也省去麻煩。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「但程兄，依我看，要不就此把英豪府一鍋端了，我們也省去麻煩。」",
+    "zh_CN": "[panel=2]「但程兄，依我看，要不就此把英豪府一锅端了，我们也省去麻烦。」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role59",
+    "text": "[panel=1]「嗯……都說天有不測風雲，相信兩位大人，也會樂見的。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「嗯……都說天有不測風雲，相信兩位大人，也會樂見的。」",
+    "zh_CN": "[panel=1]「嗯……都说天有不测风云，相信两位大人，也会乐见的。」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "role2",
+    "text": "[panel=6]＊（黃衣部隊紛紛拔出兵刃。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（黃衣部隊紛紛拔出兵刃。）＊",
+    "zh_CN": "[panel=6]＊（黄衣部队纷纷拔出兵刃。）＊",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC3",
+    "text": "[panel=3]「想作漁翁，也得有本事否。」",
+    "Sequence": "SetPortrait(MC3,pic=2);EnableCharacterExpression(3,MC3,Anger_2);",
+    "zh_TW": "[panel=3]「想作漁翁，也得有本事否。」",
+    "zh_CN": "[panel=3]「想作渔翁，也得有本事否。」",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（子羽、呂信提起兵器，嚴陣以待，情勢一觸即發──）＊",
+    "Sequence": "DisableCharacterExpression(3);",
+    "zh_TW": "[panel=6]＊（子羽、呂信提起兵器，嚴陣以待，情勢一觸即發──）＊",
+    "zh_CN": "[panel=6]＊（子羽、吕信提起兵器，严阵以待，情势一触即发──）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC13",
+    "text": "[panel=1]「休得無禮。」",
+    "Sequence": "AudioControl(StopSFX);AudioControl(StopMusic);AudioControl(PlayMusic,BGM_17);",
+    "Description": "切換音樂、關閉音效",
+    "zh_TW": "[panel=1]「休得無禮。」",
+    "zh_CN": "[panel=1]「休得无礼。」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "role2",
+    "text": "[panel=6]＊（一個慵懶聲音自黃衣後方傳來。太平一眾紛紛讓道，恭敬迎接一人走入。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（一個慵懶聲音自黃衣後方傳來。太平一眾紛紛讓道，恭敬迎接一人走入。）＊",
+    "zh_CN": "[panel=6]＊（一个慵懒声音自黄衣后方传来。太平一众纷纷让道，恭敬迎接一人走入。）＊",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那把嗓子，你一年之內聽過兩次。）＊",
+    "Sequence": "SetPortrait(MC13,pic=1);",
+    "zh_TW": "[panel=6]＊（那把嗓子，你一年之內聽過兩次。）＊",
+    "zh_CN": "[panel=6]＊（那把嗓子，你一年之内听过两次。）＊",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "MC13",
+    "text": "[panel=1]「英豪府以誅怪為業，那便是我等朋友。是朋友，就該以禮相待。」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「英豪府以誅怪為業，那便是我等朋友。是朋友，就該以禮相待。」",
+    "zh_CN": "[panel=1]「英豪府以诛怪为业，那便是我等朋友。是朋友，就该以礼相待。」",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC1",
+    "text": "「[em7]往前跨了半步，又停住[/em7]，大叔……？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「[em7]往前跨了半步，又停住[/em7]，大叔……？」",
+    "zh_CN": "「[em7]往前跨了半步，又停住[/em7]，大叔……？」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那群黃衣沒有一個人動。他們讓開的樣子，不像讓給一個路過的大夫。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（那群黃衣沒有一個人動。他們讓開的樣子，不像讓給一個路過的大夫。）＊",
+    "zh_CN": "[panel=6]＊（那群黄衣没有一个人动。他们让开的样子，不像让给一个路过的大夫。）＊",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC4",
+    "text": "[panel=2]「言辱大師，當心天譴啊。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「言辱大師，當心天譴啊。」",
+    "zh_CN": "[panel=2]「言辱大师，当心天谴啊。」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "role2",
+    "text": "[panel=6]＊（怎知賈詡竟也自人群後，緩緩走出，來到他身旁。）＊",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=6]＊（怎知賈詡竟也自人群後，緩緩走出，來到他身旁。）＊",
+    "zh_CN": "[panel=6]＊（怎知贾诩竟也自人群后，缓缓走出，来到他身旁。）＊",
+    "links": [48]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC4",
+    "text": "[panel=2]「收了兵器吧，別在未來盟友[em2]大賢良師[/em2]面前，傷了和氣。」",
+    "Sequence": "SetPortrait(MC4,pic=1);EnableCharacterExpression(2,MC4,Meditate);",
+    "zh_TW": "[panel=2]「收了兵器吧，別在未來盟友[em2]大賢良師[/em2]面前，傷了和氣。」",
+    "zh_CN": "[panel=2]「收了兵器吧，别在未来盟友[em2]大贤良师[/em2]面前，伤了和气。」",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "role2",
+    "text": "[panel=6]＊（大賢良師。這四個字這一年裡你聽過無數次——在路邊、在茶攤、在每一個談起符水治病的人嘴裡。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（大賢良師。這四個字這一年裡你聽過無數次——在路邊、在茶攤、在每一個談起符水治病的人嘴裡。）＊",
+    "zh_CN": "[panel=6]＊（大贤良师。这四个字这一年里你听过无数次——在路边、在茶摊、在每一个谈起符水治病的人嘴里。）＊",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role38",
+    "text": "[panel=1]「[em7]擺了擺手，像在推掉一件太大的衣裳[/em7]，不必如此鄭重，我就一山野大夫。」",
+    "Sequence": "SetPortrait(MC13,pic=3);",
+    "zh_TW": "[panel=1]「[em7]擺了擺手，像在推掉一件太大的衣裳[/em7]，不必如此鄭重，我就一山野大夫。」",
+    "zh_CN": "[panel=1]「[em7]摆了摆手，像在推掉一件太大的衣裳[/em7]，不必如此郑重，我就一山野大夫。」",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "role38",
+    "text": "[panel=1]「大夥輕鬆點，直喚我──[em2]張角[/em2]。」",
+    "Sequence": "SetPortrait(MC13,pic=1);",
+    "zh_TW": "[panel=1]「大夥輕鬆點，直喚我──[em2]張角[/em2]。」",
+    "zh_CN": "[panel=1]「大伙轻松点，直唤我──[em2]张角[/em2]。」",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人接話。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（沒有人接話。）＊",
+    "zh_CN": "[panel=6]＊（没有人接话。）＊",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你回頭去看張寧。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你回頭去看張寧。）＊",
+    "zh_CN": "[panel=6]＊（你回头去看张宁。）＊",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她沒有在看她父親。她在看你們這些人的表情——像早就知道會是這樣。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（她沒有在看她父親。她在看你們這些人的表情——像早就知道會是這樣。）＊",
+    "zh_CN": "[panel=6]＊（她没有在看她父亲。她在看你们这些人的表情——像早就知道会是这样。）＊",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC6",
+    "text": "[panel=3]「[em7]嘆了口氣，把藥箱換到另一隻手[/em7]……爹。」",
+    "Sequence": "SetPortrait(MC6,pic=3);EnableCharacterExpression(3,MC6,Pain);",
+    "zh_TW": "[panel=3]「[em7]嘆了口氣，把藥箱換到另一隻手[/em7]……爹。」",
+    "zh_CN": "[panel=3]「[em7]叹了口气，把药箱换到另一只手[/em7]……爹。」",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC6",
+    "text": "[panel=3]「你答應過我，不在我做事的地方擺這個架子的。」",
+    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC6,pic=2);",
+    "zh_TW": "[panel=3]「你答應過我，不在我做事的地方擺這個架子的。」",
+    "zh_CN": "[panel=3]「你答应过我，不在我做事的地方摆这个架子的。」",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "role38",
+    "text": "[panel=1]「[em7]摸了摸鼻子[/em7]，咳。這回不是爹要擺，是他們自己跪的。」",
+    "Sequence": "SetPortrait(MC13,pic=4);EnableCharacterExpression(1,MC13,Nervous);",
+    "zh_TW": "[panel=1]「[em7]摸了摸鼻子[/em7]，咳。這回不是爹要擺，是他們自己跪的。」",
+    "zh_CN": "[panel=1]「[em7]摸了摸鼻子[/em7]，咳。这回不是爹要摆，是他们自己跪的。」",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role2",
+    "text": "[panel=6]＊（沒有人笑。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（沒有人笑。）＊",
+    "zh_CN": "[panel=6]＊（没有人笑。）＊",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);OpenPanel(1, close);OpenPanel(2, close);OpenPanel(3, close);DisableAllCharacterExpression();DisableDialogueBG();Continue();",
+    "Description": "清除立繪、關閉背景",
+    "links": []
+  }
+]
