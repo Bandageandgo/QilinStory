@@ -36,9 +36,9 @@
   {
     "entryID": 6,
     "actorID": "MC8",
-    "text": "[panel=2]「表哥……這裡好潮濕，他們也好吵。他們堵在門口對罵，怎麼不直接進去？」",
+    "text": "[panel=2]「表哥……這裡好潮濕，他們怎麼不直接進去？」",
     "Sequence": "SetPortrait(MC8,pic=6);\nEnableCharacterExpression(2,MC8,Meditate);",
-    "zh_CN": "[panel=2]「表哥……这里好潮湿，他们也好吵。他们堵在门口对骂，怎么不直接进去？」",
+    "zh_CN": "[panel=2]「表哥……这里好潮湿，他们怎么不直接进去？」",
     "links": [7]
   },
   {
@@ -203,9 +203,9 @@
   {
     "entryID": 26,
     "actorID": "role2",
-    "text": "[panel=6]＊（太平道讓出半邊洞口。黑狼退到崖邊，狼牙在水霧裡發亮。）＊",
+    "text": "[panel=6]＊（太平道讓出半邊洞口。黑狼退到崖邊。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（太平道让出半边洞口。黑狼退到崖边，狼牙在水雾里发亮。）＊",
+    "zh_CN": "[panel=6]＊（太平道让出半边洞口。黑狼退到崖边。）＊",
     "links": [4103]
   },
   {
@@ -265,14 +265,6 @@
     "text": "[panel=2]「這人沒安好心！弟兄們，一起上！」",
     "Sequence": "",
     "zh_CN": "[panel=2]「这人没安好心！弟兄们，一起上！」",
-    "links": [34]
-  },
-  {
-    "entryID": 34,
-    "actorID": "role2",
-    "text": "[panel=6]＊（兩邊本來還在互罵，這會兒倒聯手把刀口對準了你們。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（两边本来还在互骂，这会儿倒联手把刀口对准了你们。）＊",
     "links": [39]
   },
   {
@@ -344,10 +336,10 @@
   {
     "entryID": 43,
     "actorID": "role2",
-    "text": "[panel=6]＊（刀光過後，洞口只剩水聲與尚未散盡的血腥。黑狼的狼牙、太平道的黃巾，都安靜地躺在洞口旁邊。）＊",
+    "text": "[panel=6]＊（刀光過後，洞口兩撥人都倒在水霧裡，只剩水聲。）＊",
     "Sequence": "",
     "Conditions": "IsPassFight() == true;",
-    "zh_CN": "[panel=6]＊（刀光过后，洞口只剩水声与尚未散尽的血腥。黑狼的狼牙、太平道的黄巾，都安静地躺在洞口旁边。）＊",
+    "zh_CN": "[panel=6]＊（刀光过后，洞口两拨人都倒在水雾里，只剩水声。）＊",
     "links": [44]
   },
   {
@@ -537,9 +529,9 @@
   {
     "entryID": 92,
     "actorID": "role2",
-    "text": "[panel=6]＊（你順著泥灰邊角往下摸，殘痕若隱若現，像還藏著另一幅畫。）＊",
+    "text": "[panel=6]＊（你順著泥灰邊角往下摸。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（你顺着泥灰边角往下摸，残痕若隐若现，像还藏着另一幅画。）＊",
+    "zh_CN": "[panel=6]＊（你顺着泥灰边角往下摸。）＊",
     "links": [93]
   },
   {
@@ -578,9 +570,9 @@
   {
     "entryID": 101,
     "actorID": "role2",
-    "text": "[panel=6]＊（舊畫露出一艘墜進山谷的怪舟。舟腹上隱約有一點亮，像嵌過什麼——泥灰一刮，那點亮就糊了，看不出原是什麼形狀，也看不出跟墜舟有沒有干係。）＊",
+    "text": "[panel=6]＊（舊畫露出一艘墜進山谷的怪舟。舟腹上隱約有一點亮，像嵌過什麼。泥灰一刮，那點亮就糊了。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（旧画露出一艘坠进山谷的怪舟。舟腹上隐约有一点亮，像嵌过什么——泥灰一刮，那点亮就糊了，看不出原是什么形状，也看不出跟坠舟有没有干系。）＊",
+    "zh_CN": "[panel=6]＊（旧画露出一艘坠进山谷的怪舟。舟腹上隐约有一点亮，像嵌过什么。泥灰一刮，那点亮就糊了。）＊",
     "links": [102]
   },
   {
@@ -621,9 +613,9 @@
   {
     "entryID": 106,
     "actorID": "role2",
-    "text": "[panel=6]＊（鑿開之後更亂。河神的臉、一艘說不清的舟、一點說不清的亮、跪著的人，全糊在同一層牆上。分不清哪筆在前、哪筆在後，更分不清該看哪一塊。）＊",
+    "text": "[panel=6]＊（鑿開之後，河神的臉、一艘說不清的舟、一點說不清的亮、跪著的人，全糊在同一層牆上。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（凿开之后更乱。河神的脸、一艘说不清的舟、一点说不清的亮、跪着的人，全糊在同一层墙上。分不清哪笔在前、哪笔在后，更分不清该看哪一块。）＊",
+    "zh_CN": "[panel=6]＊（凿开之后，河神的脸、一艘说不清的舟、一点说不清的亮、跪着的人，全糊在同一层墙上。）＊",
     "links": [107]
   },
   {
@@ -689,9 +681,9 @@
   {
     "entryID": 114,
     "actorID": "role2",
-    "text": "[panel=6]＊（石坪上已經有人了。黑狼族人圍在潭邊，刀還出著鞘；太平道人盯著潭後那座機關，口中唸唸有詞。兩邊互相罵，誰也不肯先讓。）＊",
+    "text": "[panel=6]＊（石坪上已經有人了。黑狼族人圍在潭邊，刀還出著鞘；太平道人盯著潭後那座機關，口中唸唸有詞。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（石坪上已经有人了。黑狼族人围在潭边，刀还出着鞘；太平道人盯着潭后那座机关，口中念念有词。两边互相骂，谁也不肯先让。）＊",
+    "zh_CN": "[panel=6]＊（石坪上已经有人了。黑狼族人围在潭边，刀还出着鞘；太平道人盯着潭后那座机关，口中念念有词。）＊",
     "links": [115]
   },
   {
@@ -721,9 +713,9 @@
   {
     "entryID": 118,
     "actorID": "role2",
-    "text": "[panel=6]＊（話音未落，潭面猛地炸開。一條通體幽藍的巨蛇破水而出，鱗片映著藍光，張口噴出的不是熱浪，是一蓬藍色的火。火捲過石坪，黑狼的刀、太平道的黃巾，轉眼便有人倒下。）＊",
+    "text": "[panel=6]＊（話音未落，潭面猛地炸開。一條通體幽藍的巨蛇破水而出，鱗片映著藍光，張口噴出一蓬藍火。火捲過石坪，黑狼的刀、太平道的黃巾，轉眼便有人倒下。）＊",
     "Sequence": "DisableCharacterExpression(2);\nPlayOrStopParticle(OnFire,Play);",
-    "zh_CN": "[panel=6]＊（话音未落，潭面猛地炸开。一条通体幽蓝的巨蛇破水而出，鳞片映着蓝光，张口喷出的不是热浪，是一蓬蓝色的火。火卷过石坪，黑狼的刀、太平道的黄巾，转眼便有人倒下。）＊",
+    "zh_CN": "[panel=6]＊（话音未落，潭面猛地炸开。一条通体幽蓝的巨蛇破水而出，鳞片映着蓝光，张口喷出一蓬蓝火。火卷过石坪，黑狼的刀、太平道的黄巾，转眼便有人倒下。）＊",
     "links": [120]
   },
   {
@@ -799,11 +791,11 @@
   {
     "entryID": 128,
     "actorID": "role2",
-    "text": "[panel=6]＊（石坪上的罵聲很快被藍火蓋過。黑狼族人還在砍，太平道人還在喊，可人一個個倒下。巨蛇噴火噴得猛，動作卻明顯慢了——兩邊拿命給你們換出了一個缺口。）＊",
+    "text": "[panel=6]＊（石坪上的罵聲很快被藍火蓋過。黑狼族人還在砍，太平道人還在喊，可人一個個倒下。巨蛇噴了這一陣火，動作慢了下來。）＊",
     "Sequence": "DisableCharacterExpression(2);\nStopAllParticle();",
     "Script": "SetQuestEntryState(\"CF40\", 8, \"success\");",
     "Description": "任務更新",
-    "zh_CN": "[panel=6]＊（石坪上的骂声很快被蓝火盖过。黑狼族人还在砍，太平道人还在喊，可人一个个倒下。巨蛇喷火喷得猛，动作却明显慢了——两边拿命给你们换出了一个缺口。）＊",
+    "zh_CN": "[panel=6]＊（石坪上的骂声很快被蓝火盖过。黑狼族人还在砍，太平道人还在喊，可人一个个倒下。巨蛇喷了这一阵火，动作慢了下来。）＊",
     "links": [129]
   },
   {
@@ -874,26 +866,26 @@
   {
     "entryID": 142,
     "actorID": "role2",
-    "text": "[panel=6]＊（藍火鋪天蓋地捲來。你只聽見靈犀喊了一聲表哥，隨即什麼都聽不見了。）＊",
+    "text": "[panel=6]＊（藍火鋪天蓋地捲來。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（蓝火铺天盖地卷来。你只听见灵犀喊了一声表哥，随即什么都听不见了。）＊",
+    "zh_CN": "[panel=6]＊（蓝火铺天盖地卷来。）＊",
     "links": [143]
   },
   {
     "entryID": 143,
     "actorID": "MC8",
-    "text": "[panel=2]「表哥——！」",
+    "text": "[panel=2]「表哥！」",
     "Sequence": "SetPortrait(MC8,pic=11);",
-    "zh_CN": "[panel=2]「表哥——！」",
+    "zh_CN": "[panel=2]「表哥！」",
     "links": [144]
   },
   {
     "entryID": 144,
     "actorID": "role2",
-    "text": "[panel=6]＊（再沒有人從水濂洞走出來。）＊",
+    "text": "[panel=6]＊（隨即，你什麼都聽不見了。再沒有人從水濂洞走出來。）＊",
     "Sequence": "DisableCharacterExpression(2);",
     "Description": "壞結局：Ending_1",
-    "zh_CN": "[panel=6]＊（再没有人从水濂洞走出来。）＊",
+    "zh_CN": "[panel=6]＊（随即，你什么都听不见了。再没有人从水濂洞走出来。）＊",
     "links": [4172]
   },
   {
@@ -953,18 +945,10 @@
   {
     "entryID": 153,
     "actorID": "MC22",
-    "text": "[panel=2]「[em7]一腳踩上座面掂了掂，又跳下來[/em7]，位子還真小。」",
+    "text": "[panel=2]「[em7]踩上座面掂了掂[/em7]，唔……」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC22,pic=5);EnableCharacterExpression(2,MC22,Idea);",
-    "zh_CN": "[panel=2]「[em7]一脚踩上座面掂了掂，又跳下来[/em7]，位子还真小。」",
+    "zh_CN": "[panel=2]「[em7]踩上座面掂了掂[/em7]，唔……」",
     "links": [4350]
-  },
-  {
-    "entryID": 154,
-    "actorID": "role2",
-    "text": "[panel=6]＊（石座還是那座石座，濕痕裡發著亮。似乎還在等它的主人歸來。）＊",
-    "Sequence": "DisableCharacterExpression(2);",
-    "zh_CN": "[panel=6]＊（石座还是那座石座，湿痕里发着亮。似乎还在等它的主人归来。）＊",
-    "links": [4151]
   },
   {
     "entryID": 201,
@@ -1086,9 +1070,9 @@
   {
     "entryID": 218,
     "actorID": "MC9",
-    "text": "[panel=1]「說辭稀鬆。人跑了這一趟，還空手而回，倒不像做生意的樣子。」",
+    "text": "[panel=1]「說辭稀鬆，人跑了這一趟，帶回來的就配這幾句話？」",
     "Sequence": "",
-    "zh_CN": "[panel=1]「说辞稀松。人跑了这一趟，还空手而回，倒不像做生意的样子。",
+    "zh_CN": "[panel=1]「说辞稀松，人跑了这一趟，带回来的就配这几句话？」",
     "links": [4327]
   },
   {
@@ -1169,9 +1153,9 @@
   {
     "entryID": 230,
     "actorID": "MC1",
-    "text": "「洞裡安靜。這是路上遇見的人給的念想，別無其他。」",
+    "text": "「洞裡安靜，河神的事，都是村裡人傳出來的。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC1,pic=8);",
-    "zh_CN": "「洞里安静。这是路上遇见的人给的念想，别无其他。」",
+    "zh_CN": "「洞里安静，河神的事，都是村里人传出来的。」",
     "links": [231]
   },
   {
@@ -1262,7 +1246,7 @@
     "text": "[panel=2]「是呀，除妖、奪寶，乾淨俐落！」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Proud);",
     "zh_CN": "[panel=2]「是呀，除妖、夺宝，干净俐落！」",
-    "links": [248]
+    "links": [405]
   },
   {
     "entryID": 244,
@@ -1278,7 +1262,7 @@
     "text": "[panel=2]「嗯！小犀也是這麼想的！那薄片再怪，也比表哥變成見死不救的人強。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Proud);",
     "zh_CN": "[panel=2]「嗯！小犀也是这么想的！那薄片再怪，也比表哥变成见死不救的人强。」",
-    "links": [248]
+    "links": [405]
   },
   {
     "entryID": 246,
@@ -1294,14 +1278,6 @@
     "text": "[panel=2]「對啊，府裡的帳也能鬆一口氣了。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=1);",
     "zh_CN": "[panel=2]「对啊，府里的帐也能松一口气了。」",
-    "links": [248]
-  },
-  {
-    "entryID": 248,
-    "actorID": "role2",
-    "text": "[panel=6]＊（無論這一趟你做出了選擇，這段經歷都已悄悄埋進了你的江湖路。）＊",
-    "Sequence": "DisableCharacterExpression(2);",
-    "zh_CN": "[panel=6]＊（无论这一趟你做出了选择，这段经历都已悄悄埋进了你的江湖路。）＊",
     "links": [405]
   },
   {
@@ -1633,7 +1609,7 @@
     "entryID": 4151,
     "actorID": "0",
     "text": "",
-    "Sequence": "Continue();",
+    "Sequence": "DisableCharacterExpression(2);\nContinue();",
     "Script": "SetQuestEntryState(\"CF41\", 1, \"success\");",
     "Description": "任務更新",
     "links": []
@@ -1649,9 +1625,9 @@
   {
     "entryID": 4153,
     "actorID": "role2",
-    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。後人在上頭補了慈眉善目的河神。）＊",
+    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。后人在上头补了慈眉善目的河神。）＊",
+    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。）＊",
     "links": [111]
   },
   {
@@ -1705,9 +1681,9 @@
   {
     "entryID": 4160,
     "actorID": "role2",
-    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。後人在上頭補了慈眉善目的河神。）＊",
+    "text": "[panel=6]＊（一個奇裝異服的人影自舟中爬出，村民遠遠跪伏。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。后人在上头补了慈眉善目的河神。）＊",
+    "zh_CN": "[panel=6]＊（一个奇装异服的人影自舟中爬出，村民远远跪伏。）＊",
     "links": [4158]
   },
   {
@@ -1873,10 +1849,10 @@
   {
     "entryID": 4184,
     "actorID": "role2",
-    "text": "[panel=6]＊（石徑盡頭是一處淺淺的水窪。中央立著一座高大的石像，兩道彎臂托著一個圓洞，像在等人把什麼嵌回去。周圍幾根尖石，水光映在壁上，靜得能聽見自己的呼吸。）＊",
+    "text": "[panel=6]＊（石徑盡頭是一處淺淺的水窪。中央立著一座高大的石像，兩道彎臂托著一個圓洞。）＊",
     "Sequence": "",
     "Conditions": "CurrentQuestEntryState(\"CF40\", 9) == \"unassigned\";",
-    "zh_CN": "[panel=6]＊（石径尽头是一处浅浅的水洼。中央立着一座高大的石像，两道弯臂托着一个圆洞，像在等人把什么嵌回去。周围几根尖石，水光映在壁上，静得能听见自己的呼吸。）＊",
+    "zh_CN": "[panel=6]＊（石径尽头是一处浅浅的水洼。中央立着一座高大的石像，两道弯臂托着一个圆洞。）＊",
     "links": [4185, 4189]
   },
   {
@@ -1924,9 +1900,9 @@
   {
     "entryID": 4190,
     "actorID": "MC20",
-    "text": "[panel=1]「空在那兒——依本道長看，[em2]不是沒東西，是原本的東西沒了[/em2]。」",
+    "text": "[panel=1]「空在那兒，本道長瞧著，有些蹊蹺。」",
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC20,pic=1);",
-    "zh_CN": "[panel=1]「空在那儿——依本道长看，[em2]不是没东西，是原本的东西没了[/em2]。」",
+    "zh_CN": "[panel=1]「空在那儿，本道长瞧着，有些蹊跷。」",
     "links": [4322]
   },
   {
@@ -2050,9 +2026,9 @@
   {
     "entryID": 4207,
     "actorID": "role2",
-    "text": "[panel=6]＊（一件靈物，後來沒了——這話一落，幾道目光同時靜了下來。空著的圓洞、懷中那顆來歷不明的溫熱石頭……）＊",
+    "text": "[panel=6]＊（幾道目光同時靜了下來：空著的圓洞，懷中那顆來歷不明的溫熱石頭……）＊",
     "Sequence": "DisableCharacterExpression(1);DisableCharacterExpression(2);",
-    "zh_CN": "[panel=6]＊（一件灵物，后来没了——这话一落，几道目光同时静了下来。空着的圆洞、怀中那颗来历不明的温热石头……）＊",
+    "zh_CN": "[panel=6]＊（几道目光同时静了下来：空着的圆洞，怀中那颗来历不明的温热石头……）＊",
     "links": [4208]
   },
   {
@@ -2074,10 +2050,10 @@
   {
     "entryID": 4210,
     "actorID": "role2",
-    "text": "[panel=6]＊（懷中麒麟骰忽然一顫，縫裡漏出一點微光——不是凶兆，倒像在應你心頭那一下。）＊",
+    "text": "[panel=6]＊（懷中麒麟骰忽然一顫，縫裡漏出一點微光。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == true;",
-    "zh_CN": "[panel=6]＊（怀中麒麟骰忽然一颤，缝里漏出一点微光——不是凶兆，倒像在应你心头那一下。）＊",
+    "zh_CN": "[panel=6]＊（怀中麒麟骰忽然一颤，缝里漏出一点微光。）＊",
     "links": [4211]
   },
   {
@@ -2246,9 +2222,9 @@
   {
     "entryID": 4232,
     "actorID": "role2",
-    "text": "[panel=6]＊（她的目光忽然偏了一下。不是看你的臉，是看你懷中那枚微微發燙的麒麟骰。）＊",
+    "text": "[panel=6]＊（她的目光落到你懷中那枚微微發燙的麒麟骰上。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（她的目光忽然偏了一下。不是看你的脸，是看你怀中那枚微微发烫的麒麟骰。）＊",
+    "zh_CN": "[panel=6]＊（她的目光落到你怀中那枚微微发烫的麒麟骰上。）＊",
     "links": [4234]
   },
   {
@@ -2288,9 +2264,9 @@
   {
     "entryID": 4238,
     "actorID": "role2",
-    "text": "[panel=6]＊（光影裡，她像是終於能喘上一口氣。不是變亮、也不是要走——只是那層疲憊薄了一點。她從腕間褪下一枚不起眼的暗色薄片，遞了過來。）＊",
+    "text": "[panel=6]＊（光影裡，她那層疲憊薄了一點。她從腕間褪下一枚暗色薄片，遞了過來。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（光影里，她像是终于能喘上一口气。不是变亮、也不是要走——只是那层疲惫薄了一点。她从腕间褪下一枚不起眼的暗色薄片，递了过来。）＊",
+    "zh_CN": "[panel=6]＊（光影里，她那层疲惫薄了一点。她从腕间褪下一枚暗色薄片，递了过来。）＊",
     "links": [4239]
   },
   {
@@ -2302,19 +2278,11 @@
     "links": [4298]
   },
   {
-    "entryID": 4240,
-    "actorID": "role2",
-    "text": "[panel=6]「莫盼吾此刻便去。舟毀未復，吾仍困於像後。有淚，亦只是能慢慢補、慢慢養——今日去不成，明日也未必。」",
-    "Sequence": "",
-    "zh_CN": "[panel=6]「莫盼吾此刻便去。舟毁未复，吾仍困于像后。有泪，亦只是能慢慢补、慢慢养——今日去不成，明日也未必。」",
-    "links": [4241]
-  },
-  {
     "entryID": 4241,
     "actorID": "role2",
-    "text": "[panel=6]＊（意念像潮水一樣退下去。不是她消失，是這場白日夢撐不住了。你只覺眼前一黑，隨即被人用力搖晃——）＊",
+    "text": "[panel=6]＊（意念像潮水一樣退下去。你只覺眼前一黑，隨即被人用力搖晃。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（意念像潮水一样退下去。不是她消失，是这场白日梦撑不住了。你只觉眼前一黑，随即被人用力摇晃——）＊",
+    "zh_CN": "[panel=6]＊（意念像潮水一样退下去。你只觉眼前一黑，随即被人用力摇晃。）＊",
     "links": [4306]
   },
   {
@@ -2353,9 +2321,9 @@
   {
     "entryID": 4254,
     "actorID": "role2",
-    "text": "[panel=6]＊（意念斷了。不是乘舟而去，也不是燈滅——只是再喚，沒有回應。石像還在原處，像從來沒人從裡頭看過你一眼。）＊",
+    "text": "[panel=6]＊（意念斷了，再喚也沒有回應。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（意念断了。不是乘舟而去，也不是灯灭——只是再唤，没有回应。石像还在原处，像从来没人从里头看过你一眼。）＊",
+    "zh_CN": "[panel=6]＊（意念断了，再唤也没有回应。）＊",
     "links": [4265]
   },
   {
@@ -2438,9 +2406,9 @@
   {
     "entryID": 4265,
     "actorID": "role2",
-    "text": "[panel=6]＊（你在石像前站了一會，伸手把那顆石頭從圓洞裡摳了出來。涼的。握多久，都不會再溫了。）＊",
+    "text": "[panel=6]＊（你在石像前站了一會，伸手把那顆石頭從圓洞裡摳了出來。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（你在石像前站了一会，伸手把那颗石头从圆洞里抠了出来。凉的。握多久，都不会再温了。）＊",
+    "zh_CN": "[panel=6]＊（你在石像前站了一会，伸手把那颗石头从圆洞里抠了出来。）＊",
     "links": [4315]
   },
   {
@@ -2454,9 +2422,9 @@
   {
     "entryID": 4267,
     "actorID": "role2",
-    "text": "[panel=6]＊（石像仍立在水窪中央，兩道彎臂托著那個圓洞。你伸手把石頭摳了出來——還是溫的，跟來時一樣溫。）＊",
+    "text": "[panel=6]＊（你伸手把石頭摳了出來，還是溫的。）＊",
     "Sequence": "DisableCharacterExpression(2);",
-    "zh_CN": "[panel=6]＊（石像仍立在水洼中央，两道弯臂托着那个圆洞。你伸手把石头抠了出来——还是温的，跟来时一样温。）＊",
+    "zh_CN": "[panel=6]＊（你伸手把石头抠了出来，还是温的。）＊",
     "links": [4319]
   },
   {
@@ -2607,7 +2575,7 @@
     "text": "",
     "Sequence": "ModifyData(Valuable,Player,DragonVeinJadePendant,1);\nContinue();",
     "Description": "獲得貴重品:龍脈靈玉墜",
-    "links": [4240]
+    "links": [4241]
   },
   {
     "entryID": 4303,
@@ -3056,10 +3024,10 @@
   {
     "entryID": 4347,
     "actorID": "MC8",
-    "text": "[panel=2]「那位甄家家主的眼睛太尖，表哥想在她跟前討點便宜，怕是難囉。」",
+    "text": "[panel=2]「那位甄家家主的眼睛太尖，這門生意，本來就不好做囉。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=3);",
-    "zh_CN": "[panel=2]「那位甄家家主的眼睛太尖，表哥想在她跟前讨点便宜，怕是难啰。」",
-    "links": [248]
+    "zh_CN": "[panel=2]「那位甄家家主的眼睛太尖，这门生意，本来就不好做啰。」",
+    "links": [405]
   },
   {
     "entryID": 354,
@@ -3088,7 +3056,7 @@
     "entryID": 405,
     "actorID": "0",
     "text": "",
-    "Sequence": "DisableDialogueBG();\nLoadLevel(Command_HallOfHeroes);\nContinue();",
+    "Sequence": "DisableCharacterExpression(2);\nDisableDialogueBG();\nLoadLevel(Command_HallOfHeroes);\nContinue();",
     "Description": "回英豪府根據地",
     "links": []
   },
@@ -3115,7 +3083,7 @@
     "text": "[panel=2]「羅盤沒轉、不鑲金、連暗格都懶得做——大俠，這座位子沒名堂，不是咱們要找的東西。」",
     "Sequence": "",
     "zh_CN": "[panel=2]「罗盘没转、不镶金、连暗格都懒得做——大侠，这座位子没名堂，不是咱们要找的东西。」",
-    "links": [154]
+    "links": [4151]
   },
   {
     "entryID": 4351,

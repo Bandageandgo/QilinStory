@@ -3,50 +3,34 @@
     "entryID": 1,
     "actorID": "role2",
     "title": "節日:上巳",
-    "text": "[panel=6]＊（《詩》裡寫溱洧，[em2]維士與女，伊其相謔，贈之以勺藥[/em2]。說《詩》的人講，那是鄭國三月上巳的舊俗，到兩水之上，秉蘭草，拂不祥。）＊",
-    "Sequence": "EnableDialogueBG(Grassland);",
-    "Description": "開啟背景",
-    "zh_CN": "[panel=6]＊（《诗》里写溱洧，[em2]维士与女，伊其相谑，赠之以勺药[/em2]。说《诗》的人讲，那是郑国三月上巳的旧俗，到两水之上，秉兰草，拂不祥。）＊",
-    "links": [2]
-  },
-  {
-    "entryID": 2,
-    "actorID": "role2",
-    "text": "[panel=6]＊（上巳這一日，雲中城裡的人都往東邊走。洗要洗在往東流的水上，說是水往哪頭流，一年的宿垢病氣就往哪頭去。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（上巳这一日，云中城里的人都往东边走。洗要洗在往东流的水上，说是水往哪头流，一年的宿垢病气就往哪头去。）＊",
+    "text": "[panel=6]＊（上巳這一日，雲中城裡的人都往東邊的河灣走。老輩人說，洗要洗在往東流的水上，一年的晦氣才跟著水走。）＊",
+    "Sequence": "EnableDialogueBG(Grassland);AudioControl(PlayMusic,BGM_16);",
+    "Description": "開啟背景、播放音樂",
+    "zh_CN": "[panel=6]＊（上巳这一日，云中城里的人都往东边的河湾走。老辈人说，洗要洗在往东流的水上，一年的晦气才跟着水走。）＊",
     "links": [3]
   },
   {
     "entryID": 3,
     "actorID": "role2",
-    "text": "[panel=6]＊（河灣兩里長，站滿了人。郡裡的小吏也脫了鞋下水，跟挑水的、賣餅的站在同一片淺灘上；對岸支起了一排帷帳，玄的、黃的，一頂挨著一頂。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（河湾两里长，站满了人。郡里的小吏也脱了鞋下水，跟挑水的、卖饼的站在同一片浅滩上；对岸支起了一排帷帐，玄的、黄的，一顶挨着一顶。）＊",
+    "text": "[panel=6]＊（整片河灣都站滿了人。郡裡的小吏也脫了鞋下水，跟挑水的、賣餅的站在同一片淺灘上。）＊",
+    "Sequence": "AudioControl(PlaySFX,Others_Talking);",
+    "zh_CN": "[panel=6]＊（整片河湾都站满了人。郡里的小吏也脱了鞋下水，跟挑水的、卖饼的站在同一片浅滩上。）＊",
     "links": [4]
   },
   {
     "entryID": 4,
     "actorID": "role2",
-    "text": "[panel=6]＊（水邊也不只是洗。年輕男女沿著岸走，走一段就停下來說話；有人手裡捏著一枝芍藥，遞出去了，就不再要回來。）＊",
+    "text": "[panel=6]＊（水邊也不只是洗。這一日年輕男女說話不必避人，岸邊賣芍藥的攤子，不到晌午就賣空了一半。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（水边也不只是洗。年轻男女沿着岸走，走一段就停下来说话；有人手里捏着一枝芍药，递出去了，就不再要回来。）＊",
-    "links": [5]
-  },
-  {
-    "entryID": 5,
-    "actorID": "role2",
-    "text": "[panel=6]＊（府裡的人是一齊出來的，一路上還有說有笑。到了河邊就散了，各挑各的一段水。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（府里的人是一齐出来的，一路上还有说有笑。到了河边就散了，各挑各的一段水。）＊",
+    "zh_CN": "[panel=6]＊（水边也不只是洗。这一日年轻男女说话不必避人，岸边卖芍药的摊子，不到晌午就卖空了一半。）＊",
     "links": [6]
   },
   {
     "entryID": 6,
     "actorID": "role2",
-    "text": "[panel=6]＊（頭一段水最淺，笑罵聲隔著半條河都聽得見。呂信整個人栽了進去，冒出來甩了甩頭，水花濺得岸上的人直往後躲。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（头一段水最浅，笑骂声隔着半条河都听得见。吕信整个人栽了进去，冒出来甩了甩头，水花溅得岸上的人直往后躲。）＊",
+    "text": "[panel=6]＊（府裡的人到了河邊就散了。頭一段水最淺，笑罵聲隔著半條河都聽得見，呂信頭一個栽了進去，濺了岸上一排人。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_FallWater);",
+    "zh_CN": "[panel=6]＊（府里的人到了河边就散了。头一段水最浅，笑骂声隔着半条河都听得见，吕信头一个栽了进去，溅了岸上一排人。）＊",
     "links": [7]
   },
   {
@@ -76,9 +60,9 @@
   {
     "entryID": 10,
     "actorID": "role2",
-    "text": "[panel=6]＊（往上游走二十步，笑罵聲落在後頭了。那一段水深，水面一動也不動；岸邊的草齊膝高，沒有踩倒的痕跡。子羽站在水邊，鞋也沒有脫。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（往上游走二十步，笑骂声落在后头了。那一段水深，水面一动也不动；岸边的草齐膝高，没有踩倒的痕迹。子羽站在水边，鞋也没有脱。）＊",
+    "text": "[panel=6]＊（再往上游走，笑罵聲落在後頭，呂信也跟了過來。那一段水深，沒有人下去，子羽就站在水邊，鞋也沒有脫。）＊",
+    "Sequence": "AudioControl(StopSFX);",
+    "zh_CN": "[panel=6]＊（再往上游走，笑骂声落在后头，吕信也跟了过来。那一段水深，没有人下去，子羽就站在水边，鞋也没有脱。）＊",
     "links": [11]
   },
   {
@@ -100,9 +84,9 @@
   {
     "entryID": 13,
     "actorID": "MC2",
-    "text": "[panel=1]「愣著也不下來，那就別擋著水。往下頭走走，那邊還有人。」",
+    "text": "[panel=1]「小子，你也別陪他乾站著。往下頭走走，那邊還有人。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_CN": "[panel=1]「愣着也不下来，那就别挡着水。往下头走走，那边还有人。」",
+    "zh_CN": "[panel=1]「小子，你也别陪他干站着。往下头走走，那边还有人。」",
     "links": [14]
   },
   {
@@ -116,9 +100,9 @@
   {
     "entryID": 15,
     "actorID": "role2",
-    "text": "[panel=6]＊（下游這一段水面寬，府裡的人多半聚在這兒。岸上一排脫下的衣裳和鞋，摞得整整齊齊，像有人替他們排過。岸邊站著一個沒下水的：徐榮背著手，一個一個數過去。）＊",
+    "text": "[panel=6]＊（下游這一段，岸上一排脫下的衣裳和鞋，摞得整整齊齊；徐榮背著手站在前面，一個一個數過去。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（下游这一段水面宽，府里的人多半聚在这儿。岸上一排脱下的衣裳和鞋，摞得整整齐齐，像有人替他们排过。岸边站着一个没下水的：徐荣背着手，一个一个数过去。）＊",
+    "zh_CN": "[panel=6]＊（下游这一段，岸上一排脱下的衣裳和鞋，摞得整整齐齐；徐荣背着手站在前面，一个一个数过去。）＊",
     "links": [16]
   },
   {
@@ -140,25 +124,17 @@
   {
     "entryID": 18,
     "actorID": "MC5",
-    "text": "[panel=1]「為師在岸上洗。」",
+    "text": "[panel=1]「為師在岸上洗。洗歸洗，明日卯時照練。」",
     "Sequence": "SetPortrait(MC5,pic=3);",
-    "zh_CN": "[panel=1]「为师在岸上洗。」",
-    "links": [19]
-  },
-  {
-    "entryID": 19,
-    "actorID": "MC5",
-    "text": "[panel=1]「洗歸洗，明日卯時照練。」",
-    "Sequence": "SetPortrait(MC5,pic=1);",
-    "zh_CN": "[panel=1]「洗归洗，明日卯时照练。」",
+    "zh_CN": "[panel=1]「为师在岸上洗。洗归洗，明日卯时照练。」",
     "links": [20]
   },
   {
     "entryID": 20,
     "actorID": "role2",
-    "text": "[panel=6]＊（岸邊一塊平石上放著個布包，張寧正把它解開。）＊",
+    "text": "[panel=6]＊（張寧也到了，藥箱還揹在身上。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（岸边一块平石上放着个布包，张宁正把它解开。）＊",
+    "zh_CN": "[panel=6]＊（张宁也到了，药箱还背在身上。）＊",
     "links": [21]
   },
   {
@@ -196,9 +172,9 @@
   {
     "entryID": 25,
     "actorID": "role2",
-    "text": "[panel=6]＊（再往下，岸邊起了一排柳，蔭底下曬不到日頭。這一段水裡沒有人，郭嘉坐在樹根上，什麼也沒帶，眼睛順著河灣一路看過去。）＊",
+    "text": "[panel=6]＊（再往下，岸邊是一排柳。郭嘉坐在樹根上，從這裡看得見整個河灣。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（再往下，岸边起了一排柳，荫底下晒不到日头。这一段水里没有人，郭嘉坐在树根上，什么也没带，眼睛顺着河湾一路看过去。）＊",
+    "zh_CN": "[panel=6]＊（再往下，岸边是一排柳。郭嘉坐在树根上，从这里看得见整个河湾。）＊",
     "links": [26]
   },
   {
@@ -212,9 +188,9 @@
   {
     "entryID": 27,
     "actorID": "role2",
-    "text": "[panel=6]＊（柳樹的另一邊，賈詡袖著手站著。他看的不是河，是對岸。）＊",
+    "text": "[panel=6]＊（柳樹的另一邊，賈詡袖著手站著。對岸搭著一排帷帳，玄的、黃的，一頂挨著一頂。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（柳树的另一边，贾诩袖着手站着。他看的不是河，是对岸。）＊",
+    "zh_CN": "[panel=6]＊（柳树的另一边，贾诩袖着手站着。对岸搭着一排帷帐，玄的、黄的，一顶挨着一顶。）＊",
     "links": [28]
   },
   {
@@ -244,9 +220,9 @@
   {
     "entryID": 31,
     "actorID": "MC4",
-    "text": "[panel=2]「賈某兩樣都做，並不衝突。」",
+    "text": "[panel=2]「賈某兩樣都做，兩不相妨。」",
     "Sequence": "SetPortrait(MC4,pic=1);",
-    "zh_CN": "[panel=2]「贾某两样都做，并不冲突。」",
+    "zh_CN": "[panel=2]「贾某两样都做，两不相妨。」",
     "links": [32]
   },
   {
@@ -260,9 +236,9 @@
   {
     "entryID": 33,
     "actorID": "role2",
-    "text": "[panel=6]＊（最下游這一段水淺，曬得到太陽，河底的沙看得一清二楚。娜娜赤腳站在水裡，鞋擱在岸上；小犀蹲在旁邊，面前一把算籌，一根一根撥著。）＊",
+    "text": "[panel=6]＊（最下游這一段，娜娜赤腳站在水裡，鞋擱在岸上；小犀蹲在旁邊撥她的算籌。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（最下游这一段水浅，晒得到太阳，河底的沙看得一清二楚。娜娜赤脚站在水里，鞋搁在岸上；小犀蹲在旁边，面前一把算筹，一根一根拨着。）＊",
+    "zh_CN": "[panel=6]＊（最下游这一段，娜娜赤脚站在水里，鞋搁在岸上；小犀蹲在旁边拨她的算筹。）＊",
     "links": [34]
   },
   {
@@ -284,9 +260,9 @@
   {
     "entryID": 36,
     "actorID": "MC22",
-    "text": "[panel=1]「那我們草原上一年到頭不洗，怎麼也沒見多災多難？」",
+    "text": "[panel=1]「那我們草原上沒有這一日，怎麼也沒見誰多災多難？」",
     "Sequence": "SetPortrait(MC22,pic=1);",
-    "zh_CN": "[panel=1]「那我们草原上一年到头不洗，怎么也没见多灾多难？」",
+    "zh_CN": "[panel=1]「那我们草原上没有这一日，怎么也没见谁多灾多难？」",
     "links": [37]
   },
   {
@@ -308,28 +284,28 @@
   {
     "entryID": 39,
     "actorID": "MC1",
-    "text": "（回頭去信哥那一段，讓他把你按進水裡）",
+    "text": "（回去找信哥）",
     "Sequence": "",
     "Description": "選項1",
-    "zh_CN": "（回头去信哥那一段，让他把你按进水里）",
+    "zh_CN": "（回去找信哥）",
     "links": [42]
   },
   {
     "entryID": 40,
     "actorID": "MC1",
-    "text": "（走到子羽站的地方，也不脫鞋）",
+    "text": "（去子羽那邊站一會兒）",
     "Sequence": "",
     "Description": "選項2",
-    "zh_CN": "（走到子羽站的地方，也不脱鞋）",
+    "zh_CN": "（去子羽那边站一会儿）",
     "links": [49]
   },
   {
     "entryID": 41,
     "actorID": "MC1",
-    "text": "（陪娜娜在下游這段耗著）",
+    "text": "（留在娜娜這邊）",
     "Sequence": "",
     "Description": "選項3",
-    "zh_CN": "（陪娜娜在下游这段耗着）",
+    "zh_CN": "（留在娜娜这边）",
     "links": [58]
   },
   {
@@ -343,17 +319,17 @@
   {
     "entryID": 43,
     "actorID": "MC2",
-    "text": "[panel=1]「[em7]一把揪住你後領[/em7]，早說嘛！這才像話！」",
-    "Sequence": "SetPortrait(MC2,pic=1);ModifyData(FavorabilityExp,MC2,30);",
+    "text": "[panel=1]「[em7]一把揪住你後領[/em7]，早這樣不就好了！這才像話！」",
+    "Sequence": "SetPortrait(MC2,pic=1);ModifyData(FavorabilityExp,MC2,30);AudioControl(StopSFX);AudioControl(PlaySFXOneShot,Others_FallWater);",
     "Description": "呂信好感度提升",
-    "zh_CN": "[panel=1]「[em7]一把揪住你后领[/em7]，早说嘛！这才像话！」",
+    "zh_CN": "[panel=1]「[em7]一把揪住你后领[/em7]，早这样不就好了！这才像话！」",
     "links": [44]
   },
   {
     "entryID": 44,
     "actorID": "role2",
     "text": "[panel=6]＊（水灌進耳朵，一時什麼也聽不見。等你冒出來，滿河都是人聲，你分不清哪一句是笑你的。）＊",
-    "Sequence": "",
+    "Sequence": "AudioControl(PlaySFX,Others_Talking);",
     "zh_CN": "[panel=6]＊（水灌进耳朵，一时什么也听不见。等你冒出来，满河都是人声，你分不清哪一句是笑你的。）＊",
     "links": [45]
   },
@@ -385,7 +361,7 @@
     "entryID": 48,
     "actorID": "role2",
     "text": "[panel=6]＊（他說完又要來按你的頭。這一次你先抓住他手腕，兩個人一起栽進水裡。）＊",
-    "Sequence": "",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_FallWater);",
     "zh_CN": "[panel=6]＊（他说完又要来按你的头。这一次你先抓住他手腕，两个人一起栽进水里。）＊",
     "links": [74]
   },
@@ -393,24 +369,16 @@
     "entryID": 49,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場",
-    "links": [50]
-  },
-  {
-    "entryID": 50,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你走到他旁邊站著，鞋也沒有脫。這一段水平得照得出兩個人。）＊",
-    "Sequence": "ModifyData(FavorabilityExp,MC3,30);",
-    "Description": "子羽好感度提升",
-    "zh_CN": "[panel=6]＊（你走到他旁边站着，鞋也没有脱。这一段水平得照得出两个人。）＊",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;AudioControl(StopMusic)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場、關閉音樂",
     "links": [51]
   },
   {
     "entryID": 51,
     "actorID": "MC3",
     "text": "[panel=2]「你走過來，鞋也沒脫。」",
-    "Sequence": "SetPortrait(MC3,pic=1);",
+    "Sequence": "ModifyData(FavorabilityExp,MC3,30);\nSetPortrait(MC3,pic=1);",
+    "Description": "子羽好感度提升",
     "zh_CN": "[panel=2]「你走过来，鞋也没脱。」",
     "links": [52]
   },
@@ -433,9 +401,9 @@
   {
     "entryID": 54,
     "actorID": "role2",
-    "text": "[panel=6]＊（他蹲下去，把兩隻手浸進水裡，來回搓了兩遍。站起來的時候，整個人只有手是濕的。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（他蹲下去，把两只手浸进水里，来回搓了两遍。站起来的时候，整个人只有手是湿的。）＊",
+    "text": "[panel=6]＊（他只把兩隻手浸進水裡洗了洗，整個人就只有手是濕的。）＊",
+    "Sequence": "AudioControl(PlaySFXOneShot,Others_Water);",
+    "zh_CN": "[panel=6]＊（他只把两只手浸进水里洗了洗，整个人就只有手是湿的。）＊",
     "links": [55]
   },
   {
@@ -452,22 +420,23 @@
     "text": "[panel=2]「我沒下去過，不知道。」",
     "Sequence": "SetPortrait(MC3,pic=1);",
     "zh_CN": "[panel=2]「我没下去过，不知道。」",
-    "links": [57]
+    "links": [178]
   },
   {
     "entryID": 57,
     "actorID": "role2",
-    "text": "[panel=6]＊（你們並排站著，誰也沒有再開口。水面上那兩個人影，從頭到尾沒有動過。）＊",
-    "Sequence": "",
-    "zh_CN": "[panel=6]＊（你们并排站着，谁也没有再开口。水面上那两个人影，从头到尾没有动过。）＊",
+    "text": "[panel=6]＊（下一刻他把刀往岸上一插，鞋一踢，整個人扎進水裡。等他上岸，下游已經有人在喊收衣裳了。）＊",
+    "Sequence": "OpenPanel(2, close);AudioControl(PlaySFXOneShot,Others_Water);",
+    "Description": "清除立繪",
+    "zh_CN": "[panel=6]＊（下一刻他把刀往岸上一插，鞋一踢，整个人扎进水里。等他上岸，下游已经有人在喊收衣裳了。）＊",
     "links": [74]
   },
   {
     "entryID": 58,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;AudioControl(StopMusic)@1;AudioControl(PlayMusic,BGM_18)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場、切換音樂",
     "links": [59]
   },
   {
@@ -482,17 +451,17 @@
   {
     "entryID": 60,
     "actorID": "MC8",
-    "text": "[panel=2]「……表哥，那你的鞋呢？」",
+    "text": "[panel=2]「……表哥，看鞋要收錢嗎？」",
     "Sequence": "SetPortrait(MC8,pic=14);",
-    "zh_CN": "[panel=2]「……表哥，那你的鞋呢？」",
+    "zh_CN": "[panel=2]「……表哥，看鞋要收钱吗？」",
     "links": [61]
   },
   {
     "entryID": 61,
     "actorID": "role2",
-    "text": "[panel=6]＊（岸上那雙鞋擺得歪歪的，鞋幫上還沾著草。她已經蹚回水裡去了。）＊",
+    "text": "[panel=6]＊（她的鞋就那樣歪在岸上，人已經蹚回水裡去了。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（岸上那双鞋摆得歪歪的，鞋帮上还沾着草。她已经蹚回水里去了。）＊",
+    "zh_CN": "[panel=6]＊（她的鞋就那样歪在岸上，人已经蹚回水里去了。）＊",
     "links": [62, 63]
   },
   {
@@ -507,10 +476,10 @@
   {
     "entryID": 63,
     "actorID": "MC1",
-    "text": "（什麼都不說，把鞋擺正）",
+    "text": "（不說話，替她看著鞋）",
     "Sequence": "",
     "Description": "選項2",
-    "zh_CN": "（什么都不说，把鞋摆正）",
+    "zh_CN": "（不说话，替她看着鞋）",
     "links": [73]
   },
   {
@@ -558,9 +527,9 @@
   {
     "entryID": 69,
     "actorID": "role2",
-    "text": "[panel=6]＊（她轉身蹚回水裡，走了兩步又回頭看那雙鞋一眼。）＊",
+    "text": "[panel=6]＊（她蹚回水裡去了，臨走又回頭看了那雙鞋一眼。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（她转身蹚回水里，走了两步又回头看那双鞋一眼。）＊",
+    "zh_CN": "[panel=6]＊（她蹚回水里去了，临走又回头看了那双鞋一眼。）＊",
     "links": [74]
   },
   {
@@ -584,33 +553,33 @@
   {
     "entryID": 72,
     "actorID": "role2",
-    "text": "[panel=6]＊（等你回過神，腳邊已經多了三雙鞋。娜娜那雙不在裡頭，她自己拎著走了。）＊",
+    "text": "[panel=6]＊（等你回過神，腳邊已經多了好幾雙鞋。娜娜那雙不在裡頭，她自己拎著走了。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（等你回过神，脚边已经多了三双鞋。娜娜那双不在里头，她自己拎着走了。）＊",
+    "zh_CN": "[panel=6]＊（等你回过神，脚边已经多了好几双鞋。娜娜那双不在里头，她自己拎着走了。）＊",
     "links": [74]
   },
   {
     "entryID": 73,
     "actorID": "role2",
-    "text": "[panel=6]＊（你把鞋挪到曬得到太陽的地方，自己在旁邊坐下。水漲上來一次，你又往上挪了一次。小犀在旁邊看了你半晌。）＊",
+    "text": "[panel=6]＊（你把鞋擺到曬得到太陽的地方，在旁邊守了一下午。小犀在旁邊看了你半晌。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（你把鞋挪到晒得到太阳的地方，自己在旁边坐下。水涨上来一次，你又往上挪了一次。小犀在旁边看了你半晌。）＊",
+    "zh_CN": "[panel=6]＊（你把鞋摆到晒得到太阳的地方，在旁边守了一下午。小犀在旁边看了你半晌。）＊",
     "links": [74]
   },
   {
     "entryID": 74,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
-    "Description": "轉場",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);OpenPanel(0, close)@1;OpenPanel(1, close)@1;OpenPanel(2, close)@1;AudioControl(StopSFX)@1;AudioControl(StopMusic)@1;AudioControl(PlayMusic,BGM_16)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場、切換音樂",
     "links": [75]
   },
   {
     "entryID": 75,
     "actorID": "role2",
-    "text": "[panel=6]＊（日頭偏西，河邊的人陸續上岸。草坡上晾了一片衣裳，遠看花花綠綠的。）＊",
+    "text": "[panel=6]＊（日頭偏西，河邊的人陸續上岸。對岸的帷帳一頂一頂收了，賣芍藥的攤子早就空了。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（日头偏西，河边的人陆续上岸。草坡上晾了一片衣裳，远看花花绿绿的。）＊",
+    "zh_CN": "[panel=6]＊（日头偏西，河边的人陆续上岸。对岸的帷帐一顶一顶收了，卖芍药的摊子早就空了。）＊",
     "links": [76]
   },
   {
@@ -624,10 +593,10 @@
   {
     "entryID": 77,
     "actorID": "role2",
-    "text": "[panel=6]＊（沒有人應聲，可是所有人都聽見了。）＊",
+    "text": "[panel=6]＊（來的時候各挑各的一段水，回去的時候又走成了一隊。呂信從頭濕到腳，子羽的鞋還是乾的，張寧的藥包少了一大半。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（没有人应声，可是所有人都听见了。）＊",
-    "links": [78]
+    "zh_CN": "[panel=6]＊（来的时候各挑各的一段水，回去的时候又走成了一队。吕信从头湿到脚，子羽的鞋还是干的，张宁的药包少了一大半。）＊",
+    "links": [177]
   },
   {
     "entryID": 78,
@@ -640,9 +609,9 @@
   {
     "entryID": 79,
     "actorID": "role2",
-    "text": "[panel=6]＊（上游有人接了話，隔著半條河喊過來，說洗什麼水，聽說冀州那邊喝一碗符水就成了，還不用脫衣裳。旁邊幾個人笑了，沒有一個回頭去看他。）＊",
+    "text": "[panel=6]＊（上游不知誰在喊，說洗什麼水，聽說冀州那邊喝一碗符水就成了，還不用脫衣裳。旁邊幾個人笑了，沒有一個回頭去看他。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（上游有人接了话，隔着半条河喊过来，说洗什么水，听说冀州那边喝一碗符水就成了，还不用脱衣裳。旁边几个人笑了，没有一个回头去看他。）＊",
+    "zh_CN": "[panel=6]＊（上游不知谁在喊，说洗什么水，听说冀州那边喝一碗符水就成了，还不用脱衣裳。旁边几个人笑了，没有一个回头去看他。）＊",
     "links": [35]
   },
   {
@@ -820,10 +789,10 @@
   {
     "entryID": 99,
     "actorID": "MC6",
-    "text": "[panel=3]「我有一個問題。為何我會在這？應該說，關我什麼事？」",
+    "text": "[panel=5]「我有一個問題。為何我會在這？應該說，關我什麼事？」",
     "Sequence": "SetPortrait(MC6,pic=3);",
-    "zh_TW": "[panel=3]「我有一個問題。為何我會在這？應該說，關我什麼事？」",
-    "zh_CN": "[panel=3]「我有一个问题。为何我会在这？应该说，关我什么事？」",
+    "zh_TW": "[panel=5]「我有一個問題。為何我會在這？應該說，關我什麼事？」",
+    "zh_CN": "[panel=5]「我有一个问题。为何我会在这？应该说，关我什么事？」",
     "links": [100]
   },
   {
@@ -847,10 +816,10 @@
   {
     "entryID": 102,
     "actorID": "MC6",
-    "text": "[panel=3]「還有何好評的？就那四個蠢貨，肯定只有全部出局。」",
+    "text": "[panel=5]「還有何好評的？就那四個蠢貨，肯定只有全部出局。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC6,pic=1);",
-    "zh_TW": "[panel=3]「還有何好評的？就那四個蠢貨，肯定只有全部出局。」",
-    "zh_CN": "[panel=3]「还有何好评的？就那四个蠢货，肯定只有全部出局。」",
+    "zh_TW": "[panel=5]「還有何好評的？就那四個蠢貨，肯定只有全部出局。」",
+    "zh_CN": "[panel=5]「还有何好评的？就那四个蠢货，肯定只有全部出局。」",
     "links": [103]
   },
   {
@@ -892,17 +861,17 @@
   {
     "entryID": 107,
     "actorID": "MC6",
-    "text": "[panel=3]「出局！你可以滾了！」",
-    "Sequence": "SetPortrait(MC6,pic=2);EnableCharacterExpression(3,MC6,Anger);",
-    "zh_TW": "[panel=3]「出局！你可以滾了！」",
-    "zh_CN": "[panel=3]「出局！你可以滚了！」",
+    "text": "[panel=5]「出局！你可以滾了！」",
+    "Sequence": "SetPortrait(MC6,pic=2);EnableCharacterExpression(5,MC6,Anger);",
+    "zh_TW": "[panel=5]「出局！你可以滾了！」",
+    "zh_CN": "[panel=5]「出局！你可以滚了！」",
     "links": [108]
   },
   {
     "entryID": 108,
     "actorID": "MC4",
     "text": "[panel=1]「誒？賈某還沒……」",
-    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC4,pic=5);",
+    "Sequence": "DisableCharacterExpression(5);SetPortrait(MC4,pic=4);",
     "zh_TW": "[panel=1]「誒？賈某還沒……」",
     "zh_CN": "[panel=1]「诶？贾某还没……」",
     "links": [109]
@@ -910,10 +879,10 @@
   {
     "entryID": 109,
     "actorID": "MC6",
-    "text": "[panel=3]「少拿你那見不得人的癖好出來，這裡可還有小孩在。滾！」",
+    "text": "[panel=5]「少拿你那見不得人的癖好出來，這裡可還有小孩在。滾！」",
     "Sequence": "SetPortrait(MC6,pic=2);",
-    "zh_TW": "[panel=3]「少拿你那見不得人的癖好出來，這裡可還有小孩在。滾！」",
-    "zh_CN": "[panel=3]「少拿你那见不得人的癖好出来，这里可还有小孩在。滚！」",
+    "zh_TW": "[panel=5]「少拿你那見不得人的癖好出來，這裡可還有小孩在。滾！」",
+    "zh_CN": "[panel=5]「少拿你那见不得人的癖好出来，这里可还有小孩在。滚！」",
     "links": [110]
   },
   {
@@ -1019,17 +988,17 @@
   {
     "entryID": 121,
     "actorID": "MC6",
-    "text": "[panel=3]「你認真的？」",
-    "Sequence": "SetPortrait(MC6,pic=4);EnableCharacterExpression(3,MC6,Question);",
-    "zh_TW": "[panel=3]「你認真的？」",
-    "zh_CN": "[panel=3]「你认真的？」",
+    "text": "[panel=5]「你認真的？」",
+    "Sequence": "SetPortrait(MC6,pic=4);EnableCharacterExpression(5,MC6,Question);",
+    "zh_TW": "[panel=5]「你認真的？」",
+    "zh_CN": "[panel=5]「你认真的？」",
     "links": [122]
   },
   {
     "entryID": 122,
     "actorID": "MC3",
     "text": "[panel=1]「…………」",
-    "Sequence": "DisableCharacterExpression(3);SetPortrait(MC3,pic=3);",
+    "Sequence": "DisableCharacterExpression(5);SetPortrait(MC3,pic=3);",
     "zh_TW": "[panel=1]「…………」",
     "zh_CN": "[panel=1]「…………」",
     "links": [123]
@@ -1109,26 +1078,26 @@
   {
     "entryID": 131,
     "actorID": "MC6",
-    "text": "[panel=3]「小犀乖，有些事不明白，對妳的成長比較好。」",
+    "text": "[panel=5]「小犀乖，有些事不明白，對妳的成長比較好。」",
     "Sequence": "SetPortrait(MC6,pic=1);",
-    "zh_TW": "[panel=3]「小犀乖，有些事不明白，對妳的成長比較好。」",
-    "zh_CN": "[panel=3]「小犀乖，有些事不明白，对你的成长比较好。」",
+    "zh_TW": "[panel=5]「小犀乖，有些事不明白，對妳的成長比較好。」",
+    "zh_CN": "[panel=5]「小犀乖，有些事不明白，对你的成长比较好。」",
     "links": [132]
   },
   {
     "entryID": 132,
     "actorID": "MC6",
-    "text": "[panel=3]「剩下的我已經懶得說了。恕我們無能為力，你自己看著選吧。」",
+    "text": "[panel=5]「剩下的我已經懶得說了。恕我們無能為力，你自己看著選吧。」",
     "Sequence": "SetPortrait(MC6,pic=3);",
-    "zh_TW": "[panel=3]「剩下的我已經懶得說了。恕我們無能為力，你自己看著選吧。」",
-    "zh_CN": "[panel=3]「剩下的我已经懒得说了。恕我们无能为力，你自己看着选吧。」",
+    "zh_TW": "[panel=5]「剩下的我已經懶得說了。恕我們無能為力，你自己看著選吧。」",
+    "zh_CN": "[panel=5]「剩下的我已经懒得说了。恕我们无能为力，你自己看着选吧。」",
     "links": [133]
   },
   {
     "entryID": 133,
     "actorID": "role2",
     "text": "[panel=6]＊（張寧牽著小犀走了。堂裡剩下你，和四道盯著你的目光。）＊",
-    "Sequence": "OpenPanel(2,close);OpenPanel(3,close);",
+    "Sequence": "OpenPanel(1,close);\nOpenPanel(2,close);\nOpenPanel(3,close);\nOpenPanel(5,close);",
     "zh_TW": "[panel=6]＊（張寧牽著小犀走了。堂裡剩下你，和四道盯著你的目光。）＊",
     "zh_CN": "[panel=6]＊（张宁牵着小犀走了。堂里剩下你，和四道盯着你的目光。）＊",
     "links": [134]
@@ -1213,7 +1182,7 @@
     "entryID": 142,
     "actorID": "MC1",
     "text": "「兵法云出奇制勝，那就……用賈先生那個不可告人的癖好。」",
-    "Sequence": "SetPortrait(MC1,pic=18);",
+    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(FavorabilityExp,MC4,20);",
     "zh_TW": "「兵法云出奇制勝，那就……用賈先生那個不可告人的癖好。」",
     "zh_CN": "「兵法云出奇制胜，那就……用贾先生那个不可告人的癖好。」",
     "links": [143]
@@ -1248,7 +1217,7 @@
     "entryID": 146,
     "actorID": "MC1",
     "text": "「民以食為天……有勞徐師父的那一鍋。」",
-    "Sequence": "SetPortrait(MC1,pic=11);",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(FavorabilityExp,MC5,20);",
     "zh_TW": "「民以食為天……有勞徐師父的那一鍋。」",
     "zh_CN": "「民以食为天……有劳徐师父的那一锅。」",
     "links": [147]
@@ -1283,7 +1252,7 @@
     "entryID": 150,
     "actorID": "MC1",
     "text": "「大音希聲，大象無形……子羽那一趟刀，總不會錯。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Sequence": "SetPortrait(MC1,pic=8);\nModifyData(FavorabilityExp,MC3,20);",
     "zh_TW": "「大音希聲，大象無形……子羽那一趟刀，總不會錯。」",
     "zh_CN": "「大音希声，大象无形……子羽那一趟刀，总不会错。」",
     "links": [151]
@@ -1318,7 +1287,7 @@
     "entryID": 154,
     "actorID": "MC1",
     "text": "「……信哥，就他了。」",
-    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Sequence": "SetPortrait(MC1,pic=3);\nModifyData(FavorabilityExp,MC2,20);",
     "zh_TW": "「……信哥，就他了。」",
     "zh_CN": "「……信哥，就他了。」",
     "links": [155]
@@ -1519,5 +1488,37 @@
     "Sequence": "DisableAllCharacterExpression();DisableDialogueBG();Continue();",
     "Description": "清除立繪、關閉背景",
     "links": []
+  },
+  {
+    "entryID": 177,
+    "actorID": "role2",
+    "text": "[panel=6]＊（進城的時候天快黑了，一路上都是往回走的人，頭髮還濕著。身後那條河照舊往東流，這一年的晦氣，就算是送走了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（进城的时候天快黑了，一路上都是往回走的人，头发还湿着。身后那条河照旧往东流，这一年的晦气，就算是送走了。）＊",
+    "links": [78]
+  },
+  {
+    "entryID": 178,
+    "actorID": "MC1",
+    "text": "「……羽兄，你該不會是怕水吧？！」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「……羽兄，你该不会是怕水吧？！」",
+    "links": [179]
+  },
+  {
+    "entryID": 179,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他盯著那一段深水，握刀的手緊了一下。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（他盯着那一段深水，握刀的手紧了一下。）＊",
+    "links": [180]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC3",
+    "text": "[panel=2]「沒下去過的水，今天下去便知道了。」",
+    "Sequence": "SetPortrait(MC3,pic=1);",
+    "zh_CN": "[panel=2]「没下去过的水，今天下去便知道了。」",
+    "links": [57]
   }
 ]
