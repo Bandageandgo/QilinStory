@@ -11,7 +11,7 @@
   {
     "entryID": 2,
     "actorID": "2",
-    "text": "[panel=6]＊（他坐在石墩上，腳邊一罈酒，沒開。那柄門板靠在旁邊。）＊",
+    "text": "[panel=6]＊（他坐在石墩上，腳邊一罈酒，沒開。那柄大刀靠在旁邊。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       3
@@ -80,16 +80,6 @@
     "text": "「通了就好。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
-      10
-    ]
-  },
-  {
-    "entryID": 10,
-    "actorID": "2",
-    "text": "[panel=6]＊（他說完就沒有再說。他看著場中央，那裡什麼都沒有。）＊",
-    "Sequence": "",
-    "links": [
-      19,
       22
     ]
   },
@@ -127,7 +117,6 @@
     "text": "[panel=6]＊（他點了一下頭，像是那個「大概」就夠了。）＊",
     "Sequence": "",
     "links": [
-      19,
       22
     ]
   },
@@ -136,15 +125,6 @@
     "actorID": "MC2",
     "text": "「『到了雲中，我是誰？』」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      16
-    ]
-  },
-  {
-    "entryID": 16,
-    "actorID": "2",
-    "text": "[panel=6]＊（那老頭的話。他學得不像，可是一個字都沒錯。）＊",
-    "Sequence": "",
     "links": [
       17
     ]
@@ -164,44 +144,6 @@
     "text": "[panel=6]＊（他沒有說他想出答案了沒有。）＊",
     "Sequence": "",
     "links": [
-      19,
-      22
-    ]
-  },
-  {
-    "entryID": 19,
-    "actorID": "MC2",
-    "text": "「褚幫主那扇門，我去敲過一次。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
-    "links": [
-      20
-    ]
-  },
-  {
-    "entryID": 20,
-    "actorID": "MC1",
-    "text": "「……什麼時候？」",
-    "Sequence": "SetPortrait(MC1,pic=4);",
-    "links": [
-      21
-    ]
-  },
-  {
-    "entryID": 21,
-    "actorID": "MC2",
-    "text": "「五原回來那陣子。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      211
-    ]
-  },
-  {
-    "entryID": 211,
-    "actorID": "2",
-    "text": "[panel=6]＊（敲了之後怎麼樣，他沒說。他把腳邊那罈酒又往你這邊推了推。）＊",
-    "Sequence": "",
-    "links": [
       22
     ]
   },
@@ -219,18 +161,9 @@
   {
     "entryID": 23,
     "actorID": "2",
-    "text": "[panel=6]＊（他站起來，順手把你從石墩上拉起來。）＊",
+    "text": "[panel=6]＊（他站起來，順手把你從石墩上拉起來，手勁跟五原那幾次一樣。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "Conditions": "CurrentQuestEntryState(\"＿＿\", ＿) == \"success\";",
-    "links": [
-      24
-    ]
-  },
-  {
-    "entryID": 24,
-    "actorID": "2",
-    "text": "[panel=6]＊（跟五原那幾次一樣的手勁。只是這一次，他看著你。）＊",
-    "Sequence": "",
     "links": [
       25
     ]
@@ -322,7 +255,7 @@
   {
     "entryID": 36,
     "actorID": "MC2",
-    "text": "「[em7]站起來，把門板扛上肩。一隻手[/em7]，五原沒有江。」",
+    "text": "「[em7]把刀扛上肩，一隻手[/em7]，五原沒有江。」",
     "Sequence": "DisableCharacterExpression(1);SetPortrait(MC2,pic=1);",
     "links": [
       37
@@ -447,7 +380,7 @@
   {
     "entryID": 464,
     "actorID": "MC2",
-    "text": "「[em7]扛著刀往門口走。走到門邊補了一句，沒有回頭[/em7]，小子，替我看著。」",
+    "text": "「[em7]走到門邊，背對著你[/em7]，小子，替我看著。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [

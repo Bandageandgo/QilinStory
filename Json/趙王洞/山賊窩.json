@@ -162,7 +162,16 @@
     "text": "「吵什麼吵！哪這麼多話！再不安分點，當心老子整死你！」",
     "Sequence": "",
     "zh_CN": "「吵什么吵！哪这么多话！再不安分点，当心老子整死你！」",
-    "links": [23, 27, 31]
+    "links": [4168]
+  },
+  {
+    "entryID": 4168,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [23, 27, 31, 4169]
   },
   {
     "entryID": 23,
@@ -246,6 +255,129 @@
     "Conditions": "IsPassDice() == false;",
     "zh_CN": "「狗屁！太守的侄子怎么会没带护卫在外头闲逛？你小子当我傻啊？」",
     "links": [4124]
+  },
+  {
+    "entryID": 4169,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項4",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [4170]
+  },
+  {
+    "entryID": 4170,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,20);",
+    "Description": "口才檢定",
+    "links": [4171]
+  },
+  {
+    "entryID": 4171,
+    "actorID": "MC1",
+    "text": "「整死我？你還是先顧好自己吧。官兵早把山口圍住了，殺進洞來，你們一個也跑不掉。」",
+    "Sequence": "SetPortrait(MC1,pic=18);",
+    "zh_TW": "「整死我？你還是先顧好自己吧。官兵早把山口圍住了，殺進洞來，你們一個也跑不掉。」",
+    "zh_CN": "「整死我？你还是先顾好自己吧。官兵早把山口围住了，杀进洞来，你们一个也跑不掉。」",
+    "links": [4172]
+  },
+  {
+    "entryID": 4172,
+    "actorID": "MC1",
+    "text": "「開了這扇門，到了官兵面前，我替你說句話，保你一條命。」",
+    "Sequence": "EnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「開了這扇門，到了官兵面前，我替你說句話，保你一條命。」",
+    "zh_CN": "「开了这扇门，到了官兵面前，我替你说句话，保你一条命。」",
+    "links": [4173, 4174]
+  },
+  {
+    "entryID": 4173,
+    "actorID": "role126",
+    "text": "「官、官兵圍山了？公子饒命！這點錢您收著，見了官兵千萬替小人說句話！」",
+    "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,30);ModifyData(Coin,100);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加、給錢",
+    "zh_TW": "「官、官兵圍山了？公子饒命！這點錢您收著，見了官兵千萬替小人說句話！」",
+    "zh_CN": "「官、官兵围山了？公子饶命！这点钱您收着，见了官兵千万替小人说句话！」",
+    "links": [43]
+  },
+  {
+    "entryID": 4174,
+    "actorID": "role126",
+    "text": "「說句話頂個屁用！官兵只饒自家人，今日老子就跟你約為兄弟！」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=19);EnableCharacterExpression(0,Player,Surprise);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「說句話頂個屁用！官兵只饒自家人，今日老子就跟你約為兄弟！」",
+    "zh_CN": "「说句话顶个屁用！官兵只饶自家人，今日老子就跟你约为兄弟！」",
+    "links": [4175]
+  },
+  {
+    "entryID": 4175,
+    "actorID": "role2",
+    "text": "[panel=6]＊（牢門一開，你就被他拽到了長廊上，兩人並肩跪在火光底下。隔壁的廖淳隔著柵欄，把這一幕看得清清楚楚。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（牢門一開，你就被他拽到了長廊上，兩人並肩跪在火光底下。隔壁的廖淳隔著柵欄，把這一幕看得清清楚楚。）＊",
+    "zh_CN": "[panel=6]＊（牢门一开，你就被他拽到了长廊上，两人并肩跪在火光底下。隔壁的廖淳隔着栅栏，把这一幕看得清清楚楚。）＊",
+    "links": [4176]
+  },
+  {
+    "entryID": 4176,
+    "actorID": "role126",
+    "text": "「皇天后土在上，今日我與這位公子約為兄弟，往後他是大哥，我是小弟！」",
+    "Sequence": "",
+    "zh_TW": "「皇天后土在上，今日我與這位公子約為兄弟，往後他是大哥，我是小弟！」",
+    "zh_CN": "「皇天后土在上，今日我与这位公子约为兄弟，往后他是大哥，我是小弟！」",
+    "links": [4177]
+  },
+  {
+    "entryID": 4177,
+    "actorID": "MC1",
+    "text": "「等等，誰要跟你做兄弟……喂，別按我的頭！」",
+    "Sequence": "SetPortrait(MC1,pic=2);EnableCharacterExpression(0,Player,Anger);",
+    "zh_TW": "「等等，誰要跟你做兄弟……喂，別按我的頭！」",
+    "zh_CN": "「等等，谁要跟你做兄弟……喂，别按我的头！」",
+    "links": [4178]
+  },
+  {
+    "entryID": 4178,
+    "actorID": "role126",
+    "text": "「大哥頭一回認小弟，總得賞點什麼。你那錢袋，小弟就先替大哥收著了！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「大哥頭一回認小弟，總得賞點什麼。你那錢袋，小弟就先替大哥收著了！」",
+    "zh_CN": "「大哥头一回认小弟，总得赏点什么。你那钱袋，小弟就先替大哥收着了！」",
+    "links": [4179]
+  },
+  {
+    "entryID": 4179,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你的錢袋進了他的懷裡，牢門鑰匙倒是塞到了你手上。他提起大刀站回長廊口，照舊守著你原先那間牢房。）＊",
+    "Sequence": "ModifyData(Coin,-100);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你的錢袋進了他的懷裡，牢門鑰匙倒是塞到了你手上。他提起大刀站回長廊口，照舊守著你原先那間牢房。）＊",
+    "zh_CN": "[panel=6]＊（你的钱袋进了他的怀里，牢门钥匙倒是塞到了你手上。他提起大刀站回长廊口，照旧守着你原先那间牢房。）＊",
+    "links": [4180]
+  },
+  {
+    "entryID": 4180,
+    "actorID": "role127",
+    "text": "「小兄弟，你這位新認的兄弟，方才還說要整死你。」",
+    "Sequence": "SetPortrait(role127,pic=1);",
+    "zh_TW": "「小兄弟，你這位新認的兄弟，方才還說要整死你。」",
+    "zh_CN": "「小兄弟，你这位新认的兄弟，方才还说要整死你。」",
+    "links": [4181]
+  },
+  {
+    "entryID": 4181,
+    "actorID": "MC1",
+    "text": "「廖大哥，這頭我是被他按著磕的，可不能算數啊。」",
+    "Sequence": "SetPortrait(MC1,pic=11);OpenPanel(1,close);",
+    "Description": "清除立繪",
+    "zh_TW": "「廖大哥，這頭我是被他按著磕的，可不能算數啊。」",
+    "zh_CN": "「廖大哥，这头我是被他按着磕的，可不能算数啊。」",
+    "links": [46]
   },
   {
     "entryID": 39,

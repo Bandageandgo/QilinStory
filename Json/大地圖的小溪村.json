@@ -197,10 +197,10 @@
   {
     "entryID": 58,
     "actorID": "role2",
-    "text": "[panel=6]＊（你話音未落，手中的石頭光芒大作，一股清涼的氣息瞬間湧入你的腦海！）＊",
+    "text": "[panel=6]＊（你從懷裡掏出那枚石頭，它亮得刺眼，一股清涼的氣息便順著掌心湧進你的腦海。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（你話音未落，手中的石頭光芒大作，一股清涼的氣息瞬間湧入你的腦海！）＊",
-    "zh_CN": "[panel=6]＊（你话音未落，手中的石头光芒大作，一股清凉的气息瞬间涌入你的脑海！）＊",
+    "zh_TW": "[panel=6]＊（你從懷裡掏出那枚石頭，它亮得刺眼，一股清涼的氣息便順著掌心湧進你的腦海。）＊",
+    "zh_CN": "[panel=6]＊（你从怀里掏出那枚石头，它亮得刺眼，一股清凉的气息便顺着掌心涌进你的脑海。）＊",
     "links": [2055]
   },
   {
@@ -264,25 +264,16 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（你攤開手掌，那枚石頭的光芒已慢慢斂了回去，握在掌心，卻還是溫的。）＊",
     "zh_CN": "[panel=6]＊（你摊开手掌，那枚石头的光芒已慢慢敛了回去，握在掌心，却还是温的。）＊",
-    "links": [66]
-  },
-  {
-    "entryID": 66,
-    "actorID": "role2",
-    "text": "[panel=6]＊（巨大的陰影…歸期無望…赫連娜娜所追尋的秘密，似乎遠比想像的更加驚人。這座看似平凡的村莊，地下究竟隱藏著什麼？）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（巨大的陰影…歸期無望…赫連娜娜所追尋的秘密，似乎遠比想像的更加驚人。這座看似平凡的村莊，地下究竟隱藏著什麼？）＊",
-    "zh_CN": "[panel=6]＊（巨大的阴影…归期无望…赫连娜娜所追寻的秘密，似乎远比想像的更加惊人。这座看似平凡的村庄，地下究竟隐藏着什么？）＊",
     "links": [67]
   },
   {
     "entryID": 67,
     "actorID": "role2",
-    "text": "[panel=6]＊（你窺見了不知是誰的記憶，不知道為什麼但你感覺智力似乎有所提升。）＊",
+    "text": "[panel=6]＊（那段不知是誰的記憶，慢慢淡了下去。）＊",
     "Sequence": "ModifyData(AbilityExp,Player,Intelligence,100);",
     "Script": "SetQuestState(\"CF07\", \"success\");",
-    "zh_TW": "[panel=6]＊（你窺見了不知是誰的記憶，不知道為什麼但你感覺智力似乎有所提升。）＊",
-    "zh_CN": "[panel=6]＊（你窥见了不知是谁的记忆，不知道为什么但你感觉智力似乎有所提升。）＊",
+    "zh_TW": "[panel=6]＊（那段不知是誰的記憶，慢慢淡了下去。）＊",
+    "zh_CN": "[panel=6]＊（那段不知是谁的记忆，慢慢淡了下去。）＊",
     "links": []
   },
   {
@@ -763,6 +754,91 @@
     "Conditions": "IsPassFight() == false;",
     "zh_TW": "[panel=1]「大哥，我們走。看來這小子也不過如此。」",
     "zh_CN": "[panel=1]「大哥，我们走。看来这小子也不过如此。」",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [2062, 2063]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]置之死地，而後生[/em3]",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "[em2][口才檢定][/em2][em3]置之死地，而後生[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]置之死地，而后生[/em3]",
+    "links": [2064]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": [327]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,20);",
+    "Description": "口才檢定",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "MC1",
+    "text": "「慢著，你們真當本少俠敗了？方才那是手下留情，我若下了狠手，你兄弟倆還走得了？」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「慢著，你們真當本少俠敗了？方才那是手下留情，我若下了狠手，你兄弟倆還走得了？」",
+    "zh_CN": "「慢着，你们真当本少侠败了？方才那是手下留情，我若下了狠手，你兄弟俩还走得了？」",
+    "links": [2066, 2068]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role120",
+    "text": "[panel=1]「留手？……三弟，上回俺可是實打實栽在他手上。今日贏得這般輕巧，怕是他真讓著我們。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role120,pic=4);\nEnableCharacterExpression(1,role120,Question);\nModifyData(FeatExp,Player,Persuasion,25);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=1]「留手？……三弟，上回俺可是實打實栽在他手上。今日贏得這般輕巧，怕是他真讓著我們。」",
+    "zh_CN": "[panel=1]「留手？……三弟，上回俺可是实打实栽在他手上。今日赢得这般轻巧，怕是他真让着我们。」",
+    "links": [2067]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role120",
+    "text": "[panel=1]「英雄饒命！方才是俺兄弟倆有眼無珠。這錢您收下，還望高抬貴手！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(role120,pic=1);\nModifyData(Coin,150);",
+    "Description": "給錢",
+    "zh_TW": "[panel=1]「英雄饒命！方才是俺兄弟倆有眼無珠。這錢您收下，還望高抬貴手！」",
+    "zh_CN": "[panel=1]「英雄饶命！方才是俺兄弟俩有眼无珠。这钱您收下，还望高抬贵手！」",
+    "links": [379]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();\nDisableCharacterExpression(0);\nModifyData(Coin,-200);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗、扣錢",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "role121",
+    "text": "[panel=1]「手下留情？輸了還嘴硬！大哥，這小子嚇唬人呢，把他錢袋也掏了！」",
+    "Sequence": "SetPortrait(role121,pic=3);",
+    "zh_TW": "[panel=1]「手下留情？輸了還嘴硬！大哥，這小子嚇唬人呢，把他錢袋也掏了！」",
+    "zh_CN": "[panel=1]「手下留情？输了还嘴硬！大哥，这小子吓唬人呢，把他钱袋也掏了！」",
     "links": [327]
   },
   {

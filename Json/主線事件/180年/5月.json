@@ -40,7 +40,7 @@
     "entryID": 4,
     "actorID": "MC23",
     "text": "[panel=1]「是你！」",
-    "Sequence": "SetPortrait(MC23,pic=1);",
+    "Sequence": "SetPortrait(MC23,pic=1);\nEnableCharacterExpression(1,MC23,Surprise);",
     "zh_TW": "[panel=1]「是你！」",
     "zh_CN": "[panel=1]「是你！」",
     "links": [5]
@@ -49,7 +49,7 @@
     "entryID": 5,
     "actorID": "MC1",
     "text": "「……琰姑娘，怎麼是妳？」",
-    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);",
     "zh_TW": "「……琰姑娘，怎麼是妳？」",
     "zh_CN": "「……琰姑娘，怎么是你？」",
     "links": [6]
@@ -75,10 +75,10 @@
   {
     "entryID": 8,
     "actorID": "role2",
-    "text": "[panel=6]＊（人群讓開一條縫。蔡邕手裡沒拿東西，衣袖是乾淨的——這一條街上就他一個人沒有沾藥味。）＊",
+    "text": "[panel=6]＊（人群讓開一條縫，蔡邕空著手走了過來。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（人群讓開一條縫。蔡邕手裡沒拿東西，衣袖是乾淨的——這一條街上就他一個人沒有沾藥味。）＊",
-    "zh_CN": "[panel=6]＊（人群让开一条缝。蔡邕手里没拿东西，衣袖是干净的——这一条街上就他一个人没有沾药味。）＊",
+    "zh_TW": "[panel=6]＊（人群讓開一條縫，蔡邕空著手走了過來。）＊",
+    "zh_CN": "[panel=6]＊（人群让开一条缝，蔡邕空着手走了过来。）＊",
     "links": [9]
   },
   {
@@ -103,7 +103,7 @@
     "entryID": 11,
     "actorID": "MC24",
     "text": "[panel=1]「寫這張單子的人，筆下急，收筆卻一筆不苟。這樣的字，這城裡不多。」",
-    "Sequence": "SetPortrait(MC24,pic=1);",
+    "Sequence": "SetPortrait(MC24,pic=1);\nEnableCharacterExpression(1,MC24,Meditate);",
     "zh_TW": "[panel=1]「寫這張單子的人，筆下急，收筆卻一筆不苟。這樣的字，這城裡不多。」",
     "zh_CN": "[panel=1]「写这张单子的人，笔下急，收笔却一笔不苟。这样的字，这城里不多。」",
     "links": [12]
@@ -112,7 +112,7 @@
     "entryID": 12,
     "actorID": "MC24",
     "text": "[panel=1]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩絲繫臂，辟兵及鬼，令人不病溫。」",
-    "Sequence": "SetPortrait(MC24,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩絲繫臂，辟兵及鬼，令人不病溫。」",
     "zh_CN": "[panel=1]「[em7]伸手往你腕上一指[/em7]，五月五日，以五彩丝系臂，辟兵及鬼，令人不病温。」",
     "links": [13, 14]
@@ -177,7 +177,7 @@
     "entryID": 20,
     "actorID": "MC1",
     "text": "「難怪張姑娘說今日採的才算數，過了今日就不是這個藥性。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nEnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「難怪張姑娘說今日採的才算數，過了今日就不是這個藥性。」",
     "zh_CN": "「难怪张姑娘说今日采的才算数，过了今日就不是这个药性。」",
     "links": [21]
@@ -186,7 +186,7 @@
     "entryID": 21,
     "actorID": "MC1",
     "text": "「繫絲、沐蘭、採藥，說穿了是同一樁——這一個月，人得把自己保住。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=1);",
     "zh_TW": "「繫絲、沐蘭、採藥，說穿了是同一樁——這一個月，人得把自己保住。」",
     "zh_CN": "「系丝、沐兰、采药，说穿了是同一桩——这一个月，人得把自己保住。」",
     "links": [22]
@@ -195,7 +195,7 @@
     "entryID": 22,
     "actorID": "MC24",
     "text": "[panel=1]「……英豪府裡，也有讀過《禮》的。」",
-    "Sequence": "SetPortrait(MC24,pic=4);\nModifyData(FavorabilityExp,MC24,20);\nModifyData(FavorabilityExp,MC23,20);",
+    "Sequence": "SetPortrait(MC24,pic=4);\nEnableCharacterExpression(1,MC24,Meditate);\nModifyData(FavorabilityExp,MC24,20);\nModifyData(FavorabilityExp,MC23,20);",
     "zh_TW": "[panel=1]「……英豪府裡，也有讀過《禮》的。」",
     "zh_CN": "[panel=1]「……英豪府里，也有读过《礼》的。」",
     "links": [37]
@@ -231,17 +231,17 @@
   {
     "entryID": 29,
     "actorID": "MC1",
-    "text": "「府裡發下來我就繫上了，先生問起來，我還真沒想過為什麼。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「府裡發下來我就繫上了，先生問起來，我還真沒想過為什麼。」",
-    "zh_CN": "「府里发下来我就系上了，先生问起来，我还真没想过为什么。」",
+    "text": "「先生說的是，這五彩絲是府裡發下來的，我也就繫上了。」",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Nervous);",
+    "zh_TW": "「先生說的是，這五彩絲是府裡發下來的，我也就繫上了。」",
+    "zh_CN": "「先生说的是，这五彩丝是府里发下来的，我也就系上了。」",
     "links": [30]
   },
   {
     "entryID": 30,
     "actorID": "MC24",
     "text": "[panel=1]「腕上繫著辟兵的東西，卻不知道自己在辟什麼。」",
-    "Sequence": "SetPortrait(MC24,pic=3);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC24,pic=3);",
     "zh_TW": "[panel=1]「腕上繫著辟兵的東西，卻不知道自己在辟什麼。」",
     "zh_CN": "[panel=1]「腕上系着辟兵的东西，却不知道自己在辟什么。」",
     "links": [31]
@@ -304,7 +304,7 @@
     "entryID": 37,
     "actorID": "MC24",
     "text": "[panel=1]「五月五日還有一樁。戰國的田文生在這一日，他父親田嬰不肯養。」",
-    "Sequence": "SetPortrait(MC24,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「五月五日還有一樁。戰國的田文生在這一日，他父親田嬰不肯養。」",
     "zh_CN": "[panel=1]「五月五日还有一桩。战国的田文生在这一日，他父亲田婴不肯养。」",
     "links": [38]
@@ -322,7 +322,7 @@
     "entryID": 39,
     "actorID": "MC24",
     "text": "[panel=1]「琰兒，妳在背什麼？」",
-    "Sequence": "SetPortrait(MC24,pic=2);",
+    "Sequence": "SetPortrait(MC24,pic=2);\nEnableCharacterExpression(1,MC24,Question);",
     "zh_TW": "[panel=1]「琰兒，妳在背什麼？」",
     "zh_CN": "[panel=1]「琰儿，你在背什么？」",
     "links": [40]
@@ -331,7 +331,7 @@
     "entryID": 40,
     "actorID": "MC23",
     "text": "[panel=1]「[em7]把蘭草抱高一點擋住臉[/em7]，我背我自己的書。」",
-    "Sequence": "SetPortrait(MC23,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC23,pic=1);",
     "zh_TW": "[panel=1]「[em7]把蘭草抱高一點擋住臉[/em7]，我背我自己的書。」",
     "zh_CN": "[panel=1]「[em7]把兰草抱高一点挡住脸[/em7]，我背我自己的书。」",
     "links": [41, 42, 43]
@@ -503,7 +503,7 @@
     "entryID": 59,
     "actorID": "MC4",
     "text": "[panel=2]「蔡公修的是史。史上寫的那些怪，也不見誰誅得完。」",
-    "Sequence": "SetPortrait(MC4,pic=5);",
+    "Sequence": "SetPortrait(MC4,pic=5);\nEnableCharacterExpression(2,MC4,Meditate);",
     "zh_TW": "[panel=2]「蔡公修的是史。史上寫的那些怪，也不見誰誅得完。」",
     "zh_CN": "[panel=2]「蔡公修的是史。史上写的那些怪，也不见谁诛得完。」",
     "links": [60]
@@ -511,10 +511,10 @@
   {
     "entryID": 60,
     "actorID": "role2",
-    "text": "[panel=6]＊（兩個人都笑了一下，笑完誰也沒有再往下說。琰兒在旁邊看得眼睛發亮。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（兩個人都笑了一下，笑完誰也沒有再往下說。琰兒在旁邊看得眼睛發亮。）＊",
-    "zh_CN": "[panel=6]＊（两个人都笑了一下，笑完谁也没有再往下说。琰儿在旁边看得眼睛发亮。）＊",
+    "text": "[panel=6]＊（兩個人都笑了一下。琰兒在旁邊看得眼睛發亮。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（兩個人都笑了一下。琰兒在旁邊看得眼睛發亮。）＊",
+    "zh_CN": "[panel=6]＊（两个人都笑了一下。琰儿在旁边看得眼睛发亮。）＊",
     "links": [61]
   },
   {
@@ -530,7 +530,7 @@
     "entryID": 62,
     "actorID": "MC1",
     "text": "「……先生連這個也看？」",
-    "Sequence": "SetPortrait(MC1,pic=4);",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「……先生連這個也看？」",
     "zh_CN": "「……先生连这个也看？」",
     "links": [63]
@@ -539,7 +539,7 @@
     "entryID": 63,
     "actorID": "MC24",
     "text": "[panel=1]「我是不會武的。可是誰身上少了一塊，我看得出來。」",
-    "Sequence": "SetPortrait(MC24,pic=1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「我是不會武的。可是誰身上少了一塊，我看得出來。」",
     "zh_CN": "[panel=1]「我是不会武的。可是谁身上少了一块，我看得出来。」",
     "links": [64, 65, 66]
@@ -594,7 +594,7 @@
     "entryID": 69,
     "actorID": "MC24",
     "text": "[panel=1]「教你的人沒說過？」",
-    "Sequence": "SetPortrait(MC24,pic=4);",
+    "Sequence": "SetPortrait(MC24,pic=4);\nEnableCharacterExpression(1,MC24,Question);",
     "zh_TW": "[panel=1]「教你的人沒說過？」",
     "zh_CN": "[panel=1]「教你的人没说过？」",
     "links": [70]
@@ -603,7 +603,7 @@
     "entryID": 70,
     "actorID": "MC1",
     "text": "「徐師父天天叫我改站姿，我以為他嫌我懶。」",
-    "Sequence": "SetPortrait(MC1,pic=11);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「徐師父天天叫我改站姿，我以為他嫌我懶。」",
     "zh_CN": "「徐师父天天叫我改站姿，我以为他嫌我懒。」",
     "links": [71]
@@ -612,7 +612,7 @@
     "entryID": 71,
     "actorID": "MC24",
     "text": "[panel=1]「現在聽懂了，也還不算晚。」",
-    "Sequence": "SetPortrait(MC24,pic=1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC24,pic=1);",
     "zh_TW": "[panel=1]「現在聽懂了，也還不算晚。」",
     "zh_CN": "[panel=1]「现在听懂了，也还不算晚。」",
     "links": [72]
@@ -675,7 +675,7 @@
     "entryID": 78,
     "actorID": "MC23",
     "text": "[panel=1]「爹！你又這樣！人家話都還沒說完呢！」",
-    "Sequence": "SetPortrait(MC23,pic=2);",
+    "Sequence": "SetPortrait(MC23,pic=2);\nEnableCharacterExpression(1,MC23,Anger);",
     "zh_TW": "[panel=1]「爹！你又這樣！人家話都還沒說完呢！」",
     "zh_CN": "[panel=1]「爹！你又这样！人家话都还没说完呢！」",
     "links": [79]
@@ -683,17 +683,17 @@
   {
     "entryID": 79,
     "actorID": "role2",
-    "text": "[panel=6]＊（蔡邕先走了，琰兒沒有立刻跟上——她又從懷裡摸出一冊竹簡，蹲在地上寫了幾個字，寫完才抱著蘭草追出去。）＊",
-    "Sequence": "OpenPanel(1, close);",
-    "zh_TW": "[panel=6]＊（蔡邕先走了，琰兒沒有立刻跟上——她又從懷裡摸出一冊竹簡，蹲在地上寫了幾個字，寫完才抱著蘭草追出去。）＊",
-    "zh_CN": "[panel=6]＊（蔡邕先走了，琰儿没有立刻跟上——她又从怀里摸出一册竹简，蹲在地上写了几个字，写完才抱着兰草追出去。）＊",
+    "text": "[panel=6]＊（蔡邕先走了，琰兒抱著蘭草追了上去。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nOpenPanel(1, close);",
+    "zh_TW": "[panel=6]＊（蔡邕先走了，琰兒抱著蘭草追了上去。）＊",
+    "zh_CN": "[panel=6]＊（蔡邕先走了，琰儿抱着兰草追了上去。）＊",
     "links": [80]
   },
   {
     "entryID": 80,
     "actorID": "MC4",
     "text": "[panel=2]「那位蔡公，眼光可真毒啊。」",
-    "Sequence": "SetPortrait(MC4,pic=1);",
+    "Sequence": "SetPortrait(MC4,pic=1);\nEnableCharacterExpression(2,MC4,Meditate);",
     "zh_TW": "[panel=2]「那位蔡公，眼光可真毒啊。」",
     "zh_CN": "[panel=2]「那位蔡公，眼光可真毒啊。」",
     "links": [81]
@@ -702,7 +702,7 @@
     "entryID": 81,
     "actorID": "MC4",
     "text": "[panel=2]「罷了，單子上的藥還沒買齊吧？去吧，過了今日就不是這個藥性——張寧說的。」",
-    "Sequence": "SetPortrait(MC4,pic=5);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC4,pic=5);",
     "zh_TW": "[panel=2]「罷了，單子上的藥還沒買齊吧？去吧，過了今日就不是這個藥性——張寧說的。」",
     "zh_CN": "[panel=2]「罢了，单子上的药还没买齐吧？去吧，过了今日就不是这个药性——张宁说的。」",
     "links": [82]

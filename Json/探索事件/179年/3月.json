@@ -2,11 +2,11 @@
   {
     "entryID": 65,
     "actorID": "role2",
-    "text": "[panel=6]＊（你來到後山，卻見童淵並未練槍，而是一臉苦惱地撫摸著他的槍桿，不住地嘆氣。）＊",
+    "text": "[panel=6]＊（你來到後山時，童淵正摸著他的槍桿，不住地嘆氣。）＊",
     "Sequence": "EnableDialogueBG(TrainingGround);\nSetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_19);",
     "Description": "播放音樂",
-    "zh_TW": "[panel=6]＊（你來到後山，卻見童淵並未練槍，而是一臉苦惱地撫摸著他的槍桿，不住地嘆氣。）＊",
-    "zh_CN": "[panel=6]＊（你来到后山，却见童渊并未练枪，而是一脸苦恼地抚摸着他的枪杆，不住地叹气。）＊",
+    "zh_TW": "[panel=6]＊（你來到後山時，童淵正摸著他的槍桿，不住地嘆氣。）＊",
+    "zh_CN": "[panel=6]＊（你来到后山时，童渊正摸着他的枪杆，不住地叹气。）＊",
     "links": [66]
   },
   {
@@ -308,19 +308,19 @@
   {
     "entryID": 100,
     "actorID": "role2",
-    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
+    "text": "[panel=6]＊（這倒是給你提了個醒：若想博得老闆娘青睞，日後行事須把俠義二字放在心上。）＊",
     "Sequence": "DisableCharacterExpression(0);\nDisableDialogueBG();",
-    "zh_TW": "[panel=6]＊（原來這位一枝花老闆娘鍾情俠義之士！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
-    "zh_CN": "[panel=6]＊（原来这位一枝花老板娘钟情侠义之士！这倒是给你提了个醒，若想博其青睐，日后行事须把侠义二字放在心上，成算便多几分。）＊",
+    "zh_TW": "[panel=6]＊（這倒是給你提了個醒：若想博得老闆娘青睞，日後行事須把俠義二字放在心上。）＊",
+    "zh_CN": "[panel=6]＊（这倒是给你提了个醒：若想博得老板娘青睐，日后行事须把侠义二字放在心上。）＊",
     "links": [113]
   },
   {
     "entryID": 101,
     "actorID": "MC1",
-    "text": "「這樣啊…那好吧，不為難小二哥了。」",
+    "text": "「這樣啊…小二哥莫怪，是在下禮數不周。」",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11)\n;EnableCharacterExpression(0,Player,Pain);",
-    "zh_TW": "「這樣啊…那好吧，不為難小二哥了。」",
-    "zh_CN": "「这样啊…那好吧，不为难小二哥了。」",
+    "zh_TW": "「這樣啊…小二哥莫怪，是在下禮數不周。」",
+    "zh_CN": "「这样啊…小二哥莫怪，是在下礼数不周。」",
     "links": [108]
   },
   {
@@ -354,10 +354,10 @@
   {
     "entryID": 105,
     "actorID": "role2",
-    "text": "[panel=6]＊（原來這位一枝花老闆娘鍾情[em2]俠義之士[/em2]！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
+    "text": "[panel=6]＊（這倒是給你提了個醒：若想博得老闆娘青睞，日後行事須把[em2]俠義[/em2]二字放在心上。）＊",
     "Sequence": "DisableCharacterExpression(0);",
-    "zh_TW": "[panel=6]＊（原來這位一枝花老闆娘鍾情[em2]俠義之士[/em2]！這倒是給你提了個醒，若想博其青睞，日後行事須把俠義二字放在心上，成算便多幾分。）＊",
-    "zh_CN": "[panel=6]＊（原来这位一枝花老板娘钟情[em2]侠义之士[/em2]！这倒是给你提了个醒，若想博其青睐，日后行事须把侠义二字放在心上，成算便多几分。）＊",
+    "zh_TW": "[panel=6]＊（這倒是給你提了個醒：若想博得老闆娘青睞，日後行事須把[em2]俠義[/em2]二字放在心上。）＊",
+    "zh_CN": "[panel=6]＊（这倒是给你提了个醒：若想博得老板娘青睐，日后行事须把[em2]侠义[/em2]二字放在心上。）＊",
     "links": [112]
   },
   {
@@ -382,7 +382,7 @@
     "entryID": 108,
     "actorID": "MC1",
     "text": "[em2][花費50錢][/em2]「小二哥辛苦了，這點小意思不成敬意。」",
-    "Sequence": "ModifyData(Coin,MC1,-50);",
+    "Sequence": "",
     "zh_TW": "[em2][花費50錢][/em2]「小二哥辛苦了，這點小意思不成敬意。」",
     "zh_CN": "[em2][花费50钱][/em2]「小二哥辛苦了，这点小意思不成敬意。」",
     "links": [97]
@@ -455,10 +455,10 @@
   {
     "entryID": 2072,
     "actorID": "MC8",
-    "text": "「[em7]撿起布袋，數了數，把銅錢悄悄推過來[/em7]：……表哥。」",
+    "text": "「[em7]把布袋遞過來[/em7]：……表哥。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC8,pic=4);\nEnableCharacterExpression(1,MC8,Meditate)@0.2;\nModifyData(Coin,500);",
     "Description": "給錢",
-    "zh_CN": "「[em7]捡起布袋，数了数，把铜钱悄悄推过来[/em7]：……表哥。」",
+    "zh_CN": "「[em7]把布袋递过来[/em7]：……表哥。」",
     "links": [2087]
   },
   {
@@ -523,10 +523,10 @@
   {
     "entryID": 2086,
     "actorID": "role2",
-    "text": "[panel=6]＊（半晌，他從帽下摸出一隻小布袋，擲到蕭靈犀腳邊。三蛙相視一眼，誰也沒再多說，一齊躍出窗外。）＊",
+    "text": "[panel=6]＊（半晌，他從帽下摸出一隻小布袋，擲到蕭靈犀腳邊。三蛙相視一眼，一齊躍出窗外。）＊",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=8);\nDisableEventBG(FullScreen);",
     "Description": "關閉事件圖",
-    "zh_CN": "[panel=6]＊（半晌，他从帽下摸出一只小布袋，掷到萧灵犀脚边。三蛙相视一眼，谁也没再多说，一齐跃出窗外。）＊",
+    "zh_CN": "[panel=6]＊（半晌，他从帽下摸出一只小布袋，掷到萧灵犀脚边。三蛙相视一眼，一齐跃出窗外。）＊",
     "links": [2072]
   },
   {
@@ -540,11 +540,11 @@
   {
     "entryID": 2088,
     "actorID": "role2",
-    "text": "[panel=6]＊（蛙鳴漸遠。你應了一聲，沒再多問。方才叫到一半的調子，這會兒已經聽不清了。）＊",
+    "text": "[panel=6]＊（蛙鳴漸漸遠了，方才叫到一半的調子，這會兒已經聽不清了。）＊",
     "Sequence": "DisableCharacterExpression(0);",
     "Script": "SetQuestEntryState(\"CF35\", 1, \"success\");\nSetQuestState(\"CF35\", \"success\");",
     "Description": "完成任務",
-    "zh_CN": "[panel=6]＊（蛙鸣渐远。你应了一声，没再多问。方才叫到一半的调子，这会儿已经听不清了。）＊",
+    "zh_CN": "[panel=6]＊（蛙鸣渐渐远了，方才叫到一半的调子，这会儿已经听不清了。）＊",
     "links": [2089]
   },
   {
@@ -645,5 +645,194 @@
     "zh_TW": "「但成與不成，小的可不敢打包票！」",
     "zh_CN": "「但成与不成，小的可不敢打包票！」",
     "links": [93, 96, 106]
+  },
+  {
+    "entryID": 2100,
+    "actorID": "MC1",
+    "title": "老什長的糧帳",
+    "text": "「...」",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Description": "提醒：探險事件觸發條件 IsHidden1 == true（作者在 Unity 事件上掛）",
+    "zh_TW": "「...」",
+    "zh_CN": "「...」",
+    "links": [2101]
+  },
+  {
+    "entryID": 2101,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你和小犀上了後山山道，還沒走到半山，路邊林子裡便鑽出幾個持刀的漢子，把去路堵住了。）＊",
+    "Sequence": "EnableDialogueBG(MountainForest);\nSetPortrait(MC1,pic=1);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_25);",
+    "Description": "開啟背景、播放音樂",
+    "zh_TW": "[panel=6]＊（你和小犀上了後山山道，還沒走到半山，路邊林子裡便鑽出幾個持刀的漢子，把去路堵住了。）＊",
+    "zh_CN": "[panel=6]＊（你和小犀上了后山山道，还没走到半山，路边林子里便钻出几个持刀的汉子，把去路堵住了。）＊",
+    "links": [2102]
+  },
+  {
+    "entryID": 2102,
+    "actorID": "role12",
+    "text": "「此山是我開，此樹是我栽！小子，帶著個丫頭也敢走這條道，混哪路的？」",
+    "Sequence": "",
+    "zh_TW": "「此山是我開，此樹是我栽！小子，帶著個丫頭也敢走這條道，混哪路的？」",
+    "zh_CN": "「此山是我开，此树是我栽！小子，带着个丫头也敢走这条道，混哪路的？」",
+    "links": [2103]
+  },
+  {
+    "entryID": 2103,
+    "actorID": "MC1",
+    "text": "「先別動手，小溪村的村長讓我來討一筆帳，去年冬天那批糧的帳。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「先別動手，小溪村的村長讓我來討一筆帳，去年冬天那批糧的帳。」",
+    "zh_CN": "「先别动手，小溪村的村长让我来讨一笔账，去年冬天那批粮的账。」",
+    "links": [2104]
+  },
+  {
+    "entryID": 2104,
+    "actorID": "role12",
+    "text": "「小溪村的村長……你說的是老什長？他總算肯來討這筆帳了！」",
+    "Sequence": "EnableCharacterExpression(1,role12,Surprise);",
+    "zh_TW": "「小溪村的村長……你說的是老什長？他總算肯來討這筆帳了！」",
+    "zh_CN": "「小溪村的村长……你说的是老什长？他总算肯来讨这笔账了！」",
+    "links": [2105]
+  },
+  {
+    "entryID": 2105,
+    "actorID": "role12",
+    "text": "「回鄉便是逃卒的罪，去年冬天全靠老什長那批糧才熬過來。這些你拿去，就當還他的！」",
+    "Sequence": "DisableCharacterExpression(1);\nModifyData(Coin,800);\nAudioControl(PlaySFXOneShot,Others_GetCoin);",
+    "Description": "給錢",
+    "zh_TW": "「回鄉便是逃卒的罪，去年冬天全靠老什長那批糧才熬過來。這些你拿去，就當還他的！」",
+    "zh_CN": "「回乡便是逃卒的罪，去年冬天全靠老什长那批粮才熬过来。这些你拿去，就当还他的！」",
+    "links": [2111, 2112]
+  },
+  {
+    "entryID": 2106,
+    "actorID": "MC1",
+    "text": "「好，這筆帳就算兩清了。村長那頭，你們可有話要我捎回去？」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_TW": "「好，這筆帳就算兩清了。村長那頭，你們可有話要我捎回去？」",
+    "zh_CN": "「好，这笔账就算两清了。村长那头，你们可有话要我捎回去？」",
+    "links": [2107]
+  },
+  {
+    "entryID": 2107,
+    "actorID": "role12",
+    "text": "「跟老什長說，弟兄們都還活著。往後這條道上，別再報他的名了。」",
+    "Sequence": "",
+    "zh_TW": "「跟老什長說，弟兄們都還活著。往後這條道上，別再報他的名了。」",
+    "zh_CN": "「跟老什长说，弟兄们都还活着。往后这条道上，别再报他的名了。」",
+    "links": [2108]
+  },
+  {
+    "entryID": 2108,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那伙人收了刀，轉身鑽回林子裡，山道上又只剩你和小犀兩個。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（那伙人收了刀，轉身鑽回林子裡，山道上又只剩你和小犀兩個。）＊",
+    "zh_CN": "[panel=6]＊（那伙人收了刀，转身钻回林子里，山道上又只剩你和小犀两个。）＊",
+    "links": [2109]
+  },
+  {
+    "entryID": 2109,
+    "actorID": "MC8",
+    "text": "「山上那一筆，表哥總算討回來了！小犀這就記進帳裡，可不准你拿去亂花！」",
+    "Sequence": "SetPortrait(MC8,pic=5);\nEnableCharacterExpression(1,MC8,Proud);\nModifyData(ChancePoint,1);",
+    "Description": "獲得機會點",
+    "zh_TW": "「山上那一筆，表哥總算討回來了！小犀這就記進帳裡，可不准你拿去亂花！」",
+    "zh_CN": "「山上那一笔，表哥总算讨回来了！小犀这就记进账里，可不准你拿去乱花！」",
+    "links": [2110]
+  },
+  {
+    "entryID": 2110,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nDisableDialogueBG();\nContinue();",
+    "Description": "關閉背景",
+    "links": []
+  },
+  {
+    "entryID": 2111,
+    "actorID": "MC1",
+    "text": "「好，這筆帳算兩清了。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "「好，這筆帳算兩清了。」",
+    "zh_CN": "「好，这笔账算两清了。」",
+    "links": [2106]
+  },
+  {
+    "entryID": 2112,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2]「劫道這營生，別再幹了。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "[em2][口才檢定][/em2]「劫道這營生，別再幹了。」",
+    "zh_CN": "[em2][口才检定][/em2]「劫道这营生，别再干了。」",
+    "links": [2113]
+  },
+  {
+    "entryID": 2113,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,14);",
+    "Description": "口才檢定",
+    "links": [2114]
+  },
+  {
+    "entryID": 2114,
+    "actorID": "MC1",
+    "text": "「你們在這條道上多劫一回，官府便多記一筆，遲早要派兵來剿。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「你們在這條道上多劫一回，官府便多記一筆，遲早要派兵來剿。」",
+    "zh_CN": "「你们在这条道上多劫一回，官府便多记一笔，迟早要派兵来剿。」",
+    "links": [2115]
+  },
+  {
+    "entryID": 2115,
+    "actorID": "MC1",
+    "text": "「到時候查出去年那批糧從哪來，老什長就是通賊，全村都得陪著遭殃。」",
+    "Sequence": "",
+    "zh_TW": "「到時候查出去年那批糧從哪來，老什長就是通賊，全村都得陪著遭殃。」",
+    "zh_CN": "「到时候查出去年那批粮从哪来，老什长就是通贼，全村都得陪着遭殃。」",
+    "links": [2116, 2119]
+  },
+  {
+    "entryID": 2116,
+    "actorID": "role12",
+    "text": "「……弟兄們吃了老什長的糧，總不能再把禍引回他村裡去。」",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,20);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "「……弟兄們吃了老什長的糧，總不能再把禍引回他村裡去。」",
+    "zh_CN": "「……弟兄们吃了老什长的粮，总不能再把祸引回他村里去。」",
+    "links": [2117]
+  },
+  {
+    "entryID": 2117,
+    "actorID": "role12",
+    "text": "「這條道往後不劫了。山裡有獸可獵、有地可墾，餓不死人。」",
+    "Sequence": "",
+    "zh_TW": "「這條道往後不劫了。山裡有獸可獵、有地可墾，餓不死人。」",
+    "zh_CN": "「这条道往后不劫了。山里有兽可猎、有地可垦，饿不死人。」",
+    "links": [2118]
+  },
+  {
+    "entryID": 2118,
+    "actorID": "role12",
+    "text": "「跟老什長說，弟兄們都還活著，往後也不幹這營生了。」",
+    "Sequence": "",
+    "zh_TW": "「跟老什長說，弟兄們都還活著，往後也不幹這營生了。」",
+    "zh_CN": "「跟老什长说，弟兄们都还活着，往后也不干这营生了。」",
+    "links": [2108]
+  },
+  {
+    "entryID": 2119,
+    "actorID": "role12",
+    "text": "「不劫道，山上這麼多張嘴吃什麼？這話你留著，咱們的事不用外人操心。」",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「不劫道，山上這麼多張嘴吃什麼？這話你留著，咱們的事不用外人操心。」",
+    "zh_CN": "「不劫道，山上这么多张嘴吃什么？这话你留着，咱们的事不用外人操心。」",
+    "links": [2106]
   }
 ]

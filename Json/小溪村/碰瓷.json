@@ -69,7 +69,42 @@
     "text": "",
     "Sequence": "Continue();",
     "Conditions": "IsPassFight() == true;",
-    "links": [2036, 2032]
+    "links": [2059]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [2060]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nShowNoviceTeaching(ManualDiceRollEX);\nSetContinueMode(original)@Message(EndTeaching);\nContinue()@Message(EndTeaching);",
+    "Description": "教學",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥，你的骰子又亮了！它可好久沒亮過了！」",
+    "Sequence": "SetPortrait(MC8,pic=2);",
+    "zh_TW": "[panel=2]「表哥，你的骰子又亮了！它可好久沒亮過了！」",
+    "zh_CN": "[panel=2]「表哥，你的骰子又亮了！它可好久没亮过了！」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC1",
+    "text": "「娘留下的這顆不常亮。它肯亮，就代表這事另有轉機，或是還有別的法子。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「娘留下的這顆不常亮。它肯亮，就代表這事另有轉機，或是還有別的法子。」",
+    "zh_CN": "「娘留下的这颗不常亮。它肯亮，就代表这事另有转机，或是还有别的法子。」",
+    "links": [2036, 2032, 2063]
   },
   {
     "entryID": 2036,
@@ -114,6 +149,110 @@
     "zh_TW": "「好啦好啦…我也是沒錢才會這樣啊，我保證下次決不再犯就是了！」",
     "zh_CN": "「好啦好啦…我也是没钱才会这样啊，我保证下次决不再犯就是了！」",
     "links": [2047]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [2064]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,19);",
+    "Description": "威嚇檢定",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "MC1",
+    "text": "「這壺，你在這村裡摔了幾回了？從頭數給我聽，數漏一個，我就把你當這壺，照樣摔碎！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_TW": "「這壺，你在這村裡摔了幾回了？從頭數給我聽，數漏一個，我就把你當這壺，照樣摔碎！」",
+    "zh_CN": "「这壶，你在这村里摔了几回了？从头数给我听，数漏一个，我就把你当这壶，照样摔碎！」",
+    "links": [2066, 2067]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role87",
+    "text": "「幾、幾回小的真記不清了！錢都在這兒，全數奉上，只求好漢饒小的這一回！」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=18);\nModifyData(Coin,50);\nModifyData(FeatExp,Player,Intimidation,30);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、給錢、威嚇經驗增加",
+    "zh_TW": "「幾、幾回小的真記不清了！錢都在這兒，全數奉上，只求好漢饒小的這一回！」",
+    "zh_CN": "「几、几回小的真记不清了！钱都在这儿，全数奉上，只求好汉饶小的这一回！」",
+    "links": [2047]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role2",
+    "text": "[panel=6]＊（這一聲吼出去，蛋頭兩眼一翻，直挺挺倒在他自己那堆碎壺片旁邊。四下圍看的人一下子都靜了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（這一聲吼出去，蛋頭兩眼一翻，直挺挺倒在他自己那堆碎壺片旁邊。四下圍看的人一下子都靜了。）＊",
+    "zh_CN": "[panel=6]＊（这一声吼出去，蛋头两眼一翻，直挺挺倒在他自己那堆碎壶片旁边。四下围看的人一下子都静了。）＊",
+    "links": [2068]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥別理他！剛才壺是假的，這會兒倒地也是假的，他又在演啦！」",
+    "Sequence": "SetPortrait(MC8,pic=9);\nEnableCharacterExpression(2,MC8,Anger_2);",
+    "zh_TW": "[panel=2]「表哥別理他！剛才壺是假的，這會兒倒地也是假的，他又在演啦！」",
+    "zh_CN": "[panel=2]「表哥别理他！刚才壶是假的，这会儿倒地也是假的，他又在演啦！」",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "role2",
+    "text": "[panel=6]＊（人堆裡擠出一個行腳郎中模樣的漢子，青綠長袍敞著襟，頸間一串雜色珠子晃著。小犀話音未落，他已經蹲在蛋頭身邊，兩指探著鼻息。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（人堆裡擠出一個行腳郎中模樣的漢子，青綠長袍敞著襟，頸間一串雜色珠子晃著。小犀話音未落，他已經蹲在蛋頭身邊，兩指探著鼻息。）＊",
+    "zh_CN": "[panel=6]＊（人堆里挤出一个行脚郎中模样的汉子，青绿长袍敞着襟，颈间一串杂色珠子晃着。小犀话音未落，他已经蹲在蛋头身边，两指探着鼻息。）＊",
+    "links": [2070]
+  },
+  {
+    "entryID": 2070,
+    "actorID": "role42",
+    "text": "[panel=1]「小姑娘，這回他可沒在演。都退開些，別擠著他出氣。」",
+    "Sequence": "PlayFeelFeedback(Position,P1,P1_OffScreenPos);\nSetPortrait(MC13,pic=1);",
+    "zh_TW": "[panel=1]「小姑娘，這回他可沒在演。都退開些，別擠著他出氣。」",
+    "zh_CN": "[panel=1]「小姑娘，这回他可没在演。都退开些，别挤着他出气。」",
+    "links": [2071]
+  },
+  {
+    "entryID": 2071,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他掐住蛋頭鼻下，又在背心上拍了一掌。蛋頭咯的一聲回過氣來，還沒坐起身就先叫起疼來。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他掐住蛋頭鼻下，又在背心上拍了一掌。蛋頭咯的一聲回過氣來，還沒坐起身就先叫起疼來。）＊",
+    "zh_CN": "[panel=6]＊（他掐住蛋头鼻下，又在背心上拍了一掌。蛋头咯的一声回过气来，还没坐起身就先叫起疼来。）＊",
+    "links": [2072]
+  },
+  {
+    "entryID": 2072,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥……他剛剛、剛剛是真的沒氣了嗎？」",
+    "Sequence": "SetPortrait(MC8,pic=13);\nEnableCharacterExpression(2,MC8,Nervous_2);",
+    "zh_TW": "[panel=2]「表哥……他剛剛、剛剛是真的沒氣了嗎？」",
+    "zh_CN": "[panel=2]「表哥……他刚刚、刚刚是真的没气了吗？」",
+    "links": [2073]
+  },
+  {
+    "entryID": 2073,
+    "actorID": "role42",
+    "text": "[panel=1]「他這是嚇昏過去的，能回過氣來全靠他命硬。小兄弟，你這一嗓子要是喊在沒郎中的地方，今日就得抬人了。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC13,pic=4);\nSetPortrait(MC1,pic=11);\nModifyData(FavorabilityExp,MC8,-20);\nModifyData(FavorabilityExp,MC13,-20);",
+    "Description": "蕭靈犀好感度下降、張仲景好感度下降",
+    "zh_TW": "[panel=1]「他這是嚇昏過去的，能回過氣來全靠他命硬。小兄弟，你這一嗓子要是喊在沒郎中的地方，今日就得抬人了。」",
+    "zh_CN": "[panel=1]「他这是吓昏过去的，能回过气来全靠他命硬。小兄弟，你这一嗓子要是喊在没郎中的地方，今日就得抬人了。」",
+    "links": [2051]
   },
   {
     "entryID": 2042,

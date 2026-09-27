@@ -261,14 +261,16 @@ def hook_post():
     report, results = run_quiet([fp])
     out = {'hookSpecificOutput': {'hookEventName': 'PostToolUse',
                                   'additionalContext': '【文風節奏檢查】列出來的每一句都要處理掉，或說明為什麼留。\n' + report}}
-    s = summary(results)
-    if s:
-        out['systemMessage'] = '文風節奏檢查 ' + '；'.join(s) + '（已回饋給 Claude）'
+    out['suppressOutput'] = True
     print(json.dumps(out, ensure_ascii=True))
 
 
+STOP_LOG = os.path.join(ROOT, '.claude', '文風節奏檢查報告.txt')   # Stop hook 的結果寫這裡，畫面上不印（2026-09-26 作者裁示）
+
+
 def hook_stop():
-    import subprocess
+    """掃 git 裡改過、還沒 commit 的檔，結果整份寫進 STOP_LOG（每次覆蓋）；stdout 什麼都不印。"""
+    import subprocess, time
     try:
         a = subprocess.run(['git', '-c', 'core.quotepath=false', 'diff', '--name-only', 'HEAD'], cwd=ROOT, capture_output=True).stdout
         b = subprocess.run(['git', '-c', 'core.quotepath=false', 'ls-files', '--others', '--exclude-standard'], cwd=ROOT, capture_output=True).stdout
@@ -279,12 +281,24 @@ def hook_stop():
         line = line.strip()
         if line and watched(os.path.join(ROOT, line)):
             files.append(os.path.join(ROOT, line))
+    stamp = time.strftime('%Y-%m-%d %H:%M')
     if not files:
-        return
-    _, results = run_quiet(files)
-    s = summary(results)
-    if s:
-        print(json.dumps({'systemMessage': '文風節奏檢查（本輪改過、還沒 commit 的檔）：' + '；'.join(s)}, ensure_ascii=True))
+        body = '%s  沒有改過、還沒 commit 的劇情／Json 檔。\n' % stamp
+    else:
+        report, results = run_quiet(files)
+        s = summary(results)
+        head = '%s  掃了 %d 個改過、還沒 commit 的檔' % (stamp, len(files))
+        if s:
+            body = (head + '，%d 個有待處理：\n\n' % len(s) + '\n'.join(s) + '\n\n'
+                    + '=' * 30 + ' 逐句 ' + '=' * 30 + '\n' + report)
+        else:
+            body = head + '，全部乾淨。\n'
+    try:
+        os.makedirs(os.path.dirname(STOP_LOG), exist_ok=True)
+        with open(STOP_LOG, 'w', encoding='utf-8') as f:
+            f.write(body)
+    except Exception:
+        pass
 
 
 if __name__ == '__main__':

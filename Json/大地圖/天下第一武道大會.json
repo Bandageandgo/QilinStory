@@ -1676,8 +1676,20 @@
     "Sequence": "DisableCharacterExpression(1);",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4116
+    ]
+  },
+  {
+    "entryID": 4116,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       434,
-      435
+      435,
+      4117
     ]
   },
   {
@@ -1748,6 +1760,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      704
+    ]
+  },
+  {
+    "entryID": 4117,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4118
+    ]
+  },
+  {
+    "entryID": 4118,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4119
+    ]
+  },
+  {
+    "entryID": 4119,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4120,
+      4123
+    ]
+  },
+  {
+    "entryID": 4120,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,30);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4121
+    ]
+  },
+  {
+    "entryID": 4121,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4122
+    ]
+  },
+  {
+    "entryID": 4122,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      704
+    ]
+  },
+  {
+    "entryID": 4123,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4124
+    ]
+  },
+  {
+    "entryID": 4124,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4125
+    ]
+  },
+  {
+    "entryID": 4125,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4126
+    ]
+  },
+  {
+    "entryID": 4126,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       704
     ]
@@ -1841,8 +1970,20 @@
     "Sequence": "",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4127
+    ]
+  },
+  {
+    "entryID": 4127,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       455,
-      456
+      456,
+      4128
     ]
   },
   {
@@ -1913,6 +2054,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      709
+    ]
+  },
+  {
+    "entryID": 4128,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4129
+    ]
+  },
+  {
+    "entryID": 4129,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4130
+    ]
+  },
+  {
+    "entryID": 4130,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4131,
+      4134
+    ]
+  },
+  {
+    "entryID": 4131,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,30);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4132
+    ]
+  },
+  {
+    "entryID": 4132,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4133
+    ]
+  },
+  {
+    "entryID": 4133,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      709
+    ]
+  },
+  {
+    "entryID": 4134,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4135
+    ]
+  },
+  {
+    "entryID": 4135,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4136
+    ]
+  },
+  {
+    "entryID": 4136,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4137
+    ]
+  },
+  {
+    "entryID": 4137,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       709
     ]
@@ -2106,8 +2364,20 @@
     "Sequence": "",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4138
+    ]
+  },
+  {
+    "entryID": 4138,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       486,
-      487
+      487,
+      4139
     ]
   },
   {
@@ -2178,6 +2448,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      715
+    ]
+  },
+  {
+    "entryID": 4139,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4140
+    ]
+  },
+  {
+    "entryID": 4140,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4141
+    ]
+  },
+  {
+    "entryID": 4141,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4142,
+      4145
+    ]
+  },
+  {
+    "entryID": 4142,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,75);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4143
+    ]
+  },
+  {
+    "entryID": 4143,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4144
+    ]
+  },
+  {
+    "entryID": 4144,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      715
+    ]
+  },
+  {
+    "entryID": 4145,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4146
+    ]
+  },
+  {
+    "entryID": 4146,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4147
+    ]
+  },
+  {
+    "entryID": 4147,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4148
+    ]
+  },
+  {
+    "entryID": 4148,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       715
     ]
@@ -2331,8 +2718,20 @@
     "Sequence": "",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4149
+    ]
+  },
+  {
+    "entryID": 4149,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       513,
-      514
+      514,
+      4150
     ]
   },
   {
@@ -2403,6 +2802,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      720
+    ]
+  },
+  {
+    "entryID": 4150,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4151
+    ]
+  },
+  {
+    "entryID": 4151,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4152
+    ]
+  },
+  {
+    "entryID": 4152,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4153,
+      4156
+    ]
+  },
+  {
+    "entryID": 4153,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,75);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4154
+    ]
+  },
+  {
+    "entryID": 4154,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4155
+    ]
+  },
+  {
+    "entryID": 4155,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      720
+    ]
+  },
+  {
+    "entryID": 4156,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4157
+    ]
+  },
+  {
+    "entryID": 4157,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4158
+    ]
+  },
+  {
+    "entryID": 4158,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4159
+    ]
+  },
+  {
+    "entryID": 4159,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       720
     ]
@@ -2516,8 +3032,20 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4160
+    ]
+  },
+  {
+    "entryID": 4160,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       537,
-      538
+      538,
+      4161
     ]
   },
   {
@@ -2588,6 +3116,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      726
+    ]
+  },
+  {
+    "entryID": 4161,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4162
+    ]
+  },
+  {
+    "entryID": 4162,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4163
+    ]
+  },
+  {
+    "entryID": 4163,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4164,
+      4167
+    ]
+  },
+  {
+    "entryID": 4164,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,75);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4165
+    ]
+  },
+  {
+    "entryID": 4165,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4166
+    ]
+  },
+  {
+    "entryID": 4166,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      726
+    ]
+  },
+  {
+    "entryID": 4167,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4168
+    ]
+  },
+  {
+    "entryID": 4168,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4169
+    ]
+  },
+  {
+    "entryID": 4169,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4170
+    ]
+  },
+  {
+    "entryID": 4170,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       726
     ]
@@ -2701,8 +3346,20 @@
     "Sequence": "",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4171
+    ]
+  },
+  {
+    "entryID": 4171,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       565,
-      566
+      566,
+      4172
     ]
   },
   {
@@ -2751,6 +3408,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      731
+    ]
+  },
+  {
+    "entryID": 4172,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4173
+    ]
+  },
+  {
+    "entryID": 4173,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4174
+    ]
+  },
+  {
+    "entryID": 4174,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4175,
+      4178
+    ]
+  },
+  {
+    "entryID": 4175,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,75);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4176
+    ]
+  },
+  {
+    "entryID": 4176,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4177
+    ]
+  },
+  {
+    "entryID": 4177,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      731
+    ]
+  },
+  {
+    "entryID": 4178,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4179
+    ]
+  },
+  {
+    "entryID": 4179,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4180
+    ]
+  },
+  {
+    "entryID": 4180,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4181
+    ]
+  },
+  {
+    "entryID": 4181,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       731
     ]
@@ -2875,8 +3649,20 @@
     "Sequence": "",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4182
+    ]
+  },
+  {
+    "entryID": 4182,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       590,
-      591
+      591,
+      4183
     ]
   },
   {
@@ -2925,6 +3711,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      743
+    ]
+  },
+  {
+    "entryID": 4183,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4184
+    ]
+  },
+  {
+    "entryID": 4184,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4185
+    ]
+  },
+  {
+    "entryID": 4185,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4186,
+      4189
+    ]
+  },
+  {
+    "entryID": 4186,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,150);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4187
+    ]
+  },
+  {
+    "entryID": 4187,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4188
+    ]
+  },
+  {
+    "entryID": 4188,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      743
+    ]
+  },
+  {
+    "entryID": 4189,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4190
+    ]
+  },
+  {
+    "entryID": 4190,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4191
+    ]
+  },
+  {
+    "entryID": 4191,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4192
+    ]
+  },
+  {
+    "entryID": 4192,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       743
     ]
@@ -3049,8 +3952,20 @@
     "Sequence": "",
     "zh_CN": "「少侠——妥当了么？」",
     "links": [
+      4193
+    ]
+  },
+  {
+    "entryID": 4193,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [
       617,
-      618
+      618,
+      4194
     ]
   },
   {
@@ -3099,6 +4014,123 @@
     "text": "[panel=6]＊（你不多言，抱拳入場。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（你不多言，抱拳入场。）＊",
+    "links": [
+      760
+    ]
+  },
+  {
+    "entryID": 4194,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [
+      4195
+    ]
+  },
+  {
+    "entryID": 4195,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [
+      4196
+    ]
+  },
+  {
+    "entryID": 4196,
+    "actorID": "MC1",
+    "text": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「并州父老！這一陣要是打得不好看，場邊的糖炒栗子，[var=PlayerLastName]某請全場！」",
+    "zh_CN": "「并州父老！这一阵要是打得不好看，场边的糖炒栗子，[var=PlayerLastName]某请全场！」",
+    "links": [
+      4197,
+      4200
+    ]
+  },
+  {
+    "entryID": 4197,
+    "actorID": "role2",
+    "text": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,300);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=6]＊（台下的叫好聲連成了一片，一浪高過一浪地往台上湧。賣糖炒栗子的阿婆擠到台邊，把一包栗子擱上了台板。）＊",
+    "zh_CN": "[panel=6]＊（台下的叫好声连成了一片，一浪高过一浪地往台上涌。卖糖炒栗子的阿婆挤到台边，把一包栗子搁上了台板。）＊",
+    "links": [
+      4198
+    ]
+  },
+  {
+    "entryID": 4198,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "ModifyData(Valuable,Player,SugarRoastedChestnut,5);",
+    "Description": "獲得糖炒栗子",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4199
+    ]
+  },
+  {
+    "entryID": 4199,
+    "actorID": "role134",
+    "text": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "Sequence": "",
+    "zh_TW": "「阿婆話說完就走，錢也不要！這包栗子是押少俠的彩頭——請！」",
+    "zh_CN": "「阿婆话说完就走，钱也不要！这包栗子是押少侠的彩头——请！」",
+    "links": [
+      760
+    ]
+  },
+  {
+    "entryID": 4200,
+    "actorID": "role2",
+    "text": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（賣糖炒栗子的阿婆挎著空竹籃，站到了擂台邊上。她那一籃子的栗子，已經分到了前排看客的手裡。）＊",
+    "zh_CN": "[panel=6]＊（卖糖炒栗子的阿婆挎着空竹篮，站到了擂台边上。她那一篮子的栗子，已经分到了前排看客的手里。）＊",
+    "links": [
+      4201
+    ]
+  },
+  {
+    "entryID": 4201,
+    "actorID": "role5",
+    "text": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百錢。」",
+    "zh_CN": "「[em7]慈祥的笑容，笑道[/em7]：糖炒栗子，一包一百钱。」",
+    "links": [
+      4202
+    ]
+  },
+  {
+    "entryID": 4202,
+    "actorID": "role134",
+    "text": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "Sequence": "",
+    "zh_TW": "「喲，這一陣還沒開打，栗子錢倒先討上門了！阿婆只聽見後半句——少俠，認是不認？」",
+    "zh_CN": "「哟，这一阵还没开打，栗子钱倒先讨上门了！阿婆只听见后半句——少侠，认是不认？」",
+    "links": [
+      4203
+    ]
+  },
+  {
+    "entryID": 4203,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把一籃子栗子的錢付給了阿婆，她臉上的笑容一絲沒變。阿婆挎起空竹籃，慢悠悠地走回了場邊的栗子攤。）＊",
+    "zh_CN": "[panel=6]＊（你把一篮子栗子的钱付给了阿婆，她脸上的笑容一丝没变。阿婆挎起空竹篮，慢悠悠地走回了场边的栗子摊。）＊",
     "links": [
       760
     ]

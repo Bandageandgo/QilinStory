@@ -53,10 +53,10 @@
   {
     "entryID": 2166,
     "actorID": "MC8",
-    "text": "[panel=2]「阿莎姐姐，您西域商道上來回，攤上這件貂裘、還有駱駝絨，雲中可沒幾家見得著。」",
+    "text": "[panel=2]「阿莎姐姐，您這貂裘、駱駝絨，雲中可沒幾家見得著，壓在商隊裡多可惜，交幾件給小犀試試嘛？」",
     "Sequence": "SetPortrait(MC8,pic=1);EnableCharacterExpression(2,MC8,Meditate);",
-    "zh_CN": "[panel=2]「阿莎姐姐，您西域商道上来回，摊上这件貂裘、还有骆驼绒，云中可没几家见得着。」",
-    "links": [2194]
+    "zh_CN": "[panel=2]「阿莎姐姐，您这貂裘、骆驼绒，云中可没几家见得着，压在商队里多可惜，交几件给小犀试试嘛？」",
+    "links": [2167]
   },
   {
     "entryID": 2167,
@@ -173,9 +173,9 @@
   {
     "entryID": 2181,
     "actorID": "role2",
-    "text": "[panel=6]＊（英豪府藥房外。張寧正指揮雜役搬運藥箱，嘴裡還在數藥材名。）＊",
+    "text": "[panel=6]＊（英豪府藥房外，張寧正指揮雜役搬藥箱。）＊",
     "Sequence": "DisableCharacterExpression(2);\nEnableDialogueBG(Houses_ChivalrousDoctor);",
-    "zh_CN": "[panel=6]＊（英豪府药房外。张宁正指挥杂役搬运药箱，嘴里还在数药材名。）＊",
+    "zh_CN": "[panel=6]＊（英豪府药房外，张宁正指挥杂役搬药箱。）＊",
     "links": [2182]
   },
   {
@@ -274,14 +274,6 @@
     "links": [2195]
   },
   {
-    "entryID": 2194,
-    "actorID": "MC8",
-    "text": "[panel=2]「您這貂裘、駱駝絨……雲中江湖人就好這口別處沒有的，壓在商隊裡多可惜，交幾件給小犀試試嘛？」",
-    "Sequence": "SetPortrait(MC8,pic=5);EnableCharacterExpression(2,MC8,Meditate);",
-    "zh_CN": "[panel=2]「您这貂裘、骆驼绒……云中江湖人就好这口别处没有的，压在商队里多可惜，交几件给小犀试试嘛？」",
-    "links": [2167]
-  },
-  {
     "entryID": 2195,
     "actorID": "role2",
     "text": "[panel=6]＊（蒲元的隱密工坊。爐火未熄，牆上掛著幾柄剛出爐的兵器。）＊",
@@ -329,19 +321,19 @@
   {
     "entryID": 2201,
     "actorID": "role2",
-    "text": "[panel=6]＊（她撕下點蛙簿空白頁折成小帳冊，拉著你出門。）＊",
+    "text": "[panel=6]＊（她揣上帳冊，拉著你出了門。）＊",
     "Sequence": "DisableCharacterExpression(1);",
-    "zh_CN": "[panel=6]＊（她撕下点蛙簿空白页折成小帐册，拉着你出门。）＊",
+    "zh_CN": "[panel=6]＊（她揣上帐册，拉着你出了门。）＊",
     "links": [2192]
   },
   {
     "entryID": 2202,
     "actorID": "role2",
     "title": "馬市",
-    "text": "[panel=6]＊（那幾日城裡的皮貨鋪關了一半，馬市上一匹馬的價錢兩天漲了三回。人人都在講同一件事，講的人比買馬的人多。）＊",
+    "text": "[panel=6]＊（那幾日城裡的皮貨鋪關了一半，馬市上一匹馬的價錢兩天漲了三回。）＊",
     "Sequence": "EnableDialogueBG(Yunzhong);AudioControl(PlayMusic,BGM_16);AudioControl(PlaySFX,Others_Talking);",
     "Description": "時代事件・馬市：入口。史源＝《後漢書・南匈奴列傳》光和二年張脩擅斬南單于呼徵、更立羌渠",
-    "zh_CN": "[panel=6]＊（那几日城里的皮货铺关了一半，马市上一匹马的价钱两天涨了三回。人人都在讲同一件事，讲的人比买马的人多。）＊",
+    "zh_CN": "[panel=6]＊（那几日城里的皮货铺关了一半，马市上一匹马的价钱两天涨了三回。）＊",
     "links": [2203]
   },
   {
@@ -453,9 +445,9 @@
   {
     "entryID": 2216,
     "actorID": "role2",
-    "text": "[panel=6]＊（回客棧的路上，小犀走一路數一路。你聽見她把「三年」兩個字念了好幾遍，像在記一個往後才用得著的價錢。）＊",
+    "text": "[panel=6]＊（回客棧的路上，小犀一路掐著指頭在算。）＊",
     "Sequence": "",
-    "zh_CN": "[panel=6]＊（回客栈的路上，小犀走一路数一路。你听见她把「三年」两个字念了好几遍，像在记一个往后才用得着的价钱。）＊",
+    "zh_CN": "[panel=6]＊（回客栈的路上，小犀一路掐着指头在算。）＊",
     "links": [2217]
   },
   {

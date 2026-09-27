@@ -526,7 +526,7 @@
     "Sequence": "SetPortrait(MC22,pic=7);",
     "zh_TW": "「哇！小道士你閉嘴！再胡說我就拿你試劍！」",
     "zh_CN": "「哇！小道士你闭嘴！再胡说我就拿你试剑！」",
-    "links": [75]
+    "links": [4476, 4478]
   },
   {
     "entryID": 75,
@@ -562,7 +562,7 @@
     "Sequence": "",
     "zh_TW": "「……『哥哥』我收下了，『胖』那個字就免了吧。」",
     "zh_CN": "「……『哥哥』我收下了，『胖』那个字就免了吧。」",
-    "links": [79]
+    "links": [4492, 4495]
   },
   {
     "entryID": 79,
@@ -951,7 +951,7 @@
     "Description": "大廳強制劇情",
     "zh_TW": "「...」",
     "zh_CN": "「...」",
-    "links": [37]
+    "links": [4481, 4489]
   },
   {
     "entryID": 2061,
@@ -2009,7 +2009,7 @@
     "Sequence": "SetPortrait(MC22,pic=1);\nEnableCharacterExpression(2,MC22,Proud);",
     "zh_TW": "[panel=2]「[var=PlayerFirstName]！我就說你命大福大造化大！本姑娘認可的人，哪有那麼容易交代在那種破山洞裡！」",
     "zh_CN": "[panel=2]「[var=PlayerFirstName]！我就说你命大福大造化大！本姑娘认可的人，哪有那么容易交代在那种破山洞里！」",
-    "links": [4363]
+    "links": [4479, 4480]
   },
   {
     "entryID": 4363,
@@ -2101,7 +2101,7 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Nervous);",
     "zh_TW": "[panel=1]「[em7]擺手擺得飛快[/em7]，小事小事！道爺我本來就是靠一張嘴吃飯的——」",
     "zh_CN": "[panel=1]「[em7]摆手摆得飞快[/em7]，小事小事！道爷我本来就是靠一张嘴吃饭的——」",
-    "links": [4375]
+    "links": [4496, 4499]
   },
   {
     "entryID": 4375,
@@ -2202,7 +2202,7 @@
     "Sequence": "SetPortrait(MC22,pic=9);",
     "zh_TW": "[panel=2]「[em7]皺了皺鼻子，沒放手[/em7]，《養煞篇》……飲煞、蓄煞、化形、歸元，四層。這是練功的東西！」",
     "zh_CN": "[panel=2]「[em7]皱了皱鼻子，没放手[/em7]，《养煞篇》……饮煞、蓄煞、化形、归元，四层。这是练功的东西！」",
-    "links": [4387]
+    "links": [4490, 4491]
   },
   {
     "entryID": 4387,
@@ -2238,7 +2238,7 @@
     "Sequence": "SetPortrait(MC22,pic=2);",
     "zh_TW": "[panel=2]「大俠，你別那樣看我。這種東西丟在這兒，下一個進來的撿了去，練出第二頭白虎，你負責？帶回去鎖起來，總比留在這裡強。」",
     "zh_CN": "[panel=2]「大侠，你别那样看我。这种东西丢在这儿，下一个进来的捡了去，练出第二头白虎，你负责？带回去锁起来，总比留在这里强。」",
-    "links": [4393]
+    "links": [4470, 4475]
   },
   {
     "entryID": 4393,
@@ -2687,5 +2687,284 @@
     "text": "",
     "Sequence": "Continue();",
     "links": [4459, 4460]
+  },
+  {
+    "entryID": 4470,
+    "actorID": "MC22",
+    "text": "[panel=2]「等等——以血養身、以煞代氣，頭一層叫飲煞。飲的是煞，那總得先有一件聚著陰氣的東西……」",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(2,MC22,Idea);",
+    "Conditions": "Variable[\"NanaChose1\"] == true;",
+    "zh_TW": "[panel=2]「等等——以血養身、以煞代氣，頭一層叫飲煞。飲的是煞，那總得先有一件聚著陰氣的東西……」",
+    "zh_CN": "[panel=2]「等等——以血养身、以煞代气，头一层叫饮煞。饮的是煞，那总得先有一件聚着阴气的东西……」",
+    "links": [4471]
+  },
+  {
+    "entryID": 4471,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她話還沒說完，就從懷裡摸出了那顆黑珠子。雍仔一看清她手裡拿的是什麼東西，臉色登時就變了。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=6]＊（她話還沒說完，就從懷裡摸出了那顆黑珠子。雍仔一看清她手裡拿的是什麼東西，臉色登時就變了。）＊",
+    "zh_CN": "[panel=6]＊（她话还没说完，就从怀里摸出了那颗黑珠子。雍仔一看清她手里拿的是什么东西，脸色登时就变了。）＊",
+    "links": [4472]
+  },
+  {
+    "entryID": 4472,
+    "actorID": "MC20",
+    "text": "[panel=1]「使不得使不得！那是屍丹——此物陰氣極重，運用不當，恐有奇禍的！」",
+    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Nervous_2);",
+    "zh_TW": "[panel=1]「使不得使不得！那是屍丹——此物陰氣極重，運用不當，恐有奇禍的！」",
+    "zh_CN": "[panel=1]「使不得使不得！那是尸丹——此物阴气极重，运用不当，恐有奇祸的！」",
+    "links": [4473]
+  },
+  {
+    "entryID": 4473,
+    "actorID": "MC22",
+    "text": "[panel=2]「那叫血河舍利！我爹筆記裡提過的至寶，擱在我懷裡一路了。當不當，總得用過才知道。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=8);",
+    "zh_TW": "[panel=2]「那叫血河舍利！我爹筆記裡提過的至寶，擱在我懷裡一路了。當不當，總得用過才知道。」",
+    "zh_CN": "[panel=2]「那叫血河舍利！我爹笔记里提过的至宝，搁在我怀里一路了。当不当，总得用过才知道。」",
+    "links": [4474]
+  },
+  {
+    "entryID": 4474,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她把那顆珠子攥在手心，按在心口上，好一陣子都沒有動。等那隻手再攤開，掌心裡的珠子只剩下一撮黑灰。）＊",
+    "Sequence": "",
+    "Script": "SetQuestState(\"CF05\", \"success\");\nSetQuestEntryState(\"CF05\", 2, \"success\");",
+    "Description": "完成任務：靜觀其變",
+    "zh_TW": "[panel=6]＊（她把那顆珠子攥在手心，按在心口上，好一陣子都沒有動。等那隻手再攤開，掌心裡的珠子只剩下一撮黑灰。）＊",
+    "zh_CN": "[panel=6]＊（她把那颗珠子攥在手心，按在心口上，好一阵子都没有动。等那只手再摊开，掌心里的珠子只剩下一撮黑灰。）＊",
+    "links": [4393]
+  },
+  {
+    "entryID": 4475,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"NanaChose1\"] ~= true;",
+    "links": [4393]
+  },
+  {
+    "entryID": 4476,
+    "actorID": "MC22",
+    "text": "「試劍還早——本姑娘這一個月照著帛上的法子練，一坐就是大半天，哪有空理你。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Conditions": "Variable[\"NanaChose1\"] == true;",
+    "zh_TW": "「試劍還早——本姑娘這一個月照著帛上的法子練，一坐就是大半天，哪有空理你。」",
+    "zh_CN": "「试剑还早——本姑娘这一个月照着帛上的法子练，一坐就是大半天，哪有空理你。」",
+    "links": [4477]
+  },
+  {
+    "entryID": 4477,
+    "actorID": "MC20",
+    "text": "「咳咳……那天在洞裡，道爺可是說過使不得的。」",
+    "Sequence": "SetPortrait(MC20,pic=1);",
+    "zh_TW": "「咳咳……那天在洞裡，道爺可是說過使不得的。」",
+    "zh_CN": "「咳咳……那天在洞里，道爷可是说过使不得的。」",
+    "links": [75]
+  },
+  {
+    "entryID": 4478,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"NanaChose1\"] ~= true;",
+    "links": [75]
+  },
+  {
+    "entryID": 4479,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她一手還端著那碗藥，懷裡露出了半截捲著的帛。帛上的字是暗紅的，你在趙王洞的祭壇上見過。）＊",
+    "Sequence": "DisableCharacterExpression(2);",
+    "Conditions": "Variable[\"NanaChose1\"] == true;",
+    "zh_TW": "[panel=6]＊（她一手還端著那碗藥，懷裡露出了半截捲著的帛。帛上的字是暗紅的，你在趙王洞的祭壇上見過。）＊",
+    "zh_CN": "[panel=6]＊（她一手还端着那碗药，怀里露出了半截卷着的帛。帛上的字是暗红的，你在赵王洞的祭坛上见过。）＊",
+    "links": [4363]
+  },
+  {
+    "entryID": 4480,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"NanaChose1\"] ~= true;",
+    "links": [4363]
+  },
+  {
+    "entryID": 4481,
+    "actorID": "MC20",
+    "text": "[panel=1]「各位好漢，萬事好商量！道爺我這身肉又酸又柴，吃了傷胃，不如放了我，咱們交個朋友？」",
+    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Nervous_2);\nAudioControl(PauseLowerMusic);\nAudioControl(PlayMusic,BGM_13);",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
+    "Description": "播放音樂",
+    "zh_TW": "[panel=1]「各位好漢，萬事好商量！道爺我這身肉又酸又柴，吃了傷胃，不如放了我，咱們交個朋友？」",
+    "zh_CN": "[panel=1]「各位好汉，万事好商量！道爷我这身肉又酸又柴，吃了伤胃，不如放了我，咱们交个朋友？」",
+    "links": [4482]
+  },
+  {
+    "entryID": 4482,
+    "actorID": "role2",
+    "text": "[panel=6]＊（守在祭壇邊的一個教眾聽得不耐煩，從他懷裡掏出一顆黑色珠子。那顆珠子，正是古墓裡你交給他收著的那一顆。那人看都沒多看一眼，抬手就把它塞進了他的嘴裡。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（守在祭壇邊的一個教眾聽得不耐煩，從他懷裡掏出一顆黑色珠子。那顆珠子，正是古墓裡你交給他收著的那一顆。那人看都沒多看一眼，抬手就把它塞進了他的嘴裡。）＊",
+    "zh_CN": "[panel=6]＊（守在祭坛边的一个教众听得不耐烦，从他怀里掏出一颗黑色珠子。那颗珠子，正是古墓里你交给他收着的那一颗。那人看都没多看一眼，抬手就把它塞进了他的嘴里。）＊",
+    "links": [4483]
+  },
+  {
+    "entryID": 4483,
+    "actorID": "MC20",
+    "text": "[panel=1]「唔唔！唔唔唔唔唔——！」",
+    "Sequence": "SetPortrait(MC20,pic=2);\nEnableCharacterExpression(1,MC20,Shock);",
+    "zh_TW": "[panel=1]「唔唔！唔唔唔唔唔——！」",
+    "zh_CN": "[panel=1]「唔唔！唔唔唔唔唔——！」",
+    "links": [4484]
+  },
+  {
+    "entryID": 4484,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那半人半虎的妖物被這陣動靜驚動，咆哮一聲，一爪拍向雍仔面門。祭壇邊的教眾一鬨而散，連滾帶爬地退進了暗處。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nPlayFeelFeedback(CinemachineImpulse,0.5,0.5,1);\nAudioControl(PlaySFX,Others_Roar);",
+    "zh_TW": "[panel=6]＊（那半人半虎的妖物被這陣動靜驚動，咆哮一聲，一爪拍向雍仔面門。祭壇邊的教眾一鬨而散，連滾帶爬地退進了暗處。）＊",
+    "zh_CN": "[panel=6]＊（那半人半虎的妖物被这阵动静惊动，咆哮一声，一爪拍向雍仔面门。祭坛边的教众一哄而散，连滚带爬地退进了暗处。）＊",
+    "links": [4485]
+  },
+  {
+    "entryID": 4485,
+    "actorID": "role2",
+    "text": "[panel=6]＊（赫連娜娜摸出一串銅錢，朝反方向的石壁擲了過去。銅錢撞在石上叮噹亂響，那妖物猛地扭過頭去。）＊",
+    "Sequence": "PlayOrStopParticle(Smoke_Dust,Play);\nAudioControl(PlaySFX,Others_CoinDroping);",
+    "zh_TW": "[panel=6]＊（赫連娜娜摸出一串銅錢，朝反方向的石壁擲了過去。銅錢撞在石上叮噹亂響，那妖物猛地扭過頭去。）＊",
+    "zh_CN": "[panel=6]＊（赫连娜娜摸出一串铜钱，朝反方向的石壁掷了过去。铜钱撞在石上叮当乱响，那妖物猛地扭过头去。）＊",
+    "links": [4486]
+  },
+  {
+    "entryID": 4486,
+    "actorID": "MC22",
+    "text": "[panel=2]「大俠，趁現在，快把那小道士從祭壇上放下來！」",
+    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(2,MC22,Anger_3);",
+    "zh_TW": "[panel=2]「大俠，趁現在，快把那小道士從祭壇上放下來！」",
+    "zh_CN": "[panel=2]「大侠，趁现在，快把那小道士从祭坛上放下来！」",
+    "links": [4487]
+  },
+  {
+    "entryID": 4487,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你搶上前去，一劍挑斷了綁住雍仔的粗繩。他一頭栽下祭壇，捂著喉嚨嗆了好幾聲，嘴裡已經空了。）＊",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC1,pic=2);\nEnableCharacterExpression(1,MC20,Pain);\nPlayOrStopParticle(Smoke_Dust,Stop);",
+    "Script": "SetQuestState(\"CF05\", \"success\");\nSetQuestEntryState(\"CF05\", 1, \"success\");",
+    "Description": "完成任務：靜觀其變",
+    "zh_TW": "[panel=6]＊（你搶上前去，一劍挑斷了綁住雍仔的粗繩。他一頭栽下祭壇，捂著喉嚨嗆了好幾聲，嘴裡已經空了。）＊",
+    "zh_CN": "[panel=6]＊（你抢上前去，一剑挑断了绑住雍仔的粗绳。他一头栽下祭坛，捂着喉咙呛了好几声，嘴里已经空了。）＊",
+    "links": [4488]
+  },
+  {
+    "entryID": 4488,
+    "actorID": "MC20",
+    "text": "[panel=1]「咳、咳咳……兄弟，道爺我剛才……好像嚥了個什麼東西下去？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=2);",
+    "zh_TW": "[panel=1]「咳、咳咳……兄弟，道爺我剛才……好像嚥了個什麼東西下去？」",
+    "zh_CN": "[panel=1]「咳、咳咳……兄弟，道爷我刚才……好像咽了个什么东西下去？」",
+    "links": [42]
+  },
+  {
+    "entryID": 4489,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"FatFriendDie\"] ~= false;",
+    "links": [37]
+  },
+  {
+    "entryID": 4490,
+    "actorID": "MC20",
+    "text": "[panel=1]「飲、飲煞？這個飲字……該不會是嚥進肚裡的那個飲吧？」",
+    "Sequence": "SetPortrait(MC20,pic=2);",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
+    "zh_TW": "[panel=1]「飲、飲煞？這個飲字……該不會是嚥進肚裡的那個飲吧？」",
+    "zh_CN": "[panel=1]「饮、饮煞？这个饮字……该不会是咽进肚里的那个饮吧？」",
+    "links": [4387]
+  },
+  {
+    "entryID": 4491,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"FatFriendDie\"] ~= false;",
+    "links": [4387]
+  },
+  {
+    "entryID": 4492,
+    "actorID": "MC20",
+    "text": "「對了，差點忘了正事！給你求的平安符，道爺早就壓在你枕頭底下了。」",
+    "Sequence": "SetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Idea);",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
+    "zh_TW": "「對了，差點忘了正事！給你求的平安符，道爺早就壓在你枕頭底下了。」",
+    "zh_CN": "「对了，差点忘了正事！给你求的平安符，道爷早就压在你枕头底下了。」",
+    "links": [4493]
+  },
+  {
+    "entryID": 4493,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他從你枕下抽出一張黃符，抖開來遞到你眼前。符上的筆畫一道道畫得工整，卻全是烏黑的顏色。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nEnableCharacterExpression(1,MC20,Question);",
+    "Script": "Variable[\"＿＿\"] = true;",
+    "Description": "變數更新",
+    "zh_TW": "[panel=6]＊（他從你枕下抽出一張黃符，抖開來遞到你眼前。符上的筆畫一道道畫得工整，卻全是烏黑的顏色。）＊",
+    "zh_CN": "[panel=6]＊（他从你枕下抽出一张黄符，抖开来递到你眼前。符上的笔画一道道画得工整，却全是乌黑的颜色。）＊",
+    "links": [4494]
+  },
+  {
+    "entryID": 4494,
+    "actorID": "MC20",
+    "text": "「怪了，道爺使的明明是硃砂，這一個月畫出來全是黑的。許是祖師爺嫌紅的太招搖？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);",
+    "zh_TW": "「怪了，道爺使的明明是硃砂，這一個月畫出來全是黑的。許是祖師爺嫌紅的太招搖？」",
+    "zh_CN": "「怪了，道爷使的明明是朱砂，这一个月画出来全是黑的。许是祖师爷嫌红的太招摇？」",
+    "links": [79]
+  },
+  {
+    "entryID": 4495,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"FatFriendDie\"] ~= false;",
+    "links": [79]
+  },
+  {
+    "entryID": 4496,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他說著從袖裡摸出一張黃紙，蘸著硃砂畫了一道符。等那道符畫成，紙上的一筆一畫卻全是烏黑的顏色。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Surprise);",
+    "Conditions": "Variable[\"FatFriendDie\"] == false;",
+    "Script": "Variable[\"＿＿\"] = true;",
+    "Description": "變數更新",
+    "zh_TW": "[panel=6]＊（他說著從袖裡摸出一張黃紙，蘸著硃砂畫了一道符。等那道符畫成，紙上的一筆一畫卻全是烏黑的顏色。）＊",
+    "zh_CN": "[panel=6]＊（他说着从袖里摸出一张黄纸，蘸着朱砂画了一道符。等那道符画成，纸上的一笔一画却全是乌黑的颜色。）＊",
+    "links": [4497]
+  },
+  {
+    "entryID": 4497,
+    "actorID": "MC20",
+    "text": "[panel=1]「嘿！畫、畫出來了！姑娘妳瞧，老天爺這不是賞臉了嗎？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC20,pic=1);\nEnableCharacterExpression(1,MC20,Proud);",
+    "zh_TW": "[panel=1]「嘿！畫、畫出來了！姑娘妳瞧，老天爺這不是賞臉了嗎？」",
+    "zh_CN": "[panel=1]「嘿！画、画出来了！姑娘你瞧，老天爷这不是赏脸了吗？」",
+    "links": [4498]
+  },
+  {
+    "entryID": 4498,
+    "actorID": "MC6",
+    "text": "[panel=2]「高興什麼，手伸過來，我再給你把一次脈。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=2]「高興什麼，手伸過來，我再給你把一次脈。」",
+    "zh_CN": "[panel=2]「高兴什么，手伸过来，我再给你把一次脉。」",
+    "links": [80]
+  },
+  {
+    "entryID": 4499,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "Variable[\"FatFriendDie\"] ~= false;",
+    "links": [4375]
   }
 ]

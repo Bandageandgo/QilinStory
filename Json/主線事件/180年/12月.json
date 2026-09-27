@@ -239,10 +239,10 @@
   {
     "entryID": 27,
     "actorID": "MC1",
-    "text": "「這……我爹是個為了招待朋友，連自家唯一的耕牛都敢宰的人。最是隨心所欲的一個豪俠……怎麼會是校尉？」",
+    "text": "「這……我爹是個隨心所欲的豪俠……怎麼會是校尉？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=9);SetPortrait(MC2,pic=4);",
-    "zh_TW": "「這……我爹是個為了招待朋友，連自家唯一的耕牛都敢宰的人。最是隨心所欲的一個豪俠……怎麼會是校尉？」",
-    "zh_CN": "「这……我爹是个为了招待朋友，连自家唯一的耕牛都敢宰的人。最是随心所欲的一个豪侠……怎么会是校尉？」",
+    "zh_TW": "「這……我爹是個隨心所欲的豪俠……怎麼會是校尉？」",
+    "zh_CN": "「这……我爹是个随心所欲的豪侠……怎么会是校尉？」",
     "links": [28]
   },
   {
@@ -644,10 +644,10 @@
   {
     "entryID": 70,
     "actorID": "MC4",
-    "text": "[panel=5]「[em7]沒有看你，話是對著董卓說的[/em7]，校尉遠道而來，先坐下說話罷。」",
+    "text": "[panel=5]「校尉遠道而來，先坐下說話罷。」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC4,pic=1);",
-    "zh_TW": "[panel=5]「[em7]沒有看你，話是對著董卓說的[/em7]，校尉遠道而來，先坐下說話罷。」",
-    "zh_CN": "[panel=5]「[em7]没有看你，话是对着董卓说的[/em7]，校尉远道而来，先坐下说话罢。」",
+    "zh_TW": "[panel=5]「校尉遠道而來，先坐下說話罷。」",
+    "zh_CN": "[panel=5]「校尉远道而来，先坐下说话罢。」",
     "links": [71]
   },
   {
@@ -777,7 +777,137 @@
     "Sequence": "SetPortrait(MC12,pic=2);SetPortrait(MC5,pic=1);",
     "zh_TW": "[panel=3]「十餘年尋你，就換來這麼一句胡話？」",
     "zh_CN": "[panel=3]「十余年寻你，就换来这么一句胡话？」",
-    "links": [85]
+    "links": [142]
+  },
+  {
+    "entryID": 142,
+    "actorID": "MC12",
+    "text": "[panel=3]「此事不必再議。西涼路遠，今日便隨為父動身。」",
+    "Sequence": "SetPortrait(MC12,pic=2);EnableCharacterExpression(3,MC12,Anger);",
+    "zh_TW": "[panel=3]「此事不必再議。西涼路遠，今日便隨為父動身。」",
+    "zh_CN": "[panel=3]「此事不必再议。西凉路远，今日便随为父动身。」",
+    "links": [143]
+  },
+  {
+    "entryID": 143,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他一把扣住你的手腕，轉身就往演武場的大門走。那隻手扣得極沉，你整個人被他拖著往前走了幾步。）＊",
+    "Sequence": "DisableCharacterExpression(3);OpenPanel(5, close);",
+    "Description": "清除立繪",
+    "zh_TW": "[panel=6]＊（他一把扣住你的手腕，轉身就往演武場的大門走。那隻手扣得極沉，你整個人被他拖著往前走了幾步。）＊",
+    "zh_CN": "[panel=6]＊（他一把扣住你的手腕，转身就往演武场的大门走。那只手扣得极沉，你整个人被他拖着往前走了几步。）＊",
+    "links": [144]
+  },
+  {
+    "entryID": 144,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [145, 146]
+  },
+  {
+    "entryID": 145,
+    "actorID": "MC1",
+    "text": "[em2][內功檢定][/em2][em3]置之死地，而後生[/em3]",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "[em2][內功檢定][/em2][em3]置之死地，而後生[/em3]",
+    "zh_CN": "[em2][内功检定][/em2][em3]置之死地，而后生[/em3]",
+    "links": [147]
+  },
+  {
+    "entryID": 146,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": [151]
+  },
+  {
+    "entryID": 147,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,QiCheck,18);",
+    "Description": "內功檢定",
+    "links": [148]
+  },
+  {
+    "entryID": 148,
+    "actorID": "MC1",
+    "text": "「爹，這一趟我不跟您走。您真要帶我回西涼，就跟小時候一樣，把我扛在肩上帶回去。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「爹，這一趟我不跟您走。您真要帶我回西涼，就跟小時候一樣，把我扛在肩上帶回去。」",
+    "zh_CN": "「爹，这一趟我不跟您走。您真要带我回西凉，就跟小时候一样，把我扛在肩上带回去。」",
+    "links": [149, 150]
+  },
+  {
+    "entryID": 149,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他扣著你手腕的那隻手，當著滿場的人又加了一分勁。你兩隻腳陷進沙裡，身子往下一沉，人還站在原地。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Qi,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、內功經驗增加",
+    "zh_TW": "[panel=6]＊（他扣著你手腕的那隻手，當著滿場的人又加了一分勁。你兩隻腳陷進沙裡，身子往下一沉，人還站在原地。）＊",
+    "zh_CN": "[panel=6]＊（他扣着你手腕的那只手，当着满场的人又加了一分劲。你两只脚陷进沙里，身子往下一沉，人还站在原地。）＊",
+    "links": [81]
+  },
+  {
+    "entryID": 150,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();ModifyData(Coin,-200);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗、扣錢",
+    "links": [151]
+  },
+  {
+    "entryID": 151,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他一路把你帶到了演武場的大門口，手還扣著。小犀抱著那疊帳冊從場邊追過來，跟在你們後頭。）＊",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "[panel=6]＊（他一路把你帶到了演武場的大門口，手還扣著。小犀抱著那疊帳冊從場邊追過來，跟在你們後頭。）＊",
+    "zh_CN": "[panel=6]＊（他一路把你带到了演武场的大门口，手还扣着。小犀抱着那叠帐册从场边追过来，跟在你们后头。）＊",
+    "links": [152]
+  },
+  {
+    "entryID": 152,
+    "actorID": "MC5",
+    "text": "[panel=5]「小子，到了西涼也是卯時照練，別給為師丟人。」",
+    "Sequence": "SetPortrait(MC5,pic=3);",
+    "zh_TW": "[panel=5]「小子，到了西涼也是卯時照練，別給為師丟人。」",
+    "zh_CN": "[panel=5]「小子，到了西凉也是卯时照练，别给为师丢人。」",
+    "links": [153]
+  },
+  {
+    "entryID": 153,
+    "actorID": "MC12",
+    "text": "[panel=3]「西涼的馬快，草場也寬。到了那裡，為父親自教你左右開弓。」",
+    "Sequence": "SetPortrait(MC12,pic=5);EnableCharacterExpression(3,MC12,Proud);",
+    "zh_TW": "[panel=3]「西涼的馬快，草場也寬。到了那裡，為父親自教你左右開弓。」",
+    "zh_CN": "[panel=3]「西凉的马快，草场也宽。到了那里，为父亲自教你左右开弓。」",
+    "links": [154]
+  },
+  {
+    "entryID": 154,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那年冬天，你和小犀跟著董卓的人馬一路去了西涼。往後許多年，你聽到的江湖，都是營火邊別人講的故事。）＊",
+    "Sequence": "DisableCharacterExpression(3);OpenPanel(5, close);",
+    "Description": "清除立繪",
+    "zh_TW": "[panel=6]＊（那年冬天，你和小犀跟著董卓的人馬一路去了西涼。往後許多年，你聽到的江湖，都是營火邊別人講的故事。）＊",
+    "zh_CN": "[panel=6]＊（那年冬天，你和小犀跟着董卓的人马一路去了西凉。往后许多年，你听到的江湖，都是营火边别人讲的故事。）＊",
+    "links": [155]
+  },
+  {
+    "entryID": 155,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);PlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);DisableAllCharacterExpression()@1;OpenPanel(0, close)@1;OpenPanel(2, close)@1;OpenPanel(3, close)@1;OpenPanel(5, close)@1;DisableDialogueBG()@1;ShowEnding(Ending_1)@1;SetContinueMode(original)@2.5;Continue()@2.5;",
+    "Description": "轉場、清除立繪、關閉背景、結局",
+    "links": []
   },
   {
     "entryID": 85,
@@ -886,7 +1016,7 @@
     "Sequence": "SetPortrait(MC12,pic=2);",
     "zh_TW": "[panel=3]「就這點道行，也敢與董某談條件？照理，你該隨為父回去才是……」",
     "zh_CN": "[panel=3]「就这点道行，也敢与董某谈条件？照理，你该随为父回去才是……」",
-    "links": [97]
+    "links": [142]
   },
   {
     "entryID": 97,
@@ -900,10 +1030,10 @@
   {
     "entryID": 98,
     "actorID": "role2",
-    "text": "[panel=6]＊（他伸手把你從沙裡拉起來。那一拉的力氣，比方才三招加起來都輕。）＊",
+    "text": "[panel=6]＊（他伸手把你從沙裡拉起來，手勁放得很輕。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（他伸手把你從沙裡拉起來。那一拉的力氣，比方才三招加起來都輕。）＊",
-    "zh_CN": "[panel=6]＊（他伸手把你从沙里拉起来。那一拉的力气，比方才三招加起来都轻。）＊",
+    "zh_TW": "[panel=6]＊（他伸手把你從沙裡拉起來，手勁放得很輕。）＊",
+    "zh_CN": "[panel=6]＊（他伸手把你从沙里拉起来，手劲放得很轻。）＊",
     "links": [99]
   },
   {
@@ -1061,11 +1191,11 @@
   {
     "entryID": 125,
     "actorID": "role2",
-    "text": "[panel=6]＊（他大笑著轉身出了演武場。門外的日頭已經偏西，他的背影走進那片光裡——步伐比來的時候沉穩許多。）＊",
+    "text": "[panel=6]＊（他大笑著轉身，出了演武場的門。）＊",
     "Sequence": "OpenPanel(2,close);\nOpenPanel(3, close);\nOpenPanel(5, close);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_42);\nSetPortrait(MC5,pic=1);",
     "Description": "切換音樂",
-    "zh_TW": "[panel=6]＊（他大笑著轉身出了演武場。門外的日頭已經偏西，他的背影走進那片光裡——步伐比來的時候沉穩許多。）＊",
-    "zh_CN": "[panel=6]＊（他大笑着转身出了演武场。门外的日头已经偏西，他的背影走进那片光里——步伐比来的时候沉稳许多。）＊",
+    "zh_TW": "[panel=6]＊（他大笑著轉身，出了演武場的門。）＊",
+    "zh_CN": "[panel=6]＊（他大笑着转身，出了演武场的门。）＊",
     "links": [126]
   },
   {
@@ -1106,19 +1236,19 @@
   {
     "entryID": 130,
     "actorID": "role2",
-    "text": "[panel=6]＊（場邊什麼時候多了一個人。沒人瞧見他是幾時進來的。那人負手站著，看了半晌才開口。）＊",
+    "text": "[panel=6]＊（場邊不知什麼時候多了一個人，負手站著，看了半晌才開口。）＊",
     "Sequence": "OpenPanel(1, close);\nOpenPanel(2, close);",
-    "zh_TW": "[panel=6]＊（場邊什麼時候多了一個人。沒人瞧見他是幾時進來的。那人負手站著，看了半晌才開口。）＊",
-    "zh_CN": "[panel=6]＊（场边什么时候多了一个人。没人瞧见他是几时进来的。那人负手站着，看了半晌才开口。）＊",
+    "zh_TW": "[panel=6]＊（場邊不知什麼時候多了一個人，負手站著，看了半晌才開口。）＊",
+    "zh_CN": "[panel=6]＊（场边不知什么时候多了一个人，负手站着，看了半晌才开口。）＊",
     "links": [5]
   },
   {
     "entryID": 131,
     "actorID": "role2",
-    "text": "[panel=6]＊（他走了過來，在你面前站住。那雙眼睛把你從頭到腳看過一遍，又回到你的髮上，看了很久。）＊",
+    "text": "[panel=6]＊（他走到你面前，看了你很久。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（他走了過來，在你面前站住。那雙眼睛把你從頭到腳看過一遍，又回到你的髮上，看了很久。）＊",
-    "zh_CN": "[panel=6]＊（他走了过来，在你面前站住。那双眼睛把你从头到脚看过一遍，又回到你的发上，看了很久。）＊",
+    "zh_TW": "[panel=6]＊（他走到你面前，看了你很久。）＊",
+    "zh_CN": "[panel=6]＊（他走到你面前，看了你很久。）＊",
     "links": [21]
   },
   {
@@ -1133,10 +1263,10 @@
   {
     "entryID": 133,
     "actorID": "role2",
-    "text": "[panel=6]＊（廊下一陣急步。小犀抱著一疊帳冊站在場邊，帳冊沒放下，人也沒再往前。）＊",
+    "text": "[panel=6]＊（廊下一陣急步，小犀抱著一疊帳冊趕到場邊。）＊",
     "Sequence": "DisableCharacterExpression(3);SetPortrait(MC8,pic=4);",
-    "zh_TW": "[panel=6]＊（廊下一陣急步。小犀抱著一疊帳冊站在場邊，帳冊沒放下，人也沒再往前。）＊",
-    "zh_CN": "[panel=6]＊（廊下一阵急步。小犀抱着一叠帐册站在场边，帐册没放下，人也没再往前。）＊",
+    "zh_TW": "[panel=6]＊（廊下一陣急步，小犀抱著一疊帳冊趕到場邊。）＊",
+    "zh_CN": "[panel=6]＊（廊下一阵急步，小犀抱着一叠帐册赶到场边。）＊",
     "links": [30]
   },
   {

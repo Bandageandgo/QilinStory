@@ -2,10 +2,10 @@
   {
     "entryID": 24,
     "actorID": "role2",
-    "text": "[panel=6]＊（大樹守衛的氣質截然不同，雖然依然穿著那身奇怪的裝扮，但站姿淵渟嶽峙，眼神清明。）＊",
+    "text": "[panel=6]＊（大樹守衛頭上還扣著那頂破木水桶，人卻站得筆直，穩穩當當。）＊",
     "Sequence": "",
     "Conditions": "CurrentQuestState(\"CF22\") == \"success\";",
-    "zh_CN": "[panel=6]＊（大树守卫的气质截然不同，虽然依然穿着那身奇怪的装扮，但站姿渊渟岳峙，眼神清明。）＊",
+    "zh_CN": "[panel=6]＊（大树守卫头上还扣着那顶破木水桶，人却站得笔直，稳稳当当。）＊",
     "links": [25]
   },
   {
@@ -20,7 +20,7 @@
     "entryID": 26,
     "actorID": "MC22",
     "text": "「小心點，他的氣息……怎麼像換了一個人似的？和之前那股瘋癲勁兒完全不同了。」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,MC22,Question);",
     "zh_CN": "「小心点，他的气息……怎么像换了一个人似的？和之前那股疯癫劲儿完全不同了。」",
     "links": [27]
   },
@@ -28,7 +28,7 @@
     "entryID": 27,
     "actorID": "role133",
     "text": "「少俠，別來無恙。昔日雲中七敗，如當頭棒喝，總算是打醒了我這場荒唐大夢。」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_CN": "「少侠，别来无恙。昔日云中七败，如当头棒喝，总算是打醒了我这场荒唐大梦。」",
     "links": [28]
   },
@@ -52,7 +52,7 @@
     "entryID": 31,
     "actorID": "role133",
     "text": "「哈哈哈！果然沒看錯！剛柔並濟，陰陽相合，這的確是[em2]灼金掌[/em2]與[em2]四神拳[/em2]！」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,role133,Surprise_2);",
     "zh_TW": "「哈哈哈！果然沒看錯！剛柔並濟，陰陽相合，這的確是[em2]灼金掌[/em2]與[em2]四神拳[/em2]！」",
     "zh_CN": "「哈哈哈！果然没看错！刚柔并济，阴阳相合，这的确是[em2]灼金掌[/em2]与[em2]四神拳[/em2]！」",
     "links": [4184]
@@ -95,7 +95,7 @@
     "entryID": 41,
     "actorID": "role133",
     "text": "「哼！是你！別以為上次在雲中是你佔了上風，那分明是風向不對，加上我的老驢打噴嚏！」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "「哼！是你！别以为上次在云中是你占了上风，那分明是风向不对，加上我的老驴打喷嚏！」",
     "links": [4240]
   },
@@ -103,7 +103,7 @@
     "entryID": 42,
     "actorID": "MC1",
     "text": "「好好好。」",
-    "Sequence": "SetPortrait(MC1,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=1);",
     "zh_CN": "「好好好。」",
     "links": []
   },
@@ -122,7 +122,7 @@
     "entryID": 4176,
     "actorID": "MC1",
     "text": "「放馬過來吧！那我也要認真了！」",
-    "Sequence": "SetPortrait(MC1,pic=2);",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "「放馬過來吧！那我也要認真了！」",
     "zh_CN": "「放马过来吧！那我也要认真了！」",
     "links": [4177]
@@ -131,7 +131,7 @@
     "entryID": 4177,
     "actorID": "MC1",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,58);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Sequence": "DisableCharacterExpression(0);\nDisableCharacterExpression(1);\nSetContinueMode(false);\nBeginFight(Combat,58);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥",
     "links": [4178]
   },
@@ -162,7 +162,7 @@
     "entryID": 4181,
     "actorID": "role133",
     "text": "「…容不得你拒絕。」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,role133,Anger);",
     "zh_CN": "「…容不得你拒绝。」",
     "links": [4177]
   },
@@ -187,7 +187,7 @@
     "entryID": 4184,
     "actorID": "role133",
     "text": "「天意，真是天意！沒想到我還能親眼見到這兩門絕學齊聚一人之手！」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「天意，真是天意！沒想到我還能親眼見到這兩門絕學齊聚一人之手！」",
     "zh_CN": "「天意，真是天意！没想到我还能亲眼见到这两门绝学齐聚一人之手！」",
     "links": [32]
@@ -214,7 +214,7 @@
     "entryID": 4187,
     "actorID": "MC1",
     "text": "「前輩……其實，當年二師哥並沒有死在你們手裡。」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「前輩……其實，當年二師哥並沒有死在你們手裡。」",
     "zh_CN": "「前辈……其实，当年二师哥并没有死在你们手里。」",
     "links": [4188]
@@ -241,7 +241,7 @@
     "entryID": 4190,
     "actorID": "role133",
     "text": "「只做兄弟……不再練武……不再練武……」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,role133,Shock);",
     "zh_TW": "「只做兄弟……不再練武……不再練武……」",
     "zh_CN": "「只做兄弟……不再练武……不再练武……」",
     "links": [4191]
@@ -250,7 +250,7 @@
     "entryID": 4191,
     "actorID": "role133",
     "text": "「哈哈哈！好一個不再練武！二師哥啊二師哥，你寧可詐死他鄉、孤獨終老，也不願與我們兄弟相殘。」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_TW": "「哈哈哈！好一個不再練武！二師哥啊二師哥，你寧可詐死他鄉、孤獨終老，也不願與我們兄弟相殘。」",
     "zh_CN": "「哈哈哈！好一个不再练武！二师哥啊二师哥，你宁可诈死他乡、孤独终老，也不愿与我们兄弟相残。」",
     "links": [4237]
@@ -311,7 +311,7 @@
     "entryID": 4198,
     "actorID": "MC1",
     "text": "「前輩，等等！晚輩也願將四神拳的口訣傾囊相授。如此，您也能了卻這樁心事！」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(0,Player,Idea);",
     "zh_TW": "「前輩，等等！晚輩也願將四神拳的口訣傾囊相授。如此，您也能了卻這樁心事！」",
     "zh_CN": "「前辈，等等！晚辈也愿将四神拳的口诀倾囊相授。如此，您也能了却这桩心事！」",
     "links": [4199]
@@ -320,7 +320,7 @@
     "entryID": 4199,
     "actorID": "role133",
     "text": "「[em7] 沉默了片刻，他突然笑了起來，搖了搖頭道[/em7]：\n罷了，罷了……」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「[em7] 沉默了片刻，他突然笑了起來，搖了搖頭道[/em7]：\n罷了，罷了……」",
     "zh_CN": "「[em7] 沉默了片刻，他突然笑了起来，摇了摇头道[/em7]：\n罢了，罢了……」",
     "links": [4200]
@@ -346,10 +346,10 @@
   {
     "entryID": 4202,
     "actorID": "role2",
-    "text": "[panel=6]＊（說罷，他牽起那頭老毛驢，不再回頭，步履輕鬆地轉身離去。願他的背影不再佝僂瘋癲。）＊",
+    "text": "[panel=6]＊（那頂水桶已經摘下來了，他牽著那頭老毛驢，往山裡走遠了。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（說罷，他牽起那頭老毛驢，不再回頭，步履輕鬆地轉身離去。願他的背影不再佝僂瘋癲。）＊",
-    "zh_CN": "[panel=6]＊（说罢，他牵起那头老毛驴，不再回头，步履轻松地转身离去。愿他的背影不再佝偻疯癫。）＊",
+    "zh_TW": "[panel=6]＊（那頂水桶已經摘下來了，他牽著那頭老毛驢，往山裡走遠了。）＊",
+    "zh_CN": "[panel=6]＊（那顶水桶已经摘下来了，他牵着那头老毛驴，往山里走远了。）＊",
     "links": [4203]
   },
   {
@@ -400,7 +400,7 @@
     "entryID": 4210,
     "actorID": "role133",
     "text": "「武道無涯，好自為之。這江湖的紛擾，我已無心再理會，這便退隱山林了。」",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(1);",
     "zh_CN": "「武道无涯，好自为之。这江湖的纷扰，我已无心再理会，这便退隐山林了。」",
     "links": [4216]
   },
@@ -416,7 +416,7 @@
     "entryID": 4219,
     "actorID": "role127",
     "text": "「原來是兄弟啊！非也非也，我等並非來參加遴選，只是像這等英雄雲集的盛會，我們太平道自然也要來走動走動、結交些朋友不是？」",
-    "Sequence": "SetPortrait(role127,pic=1);",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role127,pic=1);",
     "zh_TW": "「原來是兄弟啊！非也非也，我等並非來參加遴選，只是像這等英雄雲集的盛會，我們太平道自然也要來走動走動、結交些朋友不是？」",
     "zh_CN": "「原来是兄弟啊！非也非也，我等并非来参加遴选，只是像这等英雄云集的盛会，我们太平道自然也要来走动走动、结交些朋友不是？」",
     "links": [4220]
@@ -463,7 +463,7 @@
     "entryID": 4224,
     "actorID": "role53",
     "text": "「有意思……雲中這等偏僻之地，竟也藏著這麼多英雄豪傑，倒不枉我跑這一趟。」",
-    "Sequence": "SetPortrait(MC15,pic=3);",
+    "Sequence": "SetPortrait(MC15,pic=3);\nEnableCharacterExpression(1,MC15,Meditate);",
     "zh_CN": "「有意思……云中这等偏僻之地，竟也藏着这么多英雄豪杰，倒不枉我跑这一趟。」",
     "links": [4225]
   },
@@ -471,7 +471,7 @@
     "entryID": 4225,
     "actorID": "role53",
     "text": "「那身形挺拔、英氣逼人的青年，與那神色冷峻、氣息內斂的少俠，皆非池中之物。呵呵，這趟雲中之行，看來會有不少意外之喜。」",
-    "Sequence": "SetPortrait(MC15,pic=4);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC15,pic=4);",
     "zh_CN": "「那身形挺拔、英气逼人的青年，与那神色冷峻、气息内敛的少侠，皆非池中之物。呵呵，这趟云中之行，看来会有不少意外之喜。」",
     "links": []
   },
@@ -553,7 +553,7 @@
     "entryID": 4235,
     "actorID": "MC1",
     "text": "「這不是……大樹哥嗎？你不守你的大樹，怎麼也跑來遴選了？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
+    "Sequence": "SetPortrait(MC1,pic=9);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_CN": "「这不是……大树哥吗？你不守你的大树，怎么也跑来遴选了？」",
     "links": [41]
   },
@@ -561,7 +561,7 @@
     "entryID": 4236,
     "actorID": "MC1",
     "text": "「廖兄？沒想到會在這裡遇見你。破廟一別，近來可好？太平道的人怎麼也對這英豪府的遴選感興趣了？」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Question);",
     "zh_CN": "「廖兄？没想到会在这里遇见你。破庙一别，近来可好？太平道的人怎么也对这英豪府的遴选感兴趣了？」",
     "links": [4219]
   },
@@ -596,7 +596,7 @@
     "entryID": 4240,
     "actorID": "role133",
     "text": "「今日在這，吾定要堂堂正正地擊敗你，讓你見識見識吾的真本事！」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,role133,Anger_2);",
     "zh_CN": "「今日在这，吾定要堂堂正正地击败你，让你见识见识吾的真本事！」",
     "links": [42]
   },
@@ -604,7 +604,7 @@
     "entryID": 4241,
     "actorID": "role133",
     "text": "「還瘋瘋癲癲地成了什麼[em2]大樹守衛[/em2]，在這世間渾渾噩噩地遊蕩……」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,role133,Pain);",
     "zh_TW": "「還瘋瘋癲癲地成了什麼[em2]大樹守衛[/em2]，在這世間渾渾噩噩地遊蕩……」",
     "zh_CN": "「还疯疯癫癫地成了什么[em2]大树守卫[/em2]，在这世间浑浑噩噩地游荡……」",
     "links": [4187]
@@ -631,7 +631,7 @@
     "entryID": 4244,
     "actorID": "role133",
     "text": "「還瘋瘋癲癲地成了什麼[em2]大樹守衛[/em2]，在這世間渾渾噩噩地遊蕩……」",
-    "Sequence": "",
+    "Sequence": "EnableCharacterExpression(1,role133,Pain);",
     "zh_TW": "「還瘋瘋癲癲地成了什麼[em2]大樹守衛[/em2]，在這世間渾渾噩噩地遊蕩……」",
     "zh_CN": "「还疯疯癫癫地成了什么[em2]大树守卫[/em2]，在这世间浑浑噩噩地游荡……」",
     "links": [4210]

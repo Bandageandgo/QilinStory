@@ -533,10 +533,10 @@
   {
     "entryID": 119,
     "actorID": "role2",
-    "text": "[panel=6]＊（散會後，你才踏進廂房，赫連娜娜已經佔了桌邊正位。她先不急著亮那三張紙，反而拿炭筆在桌面中央畫了個歪歪扭扭的圈，寫上「并州」兩字。）＊",
+    "text": "[panel=6]＊（散會後你進了廂房，赫連娜娜已經拿炭筆在桌上畫了個圈，圈裡寫著[em2]并州[/em2]。）＊",
     "Sequence": "DisableCharacterExpression(0);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_30);",
-    "zh_TW": "[panel=6]＊（散會後，你才踏進廂房，赫連娜娜已經佔了桌邊正位。她先不急著亮那三張紙，反而拿炭筆在桌面中央畫了個歪歪扭扭的圈，寫上「并州」兩字。）＊",
-    "zh_CN": "[panel=6]＊（散会后，你才踏进厢房，赫连娜娜已经占了桌边正位。她先不急着亮那三张纸，反而拿炭笔在桌面中央画了个歪歪扭扭的圈，写上「并州」两字。）＊",
+    "zh_TW": "[panel=6]＊（散會後你進了廂房，赫連娜娜已經拿炭筆在桌上畫了個圈，圈裡寫著[em2]并州[/em2]。）＊",
+    "zh_CN": "[panel=6]＊（散会后你进了厢房，赫连娜娜已经拿炭笔在桌上画了个圈，圈里写着[em2]并州[/em2]。）＊",
     "links": [120]
   },
   {
@@ -632,10 +632,10 @@
   {
     "entryID": 130,
     "actorID": "role2",
-    "text": "[panel=6]＊（她這才把那三張紙甩開，分別拍在圈外三個方位：雁門、鄴城、朔方。）＊",
+    "text": "[panel=6]＊（她這才把三張紙甩開，分別拍在圈外三個方位。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（她這才把那三張紙甩開，分別拍在圈外三個方位：雁門、鄴城、朔方。）＊",
-    "zh_CN": "[panel=6]＊（她这才把那三张纸甩开，分别拍在圈外三个方位：雁门、邺城、朔方。）＊",
+    "zh_TW": "[panel=6]＊（她這才把三張紙甩開，分別拍在圈外三個方位。）＊",
+    "zh_CN": "[panel=6]＊（她这才把三张纸甩开，分别拍在圈外三个方位。）＊",
     "links": [131]
   },
   {
@@ -870,15 +870,6 @@
     "Sequence": "",
     "zh_TW": "[panel=3]「哈哈！有錢能使鬼推磨——沒錢，道爺我也得跟著你們推。走吧！」",
     "zh_CN": "[panel=3]「哈哈！有钱能使鬼推磨——没钱，道爷我也得跟着你们推。走吧！」",
-    "links": [157]
-  },
-  {
-    "entryID": 157,
-    "actorID": "role2",
-    "text": "[panel=6]＊（廂房油燈搖晃。并州的大局、雲中的肥肉、三隻伸過來的手——狗頭軍師一層層攤開。接下來，該選哪一步棋，便是你的事了。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（廂房油燈搖晃。并州的大局、雲中的肥肉、三隻伸過來的手——狗頭軍師一層層攤開。接下來，該選哪一步棋，便是你的事了。）＊",
-    "zh_CN": "[panel=6]＊（厢房油灯摇晃。并州的大局、云中的肥肉、三只伸过来的手——狗头军师一层层摊开。接下来，该选哪一步棋，便是你的事了。）＊",
     "links": [158]
   },
   {
@@ -942,6 +933,120 @@
     "Sequence": "",
     "zh_TW": "[panel=1]「赤龍跟甄家都煩他——可煩歸煩，誰都怕他把籌碼押到對面去，只好由他從中撈油水。」",
     "zh_CN": "[panel=1]「赤龙跟甄家都烦他——可烦归烦，谁都怕他把筹码押到对面去，只好由他从中捞油水。」",
+    "links": [171]
+  },
+  {
+    "entryID": 171,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [172, 173, 174]
+  },
+  {
+    "entryID": 172,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2]「他手裡捏著什麼？」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "[em2][謀略檢定][/em2]「他手裡捏著什麼？」",
+    "zh_CN": "[em2][谋略检定][/em2]「他手里捏着什么？」",
+    "links": [175]
+  },
+  {
+    "entryID": 173,
+    "actorID": "MC1",
+    "text": "[em2][謀略檢定][/em2][em3]知其一，不知其二[/em3]",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "[em2][謀略檢定][/em2][em3]知其一，不知其二[/em3]",
+    "zh_CN": "[em2][谋略检定][/em2][em3]知其一，不知其二[/em3]",
+    "links": [179]
+  },
+  {
+    "entryID": 174,
+    "actorID": "MC1",
+    "text": "（不插話，聽她說下去）",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "（不插話，聽她說下去）",
+    "zh_CN": "（不插话，听她说下去）",
+    "links": [148]
+  },
+  {
+    "entryID": 175,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,StrategyCheck,10);",
+    "Description": "謀略檢定",
+    "links": [176]
+  },
+  {
+    "entryID": 176,
+    "actorID": "MC1",
+    "text": "「兩家財大勢大，還得由著他撈油水。他手裡到底捏著什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「兩家財大勢大，還得由著他撈油水。他手裡到底捏著什麼？」",
+    "zh_CN": "「两家财大势大，还得由着他捞油水。他手里到底捏着什么？」",
+    "links": [177, 178]
+  },
+  {
+    "entryID": 177,
+    "actorID": "MC22",
+    "text": "[panel=1]「還能捏著什麼？他那一族的刀和馬。兩邊誰出價高，他就往誰那頭靠一靠。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=1);\nModifyData(FeatExp,Player,Strategy,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、謀略經驗增加",
+    "zh_TW": "[panel=1]「還能捏著什麼？他那一族的刀和馬。兩邊誰出價高，他就往誰那頭靠一靠。」",
+    "zh_CN": "[panel=1]「还能捏着什么？他那一族的刀和马。两边谁出价高，他就往谁那头靠一靠。」",
+    "links": [148]
+  },
+  {
+    "entryID": 178,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nContinue();",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "links": [148]
+  },
+  {
+    "entryID": 179,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,StrategyCheck,18);",
+    "Description": "謀略檢定",
+    "links": [180]
+  },
+  {
+    "entryID": 180,
+    "actorID": "MC1",
+    "text": "「他能兩頭靠，靠的是站在中間。英豪府也坐在交叉點上，又該靠哪一頭？」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Meditate);",
+    "zh_TW": "「他能兩頭靠，靠的是站在中間。英豪府也坐在交叉點上，又該靠哪一頭？」",
+    "zh_CN": "「他能两头靠，靠的是站在中间。英豪府也坐在交叉点上，又该靠哪一头？」",
+    "links": [181, 178]
+  },
+  {
+    "entryID": 181,
+    "actorID": "MC22",
+    "text": "[panel=1]「咦，大俠這一問，倒把本姑娘問醒了——英豪府用不著挑哪一頭，赤龍跟甄家的錢，兩家都拿得。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);\nModifyData(FeatExp,Player,Strategy,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、謀略經驗增加",
+    "zh_TW": "[panel=1]「咦，大俠這一問，倒把本姑娘問醒了——英豪府用不著挑哪一頭，赤龍跟甄家的錢，兩家都拿得。」",
+    "zh_CN": "[panel=1]「咦，大侠这一问，倒把本姑娘问醒了——英豪府用不着挑哪一头，赤龙跟甄家的钱，两家都拿得。」",
+    "links": [182]
+  },
+  {
+    "entryID": 182,
+    "actorID": "MC22",
+    "text": "[panel=1]「兩家都押在英豪府，黑狼就不會只在旁邊看了——他準會自己找上門。三家坐一桌，雲中反倒有機會平衡。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=8);\nModifyData(ChancePoint,1);",
+    "Description": "獲得機會點",
+    "zh_TW": "[panel=1]「兩家都押在英豪府，黑狼就不會只在旁邊看了——他準會自己找上門。三家坐一桌，雲中反倒有機會平衡。」",
+    "zh_CN": "[panel=1]「两家都押在英豪府，黑狼就不会只在旁边看了——他准会自己找上门。三家坐一桌，云中反倒有机会平衡。」",
     "links": [148]
   },
   {

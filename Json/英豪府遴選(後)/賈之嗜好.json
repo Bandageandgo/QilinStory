@@ -294,7 +294,7 @@
     "text": "",
     "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
     "Conditions": "CurrentQuestEntryState(\"CF29\", 3) == \"active\";",
-    "links": [531, 573]
+    "links": [4232, 4239]
   },
   {
     "entryID": 573,
@@ -338,5 +338,80 @@
     "Sequence": "Continue()@Message(EndEntryEvent);",
     "Description": "移動到戶外演出",
     "links": [4230]
+  },
+  {
+    "entryID": 4232,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=1);\nContinue();",
+    "Conditions": "CurrentQuestEntryState(\"CF05\", 3) == \"active\";",
+    "links": [4233, 4234]
+  },
+  {
+    "entryID": 4233,
+    "actorID": "MC4",
+    "text": "「[em7]手上的小刀沒有停[/em7]，閣下這次又是因何而來？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC4,pic=1);",
+    "Conditions": "IsCoinPass(2000) == true;",
+    "zh_TW": "「[em7]手上的小刀沒有停[/em7]，閣下這次又是因何而來？」",
+    "zh_CN": "「[em7]手上的小刀没有停[/em7]，阁下这次又是因何而来？」",
+    "links": [4235, 532, 534]
+  },
+  {
+    "entryID": 4234,
+    "actorID": "MC4",
+    "text": "「[em7]手上的小刀沒有停[/em7]，閣下這次又是因何而來？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nSetPortrait(MC4,pic=1);",
+    "zh_TW": "「[em7]手上的小刀沒有停[/em7]，閣下這次又是因何而來？」",
+    "zh_CN": "「[em7]手上的小刀没有停[/em7]，阁下这次又是因何而来？」",
+    "links": [4235, 534]
+  },
+  {
+    "entryID": 4235,
+    "actorID": "MC1",
+    "text": "晚輩帶了顆珠子來。",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "晚輩帶了顆珠子來。",
+    "zh_CN": "晚辈带了颗珠子来。",
+    "links": [4236]
+  },
+  {
+    "entryID": 4236,
+    "actorID": "MC1",
+    "text": "「晚輩帶了顆珠子來，是從黑血屍身上取的。前輩剖這些怪物，\n為的是知己知彼，想必用得上。」",
+    "Sequence": "SetPortrait(MC1,pic=18);\nModifyData(DnDAlignment,Player,GoodEvil,-0.15);",
+    "Description": "機略提升",
+    "zh_TW": "「晚輩帶了顆珠子來，是從黑血屍身上取的。前輩剖這些怪物，\n為的是知己知彼，想必用得上。」",
+    "zh_CN": "「晚辈带了颗珠子来，是从黑血尸身上取的。前辈剖这些怪物，\n为的是知己知彼，想必用得上。」",
+    "links": [4237]
+  },
+  {
+    "entryID": 4237,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把珠子擱到案上，就放在那幾具剖開的怪物屍首旁邊。賈詡這才放下小刀，把珠子拈到眼前看了許久。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你把珠子擱到案上，就放在那幾具剖開的怪物屍首旁邊。賈詡這才放下小刀，把珠子拈到眼前看了許久。）＊",
+    "zh_CN": "[panel=6]＊（你把珠子搁到案上，就放在那几具剖开的怪物尸首旁边。贾诩这才放下小刀，把珠子拈到眼前看了许久。）＊",
+    "links": [4238]
+  },
+  {
+    "entryID": 4238,
+    "actorID": "MC4",
+    "text": "「賈某素不收禮，這一件，權且收下。」",
+    "Sequence": "SetPortrait(MC4,pic=1);\nEnableCharacterExpression(1,MC4,Meditate);\nModifyData(FeatExp,Player,Realpolitik,150);",
+    "Script": "SetQuestState(\"CF05\", \"success\");\nSetQuestEntryState(\"CF05\", 3, \"success\");",
+    "Description": "獲得厚黑 專長經驗、完成任務：靜觀其變",
+    "zh_TW": "「賈某素不收禮，這一件，權且收下。」",
+    "zh_CN": "「贾某素不收礼，这一件，权且收下。」",
+    "links": [544]
+  },
+  {
+    "entryID": 4239,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestEntryState(\"CF05\", 3) ~= \"active\";",
+    "links": [531, 573]
   }
 ]

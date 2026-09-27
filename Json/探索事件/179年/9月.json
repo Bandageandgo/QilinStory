@@ -16,7 +16,16 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（被毆打的小猴子只能蜷縮在角落，而旁邊插不進隊伍的猴子們，也在一旁叫囂，沒有任何阻止的動作……）＊",
     "zh_CN": "[panel=6]＊（被殴打的小猴子只能蜷缩在角落，而旁边插不进队伍的猴子们，也在一旁叫嚣，没有任何阻止的动作……）＊",
-    "links": [2054, 2055, 2056]
+    "links": [3918]
+  },
+  {
+    "entryID": 3918,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [2054, 2055, 2056, 3919]
   },
   {
     "entryID": 2054,
@@ -121,6 +130,92 @@
     "links": [2060]
   },
   {
+    "entryID": 3919,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項4",
+    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [3920]
+  },
+  {
+    "entryID": 3920,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,20);",
+    "Description": "威嚇檢定",
+    "links": [3921]
+  },
+  {
+    "entryID": 3921,
+    "actorID": "MC1",
+    "text": "「這片山頭今日起歸我管，誰再敢動牠一下，先問過我的拳頭！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_TW": "「這片山頭今日起歸我管，誰再敢動牠一下，先問過我的拳頭！」",
+    "zh_CN": "「这片山头今日起归我管，谁再敢动它一下，先问过我的拳头！」",
+    "links": [3922, 3923]
+  },
+  {
+    "entryID": 3922,
+    "actorID": "role2",
+    "text": "[panel=6]＊（猴群被你這一嗓子鎮住，打小猴子的那幾隻全停了手。領頭的老猴朝你伏了伏身子，便領著整群猴子退進了林子。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=2);\nModifyData(FeatExp,Player,Intimidation,90);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、威嚇經驗增加",
+    "zh_TW": "[panel=6]＊（猴群被你這一嗓子鎮住，打小猴子的那幾隻全停了手。領頭的老猴朝你伏了伏身子，便領著整群猴子退進了林子。）＊",
+    "zh_CN": "[panel=6]＊（猴群被你这一嗓子镇住，打小猴子的那几只全停了手。领头的老猴朝你伏了伏身子，便领着整群猴子退进了林子。）＊",
+    "links": [2060]
+  },
+  {
+    "entryID": 3923,
+    "actorID": "role2",
+    "text": "[panel=6]＊（猴群靜了一陣，便撇下小猴子，全都挨到了你腳邊。領頭的老猴攀上你的肩頭，其餘的猴子在你身上捉起了蝨子。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=9);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=6]＊（猴群靜了一陣，便撇下小猴子，全都挨到了你腳邊。領頭的老猴攀上你的肩頭，其餘的猴子在你身上捉起了蝨子。）＊",
+    "zh_CN": "[panel=6]＊（猴群静了一阵，便撇下小猴子，全都挨到了你脚边。领头的老猴攀上你的肩头，其余的猴子在你身上捉起了虱子。）＊",
+    "links": [3924]
+  },
+  {
+    "entryID": 3924,
+    "actorID": "MC1",
+    "text": "「喂，誰要當你們的猴王了？都給我下去，滾遠些！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger);",
+    "zh_TW": "「喂，誰要當你們的猴王了？都給我下去，滾遠些！」",
+    "zh_CN": "「喂，谁要当你们的猴王了？都给我下去，滚远些！」",
+    "links": [3925]
+  },
+  {
+    "entryID": 3925,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你話音才落，腳邊那些猴子反倒一隻隻挨得更緊了。你往前走了一步，整群猴子也跟著往前挪了一步。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=19);",
+    "zh_TW": "[panel=6]＊（你話音才落，腳邊那些猴子反倒一隻隻挨得更緊了。你往前走了一步，整群猴子也跟著往前挪了一步。）＊",
+    "zh_CN": "[panel=6]＊（你话音才落，脚边那些猴子反倒一只只挨得更紧了。你往前走了一步，整群猴子也跟着往前挪了一步。）＊",
+    "links": [3926]
+  },
+  {
+    "entryID": 3926,
+    "actorID": "MC1",
+    "text": "「罷了罷了，拿去拿去，這串錢賞你們，換我一個清靜！」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Nervous_2);",
+    "zh_TW": "「罷了罷了，拿去拿去，這串錢賞你們，換我一個清靜！」",
+    "zh_CN": "「罢了罢了，拿去拿去，这串钱赏你们，换我一个清静！」",
+    "links": [3927]
+  },
+  {
+    "entryID": 3927,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把那串錢塞進老猴手裡，牠捧著錢從你肩頭跳了下去。整群猴子這才跟著老猴回了林子，角落裡只剩那隻小猴子還縮著。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(Coin,-100);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=6]＊（你把那串錢塞進老猴手裡，牠捧著錢從你肩頭跳了下去。整群猴子這才跟著老猴回了林子，角落裡只剩那隻小猴子還縮著。）＊",
+    "zh_CN": "[panel=6]＊（你把那串钱塞进老猴手里，它捧着钱从你肩头跳了下去。整群猴子这才跟着老猴回了林子，角落里只剩那只小猴子还缩着。）＊",
+    "links": [2060]
+  },
+  {
     "entryID": 2076,
     "actorID": "role2",
     "text": "[panel=6]＊（──行至中途，你聽見耳熟的吱吱聲。）＊",
@@ -169,11 +264,11 @@
   {
     "entryID": 2081,
     "actorID": "role2",
-    "text": "[panel=6]＊（你接受了小猴子的好意，當場一飲而盡。\n甘甜之際，霎時體內有股暖流，四處流竄……）＊",
+    "text": "[panel=6]＊（你當場一飲而盡。\n甘甜之際，霎時體內有股暖流，四處流竄……）＊",
     "Sequence": "ModifyData(FeatExp,Player,Qi,100);\nModifyData(FeatExp,Player,AlcoholTolerance,100);",
     "Description": "獲得專長經驗",
-    "zh_TW": "[panel=6]＊（你接受了小猴子的好意，當場一飲而盡。\n甘甜之際，霎時體內有股暖流，四處流竄……）＊",
-    "zh_CN": "[panel=6]＊（你接受了小猴子的好意，当场一饮而尽。\n甘甜之际，霎时体内有股暖流，四处流窜……）＊",
+    "zh_TW": "[panel=6]＊（你當場一飲而盡。\n甘甜之際，霎時體內有股暖流，四處流竄……）＊",
+    "zh_CN": "[panel=6]＊（你当场一饮而尽。\n甘甜之际，霎时体内有股暖流，四处流窜……）＊",
     "links": [2082]
   },
   {
@@ -291,12 +386,12 @@
   {
     "entryID": 3899,
     "actorID": "role2",
-    "text": "[panel=6]＊（山林恢復了平靜，那隻異色的小猴子早已不知去向。你搖了搖頭，甩去心頭那絲莫名的雜念，轉身返回居所。）＊",
+    "text": "[panel=6]＊（山林恢復了平靜，你轉身回了居所。）＊",
     "Sequence": "DisableEventBG(FullScreen);\nEnableDialogueBG(Forest);",
     "Script": "SetQuestState(\"CF19\", \"active\");",
     "Description": "觸發任務",
-    "zh_TW": "[panel=6]＊（山林恢復了平靜，那隻異色的小猴子早已不知去向。你搖了搖頭，甩去心頭那絲莫名的雜念，轉身返回居所。）＊",
-    "zh_CN": "[panel=6]＊（山林恢复了平静，那只异色的小猴子早已不知去向。你摇了摇头，甩去心头那丝莫名的杂念，转身返回居所。）＊",
+    "zh_TW": "[panel=6]＊（山林恢復了平靜，你轉身回了居所。）＊",
+    "zh_CN": "[panel=6]＊（山林恢复了平静，你转身回了居所。）＊",
     "links": [3898]
   },
   {
