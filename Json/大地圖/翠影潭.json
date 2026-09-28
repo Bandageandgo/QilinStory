@@ -299,14 +299,6 @@
     "links": [2079]
   },
   {
-    "entryID": 2079,
-    "actorID": "MC1",
-    "text": "「難怪老丈要我來看這道痕，得趕緊回去跟他說。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_CN": "「难怪老丈要我来看这道痕，得赶紧回去跟他说。」",
-    "links": [41]
-  },
-  {
     "entryID": 40,
     "actorID": "MC1",
     "text": "「舟還在、刻痕也還在原處，底下卻什麼也沒有。」",
@@ -390,15 +382,6 @@
     "links": [2080]
   },
   {
-    "entryID": 2080,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [53, 2069, 2081]
-  },
-  {
     "entryID": 50,
     "actorID": "MC1",
     "text": "「老丈許久沒下山了吧？如今江湖高手輩出，光英豪府的呂信、子羽兩位，就非常人也！」",
@@ -445,103 +428,6 @@
     "Sequence": "DisableCharacterExpression(0);ModifyData(FeatExp,Player,Persuasion,25);",
     "zh_CN": "「万人敌……这词，我有些日子没听人当真说过了。」",
     "links": [79]
-  },
-  {
-    "entryID": 2081,
-    "actorID": "MC1",
-    "text": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
-    "Sequence": "",
-    "Conditions": "Variable[\"IsHidden4\"] == false;",
-    "Description": "選項3",
-    "zh_TW": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
-    "zh_CN": "[em2][口才检定][/em2][em3]知其一，不知其二[/em3]",
-    "links": [2082]
-  },
-  {
-    "entryID": 2082,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
-    "Description": "口才檢定",
-    "links": [2083]
-  },
-  {
-    "entryID": 2083,
-    "actorID": "MC1",
-    "text": "「如今江湖上，英豪府的呂信、子羽兩位，晚輩是親眼見過的，那才叫真本事！」",
-    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
-    "zh_TW": "「如今江湖上，英豪府的呂信、子羽兩位，晚輩是親眼見過的，那才叫真本事！」",
-    "zh_CN": "「如今江湖上，英豪府的吕信、子羽两位，晚辈是亲眼见过的，那才叫真本事！」",
-    "links": [2084]
-  },
-  {
-    "entryID": 2084,
-    "actorID": "MC1",
-    "text": "「可老丈說打遍天下，總有那麼一回是真認真過的。那一回，老丈對上的是誰？」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=17);",
-    "zh_TW": "「可老丈說打遍天下，總有那麼一回是真認真過的。那一回，老丈對上的是誰？」",
-    "zh_CN": "「可老丈说打遍天下，总有那么一回是真认真过的。那一回，老丈对上的是谁？」",
-    "links": [2085, 2090]
-  },
-  {
-    "entryID": 2085,
-    "actorID": "role139",
-    "text": "「認真的那一回啊……倒沒跟誰比劃。年輕時我一個人進山，去取一個部落首領的首級。」",
-    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice() == true;",
-    "Script": "Variable[\"IsHidden4\"] = true;",
-    "Description": "檢定成功、口才經驗增加、變數更新",
-    "zh_TW": "「認真的那一回啊……倒沒跟誰比劃。年輕時我一個人進山，去取一個部落首領的首級。」",
-    "zh_CN": "「认真的那一回啊……倒没跟谁比划。年轻时我一个人进山，去取一个部落首领的首级。」",
-    "links": [2086]
-  },
-  {
-    "entryID": 2086,
-    "actorID": "role139",
-    "text": "「他身邊人多，劍遞不過去。我便替他們放馬，一放就是一個冬天，放到他們看慣了我。」",
-    "Sequence": "",
-    "zh_TW": "「他身邊人多，劍遞不過去。我便替他們放馬，一放就是一個冬天，放到他們看慣了我。」",
-    "zh_CN": "「他身边人多，剑递不过去。我便替他们放马，一放就是一个冬天，放到他们看惯了我。」",
-    "links": [2087]
-  },
-  {
-    "entryID": 2087,
-    "actorID": "role139",
-    "text": "「[em7]提了提釣線[/em7]，跟這根線一個道理，擱在水裡久了，魚就當它是根草。人看慣了的東西，眼睛就滑過去了。」",
-    "Sequence": "",
-    "zh_TW": "「[em7]提了提釣線[/em7]，跟這根線一個道理，擱在水裡久了，魚就當它是根草。人看慣了的東西，眼睛就滑過去了。」",
-    "zh_CN": "「[em7]提了提钓线[/em7]，跟这根线一个道理，搁在水里久了，鱼就当它是根草。人看惯了的东西，眼睛就滑过去了。」",
-    "links": [2088]
-  },
-  {
-    "entryID": 2088,
-    "actorID": "MC1",
-    "text": "「後來呢？老丈那一劍，遞過去了沒有？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「後來呢？老丈那一劍，遞過去了沒有？」",
-    "zh_CN": "「后来呢？老丈那一剑，递过去了没有？」",
-    "links": [2089]
-  },
-  {
-    "entryID": 2089,
-    "actorID": "role139",
-    "text": "「那一冬，我光顧著山裡那頭，家鄉的事全擱下了。嘿，人老了話就多，扯遠了。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nModifyData(ChancePoint,1);",
-    "Description": "獲得機會點",
-    "zh_TW": "「那一冬，我光顧著山裡那頭，家鄉的事全擱下了。嘿，人老了話就多，扯遠了。」",
-    "zh_CN": "「那一冬，我光顾着山里那头，家乡的事全搁下了。嘿，人老了话就多，扯远了。」",
-    "links": [79]
-  },
-  {
-    "entryID": 2090,
-    "actorID": "role139",
-    "text": "「我那點舊事，有什麼好聽的。倒是你說的那兩位，怎麼個真本事法？」",
-    "Sequence": "",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "zh_TW": "「我那點舊事，有什麼好聽的。倒是你說的那兩位，怎麼個真本事法？」",
-    "zh_CN": "「我那点旧事，有什么好听的。倒是你说的那两位，怎么个真本事法？」",
-    "links": [2060]
   },
   {
     "entryID": 58,
@@ -1151,5 +1037,119 @@
     "Sequence": "",
     "zh_CN": "「[em2]公羊家有言：九世犹可复仇，虽百世可也[/em2]——况在当世？」",
     "links": [2064]
+  },
+  {
+    "entryID": 2079,
+    "actorID": "MC1",
+    "text": "「難怪老丈要我來看這道痕，得趕緊回去跟他說。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「难怪老丈要我来看这道痕，得赶紧回去跟他说。」",
+    "links": [41]
+  },
+  {
+    "entryID": 2080,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [53, 2069, 2081]
+  },
+  {
+    "entryID": 2081,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
+    "Sequence": "",
+    "Conditions": "Variable[\"IsHidden4\"] == false;",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]知其一，不知其二[/em3]",
+    "links": [2082]
+  },
+  {
+    "entryID": 2082,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,25);",
+    "Description": "口才檢定",
+    "links": [2083]
+  },
+  {
+    "entryID": 2083,
+    "actorID": "MC1",
+    "text": "「如今江湖上，英豪府的呂信、子羽兩位，晚輩是親眼見過的，那才叫真本事！」",
+    "Sequence": "SetPortrait(MC1,pic=5);EnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「如今江湖上，英豪府的呂信、子羽兩位，晚輩是親眼見過的，那才叫真本事！」",
+    "zh_CN": "「如今江湖上，英豪府的吕信、子羽两位，晚辈是亲眼见过的，那才叫真本事！」",
+    "links": [2084]
+  },
+  {
+    "entryID": 2084,
+    "actorID": "MC1",
+    "text": "「可老丈說打遍天下，總有那麼一回是真認真過的。那一回，老丈對上的是誰？」",
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC1,pic=17);",
+    "zh_TW": "「可老丈說打遍天下，總有那麼一回是真認真過的。那一回，老丈對上的是誰？」",
+    "zh_CN": "「可老丈说打遍天下，总有那么一回是真认真过的。那一回，老丈对上的是谁？」",
+    "links": [2085, 2090]
+  },
+  {
+    "entryID": 2085,
+    "actorID": "role139",
+    "text": "「認真的那一回啊……倒沒跟誰比劃。年輕時我一個人進山，去取一個部落首領的首級。」",
+    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);",
+    "Conditions": "IsPassDice() == true;",
+    "Script": "Variable[\"IsHidden4\"] = true;",
+    "Description": "檢定成功、口才經驗增加、變數更新",
+    "zh_TW": "「認真的那一回啊……倒沒跟誰比劃。年輕時我一個人進山，去取一個部落首領的首級。」",
+    "zh_CN": "「认真的那一回啊……倒没跟谁比划。年轻时我一个人进山，去取一个部落首领的首级。」",
+    "links": [2086]
+  },
+  {
+    "entryID": 2086,
+    "actorID": "role139",
+    "text": "「他身邊人多，劍遞不過去。我便替他們放馬，一放就是一個冬天，放到他們看慣了我。」",
+    "Sequence": "",
+    "zh_TW": "「他身邊人多，劍遞不過去。我便替他們放馬，一放就是一個冬天，放到他們看慣了我。」",
+    "zh_CN": "「他身边人多，剑递不过去。我便替他们放马，一放就是一个冬天，放到他们看惯了我。」",
+    "links": [2087]
+  },
+  {
+    "entryID": 2087,
+    "actorID": "role139",
+    "text": "「[em7]提了提釣線[/em7]，跟這根線一個道理，擱在水裡久了，魚就當它是根草。人看慣了的東西，眼睛就滑過去了。」",
+    "Sequence": "",
+    "zh_TW": "「[em7]提了提釣線[/em7]，跟這根線一個道理，擱在水裡久了，魚就當它是根草。人看慣了的東西，眼睛就滑過去了。」",
+    "zh_CN": "「[em7]提了提钓线[/em7]，跟这根线一个道理，搁在水里久了，鱼就当它是根草。人看惯了的东西，眼睛就滑过去了。」",
+    "links": [2088]
+  },
+  {
+    "entryID": 2088,
+    "actorID": "MC1",
+    "text": "「後來呢？老丈那一劍，遞過去了沒有？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「後來呢？老丈那一劍，遞過去了沒有？」",
+    "zh_CN": "「后来呢？老丈那一剑，递过去了没有？」",
+    "links": [2089]
+  },
+  {
+    "entryID": 2089,
+    "actorID": "role139",
+    "text": "「那一冬，我光顧著山裡那頭，家鄉的事全擱下了。嘿，人老了話就多，扯遠了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nModifyData(ChancePoint,1);",
+    "Description": "獲得機會點",
+    "zh_TW": "「那一冬，我光顧著山裡那頭，家鄉的事全擱下了。嘿，人老了話就多，扯遠了。」",
+    "zh_CN": "「那一冬，我光顾着山里那头，家乡的事全搁下了。嘿，人老了话就多，扯远了。」",
+    "links": [79]
+  },
+  {
+    "entryID": 2090,
+    "actorID": "role139",
+    "text": "「我那點舊事，有什麼好聽的。倒是你說的那兩位，怎麼個真本事法？」",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「我那點舊事，有什麼好聽的。倒是你說的那兩位，怎麼個真本事法？」",
+    "zh_CN": "「我那点旧事，有什么好听的。倒是你说的那两位，怎么个真本事法？」",
+    "links": [2060]
   }
 ]

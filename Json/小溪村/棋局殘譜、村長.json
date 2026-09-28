@@ -264,110 +264,6 @@
     "links": [2055]
   },
   {
-    "entryID": 2055,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [52, 32, 46, 63, 2056]
-  },
-  {
-    "entryID": 2056,
-    "actorID": "MC1",
-    "text": "[em2][經濟檢定][/em2][em3]知其一，不知其二[/em3]",
-    "Sequence": "",
-    "Description": "選項5",
-    "zh_TW": "[em2][經濟檢定][/em2][em3]知其一，不知其二[/em3]",
-    "zh_CN": "[em2][经济检定][/em2][em3]知其一，不知其二[/em3]",
-    "links": [2057]
-  },
-  {
-    "entryID": 2057,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,18);",
-    "Description": "經濟檢定",
-    "links": [2058]
-  },
-  {
-    "entryID": 2058,
-    "actorID": "MC1",
-    "text": "「村長，這棋譜您收著，錢您看著給。小弟只想換您一句實話。」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "「村長，這棋譜您收著，錢您看著給。小弟只想換您一句實話。」",
-    "zh_CN": "「村长，这棋谱您收着，钱您看着给。小弟只想换您一句实话。」",
-    "links": [2059]
-  },
-  {
-    "entryID": 2059,
-    "actorID": "MC1",
-    "text": "「這盤殘局殺氣重，您鑽研了多日，平日又天天忙著操練。村長早年，是在軍中待過吧？」",
-    "Sequence": "EnableCharacterExpression(0,Player,Question);",
-    "zh_TW": "「這盤殘局殺氣重，您鑽研了多日，平日又天天忙著操練。村長早年，是在軍中待過吧？」",
-    "zh_CN": "「这盘残局杀气重，您钻研了多日，平日又天天忙着操练。村长早年，是在军中待过吧？」",
-    "links": [2060, 2064]
-  },
-  {
-    "entryID": 2060,
-    "actorID": "role112",
-    "text": "「……罷了，這一句老哥賣你。山上那伙人裡，有幾個是老哥早年帶過的兵。」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10);",
-    "Conditions": "IsPassDice() == true;",
-    "Script": "Variable[\"IsHidden1\"] = true;",
-    "Description": "檢定成功、經濟經驗增加、變數更新",
-    "zh_TW": "「……罷了，這一句老哥賣你。山上那伙人裡，有幾個是老哥早年帶過的兵。」",
-    "zh_CN": "「……罢了，这一句老哥卖你。山上那伙人里，有几个是老哥早年带过的兵。」",
-    "links": [2065]
-  },
-  {
-    "entryID": 2065,
-    "actorID": "role112",
-    "text": "「老哥天天練村裡的後生，就怕哪天真得跟他們對上。」",
-    "Sequence": "",
-    "zh_TW": "「老哥天天練村裡的後生，就怕哪天真得跟他們對上。」",
-    "zh_CN": "「老哥天天练村里的后生，就怕哪天真得跟他们对上。」",
-    "links": [2061]
-  },
-  {
-    "entryID": 2061,
-    "actorID": "role112",
-    "text": "「去年冬天他們下山討糧，老哥給了。官府文書一到，這事再提便是通賊，全村跟著遭殃。」",
-    "Sequence": "",
-    "zh_TW": "「去年冬天他們下山討糧，老哥給了。官府文書一到，這事再提便是通賊，全村跟著遭殃。」",
-    "zh_CN": "「去年冬天他们下山讨粮，老哥给了。官府文书一到，这事再提便是通贼，全村跟着遭殃。」",
-    "links": [2062]
-  },
-  {
-    "entryID": 2062,
-    "actorID": "role112",
-    "text": "「棋譜老哥照一百五十錢收。那筆糧的帳，你在山道上撞見他們，報老哥的名去討，討回多少都歸你！」",
-    "Sequence": "",
-    "zh_TW": "「棋譜老哥照一百五十錢收。那筆糧的帳，你在山道上撞見他們，報老哥的名去討，討回多少都歸你！」",
-    "zh_CN": "「棋谱老哥照一百五十钱收。那笔粮的账，你在山道上撞见他们，报老哥的名去讨，讨回多少都归你！」",
-    "links": [2063]
-  },
-  {
-    "entryID": 2063,
-    "actorID": "MC8",
-    "text": "「一百五十錢，小犀先記入帳了！山上那筆，等表哥討回來再記。」",
-    "Sequence": "SetPortrait(MC8,pic=5);",
-    "zh_TW": "「一百五十錢，小犀先記入帳了！山上那筆，等表哥討回來再記。」",
-    "zh_CN": "「一百五十钱，小犀先记入账了！山上那笔，等表哥讨回来再记。」",
-    "links": [61]
-  },
-  {
-    "entryID": 2064,
-    "actorID": "role112",
-    "text": "「哈哈，小兄弟想多了！老哥就是閒不住，活動活動筋骨罷了。倒是拿張棋譜換老哥的話，這價開得可不小。」",
-    "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "zh_TW": "「哈哈，小兄弟想多了！老哥就是閒不住，活動活動筋骨罷了。倒是拿張棋譜換老哥的話，這價開得可不小。」",
-    "zh_CN": "「哈哈，小兄弟想多了！老哥就是闲不住，活动活动筋骨罢了。倒是拿张棋谱换老哥的话，这价开得可不小。」",
-    "links": [59]
-  },
-  {
     "entryID": 32,
     "actorID": "MC1",
     "text": "「村長您別客氣，這棋譜能幫上您，晚輩雙手奉上便是！」",
@@ -905,5 +801,109 @@
     "zh_TW": "「看村長也是愛棋之人，想必能識其價值，不知村長願出何價交換此解法？」",
     "zh_CN": "「看村长也是爱棋之人，想必能识其价值，不知村长愿出何价交换此解法？」",
     "links": [55, 59]
+  },
+  {
+    "entryID": 2055,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [52, 32, 46, 63, 2056]
+  },
+  {
+    "entryID": 2056,
+    "actorID": "MC1",
+    "text": "[em2][經濟檢定][/em2][em3]知其一，不知其二[/em3]",
+    "Sequence": "",
+    "Description": "選項5",
+    "zh_TW": "[em2][經濟檢定][/em2][em3]知其一，不知其二[/em3]",
+    "zh_CN": "[em2][经济检定][/em2][em3]知其一，不知其二[/em3]",
+    "links": [2057]
+  },
+  {
+    "entryID": 2057,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,EconomicDevelopmentCheck,18);",
+    "Description": "經濟檢定",
+    "links": [2058]
+  },
+  {
+    "entryID": 2058,
+    "actorID": "MC1",
+    "text": "「村長，這棋譜您收著，錢您看著給。小弟只想換您一句實話。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「村長，這棋譜您收著，錢您看著給。小弟只想換您一句實話。」",
+    "zh_CN": "「村长，这棋谱您收着，钱您看着给。小弟只想换您一句实话。」",
+    "links": [2059]
+  },
+  {
+    "entryID": 2059,
+    "actorID": "MC1",
+    "text": "「這盤殘局殺氣重，您鑽研了多日，平日又天天忙著操練。村長早年，是在軍中待過吧？」",
+    "Sequence": "EnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「這盤殘局殺氣重，您鑽研了多日，平日又天天忙著操練。村長早年，是在軍中待過吧？」",
+    "zh_CN": "「这盘残局杀气重，您钻研了多日，平日又天天忙着操练。村长早年，是在军中待过吧？」",
+    "links": [2060, 2064]
+  },
+  {
+    "entryID": 2060,
+    "actorID": "role112",
+    "text": "「……罷了，這一句老哥賣你。山上那伙人裡，有幾個是老哥早年帶過的兵。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,EconomicDevelopment,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Script": "Variable[\"IsHidden1\"] = true;",
+    "Description": "檢定成功、經濟經驗增加、變數更新",
+    "zh_TW": "「……罷了，這一句老哥賣你。山上那伙人裡，有幾個是老哥早年帶過的兵。」",
+    "zh_CN": "「……罢了，这一句老哥卖你。山上那伙人里，有几个是老哥早年带过的兵。」",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "role112",
+    "text": "「老哥天天練村裡的後生，就怕哪天真得跟他們對上。」",
+    "Sequence": "",
+    "zh_TW": "「老哥天天練村裡的後生，就怕哪天真得跟他們對上。」",
+    "zh_CN": "「老哥天天练村里的后生，就怕哪天真得跟他们对上。」",
+    "links": [2061]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role112",
+    "text": "「去年冬天他們下山討糧，老哥給了。官府文書一到，這事再提便是通賊，全村跟著遭殃。」",
+    "Sequence": "",
+    "zh_TW": "「去年冬天他們下山討糧，老哥給了。官府文書一到，這事再提便是通賊，全村跟著遭殃。」",
+    "zh_CN": "「去年冬天他们下山讨粮，老哥给了。官府文书一到，这事再提便是通贼，全村跟着遭殃。」",
+    "links": [2062]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "role112",
+    "text": "「棋譜老哥照一百五十錢收。那筆糧的帳，你在山道上撞見他們，報老哥的名去討，討回多少都歸你！」",
+    "Sequence": "",
+    "zh_TW": "「棋譜老哥照一百五十錢收。那筆糧的帳，你在山道上撞見他們，報老哥的名去討，討回多少都歸你！」",
+    "zh_CN": "「棋谱老哥照一百五十钱收。那笔粮的账，你在山道上撞见他们，报老哥的名去讨，讨回多少都归你！」",
+    "links": [2063]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC8",
+    "text": "「一百五十錢，小犀先記入帳了！山上那筆，等表哥討回來再記。」",
+    "Sequence": "SetPortrait(MC8,pic=5);",
+    "zh_TW": "「一百五十錢，小犀先記入帳了！山上那筆，等表哥討回來再記。」",
+    "zh_CN": "「一百五十钱，小犀先记入账了！山上那笔，等表哥讨回来再记。」",
+    "links": [61]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "role112",
+    "text": "「哈哈，小兄弟想多了！老哥就是閒不住，活動活動筋骨罷了。倒是拿張棋譜換老哥的話，這價開得可不小。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「哈哈，小兄弟想多了！老哥就是閒不住，活動活動筋骨罷了。倒是拿張棋譜換老哥的話，這價開得可不小。」",
+    "zh_CN": "「哈哈，小兄弟想多了！老哥就是闲不住，活动活动筋骨罢了。倒是拿张棋谱换老哥的话，这价开得可不小。」",
+    "links": [59]
   }
 ]

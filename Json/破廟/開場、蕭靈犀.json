@@ -666,15 +666,6 @@
     "links": [3587, 3649]
   },
   {
-    "entryID": 3649,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [3616, 3581, 3651, 3657]
-  },
-  {
     "entryID": 3589,
     "actorID": "MC22",
     "text": "[panel=1]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
@@ -682,227 +673,6 @@
     "zh_TW": "[panel=1]「打打殺殺的多不划算！不戰而屈人之兵才是上策！我有一計——讓他們心甘情願替咱們辦事，豈不比直接動手高明多了？」",
     "zh_CN": "[panel=1]「打打杀杀的多不划算！不战而屈人之兵才是上策！我有一计——让他们心甘情愿替咱们办事，岂不比直接动手高明多了？」",
     "links": [3650]
-  },
-  {
-    "entryID": 3650,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [3590, 3597, 3581, 3652, 3658]
-  },
-  {
-    "entryID": 3651,
-    "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
-    "Sequence": "",
-    "Description": "選項3",
-    "zh_TW": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
-    "zh_CN": "[em2][威吓检定][/em2]「就凭你们两个？」",
-    "links": [3653]
-  },
-  {
-    "entryID": 3652,
-    "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
-    "Sequence": "",
-    "Description": "選項4",
-    "zh_TW": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
-    "zh_CN": "[em2][威吓检定][/em2]「就凭你们两个？」",
-    "links": [3653]
-  },
-  {
-    "entryID": 3653,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,10);",
-    "Description": "威嚇檢定",
-    "links": [3654]
-  },
-  {
-    "entryID": 3654,
-    "actorID": "MC1",
-    "text": "「就憑你們兩個，也想攔路要錢？不怕挨拳頭的，儘管上來試試！」",
-    "Sequence": "SetPortrait(MC1,pic=2);",
-    "zh_TW": "「就憑你們兩個，也想攔路要錢？不怕挨拳頭的，儘管上來試試！」",
-    "zh_CN": "「就凭你们两个，也想拦路要钱？不怕挨拳头的，尽管上来试试！」",
-    "links": [3655, 3656]
-  },
-  {
-    "entryID": 3655,
-    "actorID": "role123",
-    "text": "「嘎……今日，下雨！不搶！小的，跑！」",
-    "Sequence": "ModifyData(FeatExp,Player,Intimidation,10);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "檢定成功、威嚇經驗增加",
-    "zh_TW": "「嘎……今日，下雨！不搶！小的，跑！」",
-    "zh_CN": "「嘎……今日，下雨！不抢！小的，跑！」",
-    "links": [3558]
-  },
-  {
-    "entryID": 3656,
-    "actorID": "role123",
-    "text": "「嘎哈哈！嚇唬誰！不留財，就留命！」",
-    "Sequence": "",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "zh_TW": "「嘎哈哈！嚇唬誰！不留財，就留命！」",
-    "zh_CN": "「嘎哈哈！吓唬谁！不留财，就留命！」",
-    "links": [3604]
-  },
-  {
-    "entryID": 3657,
-    "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "Sequence": "",
-    "Description": "選項4",
-    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
-    "links": [3659]
-  },
-  {
-    "entryID": 3658,
-    "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "Sequence": "",
-    "Description": "選項5",
-    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
-    "links": [3659]
-  },
-  {
-    "entryID": 3659,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,20);",
-    "Description": "威嚇檢定",
-    "links": [3660]
-  },
-  {
-    "entryID": 3660,
-    "actorID": "MC1",
-    "text": "「錢一文也沒有，拳頭倒有一雙！誰再往前一步，今夜就燉一鍋狗肉！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_2);",
-    "zh_TW": "「錢一文也沒有，拳頭倒有一雙！誰再往前一步，今夜就燉一鍋狗肉！」",
-    "zh_CN": "「钱一文也没有，拳头倒有一双！谁再往前一步，今夜就炖一锅狗肉！」",
-    "links": [3661, 3664]
-  },
-  {
-    "entryID": 3661,
-    "actorID": "role123",
-    "text": "「嘎、嘎嗚……不燉！不燉！此山，你開！此廟，你栽！」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,30);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "檢定成功、威嚇經驗增加",
-    "zh_TW": "「嘎、嘎嗚……不燉！不燉！此山，你開！此廟，你栽！」",
-    "zh_CN": "「嘎、嘎呜……不炖！不炖！此山，你开！此庙，你栽！」",
-    "links": [3662]
-  },
-  {
-    "entryID": 3662,
-    "actorID": "role106",
-    "text": "「你開！你栽！你開！你栽！」",
-    "Sequence": "",
-    "zh_TW": "「你開！你栽！你開！你栽！」",
-    "zh_CN": "「你开！你栽！你开！你栽！」",
-    "links": [3663]
-  },
-  {
-    "entryID": 3663,
-    "actorID": "role123",
-    "text": "「[em7]捧出一口鍋子，擱在你腳前[/em7]，獻上！有事，敲它！敲一回，來一回，三回！」",
-    "Sequence": "ModifyData(Valuable,Player,CallingDogBrother,3);",
-    "Description": "獲得狗頭人的召喚信物",
-    "zh_TW": "「[em7]捧出一口鍋子，擱在你腳前[/em7]，獻上！有事，敲它！敲一回，來一回，三回！」",
-    "zh_CN": "「[em7]捧出一口锅子，搁在你脚前[/em7]，献上！有事，敲它！敲一回，来一回，三回！」",
-    "links": [3632]
-  },
-  {
-    "entryID": 3664,
-    "actorID": "role123",
-    "text": "「燉、燉狗肉？嘎……嘎啊啊啊！」",
-    "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "zh_TW": "「燉、燉狗肉？嘎……嘎啊啊啊！」",
-    "zh_CN": "「炖、炖狗肉？嘎……嘎啊啊啊！」",
-    "links": [3665]
-  },
-  {
-    "entryID": 3665,
-    "actorID": "role2",
-    "text": "[panel=6]＊（首領叫聲未落便掉頭往山下竄，把小弟撇在了原地。小弟愣了好一會兒，才哭嚎著追了上去。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（首領叫聲未落便掉頭往山下竄，把小弟撇在了原地。小弟愣了好一會兒，才哭嚎著追了上去。）＊",
-    "zh_CN": "[panel=6]＊（首领叫声未落便掉头往山下窜，把小弟撇在了原地。小弟愣了好一会儿，才哭嚎着追了上去。）＊",
-    "links": [3666]
-  },
-  {
-    "entryID": 3666,
-    "actorID": "role106",
-    "text": "「大哥！等等！大哥！等等！」",
-    "Sequence": "",
-    "zh_TW": "「大哥！等等！大哥！等等！」",
-    "zh_CN": "「大哥！等等！大哥！等等！」",
-    "links": [3667]
-  },
-  {
-    "entryID": 3667,
-    "actorID": "role123",
-    "text": "「不等！不等！燉狗肉！小的，跑！」",
-    "Sequence": "",
-    "zh_TW": "「不等！不等！燉狗肉！小的，跑！」",
-    "zh_CN": "「不等！不等！炖狗肉！小的，跑！」",
-    "links": [3668]
-  },
-  {
-    "entryID": 3668,
-    "actorID": "role2",
-    "text": "[panel=6]＊（牠們一前一後，連滾帶爬地下了山坡。首領腰間掛著一口鍋子，一路磕磕碰碰，響了好一陣才遠。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（牠們一前一後，連滾帶爬地下了山坡。首領腰間掛著一口鍋子，一路磕磕碰碰，響了好一陣才遠。）＊",
-    "zh_CN": "[panel=6]＊（它们一前一后，连滚带爬地下了山坡。首领腰间挂着一口锅子，一路磕磕碰碰，响了好一阵才远。）＊",
-    "links": [3669, 3670]
-  },
-  {
-    "entryID": 3669,
-    "actorID": "MC22",
-    "text": "[panel=1]「哎呀，別跑呀！本姑娘還想留著牠們替咱們辦事——你這一嗓子，倒把好買賣嚇沒了！」",
-    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Nervous_2);",
-    "Conditions": "IsInTeam(\"MC22\") == true;",
-    "zh_TW": "[panel=1]「哎呀，別跑呀！本姑娘還想留著牠們替咱們辦事——你這一嗓子，倒把好買賣嚇沒了！」",
-    "zh_CN": "[panel=1]「哎呀，别跑呀！本姑娘还想留着它们替咱们办事——你这一嗓子，倒把好买卖吓没了！」",
-    "links": [3671]
-  },
-  {
-    "entryID": 3670,
-    "actorID": "MC8",
-    "text": "[panel=2]「牠連小弟都顧不上，腰上那口破鍋子倒是捨不得丟，難道是什麼寶貝呀？」",
-    "Sequence": "SetPortrait(MC8,pic=6);\nEnableCharacterExpression(2,MC8,Question);",
-    "Conditions": "IsInTeam(\"MC22\") == false;",
-    "zh_TW": "[panel=2]「牠連小弟都顧不上，腰上那口破鍋子倒是捨不得丟，難道是什麼寶貝呀？」",
-    "zh_CN": "[panel=2]「它连小弟都顾不上，腰上那口破锅子倒是舍不得丢，难道是什么宝贝呀？」",
-    "links": [3671]
-  },
-  {
-    "entryID": 3671,
-    "actorID": "MC8",
-    "text": "[panel=2]「什麼燉狗肉嘛……表哥方才那副凶樣，比狗頭人還嚇人！小犀才不吃那種東西！」",
-    "Sequence": "SetPortrait(MC8,pic=2);\nDisableCharacterExpression(1);\nEnableCharacterExpression(2,MC8,Anger);\nModifyData(FavorabilityExp,MC8,-20);",
-    "Description": "蕭靈犀好感度下降",
-    "zh_TW": "[panel=2]「什麼燉狗肉嘛……表哥方才那副凶樣，比狗頭人還嚇人！小犀才不吃那種東西！」",
-    "zh_CN": "[panel=2]「什么炖狗肉嘛……表哥方才那副凶样，比狗头人还吓人！小犀才不吃那种东西！」",
-    "links": [3672]
-  },
-  {
-    "entryID": 3672,
-    "actorID": "MC1",
-    "text": "「咳……我不過是嚇唬嚇唬牠們，哪曉得這麼不經嚇。」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nDisableCharacterExpression(2);",
-    "zh_TW": "「咳……我不過是嚇唬嚇唬牠們，哪曉得這麼不經嚇。」",
-    "zh_CN": "「咳……我不过是吓唬吓唬它们，哪晓得这么不经吓。」",
-    "links": [3575]
   },
   {
     "entryID": 3590,
@@ -1414,5 +1184,235 @@
     "zh_TW": "「這可是千載難逢的翻身機會，你懂個屁！」",
     "zh_CN": "「这可是千载难逢的翻身机会，你懂个屁！」",
     "links": [3521]
+  },
+  {
+    "entryID": 3649,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [3616, 3581, 3651, 3657]
+  },
+  {
+    "entryID": 3650,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [3590, 3597, 3581, 3652, 3658]
+  },
+  {
+    "entryID": 3651,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
+    "zh_CN": "[em2][威吓检定][/em2]「就凭你们两个？」",
+    "links": [3653]
+  },
+  {
+    "entryID": 3652,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
+    "Sequence": "",
+    "Description": "選項4",
+    "zh_TW": "[em2][威嚇檢定][/em2]「就憑你們兩個？」",
+    "zh_CN": "[em2][威吓检定][/em2]「就凭你们两个？」",
+    "links": [3653]
+  },
+  {
+    "entryID": 3653,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,10);",
+    "Description": "威嚇檢定",
+    "links": [3654]
+  },
+  {
+    "entryID": 3654,
+    "actorID": "MC1",
+    "text": "「就憑你們兩個，也想攔路要錢？不怕挨拳頭的，儘管上來試試！」",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "「就憑你們兩個，也想攔路要錢？不怕挨拳頭的，儘管上來試試！」",
+    "zh_CN": "「就凭你们两个，也想拦路要钱？不怕挨拳头的，尽管上来试试！」",
+    "links": [3655, 3656]
+  },
+  {
+    "entryID": 3655,
+    "actorID": "role123",
+    "text": "「嘎……今日，下雨！不搶！小的，跑！」",
+    "Sequence": "ModifyData(FeatExp,Player,Intimidation,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、威嚇經驗增加",
+    "zh_TW": "「嘎……今日，下雨！不搶！小的，跑！」",
+    "zh_CN": "「嘎……今日，下雨！不抢！小的，跑！」",
+    "links": [3558]
+  },
+  {
+    "entryID": 3656,
+    "actorID": "role123",
+    "text": "「嘎哈哈！嚇唬誰！不留財，就留命！」",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「嘎哈哈！嚇唬誰！不留財，就留命！」",
+    "zh_CN": "「嘎哈哈！吓唬谁！不留财，就留命！」",
+    "links": [3604]
+  },
+  {
+    "entryID": 3657,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項4",
+    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [3659]
+  },
+  {
+    "entryID": 3658,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項5",
+    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [3659]
+  },
+  {
+    "entryID": 3659,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,20);",
+    "Description": "威嚇檢定",
+    "links": [3660]
+  },
+  {
+    "entryID": 3660,
+    "actorID": "MC1",
+    "text": "「錢一文也沒有，拳頭倒有一雙！誰再往前一步，今夜就燉一鍋狗肉！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_2);",
+    "zh_TW": "「錢一文也沒有，拳頭倒有一雙！誰再往前一步，今夜就燉一鍋狗肉！」",
+    "zh_CN": "「钱一文也没有，拳头倒有一双！谁再往前一步，今夜就炖一锅狗肉！」",
+    "links": [3661, 3664]
+  },
+  {
+    "entryID": 3661,
+    "actorID": "role123",
+    "text": "「嘎、嘎嗚……不燉！不燉！此山，你開！此廟，你栽！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,30);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、威嚇經驗增加",
+    "zh_TW": "「嘎、嘎嗚……不燉！不燉！此山，你開！此廟，你栽！」",
+    "zh_CN": "「嘎、嘎呜……不炖！不炖！此山，你开！此庙，你栽！」",
+    "links": [3662]
+  },
+  {
+    "entryID": 3662,
+    "actorID": "role106",
+    "text": "「你開！你栽！你開！你栽！」",
+    "Sequence": "",
+    "zh_TW": "「你開！你栽！你開！你栽！」",
+    "zh_CN": "「你开！你栽！你开！你栽！」",
+    "links": [3663]
+  },
+  {
+    "entryID": 3663,
+    "actorID": "role123",
+    "text": "「[em7]捧出一口鍋子，擱在你腳前[/em7]，獻上！有事，敲它！敲一回，來一回，三回！」",
+    "Sequence": "ModifyData(Valuable,Player,CallingDogBrother,3);",
+    "Description": "獲得狗頭人的召喚信物",
+    "zh_TW": "「[em7]捧出一口鍋子，擱在你腳前[/em7]，獻上！有事，敲它！敲一回，來一回，三回！」",
+    "zh_CN": "「[em7]捧出一口锅子，搁在你脚前[/em7]，献上！有事，敲它！敲一回，来一回，三回！」",
+    "links": [3632]
+  },
+  {
+    "entryID": 3664,
+    "actorID": "role123",
+    "text": "「燉、燉狗肉？嘎……嘎啊啊啊！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「燉、燉狗肉？嘎……嘎啊啊啊！」",
+    "zh_CN": "「炖、炖狗肉？嘎……嘎啊啊啊！」",
+    "links": [3665]
+  },
+  {
+    "entryID": 3665,
+    "actorID": "role2",
+    "text": "[panel=6]＊（首領叫聲未落便掉頭往山下竄，把小弟撇在了原地。小弟愣了好一會兒，才哭嚎著追了上去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（首領叫聲未落便掉頭往山下竄，把小弟撇在了原地。小弟愣了好一會兒，才哭嚎著追了上去。）＊",
+    "zh_CN": "[panel=6]＊（首领叫声未落便掉头往山下窜，把小弟撇在了原地。小弟愣了好一会儿，才哭嚎着追了上去。）＊",
+    "links": [3666]
+  },
+  {
+    "entryID": 3666,
+    "actorID": "role106",
+    "text": "「大哥！等等！大哥！等等！」",
+    "Sequence": "",
+    "zh_TW": "「大哥！等等！大哥！等等！」",
+    "zh_CN": "「大哥！等等！大哥！等等！」",
+    "links": [3667]
+  },
+  {
+    "entryID": 3667,
+    "actorID": "role123",
+    "text": "「不等！不等！燉狗肉！小的，跑！」",
+    "Sequence": "",
+    "zh_TW": "「不等！不等！燉狗肉！小的，跑！」",
+    "zh_CN": "「不等！不等！炖狗肉！小的，跑！」",
+    "links": [3668]
+  },
+  {
+    "entryID": 3668,
+    "actorID": "role2",
+    "text": "[panel=6]＊（牠們一前一後，連滾帶爬地下了山坡。首領腰間掛著一口鍋子，一路磕磕碰碰，響了好一陣才遠。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（牠們一前一後，連滾帶爬地下了山坡。首領腰間掛著一口鍋子，一路磕磕碰碰，響了好一陣才遠。）＊",
+    "zh_CN": "[panel=6]＊（它们一前一后，连滚带爬地下了山坡。首领腰间挂着一口锅子，一路磕磕碰碰，响了好一阵才远。）＊",
+    "links": [3669, 3670]
+  },
+  {
+    "entryID": 3669,
+    "actorID": "MC22",
+    "text": "[panel=1]「哎呀，別跑呀！本姑娘還想留著牠們替咱們辦事——你這一嗓子，倒把好買賣嚇沒了！」",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Nervous_2);",
+    "Conditions": "IsInTeam(\"MC22\") == true;",
+    "zh_TW": "[panel=1]「哎呀，別跑呀！本姑娘還想留著牠們替咱們辦事——你這一嗓子，倒把好買賣嚇沒了！」",
+    "zh_CN": "[panel=1]「哎呀，别跑呀！本姑娘还想留着它们替咱们办事——你这一嗓子，倒把好买卖吓没了！」",
+    "links": [3671]
+  },
+  {
+    "entryID": 3670,
+    "actorID": "MC8",
+    "text": "[panel=2]「牠連小弟都顧不上，腰上那口破鍋子倒是捨不得丟，難道是什麼寶貝呀？」",
+    "Sequence": "SetPortrait(MC8,pic=6);\nEnableCharacterExpression(2,MC8,Question);",
+    "Conditions": "IsInTeam(\"MC22\") == false;",
+    "zh_TW": "[panel=2]「牠連小弟都顧不上，腰上那口破鍋子倒是捨不得丟，難道是什麼寶貝呀？」",
+    "zh_CN": "[panel=2]「它连小弟都顾不上，腰上那口破锅子倒是舍不得丢，难道是什么宝贝呀？」",
+    "links": [3671]
+  },
+  {
+    "entryID": 3671,
+    "actorID": "MC8",
+    "text": "[panel=2]「什麼燉狗肉嘛……表哥方才那副凶樣，比狗頭人還嚇人！小犀才不吃那種東西！」",
+    "Sequence": "SetPortrait(MC8,pic=2);\nDisableCharacterExpression(1);\nEnableCharacterExpression(2,MC8,Anger);\nModifyData(FavorabilityExp,MC8,-20);",
+    "Description": "蕭靈犀好感度下降",
+    "zh_TW": "[panel=2]「什麼燉狗肉嘛……表哥方才那副凶樣，比狗頭人還嚇人！小犀才不吃那種東西！」",
+    "zh_CN": "[panel=2]「什么炖狗肉嘛……表哥方才那副凶样，比狗头人还吓人！小犀才不吃那种东西！」",
+    "links": [3672]
+  },
+  {
+    "entryID": 3672,
+    "actorID": "MC1",
+    "text": "「咳……我不過是嚇唬嚇唬牠們，哪曉得這麼不經嚇。」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nDisableCharacterExpression(2);",
+    "zh_TW": "「咳……我不過是嚇唬嚇唬牠們，哪曉得這麼不經嚇。」",
+    "zh_CN": "「咳……我不过是吓唬吓唬它们，哪晓得这么不经吓。」",
+    "links": [3575]
   }
 ]

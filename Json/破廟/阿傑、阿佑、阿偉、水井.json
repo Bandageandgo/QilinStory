@@ -1005,83 +1005,6 @@
     "links": [4028]
   },
   {
-    "entryID": 4028,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [3597, 3598, 4029]
-  },
-  {
-    "entryID": 4029,
-    "actorID": "MC1",
-    "text": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
-    "Sequence": "",
-    "Description": "選項3",
-    "zh_TW": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
-    "zh_CN": "[em2][口才检定][/em2][em3]知其一，不知其二[/em3]",
-    "links": [4030]
-  },
-  {
-    "entryID": 4030,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,18);",
-    "Description": "口才檢定",
-    "links": [4031]
-  },
-  {
-    "entryID": 4031,
-    "actorID": "MC1",
-    "text": "「[em7]壓低了聲音[/em7]，大哥，阿傑身上那點古怪，我也瞧見了。你瞧見的是哪一樣，說來對一對？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
-    "zh_TW": "「[em7]壓低了聲音[/em7]，大哥，阿傑身上那點古怪，我也瞧見了。你瞧見的是哪一樣，說來對一對？」",
-    "zh_CN": "「[em7]压低了声音[/em7]，大哥，阿杰身上那点古怪，我也瞧见了。你瞧见的是哪一样，说来对一对？」",
-    "links": [4032, 4035]
-  },
-  {
-    "entryID": 4032,
-    "actorID": "role98",
-    "text": "「小、小聲點……我瞧的是他腰上那條帶子。」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,10);",
-    "Conditions": "IsPassDice() == true;",
-    "Script": "Variable[\"IsHidden2\"] = true;",
-    "Description": "檢定成功、口才經驗增加、變數更新",
-    "zh_TW": "「小、小聲點……我瞧的是他腰上那條帶子。」",
-    "zh_CN": "「小、小声点……我瞧的是他腰上那条带子。」",
-    "links": [4033]
-  },
-  {
-    "entryID": 4033,
-    "actorID": "role98",
-    "text": "「剛進廟那會兒，他背著大夥拆開腰帶數錢，數完又縫了回去。出門時他跟我一樣窮啊。」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Surprise);",
-    "zh_TW": "「剛進廟那會兒，他背著大夥拆開腰帶數錢，數完又縫了回去。出門時他跟我一樣窮啊。」",
-    "zh_CN": "「刚进庙那会儿，他背着大伙拆开腰带数钱，数完又缝了回去。出门时他跟我一样穷啊。」",
-    "links": [4034]
-  },
-  {
-    "entryID": 4034,
-    "actorID": "MC1",
-    "text": "「他腰帶裡那些錢，我先記下了。你們這一趟，到底是要去投奔誰？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=18);",
-    "zh_TW": "「他腰帶裡那些錢，我先記下了。你們這一趟，到底是要去投奔誰？」",
-    "zh_CN": "「他腰带里那些钱，我先记下了。你们这一趟，到底是要去投奔谁？」",
-    "links": [3609]
-  },
-  {
-    "entryID": 4035,
-    "actorID": "role98",
-    "text": "「我、我哪有瞧什麼？小兄弟你眼花了，阿傑哥是我同鄉。」",
-    "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "zh_TW": "「我、我哪有瞧什麼？小兄弟你眼花了，阿傑哥是我同鄉。」",
-    "zh_CN": "「我、我哪有瞧什么？小兄弟你眼花了，阿杰哥是我同乡。」",
-    "links": [3623]
-  },
-  {
     "entryID": 3609,
     "actorID": "role98",
     "text": "「阿傑和我一開始是打算去投奔白波軍的廖老大。\n可……可他這幾天逢人就說，是去晉陽城做工，還有什麼[em2]金玉樓的好差事[/em2]。」",
@@ -2334,108 +2257,6 @@
     "Conditions": "IsPassFight() == false;",
     "Description": "戰鬥失敗",
     "links": [4017]
-  },
-  {
-    "entryID": 4017,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你栽倒在破廟的地上，嘴角見了血，一時撐不起身。阿傑喘著粗氣朝你走過來，阿佑遠遠跟在他身後。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（你栽倒在破廟的地上，嘴角見了血，一時撐不起身。阿傑喘著粗氣朝你走過來，阿佑遠遠跟在他身後。）＊",
-    "zh_CN": "[panel=6]＊（你栽倒在破庙的地上，嘴角见了血，一时撑不起身。阿杰喘着粗气朝你走过来，阿佑远远跟在他身后。）＊",
-    "links": [4018]
-  },
-  {
-    "entryID": 4018,
-    "actorID": "role99",
-    "text": "「就這點斤兩，也敢來壞老子的好事？\n等老子把你捆了，連那小丫頭一塊兒帶走！」",
-    "Sequence": "",
-    "zh_TW": "「就這點斤兩，也敢來壞老子的好事？\n等老子把你捆了，連那小丫頭一塊兒帶走！」",
-    "zh_CN": "「就这点斤两，也敢来坏老子的好事？\n等老子把你捆了，连那小丫头一块儿带走！」",
-    "links": [4019]
-  },
-  {
-    "entryID": 4019,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [4020, 4021]
-  },
-  {
-    "entryID": 4020,
-    "actorID": "MC1",
-    "text": "[em2][厚黑檢定][/em2][em3]置之死地，而後生[/em3]",
-    "Sequence": "",
-    "Description": "選項1",
-    "zh_TW": "[em2][厚黑檢定][/em2][em3]置之死地，而後生[/em3]",
-    "zh_CN": "[em2][厚黑检定][/em2][em3]置之死地，而后生[/em3]",
-    "links": [4022]
-  },
-  {
-    "entryID": 4021,
-    "actorID": "MC1",
-    "text": "離開",
-    "Sequence": "",
-    "Description": "選項2",
-    "zh_TW": "離開",
-    "zh_CN": "离开",
-    "links": [3865]
-  },
-  {
-    "entryID": 4022,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,18);",
-    "Description": "厚黑檢定",
-    "links": [4023]
-  },
-  {
-    "entryID": 4023,
-    "actorID": "MC1",
-    "text": "「大哥，小弟服了，有眼不識泰山！\n錢都在我懷裡，您儘管拿去便是！」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Nervous);",
-    "zh_TW": "「大哥，小弟服了，有眼不識泰山！\n錢都在我懷裡，您儘管拿去便是！」",
-    "zh_CN": "「大哥，小弟服了，有眼不识泰山！\n钱都在我怀里，您尽管拿去便是！」",
-    "links": [4024, 4027]
-  },
-  {
-    "entryID": 4024,
-    "actorID": "role99",
-    "text": "「早這麼識相，又何必討這頓打？\n懷裡揣了多少油水，老子親自來掏！」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Realpolitik,10);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "檢定成功、厚黑經驗增加",
-    "zh_TW": "「早這麼識相，又何必討這頓打？\n懷裡揣了多少油水，老子親自來掏！」",
-    "zh_CN": "「早这么识相，又何必讨这顿打？\n怀里揣了多少油水，老子亲自来掏！」",
-    "links": [4025]
-  },
-  {
-    "entryID": 4025,
-    "actorID": "role2",
-    "text": "[panel=6]＊（阿傑蹲下來掏你懷裡的錢，被你扣住手腕一把拽倒。等阿佑回過神來，阿傑已經被你按在地上揍得抱頭哀叫。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（阿傑蹲下來掏你懷裡的錢，被你扣住手腕一把拽倒。等阿佑回過神來，阿傑已經被你按在地上揍得抱頭哀叫。）＊",
-    "zh_CN": "[panel=6]＊（阿杰蹲下来掏你怀里的钱，被你扣住手腕一把拽倒。等阿佑回过神来，阿杰已经被你按在地上揍得抱头哀叫。）＊",
-    "links": [4026]
-  },
-  {
-    "entryID": 4026,
-    "actorID": "role98",
-    "text": "「別、別打了，再這麼打下去要出人命啦！\n我不跟你動手了，我不動手就是了！」",
-    "Sequence": "",
-    "zh_TW": "「別、別打了，再這麼打下去要出人命啦！\n我不跟你動手了，我不動手就是了！」",
-    "zh_CN": "「别、别打了，再这么打下去要出人命啦！\n我不跟你动手了，我不动手就是了！」",
-    "links": [3830]
-  },
-  {
-    "entryID": 4027,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();\nDisableCharacterExpression(0);\nModifyData(Coin,-200);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗、扣錢",
-    "links": [3865]
   },
   {
     "entryID": 3830,
@@ -3865,5 +3686,184 @@
     "zh_TW": "「證據呢？拿不出證據來，今天這事兒咱們沒完！」",
     "zh_CN": "「证据呢？拿不出证据来，今天这事儿咱们没完！」",
     "links": [3924, 3925]
+  },
+  {
+    "entryID": 4028,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [3597, 3598, 4029]
+  },
+  {
+    "entryID": 4029,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "[em2][口才檢定][/em2][em3]知其一，不知其二[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]知其一，不知其二[/em3]",
+    "links": [4030]
+  },
+  {
+    "entryID": 4030,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,18);",
+    "Description": "口才檢定",
+    "links": [4031]
+  },
+  {
+    "entryID": 4031,
+    "actorID": "MC1",
+    "text": "「[em7]壓低了聲音[/em7]，大哥，阿傑身上那點古怪，我也瞧見了。你瞧見的是哪一樣，說來對一對？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
+    "zh_TW": "「[em7]壓低了聲音[/em7]，大哥，阿傑身上那點古怪，我也瞧見了。你瞧見的是哪一樣，說來對一對？」",
+    "zh_CN": "「[em7]压低了声音[/em7]，大哥，阿杰身上那点古怪，我也瞧见了。你瞧见的是哪一样，说来对一对？」",
+    "links": [4032, 4035]
+  },
+  {
+    "entryID": 4032,
+    "actorID": "role98",
+    "text": "「小、小聲點……我瞧的是他腰上那條帶子。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Script": "Variable[\"IsHidden2\"] = true;",
+    "Description": "檢定成功、口才經驗增加、變數更新",
+    "zh_TW": "「小、小聲點……我瞧的是他腰上那條帶子。」",
+    "zh_CN": "「小、小声点……我瞧的是他腰上那条带子。」",
+    "links": [4033]
+  },
+  {
+    "entryID": 4033,
+    "actorID": "role98",
+    "text": "「剛進廟那會兒，他背著大夥拆開腰帶數錢，數完又縫了回去。出門時他跟我一樣窮啊。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Surprise);",
+    "zh_TW": "「剛進廟那會兒，他背著大夥拆開腰帶數錢，數完又縫了回去。出門時他跟我一樣窮啊。」",
+    "zh_CN": "「刚进庙那会儿，他背着大伙拆开腰带数钱，数完又缝了回去。出门时他跟我一样穷啊。」",
+    "links": [4034]
+  },
+  {
+    "entryID": 4034,
+    "actorID": "MC1",
+    "text": "「他腰帶裡那些錢，我先記下了。你們這一趟，到底是要去投奔誰？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=18);",
+    "zh_TW": "「他腰帶裡那些錢，我先記下了。你們這一趟，到底是要去投奔誰？」",
+    "zh_CN": "「他腰带里那些钱，我先记下了。你们这一趟，到底是要去投奔谁？」",
+    "links": [3609]
+  },
+  {
+    "entryID": 4035,
+    "actorID": "role98",
+    "text": "「我、我哪有瞧什麼？小兄弟你眼花了，阿傑哥是我同鄉。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「我、我哪有瞧什麼？小兄弟你眼花了，阿傑哥是我同鄉。」",
+    "zh_CN": "「我、我哪有瞧什么？小兄弟你眼花了，阿杰哥是我同乡。」",
+    "links": [3623]
+  },
+  {
+    "entryID": 4017,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你栽倒在破廟的地上，嘴角見了血，一時撐不起身。阿傑喘著粗氣朝你走過來，阿佑遠遠跟在他身後。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你栽倒在破廟的地上，嘴角見了血，一時撐不起身。阿傑喘著粗氣朝你走過來，阿佑遠遠跟在他身後。）＊",
+    "zh_CN": "[panel=6]＊（你栽倒在破庙的地上，嘴角见了血，一时撑不起身。阿杰喘着粗气朝你走过来，阿佑远远跟在他身后。）＊",
+    "links": [4018]
+  },
+  {
+    "entryID": 4018,
+    "actorID": "role99",
+    "text": "「就這點斤兩，也敢來壞老子的好事？\n等老子把你捆了，連那小丫頭一塊兒帶走！」",
+    "Sequence": "",
+    "zh_TW": "「就這點斤兩，也敢來壞老子的好事？\n等老子把你捆了，連那小丫頭一塊兒帶走！」",
+    "zh_CN": "「就这点斤两，也敢来坏老子的好事？\n等老子把你捆了，连那小丫头一块儿带走！」",
+    "links": [4019]
+  },
+  {
+    "entryID": 4019,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [4020, 4021]
+  },
+  {
+    "entryID": 4020,
+    "actorID": "MC1",
+    "text": "[em2][厚黑檢定][/em2][em3]置之死地，而後生[/em3]",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "[em2][厚黑檢定][/em2][em3]置之死地，而後生[/em3]",
+    "zh_CN": "[em2][厚黑检定][/em2][em3]置之死地，而后生[/em3]",
+    "links": [4022]
+  },
+  {
+    "entryID": 4021,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": [3865]
+  },
+  {
+    "entryID": 4022,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,RealpolitikCheck,18);",
+    "Description": "厚黑檢定",
+    "links": [4023]
+  },
+  {
+    "entryID": 4023,
+    "actorID": "MC1",
+    "text": "「大哥，小弟服了，有眼不識泰山！\n錢都在我懷裡，您儘管拿去便是！」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Nervous);",
+    "zh_TW": "「大哥，小弟服了，有眼不識泰山！\n錢都在我懷裡，您儘管拿去便是！」",
+    "zh_CN": "「大哥，小弟服了，有眼不识泰山！\n钱都在我怀里，您尽管拿去便是！」",
+    "links": [4024, 4027]
+  },
+  {
+    "entryID": 4024,
+    "actorID": "role99",
+    "text": "「早這麼識相，又何必討這頓打？\n懷裡揣了多少油水，老子親自來掏！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Realpolitik,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、厚黑經驗增加",
+    "zh_TW": "「早這麼識相，又何必討這頓打？\n懷裡揣了多少油水，老子親自來掏！」",
+    "zh_CN": "「早这么识相，又何必讨这顿打？\n怀里揣了多少油水，老子亲自来掏！」",
+    "links": [4025]
+  },
+  {
+    "entryID": 4025,
+    "actorID": "role2",
+    "text": "[panel=6]＊（阿傑蹲下來掏你懷裡的錢，被你扣住手腕一把拽倒。等阿佑回過神來，阿傑已經被你按在地上揍得抱頭哀叫。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（阿傑蹲下來掏你懷裡的錢，被你扣住手腕一把拽倒。等阿佑回過神來，阿傑已經被你按在地上揍得抱頭哀叫。）＊",
+    "zh_CN": "[panel=6]＊（阿杰蹲下来掏你怀里的钱，被你扣住手腕一把拽倒。等阿佑回过神来，阿杰已经被你按在地上揍得抱头哀叫。）＊",
+    "links": [4026]
+  },
+  {
+    "entryID": 4026,
+    "actorID": "role98",
+    "text": "「別、別打了，再這麼打下去要出人命啦！\n我不跟你動手了，我不動手就是了！」",
+    "Sequence": "",
+    "zh_TW": "「別、別打了，再這麼打下去要出人命啦！\n我不跟你動手了，我不動手就是了！」",
+    "zh_CN": "「别、别打了，再这么打下去要出人命啦！\n我不跟你动手了，我不动手就是了！」",
+    "links": [3830]
+  },
+  {
+    "entryID": 4027,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();\nDisableCharacterExpression(0);\nModifyData(Coin,-200);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗、扣錢",
+    "links": [3865]
   }
 ]

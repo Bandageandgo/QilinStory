@@ -106,15 +106,6 @@
     "links": [4356]
   },
   {
-    "entryID": 4356,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [15, 16, 17, 18, 4357]
-  },
-  {
     "entryID": 15,
     "actorID": "MC1",
     "text": "「我跟黑狼——讓開。」",
@@ -149,16 +140,6 @@
     "Description": "選項4：主動開戰",
     "zh_CN": "「洞口这两拨，一个不留。」",
     "links": [35]
-  },
-  {
-    "entryID": 4357,
-    "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "Sequence": "",
-    "Description": "選項5",
-    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
-    "links": [4358]
   },
   {
     "entryID": 19,
@@ -368,129 +349,6 @@
     "Sequence": "SetPortrait(MC20,pic=1);EnableCharacterExpression(1,MC20,Nervous_2);",
     "zh_CN": "[panel=1]「打、打完了？走为上计！别在这儿耗着。」",
     "links": [4113]
-  },
-  {
-    "entryID": 4358,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,25);",
-    "Description": "威嚇檢定",
-    "links": [4359]
-  },
-  {
-    "entryID": 4359,
-    "actorID": "MC1",
-    "text": "「刀都給我收回鞘裡！今天這洞我進定了，哪一邊的刀先動，我就先收拾哪一邊！」",
-    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
-    "zh_TW": "「刀都給我收回鞘裡！今天這洞我進定了，哪一邊的刀先動，我就先收拾哪一邊！」",
-    "zh_CN": "「刀都给我收回鞘里！今天这洞我进定了，哪一边的刀先动，我就先收拾哪一边！」",
-    "links": [4360, 4362]
-  },
-  {
-    "entryID": 4360,
-    "actorID": "role140",
-    "text": "[panel=1]「……弟兄們，把刀收了。漢人，今天賣你這個面子，進了洞各憑本事。」",
-    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,300);\nModifyData(FavorabilityExp,MC22,20);\nModifyData(FavorabilityExp,MC20,20);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "檢定成功、威嚇經驗增加、娜娜好感度提升、雍仔好感度提升",
-    "zh_TW": "[panel=1]「……弟兄們，把刀收了。漢人，今天賣你這個面子，進了洞各憑本事。」",
-    "zh_CN": "[panel=1]「……弟兄们，把刀收了。汉人，今天卖你这个面子，进了洞各凭本事。」",
-    "links": [4361]
-  },
-  {
-    "entryID": 4361,
-    "actorID": "role126",
-    "text": "[panel=2]「這、這塊長生玉牌給你，保平安的……進去了，可別幫著狼崽子。」",
-    "Sequence": "ModifyData(Valuable,Player,GoldenNecklace,1);",
-    "Description": "獲得長生玉牌",
-    "zh_TW": "[panel=2]「這、這塊長生玉牌給你，保平安的……進去了，可別幫著狼崽子。」",
-    "zh_CN": "[panel=2]「这、这块长生玉牌给你，保平安的……进去了，可别帮着狼崽子。」",
-    "links": [31]
-  },
-  {
-    "entryID": 4362,
-    "actorID": "role140",
-    "text": "[panel=1]「哈，嗓門倒大，這洞你進定了？你就是收了我們定錢、說好帶路進洞的那個漢人？」",
-    "Sequence": "DisableCharacterExpression(0);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "zh_TW": "[panel=1]「哈，嗓門倒大，這洞你進定了？你就是收了我們定錢、說好帶路進洞的那個漢人？」",
-    "zh_CN": "[panel=1]「哈，嗓门倒大，这洞你进定了？你就是收了我们定钱、说好带路进洞的那个汉人？」",
-    "links": [4363]
-  },
-  {
-    "entryID": 4363,
-    "actorID": "MC1",
-    "text": "「我幾時收過你們的定錢？今天還是頭一回見著你們這撥人。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「我幾時收過你們的定錢？今天還是頭一回見著你們這撥人。」",
-    "zh_CN": "「我几时收过你们的定钱？今天还是头一回见着你们这拨人。」",
-    "links": [4364]
-  },
-  {
-    "entryID": 4364,
-    "actorID": "role140",
-    "text": "[panel=1]「說好天亮就到，拖到這時辰還想賴？定錢先退一半，剩下那一半，拿你這身骨頭來抵！」",
-    "Sequence": "",
-    "zh_TW": "[panel=1]「說好天亮就到，拖到這時辰還想賴？定錢先退一半，剩下那一半，拿你這身骨頭來抵！」",
-    "zh_CN": "[panel=1]「说好天亮就到，拖到这时辰还想赖？定钱先退一半，剩下那一半，拿你这身骨头来抵！」",
-    "links": [4365]
-  },
-  {
-    "entryID": 4365,
-    "actorID": "role126",
-    "text": "[panel=2]「原來是狼崽子僱來的！呸，漢人給匈奴帶路，剛才還嚷得比誰都兇。」",
-    "Sequence": "",
-    "zh_TW": "[panel=2]「原來是狼崽子僱來的！呸，漢人給匈奴帶路，剛才還嚷得比誰都兇。」",
-    "zh_CN": "[panel=2]「原来是狼崽子雇来的！呸，汉人给匈奴带路，刚才还嚷得比谁都凶。」",
-    "links": [4366]
-  },
-  {
-    "entryID": 4366,
-    "actorID": "MC22",
-    "text": "[panel=1]「大俠，先把錢給他！錢退了，他們好歹少一個動刀的由頭。」",
-    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
-    "zh_TW": "[panel=1]「大俠，先把錢給他！錢退了，他們好歹少一個動刀的由頭。」",
-    "zh_CN": "[panel=1]「大侠，先把钱给他！钱退了，他们好歹少一个动刀的由头。」",
-    "links": [4367]
-  },
-  {
-    "entryID": 4367,
-    "actorID": "MC8",
-    "text": "[panel=2]「[em7]數出錢遞過去[/em7]，表哥……這筆小犀記下了：替人退定錢，退的是咱們自己的錢。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=6);\nModifyData(Coin,-200);",
-    "Description": "扣錢",
-    "zh_TW": "[panel=2]「[em7]數出錢遞過去[/em7]，表哥……這筆小犀記下了：替人退定錢，退的是咱們自己的錢。」",
-    "zh_CN": "[panel=2]「[em7]数出钱递过去[/em7]，表哥……这笔小犀记下了：替人退定钱，退的是咱们自己的钱。」",
-    "links": [4368]
-  },
-  {
-    "entryID": 4368,
-    "actorID": "MC20",
-    "text": "[panel=2]「咳……道爺方才還說太平道的話順耳，這下倒成了替黑狼跑腿的。」",
-    "Sequence": "SetPortrait(MC20,pic=1);\nEnableCharacterExpression(2,MC20,Pain);\nModifyData(FavorabilityExp,MC20,-20);",
-    "Description": "雍仔好感度下降",
-    "zh_TW": "[panel=2]「咳……道爺方才還說太平道的話順耳，這下倒成了替黑狼跑腿的。」",
-    "zh_CN": "[panel=2]「咳……道爷方才还说太平道的话顺耳，这下倒成了替黑狼跑腿的。」",
-    "links": [4369]
-  },
-  {
-    "entryID": 4369,
-    "actorID": "role140",
-    "text": "[panel=1]「錢收下了，剩下那一半——弟兄們，上！」",
-    "Sequence": "DisableCharacterExpression(2);",
-    "zh_TW": "[panel=1]「錢收下了，剩下那一半——弟兄們，上！」",
-    "zh_CN": "[panel=1]「钱收下了，剩下那一半——弟兄们，上！」",
-    "links": [4370]
-  },
-  {
-    "entryID": 4370,
-    "actorID": "role126",
-    "text": "[panel=2]「狼崽子僱來的人，一個也別放進洞！弟兄們，一起上！」",
-    "Sequence": "",
-    "zh_TW": "[panel=2]「狼崽子僱來的人，一個也別放進洞！弟兄們，一起上！」",
-    "zh_CN": "[panel=2]「狼崽子雇来的人，一个也别放进洞！弟兄们，一起上！」",
-    "links": [39]
   },
   {
     "entryID": 51,
@@ -3280,5 +3138,147 @@
     "Sequence": "Continue();",
     "Description": "自動洞悉檢定後的空緩衝節點",
     "links": [4353, 99]
+  },
+  {
+    "entryID": 4356,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [15, 16, 17, 18, 4357]
+  },
+  {
+    "entryID": 4357,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項5",
+    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [4358]
+  },
+  {
+    "entryID": 4358,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,25);",
+    "Description": "威嚇檢定",
+    "links": [4359]
+  },
+  {
+    "entryID": 4359,
+    "actorID": "MC1",
+    "text": "「刀都給我收回鞘裡！今天這洞我進定了，哪一邊的刀先動，我就先收拾哪一邊！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_TW": "「刀都給我收回鞘裡！今天這洞我進定了，哪一邊的刀先動，我就先收拾哪一邊！」",
+    "zh_CN": "「刀都给我收回鞘里！今天这洞我进定了，哪一边的刀先动，我就先收拾哪一边！」",
+    "links": [4360, 4362]
+  },
+  {
+    "entryID": 4360,
+    "actorID": "role140",
+    "text": "[panel=1]「……弟兄們，把刀收了。漢人，今天賣你這個面子，進了洞各憑本事。」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,300);\nModifyData(FavorabilityExp,MC22,20);\nModifyData(FavorabilityExp,MC20,20);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、威嚇經驗增加、娜娜好感度提升、雍仔好感度提升",
+    "zh_TW": "[panel=1]「……弟兄們，把刀收了。漢人，今天賣你這個面子，進了洞各憑本事。」",
+    "zh_CN": "[panel=1]「……弟兄们，把刀收了。汉人，今天卖你这个面子，进了洞各凭本事。」",
+    "links": [4361]
+  },
+  {
+    "entryID": 4361,
+    "actorID": "role126",
+    "text": "[panel=2]「這、這塊長生玉牌給你，保平安的……進去了，可別幫著狼崽子。」",
+    "Sequence": "ModifyData(Valuable,Player,GoldenNecklace,1);",
+    "Description": "獲得長生玉牌",
+    "zh_TW": "[panel=2]「這、這塊長生玉牌給你，保平安的……進去了，可別幫著狼崽子。」",
+    "zh_CN": "[panel=2]「这、这块长生玉牌给你，保平安的……进去了，可别帮着狼崽子。」",
+    "links": [31]
+  },
+  {
+    "entryID": 4362,
+    "actorID": "role140",
+    "text": "[panel=1]「哈，嗓門倒大，這洞你進定了？你就是收了我們定錢、說好帶路進洞的那個漢人？」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "[panel=1]「哈，嗓門倒大，這洞你進定了？你就是收了我們定錢、說好帶路進洞的那個漢人？」",
+    "zh_CN": "[panel=1]「哈，嗓门倒大，这洞你进定了？你就是收了我们定钱、说好带路进洞的那个汉人？」",
+    "links": [4363]
+  },
+  {
+    "entryID": 4363,
+    "actorID": "MC1",
+    "text": "「我幾時收過你們的定錢？今天還是頭一回見著你們這撥人。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「我幾時收過你們的定錢？今天還是頭一回見著你們這撥人。」",
+    "zh_CN": "「我几时收过你们的定钱？今天还是头一回见着你们这拨人。」",
+    "links": [4364]
+  },
+  {
+    "entryID": 4364,
+    "actorID": "role140",
+    "text": "[panel=1]「說好天亮就到，拖到這時辰還想賴？定錢先退一半，剩下那一半，拿你這身骨頭來抵！」",
+    "Sequence": "",
+    "zh_TW": "[panel=1]「說好天亮就到，拖到這時辰還想賴？定錢先退一半，剩下那一半，拿你這身骨頭來抵！」",
+    "zh_CN": "[panel=1]「说好天亮就到，拖到这时辰还想赖？定钱先退一半，剩下那一半，拿你这身骨头来抵！」",
+    "links": [4365]
+  },
+  {
+    "entryID": 4365,
+    "actorID": "role126",
+    "text": "[panel=2]「原來是狼崽子僱來的！呸，漢人給匈奴帶路，剛才還嚷得比誰都兇。」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「原來是狼崽子僱來的！呸，漢人給匈奴帶路，剛才還嚷得比誰都兇。」",
+    "zh_CN": "[panel=2]「原来是狼崽子雇来的！呸，汉人给匈奴带路，刚才还嚷得比谁都凶。」",
+    "links": [4366]
+  },
+  {
+    "entryID": 4366,
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠，先把錢給他！錢退了，他們好歹少一個動刀的由頭。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
+    "zh_TW": "[panel=1]「大俠，先把錢給他！錢退了，他們好歹少一個動刀的由頭。」",
+    "zh_CN": "[panel=1]「大侠，先把钱给他！钱退了，他们好歹少一个动刀的由头。」",
+    "links": [4367]
+  },
+  {
+    "entryID": 4367,
+    "actorID": "MC8",
+    "text": "[panel=2]「[em7]數出錢遞過去[/em7]，表哥……這筆小犀記下了：替人退定錢，退的是咱們自己的錢。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC8,pic=6);\nModifyData(Coin,-200);",
+    "Description": "扣錢",
+    "zh_TW": "[panel=2]「[em7]數出錢遞過去[/em7]，表哥……這筆小犀記下了：替人退定錢，退的是咱們自己的錢。」",
+    "zh_CN": "[panel=2]「[em7]数出钱递过去[/em7]，表哥……这笔小犀记下了：替人退定钱，退的是咱们自己的钱。」",
+    "links": [4368]
+  },
+  {
+    "entryID": 4368,
+    "actorID": "MC20",
+    "text": "[panel=2]「咳……道爺方才還說太平道的話順耳，這下倒成了替黑狼跑腿的。」",
+    "Sequence": "SetPortrait(MC20,pic=1);\nEnableCharacterExpression(2,MC20,Pain);\nModifyData(FavorabilityExp,MC20,-20);",
+    "Description": "雍仔好感度下降",
+    "zh_TW": "[panel=2]「咳……道爺方才還說太平道的話順耳，這下倒成了替黑狼跑腿的。」",
+    "zh_CN": "[panel=2]「咳……道爷方才还说太平道的话顺耳，这下倒成了替黑狼跑腿的。」",
+    "links": [4369]
+  },
+  {
+    "entryID": 4369,
+    "actorID": "role140",
+    "text": "[panel=1]「錢收下了，剩下那一半——弟兄們，上！」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "[panel=1]「錢收下了，剩下那一半——弟兄們，上！」",
+    "zh_CN": "[panel=1]「钱收下了，剩下那一半——弟兄们，上！」",
+    "links": [4370]
+  },
+  {
+    "entryID": 4370,
+    "actorID": "role126",
+    "text": "[panel=2]「狼崽子僱來的人，一個也別放進洞！弟兄們，一起上！」",
+    "Sequence": "",
+    "zh_TW": "[panel=2]「狼崽子僱來的人，一個也別放進洞！弟兄們，一起上！」",
+    "zh_CN": "[panel=2]「狼崽子雇来的人，一个也别放进洞！弟兄们，一起上！」",
+    "links": [39]
   }
 ]

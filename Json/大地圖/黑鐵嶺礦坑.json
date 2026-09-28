@@ -1431,6 +1431,99 @@
     "links": [3997]
   },
   {
+    "entryID": 3986,
+    "actorID": "0",
+    "title": "寒鐵礦",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [38, 3987]
+  },
+  {
+    "entryID": 3987,
+    "actorID": "MC1",
+    "text": "「這塊礦石沉重異常，且泛著幽幽藍光…」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_CN": "「这块矿石沉重异常，且泛着幽幽蓝光…」",
+    "links": [3988]
+  },
+  {
+    "entryID": 3988,
+    "actorID": "MC1",
+    "text": "「一看就是寶物，先留著它吧，搞不好以後有大用呢！」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_CN": "「一看就是宝物，先留着它吧，搞不好以后有大用呢！」",
+    "links": []
+  },
+  {
+    "entryID": 3989,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "EnableEventBG(LiDashanFight,FullScreen);\nContinue();",
+    "Description": "事件圖",
+    "links": [40]
+  },
+  {
+    "entryID": 3990,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableEventBG(FullScreen);\nContinue();",
+    "Description": "關閉事件圖",
+    "links": [3866]
+  },
+  {
+    "entryID": 3991,
+    "actorID": "MC1",
+    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "Sequence": "SetPortrait(MC1,pic=5);",
+    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
+    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
+    "links": [3901, 3900]
+  },
+  {
+    "entryID": 3992,
+    "actorID": "MC1",
+    "text": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
+    "zh_CN": "「啊，竟然没带钱出来！？这、这下糗了……」",
+    "links": [3902]
+  },
+  {
+    "entryID": 3993,
+    "actorID": "role129",
+    "text": "「若少俠不嫌棄，妾身願將家傳醫術心得傾囊相授，以此報答救命之恩！」",
+    "Sequence": "",
+    "zh_CN": "「若少侠不嫌弃，妾身愿将家传医术心得倾囊相授，以此报答救命之恩！」",
+    "links": [3879]
+  },
+  {
+    "entryID": 3994,
+    "actorID": "MC22",
+    "text": "「若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
+    "Sequence": "",
+    "zh_TW": "「若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
+    "zh_CN": "「若你刚刚不出手，他们两个都得死……我们这样也算是做了好事，对吧？」",
+    "links": [3888]
+  },
+  {
+    "entryID": 3995,
+    "actorID": "MC1",
+    "text": "「不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
+    "Sequence": "",
+    "zh_TW": "「不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
+    "zh_CN": "「不过嘛……嘿嘿，若是日后有人问起，要好好说故事啊！对了，快些回去吧，李老伯还在家里等着你们呢。」",
+    "links": [3878]
+  },
+  {
+    "entryID": 3996,
+    "actorID": "MC22",
+    "text": "「這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
+    "Sequence": "",
+    "zh_TW": "「這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
+    "zh_CN": "「这下面黑漆漆的，而且……我总觉得有一股让人很不舒服的气息。」",
+    "links": [3973]
+  },
+  {
     "entryID": 3997,
     "actorID": "role2",
     "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
@@ -1564,98 +1657,5 @@
     "zh_TW": "[panel=6]＊（等你穿好衣裳，赫連娜娜已經站回密室門口，背對著你。你的臉上多了一個巴掌印，指痕還清清楚楚地紅著。）＊",
     "zh_CN": "[panel=6]＊（等你穿好衣裳，赫连娜娜已经站回密室门口，背对着你。你的脸上多了一个巴掌印，指痕还清清楚楚地红着。）＊",
     "links": []
-  },
-  {
-    "entryID": 3986,
-    "actorID": "0",
-    "title": "寒鐵礦",
-    "text": "",
-    "Sequence": "Continue();",
-    "links": [38, 3987]
-  },
-  {
-    "entryID": 3987,
-    "actorID": "MC1",
-    "text": "「這塊礦石沉重異常，且泛著幽幽藍光…」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_CN": "「这块矿石沉重异常，且泛着幽幽蓝光…」",
-    "links": [3988]
-  },
-  {
-    "entryID": 3988,
-    "actorID": "MC1",
-    "text": "「一看就是寶物，先留著它吧，搞不好以後有大用呢！」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_CN": "「一看就是宝物，先留着它吧，搞不好以后有大用呢！」",
-    "links": []
-  },
-  {
-    "entryID": 3989,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "EnableEventBG(LiDashanFight,FullScreen);\nContinue();",
-    "Description": "事件圖",
-    "links": [40]
-  },
-  {
-    "entryID": 3990,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableEventBG(FullScreen);\nContinue();",
-    "Description": "關閉事件圖",
-    "links": [3866]
-  },
-  {
-    "entryID": 3991,
-    "actorID": "MC1",
-    "text": "「來一包吧，正好餓了。阿婆，錢給妳。」",
-    "Sequence": "SetPortrait(MC1,pic=5);",
-    "zh_TW": "「來一包吧，正好餓了。阿婆，錢給妳。」",
-    "zh_CN": "「来一包吧，正好饿了。阿婆，钱给你。」",
-    "links": [3901, 3900]
-  },
-  {
-    "entryID": 3992,
-    "actorID": "MC1",
-    "text": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
-    "Sequence": "SetPortrait(MC1,pic=11);",
-    "zh_TW": "「啊，竟然沒帶錢出來！？這、這下糗了……」",
-    "zh_CN": "「啊，竟然没带钱出来！？这、这下糗了……」",
-    "links": [3902]
-  },
-  {
-    "entryID": 3993,
-    "actorID": "role129",
-    "text": "「若少俠不嫌棄，妾身願將家傳醫術心得傾囊相授，以此報答救命之恩！」",
-    "Sequence": "",
-    "zh_CN": "「若少侠不嫌弃，妾身愿将家传医术心得倾囊相授，以此报答救命之恩！」",
-    "links": [3879]
-  },
-  {
-    "entryID": 3994,
-    "actorID": "MC22",
-    "text": "「若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
-    "Sequence": "",
-    "zh_TW": "「若你剛剛不出手，他們兩個都得死……我們這樣也算是做了好事，對吧？」",
-    "zh_CN": "「若你刚刚不出手，他们两个都得死……我们这样也算是做了好事，对吧？」",
-    "links": [3888]
-  },
-  {
-    "entryID": 3995,
-    "actorID": "MC1",
-    "text": "「不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
-    "Sequence": "",
-    "zh_TW": "「不過嘛……嘿嘿，若是日後有人問起，要好好說故事啊！對了，快些回去吧，李老伯還在家裡等著你們呢。」",
-    "zh_CN": "「不过嘛……嘿嘿，若是日后有人问起，要好好说故事啊！对了，快些回去吧，李老伯还在家里等着你们呢。」",
-    "links": [3878]
-  },
-  {
-    "entryID": 3996,
-    "actorID": "MC22",
-    "text": "「這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
-    "Sequence": "",
-    "zh_TW": "「這下面黑漆漆的，而且……我總覺得有一股讓人很不舒服的氣息。」",
-    "zh_CN": "「这下面黑漆漆的，而且……我总觉得有一股让人很不舒服的气息。」",
-    "links": [3973]
   }
 ]

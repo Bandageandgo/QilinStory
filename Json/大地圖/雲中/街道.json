@@ -349,103 +349,6 @@
     "links": [4178, 4179]
   },
   {
-    "entryID": 4178,
-    "actorID": "MC1",
-    "text": "[em2][隱藏選項][/em2]「你腰帶裡那串錢……」",
-    "Sequence": "",
-    "Conditions": "Variable[\"IsHidden2\"] == true;",
-    "Description": "選項1",
-    "zh_TW": "[em2][隱藏選項][/em2]「你腰帶裡那串錢……」",
-    "zh_CN": "[em2][隐藏选项][/em2]「你腰带里那串钱……」",
-    "links": [4180]
-  },
-  {
-    "entryID": 4179,
-    "actorID": "MC1",
-    "text": "離開",
-    "Sequence": "",
-    "Conditions": "Variable[\"IsHidden2\"] == true;",
-    "Description": "選項2",
-    "zh_TW": "離開",
-    "zh_CN": "离开",
-    "links": []
-  },
-  {
-    "entryID": 4180,
-    "actorID": "MC1",
-    "text": "「阿傑，破廟那晚阿佑跟我說過，你背著大夥拆開腰帶數錢，數完又縫了回去。」",
-    "Sequence": "SetPortrait(MC1,pic=18);",
-    "zh_TW": "「阿傑，破廟那晚阿佑跟我說過，你背著大夥拆開腰帶數錢，數完又縫了回去。」",
-    "zh_CN": "「阿杰，破庙那晚阿佑跟我说过，你背着大伙拆开腰带数钱，数完又缝了回去。」",
-    "links": [4181]
-  },
-  {
-    "entryID": 4181,
-    "actorID": "role99",
-    "text": "「阿佑那小子，嘴上真沒個把門的……恩公，不瞞你說，這錢我一個都沒敢花。」",
-    "Sequence": "",
-    "zh_TW": "「阿佑那小子，嘴上真沒個把門的……恩公，不瞞你說，這錢我一個都沒敢花。」",
-    "zh_CN": "「阿佑那小子，嘴上真没个把门的……恩公，不瞒你说，这钱我一个都没敢花。」",
-    "links": [4182]
-  },
-  {
-    "entryID": 4182,
-    "actorID": "MC8",
-    "text": "[panel=2]「一個都沒花？阿傑叔叔，那你這肉攤是拿什麼錢支起來的呀？」",
-    "Sequence": "SetPortrait(MC8,pic=14);\nEnableCharacterExpression(2,MC8,Question);",
-    "zh_TW": "[panel=2]「一個都沒花？阿傑叔叔，那你這肉攤是拿什麼錢支起來的呀？」",
-    "zh_CN": "[panel=2]「一个都没花？阿杰叔叔，那你这肉摊是拿什么钱支起来的呀？」",
-    "links": [4183]
-  },
-  {
-    "entryID": 4183,
-    "actorID": "role99",
-    "text": "「找同鄉東拼西湊借來的。腰上這串，花一個，我就想起破廟那一晚。」",
-    "Sequence": "DisableCharacterExpression(2);",
-    "zh_TW": "「找同鄉東拼西湊借來的。腰上這串，花一個，我就想起破廟那一晚。」",
-    "zh_CN": "「找同乡东拼西凑借来的。腰上这串，花一个，我就想起破庙那一晚。」",
-    "links": [4184]
-  },
-  {
-    "entryID": 4184,
-    "actorID": "role99",
-    "text": "「這錢恩公拿去吧，擱在我身上，夜裡睡不踏實。」",
-    "Sequence": "ModifyData(Coin,200);",
-    "Script": "Variable[\"IsHidden2\"] = false;",
-    "Description": "給錢、變數更新",
-    "zh_TW": "「這錢恩公拿去吧，擱在我身上，夜裡睡不踏實。」",
-    "zh_CN": "「这钱恩公拿去吧，搁在我身上，夜里睡不踏实。」",
-    "links": [4185]
-  },
-  {
-    "entryID": 4185,
-    "actorID": "MC1",
-    "text": "「好，這錢我收了。往後這攤子，你好好擺。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_TW": "「好，這錢我收了。往後這攤子，你好好擺。」",
-    "zh_CN": "「好，这钱我收了。往后这摊子，你好好摆。」",
-    "links": [4186]
-  },
-  {
-    "entryID": 4186,
-    "actorID": "MC8",
-    "text": "[panel=2]「表哥收得倒是爽快……往後來買肉，咱們可得照價給錢。」",
-    "Sequence": "SetPortrait(MC8,pic=6);",
-    "zh_TW": "[panel=2]「表哥收得倒是爽快……往後來買肉，咱們可得照價給錢。」",
-    "zh_CN": "[panel=2]「表哥收得倒是爽快……往后来买肉，咱们可得照价给钱。」",
-    "links": [4187]
-  },
-  {
-    "entryID": 4187,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你們走出老遠，回頭再看，阿傑已經把拆空的腰帶繫回腰上，又操起刀來切肉了。）＊",
-    "Sequence": "ModifyData(ChancePoint,1);",
-    "Description": "獲得機會點",
-    "zh_TW": "[panel=6]＊（你們走出老遠，回頭再看，阿傑已經把拆空的腰帶繫回腰上，又操起刀來切肉了。）＊",
-    "zh_CN": "[panel=6]＊（你们走出老远，回头再看，阿杰已经把拆空的腰带系回腰上，又操起刀来切肉了。）＊",
-    "links": []
-  },
-  {
     "entryID": 49,
     "actorID": "role2",
     "text": "[panel=6]＊（一陣香甜的氣味飄來，一位慈祥的阿婆正在翻炒著鐵鍋裡的栗子。）＊",
@@ -812,120 +715,6 @@
     "links": [4188]
   },
   {
-    "entryID": 4188,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [4189, 4190, 4191]
-  },
-  {
-    "entryID": 4189,
-    "actorID": "MC1",
-    "text": "[em2][洞悉檢定][/em2]「姑娘這話，只說了一半。」",
-    "Sequence": "",
-    "Description": "選項1",
-    "zh_TW": "[em2][洞悉檢定][/em2]「姑娘這話，只說了一半。」",
-    "zh_CN": "[em2][洞悉检定][/em2]「姑娘这话，只说了一半。」",
-    "links": [4192]
-  },
-  {
-    "entryID": 4190,
-    "actorID": "MC1",
-    "text": "[em2][洞悉檢定][/em2][em3]知其一，不知其二[/em3]",
-    "Sequence": "",
-    "Description": "選項2",
-    "zh_TW": "[em2][洞悉檢定][/em2][em3]知其一，不知其二[/em3]",
-    "zh_CN": "[em2][洞悉检定][/em2][em3]知其一，不知其二[/em3]",
-    "links": [4196]
-  },
-  {
-    "entryID": 4191,
-    "actorID": "MC1",
-    "text": "「怎樣的才算稀罕？」",
-    "Sequence": "",
-    "Description": "選項3",
-    "zh_TW": "「怎樣的才算稀罕？」",
-    "zh_CN": "「怎样的才算稀罕？」",
-    "links": [4199]
-  },
-  {
-    "entryID": 4192,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,12);",
-    "Description": "洞悉檢定",
-    "links": [4193]
-  },
-  {
-    "entryID": 4193,
-    "actorID": "MC1",
-    "text": "「姑娘這話只說了一半。金銀玉器照收，偏又講究來路，要收的怕是別處收不到的貨吧？」",
-    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
-    "zh_TW": "「姑娘這話只說了一半。金銀玉器照收，偏又講究來路，要收的怕是別處收不到的貨吧？」",
-    "zh_CN": "「姑娘这话只说了一半。金银玉器照收，偏又讲究来路，要收的怕是别处收不到的货吧？」",
-    "links": [4194, 4195]
-  },
-  {
-    "entryID": 4194,
-    "actorID": "MC19",
-    "text": "「少俠耳朵倒尖，我收的是舊東西。來路越怪越好，別家不敢收的我就收。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=5);\nModifyData(FeatExp,Player,Insight,10);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "檢定成功、洞悉經驗增加",
-    "zh_TW": "「少俠耳朵倒尖，我收的是舊東西。來路越怪越好，別家不敢收的我就收。」",
-    "zh_CN": "「少侠耳朵倒尖，我收的是旧东西。来路越怪越好，别家不敢收的我就收。」",
-    "links": [4174]
-  },
-  {
-    "entryID": 4195,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "DisableCharacterExpression(0);\nContinue();",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗",
-    "links": [4174]
-  },
-  {
-    "entryID": 4196,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,20);",
-    "Description": "洞悉檢定",
-    "links": [4197]
-  },
-  {
-    "entryID": 4197,
-    "actorID": "MC1",
-    "text": "「姑娘說話時，眼睛一直跟著攤前走過的人。妳心裡早有一樣要找的東西吧？」",
-    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Idea);",
-    "zh_TW": "「姑娘說話時，眼睛一直跟著攤前走過的人。妳心裡早有一樣要找的東西吧？」",
-    "zh_CN": "「姑娘说话时，眼睛一直跟着摊前走过的人。你心里早有一样要找的东西吧？」",
-    "links": [4198, 4195]
-  },
-  {
-    "entryID": 4198,
-    "actorID": "MC19",
-    "text": "「少俠眼睛倒毒，那東西我也只聽過傳言。說是出在一尊沒有臉的像上，會蠱惑人，拿了就捨不得撒手。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=8);\nModifyData(FeatExp,Player,Insight,10);",
-    "Conditions": "IsPassDice() == true;",
-    "Script": "Variable[\"IsHidden3\"] = true;\nSetQuestState(\"＿＿\", \"active\");",
-    "Description": "檢定成功、洞悉經驗增加、變數更新、觸發任務：＿＿",
-    "zh_TW": "「少俠眼睛倒毒，那東西我也只聽過傳言。說是出在一尊沒有臉的像上，會蠱惑人，拿了就捨不得撒手。」",
-    "zh_CN": "「少侠眼睛倒毒，那东西我也只听过传言。说是出在一尊没有脸的像上，会蛊惑人，拿了就舍不得撒手。」",
-    "links": [4174]
-  },
-  {
-    "entryID": 4199,
-    "actorID": "MC1",
-    "text": "「怎樣的才算稀罕？我們走江湖撿著的，多半是些破銅爛鐵。」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「怎樣的才算稀罕？我們走江湖撿著的，多半是些破銅爛鐵。」",
-    "zh_CN": "「怎样的才算稀罕？我们走江湖捡着的，多半是些破铜烂铁。」",
-    "links": [4174]
-  },
-  {
     "entryID": 92,
     "actorID": "MC1",
     "text": "「好，我記住了。若遇上稀罕玩意，我會先帶來給妳看。」",
@@ -1135,83 +924,6 @@
     "zh_TW": "「...」",
     "zh_CN": "「...」",
     "links": [4200]
-  },
-  {
-    "entryID": 4200,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();",
-    "links": [4201, 84]
-  },
-  {
-    "entryID": 4201,
-    "actorID": "MC19",
-    "text": "「少俠又來了，這回帶來的是稀罕貨，還是破銅爛鐵？」",
-    "Sequence": "SetPortrait(MC19,pic=1);",
-    "Conditions": "CurrentQuestState(\"＿＿\") == \"active\" and (CurrentQuestEntryState(\"＿＿\", 1) ~= \"success\") and (IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true);",
-    "zh_TW": "「少俠又來了，這回帶來的是稀罕貨，還是破銅爛鐵？」",
-    "zh_CN": "「少侠又来了，这回带来的是稀罕货，还是破铜烂铁？」",
-    "links": [4202, 4203]
-  },
-  {
-    "entryID": 4202,
-    "actorID": "MC1",
-    "text": "[em2][隱藏選項][/em2]「妳上回說的那樣東西……」",
-    "Sequence": "",
-    "Conditions": "Variable[\"IsHidden3\"] == true and (IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true);",
-    "Description": "選項1",
-    "zh_TW": "[em2][隱藏選項][/em2]「妳上回說的那樣東西……」",
-    "zh_CN": "[em2][隐藏选项][/em2]「你上回说的那样东西……」",
-    "links": [4204]
-  },
-  {
-    "entryID": 4203,
-    "actorID": "MC1",
-    "text": "離開",
-    "Sequence": "",
-    "Description": "選項2",
-    "zh_TW": "離開",
-    "zh_CN": "离开",
-    "links": []
-  },
-  {
-    "entryID": 4204,
-    "actorID": "MC1",
-    "text": "「[em7]把它擱在攤布上[/em7]，姑娘上回說的，會不會就是這個？」",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Question);",
-    "zh_TW": "「[em7]把它擱在攤布上[/em7]，姑娘上回說的，會不會就是這個？」",
-    "zh_CN": "「[em7]把它搁在摊布上[/em7]，姑娘上回说的，会不会就是这个？」",
-    "links": [4205]
-  },
-  {
-    "entryID": 4205,
-    "actorID": "MC19",
-    "text": "「就是這個，傳言倒沒騙人。只是聽說那種沒有臉的像，各處加起來不止一尊。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=4);",
-    "zh_TW": "「就是這個，傳言倒沒騙人。只是聽說那種沒有臉的像，各處加起來不止一尊。」",
-    "zh_CN": "「就是这个，传言倒没骗人。只是听说那种没有脸的像，各处加起来不止一尊。」",
-    "links": [4206]
-  },
-  {
-    "entryID": 4206,
-    "actorID": "MC19",
-    "text": "「這一件你們先收著。往後再撞見那種像，先把像上的東西拿來給我看一眼，再動手毀了它。」",
-    "Sequence": "SetPortrait(MC19,pic=8);",
-    "Script": "SetQuestEntryState(\"＿＿\", 1, \"success\");\nVariable[\"IsHidden3\"] = false;",
-    "Description": "任務更新、變數更新",
-    "zh_TW": "「這一件你們先收著。往後再撞見那種像，先把像上的東西拿來給我看一眼，再動手毀了它。」",
-    "zh_CN": "「这一件你们先收着。往后再撞见那种像，先把像上的东西拿来给我看一眼，再动手毁了它。」",
-    "links": [4207]
-  },
-  {
-    "entryID": 4207,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你把它收回懷裡，攤布上仍是香料、琉璃珠和銀飾。菈沙又抬眼打量起街上來來往往的每一個路人。）＊",
-    "Sequence": "SetPortrait(MC19,pic=2);\nModifyData(ChancePoint,1);",
-    "Description": "獲得機會點",
-    "zh_TW": "[panel=6]＊（你把它收回懷裡，攤布上仍是香料、琉璃珠和銀飾。菈沙又抬眼打量起街上來來往往的每一個路人。）＊",
-    "zh_CN": "[panel=6]＊（你把它收回怀里，摊布上仍是香料、琉璃珠和银饰。菈沙又抬眼打量起街上来来往往的每一个路人。）＊",
-    "links": []
   },
   {
     "entryID": 4068,
@@ -1894,5 +1606,293 @@
     "zh_TW": "「[em2]他也曾說過：莊子說得意而忘言，練武也是一樣，須得意而忘形[/em2]。」",
     "zh_CN": "「[em2]他也曾说过：庄子说得意而忘言，练武也是一样，须得意而忘形[/em2]。」",
     "links": [4156]
+  },
+  {
+    "entryID": 4178,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「你腰帶裡那串錢……」",
+    "Sequence": "",
+    "Conditions": "Variable[\"IsHidden2\"] == true;",
+    "Description": "選項1",
+    "zh_TW": "[em2][隱藏選項][/em2]「你腰帶裡那串錢……」",
+    "zh_CN": "[em2][隐藏选项][/em2]「你腰带里那串钱……」",
+    "links": [4180]
+  },
+  {
+    "entryID": 4179,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Conditions": "Variable[\"IsHidden2\"] == true;",
+    "Description": "選項2",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 4180,
+    "actorID": "MC1",
+    "text": "「阿傑，破廟那晚阿佑跟我說過，你背著大夥拆開腰帶數錢，數完又縫了回去。」",
+    "Sequence": "SetPortrait(MC1,pic=18);",
+    "zh_TW": "「阿傑，破廟那晚阿佑跟我說過，你背著大夥拆開腰帶數錢，數完又縫了回去。」",
+    "zh_CN": "「阿杰，破庙那晚阿佑跟我说过，你背着大伙拆开腰带数钱，数完又缝了回去。」",
+    "links": [4181]
+  },
+  {
+    "entryID": 4181,
+    "actorID": "role99",
+    "text": "「阿佑那小子，嘴上真沒個把門的……恩公，不瞞你說，這錢我一個都沒敢花。」",
+    "Sequence": "",
+    "zh_TW": "「阿佑那小子，嘴上真沒個把門的……恩公，不瞞你說，這錢我一個都沒敢花。」",
+    "zh_CN": "「阿佑那小子，嘴上真没个把门的……恩公，不瞒你说，这钱我一个都没敢花。」",
+    "links": [4182]
+  },
+  {
+    "entryID": 4182,
+    "actorID": "MC8",
+    "text": "[panel=2]「一個都沒花？阿傑叔叔，那你這肉攤是拿什麼錢支起來的呀？」",
+    "Sequence": "SetPortrait(MC8,pic=14);\nEnableCharacterExpression(2,MC8,Question);",
+    "zh_TW": "[panel=2]「一個都沒花？阿傑叔叔，那你這肉攤是拿什麼錢支起來的呀？」",
+    "zh_CN": "[panel=2]「一个都没花？阿杰叔叔，那你这肉摊是拿什么钱支起来的呀？」",
+    "links": [4183]
+  },
+  {
+    "entryID": 4183,
+    "actorID": "role99",
+    "text": "「找同鄉東拼西湊借來的。腰上這串，花一個，我就想起破廟那一晚。」",
+    "Sequence": "DisableCharacterExpression(2);",
+    "zh_TW": "「找同鄉東拼西湊借來的。腰上這串，花一個，我就想起破廟那一晚。」",
+    "zh_CN": "「找同乡东拼西凑借来的。腰上这串，花一个，我就想起破庙那一晚。」",
+    "links": [4184]
+  },
+  {
+    "entryID": 4184,
+    "actorID": "role99",
+    "text": "「這錢恩公拿去吧，擱在我身上，夜裡睡不踏實。」",
+    "Sequence": "ModifyData(Coin,200);",
+    "Script": "Variable[\"IsHidden2\"] = false;",
+    "Description": "給錢、變數更新",
+    "zh_TW": "「這錢恩公拿去吧，擱在我身上，夜裡睡不踏實。」",
+    "zh_CN": "「这钱恩公拿去吧，搁在我身上，夜里睡不踏实。」",
+    "links": [4185]
+  },
+  {
+    "entryID": 4185,
+    "actorID": "MC1",
+    "text": "「好，這錢我收了。往後這攤子，你好好擺。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「好，這錢我收了。往後這攤子，你好好擺。」",
+    "zh_CN": "「好，这钱我收了。往后这摊子，你好好摆。」",
+    "links": [4186]
+  },
+  {
+    "entryID": 4186,
+    "actorID": "MC8",
+    "text": "[panel=2]「表哥收得倒是爽快……往後來買肉，咱們可得照價給錢。」",
+    "Sequence": "SetPortrait(MC8,pic=6);",
+    "zh_TW": "[panel=2]「表哥收得倒是爽快……往後來買肉，咱們可得照價給錢。」",
+    "zh_CN": "[panel=2]「表哥收得倒是爽快……往后来买肉，咱们可得照价给钱。」",
+    "links": [4187]
+  },
+  {
+    "entryID": 4187,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你們走出老遠，回頭再看，阿傑已經把拆空的腰帶繫回腰上，又操起刀來切肉了。）＊",
+    "Sequence": "ModifyData(ChancePoint,1);",
+    "Description": "獲得機會點",
+    "zh_TW": "[panel=6]＊（你們走出老遠，回頭再看，阿傑已經把拆空的腰帶繫回腰上，又操起刀來切肉了。）＊",
+    "zh_CN": "[panel=6]＊（你们走出老远，回头再看，阿杰已经把拆空的腰带系回腰上，又操起刀来切肉了。）＊",
+    "links": []
+  },
+  {
+    "entryID": 4188,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [4189, 4190, 4191]
+  },
+  {
+    "entryID": 4189,
+    "actorID": "MC1",
+    "text": "[em2][洞悉檢定][/em2]「姑娘這話，只說了一半。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "[em2][洞悉檢定][/em2]「姑娘這話，只說了一半。」",
+    "zh_CN": "[em2][洞悉检定][/em2]「姑娘这话，只说了一半。」",
+    "links": [4192]
+  },
+  {
+    "entryID": 4190,
+    "actorID": "MC1",
+    "text": "[em2][洞悉檢定][/em2][em3]知其一，不知其二[/em3]",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "[em2][洞悉檢定][/em2][em3]知其一，不知其二[/em3]",
+    "zh_CN": "[em2][洞悉检定][/em2][em3]知其一，不知其二[/em3]",
+    "links": [4196]
+  },
+  {
+    "entryID": 4191,
+    "actorID": "MC1",
+    "text": "「怎樣的才算稀罕？」",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "「怎樣的才算稀罕？」",
+    "zh_CN": "「怎样的才算稀罕？」",
+    "links": [4199]
+  },
+  {
+    "entryID": 4192,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,12);",
+    "Description": "洞悉檢定",
+    "links": [4193]
+  },
+  {
+    "entryID": 4193,
+    "actorID": "MC1",
+    "text": "「姑娘這話只說了一半。金銀玉器照收，偏又講究來路，要收的怕是別處收不到的貨吧？」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Meditate);",
+    "zh_TW": "「姑娘這話只說了一半。金銀玉器照收，偏又講究來路，要收的怕是別處收不到的貨吧？」",
+    "zh_CN": "「姑娘这话只说了一半。金银玉器照收，偏又讲究来路，要收的怕是别处收不到的货吧？」",
+    "links": [4194, 4195]
+  },
+  {
+    "entryID": 4194,
+    "actorID": "MC19",
+    "text": "「少俠耳朵倒尖，我收的是舊東西。來路越怪越好，別家不敢收的我就收。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=5);\nModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、洞悉經驗增加",
+    "zh_TW": "「少俠耳朵倒尖，我收的是舊東西。來路越怪越好，別家不敢收的我就收。」",
+    "zh_CN": "「少侠耳朵倒尖，我收的是旧东西。来路越怪越好，别家不敢收的我就收。」",
+    "links": [4174]
+  },
+  {
+    "entryID": 4195,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(0);\nContinue();",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "links": [4174]
+  },
+  {
+    "entryID": 4196,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,20);",
+    "Description": "洞悉檢定",
+    "links": [4197]
+  },
+  {
+    "entryID": 4197,
+    "actorID": "MC1",
+    "text": "「姑娘說話時，眼睛一直跟著攤前走過的人。妳心裡早有一樣要找的東西吧？」",
+    "Sequence": "SetPortrait(MC1,pic=17);\nEnableCharacterExpression(0,Player,Idea);",
+    "zh_TW": "「姑娘說話時，眼睛一直跟著攤前走過的人。妳心裡早有一樣要找的東西吧？」",
+    "zh_CN": "「姑娘说话时，眼睛一直跟着摊前走过的人。你心里早有一样要找的东西吧？」",
+    "links": [4198, 4195]
+  },
+  {
+    "entryID": 4198,
+    "actorID": "MC19",
+    "text": "「少俠眼睛倒毒，那東西我也只聽過傳言。說是出在一尊沒有臉的像上，會蠱惑人，拿了就捨不得撒手。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=8);\nModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Script": "Variable[\"IsHidden3\"] = true;\nSetQuestState(\"＿＿\", \"active\");",
+    "Description": "檢定成功、洞悉經驗增加、變數更新、觸發任務：＿＿",
+    "zh_TW": "「少俠眼睛倒毒，那東西我也只聽過傳言。說是出在一尊沒有臉的像上，會蠱惑人，拿了就捨不得撒手。」",
+    "zh_CN": "「少侠眼睛倒毒，那东西我也只听过传言。说是出在一尊没有脸的像上，会蛊惑人，拿了就舍不得撒手。」",
+    "links": [4174]
+  },
+  {
+    "entryID": 4199,
+    "actorID": "MC1",
+    "text": "「怎樣的才算稀罕？我們走江湖撿著的，多半是些破銅爛鐵。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「怎樣的才算稀罕？我們走江湖撿著的，多半是些破銅爛鐵。」",
+    "zh_CN": "「怎样的才算稀罕？我们走江湖捡着的，多半是些破铜烂铁。」",
+    "links": [4174]
+  },
+  {
+    "entryID": 4200,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [4201, 84]
+  },
+  {
+    "entryID": 4201,
+    "actorID": "MC19",
+    "text": "「少俠又來了，這回帶來的是稀罕貨，還是破銅爛鐵？」",
+    "Sequence": "SetPortrait(MC19,pic=1);",
+    "Conditions": "CurrentQuestState(\"＿＿\") == \"active\" and (CurrentQuestEntryState(\"＿＿\", 1) ~= \"success\") and (IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true);",
+    "zh_TW": "「少俠又來了，這回帶來的是稀罕貨，還是破銅爛鐵？」",
+    "zh_CN": "「少侠又来了，这回带来的是稀罕货，还是破铜烂铁？」",
+    "links": [4202, 4203]
+  },
+  {
+    "entryID": 4202,
+    "actorID": "MC1",
+    "text": "[em2][隱藏選項][/em2]「妳上回說的那樣東西……」",
+    "Sequence": "",
+    "Conditions": "Variable[\"IsHidden3\"] == true and (IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true);",
+    "Description": "選項1",
+    "zh_TW": "[em2][隱藏選項][/em2]「妳上回說的那樣東西……」",
+    "zh_CN": "[em2][隐藏选项][/em2]「你上回说的那样东西……」",
+    "links": [4204]
+  },
+  {
+    "entryID": 4203,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": []
+  },
+  {
+    "entryID": 4204,
+    "actorID": "MC1",
+    "text": "「[em7]把它擱在攤布上[/em7]，姑娘上回說的，會不會就是這個？」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「[em7]把它擱在攤布上[/em7]，姑娘上回說的，會不會就是這個？」",
+    "zh_CN": "「[em7]把它搁在摊布上[/em7]，姑娘上回说的，会不会就是这个？」",
+    "links": [4205]
+  },
+  {
+    "entryID": 4205,
+    "actorID": "MC19",
+    "text": "「就是這個，傳言倒沒騙人。只是聽說那種沒有臉的像，各處加起來不止一尊。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=4);",
+    "zh_TW": "「就是這個，傳言倒沒騙人。只是聽說那種沒有臉的像，各處加起來不止一尊。」",
+    "zh_CN": "「就是这个，传言倒没骗人。只是听说那种没有脸的像，各处加起来不止一尊。」",
+    "links": [4206]
+  },
+  {
+    "entryID": 4206,
+    "actorID": "MC19",
+    "text": "「這一件你們先收著。往後再撞見那種像，先把像上的東西拿來給我看一眼，再動手毀了它。」",
+    "Sequence": "SetPortrait(MC19,pic=8);",
+    "Script": "SetQuestEntryState(\"＿＿\", 1, \"success\");\nVariable[\"IsHidden3\"] = false;",
+    "Description": "任務更新、變數更新",
+    "zh_TW": "「這一件你們先收著。往後再撞見那種像，先把像上的東西拿來給我看一眼，再動手毀了它。」",
+    "zh_CN": "「这一件你们先收着。往后再撞见那种像，先把像上的东西拿来给我看一眼，再动手毁了它。」",
+    "links": [4207]
+  },
+  {
+    "entryID": 4207,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把它收回懷裡，攤布上仍是香料、琉璃珠和銀飾。菈沙又抬眼打量起街上來來往往的每一個路人。）＊",
+    "Sequence": "SetPortrait(MC19,pic=2);\nModifyData(ChancePoint,1);",
+    "Description": "獲得機會點",
+    "zh_TW": "[panel=6]＊（你把它收回懷裡，攤布上仍是香料、琉璃珠和銀飾。菈沙又抬眼打量起街上來來往往的每一個路人。）＊",
+    "zh_CN": "[panel=6]＊（你把它收回怀里，摊布上仍是香料、琉璃珠和银饰。菈沙又抬眼打量起街上来来往往的每一个路人。）＊",
+    "links": []
   }
 ]

@@ -757,91 +757,6 @@
     "links": [2061]
   },
   {
-    "entryID": 2061,
-    "actorID": "role2",
-    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "Sequence": "SetPortrait(MC1,pic=12);",
-    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
-    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
-    "links": [2062, 2063]
-  },
-  {
-    "entryID": 2062,
-    "actorID": "MC1",
-    "text": "[em2][口才檢定][/em2][em3]置之死地，而後生[/em3]",
-    "Sequence": "",
-    "Description": "選項1",
-    "zh_TW": "[em2][口才檢定][/em2][em3]置之死地，而後生[/em3]",
-    "zh_CN": "[em2][口才检定][/em2][em3]置之死地，而后生[/em3]",
-    "links": [2064]
-  },
-  {
-    "entryID": 2063,
-    "actorID": "MC1",
-    "text": "離開",
-    "Sequence": "",
-    "Description": "選項2",
-    "zh_TW": "離開",
-    "zh_CN": "离开",
-    "links": [327]
-  },
-  {
-    "entryID": 2064,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,20);",
-    "Description": "口才檢定",
-    "links": [2065]
-  },
-  {
-    "entryID": 2065,
-    "actorID": "MC1",
-    "text": "「慢著，你們真當本少俠敗了？方才那是手下留情，我若下了狠手，你兄弟倆還走得了？」",
-    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
-    "zh_TW": "「慢著，你們真當本少俠敗了？方才那是手下留情，我若下了狠手，你兄弟倆還走得了？」",
-    "zh_CN": "「慢着，你们真当本少侠败了？方才那是手下留情，我若下了狠手，你兄弟俩还走得了？」",
-    "links": [2066, 2068]
-  },
-  {
-    "entryID": 2066,
-    "actorID": "role120",
-    "text": "[panel=1]「留手？……三弟，上回俺可是實打實栽在他手上。今日贏得這般輕巧，怕是他真讓著我們。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role120,pic=4);\nEnableCharacterExpression(1,role120,Question);\nModifyData(FeatExp,Player,Persuasion,25);",
-    "Conditions": "IsPassDice() == true;",
-    "Description": "檢定成功、口才經驗增加",
-    "zh_TW": "[panel=1]「留手？……三弟，上回俺可是實打實栽在他手上。今日贏得這般輕巧，怕是他真讓著我們。」",
-    "zh_CN": "[panel=1]「留手？……三弟，上回俺可是实打实栽在他手上。今日赢得这般轻巧，怕是他真让着我们。」",
-    "links": [2067]
-  },
-  {
-    "entryID": 2067,
-    "actorID": "role120",
-    "text": "[panel=1]「英雄饒命！方才是俺兄弟倆有眼無珠。這錢您收下，還望高抬貴手！」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(role120,pic=1);\nModifyData(Coin,150);",
-    "Description": "給錢",
-    "zh_TW": "[panel=1]「英雄饒命！方才是俺兄弟倆有眼無珠。這錢您收下，還望高抬貴手！」",
-    "zh_CN": "[panel=1]「英雄饶命！方才是俺兄弟俩有眼无珠。这钱您收下，还望高抬贵手！」",
-    "links": [379]
-  },
-  {
-    "entryID": 2068,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "Continue();\nDisableCharacterExpression(0);\nModifyData(Coin,-200);",
-    "Conditions": "IsPassDice() == false;",
-    "Description": "檢定失敗、扣錢",
-    "links": [2069]
-  },
-  {
-    "entryID": 2069,
-    "actorID": "role121",
-    "text": "[panel=1]「手下留情？輸了還嘴硬！大哥，這小子嚇唬人呢，把他錢袋也掏了！」",
-    "Sequence": "SetPortrait(role121,pic=3);",
-    "zh_TW": "[panel=1]「手下留情？輸了還嘴硬！大哥，這小子嚇唬人呢，把他錢袋也掏了！」",
-    "zh_CN": "[panel=1]「手下留情？输了还嘴硬！大哥，这小子吓唬人呢，把他钱袋也掏了！」",
-    "links": [327]
-  },
-  {
     "entryID": 327,
     "actorID": "role120",
     "text": "[panel=1]「哈哈哈！看到沒！俺三弟一出手，你就變成軟腳蝦了！」",
@@ -1387,5 +1302,90 @@
     "zh_TW": "「那就拜託童大哥啦！！一百五十錢是吧，拿去！」",
     "zh_CN": "「那就拜托童大哥啦！！一百五十钱是吧，拿去！」",
     "links": [283]
+  },
+  {
+    "entryID": 2061,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [2062, 2063]
+  },
+  {
+    "entryID": 2062,
+    "actorID": "MC1",
+    "text": "[em2][口才檢定][/em2][em3]置之死地，而後生[/em3]",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "[em2][口才檢定][/em2][em3]置之死地，而後生[/em3]",
+    "zh_CN": "[em2][口才检定][/em2][em3]置之死地，而后生[/em3]",
+    "links": [2064]
+  },
+  {
+    "entryID": 2063,
+    "actorID": "MC1",
+    "text": "離開",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "離開",
+    "zh_CN": "离开",
+    "links": [327]
+  },
+  {
+    "entryID": 2064,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,20);",
+    "Description": "口才檢定",
+    "links": [2065]
+  },
+  {
+    "entryID": 2065,
+    "actorID": "MC1",
+    "text": "「慢著，你們真當本少俠敗了？方才那是手下留情，我若下了狠手，你兄弟倆還走得了？」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「慢著，你們真當本少俠敗了？方才那是手下留情，我若下了狠手，你兄弟倆還走得了？」",
+    "zh_CN": "「慢着，你们真当本少侠败了？方才那是手下留情，我若下了狠手，你兄弟俩还走得了？」",
+    "links": [2066, 2068]
+  },
+  {
+    "entryID": 2066,
+    "actorID": "role120",
+    "text": "[panel=1]「留手？……三弟，上回俺可是實打實栽在他手上。今日贏得這般輕巧，怕是他真讓著我們。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role120,pic=4);\nEnableCharacterExpression(1,role120,Question);\nModifyData(FeatExp,Player,Persuasion,25);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、口才經驗增加",
+    "zh_TW": "[panel=1]「留手？……三弟，上回俺可是實打實栽在他手上。今日贏得這般輕巧，怕是他真讓著我們。」",
+    "zh_CN": "[panel=1]「留手？……三弟，上回俺可是实打实栽在他手上。今日赢得这般轻巧，怕是他真让着我们。」",
+    "links": [2067]
+  },
+  {
+    "entryID": 2067,
+    "actorID": "role120",
+    "text": "[panel=1]「英雄饒命！方才是俺兄弟倆有眼無珠。這錢您收下，還望高抬貴手！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(role120,pic=1);\nModifyData(Coin,150);",
+    "Description": "給錢",
+    "zh_TW": "[panel=1]「英雄饒命！方才是俺兄弟倆有眼無珠。這錢您收下，還望高抬貴手！」",
+    "zh_CN": "[panel=1]「英雄饶命！方才是俺兄弟俩有眼无珠。这钱您收下，还望高抬贵手！」",
+    "links": [379]
+  },
+  {
+    "entryID": 2068,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();\nDisableCharacterExpression(0);\nModifyData(Coin,-200);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗、扣錢",
+    "links": [2069]
+  },
+  {
+    "entryID": 2069,
+    "actorID": "role121",
+    "text": "[panel=1]「手下留情？輸了還嘴硬！大哥，這小子嚇唬人呢，把他錢袋也掏了！」",
+    "Sequence": "SetPortrait(role121,pic=3);",
+    "zh_TW": "[panel=1]「手下留情？輸了還嘴硬！大哥，這小子嚇唬人呢，把他錢袋也掏了！」",
+    "zh_CN": "[panel=1]「手下留情？输了还嘴硬！大哥，这小子吓唬人呢，把他钱袋也掏了！」",
+    "links": [327]
   }
 ]
