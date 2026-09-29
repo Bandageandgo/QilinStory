@@ -69,7 +69,18 @@
     "Sequence": "PlayOrStopParticle(Punch_Single_ScreenRed,Stop);PlayOrStopParticle(BloodSplash_Left,Stop);\nSetPortrait(MC1,pic=19);",
     "zh_TW": "[panel=6]＊（只見褚人飛十指硬生生嵌入那人頭骨，剎那間氣勁爆出，毒狗當場屍骨無存。）＊",
     "zh_CN": "[panel=6]＊（只见褚人飞十指硬生生嵌入那人头骨，刹那间气劲爆出，毒狗当场尸骨无存。）＊",
-    "links": [823, 728]
+    "links": [2349, 823, 728]
+  },
+  {
+    "entryID": 2349,
+    "actorID": "MC10",
+    "text": "「老子當是誰，原來是上回替那丫頭扛了五百錢債的小子，酒醒了沒有？」",
+    "Sequence": "SetPortrait(MC10,pic=1);",
+    "Conditions": "CurrentQuestState(\"CF20\") == \"failure\";",
+    "Description": "回音",
+    "zh_TW": "「老子當是誰，原來是上回替那丫頭扛了五百錢債的小子，酒醒了沒有？」",
+    "zh_CN": "「老子当是谁，原来是上回替那丫头扛了五百钱债的小子，酒醒了没有？」",
+    "links": [728]
   },
   {
     "entryID": 728,

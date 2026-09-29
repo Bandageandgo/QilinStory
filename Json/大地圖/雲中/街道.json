@@ -1803,8 +1803,8 @@
     "text": "「少俠眼睛倒毒，那東西我也只聽過傳言。說是出在一尊沒有臉的像上，會蠱惑人，拿了就捨不得撒手。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC19,pic=8);\nModifyData(FeatExp,Player,Insight,10);",
     "Conditions": "IsPassDice() == true;",
-    "Script": "Variable[\"IsHidden3\"] = true;\nSetQuestState(\"＿＿\", \"active\");",
-    "Description": "檢定成功、洞悉經驗增加、變數更新、觸發任務：＿＿",
+    "Script": "Variable[\"IsHidden3\"] = true;\nSetQuestState(\"CF48\", \"active\");",
+    "Description": "檢定成功、洞悉經驗增加、變數更新、觸發任務",
     "zh_TW": "「少俠眼睛倒毒，那東西我也只聽過傳言。說是出在一尊沒有臉的像上，會蠱惑人，拿了就捨不得撒手。」",
     "zh_CN": "「少侠眼睛倒毒，那东西我也只听过传言。说是出在一尊没有脸的像上，会蛊惑人，拿了就舍不得撒手。」",
     "links": [4174]
@@ -1830,7 +1830,7 @@
     "actorID": "MC19",
     "text": "「少俠又來了，這回帶來的是稀罕貨，還是破銅爛鐵？」",
     "Sequence": "SetPortrait(MC19,pic=1);",
-    "Conditions": "CurrentQuestState(\"＿＿\") == \"active\" and (CurrentQuestEntryState(\"＿＿\", 1) ~= \"success\") and (IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true);",
+    "Conditions": "CurrentQuestState(\"CF48\") == \"active\" and (CurrentQuestEntryState(\"CF48\", 1) ~= \"success\") and (IsValuablesObtained(\"Player\", \"EvilGodFragment\") == true);",
     "zh_TW": "「少俠又來了，這回帶來的是稀罕貨，還是破銅爛鐵？」",
     "zh_CN": "「少侠又来了，这回带来的是稀罕货，还是破铜烂铁？」",
     "links": [4202, 4203]
@@ -1879,7 +1879,7 @@
     "actorID": "MC19",
     "text": "「這一件你們先收著。往後再撞見那種像，先把像上的東西拿來給我看一眼，再動手毀了它。」",
     "Sequence": "SetPortrait(MC19,pic=8);",
-    "Script": "SetQuestEntryState(\"＿＿\", 1, \"success\");\nVariable[\"IsHidden3\"] = false;",
+    "Script": "SetQuestEntryState(\"CF48\", 1, \"success\");\nVariable[\"IsHidden3\"] = false;",
     "Description": "任務更新、變數更新",
     "zh_TW": "「這一件你們先收著。往後再撞見那種像，先把像上的東西拿來給我看一眼，再動手毀了它。」",
     "zh_CN": "「这一件你们先收着。往后再撞见那种像，先把像上的东西拿来给我看一眼，再动手毁了它。」",

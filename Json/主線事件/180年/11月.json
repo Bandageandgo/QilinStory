@@ -442,6 +442,26 @@
     "Sequence": "SetPortrait(MC11,pic=1);\nSetPortrait(MC2,pic=2);",
     "zh_TW": "[panel=3]「[em7]逕自往廳裡一坐，把腳翹到案上[/em7]，哼哈哈——本王來遲了？瞧這架勢，好戲才剛開鑼。」",
     "zh_CN": "[panel=3]「[em7]径自往厅里一坐，把脚翘到案上[/em7]，哼哈哈——本王来迟了？瞧这架势，好戏才刚开锣。」",
+    "links": [4420, 4421, 4358]
+  },
+  {
+    "entryID": 4420,
+    "actorID": "MC11",
+    "text": "[panel=3]「小子，水濂洞口你幫著黃巾，砍了本王的人——這筆帳，本王記在你頭上。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 4) == \"success\";",
+    "zh_TW": "[panel=3]「小子，水濂洞口你幫著黃巾，砍了本王的人——這筆帳，本王記在你頭上。」",
+    "zh_CN": "[panel=3]「小子，水濂洞口你帮着黄巾，砍了本王的人——这笔账，本王记在你头上。」",
+    "links": [4358]
+  },
+  {
+    "entryID": 4421,
+    "actorID": "MC11",
+    "text": "[panel=3]「水濂洞口本王的人跟黃巾，兩撥都是你放倒的——小子，下手倒夠狠。」",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 5) == \"success\";",
+    "zh_TW": "[panel=3]「水濂洞口本王的人跟黃巾，兩撥都是你放倒的——小子，下手倒夠狠。」",
+    "zh_CN": "[panel=3]「水濂洞口本王的人跟黄巾，两拨都是你放倒的——小子，下手倒够狠。」",
     "links": [4358]
   },
   {

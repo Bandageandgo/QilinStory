@@ -129,6 +129,25 @@
     "text": "「是我識人不明。卞喜那廝背棄了我教的初衷，背著渠帥在這洞裡搞些傷天害理的勾當。我屢次阻撓，反遭他暗算奪權，囚禁於此。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(role127,pic=1);",
     "zh_CN": "「是我识人不明。卞喜那厮背弃了我教的初衷，背着渠帅在这洞里搞些伤天害理的勾当。我屡次阻挠，反遭他暗算夺权，囚禁于此。」",
+    "links": [4182, 19]
+  },
+  {
+    "entryID": 4182,
+    "actorID": "role2",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsValuablesObtained(\"Player\", \"Oddlist\") == true;",
+    "Description": "回音",
+    "links": [4183]
+  },
+  {
+    "entryID": 4183,
+    "actorID": "MC1",
+    "text": "「廖大哥，我在破廟井底撈起一本名冊，上頭就有我和小犀的名字。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Description": "回音",
+    "zh_TW": "「廖大哥，我在破廟井底撈起一本名冊，上頭就有我和小犀的名字。」",
+    "zh_CN": "「廖大哥，我在破庙井底捞起一本名册，上头就有我和小犀的名字。」",
     "links": [19]
   },
   {

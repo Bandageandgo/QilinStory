@@ -106,6 +106,7 @@
     | `EnableDialogueBG`／`DisableDialogueBG` | 開啟背景／關閉背景 |
     | `OpenPanel(N, close)`／`DisableAllCharacterExpression()` 收立繪面板 | 清除立繪（作者用詞，重陽 `#4448`） |
     | `ShowEnding` | 結局 |
+    | 回音清單新加的格：回音台詞格、為了讓它播得到而墊的無字條件空格（作者 2026-09-28 定；台詞格沒有指令也照寫，是本表唯一例外） | 回音 |
     | `Shop`／`MapLock`／`ShowHint`／`ShowNoviceTeaching`／`BeginMiniGame`／`LoadLevel` | 開啟商店／地圖鎖定／提示／教學／小遊戲／切換場景 |
     
     例：`Sequence` 是 `AudioControl(StopMusic);AudioControl(PlayMusic,BGM_16);ModifyData(AbilityMaxLevel,…)×5` → `"切換音樂、超級大漢人"`；`ModifyData(FeatExp,Player,Intimidation,10);ModifyData(FavorabilityExp,MC22,10);` → `"威嚇經驗增加、娜娜好感度提升"`。

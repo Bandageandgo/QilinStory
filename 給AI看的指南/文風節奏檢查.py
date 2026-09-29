@@ -110,7 +110,7 @@ def expr_stats(p):
 
 def check(p):
     gen = lines_from_json(p) if p.endswith('.json') else lines_from_md(p)
-    per = {}; frags = []; nouns = []; flagged = []; longs = []; tails = []
+    per = {}; frags = []; nouns = []; flagged = []; longs = []; tails = []; dashes = []; cands = []
     em_lines = 0; talk_lines = 0; em_consec = []; prev_em = None
     for spk, eid, t in gen:
         if spk != '旁白':
@@ -143,6 +143,23 @@ def check(p):
                     tails.append((spk, eid, body + end))
         for h in noun_hits(t):
             nouns.append((spk, eid, h))
+        if spk == '旁白':   # 旁白卡候選（第 3 條判語／心事、第 7 條造景／數字／收尾巧句；作者 2026-09-28 要的：只列出來，留不留由審的人說理由）
+            for body, end in S:
+                last = re.split(r'[，、；：]', body)[-1]
+                if re.search(r'不是[^，。；]{1,14}，(而|卻|倒)?是', body):
+                    cands.append((spk, eid, '翻轉句', body + end))
+                elif re.match(r'^(像|彷彿|好似|如同|倒像|像是|恍如|宛如)', last) and len(last) >= 4:
+                    cands.append((spk, eid, '比喻收尾', body + end))
+                elif re.match(r'^(沒有|沒人|沒一|再也沒|再沒|誰也沒|誰也不|一個也沒|什麼也沒|並未|並沒|並不|不再)', last):
+                    cands.append((spk, eid, '否定收尾', body + end))
+                elif re.match(r'^(只剩|只有|唯有|四下裡|四下|滿地|滿天|一片|到處|處處)', last):
+                    cands.append((spk, eid, '造景收尾', body + end))
+                if re.search(r'(你知道|你明白|不是你多心|顯然|分明|果然|終於|不由得|不免|似乎|看來|想必|心頭|心裡|心中|心底|不禁|忍不住)', body):
+                    cands.append((spk, eid, '判語／心事', body + end))
+                if re.search(r'[二三四五六七八九十百千]{1,3}(丈|步|尺|里|匹|名|騎|盞|支|根|條|片|層|回|遍|次|聲|個|隻|頂|桿|道|排|家|間|口|把|張|串|枚)', body):
+                    cands.append((spk, eid, '精確數目', body + end))
+        if '——' in t:   # 全篇不用破折號（作者慣例，2026-09-28 收進文風指南旁白卡第 9 條）：旁白、台詞都抓
+            dashes.append((spk, eid, strip_tags(t)[:40]))
     print('=' * 8, p)
     print('%-10s %6s %8s %8s' % ('說話者', '句數', '每句字數', '碎句比'))
     for spk, d in per.items():
@@ -167,6 +184,14 @@ def check(p):
         print('-- 縮寫／隱喻名詞（「那本帳」若是真帳本可留）：')
         for spk, eid, h in nouns:
             print('   %s %s 「%s」' % (spk, eid, h))
+    if cands:
+        print('-- 旁白卡候選（第 3 條判語／心事、第 7 條造景／精確數目／收尾巧句；只列不判，留的要說理由；文風指南〈常犯十條〉）：')
+        for spk, eid, kind, t in cands:
+            print('   %s %s ［%s］「%s」' % (spk, eid, kind, t))
+    if dashes:
+        print('-- 破折號（全篇不用「——」，被打斷用「……」；文風指南旁白卡第 9 條）：')
+        for spk, eid, t in dashes:
+            print('   %s %s 「%s」' % (spk, eid, t))
     if longs:
         print('-- 台詞超長（可見字數過 %d 要拆格、%d 是紅線；標籤不計）：' % (LIMIT_WARN, LIMIT_HARD))
         for spk, eid, vl in longs:
@@ -182,9 +207,9 @@ def check(p):
     if sp:
         print('-- 表情特效：%d／%d 格立繪（作者舊稿每百格 32 個；零＝漏了、低於 %d 要回頭補，文本創作指南 2.3）%s'
               % (ex, sp, EXPR_LOW_PER_100, '  ⚠ 零表情' if (expr_low and ex == 0) else ('  ⚠ 偏低' if expr_low else '')))
-    if not frags and not tails and not nouns and not em_bad and not longs and not expr_low:
+    if not frags and not tails and not nouns and not em_bad and not longs and not expr_low and not dashes and not cands:
         print('-- 乾淨。')
-    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs), 'expr_low': expr_low}
+    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs), 'expr_low': expr_low, 'dashes': len(dashes), 'cands': len(cands)}
 
 
 def walk(paths):

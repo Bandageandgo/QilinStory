@@ -1537,6 +1537,25 @@
     "text": "[panel=2]「猿猴通人語？天兵？聽著跟話本一樣……表哥，這跟河神有關係嗎？」",
     "Sequence": "DisableCharacterExpression(0);SetPortrait(MC8,pic=4);EnableCharacterExpression(2,MC8,Question);",
     "zh_CN": "[panel=2]「猿猴通人语？天兵？听着跟话本一样……表哥，这跟河神有关系吗？」",
+    "links": [4371, 4149]
+  },
+  {
+    "entryID": 4371,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "CurrentQuestEntryState(\"CF19\", 1) == \"success\";",
+    "Description": "回音",
+    "links": [4372]
+  },
+  {
+    "entryID": 4372,
+    "actorID": "MC1",
+    "text": "「小犀，說起猴子，我在山上碰過一隻，請我喝自己釀的酒，還把空壺拿去洗了才走，比人還講究。」",
+    "Sequence": "DisableCharacterExpression(2);SetPortrait(MC1,pic=5);",
+    "Description": "回音",
+    "zh_TW": "「小犀，說起猴子，我在山上碰過一隻，請我喝自己釀的酒，還把空壺拿去洗了才走，比人還講究。」",
+    "zh_CN": "「小犀，说起猴子，我在山上碰过一只，请我喝自己酿的酒，还把空壶拿去洗了才走，比人还讲究。」",
     "links": [4149]
   },
   {

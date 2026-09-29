@@ -1,0 +1,336 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（董卓答應的軍需撥下來了，府裡缺的兵器總算有錢置辦。小犀把單子開好，要你送到雲中蒲元的工坊去訂。）＊",
+    "Sequence": "EnableDialogueBG(Shop_Small);",
+    "Description": "入口：181/1–2 養成支線（檔期作者定）；條件作者設，至少 CurrentQuestEntryState(\"CF45\", 3) == \"success\"（白鹵澤走完），比照 13頭巾.json #1",
+    "zh_CN": "[panel=6]＊（董卓答应的军需拨下来了，府里缺的兵器总算有钱置办。小犀把单子开好，要你送到云中蒲元的工坊去订。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蒲元照舊守著一爐通紅的火，牆上掛滿了剛出爐的兵器。娜娜是自己要跟來的，一進門就湊到了那排兵器跟前。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（蒲元照旧守着一炉通红的火，墙上挂满了刚出炉的兵器。娜娜是自己要跟来的，一进门就凑到了那排兵器跟前。）＊",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠，這幾柄的成色比雲中市上賣的強多了。這一趟，本姑娘跟對了。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Surprise_2);",
+    "zh_CN": "[panel=1]「大侠，这几柄的成色比云中市上卖的强多了。这一趟，本姑娘跟对了。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「蒲元師傅，府裡要添一批兵器，單子在這兒，您給過個目。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=8);",
+    "zh_CN": "「蒲元师傅，府里要添一批兵器，单子在这儿，您给过个目。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（單子到了蒲元手上，他只掃了一眼，隨手就擱在鐵砧上。娜娜還在牆邊挨著兵器看，他的眼睛卻跟著她背後的無鋒走。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（单子到了蒲元手上，他只扫了一眼，随手就搁在铁砧上。娜娜还在墙边挨着兵器看，他的眼睛却跟着她背后的无锋走。）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role131",
+    "text": "「小子，單子上這些不難，過些日子就送到府上。……丫頭，妳背上那把劍，解下來給我瞧瞧。」",
+    "Sequence": "",
+    "zh_CN": "「小子，单子上这些不难，过些日子就送到府上。……丫头，你背上那把剑，解下来给我瞧瞧。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC22",
+    "text": "[panel=1]「這是我爹留給我的。要瞧就在這兒瞧，別往遠處拿。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「这是我爹留给我的。要瞧就在这儿瞧，别往远处拿。」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她的手在劍柄上停了一下，才把無鋒連鞘遞了過去。蒲元捧著它湊到爐火邊，翻來覆去只看那截劍柄。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她的手在剑柄上停了一下，才把无锋连鞘递了过去。蒲元捧着它凑到炉火边，翻来覆去只看那截剑柄。）＊",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role131",
+    "text": "「咦？這封口的手法……好傢伙，這鋒是我蒲元封的！」",
+    "Sequence": "",
+    "zh_CN": "「咦？这封口的手法……好家伙，这锋是我蒲元封的！」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC22",
+    "text": "[panel=1]「你封的？這把無鋒跟了我十年，我還當它生來就沒有鋒。」",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Surprise);",
+    "zh_CN": "[panel=1]「你封的？这把无锋跟了我十年，我还当它生来就没有锋。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "role131",
+    "text": "「十來年前，有個漢人帶著這把劍來，要我把鋒封進劍心，機關做在柄上。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "「十来年前，有个汉人带着这把剑来，要我把锋封进剑心，机关做在柄上。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role131",
+    "text": "「他說，帶這把劍來的人，會來取。」",
+    "Sequence": "",
+    "zh_CN": "「他说，带这把剑来的人，会来取。」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC22",
+    "text": "[panel=1]「……那個漢人是我爹。他後來往哪去了，跟你說過沒有？」",
+    "Sequence": "SetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Question);",
+    "zh_CN": "[panel=1]「……那个汉人是我爹。他后来往哪去了，跟你说过没有？」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "role131",
+    "text": "「他沒說，我也從不問。如今劍是妳帶來的，這機關就該開了。」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "「他没说，我也从不问。如今剑是你带来的，这机关就该开了。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=6]＊（蒲元把劍鞘塞回她手裡，自己捏住柄尾用力一擰。柄尾應聲退出一截，裡頭塞著捲得極緊的一小卷。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（蒲元把剑鞘塞回她手里，自己捏住柄尾用力一拧。柄尾应声退出一截，里头塞着卷得极紧的一小卷。）＊",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role2",
+    "text": "[panel=6]＊（劍鞘裡跟著咔的一響，像是有什麼東西鬆開了。她握住劍柄往外一抽，兩側的刃口一路亮到了劍尖。）＊",
+    "Sequence": "ModifyData(Valuable,MC22,＿＿,1);",
+    "Description": "獲得＿＿",
+    "zh_CN": "[panel=6]＊（剑鞘里跟着咔的一响，像是有什么东西松开了。她握住剑柄往外一抽，两侧的刃口一路亮到了剑尖。）＊",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC22",
+    "text": "[panel=1]「……這還是我那把無鋒？」",
+    "Sequence": "SetPortrait(MC22,pic=9);\nEnableCharacterExpression(1,MC22,Shock);",
+    "zh_CN": "[panel=1]「……这还是我那把无锋？」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "role131",
+    "text": "「還是那一把，鋒口一點沒走樣。封了這些年，我蒲元的手藝還在！」",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "「还是那一把，锋口一点没走样。封了这些年，我蒲元的手艺还在！」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她把無鋒插回鞘裡，蒲元才從柄尾抽出那一小卷。卷子一到她手上，她就著爐火，把它攤在了鐵砧上。）＊",
+    "Sequence": "ModifyData(Valuable,MC22,WanderingNotesPage4,1);",
+    "Description": "獲得遊方雜記・卷四",
+    "zh_CN": "[panel=6]＊（她把无锋插回鞘里，蒲元才从柄尾抽出那一小卷。卷子一到她手上，她就着炉火，把它摊在了铁砧上。）＊",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC22",
+    "text": "[panel=1]「是我爹的字……卷四原來一直在我背上。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「是我爹的字……卷四原来一直在我背上。」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage4);",
+    "Description": "開啟便籤",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「後頭那幾句，就是妳六歲那年背的斬心訣？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_CN": "「后头那几句，就是你六岁那年背的斩心诀？」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC22",
+    "text": "[panel=1]「頭一層他教過我，第二層……我卡了這些年的，偏偏就是這幾句。」",
+    "Sequence": "SetPortrait(MC22,pic=3);\nEnableCharacterExpression(1,MC22,Pain);",
+    "zh_CN": "[panel=1]「头一层他教过我，第二层……我卡了这些年的，偏偏就是这几句。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC22",
+    "text": "[panel=1]「前頭是記事，他那時候怎麼看那東西、要往哪去都寫了，末了那句寫的是一條路。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「前头是记事，他那时候怎么看那东西、要往哪去都写了，末了那句写的是一条路。」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role2",
+    "text": "[panel=6]＊（發現：＿＿。）＊",
+    "Sequence": "MapLock(＿＿, unlock);",
+    "Description": "地圖鎖定",
+    "zh_CN": "[panel=6]＊（发现：＿＿。）＊",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role131",
+    "text": "「這把劍往後要是捲了刃，拿回來給我。別的鐵匠碰它，我可不答應。」",
+    "Sequence": "",
+    "zh_CN": "「这把剑往后要是卷了刃，拿回来给我。别的铁匠碰它，我可不答应。」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nEnableDialogueBG(TrainingGround)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪、開啟背景",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role2",
+    "text": "[panel=6]＊（當晚你經過演武場，場上只剩她一個人，手裡提著無鋒。場邊一根木樁從頂上裂到了底，兩半順著木紋分開。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（当晚你经过演武场，场上只剩她一个人，手里提着无锋。场边一根木桩从顶上裂到了底，两半顺着木纹分开。）＊",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC22",
+    "text": "[panel=1]「[var=PlayerFirstName]，第二層，今晚讓我練過去了。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]，第二层，今晚让我练过去了。」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「從工坊回來，妳就一直在這兒？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=9);",
+    "zh_CN": "「从工坊回来，你就一直在这儿？」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC22",
+    "text": "[panel=1]「卷四前頭那段記事，我翻來覆去讀了好幾遍，在屋裡哪坐得住。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「卷四前头那段记事，我翻来覆去读了好几遍，在屋里哪坐得住。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC22",
+    "text": "[panel=1]「角婆……我要自己去找它。」",
+    "Sequence": "SetPortrait(MC22,pic=8);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_CN": "[panel=1]「角婆……我要自己去找它。」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她靠著兵器架坐下，無鋒橫在腳邊，膝上攤開那捲《養煞篇》。帛上的字是暗紅的，一展開，那股腥氣又散了出來。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她靠着兵器架坐下，无锋横在脚边，膝上摊开那卷《养煞篇》。帛上的字是暗红的，一展开，那股腥气又散了出来。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC22",
+    "text": "[panel=1]「要去見它，我能帶上的，一樣都不落下。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「要去见它，我能带上的，一样都不落下。」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC22",
+    "text": "[panel=1]「斬心訣我練，這一捲，我也要練到底。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「斩心诀我练，这一卷，我也要练到底。」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]手按在帛上[/em7]，往後再撞上血河舍利那樣的東西，跟卷子一樣，先拿來給我。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「[em7]手按在帛上[/em7]，往后再撞上血河舍利那样的东西，跟卷子一样，先拿来给我。」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "「……」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC22",
+    "text": "[panel=1]「東西還沒見著，你慢慢想。那條路倒是等不得，過兩天就動身。」",
+    "Sequence": "SetPortrait(MC22,pic=1);",
+    "zh_CN": "[panel=1]「东西还没见着，你慢慢想。那条路倒是等不得，过两天就动身。」",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她把那捲帛捲好揣進了懷裡，跟卷四貼在一處。一捲寫著她爹的字，一捲是從趙王洞的祭壇上拿來的。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她把那卷帛卷好揣进了怀里，跟卷四贴在一处。一卷写着她爹的字，一卷是从赵王洞的祭坛上拿来的。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她提著無鋒起身，走到了場邊另一根木樁跟前。你出了演武場沒走幾步，身後又傳來木頭裂開的聲音。）＊",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);",
+    "Description": "清除立繪",
+    "zh_CN": "[panel=6]＊（她提着无锋起身，走到了场边另一根木桩跟前。你出了演武场没走几步，身后又传来木头裂开的声音。）＊",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", ＿＿, \"success\");",
+    "Description": "清除立繪、關閉背景、任務更新",
+    "links": []
+  }
+]

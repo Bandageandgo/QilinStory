@@ -1,0 +1,321 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（城門口那塊斷了的門墩上，照舊坐著收過路錢的老兵。你回城時把錢丟進他腳邊的陶碗，他拿木杖把碗推了回來。）＊",
+    "Sequence": "EnableDialogueBG(Yunzhong);\nAudioControl(PlaySFX,Others_HeavyColdWind);",
+    "Description": "入口條件作者設：武道大會奪冠、181/2 起、支線",
+    "zh_TW": "[panel=6]＊（城門口那塊斷了的門墩上，照舊坐著收過路錢的老兵。你回城時把錢丟進他腳邊的陶碗，他拿木杖把碗推了回來。）＊",
+    "zh_CN": "[panel=6]＊（城门口那块断了的门墩上，照旧坐着收过路钱的老兵。你回城时把钱丢进他脚边的陶碗，他拿木杖把碗推了回来。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC1",
+    "text": "「老丈，過路錢我給足了，這是做什麼？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「老丈，過路錢我給足了，這是做什麼？」",
+    "zh_CN": "「老丈，过路钱我给足了，这是做什么？」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "role＿＿",
+    "text": "「過路錢你先收著。聽說晉陽出了個天下第一，就是你吧。」",
+    "Sequence": "",
+    "zh_TW": "「過路錢你先收著。聽說晉陽出了個天下第一，就是你吧。」",
+    "zh_CN": "「过路钱你先收着。听说晋阳出了个天下第一，就是你吧。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC1",
+    "text": "「沒錯，正是我！想不到這名號都傳到城門口來了。」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「沒錯，正是我！想不到這名號都傳到城門口來了。」",
+    "zh_CN": "「没错，正是我！想不到这名号都传到城门口来了。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "role＿＿",
+    "text": "「去年冬天鮮卑來了一回，我兒子死在那一回裡。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「去年冬天鮮卑來了一回，我兒子死在那一回裡。」",
+    "zh_CN": "「去年冬天鲜卑来了一回，我儿子死在那一回里。」",
+    "links": [6, 7]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role＿＿",
+    "text": "「[em3][文化：鮮卑][/em3]你是北邊出來的，我聽得出來。這個我不管，我只找動手的那些人。」",
+    "Sequence": "",
+    "Conditions": "IsCultureFit(\"Player\", \"Xianbei\") == true;",
+    "Description": "文化分支：鮮卑",
+    "zh_TW": "「[em3][文化：鮮卑][/em3]你是北邊出來的，我聽得出來。這個我不管，我只找動手的那些人。」",
+    "zh_CN": "「[em3][文化：鲜卑][/em3]你是北边出来的，我听得出来。这个我不管，我只找动手的那些人。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「那一回，城裡就沒有人出去追？」",
+    "Sequence": "SetPortrait(MC1,pic=2);\nEnableCharacterExpression(0,Player,Anger);",
+    "zh_TW": "「那一回，城裡就沒有人出去追？」",
+    "zh_CN": "「那一回，城里就没有人出去追？」",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "role＿＿",
+    "text": "「熹平六年我從這道門出去，回來少了一條腿。打那以後，門外頭的事就沒人管了。」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "「熹平六年我從這道門出去，回來少了一條腿。打那以後，門外頭的事就沒人管了。」",
+    "zh_CN": "「熹平六年我从这道门出去，回来少了一条腿。打那以后，门外头的事就没人管了。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role＿＿",
+    "text": "「我這條腿，只走得到這個門口。你是天下第一，替我兒子報這個仇。」",
+    "Sequence": "",
+    "zh_TW": "「我這條腿，只走得到這個門口。你是天下第一，替我兒子報這個仇。」",
+    "zh_CN": "「我这条腿，只走得到这个门口。你是天下第一，替我儿子报这个仇。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role＿＿",
+    "text": "「我沒有錢給你。往後你打這兒過，錢我不收。」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「我沒有錢給你。往後你打這兒過，錢我不收。」",
+    "zh_CN": "「我没有钱给你。往后你打这儿过，钱我不收。」",
+    "links": [11, 12]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC1",
+    "text": "「這個仇，我替你報。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "「這個仇，我替你報。」",
+    "zh_CN": "「这个仇，我替你报。」",
+    "links": [13]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「這件事，我接不了。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "「這件事，我接不了。」",
+    "zh_CN": "「这件事，我接不了。」",
+    "links": [33]
+  },
+  {
+    "entryID": 13,
+    "actorID": "role2",
+    "text": "[panel=6]＊（出塞這一趟，來回少說幾個月，開春走，回城怕已是入夏。那邊人多，你只有一個人，這一去未必回得來。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（出塞這一趟，來回少說幾個月，開春走，回城怕已是入夏。那邊人多，你只有一個人，這一去未必回得來。）＊",
+    "zh_CN": "[panel=6]＊（出塞这一趟，来回少说几个月，开春走，回城怕已是入夏。那边人多，你只有一个人，这一去未必回得来。）＊",
+    "links": [14, 15]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC1",
+    "text": "「這一趟，我去定了。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "「這一趟，我去定了。」",
+    "zh_CN": "「这一趟，我去定了。」",
+    "links": [17]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「這事容我再想想。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "「這事容我再想想。」",
+    "zh_CN": "「这事容我再想想。」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role＿＿",
+    "text": "「不急，這門口我天天在，你想好了再來。」",
+    "Sequence": "",
+    "zh_TW": "「不急，這門口我天天在，你想好了再來。」",
+    "zh_CN": "「不急，这门口我天天在，你想好了再来。」",
+    "links": [11, 12]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「[em7]把陶碗推回他腳邊[/em7]，這個仇我替你報。過路錢我照給，老丈收著。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Script": "SetQuestState(\"CF49\", \"active\");",
+    "Description": "觸發任務：CF49",
+    "zh_TW": "「[em7]把陶碗推回他腳邊[/em7]，這個仇我替你報。過路錢我照給，老丈收著。」",
+    "zh_CN": "「[em7]把陶碗推回他脚边[/em7]，这个仇我替你报。过路钱我照给，老丈收着。」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "role＿＿",
+    "text": "「這錢我就收下了。你查到什麼，回這門口跟我說一聲。」",
+    "Sequence": "",
+    "zh_TW": "「這錢我就收下了。你查到什麼，回這門口跟我說一聲。」",
+    "zh_CN": "「这钱我就收下了。你查到什么，回这门口跟我说一声。」",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（幾日下來，去年冬天那一撥人的來路查清楚了。動手的是鮮卑西部一部的人，今春紮在北邊幾日路的草原。鮮卑的首領檀石槐，要到五月才會巡到那一部。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（幾日下來，去年冬天那一撥人的來路查清楚了。動手的是鮮卑西部一部的人，今春紮在北邊幾日路的草原。鮮卑的首領檀石槐，要到五月才會巡到那一部。）＊",
+    "zh_CN": "[panel=6]＊（几日下来，去年冬天那一拨人的来路查清楚了。动手的是鲜卑西部一部的人，今春扎在北边几日路的草原。鲜卑的首领檀石槐，要到五月才会巡到那一部。）＊",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「老丈，那一部的營我查到了。五月，連鮮卑的首領檀石槐本人都會到。」",
+    "Sequence": "SetPortrait(MC1,pic=13);",
+    "zh_TW": "「老丈，那一部的營我查到了。五月，連鮮卑的首領檀石槐本人都會到。」",
+    "zh_CN": "「老丈，那一部的营我查到了。五月，连鲜卑的首领檀石槐本人都会到。」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那塊斷了的門墩上是空的，只有那隻陶碗還擱在上頭。守門的說，那個少了條腿的前兩天自己拄著杖出了北門。）＊",
+    "Sequence": "AudioControl(PlayMusic,BGM_23);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Shock);",
+    "Description": "播放音樂",
+    "zh_TW": "[panel=6]＊（那塊斷了的門墩上是空的，只有那隻陶碗還擱在上頭。守門的說，那個少了條腿的前兩天自己拄著杖出了北門。）＊",
+    "zh_CN": "[panel=6]＊（那块断了的门墩上是空的，只有那只陶碗还搁在上头。守门的说，那个少了条腿的前两天自己拄着杖出了北门。）＊",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你照舊把過路錢放進那隻陶碗裡，這才出了北門。城門在你身後開著，門外那條路一直往北伸下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（你照舊把過路錢放進那隻陶碗裡，這才出了北門。城門在你身後開著，門外那條路一直往北伸下去。）＊",
+    "zh_CN": "[panel=6]＊（你照旧把过路钱放进那只陶碗里，这才出了北门。城门在你身后开着，门外那条路一直往北伸下去。）＊",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0,close)@1;\nOpenPanel(1,close)@1;\nEnableDialogueBG(Wilderness)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪、開啟背景",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（出塞以後，路就只剩幾道車轍，一直往北伸進枯草裡。日頭偏西的時候，你看見前頭路邊的草裡躺著一個人，一條褲管空蕩蕩的。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（出塞以後，路就只剩幾道車轍，一直往北伸進枯草裡。日頭偏西的時候，你看見前頭路邊的草裡躺著一個人，一條褲管空蕩蕩的。）＊",
+    "zh_CN": "[panel=6]＊（出塞以后，路就只剩几道车辙，一直往北伸进枯草里。日头偏西的时候，你看见前头路边的草里躺着一个人，一条裤管空荡荡的。）＊",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC1",
+    "text": "「老丈，你怎麼不等我就自己上路了？我從雲中一路追過來，總算趕上你了！」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「老丈，你怎麼不等我就自己上路了？我從雲中一路追過來，總算趕上你了！」",
+    "zh_CN": "「老丈，你怎么不等我就自己上路了？我从云中一路追过来，总算赶上你了！」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那人一直沒有應聲，你走到跟前，他已經斷了氣。一隻手還攥著那根木杖。）＊",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Shock);",
+    "zh_TW": "[panel=6]＊（那人一直沒有應聲，你走到跟前，他已經斷了氣。一隻手還攥著那根木杖。）＊",
+    "zh_CN": "[panel=6]＊（那人一直没有应声，你走到跟前，他已经断了气。一只手还攥着那根木杖。）＊",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nDisableCharacterExpression(0)@1;\nOpenPanel(0, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "role2",
+    "text": "[panel=6]＊（天擦黑以前，你把老兵安葬在路邊，墳頭正對著北方。北邊那顆不動的星出來的時候，你在墳前拜了三拜。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（天擦黑以前，你把老兵安葬在路邊，墳頭正對著北方。北邊那顆不動的星出來的時候，你在墳前拜了三拜。）＊",
+    "zh_CN": "[panel=6]＊（天擦黑以前，你把老兵安葬在路边，坟头正对着北方。北边那颗不动的星出来的时候，你在坟前拜了三拜。）＊",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你從墳前起身，那條車轍打墳前起一直通往北方。你照著那顆星走了下去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你從墳前起身，那條車轍打墳前起一直通往北方。你照著那顆星走了下去。）＊",
+    "zh_CN": "[panel=6]＊（你从坟前起身，那条车辙打坟前起一直通往北方。你照着那颗星走了下去。）＊",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(StopSFX);\nDisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nDisableDialogueBG();\nMapLock(XianbeiRoyalTent, unlock);\nContinue();",
+    "Description": "清除立繪、關閉背景、地圖鎖定",
+    "links": []
+  },
+  {
+    "entryID": 33,
+    "actorID": "MC1",
+    "text": "「擂台上的第一，打不了塞外的仗。老丈，這件事我接不了。」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);",
+    "zh_TW": "「擂台上的第一，打不了塞外的仗。老丈，這件事我接不了。」",
+    "zh_CN": "「擂台上的第一，打不了塞外的仗。老丈，这件事我接不了。」",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他把碗拉回腳邊，你那幾枚過路錢這一回留在了碗裡。後頭等著進城的人一個接一個，跟著把錢丟了進去。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_TW": "[panel=6]＊（他把碗拉回腳邊，你那幾枚過路錢這一回留在了碗裡。後頭等著進城的人一個接一個，跟著把錢丟了進去。）＊",
+    "zh_CN": "[panel=6]＊（他把碗拉回脚边，你那几枚过路钱这一回留在了碗里。后头等着进城的人一个接一个，跟着把钱丢了进去。）＊",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "AudioControl(StopSFX);\nDisableDialogueBG();\nContinue();",
+    "Description": "關閉背景",
+    "links": []
+  }
+]

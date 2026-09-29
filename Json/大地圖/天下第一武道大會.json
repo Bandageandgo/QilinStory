@@ -1330,6 +1330,17 @@
     "text": "「先報這廂！英豪府少年——[var=PlayerLastName][var=PlayerFirstName]！雲中後起之秀，今日初登并州擂台，是龍是蟲，全看這一遭！」",
     "Sequence": "",
     "zh_CN": "「先报这厢！英豪府少年——[var=PlayerLastName][var=PlayerFirstName]！云中后起之秀，今日初登并州擂台，是龙是虫，全看这一遭！」",
+    "links": [4204, 429]
+  },
+  {
+    "entryID": 4204,
+    "actorID": "role134",
+    "text": "「雲中吉祥擂台的對手，個個都對這位少俠說過——『算你厲害』！」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF27\", 7) == \"active\";",
+    "Description": "回音",
+    "zh_TW": "「雲中吉祥擂台的對手，個個都對這位少俠說過——『算你厲害』！」",
+    "zh_CN": "「云中吉祥擂台的对手，个个都对这位少侠说过——『算你厉害』！」",
     "links": [429]
   },
   {
@@ -3083,6 +3094,17 @@
     "text": "「才別數月，武藝竟又精進如此，今日這一仗，可得痛痛快快打個夠！」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_CN": "「才别数月，武艺竟又精进如此，今日这一仗，可得痛痛快快打个够！」",
+    "links": [4205, 564]
+  },
+  {
+    "entryID": 4205,
+    "actorID": "role73",
+    "text": "「老哥拿你取回的百年鐵木補好了槍桿，如今遇上真正的高手，也扛得住了！」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestState(\"C0F3\") == \"success\";",
+    "Description": "回音",
+    "zh_TW": "「老哥拿你取回的百年鐵木補好了槍桿，如今遇上真正的高手，也扛得住了！」",
+    "zh_CN": "「老哥拿你取回的百年铁木补好了枪杆，如今遇上真正的高手，也扛得住了！」",
     "links": [564]
   },
   {

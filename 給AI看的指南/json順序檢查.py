@@ -26,7 +26,7 @@ DESC_VOCAB = [
     r'選項\d+', r'選項[一二三四五六七八九十]+', r'.+檢定', r'擲骰緩衝節點', r'檢定成功', r'檢定失敗',
     r'進入戰鬥(：.+)?', r'戰鬥緩衝節點', r'戰鬥成功', r'戰鬥失敗', r'(文化|背景)分支：.+',
     r'播放音樂', r'切換音樂', r'關閉音樂', r'關閉音效', r'轉場', r'事件圖', r'關閉事件圖',
-    r'開啟背景', r'關閉背景', r'清除立繪', r'結局', r'開啟商店', r'地圖鎖定', r'提示', r'教學', r'小遊戲', r'切換場景',
+    r'開啟背景', r'關閉背景', r'清除立繪', r'結局', r'回音', r'開啟商店', r'地圖鎖定', r'提示', r'教學', r'小遊戲', r'切換場景',
 ]
 DESC_VOCAB_RE = re.compile('^(?:' + '|'.join(DESC_VOCAB) + r')\s*$')
 DESC_PROSE_RE = re.compile(r'[「」＝=；;（）()：:§]|待|見|\.md|作者|裁示|目前|因為|所以|不得|不要|不可')
@@ -47,8 +47,9 @@ def check_descriptions(nodes):
         odd = [s for s in parts if not DESC_VOCAB_RE.match(s)]
         if odd:
             bad.append('#%s 不在詞表：%s' % (eid, '、'.join('「%s」' % s for s in odd)))
-        elif not has_cmd and not all(re.match(r'^選項[\d一二三四五六七八九十]+$', x) for x in parts):
+        elif not has_cmd and not all(re.match(r'^(選項[\d一二三四五六七八九十]+|回音)$', x) for x in parts):
             # 選項節點本來就沒有指令，卻要照詞表寫「選項N」標籤（轉成json指南 §1），不算錯
+            # 回音清單新加的台詞格沒有指令也寫「回音」（作者 2026-09-28 定），不算錯
             bad.append('#%s 沒有任何指令卻有 Description：「%s」' % (eid, desc[:30]))
     return bad
 

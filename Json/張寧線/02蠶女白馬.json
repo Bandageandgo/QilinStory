@@ -1262,7 +1262,7 @@
     "text": "[panel=6]＊（他一巴掌掄過去，你伸手把那隻手腕扣住了。）＊",
     "Sequence": "",
     "zh_CN": "[panel=6]＊（他一巴掌抡过去，你伸手把那只手腕扣住了。）＊",
-    "links": [156]
+    "links": [214]
   },
   {
     "entryID": 156,
@@ -1736,5 +1736,182 @@
     "Sequence": "DisableDialogueBG();\nAudioControl(StopMusic);\nContinue();",
     "Description": "關閉背景、關閉音樂",
     "links": []
+  },
+  {
+    "entryID": 214,
+    "actorID": "role2",
+    "text": "[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=6]＊（怀里的麒麟骰亮了一亮。光隔着衣襟透出来，随即又暗了。）＊",
+    "links": [215, 216, 217]
+  },
+  {
+    "entryID": 215,
+    "actorID": "MC1",
+    "text": "「放尊重些。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_CN": "「放尊重些。」",
+    "links": [156]
+  },
+  {
+    "entryID": 216,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2]「要打，先過我這一關。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_CN": "[em2][威吓检定][/em2]「要打，先过我这一关。」",
+    "links": [218]
+  },
+  {
+    "entryID": 217,
+    "actorID": "MC1",
+    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "links": [227]
+  },
+  {
+    "entryID": 218,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,12);",
+    "Description": "威嚇檢定",
+    "links": [219]
+  },
+  {
+    "entryID": 219,
+    "actorID": "MC1",
+    "text": "「我們是她爹請來的，你這一巴掌要打，先過我這一關！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_2);",
+    "zh_CN": "「我们是她爹请来的，你这一巴掌要打，先过我这一关！」",
+    "links": [220, 221]
+  },
+  {
+    "entryID": 220,
+    "actorID": "role62",
+    "text": "[panel=3]「哎喲，我不打她就是了，快鬆手！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、威嚇經驗增加",
+    "zh_CN": "[panel=3]「哎哟，我不打她就是了，快松手！」",
+    "links": [157]
+  },
+  {
+    "entryID": 221,
+    "actorID": "role62",
+    "text": "[panel=3]「[em7]另一隻拳頭跟著砸過來[/em7]，她爹請來的又怎樣，輪得到你管！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_CN": "[panel=3]「[em7]另一只拳头跟着砸过来[/em7]，她爹请来的又怎样，轮得到你管！」",
+    "links": [222]
+  },
+  {
+    "entryID": 222,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,14);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥：醉漢",
+    "links": [223]
+  },
+  {
+    "entryID": 223,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [224, 225]
+  },
+  {
+    "entryID": 224,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他被你打得直不起腰，那隻手腕又落回你手裡。蠶兒退到門邊站著，一雙眼睛從頭到尾只看著他。）＊",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "IsPassFight() == true;",
+    "Description": "戰鬥成功",
+    "zh_CN": "[panel=6]＊（他被你打得直不起腰，那只手腕又落回你手里。蚕儿退到门边站着，一双眼睛从头到尾只看着他。）＊",
+    "links": [157]
+  },
+  {
+    "entryID": 225,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你被他一拳擂倒在門前的泥地上，一時撐不起身。他掄起胳膊還要再打，卻被撲上來的蠶兒一把抱住了。）＊",
+    "Sequence": "SetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Nervous_2);",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "zh_CN": "[panel=6]＊（你被他一拳擂倒在门前的泥地上，一时撑不起身。他抡起胳膊还要再打，却被扑上来的蚕儿一把抱住了。）＊",
+    "links": [226]
+  },
+  {
+    "entryID": 226,
+    "actorID": "role61",
+    "text": "[panel=1]「別打了！你真要鬧到我爹找上門來才甘心嗎！」",
+    "Sequence": "DisableCharacterExpression(0);",
+    "zh_CN": "[panel=1]「别打了！你真要闹到我爹找上门来才甘心吗！」",
+    "links": [159]
+  },
+  {
+    "entryID": 227,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,IntimidationCheck,22);",
+    "Description": "威嚇檢定",
+    "links": [228]
+  },
+  {
+    "entryID": 228,
+    "actorID": "MC1",
+    "text": "「我們是她爹請來的，你這隻手敢再往她身上掄，我今日就廢了它！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_CN": "「我们是她爹请来的，你这只手敢再往她身上抡，我今日就废了它！」",
+    "links": [229, 230]
+  },
+  {
+    "entryID": 229,
+    "actorID": "role62",
+    "text": "[panel=3]「蠶兒，是我喝昏了頭，對不住妳！妳快替我跟好漢求個情！」",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Intimidation,30);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、威嚇經驗增加",
+    "zh_CN": "[panel=3]「蚕儿，是我喝昏了头，对不住你！你快替我跟好汉求个情！」",
+    "links": [157]
+  },
+  {
+    "entryID": 230,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他掙著要抽回那隻手，被你往外一摜，仰面摔在門檻上。張寧蹲下去探過他的鼻息，那一摔已經要了他的命。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Shock);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_CN": "[panel=6]＊（他挣着要抽回那只手，被你往外一掼，仰面摔在门槛上。张宁蹲下去探过他的鼻息，那一摔已经要了他的命。）＊",
+    "links": [231]
+  },
+  {
+    "entryID": 231,
+    "actorID": "role61",
+    "text": "[panel=1]「他喝了酒是會打我，可我守著那張皮哭的時候，是他肯陪著我……」",
+    "Sequence": "DisableCharacterExpression(0);\nOpenPanel(3, close);",
+    "Description": "清除立繪",
+    "zh_CN": "[panel=1]「他喝了酒是会打我，可我守着那张皮哭的时候，是他肯陪着我……」",
+    "links": [232]
+  },
+  {
+    "entryID": 232,
+    "actorID": "MC6",
+    "text": "[panel=2]「我向來懶得管別人家的閒事，你一出手就替她斷乾淨了。」",
+    "Sequence": "SetPortrait(MC6,pic=3);\nModifyData(FavorabilityExp,MC6,-20);",
+    "Description": "張寧好感度下降",
+    "zh_CN": "[panel=2]「我向来懒得管别人家的闲事，你一出手就替她断干净了。」",
+    "links": [233]
+  },
+  {
+    "entryID": 233,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你帶著那張馬皮回田邊，把小屋裡鬧出人命的事照實說了。那商人連說跟他不相干，許下的謝儀也收了回去。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你带着那张马皮回田边，把小屋里闹出人命的事照实说了。那商人连说跟他不相干，许下的谢仪也收了回去。）＊",
+    "links": [213]
   }
 ]

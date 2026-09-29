@@ -816,6 +816,28 @@
     "Description": "需要有染血的黑刀",
     "zh_TW": "[panel=6]＊（黑刀刺入孔槽，發出一聲清脆的卡扣聲。緊接著，機關運作的轟鳴聲從下方沉悶地傳來。）＊",
     "zh_CN": "[panel=6]＊（黑刀刺入孔槽，发出一声清脆的卡扣声。紧接着，机关运作的轰鸣声从下方沉闷地传来。）＊",
+    "links": [4011, 4012]
+  },
+  {
+    "entryID": 4011,
+    "actorID": "MC1",
+    "text": "「破廟那位大哥臨終要我好生收著這黑刀，說日後定有……話沒說完就嚥了氣。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "CurrentQuestEntryState(\"CF14\", 1) == \"success\";",
+    "Description": "回音",
+    "zh_TW": "「破廟那位大哥臨終要我好生收著這黑刀，說日後定有……話沒說完就嚥了氣。」",
+    "zh_CN": "「破庙那位大哥临终要我好生收着这黑刀，说日后定有……话没说完就咽了气。」",
+    "links": []
+  },
+  {
+    "entryID": 4012,
+    "actorID": "MC1",
+    "text": "「破廟那位大哥說，總有一日我也會發現此刀的秘密，鏽成這樣，倒開得了機關。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "Conditions": "CurrentQuestEntryState(\"CF14\", 2) == \"success\";",
+    "Description": "回音",
+    "zh_TW": "「破廟那位大哥說，總有一日我也會發現此刀的秘密，鏽成這樣，倒開得了機關。」",
+    "zh_CN": "「破庙那位大哥说，总有一日我也会发现此刀的秘密，锈成这样，倒开得了机关。」",
     "links": []
   },
   {

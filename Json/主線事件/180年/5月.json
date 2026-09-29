@@ -43,6 +43,16 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=4);",
     "zh_TW": "「……琰姑娘，怎麼是妳？」",
     "zh_CN": "「……琰姑娘，怎么是你？」",
+    "links": [86, 6]
+  },
+  {
+    "entryID": 86,
+    "actorID": "MC23",
+    "text": "[panel=1]「天下第一武道大會那一場，叫你下來跟我細說，我一直等著呢！」",
+    "Sequence": "SetPortrait(MC23,pic=2);",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 6) == \"success\";",
+    "zh_TW": "[panel=1]「天下第一武道大會那一場，叫你下來跟我細說，我一直等著呢！」",
+    "zh_CN": "[panel=1]「天下第一武道大会那一场，叫你下来跟我细说，我一直等着呢！」",
     "links": [6]
   },
   {
@@ -687,6 +697,16 @@
     "Sequence": "SetPortrait(MC4,pic=1);\nEnableCharacterExpression(2,MC4,Meditate);",
     "zh_TW": "[panel=2]「那位蔡公，眼光可真毒啊。」",
     "zh_CN": "[panel=2]「那位蔡公，眼光可真毒啊。」",
+    "links": [87, 81]
+  },
+  {
+    "entryID": 87,
+    "actorID": "MC4",
+    "text": "[panel=2]「借你那卷書的事，他可問過你半句？」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC4,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"CF44\", 2) == \"success\";",
+    "zh_TW": "[panel=2]「借你那卷書的事，他可問過你半句？」",
+    "zh_CN": "[panel=2]「借你那卷书的事，他可问过你半句？」",
     "links": [81]
   },
   {

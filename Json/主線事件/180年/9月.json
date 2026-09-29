@@ -506,6 +506,26 @@
     "Sequence": "SetPortrait(MC11,pic=1);\nSetPortrait(MC2,pic=2);",
     "zh_TW": "[panel=3]「[em7]逕自往廳裡一坐，把腳翹到案上[/em7]，哼哈哈——本王來遲了？瞧這架勢，好戲才剛開鑼。」",
     "zh_CN": "[panel=3]「[em7]径自往厅里一坐，把脚翘到案上[/em7]，哼哈哈——本王来迟了？瞧这架势，好戏才刚开锣。」",
+    "links": [4453, 4454, 4358]
+  },
+  {
+    "entryID": 4453,
+    "actorID": "MC11",
+    "text": "[panel=3]「小子，水濂洞口你幫著黃巾，砍了本王的人——這筆帳，本王記在你頭上。」",
+    "Sequence": "SetPortrait(MC11,pic=2);",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 4) == \"success\";",
+    "zh_TW": "[panel=3]「小子，水濂洞口你幫著黃巾，砍了本王的人——這筆帳，本王記在你頭上。」",
+    "zh_CN": "[panel=3]「小子，水濂洞口你帮着黄巾，砍了本王的人——这笔账，本王记在你头上。」",
+    "links": [4358]
+  },
+  {
+    "entryID": 4454,
+    "actorID": "MC11",
+    "text": "[panel=3]「水濂洞口本王的人跟黃巾，兩撥都是你放倒的——小子，下手倒夠狠。」",
+    "Sequence": "SetPortrait(MC11,pic=3);",
+    "Conditions": "CurrentQuestEntryState(\"CF40\", 5) == \"success\";",
+    "zh_TW": "[panel=3]「水濂洞口本王的人跟黃巾，兩撥都是你放倒的——小子，下手倒夠狠。」",
+    "zh_CN": "[panel=3]「水濂洞口本王的人跟黄巾，两拨都是你放倒的——小子，下手倒够狠。」",
     "links": [4358]
   },
   {
@@ -3344,6 +3364,16 @@
     "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC7,pic=1);",
     "zh_TW": "[panel=1]「城還在，只是沒了管事的人。雁門關歸了赤龍幫，城裡的錢歸了甄家，塞外那些人也敢進來分。」",
     "zh_CN": "[panel=1]「城还在，只是没了管事的人。雁门关归了赤龙帮，城里的钱归了甄家，塞外那些人也敢进来分。」",
+    "links": [4452, 4401]
+  },
+  {
+    "entryID": 4452,
+    "actorID": "MC7",
+    "text": "[panel=1]「如今英豪府的帳上，也有甄家一份。」",
+    "Sequence": "SetPortrait(MC7,pic=1);",
+    "Conditions": "CurrentQuestEntryState(\"C2M1\", 2) == \"success\";",
+    "zh_TW": "[panel=1]「如今英豪府的帳上，也有甄家一份。」",
+    "zh_CN": "[panel=1]「如今英豪府的账上，也有甄家一份。」",
     "links": [4401]
   },
   {
@@ -3570,6 +3600,26 @@
     "Sequence": "SetPortrait(MC2,pic=1);\nOpenPanel(2, close);\nEnableCharacterExpression(1,MC2,Proud);",
     "zh_TW": "[panel=1]「下面一位。」",
     "zh_CN": "[panel=1]「下面一位。」",
+    "links": [4450, 4451, 4426]
+  },
+  {
+    "entryID": 4450,
+    "actorID": "MC2",
+    "text": "[panel=1]「小子，晉陽那趟你是讓人扛回府的，待會兒要是再躺下，老子扛你下山。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Anger_2);",
+    "Conditions": "CurrentQuestState(\"CF38\") == \"failure\";",
+    "zh_TW": "[panel=1]「小子，晉陽那趟你是讓人扛回府的，待會兒要是再躺下，老子扛你下山。」",
+    "zh_CN": "[panel=1]「小子，晋阳那趟你是让人扛回府的，待会儿要是再躺下，老子扛你下山。」",
+    "links": [4451, 4426]
+  },
+  {
+    "entryID": 4451,
+    "actorID": "MC1",
+    "text": "「信哥，翠影潭邊一位釣魚的老丈教了我一套東西，今日拿來會一會你！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=13);",
+    "Conditions": "CurrentQuestEntryState(\"CF39\", 4) ~= \"unassigned\";",
+    "zh_TW": "「信哥，翠影潭邊一位釣魚的老丈教了我一套東西，今日拿來會一會你！」",
+    "zh_CN": "「信哥，翠影潭边一位钓鱼的老丈教了我一套东西，今日拿来会一会你！」",
     "links": [4426]
   },
   {

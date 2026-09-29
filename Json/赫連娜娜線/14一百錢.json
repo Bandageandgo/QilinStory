@@ -15,6 +15,16 @@
     "text": "[panel=2]「表哥……她怎麼又在這兒？前天明明還在市集那頭呢。」",
     "Sequence": "SetPortrait(MC8,pic=14);",
     "zh_CN": "[panel=2]「表哥……她怎么又在这儿？前天明明还在市集那头呢。」",
+    "links": [26, 3]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC22",
+    "text": "[panel=1]「這位阿婆走到哪炒到哪，連天下第一武道大會的擂台邊，都擺著她的糖炒栗子。」",
+    "Sequence": "SetPortrait(MC22,pic=5);",
+    "Conditions": "CurrentQuestEntryState(\"CF18\", 4) == \"success\";",
+    "Description": "回音",
+    "zh_CN": "[panel=1]「这位阿婆走到哪炒到哪，连天下第一武道大会的擂台边，都摆着她的糖炒栗子。」",
     "links": [3]
   },
   {
