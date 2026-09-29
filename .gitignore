@@ -1,0 +1,10 @@
+# Python 快取（另一台會自己重生）
+__pycache__/
+*.pyc
+
+# Claude Code：這台專用或一次性的東西不進 git
+.claude/settings.local.json
+.claude/tmp/
+.claude/worktrees/
+.claude/文風節奏檢查報告.txt
+# 進 git 的：.claude/settings.json（hooks）、.claude/wf/（Workflow 腳本）

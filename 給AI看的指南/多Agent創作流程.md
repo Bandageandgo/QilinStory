@@ -200,7 +200,7 @@ python -X utf8 給AI看的指南/提案檔組裝.py --場 <場> --用途 <用途
 | 檢查腳本 | `給AI看的指南/高難度檢定檢查.py`、`文風節奏檢查.py`、`json順序檢查.py` | 已進 |
 | 第四級的腳本 | `給AI看的指南/情境包產生器.py`、`提案檔組裝.py`、`三選一套入.py`、`逐格轉json.py`、`填簡體.py`、`json複核.py`、`專名表.txt` | 2026-09-29 新增，隨下次 commit 進 |
 | 各用途的規則檔 | `劇情/蝴蝶效應_素材與設計.md`、各角色資料夾設計端 | 已進 |
-| Workflow 腳本 | `.claude/wf/*.js`（`finalize-and-convert.js` 還在用；`hard-check-v3.js`、`luxin-yingbu-v3.js`、`hard-check-v2.js`、`butterfly-*.js`、`echo-*.js`、`review-sheet-*.js` 留作對照）與 `.claude/tmp/review-fix-generic.js` | **未進：`.claude/` 整個 `??` 未追蹤，也沒被 .gitignore 擋** |
+| Workflow 腳本 | `.claude/wf/*.js`（`finalize-and-convert.js` 還在用；`hard-check-v3.js`、`luxin-yingbu-v3.js`、`hard-check-v2.js`、`butterfly-*.js`、`echo-*.js`、`review-sheet-*.js` 留作對照）與 `.claude/tmp/review-fix-generic.js` | **2026-09-30 進了**：`.claude/settings.json`（hooks，路徑已改相對）與 `.claude/wf/` 進 git；`settings.local.json`、`tmp/`、`worktrees/`、`文風節奏檢查報告.txt`、`__pycache__/` 由新建的 `.gitignore` 擋 |
 | 大綱檔、創作稿 | 該場的資料夾（第九節）；轉 JSON、回讀後移入 `劇情/舊創作稿/` | 已進 |
 
 **commit 之前用 `git -c core.quotepath=false status` 看**，不然中文路徑會顯示成八進位逃逸碼。`.claude/wf/` 要不要納入 git 由作者定；不納入的話另一台電腦要手動複製。交接紀錄照慣例寫進 `給AI看的指南/跨機待辦.md`。

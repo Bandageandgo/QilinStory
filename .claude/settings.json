@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-X", "utf8", "給AI看的指南/文風節奏檢查.py", "--hook-post"],
+            "timeout": 30,
+            "statusMessage": "文風節奏檢查"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-X", "utf8", "給AI看的指南/文風節奏檢查.py", "--hook-stop"],
+            "timeout": 60,
+            "statusMessage": "文風節奏檢查（寫進 .claude/文風節奏檢查報告.txt）"
+          }
+        ]
+      }
+    ]
+  }
+}
