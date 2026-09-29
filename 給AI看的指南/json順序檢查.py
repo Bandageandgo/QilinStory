@@ -40,11 +40,14 @@ def check_descriptions(nodes):
             continue
         eid = n.get('entryID')
         has_cmd = any((n.get(k) or '').strip() for k in ('Sequence', 'Script', 'Conditions'))
-        if len(desc) >= 30 or DESC_PROSE_RE.search(re.sub(r'(觸發任務|完成任務|任務失敗|進入戰鬥)：', '', desc)):
-            bad.append('#%s 是說明文，不是標籤：「%s」' % (eid, desc[:40]))
-            continue
+        if re.match(r'^入口：.+；條件作者設$', desc):
+            continue  # 探索事件與箱庭的入口格寫一句提醒，作者 2026-09-28 准的例外（2026-09-30 收進腳本）
         parts = [s.strip() for s in re.split(r'[、，,/／]', desc) if s.strip()]
         odd = [s for s in parts if not DESC_VOCAB_RE.match(s)]
+        stripped = re.sub(r'(觸發任務|完成任務|任務失敗|進入戰鬥|(?:文化|背景)分支)：', '', desc)  # 詞表裡帶冒號的項先拿掉再查說明文
+        if DESC_PROSE_RE.search(stripped) or (len(desc) >= 30 and odd):  # 全是詞表項的長標籤不算說明文（2026-09-30）
+            bad.append('#%s 是說明文，不是標籤：「%s」' % (eid, desc[:40]))
+            continue
         if odd:
             bad.append('#%s 不在詞表：%s' % (eid, '、'.join('「%s」' % s for s in odd)))
         elif not has_cmd and not all(re.match(r'^(選項[\d一二三四五六七八九十]+|回音)$', x) for x in parts):
