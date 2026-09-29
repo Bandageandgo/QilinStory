@@ -197,10 +197,10 @@
   {
     "entryID": 25,
     "actorID": "role2",
-    "text": "[panel=6]＊（發現：＿＿。）＊",
-    "Sequence": "MapLock(＿＿, unlock);",
+    "text": "[panel=6]＊（發現：角冢。）＊",
+    "Sequence": "MapLock(HornTomb, unlock);",
     "Description": "地圖鎖定",
-    "zh_CN": "[panel=6]＊（发现：＿＿。）＊",
+    "zh_CN": "[panel=6]＊（发现：角冢。）＊",
     "links": [26]
   },
   {
@@ -329,8 +329,8 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
-    "Script": "SetQuestEntryState(\"CF45\", ＿＿, \"success\");",
-    "Description": "清除立繪、關閉背景、任務更新",
+    "Script": "SetQuestEntryState(\"CF45\", 4, \"success\");\nSetQuestEntryState(\"CF45\", 5, \"active\");",
+    "Description": "清除立繪、關閉背景、任務更新、觸發任務：CF45",
     "links": []
   }
 ]

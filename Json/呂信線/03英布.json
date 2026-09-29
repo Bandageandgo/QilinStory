@@ -1,0 +1,700 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（日頭偏西的時候，演武場上只剩你一個還在練。呂信扛著那柄大刀從你身邊走過去，忽然停了下來。）＊",
+    "Sequence": "EnableDialogueBG(TrainingGround);\nAudioControl(PlayMusic,BGM_16);",
+    "Description": "入口條件作者設：最早 181/4、完成〈第三百四十九次〉、只播一次；其餘作者設",
+    "zh_TW": "[panel=6]＊（日頭偏西的時候，演武場上只剩你一個還在練。呂信扛著那柄大刀從你身邊走過去，忽然停了下來。）＊",
+    "zh_CN": "[panel=6]＊（日头偏西的时候，演武场上只剩你一个还在练。吕信扛着那柄大刀从你身边走过去，忽然停了下来。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC2",
+    "text": "[panel=1]「喂，小子，你讀過書吧？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「喂，小子，你讀過書吧？」",
+    "zh_CN": "[panel=1]「喂，小子，你读过书吧？」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「讀過一點，熟的也就太史公的《遊俠列傳》，再加幾本話本。」",
+    "Sequence": "SetPortrait(MC1,pic=7);",
+    "zh_TW": "「讀過一點，熟的也就太史公的《遊俠列傳》，再加幾本話本。」",
+    "zh_CN": "「读过一点，熟的也就太史公的《游侠列传》，再加几本话本。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC2",
+    "text": "[panel=1]「那你說說，英布，是個什麼樣的人？」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「那你說說，英布，是個什麼樣的人？」",
+    "zh_CN": "[panel=1]「那你说说，英布，是个什么样的人？」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,KnowledgeCheck,6);",
+    "Description": "學識檢定",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [7, 8]
+  },
+  {
+    "entryID": 7,
+    "actorID": "MC1",
+    "text": "「英布……啊，就是黥布吧，項王帳下的一員將。再往下的事，我可就說不全了。」",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Idea);\nModifyData(FeatExp,Player,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、學識經驗增加",
+    "zh_TW": "「英布……啊，就是黥布吧，項王帳下的一員將。再往下的事，我可就說不全了。」",
+    "zh_CN": "「英布……啊，就是黥布吧，项王帐下的一员将。再往下的事，我可就说不全了。」",
+    "links": [9]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC1",
+    "text": "「英布這名字，倒像在哪本話本裡見過，做過什麼事，我可說不上來。」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_TW": "「英布這名字，倒像在哪本話本裡見過，做過什麼事，我可說不上來。」",
+    "zh_CN": "「英布这名字，倒像在哪本话本里见过，做过什么事，我可说不上来。」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC2",
+    "text": "[panel=1]「哦，這樣啊，行了，你就忙你的吧。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「哦，這樣啊，行了，你就忙你的吧。」",
+    "zh_CN": "[panel=1]「哦，这样啊，行了，你就忙你的吧。」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他扛著刀，慢悠悠地往場子另一頭的兵器架去了。你在原地站了一會，這才往書房那頭走去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他扛著刀，慢悠悠地往場子另一頭的兵器架去了。你在原地站了一會，這才往書房那頭走去。）＊",
+    "zh_CN": "[panel=6]＊（他扛着刀，慢悠悠地往场子另一头的兵器架去了。你在原地站了一会，这才往书房那头走去。）＊",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nAudioControl(StopMusic)@1;\nAudioControl(PlayMusic,BGM_25)@1;\nEnableDialogueBG(StudyRoom)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪、切換音樂、開啟背景",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你到書房的時候，裡頭那股味道還是老樣子。賈詡頭也沒抬，捏著小刀，一下一下裁著案上的紙邊。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你到書房的時候，裡頭那股味道還是老樣子。賈詡頭也沒抬，捏著小刀，一下一下裁著案上的紙邊。）＊",
+    "zh_CN": "[panel=6]＊（你到书房的时候，里头那股味道还是老样子。贾诩头也没抬，捏着小刀，一下一下裁着案上的纸边。）＊",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC1",
+    "text": "「先生，弟子想請教一個人。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「先生，弟子想請教一個人。」",
+    "zh_CN": "「先生，弟子想请教一个人。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC4",
+    "text": "[panel=1]「誰？」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「誰？」",
+    "zh_CN": "[panel=1]「谁？」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC1",
+    "text": "「有個叫英布的，是什麼樣的人？」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「有個叫英布的，是什麼樣的人？」",
+    "zh_CN": "「有个叫英布的，是什么样的人？」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他手上那把小刀停了一下，又接著裁了下去。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他手上那把小刀停了一下，又接著裁了下去。）＊",
+    "zh_CN": "[panel=6]＊（他手上那把小刀停了一下，又接着裁了下去。）＊",
+    "links": [17]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC4",
+    "text": "[panel=1]「你是替誰問的。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「你是替誰問的。」",
+    "zh_CN": "[panel=1]「你是替谁问的。」",
+    "links": [18]
+  },
+  {
+    "entryID": 18,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,6);",
+    "Description": "洞悉檢定",
+    "links": [19]
+  },
+  {
+    "entryID": 19,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [20, 21]
+  },
+  {
+    "entryID": 20,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他問這一句的時候，手上那把小刀一下也沒停。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、洞悉經驗增加",
+    "zh_TW": "[panel=6]＊（他問這一句的時候，手上那把小刀一下也沒停。）＊",
+    "zh_CN": "[panel=6]＊（他问这一句的时候，手上那把小刀一下也没停。）＊",
+    "links": [22]
+  },
+  {
+    "entryID": 21,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "links": [22]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC4",
+    "text": "[panel=1]「不必答。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「不必答。」",
+    "zh_CN": "[panel=1]「不必答。」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC4",
+    "text": "[panel=1]「[em7]把小刀擱在案上，抬起頭來[/em7]，英布，六縣人，臉上有黥。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「[em7]把小刀擱在案上，抬起頭來[/em7]，英布，六縣人，臉上有黥。」",
+    "zh_CN": "[panel=1]「[em7]把小刀搁在案上，抬起头来[/em7]，英布，六县人，脸上有黥。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC4",
+    "text": "[panel=1]「先從番君起兵，後歸項梁，再隨項羽。楚軍諸將，數他最驍勇。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「先從番君起兵，後歸項梁，再隨項羽。楚軍諸將，數他最驍勇。」",
+    "zh_CN": "[panel=1]「先从番君起兵，后归项梁，再随项羽。楚军诸将，数他最骁勇。」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "MC4",
+    "text": "[panel=1]「鉅鹿破秦，新安坑降卒，入關，哪一樁少得了他。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「鉅鹿破秦，新安坑降卒，入關，哪一樁少得了他。」",
+    "zh_CN": "[panel=1]「巨鹿破秦，新安坑降卒，入关，哪一桩少得了他。」",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC4",
+    "text": "[panel=1]「項羽封他九江王。後來君臣生隙，漢使隨何一來，他就走了。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「項羽封他九江王。後來君臣生隙，漢使隨何一來，他就走了。」",
+    "zh_CN": "[panel=1]「项羽封他九江王。后来君臣生隙，汉使随何一来，他就走了。」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC4",
+    "text": "[panel=1]「歸漢以後，再立淮南王。最後謀反，兵敗被殺。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「歸漢以後，再立淮南王。最後謀反，兵敗被殺。」",
+    "zh_CN": "[panel=1]「归汉以后，再立淮南王。最后谋反，兵败被杀。」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC1",
+    "text": "「先生……有人拿英布比過誰嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "「先生……有人拿英布比過誰嗎？」",
+    "zh_CN": "「先生……有人拿英布比过谁吗？」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC4",
+    "text": "[panel=1]「世人論猛將，一開口便是項羽。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「世人論猛將，一開口便是項羽。」",
+    "zh_CN": "[panel=1]「世人论猛将，一开口便是项羽。」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC4",
+    "text": "[panel=1]「太史公書裡記著他自己的話：七十餘戰，所當者破，所擊者服，未嘗敗北。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「太史公書裡記著他自己的話：七十餘戰，所當者破，所擊者服，未嘗敗北。」",
+    "zh_CN": "[panel=1]「太史公书里记着他自己的话：七十余战，所当者破，所击者服，未尝败北。」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC4",
+    "text": "[panel=1]「能打的人多了，難得的是七十餘戰沒敗過一回，也從沒人比得上。」",
+    "Sequence": "SetPortrait(MC4,pic=1);",
+    "zh_TW": "[panel=1]「能打的人多了，難得的是七十餘戰沒敗過一回，也從沒人比得上。」",
+    "zh_CN": "[panel=1]「能打的人多了，难得的是七十余战没败过一回，也从没人比得上。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC4",
+    "text": "[panel=1]「英布也能打，一樣驍勇絕倫。只是他更懂得在亂世裡替自己找位置。」",
+    "Sequence": "SetPortrait(MC4,pic=3);\nEnableCharacterExpression(1,MC4,Meditate);",
+    "zh_TW": "[panel=1]「英布也能打，一樣驍勇絕倫。只是他更懂得在亂世裡替自己找位置。」",
+    "zh_CN": "[panel=1]「英布也能打，一样骁勇绝伦。只是他更懂得在乱世里替自己找位置。」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他說完，又拿起那把小刀，一下一下裁起了紙邊。你退出書房的時候，外頭的天已經擦黑了。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_TW": "[panel=6]＊（他說完，又拿起那把小刀，一下一下裁起了紙邊。你退出書房的時候，外頭的天已經擦黑了。）＊",
+    "zh_CN": "[panel=6]＊（他说完，又拿起那把小刀，一下一下裁起了纸边。你退出书房的时候，外头的天已经擦黑了。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nAudioControl(StopMusic)@1;\nAudioControl(PlayMusic,BGM_23)@1;\nEnableDialogueBG(TrainingGround)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪、切換音樂、開啟背景",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你遠遠看見演武場那頭的石墩上坐著一個人。走到近前，才認出是呂信，腳邊擱著兩罈酒，開了一罈。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
+    "zh_TW": "[panel=6]＊（你遠遠看見演武場那頭的石墩上坐著一個人。走到近前，才認出是呂信，腳邊擱著兩罈酒，開了一罈。）＊",
+    "zh_CN": "[panel=6]＊（你远远看见演武场那头的石墩上坐着一个人。走到近前，才认出是吕信，脚边搁着两坛酒，开了一坛。）＊",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "MC2",
+    "text": "[panel=1]「來得正好，陪你信哥喝兩碗。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「來得正好，陪你信哥喝兩碗。」",
+    "zh_CN": "[panel=1]「来得正好，陪你信哥喝两碗。」",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你坐下來，看他把兩隻碗都倒上酒，倒得很滿，滿到碗沿。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你坐下來，看他把兩隻碗都倒上酒，倒得很滿，滿到碗沿。）＊",
+    "zh_CN": "[panel=6]＊（你坐下来，看他把两只碗都倒上酒，倒得很满，满到碗沿。）＊",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你還沒開口，他先說起了項羽，垓下、二十八騎、力拔山兮，一連講了三遍。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你還沒開口，他先說起了項羽，垓下、二十八騎、力拔山兮，一連講了三遍。）＊",
+    "zh_CN": "[panel=6]＊（你还没开口，他先说起了项羽，垓下、二十八骑、力拔山兮，一连讲了三遍。）＊",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（每一遍講的都不太一樣，只有結尾那一幕沒變：烏江邊上有一條船，項羽沒有上。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（每一遍講的都不太一樣，只有結尾那一幕沒變：烏江邊上有一條船，項羽沒有上。）＊",
+    "zh_CN": "[panel=6]＊（每一遍讲的都不太一样，只有结尾那一幕没变：乌江边上有一条船，项羽没有上。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "MC1",
+    "text": "「信哥，你白天問的那個人，我去打聽過了。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「信哥，你白天問的那個人，我去打聽過了。」",
+    "zh_CN": "「信哥，你白天问的那个人，我去打听过了。」",
+    "links": [41]
+  },
+  {
+    "entryID": 41,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,InsightCheck,12);",
+    "Description": "洞悉檢定",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [43, 44]
+  },
+  {
+    "entryID": 43,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他那碗酒從頭到尾端在手裡，一口都沒有喝。不知情的人早該追問，他卻等得很穩，像早知道你要說什麼。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);\nModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、洞悉經驗增加",
+    "zh_TW": "[panel=6]＊（他那碗酒從頭到尾端在手裡，一口都沒有喝。不知情的人早該追問，他卻等得很穩，像早知道你要說什麼。）＊",
+    "zh_CN": "[panel=6]＊（他那碗酒从头到尾端在手里，一口都没有喝。不知情的人早该追问，他却等得很稳，像早知道你要说什么。）＊",
+    "links": [45, 46, 48]
+  },
+  {
+    "entryID": 44,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetPortrait(MC1,pic=12);\nContinue();",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "links": [45, 47, 48]
+  },
+  {
+    "entryID": 45,
+    "actorID": "MC1",
+    "text": "「他是名將，也換過陣營且不只一次。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "「他是名將，也換過陣營且不只一次。」",
+    "zh_CN": "「他是名将，也换过阵营且不只一次。」",
+    "links": [49]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC1",
+    "text": "「他最能打，後來還封了王。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "「他最能打，後來還封了王。」",
+    "zh_CN": "「他最能打，后来还封了王。」",
+    "links": [60]
+  },
+  {
+    "entryID": 47,
+    "actorID": "MC1",
+    "text": "「他最能打，後來還封了王。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "「他最能打，後來還封了王。」",
+    "zh_CN": "「他最能打，后来还封了王。」",
+    "links": [67]
+  },
+  {
+    "entryID": 48,
+    "actorID": "MC1",
+    "text": "「信哥，你問這個做什麼？」",
+    "Sequence": "",
+    "Description": "選項3",
+    "zh_TW": "「信哥，你問這個做什麼？」",
+    "zh_CN": "「信哥，你问这个做什么？」",
+    "links": [71]
+  },
+  {
+    "entryID": 49,
+    "actorID": "MC1",
+    "text": "「他是項王帳下的名將，驍勇絕倫。但他換陣營不只一次，最後謀反，兵敗被殺。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「他是項王帳下的名將，驍勇絕倫。但他換陣營不只一次，最後謀反，兵敗被殺。」",
+    "zh_CN": "「他是项王帐下的名将，骁勇绝伦。但他换阵营不只一次，最后谋反，兵败被杀。」",
+    "links": [50]
+  },
+  {
+    "entryID": 50,
+    "actorID": "role2",
+    "text": "[panel=6]＊（場邊一時很安靜，他把碗裡的酒慢慢喝完了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（場邊一時很安靜，他把碗裡的酒慢慢喝完了。）＊",
+    "zh_CN": "[panel=6]＊（场边一时很安静，他把碗里的酒慢慢喝完了。）＊",
+    "links": [51]
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC2",
+    "text": "[panel=1]「哈，聽起來倒挺熱鬧。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「哈，聽起來倒挺熱鬧。」",
+    "zh_CN": "[panel=1]「哈，听起来倒挺热闹。」",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "MC2",
+    "text": "[panel=1]「那不就是個牆頭草。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「那不就是個牆頭草。」",
+    "zh_CN": "[panel=1]「那不就是个墙头草。」",
+    "links": [53]
+  },
+  {
+    "entryID": 53,
+    "actorID": "MC1",
+    "text": "「……」",
+    "Sequence": "SetPortrait(MC1,pic=11);",
+    "zh_TW": "「……」",
+    "zh_CN": "「……」",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC2",
+    "text": "[panel=1]「這種人，能打有什麼用。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「這種人，能打有什麼用。」",
+    "zh_CN": "[panel=1]「这种人，能打有什么用。」",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC2",
+    "text": "[panel=1]「霸王當年寧可自刎，也沒渡那條江，[em2]那才配叫霸王。[/em2]」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「霸王當年寧可自刎，也沒渡那條江，[em2]那才配叫霸王。[/em2]」",
+    "zh_CN": "[panel=1]「霸王当年宁可自刎，也没渡那条江，[em2]那才配叫霸王。[/em2]」",
+    "links": [56]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC2",
+    "text": "[panel=1]「[em7]站起來，把沒開的那罈往你懷裡一塞[/em7]，這罈你拿去，我今天喝夠了。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「[em7]站起來，把沒開的那罈往你懷裡一塞[/em7]，這罈你拿去，我今天喝夠了。」",
+    "zh_CN": "[panel=1]「[em7]站起来，把没开的那坛往你怀里一塞[/em7]，这坛你拿去，我今天喝够了。」",
+    "links": [57]
+  },
+  {
+    "entryID": 57,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(FavorabilityExp,MC2,-30);\nContinue();",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;",
+    "Description": "呂信好感度下降、變數更新",
+    "links": [58]
+  },
+  {
+    "entryID": 58,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他走了，石墩上只剩你一個人，兩隻碗擱在腳邊。他塞過來的那罈酒還抱在你懷裡，泥封好好的。）＊",
+    "Sequence": "OpenPanel(1, close);",
+    "Description": "清除立繪",
+    "zh_TW": "[panel=6]＊（他走了，石墩上只剩你一個人，兩隻碗擱在腳邊。他塞過來的那罈酒還抱在你懷裡，泥封好好的。）＊",
+    "zh_CN": "[panel=6]＊（他走了，石墩上只剩你一个人，两只碗搁在脚边。他塞过来的那坛酒还抱在你怀里，泥封好好的。）＊",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nDisableDialogueBG();\nContinue();",
+    "Description": "清除立繪、關閉背景",
+    "links": []
+  },
+  {
+    "entryID": 60,
+    "actorID": "MC1",
+    "text": "「他是項羽麾下最能打的一個。破秦、入關，哪一樁都少不了他，後來還封了王。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「他是項羽麾下最能打的一個。破秦、入關，哪一樁都少不了他，後來還封了王。」",
+    "zh_CN": "「他是项羽麾下最能打的一个。破秦、入关，哪一桩都少不了他，后来还封了王。」",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他沒有立刻接話，過了一息，才輕輕呼出一口氣。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他沒有立刻接話，過了一息，才輕輕呼出一口氣。）＊",
+    "zh_CN": "[panel=6]＊（他没有立刻接话，过了一息，才轻轻呼出一口气。）＊",
+    "links": [62]
+  },
+  {
+    "entryID": 62,
+    "actorID": "MC2",
+    "text": "[panel=1]「……哦，封了王啊。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「……哦，封了王啊。」",
+    "zh_CN": "[panel=1]「……哦，封了王啊。」",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC2",
+    "text": "[panel=1]「那也是條漢子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「那也是條漢子。」",
+    "zh_CN": "[panel=1]「那也是条汉子。」",
+    "links": [64]
+  },
+  {
+    "entryID": 64,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他沒有問英布後來怎麼了。那後半段他一個字沒提，也沒給你提的空隙。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他沒有問英布後來怎麼了。那後半段他一個字沒提，也沒給你提的空隙。）＊",
+    "zh_CN": "[panel=6]＊（他没有问英布后来怎么了。那后半段他一个字没提，也没给你提的空隙。）＊",
+    "links": [65]
+  },
+  {
+    "entryID": 65,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ModifyData(FavorabilityExp,MC2,30);\nContinue();",
+    "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;",
+    "Description": "呂信好感度提升、變數更新",
+    "links": [66]
+  },
+  {
+    "entryID": 66,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他一口喝乾了碗裡的酒，又把兩隻碗都添滿。這一晚他講霸王一直講到夜深，你就坐在旁邊聽。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他一口喝乾了碗裡的酒，又把兩隻碗都添滿。這一晚他講霸王一直講到夜深，你就坐在旁邊聽。）＊",
+    "zh_CN": "[panel=6]＊（他一口喝干了碗里的酒，又把两只碗都添满。这一晚他讲霸王一直讲到夜深，你就坐在旁边听。）＊",
+    "links": [59]
+  },
+  {
+    "entryID": 67,
+    "actorID": "MC1",
+    "text": "「他是項羽麾下最能打的一個。破秦、入關，哪一樁都少不了他，後來還封了王。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「他是項羽麾下最能打的一個。破秦、入關，哪一樁都少不了他，後來還封了王。」",
+    "zh_CN": "「他是项羽麾下最能打的一个。破秦、入关，哪一桩都少不了他，后来还封了王。」",
+    "links": [68]
+  },
+  {
+    "entryID": 68,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他沒有立刻接話，過了一息，才輕輕呼出一口氣。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他沒有立刻接話，過了一息，才輕輕呼出一口氣。）＊",
+    "zh_CN": "[panel=6]＊（他没有立刻接话，过了一息，才轻轻呼出一口气。）＊",
+    "links": [69]
+  },
+  {
+    "entryID": 69,
+    "actorID": "MC2",
+    "text": "[panel=1]「……哦，封了王啊。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「……哦，封了王啊。」",
+    "zh_CN": "[panel=1]「……哦，封了王啊。」",
+    "links": [70]
+  },
+  {
+    "entryID": 70,
+    "actorID": "MC2",
+    "text": "[panel=1]「那也是條漢子。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「那也是條漢子。」",
+    "zh_CN": "[panel=1]「那也是条汉子。」",
+    "links": [65]
+  },
+  {
+    "entryID": 71,
+    "actorID": "MC1",
+    "text": "「信哥，你問這個做什麼？故事都是幾百年前的了。」",
+    "Sequence": "SetPortrait(MC1,pic=9);",
+    "zh_TW": "「信哥，你問這個做什麼？故事都是幾百年前的了。」",
+    "zh_CN": "「信哥，你问这个做什么？故事都是几百年前的了。」",
+    "links": [72]
+  },
+  {
+    "entryID": 72,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他轉過頭來看你，看了很久。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他轉過頭來看你，看了很久。）＊",
+    "zh_CN": "[panel=6]＊（他转过头来看你，看了很久。）＊",
+    "links": [73]
+  },
+  {
+    "entryID": 73,
+    "actorID": "MC2",
+    "text": "[panel=1]「沒什麼，隨口問問。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「沒什麼，隨口問問。」",
+    "zh_CN": "[panel=1]「没什么，随口问问。」",
+    "links": [74]
+  },
+  {
+    "entryID": 74,
+    "actorID": "MC1",
+    "text": "「隨口問一個四百年前的人？」",
+    "Sequence": "SetPortrait(MC1,pic=3);\nEnableCharacterExpression(0,Player,Question);",
+    "zh_TW": "「隨口問一個四百年前的人？」",
+    "zh_CN": "「随口问一个四百年前的人？」",
+    "links": [75]
+  },
+  {
+    "entryID": 75,
+    "actorID": "MC2",
+    "text": "[panel=1]「怎麼，隨口不行？」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「怎麼，隨口不行？」",
+    "zh_CN": "[panel=1]「怎么，随口不行？」",
+    "links": [76]
+  },
+  {
+    "entryID": 76,
+    "actorID": "MC2",
+    "text": "[panel=1]「[em7]把碗裡的酒一口灌完，往地上一頓[/em7]，喝酒喝酒，今晚不談死人。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
+    "zh_TW": "[panel=1]「[em7]把碗裡的酒一口灌完，往地上一頓[/em7]，喝酒喝酒，今晚不談死人。」",
+    "zh_CN": "[panel=1]「[em7]把碗里的酒一口灌完，往地上一顿[/em7]，喝酒喝酒，今晚不谈死人。」",
+    "links": [77]
+  },
+  {
+    "entryID": 77,
+    "actorID": "role2",
+    "text": "[panel=6]＊（他拍開另一罈的泥封，又把兩隻碗都添滿。他講起了五原的馬，從口齒講到腿腳，一直講到夜深。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（他拍開另一罈的泥封，又把兩隻碗都添滿。他講起了五原的馬，從口齒講到腿腳，一直講到夜深。）＊",
+    "zh_CN": "[panel=6]＊（他拍开另一坛的泥封，又把两只碗都添满。他讲起了五原的马，从口齿讲到腿脚，一直讲到夜深。）＊",
+    "links": [59]
+  }
+]

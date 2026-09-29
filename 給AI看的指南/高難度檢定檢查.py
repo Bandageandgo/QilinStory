@@ -33,7 +33,7 @@ DESC_EXACT = {'任務更新', '變數更新', '超級大漢人', '信義提升',
 DESC_PATTERNS = [r'^選項：(福禍|未卜|轉機)$', r'^好感度(提升|下降)$', r'^觸發任務：.+', r'^完成任務：.+', r'^任務失敗：.+', r'^.+好感度(提升|下降)$', r'^.+經驗(增加|減少)$',
                  r'^獲得.+', r'^失去.+', r'^選項\d+$', r'^.+檢定$', r'^(文化|背景)分支：.+', r'^進入戰鬥(：.+)?$']
 AUTHOR_TEACH = {'ManualDiceRollEX'}   # 作者 2026-09-26 定：高難度檢定教學，只掛在碰瓷骰子亮之後那一格空格
-AUTHOR_VARS = {'IsHidden1'}   # 作者親自取名、還沒進 Json 的變數；未卜一律 IsHiddenN（走向指南第四節第 8 條）
+AUTHOR_VARS = {'IsHidden1', 'XianbeiCampChaos'}   # 作者親自取名或准 AI 取名、還沒進 Json 的變數；未卜一律 IsHiddenN（走向指南第四節第 8 條）；XianbeiCampChaos＝鮮卑王帳計亂（作者 2026-09-29 准）
 GLOW = '[panel=6]＊（懷裡的麒麟骰亮了一亮。光隔著衣襟透出來，隨即又暗了。）＊'   # 七之二固定句，一字不改
 PUNCT = '，。！？、；：…—」』）'
 
@@ -152,7 +152,7 @@ def check_file(path, names):
             for tok in [t.strip() for t in re.split(r'[、,，]', raw) if t.strip()]:
                 if tok in DESC_EXACT or any(re.match(p, tok) for p in DESC_PATTERNS):
                     if re.search(r'\d', tok) and not re.match(r'^選項\d+$', tok):
-                        errs.append((i, f'Description「{tok}」帶數字，數值不進這欄'))
+                        (errs.append((i, f'Description「{tok}」帶數字，數值不進這欄')) if not re.match(r'^(觸發任務|完成任務|任務失敗)：CF\d+$', tok) else None)  # 任務號 CF 帶數字不算數值（2026-09-30）
                     continue
                 if tok in ('無', '（無）', '不寫', '—', '-'):
                     continue

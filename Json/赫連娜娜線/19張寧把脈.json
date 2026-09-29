@@ -1,0 +1,368 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（藥房的案上攤著一排藥包，張寧正一包一包地往裡頭分藥。你領著娜娜進門的時候，她握劍的那隻手纏著一大團布。）＊",
+    "Sequence": "EnableDialogueBG(Clinic);\nAudioControl(PlayMusic,BGM_19);",
+    "Description": "入口條件作者設：最早 181/4、角冢走完、只播一次；其餘作者設",
+    "zh_TW": "[panel=6]＊（藥房的案上攤著一排藥包，張寧正一包一包地往裡頭分藥。你領著娜娜進門的時候，她握劍的那隻手纏著一大團布。）＊",
+    "zh_CN": "[panel=6]＊（药房的案上摊着一排药包，张宁正一包一包地往里头分药。你领着娜娜进门的时候，她握剑的那只手缠着一大团布。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC6",
+    "text": "[panel=2]「血都滲到布外頭了，纏得再厚也不頂事，這是誰給妳裹的？」",
+    "Sequence": "SetPortrait(MC6,pic=2);\nEnableCharacterExpression(2,MC6,Anger);",
+    "zh_TW": "[panel=2]「血都滲到布外頭了，纏得再厚也不頂事，這是誰給妳裹的？」",
+    "zh_CN": "[panel=2]「血都渗到布外头了，缠得再厚也不顶事，这是谁给你裹的？」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC22",
+    "text": "[panel=1]「大俠裹的，人也是他硬拖來的。這點傷口，比小時候從馬背上摔下來輕多了。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=2);",
+    "zh_TW": "[panel=1]「大俠裹的，人也是他硬拖來的。這點傷口，比小時候從馬背上摔下來輕多了。」",
+    "zh_CN": "[panel=1]「大侠裹的，人也是他硬拖来的。这点伤口，比小时候从马背上摔下来轻多了。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "MC6",
+    "text": "[panel=2]「妳手上帶著傷，先給我坐下，輕不輕我看過再說。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=2]「妳手上帶著傷，先給我坐下，輕不輕我看過再說。」",
+    "zh_CN": "[panel=2]「你手上带着伤，先给我坐下，轻不轻我看过再说。」",
+    "links": [5]
+  },
+  {
+    "entryID": 5,
+    "actorID": "MC22",
+    "text": "[panel=1]「無鋒才開了鋒，我照沒鋒的使法一揮就割了手。妳快些，握不住劍我就練不成了。」",
+    "Sequence": "SetPortrait(MC22,pic=13);\nEnableCharacterExpression(1,MC22,Nervous);",
+    "zh_TW": "[panel=1]「無鋒才開了鋒，我照沒鋒的使法一揮就割了手。妳快些，握不住劍我就練不成了。」",
+    "zh_CN": "[panel=1]「无锋才开了锋，我照没锋的使法一挥就割了手。你快些，握不住剑我就练不成了。」",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "MC6",
+    "text": "[panel=2]「開了鋒還當沒鋒使，割的是手算妳命大。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC6,pic=2);",
+    "zh_TW": "[panel=2]「開了鋒還當沒鋒使，割的是手算妳命大。」",
+    "zh_CN": "[panel=2]「开了锋还当没锋使，割的是手算你命大。」",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你纏的那團布已經拆了下來，泡在腳邊的水盆裡。娜娜的掌心橫著一道口子，血已經慢慢地止住了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（你纏的那團布已經拆了下來，泡在腳邊的水盆裡。娜娜的掌心橫著一道口子，血已經慢慢地止住了。）＊",
+    "zh_CN": "[panel=6]＊（你缠的那团布已经拆了下来，泡在脚边的水盆里。娜娜的掌心横着一道口子，血已经慢慢地止住了。）＊",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "MC6",
+    "text": "[panel=2]「[em7]指尖挪到她腕上就停住了[/em7]……這一陣妳碰過什麼東西，身上別處還有沒有傷？」",
+    "Sequence": "SetPortrait(MC6,pic=1);\nEnableCharacterExpression(2,MC6,Meditate);",
+    "zh_TW": "[panel=2]「[em7]指尖挪到她腕上就停住了[/em7]……這一陣妳碰過什麼東西，身上別處還有沒有傷？」",
+    "zh_CN": "[panel=2]「[em7]指尖挪到她腕上就停住了[/em7]……这一阵你碰过什么东西，身上别处还有没有伤？」",
+    "links": [9]
+  },
+  {
+    "entryID": 9,
+    "actorID": "MC22",
+    "text": "[panel=1]「就這麼一點小傷，妳問這個做什麼？」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=14);",
+    "zh_TW": "[panel=1]「就這麼一點小傷，妳問這個做什麼？」",
+    "zh_CN": "[panel=1]「就这么一点小伤，你问这个做什么？」",
+    "links": [10]
+  },
+  {
+    "entryID": 10,
+    "actorID": "MC6",
+    "text": "[panel=2]「手別往回縮，妳這脈底下壓著一股陰氣，那些抬到我這兒來、快不行的人，摸上去也是這樣。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=2]「手別往回縮，妳這脈底下壓著一股陰氣，那些抬到我這兒來、快不行的人，摸上去也是這樣。」",
+    "zh_CN": "[panel=2]「手别往回缩，你这脉底下压着一股阴气，那些抬到我这儿来、快不行的人，摸上去也是这样。」",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC6",
+    "text": "[panel=2]「可他們都是身上帶著傷口的，妳除了掌心這一道，哪裡都好好的。再這樣下去……」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=2]「可他們都是身上帶著傷口的，妳除了掌心這一道，哪裡都好好的。再這樣下去……」",
+    "zh_CN": "[panel=2]「可他们都是身上带着伤口的，你除了掌心这一道，哪里都好好的。再这样下去……」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC22",
+    "text": "[panel=1]「本姑娘好得很，脈跳得比誰都有勁。倒是妳那張臉白得跟雪一樣，先顧好妳自己吧。」",
+    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Anger_2);",
+    "zh_TW": "[panel=1]「本姑娘好得很，脈跳得比誰都有勁。倒是妳那張臉白得跟雪一樣，先顧好妳自己吧。」",
+    "zh_CN": "[panel=1]「本姑娘好得很，脉跳得比谁都有劲。倒是你那张脸白得跟雪一样，先顾好你自己吧。」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "MC6",
+    "text": "[panel=2]「脈跳得有勁的人，我這藥房也抬出去過。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC6,pic=2);",
+    "zh_TW": "[panel=2]「脈跳得有勁的人，我這藥房也抬出去過。」",
+    "zh_CN": "[panel=2]「脉跳得有劲的人，我这药房也抬出去过。」",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "MC22",
+    "text": "[panel=1]「本姑娘又不是他們，照樣吃得下睡得著，用不著妳操心。」",
+    "Sequence": "SetPortrait(MC22,pic=2);",
+    "zh_TW": "[panel=1]「本姑娘又不是他們，照樣吃得下睡得著，用不著妳操心。」",
+    "zh_CN": "[panel=1]「本姑娘又不是他们，照样吃得下睡得着，用不着你操心。」",
+    "links": [15]
+  },
+  {
+    "entryID": 15,
+    "actorID": "MC6",
+    "text": "[panel=2]「進了我這藥房就歸我管，不想讓我管，妳現在就走。」",
+    "Sequence": "SetPortrait(MC6,pic=2);",
+    "zh_TW": "[panel=2]「進了我這藥房就歸我管，不想讓我管，妳現在就走。」",
+    "zh_CN": "[panel=2]「进了我这药房就归我管，不想让我管，你现在就走。」",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧扣著那隻手腕不肯放，娜娜使勁要把手往回抽。兩個人僵在案邊誰也不讓，一齊轉過頭來看著你。）＊",
+    "Sequence": "SetPortrait(MC1,pic=12);",
+    "zh_TW": "[panel=6]＊（張寧扣著那隻手腕不肯放，娜娜使勁要把手往回抽。兩個人僵在案邊誰也不讓，一齊轉過頭來看著你。）＊",
+    "zh_CN": "[panel=6]＊（张宁扣着那只手腕不肯放，娜娜使劲要把手往回抽。两个人僵在案边谁也不让，一齐转过头来看着你。）＊",
+    "links": [17, 18]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「我替娜娜作保！」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_TW": "「我替娜娜作保！」",
+    "zh_CN": "「我替娜娜作保！」",
+    "links": [19]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "「張姑娘是大夫，聽她的！」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_TW": "「張姑娘是大夫，聽她的！」",
+    "zh_CN": "「张姑娘是大夫，听她的！」",
+    "links": [22]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「張姑娘，娜娜要有個三長兩短，我一肩擔下，妳只管治她這隻手！」",
+    "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_TW": "「張姑娘，娜娜要有個三長兩短，我一肩擔下，妳只管治她這隻手！」",
+    "zh_CN": "「张姑娘，娜娜要有个三长两短，我一肩担下，你只管治她这只手！」",
+    "links": [20]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC22",
+    "text": "[panel=1]「聽見沒有，張姑娘？大俠都發話了。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Proud);\nModifyData(FavorabilityExp,MC22,20);\nModifyData(FavorabilityExp,MC6,-20);",
+    "Description": "娜娜好感度提升、張寧好感度下降",
+    "zh_TW": "[panel=1]「聽見沒有，張姑娘？大俠都發話了。」",
+    "zh_CN": "[panel=1]「听见没有，张姑娘？大侠都发话了。」",
+    "links": [21]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC6",
+    "text": "[panel=2]「好啊，那就讓他擔著，往後這隻手爛了也找他去，我才懶得管。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=2]「好啊，那就讓他擔著，往後這隻手爛了也找他去，我才懶得管。」",
+    "zh_CN": "[panel=2]「好啊，那就让他担着，往后这只手烂了也找他去，我才懒得管。」",
+    "links": [25]
+  },
+  {
+    "entryID": 22,
+    "actorID": "MC1",
+    "text": "「娜娜，張姑娘是大夫，妳是傷患，手伸好了讓她看完！」",
+    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_TW": "「娜娜，張姑娘是大夫，妳是傷患，手伸好了讓她看完！」",
+    "zh_CN": "「娜娜，张姑娘是大夫，你是伤患，手伸好了让她看完！」",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC6",
+    "text": "[panel=2]「這藥房裡總算還有個講理的。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=1);\nModifyData(FavorabilityExp,MC6,20);\nModifyData(FavorabilityExp,MC22,-20);",
+    "Description": "張寧好感度提升、娜娜好感度下降",
+    "zh_TW": "[panel=2]「這藥房裡總算還有個講理的。」",
+    "zh_CN": "[panel=2]「这药房里总算还有个讲理的。」",
+    "links": [24]
+  },
+  {
+    "entryID": 24,
+    "actorID": "MC22",
+    "text": "[panel=1]「好啊，大俠如今也向著她了。要看就看，本姑娘又不會少塊肉。」",
+    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Anger);",
+    "zh_TW": "[panel=1]「好啊，大俠如今也向著她了。要看就看，本姑娘又不會少塊肉。」",
+    "zh_CN": "[panel=1]「好啊，大侠如今也向着她了。要看就看，本姑娘又不会少块肉。」",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧一手仍搭著娜娜的腕子，另一隻手探上她的額頭試熱。頭巾讓那隻手推了上去，髮間那兩個小小的尖露了出來。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=9);\nEnableCharacterExpression(1,MC22,Nervous_2);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_42);",
+    "Description": "切換音樂",
+    "zh_TW": "[panel=6]＊（張寧一手仍搭著娜娜的腕子，另一隻手探上她的額頭試熱。頭巾讓那隻手推了上去，髮間那兩個小小的尖露了出來。）＊",
+    "zh_CN": "[panel=6]＊（张宁一手仍搭着娜娜的腕子，另一只手探上她的额头试热。头巾让那只手推了上去，发间那两个小小的尖露了出来。）＊",
+    "links": [26]
+  },
+  {
+    "entryID": 26,
+    "actorID": "MC22",
+    "text": "[panel=1]「[em7]另一隻手往頭上一按[/em7]，……張姑娘的手，倒是比嘴還快。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=8);",
+    "zh_TW": "[panel=1]「[em7]另一隻手往頭上一按[/em7]，……張姑娘的手，倒是比嘴還快。」",
+    "zh_CN": "[panel=1]「[em7]另一只手往头上一按[/em7]，……张姑娘的手，倒是比嘴还快。」",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC6",
+    "text": "[panel=2]「[em7]替她把頭巾攏回去[/em7]，好了，額頭不燙。我給妳紮緊些。」",
+    "Sequence": "SetPortrait(MC22,pic=1);\nSetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=2]「[em7]替她把頭巾攏回去[/em7]，好了，額頭不燙。我給妳紮緊些。」",
+    "zh_CN": "[panel=2]「[em7]替她把头巾拢回去[/em7]，好了，额头不烫。我给你扎紧些。」",
+    "links": [28]
+  },
+  {
+    "entryID": 28,
+    "actorID": "MC22",
+    "text": "[panel=1]「……張姑娘不怕？」",
+    "Sequence": "SetPortrait(MC22,pic=14);\nEnableCharacterExpression(1,MC22,Question);",
+    "zh_TW": "[panel=1]「……張姑娘不怕？」",
+    "zh_CN": "[panel=1]「……张姑娘不怕？」",
+    "links": [29]
+  },
+  {
+    "entryID": 29,
+    "actorID": "MC6",
+    "text": "[panel=2]「怕什麼，難道怕妳還會吃掉我嗎？」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=2]「怕什麼，難道怕妳還會吃掉我嗎？」",
+    "zh_CN": "[panel=2]「怕什么，难道怕你还会吃掉我吗？」",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC1",
+    "text": "「包紮我也在行，張姑娘，剩下的交給我就是！」",
+    "Sequence": "SetPortrait(MC1,pic=5);\nEnableCharacterExpression(0,Player,Proud);",
+    "zh_TW": "「包紮我也在行，張姑娘，剩下的交給我就是！」",
+    "zh_CN": "「包扎我也在行，张姑娘，剩下的交给我就是！」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "MC6",
+    "text": "[panel=2]「你在行？她這隻手就是讓你纏成那一團的，笨蛋，站遠些。」",
+    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC6,pic=3);\nEnableCharacterExpression(2,MC6,Anger_2);",
+    "zh_TW": "[panel=2]「你在行？她這隻手就是讓你纏成那一團的，笨蛋，站遠些。」",
+    "zh_CN": "[panel=2]「你在行？她这只手就是让你缠成那一团的，笨蛋，站远些。」",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC22",
+    "text": "[panel=1]「就是，大俠那雙手，還是留著拿劍吧。」",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC22,pic=5);\nSetPortrait(MC1,pic=7);",
+    "zh_TW": "[panel=1]「就是，大俠那雙手，還是留著拿劍吧。」",
+    "zh_CN": "[panel=1]「就是，大侠那双手，还是留着拿剑吧。」",
+    "links": [33]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（兩個人對看了一眼，先是娜娜沒忍住笑了。張寧跟著也笑出聲來，手上的布條沒停。案邊那隻手還擱在她手裡，這回誰也沒往回抽。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（兩個人對看了一眼，先是娜娜沒忍住笑了。張寧跟著也笑出聲來，手上的布條沒停。案邊那隻手還擱在她手裡，這回誰也沒往回抽。）＊",
+    "zh_CN": "[panel=6]＊（两个人对看了一眼，先是娜娜没忍住笑了。张宁跟着也笑出声来，手上的布条没停。案边那只手还搁在她手里，这回谁也没往回抽。）＊",
+    "links": [34]
+  },
+  {
+    "entryID": 34,
+    "actorID": "MC6",
+    "text": "[panel=2]「包好了，藥三日一換，來換的時候順道讓我再搭一次脈。這幾日不許碰劍，等傷口長好了再練。」",
+    "Sequence": "SetPortrait(MC6,pic=1);",
+    "zh_TW": "[panel=2]「包好了，藥三日一換，來換的時候順道讓我再搭一次脈。這幾日不許碰劍，等傷口長好了再練。」",
+    "zh_CN": "[panel=2]「包好了，药三日一换，来换的时候顺道让我再搭一次脉。这几日不许碰剑，等伤口长好了再练。」",
+    "links": [35]
+  },
+  {
+    "entryID": 35,
+    "actorID": "MC22",
+    "text": "[panel=1]「不碰劍就不碰劍，本姑娘練別的也成。」",
+    "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
+    "zh_TW": "[panel=1]「不碰劍就不碰劍，本姑娘練別的也成。」",
+    "zh_CN": "[panel=1]「不碰剑就不碰剑，本姑娘练别的也成。」",
+    "links": [36]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role2",
+    "text": "[panel=6]＊（娜娜起身往外走，那隻包好的手規規矩矩地垂在身側。走到門口時，她抬起另一隻手按了按那塊紮好的頭巾。）＊",
+    "Sequence": "DisableCharacterExpression(1);\nOpenPanel(1, close);",
+    "Description": "清除立繪",
+    "zh_TW": "[panel=6]＊（娜娜起身往外走，那隻包好的手規規矩矩地垂在身側。走到門口時，她抬起另一隻手按了按那塊紮好的頭巾。）＊",
+    "zh_CN": "[panel=6]＊（娜娜起身往外走，那只包好的手规规矩矩地垂在身侧。走到门口时，她抬起另一只手按了按那块扎好的头巾。）＊",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC1",
+    "text": "「張姑娘，娜娜頭巾底下的事，就請妳替她守著，這份情我記下了！」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "「張姑娘，娜娜頭巾底下的事，就請妳替她守著，這份情我記下了！」",
+    "zh_CN": "「张姑娘，娜娜头巾底下的事，就请你替她守着，这份情我记下了！」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC6",
+    "text": "[panel=2]「誰要你記這份情。三日後她要是沒來換藥，你就把她給我押過來。」",
+    "Sequence": "SetPortrait(MC6,pic=3);",
+    "zh_TW": "[panel=2]「誰要你記這份情。三日後她要是沒來換藥，你就把她給我押過來。」",
+    "zh_CN": "[panel=2]「谁要你记这份情。三日后她要是没来换药，你就把她给我押过来。」",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "role2",
+    "text": "[panel=6]＊（張寧把案上那一排分好的藥包，一包包收回了藥箱裡。水盆裡還泡著你纏的那團布，她連水帶布端出去倒了。）＊",
+    "Sequence": "",
+    "zh_TW": "[panel=6]＊（張寧把案上那一排分好的藥包，一包包收回了藥箱裡。水盆裡還泡著你纏的那團布，她連水帶布端出去倒了。）＊",
+    "zh_CN": "[panel=6]＊（张宁把案上那一排分好的药包，一包包收回了药箱里。水盆里还泡着你缠的那团布，她连水带布端出去倒了。）＊",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nOpenPanel(2, close);\nDisableDialogueBG();\nContinue();",
+    "Description": "清除立繪、關閉背景",
+    "links": []
+  }
+]

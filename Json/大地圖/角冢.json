@@ -1,0 +1,546 @@
+[
+  {
+    "entryID": 1,
+    "actorID": "role2",
+    "text": "[panel=6]＊（進了墓口是一條往下走的墓道，越往裡頭越暗。腳下一直朝北微微斜下去，一股涼氣從深處漫了上來。）＊",
+    "Sequence": "",
+    "Description": "入口：開場（進圖觸發）；條件作者設",
+    "zh_CN": "[panel=6]＊（进了墓口是一条往下走的墓道，越往里头越暗。脚下一直朝北微微斜下去，一股凉气从深处漫了上来。）＊",
+    "links": [2]
+  },
+  {
+    "entryID": 2,
+    "actorID": "MC22",
+    "text": "[panel=1]「天機盤對過了，卷四記事末了那句寫的路，就通到這底下。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「天机盘对过了，卷四记事末了那句写的路，就通到这底下。」",
+    "links": [3]
+  },
+  {
+    "entryID": 3,
+    "actorID": "MC1",
+    "text": "「那就點上火把下去，妳在前頭帶路，我跟緊些。」",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_CN": "「那就点上火把下去，你在前头带路，我跟紧些。」",
+    "links": [4]
+  },
+  {
+    "entryID": 4,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "清除立繪",
+    "links": []
+  },
+  {
+    "entryID": 5,
+    "actorID": "role2",
+    "text": "[panel=6]＊（墓道的石壁上畫滿了人，一個個頭上都長著角。他們都圍著當中的一個女子，團團坐成了一圈。那個女子的臉上沒畫眉眼口鼻，只留著一片素底。）＊",
+    "Sequence": "",
+    "Description": "入口：壁畫（走到就觸發）；條件作者設",
+    "zh_CN": "[panel=6]＊（墓道的石壁上画满了人，一个个头上都长着角。他们都围着当中的一个女子，团团坐成了一圈。那个女子的脸上没画眉眼口鼻，只留着一片素底。）＊",
+    "links": [6]
+  },
+  {
+    "entryID": 6,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她走到牆前就站住了，舉著火把仰頭看了許久。你走到她身旁，也仰起頭來細看那一牆的畫。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（她走到墙前就站住了，举着火把仰头看了许久。你走到她身旁，也仰起头来细看那一墙的画。）＊",
+    "links": [7]
+  },
+  {
+    "entryID": 7,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Auto,KnowledgeCheck,10);",
+    "Description": "學識檢定",
+    "links": [8]
+  },
+  {
+    "entryID": 8,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [9, 10]
+  },
+  {
+    "entryID": 9,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你把火把湊近了看。這一牆畫的筆路，中原和草原兩邊都找不出一樣的來。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、學識經驗增加",
+    "zh_CN": "[panel=6]＊（你把火把凑近了看。这一墙画的笔路，中原和草原两边都找不出一样的来。）＊",
+    "links": [11]
+  },
+  {
+    "entryID": 10,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你湊到牆邊看了好一陣，只看出每一筆都勾得極細。這一牆是哪一路人的手筆，你一時還認不出來。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_CN": "[panel=6]＊（你凑到墙边看了好一阵，只看出每一笔都勾得极细。这一墙是哪一路人的手笔，你一时还认不出来。）＊",
+    "links": [11]
+  },
+  {
+    "entryID": 11,
+    "actorID": "MC22",
+    "text": "[panel=1]「……這畫看得久了，眼睛都要發花。」",
+    "Sequence": "SetPortrait(MC22,pic=8);",
+    "zh_CN": "[panel=1]「……这画看得久了，眼睛都要发花。」",
+    "links": [12]
+  },
+  {
+    "entryID": 12,
+    "actorID": "MC1",
+    "text": "「那就別看了，我陪妳往前走。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「那就别看了，我陪你往前走。」",
+    "links": [13]
+  },
+  {
+    "entryID": 13,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她把頭上那塊頭巾解了下來，順手繫在了腰間。火光底下，她髮間那兩個小小的尖一左一右露了出來。）＊",
+    "Sequence": "SetPortrait(MC22-2,pic=8);",
+    "zh_CN": "[panel=6]＊（她把头上那块头巾解了下来，顺手系在了腰间。火光底下，她发间那两个小小的尖一左一右露了出来。）＊",
+    "links": [14]
+  },
+  {
+    "entryID": 14,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "OpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "清除立繪",
+    "links": []
+  },
+  {
+    "entryID": 15,
+    "actorID": "role2",
+    "text": "[panel=6]＊（石室最裡頭靠牆鋪著一層乾草，旁邊拿石頭圍了個灶。對面那堵牆上，密密地刻著一道又一道的印子。）＊",
+    "Sequence": "",
+    "Description": "入口：石室舊鋪；條件作者設",
+    "zh_CN": "[panel=6]＊（石室最里头靠墙铺着一层干草，旁边拿石头围了个灶。对面那堵墙上，密密地刻着一道又一道的印子。）＊",
+    "links": [16]
+  },
+  {
+    "entryID": 16,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);\nContinue();",
+    "links": [17, 18, 19, 20, 21]
+  },
+  {
+    "entryID": 17,
+    "actorID": "MC1",
+    "text": "「灶」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_CN": "「灶」",
+    "links": [22]
+  },
+  {
+    "entryID": 18,
+    "actorID": "MC1",
+    "text": "[em2][洞悉檢定][/em2]「牆上的印子」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_CN": "[em2][洞悉检定][/em2]「墙上的印子」",
+    "links": [24]
+  },
+  {
+    "entryID": 19,
+    "actorID": "MC1",
+    "text": "「乾草鋪」",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"MC22\", \"WanderingNotesPage6\") ~= true;",
+    "Description": "選項3",
+    "zh_CN": "「干草铺」",
+    "links": [29]
+  },
+  {
+    "entryID": 20,
+    "actorID": "MC1",
+    "text": "「乾草鋪」",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"MC22\", \"WanderingNotesPage6\") == true;",
+    "Description": "選項4",
+    "zh_CN": "「干草铺」",
+    "links": [33]
+  },
+  {
+    "entryID": 21,
+    "actorID": "MC1",
+    "text": "（不看了）",
+    "Sequence": "",
+    "Description": "選項5",
+    "zh_CN": "（不看了）",
+    "links": [34]
+  },
+  {
+    "entryID": 22,
+    "actorID": "role2",
+    "text": "[panel=6]＊（灶裡的灰積了厚厚一層，你伸手一探，早就冷透了。圍灶的那一圈石頭，朝裡的一面全燻成了黑色。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（灶里的灰积了厚厚一层，你伸手一探，早就冷透了。围灶的那一圈石头，朝里的一面全熏成了黑色。）＊",
+    "links": [23]
+  },
+  {
+    "entryID": 23,
+    "actorID": "MC22",
+    "text": "[panel=1]「這灶燒成這樣，我爹在這底下住的日子，怕是不短。」",
+    "Sequence": "SetPortrait(MC22-2,pic=8);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_CN": "[panel=1]「这灶烧成这样，我爹在这底下住的日子，怕是不短。」",
+    "links": [16]
+  },
+  {
+    "entryID": 24,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,InsightCheck,10);",
+    "Description": "洞悉檢定",
+    "links": [25]
+  },
+  {
+    "entryID": 25,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "擲骰緩衝節點",
+    "links": [26, 28]
+  },
+  {
+    "entryID": 26,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那些印子一道道長短相當，刻滿了一排才換下一排。最末一排只刻到一半，後頭的石面還是平的。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "Conditions": "IsPassDice() == true;",
+    "Description": "檢定成功、洞悉經驗增加",
+    "zh_CN": "[panel=6]＊（那些印子一道道长短相当，刻满了一排才换下一排。最末一排只刻到一半，后头的石面还是平的。）＊",
+    "links": [27]
+  },
+  {
+    "entryID": 27,
+    "actorID": "MC22",
+    "text": "[panel=1]「我爹在這底下，竟是一天一天數著日子過的。」",
+    "Sequence": "SetPortrait(MC22-2,pic=3);\nEnableCharacterExpression(1,MC22,Pain);",
+    "zh_CN": "[panel=1]「我爹在这底下，竟是一天一天数着日子过的。」",
+    "links": [16]
+  },
+  {
+    "entryID": 28,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你從頭一道一道往下數，還沒數到一半就數亂了。這一牆印子是刻來做什麼的，你一時也說不上來。）＊",
+    "Sequence": "",
+    "Conditions": "IsPassDice() == false;",
+    "Description": "檢定失敗",
+    "zh_CN": "[panel=6]＊（你从头一道一道往下数，还没数到一半就数乱了。这一墙印子是刻来做什么的，你一时也说不上来。）＊",
+    "links": [16]
+  },
+  {
+    "entryID": 29,
+    "actorID": "role2",
+    "text": "[panel=6]＊（乾草鋪靠頭那一端擱著一塊研墨的石板，上頭的墨早就乾裂了。石板底下壓著薄薄的一卷，一半還埋在乾草裡。）＊",
+    "Sequence": "ModifyData(Valuable,MC22,WanderingNotesPage6,1);",
+    "Description": "獲得遊方雜記・卷六",
+    "zh_CN": "[panel=6]＊（干草铺靠头那一端搁着一块研墨的石板，上头的墨早就干裂了。石板底下压着薄薄的一卷，一半还埋在干草里。）＊",
+    "links": [30]
+  },
+  {
+    "entryID": 30,
+    "actorID": "MC22",
+    "text": "[panel=1]「是我爹的字……他在這底下住著的時候寫的。」",
+    "Sequence": "SetPortrait(MC22-2,pic=8);",
+    "zh_CN": "[panel=1]「是我爹的字……他在这底下住着的时候写的。」",
+    "links": [31]
+  },
+  {
+    "entryID": 31,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage6);",
+    "Description": "開啟便籤",
+    "links": [32]
+  },
+  {
+    "entryID": 32,
+    "actorID": "MC22",
+    "text": "[panel=1]「第三層他給我寫下了，第四層……倒給我留了這麼大一片空。」",
+    "Sequence": "SetPortrait(MC22-2,pic=3);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_CN": "[panel=1]「第三层他给我写下了，第四层……倒给我留了这么大一片空。」",
+    "links": [16]
+  },
+  {
+    "entryID": 33,
+    "actorID": "role2",
+    "text": "[panel=6]＊（乾草鋪靠頭那一端還擱著那塊研墨的石板，上頭的墨早就乾裂了。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（干草铺靠头那一端还搁着那块研墨的石板，上头的墨早就干裂了。）＊",
+    "links": [16]
+  },
+  {
+    "entryID": 34,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "清除立繪",
+    "links": []
+  },
+  {
+    "entryID": 35,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "入口：石堆；條件作者設",
+    "links": [36, 50, 64]
+  },
+  {
+    "entryID": 36,
+    "actorID": "role2",
+    "text": "[panel=6]＊（石室角落裡有一堆石頭，一塊壓著一塊壘得很齊。石堆四周伏著幾頭黑乎乎的東西，火光一照就都抬起了頭。）＊",
+    "Sequence": "",
+    "Conditions": "IsValuablesObtained(\"MC22\", \"WanderingNotesPage5\") ~= true;",
+    "zh_CN": "[panel=6]＊（石室角落里有一堆石头，一块压着一块垒得很齐。石堆四周伏着几头黑乎乎的东西，火光一照就都抬起了头。）＊",
+    "links": [37]
+  },
+  {
+    "entryID": 37,
+    "actorID": "MC22",
+    "text": "[panel=1]「先把這幾頭東西收拾了再說！」",
+    "Sequence": "SetPortrait(MC22-2,pic=8);\nEnableCharacterExpression(1,MC22,Anger_2);",
+    "zh_CN": "[panel=1]「先把这几头东西收拾了再说！」",
+    "links": [38]
+  },
+  {
+    "entryID": 38,
+    "actorID": "MC1",
+    "text": "「我擋左邊，妳顧右邊，別讓牠們繞到後頭！」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
+    "zh_CN": "「我挡左边，你顾右边，别让它们绕到后头！」",
+    "links": [39]
+  },
+  {
+    "entryID": 39,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nBeginFight(Combat,102);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
+    "Description": "進入戰鬥：＿＿",
+    "links": [40]
+  },
+  {
+    "entryID": 40,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "戰鬥緩衝節點",
+    "links": [41, 48]
+  },
+  {
+    "entryID": 41,
+    "actorID": "role2",
+    "text": "[panel=6]＊（最後那一頭倒在石堆腳下，石室裡總算靜了下來。她搬開石堆最頂上那塊石頭，底下壓著捲得很緊的一小卷。）＊",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(Valuable,MC22,WanderingNotesPage5,1);",
+    "Conditions": "IsPassFight() == true;",
+    "Description": "戰鬥成功、獲得遊方雜記・卷五",
+    "zh_CN": "[panel=6]＊（最后那一头倒在石堆脚下，石室里总算静了下来。她搬开石堆最顶上那块石头，底下压着卷得很紧的一小卷。）＊",
+    "links": [42]
+  },
+  {
+    "entryID": 42,
+    "actorID": "MC22",
+    "text": "[panel=1]「又是我爹的字……你湊過來，這一卷我們一起看。」",
+    "Sequence": "SetPortrait(MC22-2,pic=8);",
+    "zh_CN": "[panel=1]「又是我爹的字……你凑过来，这一卷我们一起看。」",
+    "links": [43]
+  },
+  {
+    "entryID": 43,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndMemo);\nContinue()@Message(EndMemo);\nShowValuableMemo(WanderingNotesPage5);",
+    "Description": "開啟便籤",
+    "links": [44]
+  },
+  {
+    "entryID": 44,
+    "actorID": "MC22",
+    "text": "[panel=1]「他不肯帶回家的東西，原來就埋在這堆石頭底下。」",
+    "Sequence": "SetPortrait(MC22-2,pic=8);\nEnableCharacterExpression(1,MC22,Idea);",
+    "zh_CN": "[panel=1]「他不肯带回家的东西，原来就埋在这堆石头底下。」",
+    "links": [45]
+  },
+  {
+    "entryID": 45,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那堆石頭讓她一塊塊搬到了牆邊，底下露出一個淺坑。坑底躺著一顆墨黑的珠子，一湊近就有寒氣往臉上撲。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（那堆石头让她一块块搬到了墙边，底下露出一个浅坑。坑底躺着一颗墨黑的珠子，一凑近就有寒气往脸上扑。）＊",
+    "links": [46]
+  },
+  {
+    "entryID": 46,
+    "actorID": "MC22",
+    "text": "[panel=1]「這珠子我先揣在懷裡，等把這墓走完了，咱們再說。」",
+    "Sequence": "SetPortrait(MC22-2,pic=1);",
+    "zh_CN": "[panel=1]「这珠子我先揣在怀里，等把这墓走完了，咱们再说。」",
+    "links": [47]
+  },
+  {
+    "entryID": 47,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "清除立繪",
+    "links": []
+  },
+  {
+    "entryID": 48,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你被其中一頭撲翻在地上，再也撐不起身來。剩下那幾頭一齊圍了上來，你眼前的火光跟著暗了下去。）＊",
+    "Sequence": "DisableCharacterExpression(0);",
+    "Conditions": "IsPassFight() == false;",
+    "Description": "戰鬥失敗",
+    "zh_CN": "[panel=6]＊（你被其中一头扑翻在地上，再也撑不起身来。剩下那几头一齐围了上来，你眼前的火光跟着暗了下去。）＊",
+    "links": [49]
+  },
+  {
+    "entryID": 49,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "ShowEnding(Ending_1);",
+    "Description": "結局",
+    "links": []
+  },
+  {
+    "entryID": 50,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那堆石頭已經搬開了，一塊一塊靠著牆堆在一邊。底下那個淺坑空著，坑底那顆珠子已經讓她揣進了懷裡。）＊",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF45\", 5) ~= \"success\";",
+    "zh_CN": "[panel=6]＊（那堆石头已经搬开了，一块一块靠着墙堆在一边。底下那个浅坑空着，坑底那颗珠子已经让她揣进了怀里。）＊",
+    "links": []
+  },
+  {
+    "entryID": 51,
+    "actorID": "MC22",
+    "text": "[panel=1]「[var=PlayerFirstName]？裡頭還沒走完，你這就要出去？」",
+    "Sequence": "SetPortrait(MC22-2,pic=2);",
+    "Description": "入口：墓口（還沒走完）；條件作者設，IsValuablesObtained(\"MC22\", \"WanderingNotesPage5\") ~= true or (IsValuablesObtained(\"MC22\", \"WanderingNotesPage6\") ~= true)",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]？里头还没走完，你这就要出去？」",
+    "links": [52]
+  },
+  {
+    "entryID": 52,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Description": "清除立繪",
+    "links": []
+  },
+  {
+    "entryID": 53,
+    "actorID": "role2",
+    "text": "[panel=6]＊（墓口的天光斜斜照在石階上，外頭的風聲又聽得見了。她在石階底下站定，把懷裡那顆珠子托在了掌心。）＊",
+    "Sequence": "",
+    "Description": "入口：墓口（走完了）；條件作者設，IsValuablesObtained(\"MC22\", \"WanderingNotesPage5\") == true and (IsValuablesObtained(\"MC22\", \"WanderingNotesPage6\") == true)",
+    "zh_CN": "[panel=6]＊（墓口的天光斜斜照在石阶上，外头的风声又听得见了。她在石阶底下站定，把怀里那颗珠子托在了掌心。）＊",
+    "links": [54]
+  },
+  {
+    "entryID": 54,
+    "actorID": "MC22",
+    "text": "[panel=1]「[var=PlayerFirstName]，那晚在演武場，我說東西還沒見著，讓你慢慢想。」",
+    "Sequence": "SetPortrait(MC22-2,pic=8);\nEnableCharacterExpression(1,MC22,Meditate);",
+    "zh_CN": "[panel=1]「[var=PlayerFirstName]，那晚在演武场，我说东西还没见着，让你慢慢想。」",
+    "links": [55]
+  },
+  {
+    "entryID": 55,
+    "actorID": "MC22",
+    "text": "[panel=1]「現在我要的東西在這兒，你也該履行承諾把東西給我，別叫本姑娘白跑一趟。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=8);\nSetPortrait(MC1,pic=12);",
+    "zh_CN": "[panel=1]「现在我要的东西在这儿，你也该履行承诺把东西给我，别叫本姑娘白跑一趟。」",
+    "links": [56, 57]
+  },
+  {
+    "entryID": 56,
+    "actorID": "MC1",
+    "text": "「妳收著吧。」",
+    "Sequence": "",
+    "Description": "選項1",
+    "zh_CN": "「你收着吧。」",
+    "links": [58]
+  },
+  {
+    "entryID": 57,
+    "actorID": "MC1",
+    "text": "「這東西留不得。」",
+    "Sequence": "",
+    "Description": "選項2",
+    "zh_CN": "「这东西留不得。」",
+    "links": [62]
+  },
+  {
+    "entryID": 58,
+    "actorID": "MC1",
+    "text": "「妳收著吧，東西是妳挖出來的，要練就拿去練。」",
+    "Sequence": "SetPortrait(MC1,pic=1);",
+    "zh_CN": "「你收着吧，东西是你挖出来的，要练就拿去练。」",
+    "links": [59]
+  },
+  {
+    "entryID": 59,
+    "actorID": "MC22",
+    "text": "[panel=1]「好！有你這一句，這一顆本姑娘就收下了。」",
+    "Sequence": "SetPortrait(MC22-2,pic=5);\nEnableCharacterExpression(1,MC22,Surprise_2);\nModifyData(FavorabilityExp,MC22,50);",
+    "Script": "Variable[\"NanaDemon\"] = Variable[\"NanaDemon\"] + 1;",
+    "Description": "娜娜好感度提升、變數更新",
+    "zh_CN": "[panel=1]「好！有你这一句，这一颗本姑娘就收下了。」",
+    "links": [60]
+  },
+  {
+    "entryID": 60,
+    "actorID": "role2",
+    "text": "[panel=6]＊（她先上了石階。你跟出墓口時，她正把腰間那塊頭巾解下來往頭上纏。）＊",
+    "Sequence": "DisableCharacterExpression(1);",
+    "zh_CN": "[panel=6]＊（她先上了石阶。你跟出墓口时，她正把腰间那块头巾解下来往头上缠。）＊",
+    "links": [61]
+  },
+  {
+    "entryID": 61,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "DisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nContinue();",
+    "Script": "SetQuestEntryState(\"CF45\", 5, \"success\");",
+    "Description": "清除立繪、任務更新",
+    "links": []
+  },
+  {
+    "entryID": 62,
+    "actorID": "role2",
+    "text": "[panel=6]＊（你從她掌心拿過那顆珠子，攥在手裡運起了內力。費了好一番功夫，它才一點一點化成了飛灰。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（你从她掌心拿过那颗珠子，攥在手里运起了内力。费了好一番功夫，它才一点一点化成了飞灰。）＊",
+    "links": [63]
+  },
+  {
+    "entryID": 63,
+    "actorID": "MC22",
+    "text": "[panel=1]「……灰都飛了，本姑娘還能一撮一撮攏回來不成。」",
+    "Sequence": "SetPortrait(MC22-2,pic=3);\nEnableCharacterExpression(1,MC22,Pain);\nModifyData(FavorabilityExp,MC22,-50);",
+    "Description": "娜娜好感度下降",
+    "zh_CN": "[panel=1]「……灰都飞了，本姑娘还能一撮一撮拢回来不成。」",
+    "links": [60]
+  },
+  {
+    "entryID": 64,
+    "actorID": "role2",
+    "text": "[panel=6]＊（那堆石頭一塊一塊靠著牆堆在一邊，底下那個淺坑空著，坑底只剩一層鬆軟的土。）＊",
+    "Sequence": "",
+    "zh_CN": "[panel=6]＊（那堆石头一块一块靠着墙堆在一边，底下那个浅坑空着，坑底只剩一层松软的土。）＊",
+    "links": []
+  }
+]

@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
-"""文風節奏檢查：抓碎句、縮寫名詞、超長台詞，並報 em7 與表情特效的用量。
+"""文風節奏檢查：抓碎句、縮寫名詞、超長台詞、結尾旁白短促，並報 em7 與表情特效的用量。
 用法：python 給AI看的指南/文風節奏檢查.py <檔或資料夾>...   （.md 創作稿、.json 對話檔都吃）
+      --建專名表   掃全部 Json/**/*.json 的 text，印出還沒進 專名表.txt 的專名候選（只印不寫，作者挑）
       --hook-post／--hook-stop 是給 .claude/settings.json 的 hook 用的，從 stdin 讀 JSON。
 規矩出處：武俠文風創作指南 第四節旁白卡第 4 條、娜娜卡〈節奏〉、乙類〈不縮名詞〉、自檢 4a；
 台詞長度上限見 文本創作指南 2.1b（2026-09-04 作者定：可見字數 50 內、紅線 60）；
-表情特效不得零、偏低要補見 文本創作指南 2.3（2026-09-16 作者指正；作者舊稿基準每百格立繪 32 個）。
+表情特效不得零、偏低要補見 文本創作指南 2.3（2026-09-16 作者指正；作者舊稿基準每百格立繪 32 個）；
+縮寫對照 給AI看的指南/專名表.txt（全名三字以上，首字＋末字的兩字縮寫一律禁，2026-09-29）；
+每條分支最後一格旁白至少兩句、可見字三十以上（2026-09-29 作者定）。
 """
 import sys, os, re, json, statistics as st
 
@@ -16,6 +19,10 @@ COMPOUND_BEFORE = '天機羅棋地命算磨石托圓一幾整半銅玉這那面'
 COMPOUND_AFTER = '纏算問查點腿起子踞根桓龍旋繞'
 EXPR_MIN_PORTRAITS, EXPR_LOW_PER_100 = 8, 10   # 立繪不到 8 格的小段不評；每百格立繪的表情少於 10 個算偏低（文本創作指南 2.3）
 LIMIT_WARN, LIMIT_HARD = 50, 60   # 台詞可見字數：過 50 要拆格、60 是紅線（文本創作指南 2.1b，2026-09-04 作者定）
+TAIL_MIN_SENT, TAIL_MIN_CHARS = 2, 30   # 每條分支最後一格旁白：至少兩句、可見字三十以上（2026-09-29 作者定）
+NAMES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '專名表.txt')   # 縮寫檢查對照的專名表
+NAME_SUFFIX = '府幫寨村洞潭澤嶺塢障道盟骰盤訣篇經會場鋪店坊莊寺廟觀家氏軍營關城郡縣'   # --建專名表 抓候選用的結尾字
+TAG_RE = r'\[/?em\d\]|\[panel=\d+\]|\[PANEL=\d+\]|\[var=[^\]]*\]'
 
 
 def visible_len(t):
@@ -65,6 +72,132 @@ def noun_hits(t):
     return hits
 
 
+# ---------- 縮寫對照專名表（2026-09-29） ----------
+_NAMES = None
+
+
+def load_names():
+    """讀 專名表.txt，回 {'full': [全名…], 'forbid': {縮寫: 全名}, 'allow': 准用簡稱, 'white': 白名單}。
+    一行一個：全名｜禁：簡稱1,簡稱2｜准：簡稱3（禁、准都可省略；# 是註解；[白名單] 段底下一行一個短稱）。
+    全名三字以上，首字＋末字的兩字縮寫自動當禁用，除非列在准或白名單；縮寫若本身是全名或白名單就不算。
+    檔案不在就當空表，hook 不能因此掛掉。"""
+    global _NAMES
+    if _NAMES is not None:
+        return _NAMES
+    try:
+        lines = open(NAMES_FILE, encoding='utf-8').read().splitlines()
+    except Exception:
+        lines = []
+    full, entries, allow, white = [], [], set(), set()
+    section = 'names'
+    for line in lines:
+        s = line.strip()
+        if not s or s.startswith('#'):
+            continue
+        if s.startswith('[') and s.endswith(']'):
+            section = 'white' if '白名單' in s else 'names'
+            continue
+        if section == 'white':
+            white.add(s)
+            continue
+        parts = [x.strip() for x in re.split(r'[｜|]', s)]
+        name = parts[0]
+        if not name:
+            continue
+        fb, al = [], []
+        for x in parts[1:]:
+            m = re.match(r'^(禁|准)\s*[：:]\s*(.*)$', x)
+            if m:
+                items = [y.strip() for y in re.split(r'[,，、]', m.group(2)) if y.strip()]
+                (fb if m.group(1) == '禁' else al).extend(items)
+        if len(name) >= 3 and (name[0] + name[-1]) not in al:
+            fb.append(name[0] + name[-1])
+        full.append(name); allow.update(al); entries.append((name, fb))
+    forbid = {}
+    for name, fb in entries:
+        for a in fb:
+            if a and a != name and a not in full and a not in white and a not in allow:
+                forbid.setdefault(a, name)
+    _NAMES = {'full': full, 'forbid': forbid, 'allow': allow, 'white': white}
+    return _NAMES
+
+
+def abbr_hits(t):
+    """對照專名表找禁用縮寫：先把文本裡的全名、准用簡稱、白名單整段拿掉（免得「英豪府」裡的字被誤抓），再找禁用的。
+    回 [(縮寫, 全名)…]，照出現順序。"""
+    N = load_names()
+    if not N['forbid']:
+        return []
+    raw = re.sub(TAG_RE, '', t)
+    for w in sorted(set(N['full']) | N['allow'] | N['white'], key=len, reverse=True):
+        raw = raw.replace(w, '\x00' * len(w))
+    hits = []
+    for a in sorted(N['forbid'], key=len, reverse=True):
+        for m in re.finditer(re.escape(a), raw):
+            hits.append((m.start(), a, N['forbid'][a]))
+        raw = raw.replace(a, '\x00' * len(a))
+    return [(a, f) for _, a, f in sorted(hits)]
+
+
+STOP_HEAD = ('的了在去到是這那你我他她們個來回從往進出上下把被與和跟有沒不也都就又再還才很太最給對為以於之而且及或等'
+             '向朝離經過走看說想問要能會可得地著叫讓使令連隨同像比更愈越已曾正將先後便即則什麼怎哪誰每各某另整半兩幾')
+STOP_IN = '不已了嗎呢吧的著把被就也都又再才給讓叫使令連跟隨到去來回是沒能可要想說看'   # 名字裡不會有的虛字、動詞：候選含這些就丟
+HUI_BEFORE = '大盟法廟集宴'   # 結尾「會」太常當動詞（該不會、一定會），只收「大會」「盟會」這幾種
+
+
+def build_names():
+    """--建專名表：掃全部 Json/**/*.json 的 text，印出 3–6 個中文字、以 NAME_SUFFIX 收尾、出現三次以上、
+    還沒進專名表的候選，附次數；只印不寫，作者挑了再貼進 專名表.txt。"""
+    N = load_names()
+    known = set(N['full']) | N['allow'] | N['white'] | set(N['forbid'])
+    cnt = {}; files = 0
+    for root, _, fs in os.walk(os.path.join(ROOT, 'Json')):
+        for f in sorted(fs):
+            if not f.endswith('.json'):
+                continue
+            try:
+                nodes = json.load(open(os.path.join(root, f), encoding='utf-8'))
+            except Exception:
+                continue
+            files += 1
+            for n in nodes:
+                t = re.sub(TAG_RE, '', n.get('text', '') or '')
+                for m in re.finditer('[' + NAME_SUFFIX + ']', t):
+                    e = m.end()
+                    for L in range(3, 7):
+                        w = t[e - L:e] if e - L >= 0 else ''
+                        if len(w) < L or not re.fullmatch(r'[一-鿿]+', w):
+                            break
+                        cnt[w] = cnt.get(w, 0) + 1
+    # 「們英豪府」是前面黏了字的英豪府，不是新名：長的比短的少很多就丟長的；短的幾乎都躲在長的裡面就丟短的。
+    drop = set()
+    for w in sorted(cnt, key=len):
+        if len(w) < 4 or cnt[w] < 3:
+            continue
+        x = w[1:]
+        if x in cnt:
+            if x in drop or cnt[w] < 0.8 * cnt[x]:
+                drop.add(w)
+            else:
+                drop.add(x)
+    out = []
+    for w, c in cnt.items():
+        if c < 3 or w in drop or w[0] in STOP_HEAD or w in known:
+            continue
+        if any(ch in STOP_IN for ch in w[:-1]) or (w[-1] == '會' and w[-2] not in HUI_BEFORE):
+            continue
+        if any(w.endswith(k) or k.startswith(w) for k in N['full']):   # 「你們英豪府」前面黏字、「黑狼氏」是已知名的頭
+            continue
+        if any(k in w and (not w.startswith(k) or w[len(k)] in STOP_HEAD) for k in N['full'] if len(k) < len(w)):
+            continue   # 「英豪府的會」：已知名後面黏了虛字；「英豪府遴選會」這種實字接的留著
+        out.append((c, w))
+    out.sort(key=lambda x: (-x[0], x[1]))
+    print('掃了 %d 個 JSON，候選 %d 個（3–6 個中文字、結尾是 %s 之一、出現三次以上、不在專名表；只印不寫，作者挑）：'
+          % (files, len(out), NAME_SUFFIX))
+    for c, w in out:
+        print('%5d  %s' % (c, w))
+
+
 def lines_from_json(p):
     for n in json.load(open(p, encoding='utf-8')):
         t = n.get('text', '')
@@ -99,6 +232,40 @@ def lines_from_md(p):
         yield spk, ('#%s' % eid if eid else 'L%d' % i), t
 
 
+TAIL_MARK = re.compile(r'^(→\s*接|\*\*▶|▶|#{2,4} )')   # 這些行之前的那格旁白，就是一條分支的結尾
+
+
+def md_tails(p):
+    """回 .md 裡每條分支最後一格旁白 [(格號, 文)…]（創作稿、回讀稿都吃）：說話者是旁白的那一格，
+    往下找第一個不是空行、不是「- 」附註（actorID／Sequence 之類）的行，若是 → 接、**▶、▶、##／###／#### 開頭或已到檔尾，就算分支結尾。"""
+    raw = open(p, encoding='utf-8').read().splitlines()
+    out = []
+    for i, line in enumerate(raw):
+        m = MD_LINE.match(line.strip())
+        if not m:
+            continue
+        spk, eid, t = m.group(1).strip(), m.group(2), m.group(3)
+        if not t.strip() or not (spk == '旁白' or 'panel=6' in t.lower()):
+            continue
+        nxt = None
+        for j in range(i + 1, len(raw)):
+            s = raw[j].strip()
+            if s and not s.startswith('- '):
+                nxt = s
+                break
+        is_menu = nxt is not None and nxt.lstrip('*').startswith('▶') and any(k in nxt for k in ('選單', '玩家選擇', '選項'))
+        if nxt is None or (TAIL_MARK.match(nxt) and not is_menu):   # ▶ 選單／玩家選擇 是選單前，不是分支結尾（2026-09-29）
+            out.append(('#%s' % eid if eid else 'L%d' % (i + 1), t))
+    return out
+
+
+def json_tails(p):
+    """回 .json 裡每條分支最後一格旁白 [(格號, 文)…]：actorID 是 role2 且 links 為空的節點。"""
+    return [('#%s' % n.get('entryID'), n.get('text', ''))
+            for n in json.load(open(p, encoding='utf-8'))
+            if n.get('actorID') == 'role2' and not n.get('links') and (n.get('text') or '').strip()]
+
+
 def expr_stats(p):
     """回 (立繪格數, 表情特效格數)：.md 數 Sequence 行、.json 數節點。"""
     if p.endswith('.json'):
@@ -111,6 +278,7 @@ def expr_stats(p):
 def check(p):
     gen = lines_from_json(p) if p.endswith('.json') else lines_from_md(p)
     per = {}; frags = []; nouns = []; flagged = []; longs = []; tails = []; dashes = []; cands = []
+    abbrs = []; short_tails = []
     em_lines = 0; talk_lines = 0; em_consec = []; prev_em = None
     for spk, eid, t in gen:
         if spk != '旁白':
@@ -143,6 +311,8 @@ def check(p):
                     tails.append((spk, eid, body + end))
         for h in noun_hits(t):
             nouns.append((spk, eid, h))
+        for h, full in abbr_hits(t):   # 對照專名表的縮寫（2026-09-29）
+            abbrs.append((spk, eid, h, full))
         if spk == '旁白':   # 旁白卡候選（第 3 條判語／心事、第 7 條造景／數字／收尾巧句；作者 2026-09-28 要的：只列出來，留不留由審的人說理由）
             for body, end in S:
                 last = re.split(r'[，、；：]', body)[-1]
@@ -160,6 +330,10 @@ def check(p):
                     cands.append((spk, eid, '精確數目', body + end))
         if '——' in t:   # 全篇不用破折號（作者慣例，2026-09-28 收進文風指南旁白卡第 9 條）：旁白、台詞都抓
             dashes.append((spk, eid, strip_tags(t)[:40]))
+    for eid, t in (json_tails(p) if p.endswith('.json') else md_tails(p)):   # 每條分支最後一格旁白（2026-09-29 作者定）
+        ns, vl = len(sentences(t)), visible_len(t)
+        if ns < TAIL_MIN_SENT or vl < TAIL_MIN_CHARS:
+            short_tails.append((eid, ns, vl, strip_tags(speech_only(t))[:30]))
     print('=' * 8, p)
     print('%-10s %6s %8s %8s' % ('說話者', '句數', '每句字數', '碎句比'))
     for spk, d in per.items():
@@ -184,6 +358,10 @@ def check(p):
         print('-- 縮寫／隱喻名詞（「那本帳」若是真帳本可留）：')
         for spk, eid, h in nouns:
             print('   %s %s 「%s」' % (spk, eid, h))
+    if abbrs:
+        print('-- 縮寫（對照專名表；准用的與白名單不報）：')
+        for spk, eid, h, full in abbrs:
+            print('   %s %s 「%s」（%s）' % (spk, eid, h, full))
     if cands:
         print('-- 旁白卡候選（第 3 條判語／心事、第 7 條造景／精確數目／收尾巧句；只列不判，留的要說理由；文風指南〈常犯十條〉）：')
         for spk, eid, kind, t in cands:
@@ -196,6 +374,10 @@ def check(p):
         print('-- 台詞超長（可見字數過 %d 要拆格、%d 是紅線；標籤不計）：' % (LIMIT_WARN, LIMIT_HARD))
         for spk, eid, vl in longs:
             print('   %s %s %d 字%s' % (spk, eid, vl, '  ⚠ 紅線' if vl > LIMIT_HARD else ''))
+    if short_tails:
+        print('-- 結尾旁白短促（每條分支最後一格旁白至少兩句、三十字；文風審要交代）：')
+        for eid, ns, vl, s in short_tails:
+            print('   旁白 %s %d 句、%d 字 「%s」' % (eid, ns, vl, s))
     allowed = max(1, talk_lines // 10)
     em_bad = em_lines > allowed or bool(em_consec)
     if talk_lines:
@@ -207,9 +389,11 @@ def check(p):
     if sp:
         print('-- 表情特效：%d／%d 格立繪（作者舊稿每百格 32 個；零＝漏了、低於 %d 要回頭補，文本創作指南 2.3）%s'
               % (ex, sp, EXPR_LOW_PER_100, '  ⚠ 零表情' if (expr_low and ex == 0) else ('  ⚠ 偏低' if expr_low else '')))
-    if not frags and not tails and not nouns and not em_bad and not longs and not expr_low and not dashes and not cands:
+    if (not frags and not tails and not nouns and not em_bad and not longs and not expr_low and not dashes and not cands
+            and not abbrs and not short_tails):
         print('-- 乾淨。')
-    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs), 'expr_low': expr_low, 'dashes': len(dashes), 'cands': len(cands)}
+    return {'file': p, 'flagged': flagged, 'frags': len(frags), 'tails': len(tails), 'nouns': len(nouns), 'em7_bad': em_bad, 'longs': len(longs), 'expr_low': expr_low, 'dashes': len(dashes), 'cands': len(cands),
+            'abbr': len(abbrs), 'short_tails': len(short_tails)}
 
 
 def walk(paths):
@@ -257,7 +441,8 @@ def run_quiet(paths):
 def summary(results):
     lines = []
     for r in results:
-        if r['flagged'] or r['frags'] or r.get('tails') or r['nouns'] or r.get('em7_bad') or r.get('longs') or r.get('expr_low'):
+        if (r['flagged'] or r['frags'] or r.get('tails') or r['nouns'] or r.get('em7_bad') or r.get('longs') or r.get('expr_low')
+                or r.get('abbr') or r.get('short_tails')):
             bits = []
             if r['flagged']:
                 bits.append('太碎：' + '、'.join(r['flagged']))
@@ -267,6 +452,10 @@ def summary(results):
                 bits.append('逗號後短尾 %d' % r['tails'])
             if r['nouns']:
                 bits.append('縮寫名詞 %d' % r['nouns'])
+            if r.get('abbr'):
+                bits.append('縮寫（專名表）%d' % r['abbr'])
+            if r.get('short_tails'):
+                bits.append('結尾旁白短促 %d' % r['short_tails'])
             if r.get('em7_bad'):
                 bits.append('em7 過量或連掛')
             if r.get('longs'):
@@ -337,5 +526,7 @@ if __name__ == '__main__':
         hook_post(); sys.exit(0)
     if sys.argv[1] == '--hook-stop':
         hook_stop(); sys.exit(0)
+    if sys.argv[1] == '--建專名表':
+        build_names(); sys.exit(0)
     for p in walk(sys.argv[1:]):
         check(p)

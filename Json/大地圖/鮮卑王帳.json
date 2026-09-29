@@ -415,11 +415,11 @@
   {
     "entryID": 45,
     "actorID": "role2",
-    "text": "[panel=6]＊（氈帳後頭的木樁上拴著一串人，身上穿的都是漢人的衣裳。看守他們的是個抱著刀的鮮卑人，坐在不遠處的草上。）＊",
+    "text": "[panel=6]＊（氈帳後頭的木樁上拴著一串人，身上穿的都是漢人的衣裳。看守他們的鮮卑人抱著刀，背對著這邊坐在不遠處的草上。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
     "Conditions": "CurrentQuestEntryState(\"CF49\", 5) ~= \"success\";",
-    "zh_TW": "[panel=6]＊（氈帳後頭的木樁上拴著一串人，身上穿的都是漢人的衣裳。看守他們的是個抱著刀的鮮卑人，坐在不遠處的草上。）＊",
-    "zh_CN": "[panel=6]＊（毡帐后头的木桩上拴着一串人，身上穿的都是汉人的衣裳。看守他们的是个抱着刀的鲜卑人，坐在不远处的草上。）＊",
+    "zh_TW": "[panel=6]＊（氈帳後頭的木樁上拴著一串人，身上穿的都是漢人的衣裳。看守他們的鮮卑人抱著刀，背對著這邊坐在不遠處的草上。）＊",
+    "zh_CN": "[panel=6]＊（毡帐后头的木桩上拴着一串人，身上穿的都是汉人的衣裳。看守他们的鲜卑人抱着刀，背对着这边坐在不远处的草上。）＊",
     "links": [46, 47]
   },
   {
@@ -454,7 +454,7 @@
     "entryID": 49,
     "actorID": "MC1",
     "text": "「繩子我替你們割開。想回家的，就跟我在這營裡鬧上一場！」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「繩子我替你們割開。想回家的，就跟我在這營裡鬧上一場！」",
     "zh_CN": "「绳子我替你们割开。想回家的，就跟我在这营里闹上一场！」",
     "links": [50, 52]
@@ -463,7 +463,7 @@
     "entryID": 50,
     "actorID": "role84",
     "text": "「去年冬天從雲中讓人擄到這裡，這口氣憋到今天了。」",
-    "Sequence": "ModifyData(FeatExp,Player,Persuasion,25);",
+    "Sequence": "DisableCharacterExpression(0);\nModifyData(FeatExp,Player,Persuasion,25);",
     "Conditions": "IsPassDice() == true;",
     "Description": "檢定成功、口才經驗增加",
     "zh_TW": "「去年冬天從雲中讓人擄到這裡，這口氣憋到今天了。」",
@@ -485,7 +485,7 @@
     "entryID": 52,
     "actorID": "role2",
     "text": "[panel=6]＊（那一串人擠著往木樁邊上縮了回去，一個個都低下了頭。有人偷偷朝看守那頭望了一眼，又趕緊把臉轉了回來。）＊",
-    "Sequence": "",
+    "Sequence": "DisableCharacterExpression(0);",
     "Conditions": "IsPassDice() == false;",
     "Description": "檢定失敗",
     "zh_TW": "[panel=6]＊（那一串人擠著往木樁邊上縮了回去，一個個都低下了頭。有人偷偷朝看守那頭望了一眼，又趕緊把臉轉了回來。）＊",
@@ -729,11 +729,11 @@
   {
     "entryID": 78,
     "actorID": "MC1",
-    "text": "「不跟他廢話，動手！」",
+    "text": "「不跟你廢話，一起上！」",
     "Sequence": "",
     "Description": "選項2",
-    "zh_TW": "「不跟他廢話，動手！」",
-    "zh_CN": "「不跟他废话，动手！」",
+    "zh_TW": "「不跟你廢話，一起上！」",
+    "zh_CN": "「不跟你废话，一起上！」",
     "links": [88]
   },
   {
