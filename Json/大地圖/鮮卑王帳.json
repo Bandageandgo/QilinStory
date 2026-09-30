@@ -2,14 +2,13 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "開場",
     "text": "[panel=6]＊（你在塞外一直等到五月，檀石槐才巡到了這一部。你伏在坡上的草裡往下看，底下就是他們紮下的營。）＊",
     "Sequence": "",
-    "Description": "入口：坡上開場；條件作者設",
+    "Description": "開場，進圖強制處發",
     "zh_TW": "[panel=6]＊（你在塞外一直等到五月，檀石槐才巡到了這一部。你伏在坡上的草裡往下看，底下就是他們紮下的營。）＊",
     "zh_CN": "[panel=6]＊（你在塞外一直等到五月，檀石槐才巡到了这一部。你伏在坡上的草里往下看，底下就是他们扎下的营。）＊",
-    "links": [
-      2
-    ]
+    "links": [2]
   },
   {
     "entryID": 2,
@@ -23,14 +22,13 @@
   {
     "entryID": 3,
     "actorID": "role2",
+    "title": "靠近黑狼王營地",
     "text": "[panel=6]＊（坡頂後頭那片窪地裡，一群穿皮袍的人枕著馬鞍，躺在草裡嚼乾肉。只有那個年紀跟你相仿的坐著，身下墊的也是一副馬鞍。）＊",
     "Sequence": "SetPortrait(MC11,pic=1);",
-    "Description": "入口：黑狼的伏兵・第一次；條件作者設",
+    "Description": "靠近黑狼王營地時觸發",
     "zh_TW": "[panel=6]＊（坡頂後頭那片窪地裡，一群穿皮袍的人枕著馬鞍，躺在草裡嚼乾肉。只有那個年紀跟你相仿的坐著，身下墊的也是一副馬鞍。）＊",
     "zh_CN": "[panel=6]＊（坡顶后头那片洼地里，一群穿皮袍的人枕着马鞍，躺在草里嚼干肉。只有那个年纪跟你相仿的坐着，身下垫的也是一副马鞍。）＊",
-    "links": [
-      4
-    ]
+    "links": [4]
   },
   {
     "entryID": 4,
@@ -39,9 +37,7 @@
     "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
     "zh_TW": "「咦？盯著底下那座營的，原來不只我一個。你們是哪一路的？」",
     "zh_CN": "「咦？盯着底下那座营的，原来不只我一个。你们是哪一路的？」",
-    "links": [
-      5
-    ]
+    "links": [5]
   },
   {
     "entryID": 5,
@@ -50,9 +46,7 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC11,pic=1);\nEnableCharacterExpression(1,MC11,Proud);",
     "zh_TW": "「哼哈哈，朔方黑狼聽過沒有？坡頂上趴著的，都是本王的人。」",
     "zh_CN": "「哼哈哈，朔方黑狼听过没有？坡顶上趴着的，都是本王的人。」",
-    "links": [
-      6
-    ]
+    "links": [6]
   },
   {
     "entryID": 6,
@@ -61,9 +55,7 @@
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=12);",
     "zh_TW": "「原來是黑狼大王。大王的人在這坡上趴了多久了？」",
     "zh_CN": "「原来是黑狼大王。大王的人在这坡上趴了多久了？」",
-    "links": [
-      7
-    ]
+    "links": [7]
   },
   {
     "entryID": 7,
@@ -72,9 +64,7 @@
     "Sequence": "SetPortrait(MC11,pic=2);\nEnableCharacterExpression(1,MC11,Anger);",
     "zh_TW": "「盯了好些天了，本王的人趴得骨頭都硬了。這一座營，一個也摸不進去。」",
     "zh_CN": "「盯了好些天了，本王的人趴得骨头都硬了。这一座营，一个也摸不进去。」",
-    "links": [
-      8
-    ]
+    "links": [8]
   },
   {
     "entryID": 8,
@@ -90,13 +80,11 @@
     "actorID": "role2",
     "text": "[panel=6]＊（黑狼王還坐在那副馬鞍上，嚼著乾肉看了看你。他身邊躺著的那些人，也都撐起身子朝你望了過來。）＊",
     "Sequence": "SetPortrait(MC11,pic=1);\nSetPortrait(MC1,pic=12);",
-    "Description": "入口：黑狼的伏兵・再點；條件作者設",
+    "Conditions": "Variable[\"XianbeiCampChaos\"] >= 2",
+    "Description": "請求黑狼王支援，需要變數XianbeiCampChaos大於1",
     "zh_TW": "[panel=6]＊（黑狼王還坐在那副馬鞍上，嚼著乾肉看了看你。他身邊躺著的那些人，也都撐起身子朝你望了過來。）＊",
     "zh_CN": "[panel=6]＊（黑狼王还坐在那副马鞍上，嚼着干肉看了看你。他身边躺着的那些人，也都撑起身子朝你望了过来。）＊",
-    "links": [
-      10,
-      11
-    ]
+    "links": [10, 11]
   },
   {
     "entryID": 10,
@@ -106,9 +94,7 @@
     "Description": "選項1",
     "zh_TW": "「大王說話算數，就派幾個人下去添一把亂！」",
     "zh_CN": "「大王说话算数，就派几个人下去添一把乱！」",
-    "links": [
-      12
-    ]
+    "links": [12]
   },
   {
     "entryID": 11,
@@ -118,9 +104,7 @@
     "Description": "選項2",
     "zh_TW": "「我答應的事，用不著借大王的人！」",
     "zh_CN": "「我答应的事，用不着借大王的人！」",
-    "links": [
-      15
-    ]
+    "links": [15]
   },
   {
     "entryID": 12,
@@ -129,9 +113,7 @@
     "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "「大王先前親口說的，營一鬧起來，底下就摸得進去。這就撥幾個人下去添一把亂，大王說話算數！」",
     "zh_CN": "「大王先前亲口说的，营一闹起来，底下就摸得进去。这就拨几个人下去添一把乱，大王说话算数！」",
-    "links": [
-      13
-    ]
+    "links": [13]
   },
   {
     "entryID": 13,
@@ -140,9 +122,7 @@
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC11,pic=1);\nEnableCharacterExpression(1,MC11,Proud);",
     "zh_TW": "「哼哈哈，這有何難，本王這就撥幾個下去攪一攪！」",
     "zh_CN": "「哼哈哈，这有何难，本王这就拨几个下去搅一搅！」",
-    "links": [
-      14
-    ]
+    "links": [14]
   },
   {
     "entryID": 14,
@@ -169,7 +149,6 @@
     "actorID": "role2",
     "text": "[panel=6]＊（營裡的人來來去去，走到最大那頂帳前都放慢了腳步。那頂帳前留著一片空地，一直通到北邊那條踩禿的道上。）＊",
     "Sequence": "",
-    "Description": "入口：望營地；條件作者設",
     "zh_TW": "[panel=6]＊（營裡的人來來去去，走到最大那頂帳前都放慢了腳步。那頂帳前留著一片空地，一直通到北邊那條踩禿的道上。）＊",
     "zh_CN": "[panel=6]＊（营里的人来来去去，走到最大那顶帐前都放慢了脚步。那顶帐前留着一片空地，一直通到北边那条踩秃的道上。）＊",
     "links": []
@@ -177,14 +156,13 @@
   {
     "entryID": 17,
     "actorID": "role2",
+    "title": "巡邏的哨騎",
     "text": "[panel=6]＊（離營邊還有一段路，有個哨騎朝你這邊過來了。他在你前頭勒住了馬，外圈別的哨騎也跟著停了下來。）＊",
     "Sequence": "",
-    "Description": "入口：哨騎；條件作者設",
+    "Description": "靠近鮮卑營地門口外面觸發，只會觸發一次",
     "zh_TW": "[panel=6]＊（離營邊還有一段路，有個哨騎朝你這邊過來了。他在你前頭勒住了馬，外圈別的哨騎也跟著停了下來。）＊",
     "zh_CN": "[panel=6]＊（离营边还有一段路，有个哨骑朝你这边过来了。他在你前头勒住了马，外圈别的哨骑也跟着停了下来。）＊",
-    "links": [
-      18
-    ]
+    "links": [18]
   },
   {
     "entryID": 18,
@@ -193,10 +171,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "[panel=6]＊（哨騎從幾個方向把你圍在當中，刀都已經拔了出來。你握緊了劍柄，看著最近的那一騎朝你逼了過來。）＊",
     "zh_CN": "[panel=6]＊（哨骑从几个方向把你围在当中，刀都已经拔了出来。你握紧了剑柄，看着最近的那一骑朝你逼了过来。）＊",
-    "links": [
-      19,
-      20
-    ]
+    "links": [19, 20]
   },
   {
     "entryID": 19,
@@ -206,9 +181,7 @@
     "Description": "選項1",
     "zh_TW": "「這座營我進定了，要攔的就一起上！」",
     "zh_CN": "「这座营我进定了，要拦的就一起上！」",
-    "links": [
-      21
-    ]
+    "links": [21]
   },
   {
     "entryID": 20,
@@ -218,9 +191,7 @@
     "Description": "選項2",
     "zh_TW": "[em2][口才檢定][/em2]「別急著動刀，我受人之託來見你們大人！」",
     "zh_CN": "[em2][口才检定][/em2]「别急着动刀，我受人之托来见你们大人！」",
-    "links": [
-      28
-    ]
+    "links": [28]
   },
   {
     "entryID": 21,
@@ -229,9 +200,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "「今天這座營我是進定了。要攔我的就一起上，看是你們的刀快，還是我的劍快！」",
     "zh_CN": "「今天这座营我是进定了。要拦我的就一起上，看是你们的刀快，还是我的剑快！」",
-    "links": [
-      22
-    ]
+    "links": [22]
   },
   {
     "entryID": 22,
@@ -239,9 +208,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,103);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥：鮮卑哨騎",
-    "links": [
-      23
-    ]
+    "links": [23]
   },
   {
     "entryID": 23,
@@ -249,23 +216,18 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [
-      24,
-      26
-    ]
+    "links": [24, 26]
   },
   {
     "entryID": 24,
     "actorID": "role2",
-    "text": "[panel=6]＊（哨騎一個接一個倒在草裡，他們的馬自己跑散了。趁下一撥還沒繞過來，你貼著帳篷摸進了營。）＊",
+    "text": "[panel=6]＊（哨騎一個接一個倒在草裡，他們的馬自己跑散了。）＊",
     "Sequence": "DisableCharacterExpression(0);",
     "Conditions": "IsPassFight() == true;",
     "Description": "戰鬥成功",
-    "zh_TW": "[panel=6]＊（哨騎一個接一個倒在草裡，他們的馬自己跑散了。趁下一撥還沒繞過來，你貼著帳篷摸進了營。）＊",
-    "zh_CN": "[panel=6]＊（哨骑一个接一个倒在草里，他们的马自己跑散了。趁下一拨还没绕过来，你贴着帐篷摸进了营。）＊",
-    "links": [
-      25
-    ]
+    "zh_TW": "[panel=6]＊（哨騎一個接一個倒在草裡，他們的馬自己跑散了。）＊",
+    "zh_CN": "[panel=6]＊（哨骑一个接一个倒在草里，他们的马自己跑散了。）＊",
+    "links": [25]
   },
   {
     "entryID": 25,
@@ -283,9 +245,7 @@
     "Description": "戰鬥失敗",
     "zh_TW": "[panel=6]＊（哨騎越圍越多，你被他們一路逼退到坡腳下的草裡。刀從幾個方向一起落下來，你眼前的天跟著黑了。）＊",
     "zh_CN": "[panel=6]＊（哨骑越围越多，你被他们一路逼退到坡脚下的草里。刀从几个方向一起落下来，你眼前的天跟着黑了。）＊",
-    "links": [
-      27
-    ]
+    "links": [27]
   },
   {
     "entryID": 27,
@@ -301,9 +261,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,15);",
     "Description": "口才檢定",
-    "links": [
-      29
-    ]
+    "links": [29]
   },
   {
     "entryID": 29,
@@ -312,10 +270,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "zh_TW": "「別急著動刀，我就一個人。我受人之託，有話要跟你們大人當面講！」",
     "zh_CN": "「别急着动刀，我就一个人。我受人之托，有话要跟你们大人当面讲！」",
-    "links": [
-      30,
-      31
-    ]
+    "links": [30, 31]
   },
   {
     "entryID": 30,
@@ -326,9 +281,7 @@
     "Description": "檢定成功、口才經驗增加",
     "zh_TW": "[panel=6]＊（那哨騎把刀插回鞘裡，領著你走到了營邊。北邊那條道上這時揚起一路塵土，他丟下你拍馬迎了過去。）＊",
     "zh_CN": "[panel=6]＊（那哨骑把刀插回鞘里，领着你走到了营边。北边那条道上这时扬起一路尘土，他丢下你拍马迎了过去。）＊",
-    "links": [
-      25
-    ]
+    "links": [25]
   },
   {
     "entryID": 31,
@@ -339,21 +292,18 @@
     "Description": "檢定失敗",
     "zh_TW": "[panel=6]＊（那哨騎聽完沒有答話，只把手裡的刀朝你一指。四下的哨騎一齊拍馬，從幾個方向朝你衝了過來。）＊",
     "zh_CN": "[panel=6]＊（那哨骑听完没有答话，只把手里的刀朝你一指。四下的哨骑一齐拍马，从几个方向朝你冲了过来。）＊",
-    "links": [
-      22
-    ]
+    "links": [22]
   },
   {
     "entryID": 32,
     "actorID": "role2",
+    "title": "靠近主帳",
     "text": "[panel=6]＊（一隊騎手順著北邊那條踩禿的道，一路進了營。帳間的人往兩邊讓開，領頭那人背著弓，看上去正當盛年。）＊",
     "Sequence": "",
-    "Description": "入口：進營開場；條件作者設",
+    "Description": "靠近主帳時強制觸發",
     "zh_TW": "[panel=6]＊（一隊騎手順著北邊那條踩禿的道，一路進了營。帳間的人往兩邊讓開，領頭那人背著弓，看上去正當盛年。）＊",
     "zh_CN": "[panel=6]＊（一队骑手顺着北边那条踩秃的道，一路进了营。帐间的人往两边让开，领头那人背着弓，看上去正当盛年。）＊",
-    "links": [
-      33
-    ]
+    "links": [47, 33]
   },
   {
     "entryID": 33,
@@ -369,14 +319,13 @@
   {
     "entryID": 34,
     "actorID": "role2",
+    "title": "馬廄",
     "text": "[panel=6]＊（營邊那群馬一受驚全炸開了，一路撞倒了好幾頂氈帳。營裡的人都喊著往馬群那頭追，帳與帳之間亂成了一片。）＊",
     "Sequence": "",
-    "Description": "入口：放馬；條件作者設",
+    "Description": "點擊馬廄，騎術檢定難度為14",
     "zh_TW": "[panel=6]＊（營邊那群馬一受驚全炸開了，一路撞倒了好幾頂氈帳。營裡的人都喊著往馬群那頭追，帳與帳之間亂成了一片。）＊",
     "zh_CN": "[panel=6]＊（营边那群马一受惊全炸开了，一路撞倒了好几顶毡帐。营里的人都喊着往马群那头追，帐与帐之间乱成了一片。）＊",
-    "links": [
-      35
-    ]
+    "links": [35]
   },
   {
     "entryID": 35,
@@ -392,14 +341,13 @@
   {
     "entryID": 36,
     "actorID": "role2",
+    "title": "糧草庫",
     "text": "[panel=6]＊（大帳旁那堆草料燒了起來，火苗竄上了邊上的幾頂氈帳。滿營的人提著水往火那頭跑，喊聲一下子響遍了整座營。）＊",
     "Sequence": "",
-    "Description": "入口：放火；條件作者設",
+    "Description": "點擊糧草庫，謀略檢定難度為12",
     "zh_TW": "[panel=6]＊（大帳旁那堆草料燒了起來，火苗竄上了邊上的幾頂氈帳。滿營的人提著水往火那頭跑，喊聲一下子響遍了整座營。）＊",
     "zh_CN": "[panel=6]＊（大帐旁那堆草料烧了起来，火苗窜上了边上的几顶毡帐。满营的人提着水往火那头跑，喊声一下子响遍了整座营。）＊",
-    "links": [
-      37
-    ]
+    "links": [37]
   },
   {
     "entryID": 37,
@@ -415,15 +363,13 @@
   {
     "entryID": 38,
     "actorID": "role2",
+    "title": "奴隸",
     "text": "[panel=6]＊（氈帳後頭的木樁上拴著一串人，身上穿的都是漢人的衣裳。看守他們的鮮卑人抱著刀，背對著這邊坐在不遠處的草上。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Description": "入口：奴隸造反；條件作者設",
+    "Description": "和奴隸說話",
     "zh_TW": "[panel=6]＊（氈帳後頭的木樁上拴著一串人，身上穿的都是漢人的衣裳。看守他們的鮮卑人抱著刀，背對著這邊坐在不遠處的草上。）＊",
     "zh_CN": "[panel=6]＊（毡帐后头的木桩上拴着一串人，身上穿的都是汉人的衣裳。看守他们的鲜卑人抱着刀，背对着这边坐在不远处的草上。）＊",
-    "links": [
-      39,
-      40
-    ]
+    "links": [39, 40]
   },
   {
     "entryID": 39,
@@ -433,9 +379,7 @@
     "Description": "選項1",
     "zh_TW": "[em2][口才檢定][/em2]「我是衝著檀石槐來的，想回家的就跟我攪翻這座營！」",
     "zh_CN": "[em2][口才检定][/em2]「我是冲着檀石槐来的，想回家的就跟我搅翻这座营！」",
-    "links": [
-      41
-    ]
+    "links": [41]
   },
   {
     "entryID": 40,
@@ -445,9 +389,7 @@
     "Description": "選項2",
     "zh_TW": "「你們再忍一忍，我不拿空話哄你們！」",
     "zh_CN": "「你们再忍一忍，我不拿空话哄你们！」",
-    "links": [
-      46
-    ]
+    "links": [46]
   },
   {
     "entryID": 41,
@@ -455,9 +397,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,15);",
     "Description": "口才檢定",
-    "links": [
-      42
-    ]
+    "links": [42]
   },
   {
     "entryID": 42,
@@ -466,10 +406,7 @@
     "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Nervous);",
     "zh_TW": "「我是衝著檀石槐那條命來的，繩子我替你們割開。想回家的，就跟我把這座營攪個天翻地覆！」",
     "zh_CN": "「我是冲着檀石槐那条命来的，绳子我替你们割开。想回家的，就跟我把这座营搅个天翻地覆！」",
-    "links": [
-      43,
-      45
-    ]
+    "links": [43, 45]
   },
   {
     "entryID": 43,
@@ -480,9 +417,7 @@
     "Description": "檢定成功、口才經驗增加",
     "zh_TW": "「去年冬天從雲中讓人擄到這裡，這口氣憋到今天了。」",
     "zh_CN": "「去年冬天从云中让人掳到这里，这口气憋到今天了。」",
-    "links": [
-      44
-    ]
+    "links": [44]
   },
   {
     "entryID": 44,
@@ -520,14 +455,10 @@
     "actorID": "role2",
     "text": "[panel=6]＊（檀石槐坐在大帳前的氈子上，一把刀橫擱在膝頭。他身邊站著一圈佩刀的人，手都搭在刀柄上。你離他只隔著一片空地。）＊",
     "Sequence": "SetPortrait(MC1,pic=12);",
-    "Description": "入口：主帳・檀石槐；條件作者設",
+    "Conditions": "CurrentQuestEntryState(\"CF49\", 1) == \"success\"",
     "zh_TW": "[panel=6]＊（檀石槐坐在大帳前的氈子上，一把刀橫擱在膝頭。他身邊站著一圈佩刀的人，手都搭在刀柄上。你離他只隔著一片空地。）＊",
     "zh_CN": "[panel=6]＊（檀石槐坐在大帐前的毡子上，一把刀横搁在膝头。他身边站着一圈佩刀的人，手都搭在刀柄上。你离他只隔着一片空地。）＊",
-    "links": [
-      48,
-      49,
-      50
-    ]
+    "links": [90, 95]
   },
   {
     "entryID": 48,
@@ -537,9 +468,7 @@
     "Description": "選項1",
     "zh_TW": "「檀石槐，我受人之託，找你報仇來了！」",
     "zh_CN": "「檀石槐，我受人之托，找你报仇来了！」",
-    "links": [
-      51
-    ]
+    "links": [51]
   },
   {
     "entryID": 49,
@@ -550,9 +479,7 @@
     "Description": "選項2",
     "zh_TW": "[em2][隱藏選項][/em2]「他身邊人多，我等他落單再出劍！」",
     "zh_CN": "[em2][隐藏选项][/em2]「他身边人多，我等他落单再出剑！」",
-    "links": [
-      85
-    ]
+    "links": [85]
   },
   {
     "entryID": 50,
@@ -562,9 +489,7 @@
     "Description": "選項3",
     "zh_TW": "「他那顆腦袋先寄著，等營裡亂了我再來取！」",
     "zh_CN": "「他那颗脑袋先寄着，等营里乱了我再来取！」",
-    "links": [
-      87
-    ]
+    "links": [87]
   },
   {
     "entryID": 51,
@@ -573,9 +498,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
     "zh_TW": "「檀石槐！我受人之託，一路找到你帳前來報仇。今天你這條命，我是非取不可！」",
     "zh_CN": "「檀石槐！我受人之托，一路找到你帐前来报仇。今天你这条命，我是非取不可！」",
-    "links": [
-      52
-    ]
+    "links": [52]
   },
   {
     "entryID": 52,
@@ -584,9 +507,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（檀石槐坐著沒有起身，只朝身邊的人偏了偏頭。那一圈佩刀的人齊齊拔了刀，從帳前朝你圍了過來。）＊",
     "zh_CN": "[panel=6]＊（檀石槐坐着没有起身，只朝身边的人偏了偏头。那一圈佩刀的人齐齐拔了刀，从帐前朝你围了过来。）＊",
-    "links": [
-      53
-    ]
+    "links": [53]
   },
   {
     "entryID": 53,
@@ -594,9 +515,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,103);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥：鮮卑小兵",
-    "links": [
-      54
-    ]
+    "links": [54]
   },
   {
     "entryID": 54,
@@ -604,10 +523,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [
-      55,
-      71
-    ]
+    "links": [55, 71]
   },
   {
     "entryID": 55,
@@ -618,9 +534,7 @@
     "Description": "戰鬥成功",
     "zh_TW": "[panel=6]＊（那一圈佩刀的人倒了一地，檀石槐朝帳後抬了抬手。帳與帳之間又湧出來一大群人，比頭一撥多了不少。）＊",
     "zh_CN": "[panel=6]＊（那一圈佩刀的人倒了一地，檀石槐朝帐后抬了抬手。帐与帐之间又涌出来一大群人，比头一拨多了不少。）＊",
-    "links": [
-      56
-    ]
+    "links": [56]
   },
   {
     "entryID": 56,
@@ -628,9 +542,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,103);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥：鮮卑小兵",
-    "links": [
-      57
-    ]
+    "links": [57]
   },
   {
     "entryID": 57,
@@ -638,10 +550,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [
-      58,
-      71
-    ]
+    "links": [58, 71]
   },
   {
     "entryID": 58,
@@ -652,9 +561,7 @@
     "Description": "戰鬥成功",
     "zh_TW": "[panel=6]＊（第二撥人也倒在了草裡，別處的喊聲還一陣陣傳過來。檀石槐仍舊坐在氈子上，那把刀橫在他膝頭。）＊",
     "zh_CN": "[panel=6]＊（第二拨人也倒在了草里，别处的喊声还一阵阵传过来。檀石槐仍旧坐在毡子上，那把刀横在他膝头。）＊",
-    "links": [
-      59
-    ]
+    "links": [59]
   },
   {
     "entryID": 59,
@@ -663,11 +570,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「你是一個人殺進來的？」",
     "zh_CN": "「你是一个人杀进来的？」",
-    "links": [
-      60,
-      61,
-      62
-    ]
+    "links": [60, 61, 62]
   },
   {
     "entryID": 60,
@@ -677,9 +580,7 @@
     "Description": "選項1",
     "zh_TW": "[em2][口才檢定][/em2]「殺進來的就我一個，你也自己拿起刀！」",
     "zh_CN": "[em2][口才检定][/em2]「杀进来的就我一个，你也自己拿起刀！」",
-    "links": [
-      63
-    ]
+    "links": [63]
   },
   {
     "entryID": 61,
@@ -689,9 +590,7 @@
     "Description": "選項2",
     "zh_TW": "「一個人殺進來，就一個人殺出去！」",
     "zh_CN": "「一个人杀进来，就一个人杀出去！」",
-    "links": [
-      67
-    ]
+    "links": [67]
   },
   {
     "entryID": 62,
@@ -702,9 +601,7 @@
     "Description": "選項3、文化分支：鮮卑",
     "zh_TW": "「[em3][文化：鮮卑][/em3]都是馬背上長大的，用不著旁人插手！」",
     "zh_CN": "「[em3][文化：鲜卑][/em3]都是马背上长大的，用不着旁人插手！」",
-    "links": [
-      69
-    ]
+    "links": [69]
   },
   {
     "entryID": 63,
@@ -712,9 +609,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nSetContinueMode(original)@Message(EndRoll);\nContinue()@Message(EndRoll);\nBeginDiceRoll(Manual,PersuasionCheck,20);",
     "Description": "口才檢定",
-    "links": [
-      64
-    ]
+    "links": [64]
   },
   {
     "entryID": 64,
@@ -723,10 +618,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_2);",
     "zh_TW": "「[em7]劍尖朝他膝頭那把刀一指[/em7]，殺進來的就我一個人。你要真是鮮卑的首領，別再叫人替你送命，自己拿起它！」",
     "zh_CN": "「[em7]剑尖朝他膝头那把刀一指[/em7]，杀进来的就我一个人。你要真是鲜卑的首领，别再叫人替你送命，自己拿起它！」",
-    "links": [
-      65,
-      66
-    ]
+    "links": [65, 66]
   },
   {
     "entryID": 65,
@@ -737,9 +629,7 @@
     "Description": "檢定成功、口才經驗增加",
     "zh_TW": "[panel=6]＊（檀石槐提著那把刀站了起來，朝身後擺了擺手。四下的人都退開了，空地上站著的就只剩你跟他。）＊",
     "zh_CN": "[panel=6]＊（檀石槐提着那把刀站了起来，朝身后摆了摆手。四下的人都退开了，空地上站着的就只剩你跟他。）＊",
-    "links": [
-      82
-    ]
+    "links": [82]
   },
   {
     "entryID": 66,
@@ -750,9 +640,7 @@
     "Description": "檢定失敗",
     "zh_TW": "[panel=6]＊（檀石槐握著那把刀站了起來，刀尖朝你一指。四下還站著的人一齊喊著，跟在他身後衝了過來。）＊",
     "zh_CN": "[panel=6]＊（檀石槐握着那把刀站了起来，刀尖朝你一指。四下还站着的人一齐喊着，跟在他身后冲了过来。）＊",
-    "links": [
-      72
-    ]
+    "links": [72]
   },
   {
     "entryID": 67,
@@ -761,9 +649,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Proud);",
     "zh_TW": "「一個人殺進來，就一個人殺出去。你的人一起上來，我照樣接得住！」",
     "zh_CN": "「一个人杀进来，就一个人杀出去。你的人一起上来，我照样接得住！」",
-    "links": [
-      68
-    ]
+    "links": [68]
   },
   {
     "entryID": 68,
@@ -772,9 +658,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（檀石槐握著那把刀站了起來，刀尖朝你一指。四下還站著的人一齊喊著，跟在他身後衝了過來。）＊",
     "zh_CN": "[panel=6]＊（檀石槐握着那把刀站了起来，刀尖朝你一指。四下还站着的人一齐喊着，跟在他身后冲了过来。）＊",
-    "links": [
-      72
-    ]
+    "links": [72]
   },
   {
     "entryID": 69,
@@ -783,9 +667,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
     "zh_TW": "「你我都是馬背上長大的，兩個漢子的事，用不著旁人插手。叫你的人退開，就你我兩個人了斷！」",
     "zh_CN": "「你我都是马背上长大的，两个汉子的事，用不着旁人插手。叫你的人退开，就你我两个人了断！」",
-    "links": [
-      70
-    ]
+    "links": [70]
   },
   {
     "entryID": 70,
@@ -794,9 +676,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（檀石槐提著那把刀站了起來，朝身後擺了擺手。四下的人都退開了，空地上站著的就只剩你跟他。）＊",
     "zh_CN": "[panel=6]＊（檀石槐提着那把刀站了起来，朝身后摆了摆手。四下的人都退开了，空地上站着的就只剩你跟他。）＊",
-    "links": [
-      82
-    ]
+    "links": [82]
   },
   {
     "entryID": 71,
@@ -807,9 +687,7 @@
     "Description": "戰鬥失敗",
     "zh_TW": "[panel=6]＊（四面湧上來的人越來越多，一層層把你圍在了當中。你手裡的劍讓人打飛了出去，人跟著倒進了亂刀底下。）＊",
     "zh_CN": "[panel=6]＊（四面涌上来的人越来越多，一层层把你围在了当中。你手里的剑让人打飞了出去，人跟着倒进了乱刀底下。）＊",
-    "links": [
-      81
-    ]
+    "links": [81]
   },
   {
     "entryID": 72,
@@ -817,9 +695,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,101);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥：檀石槐與護衛",
-    "links": [
-      73
-    ]
+    "links": [73]
   },
   {
     "entryID": 73,
@@ -827,10 +703,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [
-      74,
-      80
-    ]
+    "links": [74, 80]
   },
   {
     "entryID": 74,
@@ -842,9 +715,7 @@
     "Description": "戰鬥成功、獲得技能卡、信義提升、任務更新、完成任務：CF49",
     "zh_TW": "[panel=6]＊（檀石槐手裡那把刀掉在了草上，人跟著倒在大帳前頭。四下趕過來的人一個個停住了腳，帳前一下子靜了下來。）＊",
     "zh_CN": "[panel=6]＊（檀石槐手里那把刀掉在了草上，人跟着倒在大帐前头。四下赶过来的人一个个停住了脚，帐前一下子静了下来。）＊",
-    "links": [
-      75
-    ]
+    "links": [75]
   },
   {
     "entryID": 75,
@@ -853,9 +724,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（坡上響起一片馬蹄聲，那一排皮袍騎著馬直衝進營來。營裡的人丟下大帳這頭，拿著兵器朝他們湧了過去。）＊",
     "zh_CN": "[panel=6]＊（坡上响起一片马蹄声，那一排皮袍骑着马直冲进营来。营里的人丢下大帐这头，拿着兵器朝他们涌了过去。）＊",
-    "links": [
-      76
-    ]
+    "links": [76]
   },
   {
     "entryID": 76,
@@ -864,9 +733,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（你逆著人從營的另一頭繞了出去，一路走回了坡上。窪地裡的人都走空了，他們的頭領正從馬鞍上站起身來。）＊",
     "zh_CN": "[panel=6]＊（你逆着人从营的另一头绕了出去，一路走回了坡上。洼地里的人都走空了，他们的头领正从马鞍上站起身来。）＊",
-    "links": [
-      77
-    ]
+    "links": [77]
   },
   {
     "entryID": 77,
@@ -876,9 +743,7 @@
     "Description": "給錢",
     "zh_TW": "「哼哈哈，本王說重賞就是重賞。這一袋拿去，一個錢也不少你！」",
     "zh_CN": "「哼哈哈，本王说重赏就是重赏。这一袋拿去，一个钱也不少你！」",
-    "links": [
-      78
-    ]
+    "links": [78]
   },
   {
     "entryID": 78,
@@ -886,9 +751,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeOut,1,#000000,1);\nOpenPanel(0,close)@1;\nOpenPanel(1,close)@1;\nSetContinueMode(original)@1;\nContinue()@1;",
     "Description": "轉場、清除立繪",
-    "links": [
-      79
-    ]
+    "links": [79]
   },
   {
     "entryID": 79,
@@ -907,9 +770,7 @@
     "Description": "戰鬥失敗",
     "zh_TW": "[panel=6]＊（刀從前後一起砍過來，你顧得了前頭，顧不了背後。你摔倒在大帳前的空地上，眼前的氈帳跟著歪了下去。）＊",
     "zh_CN": "[panel=6]＊（刀从前后一起砍过来，你顾得了前头，顾不了背后。你摔倒在大帐前的空地上，眼前的毡帐跟着歪了下去。）＊",
-    "links": [
-      81
-    ]
+    "links": [81]
   },
   {
     "entryID": 81,
@@ -925,9 +786,7 @@
     "text": "",
     "Sequence": "SetContinueMode(false);\nBeginFight(Combat,100);\nSetContinueMode(original)@Message(EndFight);\nContinue()@Message(EndFight);",
     "Description": "進入戰鬥：檀石槐",
-    "links": [
-      83
-    ]
+    "links": [83]
   },
   {
     "entryID": 83,
@@ -935,10 +794,7 @@
     "text": "",
     "Sequence": "Continue();",
     "Description": "戰鬥緩衝節點",
-    "links": [
-      74,
-      84
-    ]
+    "links": [74, 84]
   },
   {
     "entryID": 84,
@@ -949,9 +805,7 @@
     "Description": "戰鬥失敗",
     "zh_TW": "[panel=6]＊（檀石槐那把刀快了你半步，你連人帶劍倒在了地上。四下的喊聲一下子全遠了，你眼前跟著黑了下去。）＊",
     "zh_CN": "[panel=6]＊（檀石槐那把刀快了你半步，你连人带剑倒在了地上。四下的喊声一下子全远了，你眼前跟着黑了下去。）＊",
-    "links": [
-      81
-    ]
+    "links": [81]
   },
   {
     "entryID": 85,
@@ -960,9 +814,7 @@
     "Sequence": "SetPortrait(MC1,pic=18);\nEnableCharacterExpression(0,Player,Meditate);",
     "zh_TW": "「他身邊站著這麼些人，我的劍遞不過去。我就守在這營裡，等他落了單，再叫他接我這一劍！」",
     "zh_CN": "「他身边站着这么些人，我的剑递不过去。我就守在这营里，等他落了单，再叫他接我这一剑！」",
-    "links": [
-      86
-    ]
+    "links": [86]
   },
   {
     "entryID": 86,
@@ -971,9 +823,7 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（天黑以後，帳前那一圈人散去換班，下一班還沒站上來。你走到氈子前頭的時候，檀石槐提著膝上那把刀站了起來。）＊",
     "zh_CN": "[panel=6]＊（天黑以后，帐前那一圈人散去换班，下一班还没站上来。你走到毡子前头的时候，檀石槐提着膝上那把刀站了起来。）＊",
-    "links": [
-      82
-    ]
+    "links": [82]
   },
   {
     "entryID": 87,
@@ -987,14 +837,13 @@
   {
     "entryID": 88,
     "actorID": "role2",
+    "title": "酒囊",
     "text": "[panel=6]＊（你走開沒多久，那隻酒囊就讓人摘下來提進了大帳。不一會兒帳裡亂了起來，有人跌跌撞撞地倒出了帳門。）＊",
     "Sequence": "",
-    "Description": "入口：酒囊・下毒；條件作者設",
+    "Description": "點擊主帳附近的酒囊・下毒；巧手難度為8",
     "zh_TW": "[panel=6]＊（你走開沒多久，那隻酒囊就讓人摘下來提進了大帳。不一會兒帳裡亂了起來，有人跌跌撞撞地倒出了帳門。）＊",
     "zh_CN": "[panel=6]＊（你走开没多久，那只酒囊就让人摘下来提进了大帐。不一会儿帐里乱了起来，有人跌跌撞撞地倒出了帐门。）＊",
-    "links": [
-      89
-    ]
+    "links": [89]
   },
   {
     "entryID": 89,
@@ -1012,12 +861,11 @@
     "actorID": "role2",
     "text": "[panel=6]＊（不知哪頂帳裡有人喊了一聲，營裡好幾處跟著亂了起來。你提著劍夾在奔走的人堆裡，一路擠到了大帳那頭。）＊",
     "Sequence": "",
-    "Description": "入口：營亂；條件作者設",
+    "Conditions": "Variable[\"XianbeiCampChaos\"] > 3",
+    "Description": "變數XianbeiCampChaos>3",
     "zh_TW": "[panel=6]＊（不知哪頂帳裡有人喊了一聲，營裡好幾處跟著亂了起來。你提著劍夾在奔走的人堆裡，一路擠到了大帳那頭。）＊",
     "zh_CN": "[panel=6]＊（不知哪顶帐里有人喊了一声，营里好几处跟着乱了起来。你提着剑夹在奔走的人堆里，一路挤到了大帐那头。）＊",
-    "links": [
-      91
-    ]
+    "links": [91]
   },
   {
     "entryID": 91,
@@ -1026,9 +874,7 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（帳前守著的那一圈人，都朝喊聲那頭跑了過去。檀石槐提著刀從大帳裡出來。）＊",
     "zh_CN": "[panel=6]＊（帐前守着的那一圈人，都朝喊声那头跑了过去。檀石槐提着刀从大帐里出来。）＊",
-    "links": [
-      92
-    ]
+    "links": [92]
   },
   {
     "entryID": 92,
@@ -1037,9 +883,7 @@
     "Sequence": "SetPortrait(MC1,pic=13);\nEnableCharacterExpression(0,Player,Anger_3);",
     "zh_TW": "「檀石槐，營裡這場亂子是我攪起來的！我受人之託，就等你走出這頂大帳！」",
     "zh_CN": "「檀石槐，营里这场乱子是我搅起来的！我受人之托，就等你走出这顶大帐！」",
-    "links": [
-      93
-    ]
+    "links": [93]
   },
   {
     "entryID": 93,
@@ -1048,8 +892,23 @@
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "[panel=6]＊（檀石槐的眼睛一直盯著你，從帳前慢慢走了過來。走到離你還有幾步遠的地方，他把刀舉了起來。）＊",
     "zh_CN": "[panel=6]＊（檀石槐的眼睛一直盯着你，从帐前慢慢走了过来。走到离你还有几步远的地方，他把刀举了起来。）＊",
-    "links": [
-      82
-    ]
+    "links": [82]
+  },
+  {
+    "entryID": 94,
+    "actorID": "0",
+    "title": "點黑狼王",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "黑狼王對話",
+    "links": [9, 16]
+  },
+  {
+    "entryID": 95,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "選單",
+    "links": [48, 49, 50]
   }
 ]
