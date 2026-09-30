@@ -2,9 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "老兵",
     "text": "[panel=6]＊（城門口那塊斷了的門墩上，照舊坐著收過路錢的老兵。你回城時把錢丟進他腳邊的陶碗，他拿木杖把碗推了回來。）＊",
-    "Sequence": "EnableDialogueBG(Yunzhong);\nAudioControl(PlaySFX,Others_HeavyColdWind);",
-    "Description": "入口條件作者設：武道大會奪冠、181/2 起、支線",
+    "Sequence": "EnableDialogueBG(Yunzhong);\nAudioControl(PlaySFX,Others_HeavyColdWind);\nAudioControl(PlaySFXOneShot,Others_CoinDroping);\nAudioControl(PlayMusic,BGM_23);",
+    "Description": "必須武道大會奪冠、放音樂",
     "zh_TW": "[panel=6]＊（城門口那塊斷了的門墩上，照舊坐著收過路錢的老兵。你回城時把錢丟進他腳邊的陶碗，他拿木杖把碗推了回來。）＊",
     "zh_CN": "[panel=6]＊（城门口那块断了的门墩上，照旧坐着收过路钱的老兵。你回城时把钱丢进他脚边的陶碗，他拿木杖把碗推了回来。）＊",
     "links": [2]
@@ -20,7 +21,7 @@
   },
   {
     "entryID": 3,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「過路錢你先收著。聽說晉陽出了個天下第一，就是你吧。」",
     "Sequence": "",
     "zh_TW": "「過路錢你先收著。聽說晉陽出了個天下第一，就是你吧。」",
@@ -38,7 +39,7 @@
   },
   {
     "entryID": 5,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「去年冬天鮮卑來了一回，我兒子死在那一回裡。」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「去年冬天鮮卑來了一回，我兒子死在那一回裡。」",
@@ -47,7 +48,7 @@
   },
   {
     "entryID": 6,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「[em3][文化：鮮卑][/em3]你是北邊出來的，我聽得出來。這個我不管，我只找動手的那些人。」",
     "Sequence": "",
     "Conditions": "IsCultureFit(\"Player\", \"Xianbei\") == true;",
@@ -67,7 +68,7 @@
   },
   {
     "entryID": 8,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「熹平六年我從這道門出去，回來少了一條腿。打那以後，門外頭的事就沒人管了。」",
     "Sequence": "DisableCharacterExpression(0);",
     "zh_TW": "「熹平六年我從這道門出去，回來少了一條腿。打那以後，門外頭的事就沒人管了。」",
@@ -76,7 +77,7 @@
   },
   {
     "entryID": 9,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「我這條腿，只走得到這個門口。你是天下第一，替我兒子報這個仇。」",
     "Sequence": "",
     "zh_TW": "「我這條腿，只走得到這個門口。你是天下第一，替我兒子報這個仇。」",
@@ -85,7 +86,7 @@
   },
   {
     "entryID": 10,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「我沒有錢給你。往後你打這兒過，錢我不收。」",
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「我沒有錢給你。往後你打這兒過，錢我不收。」",
@@ -143,7 +144,7 @@
   },
   {
     "entryID": 16,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「不急，這門口我天天在，你想好了再來。」",
     "Sequence": "",
     "zh_TW": "「不急，這門口我天天在，你想好了再來。」",
@@ -163,7 +164,7 @@
   },
   {
     "entryID": 18,
-    "actorID": "role＿＿",
+    "actorID": "role143",
     "text": "「這錢我就收下了。你查到什麼，回這門口跟我說一聲。」",
     "Sequence": "",
     "zh_TW": "「這錢我就收下了。你查到什麼，回這門口跟我說一聲。」",
@@ -208,8 +209,8 @@
     "entryID": 23,
     "actorID": "role2",
     "text": "[panel=6]＊（那塊斷了的門墩上是空的，只有那隻陶碗還擱在上頭。守門的說，那個少了條腿的前兩天自己拄著杖出了北門。）＊",
-    "Sequence": "AudioControl(PlayMusic,BGM_23);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Shock);",
-    "Description": "播放音樂",
+    "Sequence": "AudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_7);\nSetPortrait(MC1,pic=4);",
+    "Description": "切換音樂",
     "zh_TW": "[panel=6]＊（那塊斷了的門墩上是空的，只有那隻陶碗還擱在上頭。守門的說，那個少了條腿的前兩天自己拄著杖出了北門。）＊",
     "zh_CN": "[panel=6]＊（那块断了的门墩上是空的，只有那只陶碗还搁在上头。守门的说，那个少了条腿的前两天自己拄着杖出了北门。）＊",
     "links": [24]
@@ -252,10 +253,10 @@
   {
     "entryID": 28,
     "actorID": "role2",
-    "text": "[panel=6]＊（那人一直沒有應聲，你走到跟前，他已經斷了氣。一隻手還攥著那根木杖。）＊",
-    "Sequence": "SetPortrait(MC1,pic=8);\nEnableCharacterExpression(0,Player,Shock);",
-    "zh_TW": "[panel=6]＊（那人一直沒有應聲，你走到跟前，他已經斷了氣。一隻手還攥著那根木杖。）＊",
-    "zh_CN": "[panel=6]＊（那人一直没有应声，你走到跟前，他已经断了气。一只手还攥着那根木杖。）＊",
+    "text": "[panel=6]＊（那人一直沒有應聲，你走到跟前，他已經斷了氣。一隻手還攥著那根木杖，背上捆著木板拼成的棺材。）＊",
+    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Meditate);",
+    "zh_TW": "[panel=6]＊（那人一直沒有應聲，你走到跟前，他已經斷了氣。一隻手還攥著那根木杖，背上捆著木板拼成的棺材。）＊",
+    "zh_CN": "[panel=6]＊（那人一直没有应声，你走到跟前，他已经断了气。一只手还攥着那根木杖，背上捆着木板拼成的棺材。）＊",
     "links": [29]
   },
   {
@@ -269,27 +270,27 @@
   {
     "entryID": 30,
     "actorID": "role2",
-    "text": "[panel=6]＊（天擦黑以前，你把老兵安葬在路邊，墳頭正對著北方。北邊那顆不動的星出來的時候，你在墳前拜了三拜。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（天擦黑以前，你把老兵安葬在路邊，墳頭正對著北方。北邊那顆不動的星出來的時候，你在墳前拜了三拜。）＊",
-    "zh_CN": "[panel=6]＊（天擦黑以前，你把老兵安葬在路边，坟头正对着北方。北边那颗不动的星出来的时候，你在坟前拜了三拜。）＊",
+    "text": "[panel=6]＊（天黑以前，你把老兵安葬在路邊，墳頭正對著北方，你在墳前拜了三拜。）＊",
+    "Sequence": "SetPortrait(MC1,pic=8);",
+    "zh_TW": "[panel=6]＊（天黑以前，你把老兵安葬在路邊，墳頭正對著北方，你在墳前拜了三拜。）＊",
+    "zh_CN": "[panel=6]＊（天黑以前，你把老兵安葬在路边，坟头正对着北方，你在坟前拜了三拜。）＊",
     "links": [31]
   },
   {
     "entryID": 31,
     "actorID": "role2",
-    "text": "[panel=6]＊（你從墳前起身，那條車轍打墳前起一直通往北方。你照著那顆星走了下去。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（你從墳前起身，那條車轍打墳前起一直通往北方。你照著那顆星走了下去。）＊",
-    "zh_CN": "[panel=6]＊（你从坟前起身，那条车辙打坟前起一直通往北方。你照着那颗星走了下去。）＊",
+    "text": "[panel=6]＊（你從墳前起身，握緊劍柄，往北走了下去。）＊",
+    "Sequence": "SetPortrait(MC1,pic=2);",
+    "zh_TW": "[panel=6]＊（你從墳前起身，握緊劍柄，往北走了下去。）＊",
+    "zh_CN": "[panel=6]＊（你从坟前起身，握紧剑柄，往北走了下去。）＊",
     "links": [32]
   },
   {
     "entryID": 32,
     "actorID": "0",
     "text": "",
-    "Sequence": "AudioControl(StopSFX);\nDisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nDisableDialogueBG();\nMapLock(XianbeiRoyalTent, unlock);\nContinue();",
-    "Description": "清除立繪、關閉背景、地圖鎖定",
+    "Sequence": "AudioControl(StopSFX);\nDisableAllCharacterExpression();\nOpenPanel(0, close);\nOpenPanel(1, close);\nDisableDialogueBG();\nMapLock(XianbeiRoyalTent, unlock);\nLoadLevel(XianbeiRoyalTent,XianbeiRoyalTent);\nContinue();",
+    "Description": "清除立繪、關閉背景、地圖鎖定、移動到鮮卑王帳",
     "links": []
   },
   {
@@ -305,7 +306,7 @@
     "entryID": 34,
     "actorID": "role2",
     "text": "[panel=6]＊（他把碗拉回腳邊，你那幾枚過路錢這一回留在了碗裡。後頭等著進城的人一個接一個，跟著把錢丟了進去。）＊",
-    "Sequence": "DisableCharacterExpression(0);",
+    "Sequence": "DisableCharacterExpression(0);\nAudioControl(PlaySFXOneShot,Others_CoinDroping);",
     "zh_TW": "[panel=6]＊（他把碗拉回腳邊，你那幾枚過路錢這一回留在了碗裡。後頭等著進城的人一個接一個，跟著把錢丟了進去。）＊",
     "zh_CN": "[panel=6]＊（他把碗拉回脚边，你那几枚过路钱这一回留在了碗里。后头等着进城的人一个接一个，跟着把钱丢了进去。）＊",
     "links": [35]
@@ -323,7 +324,7 @@
     "actorID": "role2",
     "text": "",
     "Sequence": "",
-    "Description": "這格無作用，會調用娜娜-工坊（赫連娜娜線/17工坊）；入口條件作者設：181/2、CF45 entry 3 success",
+    "Description": "這格無作用，會調用娜娜-工坊（赫連娜娜線/17工坊）",
     "links": []
   }
 ]

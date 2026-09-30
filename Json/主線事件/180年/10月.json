@@ -56,16 +56,6 @@
     "links": [57, 7]
   },
   {
-    "entryID": 57,
-    "actorID": "MC7",
-    "text": "[panel=1]「擂台那回我不過坐在場邊看，各家的虛實便摸了個大概。」",
-    "Sequence": "",
-    "Conditions": "CurrentQuestEntryState(\"CF38\", 4) == \"success\";",
-    "zh_TW": "[panel=1]「擂台那回我不過坐在場邊看，各家的虛實便摸了個大概。」",
-    "zh_CN": "[panel=1]「擂台那回我不过坐在场边看，各家的虚实便摸了个大概。」",
-    "links": [7]
-  },
-  {
     "entryID": 7,
     "actorID": "MC1",
     "text": "「……有道理。那你要一起去透透氣嗎？」",
@@ -508,6 +498,16 @@
     "links": [45]
   },
   {
+    "entryID": 57,
+    "actorID": "MC7",
+    "text": "[panel=1]「擂台那回我不過坐在場邊看，各家的虛實便摸了個大概。」",
+    "Sequence": "",
+    "Conditions": "CurrentQuestEntryState(\"CF38\", 4) == \"success\";",
+    "zh_TW": "[panel=1]「擂台那回我不過坐在場邊看，各家的虛實便摸了個大概。」",
+    "zh_CN": "[panel=1]「擂台那回我不过坐在场边看，各家的虚实便摸了个大概。」",
+    "links": [7]
+  },
+  {
     "entryID": 58,
     "actorID": "0",
     "text": "",
@@ -560,7 +560,7 @@
     "entryID": 64,
     "actorID": "role2",
     "text": "[panel=6]＊（先前夢裡那個小姑娘，這一回已經長成了大姑娘。你只看了一眼，就認出坐在那裡的還是她。）＊",
-    "Sequence": "SetPortrait(MC21-2,pic=1);\nSetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Surprise);",
+    "Sequence": "SetPortrait(MC21-2,pic=1);\nSetPortrait(MC1,pic=4);",
     "zh_TW": "[panel=6]＊（先前夢裡那個小姑娘，這一回已經長成了大姑娘。你只看了一眼，就認出坐在那裡的還是她。）＊",
     "zh_CN": "[panel=6]＊（先前梦里那个小姑娘，这一回已经长成了大姑娘。你只看了一眼，就认出坐在那里的还是她。）＊",
     "links": [65]
@@ -569,7 +569,7 @@
     "entryID": 65,
     "actorID": "MC1",
     "text": "「妳……怎麼長得跟先前不一樣了？」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC1,pic=12);",
+    "Sequence": "EnableCharacterExpression(0,Player,Surprise);\nSetPortrait(MC1,pic=12);",
     "zh_TW": "「妳……怎麼長得跟先前不一樣了？」",
     "zh_CN": "「你……怎么长得跟先前不一样了？」",
     "links": [66]
@@ -578,7 +578,7 @@
     "entryID": 66,
     "actorID": "MC1",
     "text": "「還有，饕餮……妳就是饕餮，對吧？」",
-    "Sequence": "SetPortrait(MC1,pic=12);",
+    "Sequence": "SetPortrait(MC1,pic=12);\nDisableCharacterExpression(0);",
     "zh_TW": "「還有，饕餮……妳就是饕餮，對吧？」",
     "zh_CN": "「还有，饕餮……你就是饕餮，对吧？」",
     "links": [67]
@@ -711,60 +711,42 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "[panel=6]＊（你低頭去看自己的手，那顆骰子到了這片空裡，也還攥在手心。她的目光跟著落了下來，停在你握緊的拳頭上。）＊",
     "zh_CN": "[panel=6]＊（你低头去看自己的手，那颗骰子到了这片空里，也还攥在手心。她的目光跟着落了下来，停在你握紧的拳头上。）＊",
-    "links": [81]
-  },
-  {
-    "entryID": 81,
-    "actorID": "MC1",
-    "text": "「這顆骰子是我娘留下的，妳在這裡頭，也跟過我娘？」",
-    "Sequence": "SetPortrait(MC1,pic=4);\nEnableCharacterExpression(0,Player,Question);",
-    "zh_TW": "「這顆骰子是我娘留下的，妳在這裡頭，也跟過我娘？」",
-    "zh_CN": "「这颗骰子是我娘留下的，你在这里头，也跟过我娘？」",
-    "links": [82]
-  },
-  {
-    "entryID": 82,
-    "actorID": "MC21-2",
-    "text": "[panel=1]「上一個拿著它的，就是生你的那個。」",
-    "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC21-2,pic=1);",
-    "zh_TW": "[panel=1]「上一個拿著它的，就是生你的那個。」",
-    "zh_CN": "[panel=1]「上一个拿着它的，就是生你的那个。」",
     "links": [83]
   },
   {
     "entryID": 83,
     "actorID": "MC1",
-    "text": "「那我娘走的時候，妳也在這裡頭？」",
-    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous);",
-    "zh_TW": "「那我娘走的時候，妳也在這裡頭？」",
-    "zh_CN": "「那我娘走的时候，你也在这里头？」",
+    "text": "「……我娘知道妳在這骰子裡？那場大火的時候，妳看見她了沒有？」",
+    "Sequence": "SetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Idea);",
+    "zh_TW": "「……我娘知道妳在這骰子裡？那場大火的時候，妳看見她了沒有？」",
+    "zh_CN": "「……我娘知道你在这颗骰子里？那场大火的时候，你看见她了没有？」",
     "links": [84]
   },
   {
     "entryID": 84,
     "actorID": "MC21-2",
-    "text": "[panel=1]「[em7]伸手扳開你的手指[/em7]，拿著它死掉的，每一回吾都曉得。」",
+    "text": "[panel=1]「她知道吾在，火起來的時候吾看得見她。」",
     "Sequence": "DisableCharacterExpression(0);\nSetPortrait(MC21-2,pic=1);",
-    "zh_TW": "[panel=1]「[em7]伸手扳開你的手指[/em7]，拿著它死掉的，每一回吾都曉得。」",
-    "zh_CN": "[panel=1]「[em7]伸手扳开你的手指[/em7]，拿着它死掉的，每一回吾都晓得。」",
+    "zh_TW": "[panel=1]「她知道吾在，火起來的時候吾看得見她。」",
+    "zh_CN": "[panel=1]「她知道吾在，火起来的时候吾看得见她。」",
     "links": [85]
   },
   {
     "entryID": 85,
     "actorID": "MC21-2",
-    "text": "[panel=1]「生你的那個，是自己鬆了手，把它交到你手上的。」",
+    "text": "[panel=1]「這場火她事先就知道，是她自己把吾交到你手上的。」",
     "Sequence": "SetPortrait(MC21-2,pic=1);",
-    "zh_TW": "[panel=1]「生你的那個，是自己鬆了手，把它交到你手上的。」",
-    "zh_CN": "[panel=1]「生你的那个，是自己松了手，把它交到你手上的。」",
+    "zh_TW": "[panel=1]「這場火她事先就知道，是她自己把吾交到你手上的。」",
+    "zh_CN": "[panel=1]「这场火她事先就知道，是她自己把吾交到你手上的。」",
     "links": [86]
   },
   {
     "entryID": 86,
     "actorID": "MC1",
-    "text": "「那後來呢，她把它交給我以後，去了哪裡？」",
-    "Sequence": "SetPortrait(MC1,pic=9);",
-    "zh_TW": "「那後來呢，她把它交給我以後，去了哪裡？」",
-    "zh_CN": "「那后来呢，她把它交给我以后，去了哪里？」",
+    "text": "「……所以這場火還沒起，她就知道了？那我娘她還活著嗎？」",
+    "Sequence": "SetPortrait(MC1,pic=4);",
+    "zh_TW": "「……所以這場火還沒起，她就知道了？那我娘她還活著嗎？」",
+    "zh_CN": "「……所以这场火还没起，她就已经知道了？我娘她还活着吗？」",
     "links": [87]
   },
   {
@@ -809,7 +791,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "[panel=6]＊（你醒過來的時候，那隻手是攤開的，骰子就擱在掌心上。你把它揣回懷裡，照舊貼身放好，窗外天色還黑著。）＊",
     "zh_CN": "[panel=6]＊（你醒过来的时候，那只手是摊开的，骰子就搁在掌心上。你把它揣回怀里，照旧贴身放好，窗外天色还黑着。）＊",
-    "links": [92]
+    "links": [93]
   },
   {
     "entryID": 92,
@@ -818,5 +800,14 @@
     "Sequence": "AudioControl(StopMusic);OpenPanel(0,close);OpenPanel(1,close);DisableAllCharacterExpression();DisableDialogueBG();Continue();",
     "Description": "關閉音樂、清除立繪、關閉背景",
     "links": []
+  },
+  {
+    "entryID": 93,
+    "actorID": "MC1",
+    "text": "「……娘要是還活著，這些年怎麼不來找我。下次見著饕餮，我得問清楚，不能再讓她逃了。」",
+    "Sequence": "SetPortrait(MC1,pic=3);",
+    "zh_TW": "「……娘要是還活著，這些年怎麼不來找我。下次見著饕餮，我得問清楚，不能再讓她逃了。」",
+    "zh_CN": "「……娘要是还活着，这些年怎么不来找我。下次见着饕餮，我得问清楚，不能再让她逃了。」",
+    "links": [92]
   }
 ]

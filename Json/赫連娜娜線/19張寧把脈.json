@@ -2,9 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "張寧把脈",
     "text": "[panel=6]＊（藥房的案上攤著一排藥包，張寧正一包一包地往裡頭分藥。你領著娜娜進門的時候，她握劍的那隻手纏著一大團布。）＊",
     "Sequence": "EnableDialogueBG(Clinic);\nAudioControl(PlayMusic,BGM_19);",
-    "Description": "入口條件作者設：最早 181/4、角冢走完、只播一次；其餘作者設",
+    "Description": "角冢走完CF45,5完成",
     "zh_TW": "[panel=6]＊（藥房的案上攤著一排藥包，張寧正一包一包地往裡頭分藥。你領著娜娜進門的時候，她握劍的那隻手纏著一大團布。）＊",
     "zh_CN": "[panel=6]＊（药房的案上摊着一排药包，张宁正一包一包地往里头分药。你领着娜娜进门的时候，她握剑的那只手缠着一大团布。）＊",
     "links": [2]
@@ -103,7 +104,7 @@
     "entryID": 12,
     "actorID": "MC22",
     "text": "[panel=1]「本姑娘好得很，脈跳得比誰都有勁。倒是妳那張臉白得跟雪一樣，先顧好妳自己吧。」",
-    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Anger_2);",
+    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Anger);",
     "zh_TW": "[panel=1]「本姑娘好得很，脈跳得比誰都有勁。倒是妳那張臉白得跟雪一樣，先顧好妳自己吧。」",
     "zh_CN": "[panel=1]「本姑娘好得很，脉跳得比谁都有劲。倒是你那张脸白得跟雪一样，先顾好你自己吧。」",
     "links": [13]
@@ -215,7 +216,7 @@
     "entryID": 24,
     "actorID": "MC22",
     "text": "[panel=1]「好啊，大俠如今也向著她了。要看就看，本姑娘又不會少塊肉。」",
-    "Sequence": "SetPortrait(MC22,pic=2);\nEnableCharacterExpression(1,MC22,Anger);",
+    "Sequence": "SetPortrait(MC22,pic=4);\nEnableCharacterExpression(1,MC22,Pain);",
     "zh_TW": "[panel=1]「好啊，大俠如今也向著她了。要看就看，本姑娘又不會少塊肉。」",
     "zh_CN": "[panel=1]「好啊，大侠如今也向着她了。要看就看，本姑娘又不会少块肉。」",
     "links": [25]
@@ -223,20 +224,20 @@
   {
     "entryID": 25,
     "actorID": "role2",
-    "text": "[panel=6]＊（張寧一手仍搭著娜娜的腕子，另一隻手探上她的額頭試熱。頭巾讓那隻手推了上去，髮間那兩個小小的尖露了出來。）＊",
+    "text": "[panel=6]＊（張寧一手仍搭著娜娜的腕子，另一隻手去擦她額上的汗。那塊頭巾鬆了，從她頭上掉了下來。）＊",
     "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=9);\nEnableCharacterExpression(1,MC22,Nervous_2);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_42);",
     "Description": "切換音樂",
-    "zh_TW": "[panel=6]＊（張寧一手仍搭著娜娜的腕子，另一隻手探上她的額頭試熱。頭巾讓那隻手推了上去，髮間那兩個小小的尖露了出來。）＊",
-    "zh_CN": "[panel=6]＊（张宁一手仍搭着娜娜的腕子，另一只手探上她的额头试热。头巾让那只手推了上去，发间那两个小小的尖露了出来。）＊",
+    "zh_TW": "[panel=6]＊（張寧一手仍搭著娜娜的腕子，另一隻手去擦她額上的汗。那塊頭巾鬆了，從她頭上掉了下來。）＊",
+    "zh_CN": "[panel=6]＊（张宁一手仍搭着娜娜的腕子，另一只手去擦她额上的汗。那块头巾松了，从她头上掉了下来。）＊",
     "links": [26]
   },
   {
     "entryID": 26,
-    "actorID": "MC22",
-    "text": "[panel=1]「[em7]另一隻手往頭上一按[/em7]，……張姑娘的手，倒是比嘴還快。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=8);",
-    "zh_TW": "[panel=1]「[em7]另一隻手往頭上一按[/em7]，……張姑娘的手，倒是比嘴還快。」",
-    "zh_CN": "[panel=1]「[em7]另一只手往头上一按[/em7]，……张姑娘的手，倒是比嘴还快。」",
+    "actorID": "MC22-2",
+    "text": "[panel=1]「[em7]另一隻手往頭上一按[/em7]，……張姑娘的手倒是挺快。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC22-2,pic=4);",
+    "zh_TW": "[panel=1]「[em7]另一隻手往頭上一按[/em7]，……張姑娘的手倒是挺快。」",
+    "zh_CN": "[panel=1]「[em7]另一只手往头上一按[/em7]，……张姑娘的手倒是挺快。」",
     "links": [27]
   },
   {
@@ -314,10 +315,10 @@
   {
     "entryID": 35,
     "actorID": "MC22",
-    "text": "[panel=1]「不碰劍就不碰劍，本姑娘練別的也成。」",
+    "text": "[panel=1]「沒事，不碰劍就不碰劍，本姑娘忙得很，先練別的也成。」",
     "Sequence": "SetPortrait(MC22,pic=5);\nEnableCharacterExpression(1,MC22,Idea);",
-    "zh_TW": "[panel=1]「不碰劍就不碰劍，本姑娘練別的也成。」",
-    "zh_CN": "[panel=1]「不碰剑就不碰剑，本姑娘练别的也成。」",
+    "zh_TW": "[panel=1]「沒事，不碰劍就不碰劍，本姑娘忙得很，先練別的也成。」",
+    "zh_CN": "[panel=1]「没事，不碰剑就不碰剑，本姑娘忙得很，先练别的也成。」",
     "links": [36]
   },
   {

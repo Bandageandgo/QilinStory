@@ -2,9 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "英布",
     "text": "[panel=6]＊（日頭偏西的時候，演武場上只剩你一個還在練。呂信扛著那柄大刀從你身邊走過去，忽然停了下來。）＊",
     "Sequence": "EnableDialogueBG(TrainingGround);\nAudioControl(PlayMusic,BGM_16);",
-    "Description": "入口條件作者設：最早 181/4、完成〈第三百四十九次〉、只播一次；其餘作者設",
+    "Description": "必須完成〈第三百四十九次〉、且呂信好感度大於2Lv",
     "zh_TW": "[panel=6]＊（日頭偏西的時候，演武場上只剩你一個還在練。呂信扛著那柄大刀從你身邊走過去，忽然停了下來。）＊",
     "zh_CN": "[panel=6]＊（日头偏西的时候，演武场上只剩你一个还在练。吕信扛着那柄大刀从你身边走过去，忽然停了下来。）＊",
     "links": [2]
@@ -302,7 +303,7 @@
     "entryID": 34,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nAudioControl(StopMusic)@1;\nAudioControl(PlayMusic,BGM_23)@1;\nEnableDialogueBG(TrainingGround)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(1, close)@1;\nAudioControl(StopMusic)@1;\nAudioControl(PlayMusic,BGM_23)@1;\nEnableDialogueBG(TrainingGround)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
     "Description": "轉場、清除立繪、切換音樂、開啟背景",
     "links": [35]
   },
@@ -385,7 +386,7 @@
     "Description": "檢定成功、洞悉經驗增加",
     "zh_TW": "[panel=6]＊（他那碗酒從頭到尾端在手裡，一口都沒有喝。不知情的人早該追問，他卻等得很穩，像早知道你要說什麼。）＊",
     "zh_CN": "[panel=6]＊（他那碗酒从头到尾端在手里，一口都没有喝。不知情的人早该追问，他却等得很稳，像早知道你要说什么。）＊",
-    "links": [45, 46, 48]
+    "links": [78]
   },
   {
     "entryID": 44,
@@ -394,7 +395,7 @@
     "Sequence": "SetPortrait(MC1,pic=12);\nContinue();",
     "Conditions": "IsPassDice() == false;",
     "Description": "檢定失敗",
-    "links": [45, 47, 48]
+    "links": [78]
   },
   {
     "entryID": 45,
@@ -415,16 +416,6 @@
     "zh_TW": "「他最能打，後來還封了王。」",
     "zh_CN": "「他最能打，后来还封了王。」",
     "links": [60]
-  },
-  {
-    "entryID": 47,
-    "actorID": "MC1",
-    "text": "「他最能打，後來還封了王。」",
-    "Sequence": "",
-    "Description": "選項2",
-    "zh_TW": "「他最能打，後來還封了王。」",
-    "zh_CN": "「他最能打，后来还封了王。」",
-    "links": [67]
   },
   {
     "entryID": 48,
@@ -599,42 +590,6 @@
     "links": [59]
   },
   {
-    "entryID": 67,
-    "actorID": "MC1",
-    "text": "「他是項羽麾下最能打的一個。破秦、入關，哪一樁都少不了他，後來還封了王。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "zh_TW": "「他是項羽麾下最能打的一個。破秦、入關，哪一樁都少不了他，後來還封了王。」",
-    "zh_CN": "「他是项羽麾下最能打的一个。破秦、入关，哪一桩都少不了他，后来还封了王。」",
-    "links": [68]
-  },
-  {
-    "entryID": 68,
-    "actorID": "role2",
-    "text": "[panel=6]＊（他沒有立刻接話，過了一息，才輕輕呼出一口氣。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（他沒有立刻接話，過了一息，才輕輕呼出一口氣。）＊",
-    "zh_CN": "[panel=6]＊（他没有立刻接话，过了一息，才轻轻呼出一口气。）＊",
-    "links": [69]
-  },
-  {
-    "entryID": 69,
-    "actorID": "MC2",
-    "text": "[panel=1]「……哦，封了王啊。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「……哦，封了王啊。」",
-    "zh_CN": "[panel=1]「……哦，封了王啊。」",
-    "links": [70]
-  },
-  {
-    "entryID": 70,
-    "actorID": "MC2",
-    "text": "[panel=1]「那也是條漢子。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "zh_TW": "[panel=1]「那也是條漢子。」",
-    "zh_CN": "[panel=1]「那也是条汉子。」",
-    "links": [65]
-  },
-  {
     "entryID": 71,
     "actorID": "MC1",
     "text": "「信哥，你問這個做什麼？故事都是幾百年前的了。」",
@@ -695,6 +650,20 @@
     "Sequence": "",
     "zh_TW": "[panel=6]＊（他拍開另一罈的泥封，又把兩隻碗都添滿。他講起了五原的馬，從口齒講到腿腳，一直講到夜深。）＊",
     "zh_CN": "[panel=6]＊（他拍开另一坛的泥封，又把两只碗都添满。他讲起了五原的马，从口齿讲到腿脚，一直讲到夜深。）＊",
-    "links": [59]
+    "links": [79]
+  },
+  {
+    "entryID": 78,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [45, 46, 48]
+  },
+  {
+    "entryID": 79,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "links": [45, 46]
   }
 ]
