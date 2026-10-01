@@ -40,6 +40,7 @@
     "actorID": "MC1",
     "text": "「還不快去向鄉親們賠罪？」",
     "Sequence": "",
+    "Description": "選項3",
     "zh_TW": "「還不快去向鄉親們賠罪？」",
     "zh_CN": "「还不快去向乡亲们赔罪？」",
     "links": [2058]
@@ -74,10 +75,11 @@
   {
     "entryID": 2036,
     "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2]「把你騙來的錢給我留下！」",
+    "text": "[em2][難度：6][/em2]「把你騙來的錢給我留下！」",
     "Sequence": "",
-    "zh_TW": "[em2][威嚇檢定][/em2]「把你騙來的錢給我留下！」",
-    "zh_CN": "[em2][威吓检定][/em2]「把你骗来的钱给我留下！」",
+    "Description": "選項1",
+    "zh_TW": "[em2][難度：6][/em2]「把你騙來的錢給我留下！」",
+    "zh_CN": "[em2][难度：6][/em2]「把你骗来的钱给我留下！」",
     "links": [2037]
   },
   {
@@ -193,7 +195,7 @@
     "entryID": 2051,
     "actorID": "role42",
     "text": "「[em7]朝那漢子一瞪[/em7]，蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=2);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=2);",
     "zh_TW": "「[em7]朝那漢子一瞪[/em7]，蛋頭！我不是跟你說過，別再搞這種雞毛鳥事嗎！」",
     "zh_CN": "「[em7]朝那汉子一瞪[/em7]，蛋头！我不是跟你说过，别再搞这种鸡毛鸟事吗！」",
     "links": [2053]
@@ -229,7 +231,7 @@
     "entryID": 2055,
     "actorID": "role42",
     "text": "「算了算了！我當初救你，可不是讓你拿新來的人練把戲的！」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=3);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=3);",
     "zh_TW": "「算了算了！我當初救你，可不是讓你拿新來的人練把戲的！」",
     "zh_CN": "「算了算了！我当初救你，可不是让你拿新来的人练把戏的！」",
     "links": [2054]
@@ -238,7 +240,7 @@
     "entryID": 2056,
     "actorID": "role42",
     "text": "「[em7]轉向你，咧嘴一笑[/em7]，嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=1);",
     "zh_TW": "「[em7]轉向你，咧嘴一笑[/em7]，嘿，小兄弟，氣性挺大嘛，有意思。看在我的面子上，這事就算了吧——」",
     "zh_CN": "「[em7]转向你，咧嘴一笑[/em7]，嘿，小兄弟，气性挺大嘛，有意思。看在我的面子上，这事就算了吧——」",
     "links": [2057]
@@ -247,7 +249,7 @@
     "entryID": 2057,
     "actorID": "role42",
     "text": "「你若是肯幫忙跑一趟腿，說不定還能撈點好處——我這兒缺個嘴快腳快的，酬金嘛，絕不虧你。」",
-    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(MC13,pic=1);",
+    "Sequence": "SetPortrait(MC1,pic=1);\nSetPortrait(role42,pic=1);",
     "zh_TW": "「你若是肯幫忙跑一趟腿，說不定還能撈點好處——我這兒缺個嘴快腳快的，酬金嘛，絕不虧你。」",
     "zh_CN": "「你若是肯帮忙跑一趟腿，说不定还能捞点好处——我这儿缺个嘴快脚快的，酬金嘛，绝不亏你。」",
     "links": [2050]
@@ -294,16 +296,16 @@
     "Sequence": "SetPortrait(MC1,pic=12);",
     "zh_TW": "「娘留下的這顆不常亮。它肯亮，就代表這事另有轉機，或是還有別的法子。」",
     "zh_CN": "「娘留下的这颗不常亮。它肯亮，就代表这事另有转机，或是还有别的法子。」",
-    "links": [2036, 2032, 2063]
+    "links": [2036, 2063, 2032]
   },
   {
     "entryID": 2063,
     "actorID": "MC1",
-    "text": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
+    "text": "[em2][難度：19][/em2][em3]「禍兮福倚，福兮禍伏。」[/em3]",
     "Sequence": "",
-    "Description": "選項3",
-    "zh_TW": "[em2][威嚇檢定][/em2][em3]禍兮福倚，福兮禍伏[/em3]",
-    "zh_CN": "[em2][威吓检定][/em2][em3]祸兮福倚，福兮祸伏[/em3]",
+    "Description": "選項2",
+    "zh_TW": "[em2][難度：19][/em2][em3]「禍兮福倚，福兮禍伏。」[/em3]",
+    "zh_CN": "[em2][难度：19][/em2][em3]「祸兮福倚，福兮祸伏。」[/em3]",
     "links": [2064]
   },
   {
@@ -349,7 +351,7 @@
     "entryID": 2068,
     "actorID": "MC8",
     "text": "[panel=2]「表哥別理他！剛才壺是假的，這會兒倒地也是假的，他又在演啦！」",
-    "Sequence": "SetPortrait(MC8,pic=9);\nEnableCharacterExpression(2,MC8,Anger_2);",
+    "Sequence": "SetPortrait(MC8,pic=4);\nEnableCharacterExpression(2,MC8,Idea);",
     "zh_TW": "[panel=2]「表哥別理他！剛才壺是假的，這會兒倒地也是假的，他又在演啦！」",
     "zh_CN": "[panel=2]「表哥别理他！刚才壶是假的，这会儿倒地也是假的，他又在演啦！」",
     "links": [2069]
@@ -367,7 +369,7 @@
     "entryID": 2070,
     "actorID": "role42",
     "text": "[panel=1]「小姑娘，這回他可沒在演。都退開些，別擠著他出氣。」",
-    "Sequence": "PlayFeelFeedback(Position,P1,P1_OffScreenPos);\nSetPortrait(MC13,pic=1);",
+    "Sequence": "PlayFeelFeedback(Position,P1,P1_OffScreenPos);\nSetPortrait(role42,pic=2);",
     "zh_TW": "[panel=1]「小姑娘，這回他可沒在演。都退開些，別擠著他出氣。」",
     "zh_CN": "[panel=1]「小姑娘，这回他可没在演。都退开些，别挤着他出气。」",
     "links": [2071]
@@ -394,7 +396,7 @@
     "entryID": 2073,
     "actorID": "role42",
     "text": "[panel=1]「他這是嚇昏過去的，能回過氣來全靠他命硬。小兄弟，你這一嗓子要是喊在沒郎中的地方，今日就得抬人了。」",
-    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(MC13,pic=4);\nSetPortrait(MC1,pic=11);\nModifyData(FavorabilityExp,MC8,-20);\nModifyData(FavorabilityExp,MC13,-20);",
+    "Sequence": "DisableCharacterExpression(2);\nSetPortrait(role42,pic=4);\nSetPortrait(MC1,pic=11);\nModifyData(FavorabilityExp,MC8,-20);\nModifyData(FavorabilityExp,MC13,-20);",
     "Description": "蕭靈犀好感度下降、張仲景好感度下降",
     "zh_TW": "[panel=1]「他這是嚇昏過去的，能回過氣來全靠他命硬。小兄弟，你這一嗓子要是喊在沒郎中的地方，今日就得抬人了。」",
     "zh_CN": "[panel=1]「他这是吓昏过去的，能回过气来全靠他命硬。小兄弟，你这一嗓子要是喊在没郎中的地方，今日就得抬人了。」",

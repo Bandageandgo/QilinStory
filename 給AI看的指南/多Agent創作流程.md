@@ -4,7 +4,7 @@
 > **為什麼這樣改：** 第三級（十五名 agent，十名在審）跑英布一場兩個半小時，作者最後還是要從頭讀三版。AI 審一遍、作者再審一遍是重複勞動；規則追不上作者的品味，審修改對了看不出、改錯了要退回。三選一把判斷還給作者，而且每一個判斷都直接進文本。
 > **適用範圍：** 凡是要**生出或改寫遊戲文本**的活——高難度檢定新戲、蝴蝶效應分支、回音一句、人物線與事件的新劇本——都照本檔跑。各用途只差「讀哪份規則、大綱要定什麼、稿放哪、定稿另套用什麼」，列在第九節。審稿單改稿是既有稿逐條修，形狀另計（第九節末列）。
 > **規則本身**（那場戲該怎麼寫）不在本檔：文風看三份必讀指南；高難度檢定看 `高難度檢定走向指南.md`；蝴蝶效應看 `劇情/蝴蝶效應_素材與設計.md` §一、§三、§八；回音看同檔 §九；人物線看該角色資料夾的設計端與 `@角色設定/`。本檔只管「誰做什麼、依什麼順序」。
-> **執行方式：** 第四級的每一步之間都有作者做決定，所以**不用一支 Workflow 從頭跑到尾**，一步派一名 agent（Agent 工具或一支只跑那一步的小腳本），作者決定了再派下一步。只有最後「定稿→轉 JSON→複核」照舊用 `.claude/wf/finalize-and-convert.js`。配套腳本：`給AI看的指南/情境包產生器.py`（底稿與指南摘錄）、`提案檔組裝.py`（對話置頂版面，一版也能組）、`文風節奏檢查.py`（含 `專名表.txt`）、`高難度檢定檢查.py`、`json順序檢查.py`。舊母版 `hard-check-v3.js`、`luxin-yingbu-v3.js` 留作對照（第七節）。
+> **執行方式：** 第四級的每一步之間都有作者做決定，所以**不用一支 Workflow 從頭跑到尾**，一步派一名 agent（Agent 工具或一支只跑那一步的小腳本），作者決定了再派下一步。只有最後「定稿→轉 JSON→複核」照舊用 `.claude/wf/finalize-and-convert.js`。配套腳本：`給AI看的指南/情境包產生器.py`（底稿與指南摘錄）、`提案檔組裝.py`（對話置頂版面，一版也能組）、`文風節奏檢查.py`（含 `專名表.txt`）、`高難度檢定檢查.py`、`json順序檢查.py`。舊母版 `luxin-yingbu-v3.js` 留作對照（第七節）。
 >
 > ⚠ **跨機注意：** `.claude/` 整個資料夾未進 git（見本檔第八節）。到另一台電腦要先確認腳本在。
 > **沿革：** 本檔原名 `高難度檢定_多agent流程.md`（2026-09-26 第二級）；2026-09-28 作者定為共同規則、改名；2026-09-29 早上第三級（串行起草、差異判定、文風審、邏輯審）；2026-09-29 晚上作者定為第四級（本版）。第一到第三級的形狀與實測都在第六、七節。
@@ -189,6 +189,7 @@ python -X utf8 給AI看的指南/提案檔組裝.py --場 <場> --用途 <用途
 - **第一級（2026-09-25）：** 一場十四名：整理、三起草、三審稿（每人審三版）、定稿、兩名複核最多三輪、寫檔、稽核與二次稽核。Fable 5.1、xhigh。一名起草平均 57 回合、17 分鐘。腳本 `hard-check-xiaoxicun.js`。
 - **第二級（2026-09-26）：** 一箱庭一情境包、三起草並行、三審修一人一版、一終審寫提案檔；09-28 加邏輯審。腳本 `hard-check-v2.js`、各批 `hard-check-*.js`、`butterfly-*.js`、`nana-workshop.js`、`nana-tomb.js`。
 - **第三級（2026-09-29 早）：** 產生器底稿、整理 high、起草串行（乙丙必須與前版不同、附差異表）、差異判定 medium、審修 high 只管結構、文風審 max（逐格表）∥邏輯審 max 只列不改、終審 high 用組裝腳本。腳本 `hard-check-v3.js`（母版）、`luxin-yingbu-v3.js`、`butterfly-tanshihuai-box-v3.js`。跑了英布一場（第六節），作者當晚改成第四級。**它的三個零件留下來用在第四級：產生器底稿、腳本零警告、邏輯審六件事。**
+- **`hard-check-*.js` 十四支已刪（2026-10-01 作者定）**：上面提到的 `hard-check-xiaoxicun.js`、`hard-check-v2.js`、各批 `hard-check-*.js`、`hard-check-v3.js` 都不在 `.claude/wf/` 了，要看當時的提示詞從 git 歷史找。它們的提示詞是舊選項格式，找回來也不要照抄；選項格式一律照 `高難度檢定走向指南.md`〈選項格式〉。
 
 ---
 
@@ -201,7 +202,7 @@ python -X utf8 給AI看的指南/提案檔組裝.py --場 <場> --用途 <用途
 | 檢查腳本 | `給AI看的指南/高難度檢定檢查.py`、`文風節奏檢查.py`、`json順序檢查.py` | 已進 |
 | 第四級的腳本 | `給AI看的指南/情境包產生器.py`、`提案檔組裝.py`、`三選一套入.py`、`逐格轉json.py`、`填簡體.py`、`json複核.py`、`專名表.txt` | 2026-09-29 新增，隨下次 commit 進 |
 | 各用途的規則檔 | `劇情/蝴蝶效應_素材與設計.md`、各角色資料夾設計端 | 已進 |
-| Workflow 腳本 | `.claude/wf/*.js`（`finalize-and-convert.js` 還在用；`hard-check-v3.js`、`luxin-yingbu-v3.js`、`hard-check-v2.js`、`butterfly-*.js`、`echo-*.js`、`review-sheet-*.js` 留作對照）與 `.claude/tmp/review-fix-generic.js` | **2026-09-30 進了**：`.claude/settings.json`（hooks，路徑已改相對）與 `.claude/wf/` 進 git；`settings.local.json`、`tmp/`、`worktrees/`、`文風節奏檢查報告.txt`、`__pycache__/` 由新建的 `.gitignore` 擋 |
+| Workflow 腳本 | `.claude/wf/*.js`（`finalize-and-convert.js` 還在用；`luxin-yingbu-v3.js`、`butterfly-*.js`、`echo-*.js`、`review-sheet-*.js` 留作對照）與 `.claude/tmp/review-fix-generic.js` | **2026-09-30 進了**：`.claude/settings.json`（hooks，路徑已改相對）與 `.claude/wf/` 進 git；`settings.local.json`、`tmp/`、`worktrees/`、`文風節奏檢查報告.txt`、`__pycache__/` 由新建的 `.gitignore` 擋 |
 | 大綱檔、創作稿 | 該場的資料夾（第九節）；轉 JSON、回讀後移入 `劇情/舊創作稿/` | 已進 |
 
 **commit 之前用 `git -c core.quotepath=false status` 看**，不然中文路徑會顯示成八進位逃逸碼。`.claude/wf/` 要不要納入 git 由作者定；不納入的話另一台電腦要手動複製。交接紀錄照慣例寫進 `給AI看的指南/跨機待辦.md`。
