@@ -70,6 +70,7 @@ def check_file(path, names):
         errs.append((1, '檔頭第一行要有「創作稿／提案，尚未進 JSON」'))
 
     n_dice = 0
+    has_plain_check = False; has_hard = False
     n_true = text.count('IsPassDice() == true')
     n_false = text.count('IsPassDice() == false')
     n_cell = 0
@@ -97,14 +98,26 @@ def check_file(path, names):
                 errs.append((i, f'「{label}」不是遊戲既有的檢定標籤（沒有「說服檢定」這類，口才即 PersuasionCheck）'))
             tail = line[m.end():]
             m3 = re.match(r'\s*\[em3\]([^\[]+)\[/em3\](.*)$', tail)
+            is_diff = re.match(r'^難度[：:]\s*(\d+|＿＿)$', label)
+            if label.startswith('難度') and (not is_diff or '：' not in label):
+                errs.append((i, f'難度標籤「{label}」要寫成 [難度：N]（全形冒號，N 是數字或 ＿＿）'))
+            if label.endswith('檢定'):
+                has_plain_check = True
             if m3:
-                motto, rest = m3.group(1).strip(), m3.group(2)
+                has_hard = True
+                # 2026-10-01 作者以碰瓷定樁：高難度選項標籤寫 [難度：N]，題語帶「」和句號
+                if not label.startswith('難度'):
+                    errs.append((i, f'高難度選項的標籤是舊格式「{label}」：改成 [em2][難度：N][/em2]，檢定名不上選單（2026-10-01）'))
+                raw_motto = m3.group(1).strip()
+                if not (raw_motto.startswith('「') and raw_motto.endswith('。」')):
+                    errs.append((i, f'題語要帶「」和句號，寫成 [em3]「{raw_motto.strip("「」。")}。」[/em3]（2026-10-01）'))
+                motto, rest = raw_motto.strip('「」。'), m3.group(2)
                 if motto not in MOTTO:
                     errs.append((i, f'題語「{motto}」不在三句已定題語裡'))
                 elif file_class and MOTTO[motto] != file_class:
                     errs.append((i, f'題語「{motto}」是{MOTTO[motto]}的，本檔是{file_class}'))
-                if '「' in rest or '」' in rest:
-                    errs.append((i, '高難度選項的選單上不放主角的話、不加引號，話留給擲骰後的發言格'))
+                if rest.strip().strip('*').strip():
+                    errs.append((i, '高難度選項 [/em3] 後面不再接字：選單上不放主角的話，話留給擲骰後的發言格'))
                 if any(c in rest for c in CLASSES):
                     errs.append((i, '選項上不出現福禍／未卜／轉機三個詞'))
                 if '麒麟骰：' in line or '[em3]兆' in line:
@@ -174,6 +187,8 @@ def check_file(path, names):
         errs.append((0, f'有 {n_dice} 個擲骰格，但 IsPassDice() == true／false 分支首格不齊（true {n_true}、false {n_false}）'))
     if n_dice == 0:
         warns.append((0, '整檔沒有 BeginDiceRoll，高難度提案至少要有一個擲骰格'))
+    if has_hard and has_plain_check:
+        warns.append((0, '有高難度檢定的選單，同選單的一般檢定也要寫 [em2][難度：N][/em2]、不寫檢定名（2026-10-01 碰瓷定樁）；別的選單的 [XX檢定] 不受影響，確認這幾個標籤屬於哪個選單'))
     if n_cell and n_em7 > max(1, -(-n_cell // 10)):
         warns.append((0, f'em7 {n_em7} 個／{n_cell} 格，超過每十格至多一個'))
     return errs, warns
