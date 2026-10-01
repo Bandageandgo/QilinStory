@@ -187,6 +187,12 @@ def check_file(path, names):
         errs.append((0, f'有 {n_dice} 個擲骰格，但 IsPassDice() == true／false 分支首格不齊（true {n_true}、false {n_false}）'))
     if n_dice == 0:
         warns.append((0, '整檔沒有 BeginDiceRoll，高難度提案至少要有一個擲骰格'))
+    shown = [(i, m.group(1)) for i, line in enumerate(lines, 1) for m in re.finditer(r'\[em2\]\[難度：(\d+|＿＿)\]\[/em2\]', line)
+             if line[:m.start()].count('`') % 2 == 0]
+    rolled = set(re.findall(r'BeginDiceRoll\(\s*\w+\s*,\s*\w+\s*,\s*(\d+|＿＿)\s*\)', text))
+    for i, num in shown:
+        if rolled and num not in rolled:
+            errs.append((i, f'選項寫難度 {num}，本檔沒有任何擲骰格是這個難度（擲骰格有：{"、".join(sorted(rolled))}）——選項數字要跟下一格 BeginDiceRoll 一樣'))
     if has_hard and has_plain_check:
         warns.append((0, '有高難度檢定的選單，同選單的一般檢定也要寫 [em2][難度：N][/em2]、不寫檢定名（2026-10-01 碰瓷定樁）；別的選單的 [XX檢定] 不受影響，確認這幾個標籤屬於哪個選單'))
     if n_cell and n_em7 > max(1, -(-n_cell // 10)):

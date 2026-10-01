@@ -12,7 +12,8 @@
   4. Description 只寫詞表標籤（轉成json指南 §1，2026-09-17 作者裁示）：頓號並列、每一段都要對得上詞表；
      說明文（引號、＝、待、見、§、.md、作者、裁示、30 字以上）一律是錯；沒有任何指令的格不該有 Description（選項節點例外，它照詞表要寫「選項N」）。
   5. 選單前一格不掛表情特效（選項節點沒有 Sequence、關不掉，特效會懸在選單旁；立繪規則 7.1 1a，2026-09-23 作者裁示）
-1、3、4、5 是硬規則（有就要改）；2 只印提示——作者舊檔在條件路由格有時一層一層排，兩種都讀得順。
+  6. 選項標籤 [難度：N] 的 N 要等於下一格 BeginDiceRoll 的難度（2026-10-01 作者裁示）
+1、3、4、5、6 是硬規則（有就要改）；2 只印提示——作者舊檔在條件路由格有時一層一層排，兩種都讀得順。
 Bridge 建新對話時照陣列順序發 Unity 流水號、畫布也照陣列排，陣列亂＝Unity 裡亂。
 """
 import io, json, os, re, sys
@@ -73,6 +74,27 @@ def check_menu_expression(nodes):
         m = re.search(r'EnableCharacterExpression\(\d,[\w-]+,(\w+)\)', n.get('Sequence') or '')
         if m:
             bad.append('#%s 是選單前一格卻掛了 %s 特效（選項節點關不掉，會懸在選單旁；往前挪一格）' % (n.get('entryID'), m.group(1)))
+    return bad
+
+
+def check_option_difficulty(nodes):
+    """選項標籤 [em2][難度：N][/em2] 的 N 必須等於它連到的擲骰格 BeginDiceRoll(…,N)（高難度檢定走向指南〈選項格式〉，2026-10-01 作者裁示）。"""
+    by = {n['entryID']: n for n in nodes}
+    bad = []
+    for n in nodes:
+        m = re.search(r'\[em2\]\[難度[：:]\s*([^\]]+)\]\[/em2\]', n.get('text') or '')
+        if not m:
+            continue
+        shown = m.group(1).strip()
+        dice = None
+        for l in n.get('links') or []:
+            d = re.search(r'BeginDiceRoll\(\s*\w+\s*,\s*\w+\s*,\s*([^)\s]+)\s*\)', (by.get(l) or {}).get('Sequence') or '')
+            if d:
+                dice = d.group(1); break
+        if dice is None:
+            bad.append('#%s 選項寫了難度 %s，下一格卻不是擲骰格' % (n.get('entryID'), shown))
+        elif dice != shown:
+            bad.append('#%s 選項寫難度 %s，下一格擲骰指令是 %s——兩邊要一樣' % (n.get('entryID'), shown, dice))
     return bad
 
 
@@ -157,6 +179,7 @@ def check(p):
             hint = '提示：陣列順序和「照 links 走」的順序在第 %d 格分岔（陣列 #%d、照 links 該是 #%d）——選項各分支要先寫完一條再寫下一條；作者舊檔在條件路由格有時一層一層排，這條只提示不算錯' % (mism[0] + 1, mism[1], mism[2])
     bad += check_descriptions(nodes)
     bad += check_menu_expression(nodes)
+    bad += check_option_difficulty(nodes)
     print('========', p, '（%d 格%s）' % (len(nodes), '，尾端 %d 格視為事後補格' % (len(nodes) - body) if body < len(nodes) else ''))
     for b in bad:
         print('  ⚠', b)
