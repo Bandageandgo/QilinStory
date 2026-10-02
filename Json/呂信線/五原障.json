@@ -297,6 +297,7 @@
     "actorID": "0",
     "text": "",
     "Sequence": "LoadLevel(WuYuanZhang);Continue();",
+    "Script": "Variable[\"LuxianVar\"] = 0;",
     "Description": "切換場景",
     "links": []
   },
@@ -392,7 +393,7 @@
     "entryID": 108,
     "actorID": "2",
     "text": "[panel=6]＊（風把眼睛吹得睜不開，可是你跟上了呂信。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Horsemanship,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Horsemanship,20);",
     "links": [
       109
     ]
@@ -477,7 +478,7 @@
     "entryID": 119,
     "actorID": "2",
     "text": "[panel=6]＊（馬倒了。人滾出去很遠，爬起來的時候呂信已經到了。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Archery,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Archery,20);",
     "links": [
       120
     ]
@@ -637,7 +638,6 @@
     "actorID": "2",
     "text": "[panel=6]＊（他伸手把你從地上拉了起來。你站穩的時候，他已經往障塞那邊走了。）＊",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [
       1020
     ]
@@ -679,8 +679,8 @@
     "entryID": 1023,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,10);",
-    "Description": "空對話擲骰節點：學識檢定 難度10",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,KnowledgeCheck,10);",
+    "Description": "背景檢定：學識 難度10",
     "links": [
       1024
     ]
@@ -699,18 +699,9 @@
   {
     "entryID": 1025,
     "actorID": "2",
-    "text": "[panel=6]＊（那不是灶，是積薪。烽燧點火要分炬數——一炬是有人，二炬是過百，三炬以上，是擋不住了。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);",
+    "text": "[panel=6]＊（那圈石頭是用來堆柴的，火一點起來，下一站就知道這邊有事，灰薄得像沒燒過，這座燧樓最後一次，火沒有點成。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,20);",
     "Conditions": "IsPassDice() == true;",
-    "links": [
-      1026
-    ]
-  },
-  {
-    "entryID": 1026,
-    "actorID": "2",
-    "text": "[panel=6]＊（石圈裡的灰只有薄薄一層。這座燧樓最後那一次，連一炬都沒點起來。）＊",
-    "Sequence": "",
     "links": [
       1020
     ]
@@ -857,8 +848,8 @@
     "entryID": 1042,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,InsightCheck,10);",
-    "Description": "空對話擲骰節點：洞悉檢定 難度10",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,10);",
+    "Description": "背景檢定：洞悉 難度10",
     "links": [
       1043
     ]
@@ -878,7 +869,7 @@
     "entryID": 1044,
     "actorID": "2",
     "text": "[panel=6]＊（你把土撥開。石上刻著里程，字口很深——「西至九原　百廿里」。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,20);",
     "Conditions": "IsPassDice() == true;",
     "links": [
       1045
@@ -946,17 +937,6 @@
     "text": "[panel=6]＊（你停下腳回過頭，他還站在原地看著你。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
-      1055,
-      1057
-    ]
-  },
-  {
-    "entryID": 1055,
-    "actorID": "MC1",
-    "text": "「知道了。回去做事。」",
-    "Sequence": "",
-    "Description": "選項1：回頭",
-    "links": [
       3121
     ]
   },
@@ -970,16 +950,6 @@
     ]
   },
   {
-    "entryID": 1057,
-    "actorID": "MC1",
-    "text": "「先撤。」",
-    "Sequence": "",
-    "Description": "選項2：真的離開（不扣好感、不扣分；任務留著）",
-    "links": [
-      1058
-    ]
-  },
-  {
     "entryID": 1056,
     "actorID": "2",
     "text": "[panel=6]＊（你轉身往回走。他跟上來，一句話都沒有多說。）＊",
@@ -987,22 +957,6 @@
     "links": [
       1020
     ]
-  },
-  {
-    "entryID": 1058,
-    "actorID": "MC2",
-    "text": "「……嘖。」",
-    "Sequence": "SetPortrait(MC2,pic=2);",
-    "links": [
-      1059
-    ]
-  },
-  {
-    "entryID": 1059,
-    "actorID": "2",
-    "text": "[panel=6]＊（他扛起刀跟在你後面。出坡口的時候，他回頭看了那座障一眼。）＊",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": []
   },
   {
     "entryID": 1060,
@@ -1017,16 +971,7 @@
   {
     "entryID": 1061,
     "actorID": "2",
-    "text": "[panel=6]＊（近了才看清楚，這座障塞比想像中小。牆圍起來的地方，大概就是英豪府一個院子。）＊",
-    "Sequence": "",
-    "links": [
-      1062
-    ]
-  },
-  {
-    "entryID": 1062,
-    "actorID": "2",
-    "text": "[panel=6]＊（門早就沒了，用車板和土袋堵著。上頭站著人。）＊",
+    "text": "[panel=6]＊（近了才看清楚，這座障塞比想像中小，牆圍起來的地方大概就是英豪府一個院子。）＊",
     "Sequence": "",
     "links": [
       1063
@@ -1035,18 +980,9 @@
   {
     "entryID": 1063,
     "actorID": "role57",
-    "text": "[panel=2]「哪來的？這是我們的地盤！」",
+    "text": "[panel=2]「站住！你們是怎麼混進來的？」",
     "Sequence": "",
     "Description": "⚠ actorID 待對照（馬賊，無立繪）",
-    "links": [
-      1064
-    ]
-  },
-  {
-    "entryID": 1064,
-    "actorID": "MC2",
-    "text": "「你們的。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       1066
     ]
@@ -1055,8 +991,8 @@
     "entryID": 1066,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);BeginFight(Combat,＿＿);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-    "Description": "戰鬥觸發節點：戰鬥二・塢牆守衛（一般版，⚠ 場次 ID 待作者填）",
+    "Sequence": "SetContinueMode(false);BeginFight(Combat,79);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
+    "Description": "戰鬥觸發節點：戰鬥二・塢牆守衛（一般版，場次 79）",
     "links": [
       1067
     ]
@@ -1074,9 +1010,9 @@
   },
   {
     "entryID": 1068,
-    "actorID": "2",
-    "text": "[panel=6]＊（車板被推開了。你們走進去。）＊",
-    "Sequence": "",
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
     "Conditions": "IsPassFight() == true;",
     "links": [
       500
@@ -1085,28 +1021,9 @@
   {
     "entryID": 1069,
     "actorID": "2",
-    "text": "[panel=6]＊（你被壓在牆根下，眼前發黑。）＊",
+    "text": "[panel=6]＊（剩下的敵人全是呂信一個人解決的。這一場打完，場上站著的只剩他一個。）＊",
     "Sequence": "",
     "Conditions": "IsPassFight() == false;",
-    "links": [
-      1070
-    ]
-  },
-  {
-    "entryID": 1070,
-    "actorID": "2",
-    "text": "[panel=6]＊（然後壓著你的重量沒了。呂信一手把你提起來，另一手還在揮。他的眼睛一直在牆上，沒有落到你身上來。）＊",
-    "Sequence": "",
-    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
-    "links": [
-      1071
-    ]
-  },
-  {
-    "entryID": 1071,
-    "actorID": "2",
-    "text": "[panel=6]＊（等你站穩，牆上已經沒有人了。）＊",
-    "Sequence": "",
     "links": [
       500
     ]
@@ -1211,7 +1128,6 @@
     "actorID": "2",
     "text": "[panel=6]＊（他伸手把你從地上拉了起來。你站穩的時候，他已經往障塞那邊走了。）＊",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [
       2020
     ]
@@ -1253,8 +1169,8 @@
     "entryID": 2023,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,KnowledgeCheck,10);",
-    "Description": "空對話擲骰節點：學識檢定 難度10",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,KnowledgeCheck,10);",
+    "Description": "背景檢定：學識 難度10",
     "links": [
       2024
     ]
@@ -1273,18 +1189,9 @@
   {
     "entryID": 2025,
     "actorID": "2",
-    "text": "[panel=6]＊（那不是灶，是積薪。烽燧點火要分炬數——一炬是有人，二炬是過百，三炬以上，是擋不住了。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);",
+    "text": "[panel=6]＊（那圈石頭是用來堆柴的，火一點起來，下一站就知道這邊有事，灰薄得像沒燒過，這座燧樓最後一次，火沒有點成。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,20);",
     "Conditions": "IsPassDice() == true;",
-    "links": [
-      2026
-    ]
-  },
-  {
-    "entryID": 2026,
-    "actorID": "2",
-    "text": "[panel=6]＊（石圈裡的灰只有薄薄一層。這座燧樓最後那一次，連一炬都沒點起來。）＊",
-    "Sequence": "",
     "links": [
       2020
     ]
@@ -1431,8 +1338,8 @@
     "entryID": 2042,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Manual,InsightCheck,10);",
-    "Description": "空對話擲骰節點：洞悉檢定 難度10",
+    "Sequence": "SetContinueMode(false);SetContinueMode(original)@Message(EndRoll);Continue()@Message(EndRoll);BeginDiceRoll(Auto,InsightCheck,10);",
+    "Description": "背景檢定：洞悉 難度10",
     "links": [
       2043
     ]
@@ -1452,7 +1359,7 @@
     "entryID": 2044,
     "actorID": "2",
     "text": "[panel=6]＊（你把土撥開。石上刻著里程，字口很深——「西至九原　百廿里」。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Insight,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Insight,20);",
     "Conditions": "IsPassDice() == true;",
     "links": [
       2045
@@ -1520,17 +1427,6 @@
     "text": "[panel=6]＊（你停下腳回過頭，他還站在原地看著你。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
-      2055,
-      2057
-    ]
-  },
-  {
-    "entryID": 2055,
-    "actorID": "MC1",
-    "text": "「知道了。回去做事。」",
-    "Sequence": "",
-    "Description": "選項1：回頭",
-    "links": [
       3122
     ]
   },
@@ -1544,16 +1440,6 @@
     ]
   },
   {
-    "entryID": 2057,
-    "actorID": "MC1",
-    "text": "「先撤。」",
-    "Sequence": "",
-    "Description": "選項2：真的離開（不扣好感、不扣分；任務留著）",
-    "links": [
-      2058
-    ]
-  },
-  {
     "entryID": 2056,
     "actorID": "2",
     "text": "[panel=6]＊（你轉身往回走。他跟上來，一句話都沒有多說。）＊",
@@ -1561,22 +1447,6 @@
     "links": [
       2020
     ]
-  },
-  {
-    "entryID": 2058,
-    "actorID": "MC2",
-    "text": "「……嘖。」",
-    "Sequence": "SetPortrait(MC2,pic=2);",
-    "links": [
-      2059
-    ]
-  },
-  {
-    "entryID": 2059,
-    "actorID": "2",
-    "text": "[panel=6]＊（他扛起刀跟在你後面。出坡口的時候，他回頭看了那座障一眼。）＊",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": []
   },
   {
     "entryID": 2060,
@@ -1591,16 +1461,7 @@
   {
     "entryID": 2061,
     "actorID": "2",
-    "text": "[panel=6]＊（近了才看清楚，這座障塞比想像中小。牆圍起來的地方，大概就是英豪府一個院子。）＊",
-    "Sequence": "",
-    "links": [
-      2062
-    ]
-  },
-  {
-    "entryID": 2062,
-    "actorID": "2",
-    "text": "[panel=6]＊（門早就沒了，用車板和土袋堵著。上頭站著人。）＊",
+    "text": "[panel=6]＊（近了才看清楚，這座障塞比想像中小，牆圍起來的地方大概就是英豪府一個院子。）＊",
     "Sequence": "",
     "links": [
       2063
@@ -1609,18 +1470,9 @@
   {
     "entryID": 2063,
     "actorID": "role57",
-    "text": "[panel=2]「哪來的？這是我們的地盤！」",
+    "text": "[panel=2]「站住！你們是怎麼混進來的？」",
     "Sequence": "",
     "Description": "⚠ actorID 待對照（馬賊，無立繪）",
-    "links": [
-      2064
-    ]
-  },
-  {
-    "entryID": 2064,
-    "actorID": "MC2",
-    "text": "「你們的。」",
-    "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       2066
     ]
@@ -1629,8 +1481,8 @@
     "entryID": 2066,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);BeginFight(Combat,＿＿);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-    "Description": "戰鬥觸發節點：戰鬥二・塢牆守衛（強化版：弓術失敗、對方被敲鑼驚動，⚠ 場次 ID 待作者填）",
+    "Sequence": "SetContinueMode(false);BeginFight(Combat,79);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
+    "Description": "戰鬥觸發節點：戰鬥二・塢牆守衛（強化版：弓術失敗、對方被敲鑼驚動，場次 79）",
     "links": [
       2067
     ]
@@ -1648,9 +1500,9 @@
   },
   {
     "entryID": 2068,
-    "actorID": "2",
-    "text": "[panel=6]＊（車板被推開了。你們走進去。）＊",
-    "Sequence": "",
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
     "Conditions": "IsPassFight() == true;",
     "links": [
       500
@@ -1659,28 +1511,9 @@
   {
     "entryID": 2069,
     "actorID": "2",
-    "text": "[panel=6]＊（你被壓在牆根下，眼前發黑。）＊",
+    "text": "[panel=6]＊（剩下的敵人全是呂信一個人解決的。這一場打完，場上站著的只剩他一個。）＊",
     "Sequence": "",
     "Conditions": "IsPassFight() == false;",
-    "links": [
-      2070
-    ]
-  },
-  {
-    "entryID": 2070,
-    "actorID": "2",
-    "text": "[panel=6]＊（然後壓著你的重量沒了。呂信一手把你提起來，另一手還在揮。他的眼睛一直在牆上，沒有落到你身上來。）＊",
-    "Sequence": "",
-    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
-    "links": [
-      2071
-    ]
-  },
-  {
-    "entryID": 2071,
-    "actorID": "2",
-    "text": "[panel=6]＊（等你站穩，牆上已經沒有人了。）＊",
-    "Sequence": "",
     "links": [
       500
     ]
@@ -1688,7 +1521,7 @@
   {
     "entryID": 500,
     "actorID": "2",
-    "text": "[panel=6]＊（塢內比外面更破。馬賊住的是東邊那間，鋪蓋、酒罈、啃剩的骨頭。）＊",
+    "text": "[panel=6]＊（這裡是廢棄的戍舍，東邊那間留著鋪蓋、酒罈、啃剩的骨頭。）＊",
     "Sequence": "",
     "links": [
       501
@@ -1697,20 +1530,9 @@
   {
     "entryID": 501,
     "actorID": "2",
-    "text": "[panel=6]＊（西邊那間沒人住。門是歪的，可是灶還在，兵器架也還在。）＊",
-    "Sequence": "",
-    "links": [
-      502
-    ]
-  },
-  {
-    "entryID": 502,
-    "actorID": "2",
-    "text": "[panel=6]＊（呂信先走進了西邊那間，在兵器架前頭站住了。）＊",
-    "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      503
-    ]
+    "text": "[panel=6]＊（西邊那間門是歪的，灶還在，兵器架也還在。）＊",
+    "Sequence": "OpenPanel(0,close);OpenPanel(1,close);Continue();",
+    "links": []
   },
   {
     "entryID": 503,
@@ -1741,35 +1563,9 @@
   {
     "entryID": 511,
     "actorID": "2",
-    "text": "[panel=6]＊（西牆上刻了一排名字。刻得很深，一個一個往下排。）＊",
-    "Sequence": "",
-    "links": [
-      512
-    ]
-  },
-  {
-    "entryID": 512,
-    "actorID": "2",
-    "text": "[panel=6]＊（你數了數，十七個。）＊",
-    "Sequence": "",
-    "links": [
-      513
-    ]
-  },
-  {
-    "entryID": 513,
-    "actorID": "2",
-    "text": "[panel=6]＊（最後三個沒刻完——一個只有姓，一個刻了一半，一個只有起筆的那一刀。）＊",
-    "Sequence": "",
-    "links": [
-      514
-    ]
-  },
-  {
-    "entryID": 514,
-    "actorID": "2",
-    "text": "[panel=6]＊（呂信站在你旁邊，看了一會。）＊",
+    "text": "[panel=6]＊（西牆上刻了一排名字，刻得很深，一個一個往下排，你數了數，十七個，最後三行被人劃掉了，筆畫還在，中間橫過一刀，呂信站在你旁邊，看了一會。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
+    "Script": "Variable[\"LuxianVar\"] = Variable[\"LuxianVar\"] + 1;",
     "links": [
       515
     ]
@@ -1795,7 +1591,7 @@
   {
     "entryID": 517,
     "actorID": "MC2",
-    "text": "「死了的人，別人會替他刻完。」",
+    "text": "「死了的，是留下來的人幫他們刻上的。劃掉的那三個，是走了的。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       518
@@ -1854,7 +1650,7 @@
     "entryID": 524,
     "actorID": "2",
     "text": "[panel=6]＊（是戍卒的日課簿。誰值哪一更、烽火幾炬、糧下來了沒有。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Knowledge,10);",
+    "Sequence": "ModifyData(FeatExp,Player,Knowledge,20);",
     "Conditions": "IsPassDice() == true;",
     "links": [
       525
@@ -1872,16 +1668,7 @@
   {
     "entryID": 526,
     "actorID": "2",
-    "text": "[panel=6]＊（「上面說這一段不設了。各人自便。」）＊",
-    "Sequence": "",
-    "links": [
-      527
-    ]
-  },
-  {
-    "entryID": 527,
-    "actorID": "2",
-    "text": "[panel=6]＊（那一行底下沒有再記東西。）＊",
+    "text": "[panel=6]＊（派他們守邊的人說，守軍從這座障撤走，各人要留要走自己定。日課簿寫到這一句就停了。）＊",
     "Sequence": "",
     "links": [
       503
@@ -1910,16 +1697,7 @@
   {
     "entryID": 531,
     "actorID": "2",
-    "text": "[panel=6]＊（灶還能用。灶膛裡有灰，不厚，是近期燒過的。）＊",
-    "Sequence": "",
-    "links": [
-      532
-    ]
-  },
-  {
-    "entryID": 532,
-    "actorID": "2",
-    "text": "[panel=6]＊（可是東邊那間馬賊自己有火。這邊的灶，是別人在用。）＊",
+    "text": "[panel=6]＊（灶還能用，灶膛裡有灰，不厚，是近期燒過的。）＊",
     "Sequence": "",
     "links": [
       503
@@ -1938,7 +1716,7 @@
   {
     "entryID": 541,
     "actorID": "2",
-    "text": "[panel=6]＊（北邊還有一間，屋頂塌了，門被夯土牆壓死。牆是整片倒下來的，缺口只有一線。）＊",
+    "text": "[panel=6]＊（這間屋子屋頂塌了，門被夯土牆壓死，牆整片倒在門上。）＊",
     "Sequence": "",
     "links": [
       542
@@ -1947,17 +1725,8 @@
   {
     "entryID": 542,
     "actorID": "MC2",
-    "text": "「推不動。上頭壓著半面牆。」",
+    "text": "「上頭壓著半面牆。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
-    "links": [
-      543
-    ]
-  },
-  {
-    "entryID": 543,
-    "actorID": "2",
-    "text": "[panel=6]＊（他說完就往旁邊讓了半步。）＊",
-    "Sequence": "",
     "links": [
       544
     ]
@@ -1979,14 +1748,14 @@
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       546,
-      552
+      553
     ]
   },
   {
     "entryID": 546,
     "actorID": "2",
-    "text": "[panel=6]＊（你把肩膀頂進那一線缺口。那面夯土本來就裂了，整塊往內塌了下去。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,Strength,10);",
+    "text": "[panel=6]＊（你把肩膀頂上去，夯土本來就裂了，整塊往內塌了下去。）＊",
+    "Sequence": "ModifyData(FeatExp,Player,Strength,20);",
     "Conditions": "IsPassDice() == true;",
     "links": [
       547
@@ -1995,73 +1764,19 @@
   {
     "entryID": 547,
     "actorID": "2",
-    "text": "[panel=6]＊（等灰散盡了，看得出裡頭是一間睡人的屋子。炕上的席子已經爛成了絮。）＊",
-    "Sequence": "",
-    "links": [
-      548
-    ]
-  },
-  {
-    "entryID": 548,
-    "actorID": "2",
-    "text": "[panel=6]＊（炕頭壓著一片木牘，上頭用墨寫著字：）＊",
-    "Sequence": "",
-    "links": [
-      549
-    ]
-  },
-  {
-    "entryID": 549,
-    "actorID": "2",
-    "text": "[panel=6]＊（[em2]「兒平安。冬衣不必寄了，這裡發。開春若得替，便回。」[/em2]）＊",
-    "Sequence": "ModifyData(Valuable,Player,UnsentLetter,1);",
-    "Description": "物品交互節點：獲得貴重品「未寄的家書」（⚠ ID 待作者建）",
-    "links": [
-      550
-    ]
-  },
-  {
-    "entryID": 550,
-    "actorID": "2",
-    "text": "[panel=6]＊（下面空著。沒有署名，也沒有寫給誰。）＊",
-    "Sequence": "",
-    "links": [
-      551
-    ]
-  },
-  {
-    "entryID": 551,
-    "actorID": "2",
-    "text": "[panel=6]＊（呂信在門口站著，沒有進來。）＊",
-    "Sequence": "SetPortrait(MC2,pic=1);",
+    "text": "[panel=6]＊（等灰散盡了，看得出裡頭是一間睡人的屋子，炕上的席子已經爛成了絮，席底藏著一塊辟邪玉牌。炕頭壓著一片木牘，上頭用墨寫著字：[em2]「兒平安。冬衣不必寄了，這裡發。開春若得替，便回。」[/em2]）＊",
+    "Sequence": "ModifyData(Valuable,Player,WardingJadePlaque,1);",
+    "Description": "獲得貴重品「辟邪玉牌」（⚠ Unity 貴重品表要新建 WardingJadePlaque）",
     "links": [
       503
     ]
   },
   {
-    "entryID": 552,
+    "entryID": 553,
     "actorID": "2",
-    "text": "[panel=6]＊（你頂了幾下，牆晃了，可是沒有倒，手臂先軟了。）＊",
+    "text": "[panel=6]＊（你把肩膀頂上去，裂開的夯土整塊從門上滑下來，門口埋死了。）＊",
     "Sequence": "",
     "Conditions": "IsPassDice() == false;",
-    "links": [
-      553
-    ]
-  },
-  {
-    "entryID": 553,
-    "actorID": "MC2",
-    "text": "「行了。」",
-    "Sequence": "SetPortrait(MC2,pic=3);",
-    "links": [
-      554
-    ]
-  },
-  {
-    "entryID": 554,
-    "actorID": "2",
-    "text": "[panel=6]＊（他也沒有自己去試。）＊",
-    "Sequence": "",
     "links": [
       503
     ]
@@ -2110,7 +1825,7 @@
     "entryID": 564,
     "actorID": "2",
     "text": "[panel=6]＊（你踩著牆縫上去了。樓頂只有一圈矮牆，站上去風大得站不穩。）＊",
-    "Sequence": "ModifyData(FeatExp,Player,MartialArts,10);",
+    "Sequence": "ModifyData(FeatExp,Player,MartialArts,20);",
     "Conditions": "IsPassDice() == true;",
     "links": [
       565
@@ -2119,16 +1834,7 @@
   {
     "entryID": 565,
     "actorID": "2",
-    "text": "[panel=6]＊（從這裡看得很遠。草是同一個方向的，路是一條淺色的線，往北。）＊",
-    "Sequence": "",
-    "links": [
-      567
-    ]
-  },
-  {
-    "entryID": 567,
-    "actorID": "2",
-    "text": "[panel=6]＊（呂信沒有上來。他站在底下，仰著頭。）＊",
+    "text": "[panel=6]＊（從這裡看得很遠，草是同一個方向的，路是一條淺色的線，往北，呂信沒有上來，他站在底下，仰著頭。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       568
@@ -2166,18 +1872,9 @@
   {
     "entryID": 581,
     "actorID": "2",
-    "text": "[panel=6]＊（鋪蓋捲成一堆，酒罈東倒西歪，骨頭啃得很乾淨。）＊",
-    "Sequence": "",
-    "links": [
-      582
-    ]
-  },
-  {
-    "entryID": 582,
-    "actorID": "2",
-    "text": "[panel=6]＊（席子底下墊著一個布包。你拉出來，裡頭是散錢，還有兩支斷了的簪子。）＊",
-    "Sequence": "ModifyData(Coin,1500);",
-    "Description": "物品交互節點：獲得散錢（⚠ 金額待作者定）",
+    "text": "[panel=6]＊（鋪蓋捲成一堆，酒罈東倒西歪，骨頭啃得很乾淨，席子底下墊著一個布包，你拉出來，裡頭是散錢。）＊",
+    "Sequence": "ModifyData(Coin,400);",
+    "Description": "物品交互節點：獲得散錢 400",
     "links": [
       583
     ]
@@ -2231,9 +1928,18 @@
   {
     "entryID": 602,
     "actorID": "role144",
-    "text": "[panel=2]「英豪府的？」",
+    "text": "[panel=2]「上面那些人，是你們放倒的？哪來的？」",
     "Sequence": "",
     "Description": "馬賊頭目 role144（作者 2026-09-30；無立繪）",
+    "links": [
+      3132
+    ]
+  },
+  {
+    "entryID": 3132,
+    "actorID": "MC2",
+    "text": "「英豪府的。有人出錢，讓我們來一趟。」",
+    "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       603
     ]
@@ -2268,16 +1974,7 @@
   {
     "entryID": 606,
     "actorID": "2",
-    "text": "[panel=6]＊（那老頭把水桶放下，挪到牆角蹲了下來。）＊",
-    "Sequence": "",
-    "links": [
-      607
-    ]
-  },
-  {
-    "entryID": 607,
-    "actorID": "2",
-    "text": "[panel=6]＊（他挪得很熟。像是這種事他見過不只一次。）＊",
+    "text": "[panel=6]＊（那老頭把水桶放下，挪到牆角蹲了下來，他挪得很熟，像是這種事他見過不只一次。）＊",
     "Sequence": "",
     "links": [
       608
@@ -2287,8 +1984,8 @@
     "entryID": 608,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);BeginFight(Combat,＿＿);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
-    "Description": "戰鬥觸發節點：戰鬥三・馬賊頭目（⚠ 場次 ID 待作者填）",
+    "Sequence": "SetContinueMode(false);BeginFight(Combat,80);SetContinueMode(original)@Message(EndFight);Continue()@Message(EndFight);",
+    "Description": "戰鬥觸發節點：戰鬥三・馬賊頭目",
     "links": [
       609
     ]
@@ -2317,7 +2014,7 @@
   {
     "entryID": 611,
     "actorID": "2",
-    "text": "[panel=6]＊（那柄環首刀是橫著掃過來的。你舉刀去架，架住了，可是整條手臂麻到肩上。）＊",
+    "text": "[panel=6]＊（馬賊首領那柄環首刀是橫著掃過來的。你舉刀去架，架住了，可是整條手臂麻到肩上。）＊",
     "Sequence": "",
     "Conditions": "IsPassFight() == false;",
     "links": [
@@ -2336,7 +2033,7 @@
   {
     "entryID": 613,
     "actorID": "2",
-    "text": "[panel=6]＊（然後有東西從你頭頂掠過去。門板砸在那人胸口，聲音悶得像砸在土上。）＊",
+    "text": "[panel=6]＊（然後呂信的大刀從你頭頂掠過去，砸在馬賊首領胸口，聲音悶得像砸在土上。）＊",
     "Sequence": "",
     "links": [
       614
@@ -2345,9 +2042,8 @@
   {
     "entryID": 614,
     "actorID": "2",
-    "text": "[panel=6]＊（等你能抬頭，馬賊已經全倒了。呂信伸手把你拉起來，牆角還蹲著那個老頭。）＊",
+    "text": "[panel=6]＊（等你能抬頭，馬賊首領倒在井邊，其餘的也倒了。呂信伸手把你拉起來，牆角還蹲著那個老頭。）＊",
     "Sequence": "",
-    "Script": "SetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [
       700
     ]
@@ -2355,16 +2051,7 @@
   {
     "entryID": 700,
     "actorID": "2",
-    "text": "[panel=6]＊（他從牆角站起來，走回井邊提起那桶水。）＊",
-    "Sequence": "",
-    "links": [
-      701
-    ]
-  },
-  {
-    "entryID": 701,
-    "actorID": "2",
-    "text": "[panel=6]＊（他做完這些，才看你們。）＊",
+    "text": "[panel=6]＊（這一場他一直蹲在牆角，這時才站起來，走回井邊，把剛才放下的那桶水提起來。）＊",
     "Sequence": "",
     "links": [
       702
@@ -2373,7 +2060,7 @@
   {
     "entryID": 702,
     "actorID": "role143",
-    "text": "[panel=2]「打完了？」",
+    "text": "[panel=2]「[em7]做完這些，才看你們[/em7]，打完了？」",
     "Sequence": "",
     "Description": "⚠ actorID 待對照（老兵，無立繪、無名字）",
     "links": [
@@ -2383,26 +2070,8 @@
   {
     "entryID": 703,
     "actorID": "MC1",
-    "text": "「……老丈是？」",
+    "text": "「……老丈是這裡的，還是他們的人？」",
     "Sequence": "SetPortrait(MC1,pic=9);",
-    "links": [
-      704
-    ]
-  },
-  {
-    "entryID": 704,
-    "actorID": "role143",
-    "text": "[panel=2]「這裡的。」",
-    "Sequence": "",
-    "links": [
-      705
-    ]
-  },
-  {
-    "entryID": 705,
-    "actorID": "MC1",
-    "text": "「他們的人？」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       706
     ]
@@ -2410,34 +2079,16 @@
   {
     "entryID": 706,
     "actorID": "role143",
-    "text": "[panel=2]「不是。我是這座障的。」",
+    "text": "[panel=2]「[em7]說得很平常，像在講今天要挑幾桶水[/em7]，這裡的，不是他們的人，我是這座障的，他們來了以後，我還是這座障的。」",
     "Sequence": "",
     "links": [
-      707
+      3133
     ]
   },
   {
-    "entryID": 707,
+    "entryID": 3133,
     "actorID": "role143",
-    "text": "[panel=2]「他們來了以後，我還是這座障的。」",
-    "Sequence": "",
-    "links": [
-      709
-    ]
-  },
-  {
-    "entryID": 709,
-    "actorID": "role143",
-    "text": "[panel=2]「[em7]說得很平常，像在講今天要挑幾桶水[/em7]，井只有這一口，路只有我認得。他們留我，我替他們挑水認路，他們給我一口飯。」",
-    "Sequence": "",
-    "links": [
-      710
-    ]
-  },
-  {
-    "entryID": 710,
-    "actorID": "role143",
-    "text": "[panel=2]「就這樣。」",
+    "text": "[panel=2]「井只有這一口，路只有我認得，他們留我，我替他們挑水認路，他們給我一口飯，就這樣。」",
     "Sequence": "",
     "links": [
       711
@@ -2482,7 +2133,7 @@
   {
     "entryID": 723,
     "actorID": "2",
-    "text": "[panel=6]＊（呂信沒有回答。）＊",
+    "text": "[panel=6]＊（呂信看著他，站在原地。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       724
@@ -2491,7 +2142,7 @@
   {
     "entryID": 724,
     "actorID": "role143",
-    "text": "[panel=2]「是你。長這麼大了。」",
+    "text": "[panel=2]「是你，長這麼大了。」",
     "Sequence": "",
     "links": [
       725
@@ -2500,7 +2151,7 @@
   {
     "entryID": 725,
     "actorID": "2",
-    "text": "[panel=6]＊（他笑了一下，笑完就低頭繼續絞水。）＊",
+    "text": "[panel=6]＊（他笑了一下，低下頭繼續絞水。）＊",
     "Sequence": "",
     "links": [
       726
@@ -2509,7 +2160,7 @@
   {
     "entryID": 726,
     "actorID": "MC1",
-    "text": "「信哥，你——」",
+    "text": "「信哥，你……」",
     "Sequence": "SetPortrait(MC1,pic=4);EnableCharacterExpression(0,Player,Surprise);",
     "links": [
       727
@@ -2519,29 +2170,18 @@
     "entryID": 727,
     "actorID": "MC2",
     "text": "「別問。」",
-    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);",
-    "links": [
-      730,
-      750
-    ]
+    "Sequence": "DisableCharacterExpression(0);SetPortrait(MC2,pic=1);OpenPanel(0,close);OpenPanel(1,close);Continue();",
+    "Description": "說完結束對話，回到井邊。處置從點呂信進 #3134",
+    "links": []
   },
   {
-    "entryID": 730,
-    "actorID": "MC1",
-    "text": "「老丈，西邊那間牆上刻的名字——」",
-    "Sequence": "",
-    "Description": "選項：問十七個名字",
+    "entryID": 3134,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "Continue();",
+    "Description": "點擊井邊的呂信。看過牆（LuxianVar==1）先問十七個名字再進 §7，否則直接 §7",
     "links": [
-      731
-    ]
-  },
-  {
-    "entryID": 750,
-    "actorID": "MC1",
-    "text": "（不問）",
-    "Sequence": "",
-    "Description": "選項：不問，直接進 §7",
-    "links": [
+      731,
       800
     ]
   },
@@ -2550,6 +2190,7 @@
     "actorID": "MC1",
     "text": "「老丈，西邊那間牆上刻的名字，我想問——」",
     "Sequence": "SetPortrait(MC1,pic=8);",
+    "Conditions": "Variable[\"LuxianVar\"] == 1;",
     "links": [
       732
     ]
@@ -2569,28 +2210,7 @@
     "text": "[panel=2]「我是第十一個。」",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
-      735,
-      745
-    ]
-  },
-  {
-    "entryID": 735,
-    "actorID": "MC1",
-    "text": "「其他十六個呢？」",
-    "Sequence": "",
-    "Description": "選項：再問下去",
-    "links": [
       736
-    ]
-  },
-  {
-    "entryID": 745,
-    "actorID": "MC1",
-    "text": "（不再問）",
-    "Sequence": "",
-    "Description": "選項：到此為止，進 §7",
-    "links": [
-      800
     ]
   },
   {
@@ -2650,8 +2270,8 @@
   {
     "entryID": 800,
     "actorID": "2",
-    "text": "[panel=6]＊（該走了。可是井邊還有一個人。）＊",
-    "Sequence": "",
+    "text": "[panel=6]＊（呂信站在井的另一邊，大刀拄在地上，一直看著那個老頭絞水。）＊",
+    "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       801
     ]
@@ -2659,17 +2279,8 @@
   {
     "entryID": 801,
     "actorID": "2",
-    "text": "[panel=6]＊（雇主要的是「清掉」。而這個老頭替他們挑了不知道多少年的水。）＊",
+    "text": "[panel=6]＊（該走了，可是雇主要的是「清掉」，這個老頭替馬賊挑了不知道多少年的水。）＊",
     "Sequence": "",
-    "links": [
-      802
-    ]
-  },
-  {
-    "entryID": 802,
-    "actorID": "2",
-    "text": "[panel=6]＊（呂信站在井的另一邊，看著那個老頭絞水。他沒有開口。）＊",
-    "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       810,
       830,
@@ -2709,16 +2320,7 @@
   {
     "entryID": 811,
     "actorID": "MC1",
-    "text": "「這差事說的是清掉。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [
-      812
-    ]
-  },
-  {
-    "entryID": 812,
-    "actorID": "MC1",
-    "text": "「留一個，就不算清掉。」",
+    "text": "「這差事說的是清掉，留一個就不算清掉。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       813
@@ -2727,7 +2329,7 @@
   {
     "entryID": 813,
     "actorID": "2",
-    "text": "[panel=6]＊（呂信看了你一會。然後他把門板從肩上卸下來。）＊",
+    "text": "[panel=6]＊（呂信看了你一會，把拄在地上的大刀提了起來。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "links": [
       814
@@ -2745,7 +2347,7 @@
   {
     "entryID": 815,
     "actorID": "2",
-    "text": "[panel=6]＊（那老頭沒有求饒，也沒有跑。他把水桶放回井沿，坐了下來。）＊",
+    "text": "[panel=6]＊（那老頭沒有求饒，也沒有跑，他在井沿坐了下來。）＊",
     "Sequence": "",
     "links": [
       816
@@ -2754,16 +2356,7 @@
   {
     "entryID": 816,
     "actorID": "role143",
-    "text": "[panel=2]「那你們動手吧。」",
-    "Sequence": "",
-    "links": [
-      817
-    ]
-  },
-  {
-    "entryID": 817,
-    "actorID": "role143",
-    "text": "[panel=2]「我這輩子沒離開過這座障。死在這也算對。」",
+    "text": "[panel=2]「那你們動手吧，我這輩子沒離開過這座障，死在這也算對。」",
     "Sequence": "",
     "links": [
       818
@@ -2772,7 +2365,7 @@
   {
     "entryID": 818,
     "actorID": "2",
-    "text": "[panel=6]＊（他說完就閉上眼睛。井繩還掛在轆轤上，桶懸在半空。）＊",
+    "text": "[panel=6]＊（他說完就閉上眼睛，井繩還掛在轆轤上，桶懸在半空。）＊",
     "Sequence": "ModifyData(DnDAlignment,Player,LawChaos,0.2);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;\nSetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [
@@ -2782,16 +2375,7 @@
   {
     "entryID": 831,
     "actorID": "MC1",
-    "text": "「他只是活下來了。」",
-    "Sequence": "SetPortrait(MC1,pic=8);",
-    "links": [
-      832
-    ]
-  },
-  {
-    "entryID": 832,
-    "actorID": "MC1",
-    "text": "「走吧，這一刀不值。」",
+    "text": "「他只是活下來了，這一刀不值，走吧。」",
     "Sequence": "SetPortrait(MC1,pic=8);",
     "links": [
       833
@@ -2800,7 +2384,7 @@
   {
     "entryID": 833,
     "actorID": "2",
-    "text": "[panel=6]＊（那老頭「嗯」了一聲，繼續絞他的水。沒有謝，也沒有抬頭。）＊",
+    "text": "[panel=6]＊（那老頭沒有謝，也沒有抬頭，「嗯」了一聲，繼續絞他的水。）＊",
     "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,-0.2);",
     "links": [
       834
@@ -2809,7 +2393,7 @@
   {
     "entryID": 834,
     "actorID": "2",
-    "text": "[panel=6]＊（呂信先走了。他把刀收回肩上，收得很乾脆。）＊",
+    "text": "[panel=6]＊（呂信把刀收回肩上，收得很乾脆，轉身先走了。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;\nSetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [
@@ -2819,7 +2403,7 @@
   {
     "entryID": 851,
     "actorID": "MC1",
-    "text": "「老丈，你跟我們走。雲中有地方住。」",
+    "text": "「老丈，跟我們走吧，雲中有地方住。」",
     "Sequence": "SetPortrait(MC1,pic=8);EnableCharacterExpression(0,Player,Meditate);",
     "links": [
       852
@@ -2837,25 +2421,7 @@
   {
     "entryID": 853,
     "actorID": "role143",
-    "text": "[panel=2]「雲中啊。」",
-    "Sequence": "",
-    "links": [
-      854
-    ]
-  },
-  {
-    "entryID": 854,
-    "actorID": "role143",
-    "text": "[panel=2]「……不了。」",
-    "Sequence": "",
-    "links": [
-      855
-    ]
-  },
-  {
-    "entryID": 855,
-    "actorID": "role143",
-    "text": "[panel=2]「我在這挑了四十年水。到了雲中，我是誰？」",
+    "text": "[panel=2]「雲中啊……不了，我在這挑了四十年水，到了雲中，我是誰？」",
     "Sequence": "",
     "links": [
       856
@@ -2864,7 +2430,7 @@
   {
     "entryID": 856,
     "actorID": "2",
-    "text": "[panel=6]＊（他把桶提起來，往東邊那間走。那裡的鋪蓋、酒罈、骨頭都還在，人已經沒有了。）＊",
+    "text": "[panel=6]＊（他把桶提起來，往東邊那間走，那是馬賊住過的屋子，鋪蓋、酒罈、骨頭都還在。）＊",
     "Sequence": "",
     "links": [
       857
@@ -2873,7 +2439,7 @@
   {
     "entryID": 857,
     "actorID": "role143",
-    "text": "[panel=2]「總會再來人的。來了我還是挑我的水。」",
+    "text": "[panel=2]「總會再來人的，來了我還是挑我的水。」",
     "Sequence": "ModifyData(DnDAlignment,Player,GoodEvil,0.2);",
     "links": [
       858
@@ -2882,7 +2448,7 @@
   {
     "entryID": 858,
     "actorID": "2",
-    "text": "[panel=6]＊（門在他身後掩上。呂信站在井邊沒有動，等那扇門不再響了，才把刀扛回肩上。）＊",
+    "text": "[panel=6]＊（門在他身後掩上，呂信站在井邊，等那扇門不再響了，才把刀扛回肩上。）＊",
     "Sequence": "SetPortrait(MC2,pic=1);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;\nSetQuestEntryState(\"＿＿\", ＿, \"success\");",
     "links": [

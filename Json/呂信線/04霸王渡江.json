@@ -2,9 +2,10 @@
   {
     "entryID": 1,
     "actorID": "role2",
+    "title": "霸王渡江",
     "text": "[panel=6]＊（前廳今天很擠。赤龍幫的旗子插在門外，來了十幾個人，個個腰上有傢伙。）＊",
-    "Sequence": "EnableDialogueBG(HallOfHeroes);",
-    "Description": "開啟背景",
+    "Sequence": "EnableDialogueBG(HallOfHeroes);\nAudioControl(PlayMusic,BGM_28);\nAudioControl(PlaySFX,Others_Talking);",
+    "Description": "開啟背景、播放音樂",
     "zh_TW": "[panel=6]＊（前廳今天很擠。赤龍幫的旗子插在門外，來了十幾個人，個個腰上有傢伙。）＊",
     "zh_CN": "[panel=6]＊（前厅今天很挤。赤龙帮的旗子插在门外，来了十几个人，个个腰上有家伙。）＊",
     "links": [2]
@@ -76,7 +77,7 @@
     "entryID": 9,
     "actorID": "MC10",
     "text": "[panel=1]「哈，好樣的，能使這柄大刀還使得這麼輕鬆，老子還真沒見過。」",
-    "Sequence": "SetPortrait(MC10,pic=1);\nEnableCharacterExpression(1,MC10,Surprise_2);",
+    "Sequence": "SetPortrait(MC10,pic=5);\nEnableCharacterExpression(1,MC10,Surprise_2);",
     "zh_TW": "[panel=1]「哈，好樣的，能使這柄大刀還使得這麼輕鬆，老子還真沒見過。」",
     "zh_CN": "[panel=1]「哈，好样的，能使这柄大刀还使得这么轻松，老子还真没见过。」",
     "links": [10]
@@ -85,7 +86,7 @@
     "entryID": 10,
     "actorID": "MC10",
     "text": "[panel=1]「這小子，借老子使使。」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC10,pic=1);",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC10,pic=4);",
     "zh_TW": "[panel=1]「這小子，借老子使使。」",
     "zh_CN": "[panel=1]「这小子，借老子使使。」",
     "links": [11]
@@ -130,7 +131,7 @@
     "entryID": 15,
     "actorID": "MC10",
     "text": "[panel=1]「哈哈哈！好！老子就喜歡這種不怕死的！」",
-    "Sequence": "SetPortrait(MC10,pic=1);\nEnableCharacterExpression(1,MC10,Surprise_2);",
+    "Sequence": "SetPortrait(MC10,pic=5);\nEnableCharacterExpression(1,MC10,Surprise_2);",
     "zh_TW": "[panel=1]「哈哈哈！好！老子就喜歡這種不怕死的！」",
     "zh_CN": "[panel=1]「哈哈哈！好！老子就喜欢这种不怕死的！」",
     "links": [16]
@@ -166,7 +167,7 @@
     "entryID": 19,
     "actorID": "MC10",
     "text": "[panel=1]「三、老子這條命賭一把大的。你要是肯來，賭贏了，你就是開國的那一批。」",
-    "Sequence": "SetPortrait(MC10,pic=1);\nEnableCharacterExpression(1,MC10,Proud);",
+    "Sequence": "SetPortrait(MC10,pic=1);",
     "zh_TW": "[panel=1]「三、老子這條命賭一把大的。你要是肯來，賭贏了，你就是開國的那一批。」",
     "zh_CN": "[panel=1]「三、老子这条命赌一把大的。你要是肯来，赌赢了，你就是开国的那一批。」",
     "links": [20]
@@ -175,7 +176,7 @@
     "entryID": 20,
     "actorID": "MC10",
     "text": "[panel=1]「劉邦當年也不過是個亭長，老子為何不能成皇？」",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC10,pic=1);",
+    "Sequence": "SetPortrait(MC10,pic=1);",
     "zh_TW": "[panel=1]「劉邦當年也不過是個亭長，老子為何不能成皇？」",
     "zh_CN": "[panel=1]「刘邦当年也不过是个亭长，老子为何不能成皇？」",
     "links": [21]
@@ -184,7 +185,8 @@
     "entryID": 21,
     "actorID": "role2",
     "text": "[panel=6]＊（前廳裡一時沒有人說話，賈詡又坐了回去，端起茶碗喝了一口。）＊",
-    "Sequence": "SetPortrait(MC4,pic=1);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
+    "Sequence": "AudioControl(StopSFX);\nSetPortrait(MC4,pic=1);\nSetPortrait(MC1,pic=11);\nEnableCharacterExpression(0,Player,Nervous_2);",
+    "Description": "關閉音效",
     "zh_TW": "[panel=6]＊（前廳裡一時沒有人說話，賈詡又坐了回去，端起茶碗喝了一口。）＊",
     "zh_CN": "[panel=6]＊（前厅里一时没有人说话，贾诩又坐了回去，端起茶碗喝了一口。）＊",
     "links": [22]
@@ -245,7 +247,7 @@
     "entryID": 28,
     "actorID": "role2",
     "text": "[panel=6]＊（你接住了第一刀，也接住了第二刀。第三刀他沒有收力，你飛出去撞在門框上。）＊",
-    "Sequence": "SetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Pain);\nModifyData(FeatExp,Player,MartialArts,10);",
+    "Sequence": "AudioControl(PlaySFX,Others_BodyFall);\nSetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Pain);\nModifyData(FeatExp,Player,MartialArts,10);",
     "Conditions": "IsPassDice() == true;",
     "Description": "檢定成功、武藝經驗增加",
     "zh_TW": "[panel=6]＊（你接住了第一刀，也接住了第二刀。第三刀他沒有收力，你飛出去撞在門框上。）＊",
@@ -274,7 +276,7 @@
     "entryID": 31,
     "actorID": "role2",
     "text": "[panel=6]＊（他只出了一刀，你手裡的兵器就脫了手，人也摔在地上。）＊",
-    "Sequence": "SetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Pain);",
+    "Sequence": "AudioControl(PlaySFX,Others_BodyFall);\nSetPortrait(MC1,pic=16);\nEnableCharacterExpression(0,Player,Pain);",
     "Conditions": "IsPassDice() == false;",
     "Description": "檢定失敗",
     "zh_TW": "[panel=6]＊（他只出了一刀，你手裡的兵器就脫了手，人也摔在地上。）＊",
@@ -303,7 +305,7 @@
     "entryID": 34,
     "actorID": "MC10",
     "text": "[panel=1]「刀老子看過了，小子，你怎麼說？」",
-    "Sequence": "SetPortrait(MC10,pic=1);",
+    "Sequence": "SetPortrait(MC10,pic=1);\nAudioControl(StopMusic);\nAudioControl(PlayMusic,BGM_38);",
     "zh_TW": "[panel=1]「刀老子看過了，小子，你怎麼說？」",
     "zh_CN": "[panel=1]「刀老子看过了，小子，你怎么说？」",
     "links": [35]
@@ -422,8 +424,8 @@
     "entryID": 47,
     "actorID": "role2",
     "text": "[panel=6]＊（赤龍幫的人走了，門外的旗子也撤了，前廳一下子空了下來。）＊",
-    "Sequence": "OpenPanel(1, close);",
-    "Description": "清除立繪",
+    "Sequence": "AudioControl(StopMusic);\nOpenPanel(1, close);",
+    "Description": "關閉音樂、清除立繪",
     "zh_TW": "[panel=6]＊（赤龍幫的人走了，門外的旗子也撤了，前廳一下子空了下來。）＊",
     "zh_CN": "[panel=6]＊（赤龙帮的人走了，门外的旗子也撤了，前厅一下子空了下来。）＊",
     "links": [48]
@@ -460,8 +462,8 @@
     "entryID": 51,
     "actorID": "0",
     "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場、清除立繪",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nOpenPanel(2, close)@1;\nAudioControl(PlayMusic,BGM_42)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪、播放音樂",
     "links": [52]
   },
   {
@@ -617,7 +619,7 @@
     "text": "[panel=6]＊（他把碗倒滿，端在手裡，這回沒有立刻喝。）＊",
     "Sequence": "ModifyData(FavorabilityExp,MC2,-10);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] + 1;",
-    "Description": "呂信好感度下降、變數更新",
+    "Description": "呂信好感度下降、結局變數更新(+1)",
     "zh_TW": "[panel=6]＊（他把碗倒滿，端在手裡，這回沒有立刻喝。）＊",
     "zh_CN": "[panel=6]＊（他把碗倒满，端在手里，这回没有立刻喝。）＊",
     "links": [76]
@@ -646,7 +648,7 @@
     "text": "[panel=1]「[em7]把碗裡的酒喝乾[/em7]，……是啊，所以他才是霸王，我們才在這裡喝酒。」",
     "Sequence": "SetPortrait(MC2,pic=1);\nModifyData(FavorabilityExp,MC2,20);",
     "Script": "Variable[\"LuxianChose\"] = Variable[\"LuxianChose\"] - 2;",
-    "Description": "呂信好感度提升、變數更新",
+    "Description": "呂信好感度提升、結局變數更新(-2)",
     "zh_TW": "[panel=1]「[em7]把碗裡的酒喝乾[/em7]，……是啊，所以他才是霸王，我們才在這裡喝酒。」",
     "zh_CN": "[panel=1]「[em7]把碗里的酒喝干[/em7]，……是啊，所以他才是霸王，我们才在这里喝酒。」",
     "links": [76]
@@ -712,31 +714,22 @@
     "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Question);",
     "zh_TW": "[panel=1]「嗯？」",
     "zh_CN": "[panel=1]「嗯？」",
-    "links": [79]
-  },
-  {
-    "entryID": 79,
-    "actorID": "role2",
-    "text": "[panel=6]＊（你張了張嘴，又閉上了。）＊",
-    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=11);",
-    "zh_TW": "[panel=6]＊（你張了張嘴，又閉上了。）＊",
-    "zh_CN": "[panel=6]＊（你张了张嘴，又闭上了。）＊",
     "links": [80]
   },
   {
     "entryID": 80,
     "actorID": "MC1",
-    "text": "「……沒事，酒錢我出。」",
-    "Sequence": "SetPortrait(MC1,pic=6);",
-    "zh_TW": "「……沒事，酒錢我出。」",
-    "zh_CN": "「……没事，酒钱我出。」",
+    "text": "「[em7]你張了張嘴，又閉上了。[/em7]……沒事，酒錢我出。」",
+    "Sequence": "DisableCharacterExpression(1);\nSetPortrait(MC1,pic=6);",
+    "zh_TW": "「[em7]你張了張嘴，又閉上了。[/em7]……沒事，酒錢我出。」",
+    "zh_CN": "「[em7]你张了张嘴，又闭上了。[/em7]……没事，酒钱我出。」",
     "links": [81]
   },
   {
     "entryID": 81,
     "actorID": "MC2",
     "text": "[panel=1]「哈！你小子哪來的錢？」",
-    "Sequence": "SetPortrait(MC2,pic=1);\nEnableCharacterExpression(1,MC2,Proud);",
+    "Sequence": "SetPortrait(MC2,pic=1);",
     "zh_TW": "[panel=1]「哈！你小子哪來的錢？」",
     "zh_CN": "[panel=1]「哈！你小子哪来的钱？」",
     "links": [82]
@@ -745,44 +738,27 @@
     "entryID": 82,
     "actorID": "role2",
     "text": "[panel=6]＊（他笑著走了，三個空罈子留在上座那張凳子邊。）＊",
-    "Sequence": "DisableCharacterExpression(1);",
+    "Sequence": "",
     "zh_TW": "[panel=6]＊（他笑著走了，三個空罈子留在上座那張凳子邊。）＊",
     "zh_CN": "[panel=6]＊（他笑着走了，三个空坛子留在上座那张凳子边。）＊",
-    "links": [83]
-  },
-  {
-    "entryID": 83,
-    "actorID": "0",
-    "text": "",
-    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
-    "Description": "轉場、清除立繪",
-    "links": [84]
-  },
-  {
-    "entryID": 84,
-    "actorID": "role2",
-    "text": "[panel=6]＊（白天那番話，全前廳的人都聽見了；夜裡那句話，他後來沒有再提過。）＊",
-    "Sequence": "",
-    "zh_TW": "[panel=6]＊（白天那番話，全前廳的人都聽見了；夜裡那句話，他後來沒有再提過。）＊",
-    "zh_CN": "[panel=6]＊（白天那番话，全前厅的人都听见了；夜里那句话，他后来没有再提过。）＊",
-    "links": [85]
+    "links": [89]
   },
   {
     "entryID": 85,
     "actorID": "role2",
-    "text": "[panel=6]＊（往後很長一段日子，你們照常喝酒、照常打鬧、照常在演武場上滾成一團。）＊",
+    "text": "[panel=6]＊（往後很長一段日子，你們照常喝酒、照常打鬧、照常在演武場上打成一團。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（往後很長一段日子，你們照常喝酒、照常打鬧、照常在演武場上滾成一團。）＊",
-    "zh_CN": "[panel=6]＊（往后很长一段日子，你们照常喝酒、照常打闹、照常在演武场上滚成一团。）＊",
+    "zh_TW": "[panel=6]＊（往後很長一段日子，你們照常喝酒、照常打鬧、照常在演武場上打成一團。）＊",
+    "zh_CN": "[panel=6]＊（往后很长一段日子，你们照常喝酒、照常打闹、照常在演武场上打成一团。）＊",
     "links": [86]
   },
   {
     "entryID": 86,
     "actorID": "role2",
-    "text": "[panel=6]＊（只是每次講到霸王，他都會在烏江那裡停半息，然後跳過去講別的。）＊",
+    "text": "[panel=6]＊（只是之後他沒有再提過霸王渡江的故事。）＊",
     "Sequence": "",
-    "zh_TW": "[panel=6]＊（只是每次講到霸王，他都會在烏江那裡停半息，然後跳過去講別的。）＊",
-    "zh_CN": "[panel=6]＊（只是每次讲到霸王，他都会在乌江那里停半息，然后跳过去讲别的。）＊",
+    "zh_TW": "[panel=6]＊（只是之後他沒有再提過霸王渡江的故事。）＊",
+    "zh_CN": "[panel=6]＊（只是之后他没有再提过霸王渡江的故事。）＊",
     "links": [87]
   },
   {
@@ -790,7 +766,15 @@
     "actorID": "0",
     "text": "",
     "Sequence": "DisableAllCharacterExpression();\nDisableDialogueBG();\nContinue();",
-    "Description": "清除立繪、關閉背景",
+    "Description": "關閉背景",
     "links": []
+  },
+  {
+    "entryID": 89,
+    "actorID": "0",
+    "text": "",
+    "Sequence": "SetContinueMode(false);\nPlayFeelFeedback(FadeInOut,1,0.5,1,#000000,1);\nAudioControl(StopMusic);\nOpenPanel(0, close)@1;\nOpenPanel(1, close)@1;\nSetContinueMode(original)@2.5;\nContinue()@2.5;",
+    "Description": "轉場、清除立繪",
+    "links": [85]
   }
 ]
